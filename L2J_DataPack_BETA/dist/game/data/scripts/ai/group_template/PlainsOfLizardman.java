@@ -67,22 +67,22 @@ public class PlainsOfLizardman extends AbstractNpcAI
 		if ((player != null) && !player.isAlikeDead())
 		{
 			boolean isPet = false;
-			if (event.endsWith("_pet") && (player.getPet() != null) && !player.getPet().isDead())
+			if (event.endsWith("_pet") && player.hasSummon() && !player.getSummon().isDead())
 			{
 				isPet = true;
 			}
 			
 			if (event.startsWith("rainbow_frog"))
 			{
-				triggerSkill(npc, isPet ? player.getPet() : player, RAINBOW_FROG_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getSummon() : player, RAINBOW_FROG_SKILL, 1);
 			}
 			else if (event.startsWith("energy_plant"))
 			{
-				triggerSkill(npc, isPet ? player.getPet() : player, ENERGY_PLANT_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getSummon() : player, ENERGY_PLANT_SKILL, 1);
 			}
 			else if (event.startsWith("sticky_mushroom"))
 			{
-				triggerSkill(npc, isPet ? player.getPet() : player, STICKY_MUSHROOM_SKILL, 1);
+				triggerSkill(npc, isPet ? player.getSummon() : player, STICKY_MUSHROOM_SKILL, 1);
 			}
 			else if (event.startsWith("fantasy_mushroom"))
 			{
@@ -93,7 +93,7 @@ public class PlainsOfLizardman extends AbstractNpcAI
 					if ((target != null) && (target instanceof L2Attackable) && (target.getAI() != null))
 					{
 						skill.getEffects(npc, target);
-						attackPlayer((L2Attackable) target, isPet ? player.getPet() : player);
+						attackPlayer((L2Attackable) target, isPet ? player.getSummon() : player);
 					}
 				}
 				npc.doDie(player);

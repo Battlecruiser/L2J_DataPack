@@ -153,9 +153,9 @@ public class ItemSkillsTemplate implements IItemHandler
 				{
 					playable.doSimultaneousCast(itemSkill);
 					// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-					if (!playable.isSummon() && (activeChar.getPet() != null))
+					if (!playable.isSummon() && activeChar.hasSummon())
 					{
-						activeChar.getPet().doSimultaneousCast(itemSkill);
+						activeChar.getSummon().doSimultaneousCast(itemSkill);
 					}
 				}
 				else

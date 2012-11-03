@@ -55,11 +55,11 @@ public class SecretArea extends Quest
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
 		player.teleToLocation(loc, false);
-		if (player.getPet() != null)
+		if (player.hasSummon())
 		{
-			player.getPet().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.getPet().setInstanceId(instanceId);
-			player.getPet().teleToLocation(loc, false);
+			player.getSummon().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			player.getSummon().setInstanceId(instanceId);
+			player.getSummon().teleToLocation(loc, false);
 		}
 	}
 	

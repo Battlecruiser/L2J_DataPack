@@ -19,7 +19,6 @@ import java.util.logging.Level;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -42,23 +41,21 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance activeOwner = playable.getActingPlayer();
-		L2Summon activePet = activeOwner.getPet();
-		
-		if (activePet == null)
+		final L2PcInstance activeOwner = playable.getActingPlayer();
+		if (activeOwner.hasSummon())
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
 		
-		if (activePet.isDead())
+		if (activeOwner.getSummon().isDead())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET);
 			return false;
 		}
 		
 		final int itemId = item.getItemId();
-		final short shotConsumption = activePet.getSoulShotsPerHit();
+		final short shotConsumption = activeOwner.getSummon().getSoulShotsPerHit();
 		final long shotCount = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
@@ -78,7 +75,7 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		if (activePet.isChargedShot(ShotType.SOULSHOTS))
+		if (activeOwner.getSummon().isChargedShot(ShotType.SOULSHOTS))
 		{
 			// SoulShots are already active.
 			return false;
@@ -96,9 +93,9 @@ public class BeastSoulShot implements IItemHandler
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.PET_USE_SPIRITSHOT);
-		activePet.setChargedShot(ShotType.SOULSHOTS, true);
+		activeOwner.getSummon().setChargedShot(ShotType.SOULSHOTS, true);
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;
 	}
 }

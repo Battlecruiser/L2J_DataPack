@@ -134,7 +134,7 @@ public class PrisonGuards extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
 	{
-		L2Character caster = isPet ? player.getPet() : player;
+		L2Character caster = isPet ? player.getSummon() : player;
 		
 		if (npc.getNpcId() == GUARD2)
 		{
@@ -153,7 +153,7 @@ public class PrisonGuards extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2Character target = isPet ? player.getPet() : player;
+		L2Character target = isPet ? player.getSummon() : player;
 		
 		if (npc.getNpcId() == GUARD2)
 		{
@@ -187,7 +187,7 @@ public class PrisonGuards extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
-		L2Character attacker = isPet ? player.getPet() : player;
+		L2Character attacker = isPet ? player.getSummon() : player;
 		
 		_firstAttacked = true;
 		
@@ -252,7 +252,7 @@ public class PrisonGuards extends AbstractNpcAI
 		L2Skill skill = SkillTable.getInstance().getInfo(effectId, isSpell ? 9 : 1);
 		if (skill != null)
 		{
-			npc.setTarget(isSummon ? player.getPet() : player);
+			npc.setTarget(isSummon ? player.getSummon() : player);
 			npc.doCast(skill);
 		}
 	}

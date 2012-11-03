@@ -96,14 +96,14 @@ class Quest (JQuest) :
          st.exitQuest(1)
          htmltext = "30610-06.htm"
    elif event == "30747-02.htm" :
-      summon = player.getPet()
+      summon = player.getSummon()
       if summon :
          if summon.getControlItem().getObjectId() == st.getInt("summonOid"):
             htmltext = "30747-04.htm"
          else :
             htmltext = "30747-03.htm"
    elif event == "30747-05.htm" :
-      summon = player.getPet()
+      summon = player.getSummon()
       if summon :
          if summon.getControlItem().getObjectId() == st.getInt("summonOid"):
             htmltext = "30747-05.htm"
@@ -159,7 +159,7 @@ class Quest (JQuest) :
             st.set("id","2")
             htmltext = "30747-01.htm"
          elif st.getInt("id") == 2 :
-            summon = player.getPet()
+            summon = player.getSummon()
             if summon :
                if summon.getControlItem().getObjectId() == st.getInt("summonOid"):
                   htmltext = "30747-04.htm"
@@ -172,7 +172,7 @@ class Quest (JQuest) :
          elif st.getInt("id") > 0 and st.getInt("id") < 15 and st.getQuestItemsCount(FT_LEAF) >= 1 :
             htmltext = "30747-11.htm"
          elif st.getInt("id") == 15 and st.getQuestItemsCount(FT_LEAF) == 0 :
-            summon = player.getPet()
+            summon = player.getSummon()
             if summon :
                if summon.getControlItem().getObjectId() == st.getInt("summonOid"):
                   st.set("id","16")
@@ -182,7 +182,7 @@ class Quest (JQuest) :
             else :
                htmltext = "30747-12.htm"
          elif st.getInt("id") == 16:
-            summon = player.getPet()
+            summon = player.getSummon()
             if summon :
                htmltext = "30747-15.htm"
             elif (st.getQuestItemsCount(3500) + st.getQuestItemsCount(3501) + st.getQuestItemsCount(3502)) == 1 :
@@ -247,7 +247,7 @@ class Quest (JQuest) :
       if pc == player and mobId == npcId:
          return
    if isPet and st.getInt("id") < 16:
-      pet = player.getPet()
+      pet = player.getSummon()
       if self.getRandom(100) <= 2 and st.getQuestItemsCount(FT_LEAF) >= 0:
          st.takeItems(FT_LEAF,1)
          st.playSound("ItemSound.quest_middle")

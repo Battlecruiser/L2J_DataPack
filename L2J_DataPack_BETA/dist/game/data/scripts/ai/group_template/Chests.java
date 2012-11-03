@@ -168,7 +168,7 @@ public class Chests extends AbstractNpcAI
 				}
 				else
 				{
-					L2Character originalCaster = isPet ? caster.getPet() : caster;
+					L2Character originalCaster = isPet ? caster.getSummon() : caster;
 					chest.setRunning();
 					chest.addDamageHate(originalCaster, 0, 999);
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalCaster);
@@ -203,7 +203,7 @@ public class Chests extends AbstractNpcAI
 				{
 					// if this weren't a box, upon interaction start the mimic behaviors...
 					// todo: perhaps a self-buff (skill id 4245) with random chance goes here?
-					L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+					L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
 					chest.setRunning();
 					chest.addDamageHate(originalAttacker, 0, (damage * 100) / (chest.getLevel() + 7));
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);

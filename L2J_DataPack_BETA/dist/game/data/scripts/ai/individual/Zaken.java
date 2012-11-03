@@ -802,7 +802,7 @@ public class Zaken extends AbstractNpcAI
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
 				}
 			}
-			L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+			L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
 			int hate = (int) (((damage / npc.getMaxHp()) / 0.05) * 20000);
 			((L2Attackable) npc).addDamageHate(originalAttacker, 0, hate);
 			if (getRandom(10) < 1)
@@ -966,7 +966,7 @@ public class Zaken extends AbstractNpcAI
 		{
 			if (_Zone.isInsideZone(npc))
 			{
-				L2Character target = isPet ? player.getPet() : player;
+				L2Character target = isPet ? player.getSummon() : player;
 				((L2Attackable) npc).addDamageHate(target, 1, 200);
 			}
 			if ((player.getZ() > (npc.getZ() - 100)) && (player.getZ() < (npc.getZ() + 100)))

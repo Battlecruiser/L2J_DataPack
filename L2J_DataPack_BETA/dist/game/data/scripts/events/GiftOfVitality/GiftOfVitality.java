@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -139,13 +138,13 @@ public class GiftOfVitality extends Quest
 			{
 				htmltext = "4306-nolevel.htm";
 			}
-			else if ((player.getPet() == null) || !(player.getPet() instanceof L2ServitorInstance))
+			else if (!player.hasSummon() || !player.getSummon().isServitor())
 			{
 				htmltext = "4306-nosummon.htm";
 			}
 			else
 			{
-				npc.setTarget(player.getPet());
+				npc.setTarget(player.getSummon());
 				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
 				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
 				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier

@@ -273,7 +273,7 @@ public class QueenAnt extends AbstractNpcAI
 		if (isPet)
 		{
 			isMage = false;
-			character = player.getPet();
+			character = player.getSummon();
 		}
 		else
 		{

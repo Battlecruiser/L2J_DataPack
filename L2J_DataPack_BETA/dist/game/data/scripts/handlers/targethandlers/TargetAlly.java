@@ -55,7 +55,7 @@ public class TargetAlly implements ITargetTypeHandler
 			final int radius = skill.getSkillRadius();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, false))
-				targetList.add(player.getPet());
+				targetList.add(player.getSummon());
 			
 			if (player.getClan() != null)
 			{
@@ -85,7 +85,7 @@ public class TargetAlly implements ITargetTypeHandler
 						continue;
 					
 					if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, false))
-						targetList.add(obj.getPet());
+						targetList.add(obj.getSummon());
 					
 					if (!L2Skill.addCharacter(activeChar, obj, radius, false))
 						continue;

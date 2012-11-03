@@ -19,7 +19,6 @@ import java.util.logging.Level;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -42,16 +41,14 @@ public class BeastSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		L2PcInstance activeOwner = playable.getActingPlayer();
-		L2Summon activePet = activeOwner.getPet();
-		
-		if (activePet == null)
+		final L2PcInstance activeOwner = playable.getActingPlayer();
+		if (activeOwner.hasSummon())
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
 		
-		if (activePet.isDead())
+		if (activeOwner.getSummon().isDead())
 		{
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET);
 			return false;
@@ -59,7 +56,7 @@ public class BeastSpiritShot implements IItemHandler
 		
 		final int itemId = item.getItemId();
 		final boolean isBlessed = ((itemId == 6647) || (itemId == 20334)); // TODO: Unhardcode these!
-		final short shotConsumption = activePet.getSpiritShotsPerHit();
+		final short shotConsumption = activeOwner.getSummon().getSpiritShotsPerHit();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
 		if (skills == null)
@@ -79,7 +76,7 @@ public class BeastSpiritShot implements IItemHandler
 			return false;
 		}
 		
-		if (activePet.isChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
+		if (activeOwner.getSummon().isChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS))
 		{
 			// shots are already active.
 			return false;
@@ -96,9 +93,9 @@ public class BeastSpiritShot implements IItemHandler
 		
 		// Pet uses the power of spirit.
 		activeOwner.sendPacket(SystemMessageId.PET_USE_SPIRITSHOT);
-		activePet.setChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, true);
+		activeOwner.getSummon().setChargedShot(isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, true);
 		
-		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activePet, activePet, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(activeOwner.getSummon(), activeOwner.getSummon(), skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0), 600);
 		return true;
 	}
 }

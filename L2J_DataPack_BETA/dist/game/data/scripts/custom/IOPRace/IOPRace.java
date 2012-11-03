@@ -70,8 +70,8 @@ public class IOPRace extends Quest
 		{
 			// clean old data
 			player.stopSkillEffects(5239);
-			if (player.getPet() != null)
-				player.getPet().stopSkillEffects(5239);
+			if (player.hasSummon())
+				player.getSummon().stopSkillEffects(5239);
 			
 			st.takeItems(STAMP, -1);
 			st.set("1st", "0");
@@ -83,8 +83,8 @@ public class IOPRace extends Quest
 			if (skill != null)
 			{
 				skill.getEffects(npc, player);
-				if (player.getPet() != null)
-					skill.getEffects(npc, player.getPet());
+				if (player.hasSummon())
+					skill.getEffects(npc, player.getSummon());
 			}
 			
 			startQuestTimer("timer", 1800000, null, null); // 30 min

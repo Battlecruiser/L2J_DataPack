@@ -21,7 +21,6 @@ import com.l2jserver.gameserver.model.L2HelperBuff;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
@@ -87,13 +86,13 @@ public class SupportMagic implements IBypassHandler
 		
 		if (isSummon)
 		{
-			if ((player.getPet() == null) || !(player.getPet() instanceof L2ServitorInstance))
+			if (!player.hasSummon() || !player.getSummon().isServitor())
 			{
 				String content = "<html><body>Only servitors can receive this Support Magic. If you do not have a servitor, you cannot access these spells.</body></html>";
 				npc.insertObjectIdAndShowChatWindow(player, content);
 				return true;
 			}
-			npc.setTarget(player.getPet());
+			npc.setTarget(player.getSummon());
 		}
 		else
 		{

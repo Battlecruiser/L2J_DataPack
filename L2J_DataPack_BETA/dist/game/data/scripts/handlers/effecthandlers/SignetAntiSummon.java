@@ -74,7 +74,7 @@ public class SignetAntiSummon extends L2Effect
 					else
 						owner = cha.getActingPlayer();
 					
-					if (owner != null && owner.getPet() != null)
+					if (owner != null && owner.hasSummon())
 					{
 						if (mpConsume > getEffector().getCurrentMp())
 						{
@@ -83,7 +83,7 @@ public class SignetAntiSummon extends L2Effect
 						}
 						
 						getEffector().reduceCurrentMp(mpConsume);
-						owner.getPet().unSummon(owner);
+						owner.getSummon().unSummon(owner);
 						owner.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 					}
 				}

@@ -39,7 +39,7 @@ public class TargetAreaSummon implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		target = activeChar.getPet();
+		target = activeChar.getSummon();
 		if (target == null || !(target instanceof L2ServitorInstance) || target.isDead())
 			return _emptyTargetList;
 		

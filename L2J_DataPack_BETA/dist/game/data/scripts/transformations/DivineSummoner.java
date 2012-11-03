@@ -39,9 +39,9 @@ public class DivineSummoner extends L2Transformation
 			return;
 		}
 		
-		if (getPlayer().getPet() != null)
+		if (getPlayer().hasSummon())
 		{
-			getPlayer().getPet().unSummon(getPlayer());
+			getPlayer().getSummon().unSummon(getPlayer());
 		}
 		
 		transformedSkills();
@@ -70,9 +70,9 @@ public class DivineSummoner extends L2Transformation
 	@Override
 	public void onUntransform()
 	{
-		if (getPlayer().getPet() != null)
+		if (getPlayer().hasSummon())
 		{
-			getPlayer().getPet().unSummon(getPlayer());
+			getPlayer().getSummon().unSummon(getPlayer());
 		}
 		
 		removeSkills();

@@ -138,7 +138,7 @@ public class SummonMinions extends AbstractNpcAI
 				{
 					if (isPet)
 					{
-						attacker = (attacker).getPet().getOwner();
+						attacker = attacker.getSummon().getOwner();
 					}
 					if (attacker.getParty() != null)
 					{

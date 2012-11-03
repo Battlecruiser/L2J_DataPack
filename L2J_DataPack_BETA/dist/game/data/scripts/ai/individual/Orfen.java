@@ -241,7 +241,7 @@ public class Orfen extends AbstractNpcAI
 	{
 		if (npc.getNpcId() == ORFEN)
 		{
-			L2Character originalCaster = isPet ? caster.getPet() : caster;
+			L2Character originalCaster = isPet ? caster.getSummon() : caster;
 			if ((skill.getAggroPoints() > 0) && (getRandom(5) == 0) && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
 				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), TEXT[getRandom(4)]);
