@@ -23,6 +23,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another.
  * @author UnAfraid
  */
 public class ServitorShare extends L2Effect
@@ -41,17 +42,16 @@ public class ServitorShare extends L2Effect
 	@Override
 	public void onExit()
 	{
-		// Synchronizing effects on player and pet if one of them get's removed for some reason the same will happen to another.
 		L2Effect[] effects = null;
 		if (getEffected().isPlayer())
 		{
 			L2Summon summon = getEffector().getSummon();
-			if (summon != null)
+			if ((summon != null) && summon.isServitor())
 			{
 				effects = summon.getAllEffects();
 			}
 		}
-		else if (getEffected().isSummon())
+		else if (getEffected().isServitor())
 		{
 			L2PcInstance owner = getEffected().getActingPlayer();
 			if (owner != null)
