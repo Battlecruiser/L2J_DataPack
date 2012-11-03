@@ -46,12 +46,18 @@ public class ServitorShare extends L2Effect
 		if (getEffected().isPlayer())
 		{
 			L2Summon summon = getEffector().getPet();
-			effects = summon.getAllEffects();
+			if (summon != null)
+			{
+				effects = summon.getAllEffects();
+			}
 		}
 		else if (getEffected().isSummon())
 		{
 			L2PcInstance owner = getEffected().getActingPlayer();
-			effects = owner.getAllEffects();
+			if (owner != null)
+			{
+				effects = owner.getAllEffects();
+			}
 		}
 		
 		if (effects != null)
