@@ -592,7 +592,7 @@ public class CrystalCaverns extends Quest
 		player.breakAttack();
 		player.breakCast();
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		L2Summon pet = player.getPet();
+		L2Summon pet = player.getSummon();
 		if (pet != null)
 		{
 			pet.setTarget(null);
@@ -1100,8 +1100,8 @@ public class CrystalCaverns extends Quest
 				{
 					p.setIsParalyzed(false);
 					Throw(npc, p);
-					if (p.getPet() != null)
-						Throw(npc, p.getPet());
+					if (p.getSummon() != null)
+						Throw(npc, p.getSummon());
 				}
 				world._raidStatus = 0;
 				for (L2Npc mob : world._animationMobs)
@@ -1701,7 +1701,7 @@ public class CrystalCaverns extends Quest
 					int x = (int) (radius * Math.cos(i * 2 * Math.PI / members));
 					int y = (int) (radius * Math.sin(i++ * 2 * Math.PI / members));
 					p.teleToLocation(153571 + x, 142075 + y, -12737);
-					L2Summon pet = p.getPet();
+					L2Summon pet = p.getSummon();
 					if (pet != null)
 					{
 						pet.teleToLocation(153571 + x, 142075 + y, -12737, true);

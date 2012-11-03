@@ -147,7 +147,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 			{
 				MY_TRACKING_SET.add(npcObjId);
 				// Spawn first 5 shades on first attack on Dark Water Dragon
-				L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+				L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() - 100, npc.getY() + 100, npc.getZ());
@@ -158,7 +158,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 			{
 				SECOND_SPAWN.add(npcObjId);
 				// Spawn second 5 shades on half hp of on Dark Water Dragon
-				L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+				L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 100, npc.getY() + 100, npc.getZ());

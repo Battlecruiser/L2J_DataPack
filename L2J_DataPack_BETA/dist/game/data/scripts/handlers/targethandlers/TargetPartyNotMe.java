@@ -49,8 +49,8 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 		else if (activeChar instanceof L2PcInstance)
 		{
 			player = (L2PcInstance) activeChar;
-			if (activeChar.getPet() != null)
-				targetList.add(activeChar.getPet());
+			if (activeChar.getSummon() != null)
+				targetList.add(activeChar.getSummon());
 		}
 		
 		if (activeChar.getParty() != null)
@@ -70,9 +70,9 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 					
 					targetList.add(partyMember);
 					
-					if (partyMember.getPet() != null && !partyMember.getPet().isDead())
+					if (partyMember.getSummon() != null && !partyMember.getSummon().isDead())
 					{
-						targetList.add(partyMember.getPet());
+						targetList.add(partyMember.getSummon());
 					}
 				}
 			}

@@ -306,7 +306,7 @@ public class Disablers implements ISkillHandler
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss) && !(target instanceof L2SiegeSummonInstance))
 					{
 						final L2PcInstance summonOwner = ((L2Summon) target).getOwner();
-						final L2Summon summon = summonOwner.getPet();
+						final L2Summon summon = summonOwner.getSummon();
 						if (summon != null)
 						{
 							// TODO: Retail confirmation for Soul of the Phoenix required.

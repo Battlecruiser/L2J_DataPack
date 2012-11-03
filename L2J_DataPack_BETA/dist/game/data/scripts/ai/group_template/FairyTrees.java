@@ -56,7 +56,7 @@ public class FairyTrees extends AbstractNpcAI
 			for (int i = 0; i < 20; i++)
 			{
 				L2Attackable newNpc = (L2Attackable) addSpawn(27189, npc.getX(), npc.getY(), npc.getZ(), 0, false, 30000);
-				L2Character originalKiller = isPet ? killer.getPet() : killer;
+				L2Character originalKiller = isPet ? killer.getSummon() : killer;
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalKiller, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);

@@ -930,9 +930,9 @@ public class FinalEmperialTomb extends Quest
 									{
 										targetList.add(player);
 									}
-									if ((player.getPet() != null) && !player.getPet().isDead())
+									if (player.hasSummon() && !player.getSummon().isDead())
 									{
-										targetList.add(player.getPet());
+										targetList.add(player.getSummon());
 									}
 								}
 							}

@@ -34,7 +34,7 @@ public class Mount implements IUserCommandHandler
 		if (id != COMMAND_IDS[0])
 			return false;
 		
-		return activeChar.mountPlayer(activeChar.getPet());
+		return activeChar.mountPlayer(activeChar.getSummon());
 	}
 	
 	@Override

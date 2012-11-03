@@ -45,7 +45,7 @@ public class NecromancerValley extends AbstractNpcAI
 	{
 		if (Rnd.get(100) < 20)
 		{
-			L2Character attacker = isPet ? killer.getPet() : killer;
+			L2Character attacker = isPet ? killer.getSummon() : killer;
 			L2Attackable Orc = (L2Attackable) addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			Orc.setRunning();
 			Orc.addDamageHate(attacker, 0, 600);
@@ -65,7 +65,7 @@ public class NecromancerValley extends AbstractNpcAI
 	{
 		if (Rnd.get(100) < 1)
 		{
-			L2Character player = isPet ? attacker.getPet() : attacker;
+			L2Character player = isPet ? attacker.getSummon() : attacker;
 			L2Attackable Orc = (L2Attackable) addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			Orc.setRunning();
 			Orc.addDamageHate(player, 0, 600);

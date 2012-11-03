@@ -31,7 +31,7 @@ public class TargetCorpsePet implements ITargetTypeHandler
 	{
 		if (activeChar instanceof L2PcInstance)
 		{
-			target = activeChar.getPet();
+			target = activeChar.getSummon();
 			if (target != null && target.isDead())
 				return new L2Character[] { target };
 		}

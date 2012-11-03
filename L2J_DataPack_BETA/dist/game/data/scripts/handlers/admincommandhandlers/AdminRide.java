@@ -51,9 +51,9 @@ public class AdminRide implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_ride"))
 		{		
-			if (player.isMounted() || player.getPet() != null)
+			if (player.isMounted() || player.hasSummon())
 			{
-				activeChar.sendMessage("Target already have a pet.");
+				activeChar.sendMessage("Target already have a summon.");
 				return false;
 			}
 			if (command.startsWith("admin_ride_wyvern"))

@@ -75,9 +75,9 @@ public final class L2AttackableAIScript extends QuestJython
 		
 		int skillAggroPoints = skill.getAggroPoints();
 		
-		if (caster.getPet() != null)
+		if (caster.hasSummon())
 		{
-			if ((targets.length == 1) && Util.contains(targets, caster.getPet()))
+			if ((targets.length == 1) && Util.contains(targets, caster.getSummon()))
 			{
 				skillAggroPoints = 0;
 			}
@@ -92,7 +92,7 @@ public final class L2AttackableAIScript extends QuestJython
 				{
 					if ((npcTarget == skillTarget) || (npc == skillTarget))
 					{
-						L2Character originalCaster = isPet ? caster.getPet() : caster;
+						L2Character originalCaster = isPet ? caster.getSummon() : caster;
 						attackable.addDamageHate(originalCaster, 0, (skillAggroPoints * 150) / (attackable.getLevel() + 7));
 					}
 				}
@@ -110,7 +110,7 @@ public final class L2AttackableAIScript extends QuestJython
 			return null;
 		}
 		
-		L2Character originalAttackTarget = (isPet ? attacker.getPet() : attacker);
+		L2Character originalAttackTarget = (isPet ? attacker.getSummon() : attacker);
 		if (attacker.isInParty() && attacker.getParty().isInDimensionalRift())
 		{
 			byte riftType = attacker.getParty().getDimensionalRift().getType();
@@ -137,7 +137,7 @@ public final class L2AttackableAIScript extends QuestJython
 			return null;
 		}
 		
-		L2Character target = isPet ? player.getPet() : player;
+		L2Character target = isPet ? player.getSummon() : player;
 		
 		((L2Attackable) npc).addDamageHate(target, 0, 1);
 		
@@ -162,7 +162,7 @@ public final class L2AttackableAIScript extends QuestJython
 		{
 			L2Attackable attackable = (L2Attackable) npc;
 			
-			L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+			L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
 			attackable.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, originalAttacker);
 			attackable.addDamageHate(originalAttacker, damage, (damage * 100) / (attackable.getLevel() + 7));
 		}

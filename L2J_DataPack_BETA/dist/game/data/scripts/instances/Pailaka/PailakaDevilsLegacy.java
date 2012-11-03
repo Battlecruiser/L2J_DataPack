@@ -431,7 +431,7 @@ public class PailakaDevilsLegacy extends Quest
 				}
 				return "32501-01.htm";
 			case ADVENTURER1:
-				if (player.getPet() == null)
+				if (!player.hasSummon())
 				{
 					if (st.hasQuestItems(SWORD))
 					{
@@ -466,7 +466,7 @@ public class PailakaDevilsLegacy extends Quest
 				}
 				return "32508-07.htm";
 			case ADVENTURER2:
-				if (player.getPet() == null)
+				if (!player.hasSummon())
 				{
 					st.unset("cond");
 					st.playSound("ItemSound.quest_finish");
@@ -515,7 +515,7 @@ public class PailakaDevilsLegacy extends Quest
 						{
 							if (isPet)
 							{
-								attackPlayer((L2Attackable) npc, attacker.getPet());
+								attackPlayer((L2Attackable) npc, attacker.getSummon());
 							}
 							else
 							{

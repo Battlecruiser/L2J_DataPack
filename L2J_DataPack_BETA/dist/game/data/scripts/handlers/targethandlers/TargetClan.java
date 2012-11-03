@@ -60,7 +60,7 @@ public class TargetClan implements ITargetTypeHandler
 			final L2Clan clan = player.getClan();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, false))
-				targetList.add(player.getPet());
+				targetList.add(player.getSummon());
 			
 			if (clan != null)
 			{
@@ -88,7 +88,7 @@ public class TargetClan implements ITargetTypeHandler
 						continue;
 					
 					if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, false))
-						targetList.add(obj.getPet());
+						targetList.add(obj.getSummon());
 					
 					if (!L2Skill.addCharacter(activeChar, obj, radius, false))
 						continue;

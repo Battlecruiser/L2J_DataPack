@@ -42,9 +42,9 @@ public class MyoRace extends L2Transformation
 			return;
 		}
 		
-		if (getPlayer().getPet() != null)
+		if (getPlayer().hasSummon())
 		{
-			getPlayer().getPet().unSummon(getPlayer());
+			getPlayer().getSummon().unSummon(getPlayer());
 		}
 		
 		transformedSkills();

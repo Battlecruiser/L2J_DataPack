@@ -719,9 +719,9 @@ public class RainbowSpringsChateau extends Quest
 			if (pc != null)
 			{
 				pc.stopAllEffects();
-				if (pc.getPet() != null)
+				if (pc.hasSummon())
 				{
-					pc.getPet().unSummon(pc);
+					pc.getSummon().unSummon(pc);
 				}
 				pc.teleToLocation(ARENAS[arena][0], ARENAS[arena][1], ARENAS[arena][2]);
 			}

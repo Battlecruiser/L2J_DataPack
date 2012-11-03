@@ -51,7 +51,7 @@ public class TargetPartyClan implements ITargetTypeHandler
 		final boolean hasParty = player.isInParty();
 		
 		if (L2Skill.addSummon(activeChar, player, radius, false))
-			targetList.add(player.getPet());
+			targetList.add(player.getSummon());
 		
 		// if player in clan and not in party
 		if (!(hasClan || hasParty))
@@ -96,7 +96,7 @@ public class TargetPartyClan implements ITargetTypeHandler
 				continue;
 			
 			if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, false))
-				targetList.add(obj.getPet());
+				targetList.add(obj.getSummon());
 			
 			if (!L2Skill.addCharacter(activeChar, obj, radius, false))
 				continue;

@@ -61,7 +61,7 @@ public class RideWyvern implements IBypassHandler
 			return false;
 		}
 		
-		if (activeChar.getPet() == null)
+		if (!activeChar.hasSummon())
 		{
 			if (activeChar.isMounted())
 			{
@@ -72,17 +72,17 @@ public class RideWyvern implements IBypassHandler
 				activeChar.sendMessage("Summon your Strider first.");
 			}
 		}
-		else if (Util.contains(STRIDERS, activeChar.getPet().getNpcId()))
+		else if (Util.contains(STRIDERS, activeChar.getSummon().getNpcId()))
 		{
 			if ((activeChar.getInventory().getItemByItemId(1460) != null) && (activeChar.getInventory().getItemByItemId(1460).getCount() >= 25))
 			{
-				if (activeChar.getPet().getLevel() < 55)
+				if (activeChar.getSummon().getLevel() < 55)
 				{
 					activeChar.sendMessage("Your Strider Has not reached the required level.");
 				}
 				else
 				{
-					activeChar.getPet().unSummon(activeChar);
+					activeChar.getSummon().unSummon(activeChar);
 					if (activeChar.mount(12621, 0, true))
 					{
 						activeChar.getInventory().destroyItemByItemId("Wyvern", 1460, 25, activeChar, npc);

@@ -386,7 +386,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
 	{
-		L2Playable attacker = (isPet ? player.getPet() : player);
+		L2Playable attacker = (isPet ? player.getSummon() : player);
 		if ((attacker.getLevel() - npc.getLevel()) >= 9)
 		{
 			if ((attacker.getBuffCount() > 0) || (attacker.getDanceCount() > 0))

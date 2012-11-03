@@ -522,9 +522,9 @@ public class Kamaloka extends Quest
 				continue;
 			e.exit();
 		}
-		if (ch.getPet() != null)
+		if (ch.getSummon() != null)
 		{
-			for (L2Effect e : ch.getPet().getAllEffects())
+			for (L2Effect e : ch.getSummon().getAllEffects())
 			{
 				if (e == null)
 					continue;

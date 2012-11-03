@@ -29,7 +29,7 @@ TYRANT_KINGPIN = 20193
 TRISALIM_TARANTULA = 20561
 
 def findPetLvl (player, itemid) :
-    pet = player.getPet()
+    pet = player.getSummon()
     if pet:
         if pet.getNpcId() == 12564 :
             level = pet.getStat().getLevel()
@@ -85,7 +85,7 @@ class Quest (JQuest) :
         plevel = findPetLvl(player,PENITENTS_MANACLES)
         level = player.getLevel()
         olevel = st.getInt("level")
-        pet = player.getPet()
+        pet = player.getSummon()
         if pet:
             if pet.getNpcId() == 12564 :
                 htmltext = "30981-16.htm"

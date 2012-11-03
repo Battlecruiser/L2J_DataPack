@@ -78,7 +78,7 @@ public class RentPet implements IBypassHandler
 	
 	public static final void tryRentPet(L2PcInstance player, int val)
 	{
-		if ((player == null) || (player.getPet() != null) || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
+		if ((player == null) || player.hasSummon() || player.isMounted() || player.isRentedPet() || player.isTransformed() || player.isCursedWeaponEquipped())
 		{
 			return;
 		}

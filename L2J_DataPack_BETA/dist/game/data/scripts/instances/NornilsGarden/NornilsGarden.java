@@ -250,10 +250,10 @@ public class NornilsGarden extends Quest
 		}
 		removeBuffs(player);
 		giveBuffs(player);
-		if (player.getPet() != null)
+		if (player.hasSummon())
 		{
-			removeBuffs(player.getPet());
-			giveBuffs(player.getPet());
+			removeBuffs(player.getSummon());
+			giveBuffs(player.getSummon());
 		}
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
