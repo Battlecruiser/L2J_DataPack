@@ -14,50 +14,30 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.CharEffectList;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * @author mkizub
+ * Unsummon Agathion effect.
+ * @author Zoey76
  */
-public class Stun extends L2Effect
+public class UnsummonAgathion extends SummonAgathion
 {
-	public Stun(Env env, EffectTemplate template)
+	public UnsummonAgathion(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	protected void setAgathionId(L2PcInstance player)
 	{
-		return L2EffectType.STUN;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		getEffected().startStunning();
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopStunning(false);
+		player.setAgathionId(0);
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
 		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return CharEffectList.EFFECT_FLAG_STUNNED;
 	}
 }

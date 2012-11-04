@@ -20,8 +20,8 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * @author UnAfraid
  * Removes all effects.
+ * @author UnAfraid
  */
 public class CancelAll extends L2Effect
 {

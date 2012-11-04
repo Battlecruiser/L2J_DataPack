@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author ZaKaX (Ghost @ L2D)
+ * @author ZaKaX
  */
 public class ClanGate extends L2Effect
 {

@@ -35,7 +35,6 @@ public class Debuff extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		// just stop this effect
 		return false;
 	}
 }

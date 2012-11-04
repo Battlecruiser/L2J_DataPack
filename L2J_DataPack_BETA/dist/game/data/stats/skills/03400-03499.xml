@@ -261,28 +261,40 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16031" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3424" levels="1" name="Little Devil Agathion - Summon (or Release)">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16032" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3425" levels="1" name="Rudolph Agathion - Summon (or Release)">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16033" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3426" levels="1" name="Maximum Ability">
 		<!-- Confirmed CT2.5 -->

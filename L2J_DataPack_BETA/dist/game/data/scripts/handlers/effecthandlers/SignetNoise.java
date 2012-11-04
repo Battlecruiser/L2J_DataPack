@@ -12,7 +12,6 @@
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -24,7 +23,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * @authors Forsaiken, Sami
+ * @author Forsaiken, Sami
  */
 public class SignetNoise extends L2Effect
 {

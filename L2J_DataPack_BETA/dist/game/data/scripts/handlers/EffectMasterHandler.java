@@ -83,10 +83,12 @@ import handlers.effecthandlers.SilentMove;
 import handlers.effecthandlers.Sleep;
 import handlers.effecthandlers.Spoil;
 import handlers.effecthandlers.Stun;
+import handlers.effecthandlers.SummonAgathion;
 import handlers.effecthandlers.TargetMe;
 import handlers.effecthandlers.ThrowUp;
 import handlers.effecthandlers.TransferDamage;
 import handlers.effecthandlers.Transformation;
+import handlers.effecthandlers.UnsummonAgathion;
 import handlers.effecthandlers.Warp;
 
 import java.lang.reflect.Method;
@@ -176,10 +178,12 @@ public final class EffectMasterHandler
 		Sleep.class,
 		Spoil.class,
 		Stun.class,
+		SummonAgathion.class,
 		TargetMe.class,
 		ThrowUp.class,
 		TransferDamage.class,
 		Transformation.class,
+		UnsummonAgathion.class,
 		Warp.class,
 	};
 	

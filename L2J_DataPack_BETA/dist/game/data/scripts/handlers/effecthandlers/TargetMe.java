@@ -78,7 +78,6 @@ public class TargetMe extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		// nothing
 		return false;
 	}
 }

@@ -30,7 +30,8 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
 /**
- * Implementation of the Confusion Effect
+ * Implementation of the Confusion Effect.<br>
+ * Zoey76: TODO: Review onActionTime() method.
  * @author littlecrow
  */
 public class ConfuseMob extends L2Effect
