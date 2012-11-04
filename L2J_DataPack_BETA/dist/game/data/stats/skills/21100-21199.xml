@@ -76,52 +76,76 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="21105" levels="1" name="Agathion Seal Cancel - Chon-chon">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1529" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21106" levels="1" name="Agathion Seal Cancel - Tang-tang">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1530" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21107" levels="1" name="Agathion Seal Cancel - Dancing Lucky Kid">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1531" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21108" levels="1" name="Agathion Seal Cancel - Monkey King">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1532" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21109" levels="1" name="Agathion Seal Cancel - Utanka">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1533" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21110" levels="1" name="Agathion Seal Cancel - Bonus B">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1534" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21111" levels="1" name="Great Adventurer's Soul Power: Resilience">
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
@@ -533,28 +557,40 @@
 		</for>
 	</skill>
 	<skill id="21133" levels="1" name="Agathion Seal Cancel - Zombie">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1535" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21134" levels="1" name="Agathion Seal Cancel - Baekyi Hwamae">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1536" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21135" levels="1" name="Agathion Seal Cancel - Kwanwoo Hwamae">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1537" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21136" levels="1" name="Authority of Golden Jack O'Lantern Mask">
 		<!-- Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour. -->
@@ -681,84 +717,124 @@
 		</for>
 	</skill>
 	<skill id="21142" levels="1" name="Agathion Seal Cancel - Gwangong">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1551" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21143" levels="1" name="Agathion Seal Cancel - Gwanseum Nyang Nyang">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1552" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21144" levels="1" name="Agathion Seal Cancel - Blue Opera">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1553" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21145" levels="1" name="Agathion Seal Cancel - Blue Opera">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1553" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21146" levels="1" name="Agathion Seal Cancel - Red Opera">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1554" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21147" levels="1" name="Agathion Seal Cancel - Opera">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1555" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21148" levels="1" name="Agathion Seal Cancel - Miss Chipao">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1556" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21149" levels="1" name="Agathion Seal Cancel - Nepal Snow">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1557" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21150" levels="1" name="Agathion Seal Cancel - Round Ball Snow">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1558" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21151" levels="1" name="Agathion Seal Cancel - Ladder Snow">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1559" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21152" levels="1" name="Continuous Fireworks">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -838,100 +914,148 @@
 		</for>
 	</skill>
 	<skill id="21157" levels="1" name="Agathion Seal Cancel - Iken">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1539" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21158" levels="1" name="Agathion Seal Cancel - Lana">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1540" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21159" levels="1" name="Agathion Seal Cancel - Gnocian">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1541" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21160" levels="1" name="Agathion Seal Cancel - Orodriel">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1542" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21161" levels="1" name="Agathion Seal Cancel - Lakinos">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1543" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21162" levels="1" name="Agathion Seal Cancel - Mortia">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1544" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21163" levels="1" name="Agathion Seal Cancel - Hayance">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1545" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21164" levels="1" name="Agathion Seal Cancel - Meruril">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1546" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21165" levels="1" name="Agathion Seal Cancel - Taman ze Lapatui">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1547" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21166" levels="1" name="Agathion Seal Cancel - Kaurin">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1548" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21167" levels="1" name="Agathion Seal Cancel - Ahertbein">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1549" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21168" levels="1" name="Agathion Seal Cancel - Naonin">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1550" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21169" levels="1" name="Transform Kadomas">
 		<set name="abnormalLvl" val="1" />
@@ -1113,12 +1237,16 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21191" levels="1" name="Agathion Seal Cancel - Phoenix">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1574" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21192" levels="1" name="Silent Move">
 		<set name="abnormalLvl" val="26" />
@@ -1148,12 +1276,16 @@
 		<set name="staticReuse" val="true" />
 	</skill>
 	<skill id="21194" levels="1" name="Agathion Seal Cancel - Three-headed Dragon">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="AGATHION" />
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="operateType" val="A1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1575" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SummonAgathion" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="21195" levels="1" name="Blessed Child Transformation Skill - Trejuo">
 		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->

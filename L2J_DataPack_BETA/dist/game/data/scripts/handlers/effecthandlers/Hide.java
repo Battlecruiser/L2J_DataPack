@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
- * @author ZaKaX - nBd
+ * @author ZaKaX, nBd
  */
 public class Hide extends L2Effect
 {

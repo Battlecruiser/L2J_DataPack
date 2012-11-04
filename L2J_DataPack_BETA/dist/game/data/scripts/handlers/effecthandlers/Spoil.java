@@ -62,7 +62,6 @@ public class Spoil extends L2Effect
 			return false;
 		}
 		
-		// SPOIL SYSTEM by Lbaldi
 		boolean spoil = false;
 		if (target.isDead() == false)
 		{
@@ -77,7 +76,6 @@ public class Spoil extends L2Effect
 			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		}
 		return true;
-		
 	}
 	
 	@Override

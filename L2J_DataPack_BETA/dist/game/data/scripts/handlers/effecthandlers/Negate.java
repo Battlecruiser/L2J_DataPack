@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * 
  * @author Gnat
  */
 public class Negate extends L2Effect

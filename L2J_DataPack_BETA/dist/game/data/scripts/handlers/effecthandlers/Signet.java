@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
- * @authors Forsaiken, Sami
+ * @author Forsaiken, Sami
  */
 public class Signet extends L2Effect
 {

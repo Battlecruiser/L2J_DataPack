@@ -1959,7 +1959,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalVisualEffect="poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" abnormalLvl="#abnormalLvls" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3196" levels="10" name="Item Skill: Bleed">

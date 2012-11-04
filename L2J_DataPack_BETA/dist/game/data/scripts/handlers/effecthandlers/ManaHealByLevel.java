@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author UnAfraid
- *
  */
 public class ManaHealByLevel extends L2Effect
 {

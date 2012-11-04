@@ -21,7 +21,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- ** @author Gnacik
+ * @author Gnacik
  */
 public class DispelBySlot extends L2Effect
 {
