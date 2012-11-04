@@ -56,15 +56,11 @@ public class SummonAgathion extends L2Effect
 	public void onExit()
 	{
 		super.onExit();
-		
-		System.out.println("On action time: " + onActionTime());
-		System.out.println("Is in Use: " + getInUse());
 		final L2PcInstance player = getEffector().getActingPlayer();
 		if (player != null)
 		{
 			player.setAgathionId(0);
 			player.broadcastUserInfo();
-			System.out.println("Exiting");
 		}
 	}
 	

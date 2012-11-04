@@ -550,7 +550,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		int start = ((page - 1) * PAGE_LIMIT);
 		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, tradeList.getItems().size());
-		//System.out.println("page: " + page + "; tradeList.getItems().size(): " + tradeList.getItems().size() + "; start: " + start + "; end: " + end + "; max: " + max);
 		for (L2TradeItem item : tradeList.getItems(start, end))
 		{
 			StringUtil.append(replyMSG, "<tr><td><a action=\"bypass -h admin_editShopItem ",
