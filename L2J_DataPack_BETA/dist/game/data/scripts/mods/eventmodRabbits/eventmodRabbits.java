@@ -118,6 +118,7 @@ public class eventmodRabbits extends Event
 		// Check Custom Table - we use custom NPC's
 		if (!Config.CUSTOM_NPC_TABLE)
 		{
+			_log.info(getName() + ": Event can't be started, because custom npc table is disabled!");
 			return false;
 		}
 		
