@@ -43,12 +43,6 @@ public class ManaHeal implements ISkillHandler
 	{
 		for (L2Character target: (L2Character[]) targets)
 		{
-			// if skill power is "0 or less" don't show heal system message.
-			if (skill.getPower() <= 0)
-			{
-				continue;
-			}
-			
 			if (target.isInvul())
 				continue;
 			
