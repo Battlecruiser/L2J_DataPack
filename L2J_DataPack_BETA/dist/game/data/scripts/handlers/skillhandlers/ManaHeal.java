@@ -105,18 +105,22 @@ public class ManaHeal implements ISkillHandler
 			target.sendPacket(sump);
 			
 			SystemMessage sm;
-			if (activeChar.isPlayer() && activeChar != target)
+			// if skill power is "0 or less" don't show heal system message.
+			if (skill.getPower() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-				sm.addString(activeChar.getName());
-				sm.addNumber((int) mp);
-				target.sendPacket(sm);
-			}
-			else
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-				sm.addNumber((int) mp);
-				target.sendPacket(sm);
+				if (activeChar.isPlayer() && activeChar != target)
+				{
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
+					sm.addString(activeChar.getName());
+					sm.addNumber((int) mp);
+					target.sendPacket(sm);
+				}
+				else
+				{
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
+					sm.addNumber((int) mp);
+					target.sendPacket(sm);
+				}
 			}
 			
 			if (skill.hasEffects())
