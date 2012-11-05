@@ -344,37 +344,48 @@
 		</for>
 	</skill>
 	<skill id="822" levels="3" name="Repair Golem">
-		<table name="#mpConsume"> 61 78 88 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggroPoints"> 362 481 562 </table>
 		<table name="#amount"> 8 12 15 </table>
-		<set name="aggroPoints" val="#amount" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SUMMON" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="2500" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="A1" />
+		<table name="#magicLvl"> 40 49 55 </table>
+		<table name="#mpConsume"> 61 78 88 </table>
+		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="80" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="target" val="TARGET_SUMMON" />
+		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
 		<for>
 			<effect name="HealPercent" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="823" levels="3" name="Strengthen Golem">
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggroPoints"> 408 495 549 </table>
+		<table name="#magicLvl"> 43 52 58 </table>
+		<table name="#mpConsume"> 24 36 42 </table>
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
-		<table name="#mpConsume"> 24 36 42 </table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="pa_up" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SUMMON" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
+		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="castRange" val="400" />
-		<set name="effectRange" val="900" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SUMMON" />
+		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -383,91 +394,98 @@
 		</for>
 	</skill>
 	<skill id="824" levels="3" name="Golem Reinforcement">
-		<table name="#pDef"> 1.08 1.12 1.15 </table>
+		<!-- Confirmed CT2.5 -->
+		<table name="#aggroPoints"> 379 467 523 </table>
+		<table name="#magicLvl"> 40 49 55 </table>
 		<table name="#maxHp"> 1.05 1.08 1.1 </table>
-		<table name="#mpConsume"> 35 44 41 </table>
+		<table name="#mpConsume"> 35 44 44 </table>
+		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="pd_up" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SUMMON" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="40" />
+		<set name="coolTime" val="500" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SUMMON" />
+		<!-- FIXME: It shouldn't affect all summons, missing condition for target race "construct" -->
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="4" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="825" levels="1" name="Sharp Edge">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="magicLvl" val="49" />
-		<set name="mpInitialConsume" val="16" />
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="49" />
+		<set name="mpConsume" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
-					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
 				</mul>
 				<basemul order="0x30" stat="rCrit" val="0.2">
-					<using kind="Sword,Big Sword,Dual Sword,Ancient,Rapier,Dagger,Dual Dagger,Pole,Dual Fist" />
+					<using kind="Sword,Big Sword,Dagger,Dual Dagger,Pole,Rapier,Ancient,Dual Sword,Dual Fist" />
 				</basemul>
 			</effect>
 		</for>
 	</skill>
 	<skill id="826" levels="1" name="Spike">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="magicLvl" val="49" />
-		<set name="mpInitialConsume" val="16" />
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="49" />
+		<set name="mpConsume" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
-				<add order="0x40" stat="stunProf" val="8">
-					<using kind="Blunt,Big Blunt" />
-				</add>
+				<add order="0x40" stat="stunProf" val="8" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="827" levels="1" name="Restring">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
-		<set name="magicLvl" val="49" />
-		<set name="mpInitialConsume" val="16" />
-		<set name="mpConsume" val="28" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="49" />
+		<set name="mpConsume" val="44" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
@@ -480,19 +498,20 @@
 		</for>
 	</skill>
 	<skill id="828" levels="1" name="Case Harden">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="magicLvl" val="46" />
-		<set name="mpInitialConsume" val="15" />
-		<set name="mpConsume" val="25" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="46" />
+		<set name="mpConsume" val="41" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
@@ -502,19 +521,20 @@
 		</for>
 	</skill>
 	<skill id="829" levels="1" name="Hard Tanning">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="magicLvl" val="46" />
-		<set name="mpInitialConsume" val="15" />
-		<set name="mpConsume" val="25" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="46" />
+		<set name="mpConsume" val="41" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
@@ -527,19 +547,20 @@
 		</for>
 	</skill>
 	<skill id="830" levels="1" name="Embroider">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
-		<set name="magicLvl" val="46" />
-		<set name="mpInitialConsume" val="15" />
-		<set name="mpConsume" val="25" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="46" />
+		<set name="mpConsume" val="41" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="dwarf_defence_buff">
 				<mul order="0x30" stat="pDef" val="1.05">
