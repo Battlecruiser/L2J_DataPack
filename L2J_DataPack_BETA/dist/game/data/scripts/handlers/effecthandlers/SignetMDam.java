@@ -59,7 +59,7 @@ public class SignetMDam extends L2Effect
 	{
 		L2NpcTemplate template;
 		if (getSkill() instanceof L2SkillSignetCasttime)
-			template = NpcTable.getInstance().getTemplate(((L2SkillSignetCasttime) getSkill())._effectNpcId);
+			template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
 		else
 			return false;
 		

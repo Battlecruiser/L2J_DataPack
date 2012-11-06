@@ -521,7 +521,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="13037" />
+		<set name="npcId" val="13037" />
 		<set name="triggerSkillId" val="5267" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -547,7 +547,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="13037" />		
+		<set name="npcId" val="13037" />
 		<set name="triggerSkillId" val="5268" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -573,7 +573,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="13037" />
+		<set name="npcId" val="13037" />
 		<set name="triggerSkillId" val="5269" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -599,7 +599,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="13037" />
+		<set name="npcId" val="13037" />
 		<set name="triggerSkillId" val="5270" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -625,7 +625,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="13037" />
+		<set name="npcId" val="13037" />
 		<set name="triggerSkillId" val="5271" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -2026,7 +2026,7 @@
 	<skill id="574" levels="4" name="Bomb Installation">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 60 63 66 69 </table>
-		<table name="#npcTrapId"> 13040 13041 13042 13043 </table>
+		<table name="#npcId"> 13040 13041 13042 13043 </table>
 		<table name="#triggerSkillLvl"> 4 5 6 7 </table>
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2037,7 +2037,7 @@
 		<set name="skillType" val="SUMMON_TRAP" />
 		<set name="summonTotalLifeTime" val="30000" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="trapNpcId" val="#npcTrapId" />
+		<set name="npcId" val="#npcId" />
 		<set name="triggerSkillId" val="5267" />
 		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
 	</skill>
