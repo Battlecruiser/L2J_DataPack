@@ -803,11 +803,15 @@
 		</for>
 	</skill>
 	<skill id="9069" levels="1" name="10,000 SP scroll">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="10000" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="GIVE_SP" />
+		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="9070" levels="1" name="Halloween Pumpkin">
 		<!-- Confirmed CT2.5 -->
