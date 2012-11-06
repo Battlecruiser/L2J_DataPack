@@ -692,10 +692,11 @@
 		</for>
 	</skill>
 	<skill id="2167" levels="4" name="Scroll of SP">
+		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 500 5000 100000 500000 </table>
+		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="hitTime" val="200" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />

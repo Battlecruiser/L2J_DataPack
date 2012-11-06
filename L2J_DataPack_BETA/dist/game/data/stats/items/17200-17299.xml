@@ -569,18 +569,26 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="17276" type="EtcItem" name="5,000,000 SP scroll">
-		<!-- Description: Scroll that replenishes 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9180-1" />
 	</item>
 	<item id="17277" type="EtcItem" name="100,000,000 SP scroll">
-		<!-- Description: Scroll that replenishes 100,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9180-2" />
 	</item>
 	<item id="17278" type="EtcItem" name="Strider Pet Exchange Pack">
 		<!-- Description: Dimensional item pack. Wrapped pack containing a Strider pet exchange coupon. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
