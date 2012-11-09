@@ -1549,22 +1549,25 @@
 	</skill>
 	<skill id="1560" levels="1" name="Lucky Blow">
 		<!-- High Five Skill -->
-		<set name="baseCritRate" val="15" /> <!-- FIXME: value unconfirmed -->
-		<set name="blowChance" val="20" /> <!-- FIXME: value unconfirmed -->
+		<set name="baseCritRate" val="30" />
+		<set name="blowChance" val="60" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="16" /> <!-- Crit -->
+		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
-		<set name="lethal1" val="10" /> <!-- FIXME: value unconfirmed -->
-		<set name="lethal2" val="5" /> <!-- FIXME: value unconfirmed -->
+		<set name="lethal1" val="8" />
+		<set name="lethal2" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="82" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="11234" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BLOW" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Dagger" />
 		</cond>
