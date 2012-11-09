@@ -36,19 +36,19 @@
 		<set name="effectRange" val="550" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
 		<!-- Increases Speed by 100% for 5 seconds with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="speed_up_special">
-				<mul order="0x30" stat="runSpd" val="2.0" />
+				<mul order="0x30" stat="runSpd" val="2" />
 			</effect>
 		</for>
 	</skill>
@@ -56,7 +56,7 @@
 		<!-- Increases Critical Rate by 30% for 20 minutes with a dragon's strength. -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="1" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="4000" />
@@ -72,7 +72,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_SELF" />
