@@ -28,13 +28,11 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.L2Summon;
@@ -476,9 +474,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
 			player.sendMessage("Your gender has been changed by a GM");
 			player.broadcastUserInfo();
-			// Transform-untransorm player quickly to force the client to reload the character textures
-			TransformationManager.getInstance().transformPlayer(105, player);
-			ThreadPoolManager.getInstance().scheduleGeneral(new Untransform(player), 200);
 		}
 		else if (command.startsWith("admin_setcolor"))
 		{
@@ -1471,21 +1466,5 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%player%", target.getName());
 		html.replace("%party%", text.toString());
 		activeChar.sendPacket(html);
-	}
-
-	private final class Untransform implements Runnable
-	{
-		private final L2PcInstance _player;
-
-		protected Untransform(L2PcInstance player)
-		{
-			_player = player;
-		}
-
-		@Override
-		public void run()
-		{
-			_player.untransform();
-		}
 	}
 }
