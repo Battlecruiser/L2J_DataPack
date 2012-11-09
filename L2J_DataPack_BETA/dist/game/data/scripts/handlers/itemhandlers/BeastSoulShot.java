@@ -42,7 +42,7 @@ public class BeastSoulShot implements IItemHandler
 		}
 		
 		final L2PcInstance activeOwner = playable.getActingPlayer();
-		if (activeOwner.hasSummon())
+		if (!activeOwner.hasSummon())
 		{
 			activeOwner.sendPacket(SystemMessageId.PETS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
