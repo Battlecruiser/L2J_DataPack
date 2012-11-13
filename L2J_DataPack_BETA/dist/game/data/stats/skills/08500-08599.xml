@@ -87,11 +87,14 @@
 		</for>
 	</skill>
 	<skill id="8509" levels="1" name="High Angel Circlet">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="RECALL" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
