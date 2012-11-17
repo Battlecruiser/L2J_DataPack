@@ -58,9 +58,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5414-1;3269-1;3267-1" />
-		<set name="equip_condition" val="{{ec_agit;1};{ec_agit_num;{62}}}" />
 		<cond msgId="1518">
-			<player clanHall="65" />
+			<player clanHall="62" />
 		</cond>
 	</item>
 	<item id="9606" type="Armor" name="Agathion Seal Bracelet - Wild Beast Reserve">
@@ -76,7 +75,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5413-1;3270-1;3267-1" />
-		<set name="equip_condition" val="{{ec_agit;1};{ec_agit_num;{63}}}" />
 		<cond msgId="1518">
 			<player clanHall="63" />
 		</cond>
