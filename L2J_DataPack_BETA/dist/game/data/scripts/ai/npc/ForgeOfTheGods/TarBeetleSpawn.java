@@ -42,7 +42,7 @@ import com.l2jserver.util.Rnd;
 public class TarBeetleSpawn extends DocumentParser
 {
 	private static final Map<Integer, SpawnZone> _spawnZoneList = new HashMap<>();
-	private static final Map<Integer, Beetle> _spawnList = new FastMap<>();
+	private static final Map<Integer, L2Npc> _spawnList = new FastMap<>();
 	
 	public static List<Integer> lowerZones = new ArrayList<>();
 	public static List<Integer> upperZones = new ArrayList<>();
@@ -152,8 +152,9 @@ public class TarBeetleSpawn extends DocumentParser
 			npc.setIsImmobilized(true);
 			npc.setIsInvul(true);
 			npc.disableCoreAI(true);
+			npc.setScriptValue(5);
 			
-			_spawnList.put(npc.getObjectId(), new Beetle(npc));
+			_spawnList.put(npc.getObjectId(), npc);
 		}
 		catch (Exception e)
 		{
@@ -172,40 +173,14 @@ public class TarBeetleSpawn extends DocumentParser
 		return _spawnZoneList.get(id);
 	}
 	
-	public Beetle getBeetle(L2Npc npc)
+	public L2Npc getBeetle(L2Npc npc)
 	{
 		return _spawnList.get(npc.getObjectId());
 	}
 	
-	public static Map<Integer, Beetle> getSpawnList()
+	public static Map<Integer, L2Npc> getSpawnList()
 	{
 		return _spawnList;
-	}
-	
-	public class Beetle
-	{
-		private int _numShotValue = 5;
-		private final L2Npc _npc;
-		
-		public Beetle(L2Npc npc)
-		{
-			_npc = npc;
-		}
-		
-		public L2Npc getNpc()
-		{
-			return _npc;
-		}
-		
-		public void setNumShotValue(int numShotValue)
-		{
-			_numShotValue = numShotValue;
-		}
-		
-		public int getNumShotValue()
-		{
-			return _numShotValue;
-		}
 	}
 	
 	private class SpawnZone extends L2Territory
@@ -269,16 +244,16 @@ public class TarBeetleSpawn extends DocumentParser
 		@Override
 		public void run()
 		{
-			Iterator<Beetle> iterator = getSpawnList().values().iterator();
+			Iterator<L2Npc> iterator = getSpawnList().values().iterator();
 			while (iterator.hasNext())
 			{
-				Beetle b = iterator.next();
-				int val = b.getNumShotValue();
+				L2Npc npc = iterator.next();
+				int val = npc.getScriptValue();
 				if (val == 5)
 				{
-					b.getNpc().deleteMe();
+					npc.deleteMe();
 					iterator.remove();
-					if (b.getNpc().getSpawn().getLocz() < -5000)
+					if (npc.getSpawn().getLocz() < -5000)
 					{
 						lowerNpcCount--;
 					}
@@ -289,7 +264,7 @@ public class TarBeetleSpawn extends DocumentParser
 				}
 				else
 				{
-					b.setNumShotValue(val + 1);
+					npc.setScriptValue(val + 1);
 				}
 			}
 		}

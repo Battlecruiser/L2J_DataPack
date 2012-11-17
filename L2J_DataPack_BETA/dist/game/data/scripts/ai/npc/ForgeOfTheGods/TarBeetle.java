@@ -45,7 +45,7 @@ public class TarBeetle extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if ((spawn.getBeetle(npc).getNumShotValue() > 0) && canCastSkill(npc))
+		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
 		{
 			int level = 0;
 			final L2Effect effect = player.getFirstEffect(SKILL_ID);
@@ -68,14 +68,14 @@ public class TarBeetle extends AbstractNpcAI
 	{
 		if ((skill != null) && (skill.getId() == SKILL_ID))
 		{
-			int val = spawn.getBeetle(npc).getNumShotValue() - 1;
+			int val = spawn.getBeetle(npc).getScriptValue() - 1;
 			if ((val <= 0) || (SKILLS[0].getSkill().getMpConsume() > npc.getCurrentMp()))
 			{
 				spawn.removeBeetle(npc);
 			}
 			else
 			{
-				spawn.getBeetle(npc).setNumShotValue(val);
+				spawn.getBeetle(npc).isScriptValue(val);
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
