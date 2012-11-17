@@ -68,13 +68,13 @@ public class OlympiadManagerLink implements IBypassHandler
 		
 		try
 		{
-			if (command.toLowerCase().startsWith(COMMANDS[0])) // desc
+			if (command.toLowerCase().startsWith("olympiaddesc"))
 			{
 				int val = Integer.parseInt(command.substring(13, 14));
 				String suffix = command.substring(14);
 				((L2OlympiadManagerInstance) target).showChatWindow(activeChar, val, suffix);
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[1])) // noble
+			else if (command.toLowerCase().startsWith("olympiadnoble"))
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				if (activeChar.isCursedWeaponEquipped())
@@ -222,7 +222,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						break;
 				}
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[2])) // buff
+			else if (command.toLowerCase().startsWith("olybuff"))
 			{
 				if (activeChar.olyBuff <= 0)
 				{
@@ -281,10 +281,10 @@ public class OlympiadManagerLink implements IBypassHandler
 					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
-					target.deleteMe();
+					target.decayMe();
 				}
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[3])) // olympiad
+			else if (command.toLowerCase().startsWith("olympiad"))
 			{
 				int val = Integer.parseInt(command.substring(9, 10));
 				
