@@ -953,10 +953,10 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="attack_time_down" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -965,8 +965,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<!-- 0.02%HP * 3 during 180 seconds (NOTE: using 3 in dot for now, due support for dot in % is not done) -->
-			<effect count="60" name="DamOverTime" abnormalTime="3" val="3" abnormalLvl="2" abnormalType="attack_time_down">
+			<effect count="36" name="DamOverTime" abnormalTime="5" val="0.02" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
