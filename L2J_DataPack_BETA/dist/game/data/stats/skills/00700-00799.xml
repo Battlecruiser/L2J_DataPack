@@ -1304,20 +1304,21 @@
 		</for>
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
-		<set name="power" val="80" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="87" />
-		<set name="saveVs" val="MEN" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="100" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="FEAR" />
 		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="power" val="80" />
 		<set name="reuseDelay" val="75000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="FEAR" />
+		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="4" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee">
@@ -1470,21 +1471,22 @@
 		</for>
 	</skill>
 	<skill id="771" levels="1" name="Flame Hawk">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3500" />
-		<set name="coolTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="8049" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillRadius" val="80" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="baseCritRate" val="15" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
 		</cond>
@@ -1493,21 +1495,22 @@
 		</for>
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="600" />
+		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="coolTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="7043" />
 		<set name="reuseDelay" val="75000" />
+		<set name="skillRadius" val="200" />
 		<set name="skillType" val="PDAM" />
-		<set name="skillRadius" val="100" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="baseCritRate" val="15" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
 		</cond>
@@ -1516,18 +1519,19 @@
 		</for>
 	</skill>
 	<skill id="773" levels="1" name="Ghost Piercing">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
+		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
-		<set name="coolTime" val="1000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="8452" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillRadius" val="80" /> <!-- FIXME: value unconfirmed -->
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -1564,20 +1568,21 @@
 		</for>
 	</skill>
 	<skill id="775" levels="1" name="Weapon Blockade">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="chargeConsume" val="2" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="STR" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="58" />
-		<set name="chargeConsume" val="2" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="15000" />
+		<set name="saveVs" val="STR" />
 		<set name="skillType" val="DISARM" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
@@ -1587,7 +1592,9 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
+			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
+				<mul order="0x30" stat="pAtk" val="0.6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="776" levels="1" name="Force of Destruction">
@@ -1596,13 +1603,13 @@
 		<set name="abnormalType" val="force_of_destruction" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
+		<set name="chargeConsume" val="2" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1200" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="37" />
-		<set name="chargeConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="4500" />
@@ -1618,7 +1625,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" abnormalTime="1" val="80" abnormalLvl="10" abnormalType="force_of_destruction" effectPower="70" effectType="DOT" />
+			<effect count="20" name="DamOverTime" abnormalTime="1" val="80" abnormalLvl="10" abnormalType="force_of_destruction" effectPower="70" effectType="DOT" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
