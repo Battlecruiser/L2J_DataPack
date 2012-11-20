@@ -965,7 +965,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect count="36" name="DamOverTime" abnormalTime="5" val="0.02" abnormalLvl="2" abnormalType="attack_time_down">
+			<effect count="36" name="DamOverTimePercent" abnormalTime="5" val="0.02" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
