@@ -594,7 +594,7 @@
 	<skill id="6435" levels="3" name="Curse of the Plains">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<table name="#dot"> 100 200 300 </table>
+		<table name="#dot"> 0.005 0.01 0.02 </table>
 		<table name="#rCrit"> 0.2 0.5 0.75 </table>
 		<table name="#cAtk"> 1.2 1.3 1.4 </table>
 		<table name="#abnormalLvls"> 7 8 9 </table>
@@ -609,8 +609,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<!-- TODO: DOT should be by % and values per level are 0.005 0.01 0.02 -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="multi_debuff">
+			<effect count="5" name="DamOverTimePercent" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="multi_debuff">
 				<basemul order="0x30" stat="rCrit" val="#rCrit">
 					<using kind="Bow,Crossbow" />
 				</basemul>
@@ -634,8 +633,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<!-- TODO: DOT should be by % and value is 0.05 -->
-			<effect count="3" name="DamOverTime" abnormalTime="5" val="400" abnormalLvl="10" abnormalType="multi_debuff">
+			<effect count="3" name="DamOverTimePercent" abnormalTime="5" val="0.05" abnormalLvl="10" abnormalType="multi_debuff">
 				<basemul order="0x30" stat="rCrit" val="0.9">
 					<using kind="Bow,Crossbow" />
 				</basemul>
