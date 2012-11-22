@@ -40170,7 +40170,7 @@ INSERT INTO `droplist` VALUES
 (22815, 10403, 1, 1, -1, 2195), -- Icarus Hand Piece
 (22815, 15778, 1, 1, -1, 1526), -- Recipe - Sealed Moirai Breastplate (60%)
 (22815, 10218, 1, 1, -1, 7), -- Icarus Heavy Arms
-(22815, 57, 2710, 6322, 0, 700000), -- Adena
+(22815, 57, 2710, 6322, 0, 660000), -- Adena
 (22815, 9442, 1, 1, 1, 1), -- Dynasty Sword
 (22815, 9443, 1, 1, 1, 1), -- Dynasty Blade
 (22815, 9444, 1, 1, 1, 1), -- Dynasty Phantom
@@ -40193,7 +40193,7 @@ INSERT INTO `droplist` VALUES
 (22818, 15781, 1, 1, -1, 1465), -- Recipe - Sealed Moirai Gaiter (60%)
 (22818, 10402, 1, 1, -1, 1318), -- Icarus Hammer Piece
 (22818, 10219, 1, 1, -1, 4), -- Icarus Trident
-(22818, 57, 1624, 3794, 0, 700000), -- Adena
+(22818, 57, 1624, 3794, 0, 660000), -- Adena
 (22818, 15703, 1, 1, 1, 15), -- Sealed Moirai Gauntlet
 (22818, 15704, 1, 1, 1, 15), -- Sealed Moirai Leather Gloves
 (22818, 15705, 1, 1, 1, 15), -- Sealed Moirai Gloves
@@ -40212,7 +40212,7 @@ INSERT INTO `droplist` VALUES
 (22819, 10403, 1, 1, -1, 2196), -- Icarus Hand Piece
 (22819, 15778, 1, 1, -1, 1526), -- Recipe - Sealed Moirai Breastplate (60%)
 (22819, 10218, 1, 1, -1, 7), -- Icarus Heavy Arms
-(22819, 57, 1624, 3794, 0, 700000), -- Adena
+(22819, 57, 1624, 3794, 0, 660000), -- Adena
 (22819, 15706, 1, 1, 1, 15), -- Sealed Moirai Boots
 (22819, 15707, 1, 1, 1, 15), -- Sealed Moirai Leather Boots
 (22819, 15708, 1, 1, 1, 15), -- Sealed Moirai Shoes
@@ -40231,7 +40231,7 @@ INSERT INTO `droplist` VALUES
 (22820, 9629, 1, 1, -1, 17780), -- Adamantine
 (22820, 10404, 1, 1, -1, 1748), -- Icarus Hall Piece
 (22820, 15780, 1, 1, -1, 1619), -- Recipe - Sealed Moirai Tunic (60%)
-(22820, 57, 1724, 4029, 0, 700000), -- Adena
+(22820, 57, 1724, 4029, 0, 660000), -- Adena
 (22820, 15709, 1, 1, 1, 15), -- Sealed Moirai Sigil
 (22820, 15710, 1, 1, 1, 15), -- Sealed Moirai Shield
 (22820, 13893, 1, 1, 1, 5), -- Sealed Holy Spirit's Cloak
@@ -40247,7 +40247,7 @@ INSERT INTO `droplist` VALUES
 (22820, 9574, 1, 1, 2, 466), -- Mid-Grade Life Stone - Level 80
 (22820, 9575, 1, 1, 2, 47), -- High-Grade Life Stone - Level 80
 -- Immortal Necromancer
-(22821, 57, 1724, 4029, 0, 700000), -- Adena
+(22821, 57, 1724, 4029, 0, 660000), -- Adena
 (22821, 15703, 1, 1, 1, 16), -- Sealed Moirai Gauntlet
 (22821, 15704, 1, 1, 1, 16), -- Sealed Moirai Leather Gloves
 (22821, 15705, 1, 1, 1, 16), -- Sealed Moirai Gloves
@@ -40270,7 +40270,7 @@ INSERT INTO `droplist` VALUES
 (22822, 15780, 1, 1, -1, 9987), -- Recipe - Sealed Moirai Tunic (60%)
 (22822, 10373, 1, 1, -1, 1626), -- Recipe - Icarus Sawsword (60%)
 (22822, 15697, 1, 1, -1, 150), -- Sealed Moirai Breastplate
-(22822, 57, 18619, 43478, 0, 700000), -- Adena
+(22822, 57, 18619, 43478, 0, 660000), -- Adena
 (22822, 15697, 1, 1, 1, 86), -- Sealed Moirai Breastplate
 (22822, 10221, 1, 1, 1, 19), -- Icarus Hand
 (22822, 1879, 1, 3, 2, 201329), -- Cokes
@@ -40295,7 +40295,7 @@ INSERT INTO `droplist` VALUES
 (22823, 959, 1, 1, -1, 549), -- Scroll: Enchant Weapon (S-Grade)
 (22823, 10220, 1, 1, -1, 18), -- Icarus Hammer
 (22823, 10223, 1, 1, -1, 18), -- Icarus Spitter
-(22823, 57, 13033, 30434, 0, 700000), -- Adena
+(22823, 57, 13033, 30434, 0, 660000), -- Adena
 (22823, 15706, 1, 1, 1, 161), -- Sealed Moirai Boots
 (22823, 15699, 1, 1, 1, 54), -- Sealed Moirai Tunic
 (22823, 10223, 1, 1, 1, 9), -- Icarus Spitter
@@ -40318,7 +40318,7 @@ INSERT INTO `droplist` VALUES
 (22824, 15778, 1, 1, -1, 9071), -- Recipe - Sealed Moirai Breastplate (60%)
 (22824, 15797, 1, 1, -1, 8727), -- Recipe - Sealed Vesper Tunic (60%)
 (22824, 10216, 1, 1, -1, 39), -- Icarus Disperser
-(22824, 57, 25780, 60169, 0, 700000), -- Adena
+(22824, 57, 25780, 60169, 0, 660000), -- Adena
 (22824, 15697, 1, 1, 1, 119), -- Sealed Moirai Breastplate
 (22824, 10216, 1, 1, 1, 26), -- Icarus Disperser
 (22824, 1888, 1, 1, 2, 75996), -- Synthetic Cokes
@@ -40345,7 +40345,7 @@ INSERT INTO `droplist` VALUES
 (22825, 15803, 1, 1, -1, 28546), -- Recipe - Sealed Vesper Gloves (60%)
 (22825, 10404, 1, 1, -1, 14233), -- Icarus Hall Piece
 (22825, 15780, 1, 1, -1, 13187), -- Recipe - Sealed Moirai Tunic (60%)
-(22825, 57, 24584, 57408, 0, 700000), -- Adena
+(22825, 57, 24584, 57408, 0, 660000), -- Adena
 (22825, 15710, 1, 1, 1, 433), -- Sealed Moirai Shield
 (22825, 10215, 1, 1, 1, 25), -- Icarus Sawsword
 (22825, 1895, 3, 9, 2, 165717), -- Metallic Fiber
@@ -40367,7 +40367,7 @@ INSERT INTO `droplist` VALUES
 (22826, 10399, 1, 1, -1, 7886), -- Icarus Spirit Piece
 (22826, 10402, 1, 1, -1, 7861), -- Icarus Hammer Piece
 (22826, 15778, 1, 1, -1, 5463), -- Recipe - Sealed Moirai Breastplate (60%)
-(22826, 57, 13579, 31708, 0, 700000), -- Adena
+(22826, 57, 13579, 31708, 0, 660000), -- Adena
 (22826, 15703, 1, 1, 1, 251), -- Sealed Moirai Gauntlet
 (22826, 10216, 1, 1, 1, 14), -- Icarus Disperser
 (22826, 1895, 1, 3, 2, 274590), -- Metallic Fiber
@@ -40388,7 +40388,7 @@ INSERT INTO `droplist` VALUES
 (22827, 15778, 1, 1, -1, 12155), -- Recipe - Sealed Moirai Breastplate (60%)
 (22827, 10216, 1, 1, -1, 53), -- Icarus Disperser
 (22827, 10215, 1, 1, -1, 53), -- Icarus Sawsword
-(22827, 57, 25908, 60468, 0, 700000), -- Adena
+(22827, 57, 25908, 60468, 0, 660000), -- Adena
 (22827, 15709, 1, 1, 1, 456), -- Sealed Moirai Sigil
 (22827, 10217, 1, 1, 1, 26), -- Icarus Spirit
 (22827, 1879, 3, 9, 2, 101833), -- Cokes
@@ -40410,7 +40410,7 @@ INSERT INTO `droplist` VALUES
 (22828, 10401, 1, 1, -1, 7890), -- Icarus Trident Piece
 (22828, 13893, 1, 1, -1, 129), -- Sealed Holy Spirit's Cloak
 (22828, 10218, 1, 1, -1, 24), -- Icarus Heavy Arms
-(22828, 57, 13629, 31826, 0, 700000), -- Adena
+(22828, 57, 13629, 31826, 0, 660000), -- Adena
 (22828, 15704, 1, 1, 1, 252), -- Sealed Moirai Leather Gloves
 (22828, 10218, 1, 1, 1, 14), -- Icarus Heavy Arms
 (22828, 1879, 1, 3, 2, 147374), -- Cokes
@@ -40431,7 +40431,7 @@ INSERT INTO `droplist` VALUES
 (22829, 15780, 1, 1, -1, 19362), -- Recipe - Sealed Moirai Tunic (60%)
 (22829, 959, 1, 1, -1, 1956), -- Scroll: Enchant Weapon (S-Grade)
 (22829, 10217, 1, 1, -1, 63), -- Icarus Spirit
-(22829, 57, 25783, 60208, 0, 700000), -- Adena
+(22829, 57, 25783, 60208, 0, 660000), -- Adena
 (22829, 15697, 1, 1, 1, 119), -- Sealed Moirai Breastplate
 (22829, 10219, 1, 1, 1, 26), -- Icarus Trident
 (22829, 1895, 3, 9, 2, 173798), -- Metallic Fiber
@@ -40452,7 +40452,7 @@ INSERT INTO `droplist` VALUES
 (22830, 10397, 1, 1, -1, 8719), -- Icarus Sawsword Piece
 (22830, 10404, 1, 1, -1, 8691), -- Icarus Hall Piece
 (22830, 10215, 1, 1, -1, 26), -- Icarus Sawsword
-(22830, 57, 12867, 30047, 0, 700000), -- Adena
+(22830, 57, 12867, 30047, 0, 660000), -- Adena
 (22830, 15703, 1, 1, 1, 238), -- Sealed Moirai Gauntlet
 (22830, 10220, 1, 1, 1, 13), -- Icarus Hammer
 (22830, 1879, 1, 1, 2, 222616), -- Cokes
@@ -40476,7 +40476,7 @@ INSERT INTO `droplist` VALUES
 (22831, 10397, 1, 1, -1, 22051), -- Icarus Sawsword Piece
 (22831, 13893, 1, 1, -1, 359), -- Sealed Holy Spirit's Cloak
 (22831, 10218, 1, 1, -1, 66), -- Icarus Heavy Arms
-(22831, 57, 27119, 63328, 0, 700000), -- Adena
+(22831, 57, 27119, 63328, 0, 660000), -- Adena
 (22831, 15699, 1, 1, 1, 112), -- Sealed Moirai Tunic
 (22831, 13893, 1, 1, 1, 98), -- Sealed Holy Spirit's Cloak
 (22831, 10221, 1, 1, 1, 18), -- Icarus Hand
@@ -40499,7 +40499,7 @@ INSERT INTO `droplist` VALUES
 (22832, 10401, 1, 1, -1, 21576), -- Icarus Trident Piece
 (22832, 15778, 1, 1, -1, 14994), -- Recipe - Sealed Moirai Breastplate (60%)
 (22832, 10217, 1, 1, -1, 65), -- Icarus Spirit
-(22832, 57, 26621, 62165, 0, 700000), -- Adena
+(22832, 57, 26621, 62165, 0, 660000), -- Adena
 (22832, 15709, 1, 1, 1, 312), -- Sealed Moirai Sigil
 (22832, 15694, 1, 1, 1, 219), -- Sealed Moirai Helmet
 (22832, 10222, 1, 1, 1, 18), -- Icarus Hall
@@ -40528,7 +40528,7 @@ INSERT INTO `droplist` VALUES
 (22833, 15795, 1, 1, -1, 7195), -- Recipe - Sealed Vesper Breastplate (60%)
 (22833, 13893, 1, 1, -1, 234), -- Sealed Holy Spirit's Cloak
 (22833, 10219, 1, 1, -1, 43), -- Icarus Trident
-(22833, 57, 28329, 66153, 0, 700000), -- Adena
+(22833, 57, 28329, 66153, 0, 660000), -- Adena
 (22833, 15706, 1, 1, 1, 262), -- Sealed Moirai Boots
 (22833, 15699, 1, 1, 1, 87), -- Sealed Moirai Tunic
 (22833, 13893, 1, 1, 1, 77), -- Sealed Holy Spirit's Cloak
@@ -40556,7 +40556,7 @@ INSERT INTO `droplist` VALUES
 (22834, 15781, 1, 1, -1, 21869), -- Recipe - Sealed Moirai Gaiter (60%)
 (22834, 10403, 1, 1, -1, 19669), -- Icarus Hand Piece
 (22834, 10217, 1, 1, -1, 59), -- Icarus Spirit
-(22834, 57, 29134, 67996, 0, 700000), -- Adena
+(22834, 57, 29134, 67996, 0, 660000), -- Adena
 (22834, 15710, 1, 1, 1, 342), -- Sealed Moirai Shield
 (22834, 10218, 1, 1, 1, 19), -- Icarus Heavy Arms
 (22834, 10217, 1, 1, 1, 19), -- Icarus Spirit
@@ -40599,7 +40599,7 @@ INSERT INTO `droplist` VALUES
 (22838, 15636, 1, 1, -1, 23272), -- Vesper Buster Piece
 (22838, 15635, 1, 1, -1, 23231), -- Vesper Slasher Piece
 (22838, 15638, 1, 1, -1, 23073), -- Vesper Fighter Piece
-(22838, 57, 24809, 57874, 0, 700000), -- Adena
+(22838, 57, 24809, 57874, 0, 660000), -- Adena
 (22838, 15669, 1, 1, 1, 17446), -- Sealed Vesper Verteidiger Piece
 (22838, 14113, 1, 1, 1, 132), -- Sealed Vesper Leather Gloves
 (22838, 14116, 1, 1, 1, 132), -- Sealed Vesper Gloves
@@ -40627,7 +40627,7 @@ INSERT INTO `droplist` VALUES
 (22839, 15640, 1, 1, -1, 22318), -- Vesper Avenger Piece
 (22839, 15642, 1, 1, -1, 22318), -- Vesper Caster Piece
 (22839, 15825, 1, 1, -1, 2644), -- Recipe - Vesper Thrower (60%)
-(22839, 57, 23997, 55980, 0, 700000), -- Adena
+(22839, 57, 23997, 55980, 0, 660000), -- Adena
 (22839, 15669, 1, 1, 1, 13323), -- Sealed Vesper Verteidiger Piece
 (22839, 15691, 1, 1, 1, 13323), -- Sealed Vesper Sigil Piece
 (22839, 15660, 1, 1, 1, 9014), -- Sealed Vesper Helmet Piece
@@ -40661,7 +40661,7 @@ INSERT INTO `droplist` VALUES
 (22840, 15819, 1, 1, -1, 813), -- Recipe - Vesper Fighter (60%)
 (22840, 6578, 1, 1, -1, 518), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22840, 13458, 1, 1, -1, 16), -- Vesper Slasher
-(22840, 57, 8612, 20089, 0, 700000), -- Adena
+(22840, 57, 8612, 20089, 0, 660000), -- Adena
 (22840, 15668, 1, 1, 1, 6417), -- Sealed Vesper Boots Piece
 (22840, 15667, 1, 1, 1, 6417), -- Sealed Vesper Gauntlet Piece
 (22840, 15674, 1, 1, 1, 6417), -- Sealed Vesper Gloves Piece
@@ -40691,7 +40691,7 @@ INSERT INTO `droplist` VALUES
 (22841, 15639, 1, 1, -1, 13915), -- Vesper Stormer Piece
 (22841, 15637, 1, 1, -1, 13874), -- Vesper Shaper Piece
 (22841, 13459, 1, 1, -1, 33), -- Vesper Buster
-(22841, 57, 14790, 34502, 0, 700000), -- Adena
+(22841, 57, 14790, 34502, 0, 660000), -- Adena
 (22841, 15673, 1, 1, 1, 6010), -- Sealed Vesper Stockings Piece
 (22841, 15665, 1, 1, 1, 3899), -- Sealed Vesper Tunic Piece
 (22841, 14115, 1, 1, 1, 105), -- Sealed Vesper Stockings
@@ -40716,7 +40716,7 @@ INSERT INTO `droplist` VALUES
 (22842, 959, 1, 1, -1, 801), -- Scroll: Enchant Weapon (S-Grade)
 (22842, 13459, 1, 1, -1, 28), -- Vesper Buster
 (22842, 13458, 1, 1, -1, 28), -- Vesper Slasher
-(22842, 57, 14790, 34502, 0, 700000), -- Adena
+(22842, 57, 14790, 34502, 0, 660000), -- Adena
 (22842, 15670, 1, 1, 1, 6472), -- Sealed Vesper Leather Legging Piece
 (22842, 15664, 1, 1, 1, 4199), -- Sealed Vesper Leather Breastplate Piece
 (22842, 14112, 1, 1, 1, 105), -- Sealed Vesper Leather Leggings
@@ -40739,7 +40739,7 @@ INSERT INTO `droplist` VALUES
 (22843, 15636, 1, 1, -1, 7928), -- Vesper Buster Piece
 (22843, 15635, 1, 1, -1, 7914), -- Vesper Slasher Piece
 (22843, 15638, 1, 1, -1, 786), -- Vesper Fighter Piece
-(22843, 57, 8451, 19715, 0, 700000), -- Adena
+(22843, 57, 8451, 19715, 0, 660000), -- Adena
 (22843, 15666, 1, 1, 1, 2738), -- Sealed Vesper Gaiter Piece
 (22843, 15663, 1, 1, 1, 1700), -- Sealed Vesper Breastplate Piece
 (22843, 14160, 1, 1, 1, 77), -- Sealed Vesper Earring
@@ -40764,7 +40764,7 @@ INSERT INTO `droplist` VALUES
 (22844, 6578, 1, 1, -1, 1842), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22844, 6577, 1, 1, -1, 276), -- Blessed Scroll: Enchant Weapon (S-Grade)
 (22844, 13457, 1, 1, -1, 58), -- Vesper Cutter
-(22844, 57, 26239, 61210, 0, 700000), -- Adena
+(22844, 57, 26239, 61210, 0, 660000), -- Adena
 (22844, 15637, 1, 1, 1, 1617), -- Vesper Shaper Piece
 (22844, 15635, 1, 1, 1, 1614), -- Vesper Slasher Piece
 (22844, 14162, 1, 1, 1, 268), -- Sealed Vesper Ring
@@ -40792,7 +40792,7 @@ INSERT INTO `droplist` VALUES
 (22845, 959, 1, 1, -1, 1461), -- Scroll: Enchant Weapon (S-Grade)
 (22845, 13467, 1, 1, -1, 51), -- Vesper Thrower
 (22845, 13457, 1, 1, -1, 51), -- Vesper Cutter
-(22845, 57, 26983, 62945, 0, 700000), -- Adena
+(22845, 57, 26983, 62945, 0, 660000), -- Adena
 (22845, 15638, 1, 1, 1, 1648), -- Vesper Fighter Piece
 (22845, 14111, 1, 1, 1, 229), -- Sealed Vesper Shield
 (22845, 13458, 1, 1, 1, 20), -- Vesper Slasher
@@ -40819,7 +40819,7 @@ INSERT INTO `droplist` VALUES
 (22846, 15820, 1, 1, -1, 3375), -- Recipe - Vesper Stormer (60%)
 (22846, 959, 1, 1, -1, 1935), -- Scroll: Enchant Weapon (S-Grade)
 (22846, 13893, 1, 1, -1, 337), -- Sealed Holy Spirit's Cloak
-(22846, 57, 35741, 83374, 0, 700000), -- Adena
+(22846, 57, 35741, 83374, 0, 660000), -- Adena
 (22846, 15639, 1, 1, 1, 2366), -- Vesper Stormer Piece
 (22846, 15640, 1, 1, 1, 2339), -- Vesper Avenger Piece
 (22846, 13893, 1, 1, 1, 129), -- Sealed Holy Spirit's Cloak
@@ -40846,7 +40846,7 @@ INSERT INTO `droplist` VALUES
 (22847, 6578, 1, 1, -1, 930), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22847, 6577, 1, 1, -1, 140), -- Blessed Scroll: Enchant Weapon (S-Grade)
 (22847, 13467, 1, 1, -1, 29), -- Vesper Thrower
-(22847, 57, 17676, 41234, 0, 700000), -- Adena
+(22847, 57, 17676, 41234, 0, 660000), -- Adena
 (22847, 15669, 1, 1, 1, 12430), -- Sealed Vesper Verteidiger Piece
 (22847, 15634, 1, 1, 1, 1089), -- Vesper Cutter Piece
 (22847, 14111, 1, 1, 1, 225), -- Sealed Vesper Shield
@@ -40870,7 +40870,7 @@ INSERT INTO `droplist` VALUES
 (22848, 15642, 1, 1, -1, 34481), -- Vesper Caster Piece
 (22848, 13893, 1, 1, -1, 408), -- Sealed Holy Spirit's Cloak
 (22848, 13459, 1, 1, -1, 82), -- Vesper Buster
-(22848, 57, 30896, 72072, 0, 700000), -- Adena
+(22848, 57, 30896, 72072, 0, 660000), -- Adena
 (22848, 15644, 1, 1, 1, 2048), -- Vesper Thrower Piece
 (22848, 15642, 1, 1, 1, 2022), -- Vesper Caster Piece
 (22848, 13893, 1, 1, 1, 168), -- Sealed Holy Spirit's Cloak
@@ -40895,7 +40895,7 @@ INSERT INTO `droplist` VALUES
 (22849, 15817, 1, 1, -1, 1674), -- Recipe - Vesper Buster (60%)
 (22849, 959, 1, 1, -1, 960), -- Scroll: Enchant Weapon (S-Grade)
 (22849, 13457, 1, 1, -1, 33), -- Vesper Cutter
-(22849, 57, 17732, 41364, 0, 700000), -- Adena
+(22849, 57, 17732, 41364, 0, 660000), -- Adena
 (22849, 15644, 1, 1, 1, 1266), -- Vesper Thrower Piece
 (22849, 15642, 1, 1, 1, 1250), -- Vesper Caster Piece
 (22849, 13465, 1, 1, 1, 13), -- Vesper Caster
@@ -40920,7 +40920,7 @@ INSERT INTO `droplist` VALUES
 (22850, 6578, 1, 1, -1, 503), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22850, 6577, 1, 1, -1, 75), -- Blessed Scroll: Enchant Weapon (S-Grade)
 (22850, 13459, 1, 1, -1, 16), -- Vesper Buster
-(22850, 57, 8361, 19504, 0, 700000), -- Adena
+(22850, 57, 8361, 19504, 0, 660000), -- Adena
 (22850, 15638, 1, 1, 1, 511), -- Vesper Fighter Piece
 (22850, 13458, 1, 1, 1, 9), -- Vesper Slasher
 (22850, 13467, 1, 1, 1, 9), -- Vesper Thrower
@@ -40944,7 +40944,7 @@ INSERT INTO `droplist` VALUES
 (22851, 15815, 1, 1, -1, 2408), -- Recipe - Sealed Vesper Cutter (60%)
 (22851, 959, 1, 1, -1, 1381), -- Scroll: Enchant Weapon (S-Grade)
 (22851, 13458, 1, 1, -1, 48), -- Vesper Slasher
-(22851, 57, 18219, 42501, 0, 700000), -- Adena
+(22851, 57, 18219, 42501, 0, 660000), -- Adena
 (22851, 15644, 1, 1, 1, 1409), -- Vesper Thrower Piece
 (22851, 15642, 1, 1, 1, 1391), -- Vesper Caster Piece
 (22851, 13465, 1, 1, 1, 13), -- Vesper Caster
@@ -40965,7 +40965,7 @@ INSERT INTO `droplist` VALUES
 (22852, 15669, 1, 1, -1, 727776), -- Sealed Vesper Verteidiger Piece
 (22852, 2134, 1, 1, -1, 214694), -- Gemstone S
 (22852, 13459, 1, 1, -1, 150), -- Vesper Buster
-(22852, 57, 45317, 105714, 0, 700000), -- Adena
+(22852, 57, 45317, 105714, 0, 660000), -- Adena
 (22852, 15644, 1, 1, 1, 3235), -- Vesper Thrower Piece
 (22852, 15642, 1, 1, 1, 3194), -- Vesper Caster Piece
 (22852, 13893, 1, 1, 1, 123), -- Sealed Holy Spirit's Cloak
@@ -40989,7 +40989,7 @@ INSERT INTO `droplist` VALUES
 (22853, 15816, 1, 1, -1, 3238), -- Recipe - Sealed Vesper Slasher (60%)
 (22853, 6578, 1, 1, -1, 2063), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22853, 13460, 1, 1, -1, 65), -- Vesper Shaper
-(22853, 57, 24497, 57145, 0, 700000), -- Adena
+(22853, 57, 24497, 57145, 0, 660000), -- Adena
 (22853, 15636, 1, 1, 1, 1741), -- Vesper Buster Piece
 (22853, 15637, 1, 1, 1, 1741), -- Vesper Shaper Piece
 (22853, 14111, 1, 1, 1, 208), -- Sealed Vesper Shield
@@ -41012,7 +41012,7 @@ INSERT INTO `droplist` VALUES
 (22854, 14167, 1, 1, -1, 263347), -- Mid-Grade Life Stone - Level 84
 (22854, 14168, 1, 1, -1, 26335), -- High-Grade Life Stone - Level 84
 (22854, 14169, 1, 1, -1, 5266), -- Top-Grade Life Stone - Level 84
-(22854, 57, 115052, 268713, 0, 700000), -- Adena
+(22854, 57, 115052, 268713, 0, 660000), -- Adena
 (22854, 15764, 1, 1, 1, 648), -- Sealed Vorpal Earring
 (22854, 15755, 1, 1, 1, 428), -- Sealed Vorpal Boots
 (22854, 15743, 1, 1, 1, 285), -- Sealed Vorpal Helmet
@@ -41033,7 +41033,7 @@ INSERT INTO `droplist` VALUES
 (22855, 14167, 1, 1, -1, 149640), -- Mid-Grade Life Stone - Level 84
 (22855, 14168, 1, 1, -1, 14964), -- High-Grade Life Stone - Level 84
 (22855, 14169, 1, 1, -1, 2992), -- Top-Grade Life Stone - Level 84
-(22855, 57, 65375, 152689, 0, 700000), -- Adena
+(22855, 57, 65375, 152689, 0, 660000), -- Adena
 (22855, 15763, 1, 1, 1, 552), -- Sealed Vorpal Ring
 (22855, 15765, 1, 1, 1, 276), -- Sealed Vorpal Necklace
 (22855, 15753, 1, 1, 1, 243), -- Sealed Vorpal Leather Gloves
@@ -41056,7 +41056,7 @@ INSERT INTO `droplist` VALUES
 (22856, 14167, 1, 1, -1, 149640), -- Mid-Grade Life Stone - Level 84
 (22856, 14168, 1, 1, -1, 14964), -- High-Grade Life Stone - Level 84
 (22856, 14169, 1, 1, -1, 2992), -- Top-Grade Life Stone - Level 84
-(22856, 57, 65375, 152689, 0, 700000), -- Adena
+(22856, 57, 65375, 152689, 0, 660000), -- Adena
 (22856, 15756, 1, 1, 1, 182), -- Sealed Vorpal Leather Boots
 (22856, 15752, 1, 1, 1, 182), -- Sealed Vorpal Gauntlet
 (22856, 15759, 1, 1, 1, 174), -- Sealed Vorpal Sigil
@@ -41081,7 +41081,7 @@ INSERT INTO `droplist` VALUES
 (22857, 14052, 1, 25, -1, 892155), -- Noble Enhancement Stone
 (22857, 6578, 1, 1, -1, 20619), -- Blessed Scroll: Enchant Armor (S-Grade)
 (22857, 6577, 1, 1, -1, 3093), -- Blessed Scroll: Enchant Weapon (S-Grade)
-(22857, 57, 195846, 456862, 0, 700000), -- Adena
+(22857, 57, 195846, 456862, 0, 660000), -- Adena
 (22857, 13893, 1, 1, 1, 142), -- Sealed Holy Spirit's Cloak
 (22857, 15558, 1, 1, 1, 24), -- Periel Sword
 (22857, 15567, 1, 1, 1, 24), -- Veniplant Sword
@@ -41114,7 +41114,7 @@ INSERT INTO `droplist` VALUES
 (22858, 9628, 1, 1, -1, 31844), -- Leonard
 (22858, 10404, 1, 1, -1, 1735), -- Icarus Hall Piece
 (22858, 15780, 1, 1, -1, 1608), -- Recipe - Sealed Moirai Tunic (60%)
-(22858, 57, 1712, 4000, 0, 700000), -- Adena
+(22858, 57, 1712, 4000, 0, 660000), -- Adena
 (22858, 15767, 1, 1, 1, 22), -- Sealed Moirai Earring
 (22858, 15696, 1, 1, 1, 14), -- Sealed Moirai Circlet
 (22858, 15697, 1, 1, 1, 5), -- Sealed Moirai Breastplate
@@ -41131,7 +41131,7 @@ INSERT INTO `droplist` VALUES
 (22859, 9628, 1, 1, -1, 33117), -- Leonard
 (22859, 10398, 1, 1, -1, 1810), -- Icarus Disperser Piece
 (22859, 959, 1, 1, -1, 169), -- Scroll: Enchant Weapon (S-Grade)
-(22859, 57, 1780, 4157, 0, 700000), -- Adena
+(22859, 57, 1780, 4157, 0, 660000), -- Adena
 (22859, 15766, 1, 1, 1, 25), -- Sealed Moirai Ring
 (22859, 15709, 1, 1, 1, 16), -- Sealed Moirai Sigil
 (22859, 15710, 1, 1, 1, 16), -- Sealed Moirai Shield
@@ -41152,7 +41152,7 @@ INSERT INTO `droplist` VALUES
 (22860, 10401, 1, 1, -1, 7829), -- Icarus Trident Piece
 (22860, 15778, 1, 1, -1, 5440), -- Recipe - Sealed Moirai Breastplate (60%)
 (22860, 15797, 1, 1, -1, 5234), -- Recipe - Sealed Vesper Tunic (60%)
-(22860, 57, 13523, 31578, 0, 700000), -- Adena
+(22860, 57, 13523, 31578, 0, 660000), -- Adena
 (22860, 15706, 1, 1, 1, 72), -- Sealed Moirai Boots
 (22860, 15703, 1, 1, 1, 72), -- Sealed Moirai Gauntlet
 (22860, 15705, 1, 1, 1, 72), -- Sealed Moirai Gloves
@@ -41182,7 +41182,7 @@ INSERT INTO `droplist` VALUES
 (22861, 10402, 1, 1, -1, 12878), -- Icarus Hammer Piece
 (22861, 15796, 1, 1, -1, 8610), -- Recipe - Sealed Vesper Leather Breastplate (60%)
 (22861, 959, 1, 1, -1, 1205), -- Scroll: Enchant Weapon (S-Grade)
-(22861, 57, 22245, 51946, 0, 700000), -- Adena
+(22861, 57, 22245, 51946, 0, 660000), -- Adena
 (22861, 15766, 1, 1, 1, 180), -- Sealed Moirai Ring
 (22861, 15710, 1, 1, 1, 112), -- Sealed Moirai Shield
 (22861, 15709, 1, 1, 1, 112), -- Sealed Moirai Sigil
@@ -41208,7 +41208,7 @@ INSERT INTO `droplist` VALUES
 (22862, 15798, 1, 1, -1, 8503), -- Recipe - Sealed Vesper Gaiter (60%)
 (22862, 15778, 1, 1, -1, 7365), -- Recipe - Sealed Moirai Breastplate (60%)
 (22862, 15795, 1, 1, -1, 5314), -- Recipe - Sealed Vesper Breastplate (60%)
-(22862, 57, 18307, 42751, 0, 700000), -- Adena
+(22862, 57, 18307, 42751, 0, 660000), -- Adena
 (22862, 1885, 1, 1, 2, 215959), -- High-Grade Suede
 (22862, 1879, 3, 9, 2, 71986), -- Cokes
 (22862, 9549, 1, 1, 2, 20732), -- Wind Stone
