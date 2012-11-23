@@ -473,22 +473,25 @@
 		<set name="aggroPoints" val="#aggro" />
 	</skill>
 	<skill id="1018" levels="3" name="Purify">
-		<table name="#mpInitialConsume"> 8 10 11 </table>
-		<table name="#mpConsume"> 31 38 44 </table>
-		<table name="#negateAbnormals"> poison,3;bleeding,3;paralyze,1 poison,7;bleeding,7;paralyze,1;turn_stone,1 poison,9;bleeding,9;paralyze,1;turn_stone,1 </table>
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#aggro"> 418 495 566 </table>
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="3000" />
-		<set name="skillType" val="NEGATE" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#magicLvl"> 44 52 62 </table>
+		<table name="#mpConsume"> 31 38 44 </table>
+		<table name="#mpInitialConsume"> 8 10 11 </table>
+		<table name="#negateAbnormals"> poison,3;bleeding,3;paralyze,1 poison,7;bleeding,7;paralyze,1;turn_stone,2 poison,9;bleeding,9;paralyze,1;turn_stone,2 </table>
+		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="negateAbnormals" val="#negateAbnormals" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NEGATE" />
+		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1020" levels="27" name="Vitalize" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

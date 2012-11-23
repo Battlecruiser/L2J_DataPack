@@ -2204,6 +2204,7 @@
 		</enchant1for>
 	</skill>
 	<skill id="367" levels="1" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
@@ -2211,18 +2212,19 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="element" val="3" /> <!-- Earth -->
-		<set name="magicLvl" val="77" />
-		<set name="mpConsume" val="53" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="skillRadius" val="150" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="53" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="30000" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="15000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="150" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="target" val="TARGET_AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
