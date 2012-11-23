@@ -1427,21 +1427,22 @@
 		</for>
 	</skill>
 	<skill id="349" levels="1" name="Song of Renewal" enchantGroup1="5" enchantGroup2="5">
+		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="song_of_renewal" />
+		<set name="aggroPoints" val="666" />
+		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="60" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="2500" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="666" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillRadius" val="1000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -1451,6 +1452,7 @@
 				<mul order="0x30" stat="pReuse" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -1459,6 +1461,7 @@
 				<mul order="0x30" stat="pReuse" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
 			</effect>
 		</enchant1for>
 	</skill>

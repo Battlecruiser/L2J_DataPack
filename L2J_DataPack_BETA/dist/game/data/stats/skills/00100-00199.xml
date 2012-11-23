@@ -300,16 +300,17 @@
 		</enchant3for>
 	</skill>
 	<skill id="109" levels="1" name="Ogre Spirit Totem">
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="possession" />
+		<set name="aggroPoints" val="438" />
+		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="30000" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="aggroPoints" val="438" />
+		<set name="reuseDelay" val="30000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
 		</cond>
@@ -318,12 +319,8 @@
 				<mul order="0x30" stat="pAtk" val="1.3">
 					<using kind="Dual Fist" />
 				</mul>
-				<mul order="0x30" stat="pDef" val="1.3">
-					<using kind="Dual Fist" />
-				</mul>
-				<mul order="0x30" stat="mDef" val="1.3">
-					<using kind="Dual Fist" />
-				</mul>
+				<mul order="0x30" stat="pDef" val="1.3" />
+				<mul order="0x30" stat="mDef" val="1.3" />
 				<mul order="0x30" stat="cAtk" val="1.1">
 					<using kind="Dual Fist" />
 				</mul>
@@ -797,22 +794,24 @@
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">
-		<table name="#pAtkSpd"> 1.05 1.1 </table>
-		<table name="#mpConsume"> 21 25 </table>
-		<table name="#magicLvl"> 46 55 </table>
-		<table name="#ench1runSpd"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1.00 1.00 </table>
-		<table name="#aggro"> 438 523 </table>
+		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#aggro"> 438 523 </table>
+		<table name="#ench1runSpd"> 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.87 0.88 0.89 0.89 0.9 0.91 0.91 0.92 0.93 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1 </table>
+		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#magicLvl"> 46 55 </table>
+		<table name="#mpConsume"> 21 25 </table>
+		<table name="#pAtkSpd"> 1.05 1.1 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="thrill_fight" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="#aggro" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="thrill_fight">
 				<mul order="0x30" stat="runSpd" val="0.8" />
