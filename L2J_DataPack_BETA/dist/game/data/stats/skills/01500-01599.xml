@@ -234,21 +234,23 @@
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="limit" />
-		<set name="mpConsume" val="55" />
-		<set name="magicLvl" val="81" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
-		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlDepend" val="1" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="44" />
+		<set name="mpInitialConsume" val="11" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="60" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="2000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillRadius" val="200" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="limit">
 				<mul order="0x30" stat="maxRecoverableHp" val="0.3" />
