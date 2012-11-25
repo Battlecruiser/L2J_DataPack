@@ -54,13 +54,13 @@ public abstract class AbstractNpcAI extends L2Script
 	/**
 	 * Registers the fallowing events to the current script:<br>
 	 * <ul>
-	 * 	<li>ON_ATTACK</li>
-	 * 	<li>ON_KILL</li>
-	 * 	<li>ON_SPAWN</li>
-	 * 	<li>ON_SPELL_FINISHED</li>
-	 * 	<li>ON_SKILL_SEE</li>
-	 * 	<li>ON_FACTION_CALL</li>
-	 * 	<li>ON_AGGR_RANGE_ENTER</li>
+	 * <li>ON_ATTACK</li>
+	 * <li>ON_KILL</li>
+	 * <li>ON_SPAWN</li>
+	 * <li>ON_SPELL_FINISHED</li>
+	 * <li>ON_SKILL_SEE</li>
+	 * <li>ON_FACTION_CALL</li>
+	 * <li>ON_AGGR_RANGE_ENTER</li>
 	 * </ul>
 	 * @param mobs
 	 */
@@ -79,8 +79,7 @@ public abstract class AbstractNpcAI extends L2Script
 	}
 	
 	/**
-	 * This is used to register all monsters contained in mobs for a particular script
-	 * event types defined in types.
+	 * This is used to register all monsters contained in mobs for a particular script event types defined in types.
 	 * @param mobs
 	 * @param types
 	 */
@@ -126,6 +125,26 @@ public abstract class AbstractNpcAI extends L2Script
 	protected void broadcastNpcSay(L2Npc npc, int type, NpcStringId stringId)
 	{
 		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), stringId));
+	}
+	
+	/**
+	 * Broadcasts NpcSay packet to all known players with npc string id.
+	 * @param npc
+	 * @param type
+	 * @param stringId
+	 * @param parameters
+	 */
+	protected void broadcastNpcSay(L2Npc npc, int type, NpcStringId stringId, String... parameters)
+	{
+		final NpcSay say = new NpcSay(npc.getObjectId(), type, npc.getTemplate().getIdTemplate(), stringId);
+		if (parameters != null)
+		{
+			for (String parameter : parameters)
+			{
+				say.addStringParameter(parameter);
+			}
+		}
+		Broadcast.toKnownPlayers(npc, say);
 	}
 	
 	/**
