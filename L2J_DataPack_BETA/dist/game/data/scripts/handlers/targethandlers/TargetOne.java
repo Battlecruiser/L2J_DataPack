@@ -53,14 +53,17 @@ public class TargetOne implements ITargetTypeHandler
 		}
 		
 		// Check for null target or any other invalid target
-		if (target == null || target.isDead() || (target == activeChar && !canTargetSelf))
+		if ((target == null) || target.isDead() || ((target == activeChar) && !canTargetSelf))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
 		}
 		
 		// If a target is found, return it in a table else send a system message TARGET_IS_INCORRECT
-		return new L2Character[] { target };
+		return new L2Character[]
+		{
+			target
+		};
 	}
 	
 	@Override

@@ -37,8 +37,8 @@ public class TargetCorpseMob implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		final boolean isSummon = target instanceof L2ServitorInstance;
-		if (!(isSummon || target instanceof L2Attackable) || !target.isDead())
+		final boolean isSummon = target.isServitor();
+		if (!(isSummon || target.isL2Attackable()) || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
@@ -49,9 +49,10 @@ public class TargetCorpseMob implements ITargetTypeHandler
 		{
 			case SUMMON:
 			{
-				if (isSummon && ((L2ServitorInstance)target).getOwner() != null
-						&& ((L2ServitorInstance)target).getOwner().getObjectId() == activeChar.getObjectId())
+				if (isSummon && (((L2ServitorInstance) target).getOwner() != null) && (((L2ServitorInstance) target).getOwner().getObjectId() == activeChar.getObjectId()))
+				{
 					return _emptyTargetList;
+				}
 				
 				break;
 			}
@@ -69,7 +70,10 @@ public class TargetCorpseMob implements ITargetTypeHandler
 			targetList.add(target);
 			return targetList.toArray(new L2Object[targetList.size()]);
 		}
-		return new L2Character[] { target };
+		return new L2Character[]
+		{
+			target
+		};
 	}
 	
 	@Override

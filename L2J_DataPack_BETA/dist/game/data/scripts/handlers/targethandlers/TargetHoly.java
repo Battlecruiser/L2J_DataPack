@@ -32,12 +32,16 @@ public class TargetHoly implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return _emptyTargetList;
+		}
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		final Castle castle = CastleManager.getInstance().getCastle(player);
-		if (player.getClan() == null || castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill, target))
+		if ((player.getClan() == null) || (castle == null) || !player.checkIfOkToCastSealOfRule(castle, true, skill, target))
+		{
 			return _emptyTargetList;
+		}
 		
 		return new L2Object[]
 		{

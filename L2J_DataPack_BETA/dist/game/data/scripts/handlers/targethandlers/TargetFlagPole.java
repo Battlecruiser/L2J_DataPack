@@ -32,12 +32,16 @@ public class TargetFlagPole implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return _emptyTargetList;
+		}
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		final Fort fort = FortManager.getInstance().getFort(player);
-		if (player.getClan() == null || fort == null || !player.checkIfOkToCastFlagDisplay(fort, true, skill, activeChar.getTarget()))
+		if ((player.getClan() == null) || (fort == null) || !player.checkIfOkToCastFlagDisplay(fort, true, skill, activeChar.getTarget()))
+		{
 			return _emptyTargetList;
+		}
 		
 		return new L2Object[]
 		{

@@ -37,12 +37,19 @@ public class TargetPartyClan implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		if (onlyFirst)
-			return new L2Character[] { activeChar };
+		{
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		
 		if (player == null)
+		{
 			return _emptyTargetList;
+		}
 		
 		targetList.add(player);
 		
@@ -51,61 +58,94 @@ public class TargetPartyClan implements ITargetTypeHandler
 		final boolean hasParty = player.isInParty();
 		
 		if (L2Skill.addSummon(activeChar, player, radius, false))
+		{
 			targetList.add(player.getSummon());
+		}
 		
 		// if player in clan and not in party
 		if (!(hasClan || hasParty))
+		{
 			return targetList.toArray(new L2Character[targetList.size()]);
+		}
 		
 		// Get all visible objects in a spherical area near the L2Character
 		final Collection<L2PcInstance> objs = activeChar.getKnownList().getKnownPlayersInRadius(radius);
 		for (L2PcInstance obj : objs)
 		{
 			if (obj == null)
+			{
 				continue;
+			}
 			
 			// olympiad mode - adding only own side
 			if (player.isInOlympiadMode())
 			{
 				if (!obj.isInOlympiadMode())
+				{
 					continue;
+				}
 				if (player.getOlympiadGameId() != obj.getOlympiadGameId())
+				{
 					continue;
+				}
 				if (player.getOlympiadSide() != obj.getOlympiadSide())
+				{
 					continue;
+				}
 			}
 			
 			if (player.isInDuel())
 			{
 				if (player.getDuelId() != obj.getDuelId())
+				{
 					continue;
+				}
 				
-				if (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
+				if (hasParty && obj.isInParty() && (player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId()))
+				{
 					continue;
+				}
 			}
 			
-			if (!((hasClan && obj.getClanId() == player.getClanId()) || (hasParty && obj.isInParty() && player.getParty().getLeaderObjectId() == obj.getParty().getLeaderObjectId())))
+			if (!((hasClan && (obj.getClanId() == player.getClanId())) || (hasParty && obj.isInParty() && (player.getParty().getLeaderObjectId() == obj.getParty().getLeaderObjectId()))))
+			{
 				continue;
+			}
 			
 			// Don't add this target if this is a Pc->Pc pvp
 			// casting and pvp condition not met
 			if (!player.checkPvpSkill(obj, skill))
+			{
 				continue;
+			}
 			
 			if (!TvTEvent.checkForTvTSkill(player, obj, skill))
+			{
 				continue;
+			}
 			
 			if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, false))
+			{
 				targetList.add(obj.getSummon());
+			}
 			
 			if (!L2Skill.addCharacter(activeChar, obj, radius, false))
+			{
 				continue;
+			}
 			
 			if (onlyFirst)
-				return new L2Character[] { obj };
+			{
+				return new L2Character[]
+				{
+					obj
+				};
+			}
 			
-			if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+			if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+			{
 				break;
+			}
 			
 			targetList.add(obj);
 		}

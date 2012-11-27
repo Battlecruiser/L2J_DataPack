@@ -29,8 +29,13 @@ public class TargetPet implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		target = activeChar.getSummon();
-		if (target != null && !target.isDead())
-			return new L2Character[] { target };
+		if ((target != null) && !target.isDead())
+		{
+			return new L2Character[]
+			{
+				target
+			};
+		}
 		
 		return _emptyTargetList;
 	}
