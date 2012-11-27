@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.L2ClanMember;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -43,21 +42,30 @@ public class TargetCorpseClan implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		if (activeChar instanceof L2Playable)
+		if (activeChar.isPlayable())
 		{
 			final L2PcInstance player = activeChar.getActingPlayer();
 			
 			if (player == null)
+			{
 				return _emptyTargetList;
+			}
 			
 			if (player.isInOlympiadMode())
-				return new L2Character[] { player };
+			{
+				return new L2Character[]
+				{
+					player
+				};
+			}
 			
 			final int radius = skill.getSkillRadius();
 			final L2Clan clan = player.getClan();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, true))
+			{
 				targetList.add(player.getSummon());
+			}
 			
 			if (clan != null)
 			{
@@ -66,42 +74,65 @@ public class TargetCorpseClan implements ITargetTypeHandler
 				{
 					obj = member.getPlayerInstance();
 					
-					if (obj == null || obj == player)
+					if ((obj == null) || (obj == player))
+					{
 						continue;
+					}
 					
 					if (player.isInDuel())
 					{
 						if (player.getDuelId() != obj.getDuelId())
+						{
 							continue;
-						if (player.isInParty() && obj.isInParty() && player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId())
+						}
+						if (player.isInParty() && obj.isInParty() && (player.getParty().getLeaderObjectId() != obj.getParty().getLeaderObjectId()))
+						{
 							continue;
+						}
 					}
 					
 					// Don't add this target if this is a Pc->Pc pvp casting and pvp condition not met
 					if (!player.checkPvpSkill(obj, skill))
+					{
 						continue;
+					}
 					
 					if (!TvTEvent.checkForTvTSkill(player, obj, skill))
+					{
 						continue;
+					}
 					
 					if (!onlyFirst && L2Skill.addSummon(activeChar, obj, radius, true))
+					{
 						targetList.add(obj.getSummon());
+					}
 					
 					if (!L2Skill.addCharacter(activeChar, obj, radius, true))
+					{
 						continue;
+					}
 					
 					if (skill.getSkillType() == L2SkillType.RESURRECT)
 					{
 						// check target is not in a active siege zone
 						if (obj.isInsideZone(ZoneId.SIEGE) && !obj.isInSiege())
+						{
 							continue;
+						}
 					}
 					
 					if (onlyFirst)
-						return new L2Character[] { obj };
+					{
+						return new L2Character[]
+						{
+							obj
+						};
+					}
 					
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+					{
 						break;
+					}
 					
 					targetList.add(obj);
 				}
@@ -111,9 +142,12 @@ public class TargetCorpseClan implements ITargetTypeHandler
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself
 			final L2Npc npc = (L2Npc) activeChar;
-			if (npc.getFactionId() == null || npc.getFactionId().isEmpty())
+			if ((npc.getFactionId() == null) || npc.getFactionId().isEmpty())
 			{
-				return new L2Character[] { activeChar };
+				return new L2Character[]
+				{
+					activeChar
+				};
 			}
 			
 			targetList.add(activeChar);
@@ -122,13 +156,17 @@ public class TargetCorpseClan implements ITargetTypeHandler
 			
 			for (L2Object newTarget : objs)
 			{
-				if (newTarget instanceof L2Npc && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
+				if ((newTarget.isNpc()) && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
 				{
 					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
+					{
 						continue;
+					}
 					
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+					{
 						break;
+					}
 					
 					targetList.add((L2Npc) newTarget);
 				}

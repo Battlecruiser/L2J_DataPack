@@ -21,10 +21,7 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -49,16 +46,25 @@ public class TargetAura implements ITargetTypeHandler
 		if (skill.getSkillType() == L2SkillType.DUMMY)
 		{
 			if (onlyFirst)
-				return new L2Character[] { activeChar };
+			{
+				return new L2Character[]
+				{
+					activeChar
+				};
+			}
 			
 			targetList.add(activeChar);
 			for (L2Character obj : objs)
 			{
-				if (!(obj == activeChar || obj == sourcePlayer || obj instanceof L2Npc || obj instanceof L2Attackable))
+				if (!((obj == activeChar) || (obj == sourcePlayer) || obj.isNpc() || obj.isL2Attackable()))
+				{
 					continue;
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+				{
 					break;
+				}
 				
 				targetList.add(obj);
 			}
@@ -67,16 +73,25 @@ public class TargetAura implements ITargetTypeHandler
 		{
 			for (L2Character obj : objs)
 			{
-				if (obj instanceof L2Attackable || obj instanceof L2Playable)
+				if (obj.isL2Attackable() || obj.isPlayable())
 				{
 					if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+					{
 						continue;
+					}
 					
 					if (onlyFirst)
-						return new L2Character[] { obj };
+					{
+						return new L2Character[]
+						{
+							obj
+						};
+					}
 					
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+					{
 						break;
+					}
 					targetList.add(obj);
 				}
 			}

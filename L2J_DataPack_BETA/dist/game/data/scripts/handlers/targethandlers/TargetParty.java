@@ -21,7 +21,6 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -36,22 +35,31 @@ public class TargetParty implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		if (onlyFirst)
-			return new L2Character[] { activeChar };
+		{
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
 		
 		targetList.add(activeChar);
 		
 		final int radius = skill.getSkillRadius();
 		
 		L2PcInstance player = activeChar.getActingPlayer();
-		if (activeChar instanceof L2Summon)
+		if (activeChar.isSummon())
 		{
 			if (L2Skill.addCharacter(activeChar, player, radius, false))
+			{
 				targetList.add(player);
+			}
 		}
-		else if (activeChar instanceof L2PcInstance)
+		else if (activeChar.isPlayer())
 		{
 			if (L2Skill.addSummon(activeChar, player, radius, false))
+			{
 				targetList.add(player.getSummon());
+			}
 		}
 		
 		if (activeChar.isInParty())
@@ -59,17 +67,25 @@ public class TargetParty implements ITargetTypeHandler
 			// Get a list of Party Members
 			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
 			{
-				if (partyMember == null || partyMember == player)
+				if ((partyMember == null) || (partyMember == player))
+				{
 					continue;
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+				{
 					break;
+				}
 				
 				if (L2Skill.addCharacter(activeChar, partyMember, radius, false))
+				{
 					targetList.add(partyMember);
+				}
 				
 				if (L2Skill.addSummon(activeChar, partyMember, radius, false))
+				{
 					targetList.add(partyMember.getSummon());
+				}
 			}
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);

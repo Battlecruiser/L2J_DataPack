@@ -21,10 +21,7 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
@@ -40,11 +37,18 @@ public class TargetAreaSummon implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		target = activeChar.getSummon();
-		if (target == null || !(target instanceof L2ServitorInstance) || target.isDead())
+		if ((target == null) || !target.isServitor() || target.isDead())
+		{
 			return _emptyTargetList;
+		}
 		
 		if (onlyFirst)
-			return new L2Character[] { target };
+		{
+			return new L2Character[]
+			{
+				target
+			};
+		}
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharacters();
@@ -52,26 +56,38 @@ public class TargetAreaSummon implements ITargetTypeHandler
 		
 		for (L2Character obj : objs)
 		{
-			if (obj == null || obj == target || obj == activeChar)
+			if ((obj == null) || (obj == target) || (obj == activeChar))
+			{
 				continue;
+			}
 			
 			if (!Util.checkIfInRange(radius, target, obj, true))
+			{
 				continue;
+			}
 			
-			if (!(obj instanceof L2Attackable || obj instanceof L2Playable))
+			if (!(obj.isL2Attackable() || obj.isPlayable()))
+			{
 				continue;
+			}
 			
 			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
+			{
 				continue;
+			}
 			
-			if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+			if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+			{
 				break;
+			}
 			
 			targetList.add(obj);
 		}
 		
 		if (targetList.isEmpty())
+		{
 			return _emptyTargetList;
+		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}

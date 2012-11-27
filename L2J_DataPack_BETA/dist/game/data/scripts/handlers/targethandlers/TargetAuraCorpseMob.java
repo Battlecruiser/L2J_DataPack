@@ -21,7 +21,6 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -39,13 +38,20 @@ public class TargetAuraCorpseMob implements ITargetTypeHandler
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
 		for (L2Character obj : objs)
 		{
-			if (obj instanceof L2Attackable && obj.isDead())
+			if (obj.isL2Attackable() && obj.isDead())
 			{
 				if (onlyFirst)
-					return new L2Character[] { obj };
+				{
+					return new L2Character[]
+					{
+						obj
+					};
+				}
 				
-				if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+				{
 					break;
+				}
 				
 				targetList.add(obj);
 			}

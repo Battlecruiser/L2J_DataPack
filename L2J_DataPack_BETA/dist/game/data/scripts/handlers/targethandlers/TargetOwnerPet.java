@@ -29,11 +29,16 @@ public class TargetOwnerPet implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (activeChar instanceof L2Summon)
+		if (activeChar.isSummon())
 		{
 			target = ((L2Summon) activeChar).getOwner();
-			if (target != null && !target.isDead())
-				return new L2Character[] { target };
+			if ((target != null) && !target.isDead())
+			{
+				return new L2Character[]
+				{
+					target
+				};
+			}
 		}
 		
 		return _emptyTargetList;

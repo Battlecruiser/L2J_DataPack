@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
@@ -35,7 +34,7 @@ public class TargetUnlockable implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		if (!(target instanceof L2DoorInstance) && !(target instanceof L2ChestInstance))
+		if (!target.isDoor() && !(target instanceof L2ChestInstance))
 		{
 			return _emptyTargetList;
 		}
@@ -45,7 +44,10 @@ public class TargetUnlockable implements ITargetTypeHandler
 			targetList.add(target);
 			return targetList.toArray(new L2Object[targetList.size()]);
 		}
-		return new L2Character[] { target };
+		return new L2Character[]
+		{
+			target
+		};
 	}
 	
 	@Override

@@ -17,7 +17,6 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -30,32 +29,39 @@ public class TargetPartyOther implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (target != null && target != activeChar
-				&& activeChar.isInParty() && target.isInParty()
-				&& activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
+		if ((target != null) && (target != activeChar) && activeChar.isInParty() && target.isInParty() && (activeChar.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
 		{
 			if (!target.isDead())
 			{
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					switch (skill.getId())
 					{
-						// FORCE BUFFS may cancel here but there should be a proper condition
+					// FORCE BUFFS may cancel here but there should be a proper condition
 						case 426:
-							if (!((L2PcInstance) target).isMageClass())
+							if (!target.getActingPlayer().isMageClass())
 							{
-								return new L2Character[] { target };
+								return new L2Character[]
+								{
+									target
+								};
 							}
 							return _emptyTargetList;
 						case 427:
-							if (((L2PcInstance) target).isMageClass())
+							if (target.getActingPlayer().isMageClass())
 							{
-								return new L2Character[] { target };
+								return new L2Character[]
+								{
+									target
+								};
 							}
 							return _emptyTargetList;
 					}
 				}
-				return new L2Character[] { target };
+				return new L2Character[]
+				{
+					target
+				};
 			}
 			return _emptyTargetList;
 		}

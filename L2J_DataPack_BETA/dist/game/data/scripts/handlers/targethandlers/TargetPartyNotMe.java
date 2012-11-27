@@ -37,20 +37,27 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		if (onlyFirst)
-			return new L2Character[] { activeChar };
+		{
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
 		
 		L2PcInstance player = null;
 		
-		if (activeChar instanceof L2Summon)
+		if (activeChar.isSummon())
 		{
 			player = ((L2Summon) activeChar).getOwner();
 			targetList.add(player);
 		}
-		else if (activeChar instanceof L2PcInstance)
+		else if (activeChar.isPlayer())
 		{
-			player = (L2PcInstance) activeChar;
+			player = activeChar.getActingPlayer();
 			if (activeChar.getSummon() != null)
+			{
 				targetList.add(activeChar.getSummon());
+			}
 		}
 		
 		if (activeChar.getParty() != null)
@@ -60,17 +67,23 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 			for (L2PcInstance partyMember : partyList)
 			{
 				if (partyMember == null)
+				{
 					continue;
+				}
 				else if (partyMember == player)
+				{
 					continue;
+				}
 				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getSkillRadius(), activeChar, partyMember, true))
 				{
-					if (skill.getMaxTargets() > -1 && targetList.size() >= skill.getMaxTargets())
+					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+					{
 						break;
+					}
 					
 					targetList.add(partyMember);
 					
-					if (partyMember.getSummon() != null && !partyMember.getSummon().isDead())
+					if ((partyMember.getSummon() != null) && !partyMember.getSummon().isDead())
 					{
 						targetList.add(partyMember.getSummon());
 					}

@@ -38,27 +38,39 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		if (target != null && target.isDead())
+		if ((target != null) && target.isDead())
 		{
 			final L2PcInstance player;
-			if (activeChar instanceof L2PcInstance)
-				player = (L2PcInstance) activeChar;
+			if (activeChar.isPlayer())
+			{
+				player = activeChar.getActingPlayer();
+			}
 			else
+			{
 				player = null;
+			}
 			
 			final L2PcInstance targetPlayer;
-			if (target instanceof L2PcInstance)
-				targetPlayer = (L2PcInstance) target;
+			if (target.isPlayer())
+			{
+				targetPlayer = target.getActingPlayer();
+			}
 			else
+			{
 				targetPlayer = null;
+			}
 			
 			final L2PetInstance targetPet;
-			if (target instanceof L2PetInstance)
+			if (target.isPet())
+			{
 				targetPet = (L2PetInstance) target;
+			}
 			else
+			{
 				targetPet = null;
+			}
 			
-			if (player != null && (targetPlayer != null || targetPet != null))
+			if ((player != null) && ((targetPlayer != null) || (targetPet != null)))
 			{
 				boolean condGood = true;
 				
@@ -81,9 +93,13 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 						if (targetPlayer.isReviveRequested())
 						{
 							if (targetPlayer.isRevivingPet())
+							{
 								player.sendPacket(SystemMessageId.MASTER_CANNOT_RES); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
+							}
 							else
+							{
 								player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+							}
 							condGood = false;
 						}
 					}
@@ -94,9 +110,13 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 							if (targetPet.getOwner().isReviveRequested())
 							{
 								if (targetPet.getOwner().isRevivingPet())
+								{
 									player.sendPacket(SystemMessageId.RES_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
+								}
 								else
+								{
 									player.sendPacket(SystemMessageId.CANNOT_RES_PET2); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+								}
 								condGood = false;
 							}
 						}
@@ -110,7 +130,10 @@ public class TargetCorpsePlayer implements ITargetTypeHandler
 						targetList.add(target);
 						return targetList.toArray(new L2Object[targetList.size()]);
 					}
-					return new L2Character[] { target };
+					return new L2Character[]
+					{
+						target
+					};
 				}
 			}
 		}
