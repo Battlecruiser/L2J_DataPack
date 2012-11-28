@@ -16,12 +16,11 @@ package events.MasterOfEnchanting;
 
 import java.util.Date;
 
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -30,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Master of Enchanting event AI.
  * @author Gnacik
  */
-public class MasterOfEnchanting extends Quest
+public class MasterOfEnchanting extends LongTimeEvent
 {
 	private static final int _master_yogi = 32599;
 	private static final int _master_yogi_staff = 13539;
@@ -58,56 +57,13 @@ public class MasterOfEnchanting extends Quest
 	
 	@SuppressWarnings("deprecation")
 	private static final Date _eventStart = new Date(2011, 7, 1);
-	
-	private static final Location[] _spawns =
-	{
-		new Location(16111, 142850, -2707, 16000),
-		new Location(17275, 145000, -3037, 25000),
-		new Location(83037, 149324, -3470, 44000),
-		new Location(82145, 148609, -3468, 0),
-		new Location(81755, 146487, -3534, 32768),
-		new Location(-81031, 150038, -3045, 0),
-		new Location(-83156, 150994, -3130, 0),
-		new Location(-13727, 122117, -2990, 16384),
-		new Location(-14129, 123869, -3118, 40959),
-		new Location(-84411, 244813, -3730, 57343),
-		new Location(-84023, 243051, -3730, 4096),
-		new Location(46908, 50856, -2997, 8192),
-		new Location(45538, 48357, -3061, 18000),
-		new Location(9929, 16324, -4576, 62999),
-		new Location(11546, 17599, -4586, 46900),
-		new Location(81987, 53723, -1497, 0),
-		new Location(81083, 56118, -1562, 32768),
-		new Location(147200, 25614, -2014, 16384),
-		new Location(148557, 26806, -2206, 32768),
-		new Location(117356, 76708, -2695, 49151),
-		new Location(115887, 76382, -2714, 0),
-		new Location(-117239, 46842, 367, 49151),
-		new Location(-119494, 44882, 367, 24576),
-		new Location(111004, 218928, -3544, 16384),
-		new Location(108426, 221876, -3600, 49151),
-		new Location(-45278, -112766, -241, 0),
-		new Location(-45372, -114104, -241, 16384),
-		new Location(115096, -178370, -891, 0),
-		new Location(116199, -182694, -1506, 0),
-		new Location(86865, -142915, -1341, 26000),
-		new Location(85584, -142490, -1343, 0),
-		new Location(147421, -55435, -2736, 49151),
-		new Location(148206, -55786, -2782, 61439),
-		new Location(43165, -48461, -797, 17000),
-		new Location(43966, -47709, -798, 49999)
-	};
-	
+
 	public MasterOfEnchanting(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(_master_yogi);
 		addFirstTalkId(_master_yogi);
 		addTalkId(_master_yogi);
-		for (Location loc : _spawns)
-		{
-			addSpawn(_master_yogi, loc, false, 0);
-		}
 	}
 	
 	@Override
