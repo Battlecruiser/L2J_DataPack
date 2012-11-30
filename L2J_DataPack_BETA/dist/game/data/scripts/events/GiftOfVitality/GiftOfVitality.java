@@ -30,16 +30,16 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class GiftOfVitality extends LongTimeEvent
 {
 	// Reuse between buffs
-	private static final int _hours = 5;
-	
-	private static final int _jack = 4306;
+	private static final int HOURS = 5;
+	// NPC
+	private static final int JACK = 4306;
 	
 	public GiftOfVitality(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(_jack);
-		addFirstTalkId(_jack);
-		addTalkId(_jack);
+		addStartNpc(JACK);
+		addFirstTalkId(JACK);
+		addTalkId(JACK);
 	}
 	
 	@Override
@@ -74,7 +74,7 @@ public class GiftOfVitality extends LongTimeEvent
 				// Gift of Vitality
 				npc.doCast(SkillTable.getInstance().getInfo(23179, 1));
 				st.setState(State.STARTED);
-				st.set("reuse", String.valueOf(System.currentTimeMillis() + (_hours * 3600000)));
+				st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
 				htmltext = "4306-okvitality.htm";
 			}
 		}
@@ -149,6 +149,6 @@ public class GiftOfVitality extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new GiftOfVitality(-1, "GiftOfVitality", "events");
+		new GiftOfVitality(-1, GiftOfVitality.class.getSimpleName(), "events");
 	}
 }

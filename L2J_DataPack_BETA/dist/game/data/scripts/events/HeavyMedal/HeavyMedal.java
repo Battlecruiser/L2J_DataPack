@@ -141,6 +141,6 @@ public class HeavyMedal extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new HeavyMedal(-1, "HeavyMedal", "events");
+		new HeavyMedal(-1, HeavyMedal.class.getSimpleName(), "events");
 	}
 }

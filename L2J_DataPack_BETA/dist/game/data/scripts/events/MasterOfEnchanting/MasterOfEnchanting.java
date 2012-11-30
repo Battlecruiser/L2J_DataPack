@@ -31,30 +31,31 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class MasterOfEnchanting extends LongTimeEvent
 {
-	private static final int _master_yogi = 32599;
-	private static final int _master_yogi_staff = 13539;
-	private static final int _master_yogi_scroll = 13540;
+	// NPC
+	private static final int MASTER_YOGI = 32599;
+	// Items
+	private static final int MASTER_YOGI_STAFF = 13539;
+	private static final int MASTER_YOGI_SCROLL = 13540;
+	// Misc
+	private static final int STAFF_PRICE = 1000000;
+	private static final int SCROLL_24_PRICE = 5000000;
+	private static final int SCROLL_24_TIME = 6;
+	private static final int SCROLL_1_PRICE = 500000;
+	private static final int SCROLL_10_PRICE = 5000000;
 	
-	private static final int _staff_price = 1000000;
-	private static final int _scroll_24_price = 5000000;
-	private static final int _scroll_24_time = 6;
-	
-	private static final int _scroll_1_price = 500000;
-	private static final int _scroll_10_price = 5000000;
-	
-	private static final int[] _hat_shadow_reward =
+	private static final int[] HAT_SHADOW_REWARD =
 	{
 		13074,
 		13075,
 		13076
 	};
-	private static final int[] _hat_event_reward =
+	private static final int[] HAT_EVENT_REWARD =
 	{
 		13518,
 		13519,
 		13522
 	};
-	private static final int[] _crystal_reward =
+	private static final int[] CRYSTAL_REWARD =
 	{
 		9570,
 		9571,
@@ -67,9 +68,9 @@ public class MasterOfEnchanting extends LongTimeEvent
 	public MasterOfEnchanting(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(_master_yogi);
-		addFirstTalkId(_master_yogi);
-		addTalkId(_master_yogi);
+		addStartNpc(MASTER_YOGI);
+		addFirstTalkId(MASTER_YOGI);
+		addTalkId(MASTER_YOGI);
 	}
 	
 	@Override
@@ -79,10 +80,10 @@ public class MasterOfEnchanting extends LongTimeEvent
 		QuestState st = player.getQuestState(getName());
 		if (event.equalsIgnoreCase("buy_staff"))
 		{
-			if (!st.hasQuestItems(_master_yogi_staff) && (st.getQuestItemsCount(PcInventory.ADENA_ID) > _staff_price))
+			if (!st.hasQuestItems(MASTER_YOGI_STAFF) && (st.getQuestItemsCount(PcInventory.ADENA_ID) > STAFF_PRICE))
 			{
-				st.takeItems(PcInventory.ADENA_ID, _staff_price);
-				st.giveItems(_master_yogi_staff, 1);
+				st.takeItems(PcInventory.ADENA_ID, STAFF_PRICE);
+				st.giveItems(MASTER_YOGI_STAFF, 1);
 				htmltext = "32599-staffbuyed.htm";
 			}
 			else
@@ -102,11 +103,11 @@ public class MasterOfEnchanting extends LongTimeEvent
 			
 			if (_curr_time > _reuse_time)
 			{
-				if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_24_price)
+				if (st.getQuestItemsCount(PcInventory.ADENA_ID) > SCROLL_24_PRICE)
 				{
-					st.takeItems(PcInventory.ADENA_ID, _scroll_24_price);
-					st.giveItems(_master_yogi_scroll, 24);
-					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
+					st.takeItems(PcInventory.ADENA_ID, SCROLL_24_PRICE);
+					st.giveItems(MASTER_YOGI_SCROLL, 24);
+					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else
@@ -138,11 +139,11 @@ public class MasterOfEnchanting extends LongTimeEvent
 				{
 					// Little glitch. There is no SystemMessage with seconds only.
 					// If time is less than 1 minute player can buy scrolls
-					if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_24_price)
+					if (st.getQuestItemsCount(PcInventory.ADENA_ID) > SCROLL_24_PRICE)
 					{
-						st.takeItems(PcInventory.ADENA_ID, _scroll_24_price);
-						st.giveItems(_master_yogi_scroll, 24);
-						saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_scroll_24_time * 3600000)));
+						st.takeItems(PcInventory.ADENA_ID, SCROLL_24_PRICE);
+						st.giveItems(MASTER_YOGI_SCROLL, 24);
+						saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 						htmltext = "32599-scroll24.htm";
 					}
 					else
@@ -154,10 +155,10 @@ public class MasterOfEnchanting extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_1"))
 		{
-			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_1_price)
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > SCROLL_1_PRICE)
 			{
-				st.takeItems(PcInventory.ADENA_ID, _scroll_1_price);
-				st.giveItems(_master_yogi_scroll, 1);
+				st.takeItems(PcInventory.ADENA_ID, SCROLL_1_PRICE);
+				st.giveItems(MASTER_YOGI_SCROLL, 1);
 				htmltext = "32599-scroll-ok.htm";
 			}
 			else
@@ -167,10 +168,10 @@ public class MasterOfEnchanting extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("buy_scroll_10"))
 		{
-			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > _scroll_10_price)
+			if (st.getQuestItemsCount(PcInventory.ADENA_ID) > SCROLL_10_PRICE)
 			{
-				st.takeItems(PcInventory.ADENA_ID, _scroll_10_price);
-				st.giveItems(_master_yogi_scroll, 10);
+				st.takeItems(PcInventory.ADENA_ID, SCROLL_10_PRICE);
+				st.giveItems(MASTER_YOGI_SCROLL, 10);
 				htmltext = "32599-scroll-ok.htm";
 			}
 			else
@@ -180,9 +181,9 @@ public class MasterOfEnchanting extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("receive_reward"))
 		{
-			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == _master_yogi_staff) && (st.getEnchantLevel(_master_yogi_staff) > 3))
+			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == MASTER_YOGI_STAFF) && (st.getEnchantLevel(MASTER_YOGI_STAFF) > 3))
 			{
-				switch (st.getEnchantLevel(_master_yogi_staff))
+				switch (st.getEnchantLevel(MASTER_YOGI_STAFF))
 				{
 					case 4:
 						st.giveItems(6406, 1); // Firework
@@ -196,7 +197,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 						st.giveItems(6407, 2); // Large Firework
 						break;
 					case 7:
-						st.giveItems(_hat_shadow_reward[getRandom(3)], 1);
+						st.giveItems(HAT_SHADOW_REWARD[getRandom(3)], 1);
 						break;
 					case 8:
 						st.giveItems(955, 1); // Scroll: Enchant Weapon (D)
@@ -219,7 +220,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 						st.giveItems(729, 1); // Scroll: Enchant Weapon (A)
 						break;
 					case 14:
-						st.giveItems(_hat_event_reward[getRandom(3)], 1);
+						st.giveItems(HAT_EVENT_REWARD[getRandom(3)], 1);
 						break;
 					case 15:
 						st.giveItems(13992, 1); // Grade S Accessory Chest (Event)
@@ -237,12 +238,12 @@ public class MasterOfEnchanting extends LongTimeEvent
 						st.giveItems(13990, 1); // Grade S Weapon Chest (Event)
 						break;
 					case 20:
-						st.giveItems(_crystal_reward[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+						st.giveItems(CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
 					case 21:
 						st.giveItems(8762, 1); // Top-Grade Life Stone: level 76
 						st.giveItems(8752, 1); // High-Grade Life Stone: level 76
-						st.giveItems(_crystal_reward[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
+						st.giveItems(CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
 					case 22:
 						st.giveItems(13989, 1); // S80 Grade Armor Chest (Event)
@@ -250,13 +251,13 @@ public class MasterOfEnchanting extends LongTimeEvent
 					case 23:
 						st.giveItems(13988, 1); // S80 Grade Weapon Chest (Event)
 					default:
-						if (st.getEnchantLevel(_master_yogi_staff) > 23)
+						if (st.getEnchantLevel(MASTER_YOGI_STAFF) > 23)
 						{
 							st.giveItems(13988, 1); // S80 Grade Weapon Chest (Event)
 						}
 						break;
 				}
-				st.takeItems(_master_yogi_staff, 1);
+				st.takeItems(MASTER_YOGI_STAFF, 1);
 				htmltext = "32599-rewardok.htm";
 			}
 			else
@@ -279,6 +280,6 @@ public class MasterOfEnchanting extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new MasterOfEnchanting(-1, "MasterOfEnchanting", "events");
+		new MasterOfEnchanting(-1, MasterOfEnchanting.class.getSimpleName(), "events");
 	}
 }
