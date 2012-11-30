@@ -44,20 +44,26 @@ public class MasterOfEnchanting extends LongTimeEvent
 	
 	private static final int[] _hat_shadow_reward =
 	{
-		13074, 13075, 13076
+		13074,
+		13075,
+		13076
 	};
 	private static final int[] _hat_event_reward =
 	{
-		13518, 13519, 13522
+		13518,
+		13519,
+		13522
 	};
 	private static final int[] _crystal_reward =
 	{
-		9570, 9571, 9572
+		9570,
+		9571,
+		9572
 	};
 	
 	@SuppressWarnings("deprecation")
 	private static final Date _eventStart = new Date(2011, 7, 1);
-
+	
 	public MasterOfEnchanting(int questId, String name, String descr)
 	{
 		super(questId, name, descr);

@@ -42,7 +42,13 @@ public class FreyaCelebration extends LongTimeEvent
 	
 	private static final int[] _skills =
 	{
-		9150, 9151, 9152, 9153, 9154, 9155, 9156
+		9150,
+		9151,
+		9152,
+		9153,
+		9154,
+		9155,
+		9156
 	};
 	
 	private static final NpcStringId[] _freya_texts =
@@ -53,7 +59,7 @@ public class FreyaCelebration extends LongTimeEvent
 		NpcStringId.BUT_I_KIND_OF_MISS_IT_LIKE_I_HAD_FELT_THIS_FEELING_BEFORE,
 		NpcStringId.I_AM_ICE_QUEEN_FREYA_THIS_FEELING_AND_EMOTION_ARE_NOTHING_BUT_A_PART_OF_MELISSAA_MEMORIES
 	};
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
