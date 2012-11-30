@@ -146,10 +146,10 @@
 		<table name="#abnormalLvls"> 2 3 3 4 4 4 4 4 4 4 4 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="armor_fire" />
+		<set name="fanRange" val="0,0,80,150" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;80;150" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillRadius" val="80" />
 		<set name="skillType" val="PDAM" />
@@ -315,10 +315,10 @@
 		<table name="#power"> 46 105 216 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
+		<set name="fanRange" val="0,0,1000,180" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;1000;180" />
 		<set name="skillRadius" val="1000" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
@@ -1706,6 +1706,7 @@
 		<set name="effectRange" val="400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,15,250,160" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1725,6 +1726,7 @@
 		<set name="effectRange" val="400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,-15,250,160" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1745,6 +1747,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,1200,35" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
@@ -1771,6 +1774,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,1700,160" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="2" />
@@ -1794,6 +1798,7 @@
 		<set name="coolTime" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,180,1000,120" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1808,6 +1813,7 @@
 		<!-- Valakas Tail Stomp B from Behind -->
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,180,500,120" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="157" />
@@ -1834,6 +1840,7 @@
 		<set name="coolTime" val="3000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,180,250,500" />
 		<set name="flyRadius" val="600" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="3000" />

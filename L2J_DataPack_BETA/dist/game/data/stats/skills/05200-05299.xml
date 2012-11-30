@@ -680,7 +680,6 @@
 		<set name="abnormalType" val="freezing" />
 		<set name="magicLvl" val="85" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;600;60" />
 		<set name="skillRadius" val="600" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="A2" />
@@ -697,6 +696,7 @@
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,600,60" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="freezing" />
 		</for>
@@ -726,7 +726,6 @@
 		<set name="power" val="6723" />
 		<set name="lvlDepend" val="2" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;600;60" />
 		<set name="skillRadius" val="600" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="CON" />
@@ -735,6 +734,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,600,60" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
@@ -1259,6 +1259,7 @@
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,200,180" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1269,7 +1270,6 @@
 		<set name="skillRadius" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;200;180" />
 	</skill>
 	<skill id="5266" levels="12" name="Magical Backfire">
 		<!-- CT2.5 retail confirmed -->

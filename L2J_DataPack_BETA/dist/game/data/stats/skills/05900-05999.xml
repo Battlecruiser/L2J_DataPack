@@ -3,8 +3,9 @@
 	<skill id="5900" levels="1" name="Burst of Oblivion">
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="oblivion" />
+		<set name="fanRange" val="0,0,150,90" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
@@ -40,6 +41,7 @@
 	<skill id="5903" levels="1" name="Burst of Misplace">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
+		<set name="fanRange" val="0,0,600,90" />
 		<set name="mpConsume" val="74" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -51,7 +53,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="skillType" val="DISARM" />
 		<set name="soulMaxConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="saveVs" val="STR" />
 		<for>
@@ -253,6 +255,7 @@
 		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="fanRange" val="0,0,600,90" />
 		<set name="hitTime" val="26950" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -332,8 +335,9 @@
 		</cond>
 	</skill>
 	<skill id="5926" levels="1" name="Breath Corruption">
+		<set name="fanRange" val="0,0,300,90" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -387,6 +391,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,300,160" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
@@ -404,6 +409,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,300,160" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />

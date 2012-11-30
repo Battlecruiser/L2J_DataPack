@@ -301,7 +301,7 @@
 		<set name="power" val="#power" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;200;180" />
+		<set name="fanRange" val="0,0,200,180" />
 		<set name="skillRadius" val="200" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="2000" />
@@ -490,7 +490,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;200;180" />
+		<set name="fanRange" val="0,0,200,180" />
 		<set name="overHit" val="true" />
 		<set name="skillRadius" val="200" />
 		<set name="SSBoost" val="2.0" />

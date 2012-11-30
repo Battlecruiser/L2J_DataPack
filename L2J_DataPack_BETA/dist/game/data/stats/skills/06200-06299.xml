@@ -605,7 +605,8 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6268" levels="1" name="Power Attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,300,90" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -987,6 +988,7 @@
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,250,60" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />

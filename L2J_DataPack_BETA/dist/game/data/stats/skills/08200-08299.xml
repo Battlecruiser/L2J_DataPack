@@ -1056,7 +1056,8 @@
 	<skill id="8276" levels="1" name="Shield Branding">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,150,90" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />

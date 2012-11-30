@@ -163,6 +163,7 @@
 		<set name="coolTime" val="3000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,180,1500,400" />
 		<set name="flyRadius" val="600" />
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="3000" />
@@ -209,6 +210,7 @@
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="antaras_debuff" />
+		<set name="fanRange" val="0,0,850,850" />
 		<set name="coolTime" val="1200" />
 		<set name="hitTime" val="2800" />
 		<set name="isDebuff" val="true" />
@@ -246,6 +248,7 @@
 		<set name="effectRange" val="#effectRange" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,1200,300" />
 		<set name="hitTime" val="2300" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -571,6 +574,7 @@
 		<!-- Baium Skills -->
 		<set name="coolTime" val="1700" />
 		<set name="hitTime" val="2300" />
+		<set name="fanRange" val="0,0,600,100" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="14000" />

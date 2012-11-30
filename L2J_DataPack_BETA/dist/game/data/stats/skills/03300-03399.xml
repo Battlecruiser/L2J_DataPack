@@ -270,7 +270,8 @@
 		<set name="coolTime" val="133" />
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="60000" />

@@ -307,7 +307,6 @@
 		<set name="mpConsume" val="84" />
 		<set name="power" val="2487" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;80;150" />
 		<set name="skillRadius" val="80" />
 		<set name="reuseDelay" val="17000" />
 		<set name="hitTime" val="1080" />
@@ -316,6 +315,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,80,150" />
 		<set name="nextActionAttack" val="true" />
 		<set name="aggroPoints" val="351" />
 	</skill>
@@ -1467,6 +1467,7 @@
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
 		<set name="effectRange" val="1100" />
+		<set name="fanRange" val="0,0,1200,35" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />

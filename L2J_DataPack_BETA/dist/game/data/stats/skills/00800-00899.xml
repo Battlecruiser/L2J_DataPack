@@ -1275,7 +1275,6 @@
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<set name="mpConsume" val="25" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;400;90" />
 		<set name="skillRadius" val="400" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1286,6 +1285,7 @@
 		<set name="coolTime" val="720" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,400,90" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="nextActionAttack" val="true" />
 	</skill>

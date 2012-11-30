@@ -650,10 +650,10 @@
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
 		<!-- Confirmed CT2.5 -->
-		<!-- TODO: Implement proper target type. -->
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,300,900" />
 		<set name="hitTime" val="1300" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />

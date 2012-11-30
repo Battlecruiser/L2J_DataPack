@@ -97,9 +97,10 @@
 	</skill>
 	<skill id="5708" levels="2" name="Water Cannon">
 		<set name="power" val="160" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,400,60" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
@@ -120,13 +121,14 @@
 	</skill>
 	<skill id="5710" levels="2" name="Triple Sword">
 		<set name="power" val="320" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,500,60" />
 	</skill>
 	<skill id="5711" levels="1" name="Power of Rage">
 		<set name="abnormalLvl" val="1" />
@@ -197,7 +199,8 @@
 	<skill id="5716" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,1500,60" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A2" />
@@ -1159,8 +1162,9 @@
 	<skill id="5794" levels="1" name="Decrease Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
+		<set name="fanRange" val="0,0,900,5" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
@@ -1184,8 +1188,9 @@
 	<skill id="5796" levels="1" name="Decrease Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
+		<set name="fanRange" val="0,0,900,30" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A2" />
@@ -1194,6 +1199,7 @@
 		<set name="lvlDepend" val="2" />
 	</skill>
 	<skill id="5797" levels="1" name="Bursting Flame">
+		<set name="fanRange" val="0,0,600,60" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="reuseDelay" val="4000" />

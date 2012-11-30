@@ -5,6 +5,7 @@
 		<table name="#pvpPower"> 5280 5390 5498 5603 5704 5800 </table>
 		<table name="#pvePower"> 15838 16170 16494 16807 17110 17400 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
+		<set name="fanRange" val="0,0,200,900" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
@@ -127,12 +128,13 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
+		<set name="fanRange" val="0,0,900,100" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="83" />
 		<set name="target" val="TARGET_FRONT_AURA" />
-		<set name="skillRadius" val="100" />
+		<set name="skillRadius" val="900" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="PDAM" />
@@ -219,6 +221,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,200,900" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="CON" />
 		<set name="skillRadius" val="100" />
