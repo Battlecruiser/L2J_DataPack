@@ -889,11 +889,12 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="PDAM" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
+		<set name="fanRange" val="0,0,150,60" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="6000" />
 	</skill>

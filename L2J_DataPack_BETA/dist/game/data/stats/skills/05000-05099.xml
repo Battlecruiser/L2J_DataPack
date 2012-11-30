@@ -260,6 +260,7 @@
 		<set name="effectRange" val="650" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="0,0,150,150" />
 		<set name="hitTime" val="1300" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -272,6 +273,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<table name="#coolTime"> 0 0 0 1500 1500 1500 </table>
+		<table name="#fanRange"> 0,0,400,150 0,0,500,170 0,0,700,200 0,0,400,150 0,0,500,170 0,0,700,200 </table>
 		<table name="#radius"> 400 500 700 400 500 700 </table>
 		<table name="#power"> 48761 52970 68074 48761 52970 68074 </table>
 		<set name="castRange" val="150" />
@@ -279,6 +281,7 @@
 		<set name="effectRange" val="650" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
+		<set name="fanRange" val="#fanRange" />
 		<set name="flyRadius" val="#radius" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="1500" />

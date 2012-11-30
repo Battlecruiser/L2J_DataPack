@@ -1190,6 +1190,7 @@
 		<table name="#power"> 138 139 141 142 144 145 146 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,400,180" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1226,6 +1227,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
+		<set name="fanRange" val="0,0,900,100" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1237,9 +1239,9 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="100" /> <!-- 900, 100 -->
+		<set name="skillRadius" val="900" />
 		<set name="skillType" val="FEAR" />
-		<set name="target" val="TARGET_FRONT_AREA" /> <!-- TODO: TARGET_AURA_SQUARE -->
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>

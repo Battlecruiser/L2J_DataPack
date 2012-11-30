@@ -7,8 +7,9 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="5801" levels="1" name="Drake Breath">
+		<set name="fanRange" val="0,0,600,45" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3300" />
@@ -17,7 +18,8 @@
 	<skill id="5802" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,400,60" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1500" />
@@ -83,8 +85,9 @@
 	<skill id="5810" levels="1" name="Decrease Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
+		<set name="fanRange" val="0,0,600,30" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
@@ -100,8 +103,9 @@
 		<set name="hitTime" val="1700" />
 	</skill>
 	<skill id="5812" levels="1" name="Fire Breath">
+		<set name="fanRange" val="0,0,600,60" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
@@ -204,10 +208,10 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,600,120" />
 		<set name="power" val="#power" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;600;120" />
 		<set name="skillType" val="MDAM" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -428,6 +432,7 @@
 		<!-- Tiat Skills -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
+		<set name="fanRange" val="0,0,1200,30" />
 		<set name="hitTime" val="2600" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
@@ -446,6 +451,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- fire -->
 		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,1200,90" />
 		<set name="hitTime" val="2600" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
@@ -642,7 +648,8 @@
 	<skill id="5855" levels="1" name="Shock">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,300,90" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
@@ -748,8 +755,9 @@
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
+		<set name="fanRange" val="0,0,150,90" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
@@ -796,7 +804,8 @@
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,150,90" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
@@ -828,7 +837,8 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="deathworm" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="fanRange" val="0,0,150,90" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
@@ -976,6 +986,7 @@
 		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
+		<set name="fanRange" val="0,0,300,90" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -1001,6 +1012,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,300,90" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
@@ -1056,6 +1068,7 @@
 		<table name="#mpConsume"> 82 83 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
+		<set name="fanRange" val="0,0,300,90" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -1067,7 +1080,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="lvlDepend" val="1" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1259,11 +1272,12 @@
 		<table name="#hitTime"> 2000 22940 </table>
 		<set name="mpConsume" val="224" />
 		<set name="power" val="3000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 	</skill>

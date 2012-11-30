@@ -812,6 +812,7 @@
 		<table name="#power"> 1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978 </table>
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
+		<set name="fanRange" val="0,0,80,150" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -819,7 +820,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillRadius" val="80" />
-		<set name="skillScope" val="fan;80;150" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>

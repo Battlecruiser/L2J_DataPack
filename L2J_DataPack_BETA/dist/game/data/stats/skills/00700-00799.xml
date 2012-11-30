@@ -1065,8 +1065,8 @@
 		<table name="#mpConsume"> 71 74 77 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="150" />
+		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="skillRadius" val="80" />
 		<set name="power" val="#dmg" />
 		<set name="skillType" val="PDAM" />
 		<set name="overHit" val="true" />
@@ -1077,6 +1077,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,80,150" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
 	<skill id="752" levels="3" name="Doll Blader Sting">
@@ -1476,6 +1477,7 @@
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
+		<set name="fanRange" val="0,0,900,40" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
@@ -1524,6 +1526,7 @@
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
+		<set name="fanRange" val="0,0,900,100" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
@@ -1633,6 +1636,7 @@
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
+		<set name="fanRange" val="0,0,500,60" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="160" />
@@ -1962,6 +1966,7 @@
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
+		<set name="fanRange" val="0,0,900,40" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="120" />
@@ -2042,6 +2047,7 @@
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="800" />
+		<set name="fanRange" val="0,0,600,60" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
 		<set name="isDebuff" val="true" />
@@ -2122,6 +2128,7 @@
 	<skill id="795" levels="1" name="Divine Knight Brandish">
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,200,180" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="mpConsume" val="88" />
@@ -2149,6 +2156,7 @@
 	<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,250,60" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="mpConsume" val="88" />
@@ -2156,11 +2164,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2111" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillRadius" val="80" />
+		<set name="skillRadius" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="square;250;60" />
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
 		<set name="abnormalLvl" val="3" />
