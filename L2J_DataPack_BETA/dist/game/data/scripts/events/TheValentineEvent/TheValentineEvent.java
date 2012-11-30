@@ -28,7 +28,7 @@ public class TheValentineEvent extends LongTimeEvent
 {
 	private static final int _npc = 4301;
 	private static final int _recipe = 20191;
-
+	
 	public TheValentineEvent(int questId, String name, String descr)
 	{
 		super(questId, name, descr);

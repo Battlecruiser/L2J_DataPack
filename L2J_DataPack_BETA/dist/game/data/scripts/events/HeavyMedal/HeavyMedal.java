@@ -33,13 +33,19 @@ public class HeavyMedal extends LongTimeEvent
 	
 	private final static int[] MEDALS =
 	{
-		5, 10, 20, 40
+		5,
+		10,
+		20,
+		40
 	};
 	private final static int[] BADGES =
 	{
-		6399, 6400, 6401, 6402
+		6399,
+		6400,
+		6401,
+		6402
 	};
-
+	
 	public HeavyMedal(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
