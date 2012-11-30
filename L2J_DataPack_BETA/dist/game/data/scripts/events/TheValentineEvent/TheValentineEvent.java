@@ -26,15 +26,17 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class TheValentineEvent extends LongTimeEvent
 {
-	private static final int _npc = 4301;
-	private static final int _recipe = 20191;
+	// NPC
+	private static final int NPC = 4301;
+	// Item
+	private static final int RECIPE = 20191;
 	
 	public TheValentineEvent(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(_npc);
-		addFirstTalkId(_npc);
-		addTalkId(_npc);
+		addStartNpc(NPC);
+		addFirstTalkId(NPC);
+		addTalkId(NPC);
 	}
 	
 	@Override
@@ -55,7 +57,7 @@ public class TheValentineEvent extends LongTimeEvent
 			}
 			else
 			{
-				st.giveItems(_recipe, 1);
+				st.giveItems(RECIPE, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				st.setState(State.COMPLETED);
 			}
@@ -75,6 +77,6 @@ public class TheValentineEvent extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new TheValentineEvent(-1, "TheValentineEvent", "events");
+		new TheValentineEvent(-1, TheValentineEvent.class.getSimpleName(), "events");
 	}
 }

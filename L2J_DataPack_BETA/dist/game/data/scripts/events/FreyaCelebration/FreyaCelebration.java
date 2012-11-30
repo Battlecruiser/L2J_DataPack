@@ -35,12 +35,15 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class FreyaCelebration extends LongTimeEvent
 {
-	private static final int _freya = 13296;
-	private static final int _freya_potion = 15440;
-	private static final int _freya_gift = 17138;
-	private static final int _hours = 20;
+	// NPC
+	private static final int FREYA = 13296;
+	// Items
+	private static final int FREYA_POTION = 15440;
+	private static final int FREYA_GIFT = 17138;
+	// Misc
+	private static final int HOURS = 20;
 	
-	private static final int[] _skills =
+	private static final int[] SKILLS =
 	{
 		9150,
 		9151,
@@ -51,7 +54,7 @@ public class FreyaCelebration extends LongTimeEvent
 		9156
 	};
 	
-	private static final NpcStringId[] _freya_texts =
+	private static final NpcStringId[] FREYA_TEXT =
 	{
 		NpcStringId.EVEN_THOUGH_YOU_BRING_SOMETHING_CALLED_A_GIFT_AMONG_YOUR_HUMANS_IT_WOULD_JUST_BE_PROBLEMATIC_FOR_ME,
 		NpcStringId.I_JUST_DONT_KNOW_WHAT_EXPRESSION_I_SHOULD_HAVE_IT_APPEARED_ON_ME_ARE_HUMANS_EMOTIONS_LIKE_THIS_FEELING,
@@ -81,8 +84,8 @@ public class FreyaCelebration extends LongTimeEvent
 				{
 					st.setState(State.STARTED);
 					st.takeItems(PcInventory.ADENA_ID, 1);
-					st.giveItems(_freya_potion, 1);
-					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (_hours * 3600000)));
+					st.giveItems(FREYA_POTION, 1);
+					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (HOURS * 3600000)));
 				}
 				else
 				{
@@ -90,7 +93,7 @@ public class FreyaCelebration extends LongTimeEvent
 					int hours = (int) (remainingTime / 3600);
 					int minutes = (int) ((remainingTime % 3600) / 60);
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
-					sm.addItemName(_freya_potion);
+					sm.addItemName(FREYA_POTION);
 					sm.addNumber(hours);
 					sm.addNumber(minutes);
 					player.sendPacket(sm);
@@ -115,7 +118,7 @@ public class FreyaCelebration extends LongTimeEvent
 			return null;
 		}
 		
-		if ((npc.getNpcId() == _freya) && Util.contains(targets, npc) && Util.contains(_skills, skill.getId()))
+		if ((npc.getNpcId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
 		{
 			if (getRandom(100) < 5)
 			{
@@ -124,13 +127,13 @@ public class FreyaCelebration extends LongTimeEvent
 				
 				npc.broadcastPacket(cs);
 				
-				caster.addItem("FreyaCelebration", _freya_gift, 1, npc, true);
+				caster.addItem("FreyaCelebration", FREYA_GIFT, 1, npc, true);
 			}
 			else
 			{
 				if (getRandom(10) < 2)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), _freya_texts[getRandom(_freya_texts.length - 1)]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
 				}
 			}
 		}
@@ -151,14 +154,14 @@ public class FreyaCelebration extends LongTimeEvent
 	{
 		super(questId, name, descr);
 		
-		addStartNpc(_freya);
-		addFirstTalkId(_freya);
-		addTalkId(_freya);
-		addSkillSeeId(_freya);
+		addStartNpc(FREYA);
+		addFirstTalkId(FREYA);
+		addTalkId(FREYA);
+		addSkillSeeId(FREYA);
 	}
 	
 	public static void main(String[] args)
 	{
-		new FreyaCelebration(-1, "FreyaCelebration", "events");
+		new FreyaCelebration(-1, FreyaCelebration.class.getSimpleName(), "events");
 	}
 }
