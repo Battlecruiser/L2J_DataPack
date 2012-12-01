@@ -771,14 +771,18 @@
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6676" levels="1" name="Magician's Perversity">
+		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
-		<set name="castRange" val="600" />
-		<set name="hitTime" val="2000" />
+		<set name="castRange" val="900" />
+		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="mpConsume" val="82" />
-		<set name="power" val="450" />
+		<set name="power" val="120" />
+		<set name="effectRange" val="1200" />
+		<set name="elementPower" val="180" />
+		<set name="element" val="3" /> <!-- Earth -->
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
 		<set name="abnormalLvl" val="1" />
