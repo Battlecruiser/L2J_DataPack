@@ -150,9 +150,9 @@ public class FreyaCelebration extends LongTimeEvent
 		return "13296.htm";
 	}
 	
-	public FreyaCelebration(int questId, String name, String descr)
+	public FreyaCelebration(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		
 		addStartNpc(FREYA);
 		addFirstTalkId(FREYA);
@@ -162,6 +162,6 @@ public class FreyaCelebration extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new FreyaCelebration(-1, FreyaCelebration.class.getSimpleName(), "events");
+		new FreyaCelebration(FreyaCelebration.class.getSimpleName(), "events");
 	}
 }

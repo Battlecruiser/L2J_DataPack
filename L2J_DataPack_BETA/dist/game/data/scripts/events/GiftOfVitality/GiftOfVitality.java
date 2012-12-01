@@ -34,9 +34,9 @@ public class GiftOfVitality extends LongTimeEvent
 	// NPC
 	private static final int JACK = 4306;
 	
-	public GiftOfVitality(int questId, String name, String descr)
+	public GiftOfVitality(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		addStartNpc(JACK);
 		addFirstTalkId(JACK);
 		addTalkId(JACK);
@@ -149,6 +149,6 @@ public class GiftOfVitality extends LongTimeEvent
 	
 	public static void main(String[] args)
 	{
-		new GiftOfVitality(-1, GiftOfVitality.class.getSimpleName(), "events");
+		new GiftOfVitality(GiftOfVitality.class.getSimpleName(), "events");
 	}
 }
