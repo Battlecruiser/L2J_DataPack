@@ -591,8 +591,11 @@ public class HallOfSuffering extends Quest
 				for(L2PcInstance pl : player.getParty().getMembers())
 				{
 					st = pl.getQuestState(qn);
-					st.giveItems(736, 1);
-					st.giveItems(((HSWorld)world).rewardItemId, 1);
+					if (st != null)
+					{
+						st.giveItems(736, 1);
+						st.giveItems(((HSWorld)world).rewardItemId, 1);
+					}
 				}
 				return "";
 			}
