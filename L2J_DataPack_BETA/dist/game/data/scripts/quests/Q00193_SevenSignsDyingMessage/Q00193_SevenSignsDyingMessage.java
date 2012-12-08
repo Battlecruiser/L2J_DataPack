@@ -14,6 +14,8 @@
  */
 package quests.Q00193_SevenSignsDyingMessage;
 
+import quests.Q00192_SevenSignSeriesOfDoubt.Q00192_SevenSignSeriesOfDoubt;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -241,7 +243,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (npc.getNpcId() == HOLLINT)
 				{
-					st = player.getQuestState("Q00192_SevenSignSeriesOfDoubt");
+					st = player.getQuestState(Q00192_SevenSignSeriesOfDoubt.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30191-01.htm" : "30191-03.html";
 				}
 				break;

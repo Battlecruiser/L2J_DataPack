@@ -14,6 +14,8 @@
  */
 package quests.Q00198_SevenSignsEmbryo;
 
+import quests.Q00197_SevenSignsTheSacredBookOfSeal.Q00197_SevenSignsTheSacredBookOfSeal;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -213,7 +215,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			{
 				if (npc.getNpcId() == WOOD)
 				{
-					st = player.getQuestState("Q00197_SevenSignsTheSacredBookOfSeal");
+					st = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-03.html";
 				}
 				break;
