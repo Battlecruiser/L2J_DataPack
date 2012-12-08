@@ -191,12 +191,9 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == PINAPS)
+				if (st.isCond(1))
 				{
-					if (st.isCond(1))
-					{
-						htmltext = (st.getQuestItemsCount(SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
-					}
+					htmltext = (st.getQuestItemsCount(SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
 				}
 				break;
 			}
