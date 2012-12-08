@@ -14,6 +14,9 @@
  */
 package quests.Q00290_ThreatRemoval;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import quests.Q00251_NoSecrets.Q00251_NoSecrets;
 
 import com.l2jserver.Config;
@@ -22,70 +25,38 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Threat Removal (290)
- * @author kostantinos
+ * @author Adry_85
  */
 public class Q00290_ThreatRemoval extends Quest
 {
-	public static final int PINAPS = 30201;
-	public static final int TAGS = 15714;
+	// NPC
+	private static final int PINAPS = 30201;
+	// Item
+	private static final int ENCHANT_WEAPON_S = 959;
+	private static final int ENCHANT_ARMOR_S = 960;
+	private static final int FIRE_CRYSTAL = 9552;
+	private static final int SEL_MAHUM_ID_TAG = 15714;
+	// Misc
+	private static final int MIN_LEVEL = 82;
 	
-	private static final int[] MOBS1 =
-	{
-		22780,
-		22782,
-		22784
-	};
-	private static final int[] MOBS2 =
-	{
-		22781,
-		22783,
-		22785
-	};
-	private static final int[] MOBS3 =
-	{
-		22776,
-		22775,
-		22777,
-		22778
-	};
+	private static final Map<Integer, Integer> MOBS_TAG = new HashMap<>();
 	
-	private static final int[][][] REWARD =
+	static
 	{
-		{
-			{
-				959,
-				1
-			}
-		},
-		{
-			{
-				960,
-				1
-			},
-			{
-				960,
-				2
-			},
-			{
-				960,
-				3
-			}
-		},
-		{
-			{
-				9552,
-				1
-			},
-			{
-				9552,
-				2
-			}
-		}
-	};
+		MOBS_TAG.put(22775, 932); // Sel Mahum Drill Sergeant
+		MOBS_TAG.put(22776, 397); // Sel Mahum Training Officer
+		MOBS_TAG.put(22777, 932); // Sel Mahum Drill Sergeant
+		MOBS_TAG.put(22778, 932); // Sel Mahum Drill Sergeant
+		MOBS_TAG.put(22780, 363); // Sel Mahum Recruit
+		MOBS_TAG.put(22781, 483); // Sel Mahum Soldier
+		MOBS_TAG.put(22782, 363); // Sel Mahum Recruit
+		MOBS_TAG.put(22783, 352); // Sel Mahum Soldier
+		MOBS_TAG.put(22784, 363); // Sel Mahum Recruit
+		MOBS_TAG.put(22785, 169); // Sel Mahum Soldier
+	}
 	
 	public Q00290_ThreatRemoval(int id, String name, String descr)
 	{
@@ -93,161 +64,165 @@ public class Q00290_ThreatRemoval extends Quest
 		
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
-		
-		for (int i : MOBS1)
-		{
-			addKillId(i);
-		}
-		for (int i : MOBS2)
-		{
-			addKillId(i);
-		}
-		for (int i : MOBS3)
-		{
-			addKillId(i);
-		}
+		addKillId(MOBS_TAG.keySet());
+		registerQuestItems(SEL_MAHUM_ID_TAG);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return htmltext;
+			return null;
 		}
-		int[][] i = REWARD[getRandom(REWARD.length)];
-		int b = getRandom(i.length);
 		
-		if (npc.getNpcId() == PINAPS)
+		String htmltext = null;
+		switch (event)
 		{
-			if (event.equalsIgnoreCase("30201-02.htm"))
+			case "30201-02.html":
 			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
+				htmltext = event;
+				break;
 			}
-			else if (event.equalsIgnoreCase("30201-05.htm"))
+			case "30201-06.html":
 			{
-				if (st.getQuestItemsCount(TAGS) >= 400)
+				if (st.isCond(1))
 				{
-					st.giveItems(i[b][0], i[b][1]);
-					st.takeItems(TAGS, 400);
-					st.playSound("ItemSound.quest_finish");
-					htmltext = "30201-05.htm";
+					st.takeItems(SEL_MAHUM_ID_TAG, 400);
+					switch (getRandom(10))
+					{
+						case 0:
+						{
+							st.rewardItems(ENCHANT_WEAPON_S, 1);
+							break;
+						}
+						case 1:
+						case 2:
+						case 3:
+						{
+							st.rewardItems(ENCHANT_ARMOR_S, 1);
+							break;
+						}
+						case 4:
+						case 5:
+						{
+							st.rewardItems(ENCHANT_ARMOR_S, 2);
+							break;
+						}
+						case 6:
+						{
+							st.rewardItems(ENCHANT_ARMOR_S, 3);
+							break;
+						}
+						case 7:
+						case 8:
+						{
+							st.rewardItems(FIRE_CRYSTAL, 1);
+							break;
+						}
+						case 9:
+						case 10:
+						{
+							st.rewardItems(FIRE_CRYSTAL, 2);
+							break;
+						}
+					}
+					htmltext = event;
 				}
-				else
-				{
-					htmltext = "30201-03.htm";
-				}
+				break;
 			}
-			else if (event.equalsIgnoreCase("30201-08.htm"))
+			case "30201-07.html":
 			{
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(true);
+				if (st.isCond(1))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "exit":
+			{
+				if (st.isCond(1))
+				{
+					if (st.hasQuestItems(SEL_MAHUM_ID_TAG))
+					{
+						htmltext = "30201-08.html";
+					}
+					else
+					{
+						st.exitQuest(true, true);
+						htmltext = "30201-09.html";
+					}
+				}
+				break;
+			}
+			case "30201-10.html":
+			{
+				if (st.isCond(1))
+				{
+					st.exitQuest(true, true);
+					htmltext = event;
+				}
+				break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		QuestState st = player.getQuestState(getName());
-		QuestState _prev = player.getQuestState(Q00251_NoSecrets.class.getSimpleName());
+		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == PINAPS)
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
-					if ((player.getLevel() >= 82) && (_prev != null) && _prev.isCompleted())
+				st = player.getQuestState(Q00251_NoSecrets.class.getSimpleName());
+				htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30201-01.htm" : "30201-03.html";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (npc.getNpcId() == PINAPS)
+				{
+					if (st.isCond(1))
 					{
-						htmltext = "30201-01.htm";
+						htmltext = (st.getQuestItemsCount(SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
 					}
-					else
-					{
-						htmltext = "30201-00.htm";
-					}
-					break;
-				case State.STARTED:
-					if (st.getInt("cond") == 1)
-					{
-						if (st.getQuestItemsCount(TAGS) >= 400)
-						{
-							htmltext = "30201-04.htm";
-						}
-						else
-						{
-							htmltext = "30201-03.htm";
-						}
-					}
-					break;
+				}
+				break;
 			}
 		}
+		
 		return htmltext;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		if ((st == null) || (st.getState() != State.STARTED))
+		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		if (partyMember == null)
 		{
 			return null;
 		}
-		if (Util.contains(MOBS1, npcId))
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		int chance = (int) ((MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP) % 1000);
+		if (getRandom(1000) < chance)
 		{
-			int chance = (int) (25 * Config.RATE_QUEST_DROP);
-			int numItems = (chance / 100);
-			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
-				numItems++;
-			}
-			if (numItems > 0)
-			{
-				st.playSound("ItemSound.quest_itemget");
-				st.giveItems(TAGS, numItems);
-			}
+			st.rewardItems(SEL_MAHUM_ID_TAG, 1);
+			st.playSound("ItemSound.quest_itemget");
 		}
-		else if (Util.contains(MOBS2, npcId))
-		{
-			int chance = (int) (30 * Config.RATE_QUEST_DROP);
-			int numItems = (chance / 100);
-			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
-				numItems++;
-			}
-			if (numItems > 0)
-			{
-				st.playSound("ItemSound.quest_itemget");
-				st.giveItems(TAGS, numItems);
-			}
-		}
-		else if (Util.contains(MOBS3, npcId))
-		{
-			int chance = (int) (50 * Config.RATE_QUEST_DROP);
-			int numItems = (chance / 100);
-			chance = chance % 100;
-			if (getRandom(100) < chance)
-			{
-				numItems++;
-			}
-			if (numItems > 0)
-			{
-				st.playSound("ItemSound.quest_itemget");
-				st.giveItems(TAGS, numItems);
-			}
-		}
+		
 		return super.onKill(npc, player, isPet);
 	}
 	
