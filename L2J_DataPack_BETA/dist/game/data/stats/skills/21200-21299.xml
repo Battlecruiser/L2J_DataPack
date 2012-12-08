@@ -351,22 +351,40 @@
 		</for>
 	</skill>
 	<skill id="21235" levels="1" name="7th Anniversary T-shirt: Speed">
-		<!-- Increases Speed by 7. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<!-- High Five Skill -->
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
 	</skill>
 	<skill id="21236" levels="1" name="7th Anniversary T-shirt: Blessed Escape Ability">
-		<!-- Allows the use of Blessed Escape every 20 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="72000000" />
+		<set name="skillType" val="RECALL" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="21237" levels="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
-		<!-- Temporarily becomes invincible for 7 seconds. Can be used every 20 hours. -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="invincibility" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="72000000" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Invincible" abnormalTime="7" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
+		</for>
 	</skill>
 	<skill id="21238" levels="1" name="Jet Bike">
 		<!-- Mounts a jet bike. -->
