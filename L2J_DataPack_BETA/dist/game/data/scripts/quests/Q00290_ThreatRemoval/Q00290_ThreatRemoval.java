@@ -34,7 +34,7 @@ public class Q00290_ThreatRemoval extends Quest
 {
 	// NPC
 	private static final int PINAPS = 30201;
-	// Item
+	// Items
 	private static final int ENCHANT_WEAPON_S = 959;
 	private static final int ENCHANT_ARMOR_S = 960;
 	private static final int FIRE_CRYSTAL = 9552;

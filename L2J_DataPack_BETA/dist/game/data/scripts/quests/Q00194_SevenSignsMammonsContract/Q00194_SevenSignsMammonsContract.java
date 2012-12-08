@@ -14,6 +14,8 @@
  */
 package quests.Q00194_SevenSignsMammonsContract;
 
+import quests.Q00193_SevenSignsDyingMessage.Q00193_SevenSignsDyingMessage;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -380,7 +382,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (npc.getNpcId() == SIR_GUSTAV_ATHEBALDT)
 				{
-					st = player.getQuestState("Q00193_SevenSignsDyingMessage");
+					st = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30760-01.htm" : "30760-05.html";
 				}
 				break;
