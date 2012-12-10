@@ -14,8 +14,6 @@
  */
 package quests.Q00197_SevenSignsTheSacredBookOfSeal;
 
-import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmperor;
-
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -261,6 +259,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	}
 	
 	@Override
+	@SuppressWarnings("null")
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -281,7 +280,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			{
 				if (npc.getNpcId() == WOOD)
 				{
-					st = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
+					// st = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName()); // TODO: Un-comment when quest is committed.
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-05.html";
 				}
 				break;
