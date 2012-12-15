@@ -91,21 +91,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 				break;
 			}
 			case "32597-02.html":
-			{
-				if (st.isCond(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32597-03.html":
-			{
-				if (st.isCond(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32597-04.html":
 			{
 				if (st.isCond(1))
@@ -150,21 +136,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 				break;
 			}
 			case "32597-08.html":
-			{
-				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32597-09.html":
-			{
-				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32597-10.html":
 			{
 				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
@@ -190,7 +162,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -271,7 +242,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

@@ -79,10 +79,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		switch (event)
 		{
 			case "32593-02.htm":
-			{
-				htmltext = event;
-				break;
-			}
 			case "32593-03.htm":
 			{
 				htmltext = event;
@@ -120,13 +116,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				break;
 			}
 			case "30857-02.html":
-			{
-				if (st.isCond(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "30857-03.html":
 			{
 				if (st.isCond(1))
@@ -162,13 +151,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				break;
 			}
 			case "32595-02.html":
-			{
-				if (st.isCond(3))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32595-03.html":
 			{
 				if (st.isCond(3))
@@ -195,21 +177,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				break;
 			}
 			case "32595-06.html":
-			{
-				if (st.isCond(4) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32595-07.html":
-			{
-				if (st.isCond(4) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32595-08.html":
 			{
 				if (st.isCond(4) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
@@ -228,13 +196,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				break;
 			}
 			case "32596-02.html":
-			{
-				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32596-03.html":
 			{
 				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
@@ -254,7 +215,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -287,91 +247,98 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == WOOD)
+				switch (npc.getNpcId())
 				{
-					if ((st.getCond() > 0) && (st.getCond() < 6))
+					case WOOD:
 					{
-						htmltext = "32593-06.html";
-					}
-					else if (st.isCond(6))
-					{
-						if (st.hasQuestItems(MYSTERIOUS_HAND_WRITTEN_TEXT) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
+						if ((st.getCond() > 0) && (st.getCond() < 6))
 						{
-							htmltext = "32593-07.html";
+							htmltext = "32593-06.html";
 						}
-					}
-				}
-				else if (npc.getNpcId() == ORVEN)
-				{
-					if (st.isCond(1))
-					{
-						htmltext = "30857-01.html";
-					}
-					else if (st.getCond() >= 2)
-					{
-						htmltext = "30857-05.html";
-					}
-				}
-				else if (npc.getNpcId() == LEOPARD)
-				{
-					if (st.isCond(2))
-					{
-						htmltext = "32594-01.html";
-					}
-					else if (st.getCond() >= 3)
-					{
-						htmltext = "32594-04.html";
-					}
-				}
-				else if (npc.getNpcId() == LAWRENCE)
-				{
-					if (st.isCond(3))
-					{
-						if (isBusy)
+						else if (st.isCond(6))
 						{
-							htmltext = "32595-05.html";
+							if (st.hasQuestItems(MYSTERIOUS_HAND_WRITTEN_TEXT) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32593-07.html";
+							}
 						}
-						else
-						{
-							htmltext = "32595-01.html";
-						}
+						break;
 					}
-					else if (st.isCond(4))
+					case ORVEN:
 					{
-						if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+						if (st.isCond(1))
 						{
-							htmltext = "32595-06.html";
+							htmltext = "30857-01.html";
 						}
+						else if (st.getCond() >= 2)
+						{
+							htmltext = "30857-05.html";
+						}
+						break;
 					}
-					else if (st.getCond() >= 5)
+					case LEOPARD:
 					{
-						if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+						if (st.isCond(2))
 						{
-							htmltext = "32595-10.html";
+							htmltext = "32594-01.html";
 						}
+						else if (st.getCond() >= 3)
+						{
+							htmltext = "32594-04.html";
+						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == SOPHIA)
-				{
-					if (st.isCond(5))
+					case LAWRENCE:
 					{
-						if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+						if (st.isCond(3))
 						{
-							htmltext = "32596-01.html";
+							if (isBusy)
+							{
+								htmltext = "32595-05.html";
+							}
+							else
+							{
+								htmltext = "32595-01.html";
+							}
 						}
+						else if (st.isCond(4))
+						{
+							if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32595-06.html";
+							}
+						}
+						else if (st.getCond() >= 5)
+						{
+							if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32595-10.html";
+							}
+						}
+						break;
 					}
-					else if (st.getCond() >= 6)
+					case SOPHIA:
 					{
-						if (st.hasQuestItems(SCULPTURE_OF_DOUBT) && st.hasQuestItems(MYSTERIOUS_HAND_WRITTEN_TEXT))
+						if (st.isCond(5))
 						{
-							htmltext = "32596-05.html";
+							if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							{
+								htmltext = "32596-01.html";
+							}
 						}
+						else if (st.getCond() >= 6)
+						{
+							if (st.hasQuestItems(SCULPTURE_OF_DOUBT) && st.hasQuestItems(MYSTERIOUS_HAND_WRITTEN_TEXT))
+							{
+								htmltext = "32596-05.html";
+							}
+						}
+						break;
 					}
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

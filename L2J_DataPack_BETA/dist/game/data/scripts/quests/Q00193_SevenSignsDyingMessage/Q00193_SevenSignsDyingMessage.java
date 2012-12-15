@@ -92,21 +92,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 				break;
 			}
 			case "32569-02.html":
-			{
-				if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32569-03.html":
-			{
-				if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32569-04.html":
 			{
 				if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
@@ -137,13 +123,6 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 				break;
 			}
 			case "32569-10.html":
-			{
-				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32569-11.html":
 			{
 				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
@@ -218,7 +197,6 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -250,87 +228,93 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == HOLLINT)
+				switch (npc.getNpcId())
 				{
-					if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
+					case HOLLINT:
 					{
-						htmltext = "30191-04.html";
+						if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
+						{
+							htmltext = "30191-04.html";
+						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == CAIN)
-				{
-					switch (st.getCond())
+					case CAIN:
 					{
-						case 1:
+						switch (st.getCond())
 						{
-							if (st.hasQuestItems(JACOBS_NECKLACE))
+							case 1:
 							{
-								htmltext = "32569-01.html";
+								if (st.hasQuestItems(JACOBS_NECKLACE))
+								{
+									htmltext = "32569-01.html";
+								}
+								break;
 							}
-							break;
-						}
-						case 2:
-						{
-							htmltext = "32569-06.html";
-							break;
-						}
-						case 3:
-						{
-							if (st.hasQuestItems(DEADMANS_HERB))
+							case 2:
 							{
-								htmltext = "32569-07.html";
+								htmltext = "32569-06.html";
+								break;
 							}
-							break;
-						}
-						case 4:
-						{
-							if (isBusy)
+							case 3:
 							{
-								htmltext = "32569-13.html";
+								if (st.hasQuestItems(DEADMANS_HERB))
+								{
+									htmltext = "32569-07.html";
+								}
+								break;
 							}
-							else
+							case 4:
 							{
-								htmltext = "32569-08.html";
+								if (isBusy)
+								{
+									htmltext = "32569-13.html";
+								}
+								else
+								{
+									htmltext = "32569-08.html";
+								}
+								break;
 							}
-							break;
-						}
-						case 5:
-						{
-							if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+							case 5:
 							{
-								htmltext = "32569-09.html";
+								if (st.hasQuestItems(SCULPTURE_OF_DOUBT))
+								{
+									htmltext = "32569-09.html";
+								}
+								break;
 							}
-							break;
 						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == ERIC)
-				{
-					switch (st.getCond())
+					case ERIC:
 					{
-						case 2:
+						switch (st.getCond())
 						{
-							htmltext = "32570-01.html";
-							break;
+							case 2:
+							{
+								htmltext = "32570-01.html";
+								break;
+							}
+							case 3:
+							{
+								htmltext = "32570-03.html";
+								break;
+							}
 						}
-						case 3:
-						{
-							htmltext = "32570-03.html";
-							break;
-						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == SIR_GUSTAV_ATHEBALDT)
-				{
-					if (st.isCond(6))
+					case SIR_GUSTAV_ATHEBALDT:
 					{
-						htmltext = "30760-01.html";
+						if (st.isCond(6))
+						{
+							htmltext = "30760-01.html";
+						}
+						break;
 					}
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
