@@ -113,13 +113,6 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 				break;
 			}
 			case "32571-03.html":
-			{
-				if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32571-04.html":
 			{
 				if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
@@ -262,13 +255,6 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 				break;
 			}
 			case "32572-03.html":
-			{
-				if (st.isCond(4))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32572-04.html":
 			{
 				if (st.isCond(4))
@@ -306,13 +292,6 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 				break;
 			}
 			case "32574-03.html":
-			{
-				if (st.isCond(10))
-				{
-					htmltext = event;
-				}
-				break;
-			}
 			case "32574-04.html":
 			{
 				if (st.isCond(10))
@@ -357,7 +336,6 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -389,202 +367,210 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == SIR_GUSTAV_ATHEBALDT)
+				switch (npc.getNpcId())
 				{
-					if (st.isCond(1))
+					case SIR_GUSTAV_ATHEBALDT:
 					{
-						htmltext = "30760-02.html";
+						if (st.isCond(1))
+						{
+							htmltext = "30760-02.html";
+						}
+						else if (st.isCond(2))
+						{
+							htmltext = "30760-06.html";
+						}
+						else if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+						{
+							htmltext = "30760-08.html";
+						}
+						break;
 					}
-					else if (st.isCond(2))
+					case COLIN:
 					{
-						htmltext = "30760-06.html";
+						switch (st.getCond())
+						{
+							case 1:
+							case 2:
+							{
+								htmltext = "32571-01.html";
+								break;
+							}
+							case 3:
+							{
+								if (st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+								{
+									htmltext = "32571-02.html";
+								}
+								break;
+							}
+							case 4:
+							{
+								if (!st.hasQuestItems(FROG_KINGS_BEAD))
+								{
+									htmltext = (player.getTransformationId() != 111) ? "32571-06.html" : "32571-08.html";
+								}
+								break;
+							}
+							case 5:
+							{
+								if (st.hasQuestItems(FROG_KINGS_BEAD))
+								{
+									htmltext = "32571-10.html";
+								}
+								break;
+							}
+							case 6:
+							{
+								htmltext = "32571-12.html";
+								break;
+							}
+							case 7:
+							{
+								if (!st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+								{
+									htmltext = (player.getTransformationId() != 112) ? "32571-14.html" : "32571-16.html";
+								}
+								break;
+							}
+							case 8:
+							{
+								if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
+								{
+									htmltext = "32571-18.html";
+								}
+								break;
+							}
+							case 9:
+							{
+								htmltext = "32571-20.html";
+								break;
+							}
+							case 10:
+							{
+								if (!st.hasQuestItems(NATIVES_GLOVE))
+								{
+									htmltext = (player.getTransformationId() != 124) ? "32571-22.html" : "32571-24.html";
+								}
+								break;
+							}
+							case 11:
+							{
+								if (st.hasQuestItems(NATIVES_GLOVE))
+								{
+									htmltext = "32571-26.html";
+								}
+								break;
+							}
+							case 12:
+							{
+								htmltext = "32571-28.html";
+								break;
+							}
+						}
+						break;
 					}
-					else if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+					case FROG:
 					{
-						htmltext = "30760-08.html";
+						switch (st.getCond())
+						{
+							case 1:
+							case 2:
+							case 3:
+							{
+								htmltext = "32572-01.html";
+								break;
+							}
+							case 4:
+							{
+								htmltext = (player.getTransformationId() == 111) ? "32572-02.html" : "32572-06.html";
+								break;
+							}
+							case 5:
+							{
+								if (st.hasQuestItems(FROG_KINGS_BEAD) && (player.getTransformationId() == 111))
+								{
+									htmltext = "32572-07.html";
+								}
+								break;
+							}
+						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == COLIN)
-				{
-					switch (st.getCond())
+					case TESS:
 					{
-						case 1:
-						case 2:
+						switch (st.getCond())
 						{
-							htmltext = "32571-01.html";
-							break;
-						}
-						case 3:
-						{
-							if (st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
+							case 1:
+							case 2:
+							case 3:
+							case 4:
+							case 5:
+							case 6:
 							{
-								htmltext = "32571-02.html";
+								htmltext = "32573-01.html";
+								break;
 							}
-							break;
-						}
-						case 4:
-						{
-							if (!st.hasQuestItems(FROG_KINGS_BEAD))
+							case 7:
 							{
-								htmltext = (player.getTransformationId() != 111) ? "32571-06.html" : "32571-08.html";
+								htmltext = (player.getTransformationId() == 112) ? "32573-02.html" : "32573-05.html";
+								break;
 							}
-							break;
-						}
-						case 5:
-						{
-							if (st.hasQuestItems(FROG_KINGS_BEAD))
+							case 8:
 							{
-								htmltext = "32571-10.html";
+								if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH) && (player.getTransformationId() == 112))
+								{
+									htmltext = "32573-06.html";
+								}
+								break;
 							}
-							break;
 						}
-						case 6:
-						{
-							htmltext = "32571-12.html";
-							break;
-						}
-						case 7:
-						{
-							if (!st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
-							{
-								htmltext = (player.getTransformationId() != 112) ? "32571-14.html" : "32571-16.html";
-							}
-							break;
-						}
-						case 8:
-						{
-							if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
-							{
-								htmltext = "32571-18.html";
-							}
-							break;
-						}
-						case 9:
-						{
-							htmltext = "32571-20.html";
-							break;
-						}
-						case 10:
-						{
-							if (!st.hasQuestItems(NATIVES_GLOVE))
-							{
-								htmltext = (player.getTransformationId() != 124) ? "32571-22.html" : "32571-24.html";
-							}
-							break;
-						}
-						case 11:
-						{
-							if (st.hasQuestItems(NATIVES_GLOVE))
-							{
-								htmltext = "32571-26.html";
-							}
-							break;
-						}
-						case 12:
-						{
-							htmltext = "32571-28.html";
-							break;
-						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == FROG)
-				{
-					switch (st.getCond())
+					case KUTA:
 					{
-						case 1:
-						case 2:
-						case 3:
+						switch (st.getCond())
 						{
-							htmltext = "32572-01.html";
-							break;
-						}
-						case 4:
-						{
-							htmltext = (player.getTransformationId() == 111) ? "32572-02.html" : "32572-06.html";
-							break;
-						}
-						case 5:
-						{
-							if (st.hasQuestItems(FROG_KINGS_BEAD) && (player.getTransformationId() == 111))
+							case 1:
+							case 2:
+							case 3:
+							case 4:
+							case 5:
+							case 6:
+							case 7:
+							case 8:
+							case 9:
 							{
-								htmltext = "32572-07.html";
+								htmltext = "32574-01.html";
+								break;
 							}
-							break;
-						}
-					}
-				}
-				else if (npc.getNpcId() == TESS)
-				{
-					switch (st.getCond())
-					{
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-						case 5:
-						case 6:
-						{
-							htmltext = "32573-01.html";
-							break;
-						}
-						case 7:
-						{
-							htmltext = (player.getTransformationId() == 112) ? "32573-02.html" : "32573-05.html";
-							break;
-						}
-						case 8:
-						{
-							if (st.hasQuestItems(GRANDA_TESS_CANDY_POUCH) && (player.getTransformationId() == 112))
+							case 10:
 							{
-								htmltext = "32573-06.html";
+								htmltext = (player.getTransformationId() == 124) ? "32574-02.html" : "32574-06.html";
+								break;
 							}
-							break;
-						}
-					}
-				}
-				else if (npc.getNpcId() == KUTA)
-				{
-					switch (st.getCond())
-					{
-						case 1:
-						case 2:
-						case 3:
-						case 4:
-						case 5:
-						case 6:
-						case 7:
-						case 8:
-						case 9:
-						{
-							htmltext = "32574-01.html";
-							break;
-						}
-						case 10:
-						{
-							htmltext = (player.getTransformationId() == 124) ? "32574-02.html" : "32574-06.html";
-							break;
-						}
-						case 11:
-						{
-							if (st.hasQuestItems(NATIVES_GLOVE) && (player.getTransformationId() == 124))
+							case 11:
 							{
-								htmltext = "32574-07.html";
+								if (st.hasQuestItems(NATIVES_GLOVE) && (player.getTransformationId() == 124))
+								{
+									htmltext = "32574-07.html";
+								}
+								break;
 							}
-							break;
 						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == CLAUDIA_ATHEBALDT)
-				{
-					if (st.isCond(12))
+					case CLAUDIA_ATHEBALDT:
 					{
-						htmltext = "31001-01.html";
+						if (st.isCond(12))
+						{
+							htmltext = "31001-01.html";
+						}
+						break;
 					}
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

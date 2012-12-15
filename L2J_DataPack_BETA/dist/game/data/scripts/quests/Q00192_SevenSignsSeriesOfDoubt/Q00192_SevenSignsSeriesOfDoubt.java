@@ -165,7 +165,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			}
 			case "reward":
 			{
-				if (st.isCond(7) && st.hasQuestItems(CROOPS_LETTER) && (player.getLevel() >= MIN_LEVEL))
+				if (st.isCond(7) && st.hasQuestItems(CROOPS_LETTER))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -182,7 +182,6 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -224,86 +223,93 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == CROOP)
+				switch (npc.getNpcId())
 				{
-					switch (st.getCond())
+					case CROOP:
 					{
-						case 1:
+						switch (st.getCond())
 						{
-							htmltext = "30676-06.html";
-							break;
-						}
-						case 2:
-						{
-							st.giveItems(CROOPS_INTRODUCTION, 1);
-							st.setCond(3, true);
-							htmltext = "30676-07.html";
-							break;
-						}
-						case 3:
-						case 4:
-						case 5:
-						{
-							htmltext = "30676-08.html";
-							break;
-						}
-						case 6:
-						{
-							if (st.hasQuestItems(JACOBS_NECKLACE))
+							case 1:
 							{
-								htmltext = "30676-09.html";
+								htmltext = "30676-06.html";
+								break;
 							}
-							break;
+							case 2:
+							{
+								st.giveItems(CROOPS_INTRODUCTION, 1);
+								st.setCond(3, true);
+								htmltext = "30676-07.html";
+								break;
+							}
+							case 3:
+							case 4:
+							case 5:
+							{
+								htmltext = "30676-08.html";
+								break;
+							}
+							case 6:
+							{
+								if (st.hasQuestItems(JACOBS_NECKLACE))
+								{
+									htmltext = "30676-09.html";
+								}
+								break;
+							}
 						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == HECTOR)
-				{
-					if (st.isCond(3))
+					case HECTOR:
 					{
-						if (st.hasQuestItems(CROOPS_INTRODUCTION))
+						if (st.isCond(3))
 						{
-							htmltext = "30197-01.html";
+							if (st.hasQuestItems(CROOPS_INTRODUCTION))
+							{
+								htmltext = "30197-01.html";
+							}
 						}
+						else if (st.getCond() > 3)
+						{
+							htmltext = "30197-04.html";
+						}
+						break;
 					}
-					else if (st.getCond() > 3)
+					case STAN:
 					{
-						htmltext = "30197-04.html";
+						if (st.isCond(4))
+						{
+							htmltext = "30200-01.html";
+						}
+						else if (st.getCond() > 4)
+						{
+							htmltext = "30200-05.html";
+						}
+						break;
 					}
-				}
-				else if (npc.getNpcId() == STAN)
-				{
-					if (st.isCond(4))
+					case UNIDENTIFIED_BODY:
 					{
-						htmltext = "30200-01.html";
+						if (st.isCond(5))
+						{
+							htmltext = "32568-01.html";
+						}
+						else if (st.getCond() < 5)
+						{
+							htmltext = "32568-03.html";
+						}
+						break;
 					}
-					else if (st.getCond() > 4)
+					case HOLLINT:
 					{
-						htmltext = "30200-05.html";
-					}
-				}
-				else if (npc.getNpcId() == UNIDENTIFIED_BODY)
-				{
-					if (st.isCond(5))
-					{
-						htmltext = "32568-01.html";
-					}
-					else if (st.getCond() < 5)
-					{
-						htmltext = "32568-03.html";
-					}
-				}
-				else if (npc.getNpcId() == HOLLINT)
-				{
-					if (st.isCond(7) && st.hasQuestItems(CROOPS_LETTER))
-					{
-						htmltext = "30191-01.html";
+						if (st.isCond(7) && st.hasQuestItems(CROOPS_LETTER))
+						{
+							htmltext = "30191-01.html";
+						}
+						break;
 					}
 				}
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
