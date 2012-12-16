@@ -18,7 +18,7 @@ import com.l2jserver.gameserver.handler.IUserCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Support for /mount command.
+ * Mount user command.
  * @author Tempy
  */
 public class Mount implements IUserCommandHandler
@@ -32,8 +32,9 @@ public class Mount implements IUserCommandHandler
 	public synchronized boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
+		{
 			return false;
-		
+		}
 		return activeChar.mountPlayer(activeChar.getSummon());
 	}
 	

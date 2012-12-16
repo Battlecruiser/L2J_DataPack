@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
+/**
+ * Time user command.
+ */
 public class Time implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
@@ -37,15 +40,21 @@ public class Time implements IUserCommandHandler
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (COMMAND_IDS[0] != id)
+		{
 			return false;
+		}
 		
 		int t = GameTimeController.getInstance().getGameTime();
-		String h = "" + (t / 60) % 24;
+		String h = "" + ((t / 60) % 24);
 		String m;
-		if (t % 60 < 10)
-			m = "0" + t % 60;
+		if ((t % 60) < 10)
+		{
+			m = "0" + (t % 60);
+		}
 		else
-			m = "" + t % 60;
+		{
+			m = "" + (t % 60);
+		}
 		
 		SystemMessage sm;
 		if (GameTimeController.getInstance().isNowNight())
@@ -62,7 +71,9 @@ public class Time implements IUserCommandHandler
 		}
 		activeChar.sendPacket(sm);
 		if (Config.L2JMOD_DISPLAY_SERVER_TIME)
+		{
 			activeChar.sendMessage("Server time is " + fmt.format(new Date(System.currentTimeMillis())));
+		}
 		return true;
 	}
 	

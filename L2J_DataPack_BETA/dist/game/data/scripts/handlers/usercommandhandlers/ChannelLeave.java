@@ -22,7 +22,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author  Chris
+ * Channel Leave user command.
+ * @author Chris, Zoey76
  */
 public class ChannelLeave implements IUserCommandHandler
 {
@@ -35,25 +36,28 @@ public class ChannelLeave implements IUserCommandHandler
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
-			return false;
-		
-		if (activeChar.isInParty())
 		{
-			if (activeChar.getParty().isLeader(activeChar) && activeChar.getParty().isInCommandChannel())
-			{
-				L2CommandChannel channel = activeChar.getParty().getCommandChannel();
-				L2Party party = activeChar.getParty();
-				channel.removeParty(party);
-				
-				party.getLeader().sendPacket(SystemMessageId.LEFT_COMMAND_CHANNEL);
-				
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_PARTY_LEFT_COMMAND_CHANNEL);
-				sm.addString(party.getLeader().getName());
-				channel.broadcastPacket(sm);
-				return true;
-			}
+			return false;
 		}
 		
+		if (!activeChar.isInParty() || !activeChar.getParty().isLeader(activeChar))
+		{
+			activeChar.sendPacket(SystemMessageId.ONLY_PARTY_LEADER_CAN_LEAVE_CHANNEL);
+			return false;
+		}
+		
+		if (activeChar.getParty().isInCommandChannel())
+		{
+			final L2CommandChannel channel = activeChar.getParty().getCommandChannel();
+			final L2Party party = activeChar.getParty();
+			channel.removeParty(party);
+			party.getLeader().sendPacket(SystemMessageId.LEFT_COMMAND_CHANNEL);
+			
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_PARTY_LEFT_COMMAND_CHANNEL);
+			sm.addPcName(party.getLeader());
+			channel.broadcastPacket(sm);
+			return true;
+		}
 		return false;
 		
 	}

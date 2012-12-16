@@ -40,7 +40,6 @@ import handlers.admincommandhandlers.AdminCache;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
-import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
 import handlers.admincommandhandlers.AdminDebug;
@@ -80,6 +79,7 @@ import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
 import handlers.admincommandhandlers.AdminPForge;
 import handlers.admincommandhandlers.AdminPathNode;
+import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
@@ -272,20 +272,20 @@ import handlers.telnethandlers.ReloadHandler;
 import handlers.telnethandlers.ServerHandler;
 import handlers.telnethandlers.StatusHandler;
 import handlers.telnethandlers.ThreadHandler;
-import handlers.usercommandhandlers.Birthday;
 import handlers.usercommandhandlers.ChannelDelete;
+import handlers.usercommandhandlers.ChannelInfo;
 import handlers.usercommandhandlers.ChannelLeave;
-import handlers.usercommandhandlers.ChannelListUpdate;
 import handlers.usercommandhandlers.ClanPenalty;
 import handlers.usercommandhandlers.ClanWarsList;
-import handlers.usercommandhandlers.DisMount;
-import handlers.usercommandhandlers.Escape;
+import handlers.usercommandhandlers.Dismount;
 import handlers.usercommandhandlers.InstanceZone;
 import handlers.usercommandhandlers.Loc;
 import handlers.usercommandhandlers.Mount;
+import handlers.usercommandhandlers.MyBirthday;
 import handlers.usercommandhandlers.OlympiadStat;
 import handlers.usercommandhandlers.PartyInfo;
 import handlers.usercommandhandlers.Time;
+import handlers.usercommandhandlers.Unstuck;
 import handlers.voicedcommandhandlers.Banking;
 import handlers.voicedcommandhandlers.ChangePassword;
 import handlers.voicedcommandhandlers.ChatAdmin;
@@ -336,7 +336,7 @@ public class MasterHandler
 		TelnetHandler.class,
 	};
 	
-	private static final Class<?>[][] _handlers = 
+	private static final Class<?>[][] _handlers =
 	{
 		{
 			// Action Handlers
@@ -581,8 +581,8 @@ public class MasterHandler
 			// User Command Handlers
 			ClanPenalty.class,
 			ClanWarsList.class,
-			DisMount.class,
-			Escape.class,
+			Dismount.class,
+			Unstuck.class,
 			InstanceZone.class,
 			Loc.class,
 			Mount.class,
@@ -591,8 +591,8 @@ public class MasterHandler
 			OlympiadStat.class,
 			ChannelLeave.class,
 			ChannelDelete.class,
-			ChannelListUpdate.class,
-			Birthday.class,
+			ChannelInfo.class,
+			MyBirthday.class,
 		},
 		{
 			// Voiced Command Handlers
@@ -666,7 +666,7 @@ public class MasterHandler
 		
 		Object loadInstance = null;
 		Method method = null;
-		Class<?>[]  interfaces = null;
+		Class<?>[] interfaces = null;
 		Object handler = null;
 		
 		for (int i = 0; i < _loadInstances.length; i++)
@@ -689,13 +689,17 @@ public class MasterHandler
 				try
 				{
 					if (c == null)
+					{
 						continue; // Disabled handler
+					}
 					// Don't wtf some classes extending another like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
 					interfaces = c.getInterfaces().length > 0 ? // Standardly handler has implementation
-						c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
-							c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
+					c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
+					c.getSuperclass().getInterfaces() : c.getSuperclass().getSuperclass().getInterfaces(); // O noh that's Elixir->ItemSkills->ItemSkillsTemplate
 					if (method == null)
+					{
 						method = loadInstance.getClass().getMethod("registerHandler", interfaces);
+					}
 					handler = c.newInstance();
 					if (method.getParameterTypes()[0].isInstance(handler))
 					{
@@ -713,7 +717,7 @@ public class MasterHandler
 			{
 				method = loadInstance.getClass().getMethod("size");
 				Object returnVal = method.invoke(loadInstance);
-				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");	
+				_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
 			}
 			catch (Exception e)
 			{

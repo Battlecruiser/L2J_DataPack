@@ -22,12 +22,15 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Support for /olympiadstat command
+ * Olympiad Stat user command.
  * @author kamy, Zoey76
  */
 public class OlympiadStat implements IUserCommandHandler
 {
-	private static final int[] COMMAND_IDS = { 109 };
+	private static final int[] COMMAND_IDS =
+	{
+		109
+	};
 	
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
@@ -41,7 +44,7 @@ public class OlympiadStat implements IUserCommandHandler
 		final L2Object target = activeChar.getTarget();
 		if (target != null)
 		{
-			if ((target instanceof L2PcInstance) && target.getActingPlayer().isNoble())
+			if (target.isPlayer() && target.getActingPlayer().isNoble())
 			{
 				nobleObjId = target.getObjectId();
 			}

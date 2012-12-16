@@ -21,8 +21,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Support for /partyinfo command
- * Added by Tempy - 28 Jul 05
+ * Party Info user command.
+ * @author Tempy
  */
 public class PartyInfo implements IUserCommandHandler
 {
@@ -35,47 +35,41 @@ public class PartyInfo implements IUserCommandHandler
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
-			return false;
-		
-		if (!activeChar.isInParty())
 		{
-			activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
-			activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 			return false;
 		}
-		
-		L2Party playerParty = activeChar.getParty();
-		int memberCount = playerParty.getMemberCount();
-		int lootDistribution = playerParty.getLootDistribution();
-		String partyLeader = playerParty.getMembers().get(0).getName();
 		
 		activeChar.sendPacket(SystemMessageId.PARTY_INFORMATION);
-		
-		switch (lootDistribution)
+		if (activeChar.isInParty())
 		{
-			case L2Party.ITEM_LOOTER:
-				activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
-				break;
-			case L2Party.ITEM_ORDER:
-				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
-				break;
-			case L2Party.ITEM_ORDER_SPOIL:
-				activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
-				break;
-			case L2Party.ITEM_RANDOM:
-				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
-				break;
-			case L2Party.ITEM_RANDOM_SPOIL:
-				activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
-				break;
+			final L2Party party = activeChar.getParty();
+			switch (party.getLootDistribution())
+			{
+				case L2Party.ITEM_LOOTER:
+					activeChar.sendPacket(SystemMessageId.LOOTING_FINDERS_KEEPERS);
+					break;
+				case L2Party.ITEM_ORDER:
+					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN);
+					break;
+				case L2Party.ITEM_ORDER_SPOIL:
+					activeChar.sendPacket(SystemMessageId.LOOTING_BY_TURN_INCLUDE_SPOIL);
+					break;
+				case L2Party.ITEM_RANDOM:
+					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM);
+					break;
+				case L2Party.ITEM_RANDOM_SPOIL:
+					activeChar.sendPacket(SystemMessageId.LOOTING_RANDOM_INCLUDE_SPOIL);
+					break;
+			}
+			
+			if (!party.isLeader(activeChar))
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);
+				sm.addPcName(party.getLeader());
+				activeChar.sendPacket(sm);
+			}
+			activeChar.sendMessage("Members: " + party.getMemberCount() + "/9"); // TODO: Custom?
 		}
-		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1);
-		sm.addString(partyLeader);
-		activeChar.sendPacket(sm);
-		
-		activeChar.sendMessage("Members: " + memberCount + "/9");
-		
 		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 		return true;
 	}
