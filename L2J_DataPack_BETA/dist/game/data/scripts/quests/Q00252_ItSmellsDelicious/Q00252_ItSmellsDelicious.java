@@ -73,9 +73,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 		{
 			if (event.equalsIgnoreCase("30200-05.htm"))
 			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("30200-08.htm"))
 			{
@@ -83,8 +81,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 				st.takeItems(MAHUM_COOKBOOK, -1);
 				st.giveItems(57, 147656);
 				st.addExpAndSp(716238, 78324);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 			}
 		}
 		return htmltext;
@@ -145,12 +142,11 @@ public class Q00252_ItSmellsDelicious extends Quest
 			if (st != null)
 			{
 				st.giveItems(MAHUM_DIARY, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				
 				if ((st.getQuestItemsCount(MAHUM_DIARY) >= 10) && (st.getQuestItemsCount(MAHUM_COOKBOOK) >= 5))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
 				}
 			}
 		}
@@ -160,12 +156,11 @@ public class Q00252_ItSmellsDelicious extends Quest
 			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (getRandom(1000) < 360))
 			{
 				st.giveItems(MAHUM_COOKBOOK, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				
 				if ((st.getQuestItemsCount(MAHUM_DIARY) >= 10) && (st.getQuestItemsCount(MAHUM_COOKBOOK) >= 5))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
 				}
 			}
 		}

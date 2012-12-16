@@ -118,7 +118,7 @@ public class DarkElvenChange2 extends Quest
 						st.takeItems(CLASSES[i][6], -1);
 						st.takeItems(CLASSES[i][7], -1);
 						st.takeItems(CLASSES[i][8], -1);
-						st.playSound("ItemSound.quest_fanfare_2");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_2);
 						player.setClassId(CLASSES[i][0]);
 						player.setBaseClass(CLASSES[i][0]);
 						player.broadcastUserInfo();

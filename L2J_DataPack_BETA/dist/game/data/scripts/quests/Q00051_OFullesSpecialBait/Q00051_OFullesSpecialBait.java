@@ -31,7 +31,6 @@ public class Q00051_OFullesSpecialBait extends Quest
 	// NPCs
 	private static final int OFULLE = 31572;
 	private static final int FETTERED_SOUL = 20552;
-	
 	// Items
 	private static final int LOST_BAIT = 7622;
 	private static final int ICY_AIR_LURE = 7611;
@@ -106,7 +105,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 			if (getRandom(100) < chance)
 			{
 				st.rewardItems(LOST_BAIT, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		
@@ -126,10 +125,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);
-		questItemIds = new int[]
-		{
-			LOST_BAIT
-		};
+		registerQuestItems(LOST_BAIT);
 	}
 	
 	public static void main(String[] args)

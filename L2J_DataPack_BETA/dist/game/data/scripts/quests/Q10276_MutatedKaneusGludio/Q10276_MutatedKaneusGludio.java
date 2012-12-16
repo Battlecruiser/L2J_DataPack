@@ -35,7 +35,6 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	private static final int ROHMER = 30344;
 	private static final int TOMLAN_KAMOS = 18554;
 	private static final int OL_ARIOSH = 18555;
-	
 	// Items
 	private static final int TISSUE_TK = 13830;
 	private static final int TISSUE_OA = 13831;
@@ -148,12 +147,12 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		if ((npcId == TOMLAN_KAMOS) && !st.hasQuestItems(TISSUE_TK))
 		{
 			st.giveItems(TISSUE_TK, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == OL_ARIOSH) && !st.hasQuestItems(TISSUE_OA))
 		{
 			st.giveItems(TISSUE_OA, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	
@@ -163,11 +162,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, ROHMER);
 		addKillId(TOMLAN_KAMOS, OL_ARIOSH);
-		questItemIds = new int[]
-		{
-			TISSUE_TK,
-			TISSUE_OA
-		};
+		registerQuestItems(TISSUE_TK, TISSUE_OA);
 	}
 	
 	public static void main(String[] args)

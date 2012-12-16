@@ -52,28 +52,24 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 		switch (event)
 		{
 			case "31572-04.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31572-08.htm":
 				if ((st.getInt("cond") == 1) && (st.hasQuestItems(YELLOW_TREASURE_BOX)))
 				{
-					htmltext = "31572-07.htm";
-					st.set("cond", "2");
 					st.giveItems(KIKIS_LETTER, 1);
 					st.takeItems(YELLOW_TREASURE_BOX, -1);
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
+					htmltext = "31572-07.htm";
 				}
 				break;
 			case "31442-03.htm":
 				if ((st.getInt("cond") == 2) && (st.hasQuestItems(KIKIS_LETTER)))
 				{
-					htmltext = "31442-02.htm";
 					st.giveItems(ELVEN_RING, 1);
 					st.takeItems(KIKIS_LETTER, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
+					htmltext = "31442-02.htm";
 				}
 				break;
 		

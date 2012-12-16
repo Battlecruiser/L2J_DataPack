@@ -56,10 +56,8 @@ public class Q00017_LightAndDarkness extends Quest
 			case "31517-02.html":
 				if (player.getLevel() >= 61)
 				{
+					st.startQuest();
 					st.giveItems(BLOOD_OF_SAINT, 4);
-					st.set("cond", "1");
-					st.setState(State.STARTED);
-					st.playSound("ItemSound.quest_accept");
 				}
 				else
 				{
@@ -70,14 +68,13 @@ public class Q00017_LightAndDarkness extends Quest
 			case "31509-02.html":
 			case "31510-02.html":
 			case "31511-02.html":
-				final int cond = st.getInt("cond");
+				final int cond = st.getCond();
 				final int npcId = Integer.parseInt(event.replace("-02.html", ""));
 				if ((cond == (npcId - 31507)) && st.hasQuestItems(BLOOD_OF_SAINT))
 				{
 					htmltext = npcId + "-01.html";
 					st.takeItems(BLOOD_OF_SAINT, 1);
-					st.set("cond", String.valueOf(cond + 1));
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(cond + 1, true);
 				}
 				break;
 		}
@@ -116,10 +113,9 @@ public class Q00017_LightAndDarkness extends Quest
 						}
 						else
 						{
-							htmltext = "31517-03.html";
 							st.addExpAndSp(697040, 54887);
-							st.playSound("ItemSound.quest_finish");
-							st.exitQuest(false);
+							st.exitQuest(false, true);
+							htmltext = "31517-03.html";
 						}
 						break;
 					case SAINT_ALTAR_1:

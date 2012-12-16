@@ -109,7 +109,7 @@ public class Q00432_BirthdayPartySong extends Quest
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isPet);

@@ -18,32 +18,24 @@ import java.util.Calendar;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Demon Prince Floor instance zone.
  * @author GKR
  */
 public class DemonPrinceFloor extends Quest
 {
-	private class DPWorld extends InstanceWorld
-	{
-		public DPWorld()
-		{
-			super();
-		}
-	}
-	
-	private static final String qn = "DemonPrinceFloor";
 	private static final int INSTANCEID = 142; // this is the client number
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
@@ -85,9 +77,9 @@ public class DemonPrinceFloor extends Quest
 		else if (npc.getNpcId() == CUBE)
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if ((world != null) && (world instanceof DPWorld))
+			if ((world != null) && (world.getInstanceId() == INSTANCEID))
 			{
-				world.allowed.remove(world.allowed.indexOf(player.getObjectId()));
+				world.removeAllowed(player.getObjectId());
 				teleportPlayer(player, EXIT_POINT, 0);
 			}
 		}
@@ -112,7 +104,7 @@ public class DemonPrinceFloor extends Quest
 			
 			inst.setEmptyDestroyTime(0);
 			
-			if ((world != null) && (world instanceof DPWorld))
+			if ((world != null) && (world.getInstanceId() == INSTANCEID))
 			{
 				setReenterTime(world);
 			}
@@ -206,13 +198,13 @@ public class DemonPrinceFloor extends Quest
 		// existing instance
 		if (world != null)
 		{
-			if (!(world instanceof DPWorld))
+			if ((world.getInstanceId() != INSTANCEID))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, ENTRY_POINT, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+			return world.getInstanceId();
 		}
 		
 		if (!checkTeleport(player))
@@ -221,10 +213,10 @@ public class DemonPrinceFloor extends Quest
 		}
 		
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new DPWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCEID;
-		world.status = 0;
+		world = new InstanceWorld();
+		world.setInstanceId(instanceId);
+		world.setTemplateId(INSTANCEID);
+		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
@@ -232,16 +224,15 @@ public class DemonPrinceFloor extends Quest
 		{
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
 			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-			world.allowed.add(partyMember.getObjectId());
+			world.addAllowed(partyMember.getObjectId());
 		}
 		return instanceId;
 	}
 	
 	public void setReenterTime(InstanceWorld world)
 	{
-		if (world instanceof DPWorld)
+		if (world.getInstanceId() == INSTANCEID)
 		{
-			
 			// Reenter time should be cleared every Wed and Sat at 6:30 AM, so we set next suitable
 			Calendar reenter;
 			Calendar now = Calendar.getInstance();
@@ -264,14 +255,14 @@ public class DemonPrinceFloor extends Quest
 			}
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-			sm.addInstanceName(world.templateId);
+			sm.addInstanceName(world.getTemplateId());
 			// set instance reenter time for all allowed players
-			for (int objectId : world.allowed)
+			for (int objectId : world.getAllowed())
 			{
 				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.templateId, reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
 					player.sendPacket(sm);
 				}
 			}
@@ -287,7 +278,6 @@ public class DemonPrinceFloor extends Quest
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
-		new DemonPrinceFloor(-1, qn, "instances");
+		new DemonPrinceFloor(-1, DemonPrinceFloor.class.getSimpleName(), "instances");
 	}
 }

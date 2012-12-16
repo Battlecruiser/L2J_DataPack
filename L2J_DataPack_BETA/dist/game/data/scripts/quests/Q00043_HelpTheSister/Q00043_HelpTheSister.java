@@ -30,11 +30,9 @@ public class Q00043_HelpTheSister extends Quest
 	// NPCs
 	private static final int COOPER = 30829;
 	private static final int GALLADUCCI = 30097;
-	
 	// Monster
 	private static final int SPECTER = 20171;
 	private static final int SORROW_MAIDEN = 20197;
-	
 	// Items
 	private static final int CRAFTED_DAGGER = 220;
 	private static final int MAP_PIECE = 7550;
@@ -103,7 +101,6 @@ public class Q00043_HelpTheSister extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -174,7 +171,7 @@ public class Q00043_HelpTheSister extends Quest
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isPet);
@@ -186,12 +183,7 @@ public class Q00043_HelpTheSister extends Quest
 		addStartNpc(COOPER);
 		addTalkId(COOPER, GALLADUCCI);
 		addKillId(SORROW_MAIDEN, SPECTER);
-		
-		questItemIds = new int[]
-		{
-			MAP,
-			MAP_PIECE
-		};
+		registerQuestItems(MAP, MAP_PIECE);
 	}
 	
 	public static void main(String[] args)

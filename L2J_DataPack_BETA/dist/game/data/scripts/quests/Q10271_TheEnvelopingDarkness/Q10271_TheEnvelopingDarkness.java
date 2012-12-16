@@ -53,7 +53,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 						htmltext = ((player.getLevel() >= 75) && (st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						break;
 					case State.STARTED:
-						switch (st.getInt("cond"))
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "32560-05.html"; // TODO this html should most probably be different
@@ -85,7 +85,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				}
 				else if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "32556-01.html";
@@ -109,7 +109,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				}
 				else if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 2:
 							htmltext = "32528-01.html";
@@ -162,10 +162,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 		super(questId, name, descr);
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU, EL, MEDIBAL_CORPSE);
-		questItemIds = new int[]
-		{
-			MEDIBAL_DOCUMENT
-		};
+		registerQuestItems(MEDIBAL_DOCUMENT);
 	}
 	
 	public static void main(String[] args)

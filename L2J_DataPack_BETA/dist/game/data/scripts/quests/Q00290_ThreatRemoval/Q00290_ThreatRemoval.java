@@ -217,7 +217,7 @@ public class Q00290_ThreatRemoval extends Quest
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(SEL_MAHUM_ID_TAG, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
 		return super.onKill(npc, player, isPet);

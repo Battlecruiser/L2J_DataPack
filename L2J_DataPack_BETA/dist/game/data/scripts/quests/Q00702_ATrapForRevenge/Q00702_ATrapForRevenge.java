@@ -61,9 +61,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		
 		if (event.equalsIgnoreCase("32563-04.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("32563-07.html"))
 		{
@@ -89,8 +87,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-14.html"))
 		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
@@ -116,13 +113,11 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-03.html"))
 		{
-			st.set("cond", "2");
-			st.playSound("ItemSound.quest_middle");
+			st.setCond(2, true);
 		}
 		else if (event.equalsIgnoreCase("32555-05.html"))
 		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{
@@ -401,7 +396,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				st.giveItems(VariantDrakeWingHorns, count);
 				break;
 		}
-		st.playSound("ItemSound.quest_itemget");
+		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		return null;
 	}
 	

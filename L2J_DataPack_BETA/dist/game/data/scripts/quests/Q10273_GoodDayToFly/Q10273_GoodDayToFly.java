@@ -14,13 +14,12 @@
  */
 package quests.Q10273_GoodDayToFly;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
  * Good Day to Fly (10273)<br>
@@ -31,7 +30,7 @@ public class Q10273_GoodDayToFly extends Quest
 {
 	// NPCs
 	private static final int LEKON = 32557;
-	
+	// Monsters
 	private static final int[] MOBS =
 	{
 		22614, // Vulture Rider
@@ -40,10 +39,9 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	// Items
 	private static final int MARK = 13856;
-	
 	// Skills
-	private static final L2Skill AuraBirdFalcon = SkillTable.getInstance().getInfo(5982, 1);
-	private static final L2Skill AuraBirdOwl = SkillTable.getInstance().getInfo(5983, 1);
+	private static final SkillHolder AURA_BIRD_FALCON = new SkillHolder(5982, 1);
+	private static final SkillHolder AURA_BIRD_OWL = new SkillHolder(5983, 1);
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -109,20 +107,20 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 			case "32557-09.html":
 				st.set("transform", "1");
-				AuraBirdFalcon.getEffects(player, player);
+				AURA_BIRD_FALCON.getSkill().getEffects(player, player);
 				break;
 			case "32557-10.html":
 				st.set("transform", "2");
-				AuraBirdOwl.getEffects(player, player);
+				AURA_BIRD_OWL.getSkill().getEffects(player, player);
 				break;
 			case "32557-13.html":
 				switch (st.getInt("transform"))
 				{
 					case 1:
-						AuraBirdFalcon.getEffects(player, player);
+						AURA_BIRD_FALCON.getSkill().getEffects(player, player);
 						break;
 					case 2:
-						AuraBirdOwl.getEffects(player, player);
+						AURA_BIRD_OWL.getSkill().getEffects(player, player);
 						break;
 				}
 				break;
@@ -149,7 +147,7 @@ public class Q10273_GoodDayToFly extends Quest
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return null;
@@ -161,10 +159,7 @@ public class Q10273_GoodDayToFly extends Quest
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			MARK
-		};
+		registerQuestItems(MARK);
 	}
 	
 	public static void main(String[] args)

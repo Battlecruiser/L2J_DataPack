@@ -45,12 +45,7 @@ public class Q00551_OlympiadStarter extends Quest
 		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
-		questItemIds = new int[]
-		{
-			CERT_3,
-			CERT_5,
-			CERT_10
-		};
+		registerQuestItems(CERT_3, CERT_5, CERT_10);
 		setOlympiadUse(true);
 	}
 	
@@ -66,9 +61,7 @@ public class Q00551_OlympiadStarter extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
@@ -80,8 +73,7 @@ public class Q00551_OlympiadStarter extends Quest
 				{
 					st.giveItems(MEDAL_OF_GLORY, 3);
 				}
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -129,11 +121,10 @@ public class Q00551_OlympiadStarter extends Quest
 			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5) + st.getQuestItemsCount(CERT_10);
 			if (count == 3)
 			{
-				htmltext = "31688-04.html"; // reusing the same html
+				htmltext = "31688-04.html";
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{

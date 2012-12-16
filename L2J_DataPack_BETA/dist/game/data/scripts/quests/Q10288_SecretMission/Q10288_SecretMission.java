@@ -30,7 +30,6 @@ public class Q10288_SecretMission extends Quest
 	private static final int DOMINIC = 31350;
 	private static final int AQUILANI = 32780;
 	private static final int GREYMORE = 32757;
-	
 	// Items
 	private static final int LETTER = 15529;
 	
@@ -153,10 +152,7 @@ public class Q10288_SecretMission extends Quest
 		addStartNpc(AQUILANI, DOMINIC);
 		addFirstTalkId(AQUILANI);
 		addTalkId(DOMINIC, GREYMORE, AQUILANI);
-		questItemIds = new int[]
-		{
-			LETTER
-		};
+		registerQuestItems(LETTER);
 	}
 	
 	public static void main(String[] args)

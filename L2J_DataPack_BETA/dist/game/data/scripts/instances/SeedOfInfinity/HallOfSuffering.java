@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
@@ -32,6 +31,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -41,6 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Seed of Infinity (Hall of Suffering) instance zone.<br>
  * TODO:
  * - after 15mins mobs are despawned
  * - bound instance to quests
@@ -50,8 +51,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class HallOfSuffering extends Quest
 {
-	
-	private class HSWorld extends InstanceWorld
+	protected class HSWorld extends InstanceWorld
 	{
 		public           Map<L2Npc,Boolean> npcList                      = new FastMap<>();
 		public           L2Npc klodekus                                  = null;
@@ -62,25 +62,17 @@ public class HallOfSuffering extends Quest
 		public           int rewardItemId                                = -1;
 		public           String rewardHtm                                = "";
 		public           boolean isRewarded                              = false;
-		
-		public HSWorld()
-		{
-		}
 	}
 	
 	private static final String qn = "SeedOfInfinity";
 	private static final int INSTANCEID = 115; // this is the client number
 	private static final boolean debug = false;
 	
-	//Items
-	
 	//NPCs
 	private static final int MOUTHOFEKIMUS = 32537;
 	private static final int TEPIOS = 32530;
-	
 	// teleports
 	private static final int[] ENTER_TELEPORT = {-187567,205570,-9538};
-	
 	//mobs
 	private static final int KLODEKUS = 25665;
 	private static final int KLANIKUS = 25666;
@@ -88,9 +80,6 @@ public class HallOfSuffering extends Quest
 	private static final int TUMOR_DEAD = 18705;
 	private static final int[] TUMOR_MOBIDS = {22509,22510,22511,22512,22513,22514,22515};
 	private static final int[] TWIN_MOBIDS = {22509,22510,22511,22512,22513};
-	
-	// Doors/Walls/Zones
-	
 	// Doors/Walls/Zones
 	private static final int[][] ROOM_1_MOBS = {
 		{22509, -186296, 208200, -9544}, {22509, -186161, 208345, -9544}, {22509, -186296, 208403, -9544},
@@ -193,8 +182,8 @@ public class HallOfSuffering extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, coords, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, coords, world.getInstanceId());
+			return world.getInstanceId();
 		}
 		//New instance
 		if (!checkConditions(player))
@@ -202,9 +191,9 @@ public class HallOfSuffering extends Quest
 		L2Party party = player.getParty();
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new HSWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCEID;
-		world.status = 0;
+		world.setInstanceId(instanceId);
+		world.setTemplateId(INSTANCEID);
+		world.setStatus(0);
 		((HSWorld)world).startTime = System.currentTimeMillis();
 		((HSWorld)world).ptLeaderName = player.getName();
 		InstanceManager.getInstance().addWorld(world);
@@ -215,14 +204,14 @@ public class HallOfSuffering extends Quest
 		if (player.getParty() == null)
 		{
 			teleportPlayer(player, coords, instanceId);
-			world.allowed.add(player.getObjectId());
+			world.addAllowed(player.getObjectId());
 		}
 		else
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
 				teleportPlayer(partyMember, coords, instanceId);
-				world.allowed.add(partyMember.getObjectId());
+				world.addAllowed(partyMember.getObjectId());
 				if (partyMember.getQuestState(qn) == null)
 					newQuestState(partyMember);
 			}
@@ -261,24 +250,24 @@ public class HallOfSuffering extends Quest
 	
 	protected void runTumors(HSWorld world)
 	{
-		for (int[] mob : getRoomSpawns(world.status))
+		for (int[] mob : getRoomSpawns(world.getStatus()))
 		{
-			L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false,0,false,world.instanceId);
+			L2Npc npc = addSpawn(mob[0], mob[1], mob[2], mob[3], 0, false,0,false,world.getInstanceId());
 			world.npcList.put(npc, false);
 		}
-		L2Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.status][0], TUMOR_SPAWNS[world.status][1], TUMOR_SPAWNS[world.status][2], 0, false,0,false,world.instanceId);
+		L2Npc mob = addSpawn(TUMOR_ALIVE, TUMOR_SPAWNS[world.getStatus()][0], TUMOR_SPAWNS[world.getStatus()][1], TUMOR_SPAWNS[world.getStatus()][2], 0, false,0,false,world.getInstanceId());
 		mob.disableCoreAI(true);
 		mob.setIsImmobilized(true);
 		mob.setCurrentHp(mob.getMaxHp()*0.5);
 		world.npcList.put(mob, false);
-		world.status++;
+		world.setStatus(world.getStatus() + 1);
 	}
 	
 	protected void runTwins(HSWorld world)
 	{
-		world.status++;
-		world.klodekus = addSpawn(TWIN_SPAWNS[0][0], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false,0,false,world.instanceId);
-		world.klanikus = addSpawn(TWIN_SPAWNS[1][0], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false,0,false,world.instanceId);
+		world.setStatus(world.getStatus() + 1);
+		world.klodekus = addSpawn(TWIN_SPAWNS[0][0], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false,0,false,world.getInstanceId());
+		world.klanikus = addSpawn(TWIN_SPAWNS[1][0], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false,0,false,world.getInstanceId());
 		world.klanikus.setIsMortal(false);
 		world.klodekus.setIsMortal(false);
 	}
@@ -464,15 +453,15 @@ public class HallOfSuffering extends Quest
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-				sm.addInstanceName(tmpworld.templateId);
+				sm.addInstanceName(tmpworld.getTemplateId());
 				
 				// set instance reenter time for all allowed players
-				for (int objectId : tmpworld.allowed)
+				for (int objectId : tmpworld.getAllowed())
 				{
 					L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if (player != null && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.templateId, reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.getTemplateId(), reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -513,21 +502,21 @@ public class HallOfSuffering extends Quest
 			
 			if (npc.getNpcId() == TUMOR_ALIVE)
 				addSpawn(TUMOR_DEAD, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, npc.getInstanceId());
-			if (world.status < 5)
+			if (world.getStatus() < 5)
 			{
 				if (checkKillProgress(npc, world))
 					runTumors(world);
 			}
-			else if (world.status == 5)
+			else if (world.getStatus() == 5)
 			{
 				if (checkKillProgress(npc, world))
 					runTwins(world);
 			}
-			else if (world.status == 6 && (npc.getNpcId() == KLODEKUS || npc.getNpcId() == KLANIKUS))
+			else if (world.getStatus() == 6 && (npc.getNpcId() == KLODEKUS || npc.getNpcId() == KLANIKUS))
 			{
 				if (world.klanikus.isDead() && world.klodekus.isDead())
 				{
-					world.status++;
+					world.setStatus(world.getStatus() + 1);
 					// instance end
 					calcRewardItemId(world);
 					world.klanikus = null;
@@ -535,7 +524,7 @@ public class HallOfSuffering extends Quest
 					this.cancelQuestTimers("ressurectTwin");
 					this.cancelQuestTimers("spawnBossGuards");
 					this.cancelQuestTimers("isTwinSeparated");
-					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false,0,false,world.instanceId);
+					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false,0,false,world.getInstanceId());
 				}
 			}
 		}

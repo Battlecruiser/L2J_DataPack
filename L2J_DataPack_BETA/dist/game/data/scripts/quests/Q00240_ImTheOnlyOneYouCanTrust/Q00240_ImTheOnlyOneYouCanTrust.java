@@ -28,7 +28,6 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 {
 	// NPC
 	private static final int KINTAIJIN = 32640;
-	
 	// Monster
 	private static final int[] MOBS =
 	{
@@ -50,7 +49,6 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		22632,
 		22633
 	};
-	
 	// Item
 	private static final int STAKATOFANGS = 14879;
 	
@@ -127,7 +125,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		}
 		else
 		{
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isPet);
 	}
@@ -138,11 +136,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS);
-		
-		questItemIds = new int[]
-		{
-			STAKATOFANGS
-		};
+		registerQuestItems(STAKATOFANGS);
 	}
 	
 	public static void main(String[] args)

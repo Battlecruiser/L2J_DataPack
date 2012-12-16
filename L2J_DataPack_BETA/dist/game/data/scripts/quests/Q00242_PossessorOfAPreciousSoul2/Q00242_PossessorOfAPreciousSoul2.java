@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 {
-	
 	// NPCs
 	private static final int VIRGIL = 31742;
 	private static final int KASSANDRA = 31743;
@@ -40,16 +39,13 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	private static final int ANGEL_CORPSE = 31752;
 	private static final int KALIS = 30759;
 	private static final int MATILD = 30738;
-	
 	private static final int RESTRAINER_OF_GLORY = 27317;
-	
 	// Items
 	private static final int VIRGILS_LETTER = 7677;
 	private static final int GOLDEN_HAIR = 7590;
 	private static final int ORB_OF_BINDING = 7595;
 	private static final int SORCERY_INGREDIENT = 7596;
 	private static final int CARADINE_LETTER = 7678;
-	
 	// Rewards
 	private static final int CHANCE_FOR_HAIR = 20;
 	
@@ -264,7 +260,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 						{
 							st.setCond(10);
 						}
-						st.playSound("ItemSound.quest_middle");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 						npc.setTarget(player);
 						npc.doCast(SkillTable.getInstance().getInfo(4546, 1));
 					}
@@ -315,7 +311,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		if (st.isCond(9) && (st.getQuestItemsCount(ORB_OF_BINDING) < 4))
 		{
 			st.giveItems(ORB_OF_BINDING, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		if (st.getQuestItemsCount(ORB_OF_BINDING) >= 4)
 		{
@@ -330,12 +326,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		addStartNpc(VIRGIL);
 		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
 		addKillId(RESTRAINER_OF_GLORY);
-		questItemIds = new int[]
-		{
-			GOLDEN_HAIR,
-			ORB_OF_BINDING,
-			SORCERY_INGREDIENT
-		};
+		registerQuestItems(GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT);
 	}
 	
 	public static void main(String[] args)

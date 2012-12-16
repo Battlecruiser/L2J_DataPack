@@ -14,15 +14,14 @@
  */
 package quests.Q10275_ContainingTheAttributePower;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -37,19 +36,16 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	private static final int WEBER = 31307;
 	private static final int YIN = 32325;
 	private static final int YANG = 32326;
-	
 	private static final int WATER = 27380;
 	private static final int AIR = 27381;
-	
 	// Items
 	private static final int YINSWORD = 13845;
 	private static final int YANGSWORD = 13881;
 	private static final int SOULPIECEWATER = 13861;
 	private static final int SOULPIECEAIR = 13862;
-	
 	// Skills
-	private static final L2Skill BlessingOfFire = SkillTable.getInstance().getInfo(2635, 1);
-	private static final L2Skill BlessingOfEarth = SkillTable.getInstance().getInfo(2636, 1);
+	private static final SkillHolder BLESSING_OF_FIRE = new SkillHolder(2635, 1);
+	private static final SkillHolder BLESSING_OF_EARTH = new SkillHolder(2636, 1);
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -215,12 +211,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				break;
 			case "32325-09.html":
 				st.setCond(5, true);
-				BlessingOfFire.getEffects(player, player);
+				BLESSING_OF_FIRE.getSkill().getEffects(player, player);
 				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-09.html":
 				st.setCond(10, true);
-				BlessingOfEarth.getEffects(player, player);
+				BLESSING_OF_EARTH.getSkill().getEffects(player, player);
 				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 		}
@@ -258,7 +254,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
@@ -272,7 +268,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
@@ -287,13 +283,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		addStartNpc(HOLLY, WEBER);
 		addTalkId(HOLLY, WEBER, YIN, YANG);
 		addKillId(AIR, WATER);
-		questItemIds = new int[]
-		{
-			YINSWORD,
-			YANGSWORD,
-			SOULPIECEWATER,
-			SOULPIECEAIR
-		};
+		registerQuestItems(YINSWORD, YANGSWORD, SOULPIECEWATER, SOULPIECEAIR);
 	}
 	
 	public static void main(String[] args)

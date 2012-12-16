@@ -37,7 +37,6 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
@@ -52,6 +51,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -62,6 +62,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Seed of Destruction instance zone.<br>
  * TODO:
  * <ul>
  * 	<li>No random mob spawns after mob kill.</li>
@@ -73,15 +74,11 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Stage1 extends Quest
 {
-	private class SOD1World extends InstanceWorld
+	protected class SOD1World extends InstanceWorld
 	{
 		public           Map<L2Npc,Boolean> npcList                      = new FastMap<>();
 		public           int                deviceSpawnedMobCount        = 0;
 		public           Lock               lock                         = new ReentrantLock();
-
-		public SOD1World()
-		{
-		}
 	}
 	
 	protected static class SODSpawn
@@ -425,16 +422,16 @@ public class Stage1 extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, coords, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, coords, world.getInstanceId());
+			return world.getInstanceId();
 		}
 		//New instance
 		if (!checkConditions(player))
 			return 0;
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new SOD1World();
-		world.instanceId = instanceId;
-		world.status = 0;
+		world.setInstanceId(instanceId);
+		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
 		spawnState((SOD1World)world);
 		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
@@ -445,14 +442,14 @@ public class Stage1 extends Quest
 		if (player.getParty() == null || player.getParty().getCommandChannel() == null)
 		{
 			teleportPlayer(player, coords, instanceId);
-			world.allowed.add(player.getObjectId());
+			world.addAllowed(player.getObjectId());
 		}
 		else
 		{
 			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
 				teleportPlayer(channelMember, coords, instanceId);
-				world.allowed.add(channelMember.getObjectId());
+				world.addAllowed(channelMember.getObjectId());
 			}
 		}
 		return instanceId;
@@ -507,7 +504,7 @@ public class Stage1 extends Quest
 			try
 			{
 				world.npcList.clear();
-				switch(world.status)
+				switch(world.getStatus())
 				{
 				case 0:
 					spawnFlaggedNPCs(world, 0);
@@ -516,7 +513,7 @@ public class Stage1 extends Quest
 					ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1);
 					sendScreenMessage(world, message1);
 					for(int i : ENTRANCE_ROOM_DOORS)
-						openDoor(i,world.instanceId);
+						openDoor(i,world.getInstanceId());
 					spawnFlaggedNPCs(world, 1);
 					break;
 				case 2:
@@ -527,16 +524,16 @@ public class Stage1 extends Quest
 					ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DONT_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1);
 					sendScreenMessage(world, message2);
 					for(int i : SQUARE_DOORS)
-						openDoor(i,world.instanceId);
+						openDoor(i,world.getInstanceId());
 					spawnFlaggedNPCs(world, 4);
 					break;
 				case 5:
-					openDoor(SCOUTPASS_DOOR,world.instanceId);
+					openDoor(SCOUTPASS_DOOR,world.getInstanceId());
 					spawnFlaggedNPCs(world, 3);
 					spawnFlaggedNPCs(world, 5);
 					break;
 				case 6:
-					openDoor(THRONE_DOOR,world.instanceId);
+					openDoor(THRONE_DOOR,world.getInstanceId());
 					break;
 				case 7:
 					spawnFlaggedNPCs(world, 7);
@@ -551,7 +548,7 @@ public class Stage1 extends Quest
 					// instance end
 					break;
 				}
-				world.status++;
+				world.setStatus(world.getStatus() + 1);
 				return true;
 			}
 			finally
@@ -576,10 +573,10 @@ public class Stage1 extends Quest
 				skill = TRAP_DAMAGE.getSkill();
 			else
 				skill = TRAP_SPAWN.getSkill();
-			addTrap(npcId, x, y, z, h, skill, world.instanceId);
+			addTrap(npcId, x, y, z, h, skill, world.getInstanceId());
 			return;
 		}
-		L2Npc npc = addSpawn(npcId, x, y, z, h, false,0,false,world.instanceId);
+		L2Npc npc = addSpawn(npcId, x, y, z, h, false,0,false,world.getInstanceId());
 		if (addToKillTable)
 			world.npcList.put(npc, false);
 		npc.setIsNoRndWalk(true);
@@ -620,7 +617,7 @@ public class Stage1 extends Quest
 		sm.addInstanceName(INSTANCEID);
 
 		// set instance reenter time for all allowed players
-		for (int objectId : world.allowed)
+		for (int objectId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
@@ -631,7 +628,7 @@ public class Stage1 extends Quest
 	
 	private void sendScreenMessage(SOD1World world, ExShowScreenMessage message)
 	{
-		for(int objId : world.allowed)
+		for(int objId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if (player != null)
@@ -658,11 +655,11 @@ public class Stage1 extends Quest
 			if (tmpworld instanceof SOD1World)
 			{
 				SOD1World world = (SOD1World) tmpworld;
-				if (world.status == 7)
+				if (world.getStatus() == 7)
 				{
 					if (spawnState(world))
 					{
-						for(int objId : world.allowed)
+						for(int objId : world.getAllowed())
 						{
 							L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 							if (pl != null)
@@ -683,17 +680,17 @@ public class Stage1 extends Quest
 		if (tmpworld instanceof SOD1World)
 		{
 			SOD1World world = (SOD1World) tmpworld;
-			if (world.status == 2 && npc.getNpcId() == OBELISK)
+			if (world.getStatus() == 2 && npc.getNpcId() == OBELISK)
 			{
-				world.status = 4;
+				world.setStatus(4);
 				spawnFlaggedNPCs(world, 3);
 			}
-			else if (world.status == 3 && npc.getNpcId() == OBELISK)
+			else if (world.getStatus() == 3 && npc.getNpcId() == OBELISK)
 			{
-				world.status = 4;
+				world.setStatus(4);
 				spawnFlaggedNPCs(world, 2);
 			}
-			else if (world.status <= 8 && npc.getNpcId() == TIAT)
+			else if (world.getStatus() <= 8 && npc.getNpcId() == TIAT)
 			{
 				if (npc.getCurrentHp() < (npc.getMaxHp() / 2))
 				{
@@ -717,16 +714,16 @@ public class Stage1 extends Quest
 			SOD1World world = (SOD1World) tmpworld;
 			if (event.equalsIgnoreCase("Spawn"))
 			{
-				L2PcInstance target = L2World.getInstance().getPlayer(world.allowed.get(getRandom(world.allowed.size())));
+				L2PcInstance target = L2World.getInstance().getPlayer(world.getAllowed().get(getRandom(world.getAllowed().size())));
 				if (world.deviceSpawnedMobCount < MAX_DEVICESPAWNEDMOBCOUNT
 						&& target != null && target.getInstanceId() == npc.getInstanceId()
 						&& !target.isDead())
 				{
-					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.instanceId);
+					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false,0,false,world.getInstanceId());
 					world.deviceSpawnedMobCount++;
 					mob.setSeeThroughSilentMove(true);
 					mob.setRunning();
-					if (world.status >= 7)
+					if (world.getStatus() >= 7)
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_TIAT);
 					else
 						mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_DOOR);
@@ -779,42 +776,42 @@ public class Stage1 extends Quest
 		if (tmpworld instanceof SOD1World)
 		{
 			SOD1World world = (SOD1World) tmpworld;
-			if (world.status == 1)
+			if (world.getStatus() == 1)
 			{
 				if (checkKillProgress(npc, world))
 					spawnState(world);
 			}
-			else if (world.status == 2)
+			else if (world.getStatus() == 2)
 			{
 				if (checkKillProgress(npc, world))
-					world.status++;
+					world.setStatus(world.getStatus() + 1);
 			}
-			else if (world.status == 4 && npc.getNpcId() == OBELISK)
+			else if (world.getStatus() == 4 && npc.getNpcId() == OBELISK)
 			{
 				spawnState(world);
 			}
-			else if (world.status == 5 && npc.getNpcId() == POWERFUL_DEVICE)
+			else if (world.getStatus() == 5 && npc.getNpcId() == POWERFUL_DEVICE)
 			{
 				if (checkKillProgress(npc, world))
 					spawnState(world);
 			}
-			else if (world.status == 6 && npc.getNpcId() == THRONE_POWERFUL_DEVICE)
+			else if (world.getStatus() == 6 && npc.getNpcId() == THRONE_POWERFUL_DEVICE)
 			{
 				if (checkKillProgress(npc, world))
 					spawnState(world);
 			}
-			else if (world.status >= 7)
+			else if (world.getStatus() >= 7)
 			{
 				if (npc.getNpcId() == TIAT)
 				{
-					world.status++;
-					for(int objId : world.allowed)
+					world.setStatus(world.getStatus() + 1);
+					for(int objId : world.getAllowed())
 					{
 						L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 						if (pl != null)
 							pl.showQuestMovie(6);
 					}
-					for(L2Npc mob:InstanceManager.getInstance().getInstance(world.instanceId).getNpcs())
+					for(L2Npc mob:InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
 						mob.deleteMe();
 					
 					GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
@@ -860,10 +857,10 @@ public class Stage1 extends Quest
 				case TRAP_TRIGGERED:
 					if (trap.getNpcId() == 18771)
 						for(int npcId : TRAP_18771_NPCS)
-							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.instanceId);
+							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.getInstanceId());
 					else
 						for(int npcId : TRAP_OTHER_NPCS)
-							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.instanceId);
+							addSpawn(npcId, trap.getX(), trap.getY(), trap.getZ(), trap.getHeading(), true, 0, true, world.getInstanceId());
 					break;
 			}
 		}

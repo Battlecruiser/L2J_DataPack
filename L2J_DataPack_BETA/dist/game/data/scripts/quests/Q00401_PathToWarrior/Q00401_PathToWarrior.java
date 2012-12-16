@@ -38,7 +38,6 @@ public class Q00401_PathToWarrior extends Quest
 	private static final int SIMPLONSLETTER = 1143;
 	private static final int POISONSPIDERLEG = 1144;
 	private static final int MEDALLIONOFWARRIOR = 1145;
-	
 	// Npc
 	private static final int AURON = 30010;
 	private static final int SIMPLON = 30253;
@@ -55,7 +54,6 @@ public class Q00401_PathToWarrior extends Quest
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -250,7 +248,7 @@ public class Q00401_PathToWarrior extends Quest
 						if (getRandom(10) < 4)
 						{
 							st.giveItems(RUSTEDBRONZESWORD1, 1);
-							st.playSound("ItemSound.quest_itemget");
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) == 10)
@@ -267,7 +265,7 @@ public class Q00401_PathToWarrior extends Quest
 					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
 					{
 						st.giveItems(POISONSPIDERLEG, 1);
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
 					if (st.getQuestItemsCount(POISONSPIDERLEG) == 20)
@@ -289,17 +287,7 @@ public class Q00401_PathToWarrior extends Quest
 		addTalkId(AURON);
 		addTalkId(SIMPLON);
 		addKillId(MONSTERS);
-		
-		questItemIds = new int[]
-		{
-			AURONSLETTER,
-			WARRIORGUILDMARK,
-			RUSTEDBRONZESWORD1,
-			RUSTEDBRONZESWORD2,
-			RUSTEDBRONZESWORD3,
-			SIMPLONSLETTER,
-			POISONSPIDERLEG
-		};
+		registerQuestItems(AURONSLETTER, WARRIORGUILDMARK, RUSTEDBRONZESWORD1, RUSTEDBRONZESWORD2, RUSTEDBRONZESWORD3, SIMPLONSLETTER, POISONSPIDERLEG);
 	}
 	
 	public static void main(String[] args)

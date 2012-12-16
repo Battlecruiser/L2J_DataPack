@@ -170,11 +170,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);
-		questItemIds = new int[]
-		{
-			POOR_NECKLACE,
-			VALOR_NECKLACE
-		};
+		registerQuestItems(POOR_NECKLACE, VALOR_NECKLACE);
 	}
 	
 	public static void main(String[] args)

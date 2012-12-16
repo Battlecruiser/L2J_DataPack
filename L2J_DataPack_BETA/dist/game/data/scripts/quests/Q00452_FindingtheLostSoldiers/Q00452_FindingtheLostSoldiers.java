@@ -137,13 +137,10 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	{
 		super(questId, name, descr);
 		
-		questItemIds = new int[]
-		{
-			TAG_ID
-		};
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
 		addTalkId(SOLDIER_CORPSES);
+		registerQuestItems(TAG_ID);
 	}
 	
 	public static void main(String[] args)

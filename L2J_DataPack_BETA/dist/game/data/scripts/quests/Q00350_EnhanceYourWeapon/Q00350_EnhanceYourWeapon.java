@@ -360,9 +360,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (event.endsWith("-04.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.endsWith("-09.htm"))
 		{

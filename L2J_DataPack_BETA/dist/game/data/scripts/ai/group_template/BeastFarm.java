@@ -297,7 +297,7 @@ public class BeastFarm extends AbstractNpcAI
 			nextNpc.setRunning();
 			
 			QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
-			if ((st != null) && (st.getInt("cond") == 1) && !st.hasQuestItems(7185) && (getRandom(10) == 1))
+			if ((st != null) && st.isCond(1) && !st.hasQuestItems(7185) && (getRandom(10) == 1))
 			{
 				// if player has quest 20 going, give quest item
 				// it's easier to hardcode it in here than to try and repeat this stuff in the quest

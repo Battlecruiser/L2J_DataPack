@@ -52,28 +52,24 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 		switch (event)
 		{
 			case "31570-03.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31570-05.htm":
 				if ((st.getInt("cond") == 1) && (st.hasQuestItems(BLUE_TREASURE_BOX)))
 				{
 					htmltext = "31570-06.htm";
-					st.set("cond", "2");
+					st.setCond(2, true);
 					st.giveItems(STRANGE_BLUESPRINT, 1);
 					st.takeItems(BLUE_TREASURE_BOX, -1);
-					st.playSound("ItemSound.quest_middle");
 				}
 				break;
 			case "31434-02.htm":
 				if ((st.getInt("cond") == 2) && (st.hasQuestItems(STRANGE_BLUESPRINT)))
 				{
-					htmltext = "31434-01.htm";
 					st.giveItems(BLACK_PEARL_RING, 1);
 					st.takeItems(STRANGE_BLUESPRINT, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
+					htmltext = "31434-01.htm";
 				}
 				break;
 		

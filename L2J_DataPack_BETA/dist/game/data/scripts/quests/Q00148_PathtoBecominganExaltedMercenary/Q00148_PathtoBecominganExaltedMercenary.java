@@ -62,9 +62,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 		}
 		else if (event.equalsIgnoreCase("exalted-03.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		return htmltext;
 	}

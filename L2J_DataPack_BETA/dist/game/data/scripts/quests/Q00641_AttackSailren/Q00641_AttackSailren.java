@@ -111,7 +111,7 @@ public class Q00641_AttackSailren extends Quest
 				st.giveItems(GAZKH_FRAGMENT, 1);
 				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
 				{
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else
 				{

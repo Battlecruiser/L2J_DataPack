@@ -45,17 +45,14 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 		}
 		else if ((npc.getNpcId() == _johnny) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
+			st.exitQuest(false, true);
 		}
 		return htmltext;
 	}

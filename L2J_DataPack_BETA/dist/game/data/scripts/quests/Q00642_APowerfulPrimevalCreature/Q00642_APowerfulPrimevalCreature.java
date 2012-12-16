@@ -134,13 +134,13 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			if (getRandom(1000) < chance)
 			{
 				st.rewardItems(DINOSAUR_TISSUE, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		else if (npcId == ANCIENT_EGG)
 		{
 			st.rewardItems(DINOSAUR_EGG, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isPet);
 	}

@@ -100,7 +100,7 @@ public class DarkElvenChange1 extends Quest
 						st.takeItems(CLASSES[i][6], -1);
 						player.setClassId(CLASSES[i][0]);
 						player.setBaseClass(CLASSES[i][0]);
-						st.playSound("ItemSound.quest_fanfare_2");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_2);
 						player.broadcastUserInfo();
 						st.exitQuest(false);
 					}

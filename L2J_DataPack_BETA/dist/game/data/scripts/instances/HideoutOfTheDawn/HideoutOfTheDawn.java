@@ -2,45 +2,34 @@ package instances.HideoutOfTheDawn;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
+ * Hideout of the Dawn instance zone.
  * @author Adry_85
  */
 public class HideoutOfTheDawn extends Quest
 {
-	private class HoDWorld extends InstanceWorld
+	protected class HotDWorld extends InstanceWorld
 	{
-		public long[] storeTime =
-		{
-			0,
-			0
-		};
-		
-		public HoDWorld()
-		{
-		}
+		long storeTime = 0;
 	}
 	
 	private static final int INSTANCEID = 113;
+	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
-	
-	public class teleCoord
-	{
-		int instanceId;
-		int x;
-		int y;
-		int z;
-	}
+	// Location
+	private static final Location WOOD_LOC = new Location(-23758, -8959, -5384, 0, 0);
+	private static final Location JAINA_LOC = new Location(147072, 23743, -1984, 0);
 	
 	public HideoutOfTheDawn(int questId, String name, String descr)
 	{
@@ -51,90 +40,63 @@ public class HideoutOfTheDawn extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
-		
 		switch (npc.getNpcId())
 		{
 			case WOOD:
 			{
-				teleCoord tele = new teleCoord();
-				tele.x = -23758;
-				tele.y = -8959;
-				tele.z = -5384;
-				enterInstance(player, "HideoutOfTheDawn.xml", tele);
+				enterInstance(talker, "HideoutOfTheDawn.xml", WOOD_LOC);
 				return "32593-01.htm";
 			}
-			
 			case JAINA:
 			{
-				InstanceManager.InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-				world.allowed.remove(world.allowed.indexOf(Integer.valueOf(player.getObjectId())));
-				teleCoord tele = new teleCoord();
-				tele.instanceId = 0;
-				tele.x = 147072;
-				tele.y = 23743;
-				tele.z = -1984;
-				exitInstance(player, tele);
+				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
+				world.removeAllowed(talker.getObjectId());
+				talker.teleToLocation(JAINA_LOC, 0);
 				return "32617-01.htm";
 			}
 		}
-		
-		return "";
+		return super.onTalk(npc, talker);
 	}
 	
-	private void teleportplayer(L2PcInstance player, teleCoord teleto)
+	private void teleportPlayer(L2PcInstance player, Location loc)
 	{
 		removeBuffs(player);
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(teleto.instanceId);
-		player.teleToLocation(teleto.x, teleto.y, teleto.z);
+		player.teleToLocation(loc, 0);
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
-		int instanceId = 0;
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		// existing instance
 		if (world != null)
 		{
-			if (!(world instanceof HoDWorld))
+			if (!(world instanceof HotDWorld))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleto.instanceId = world.instanceId;
-			teleportplayer(player, teleto);
-			return instanceId;
+			loc.setInstanceId(world.getInstanceId());
+			teleportPlayer(player, loc);
+			return 0;
 		}
 		// New instance
-		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new HoDWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCEID;
-		world.status = 0;
-		((HoDWorld) world).storeTime[0] = System.currentTimeMillis();
+		world = new HotDWorld();
+		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+		world.setTemplateId(INSTANCEID);
+		world.setStatus(0);
+		((HotDWorld) world).storeTime = System.currentTimeMillis();
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("SevenSign started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
-		teleto.instanceId = instanceId;
-		teleportplayer(player, teleto);
-		world.allowed.add(player.getObjectId());
+		loc.setInstanceId(world.getInstanceId());
+		teleportPlayer(player, loc);
+		world.addAllowed(player.getObjectId());
 		
-		return instanceId;
-	}
-	
-	protected void exitInstance(L2PcInstance player, teleCoord tele)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(0);
-		player.teleToLocation(tele.x, tele.y, tele.z);
+		return world.getInstanceId();
 	}
 	
 	private static final void removeBuffs(L2Character ch)

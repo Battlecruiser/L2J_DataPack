@@ -151,7 +151,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 						rewardScroll(st, 1);
 					}
 					htmltext = "32757-09.html";
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.takeItems(TATTERED_MONK_CLOTHES, 100);
 				}
 				else
@@ -174,7 +174,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					}
 					rewardScroll(st, 2);
 					htmltext = "32757-09.html";
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.takeItems(TATTERED_MONK_CLOTHES, 200);
 				}
 				else
@@ -191,7 +191,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					st.giveItems(10397 + getRandom(9), 1);
 					rewardScroll(st, 3);
 					htmltext = "32757-09.html";
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.takeItems(TATTERED_MONK_CLOTHES, 300);
 				}
 				else
@@ -224,7 +224,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 						rewardScroll(st, 1);
 					}
 					htmltext = "32757-09.html";
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.takeItems(TATTERED_MONK_CLOTHES, 400);
 				}
 				else
@@ -251,7 +251,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 					}
 					rewardScroll(st, 2);
 					htmltext = "32757-09.html";
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.takeItems(TATTERED_MONK_CLOTHES, 300);
 				}
 				else
@@ -366,7 +366,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 			{
 				final QuestState qs = player.getQuestState(getName());
 				qs.giveItems(TATTERED_MONK_CLOTHES, count);
-				qs.playSound("ItemSound.quest_itemget");
+				qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 	}

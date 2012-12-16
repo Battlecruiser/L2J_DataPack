@@ -30,7 +30,6 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int PUPINA = 30118;
 	private static final int ANGUS = 30474;
 	private static final int SLA = 30666;
-	
 	private static final int MOBS[] =
 	{
 		20176, // Wyrm
@@ -38,7 +37,6 @@ public class Q00138_TempleChampionPart2 extends Quest
 		20551, // Road Scavenger
 		20552, // Fettered Soul
 	};
-	
 	// Items
 	private static final int MANIFESTO = 10340;
 	private static final int RELIC = 10340;
@@ -220,11 +218,11 @@ public class Q00138_TempleChampionPart2 extends Quest
 			st.giveItems(RELIC, 1);
 			if (st.getQuestItemsCount(RELIC) >= 10)
 			{
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isPet);
@@ -236,13 +234,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			MANIFESTO,
-			RELIC,
-			ANGUS_REC,
-			PUPINA_REC
-		};
+		registerQuestItems(MANIFESTO, RELIC, ANGUS_REC, PUPINA_REC);
 	}
 	
 	public static void main(String[] args)

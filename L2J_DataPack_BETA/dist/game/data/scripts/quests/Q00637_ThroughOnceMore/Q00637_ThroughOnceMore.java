@@ -49,11 +49,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
 		addKillId(MOBS);
-		
-		questItemIds = new int[]
-		{
-			NECRO_HEART
-		};
+		registerQuestItems(NECRO_HEART);
 	}
 	
 	@Override
@@ -150,7 +146,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
 					st.giveItems(NECRO_HEART, numItems);

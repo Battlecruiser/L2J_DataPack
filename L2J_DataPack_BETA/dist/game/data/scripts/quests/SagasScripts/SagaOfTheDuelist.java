@@ -133,18 +133,14 @@ public class SagaOfTheDuelist extends SagasSuperClass
 		{
 			String htmltext = getNoQuestMsg(player);
 			QuestState st = player.getQuestState(qn);
-			if (st != null)
+			if ((st != null) && st.isCond(3))
 			{
-				int cond = st.getInt("cond");
-				if (cond == 3)
+				if (!st.hasQuestItems(TOPQUALITYMEAT))
 				{
-					if (!st.hasQuestItems(TOPQUALITYMEAT))
-					{
-						st.giveItems(TOPQUALITYMEAT, 1);
-						return "tunatun_01.htm";
-					}
-					return "tunatun_02.htm";
+					st.giveItems(TOPQUALITYMEAT, 1);
+					return "tunatun_01.htm";
 				}
+				return "tunatun_02.htm";
 			}
 			return htmltext;
 		}

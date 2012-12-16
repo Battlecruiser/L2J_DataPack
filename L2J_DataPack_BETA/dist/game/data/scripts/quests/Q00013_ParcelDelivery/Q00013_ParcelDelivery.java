@@ -27,11 +27,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00013_ParcelDelivery extends Quest
 {
-	
 	// NPCs
 	private static final int FUNDIN = 31274;
 	private static final int VULCAN = 31539;
-	
 	// Items
 	private static final int PACKAGE = 7263;
 	
@@ -48,19 +46,16 @@ public class Q00013_ParcelDelivery extends Quest
 		switch (event)
 		{
 			case "31274-02.html":
-				st.set("cond", "1");
+				st.startQuest();
 				st.giveItems(PACKAGE, 1);
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
 				break;
 			case "31539-01.html":
-				if ((st.getInt("cond") == 1) && (st.hasQuestItems(PACKAGE)))
+				if (st.isCond(1) && st.hasQuestItems(PACKAGE))
 				{
 					st.takeItems(PACKAGE, -1);
 					st.giveItems(57, 157834);
 					st.addExpAndSp(589092, 58794);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else
 				{
@@ -94,8 +89,7 @@ public class Q00013_ParcelDelivery extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
-				if (cond == 1)
+				if (st.isCond(1))
 				{
 					switch (npcId)
 					{
@@ -117,13 +111,8 @@ public class Q00013_ParcelDelivery extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(FUNDIN);
-		
 		addTalkId(FUNDIN, VULCAN);
-		
-		questItemIds = new int[]
-		{
-			PACKAGE
-		};
+		registerQuestItems(PACKAGE);
 	}
 	
 	public static void main(String[] args)

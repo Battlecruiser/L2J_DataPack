@@ -385,7 +385,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
@@ -405,7 +405,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
@@ -419,15 +419,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, STEDMIEL, GABRIELLE, GILMORE, KANTABILON, RAHORAKTI, CARADINE, KASSANDRA, VIRGIL, OGMAR);
 		addKillId(BARAHAM, MALRUK_SUCCUBUS_1, MALRUK_SUCCUBUS_TUREN_1, MALRUK_SUCCUBUS_2, MALRUK_SUCCUBUS_TUREN_2, TAIK_ORC_SUPPLY_LEADER);
-		questItemIds = new int[]
-		{
-			LEGEND_OF_SEVENTEEN,
-			MALRUK_SUCCUBUS_CLAW,
-			ECHO_CRYSTAL,
-			POETRY_BOOK,
-			CRIMSON_MOSS,
-			RAHORAKTIS_MEDICINE
-		};
+		registerQuestItems(LEGEND_OF_SEVENTEEN, MALRUK_SUCCUBUS_CLAW, ECHO_CRYSTAL, POETRY_BOOK, CRIMSON_MOSS, RAHORAKTIS_MEDICINE);
 	}
 	
 	public static void main(String[] args)

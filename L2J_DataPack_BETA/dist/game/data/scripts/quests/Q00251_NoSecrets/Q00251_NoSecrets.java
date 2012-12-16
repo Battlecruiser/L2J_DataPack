@@ -130,7 +130,7 @@ public class Q00251_NoSecrets extends Quest
 				}
 				else
 				{
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5))
@@ -142,7 +142,7 @@ public class Q00251_NoSecrets extends Quest
 				}
 				else
 				{
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}

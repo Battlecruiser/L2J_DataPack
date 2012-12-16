@@ -32,7 +32,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	private static final int LADD = 30721;
 	private static final int CARADINE = 31740;
 	private static final int OSSIAN = 31741;
-	
 	private static final int PILGRIM_OF_SPLENDOR = 21541;
 	private static final int JUDGE_OF_SPLENDOR = 21544;
 	private static final int BARAKIEL = 25325;
@@ -45,7 +44,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		21539, // Wailing of Splendor
 		21540, // Wailing of Splendor
 	};
-	
 	// Items
 	private static final int CARADINE_LETTER = 7678;
 	private static final int CARADINE_LETTER_LAST = 7679;
@@ -54,7 +52,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	private static final int RAIN_SONG = 7593;
 	private static final int RELIC_BOX = 7594;
 	private static final int FRAGMENTS = 21725;
-	
 	// Rewards
 	private static final int CHANCE_FOR_DROP = 30;
 	private static final int CHANCE_FOR_DROP_FRAGMENTS = 60;
@@ -236,7 +233,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 							}
 							else
 							{
-								st.playSound("ItemSound.quest_itemget");
+								st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
 						}
 					}
@@ -260,7 +257,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 							}
 							else
 							{
-								st.playSound("ItemSound.quest_itemget");
+								st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 							}
 						}
 					}
@@ -310,7 +307,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 						st.giveItems(FRAGMENTS, 1);
 						if (st.getQuestItemsCount(FRAGMENTS) < 100)
 						{
-							st.playSound("ItemSound.quest_itemget");
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 						else
 						{
@@ -330,14 +327,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		addTalkId(LADD, CARADINE, OSSIAN);
 		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			WATERBINDER,
-			EVERGREEN,
-			FRAGMENTS,
-			RAIN_SONG,
-			RELIC_BOX
-		};
+		registerQuestItems(WATERBINDER, EVERGREEN, FRAGMENTS, RAIN_SONG, RELIC_BOX);
 	}
 	
 	public static void main(String[] args)

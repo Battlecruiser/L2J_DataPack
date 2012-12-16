@@ -65,9 +65,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
@@ -76,8 +74,7 @@ public class Q00552_OlympiadVeteran extends Quest
 			if (count > 0)
 			{
 				st.giveItems(OLY_CHEST, count);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -126,10 +123,9 @@ public class Q00552_OlympiadVeteran extends Quest
 			
 			if (count == 3)
 			{
-				htmltext = "31688-04.html"; // reusing the same html
+				htmltext = "31688-04.html";
 				st.giveItems(OLY_CHEST, 4);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{

@@ -94,7 +94,7 @@ public class QuestLink implements IBypassHandler
 			{
 				state = q.isCustomQuest() ? "" : "01";
 			}
-			else if (qs.isStarted() && (qs.getInt("cond") > 0))
+			else if (qs.isStarted())
 			{
 				state = q.isCustomQuest() ? " (In Progress)" : "02";
 			}

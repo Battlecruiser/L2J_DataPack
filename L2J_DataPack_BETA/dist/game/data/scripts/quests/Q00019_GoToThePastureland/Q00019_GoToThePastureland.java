@@ -27,13 +27,12 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00019_GoToThePastureland extends Quest
 {
-	
 	// NPC
-	private static final int Vladimir = 31302;
-	private static final int Tunatun = 31537;
+	private static final int VLADIMIR = 31302;
+	private static final int TUNATUN = 31537;
 	// Items
-	private static final int Veal = 15532;
-	private static final int YoungWildBeastMeat = 7547;
+	private static final int VEAL = 15532;
+	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -48,29 +47,25 @@ public class Q00019_GoToThePastureland extends Quest
 		
 		if (event.equalsIgnoreCase("31302-02.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
-			st.giveItems(Veal, 1);
+			st.startQuest();
+			st.giveItems(VEAL, 1);
 		}
 		else if (event.equalsIgnoreCase("31537-02.html"))
 		{
-			if (st.hasQuestItems(YoungWildBeastMeat))
+			if (st.hasQuestItems(YOUNG_WILD_BEAST_MEAT))
 			{
-				st.takeItems(YoungWildBeastMeat, -1);
+				st.takeItems(YOUNG_WILD_BEAST_MEAT, -1);
 				st.giveAdena(50000, true);
 				st.addExpAndSp(136766, 12688);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 				htmltext = "31537-02.html";
 			}
-			else if (st.hasQuestItems(Veal))
+			else if (st.hasQuestItems(VEAL))
 			{
-				st.takeItems(Veal, -1);
+				st.takeItems(VEAL, -1);
 				st.giveAdena(147200, true);
 				st.addExpAndSp(385040, 75250);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 				htmltext = "31537-02.html";
 			}
 			else
@@ -91,7 +86,7 @@ public class Q00019_GoToThePastureland extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == Vladimir)
+		if (npc.getNpcId() == VLADIMIR)
 		{
 			switch (st.getState())
 			{
@@ -113,7 +108,7 @@ public class Q00019_GoToThePastureland extends Quest
 					break;
 			}
 		}
-		else if ((npc.getNpcId() == Tunatun) && (st.getInt("cond") == 1))
+		else if ((npc.getNpcId() == TUNATUN) && (st.getInt("cond") == 1))
 		{
 			htmltext = "31537-01.html";
 		}
@@ -124,14 +119,9 @@ public class Q00019_GoToThePastureland extends Quest
 	{
 		super(questId, name, descr);
 		
-		addStartNpc(Vladimir);
-		addTalkId(Vladimir, Tunatun);
-		
-		questItemIds = new int[]
-		{
-			Veal,
-			YoungWildBeastMeat
-		};
+		addStartNpc(VLADIMIR);
+		addTalkId(VLADIMIR, TUNATUN);
+		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);
 	}
 	
 	public static void main(String[] args)

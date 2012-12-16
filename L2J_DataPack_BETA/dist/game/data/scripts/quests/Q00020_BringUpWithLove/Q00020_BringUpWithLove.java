@@ -50,9 +50,7 @@ public class Q00020_BringUpWithLove extends Quest
 		{
 			if (event.equalsIgnoreCase("31537-12.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("31537-03.htm"))
 			{
@@ -66,8 +64,7 @@ public class Q00020_BringUpWithLove extends Quest
 			{
 				st.takeItems(_jewel, -1);
 				st.giveItems(_crystal, 1);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("31537-21.html"))
 			{

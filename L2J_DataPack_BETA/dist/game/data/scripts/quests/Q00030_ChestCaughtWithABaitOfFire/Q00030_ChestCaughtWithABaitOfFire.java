@@ -52,28 +52,24 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 		switch (event)
 		{
 			case "31577-02.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31577-04a.htm":
 				if ((st.getInt("cond") == 1) && (st.hasQuestItems(RED_TREASURE_BOX)))
 				{
-					htmltext = "31577-04.htm";
-					st.set("cond", "2");
 					st.giveItems(RUKAL_MUSICAL, 1);
 					st.takeItems(RED_TREASURE_BOX, -1);
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
+					htmltext = "31577-04.htm";
 				}
 				break;
 			case "30629-02.htm":
 				if ((st.getInt("cond") == 2) && (st.hasQuestItems(RUKAL_MUSICAL)))
 				{
-					htmltext = "30629-03.htm";
 					st.giveItems(PROTECTION_NECKLACE, 1);
 					st.takeItems(RUKAL_MUSICAL, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
+					htmltext = "30629-03.htm";
 				}
 				break;
 		

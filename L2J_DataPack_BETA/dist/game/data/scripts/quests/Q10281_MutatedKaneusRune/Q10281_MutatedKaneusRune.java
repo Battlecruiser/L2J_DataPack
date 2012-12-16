@@ -30,12 +30,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10281_MutatedKaneusRune extends Quest
 {
-	
 	// NPCs
 	private static final int MATHIAS = 31340;
 	private static final int KAYAN = 31335;
 	private static final int WHITE_ALLOSCE = 18577;
-	
 	// Items
 	private static final int TISSUE_WA = 13840;
 	
@@ -145,7 +143,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	private final void rewardItem(int npcId, QuestState st)
 	{
 		st.giveItems(TISSUE_WA, 1);
-		st.playSound("ItemSound.quest_itemget");
+		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 	}
 	
 	public Q10281_MutatedKaneusRune(int questId, String name, String descr)
@@ -154,10 +152,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS, KAYAN);
 		addKillId(WHITE_ALLOSCE);
-		questItemIds = new int[]
-		{
-			TISSUE_WA
-		};
+		registerQuestItems(TISSUE_WA);
 	}
 	
 	public static void main(String[] args)

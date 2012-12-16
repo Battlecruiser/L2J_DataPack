@@ -32,12 +32,11 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	// NPCs
 	private static final int LINNAEUS = 31577;
 	private static final int CRIMSON_DRAKE = 20670;
-	
 	// Items
 	private static final int CRIMSON_DRAKE_HEART = 7624;
 	private static final int FLAMING_FISHING_LURE = 7613;
 	
-	// Custom setting: wether or not to check for fishing skill level?
+	// Custom setting: whether or not to check for fishing skill level?
 	// default False to require fishing skill level, any other value to ignore fishing
 	// and evaluate char level only.
 	private static final boolean ALT_IGNORE_FISHING = false;
@@ -115,7 +114,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 			if (getRandom(100) < chance)
 			{
 				st.rewardItems(CRIMSON_DRAKE_HEART, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		
@@ -151,10 +150,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);
-		questItemIds = new int[]
-		{
-			CRIMSON_DRAKE_HEART
-		};
+		registerQuestItems(CRIMSON_DRAKE_HEART);
 	}
 	
 	public static void main(String[] args)
