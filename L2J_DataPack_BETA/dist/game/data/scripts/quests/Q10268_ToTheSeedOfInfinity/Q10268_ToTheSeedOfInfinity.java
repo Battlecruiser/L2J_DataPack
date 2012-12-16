@@ -30,7 +30,6 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	// NPCs
 	private static final int KEUCEREUS = 32548;
 	private static final int TEPIOS = 32603;
-	
 	// Items
 	private static final int INTRODUCTION = 13811;
 	
@@ -102,10 +101,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 		super(questId, name, descr);
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, TEPIOS);
-		questItemIds = new int[]
-		{
-			INTRODUCTION
-		};
+		registerQuestItems(INTRODUCTION);
 	}
 	
 	public static void main(String[] args)

@@ -92,9 +92,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 			case "31314-03.html":
 				if (player.getLevel() >= 66)
 				{
-					st.set("cond", "1");
-					st.setState(State.STARTED);
-					st.playSound("ItemSound.quest_accept");
+					st.startQuest();
 				}
 				else
 				{
@@ -111,8 +109,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 					st.giveAdena(40000, true);
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(126668, 11731);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				break;
 		}

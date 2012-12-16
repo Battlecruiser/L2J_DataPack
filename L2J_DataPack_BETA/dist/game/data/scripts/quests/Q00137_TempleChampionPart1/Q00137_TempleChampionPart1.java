@@ -27,7 +27,6 @@ public class Q00137_TempleChampionPart1 extends Quest
 {
 	// NPCs
 	private static final int SYLVAIN = 30070;
-	
 	private static final int MOBS[] =
 	{
 		20083, // Granite Golem
@@ -37,7 +36,6 @@ public class Q00137_TempleChampionPart1 extends Quest
 		20201, // Ghoul
 		20202, // Dead Seeker
 	};
-	
 	// Items
 	private static final int FRAGMENT = 10340;
 	private static final int EXECUTOR = 10334;
@@ -147,7 +145,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isPet);
@@ -159,10 +157,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			FRAGMENT
-		};
+		registerQuestItems(FRAGMENT);
 	}
 	
 	public static void main(String[] args)

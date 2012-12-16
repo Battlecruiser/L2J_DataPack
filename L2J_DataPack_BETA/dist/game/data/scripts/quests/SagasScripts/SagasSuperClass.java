@@ -169,21 +169,15 @@ public class SagasSuperClass extends Quest
 	public void registerNPCs()
 	{
 		addStartNpc(NPC[0]);
-		addAttackId(Mob[2]);
-		addAttackId(Mob[1]);
+		addAttackId(Mob[2], Mob[1]);
 		addSkillSeeId(Mob[1]);
 		addFirstTalkId(NPC[4]);
-		for (int npc : NPC)
-		{
-			addTalkId(npc);
-		}
-		for (int mobid : Mob)
-		{
-			addKillId(mobid);
-		}
-		questItemIds = Items.clone();
+		addTalkId(NPC);
+		addKillId(Mob);
+		final int[] questItemIds = Items.clone();
 		questItemIds[0] = 0;
 		questItemIds[2] = 0; // remove Ice Crystal and Divine Stone of Wisdom
+		registerQuestItems(questItemIds);
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 		{
 			addKillId(Archon_Minion);
@@ -196,10 +190,7 @@ public class SagasSuperClass extends Quest
 			18216,
 			18218
 		};
-		for (int element : Archon_Hellisha_Norm)
-		{
-			addKillId(element);
-		}
+		addKillId(Archon_Hellisha_Norm);
 		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
 		{
 			addKillId(Guardian_Angel);
@@ -341,9 +332,7 @@ public class SagasSuperClass extends Quest
 			}
 			else if (event.equalsIgnoreCase("accept"))
 			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				st.giveItems(Items[10], 1);
 				htmltext = "0-03.htm";
 			}
@@ -386,7 +375,7 @@ public class SagasSuperClass extends Quest
 				else
 				{
 					st.takeItems(Items[10], -1);
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					st.set("cond", "20");
 					htmltext = "0-08.htm";
 				}
@@ -448,7 +437,7 @@ public class SagasSuperClass extends Quest
 			{
 				st.giveItems(Items[9], 1);
 				st.set("cond", "18");
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "4-011.htm";
 			}
 			else if (event.equalsIgnoreCase("4-3"))
@@ -458,7 +447,7 @@ public class SagasSuperClass extends Quest
 				AutoChat(npc, Text[13].replace("PLAYERNAME", player.getName()));
 				st.set("Quest0", "0");
 				cancelQuestTimer("Mob_2 has despawned", npc, player);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				DeleteSpawn(st, npc);
 				return null;
 			}
@@ -467,7 +456,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "6");
 				st.takeItems(Items[4], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "5-02.htm";
 			}
 			else if (event.equalsIgnoreCase("6-1"))
@@ -475,7 +464,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "8");
 				st.takeItems(Items[5], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "6-03.htm";
 			}
 			else if (event.equalsIgnoreCase("7-1"))
@@ -503,7 +492,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "10");
 				st.takeItems(Items[6], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "7-06.htm";
 			}
 			else if (event.equalsIgnoreCase("8-1"))
@@ -511,7 +500,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "14");
 				st.takeItems(Items[7], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "8-02.htm";
 			}
 			else if (event.equalsIgnoreCase("9-1"))
@@ -519,7 +508,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "17");
 				st.takeItems(Items[8], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "9-03.htm";
 			}
 			else if (event.equalsIgnoreCase("10-1"))
@@ -553,7 +542,7 @@ public class SagasSuperClass extends Quest
 				st.set("cond", "19");
 				st.takeItems(Items[9], 1);
 				Cast(npc, player, 4546, 1);
-				st.playSound("ItemSound.quest_middle");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "10-06.htm";
 			}
 			else if (event.equalsIgnoreCase("11-9"))
@@ -1119,8 +1108,7 @@ public class SagasSuperClass extends Quest
 						AutoChat(npc, Text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
 						st1.giveItems(Items[8], 1);
 						st1.takeItems(Items[3], -1);
-						st1.set("cond", "16");
-						st1.playSound("ItemSound.quest_middle");
+						st1.setCond(16, true);
 					}
 					
 				}
@@ -1143,9 +1131,8 @@ public class SagasSuperClass extends Quest
 						}
 						else
 						{
-							st1.playSound("ItemSound.quest_middle");
 							st1.giveItems(Items[5], 1);
-							st1.set("cond", "7");
+							st1.setCond(7, true);
 						}
 					}
 					
@@ -1169,8 +1156,7 @@ public class SagasSuperClass extends Quest
 					{
 						AutoChat(npc, Text[12].replace("PLAYERNAME", player.getName()));
 						st.giveItems(Items[6], 1);
-						st.set("cond", "9");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(9, true);
 					}
 				}
 				cancelQuestTimer("Mob_1 has despawned", npc, st2.getPlayer());
@@ -1186,8 +1172,7 @@ public class SagasSuperClass extends Quest
 						AutoChat(npc, Text[4].replace("PLAYERNAME", player.getName()));
 						st.giveItems(Items[8], 1);
 						st.takeItems(Items[3], -1);
-						st.set("cond", "16");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(16, true);
 					}
 					else
 					{

@@ -177,11 +177,7 @@ public class Q10290_LandDragonConqueror extends Quest
 		addStartNpc(THEODRIC);
 		addTalkId(THEODRIC);
 		addKillId(ANTHARAS);
-		questItemIds = new int[]
-		{
-			MIRACLE_NECKLACE,
-			SHABBY_NECKLACE
-		};
+		registerQuestItems(MIRACLE_NECKLACE, SHABBY_NECKLACE);
 	}
 	
 	public static void main(String[] args)

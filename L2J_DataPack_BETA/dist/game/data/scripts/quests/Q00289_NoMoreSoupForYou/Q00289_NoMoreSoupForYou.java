@@ -163,11 +163,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		}
 	}
 	
-	public static void main(String[] args)
-	{
-		new Q00289_NoMoreSoupForYou(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
-	}
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -184,9 +179,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		{
 			if (event.equalsIgnoreCase("30200-03.htm"))
 			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("30200-05.htm"))
 			{
@@ -194,7 +187,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 				{
 					st.giveItems(WEAPONS[c][0], WEAPONS[c][1]);
 					st.takeItems(SOUP, 500);
-					st.playSound("ItemSound.quest_accept");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "30200-04.htm";
 				}
 				else
@@ -208,7 +201,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 				{
 					st.giveItems(ARMORS[b][0], ARMORS[b][1]);
 					st.takeItems(SOUP, 100);
-					st.playSound("ItemSound.quest_accept");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "30200-04.htm";
 				}
 				else
@@ -275,8 +268,13 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		if (Util.contains(MOBS, npcId))
 		{
 			st.giveItems(SOUP, 1 * RATE);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isPet);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Q00289_NoMoreSoupForYou(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
 	}
 }

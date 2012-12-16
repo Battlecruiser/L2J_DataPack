@@ -68,9 +68,7 @@ public class Q00423_TakeYourBestShot extends Quest
 		{
 			if (event.equalsIgnoreCase("32744-04.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32744-quit.htm"))
 			{
@@ -144,9 +142,8 @@ public class Q00423_TakeYourBestShot extends Quest
 			else if ((st.getState() == State.STARTED) && (st.getInt("cond") == 2))
 			{
 				st.giveItems(_seer_ugoros_pass, 1);
-				st.playSound("ItemSound.quest_finish");
 				st.unset("cond");
-				st.exitQuest(true);
+				st.exitQuest(true, true);
 				htmltext = "32740-04.htm";
 			}
 		}
@@ -185,8 +182,7 @@ public class Q00423_TakeYourBestShot extends Quest
 		}
 		else if ((npc.getNpcId() == _tanta_guard) && (st.getInt("cond") == 1))
 		{
-			st.set("cond", "2");
-			st.playSound("ItemSound.quest_middle");
+			st.setCond(2, true);
 		}
 		return null;
 	}

@@ -31,7 +31,6 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	// NPCs
 	private static final int LANOSCO = 31570;
 	private static final int SINGING_WIND = 21026;
-	
 	// Items
 	private static final int ESSENCE_OF_WIND = 7621;
 	private static final int WIND_FISHING_LURE = 7610;
@@ -106,7 +105,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 			if (getRandom(100) < chance)
 			{
 				st.rewardItems(ESSENCE_OF_WIND, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		
@@ -126,10 +125,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		addStartNpc(LANOSCO);
 		addTalkId(LANOSCO);
 		addKillId(SINGING_WIND);
-		questItemIds = new int[]
-		{
-			ESSENCE_OF_WIND
-		};
+		registerQuestItems(ESSENCE_OF_WIND);
 	}
 	
 	public static void main(String[] args)

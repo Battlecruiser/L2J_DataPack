@@ -30,13 +30,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10278_MutatedKaneusHeine extends Quest
 {
-	
 	// NPCs
 	private static final int GOSTA = 30916;
 	private static final int MINEVIA = 30907;
 	private static final int BLADE_OTIS = 18562;
 	private static final int WEIRD_BUNEI = 18564;
-	
 	// Items
 	private static final int TISSUE_BO = 13834;
 	private static final int TISSUE_WB = 13835;
@@ -149,12 +147,12 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		if ((npcId == BLADE_OTIS) && !st.hasQuestItems(TISSUE_BO))
 		{
 			st.giveItems(TISSUE_BO, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == WEIRD_BUNEI) && !st.hasQuestItems(TISSUE_WB))
 		{
 			st.giveItems(TISSUE_WB, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	
@@ -164,11 +162,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		addStartNpc(GOSTA);
 		addTalkId(GOSTA, MINEVIA);
 		addKillId(BLADE_OTIS, WEIRD_BUNEI);
-		questItemIds = new int[]
-		{
-			TISSUE_BO,
-			TISSUE_WB
-		};
+		registerQuestItems(TISSUE_BO, TISSUE_WB);
 	}
 	
 	public static void main(String[] args)

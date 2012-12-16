@@ -55,14 +55,11 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32020-07.htm"))
 			{
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
+				st.setCond(2, true);
 			}
 		}
 		else if ((npc.getNpcId() == _kier) && event.equalsIgnoreCase("spawn"))
@@ -74,8 +71,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		{
 			st.giveItems(57, 190000);
 			st.addExpAndSp(627000, 50300);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
+			st.exitQuest(false, true);
 			npc.deleteMe();
 		}
 		return htmltext;

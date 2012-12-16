@@ -31,7 +31,6 @@ public class Q00052_WilliesSpecialBait extends Quest
 	// NPCs
 	private static final int WILLIE = 31574;
 	private static final int TARLK_BASILISK = 20573;
-	
 	// Items
 	private static final int TARLK_EYE = 7623;
 	private static final int EARTH_FISHING_LURE = 7612;
@@ -46,7 +45,6 @@ public class Q00052_WilliesSpecialBait extends Quest
 		}
 		
 		String htmltext = event;
-		
 		switch (event)
 		{
 			case "31574-03.htm":
@@ -99,23 +97,20 @@ public class Q00052_WilliesSpecialBait extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		
 		if (st.getQuestItemsCount(TARLK_EYE) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
 			{
 				st.rewardItems(TARLK_EYE, 1);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		
 		if (st.getQuestItemsCount(TARLK_EYE) >= 100)
 		{
 			st.setCond(2, true);
-			
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -126,10 +121,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE);
 		addKillId(TARLK_BASILISK);
-		questItemIds = new int[]
-		{
-			TARLK_EYE
-		};
+		registerQuestItems(TARLK_EYE);
 	}
 	
 	public static void main(String[] args)

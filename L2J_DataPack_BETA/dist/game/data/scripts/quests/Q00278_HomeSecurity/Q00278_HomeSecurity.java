@@ -53,9 +53,7 @@ public class Q00278_HomeSecurity extends Quest
 		}
 		else if (event.equalsIgnoreCase("31537-04.htm"))
 		{
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
-			st.setState(State.STARTED);
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31537-07.html"))
 		{
@@ -116,8 +114,7 @@ public class Q00278_HomeSecurity extends Quest
 			
 			st.takeItems(SelMahumMane, -1);
 			st.unset("cond");
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 			htmltext = "31537-07.html";
 		}
 		return htmltext;
@@ -175,12 +172,11 @@ public class Q00278_HomeSecurity extends Quest
 						st.giveItems(SelMahumMane, 1);
 						if (st.getQuestItemsCount(SelMahumMane) >= 300)
 						{
-							st.set("cond", "2");
-							st.playSound("ItemSound.quest_middle");
+							st.setCond(2, true);
 						}
 						else
 						{
-							st.playSound("ItemSound.quest_itemget");
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;
@@ -191,14 +187,13 @@ public class Q00278_HomeSecurity extends Quest
 						i1 = getRandom(6) + 1;
 						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
 						{
-							st.set("cond", "2");
-							st.playSound("ItemSound.quest_middle");
 							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
+							st.setCond(2, true);
 						}
 						else
 						{
 							st.giveItems(SelMahumMane, i1);
-							st.playSound("ItemSound.quest_itemget");
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					else
@@ -206,14 +201,13 @@ public class Q00278_HomeSecurity extends Quest
 						i1 = (getRandom(5) + 1);
 						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
 						{
-							st.set("cond", "2");
-							st.playSound("ItemSound.quest_middle");
 							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
+							st.setCond(2, true);
 						}
 						else
 						{
 							st.giveItems(SelMahumMane, i1);
-							st.playSound("ItemSound.quest_itemget");
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					break;

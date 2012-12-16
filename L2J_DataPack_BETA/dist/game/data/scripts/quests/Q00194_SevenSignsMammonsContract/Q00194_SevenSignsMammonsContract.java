@@ -88,7 +88,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 				if (st.isCond(1))
 				{
 					htmltext = event;
-					st.playSound("ItemSound.quest_middle");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				}
 				break;
 			}

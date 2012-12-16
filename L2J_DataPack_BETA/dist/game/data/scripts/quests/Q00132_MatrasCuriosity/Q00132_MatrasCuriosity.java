@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Matras' Curiosity (132)
@@ -26,12 +25,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00132_MatrasCuriosity extends Quest
 {
-	
 	// NPCs
 	private static final int MATRAS = 32245;
 	private static final int DEMON_PRINCE = 25540;
 	private static final int RANKU = 25542;
-	
 	// Items
 	private static final int FIRE = 10521;
 	private static final int WATER = 10522;
@@ -57,11 +54,9 @@ public final class Q00132_MatrasCuriosity extends Quest
 		{
 			if (st.isCreated())
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
+				st.startQuest();
 				st.set("rewarded_prince", "1");
 				st.set("rewarded_ranku", "1");
-				st.playSound("ItemSound.quest_accept");
 			}
 			else
 			{
@@ -78,8 +73,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 			st.giveItems(WIND, 1);
 			st.giveItems(DARKNESS, 1);
 			st.giveItems(DIVINITY, 1);
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
+			st.exitQuest(false, true);
 		}
 		return htmltext;
 	}
@@ -112,8 +106,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 					{
 						st.takeItems(BLUEPRINT_RANKU, -1);
 						st.takeItems(BLUEPRINT_PRINCE, -1);
-						st.set("cond", "3");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(3, true);
 						htmltext = "32245-05.htm";
 					}
 					else
@@ -145,12 +138,11 @@ public final class Q00132_MatrasCuriosity extends Quest
 					
 					if (st.hasQuestItems(BLUEPRINT_RANKU))
 					{
-						st.set("cond", "2");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(2, true);
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;
@@ -164,12 +156,11 @@ public final class Q00132_MatrasCuriosity extends Quest
 					
 					if (st.hasQuestItems(BLUEPRINT_PRINCE))
 					{
-						st.set("cond", "2");
-						st.playSound("ItemSound.quest_middle");
+						st.setCond(2, true);
 					}
 					else
 					{
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 				break;

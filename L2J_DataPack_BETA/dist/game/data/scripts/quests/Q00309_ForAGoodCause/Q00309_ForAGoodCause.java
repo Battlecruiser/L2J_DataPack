@@ -18,7 +18,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
@@ -31,7 +30,6 @@ public class Q00309_ForAGoodCause extends Quest
 {
 	// NPC's
 	private static final int ATRA = 32647;
-	
 	// Mobs
 	private static final int CONTAMINATED_MUCROKIAN = 22654;
 	private static final int CHANGED_MUCROKIAN = 22655;
@@ -42,20 +40,16 @@ public class Q00309_ForAGoodCause extends Quest
 		22652,
 		22653
 	};
-	
 	// Quest Items
 	private static final int MUCROKIAN_HIDE = 14873;
 	private static final int FALLEN_MUCROKIAN_HIDE = 14874;
-	
 	private static final int MUCROKIAN_HIDE_CHANCE = 50;
 	private static final int FALLEN_HIDE_CHANCE = 50;
-	
 	// Rewards
 	private static final int REC_DYNASTY_EARRINGS_70 = 9985;
 	private static final int REC_DYNASTY_NECKLACE_70 = 9986;
 	private static final int REC_DYNASTY_RING_70 = 9987;
 	private static final int REC_DYNASTY_SIGIL_60 = 10115;
-	
 	private static final int REC_MOIRAI_CIRCLET_60 = 15777;
 	private static final int REC_MOIRAI_TUNIC_60 = 15780;
 	private static final int REC_MOIRAI_STOCKINGS_60 = 15783;
@@ -65,7 +59,6 @@ public class Q00309_ForAGoodCause extends Quest
 	private static final int REC_MOIRAI_EARRING_70 = 15814;
 	private static final int REC_MOIRAI_NECKLACE_70 = 15813;
 	private static final int REC_MOIRAI_RING_70 = 15812;
-	
 	private static final int[] MOIRAI_PIECES =
 	{
 		15647,
@@ -91,9 +84,7 @@ public class Q00309_ForAGoodCause extends Quest
 		String htmltext = event;
 		if (event.equalsIgnoreCase("32647-05.html"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 			player.sendPacket(new RadarControl(0, 2, 77325, 205773, -3432));
 		}
 		else if (event.equalsIgnoreCase("claimreward"))
@@ -246,8 +237,7 @@ public class Q00309_ForAGoodCause extends Quest
 		}
 		else if (event.equalsIgnoreCase("32647-14.html") || event.equalsIgnoreCase("32647-07.html"))
 		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		return htmltext;
 	}
@@ -292,17 +282,17 @@ public class Q00309_ForAGoodCause extends Quest
 				if (getRandom(100) < MUCROKIAN_HIDE_CHANCE)
 				{
 					st.giveItems(MUCROKIAN_HIDE, 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if ((npc.getNpcId() == CHANGED_MUCROKIAN) && (getRandom(100) < FALLEN_HIDE_CHANCE))
 				{
 					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if ((npc.getNpcId() == CONTAMINATED_MUCROKIAN) && (getRandom(100) < 10))
 				{
 					st.giveItems(MUCROKIAN_HIDE, 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -315,7 +305,7 @@ public class Q00309_ForAGoodCause extends Quest
 		{
 			st.giveItems(pieces, getRandom(1, 4));
 			st.takeItems(MUCROKIAN_HIDE, event);
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			return "32647-16.html";
 		}
 		return "32647-15.html";
@@ -327,7 +317,7 @@ public class Q00309_ForAGoodCause extends Quest
 		{
 			st.giveItems(recipe, 1);
 			st.takeItems(takeid, quanty);
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			return "32647-16.html";
 		}
 		return "32647-15.html";

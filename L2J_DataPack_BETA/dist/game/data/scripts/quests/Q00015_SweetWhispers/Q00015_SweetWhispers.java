@@ -43,27 +43,22 @@ public class Q00015_SweetWhispers extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
 		switch (event)
 		{
 			case "31302-01.html":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31518-01.html":
-				if (cond == 1)
+				if (st.isCond(1))
 				{
-					st.set("cond", "2");
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2);
 				}
 				break;
 			case "31517-01.html":
-				if (cond == 2)
+				if (st.isCond(2))
 				{
 					st.addExpAndSp(350531, 28204);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				break;
 		}
@@ -93,17 +88,16 @@ public class Q00015_SweetWhispers extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
 				switch (npcId)
 				{
 					case VLADIMIR:
-						if (cond == 1)
+						if (st.isCond(1))
 						{
 							htmltext = "31302-01a.html";
 						}
 						break;
 					case M_NECROMANCER:
-						switch (cond)
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "31518-00.html";
@@ -114,7 +108,7 @@ public class Q00015_SweetWhispers extends Quest
 						}
 						break;
 					case HIERARCH:
-						if (cond == 2)
+						if (st.isCond(2))
 						{
 							htmltext = "31517-00.html";
 						}

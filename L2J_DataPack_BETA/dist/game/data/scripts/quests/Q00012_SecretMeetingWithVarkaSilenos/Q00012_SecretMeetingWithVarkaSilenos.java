@@ -46,29 +46,24 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
 		switch (event)
 		{
 			case "31296-03.html":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31258-02.html":
-				if (cond == 1)
+				if (st.isCond(1))
 				{
-					st.set("cond", "2");
+					st.setCond(2, true);
 					st.giveItems(BOX, 1);
-					st.playSound("ItemSound.quest_middle");
 				}
 				break;
 			case "31378-02.html":
-				if ((cond == 2) && (st.hasQuestItems(BOX)))
+				if (st.isCond(2) && st.hasQuestItems(BOX))
 				{
 					st.takeItems(BOX, -1);
 					st.addExpAndSp(233125, 18142);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else
 				{

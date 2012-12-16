@@ -35,11 +35,9 @@ public class Q10289_FadeToBlack extends Quest
 {
 	// NPCs
 	private static final int GREYMORE = 32757;
-	
 	// Items
 	private static final int MARK_OF_SPLENDOR = 15527;
 	private static final int MARK_OF_DARKNESS = 15528;
-	
 	// Monsters
 	private static final int ANAYS = 25701;
 	
@@ -53,7 +51,6 @@ public class Q10289_FadeToBlack extends Quest
 		}
 		
 		String htmltext = event;
-		
 		switch (event)
 		{
 			case "32757-03.htm":
@@ -287,11 +284,7 @@ public class Q10289_FadeToBlack extends Quest
 		addStartNpc(GREYMORE);
 		addTalkId(GREYMORE);
 		addKillId(ANAYS);
-		questItemIds = new int[]
-		{
-			MARK_OF_SPLENDOR,
-			MARK_OF_DARKNESS
-		};
+		registerQuestItems(MARK_OF_SPLENDOR, MARK_OF_DARKNESS);
 	}
 	
 	public static void main(String[] args)

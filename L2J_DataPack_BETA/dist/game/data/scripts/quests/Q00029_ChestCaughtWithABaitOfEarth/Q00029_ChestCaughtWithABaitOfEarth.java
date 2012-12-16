@@ -52,28 +52,24 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 		switch (event)
 		{
 			case "31574-04.htm":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 				break;
 			case "31574-08.htm":
 				if ((st.getInt("cond") == 1) && (st.hasQuestItems(PURPLE_TREASURE_BOX)))
 				{
-					htmltext = "31574-07.htm";
-					st.set("cond", "2");
 					st.giveItems(SMALL_GLASS_BOX, 1);
 					st.takeItems(PURPLE_TREASURE_BOX, -1);
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(2, true);
+					htmltext = "31574-07.htm";
 				}
 				break;
 			case "30909-03.htm":
 				if ((st.getInt("cond") == 2) && (st.hasQuestItems(SMALL_GLASS_BOX)))
 				{
-					htmltext = "30909-02.htm";
 					st.giveItems(PLATED_LEATHER_GLOVES, 1);
 					st.takeItems(SMALL_GLASS_BOX, -1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
+					htmltext = "30909-02.htm";
 				}
 				break;
 		

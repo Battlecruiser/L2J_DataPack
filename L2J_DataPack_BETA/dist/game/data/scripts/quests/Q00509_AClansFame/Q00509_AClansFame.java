@@ -124,7 +124,7 @@ public class Q00509_AClansFame extends Quest
 					if (st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 					{
 						htmltext = "31331-" + raid + "b.html";
-						st.playSound("ItemSound.quest_fanfare_1");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
 						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
 						clan.addReputationScore(rep, true);
@@ -177,7 +177,7 @@ public class Q00509_AClansFame extends Quest
 				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 				{
 					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}

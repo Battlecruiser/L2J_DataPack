@@ -66,9 +66,7 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 		}
 		else if (event.equalsIgnoreCase("elite-04.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		return htmltext;
 	}

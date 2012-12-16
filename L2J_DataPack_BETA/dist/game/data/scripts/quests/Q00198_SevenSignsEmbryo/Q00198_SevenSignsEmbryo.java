@@ -272,7 +272,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			st.setCond(2);
 		}
 		

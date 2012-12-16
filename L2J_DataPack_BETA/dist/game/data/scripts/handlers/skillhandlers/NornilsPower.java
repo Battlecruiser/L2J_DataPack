@@ -16,10 +16,10 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -37,18 +37,18 @@ public class NornilsPower implements ISkillHandler
 	{
 		if (!activeChar.isPlayer())
 			return;
+		
 		InstanceWorld world = null;
-
 		final int instanceId = activeChar.getInstanceId();
 		if (instanceId > 0)
 			world = InstanceManager.getInstance().getPlayerWorld(activeChar.getActingPlayer());
 		
-		if (world != null && world.instanceId == instanceId && world.templateId == 11)
+		if (world != null && world.getInstanceId() == instanceId && world.getTemplateId() == 11)
 		{
 			if(activeChar.isInsideRadius(-107393, 83677, 100, true))
 			{
 				activeChar.destroyItemByItemId("NornilsPower", 9713, 1, activeChar, true);
-				L2DoorInstance door = InstanceManager.getInstance().getInstance(world.instanceId).getDoor(16200010);
+				L2DoorInstance door = InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(16200010);
 				if (door != null)
 				{
 					door.setMeshIndex(1);

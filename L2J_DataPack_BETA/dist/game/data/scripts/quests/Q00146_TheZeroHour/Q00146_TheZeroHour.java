@@ -28,11 +28,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00146_TheZeroHour extends Quest
 {
-	// Npc
-	private static final int Kahman = 31554;
-	private static final int QueenShyeed = 25671;
+	// NPC
+	private static final int KAHMAN = 31554;
+	private static final int QUEEN_SHYEED = 25671;
 	// Item
-	private static final int Fang = 14859;
+	private static final int FANG = 14859;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -45,9 +45,7 @@ public class Q00146_TheZeroHour extends Quest
 		
 		if (event.equalsIgnoreCase("31554-03.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		return event;
 	}
@@ -83,7 +81,7 @@ public class Q00146_TheZeroHour extends Quest
 				}
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					htmltext = "31554-06.html";
 				}
@@ -91,9 +89,8 @@ public class Q00146_TheZeroHour extends Quest
 				{
 					st.giveItems(14849, 1);
 					st.addExpAndSp(154616, 12500);
-					st.takeItems(Fang, 1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.takeItems(FANG, 1);
+					st.exitQuest(false, true);
 					htmltext = "31554-05.html";
 				}
 				break;
@@ -107,17 +104,15 @@ public class Q00146_TheZeroHour extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
+		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		if (partyMember != null)
 		{
-			return null;
-		}
-		QuestState st = partyMember.getQuestState(getName());
-		if (!st.hasQuestItems(Fang))
-		{
-			st.giveItems(Fang, 1);
-			st.set("cond", "2");
-			st.playSound("ItemSound.quest_middle");
+			final QuestState st = partyMember.getQuestState(getName());
+			if (!st.hasQuestItems(FANG))
+			{
+				st.giveItems(FANG, 1);
+				st.setCond(2, true);
+			}
 		}
 		return null;
 	}
@@ -125,14 +120,10 @@ public class Q00146_TheZeroHour extends Quest
 	public Q00146_TheZeroHour(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(Kahman);
-		addTalkId(Kahman);
-		addKillId(QueenShyeed);
-		
-		questItemIds = new int[]
-		{
-			Fang
-		};
+		addStartNpc(KAHMAN);
+		addTalkId(KAHMAN);
+		addKillId(QUEEN_SHYEED);
+		registerQuestItems(FANG);
 	}
 	
 	public static void main(String[] args)

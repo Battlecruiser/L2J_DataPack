@@ -308,7 +308,7 @@ public class Q10272_LightFragment extends Quest
 					if (numItems > 0)
 					{
 						st.giveItems(FRAGMENT_POWDER, numItems);
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 			}
@@ -322,11 +322,7 @@ public class Q10272_LightFragment extends Quest
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU, ARTIUS, GINBY, LELRIKIA, LEKON);
 		addKillId(MOBS);
-		questItemIds = new int[]
-		{
-			FRAGMENT_POWDER,
-			LIGHT_FRAGMENT_POWDER,
-		};
+		registerQuestItems(FRAGMENT_POWDER, LIGHT_FRAGMENT_POWDER);
 	}
 	
 	public static void main(String[] args)

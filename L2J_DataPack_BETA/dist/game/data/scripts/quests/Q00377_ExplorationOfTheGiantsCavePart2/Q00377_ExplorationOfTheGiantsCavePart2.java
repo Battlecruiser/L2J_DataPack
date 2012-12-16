@@ -30,10 +30,8 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {
-	
 	// NPC's
 	private static final int SOBLING = 31147;
-	
 	// Items
 	private static final int TITAN_ANCIENT_BOOK = 14847;
 	private static final int BOOK1 = 14842;
@@ -41,12 +39,10 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	private static final int BOOK3 = 14844;
 	private static final int BOOK4 = 14845;
 	private static final int BOOK5 = 14846;
-	
 	// Drop Chance
 	private static final int DROP_CHANCE = 50;
-	
 	// Mobs
-	private static final int[] _mobs =
+	private static final int[] MOBS =
 	{
 		22661,
 		22662,
@@ -58,7 +54,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		22668,
 		22669
 	};
-	
 	// Rewards
 	private static final int OBLIVION = 9625;
 	private static final int DISCIPLINE = 9626;
@@ -78,15 +73,12 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		
 		if (event.equalsIgnoreCase("31147-02.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 			player.sendPacket(new RadarControl(0, 2, -113360, -244676, -15536));
 		}
 		else if (event.equalsIgnoreCase("31147-quit.html"))
 		{
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		else if (Util.isDigit(event))
 		{
@@ -151,7 +143,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE))
 		{
 			st.giveItems(TITAN_ANCIENT_BOOK, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isPet);
 	}
@@ -166,7 +158,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			st.takeItems(BOOK4, rem);
 			st.takeItems(BOOK5, rem);
 			st.giveItems(giveid, qty);
-			st.playSound("ItemSound.quest_finish");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			return "31147-ok.html";
 		}
 		return "31147-no.html";
@@ -178,12 +170,8 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
-		addKillId(_mobs);
-		
-		questItemIds = new int[]
-		{
-			TITAN_ANCIENT_BOOK
-		};
+		addKillId(MOBS);
+		registerQuestItems(TITAN_ANCIENT_BOOK);
 	}
 	
 	public static void main(String[] args)

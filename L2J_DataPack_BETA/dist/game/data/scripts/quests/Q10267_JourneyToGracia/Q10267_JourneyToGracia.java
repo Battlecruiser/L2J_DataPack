@@ -31,7 +31,6 @@ public class Q10267_JourneyToGracia extends Quest
 	private static final int ORVEN = 30857;
 	private static final int KEUCEREUS = 32548;
 	private static final int PAPIKU = 32564;
-	
 	// Items
 	private static final int LETTER = 13810;
 	
@@ -113,10 +112,7 @@ public class Q10267_JourneyToGracia extends Quest
 		super(questId, name, descr);
 		addStartNpc(ORVEN);
 		addTalkId(ORVEN, KEUCEREUS, PAPIKU);
-		questItemIds = new int[]
-		{
-			LETTER
-		};
+		registerQuestItems(LETTER);
 	}
 	
 	public static void main(String[] args)

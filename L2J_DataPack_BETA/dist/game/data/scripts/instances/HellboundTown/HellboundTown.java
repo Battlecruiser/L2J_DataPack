@@ -19,7 +19,6 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -29,6 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -39,20 +39,16 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Urban Area instance zone.
  * @author GKR
  */
 public class HellboundTown extends Quest
 {
-	private class TownWorld extends InstanceWorld
+	protected class TownWorld extends InstanceWorld
 	{
 		protected L2MonsterInstance spawnedAmaskari;
 		protected ScheduledFuture<?> activeAmaskariCall = null;
 		public boolean isAmaskariDead = false;
-		
-		public TownWorld()
-		{
-			super();
-		}
 	}
 	
 	private static final String qn = "HellboundTown";
@@ -188,7 +184,7 @@ public class HellboundTown extends Quest
 					{
 						npc.setBusy(true);
 						// destroy instance after 5 min
-						Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
+						Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						inst.setDuration(5 * 60000);
 						inst.setEmptyDestroyTime(0);
 						ThreadPoolManager.getInstance().scheduleGeneral(new ExitInstance(party, world), 285000);
@@ -441,8 +437,8 @@ public class HellboundTown extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, ENTRY_POINT, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+			return world.getInstanceId();
 		}
 		
 		if (!checkTeleport(player))
@@ -452,16 +448,16 @@ public class HellboundTown extends Quest
 		
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new TownWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCEID;
-		world.status = 0;
+		world.setInstanceId(instanceId);
+		world.setTemplateId(INSTANCEID);
+		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Hellbound Town started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
 		for (L2PcInstance partyMember : player.getParty().getMembers())
 		{
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
-			world.allowed.add(partyMember.getObjectId());
+			world.addAllowed(partyMember.getObjectId());
 		}
 		
 		((TownWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT[0], AMASKARI_SPAWN_POINT[1], AMASKARI_SPAWN_POINT[2], AMASKARI_SPAWN_POINT[3], false, 0, false, instanceId);
@@ -536,7 +532,7 @@ public class HellboundTown extends Quest
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{
-						_world.allowed.remove(_world.allowed.indexOf(partyMember.getObjectId()));
+						_world.removeAllowed(partyMember.getObjectId());
 						partyMember.setInstanceId(0);
 						partyMember.teleToLocation((EXIT_POINT[0] - 100) + getRandom(50), (EXIT_POINT[1] - 100) + getRandom(50), EXIT_POINT[2]);
 					}

@@ -174,9 +174,8 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					case 5:
 					{
 						st.giveItems(Reward[Rnd.get(Reward.length)][getRandom(Reward[0].length)], 1);
-						st.playSound("ItemSound.quest_finish");
+						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "32734-14.html";
-						st.exitQuest(QuestType.DAILY);
 						break;
 					}
 				}
@@ -258,7 +257,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				if (i < 15)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				checkProgress(st, 15, Monsters1[0], Monsters1[1], Monsters1[2], Monsters1[3]);
@@ -287,7 +286,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				if (i < 20)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				checkProgress(st, 20, Monsters2[0], Monsters2[1], Monsters2[2]);
@@ -315,7 +314,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				if (i < 20)
 				{
 					st.set(Integer.toString(npcId), Integer.toString(i + 1));
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				checkProgress(st, 20, Monsters3[0], Monsters3[1], Monsters3[2]);

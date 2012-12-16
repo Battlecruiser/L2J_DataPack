@@ -457,7 +457,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				if (getRandom(1000) < chance)
 				{
 					st.giveItems(ORNITHOMIMUS_CLAW, 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
@@ -469,7 +469,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				if (getRandom(1000) < chance)
 				{
 					st.giveItems(DEINONYCHUS_BONE, 1);
-					st.playSound("ItemSound.quest_itemget");
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}

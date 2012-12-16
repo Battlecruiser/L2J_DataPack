@@ -33,13 +33,12 @@ public class Q10274_CollectingInTheAir extends Quest
 {
 	// NPCs
 	private static final int LEKON = 32557;
-	
 	// Items
 	private static final int SCROLL = 13844;
 	private static final int RED = 13858;
 	private static final int BLUE = 13859;
 	private static final int GREEN = 13860;
-	
+	// Monsters
 	private static final int MOBS[] =
 	{
 		18684, // Red Star Stone
@@ -142,7 +141,7 @@ public class Q10274_CollectingInTheAir extends Quest
 					st.giveItems(GREEN, 1);
 					break;
 			}
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			npc.doDie(caster);
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
@@ -154,13 +153,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addSkillSeeId(MOBS);
-		questItemIds = new int[]
-		{
-			SCROLL,
-			RED,
-			BLUE,
-			GREEN
-		};
+		registerQuestItems(SCROLL, RED, BLUE, GREEN);
 	}
 	
 	public static void main(String[] args)

@@ -304,41 +304,40 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
 	{
-		QuestState _state = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
-		if ((_state != null) && (_state.getState() == State.STARTED))
+		QuestState st = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
+		if ((st != null) && (st.getState() == State.STARTED))
 		{
-			int _cond = _state.getInt("cond");
 			if (catapult)
 			{
-				if (_cond == 2)
+				if (st.isCond(2))
 				{
-					_state.setCond(4);
+					st.setCond(4);
 				}
-				else if (_cond == 1)
+				else if (st.isCond(1))
 				{
-					_state.setCond(3);
+					st.setCond(3);
 				}
 			}
 			else
 			{
-				if ((_cond == 1) || (_cond == 3))
+				if (st.isCond(1) || st.isCond(3))
 				{
 					// Get
-					int _kills = _state.getInt("kills");
+					int _kills = st.getInt("kills");
 					// Increase
 					_kills++;
 					// Save
-					_state.set("kills", String.valueOf(_kills));
+					st.set("kills", String.valueOf(_kills));
 					// Check
 					if (_kills >= 10)
 					{
-						if (_cond == 1)
+						if (st.isCond(1))
 						{
-							_state.setCond(2);
+							st.setCond(2);
 						}
-						else if (_cond == 3)
+						else if (st.isCond(3))
 						{
-							_state.setCond(4);
+							st.setCond(4);
 						}
 					}
 				}
@@ -352,9 +351,9 @@ public class TerritoryWarSuperClass extends Quest
 		int cond = 0;
 		// Additional Handle for Quest
 		QuestState _sfh = player.getQuestState("176_StepsForHonor");
-		if ((_sfh != null) && (_sfh.getState() == State.STARTED))
+		if ((_sfh != null) && _sfh.isStarted())
 		{
-			cond = _sfh.getInt("cond");
+			cond = _sfh.getCond();
 			if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 7))
 			{
 				// Get kills
@@ -507,12 +506,14 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
+					st.setState(State.COMPLETED, false);
 					st.exitQuest(false);
 					for (Quest q : _protectTheScripts.values())
 					{
 						st = player.getQuestState(q.getName());
 						if (st != null)
 						{
+							st.setState(State.COMPLETED, false);
 							st.exitQuest(false);
 						}
 					}

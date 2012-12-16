@@ -156,12 +156,12 @@ public class Q10277_MutatedKaneusDion extends Quest
 		if ((npcId == CRIMSON_HATU) && !st.hasQuestItems(TISSUE_CH))
 		{
 			st.giveItems(TISSUE_CH, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == SEER_FLOUROS) && !st.hasQuestItems(TISSUE_SF))
 		{
 			st.giveItems(TISSUE_SF, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	

@@ -30,13 +30,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10280_MutatedKaneusSchuttgart extends Quest
 {
-	
 	// NPCs
 	private static final int VISHOTSKY = 31981;
 	private static final int ATRAXIA = 31972;
 	private static final int VENOMOUS_STORACE = 18571;
 	private static final int KEL_BILETTE = 18573;
-	
 	// Items
 	private static final int TISSUE_VS = 13838;
 	private static final int TISSUE_KB = 13839;
@@ -149,12 +147,12 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		if ((npcId == VENOMOUS_STORACE) && !st.hasQuestItems(TISSUE_VS))
 		{
 			st.giveItems(TISSUE_VS, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == KEL_BILETTE) && !st.hasQuestItems(TISSUE_KB))
 		{
 			st.giveItems(TISSUE_KB, 1);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	
@@ -164,11 +162,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		addStartNpc(VISHOTSKY);
 		addTalkId(VISHOTSKY, ATRAXIA);
 		addKillId(VENOMOUS_STORACE, KEL_BILETTE);
-		questItemIds = new int[]
-		{
-			TISSUE_VS,
-			TISSUE_KB
-		};
+		registerQuestItems(TISSUE_VS, TISSUE_KB);
 	}
 	
 	public static void main(String[] args)

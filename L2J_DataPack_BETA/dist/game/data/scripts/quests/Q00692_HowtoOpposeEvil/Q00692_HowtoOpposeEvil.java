@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * How to Oppose Evil (692)
@@ -122,9 +121,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		}
 		if (event.equalsIgnoreCase("32549-03.htm"))
 		{
-			st.set("cond", "1");
-			st.setState(State.STARTED);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("32550-04.htm"))
 		{
@@ -249,7 +246,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 			if (numItems > 0)
 			{
 				st.giveItems(_questMobs.get(npcId).getId(), numItems);
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return null;

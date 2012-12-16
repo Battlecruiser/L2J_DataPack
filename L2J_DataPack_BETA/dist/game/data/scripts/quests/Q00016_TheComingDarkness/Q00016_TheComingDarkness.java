@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00016_TheComingDarkness extends Quest
 {
-	
 	// NPCs
 	private static final int HIERARCH = 31517;
 	private static final int EVIL_ALTAR_1 = 31512;
@@ -38,7 +37,6 @@ public class Q00016_TheComingDarkness extends Quest
 	private static final int EVIL_ALTAR_3 = 31514;
 	private static final int EVIL_ALTAR_4 = 31515;
 	private static final int EVIL_ALTAR_5 = 31516;
-	
 	// Items
 	private static final int CRYSTAL_OF_SEAL = 7167;
 	
@@ -52,14 +50,12 @@ public class Q00016_TheComingDarkness extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getInt("cond");
+		final int cond = st.getCond();
 		switch (event)
 		{
 			case "31517-02.htm":
+				st.startQuest();
 				st.giveItems(CRYSTAL_OF_SEAL, 5);
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
 				break;
 			case "31512-01.html":
 			case "31513-01.html":
@@ -70,8 +66,7 @@ public class Q00016_TheComingDarkness extends Quest
 				if ((cond == (npcId - 31511)) && st.hasQuestItems(CRYSTAL_OF_SEAL))
 				{
 					st.takeItems(CRYSTAL_OF_SEAL, 1);
-					st.set("cond", String.valueOf(cond + 1));
-					st.playSound("ItemSound.quest_middle");
+					st.setCond(cond + 1, true);
 				}
 				break;
 		}
@@ -109,10 +104,9 @@ public class Q00016_TheComingDarkness extends Quest
 				{
 					if (cond == 6)
 					{
-						htmltext = "31517-03.html";
 						st.addExpAndSp(865187, 69172);
-						st.playSound("ItemSound.quest_finish");
-						st.exitQuest(false);
+						st.exitQuest(false, true);
+						htmltext = "31517-03.html";
 					}
 					else
 					{
@@ -137,13 +131,8 @@ public class Q00016_TheComingDarkness extends Quest
 		super(questId, name, descr);
 		
 		addStartNpc(HIERARCH);
-		
 		addTalkId(HIERARCH, EVIL_ALTAR_1, EVIL_ALTAR_2, EVIL_ALTAR_3, EVIL_ALTAR_4, EVIL_ALTAR_5);
-		
-		questItemIds = new int[]
-		{
-			CRYSTAL_OF_SEAL
-		};
+		registerQuestItems(CRYSTAL_OF_SEAL);
 	}
 	
 	public static void main(String[] args)

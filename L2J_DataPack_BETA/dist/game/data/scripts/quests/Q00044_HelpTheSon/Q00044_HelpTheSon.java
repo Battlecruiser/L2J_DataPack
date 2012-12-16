@@ -30,12 +30,10 @@ public class Q00044_HelpTheSon extends Quest
 	// NPCs
 	private static final int LUNDY = 30827;
 	private static final int DRIKUS = 30505;
-	
 	// Monster
 	private static final int MAILLE_GUARD = 20921;
 	private static final int MAILLE_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN = 20919;
-	
 	// Items
 	private static final int WORK_HAMMER = 168;
 	private static final int GEMSTONE_FRAGMENT = 7552;
@@ -105,7 +103,6 @@ public class Q00044_HelpTheSon extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
 			return htmltext;
@@ -165,8 +162,7 @@ public class Q00044_HelpTheSon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		QuestState st = player.getQuestState(getName());
-		
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(2))
 		{
 			st.giveItems(GEMSTONE_FRAGMENT, 1);
@@ -176,7 +172,7 @@ public class Q00044_HelpTheSon extends Quest
 			}
 			else
 			{
-				st.playSound("ItemSound.quest_itemget");
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, player, isPet);
@@ -188,12 +184,7 @@ public class Q00044_HelpTheSon extends Quest
 		addStartNpc(LUNDY);
 		addTalkId(LUNDY, DRIKUS);
 		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
-		
-		questItemIds = new int[]
-		{
-			GEMSTONE,
-			GEMSTONE_FRAGMENT
-		};
+		registerQuestItems(GEMSTONE, GEMSTONE_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

@@ -28,9 +28,9 @@ import com.l2jserver.gameserver.model.quest.State;
 public class Q00250_WatchWhatYouEat extends Quest
 {
 	// NPCs
-	private static final int _sally = 32743;
+	private static final int SALLY = 32743;
 	// Mobs - Items
-	private static final int[][] _mobs =
+	private static final int[][] MOBS =
 	{
 		{
 			18864,
@@ -57,20 +57,17 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _sally)
+		if (npc.getNpcId() == SALLY)
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else if (event.equalsIgnoreCase("32743-end.htm"))
 			{
 				st.giveAdena(135661, true);
 				st.addExpAndSp(698334, 76369);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("32743-22.html") && st.isCompleted())
 			{
@@ -90,7 +87,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _sally)
+		if (npc.getNpcId() == SALLY)
 		{
 			switch (st.getState())
 			{
@@ -105,16 +102,16 @@ public class Q00250_WatchWhatYouEat extends Quest
 					}
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
 						htmltext = "32743-04.htm";
 					}
-					else if (st.getInt("cond") == 2)
+					else if (st.isCond(2))
 					{
-						if (st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
+						if (st.hasQuestItems(MOBS[0][1]) && st.hasQuestItems(MOBS[1][1]) && st.hasQuestItems(MOBS[2][1]))
 						{
 							htmltext = "32743-05.htm";
-							for (int items[] : _mobs)
+							for (int items[] : MOBS)
 							{
 								st.takeItems(items[1], -1);
 							}
@@ -141,23 +138,22 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			return null;
 		}
-		if (st.isStarted() && (st.getInt("cond") == 1))
+		if (st.isStarted() && st.isCond(1))
 		{
-			for (int mob[] : _mobs)
+			for (int[] mob : MOBS)
 			{
 				if (npc.getNpcId() == mob[0])
 				{
 					if (!st.hasQuestItems(mob[1]))
 					{
 						st.giveItems(mob[1], 1);
-						st.playSound("ItemSound.quest_itemget");
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
 			}
-			if (st.hasQuestItems(_mobs[0][1]) && st.hasQuestItems(_mobs[1][1]) && st.hasQuestItems(_mobs[2][1]))
+			if (st.hasQuestItems(MOBS[0][1]) && st.hasQuestItems(MOBS[1][1]) && st.hasQuestItems(MOBS[2][1]))
 			{
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_middle");
+				st.setCond(2, true);
 			}
 		}
 		return null;
@@ -172,7 +168,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			newQuestState(player);
 		}
 		
-		if (npc.getNpcId() == _sally)
+		if (npc.getNpcId() == SALLY)
 		{
 			return "32743-20.html";
 		}
@@ -184,21 +180,14 @@ public class Q00250_WatchWhatYouEat extends Quest
 	{
 		super(questId, name, descr);
 		
-		questItemIds = new int[]
+		addStartNpc(SALLY);
+		addFirstTalkId(SALLY);
+		addTalkId(SALLY);
+		for (int[] mob : MOBS)
 		{
-			15493,
-			15494,
-			15495
-		};
-		
-		addStartNpc(_sally);
-		addFirstTalkId(_sally);
-		addTalkId(_sally);
-		
-		for (int i[] : _mobs)
-		{
-			addKillId(i[0]);
+			addKillId(mob[0]);
 		}
+		registerQuestItems(15493, 15494, 15495);
 	}
 	
 	public static void main(String[] args)

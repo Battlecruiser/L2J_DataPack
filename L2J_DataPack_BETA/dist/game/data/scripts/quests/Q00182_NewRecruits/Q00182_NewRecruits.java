@@ -47,9 +47,7 @@ public class Q00182_NewRecruits extends Quest
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 		}
 		else if (npc.getNpcId() == _nornil)
@@ -57,14 +55,12 @@ public class Q00182_NewRecruits extends Quest
 			if (event.equalsIgnoreCase("32258-04.html"))
 			{
 				st.giveItems(847, 2);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("32258-05.html"))
 			{
 				st.giveItems(890, 2);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(false);
+				st.exitQuest(false, true);
 			}
 		}
 		return htmltext;

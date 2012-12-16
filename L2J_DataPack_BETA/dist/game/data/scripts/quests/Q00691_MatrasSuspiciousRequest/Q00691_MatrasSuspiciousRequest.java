@@ -81,9 +81,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		{
 			if (player.getLevel() >= 76)
 			{
-				st.setState(State.STARTED);
-				st.set("cond", "1");
-				st.playSound("ItemSound.quest_accept");
+				st.startQuest();
 			}
 			else
 			{
@@ -115,8 +113,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		else if (event.equalsIgnoreCase("32245-12.htm"))
 		{
 			st.giveItems(57, (st.getInt("submitted_gems") * 10000));
-			st.playSound("IItemSound.quest_finish");
-			st.exitQuest(true);
+			st.exitQuest(true, true);
 		}
 		return htmltext;
 	}
@@ -177,7 +174,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		if (getRandom(1000) <= chance)
 		{
 			st.giveItems(RED_GEM, numItems);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return null;
 	}

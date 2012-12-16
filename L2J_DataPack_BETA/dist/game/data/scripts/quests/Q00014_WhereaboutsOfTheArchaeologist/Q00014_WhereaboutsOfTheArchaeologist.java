@@ -48,19 +48,16 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 		switch (event)
 		{
 			case "31263-02.html":
-				st.set("cond", "1");
-				st.setState(State.STARTED);
+				st.startQuest();
 				st.giveItems(LETTER, 1);
-				st.playSound("ItemSound.quest_accept");
 				break;
 			case "31538-01.html":
-				if ((st.getInt("cond") == 1) && st.hasQuestItems(LETTER))
+				if (st.isCond(1) && st.hasQuestItems(LETTER))
 				{
 					st.takeItems(LETTER, -1);
 					st.giveItems(57, 136928);
 					st.addExpAndSp(325881, 32524);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
+					st.exitQuest(false, true);
 				}
 				else
 				{
@@ -94,7 +91,7 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 				}
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					switch (npcId)
 					{

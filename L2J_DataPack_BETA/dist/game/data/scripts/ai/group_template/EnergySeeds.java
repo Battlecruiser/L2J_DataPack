@@ -361,19 +361,19 @@ public class EnergySeeds extends AbstractNpcAI
 		switch (seedType)
 		{
 			case INFINITY:
-				if ((st != null) && (st.getInt("cond") == 3))
+				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(st, 13798);
 				}
 				break;
 			case DESTRUCTION:
-				if ((st != null) && (st.getInt("cond") == 3))
+				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(st, 13867);
 				}
 				break;
 			case ANNIHILATION_BISTAKON:
-				if ((st != null) && (st.getInt("cond") == 3))
+				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(st, 15535);
 				}
@@ -386,7 +386,7 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				break;
 			case ANNIHILATION_REPTILIKON:
-				if ((st != null) && (st.getInt("cond") == 3))
+				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(st, 15535);
 				}
@@ -399,7 +399,7 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 				break;
 			case ANNIHILATION_COKRAKON:
-				if ((st != null) && (st.getInt("cond") == 3))
+				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(st, 15535);
 				}
@@ -450,7 +450,7 @@ public class EnergySeeds extends AbstractNpcAI
 		if (numItems > 0)
 		{
 			st.giveItems(itemId, numItems);
-			st.playSound("ItemSound.quest_itemget");
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}
 	

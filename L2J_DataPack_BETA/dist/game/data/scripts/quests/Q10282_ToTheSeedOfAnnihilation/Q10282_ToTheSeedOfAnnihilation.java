@@ -91,10 +91,8 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		switch (event)
 		{
 			case "32733-07.htm":
-				st.setState(State.STARTED);
-				st.set("cond", "1");
+				st.startQuest();
 				st.giveItems(SOA_ORDERS, 1);
-				st.playSound("ItemSound.quest_accept");
 				break;
 			case "32734-02.htm":
 				st.addExpAndSp(1148480, 99110);

@@ -45,12 +45,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
-		questItemIds = new int[]
-		{
-			WIN_CONF_2,
-			WIN_CONF_5,
-			WIN_CONF_10
-		};
+		registerQuestItems(WIN_CONF_2, WIN_CONF_5, WIN_CONF_10);
 		setOlympiadUse(true);
 	}
 	
@@ -66,9 +61,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 		
 		if (event.equalsIgnoreCase("31688-03.html"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
@@ -81,8 +74,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 				{
 					st.giveItems(MEDAL_OF_GLORY, 3);
 				}
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
 			}
 			else
 			{
@@ -130,11 +122,10 @@ public class Q00553_OlympiadUndefeated extends Quest
 			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5) + st.getQuestItemsCount(WIN_CONF_10);
 			if ((count == 3) && (st.getInt("cond") == 2))
 			{
-				htmltext = "31688-04.html";
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
-				st.playSound("ItemSound.quest_finish");
-				st.exitQuest(QuestType.DAILY);
+				st.exitQuest(QuestType.DAILY, true);
+				htmltext = "31688-04.html";
 			}
 			else
 			{

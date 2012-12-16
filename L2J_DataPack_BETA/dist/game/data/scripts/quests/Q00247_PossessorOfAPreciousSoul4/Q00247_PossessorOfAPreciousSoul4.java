@@ -30,14 +30,14 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
  */
 public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 {
-	
 	// NPCs
 	private static final int CARADINE = 31740;
 	private static final int LADY_OF_LAKE = 31745;
-	
 	// Items
 	private static final int CARADINE_LETTER_LAST = 7679;
 	private static final int NOBLESS_TIARA = 7694;
+	// Location
+	private static final Location CARADINE_LOC = new Location(143209, 43968, -3038);
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -62,7 +62,7 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 				{
 					st.setCond(2, true);
 					st.takeItems(CARADINE_LETTER_LAST, -1);
-					player.teleToLocation(new Location(143209, 43968, -3038), 0);
+					player.teleToLocation(CARADINE_LOC, 0);
 				}
 				break;
 			case "31745-5.html":
