@@ -14,39 +14,37 @@
  */
 package handlers.usercommandhandlers;
 
-import java.util.Calendar;
-
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
+import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 
 /**
- * Support for /mybirthday command
- * @author JIV
+ * Channel Info user command.
+ * @author chris_00
  */
-public class Birthday implements IUserCommandHandler
+public class ChannelInfo implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
 	{
-		126
+		97
 	};
 	
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
 		if (id != COMMAND_IDS[0])
+		{
 			return false;
+		}
 		
-		Calendar date = activeChar.getCreateDate();
+		if ((activeChar.getParty() == null) || (activeChar.getParty().getCommandChannel() == null))
+		{
+			return false;
+		}
 		
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_BIRTHDAY_IS_S3_S4_S2);
-		sm.addPcName(activeChar);
-		sm.addString(Integer.toString(date.get(Calendar.YEAR)));
-		sm.addString(Integer.toString(date.get(Calendar.MONTH)+1));
-		sm.addString(Integer.toString(date.get(Calendar.DATE)));
-		
-		activeChar.sendPacket(sm);
+		final L2CommandChannel channel = activeChar.getParty().getCommandChannel();
+		activeChar.sendPacket(new ExMultiPartyCommandChannelInfo(channel));
 		return true;
 	}
 	

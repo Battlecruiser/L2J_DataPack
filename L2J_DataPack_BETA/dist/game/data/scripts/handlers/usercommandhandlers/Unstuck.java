@@ -14,8 +14,6 @@
  */
 package handlers.usercommandhandlers;
 
-import java.util.logging.Level;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
@@ -32,9 +30,9 @@ import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
- *
+ * Unstuck user command.
  */
-public class Escape implements IUserCommandHandler
+public class Unstuck implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
 	{
@@ -97,18 +95,17 @@ public class Escape implements IUserCommandHandler
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		
-		EscapeFinalizer ef = new EscapeFinalizer(activeChar);
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(ef, unstuckTimer));
+		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(new EscapeFinalizer(activeChar), unstuckTimer));
 		
 		return true;
 	}
 	
-	static class EscapeFinalizer implements Runnable
+	private static class EscapeFinalizer implements Runnable
 	{
 		private final L2PcInstance _activeChar;
 		
-		EscapeFinalizer(L2PcInstance activeChar)
+		protected EscapeFinalizer(L2PcInstance activeChar)
 		{
 			_activeChar = activeChar;
 		}
@@ -125,15 +122,7 @@ public class Escape implements IUserCommandHandler
 			_activeChar.enableAllSkills();
 			_activeChar.setIsCastingNow(false);
 			_activeChar.setInstanceId(0);
-			
-			try
-			{
-				_activeChar.teleToLocation(MapRegionManager.TeleportWhereType.Town);
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.SEVERE, "", e);
-			}
+			_activeChar.teleToLocation(MapRegionManager.TeleportWhereType.Town);
 		}
 	}
 	
