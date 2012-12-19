@@ -61,7 +61,10 @@ public class Dummy implements ISkillHandler
 			}
 		}
 		
-		activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		if (skill.useSpiritShot())
+		{
+			activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		}
 	}
 	
 	@Override
