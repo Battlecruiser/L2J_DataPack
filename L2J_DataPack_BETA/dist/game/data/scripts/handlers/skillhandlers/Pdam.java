@@ -35,7 +35,6 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public class Pdam implements ISkillHandler
 {
-	private static final Logger _log = Logger.getLogger(Pdam.class.getName());
 	private static final Logger _logDamage = Logger.getLogger("damage");
 	
 	private static final L2SkillType[] SKILL_IDS =
@@ -59,12 +58,7 @@ public class Pdam implements ISkillHandler
 		
 		int damage = 0;
 		
-		if (Config.DEBUG)
-		{
-			_log.fine("Begin Skill processing in Pdam.java " + skill.getSkillType());
-		}
-		
-		boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		
 		for (L2Character target: (L2Character[]) targets)
 		{
