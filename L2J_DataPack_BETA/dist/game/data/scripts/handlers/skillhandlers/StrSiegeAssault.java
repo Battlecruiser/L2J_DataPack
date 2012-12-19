@@ -72,7 +72,7 @@ public class StrSiegeAssault implements ISkillHandler
 		{
 			// damage calculation
 			int damage = 0;
-			boolean ss = skill.isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+			boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 			
 			for (L2Character target: (L2Character[]) targets)
 			{
