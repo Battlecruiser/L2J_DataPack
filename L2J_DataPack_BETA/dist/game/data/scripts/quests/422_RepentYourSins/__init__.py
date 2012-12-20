@@ -102,7 +102,7 @@ class Quest (JQuest) :
                 st.takeItems(PENITENTS_MANACLES,1)
                 htmltext = "30981-15.htm"
                 player.setPkKills(0)
-                st.playSound("ItemSound.quest_finished")
+                st.playSound("ItemSound.quest_finish")
                 st.exitQuest(1)
             else :
                 st.giveItems(PENITENTS_MANACLES2,1)
@@ -115,7 +115,7 @@ class Quest (JQuest) :
       htmltext = "30981-19.htm"
     elif event == "Quit" :
         htmltext = "30981-20.htm"
-        st.playSound("ItemSound.quest_finished")
+        st.playSound("ItemSound.quest_finish")
         st.takeItems(SCAVENGER_WERERAT_SKULL,-1)
         st.takeItems(TUREK_WARHOUND_TAIL,-1)
         st.takeItems(TYRANT_KINGPIN_HEART,-1)
