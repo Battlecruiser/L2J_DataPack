@@ -5,9 +5,11 @@
 	<emptyDestroyTime val="30" />
 	<spawnPoint spawnX="147072" spawnY="23743" spawnZ="-1984" />
 	<spawnlist>
-		<!-- Franz -->
-		<spawn npcId="32597" x="-23976" y="-8964" z="-5392" heading="0" respawn="60" />
-		<!-- Jaina -->
-		<spawn npcId="32617" x="-23961" y="-8892" z="-5392" heading="0" respawn="60" />
+		<group name="general">
+			<!-- Franz -->
+			<spawn npcId="32597" x="-23976" y="-8964" z="-5392" heading="0" respawn="60" />
+			<!-- Jaina -->
+			<spawn npcId="32617" x="-23961" y="-8892" z="-5392" heading="0" respawn="60" />
+		</group>
 	</spawnlist>
 </instance>

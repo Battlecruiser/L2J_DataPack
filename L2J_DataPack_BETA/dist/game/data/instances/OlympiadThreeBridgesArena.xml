@@ -5,7 +5,9 @@
 		<door doorId="17100102" />
 	</doorlist>
 	<spawnlist>
-		<spawn npcId="36402" x="-76760" y="-252461" z="-7741" heading="0" respawn="60" />
-		<spawn npcId="36402" x="-74170" y="-252459" z="-7741" heading="0" respawn="60" />
+		<group name="general">
+			<spawn npcId="36402" x="-76760" y="-252461" z="-7741" heading="0" respawn="60" />
+			<spawn npcId="36402" x="-74170" y="-252459" z="-7741" heading="0" respawn="60" />
+		</group>
 	</spawnlist>
 </instance>
