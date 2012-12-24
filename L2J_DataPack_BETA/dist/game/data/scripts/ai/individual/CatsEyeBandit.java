@@ -27,13 +27,20 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
  * Cat's Eye Bandit (Quest Monster) AI.
  * @author Gladicek
  */
-public class CatsEyeBandit extends AbstractNpcAI
+public final class CatsEyeBandit extends AbstractNpcAI
 {
 	// NPC ID
 	private static final int MOB_ID = 27038;
 	// Weapons
 	private static final int BOW = 1181;
 	private static final int DAGGER = 1182;
+	
+	private CatsEyeBandit(String name, String descr)
+	{
+		super(name, descr);
+		addAttackId(MOB_ID);
+		addKillId(MOB_ID);
+	}
 	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
@@ -54,16 +61,8 @@ public class CatsEyeBandit extends AbstractNpcAI
 		if (qs != null)
 		{
 			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.I_MUST_DO_SOMETHING_ABOUT_THIS_SHAMEFUL_INCIDENT);
-			npc.setScriptValue(0);
 		}
 		return super.onKill(npc, killer, isPet);
-	}
-	
-	public CatsEyeBandit(String name, String descr)
-	{
-		super(name, descr);
-		addAttackId(MOB_ID);
-		addKillId(MOB_ID);
 	}
 	
 	public static void main(String[] args)
