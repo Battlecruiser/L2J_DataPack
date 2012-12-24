@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
  * AI for mobs in Plains of Dion (near Floran Village)
  * @author Gladicek
  */
-public class PlainsOfDion extends AbstractNpcAI
+public final class PlainsOfDion extends AbstractNpcAI
 {
 	private static final int MONSTERS[] =
 	{
@@ -53,6 +53,12 @@ public class PlainsOfDion extends AbstractNpcAI
 		NpcStringId.KILL_THE_COWARD,
 		NpcStringId.WHAT_ARE_YOU_LOOKING_AT
 	};
+	
+	private PlainsOfDion(String name, String descr)
+	{
+		super(name, descr);
+		addAttackId(MONSTERS);
+	}
 	
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
@@ -81,19 +87,6 @@ public class PlainsOfDion extends AbstractNpcAI
             npc.setScriptValue(1);
 		}
 		return super.onAttack(npc, player, damage, isPet);
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		npc.setScriptValue(0);
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	public PlainsOfDion(String name, String descr)
-	{
-		super(name, descr);
-		registerMobs(MONSTERS, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 	}
 	
 	public static void main(String[] args)

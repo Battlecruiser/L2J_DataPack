@@ -31,7 +31,7 @@ import com.l2jserver.util.Rnd;
  * Frightened Ragna Orc AI.
  * @author Gladicek, malyelfik
  */
-public class FrightenedRagnaOrc extends AbstractNpcAI
+public final class FrightenedRagnaOrc extends AbstractNpcAI
 {
 	// NPC ID
 	private static final int MOB_ID = 18807;
@@ -45,7 +45,7 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 	// Skill
 	private static final SkillHolder SKILL = new SkillHolder(6234, 1);
 	
-	public FrightenedRagnaOrc(String name, String descr)
+	private FrightenedRagnaOrc(String name, String descr)
 	{
 		super(name, descr);
 		addAttackId(MOB_ID);
@@ -76,7 +76,6 @@ public class FrightenedRagnaOrc extends AbstractNpcAI
 		broadcastNpcSay(npc, Say2.NPC_ALL, msg);
 		cancelQuestTimer("say", npc, null);
 		cancelQuestTimer("reward", npc, player);
-		npc.setScriptValue(0);
 		return super.onKill(npc, player, isPet);
 	}
 	
