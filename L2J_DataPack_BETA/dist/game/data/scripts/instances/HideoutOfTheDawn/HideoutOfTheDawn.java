@@ -53,6 +53,7 @@ public class HideoutOfTheDawn extends Quest
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
 				world.removeAllowed(talker.getObjectId());
+				talker.setInstanceId(0);
 				talker.teleToLocation(JAINA_LOC, 0);
 				return "32617-01.htm";
 			}
