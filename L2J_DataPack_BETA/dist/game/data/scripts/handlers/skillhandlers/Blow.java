@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author  Steuf
+ * @author Steuf
  */
 public class Blow implements ISkillHandler
 {
@@ -44,22 +44,25 @@ public class Blow implements ISkillHandler
 	{
 		L2SkillType.BLOW
 	};
-
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar.isAlikeDead())
+		{
 			return;
+		}
 		
 		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		boolean sps = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
 		boolean bss = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Character target : (L2Character[]) targets)
 		{
 			if (target.isAlikeDead())
+			{
 				continue;
+			}
 			
 			// Check firstly if target dodges skill
 			final boolean skillIsEvaded = Formulas.calcPhysicalSkillEvasion(target, skill);
@@ -102,40 +105,30 @@ public class Blow implements ISkillHandler
 				byte shld = Formulas.calcShldUse(activeChar, target, skill);
 				
 				double damage = skill.isStaticDamage() ? skill.getPower() : (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, ss);
-				if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
+				if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 				{
-					switch (activeChar.getActingPlayer().getSouls())
-					{
-						case 0:
-							break;
-						case 1:
-							damage *= 1.10;
-							break;
-						case 2:
-							damage *= 1.12;
-							break;
-						case 3:
-							damage *= 1.15;
-							break;
-						case 4:
-							damage *= 1.18;
-							break;
-						default:
-							damage *= 1.20;
-							break;
-					}
+					// Souls Formula (each soul increase +4%)
+					damage *= ((activeChar.getActingPlayer().getSouls() * 0.04) + 1);
 				}
 				
 				// Crit rate base crit rate for skill, modified with STR bonus
 				if (!skill.isStaticDamage() && Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
+				{
 					damage *= 2;
+				}
 				
-				if (Config.LOG_GAME_DAMAGE
-						&& activeChar.isPlayable()
-						&& damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
+				if (Config.LOG_GAME_DAMAGE && activeChar.isPlayable() && (damage > Config.LOG_GAME_DAMAGE_THRESHOLD))
 				{
 					LogRecord record = new LogRecord(Level.INFO, "");
-					record.setParameters(new Object[]{activeChar, " did damage ", (int)damage, skill, " to ", target});
+					record.setParameters(new Object[]
+					{
+						activeChar,
+						" did damage ",
+						(int) damage,
+						skill,
+						" to ",
+						target
+					});
 					record.setLoggerName("pdam");
 					_logDamage.log(record);
 				}
@@ -159,7 +152,7 @@ public class Blow implements ISkillHandler
 					}
 					// Formula from Diego Vargas post: http://www.l2guru.com/forum/showthread.php?p=3122630
 					// 1189 x Your PATK / PDEF of target
-					double vegdamage = (1189 * target.getPAtk(activeChar) / activeChar.getPDef(target));
+					double vegdamage = ((1189 * target.getPAtk(activeChar)) / activeChar.getPDef(target));
 					activeChar.reduceCurrentHp(vegdamage, target, skill);
 				}
 				
@@ -169,12 +162,12 @@ public class Blow implements ISkillHandler
 					target.breakAttack();
 					target.breakCast();
 				}
-
-				if(activeChar.isPlayer())
+				
+				if (activeChar.isPlayer())
 				{
 					L2PcInstance activePlayer = activeChar.getActingPlayer();
 					
-					activePlayer.sendDamageMessage(target, (int)damage, false, true, false);
+					activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 				}
 			}
 			
@@ -195,15 +188,17 @@ public class Blow implements ISkillHandler
 				}
 			}
 			
-			//Possibility of a lethal strike
+			// Possibility of a lethal strike
 			Formulas.calcLethalHit(activeChar, target, skill);
 			
-			//Self Effect
+			// Self Effect
 			if (skill.hasSelfEffects())
 			{
 				final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-				if (effect != null && effect.isSelfEffect())
+				if ((effect != null) && effect.isSelfEffect())
+				{
 					effect.exit();
+				}
 				skill.getEffectsSelf(activeChar);
 			}
 			
