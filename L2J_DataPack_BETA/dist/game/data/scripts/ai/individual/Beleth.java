@@ -407,8 +407,8 @@ public class Beleth extends AbstractNpcAI
 		{
 			setBelethKiller(1, killer);
 			GrandBossManager.getInstance().setBossStatus(29118, 3);
-			// Respawn time is 192 Hours - 148 Random Hours
-			long respawnTime = (long) Config.INTERVAL_OF_BELETH_SPAWN - getRandom(Config.RANDOM_OF_BELETH_SPAWN);
+			// Calculate Min and Max respawn times randomly.
+			long respawnTime = getRandom((Config.INTERVAL_OF_BELETH_SPAWN - Config.RANDOM_OF_BELETH_SPAWN), (Config.INTERVAL_OF_BELETH_SPAWN + Config.RANDOM_OF_BELETH_SPAWN));
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(29118);
 			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 			GrandBossManager.getInstance().setStatsSet(29118, info);
