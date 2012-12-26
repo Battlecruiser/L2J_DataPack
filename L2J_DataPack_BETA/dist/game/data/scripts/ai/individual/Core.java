@@ -199,8 +199,8 @@ public class Core extends AbstractNpcAI
 			npc.broadcastPacket(new NpcSay(objId, Say2.NPC_ALL, npcId, NpcStringId.DOT_DOT_DOT_DOT_DOT_DOT));
 			_FirstAttacked = false;
 			GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
-			// Respawn time is 60 Hours - 24 Random Hours
-			long respawnTime = (long) Config.Interval_Of_Core_Spawn - getRandom(Config.Random_Of_Core_Spawn);
+			// Calculate Min and Max respawn times randomly.
+			long respawnTime = getRandom((Config.Interval_Of_Core_Spawn - Config.Random_Of_Core_Spawn), (Config.Interval_Of_Core_Spawn + Config.Random_Of_Core_Spawn));
 			startQuestTimer("core_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);

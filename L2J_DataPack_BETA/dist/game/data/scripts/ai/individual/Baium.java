@@ -471,8 +471,8 @@ public class Baium extends AbstractNpcAI
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		// spawn the "Teleportation Cubic" for 15 minutes (to allow players to exit the lair)
 		addSpawn(TELEPORT_CUBIC, 115017, 15549, 10090, 0, false, 900000);
-		// Respawn time is 168 Hours - 48 Random Hours
-		long respawnTime = (long) Config.Interval_Of_Baium_Spawn - getRandom(Config.Random_Of_Baium_Spawn);
+		// Calculate Min and Max respawn times randomly.
+		long respawnTime = getRandom((Config.Interval_Of_Baium_Spawn - Config.Random_Of_Baium_Spawn), (Config.Interval_Of_Baium_Spawn + Config.Random_Of_Baium_Spawn));
 		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
 		startQuestTimer("baium_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
