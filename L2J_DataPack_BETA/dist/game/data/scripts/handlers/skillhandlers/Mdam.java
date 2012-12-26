@@ -77,28 +77,10 @@ public class Mdam implements ISkillHandler
 				damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
 			}
 			
-			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
+			if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 			{
-				switch (activeChar.getActingPlayer().getSouls())
-				{
-					case 0:
-						break;
-					case 1:
-						damage *= 1.10;
-						break;
-					case 2:
-						damage *= 1.12;
-						break;
-					case 3:
-						damage *= 1.15;
-						break;
-					case 4:
-						damage *= 1.18;
-						break;
-					default:
-						damage *= 1.20;
-						break;
-				}
+				// Souls Formula (each soul increase +4%)
+				damage *= ((activeChar.getActingPlayer().getSouls() * 0.04) + 1);
 			}
 			
 			// Possibility of a lethal strike
@@ -155,7 +137,7 @@ public class Mdam implements ISkillHandler
 				}
 				
 				// Logging damage
-				if (Config.LOG_GAME_DAMAGE && activeChar.isPlayable() && damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
+				if (Config.LOG_GAME_DAMAGE && activeChar.isPlayable() && (damage > Config.LOG_GAME_DAMAGE_THRESHOLD))
 				{
 					LogRecord record = new LogRecord(Level.INFO, "");
 					record.setParameters(new Object[]
@@ -177,7 +159,7 @@ public class Mdam implements ISkillHandler
 		if (skill.hasSelfEffects())
 		{
 			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
+			if ((effect != null) && effect.isSelfEffect())
 			{
 				// Replace old effect with new one.
 				effect.exit();
