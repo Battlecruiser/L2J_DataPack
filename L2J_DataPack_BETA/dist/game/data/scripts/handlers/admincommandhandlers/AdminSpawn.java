@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jserver.gameserver.model.AutoChatHandler;
 import com.l2jserver.gameserver.model.AutoSpawnHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
@@ -237,7 +236,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			SpawnTable.getInstance().reloadAll();
 			RaidBossSpawnManager.getInstance().load();
 			AutoSpawnHandler.getInstance().reload();
-			AutoChatHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
 			QuestManager.getInstance().reloadAllQuests();
 			AdminTable.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
