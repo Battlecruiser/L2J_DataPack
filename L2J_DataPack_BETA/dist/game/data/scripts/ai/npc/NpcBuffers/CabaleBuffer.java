@@ -23,17 +23,40 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
+import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 
 /**
- * @author UnAfraid
+ * Preacher of Doom and Orator of Revelations AI
+ * @author UnAfraid, malyelfik
  */
 public class CabaleBuffer extends AbstractNpcAI
 {
 	private static final int DISTANCE_TO_WATCH_OBJECT = 900;
+	
+	// Messages
+	public static final NpcStringId[] ORATOR_MSG =
+	{
+		NpcStringId.THE_DAY_OF_JUDGMENT_IS_NEAR,
+		NpcStringId.THE_PROPHECY_OF_DARKNESS_HAS_BEEN_FULFILLED,
+		NpcStringId.AS_FORETOLD_IN_THE_PROPHECY_OF_DARKNESS_THE_ERA_OF_CHAOS_HAS_BEGUN,
+		NpcStringId.THE_PROPHECY_OF_DARKNESS_HAS_COME_TO_PASS
+	};
+	public static final NpcStringId[] PREACHER_MSG =
+	{
+		NpcStringId.THIS_WORLD_WILL_SOON_BE_ANNIHILATED,
+		NpcStringId.ALL_IS_LOST_PREPARE_TO_MEET_THE_GODDESS_OF_DEATH,
+		NpcStringId.ALL_IS_LOST_THE_PROPHECY_OF_DESTRUCTION_HAS_BEEN_FULFILLED,
+		NpcStringId.THE_END_OF_TIME_HAS_COME_THE_PROPHECY_OF_DESTRUCTION_HAS_BEEN_FULFILLED
+	};
+	
+	// Skill Id
+	private static final int ORATOR_FIGTER = 4364;
+	private static final int ORATOR_MAGE = 4365;
+	private static final int PREACHER_FIGTER = 4361;
+	private static final int PREACHER_MAGE = 4362;
 	
 	protected CabaleBuffer(String name, String descr)
 	{
@@ -52,7 +75,33 @@ public class CabaleBuffer extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(new CabaleAI(npc), 3000);
+		ThreadPoolManager.getInstance().scheduleGeneral(new Talk(npc), 60000);
 		return super.onSpawn(npc);
+	}
+	
+	protected class Talk implements Runnable
+	{
+		private final L2Npc _npc;
+		
+		protected Talk(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
+		@Override
+		public void run()
+		{
+			if ((_npc != null) && !_npc.isDecayed())
+			{
+				NpcStringId[] messages = ORATOR_MSG;
+				if (_npc.getNpcId() == SevenSigns.PREACHER_NPC_ID)
+				{
+					messages = PREACHER_MSG;
+				}
+				broadcastSay(_npc, messages[getRandom(messages.length)], null, -1);
+				ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
+			}
+		}
 	}
 	
 	protected class CabaleAI implements Runnable
@@ -101,16 +150,32 @@ public class CabaleBuffer extends AbstractNpcAI
 				{
 					if (!player.isMageClass())
 					{
-						if (handleCast(player, 4364))
+						if (handleCast(player, ORATOR_FIGTER))
 						{
+							if (getAbnormalLvl(player, ORATOR_FIGTER) == 2)
+							{
+								broadcastSay(_npc, NpcStringId.S1_I_GIVE_YOU_THE_BLESSING_OF_PROPHECY, player.getName(), 500);
+							}
+							else
+							{
+								broadcastSay(_npc, NpcStringId.I_BESTOW_UPON_YOU_A_BLESSING, null, 1);
+							}
 							isBuffAWinner = true;
 							continue;
 						}
 					}
 					else
 					{
-						if (handleCast(player, 4365))
+						if (handleCast(player, ORATOR_MAGE))
 						{
+							if (getAbnormalLvl(player, ORATOR_MAGE) == 2)
+							{
+								broadcastSay(_npc, NpcStringId.S1_I_BESTOW_UPON_YOU_THE_AUTHORITY_OF_THE_ABYSS, player.getName(), 500);
+							}
+							else
+							{
+								broadcastSay(_npc, NpcStringId.HERALD_OF_THE_NEW_ERA_OPEN_YOUR_EYES, null, 1);
+							}
 							isBuffAWinner = true;
 							continue;
 						}
@@ -120,16 +185,32 @@ public class CabaleBuffer extends AbstractNpcAI
 				{
 					if (!player.isMageClass())
 					{
-						if (handleCast(player, 4361))
+						if (handleCast(player, PREACHER_FIGTER))
 						{
+							if (getAbnormalLvl(player, PREACHER_FIGTER) == 2)
+							{
+								broadcastSay(_npc, NpcStringId.A_CURSE_UPON_YOU, player.getName(), 500);
+							}
+							else
+							{
+								broadcastSay(_npc, NpcStringId.YOU_DONT_HAVE_ANY_HOPE_YOUR_END_HAS_COME, null, 1);
+							}
 							isBuffALoser = true;
 							continue;
 						}
 					}
 					else
 					{
-						if (handleCast(player, 4362))
+						if (handleCast(player, PREACHER_MAGE))
 						{
+							if (getAbnormalLvl(player, PREACHER_MAGE) == 2)
+							{
+								broadcastSay(_npc, NpcStringId.S1_YOU_MIGHT_AS_WELL_GIVE_UP, player.getName(), 500);
+							}
+							else
+							{
+								broadcastSay(_npc, NpcStringId.S1_YOU_BRING_AN_ILL_WIND, player.getName(), 1);
+							}
 							isBuffALoser = true;
 							continue;
 						}
@@ -141,7 +222,6 @@ public class CabaleBuffer extends AbstractNpcAI
 					break;
 				}
 			}
-			
 			ThreadPoolManager.getInstance().scheduleGeneral(this, 3000);
 		}
 		
@@ -154,34 +234,62 @@ public class CabaleBuffer extends AbstractNpcAI
 		 * - Mystics: -25% Casting Speed, -25% Effect Resistance<BR>
 		 * <BR>
 		 * <BR>
-		 * Blessing of Prophecy (Winner) - Fighters: +25% Max Load, +25% Effect Resistance<BR>
+		 * Blessing of Prophecy (Winner)<br>
+		 * - Fighters: +25% Max Load, +25% Effect Resistance<BR>
 		 * - Mystics: +25% Magic Cancel Resist, +25% Effect Resistance<BR>
-		 * @param player 
-		 * @param skillId 
-		 * @return 
+		 * @param player
+		 * @param skillId
+		 * @return
 		 */
 		private boolean handleCast(L2PcInstance player, int skillId)
 		{
-			int skillLevel = (player.getLevel() > 40) ? 1 : 2;
-			
 			if (player.isDead() || !player.isVisible() || !_npc.isInsideRadius(player, DISTANCE_TO_WATCH_OBJECT, false, false))
 			{
 				return false;
 			}
 			
-			L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-			if (player.getFirstEffect(skill) == null)
+			boolean doCast = false;
+			int skillLevel = 1;
+			
+			final int level = getAbnormalLvl(player, skillId);
+			if (level == 0)
 			{
-				skill.getEffects(_npc, player);
-				_npc.broadcastPacket(new MagicSkillUse(_npc, player, skill.getId(), skillLevel, skill.getHitTime(), 0));
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-				sm.addSkillName(skill);
-				player.sendPacket(sm);
-				return true;
+				doCast = true;
+				
+			}
+			else if ((level == 1) && (getRandom(100) < 5))
+			{
+				doCast = true;
+				skillLevel = 2;
 			}
 			
+			if (doCast)
+			{
+				final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
+				_npc.setTarget(player);
+				_npc.doCast(skill);
+				return true;
+			}
 			return false;
 		}
+	}
+	
+	public void broadcastSay(L2Npc npc, NpcStringId message, String param, int chance)
+	{
+		if (chance == -1)
+		{
+			broadcastNpcSay(npc, Say2.NPC_ALL, message);
+		}
+		else if (getRandom(10000) < chance)
+		{
+			broadcastNpcSay(npc, Say2.NPC_ALL, message, param);
+		}
+	}
+	
+	public int getAbnormalLvl(L2PcInstance player, int skillId)
+	{
+		final L2Effect effect = player.getFirstEffect(skillId);
+		return (effect != null) ? effect.getAbnormalLvl() : 0;
 	}
 	
 	public static void main(String[] args)
