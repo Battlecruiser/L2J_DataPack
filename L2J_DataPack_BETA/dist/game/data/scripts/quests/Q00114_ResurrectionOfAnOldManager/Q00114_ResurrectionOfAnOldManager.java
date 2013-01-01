@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -43,7 +42,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	private static final int STONES = 32046;
 	private static final int WENDY = 32047;
 	private static final int BOX = 32050;
-	
 	// Items
 	private static final int STARSTONE = 8287;
 	private static final int LETTER = 8288;
@@ -51,12 +49,15 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	private static final int DETCTOR = 8090;
 	private static final int DETCTOR2 = 8091;
 	private static final int ADENA = 57;
-	
 	// Monster
 	private static final int GUARDIAN = 27318;
-	
 	// Zones
-	private static final int[] ZONES = {200032, 200033, 200034};
+	private static final int[] ZONES =
+	{
+		200032,
+		200033,
+		200034
+	};
 	
 	private static L2Attackable golem = null;
 	
@@ -580,7 +581,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.takeItems(DETCTOR, 1);
 				st.giveItems(DETCTOR2, 1);
 				st.setCond(18, true);
-				character.sendPacket(new ExShowScreenMessage(NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500));
+				showOnScreenMsg(character.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}
 		}
 		return super.onEnterZone(character, zone);

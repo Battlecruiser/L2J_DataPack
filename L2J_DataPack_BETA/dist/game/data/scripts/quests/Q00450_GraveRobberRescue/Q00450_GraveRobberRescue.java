@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
@@ -38,13 +37,10 @@ public class Q00450_GraveRobberRescue extends Quest
 	// NPCs
 	private static final int KANEMIKA = 32650;
 	private static final int WARRIOR = 32651;
-	
 	// Monster
 	private static final int WARRIOR_MON = 22741;
-	
 	// Items
 	private static final int EVIDENCE_OF_MIGRATION = 14876;
-	
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
@@ -165,7 +161,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				monster.setRunning();
 				monster.addDamageHate(player, 0, 999);
 				monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-				player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_GRAVE_ROBBER_WARRIOR_HAS_BEEN_FILLED_WITH_DARK_ENERGY_AND_IS_ATTACKING_YOU, 5, 5000));
+				showOnScreenMsg(player, NpcStringId.THE_GRAVE_ROBBER_WARRIOR_HAS_BEEN_FILLED_WITH_DARK_ENERGY_AND_IS_ATTACKING_YOU, 5, 5000);
 			}
 		}
 		
