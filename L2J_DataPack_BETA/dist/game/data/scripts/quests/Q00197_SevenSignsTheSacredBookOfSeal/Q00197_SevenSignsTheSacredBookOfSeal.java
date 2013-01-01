@@ -219,7 +219,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	}
 	
 	@Override
-	@SuppressWarnings("null")
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -240,7 +239,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			{
 				if (npc.getNpcId() == WOOD)
 				{
-					// st = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName()); // TODO: Un-comment when quest is committed.
+					st = player.getQuestState("Q00196_SevenSignsSealOfTheEmperor");
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-05.html";
 				}
 				break;
