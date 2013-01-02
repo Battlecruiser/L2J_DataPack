@@ -920,10 +920,23 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9177" levels="1" name="Olympiad Reward Box">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- High Five Skill -->
+		<!-- TODO: The last group of items should be "13722,1,200,8621,1,1,1", but require support -->
+		<table name="#extractableItems"> 13722,350,85.8;13722,250,13750,1,7.4;13722,200,13751,1,0.6;13722,200,13752,1,0.6;13722,200,13754,1,0.4;13722,200,13753,1,0.3;13722,250,6622,1,3.9;13722,1,8621,1,1 </table>
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+		<for>
+			<effect name="RestorationRandom" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="9178" levels="1" name="Theodric's Box">
 		<!-- none -->
