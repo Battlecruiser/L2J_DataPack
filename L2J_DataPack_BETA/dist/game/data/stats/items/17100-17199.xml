@@ -942,7 +942,7 @@
 	</item>
 	<item id="17169" type="EtcItem" name="Olympiad Treasure Chest">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="capsule" />
 		<set name="material" val="fish" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -951,8 +951,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="6622,1,1,100" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9177-1" />
 	</item>
 	<item id="17170" type="Armor" name="Soccer Ball Afro Hair - White">
 		<!-- Description: Afro hair that has been dyed like a white soccer ball. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
