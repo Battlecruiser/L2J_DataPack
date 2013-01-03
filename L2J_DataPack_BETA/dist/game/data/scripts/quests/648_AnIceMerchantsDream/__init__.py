@@ -49,7 +49,7 @@ class Quest (JQuest) :
     elif event == "32023-05.htm" :
        if self.getRandom(100) <= 25 :
           st.giveItems(Black_Ice,1)
-          st.playSound("ItemSound3.sys_enchant_sucess")
+          st.playSound("ItemSound3.sys_enchant_success")
        else:
           htmltext = "32023-06.htm"
           st.playSound("ItemSound3.sys_enchant_failed")
