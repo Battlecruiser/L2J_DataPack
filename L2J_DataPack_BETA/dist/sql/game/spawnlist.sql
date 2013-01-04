@@ -32624,13 +32624,13 @@ INSERT INTO `spawnlist` VALUES
 -- Misa
 ("Ice_Queen_Castle", 1, 32018, 107888, -120464, -3744, 0, 0, 24576, 60, 0, 2),
 -- Rafforty
-("Ice Merchant/Frozen", 1, 32020, 113847, -109386, -852, 0, 0, 20733, 60, 0, 0),
+("Ice Merchant/Frozen", 1, 32020, 113808, -109344, -846, 0, 0, 8192, 60, 0, 0),
 -- Ice Sculpture
 ("Ice_Queen_Castle", 1, 32021, 117920, -126592, -2584, 0, 0, 8192, 60, 0, 0),
 -- Kier
 ("Ice_Queen_Castle", 1, 32022, 104512, -107648, -3688, 0, 0, 28672, 60, 0, 0),
 -- Ice Shelf
-("Ice Merchant/Frozen", 1, 32023, 113741, -109246, -841, 0, 0, 29413, 60, 0, 0),
+("Ice Merchant/Frozen", 1, 32023, 113760, -109264, -840, 0, 0, 0, 60, 0, 0),
 -- Freya's Steward
 ("Ice_Queen_Castle", 1, 32029, 115451, -125706, -3448, 0, 0, 0, 60, 0, 0),
 -- Ice Fairy Sculpture
