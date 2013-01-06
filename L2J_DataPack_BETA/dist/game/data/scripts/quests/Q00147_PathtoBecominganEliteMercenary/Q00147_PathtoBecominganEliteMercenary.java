@@ -27,9 +27,8 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00147_PathtoBecominganEliteMercenary extends Quest
 {
-	
 	// NPCs
-	private static final int[] _merc =
+	private static final int[] MERC =
 	{
 		36481,
 		36482,
@@ -42,8 +41,8 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 		36489
 	};
 	// Items
-	private static final int _cert_ordinary = 13766;
-	private static final int _cert_elite = 13767;
+	private static final int ORDINARY_CERTIFICATE = 13766;
+	private static final int ELITE_CERTIFICATE = 13767;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -58,11 +57,11 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 		
 		if (event.equalsIgnoreCase("elite-02.htm"))
 		{
-			if (st.hasQuestItems(_cert_ordinary))
+			if (st.hasQuestItems(ORDINARY_CERTIFICATE))
 			{
 				return "elite-02a.htm";
 			}
-			st.giveItems(_cert_ordinary, 1);
+			st.giveItems(ORDINARY_CERTIFICATE, 1);
 		}
 		else if (event.equalsIgnoreCase("elite-04.htm"))
 		{
@@ -94,15 +93,14 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
-				if (cond < 4)
+				if (st.getCond() < 4)
 				{
 					htmltext = "elite-05.htm";
 				}
-				else if (cond == 4)
+				else if (st.isCond(4))
 				{
-					st.takeItems(_cert_ordinary, -1);
-					st.giveItems(_cert_elite, 1);
+					st.takeItems(ORDINARY_CERTIFICATE, -1);
+					st.giveItems(ELITE_CERTIFICATE, 1);
 					st.exitQuest(false);
 					htmltext = "elite-06.htm";
 				}
@@ -117,9 +115,8 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	public Q00147_PathtoBecominganEliteMercenary(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_merc);
-		addTalkId(_merc);
+		addStartNpc(MERC);
+		addTalkId(MERC);
 	}
 	
 	public static void main(String[] args)

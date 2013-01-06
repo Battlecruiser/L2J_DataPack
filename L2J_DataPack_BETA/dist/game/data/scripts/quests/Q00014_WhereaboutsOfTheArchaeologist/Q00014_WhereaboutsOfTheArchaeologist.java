@@ -21,18 +21,16 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Where abouts Of The Archaeologist (14)<br>
+ * Whereabouts of the Archaeologist (14)<br>
  * Original Jython script by disKret.
  * @author nonom
  */
 public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 {
-	
 	// NPCs
 	private static final int LIESEL = 31263;
 	private static final int GHOST_OF_ADVENTURER = 31538;
-	
-	// Items
+	// Item
 	private static final int LETTER = 7253;
 	
 	@Override
@@ -54,8 +52,7 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 			case "31538-01.html":
 				if (st.isCond(1) && st.hasQuestItems(LETTER))
 				{
-					st.takeItems(LETTER, -1);
-					st.giveItems(57, 136928);
+					st.giveAdena(136928, true);
 					st.addExpAndSp(325881, 32524);
 					st.exitQuest(false, true);
 				}
@@ -111,14 +108,13 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 	public Q00014_WhereaboutsOfTheArchaeologist(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(LIESEL);
-		addTalkId(LIESEL);
-		addTalkId(GHOST_OF_ADVENTURER);
+		addTalkId(LIESEL, GHOST_OF_ADVENTURER);
+		registerQuestItems(LETTER);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Q00014_WhereaboutsOfTheArchaeologist(14, Q00014_WhereaboutsOfTheArchaeologist.class.getSimpleName(), "Whereabouts Of The Archaeologist");
+		new Q00014_WhereaboutsOfTheArchaeologist(14, Q00014_WhereaboutsOfTheArchaeologist.class.getSimpleName(), "Whereabouts of the Archaeologist");
 	}
 }

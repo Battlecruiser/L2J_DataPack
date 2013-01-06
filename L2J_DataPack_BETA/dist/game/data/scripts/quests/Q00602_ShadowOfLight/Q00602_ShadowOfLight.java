@@ -29,10 +29,8 @@ public class Q00602_ShadowOfLight extends Quest
 {
 	// NPC
 	private static final int EYE_OF_ARGOS = 31683;
-	
 	// Item
 	private static final int EYE_OF_DARKNESS = 7189;
-	
 	// Monsters
 	private static final int[] MOBS =
 	{
@@ -163,7 +161,6 @@ public class Q00602_ShadowOfLight extends Quest
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS);
-		
 		registerQuestItems(EYE_OF_DARKNESS);
 	}
 	

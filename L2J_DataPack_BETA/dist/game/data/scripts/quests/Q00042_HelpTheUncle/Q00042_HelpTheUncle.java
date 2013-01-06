@@ -30,7 +30,7 @@ public class Q00042_HelpTheUncle extends Quest
 	// NPCs
 	private static final int WATERS = 30828;
 	private static final int SOPHYA = 30735;
-	// Monster
+	// Monsters
 	private static final int MONSTER_EYE_DESTROYER = 20068;
 	private static final int MONSTER_EYE_GAZER = 20266;
 	// Items

@@ -26,16 +26,14 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00653_WildMaiden extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int GALIBREDO = 30181;
 	private static final int SUKI = 32013;
-	
 	// Item
 	private static final int SOE = 736;
-	
 	// Misc
 	private static final int MIN_LEVEL = 36;
-		
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -59,10 +57,7 @@ public class Q00653_WildMaiden extends Quest
 			st.startQuest();
 			st.takeItems(SOE, 1);
 			npc.deleteMe();
-			if (getRandom(2) == 0)
-				htmltext = event;
-			else
-				htmltext = "32013-04a.htm";
+			htmltext = (getRandom(2) == 0) ? event : "32013-04a.htm";
 		}
 		return htmltext;
 	}

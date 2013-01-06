@@ -50,7 +50,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		22633
 	};
 	// Item
-	private static final int STAKATOFANGS = 14879;
+	private static final int STAKATO_FANG = 14879;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -87,13 +87,13 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 				switch (st.getCond())
 				{
 					case 1:
-						htmltext = (!st.hasQuestItems(STAKATOFANGS)) ? "32640-8.html" : "32640-9.html";
+						htmltext = (!st.hasQuestItems(STAKATO_FANG)) ? "32640-8.html" : "32640-9.html";
 						break;
 					case 2:
-						if (st.getQuestItemsCount(STAKATOFANGS) >= 25)
+						if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
 						{
 							st.giveAdena(147200, true);
-							st.takeItems(STAKATOFANGS, -1);
+							st.takeItems(STAKATO_FANG, -1);
 							st.addExpAndSp(589542, 36800);
 							st.exitQuest(false, true);
 							htmltext = "32640-10.html";
@@ -118,8 +118,8 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		st.giveItems(STAKATOFANGS, 1);
-		if (st.getQuestItemsCount(STAKATOFANGS) >= 25)
+		st.giveItems(STAKATO_FANG, 1);
+		if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
 		{
 			st.setCond(2, true);
 		}
@@ -136,7 +136,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS);
-		registerQuestItems(STAKATOFANGS);
+		registerQuestItems(STAKATO_FANG);
 	}
 	
 	public static void main(String[] args)

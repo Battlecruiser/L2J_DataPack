@@ -187,7 +187,6 @@ public class Q00509_AClansFame extends Quest
 	public Q00509_AClansFame(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(RAID_BOSS);

@@ -33,16 +33,16 @@ import com.l2jserver.gameserver.util.Util;
 public class Q00423_TakeYourBestShot extends Quest
 {
 	// NPC
-	private static final int _batracos = 32740;
-	private static final int _johnny = 32744;
+	private static final int BATRACOS = 32740;
+	private static final int JOHNNY = 32744;
 	// Item
-	private static final int _seer_ugoros_pass = 15496;
+	private static final int SEER_UGOROS_PASS = 15496;
 	// Spawn chance x/1000
-	private static final int _spawn_chance = 2;
+	private static final int SPAWN_CHANCE = 2;
 	// Guard
-	private static final int _tanta_guard = 18862;
+	private static final int TANTA_LIZARDMAN_GUARD = 18862;
 	// Mobs
-	private static final int[] _mobs =
+	private static final int[] MOBS =
 	{
 		22768,
 		22769,
@@ -64,7 +64,7 @@ public class Q00423_TakeYourBestShot extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _johnny)
+		if (npc.getNpcId() == JOHNNY)
 		{
 			if (event.equalsIgnoreCase("32744-04.htm"))
 			{
@@ -81,14 +81,14 @@ public class Q00423_TakeYourBestShot extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 		QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _johnny)
+		if (npc.getNpcId() == JOHNNY)
 		{
 			switch (st.getState())
 			{
@@ -96,14 +96,7 @@ public class Q00423_TakeYourBestShot extends Quest
 					QuestState _prev = player.getQuestState(Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName());
 					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
 					{
-						if (st.hasQuestItems(_seer_ugoros_pass))
-						{
-							htmltext = "32744-07.htm";
-						}
-						else
-						{
-							htmltext = "32744-01.htm";
-						}
+						htmltext = (st.hasQuestItems(SEER_UGOROS_PASS)) ? "32744-07.htm" : "32744-01.htm";
 					}
 					else
 					{
@@ -111,38 +104,30 @@ public class Q00423_TakeYourBestShot extends Quest
 					}
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
 						htmltext = "32744-05.htm";
 					}
-					else if (st.getInt("cond") == 2)
+					else if (st.isCond(2))
 					{
 						htmltext = "32744-06.htm";
 					}
 					break;
 			}
 		}
-		else if (npc.getNpcId() == _batracos)
+		else if (npc.getNpcId() == BATRACOS)
 		{
 			if (st.getState() == State.CREATED)
 			{
-				if (st.hasQuestItems(_seer_ugoros_pass))
-				{
-					htmltext = "32740-05.htm";
-				}
-				else
-				{
-					htmltext = "32740-00.htm";
-				}
+				htmltext = (st.hasQuestItems(SEER_UGOROS_PASS)) ? "32740-05.htm" : "32740-00.htm";
 			}
-			else if ((st.getState() == State.STARTED) && (st.getInt("cond") == 1))
+			else if ((st.getState() == State.STARTED) && (st.isCond(1)))
 			{
 				htmltext = "32740-02.htm";
 			}
-			else if ((st.getState() == State.STARTED) && (st.getInt("cond") == 2))
+			else if ((st.getState() == State.STARTED) && (st.isCond(2)))
 			{
-				st.giveItems(_seer_ugoros_pass, 1);
-				st.unset("cond");
+				st.giveItems(SEER_UGOROS_PASS, 1);
 				st.exitQuest(true, true);
 				htmltext = "32740-04.htm";
 			}
@@ -175,12 +160,12 @@ public class Q00423_TakeYourBestShot extends Quest
 			return null;
 		}
 		
-		if (Util.contains(_mobs, npc.getNpcId()) && (getRandom(1000) <= _spawn_chance))
+		if (Util.contains(MOBS, npc.getNpcId()) && (getRandom(1000) <= SPAWN_CHANCE))
 		{
-			L2Npc guard = addSpawn(_tanta_guard, npc, false);
+			L2Npc guard = addSpawn(TANTA_LIZARDMAN_GUARD, npc, false);
 			attackPlayer((L2Attackable) guard, player);
 		}
-		else if ((npc.getNpcId() == _tanta_guard) && (st.getInt("cond") == 1))
+		else if ((npc.getNpcId() == TANTA_LIZARDMAN_GUARD) && (st.isCond(1)))
 		{
 			st.setCond(2, true);
 		}
@@ -197,18 +182,11 @@ public class Q00423_TakeYourBestShot extends Quest
 	public Q00423_TakeYourBestShot(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_johnny);
-		addTalkId(_johnny);
-		addStartNpc(_batracos);
-		addTalkId(_batracos);
-		addFirstTalkId(_batracos);
-		
-		addKillId(_tanta_guard);
-		for (int _mob : _mobs)
-		{
-			addKillId(_mob);
-		}
+		addStartNpc(JOHNNY, BATRACOS);
+		addTalkId(JOHNNY, BATRACOS);
+		addFirstTalkId(BATRACOS);
+		addKillId(TANTA_LIZARDMAN_GUARD);
+		addKillId(MOBS);
 	}
 	
 	public static void main(String[] args)

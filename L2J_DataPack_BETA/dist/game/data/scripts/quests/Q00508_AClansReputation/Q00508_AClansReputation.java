@@ -200,7 +200,6 @@ public class Q00508_AClansReputation extends Quest
 	public Q00508_AClansReputation(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(SIR_ERIC_RODEMAI);
 		addTalkId(SIR_ERIC_RODEMAI);
 		addKillId(RAID_BOSS);

@@ -51,7 +51,6 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 	public Q00194_SevenSignsMammonsContract(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
 		addTalkId(SIR_GUSTAV_ATHEBALDT, COLIN, FROG, TESS, KUTA, CLAUDIA_ATHEBALDT);
 		registerQuestItems(ATHEBALDTS_INTRODUCTION, NATIVES_GLOVE, FROG_KINGS_BEAD, GRANDA_TESS_CANDY_POUCH);

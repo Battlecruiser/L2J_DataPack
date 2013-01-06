@@ -30,10 +30,8 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00510_AClansPrestige extends Quest
 {
-	
 	// NPC
 	private static final int VALDIS = 31331;
-	
 	// Quest Item
 	private static final int TYRANNOSAURUS_CLAW = 8767;
 	
@@ -143,7 +141,6 @@ public class Q00510_AClansPrestige extends Quest
 	public Q00510_AClansPrestige(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(VALDIS);
 		addTalkId(VALDIS);
 		addKillId(MOBS);

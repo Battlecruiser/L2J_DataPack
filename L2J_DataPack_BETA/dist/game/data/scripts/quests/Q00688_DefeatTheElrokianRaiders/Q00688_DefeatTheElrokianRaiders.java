@@ -39,7 +39,6 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	public Q00688_DefeatTheElrokianRaiders(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ELROKI);
@@ -112,7 +111,6 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 				htmltext = event;
 				break;
 			}
-			
 		}
 		return htmltext;
 	}
@@ -149,12 +147,12 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
 		{
-			return null;
+			return super.onKill(npc, player, isPet);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		int chance = (int) ((DROP_RATE * Config.RATE_QUEST_DROP) % 1000);
+		float chance = (DROP_RATE * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(DINOSAUR_FANG_NECKLACE, 1);

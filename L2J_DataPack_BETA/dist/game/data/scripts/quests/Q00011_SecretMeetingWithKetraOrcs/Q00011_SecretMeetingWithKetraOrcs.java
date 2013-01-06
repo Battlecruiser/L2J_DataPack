@@ -27,13 +27,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 {
-	
 	// NPCs
 	private static final int CADMON = 31296;
 	private static final int LEON = 31256;
 	private static final int WAHKAN = 31371;
-	
-	// Items
+	// Item
 	private static final int BOX = 7231;
 	
 	@Override
@@ -61,7 +59,6 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 			case "31371-02.html":
 				if (st.isCond(2) && st.hasQuestItems(BOX))
 				{
-					st.takeItems(BOX, -1);
 					st.addExpAndSp(233125, 18142);
 					st.exitQuest(false, true);
 				}
@@ -125,9 +122,9 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	public Q00011_SecretMeetingWithKetraOrcs(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(CADMON);
 		addTalkId(CADMON, LEON, WAHKAN);
+		registerQuestItems(BOX);
 	}
 	
 	public static void main(String[] args)

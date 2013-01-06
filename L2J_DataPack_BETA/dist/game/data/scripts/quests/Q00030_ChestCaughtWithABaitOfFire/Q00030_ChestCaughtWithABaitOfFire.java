@@ -29,11 +29,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 {
-	
 	// NPCs
 	private static final int LINNAEUS = 31577;
 	private static final int RUKAL = 30629;
-	
 	// Items
 	private static final int RED_TREASURE_BOX = 6511;
 	private static final int RUKAL_MUSICAL = 7628;
@@ -55,7 +53,7 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				st.startQuest();
 				break;
 			case "31577-04a.htm":
-				if ((st.getInt("cond") == 1) && (st.hasQuestItems(RED_TREASURE_BOX)))
+				if (st.isCond(1) && st.hasQuestItems(RED_TREASURE_BOX))
 				{
 					st.giveItems(RUKAL_MUSICAL, 1);
 					st.takeItems(RED_TREASURE_BOX, -1);
@@ -64,10 +62,9 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				}
 				break;
 			case "30629-02.htm":
-				if ((st.getInt("cond") == 2) && (st.hasQuestItems(RUKAL_MUSICAL)))
+				if (st.isCond(2) && st.hasQuestItems(RUKAL_MUSICAL))
 				{
 					st.giveItems(PROTECTION_NECKLACE, 1);
-					st.takeItems(RUKAL_MUSICAL, -1);
 					st.exitQuest(false, true);
 					htmltext = "30629-03.htm";
 				}
@@ -106,11 +103,10 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
 				switch (npcId)
 				{
 					case LINNAEUS:
-						switch (cond)
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "31577-03a.htm";
@@ -125,7 +121,7 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 						}
 						break;
 					case RUKAL:
-						if (cond == 2)
+						if (st.isCond(2))
 						{
 							htmltext = "30629-01.htm";
 						}
@@ -139,9 +135,9 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 	public Q00030_ChestCaughtWithABaitOfFire(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS, RUKAL);
+		registerQuestItems(RUKAL_MUSICAL);
 	}
 	
 	public static void main(String[] args)

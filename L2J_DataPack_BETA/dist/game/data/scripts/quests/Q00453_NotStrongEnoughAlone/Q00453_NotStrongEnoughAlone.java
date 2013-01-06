@@ -33,8 +33,8 @@ import com.l2jserver.util.Rnd;
 public class Q00453_NotStrongEnoughAlone extends Quest
 {
 	// NPC
-	private static final int Klemis = 32734;
-	private static final int[] Monsters1 =
+	private static final int KLEMIS = 32734;
+	private static final int[] MONSTER1 =
 	{
 		22746,
 		22747,
@@ -45,7 +45,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		22752,
 		22753
 	};
-	private static final int[] Monsters2 =
+	private static final int[] MONSTER2 =
 	{
 		22754,
 		22755,
@@ -54,7 +54,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		22758,
 		22759
 	};
-	private static final int[] Monsters3 =
+	private static final int[] MONSTER3 =
 	{
 		22760,
 		22761,
@@ -65,7 +65,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	};
 	
 	// Reward
-	private static final int[][] Reward =
+	private static final int[][] REWARD =
 	{
 		{
 			15815,
@@ -149,7 +149,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				}
 				break;
 			case State.STARTED:
-				switch (st.getInt("cond"))
+				switch (st.getCond())
 				{
 					case 1:
 					{
@@ -173,7 +173,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					}
 					case 5:
 					{
-						st.giveItems(Reward[Rnd.get(Reward.length)][getRandom(Reward[0].length)], 1);
+						st.giveItems(REWARD[Rnd.get(REWARD.length)][getRandom(REWARD[0].length)], 1);
 						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "32734-14.html";
 						break;
@@ -234,23 +234,23 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		{
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
 			
-			if (Util.contains(Monsters1, npcId) && (st.getInt("cond") == 2))
+			if (Util.contains(MONSTER1, npcId) && st.isCond(2))
 			{
-				if (npcId == Monsters1[4])
+				if (npcId == MONSTER1[4])
 				{
-					npcId = Monsters1[0];
+					npcId = MONSTER1[0];
 				}
-				else if (npcId == Monsters1[5])
+				else if (npcId == MONSTER1[5])
 				{
-					npcId = Monsters1[1];
+					npcId = MONSTER1[1];
 				}
-				else if (npcId == Monsters1[6])
+				else if (npcId == MONSTER1[6])
 				{
-					npcId = Monsters1[2];
+					npcId = MONSTER1[2];
 				}
-				else if (npcId == Monsters1[7])
+				else if (npcId == MONSTER1[7])
 				{
-					npcId = Monsters1[3];
+					npcId = MONSTER1[3];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
@@ -260,26 +260,26 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				checkProgress(st, 15, Monsters1[0], Monsters1[1], Monsters1[2], Monsters1[3]);
+				checkProgress(st, 15, MONSTER1[0], MONSTER1[1], MONSTER1[2], MONSTER1[3]);
 				
-				log.addNpc(Monsters1[0], st.getInt(String.valueOf(Monsters1[0])));
-				log.addNpc(Monsters1[1], st.getInt(String.valueOf(Monsters1[1])));
-				log.addNpc(Monsters1[2], st.getInt(String.valueOf(Monsters1[2])));
-				log.addNpc(Monsters1[3], st.getInt(String.valueOf(Monsters1[3])));
+				log.addNpc(MONSTER1[0], st.getInt(String.valueOf(MONSTER1[0])));
+				log.addNpc(MONSTER1[1], st.getInt(String.valueOf(MONSTER1[1])));
+				log.addNpc(MONSTER1[2], st.getInt(String.valueOf(MONSTER1[2])));
+				log.addNpc(MONSTER1[3], st.getInt(String.valueOf(MONSTER1[3])));
 			}
-			else if (Util.contains(Monsters2, npcId) && (st.getInt("cond") == 3))
+			else if (Util.contains(MONSTER2, npcId) && st.isCond(3))
 			{
-				if (npcId == Monsters2[3])
+				if (npcId == MONSTER2[3])
 				{
-					npcId = Monsters2[0];
+					npcId = MONSTER2[0];
 				}
-				else if (npcId == Monsters2[4])
+				else if (npcId == MONSTER2[4])
 				{
-					npcId = Monsters2[1];
+					npcId = MONSTER2[1];
 				}
-				else if (npcId == Monsters2[5])
+				else if (npcId == MONSTER2[5])
 				{
-					npcId = Monsters2[2];
+					npcId = MONSTER2[2];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
@@ -289,25 +289,25 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				checkProgress(st, 20, Monsters2[0], Monsters2[1], Monsters2[2]);
+				checkProgress(st, 20, MONSTER2[0], MONSTER2[1], MONSTER2[2]);
 				
-				log.addNpc(Monsters2[0], st.getInt(String.valueOf(Monsters2[0])));
-				log.addNpc(Monsters2[1], st.getInt(String.valueOf(Monsters2[1])));
-				log.addNpc(Monsters2[2], st.getInt(String.valueOf(Monsters2[2])));
+				log.addNpc(MONSTER2[0], st.getInt(String.valueOf(MONSTER2[0])));
+				log.addNpc(MONSTER2[1], st.getInt(String.valueOf(MONSTER2[1])));
+				log.addNpc(MONSTER2[2], st.getInt(String.valueOf(MONSTER2[2])));
 			}
-			else if (Util.contains(Monsters3, npcId) && (st.getInt("cond") == 4))
+			else if (Util.contains(MONSTER3, npcId) && st.isCond(4))
 			{
-				if (npcId == Monsters3[3])
+				if (npcId == MONSTER3[3])
 				{
-					npcId = Monsters3[0];
+					npcId = MONSTER3[0];
 				}
-				else if (npcId == Monsters3[4])
+				else if (npcId == MONSTER3[4])
 				{
-					npcId = Monsters3[1];
+					npcId = MONSTER3[1];
 				}
-				else if (npcId == Monsters3[5])
+				else if (npcId == MONSTER3[5])
 				{
-					npcId = Monsters3[2];
+					npcId = MONSTER3[2];
 				}
 				
 				int i = st.getInt(String.valueOf(npcId));
@@ -317,11 +317,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				checkProgress(st, 20, Monsters3[0], Monsters3[1], Monsters3[2]);
+				checkProgress(st, 20, MONSTER3[0], MONSTER3[1], MONSTER3[2]);
 				
-				log.addNpc(Monsters3[0], st.getInt(String.valueOf(Monsters3[0])));
-				log.addNpc(Monsters3[1], st.getInt(String.valueOf(Monsters3[1])));
-				log.addNpc(Monsters3[2], st.getInt(String.valueOf(Monsters3[2])));
+				log.addNpc(MONSTER3[0], st.getInt(String.valueOf(MONSTER3[0])));
+				log.addNpc(MONSTER3[1], st.getInt(String.valueOf(MONSTER3[1])));
+				log.addNpc(MONSTER3[2], st.getInt(String.valueOf(MONSTER3[2])));
 			}
 			player.sendPacket(log);
 		}
@@ -342,11 +342,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	public Q00453_NotStrongEnoughAlone(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(Klemis);
-		addTalkId(Klemis);
-		addKillId(Monsters1);
-		addKillId(Monsters2);
-		addKillId(Monsters3);
+		addStartNpc(KLEMIS);
+		addTalkId(KLEMIS);
+		addKillId(MONSTER1);
+		addKillId(MONSTER2);
+		addKillId(MONSTER3);
 	}
 	
 	public static void main(String[] args)

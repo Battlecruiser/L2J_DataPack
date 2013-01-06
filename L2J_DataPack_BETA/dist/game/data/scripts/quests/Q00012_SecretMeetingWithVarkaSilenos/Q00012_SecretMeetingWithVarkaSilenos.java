@@ -27,13 +27,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 {
-	
 	// NPCs
 	private static final int CADMON = 31296;
 	private static final int HELMUT = 31258;
 	private static final int NARAN = 31378;
-	
-	// Items
+	// Item
 	private static final int BOX = 7232;
 	
 	@Override
@@ -61,7 +59,6 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 			case "31378-02.html":
 				if (st.isCond(2) && st.hasQuestItems(BOX))
 				{
-					st.takeItems(BOX, -1);
 					st.addExpAndSp(233125, 18142);
 					st.exitQuest(false, true);
 				}
@@ -125,10 +122,9 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	public Q00012_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(CADMON);
-		
 		addTalkId(CADMON, HELMUT, NARAN);
+		registerQuestItems(BOX);
 	}
 	
 	public static void main(String[] args)

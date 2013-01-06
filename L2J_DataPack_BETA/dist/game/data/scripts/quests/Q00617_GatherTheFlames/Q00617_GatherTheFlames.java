@@ -32,10 +32,8 @@ public class Q00617_GatherTheFlames extends Quest
 	private static final int HILDA = 31271;
 	private static final int VULCAN = 31539;
 	private static final int ROONEY = 32049;
-	
 	// Item
 	private static final int TORCH = 7264;
-	
 	// Reward
 	private static final int[] REWARD =
 	{
@@ -95,7 +93,7 @@ public class Q00617_GatherTheFlames extends Quest
 			case "31539-06.html":
 				break;
 			case "31539-07.html":
-				if (st.getQuestItemsCount(TORCH) < 1000 || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1000) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
@@ -113,7 +111,7 @@ public class Q00617_GatherTheFlames extends Quest
 			case "6895":
 			case "6897":
 			case "6899":
-				if (st.getQuestItemsCount(TORCH) < 1200 || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1200) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
@@ -122,7 +120,7 @@ public class Q00617_GatherTheFlames extends Quest
 				break;
 			case "6887":
 			case "6881":
-				if (st.getQuestItemsCount(TORCH) < 1200 || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1200) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
@@ -213,7 +211,6 @@ public class Q00617_GatherTheFlames extends Quest
 		addStartNpc(HILDA, VULCAN);
 		addTalkId(ROONEY, HILDA, VULCAN);
 		addKillId(MOBS.keySet());
-		
 		registerQuestItems(TORCH);
 	}
 	

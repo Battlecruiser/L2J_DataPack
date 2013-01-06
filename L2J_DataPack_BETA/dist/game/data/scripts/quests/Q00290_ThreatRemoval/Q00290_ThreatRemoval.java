@@ -61,7 +61,6 @@ public class Q00290_ThreatRemoval extends Quest
 	public Q00290_ThreatRemoval(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS_TAG.keySet());
@@ -167,7 +166,6 @@ public class Q00290_ThreatRemoval extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -198,7 +196,6 @@ public class Q00290_ThreatRemoval extends Quest
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	
@@ -208,18 +205,17 @@ public class Q00290_ThreatRemoval extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
 		{
-			return null;
+			return super.onKill(npc, player, isPet);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		int npcId = npc.getNpcId();
-		int chance = (int) ((MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP) % 1000);
+		float chance = (MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(SEL_MAHUM_ID_TAG, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	

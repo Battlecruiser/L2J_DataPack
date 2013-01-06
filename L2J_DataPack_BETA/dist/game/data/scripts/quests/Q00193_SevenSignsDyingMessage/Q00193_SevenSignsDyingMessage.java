@@ -54,7 +54,6 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	public Q00193_SevenSignsDyingMessage(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT, CAIN, ERIC, SIR_GUSTAV_ATHEBALDT);
 		addKillId(SHILENS_EVIL_THOUGHTS);

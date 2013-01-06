@@ -30,13 +30,10 @@ public class Q00432_BirthdayPartySong extends Quest
 {
 	// NPC
 	private static final int OCTAVIA = 31043;
-	
 	// Monster
 	private static final int GOLEM = 21103;
-	
 	// Item
 	private static final int RED_CRYSTAL = 7541;
-	
 	// Reward
 	private static final int ECHO_CRYSTAL = 7061;
 	
@@ -121,7 +118,6 @@ public class Q00432_BirthdayPartySong extends Quest
 		addStartNpc(OCTAVIA);
 		addTalkId(OCTAVIA);
 		addKillId(GOLEM);
-		
 		registerQuestItems(RED_CRYSTAL);
 	}
 	

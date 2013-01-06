@@ -48,7 +48,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	public Q00197_SevenSignsTheSacredBookOfSeal(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(WOOD);
 		addTalkId(WOOD, ORVEN, LEOPARD, LAWRENCE, SOPHIA);
 		addKillId(SHILENS_EVIL_THOUGHTS);
@@ -364,7 +363,6 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 		ns.addStringParameter(player.getName());
 		npc.broadcastPacket(ns);
-		
 		return super.onKill(npc, player, isPet);
 	}
 	

@@ -304,7 +304,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
 		if (partyMember == null)
 		{
-			return null;
+			return super.onKill(npc, player, isPet);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());

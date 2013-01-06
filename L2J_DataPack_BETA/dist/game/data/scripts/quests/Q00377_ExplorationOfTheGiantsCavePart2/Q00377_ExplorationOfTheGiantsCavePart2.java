@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 {
-	// NPC's
+	// NPC
 	private static final int SOBLING = 31147;
 	// Items
 	private static final int TITAN_ANCIENT_BOOK = 14847;
@@ -140,7 +140,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			return null;
 		}
 		
-		if ((st.getInt("cond") == 1) && (getRandom(100) < DROP_CHANCE))
+		if ((st.isCond(1)) && (getRandom(100) < DROP_CHANCE))
 		{
 			st.giveItems(TITAN_ANCIENT_BOOK, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -167,7 +167,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	public Q00377_ExplorationOfTheGiantsCavePart2(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(MOBS);

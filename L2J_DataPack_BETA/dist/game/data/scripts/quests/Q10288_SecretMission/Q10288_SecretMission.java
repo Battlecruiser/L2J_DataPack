@@ -30,7 +30,7 @@ public class Q10288_SecretMission extends Quest
 	private static final int DOMINIC = 31350;
 	private static final int AQUILANI = 32780;
 	private static final int GREYMORE = 32757;
-	// Items
+	// Item
 	private static final int LETTER = 15529;
 	
 	@Override
@@ -90,7 +90,6 @@ public class Q10288_SecretMission extends Quest
 			return htmltext;
 		}
 		
-		final int cond = st.getCond();
 		switch (npc.getNpcId())
 		{
 			case DOMINIC:
@@ -113,11 +112,11 @@ public class Q10288_SecretMission extends Quest
 			case AQUILANI:
 				if (st.isStarted())
 				{
-					if ((cond == 1) && st.hasQuestItems(LETTER))
+					if (st.isCond(1) && st.hasQuestItems(LETTER))
 					{
 						htmltext = "32780-01.html";
 					}
-					else if (cond == 2)
+					else if (st.isCond(2))
 					{
 						htmltext = "32780-04.html";
 					}
@@ -142,7 +141,6 @@ public class Q10288_SecretMission extends Quest
 		{
 			return "32780-05.html";
 		}
-		
 		return "data/html/default/32780.htm";
 	}
 	

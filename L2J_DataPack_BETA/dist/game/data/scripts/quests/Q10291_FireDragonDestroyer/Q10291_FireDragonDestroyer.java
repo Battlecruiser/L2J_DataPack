@@ -83,8 +83,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 			}
 			case State.STARTED:
 			{
-				final int cond = st.getCond();
-				if (cond == 1)
+				if (st.isCond(1))
 				{
 					if (st.hasQuestItems(POOR_NECKLACE))
 					{
@@ -96,7 +95,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 						htmltext = "31540-07.html";
 					}
 				}
-				else if ((cond == 2) && st.hasQuestItems(VALOR_NECKLACE))
+				else if (st.isCond(2) && st.hasQuestItems(VALOR_NECKLACE))
 				{
 					htmltext = "31540-08.html";
 					st.giveAdena(126549, true);
@@ -133,7 +132,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 		{
 			player.getParty().forEachMember(new RewardCheck(npc));
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	

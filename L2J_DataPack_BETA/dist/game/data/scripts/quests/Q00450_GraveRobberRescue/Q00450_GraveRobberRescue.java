@@ -39,7 +39,7 @@ public class Q00450_GraveRobberRescue extends Quest
 	private static final int WARRIOR = 32651;
 	// Monster
 	private static final int WARRIOR_MON = 22741;
-	// Items
+	// Item
 	private static final int EVIDENCE_OF_MIGRATION = 14876;
 	// Misc
 	private static final int MIN_LEVEL = 80;
@@ -104,14 +104,7 @@ public class Q00450_GraveRobberRescue extends Quest
 				case State.STARTED:
 					if (st.isCond(1))
 					{
-						if (!st.hasQuestItems(EVIDENCE_OF_MIGRATION))
-						{
-							htmltext = "32650-08.html";
-						}
-						else
-						{
-							htmltext = "32650-09.html";
-						}
+						htmltext = (!st.hasQuestItems(EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
 					}
 					else
 					{
@@ -173,7 +166,6 @@ public class Q00450_GraveRobberRescue extends Quest
 		super(questId, name, descr);
 		addStartNpc(KANEMIKA);
 		addTalkId(KANEMIKA, WARRIOR);
-		
 		registerQuestItems(EVIDENCE_OF_MIGRATION);
 	}
 	

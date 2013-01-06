@@ -21,6 +21,7 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -48,7 +49,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	private static final int STARSTONE2 = 8289;
 	private static final int DETCTOR = 8090;
 	private static final int DETCTOR2 = 8091;
-	private static final int ADENA = 57;
 	// Monster
 	private static final int GUARDIAN = 27318;
 	// Zones
@@ -224,10 +224,10 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.setCond(15, true);
 				break;
 			case "32047-29c.html":
-				if (st.getQuestItemsCount(ADENA) >= 3000)
+				if (player.getAdena() >= 3000)
 				{
 					st.giveItems(STARSTONE2, 1);
-					st.takeItems(ADENA, 3000);
+					st.takeItems(PcInventory.ADENA_ID, 3000);
 					st.unset("talk");
 					st.setCond(26, true);
 				}
@@ -575,7 +575,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	{
 		if (character.isPlayer())
 		{
-			final QuestState st = ((L2PcInstance) character).getQuestState(getName());
+			final QuestState st = character.getActingPlayer().getQuestState(getName());
 			if ((st != null) && st.isCond(17))
 			{
 				st.takeItems(DETCTOR, 1);
@@ -594,7 +594,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
 		addEnterZoneId(ZONES);
-		
 		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
 	}
 	

@@ -298,13 +298,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	public Q00350_EnhanceYourWeapon(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		for (int npcId : STARTING_NPCS)
-		{
-			addStartNpc(npcId);
-			addTalkId(npcId);
-		}
-		
+		addStartNpc(STARTING_NPCS);
+		addTalkId(STARTING_NPCS);
 		load();
 		for (int npcId : _npcLevelingInfos.keySet())
 		{
@@ -326,7 +321,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		{
 			return null;
 		}
-		if (!(npc instanceof L2Attackable) || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getNpcId()))
+		if (!npc.isL2Attackable() || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getNpcId()))
 		{
 			return null;
 		}
@@ -345,7 +340,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if ((npc instanceof L2Attackable) && _npcLevelingInfos.containsKey(npc.getNpcId()))
+		if (npc.isL2Attackable() && _npcLevelingInfos.containsKey(npc.getNpcId()))
 		{
 			levelSoulCrystals((L2Attackable) npc, killer);
 		}

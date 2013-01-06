@@ -30,7 +30,7 @@ public class Q00013_ParcelDelivery extends Quest
 	// NPCs
 	private static final int FUNDIN = 31274;
 	private static final int VULCAN = 31539;
-	// Items
+	// Item
 	private static final int PACKAGE = 7263;
 	
 	@Override
@@ -52,8 +52,7 @@ public class Q00013_ParcelDelivery extends Quest
 			case "31539-01.html":
 				if (st.isCond(1) && st.hasQuestItems(PACKAGE))
 				{
-					st.takeItems(PACKAGE, -1);
-					st.giveItems(57, 157834);
+					st.giveAdena(157834, true);
 					st.addExpAndSp(589092, 58794);
 					st.exitQuest(false, true);
 				}
@@ -109,7 +108,6 @@ public class Q00013_ParcelDelivery extends Quest
 	public Q00013_ParcelDelivery(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(FUNDIN);
 		addTalkId(FUNDIN, VULCAN);
 		registerQuestItems(PACKAGE);

@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.network.NpcStringId;
  */
 public class Q00001_LettersOfLove extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int DARIN = 30048;
 	private static final int ROXXY = 30006;
 	private static final int BAULRO = 30033;

@@ -29,11 +29,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 {
-	
 	// NPCs
 	private static final int LANOSCO = 31570;
 	private static final int SHALING = 31434;
-	
 	// Items
 	private static final int BLUE_TREASURE_BOX = 6500;
 	private static final int STRANGE_BLUESPRINT = 7625;
@@ -55,7 +53,7 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				st.startQuest();
 				break;
 			case "31570-05.htm":
-				if ((st.getInt("cond") == 1) && (st.hasQuestItems(BLUE_TREASURE_BOX)))
+				if (st.isCond(1) && st.hasQuestItems(BLUE_TREASURE_BOX))
 				{
 					htmltext = "31570-06.htm";
 					st.setCond(2, true);
@@ -64,10 +62,9 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				}
 				break;
 			case "31434-02.htm":
-				if ((st.getInt("cond") == 2) && (st.hasQuestItems(STRANGE_BLUESPRINT)))
+				if (st.isCond(2) && st.hasQuestItems(STRANGE_BLUESPRINT))
 				{
 					st.giveItems(BLACK_PEARL_RING, 1);
-					st.takeItems(STRANGE_BLUESPRINT, -1);
 					st.exitQuest(false, true);
 					htmltext = "31434-01.htm";
 				}
@@ -87,7 +84,6 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:
@@ -95,7 +91,7 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				break;
 			case State.CREATED:
 				final QuestState qs = player.getQuestState(Q00050_LanoscosSpecialBait.class.getSimpleName());
-				if (npcId == LANOSCO)
+				if (npc.getNpcId() == LANOSCO)
 				{
 					htmltext = "31570-02.htm";
 					if (qs != null)
@@ -105,11 +101,10 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
-				switch (npcId)
+				switch (npc.getNpcId())
 				{
 					case LANOSCO:
-						if (cond == 1)
+						if (st.isCond(1))
 						{
 							if (st.hasQuestItems(BLUE_TREASURE_BOX))
 							{
@@ -126,7 +121,7 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 						}
 						break;
 					case SHALING:
-						if (cond == 2)
+						if (st.isCond(2))
 						{
 							htmltext = "31434-00.htm";
 						}
@@ -139,9 +134,9 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 	public Q00027_ChestCaughtWithABaitOfWind(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(LANOSCO);
 		addTalkId(LANOSCO, SHALING);
+		registerQuestItems(STRANGE_BLUESPRINT);
 	}
 	
 	public static void main(String[] args)

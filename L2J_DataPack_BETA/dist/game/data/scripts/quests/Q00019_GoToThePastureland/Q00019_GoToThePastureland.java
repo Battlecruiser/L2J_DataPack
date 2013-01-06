@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00019_GoToThePastureland extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int VLADIMIR = 31302;
 	private static final int TUNATUN = 31537;
 	// Items
@@ -54,7 +54,6 @@ public class Q00019_GoToThePastureland extends Quest
 		{
 			if (st.hasQuestItems(YOUNG_WILD_BEAST_MEAT))
 			{
-				st.takeItems(YOUNG_WILD_BEAST_MEAT, -1);
 				st.giveAdena(50000, true);
 				st.addExpAndSp(136766, 12688);
 				st.exitQuest(false, true);
@@ -62,7 +61,6 @@ public class Q00019_GoToThePastureland extends Quest
 			}
 			else if (st.hasQuestItems(VEAL))
 			{
-				st.takeItems(VEAL, -1);
 				st.giveAdena(147200, true);
 				st.addExpAndSp(385040, 75250);
 				st.exitQuest(false, true);
@@ -108,7 +106,7 @@ public class Q00019_GoToThePastureland extends Quest
 					break;
 			}
 		}
-		else if ((npc.getNpcId() == TUNATUN) && (st.getInt("cond") == 1))
+		else if ((npc.getNpcId() == TUNATUN) && (st.isCond(1)))
 		{
 			htmltext = "31537-01.html";
 		}
@@ -118,7 +116,6 @@ public class Q00019_GoToThePastureland extends Quest
 	public Q00019_GoToThePastureland(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, TUNATUN);
 		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);

@@ -34,11 +34,9 @@ public class Q00461_RumbleInTheBase extends Quest
 {
 	// NPC
 	private static final int STAN = 30200;
-	
-	// Item
+	// Items
 	private static final int SHINY_SALMON = 15503;
 	private static final int SHOES_STRING_OF_SEL_MAHUM = 16382;
-	
 	// Mobs
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	
@@ -168,7 +166,6 @@ public class Q00461_RumbleInTheBase extends Quest
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MONSTERS.keySet());
-		
 		registerQuestItems(SHINY_SALMON, SHOES_STRING_OF_SEL_MAHUM);
 	}
 	

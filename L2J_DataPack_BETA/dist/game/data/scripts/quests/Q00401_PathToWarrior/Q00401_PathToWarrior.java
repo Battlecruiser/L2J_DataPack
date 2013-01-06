@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.SocialAction;
  */
 public class Q00401_PathToWarrior extends Quest
 {
-	// Item
+	// Items
 	private static final int AURONSLETTER = 1138;
 	private static final int WARRIORGUILDMARK = 1139;
 	private static final int RUSTEDBRONZESWORD1 = 1140;
@@ -38,7 +38,7 @@ public class Q00401_PathToWarrior extends Quest
 	private static final int SIMPLONSLETTER = 1143;
 	private static final int POISONSPIDERLEG = 1144;
 	private static final int MEDALLIONOFWARRIOR = 1145;
-	// Npc
+	// NPCs
 	private static final int AURON = 30010;
 	private static final int SIMPLON = 30253;
 	private static final int[] MONSTERS =
@@ -260,7 +260,7 @@ public class Q00401_PathToWarrior extends Quest
 			}
 			case 5:
 			{
-				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getNpcId() == MONSTERS[1]) || (npc.getNpcId() == MONSTERS[3]))
+				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getNpcId() == MONSTERS[1])) || (npc.getNpcId() == MONSTERS[3]))
 				{
 					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
 					{
@@ -282,10 +282,8 @@ public class Q00401_PathToWarrior extends Quest
 	public Q00401_PathToWarrior(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(AURON);
-		addTalkId(AURON);
-		addTalkId(SIMPLON);
+		addTalkId(AURON, SIMPLON);
 		addKillId(MONSTERS);
 		registerQuestItems(AURONSLETTER, WARRIORGUILDMARK, RUSTEDBRONZESWORD1, RUSTEDBRONZESWORD2, RUSTEDBRONZESWORD3, SIMPLONSLETTER, POISONSPIDERLEG);
 	}

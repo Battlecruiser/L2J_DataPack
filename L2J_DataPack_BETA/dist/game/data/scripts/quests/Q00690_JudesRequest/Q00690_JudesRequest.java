@@ -27,11 +27,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00690_JudesRequest extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int JUDE = 32356;
 	private static final int LESSER_EVIL = 22398;
 	private static final int GREATER_EVIL = 22399;
-	
 	// Items
 	private static final int EVIL_WEAPON = 10327;
 	private static final int[][] REWARDS =
@@ -188,11 +187,9 @@ public class Q00690_JudesRequest extends Quest
 	public Q00690_JudesRequest(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
-		addKillId(LESSER_EVIL);
-		addKillId(GREATER_EVIL);
+		addKillId(LESSER_EVIL, GREATER_EVIL);
 	}
 	
 	public static void main(String[] args)

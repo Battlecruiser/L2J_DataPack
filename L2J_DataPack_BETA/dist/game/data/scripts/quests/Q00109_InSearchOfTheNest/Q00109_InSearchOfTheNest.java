@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00109_InSearchOfTheNest extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int PIERCE = 31553;
 	private static final int SCOUTS_CORPSE = 32015;
 	private static final int KAHMAN = 31554;
@@ -127,7 +127,6 @@ public class Q00109_InSearchOfTheNest extends Quest
 	public Q00109_InSearchOfTheNest(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
 		registerQuestItems(SCOUTS_NOTE);

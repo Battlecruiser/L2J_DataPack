@@ -36,7 +36,8 @@ public class Q10290_LandDragonConqueror extends Quest
 		29019, // Old
 		29066, // Weak
 		29067, // Normal
-		29068 //Strong
+		29068
+	// Strong
 	};
 	
 	// Items
@@ -90,8 +91,7 @@ public class Q10290_LandDragonConqueror extends Quest
 			}
 			case State.STARTED:
 			{
-				final int cond = st.getCond();
-				if (cond == 1)
+				if (st.isCond(1))
 				{
 					if (st.hasQuestItems(SHABBY_NECKLACE))
 					{
@@ -103,7 +103,7 @@ public class Q10290_LandDragonConqueror extends Quest
 						htmltext = "30755-07.html";
 					}
 				}
-				else if ((cond == 2) && st.hasQuestItems(MIRACLE_NECKLACE))
+				else if ((st.isCond(2)) && st.hasQuestItems(MIRACLE_NECKLACE))
 				{
 					htmltext = "30755-08.html";
 					st.giveAdena(131236, true);

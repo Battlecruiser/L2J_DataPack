@@ -32,7 +32,7 @@ public class Q00153_DeliverGoods extends Quest
 	private static final int SILVIA_ID = 30003;
 	private static final int ARNOLD_ID = 30041;
 	private static final int RANT_ID = 30054;
-	// ITEMs
+	// Items
 	private static final int DELIVERY_LIST_ID = 1012;
 	private static final int HEAVY_WOOD_BOX_ID = 1013;
 	private static final int CLOTH_BUNDLE_ID = 1014;
@@ -40,8 +40,7 @@ public class Q00153_DeliverGoods extends Quest
 	private static final int JACKSONS_RECEIPT_ID = 1016;
 	private static final int SILVIAS_RECEIPT_ID = 1017;
 	private static final int RANTS_RECEIPT_ID = 1018;
-	
-	// REWARDs
+	// Rewards
 	private static final int SOULSHOT_NO_GRADE_ID = 1835; // You get 3 Soulshots no grade.
 	private static final int RING_OF_KNOWLEDGE_ID = 875;
 	private static final int XP_REWARD_AMOUNT = 600;
@@ -49,7 +48,6 @@ public class Q00153_DeliverGoods extends Quest
 	public Q00153_DeliverGoods(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(ARNOLD_ID, JACKSON_ID, SILVIA_ID, ARNOLD_ID, RANT_ID);
 		registerQuestItems(DELIVERY_LIST_ID, HEAVY_WOOD_BOX_ID, CLOTH_BUNDLE_ID, CLAY_POT_ID, JACKSONS_RECEIPT_ID, SILVIAS_RECEIPT_ID, RANTS_RECEIPT_ID);
 	}

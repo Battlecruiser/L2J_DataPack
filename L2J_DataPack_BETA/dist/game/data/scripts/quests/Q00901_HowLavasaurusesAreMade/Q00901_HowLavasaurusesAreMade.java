@@ -29,19 +29,16 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 {
 	// NPC
 	private static final int ROONEY = 32049;
-	
 	// Monsters
 	private static final int LAVASAURUS_NEWBORN = 18799;
 	private static final int LAVASAURUS_FLEDGIING = 18800;
 	private static final int LAVASAURUS_ADULT = 18801;
 	private static final int LAVASAURUS_ELDERLY = 18802;
-	
 	// Items
 	private static final int FRAGMENT_STONE = 21909;
 	private static final int FRAGMENT_HEAD = 21910;
 	private static final int FRAGMENT_BODY = 21911;
 	private static final int FRAGMENT_HORN = 21912;
-	
 	// Rewards
 	private static final int TOTEM_OF_BODY = 21899;
 	private static final int TOTEM_OF_SPIRIT = 21900;
@@ -54,7 +51,6 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		addStartNpc(ROONEY);
 		addTalkId(ROONEY);
 		addKillId(LAVASAURUS_NEWBORN, LAVASAURUS_FLEDGIING, LAVASAURUS_ADULT, LAVASAURUS_ELDERLY);
-		
 		registerQuestItems(FRAGMENT_STONE, FRAGMENT_HORN, FRAGMENT_HEAD, FRAGMENT_BODY);
 	}
 	

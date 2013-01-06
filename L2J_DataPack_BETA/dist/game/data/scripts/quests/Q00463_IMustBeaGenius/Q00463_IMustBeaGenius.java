@@ -36,11 +36,9 @@ public class Q00463_IMustBeaGenius extends Quest
 {
 	// NPC
 	private static final int GUTENHAGEN = 32069;
-	
 	// Items
 	private static final int CORPSE_LOG = 15510;
 	private static final int COLLECTION = 15511;
-	
 	// Mobs
 	private static final Map<Integer, DropInfo> MOBS = new HashMap<>();
 	
@@ -220,7 +218,6 @@ public class Q00463_IMustBeaGenius extends Quest
 		addStartNpc(GUTENHAGEN);
 		addTalkId(GUTENHAGEN);
 		addKillId(MOBS.keySet());
-		
 		registerQuestItems(COLLECTION, CORPSE_LOG);
 	}
 	

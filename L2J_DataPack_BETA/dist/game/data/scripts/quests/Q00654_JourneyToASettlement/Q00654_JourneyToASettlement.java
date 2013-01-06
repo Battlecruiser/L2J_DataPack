@@ -51,7 +51,6 @@ public class Q00654_JourneyToASettlement extends Quest
 	public Q00654_JourneyToASettlement(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT);
 		addKillId(MOBS_SKIN.keySet());

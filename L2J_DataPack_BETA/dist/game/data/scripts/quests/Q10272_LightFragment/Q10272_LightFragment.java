@@ -50,7 +50,8 @@ public class Q10272_LightFragment extends Quest
 		22550, // Savage Warrior
 		22551, // Priest of Darkness
 		22552, // Mutation Drake
-		22596 // White Dragon Leader
+		22596
+	// White Dragon Leader
 	};
 	private static final int FRAGMENT_POWDER = 13853;
 	private static final int LIGHT_FRAGMENT_POWDER = 13854;
@@ -66,8 +67,6 @@ public class Q10272_LightFragment extends Quest
 		{
 			return htmltext;
 		}
-		
-		final int cond = st.getInt("cond");
 		
 		switch (npc.getNpcId())
 		{
@@ -103,7 +102,7 @@ public class Q10272_LightFragment extends Quest
 				}
 				else
 				{
-					switch (cond)
+					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "32559-01.html";
@@ -154,7 +153,7 @@ public class Q10272_LightFragment extends Quest
 			}
 			case GINBY:
 			{
-				switch (cond)
+				switch (st.getCond())
 				{
 					case 1:
 					case 2:
@@ -177,7 +176,7 @@ public class Q10272_LightFragment extends Quest
 			}
 			case LELRIKIA:
 			{
-				switch (cond)
+				switch (st.getCond())
 				{
 					case 3:
 						htmltext = "32567-01.html";
@@ -190,7 +189,7 @@ public class Q10272_LightFragment extends Quest
 			}
 			case LEKON:
 			{
-				switch (cond)
+				switch (st.getCond())
 				{
 					case 7:
 						if (st.getInt("wait") == 1)

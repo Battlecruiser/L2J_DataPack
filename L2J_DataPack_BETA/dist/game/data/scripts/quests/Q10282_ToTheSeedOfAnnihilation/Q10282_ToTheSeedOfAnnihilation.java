@@ -27,12 +27,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10282_ToTheSeedOfAnnihilation extends Quest
 {
-	
 	// NPCs
 	private static final int KBALDIR = 32733;
 	private static final int KLEMIS = 32734;
-	
-	// Items
+	// Item
 	private static final int SOA_ORDERS = 15512;
 	
 	@Override
@@ -62,7 +60,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					if (npcId == KBALDIR)
 					{
@@ -96,7 +94,6 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				break;
 			case "32734-02.htm":
 				st.addExpAndSp(1148480, 99110);
-				st.takeItems(SOA_ORDERS, -1);
 				st.exitQuest(false);
 				break;
 		}
@@ -106,9 +103,9 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(KBALDIR);
 		addTalkId(KBALDIR, KLEMIS);
+		registerQuestItems(SOA_ORDERS);
 	}
 	
 	public static void main(String[] args)

@@ -14,10 +14,10 @@
  */
 package quests.Q00247_PossessorOfAPreciousSoul4;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -38,6 +38,8 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 	private static final int NOBLESS_TIARA = 7694;
 	// Location
 	private static final Location CARADINE_LOC = new Location(143209, 43968, -3038);
+	// Skill
+	private static SkillHolder MIMIRS_ELIXIR = new SkillHolder(4339, 1);
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -72,7 +74,7 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 					st.addExpAndSp(93836, 0);
 					st.giveItems(NOBLESS_TIARA, 1);
 					npc.setTarget(player);
-					npc.doCast(SkillTable.getInstance().getInfo(4339, 1));
+					npc.doCast(MIMIRS_ELIXIR.getSkill());
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
 					st.exitQuest(false, true);
 				}

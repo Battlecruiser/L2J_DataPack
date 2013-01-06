@@ -30,26 +30,20 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00552_OlympiadVeteran extends Quest
 {
+	// NPC
 	private static final int MANAGER = 31688;
-	
-	private static final int Team_Event_Certificate = 17241;
-	private static final int Class_Free_Battle_Certificate = 17242;
-	private static final int Class_Battle_Certificate = 17243;
-	
+	// Items
+	private static final int TEAM_EVENT_CERTIFICATE = 17241;
+	private static final int CLASS_FREE_BATTLE_CERTIFICATE = 17242;
+	private static final int CLASS_BATTLE_CERTIFICATE = 17243;
 	private static final int OLY_CHEST = 17169;
 	
 	public Q00552_OlympiadVeteran(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
-		questItemIds = new int[]
-		{
-			Team_Event_Certificate,
-			Class_Free_Battle_Certificate,
-			Class_Battle_Certificate
-		};
+		registerQuestItems(TEAM_EVENT_CERTIFICATE, CLASS_FREE_BATTLE_CERTIFICATE, CLASS_BATTLE_CERTIFICATE);
 		setOlympiadUse(true);
 	}
 	
@@ -69,7 +63,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
-			final long count = st.getQuestItemsCount(Team_Event_Certificate) + st.getQuestItemsCount(Class_Free_Battle_Certificate) + st.getQuestItemsCount(Class_Battle_Certificate);
+			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
 			
 			if (count > 0)
 			{
@@ -119,7 +113,7 @@ public class Q00552_OlympiadVeteran extends Quest
 		}
 		else if (st.isStarted())
 		{
-			final long count = st.getQuestItemsCount(Team_Event_Certificate) + st.getQuestItemsCount(Class_Free_Battle_Certificate) + st.getQuestItemsCount(Class_Battle_Certificate);
+			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
 			
 			if (count == 3)
 			{
@@ -150,9 +144,9 @@ public class Q00552_OlympiadVeteran extends Quest
 					{
 						matches = st.getInt("classed") + 1;
 						st.set("classed", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(Class_Battle_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(CLASS_BATTLE_CERTIFICATE))
 						{
-							st.giveItems(Class_Battle_Certificate, 1);
+							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -160,9 +154,9 @@ public class Q00552_OlympiadVeteran extends Quest
 					{
 						matches = st.getInt("nonclassed") + 1;
 						st.set("nonclassed", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(Class_Free_Battle_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(CLASS_FREE_BATTLE_CERTIFICATE))
 						{
-							st.giveItems(Class_Free_Battle_Certificate, 1);
+							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -170,9 +164,9 @@ public class Q00552_OlympiadVeteran extends Quest
 					{
 						matches = st.getInt("teams") + 1;
 						st.set("teams", String.valueOf(matches));
-						if ((matches == 5) && !st.hasQuestItems(Team_Event_Certificate))
+						if ((matches == 5) && !st.hasQuestItems(TEAM_EVENT_CERTIFICATE))
 						{
-							st.giveItems(Team_Event_Certificate, 1);
+							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -198,7 +192,7 @@ public class Q00552_OlympiadVeteran extends Quest
 						st.set("classed", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(Class_Battle_Certificate, 1);
+							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -208,7 +202,7 @@ public class Q00552_OlympiadVeteran extends Quest
 						st.set("nonclassed", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(Class_Free_Battle_Certificate, 1);
+							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
 						}
 						break;
 					}
@@ -218,7 +212,7 @@ public class Q00552_OlympiadVeteran extends Quest
 						st.set("teams", String.valueOf(matches));
 						if (matches == 5)
 						{
-							st.giveItems(Team_Event_Certificate, 1);
+							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
 						}
 						break;
 					}

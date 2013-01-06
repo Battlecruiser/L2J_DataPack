@@ -27,13 +27,12 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00020_BringUpWithLove extends Quest
 {
-	
-	// Npc
-	private static final int _tunatun = 31537;
-	// Item
-	private static final int _beast_whip = 15473;
-	private static final int _crystal = 9553;
-	private static final int _jewel = 7185;
+	// NPC
+	private static final int TUNATUN = 31537;
+	// Items
+	private static final int BEAST_WHIP = 15473;
+	private static final int CRYSTAL = 9553;
+	private static final int JEWEL = 7185;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -46,7 +45,7 @@ public class Q00020_BringUpWithLove extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _tunatun)
+		if (npc.getNpcId() == TUNATUN)
 		{
 			if (event.equalsIgnoreCase("31537-12.htm"))
 			{
@@ -54,16 +53,16 @@ public class Q00020_BringUpWithLove extends Quest
 			}
 			else if (event.equalsIgnoreCase("31537-03.htm"))
 			{
-				if (st.hasQuestItems(_beast_whip))
+				if (st.hasQuestItems(BEAST_WHIP))
 				{
 					return "31537-03a.htm";
 				}
-				st.giveItems(_beast_whip, 1);
+				st.giveItems(BEAST_WHIP, 1);
 			}
 			else if (event.equalsIgnoreCase("31537-15.htm"))
 			{
-				st.takeItems(_jewel, -1);
-				st.giveItems(_crystal, 1);
+				st.takeItems(JEWEL, -1);
+				st.giveItems(CRYSTAL, 1);
 				st.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("31537-21.html"))
@@ -72,11 +71,11 @@ public class Q00020_BringUpWithLove extends Quest
 				{
 					return "31537-23.html";
 				}
-				if (st.hasQuestItems(_beast_whip))
+				if (st.hasQuestItems(BEAST_WHIP))
 				{
 					return "31537-22.html";
 				}
-				st.giveItems(_beast_whip, 1);
+				st.giveItems(BEAST_WHIP, 1);
 			}
 		}
 		return htmltext;
@@ -92,7 +91,7 @@ public class Q00020_BringUpWithLove extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _tunatun)
+		if (npc.getNpcId() == TUNATUN)
 		{
 			switch (st.getState())
 			{
@@ -107,11 +106,11 @@ public class Q00020_BringUpWithLove extends Quest
 					}
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
 						htmltext = "31537-13.htm";
 					}
-					else if (st.getInt("cond") == 2)
+					else if (st.isCond(2))
 					{
 						htmltext = "31537-14.htm";
 					}
@@ -135,10 +134,9 @@ public class Q00020_BringUpWithLove extends Quest
 	public Q00020_BringUpWithLove(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_tunatun);
-		addTalkId(_tunatun);
-		addFirstTalkId(_tunatun);
+		addStartNpc(TUNATUN);
+		addTalkId(TUNATUN);
+		addFirstTalkId(TUNATUN);
 	}
 	
 	public static void main(String[] args)

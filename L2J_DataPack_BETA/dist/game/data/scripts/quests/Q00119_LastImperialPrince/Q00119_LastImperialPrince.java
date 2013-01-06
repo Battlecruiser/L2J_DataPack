@@ -37,7 +37,6 @@ public class Q00119_LastImperialPrince extends Quest
 	public Q00119_LastImperialPrince(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT, DEVORIN);
 	}

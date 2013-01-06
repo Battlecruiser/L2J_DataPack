@@ -91,7 +91,6 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 	public Q00643_RiseAndFallOfTheElrokiTribe(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(SINGSING);
 		addTalkId(SINGSING, KARAKAWEI);
 		addKillId(MOBS1);

@@ -30,19 +30,18 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00553_OlympiadUndefeated extends Quest
 {
+	// NPC
 	private static final int MANAGER = 31688;
-	
+	// Items
 	private static final int WIN_CONF_2 = 17244;
 	private static final int WIN_CONF_5 = 17245;
 	private static final int WIN_CONF_10 = 17246;
-	
 	private static final int OLY_CHEST = 17169;
 	private static final int MEDAL_OF_GLORY = 21874;
 	
 	public Q00553_OlympiadUndefeated(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(WIN_CONF_2, WIN_CONF_5, WIN_CONF_10);
@@ -120,7 +119,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 		else
 		{
 			final long count = st.getQuestItemsCount(WIN_CONF_2) + st.getQuestItemsCount(WIN_CONF_5) + st.getQuestItemsCount(WIN_CONF_10);
-			if ((count == 3) && (st.getInt("cond") == 2))
+			if ((count == 3) && st.isCond(2))
 			{
 				st.giveItems(OLY_CHEST, 4);
 				st.giveItems(MEDAL_OF_GLORY, 5);
@@ -141,7 +140,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 		if (winner != null)
 		{
 			final QuestState st = winner.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
+			if ((st != null) && st.isStarted() && (st.isCond(1)))
 			{
 				final int matches = st.getInt("undefeatable") + 1;
 				st.set("undefeatable", String.valueOf(matches));
@@ -163,7 +162,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 						if (!st.hasQuestItems(WIN_CONF_10))
 						{
 							st.giveItems(WIN_CONF_10, 1);
-							st.set("cond", "2");
+							st.setCond(2);
 						}
 						break;
 				}
@@ -177,7 +176,7 @@ public class Q00553_OlympiadUndefeated extends Quest
 		if (loser != null)
 		{
 			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.getInt("cond") == 1))
+			if ((st != null) && st.isStarted() && (st.isCond(1)))
 			{
 				st.unset("undefeatable");
 				st.takeItems(WIN_CONF_2, -1);

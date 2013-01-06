@@ -42,7 +42,6 @@ public class Q00451_LuciensAltar extends Quest
 	// Items
 	private static final int REPLENISHED_BEAD = 14877;
 	private static final int DISCHARGED_BEAD = 14878;
-	
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
@@ -148,7 +147,6 @@ public class Q00451_LuciensAltar extends Quest
 		addStartNpc(DAICHIR);
 		addTalkId(ALTARS);
 		addTalkId(DAICHIR);
-		
 		registerQuestItems(REPLENISHED_BEAD, DISCHARGED_BEAD);
 	}
 	

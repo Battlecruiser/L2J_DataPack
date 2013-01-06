@@ -30,7 +30,7 @@ public class Q00043_HelpTheSister extends Quest
 	// NPCs
 	private static final int COOPER = 30829;
 	private static final int GALLADUCCI = 30097;
-	// Monster
+	// Monsters
 	private static final int SPECTER = 20171;
 	private static final int SORROW_MAIDEN = 20197;
 	// Items

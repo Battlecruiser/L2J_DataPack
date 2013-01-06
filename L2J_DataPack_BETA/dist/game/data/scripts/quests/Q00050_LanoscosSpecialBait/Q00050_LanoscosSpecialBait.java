@@ -121,7 +121,6 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	public Q00050_LanoscosSpecialBait(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(LANOSCO);
 		addTalkId(LANOSCO);
 		addKillId(SINGING_WIND);

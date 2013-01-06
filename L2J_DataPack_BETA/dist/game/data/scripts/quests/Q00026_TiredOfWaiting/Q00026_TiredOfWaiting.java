@@ -99,7 +99,7 @@ public class Q00026_TiredOfWaiting extends Quest
 				}
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") == 1)
+				if (st.isCond(1))
 				{
 					switch (npcId)
 					{
@@ -125,7 +125,6 @@ public class Q00026_TiredOfWaiting extends Quest
 	public Q00026_TiredOfWaiting(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(ISAEL_SILVERSHADOW);
 		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
 		registerQuestItems(DELIVERY_BOX);
