@@ -92,7 +92,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st :
       st = self.newQuestState(player)
-   qs = st.getPlayer().getQuestState("138_TempleChampionPart2")
+   qs = st.getPlayer().getQuestState("Q00138_TempleChampionPart2")
    if qs :
       if qs.getState() == State.COMPLETED and st.getState() == State.CREATED :
           st.setState(State.STARTED)

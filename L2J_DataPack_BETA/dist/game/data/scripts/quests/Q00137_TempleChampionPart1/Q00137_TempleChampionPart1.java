@@ -65,7 +65,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 				st.setCond(2, true);
 				break;
 			case "30070-16.html":
-				if (st.isCond(2) && (st.hasQuestItems(EXECUTOR) && st.hasQuestItems(MISSIONARY)))
+				if (st.isCond(3) && (st.hasQuestItems(EXECUTOR) && st.hasQuestItems(MISSIONARY)))
 				{
 					st.takeItems(EXECUTOR, -1);
 					st.takeItems(MISSIONARY, -1);
@@ -94,7 +94,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 		{
 			return getAlreadyCompletedMsg(player);
 		}
-		switch (st.getInt("cond"))
+		switch (st.getCond())
 		{
 			case 1:
 				switch (st.getInt("talk"))
