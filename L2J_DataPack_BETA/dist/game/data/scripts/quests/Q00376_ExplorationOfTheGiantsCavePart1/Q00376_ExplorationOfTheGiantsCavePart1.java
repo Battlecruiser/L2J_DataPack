@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 {
-	// NPC's
+	// NPC
 	private static final int SOBLING = 31147;
 	// Items
 	private static final int ANCIENT_PARCHMENT = 14841;
@@ -193,7 +193,6 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 	public Q00376_ExplorationOfTheGiantsCavePart1(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(MOBS);

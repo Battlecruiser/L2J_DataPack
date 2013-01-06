@@ -63,7 +63,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 				htmltext = "32245-03a.htm";
 			}
 		}
-		else if (event.equalsIgnoreCase("32245-07.htm") && (st.getInt("cond") == 3) && !st.isCompleted())
+		else if (event.equalsIgnoreCase("32245-07.htm") && st.isCond(3) && !st.isCompleted())
 		{
 			st.giveAdena(65884, true);
 			st.addExpAndSp(50541, 5094);
@@ -98,7 +98,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 		}
 		else if (st.isStarted())
 		{
-			switch (st.getInt("cond"))
+			switch (st.getCond())
 			{
 				case 1:
 				case 2:
@@ -171,11 +171,10 @@ public final class Q00132_MatrasCuriosity extends Quest
 	public Q00132_MatrasCuriosity(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
-		
 		addKillId(RANKU, DEMON_PRINCE);
+		registerQuestItems(BLUEPRINT_RANKU, BLUEPRINT_PRINCE);
 	}
 	
 	public static void main(String[] args)

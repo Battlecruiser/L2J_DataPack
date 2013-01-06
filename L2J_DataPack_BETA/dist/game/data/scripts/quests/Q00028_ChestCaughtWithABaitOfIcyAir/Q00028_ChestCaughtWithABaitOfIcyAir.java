@@ -29,11 +29,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 {
-	
 	// NPCs
 	private static final int OFULLE = 31572;
 	private static final int KIKI = 31442;
-	
 	// Items
 	private static final int YELLOW_TREASURE_BOX = 6503;
 	private static final int KIKIS_LETTER = 7626;
@@ -55,7 +53,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				st.startQuest();
 				break;
 			case "31572-08.htm":
-				if ((st.getInt("cond") == 1) && (st.hasQuestItems(YELLOW_TREASURE_BOX)))
+				if (st.isCond(1) && st.hasQuestItems(YELLOW_TREASURE_BOX))
 				{
 					st.giveItems(KIKIS_LETTER, 1);
 					st.takeItems(YELLOW_TREASURE_BOX, -1);
@@ -64,10 +62,9 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				}
 				break;
 			case "31442-03.htm":
-				if ((st.getInt("cond") == 2) && (st.hasQuestItems(KIKIS_LETTER)))
+				if (st.isCond(2) && st.hasQuestItems(KIKIS_LETTER))
 				{
 					st.giveItems(ELVEN_RING, 1);
-					st.takeItems(KIKIS_LETTER, -1);
 					st.exitQuest(false, true);
 					htmltext = "31442-02.htm";
 				}
@@ -105,11 +102,10 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
 				switch (npcId)
 				{
 					case OFULLE:
-						switch (cond)
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "31572-06.htm";
@@ -124,7 +120,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 						}
 						break;
 					case KIKI:
-						if (cond == 2)
+						if (st.isCond(2))
 						{
 							htmltext = "31442-01.htm";
 						}
@@ -138,9 +134,9 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 	public Q00028_ChestCaughtWithABaitOfIcyAir(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE, KIKI);
+		registerQuestItems(KIKIS_LETTER);
 	}
 	
 	public static void main(String[] args)

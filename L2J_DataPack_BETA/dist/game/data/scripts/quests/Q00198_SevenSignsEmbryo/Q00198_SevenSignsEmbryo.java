@@ -53,7 +53,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 	public Q00198_SevenSignsEmbryo(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, FRANZ);
@@ -282,7 +281,6 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 		ns.addStringParameter(player.getName());
 		npc.broadcastPacket(ns);
-		
 		return super.onKill(npc, player, isPet);
 	}
 	

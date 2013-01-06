@@ -27,9 +27,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 {
-	
-	private static final int _mouen = 30196;
-	private static final int _johnny = 32744;
+	// NPCs
+	private static final int MOUEN = 30196;
+	private static final int JOHNNY = 32744;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -41,14 +41,14 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _mouen)
+		if (npc.getNpcId() == MOUEN)
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
 				st.startQuest();
 			}
 		}
-		else if ((npc.getNpcId() == _johnny) && event.equalsIgnoreCase("32744-03.htm"))
+		else if ((npc.getNpcId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
@@ -67,22 +67,15 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _mouen)
+		if (npc.getNpcId() == MOUEN)
 		{
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getLevel() >= 82)
-					{
-						htmltext = "30196-01.htm";
-					}
-					else
-					{
-						htmltext = "30196-00.htm";
-					}
+					htmltext = (player.getLevel() >= 82) ? "30196-01.htm" : "30196-00.htm";
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
 						htmltext = "30196-04.htm";
 					}
@@ -92,9 +85,9 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 					break;
 			}
 		}
-		else if (npc.getNpcId() == _johnny)
+		else if (npc.getNpcId() == JOHNNY)
 		{
-			if (st.getInt("cond") == 1)
+			if (st.isCond(1))
 			{
 				htmltext = "32744-01.htm";
 			}
@@ -109,9 +102,8 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	public Q00249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_mouen);
-		addTalkId(_mouen, _johnny);
+		addStartNpc(MOUEN);
+		addTalkId(MOUEN, JOHNNY);
 	}
 	
 	public static void main(String[] args)

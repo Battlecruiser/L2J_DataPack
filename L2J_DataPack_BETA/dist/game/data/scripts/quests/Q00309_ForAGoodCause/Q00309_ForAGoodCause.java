@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00309_ForAGoodCause extends Quest
 {
-	// NPC's
+	// NPC
 	private static final int ATRA = 32647;
 	// Mobs
 	private static final int CONTAMINATED_MUCROKIAN = 22654;
@@ -326,7 +326,6 @@ public class Q00309_ForAGoodCause extends Quest
 	public Q00309_ForAGoodCause(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
 		addKillId(MUCROKIANS);

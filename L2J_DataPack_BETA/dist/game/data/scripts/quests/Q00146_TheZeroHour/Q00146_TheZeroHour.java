@@ -28,10 +28,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00146_TheZeroHour extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int KAHMAN = 31554;
 	private static final int QUEEN_SHYEED = 25671;
 	// Item
+	private static final int KAHMANS_SUPPLY_BOX = 14849;
 	private static final int FANG = 14859;
 	
 	@Override
@@ -87,9 +88,8 @@ public class Q00146_TheZeroHour extends Quest
 				}
 				else
 				{
-					st.giveItems(14849, 1);
+					st.giveItems(KAHMANS_SUPPLY_BOX, 1);
 					st.addExpAndSp(154616, 12500);
-					st.takeItems(FANG, 1);
 					st.exitQuest(false, true);
 					htmltext = "31554-05.html";
 				}

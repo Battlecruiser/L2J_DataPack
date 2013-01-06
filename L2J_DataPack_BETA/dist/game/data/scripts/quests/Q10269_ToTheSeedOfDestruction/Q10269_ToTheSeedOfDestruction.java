@@ -30,7 +30,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	// NPCs
 	private static final int KEUCEREUS = 32548;
 	private static final int ALLENOS = 32526;
-	// Items
+	// Item
 	private static final int INTRODUCTION = 13812;
 	
 	@Override

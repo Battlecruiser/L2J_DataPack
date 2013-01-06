@@ -30,13 +30,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10279_MutatedKaneusOren extends Quest
 {
-	
 	// NPCs
 	private static final int MOUEN = 30196;
 	private static final int ROVIA = 30189;
 	private static final int KAIM_ABIGORE = 18566;
 	private static final int KNIGHT_MONTAGNAR = 18568;
-	
 	// Items
 	private static final int TISSUE_KA = 13836;
 	private static final int TISSUE_KM = 13837;
@@ -164,11 +162,7 @@ public class Q10279_MutatedKaneusOren extends Quest
 		addStartNpc(MOUEN);
 		addTalkId(MOUEN, ROVIA);
 		addKillId(KAIM_ABIGORE, KNIGHT_MONTAGNAR);
-		questItemIds = new int[]
-		{
-			TISSUE_KA,
-			TISSUE_KM
-		};
+		registerQuestItems(TISSUE_KA, TISSUE_KM);
 	}
 	
 	public static void main(String[] args)

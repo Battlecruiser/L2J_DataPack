@@ -52,7 +52,6 @@ public class Q00464_Oath extends Quest
 	private static final int STRONGBOX = 15537;
 	private static final int BOOK = 15538;
 	private static final int BOOK2 = 15539;
-	
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
 	
@@ -264,7 +263,6 @@ public class Q00464_Oath extends Quest
 			addTalkId(npc[0]);
 		}
 		addKillId(MOBS.keySet());
-		
 		registerQuestItems(BOOK, BOOK2);
 	}
 	

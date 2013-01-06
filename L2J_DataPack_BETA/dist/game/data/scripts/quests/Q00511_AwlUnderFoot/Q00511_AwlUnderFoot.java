@@ -83,10 +83,8 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	// QUEST ITEMS
 	private static final int DL_MARK = 9797;
-	
 	// REWARDS
 	private static final int KNIGHT_EPALUETTE = 9912;
-	
 	// MONSTER TO KILL -- Only last 3 Raids (lvl ordered) give DL_MARK
 	protected static final int[] RAIDS1 =
 	{
@@ -107,7 +105,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		25592,
 		25593
 	};
-	
+	// Skill
 	private static final SkillHolder RAID_CURSE = new SkillHolder(5456, 1);
 	
 	private String checkConditions(L2PcInstance player)
@@ -470,18 +468,9 @@ public final class Q00511_AwlUnderFoot extends Quest
 			addTalkId(i);
 		}
 		
-		for (int i : RAIDS1)
-		{
-			addKillId(i);
-		}
-		for (int i : RAIDS2)
-		{
-			addKillId(i);
-		}
-		for (int i : RAIDS3)
-		{
-			addKillId(i);
-		}
+		addKillId(RAIDS1);
+		addKillId(RAIDS2);
+		addKillId(RAIDS3);
 		
 		for (int i = 25572; i <= 25595; i++)
 		{
@@ -491,7 +480,6 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
 		new Q00511_AwlUnderFoot(511, Q00511_AwlUnderFoot.class.getSimpleName(), "instances");
 	}
 }

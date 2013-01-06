@@ -217,7 +217,7 @@ public class Q00455_WingsOfSand extends Quest
 	private static final void reward(QuestState st)
 	{
 		int chance;
-		for (int i = 1; i <= st.getCond() - 1; i++)
+		for (int i = 1; i <= (st.getCond() - 1); i++)
 		{
 			chance = getRandom(1000);
 			if (chance <= 250)

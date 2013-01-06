@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.quest.State;
 public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 {
 	// NPCs
-	private static final int[] _merc =
+	private static final int[] MERC =
 	{
 		36481,
 		36482,
@@ -43,8 +43,8 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 		36489
 	};
 	// Items
-	private static final int _cert_elite = 13767;
-	private static final int _cert_top_elite = 13768;
+	private static final int ELITE_CERTIFICATE = 13767;
+	private static final int TOP_ELITE_CERTIFICATE = 13768;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -58,7 +58,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 		
 		if (event.equalsIgnoreCase("exalted-00b.htm"))
 		{
-			st.giveItems(_cert_elite, 1);
+			st.giveItems(ELITE_CERTIFICATE, 1);
 		}
 		else if (event.equalsIgnoreCase("exalted-03.htm"))
 		{
@@ -85,7 +85,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 				{
 					htmltext = "castle.htm";
 				}
-				else if (st.hasQuestItems(_cert_elite))
+				else if (st.hasQuestItems(ELITE_CERTIFICATE))
 				{
 					htmltext = "exalted-01.htm";
 				}
@@ -102,14 +102,14 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 				}
 				break;
 			case State.STARTED:
-				if (st.getInt("cond") < 4)
+				if (st.getCond() < 4)
 				{
 					htmltext = "exalted-04.htm";
 				}
-				else if (st.getInt("cond") == 4)
+				else if (st.isCond(4))
 				{
-					st.takeItems(_cert_elite, -1);
-					st.giveItems(_cert_top_elite, 1);
+					st.takeItems(ELITE_CERTIFICATE, -1);
+					st.giveItems(TOP_ELITE_CERTIFICATE, 1);
 					st.exitQuest(false);
 					htmltext = "exalted-05.htm";
 				}
@@ -124,9 +124,8 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 	public Q00148_PathtoBecominganExaltedMercenary(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_merc);
-		addTalkId(_merc);
+		addStartNpc(MERC);
+		addTalkId(MERC);
 	}
 	
 	public static void main(String[] args)

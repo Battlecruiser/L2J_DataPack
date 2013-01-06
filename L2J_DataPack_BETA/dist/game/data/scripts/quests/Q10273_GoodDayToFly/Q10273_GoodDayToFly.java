@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10273_GoodDayToFly extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int LEKON = 32557;
 	// Monsters
 	private static final int[] MOBS =
@@ -37,7 +37,7 @@ public class Q10273_GoodDayToFly extends Quest
 		22615, // Vulture Rider
 	};
 	
-	// Items
+	// Item
 	private static final int MARK = 13856;
 	// Skills
 	private static final SkillHolder AURA_BIRD_FALCON = new SkillHolder(5982, 1);

@@ -29,11 +29,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 {
-	
 	// NPCs
 	private static final int WILLIE = 31574;
 	private static final int ANABEL = 30909;
-	
 	// Items
 	private static final int PURPLE_TREASURE_BOX = 6507;
 	private static final int SMALL_GLASS_BOX = 7627;
@@ -55,7 +53,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				st.startQuest();
 				break;
 			case "31574-08.htm":
-				if ((st.getInt("cond") == 1) && (st.hasQuestItems(PURPLE_TREASURE_BOX)))
+				if (st.isCond(1) && st.hasQuestItems(PURPLE_TREASURE_BOX))
 				{
 					st.giveItems(SMALL_GLASS_BOX, 1);
 					st.takeItems(PURPLE_TREASURE_BOX, -1);
@@ -64,10 +62,9 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				}
 				break;
 			case "30909-03.htm":
-				if ((st.getInt("cond") == 2) && (st.hasQuestItems(SMALL_GLASS_BOX)))
+				if (st.isCond(2) && st.hasQuestItems(SMALL_GLASS_BOX))
 				{
 					st.giveItems(PLATED_LEATHER_GLOVES, 1);
-					st.takeItems(SMALL_GLASS_BOX, -1);
 					st.exitQuest(false, true);
 					htmltext = "30909-02.htm";
 				}
@@ -105,11 +102,10 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				}
 				break;
 			case State.STARTED:
-				final int cond = st.getInt("cond");
 				switch (npcId)
 				{
 					case WILLIE:
-						switch (cond)
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "31574-06.htm";
@@ -124,7 +120,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 						}
 						break;
 					case ANABEL:
-						if (cond == 2)
+						if (st.isCond(2))
 						{
 							htmltext = "30909-01.htm";
 						}
@@ -138,9 +134,9 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	public Q00029_ChestCaughtWithABaitOfEarth(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE, ANABEL);
+		registerQuestItems(SMALL_GLASS_BOX);
 	}
 	
 	public static void main(String[] args)

@@ -117,7 +117,6 @@ public class Q00052_WilliesSpecialBait extends Quest
 	public Q00052_WilliesSpecialBait(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE);
 		addKillId(TARLK_BASILISK);

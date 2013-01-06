@@ -27,15 +27,15 @@ import com.l2jserver.gameserver.model.quest.State;
 public class Q00278_HomeSecurity extends Quest
 {
 	// NPC
-	private static final int Tunatun = 31537;
-	private static final int[] Monster =
+	private static final int TUNATUN = 31537;
+	private static final int[] MONSTER =
 	{
 		18905,
 		18906,
 		18907
 	};
 	// Item
-	private static final int SelMahumMane = 15531;
+	private static final int SEL_MAHUM_MANE = 15531;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -112,8 +112,6 @@ public class Q00278_HomeSecurity extends Quest
 				st.giveItems(959, 1);
 			}
 			
-			st.takeItems(SelMahumMane, -1);
-			st.unset("cond");
 			st.exitQuest(true, true);
 			htmltext = "31537-07.html";
 		}
@@ -136,11 +134,11 @@ public class Q00278_HomeSecurity extends Quest
 				htmltext = "31537-01.htm";
 				break;
 			case State.STARTED:
-				if ((st.getInt("cond") == 1) || (st.getQuestItemsCount(SelMahumMane) < 300))
+				if (st.isCond(1) || (st.getQuestItemsCount(SEL_MAHUM_MANE) < 300))
 				{
 					htmltext = "31537-06.html";
 				}
-				else if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(SelMahumMane) >= 300))
+				else if (st.isCond(2) && (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300))
 				{
 					htmltext = "31537-05.html";
 				}
@@ -160,7 +158,7 @@ public class Q00278_HomeSecurity extends Quest
 		final QuestState st = partyMember.getQuestState(getName());
 		
 		int chance, i1;
-		if (st.getInt("cond") == 1)
+		if (st.isCond(1))
 		{
 			switch (npc.getNpcId())
 			{
@@ -169,8 +167,8 @@ public class Q00278_HomeSecurity extends Quest
 					chance = getRandom(1000);
 					if (chance < 85)
 					{
-						st.giveItems(SelMahumMane, 1);
-						if (st.getQuestItemsCount(SelMahumMane) >= 300)
+						st.giveItems(SEL_MAHUM_MANE, 1);
+						if (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300)
 						{
 							st.setCond(2, true);
 						}
@@ -185,28 +183,28 @@ public class Q00278_HomeSecurity extends Quest
 					if (chance < 486)
 					{
 						i1 = getRandom(6) + 1;
-						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
+						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
 						{
-							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
+							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
 							st.setCond(2, true);
 						}
 						else
 						{
-							st.giveItems(SelMahumMane, i1);
+							st.giveItems(SEL_MAHUM_MANE, i1);
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					else
 					{
 						i1 = (getRandom(5) + 1);
-						if ((i1 + st.getQuestItemsCount(SelMahumMane)) >= 300)
+						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
 						{
-							st.giveItems(SelMahumMane, (300 - st.getQuestItemsCount(SelMahumMane)));
+							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
 							st.setCond(2, true);
 						}
 						else
 						{
-							st.giveItems(SelMahumMane, i1);
+							st.giveItems(SEL_MAHUM_MANE, i1);
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
@@ -219,15 +217,10 @@ public class Q00278_HomeSecurity extends Quest
 	public Q00278_HomeSecurity(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(Tunatun);
-		addTalkId(Tunatun);
-		addKillId(Monster);
-		
-		questItemIds = new int[]
-		{
-			SelMahumMane
-		};
+		addStartNpc(TUNATUN);
+		addTalkId(TUNATUN);
+		addKillId(MONSTER);
+		registerQuestItems(SEL_MAHUM_MANE);
 	}
 	
 	public static void main(String[] args)

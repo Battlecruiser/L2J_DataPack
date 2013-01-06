@@ -30,7 +30,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	// NPCs
 	private static final int KEUCEREUS = 32548;
 	private static final int TEPIOS = 32603;
-	// Items
+	// Item
 	private static final int INTRODUCTION = 13811;
 	
 	@Override

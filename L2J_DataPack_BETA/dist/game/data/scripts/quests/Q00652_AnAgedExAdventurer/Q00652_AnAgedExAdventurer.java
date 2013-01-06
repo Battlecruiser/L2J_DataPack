@@ -29,7 +29,6 @@ public class Q00652_AnAgedExAdventurer extends Quest
 	// NPCs
 	private static final int TANTAN = 32012;
 	private static final int SARA = 30180;
-	
 	// Items
 	private static final int SOULSHOT_C = 1464;
 	private static final int ENCHANT_ARMOR_D = 956;

@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
  */
 public class Q10274_CollectingInTheAir extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int LEKON = 32557;
 	// Items
 	private static final int SCROLL = 13844;

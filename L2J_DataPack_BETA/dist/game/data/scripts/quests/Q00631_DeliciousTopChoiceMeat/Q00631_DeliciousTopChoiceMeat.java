@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00631_DeliciousTopChoiceMeat extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int TUNATUN = 31537;
 	// Items
 	private static final int TOP_QUALITY_MEAT = 7546;
@@ -84,7 +84,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	public Q00631_DeliciousTopChoiceMeat(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 		addKillId(MOBS_MEAT.keySet());
@@ -232,7 +231,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		int npcId = npc.getNpcId();
-		int chance = (int) ((MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP) % 1000);
+		float chance = (MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(PRIME_MEAT, 1);

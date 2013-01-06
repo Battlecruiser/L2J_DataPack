@@ -30,7 +30,7 @@ public class Q00044_HelpTheSon extends Quest
 	// NPCs
 	private static final int LUNDY = 30827;
 	private static final int DRIKUS = 30505;
-	// Monster
+	// Monsters
 	private static final int MAILLE_GUARD = 20921;
 	private static final int MAILLE_SCOUT = 20920;
 	private static final int MAILLE_LIZARDMAN = 20919;

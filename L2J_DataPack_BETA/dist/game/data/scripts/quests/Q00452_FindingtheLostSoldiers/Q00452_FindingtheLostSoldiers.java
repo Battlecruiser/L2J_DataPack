@@ -136,7 +136,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	public Q00452_FindingtheLostSoldiers(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(JAKAN);
 		addTalkId(JAKAN);
 		addTalkId(SOLDIER_CORPSES);

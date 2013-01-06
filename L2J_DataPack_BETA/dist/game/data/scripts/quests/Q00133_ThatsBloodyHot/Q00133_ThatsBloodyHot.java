@@ -32,7 +32,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 	// NPCs
 	private static final int KANIS = 32264;
 	private static final int GALATE = 32292;
-	// Items
+	// Item
 	private static final int REFINED_CRYSTAL_SAMPLE = 9785;
 	// Misc
 	private static final int MIN_LEVEL = 78;

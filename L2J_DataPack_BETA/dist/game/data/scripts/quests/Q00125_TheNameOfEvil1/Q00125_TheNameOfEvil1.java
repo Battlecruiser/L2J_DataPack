@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Q00125_TheNameOfEvil1 extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int MUSHIKA = 32114;
 	private static final int KARAKAWEI = 32117;
 	private static final int ULU_KAIMU = 32119;
@@ -257,7 +257,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						}
 						break;
 					case State.STARTED:
-						switch (st.getInt("cond"))
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "32114-09.html";
@@ -290,7 +290,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case KARAKAWEI:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "32117-01.html";
@@ -325,7 +325,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case ULU_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -360,7 +360,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case BALU_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -396,7 +396,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case CHUTA_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -484,7 +484,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	public Q00125_TheNameOfEvil1(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(MUSHIKA);
 		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
 		addKillId(ORNITHOMIMUS.keySet());

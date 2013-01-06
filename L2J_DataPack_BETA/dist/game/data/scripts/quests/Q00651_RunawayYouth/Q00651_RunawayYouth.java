@@ -26,13 +26,11 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00651_RunawayYouth extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int BATIDAE = 31989;
 	private static final int IVAN = 32014;
-	
 	// Item
 	private static final int SOE = 736;
-	
 	// Misc
 	private static final int MIN_LEVEL = 26;
 	

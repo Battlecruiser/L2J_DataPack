@@ -26,10 +26,10 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00110_ToThePrimevalIsle extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int ANTON = 31338;
 	private static final int MARQUEZ = 32113;
-	// Items
+	// Item
 	private static final int ANCIENT_BOOK = 8777;
 	
 	@Override
@@ -49,7 +49,6 @@ public class Q00110_ToThePrimevalIsle extends Quest
 				break;
 			case "32113-2.html":
 			case "32113-2a.html":
-				st.takeItems(ANCIENT_BOOK, -1);
 				st.giveAdena(191678, true);
 				st.addExpAndSp(251602, 25245);
 				st.exitQuest(false, true);
@@ -97,7 +96,6 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	public Q00110_ToThePrimevalIsle(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(ANTON);
 		addTalkId(ANTON, MARQUEZ);
 		registerQuestItems(ANCIENT_BOOK);

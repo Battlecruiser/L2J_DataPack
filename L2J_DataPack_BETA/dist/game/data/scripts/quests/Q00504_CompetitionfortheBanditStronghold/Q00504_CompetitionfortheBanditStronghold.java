@@ -58,10 +58,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 		super(questId, name, descr);
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
-		for (int mob : MOBS)
-		{
-			addKillId(mob);
-		}
+		addKillId(MOBS);
 	}
 	
 	@Override
@@ -105,7 +102,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 					{
 						result = "azit_messenger_q0504_02.htm";
 						st.setState(State.STARTED);
-						st.set("cond", "1");
+						st.setCond(1);
 					}
 					break;
 				case State.STARTED:
@@ -149,7 +146,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 			return null;
 		}
 		
-		if (st.isStarted() && (st.getInt("cond") == 1))
+		if (st.isStarted() && st.isCond(1))
 		{
 			st.giveItems(TARLK_AMULET, 1);
 			if (st.getQuestItemsCount(TARLK_AMULET) < 30)

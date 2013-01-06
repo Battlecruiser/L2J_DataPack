@@ -28,10 +28,9 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00182_NewRecruits extends Quest
 {
-	
-	// NPC's
-	private static final int _kekropus = 32138;
-	private static final int _nornil = 32258;
+	// NPCs
+	private static final int KEKROPUS = 32138;
+	private static final int MENACING_MACHINE = 32258;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -43,14 +42,14 @@ public class Q00182_NewRecruits extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == _kekropus)
+		if (npc.getNpcId() == KEKROPUS)
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.startQuest();
 			}
 		}
-		else if (npc.getNpcId() == _nornil)
+		else if (npc.getNpcId() == MENACING_MACHINE)
 		{
 			if (event.equalsIgnoreCase("32258-04.html"))
 			{
@@ -77,7 +76,7 @@ public class Q00182_NewRecruits extends Quest
 		}
 		
 		final int npcId = npc.getNpcId();
-		if (npcId == _kekropus)
+		if (npcId == KEKROPUS)
 		{
 			switch (st.getState())
 			{
@@ -107,7 +106,7 @@ public class Q00182_NewRecruits extends Quest
 					break;
 			}
 		}
-		else if ((npcId == _nornil) && st.isStarted())
+		else if ((npcId == MENACING_MACHINE) && st.isStarted())
 		{
 			htmltext = "32258-01.html";
 		}
@@ -117,9 +116,8 @@ public class Q00182_NewRecruits extends Quest
 	public Q00182_NewRecruits(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(_kekropus);
-		addTalkId(_kekropus, _nornil);
+		addStartNpc(KEKROPUS);
+		addTalkId(KEKROPUS, MENACING_MACHINE);
 	}
 	
 	public static void main(String[] args)

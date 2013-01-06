@@ -29,10 +29,10 @@ import com.l2jserver.gameserver.model.quest.State;
 public class Q00702_ATrapForRevenge extends Quest
 {
 	// NPC
-	private static final int Plenos = 32563;
-	private static final int Lekon = 32557;
-	private static final int Tenius = 32555;
-	private static final int[] Monsters =
+	private static final int PLENOS = 32563;
+	private static final int LEKON = 32557;
+	private static final int TENIUS = 32555;
+	private static final int[] MONSTERS =
 	{
 		22612,
 		22613,
@@ -43,11 +43,11 @@ public class Q00702_ATrapForRevenge extends Quest
 		25626
 	};
 	// Items
-	private static final int DrakeFlesh = 13877;
-	private static final int RottenBlood = 13878;
-	private static final int BaitForDrakes = 13879;
-	private static final int VariantDrakeWingHorns = 13880;
-	private static final int ExtractedRedStarStone = 14009;
+	private static final int DRAKES_FLESH = 13877;
+	private static final int ROTTEN_BLOOD = 13878;
+	private static final int BAIT_FOR_DRAKES = 13879;
+	private static final int VARIANT_DRAKE_WING_HORNS = 13880;
+	private static final int EXTRACTED_RED_STAR_STONE = 14009;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -65,19 +65,19 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-07.html"))
 		{
-			htmltext = st.hasQuestItems(DrakeFlesh) ? "32563-08.html" : "32563-07.html";
+			htmltext = st.hasQuestItems(DRAKES_FLESH) ? "32563-08.html" : "32563-07.html";
 		}
 		else if (event.equalsIgnoreCase("32563-09.html"))
 		{
-			st.giveAdena(st.getQuestItemsCount(DrakeFlesh) * 100, false);
-			st.takeItems(DrakeFlesh, -1);
+			st.giveAdena(st.getQuestItemsCount(DRAKES_FLESH) * 100, false);
+			st.takeItems(DRAKES_FLESH, -1);
 		}
 		else if (event.equalsIgnoreCase("32563-11.html"))
 		{
-			if (st.hasQuestItems(VariantDrakeWingHorns))
+			if (st.hasQuestItems(VARIANT_DRAKE_WING_HORNS))
 			{
-				st.giveAdena(st.getQuestItemsCount(VariantDrakeWingHorns) * 200000, false);
-				st.takeItems(VariantDrakeWingHorns, -1);
+				st.giveAdena(st.getQuestItemsCount(VARIANT_DRAKE_WING_HORNS) * 200000, false);
+				st.takeItems(VARIANT_DRAKE_WING_HORNS, -1);
 				htmltext = "32563-12.html";
 			}
 			else
@@ -91,23 +91,23 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
-			if (!st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) < 100))
+			if (!st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) < 100))
 			{
 				htmltext = "32557-03.html";
 			}
-			else if (st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) < 100))
+			else if (st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) < 100))
 			{
 				htmltext = "32557-04.html";
 			}
-			else if (!st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) >= 100))
+			else if (!st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) >= 100))
 			{
 				htmltext = "32557-05.html";
 			}
-			else if (st.hasQuestItems(RottenBlood) && (st.getQuestItemsCount(ExtractedRedStarStone) >= 100))
+			else if (st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) >= 100))
 			{
-				st.giveItems(BaitForDrakes, 1);
-				st.takeItems(RottenBlood, 1);
-				st.takeItems(ExtractedRedStarStone, 100);
+				st.giveItems(BAIT_FOR_DRAKES, 1);
+				st.takeItems(ROTTEN_BLOOD, 1);
+				st.takeItems(EXTRACTED_RED_STAR_STONE, 100);
 				htmltext = "32557-06.html";
 			}
 		}
@@ -121,7 +121,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{
-			if (st.getQuestItemsCount(DrakeFlesh) < 100)
+			if (st.getQuestItemsCount(DRAKES_FLESH) < 100)
 			{
 				htmltext = "32555-06.html";
 			}
@@ -132,12 +132,12 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-08.html"))
 		{
-			st.giveItems(RottenBlood, 1);
-			st.takeItems(DrakeFlesh, 100);
+			st.giveItems(ROTTEN_BLOOD, 1);
+			st.takeItems(DRAKES_FLESH, 100);
 		}
 		else if (event.equalsIgnoreCase("32555-10.html"))
 		{
-			if (st.hasQuestItems(VariantDrakeWingHorns))
+			if (st.hasQuestItems(VARIANT_DRAKE_WING_HORNS))
 			{
 				htmltext = "32555-11.html";
 			}
@@ -245,7 +245,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				
 				htmltext = "32555-18.html";
 			}
-			st.takeItems(VariantDrakeWingHorns, 1);
+			st.takeItems(VARIANT_DRAKE_WING_HORNS, 1);
 		}
 		return htmltext;
 	}
@@ -260,7 +260,7 @@ public class Q00702_ATrapForRevenge extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == Plenos)
+		if (npc.getNpcId() == PLENOS)
 		{
 			switch (st.getState())
 			{
@@ -269,15 +269,15 @@ public class Q00702_ATrapForRevenge extends Quest
 					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
 					break;
 				case State.STARTED:
-					htmltext = (st.getInt("cond") == 1) ? "32563-05.html" : "32563-06.html";
+					htmltext = (st.isCond(1)) ? "32563-05.html" : "32563-06.html";
 					break;
 			}
 		}
 		if (st.getState() == State.STARTED)
 		{
-			if (npc.getNpcId() == Lekon)
+			if (npc.getNpcId() == LEKON)
 			{
-				switch (st.getInt("cond"))
+				switch (st.getCond())
 				{
 					case 1:
 						htmltext = "32557-01.html";
@@ -287,9 +287,9 @@ public class Q00702_ATrapForRevenge extends Quest
 						break;
 				}
 			}
-			else if (npc.getNpcId() == Tenius)
+			else if (npc.getNpcId() == TENIUS)
 			{
-				switch (st.getInt("cond"))
+				switch (st.getCond())
 				{
 					case 1:
 						htmltext = "32555-01.html";
@@ -318,57 +318,57 @@ public class Q00702_ATrapForRevenge extends Quest
 			case 22612:
 				if (chance < 413)
 				{
-					st.giveItems(DrakeFlesh, 2);
+					st.giveItems(DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 22613:
 				if (chance < 440)
 				{
-					st.giveItems(DrakeFlesh, 2);
+					st.giveItems(DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 25632:
 				if (chance < 996)
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 22610:
 				if (chance < 485)
 				{
-					st.giveItems(DrakeFlesh, 2);
+					st.giveItems(DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 22611:
 				if (chance < 451)
 				{
-					st.giveItems(DrakeFlesh, 2);
+					st.giveItems(DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 25631:
 				if (chance < 485)
 				{
-					st.giveItems(DrakeFlesh, 2);
+					st.giveItems(DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DrakeFlesh, 1);
+					st.giveItems(DRAKES_FLESH, 1);
 				}
 				break;
 			case 25626:
@@ -393,7 +393,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				{
 					count = getRandom(5) + 14;
 				}
-				st.giveItems(VariantDrakeWingHorns, count);
+				st.giveItems(VARIANT_DRAKE_WING_HORNS, count);
 				break;
 		}
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -403,11 +403,10 @@ public class Q00702_ATrapForRevenge extends Quest
 	public Q00702_ATrapForRevenge(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(Plenos);
-		addTalkId(Plenos);
-		addTalkId(Lekon);
-		addTalkId(Tenius);
-		addKillId(Monsters);
+		addStartNpc(PLENOS);
+		addTalkId(PLENOS, LEKON, TENIUS);
+		addKillId(MONSTERS);
+		registerQuestItems(DRAKES_FLESH, ROTTEN_BLOOD, BAIT_FOR_DRAKES, VARIANT_DRAKE_WING_HORNS);
 	}
 	
 	public static void main(String[] args)

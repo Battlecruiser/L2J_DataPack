@@ -29,9 +29,12 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00289_NoMoreSoupForYou extends Quest
 {
+	// NPC
 	public static final int STAN = 30200;
-	public static final int RATE = 5;
+	// Item
 	public static final int SOUP = 15712;
+	// Misc
+	public static final int RATE = 5;
 	
 	private static final int[] MOBS =
 	{
@@ -153,14 +156,9 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	public Q00289_NoMoreSoupForYou(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(STAN);
 		addTalkId(STAN);
-		
-		for (int i : MOBS)
-		{
-			addKillId(i);
-		}
+		addKillId(MOBS);
 	}
 	
 	@Override
@@ -229,26 +227,12 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			{
 				case State.CREATED:
 					QuestState _prev = player.getQuestState(Q00252_ItSmellsDelicious.class.getSimpleName());
-					if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82))
-					{
-						htmltext = "30200-01.htm";
-					}
-					else
-					{
-						htmltext = "30200-00.htm";
-					}
+					htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "30200-01.htm" : "30200-00.htm";
 					break;
 				case State.STARTED:
-					if (st.getInt("cond") == 1)
+					if (st.isCond(1))
 					{
-						if (st.getQuestItemsCount(SOUP) >= 100)
-						{
-							htmltext = "30200-04.htm";
-						}
-						else
-						{
-							htmltext = "30200-03.htm";
-						}
+						htmltext = (st.getQuestItemsCount(SOUP) >= 100) ? "30200-04.htm" : "30200-03.htm";
 					}
 					break;
 			}

@@ -32,10 +32,8 @@ public class Q00601_WatchingEyes extends Quest
 {
 	// NPC
 	private static final int EYE_OF_ARGOS = 31683;
-	
 	// Item
 	private static final int PROOF_OF_AVENGER = 7188;
-	
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
 	
@@ -147,7 +145,6 @@ public class Q00601_WatchingEyes extends Quest
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		
 		return super.onKill(npc, player, isPet);
 	}
 	
@@ -157,7 +154,6 @@ public class Q00601_WatchingEyes extends Quest
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS);
 		addKillId(MOBS.keySet());
-		
 		registerQuestItems(PROOF_OF_AVENGER);
 	}
 	

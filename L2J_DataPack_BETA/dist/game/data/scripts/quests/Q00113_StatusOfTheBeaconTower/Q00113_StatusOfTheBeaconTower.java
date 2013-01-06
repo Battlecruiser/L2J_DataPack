@@ -30,7 +30,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	// NPCs
 	private static final int MOIRA = 31979;
 	private static final int TORRANT = 32016;
-	
 	// Items
 	private static final int FLAME_BOX = 14860;
 	private static final int FIRE_BOX = 8086;
@@ -114,7 +113,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 		super(questId, name, descr);
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, TORRANT);
-		
 		registerQuestItems(FIRE_BOX, FLAME_BOX);
 	}
 	

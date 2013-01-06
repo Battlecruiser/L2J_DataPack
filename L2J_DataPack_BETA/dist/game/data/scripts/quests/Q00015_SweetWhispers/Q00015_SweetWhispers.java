@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00015_SweetWhispers extends Quest
 {
-	
 	// NPCs
 	private static final int VLADIMIR = 31302;
 	private static final int HIERARCH = 31517;
@@ -122,9 +121,7 @@ public class Q00015_SweetWhispers extends Quest
 	public Q00015_SweetWhispers(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(VLADIMIR);
-		
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}
 	

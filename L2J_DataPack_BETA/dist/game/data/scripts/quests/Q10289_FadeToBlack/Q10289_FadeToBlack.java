@@ -33,12 +33,12 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10289_FadeToBlack extends Quest
 {
-	// NPCs
+	// NPC
 	private static final int GREYMORE = 32757;
 	// Items
 	private static final int MARK_OF_SPLENDOR = 15527;
 	private static final int MARK_OF_DARKNESS = 15528;
-	// Monsters
+	// Monster
 	private static final int ANAYS = 25701;
 	
 	@Override

@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00279_TargetOfOpportunity extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int JERIAN = 32302;
 	private static final int[] MONSTERS =
 	{
@@ -55,7 +55,6 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public Q00279_TargetOfOpportunity(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);

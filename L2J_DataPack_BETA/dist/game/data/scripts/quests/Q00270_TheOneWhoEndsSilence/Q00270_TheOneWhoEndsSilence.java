@@ -61,14 +61,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 		{
 			case State.CREATED:
 				final QuestState qs = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
-				if ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted())
-				{
-					htmltext = "32757-01.htm";
-				}
-				else
-				{
-					htmltext = "32757-03.html";
-				}
+				htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32757-01.htm" : "32757-03.html";
 				break;
 			case State.STARTED:
 				if (st.isCond(1))
@@ -353,8 +346,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	 * @param killer the killer of the npc
 	 * @param npc the killed npc
 	 * @param chance the reward chance
-	 * @param atLeastOne if {@code true} it will reward two items if the chance is meet and one if the chance is not meet,
-	 * if {@code false} if the chance is not meet doesn't reward, otherwise reward one item
+	 * @param atLeastOne if {@code true} it will reward two items if the chance is meet and one if the chance is not meet, if {@code false} if the chance is not meet doesn't reward, otherwise reward one item
 	 */
 	private void giveItem(L2PcInstance killer, L2Npc npc, int chance, boolean atLeastOne)
 	{

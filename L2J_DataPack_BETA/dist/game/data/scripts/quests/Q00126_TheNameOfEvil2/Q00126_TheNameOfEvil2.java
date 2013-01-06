@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class Q00126_TheNameOfEvil2 extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int SHILENS_STONE_STATUE = 32109;
 	private static final int MUSHIKA = 32114;
 	private static final int ASAMAH = 32115;
@@ -317,7 +317,6 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				st.exitQuest(false, true);
 				break;
 		}
-		
 		return event;
 	}
 	
@@ -348,7 +347,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 						}
 						break;
 					case State.STARTED:
-						switch (st.getInt("cond"))
+						switch (st.getCond())
 						{
 							case 1:
 								htmltext = "32115-1d.html";
@@ -394,7 +393,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case ULU_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 							htmltext = "32119-1.html";
@@ -418,7 +417,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case BALU_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -445,7 +444,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case CHUTA_KAIMU:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -475,7 +474,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case WARRIORS_GRAVE:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -538,7 +537,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case SHILENS_STONE_STATUE:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -580,12 +579,11 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case MUSHIKA:
 				if (st.isStarted())
 				{
-					int cond = st.getInt("cond");
-					if (cond < 22)
+					if (st.getCond() < 22)
 					{
 						htmltext = "32114-4.html";
 					}
-					else if (cond == 22)
+					else if (st.isCond(22))
 					{
 						htmltext = "32114-1.html";
 					}
@@ -602,7 +600,6 @@ public class Q00126_TheNameOfEvil2 extends Quest
 	public Q00126_TheNameOfEvil2(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(ASAMAH);
 		addTalkId(ASAMAH, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIORS_GRAVE, SHILENS_STONE_STATUE, MUSHIKA);
 		registerQuestItems(GAZKH_FRAGMENT, BONE_POWDER);

@@ -92,14 +92,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					if (player.getLevel() >= 82)
-					{
-						htmltext = "32743-01.htm";
-					}
-					else
-					{
-						htmltext = "32743-00.htm";
-					}
+					htmltext = (player.getLevel() >= 82) ? "32743-01.htm" : "32743-00.htm";
 					break;
 				case State.STARTED:
 					if (st.isCond(1))
@@ -179,7 +172,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 	public Q00250_WatchWhatYouEat(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(SALLY);
 		addFirstTalkId(SALLY);
 		addTalkId(SALLY);

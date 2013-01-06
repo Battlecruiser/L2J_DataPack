@@ -30,10 +30,8 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public final class Q00691_MatrasSuspiciousRequest extends Quest
 {
-	
-	// NPCs
+	// NPC
 	private static final int MATRAS = 32245;
-	
 	// Items
 	private static final int RED_GEM = 10372;
 	private static final int DYNASTY_SOUL_II = 10413;
@@ -57,14 +55,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	public Q00691_MatrasSuspiciousRequest(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
-		
-		for (int npcId : REWARD_CHANCES.keySet())
-		{
-			addKillId(npcId);
-		}
+		addKillId(REWARD_CHANCES.keySet());
 	}
 	
 	@Override
@@ -112,7 +105,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		}
 		else if (event.equalsIgnoreCase("32245-12.htm"))
 		{
-			st.giveItems(57, (st.getInt("submitted_gems") * 10000));
+			st.giveAdena((st.getInt("submitted_gems") * 10000), true);
 			st.exitQuest(true, true);
 		}
 		return htmltext;

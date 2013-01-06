@@ -39,7 +39,6 @@ public final class Q00636_TruthBeyond extends Quest
 	public Q00636_TruthBeyond(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);
 		addEnterZoneId(ZONE);
@@ -99,7 +98,7 @@ public final class Q00636_TruthBeyond extends Quest
 		}
 		else if (st.getState() == State.STARTED) // Flauron only
 		{
-			if (st.getInt("cond") == 1)
+			if (st.isCond(1))
 			{
 				return "32010-01.htm";
 			}

@@ -38,14 +38,13 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	private static final int VIRGIL = 31742;
 	private static final int KASSANDRA = 31743;
 	private static final int OGMAR = 31744;
-	
+	// Mobs
 	private static final int BARAHAM = 27113;
 	private static final int MALRUK_SUCCUBUS_1 = 20244;
 	private static final int MALRUK_SUCCUBUS_TUREN_1 = 20245;
 	private static final int MALRUK_SUCCUBUS_2 = 20283;
 	private static final int MALRUK_SUCCUBUS_TUREN_2 = 20284;
 	private static final int TAIK_ORC_SUPPLY_LEADER = 20669;
-	
 	// Items
 	private static final int LEGEND_OF_SEVENTEEN = 7587;
 	private static final int MALRUK_SUCCUBUS_CLAW = 7597;
@@ -54,7 +53,6 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	private static final int CRIMSON_MOSS = 7598;
 	private static final int RAHORAKTIS_MEDICINE = 7599;
 	private static final int VIRGILS_LETTER = 7677;
-	
 	// Rewards
 	private static final int CRIMSON_MOSS_CHANCE = 30;
 	private static final int MALRUK_SUCCUBUS_CLAW_CHANCE = 60;

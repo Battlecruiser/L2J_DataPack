@@ -42,7 +42,6 @@ public class Q00551_OlympiadStarter extends Quest
 	public Q00551_OlympiadStarter(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		registerQuestItems(CERT_3, CERT_5, CERT_10);

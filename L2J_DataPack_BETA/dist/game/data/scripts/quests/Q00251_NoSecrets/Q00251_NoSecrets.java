@@ -54,11 +54,7 @@ public class Q00251_NoSecrets extends Quest
 		addTalkId(PINAPS);
 		addKillId(MOBS);
 		addKillId(MOBS2);
-		questItemIds = new int[]
-		{
-			DIARY,
-			TABLE
-		};
+		registerQuestItems(DIARY, TABLE);
 	}
 	
 	@Override
@@ -93,15 +89,14 @@ public class Q00251_NoSecrets extends Quest
 				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
 				break;
 			case State.STARTED:
-				int cond = st.getInt("cond");
-				if (cond == 1)
+				if (st.isCond(1))
 				{
 					htmltext = "30201-05.htm";
 				}
-				else if ((cond == 2) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
+				else if ((st.isCond(2)) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
 				{
 					htmltext = "30201-04.htm";
-					st.rewardItems(57, 313355);
+					st.giveAdena(313355, true);
 					st.addExpAndSp(56787, 160578);
 					st.exitQuest(false, true);
 				}

@@ -125,7 +125,6 @@ public class Q00641_AttackSailren extends Quest
 	public Q00641_AttackSailren(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(SHILENS_STONE_STATUE);
 		addTalkId(SHILENS_STONE_STATUE);
 		addKillId(MOBS);

@@ -29,19 +29,16 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 {
 	// NPC
 	private final static int DROPH = 32711;
-	
 	// RB
 	private final static int GORGOLOS = 25681;
 	private final static int LAST_TITAN_UTENUS = 25684;
 	private final static int GIANT_MARPANAK = 25680;
 	private final static int HEKATON_PRIME = 25687;
-	
 	// Items
 	private final static int SUPPORT_ITEMS = 14850;
 	private final static int CET_1_SHEET = 14851;
 	private final static int CET_2_SHEET = 14852;
 	private final static int CET_3_SHEET = 14853;
-	
 	// Misc
 	private final static int RESPAWN_DELAY = 3600000; // 1 hour
 	private static L2Npc hekaton;

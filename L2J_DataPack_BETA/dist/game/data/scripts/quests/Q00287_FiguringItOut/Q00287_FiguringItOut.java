@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00287_FiguringItOut extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int LAKI = 32742;
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	
@@ -49,7 +49,6 @@ public class Q00287_FiguringItOut extends Quest
 	
 	// Items
 	private static final int VIAL_OF_TANTA_BLOOD = 15499;
-	
 	// Rewards
 	private static final ItemHolder[] MOIRAI =
 	{
@@ -195,7 +194,6 @@ public class Q00287_FiguringItOut extends Quest
 		addStartNpc(LAKI);
 		addTalkId(LAKI);
 		addKillId(MONSTERS.keySet());
-		
 		registerQuestItems(VIAL_OF_TANTA_BLOOD);
 	}
 	

@@ -34,7 +34,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	private static final int MATHIAS = 31340;
 	private static final int KAYAN = 31335;
 	private static final int WHITE_ALLOSCE = 18577;
-	// Items
+	// Item
 	private static final int TISSUE_WA = 13840;
 	
 	@Override

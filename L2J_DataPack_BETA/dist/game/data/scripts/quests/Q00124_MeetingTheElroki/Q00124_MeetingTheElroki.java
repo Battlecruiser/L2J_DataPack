@@ -26,13 +26,13 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q00124_MeetingTheElroki extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int MARQUEZ = 32113;
 	private static final int MUSHIKA = 32114;
 	private static final int ASAMAH = 32115;
 	private static final int KARAKAWEI = 32117;
 	private static final int MANTARASA = 32118;
-	// Items
+	// Item
 	private static final int MANTARASA_EGG = 8778;
 	
 	@Override
@@ -144,7 +144,7 @@ public class Q00124_MeetingTheElroki extends Quest
 			case ASAMAH:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -174,7 +174,7 @@ public class Q00124_MeetingTheElroki extends Quest
 			case KARAKAWEI:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -196,7 +196,7 @@ public class Q00124_MeetingTheElroki extends Quest
 			case MANTARASA:
 				if (st.isStarted())
 				{
-					switch (st.getInt("cond"))
+					switch (st.getCond())
 					{
 						case 1:
 						case 2:
@@ -220,7 +220,6 @@ public class Q00124_MeetingTheElroki extends Quest
 	public Q00124_MeetingTheElroki(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
 		registerQuestItems(MANTARASA_EGG);

@@ -123,14 +123,14 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
 		if (partyMember == null)
 		{
-			return null;
+			return super.onKill(npc, player, isPet);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		int npcId = npc.getNpcId();
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
-			int chance = (int) ((MOBS_TISSUE.get(npcId) * Config.RATE_QUEST_DROP) % 1000);
+			float chance = (MOBS_TISSUE.get(npcId) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.rewardItems(DINOSAUR_TISSUE, 1);
@@ -148,7 +148,6 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	public Q00642_APowerfulPrimevalCreature(int id, String name, String descr)
 	{
 		super(id, name, descr);
-		
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);

@@ -45,7 +45,6 @@ public final class Q00637_ThroughOnceMore extends Quest
 	public Q00637_ThroughOnceMore(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
 		addKillId(MOBS);
@@ -69,7 +68,6 @@ public final class Q00637_ThroughOnceMore extends Quest
 		{
 			st.exitQuest(true);
 		}
-		
 		return event;
 	}
 	
@@ -107,7 +105,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 		}
 		else if (id == State.STARTED)
 		{
-			if ((st.getInt("cond") == 2) && (st.getQuestItemsCount(NECRO_HEART) == 10))
+			if ((st.isCond(2)) && (st.getQuestItemsCount(NECRO_HEART) == 10))
 			{
 				st.takeItems(NECRO_HEART, 10);
 				st.takeItems(FADED_MARK, 1);

@@ -121,7 +121,6 @@ public class Q00051_OFullesSpecialBait extends Quest
 	public Q00051_OFullesSpecialBait(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);

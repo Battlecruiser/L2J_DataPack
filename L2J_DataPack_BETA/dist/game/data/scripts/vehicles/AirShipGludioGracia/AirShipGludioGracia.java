@@ -286,7 +286,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		// check objects around the ship
 		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
 		{
-			if (obj instanceof L2Npc)
+			if (obj.isNpc())
 			{
 				for (int id : CONTROLLERS)
 				{
