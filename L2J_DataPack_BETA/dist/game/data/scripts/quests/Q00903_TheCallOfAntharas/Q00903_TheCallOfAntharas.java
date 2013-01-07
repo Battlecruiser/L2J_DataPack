@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00907_DragonTrophyValakas;
+package quests.Q00903_TheCallOfAntharas;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,27 +27,31 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Dragon Trophy - Valakas (907)
+ * The Call of Antharas (903)
  * @author Zoey76
  */
-public class Q00907_DragonTrophyValakas extends Quest
+public class Q00903_TheCallOfAntharas extends Quest
 {
 	// NPC
-	private static final int KLEIN = 31540;
-	// Monster
-	private static final int VALAKAS = 29028;
+	private static final int THEODRIC = 30755;
+	// Monsters
+	private static final int BEHEMOTH_DRAGON = 29069;
+	private static final int TARASK_DRAGON = 29190;
 	// Items
-	private static final int MEDAL_OF_GLORY = 21874;
-	private static final int VACUALITE_FLOATING_STONE = 7267;
+	private static final int TARASK_DRAGONS_LEATHER_FRAGMENT = 21991;
+	private static final int BEHEMOTH_DRAGON_LEATHER = 21992;
+	private static final int SCROLL_ANTHARAS_CALL = 21897;
+	private static final int PORTAL_STONE = 3865;
 	// Misc
-	private static final int MIN_LEVEL = 84;
+	private static final int MIN_LEVEL = 83;
 	
-	private Q00907_DragonTrophyValakas(int questId, String name, String descr)
+	private Q00903_TheCallOfAntharas(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(KLEIN);
-		addTalkId(KLEIN);
-		addKillId(VALAKAS);
+		addStartNpc(THEODRIC);
+		addTalkId(THEODRIC);
+		addKillId(BEHEMOTH_DRAGON, TARASK_DRAGON);
+		registerQuestItems(TARASK_DRAGONS_LEATHER_FRAGMENT, BEHEMOTH_DRAGON_LEATHER);
 	}
 	
 	@Override
@@ -64,25 +68,17 @@ public class Q00907_DragonTrophyValakas extends Quest
 		{
 			switch (event)
 			{
-				case "31540-05.htm":
+				case "30755-05.htm":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
+					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
 					{
 						htmltext = event;
 					}
 					break;
 				}
-				case "31540-06.htm":
+				case "30755-06.html":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						htmltext = event;
-					}
-					break;
-				}
-				case "31540-07.html":
-				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
+					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
 					{
 						st.startQuest();
 						htmltext = event;
@@ -110,15 +106,15 @@ public class Q00907_DragonTrophyValakas extends Quest
 			{
 				if (player.getLevel() < MIN_LEVEL)
 				{
-					htmltext = "31540-02.html";
+					htmltext = "30755-03.html";
 				}
-				else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+				else if (!st.hasQuestItems(PORTAL_STONE))
 				{
-					htmltext = "31540-04.html";
+					htmltext = "30755-04.html";
 				}
 				else
 				{
-					htmltext = "31540-01.htm";
+					htmltext = "30755-01.htm";
 				}
 				break;
 			}
@@ -128,15 +124,15 @@ public class Q00907_DragonTrophyValakas extends Quest
 				{
 					case 1:
 					{
-						htmltext = "31540-08.html";
+						htmltext = "30755-07.html";
 						break;
 					}
 					case 2:
 					{
-						st.giveItems(MEDAL_OF_GLORY, 30);
+						st.giveItems(SCROLL_ANTHARAS_CALL, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(QuestType.DAILY, true);
-						htmltext = "31540-09.html";
+						htmltext = "30755-08.html";
 						break;
 					}
 				}
@@ -146,22 +142,22 @@ public class Q00907_DragonTrophyValakas extends Quest
 			{
 				if (!st.isNowAvailable())
 				{
-					htmltext = "31540-03.html";
+					htmltext = "30755-02.html";
 				}
 				else
 				{
 					st.setState(State.CREATED);
 					if (player.getLevel() < MIN_LEVEL)
 					{
-						htmltext = "31540-02.html";
+						htmltext = "30755-03.html";
 					}
-					else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+					else if (!st.hasQuestItems(PORTAL_STONE))
 					{
-						htmltext = "31540-04.html";
+						htmltext = "30755-04.html";
 					}
 					else
 					{
-						htmltext = "31540-01.htm";
+						htmltext = "30755-01.htm";
 					}
 				}
 				break;
@@ -176,13 +172,32 @@ public class Q00907_DragonTrophyValakas extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
 		{
-			st.setCond(2, true);
+			switch (npc.getNpcId())
+			{
+				case BEHEMOTH_DRAGON:
+				{
+					st.giveItems(BEHEMOTH_DRAGON_LEATHER, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+				case TARASK_DRAGON:
+				{
+					st.giveItems(TARASK_DRAGONS_LEATHER_FRAGMENT, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+			}
+			
+			if (st.hasQuestItems(BEHEMOTH_DRAGON_LEATHER) && st.hasQuestItems(TARASK_DRAGONS_LEATHER_FRAGMENT))
+			{
+				st.setCond(2, true);
+			}
 		}
 		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)
 	{
-		new Q00907_DragonTrophyValakas(907, Q00907_DragonTrophyValakas.class.getSimpleName(), "Dragon Trophy - Valakas");
+		new Q00903_TheCallOfAntharas(903, Q00903_TheCallOfAntharas.class.getSimpleName(), "The Call of Antharas");
 	}
 }

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00907_DragonTrophyValakas;
+package quests.Q00906_TheCallOfValakas;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -27,27 +27,29 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Dragon Trophy - Valakas (907)
+ * The Call of Valakas (906)
  * @author Zoey76
  */
-public class Q00907_DragonTrophyValakas extends Quest
+public class Q00906_TheCallOfValakas extends Quest
 {
 	// NPC
 	private static final int KLEIN = 31540;
 	// Monster
-	private static final int VALAKAS = 29028;
+	private static final int LAVASAURUS_ALPHA = 29029;
 	// Items
-	private static final int MEDAL_OF_GLORY = 21874;
+	private static final int LAVASAURUS_ALPHA_FRAGMENT = 21993;
+	private static final int SCROLL_VALAKAS_CALL = 21895;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	// Misc
-	private static final int MIN_LEVEL = 84;
+	private static final int MIN_LEVEL = 83;
 	
-	private Q00907_DragonTrophyValakas(int questId, String name, String descr)
+	private Q00906_TheCallOfValakas(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
-		addKillId(VALAKAS);
+		addKillId(LAVASAURUS_ALPHA);
+		registerQuestItems(LAVASAURUS_ALPHA_FRAGMENT);
 	}
 	
 	@Override
@@ -72,15 +74,7 @@ public class Q00907_DragonTrophyValakas extends Quest
 					}
 					break;
 				}
-				case "31540-06.htm":
-				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						htmltext = event;
-					}
-					break;
-				}
-				case "31540-07.html":
+				case "31540-06.html":
 				{
 					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
 					{
@@ -110,7 +104,7 @@ public class Q00907_DragonTrophyValakas extends Quest
 			{
 				if (player.getLevel() < MIN_LEVEL)
 				{
-					htmltext = "31540-02.html";
+					htmltext = "31540-03.html";
 				}
 				else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
 				{
@@ -128,15 +122,15 @@ public class Q00907_DragonTrophyValakas extends Quest
 				{
 					case 1:
 					{
-						htmltext = "31540-08.html";
+						htmltext = "31540-07.html";
 						break;
 					}
 					case 2:
 					{
-						st.giveItems(MEDAL_OF_GLORY, 30);
+						st.giveItems(SCROLL_VALAKAS_CALL, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(QuestType.DAILY, true);
-						htmltext = "31540-09.html";
+						htmltext = "31540-08.html";
 						break;
 					}
 				}
@@ -146,14 +140,14 @@ public class Q00907_DragonTrophyValakas extends Quest
 			{
 				if (!st.isNowAvailable())
 				{
-					htmltext = "31540-03.html";
+					htmltext = "31540-02.html";
 				}
 				else
 				{
 					st.setState(State.CREATED);
 					if (player.getLevel() < MIN_LEVEL)
 					{
-						htmltext = "31540-02.html";
+						htmltext = "31540-03.html";
 					}
 					else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
 					{
@@ -176,6 +170,8 @@ public class Q00907_DragonTrophyValakas extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
 		{
+			st.giveItems(LAVASAURUS_ALPHA_FRAGMENT, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isPet);
@@ -183,6 +179,6 @@ public class Q00907_DragonTrophyValakas extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00907_DragonTrophyValakas(907, Q00907_DragonTrophyValakas.class.getSimpleName(), "Dragon Trophy - Valakas");
+		new Q00906_TheCallOfValakas(906, Q00906_TheCallOfValakas.class.getSimpleName(), "The Call of Valakas");
 	}
 }
