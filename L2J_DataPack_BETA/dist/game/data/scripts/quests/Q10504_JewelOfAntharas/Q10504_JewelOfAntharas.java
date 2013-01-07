@@ -16,40 +16,43 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00906_TheCallOfValakas;
+package quests.Q10504_JewelOfAntharas;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * The Call of Valakas (906)
+ * Jewel of Antharas (10504)
  * @author Zoey76
  */
-public class Q00906_TheCallOfValakas extends Quest
+public class Q10504_JewelOfAntharas extends Quest
 {
 	// NPC
-	private static final int KLEIN = 31540;
-	// Monster
-	private static final int LAVASAURUS_ALPHA = 29029;
+	private static final int THEODRIC = 30755;
+	// Monsters
+	private static final int ANTHARAS_OLD = 29019;
+	private static final int ANTHARAS_WEAK = 29066;
+	private static final int ANTHARAS_NORMAL = 29067;
+	private static final int ANTHARAS_STRONG = 29068;
 	// Items
-	private static final int LAVASAURUS_ALPHA_FRAGMENT = 21993;
-	private static final int SCROLL_VALAKAS_CALL = 21895;
-	private static final int VACUALITE_FLOATING_STONE = 7267;
+	private static final int CLEAR_CRYSTAL = 21905;
+	private static final int FILLED_CRYSTAL_ANTHARAS_ENERGY = 21907;
+	private static final int JEWEL_OF_ANTHARAS = 21898;
+	private static final int PORTAL_STONE = 3865;
 	// Misc
-	private static final int MIN_LEVEL = 83;
+	private static final int MIN_LEVEL = 84;
 	
-	private Q00906_TheCallOfValakas(int questId, String name, String descr)
+	private Q10504_JewelOfAntharas(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(KLEIN);
-		addTalkId(KLEIN);
-		addKillId(LAVASAURUS_ALPHA);
-		registerQuestItems(LAVASAURUS_ALPHA_FRAGMENT);
+		addStartNpc(THEODRIC);
+		addTalkId(THEODRIC);
+		addKillId(ANTHARAS_OLD, ANTHARAS_WEAK, ANTHARAS_NORMAL, ANTHARAS_STRONG);
+		registerQuestItems(CLEAR_CRYSTAL, FILLED_CRYSTAL_ANTHARAS_ENERGY);
 	}
 	
 	@Override
@@ -62,18 +65,20 @@ public class Q00906_TheCallOfValakas extends Quest
 		}
 		
 		String htmltext = null;
-		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
+		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
 		{
 			switch (event)
 			{
-				case "31540-05.htm":
+				case "30755-05.htm":
+				case "30755-06.htm":
 				{
 					htmltext = event;
 					break;
 				}
-				case "31540-06.html":
+				case "30755-07.html":
 				{
 					st.startQuest();
+					st.giveItems(CLEAR_CRYSTAL, 1);
 					htmltext = event;
 					break;
 				}
@@ -98,15 +103,15 @@ public class Q00906_TheCallOfValakas extends Quest
 			{
 				if (player.getLevel() < MIN_LEVEL)
 				{
-					htmltext = "31540-03.html";
+					htmltext = "30755-02.html";
 				}
-				else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
+				else if (!st.hasQuestItems(PORTAL_STONE))
 				{
-					htmltext = "31540-04.html";
+					htmltext = "30755-04.html";
 				}
 				else
 				{
-					htmltext = "31540-01.htm";
+					htmltext = "30755-01.htm";
 				}
 				break;
 			}
@@ -116,15 +121,23 @@ public class Q00906_TheCallOfValakas extends Quest
 				{
 					case 1:
 					{
-						htmltext = "31540-07.html";
+						if (st.hasQuestItems(CLEAR_CRYSTAL))
+						{
+							htmltext = "30755-08.html";
+						}
+						else
+						{
+							st.giveItems(CLEAR_CRYSTAL, 1);
+							htmltext = "30755-09.html";
+						}
 						break;
 					}
 					case 2:
 					{
-						st.giveItems(SCROLL_VALAKAS_CALL, 1);
+						st.giveItems(JEWEL_OF_ANTHARAS, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						st.exitQuest(QuestType.DAILY, true);
-						htmltext = "31540-08.html";
+						st.exitQuest(false, true);
+						htmltext = "30755-10.html";
 						break;
 					}
 				}
@@ -132,26 +145,7 @@ public class Q00906_TheCallOfValakas extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (!st.isNowAvailable())
-				{
-					htmltext = "31540-02.html";
-				}
-				else
-				{
-					st.setState(State.CREATED);
-					if (player.getLevel() < MIN_LEVEL)
-					{
-						htmltext = "31540-03.html";
-					}
-					else if (!st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						htmltext = "31540-04.html";
-					}
-					else
-					{
-						htmltext = "31540-01.htm";
-					}
-				}
+				htmltext = "30755-03.html";
 				break;
 			}
 		}
@@ -162,9 +156,10 @@ public class Q00906_TheCallOfValakas extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
 		{
-			st.giveItems(LAVASAURUS_ALPHA_FRAGMENT, 1);
+			st.takeItems(CLEAR_CRYSTAL, -1);
+			st.giveItems(FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
@@ -173,6 +168,6 @@ public class Q00906_TheCallOfValakas extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00906_TheCallOfValakas(906, Q00906_TheCallOfValakas.class.getSimpleName(), "The Call of Valakas");
+		new Q10504_JewelOfAntharas(10504, Q10504_JewelOfAntharas.class.getSimpleName(), "Jewel of Antharas");
 	}
 }

@@ -63,33 +63,20 @@ public class Q00904_DragonTrophyAntharas extends Quest
 		}
 		
 		String htmltext = null;
-		if (player.getLevel() >= MIN_LEVEL)
+		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
 		{
 			switch (event)
 			{
 				case "30755-05.htm":
-				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
-					{
-						htmltext = event;
-					}
-					break;
-				}
 				case "30755-06.htm":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
-					{
-						htmltext = event;
-					}
+					htmltext = event;
 					break;
 				}
 				case "30755-07.html":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
-					{
-						st.startQuest();
-						htmltext = event;
-					}
+					st.startQuest();
+					htmltext = event;
 					break;
 				}
 			}
@@ -177,7 +164,7 @@ public class Q00904_DragonTrophyAntharas extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
 		{
 			st.setCond(2, true);
 		}
