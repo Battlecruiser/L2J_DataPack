@@ -60,33 +60,20 @@ public class Q00907_DragonTrophyValakas extends Quest
 		}
 		
 		String htmltext = null;
-		if (player.getLevel() >= MIN_LEVEL)
+		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
 		{
 			switch (event)
 			{
 				case "31540-05.htm":
-				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						htmltext = event;
-					}
-					break;
-				}
 				case "31540-06.htm":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						htmltext = event;
-					}
+					htmltext = event;
 					break;
 				}
 				case "31540-07.html":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(VACUALITE_FLOATING_STONE))
-					{
-						st.startQuest();
-						htmltext = event;
-					}
+					st.startQuest();
+					htmltext = event;
 					break;
 				}
 			}
@@ -174,7 +161,7 @@ public class Q00907_DragonTrophyValakas extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
 		{
 			st.setCond(2, true);
 		}

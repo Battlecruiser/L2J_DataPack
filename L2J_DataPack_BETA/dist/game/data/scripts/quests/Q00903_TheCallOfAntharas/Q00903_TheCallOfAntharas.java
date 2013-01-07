@@ -64,25 +64,19 @@ public class Q00903_TheCallOfAntharas extends Quest
 		}
 		
 		String htmltext = null;
-		if (player.getLevel() >= MIN_LEVEL)
+		if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
 		{
 			switch (event)
 			{
 				case "30755-05.htm":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
-					{
-						htmltext = event;
-					}
+					htmltext = event;
 					break;
 				}
 				case "30755-06.html":
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(PORTAL_STONE))
-					{
-						st.startQuest();
-						htmltext = event;
-					}
+					st.startQuest();
+					htmltext = event;
 					break;
 				}
 			}
