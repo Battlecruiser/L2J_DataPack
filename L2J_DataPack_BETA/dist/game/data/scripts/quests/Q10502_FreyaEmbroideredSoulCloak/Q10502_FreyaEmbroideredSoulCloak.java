@@ -18,6 +18,7 @@
  */
 package quests.Q10502_FreyaEmbroideredSoulCloak;
 
+import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -115,39 +116,46 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		QuestState st;
 		if (killer.isInParty())
 		{
-			for (L2PcInstance player : killer.getParty().getMembers())
+			if (killer.getParty().isInCommandChannel())
 			{
-				st = player.getQuestState(getName());
-				if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+				for (L2Party party : killer.getParty().getCommandChannel().getPartys())
 				{
-					st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					
-					if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+					for (L2PcInstance player : party.getMembers())
 					{
-						st.setCond(2, true);
+						rewardPlayer(player, npc);
 					}
+				}
+			}
+			else
+			{
+				for (L2PcInstance player : killer.getParty().getMembers())
+				{
+					rewardPlayer(player, npc);
 				}
 			}
 		}
 		else
 		{
-			st = killer.getQuestState(getName());
-			if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
-			{
-				st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
-				if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
-				{
-					st.setCond(2, true);
-				}
-			}
+			rewardPlayer(killer, npc);
 		}
 		return super.onKill(npc, killer, isPet);
+	}
+	
+	private final void rewardPlayer(L2PcInstance player, L2Npc npc)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			
+			if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+			{
+				st.setCond(2, true);
+			}
+		}
 	}
 	
 	public static void main(String[] args)
