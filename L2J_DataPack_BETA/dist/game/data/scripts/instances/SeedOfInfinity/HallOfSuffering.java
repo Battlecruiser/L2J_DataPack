@@ -264,12 +264,12 @@ public class HallOfSuffering extends Quest
 		mob.setIsImmobilized(true);
 		mob.setCurrentHp(mob.getMaxHp()*0.5);
 		world.npcList.put(mob, false);
-		world.setStatus(world.getStatus() + 1);
+		world.incStatus();
 	}
 	
 	protected void runTwins(HSWorld world)
 	{
-		world.setStatus(world.getStatus() + 1);
+		world.incStatus();
 		world.klodekus = addSpawn(TWIN_SPAWNS[0][0], TWIN_SPAWNS[0][1], TWIN_SPAWNS[0][2], TWIN_SPAWNS[0][3], 0, false,0,false,world.getInstanceId());
 		world.klanikus = addSpawn(TWIN_SPAWNS[1][0], TWIN_SPAWNS[1][1], TWIN_SPAWNS[1][2], TWIN_SPAWNS[1][3], 0, false,0,false,world.getInstanceId());
 		world.klanikus.setIsMortal(false);
@@ -520,7 +520,7 @@ public class HallOfSuffering extends Quest
 			{
 				if (world.klanikus.isDead() && world.klodekus.isDead())
 				{
-					world.setStatus(world.getStatus() + 1);
+					world.incStatus();
 					// instance end
 					calcRewardItemId(world);
 					world.klanikus = null;

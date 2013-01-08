@@ -155,15 +155,21 @@ public class Q10504_JewelOfAntharas extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
+		executeForEachPlayer(killer, npc, isPet, true, true);
+		return super.onKill(npc, killer, isPet);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			st.takeItems(CLEAR_CRYSTAL, -1);
 			st.giveItems(FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
-		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)

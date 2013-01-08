@@ -18,7 +18,6 @@
  */
 package quests.Q10501_ZakenEmbroideredSoulCloak;
 
-import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -116,34 +115,12 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if (killer.isInParty())
-		{
-			if (killer.getParty().isInCommandChannel())
-			{
-				for (L2Party party : killer.getParty().getCommandChannel().getPartys())
-				{
-					for (L2PcInstance player : party.getMembers())
-					{
-						rewardPlayer(player, npc);
-					}
-				}
-			}
-			else
-			{
-				for (L2PcInstance player : killer.getParty().getMembers())
-				{
-					rewardPlayer(player, npc);
-				}
-			}
-		}
-		else
-		{
-			rewardPlayer(killer, npc);
-		}
+		executeForEachPlayer(killer, npc, isPet, true, true);
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	private final void rewardPlayer(L2PcInstance player, L2Npc npc)
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))

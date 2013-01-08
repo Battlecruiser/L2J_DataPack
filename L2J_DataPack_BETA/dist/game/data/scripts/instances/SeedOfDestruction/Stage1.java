@@ -552,7 +552,7 @@ public class Stage1 extends Quest
 					// instance end
 					break;
 				}
-				world.setStatus(world.getStatus() + 1);
+				world.incStatus();
 				return true;
 			}
 			finally
@@ -788,7 +788,9 @@ public class Stage1 extends Quest
 			else if (world.getStatus() == 2)
 			{
 				if (checkKillProgress(npc, world))
-					world.setStatus(world.getStatus() + 1);
+				{
+					world.incStatus();
+				}
 			}
 			else if (world.getStatus() == 4 && npc.getNpcId() == OBELISK)
 			{
@@ -808,7 +810,7 @@ public class Stage1 extends Quest
 			{
 				if (npc.getNpcId() == TIAT)
 				{
-					world.setStatus(world.getStatus() + 1);
+					world.incStatus();
 					for(int objId : world.getAllowed())
 					{
 						L2PcInstance pl = L2World.getInstance().getPlayer(objId);
