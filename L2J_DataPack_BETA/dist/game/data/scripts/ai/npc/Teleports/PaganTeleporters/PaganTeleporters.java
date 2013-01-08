@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class PaganTeleporters extends AbstractNpcAI
 {
-	//NPCs
+	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;
 	private static final int TRIOLS_MIRROR_2 = 32040;
 	
@@ -46,7 +46,7 @@ public class PaganTeleporters extends AbstractNpcAI
 		32040
 	};
 	
-	//Items
+	// Items
 	private static final int VISITORS_MARK = 8064;
 	private static final int FADED_VISITORS_MARK = 8065;
 	private static final int PAGANS_MARK = 8067;

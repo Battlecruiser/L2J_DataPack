@@ -56,35 +56,43 @@ public class TowerOfInfinitum extends Quest
 		
 		TELE_COORDS.put(32745, new Location[]
 		{
-			new Location(-22208, 277122, -13376), null
+			new Location(-22208, 277122, -13376),
+			null
 		});
 		TELE_COORDS.put(32746, new Location[]
 		{
-			new Location(-22208, 277106, -11648), new Location(-22208, 277074, -15040)
+			new Location(-22208, 277106, -11648),
+			new Location(-22208, 277074, -15040)
 		});
 		TELE_COORDS.put(32747, new Location[]
 		{
-			new Location(-22208, 277120, -9920), new Location(-22208, 277120, -13376)
+			new Location(-22208, 277120, -9920),
+			new Location(-22208, 277120, -13376)
 		});
 		TELE_COORDS.put(32748, new Location[]
 		{
-			new Location(-19024, 277126, -8256), new Location(-22208, 277106, -11648)
+			new Location(-19024, 277126, -8256),
+			new Location(-22208, 277106, -11648)
 		});
 		TELE_COORDS.put(32749, new Location[]
 		{
-			new Location(-19024, 277106, -9920), new Location(-22208, 277122, -9920)
+			new Location(-19024, 277106, -9920),
+			new Location(-22208, 277122, -9920)
 		});
 		TELE_COORDS.put(32750, new Location[]
 		{
-			new Location(-19008, 277100, -11648), new Location(-19024, 277122, -8256)
+			new Location(-19008, 277100, -11648),
+			new Location(-19024, 277122, -8256)
 		});
 		TELE_COORDS.put(32751, new Location[]
 		{
-			new Location(-19008, 277100, -13376), new Location(-19008, 277106, -9920)
+			new Location(-19008, 277100, -13376),
+			new Location(-19008, 277106, -9920)
 		});
 		TELE_COORDS.put(32752, new Location[]
 		{
-			new Location(14602, 283179, -7500), new Location(-19008, 277100, -11648)
+			new Location(14602, 283179, -7500),
+			new Location(-19008, 277100, -11648)
 		});
 	}
 	

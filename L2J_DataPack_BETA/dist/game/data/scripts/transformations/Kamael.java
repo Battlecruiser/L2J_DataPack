@@ -26,7 +26,12 @@ public class Kamael extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		539, 540, 1471, 1472, 5491, 619
+		539,
+		540,
+		1471,
+		1472,
+		5491,
+		619
 	};
 	
 	public Kamael()

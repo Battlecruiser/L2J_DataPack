@@ -26,7 +26,10 @@ public class OnyxBeast extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		584, 585, 5491, 619
+		584,
+		585,
+		5491,
+		619
 	};
 	
 	public OnyxBeast()

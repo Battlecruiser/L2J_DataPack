@@ -26,7 +26,12 @@ public class GolemGuardianStrong extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		572, 573, 574, 575, 5491, 619
+		572,
+		573,
+		574,
+		575,
+		5491,
+		619
 	};
 	
 	public GolemGuardianStrong()

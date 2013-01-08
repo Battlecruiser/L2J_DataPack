@@ -58,9 +58,13 @@ public class Signet extends L2Effect
 	public boolean onStart()
 	{
 		if (getSkill() instanceof L2SkillSignet)
+		{
 			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+		}
 		else if (getSkill() instanceof L2SkillSignetCasttime)
+		{
 			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+		}
 		_actor = (L2EffectPointInstance) getEffected();
 		_srcInArena = (getEffector().isInsideZone(ZoneId.PVP) && !getEffector().isInsideZone(ZoneId.SIEGE));
 		return true;
@@ -70,7 +74,9 @@ public class Signet extends L2Effect
 	public boolean onActionTime()
 	{
 		if (_skill == null)
+		{
 			return true;
+		}
 		int mpConsume = _skill.getMpConsume();
 		
 		if (mpConsume > getEffector().getCurrentMp())
@@ -84,10 +90,14 @@ public class Signet extends L2Effect
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (cha == null)
+			{
 				continue;
+			}
 			
 			if (_skill.isOffensive() && !L2Skill.checkForAreaOffensiveSkills(getEffector(), cha, _skill, _srcInArena))
+			{
 				continue;
+			}
 			
 			// there doesn't seem to be a visible effect with MagicSkillLaunched packet...
 			_actor.broadcastPacket(new MagicSkillUse(_actor, cha, _skill.getId(), _skill.getLevel(), 0, 0));
@@ -95,7 +105,9 @@ public class Signet extends L2Effect
 		}
 		
 		if (!targets.isEmpty())
+		{
 			getEffector().callSkill(_skill, targets.toArray(new L2Character[targets.size()]));
+		}
 		FastList.recycle(targets);
 		return true;
 	}
@@ -104,6 +116,8 @@ public class Signet extends L2Effect
 	public void onExit()
 	{
 		if (_actor != null)
+		{
 			_actor.deleteMe();
+		}
 	}
 }

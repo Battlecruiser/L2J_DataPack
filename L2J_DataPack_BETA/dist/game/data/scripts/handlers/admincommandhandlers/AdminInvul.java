@@ -25,11 +25,8 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
-
 /**
- * This class handles following admin commands:
- * - invul = turns invulnerability on/off
- *
+ * This class handles following admin commands: - invul = turns invulnerability on/off
  * @version $Revision: 1.2.4.4 $ $Date: 2007/07/31 10:06:02 $
  */
 public class AdminInvul implements IAdminCommandHandler
@@ -75,14 +72,18 @@ public class AdminInvul implements IAdminCommandHandler
 			activeChar.setIsInvul(false);
 			text = activeChar.getName() + " is now mortal";
 			if (Config.DEBUG)
+			{
 				_log.fine("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+			}
 		}
 		else
 		{
 			activeChar.setIsInvul(true);
 			text = activeChar.getName() + " is now invulnerable";
 			if (Config.DEBUG)
+			{
 				_log.fine("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
+			}
 		}
 		activeChar.sendMessage(text);
 	}

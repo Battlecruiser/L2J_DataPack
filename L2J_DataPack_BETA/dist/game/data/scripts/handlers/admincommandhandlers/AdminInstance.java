@@ -97,7 +97,7 @@ public class AdminInstance implements IAdminCommandHandler
 				}
 				
 				L2Object target = activeChar.getTarget();
-				if (target == null || target instanceof L2Summon) // Don't separate summons from masters
+				if ((target == null) || (target instanceof L2Summon)) // Don't separate summons from masters
 				{
 					activeChar.sendMessage("Incorrect target.");
 					return false;

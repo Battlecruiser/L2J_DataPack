@@ -44,7 +44,8 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 		StringTokenizer st = new StringTokenizer(command);
 		if (st.hasMoreTokens())
 		{
-			switch (st.nextToken()) // command
+			switch (st.nextToken())
+			// command
 			{
 				case "admin_exceptions":
 				{
@@ -53,7 +54,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 					StringBuilder sb = new StringBuilder();
 					for (PcCondOverride ex : PcCondOverride.values())
 					{
-						sb.append("<tr><td fixwidth=\"180\">" + ex.getDescription() + ":</td><td><a action=\"bypass -h admin_set_exception " + ex.ordinal() + "\">" + (activeChar.canOverrideCond(ex) ? "Disable" : "Enable") + "</a></td></tr>");	
+						sb.append("<tr><td fixwidth=\"180\">" + ex.getDescription() + ":</td><td><a action=\"bypass -h admin_set_exception " + ex.ordinal() + "\">" + (activeChar.canOverrideCond(ex) ? "Disable" : "Enable") + "</a></td></tr>");
 					}
 					msg.replace("%cond_table%", sb.toString());
 					activeChar.sendPacket(msg);
@@ -119,7 +120,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 		}
 		return true;
 	}
-
+	
 	@Override
 	public String[] getAdminCommandList()
 	{

@@ -25,9 +25,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * This class handles following admin commands:
- * - gm = turns gm mode off
- *
+ * This class handles following admin commands: - gm = turns gm mode off
  * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminGm implements IAdminCommandHandler

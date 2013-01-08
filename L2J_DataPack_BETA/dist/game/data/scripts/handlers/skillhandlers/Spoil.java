@@ -43,15 +43,21 @@ public class Spoil implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		if (targets == null)
+		{
 			return;
+		}
 		
-		for (L2Object tgt: targets)
+		for (L2Object tgt : targets)
 		{
 			if (!tgt.isMonster())
+			{
 				continue;
+			}
 			
 			L2MonsterInstance target = (L2MonsterInstance) tgt;
 			

@@ -47,12 +47,16 @@ public class RandomizeHate extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() == null || getEffected() == getEffector())
+		if ((getEffected() == null) || (getEffected() == getEffector()))
+		{
 			return false;
+		}
 		
 		// Effect is for mobs only.
 		if (!getEffected().isL2Attackable())
+		{
 			return false;
+		}
 		
 		L2Attackable effectedMob = (L2Attackable) getEffected();
 		
@@ -63,18 +67,22 @@ public class RandomizeHate extends L2Effect
 		Collection<L2Character> chars = getEffected().getKnownList().getKnownCharacters();
 		for (L2Character cha : chars)
 		{
-			if (cha != null && (cha != effectedMob) && (cha != getEffector()))
+			if ((cha != null) && (cha != effectedMob) && (cha != getEffector()))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha.isL2Attackable() && ((L2Attackable) cha).getFactionId() != null && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
+				if (cha.isL2Attackable() && (((L2Attackable) cha).getFactionId() != null) && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
+				{
 					continue;
+				}
 				
 				targetList.add(cha);
 			}
 		}
 		// if there is no target, exit function
 		if (targetList.isEmpty())
+		{
 			return true;
+		}
 		
 		// Choosing randomly a new target
 		final L2Character target = targetList.get(Rnd.get(targetList.size()));

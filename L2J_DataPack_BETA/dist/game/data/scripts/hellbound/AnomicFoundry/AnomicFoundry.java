@@ -52,19 +52,44 @@ public class AnomicFoundry extends Quest
 	private static int[][] SPAWNS =
 	{
 		{
-			LESSER_EVIL, 27883, 248613, -3209, -13248, 5
+			LESSER_EVIL,
+			27883,
+			248613,
+			-3209,
+			-13248,
+			5
 		},
 		{
-			LESSER_EVIL, 26142, 246442, -3216, 7064, 5
+			LESSER_EVIL,
+			26142,
+			246442,
+			-3216,
+			7064,
+			5
 		},
 		{
-			LESSER_EVIL, 27335, 246217, -3668, -7992, 5
+			LESSER_EVIL,
+			27335,
+			246217,
+			-3668,
+			-7992,
+			5
 		},
 		{
-			LESSER_EVIL, 28486, 245913, -3698, 0, 10
+			LESSER_EVIL,
+			28486,
+			245913,
+			-3698,
+			0,
+			10
 		},
 		{
-			GREATER_EVIL, 28684, 244118, -3700, -22560, 10
+			GREATER_EVIL,
+			28684,
+			244118,
+			-3700,
+			-22560,
+			10
 		}
 	};
 	
@@ -74,7 +99,11 @@ public class AnomicFoundry extends Quest
 	
 	private final int[] _spawned =
 	{
-		0, 0, 0, 0, 0
+		0,
+		0,
+		0,
+		0,
+		0
 	};
 	private final Map<Integer, Integer> _atkIndex = new FastMap<>();
 	

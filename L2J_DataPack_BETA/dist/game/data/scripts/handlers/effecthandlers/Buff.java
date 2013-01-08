@@ -44,7 +44,7 @@ public class Buff extends L2Effect
 	{
 		return true;
 	}
-
+	
 	@Override
 	public L2EffectType getEffectType()
 	{

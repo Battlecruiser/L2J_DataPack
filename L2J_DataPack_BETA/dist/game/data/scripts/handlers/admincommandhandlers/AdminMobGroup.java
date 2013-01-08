@@ -32,8 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
- * @author littlecrow
- * Admin commands handler for controllable mobs
+ * @author littlecrow Admin commands handler for controllable mobs
  */
 public class AdminMobGroup implements IAdminCommandHandler
 {
@@ -67,19 +66,33 @@ public class AdminMobGroup implements IAdminCommandHandler
 			return true;
 		}
 		else if (command.equals("admin_mobgroup_list"))
+		{
 			showGroupList(activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_create"))
+		{
 			createGroup(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_delete") || command.startsWith("admin_mobgroup_remove"))
+		{
 			removeGroup(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_spawn"))
+		{
 			spawnGroup(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_unspawn"))
+		{
 			unspawnGroup(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_kill"))
+		{
 			killGroup(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_attackgrp"))
+		{
 			attackGrp(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_attack"))
 		{
 			if (activeChar.getTarget() instanceof L2Character)
@@ -89,28 +102,44 @@ public class AdminMobGroup implements IAdminCommandHandler
 			}
 		}
 		else if (command.startsWith("admin_mobgroup_rnd"))
+		{
 			setNormal(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_idle"))
+		{
 			idle(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_return"))
+		{
 			returnToChar(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_follow"))
+		{
 			follow(command, activeChar, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_casting"))
+		{
 			setCasting(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_nomove"))
+		{
 			noMove(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_invul"))
+		{
 			invul(command, activeChar);
+		}
 		else if (command.startsWith("admin_mobgroup_teleport"))
+		{
 			teleportGroup(command, activeChar);
+		}
 		showMainPage(activeChar, command);
 		return true;
 	}
 	
 	/**
 	 * @param activeChar
-	 * @param command 
+	 * @param command
 	 */
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
@@ -290,7 +319,9 @@ public class AdminMobGroup implements IAdminCommandHandler
 		group.unspawnGroup();
 		
 		if (MobGroupTable.getInstance().removeGroup(groupId))
+		{
 			activeChar.sendMessage("Mob group " + groupId + " unspawned and removed.");
+		}
 	}
 	
 	private void spawnGroup(String command, L2PcInstance activeChar)
@@ -335,9 +366,13 @@ public class AdminMobGroup implements IAdminCommandHandler
 		doAnimation(activeChar);
 		
 		if (topos)
+		{
 			group.spawnGroup(posx, posy, posz);
+		}
 		else
+		{
 			group.spawnGroup(activeChar);
+		}
 		
 		activeChar.sendMessage("Mob group " + groupId + " spawned.");
 	}
@@ -446,11 +481,17 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		if (enabled.equalsIgnoreCase("on") || enabled.equalsIgnoreCase("true"))
+		{
 			group.setNoMoveMode(true);
+		}
 		else if (enabled.equalsIgnoreCase("off") || enabled.equalsIgnoreCase("false"))
+		{
 			group.setNoMoveMode(false);
+		}
 		else
+		{
 			activeChar.sendMessage("Incorrect command arguments.");
+		}
 	}
 	
 	private void doAnimation(L2PcInstance activeChar)
@@ -519,11 +560,17 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		
 		if (enabled.equalsIgnoreCase("on") || enabled.equalsIgnoreCase("true"))
+		{
 			group.setInvul(true);
+		}
 		else if (enabled.equalsIgnoreCase("off") || enabled.equalsIgnoreCase("false"))
+		{
 			group.setInvul(false);
+		}
 		else
+		{
 			activeChar.sendMessage("Incorrect command arguments.");
+		}
 	}
 	
 	private void teleportGroup(String command, L2PcInstance activeChar)
@@ -538,10 +585,14 @@ public class AdminMobGroup implements IAdminCommandHandler
 			targetPlayerStr = command.split(" ")[2];
 			
 			if (targetPlayerStr != null)
+			{
 				targetPlayer = L2World.getInstance().getPlayer(targetPlayerStr);
+			}
 			
 			if (targetPlayer == null)
+			{
 				targetPlayer = activeChar;
+			}
 		}
 		catch (Exception e)
 		{
@@ -567,7 +618,9 @@ public class AdminMobGroup implements IAdminCommandHandler
 		activeChar.sendMessage("======= <Mob Groups> =======");
 		
 		for (MobGroup mobGroup : mobGroupList)
+		{
 			activeChar.sendMessage(mobGroup.getGroupId() + ": " + mobGroup.getActiveMobCount() + " alive out of " + mobGroup.getMaxMobCount() + " of NPC ID " + mobGroup.getTemplate().getNpcId() + " (" + mobGroup.getStatus() + ")");
+		}
 		
 		activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOTER);
 	}

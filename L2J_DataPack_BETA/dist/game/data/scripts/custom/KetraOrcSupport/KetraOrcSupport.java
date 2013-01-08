@@ -40,7 +40,7 @@ import com.l2jserver.gameserver.util.Util;
 public class KetraOrcSupport extends Quest
 {
 	private static final String qn = "KetraOrcSupport";
-
+	
 	private static final int KADUN = 31370; // Hierarch
 	private static final int WAHKAN = 31371; // Messenger
 	private static final int ASEFA = 31372; // Soul Guide
@@ -50,44 +50,52 @@ public class KetraOrcSupport extends Quest
 	private static final int KURFA = 31376; // Gate Keeper
 	private static final int[] NPCS =
 	{
-		KADUN, WAHKAN, ASEFA, ATAN, JAFF, JUMARA, KURFA
+		KADUN,
+		WAHKAN,
+		ASEFA,
+		ATAN,
+		JAFF,
+		JUMARA,
+		KURFA
 	};
-
+	
 	private static final int HORN = 7186;
-
+	
 	private static final Map<Integer, BuffsData> BUFF = new HashMap<>();
-
+	
 	private class BuffsData
 	{
-		private int _skill;
-		private int _cost;
-
+		private final int _skill;
+		private final int _cost;
+		
 		public BuffsData(int skill, int cost)
 		{
 			super();
 			_skill = skill;
 			_cost = cost;
 		}
-
+		
 		public L2Skill getSkill()
 		{
 			return SkillTable.getInstance().getInfo(_skill, 1);
 		}
-
+		
 		public int getCost()
 		{
 			return _cost;
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			return htmltext;
-
+		}
+		
 		int Alevel = player.getAllianceWithVarkaKetra();
 		if (Util.isDigit(event) && BUFF.containsKey(Integer.parseInt(event)))
 		{
@@ -104,7 +112,9 @@ public class KetraOrcSupport extends Quest
 		else if (event.equals("Withdraw"))
 		{
 			if (player.getWarehouse().getSize() == 0)
+			{
 				htmltext = "31374-0.htm";
+			}
 			else
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -115,110 +125,170 @@ public class KetraOrcSupport extends Quest
 		else if (event.equals("Teleport"))
 		{
 			if (Alevel == 4)
+			{
 				htmltext = "31376-4.htm";
+			}
 			else if (Alevel == 5)
+			{
 				htmltext = "31376-5.htm";
+			}
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			st = this.newQuestState(player);
+		{
+			st = newQuestState(player);
+		}
 		int npcId = npc.getNpcId();
 		int Alevel = player.getAllianceWithVarkaKetra();
 		if (npcId == KADUN)
 		{
 			if (Alevel > 0)
+			{
 				htmltext = "31370-friend.htm";
+			}
 			else
+			{
 				htmltext = "31370-no.htm";
+			}
 		}
 		else if (npcId == WAHKAN)
 		{
 			if (Alevel > 0)
+			{
 				htmltext = "31371-friend.htm";
+			}
 			else
+			{
 				htmltext = "31371-no.htm";
+			}
 		}
 		else if (npcId == ASEFA)
 		{
 			st.setState(State.STARTED);
 			if (Alevel < 1)
+			{
 				htmltext = "31372-3.htm";
-			else if (Alevel < 3 && Alevel > 0)
+			}
+			else if ((Alevel < 3) && (Alevel > 0))
+			{
 				htmltext = "31372-1.htm";
+			}
 			else if (Alevel > 2)
+			{
 				if (st.hasQuestItems(HORN))
+				{
 					htmltext = "31372-4.htm";
+				}
 				else
+				{
 					htmltext = "31372-2.htm";
+				}
+			}
 		}
 		else if (npcId == ATAN)
 		{
 			if (player.getKarma() >= 1)
+			{
 				htmltext = "31373-pk.htm";
+			}
 			else if (Alevel <= 0)
+			{
 				htmltext = "31373-no.htm";
-			else if (Alevel == 1 || Alevel == 2)
+			}
+			else if ((Alevel == 1) || (Alevel == 2))
+			{
 				htmltext = "31373-1.htm";
+			}
 			else
+			{
 				htmltext = "31373-2.htm";
+			}
 		}
 		else if (npcId == JAFF)
 		{
 			if (Alevel <= 0)
+			{
 				htmltext = "31374-no.htm";
+			}
 			else if (Alevel == 1)
+			{
 				htmltext = "31374-1.htm";
+			}
 			else if (player.getWarehouse().getSize() == 0)
+			{
 				htmltext = "31374-3.htm";
-			else if (Alevel == 2 || Alevel == 3)
+			}
+			else if ((Alevel == 2) || (Alevel == 3))
+			{
 				htmltext = "31374-2.htm";
+			}
 			else
+			{
 				htmltext = "31374-4.htm";
+			}
 		}
 		else if (npcId == JUMARA)
 		{
 			if (Alevel == 2)
+			{
 				htmltext = "31375-1.htm";
-			else if (Alevel == 3 || Alevel == 4)
+			}
+			else if ((Alevel == 3) || (Alevel == 4))
+			{
 				htmltext = "31375-2.htm";
+			}
 			else if (Alevel == 5)
+			{
 				htmltext = "31375-3.htm";
+			}
 			else
+			{
 				htmltext = "31375-no.htm";
+			}
 		}
 		else if (npcId == KURFA)
 		{
 			if (Alevel <= 0)
+			{
 				htmltext = "31376-no.htm";
-			else if (Alevel > 0 && Alevel < 4)
+			}
+			else if ((Alevel > 0) && (Alevel < 4))
+			{
 				htmltext = "31376-1.htm";
+			}
 			else if (Alevel == 4)
+			{
 				htmltext = "31376-2.htm";
+			}
 			else
+			{
 				htmltext = "31376-3.htm";
+			}
 		}
 		return htmltext;
 	}
-
+	
 	public KetraOrcSupport(int id, String name, String descr)
 	{
 		super(id, name, descr);
-
+		
 		for (int i : NPCS)
+		{
 			addFirstTalkId(i);
+		}
 		addTalkId(ASEFA);
 		addTalkId(KURFA);
 		addTalkId(JAFF);
 		addStartNpc(KURFA);
 		addStartNpc(JAFF);
-
+		
 		BUFF.put(1, new BuffsData(4359, 2)); // Focus: Requires 2 Buffalo Horns
 		BUFF.put(2, new BuffsData(4360, 2)); // Death Whisper: Requires 2 Buffalo Horns
 		BUFF.put(3, new BuffsData(4345, 3)); // Might: Requires 3 Buffalo Horns
@@ -228,7 +298,7 @@ public class KetraOrcSupport extends Quest
 		BUFF.put(7, new BuffsData(4356, 6)); // Empower: Requires 6 Buffalo Horns
 		BUFF.put(8, new BuffsData(4357, 6)); // Haste: Requires 6 Buffalo Horns
 	}
-
+	
 	public static void main(String args[])
 	{
 		new KetraOrcSupport(-1, qn, "custom");

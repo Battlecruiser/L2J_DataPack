@@ -43,7 +43,7 @@ public class Cancel implements ISkillHandler
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{	
+	{
 		L2Character target;
 		L2Effect effect;
 		final int cancelLvl, minRate, maxRate;
@@ -51,15 +51,19 @@ public class Cancel implements ISkillHandler
 		cancelLvl = skill.getMagicLevel();
 		minRate = 25;
 		maxRate = 80;
-
+		
 		for (L2Object obj : targets)
 		{
 			if (!(obj instanceof L2Character))
+			{
 				continue;
-			target = (L2Character)obj;
+			}
+			target = (L2Character) obj;
 			
 			if (target.isDead())
+			{
 				continue;
+			}
 			
 			int lastCanceledSkillId = 0;
 			int count = skill.getMaxNegatedEffects();
@@ -72,11 +76,13 @@ public class Cancel implements ISkillHandler
 			{
 				if (res < 0)
 				{
-					resMod = 1 - 0.075 * res;
+					resMod = 1 - (0.075 * res);
 					resMod = 1 / resMod;
 				}
 				else
-					resMod = 1 + 0.02 * res;
+				{
+					resMod = 1 + (0.02 * res);
+				}
 				
 				rate *= resMod;
 			}
@@ -84,22 +90,18 @@ public class Cancel implements ISkillHandler
 			if (activeChar.isDebug())
 			{
 				final StringBuilder stat = new StringBuilder(100);
-				StringUtil.append(stat,
-						skill.getName(),
-						" power:", String.valueOf((int)skill.getPower()),
-						" lvl:", String.valueOf(cancelLvl),
-						" res:", String.format("%1.2f", resMod), "(",
-						String.format("%1.2f", profModifier), "/",
-						String.format("%1.2f", vulnModifier),
-						") total:", String.valueOf(rate)
-				);
+				StringUtil.append(stat, skill.getName(), " power:", String.valueOf((int) skill.getPower()), " lvl:", String.valueOf(cancelLvl), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", profModifier), "/", String.format("%1.2f", vulnModifier), ") total:", String.valueOf(rate));
 				final String result = stat.toString();
 				if (activeChar.isDebug())
+				{
 					activeChar.sendDebugMessage(result);
+				}
 				if (Config.DEVELOPER)
+				{
 					_log.info(result);
+				}
 			}
-
+			
 			final L2Effect[] effects = target.getAllEffects();
 			
 			if (skill.getNegateAbnormals() != null) // Cancel for abnormals
@@ -107,14 +109,18 @@ public class Cancel implements ISkillHandler
 				for (L2Effect eff : effects)
 				{
 					if (eff == null)
+					{
 						continue;
+					}
 					
 					for (String negateAbnormalType : skill.getNegateAbnormals().keySet())
 					{
-						if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && skill.getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl())
+						if (negateAbnormalType.equalsIgnoreCase(eff.getAbnormalType()) && (skill.getNegateAbnormals().get(negateAbnormalType) >= eff.getAbnormalLvl()))
 						{
-							if (calcCancelSuccess(eff, cancelLvl, (int)rate, minRate, maxRate))
+							if (calcCancelSuccess(eff, cancelLvl, (int) rate, minRate, maxRate))
+							{
 								eff.exit();
+							}
 						}
 					}
 				}
@@ -125,7 +131,9 @@ public class Cancel implements ISkillHandler
 				{
 					effect = effects[i];
 					if (effect == null)
+					{
 						continue;
+					}
 					
 					if (!effect.canBeStolen())
 					{
@@ -135,7 +143,9 @@ public class Cancel implements ISkillHandler
 					
 					// first pass - dances/songs only
 					if (!effect.getSkill().isDance())
+					{
 						continue;
+					}
 					
 					if (effect.getSkill().getId() == lastCanceledSkillId)
 					{
@@ -143,15 +153,19 @@ public class Cancel implements ISkillHandler
 						continue;
 					}
 					
-					if (!calcCancelSuccess(effect, cancelLvl, (int)rate, minRate, maxRate))
+					if (!calcCancelSuccess(effect, cancelLvl, (int) rate, minRate, maxRate))
+					{
 						continue;
+					}
 					
 					lastCanceledSkillId = effect.getSkill().getId();
 					effect.exit();
 					count--;
 					
 					if (count == 0)
+					{
 						break;
+					}
 				}
 				
 				if (count != 0)
@@ -161,11 +175,15 @@ public class Cancel implements ISkillHandler
 					{
 						effect = effects[i];
 						if (effect == null)
+						{
 							continue;
+						}
 						
 						// second pass - all except dances/songs
 						if (effect.getSkill().isDance())
+						{
 							continue;
+						}
 						
 						if (effect.getSkill().getId() == lastCanceledSkillId)
 						{
@@ -173,20 +191,24 @@ public class Cancel implements ISkillHandler
 							continue;
 						}
 						
-						if (!calcCancelSuccess(effect, cancelLvl, (int)rate, minRate, maxRate))
+						if (!calcCancelSuccess(effect, cancelLvl, (int) rate, minRate, maxRate))
+						{
 							continue;
+						}
 						
 						lastCanceledSkillId = effect.getSkill().getId();
 						effect.exit();
 						count--;
 						
 						if (count == 0)
+						{
 							break;
+						}
 					}
 				}
 			}
 			
-			//Possibility of a lethal strike
+			// Possibility of a lethal strike
 			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		
@@ -194,9 +216,9 @@ public class Cancel implements ISkillHandler
 		if (skill.hasSelfEffects())
 		{
 			effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
+			if ((effect != null) && effect.isSelfEffect())
 			{
-				//Replace old effect with new one.
+				// Replace old effect with new one.
 				effect.exit();
 			}
 			skill.getEffectsSelf(activeChar);
@@ -208,13 +230,17 @@ public class Cancel implements ISkillHandler
 	private boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate, int minRate, int maxRate)
 	{
 		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
-		rate += effect.getAbnormalTime()/120;
+		rate += effect.getAbnormalTime() / 120;
 		rate += baseRate;
 		
 		if (rate < minRate)
+		{
 			rate = minRate;
+		}
 		else if (rate > maxRate)
+		{
 			rate = maxRate;
+		}
 		
 		return Rnd.get(100) < rate;
 	}

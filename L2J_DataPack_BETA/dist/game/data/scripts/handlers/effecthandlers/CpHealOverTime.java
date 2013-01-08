@@ -53,18 +53,24 @@ public class CpHealOverTime extends L2Effect
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())
+		{
 			return false;
+		}
 		
 		double cp = getEffected().getCurrentCp();
 		double maxcp = getEffected().getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
 		if (cp >= maxcp)
+		{
 			return true;
+		}
 		
 		cp += calc();
 		if (cp > maxcp)
+		{
 			cp = maxcp;
+		}
 		
 		getEffected().setCurrentCp(cp);
 		StatusUpdate sump = new StatusUpdate(getEffected());

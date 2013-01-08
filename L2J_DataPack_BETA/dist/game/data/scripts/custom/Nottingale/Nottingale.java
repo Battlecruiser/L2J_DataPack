@@ -34,9 +34,9 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 public class Nottingale extends Quest
 {
 	private static final String qn = "Nottingale";
-
+	
 	private static final int NPC = 32627;
-
+	
 	public Nottingale(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -44,13 +44,13 @@ public class Nottingale extends Quest
 		addFirstTalkId(NPC);
 		addTalkId(NPC);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
 		QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-		if (qs == null || !qs.isCompleted())
+		if ((qs == null) || !qs.isCompleted())
 		{
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -184545, 243120, 1581));
@@ -88,18 +88,20 @@ public class Nottingale extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			st = this.newQuestState(player);
+		{
+			st = newQuestState(player);
+		}
 		player.setLastQuestNpcObject(npc.getObjectId());
 		npc.showChatWindow(player);
 		return null;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new Nottingale(-1, qn, "custom");

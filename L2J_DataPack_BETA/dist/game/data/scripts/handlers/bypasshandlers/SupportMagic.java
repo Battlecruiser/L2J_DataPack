@@ -32,7 +32,7 @@ public class SupportMagic implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"supportmagicservitor", 
+		"supportmagicservitor",
 		"supportmagic"
 	};
 	
@@ -67,9 +67,9 @@ public class SupportMagic implements IBypassHandler
 	 * <FONT COLOR=#FF0000><B> Newbie Helper Buff list is define in sql table helper_buff_list</B></FONT><BR>
 	 * <BR>
 	 * @param player The L2PcInstance that talk with the L2NpcInstance
-	 * @param npc 
-	 * @param isSummon 
-	 * @return 
+	 * @param npc
+	 * @param isSummon
+	 * @return
 	 */
 	public static boolean makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{

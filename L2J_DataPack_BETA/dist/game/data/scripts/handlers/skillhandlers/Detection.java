@@ -52,18 +52,26 @@ public class Detection implements ISkillHandler
 			
 			for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
 			{
-				if (target != null && target.getAppearance().getInvisible())
+				if ((target != null) && target.getAppearance().getInvisible())
 				{
-					if (hasParty && target.getParty() != null && player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId())
+					if (hasParty && (target.getParty() != null) && (player.getParty().getLeaderObjectId() == target.getParty().getLeaderObjectId()))
+					{
 						continue;
-					if (hasClan && player.getClanId() == target.getClanId())
+					}
+					if (hasClan && (player.getClanId() == target.getClanId()))
+					{
 						continue;
-					if (hasAlly && player.getAllyId() == target.getAllyId())
+					}
+					if (hasAlly && (player.getAllyId() == target.getAllyId()))
+					{
 						continue;
+					}
 					
 					L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
 					if (eHide != null)
+					{
 						eHide.exit();
+					}
 				}
 			}
 		}

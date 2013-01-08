@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Trade chat handler.
- * @author  durgus
+ * @author durgus
  */
 public class ChatTrade implements IChatHandler
 {
@@ -61,8 +61,10 @@ public class ChatTrade implements IChatHandler
 			int region = MapRegionManager.getInstance().getMapRegionLocId(activeChar);
 			for (L2PcInstance player : pls)
 			{
-				if (region == MapRegionManager.getInstance().getMapRegionLocId(player) && !BlockList.isBlocked(player, activeChar) && player.getInstanceId() == activeChar.getInstanceId())
+				if ((region == MapRegionManager.getInstance().getMapRegionLocId(player)) && !BlockList.isBlocked(player, activeChar) && (player.getInstanceId() == activeChar.getInstanceId()))
+				{
 					player.sendPacket(cs);
+				}
 			}
 		}
 		else if (Config.DEFAULT_TRADE_CHAT.equalsIgnoreCase("global"))
@@ -76,7 +78,9 @@ public class ChatTrade implements IChatHandler
 			for (L2PcInstance player : pls)
 			{
 				if (!BlockList.isBlocked(player, activeChar))
+				{
 					player.sendPacket(cs);
+				}
 			}
 		}
 	}

@@ -31,8 +31,8 @@ public class ServerHandler implements ITelnetHandler
 {
 	private final String[] _commands =
 	{
-		"shutdown", 
-		"restart", 
+		"shutdown",
+		"restart",
 		"abort"
 	};
 	

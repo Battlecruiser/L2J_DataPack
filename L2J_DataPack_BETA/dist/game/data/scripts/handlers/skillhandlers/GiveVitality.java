@@ -49,7 +49,7 @@ public class GiveVitality implements ISkillHandler
 					sm.addSkillName(skill);
 					target.sendPacket(sm);
 				}
-				target.getActingPlayer().updateVitalityPoints((float)skill.getPower(), false, false);
+				target.getActingPlayer().updateVitalityPoints((float) skill.getPower(), false, false);
 				target.getActingPlayer().sendPacket(new UserInfo(target.getActingPlayer()));
 			}
 		}

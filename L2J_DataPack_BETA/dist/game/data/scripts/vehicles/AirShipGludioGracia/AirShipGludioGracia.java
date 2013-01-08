@@ -255,7 +255,9 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			}
 			_cycle++;
 			if (_cycle > 7)
+			{
 				_cycle = 0;
+			}
 		}
 		catch (Exception e)
 		{
@@ -271,7 +273,9 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGludio = findController();
 		}
 		if (_atcGludio != null)
+		{
 			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
+		}
 	}
 	
 	private final void broadcastInGracia(NpcStringId npcStringId)
@@ -282,7 +286,9 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			_atcGracia = findController();
 		}
 		if (_atcGracia != null)
+		{
 			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
+		}
 	}
 	
 	private final L2Npc findController()
@@ -295,7 +301,9 @@ public class AirShipGludioGracia extends Quest implements Runnable
 				for (int id : CONTROLLERS)
 				{
 					if (((L2Npc) obj).getNpcId() == id)
+					{
 						return (L2Npc) obj;
+					}
 				}
 			}
 		}

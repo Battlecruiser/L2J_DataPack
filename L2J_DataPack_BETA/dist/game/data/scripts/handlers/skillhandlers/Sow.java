@@ -36,7 +36,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 /**
- * @author  l3x
+ * @author l3x
  */
 public class Sow implements ISkillHandler
 {
@@ -51,26 +51,32 @@ public class Sow implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		final L2Object[] targetList = skill.getTargetList(activeChar);
-		if (targetList == null || targetList.length == 0)
+		if ((targetList == null) || (targetList.length == 0))
+		{
 			return;
+		}
 		
 		if (Config.DEBUG)
+		{
 			_log.info("Casting sow");
+		}
 		
 		L2MonsterInstance target;
 		
-		for (L2Object tgt: targetList)
+		for (L2Object tgt : targetList)
 		{
 			if (!tgt.isMonster())
+			{
 				continue;
+			}
 			
 			target = (L2MonsterInstance) tgt;
-			if (target.isDead()
-					|| target.isSeeded()
-					|| target.getSeederId() != activeChar.getObjectId())
+			if (target.isDead() || target.isSeeded() || (target.getSeederId() != activeChar.getObjectId()))
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				continue;
@@ -83,7 +89,7 @@ public class Sow implements ISkillHandler
 				continue;
 			}
 			
-			//Consuming used seed
+			// Consuming used seed
 			if (!activeChar.destroyItemByItemId("Consume", seedId, 1, target, false))
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -98,14 +104,20 @@ public class Sow implements ISkillHandler
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN);
 			}
 			else
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN);
+			}
 			
 			if (activeChar.getParty() == null)
+			{
 				activeChar.sendPacket(sm);
+			}
 			else
+			{
 				activeChar.getParty().broadcastPacket(sm);
+			}
 			
-			//TODO: Mob should not aggro on player, this way doesn't work really nice
+			// TODO: Mob should not aggro on player, this way doesn't work really nice
 			target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
@@ -121,21 +133,31 @@ public class Sow implements ISkillHandler
 		
 		// seed level
 		if (levelTarget < minlevelSeed)
+		{
 			basicSuccess -= 5 * (minlevelSeed - levelTarget);
+		}
 		if (levelTarget > maxlevelSeed)
+		{
 			basicSuccess -= 5 * (levelTarget - maxlevelSeed);
+		}
 		
 		// 5% decrease in chance if player level
 		// is more than +/- 5 levels to _target's_ level
 		int diff = (levelPlayer - levelTarget);
 		if (diff < 0)
+		{
 			diff = -diff;
+		}
 		if (diff > 5)
+		{
 			basicSuccess -= 5 * (diff - 5);
+		}
 		
-		//chance can't be less than 1%
+		// chance can't be less than 1%
 		if (basicSuccess < 1)
+		{
 			basicSuccess = 1;
+		}
 		
 		return Rnd.nextInt(99) < basicSuccess;
 	}

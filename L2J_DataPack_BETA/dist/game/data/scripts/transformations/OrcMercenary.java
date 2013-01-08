@@ -26,7 +26,8 @@ public class OrcMercenary extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5491, 619
+		5491,
+		619
 	};
 	
 	public OrcMercenary()

@@ -26,7 +26,13 @@ public class Anakim extends L2Transformation
 {
 	private static final int[] SKILLS = new int[]
 	{
-		720, 721, 722, 723, 724, 5491, 619
+		720,
+		721,
+		722,
+		723,
+		724,
+		5491,
+		619
 	};
 	
 	public Anakim()

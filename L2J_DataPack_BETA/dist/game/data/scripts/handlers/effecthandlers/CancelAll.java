@@ -33,13 +33,13 @@ public class CancelAll extends L2Effect
 	{
 		super(env, template);
 	}
-
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CANCEL_ALL;
 	}
-
+	
 	@Override
 	public boolean onStart()
 	{

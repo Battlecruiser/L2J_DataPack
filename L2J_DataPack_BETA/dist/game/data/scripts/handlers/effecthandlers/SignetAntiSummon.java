@@ -57,8 +57,10 @@ public class SignetAntiSummon extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() == getTotalCount() - 1)
+		if (getCount() == (getTotalCount() - 1))
+		{
 			return true; // do nothing first time
+		}
 		int mpConsume = getSkill().getMpConsume();
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
@@ -66,7 +68,9 @@ public class SignetAntiSummon extends L2Effect
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
 			if (cha == null)
+			{
 				continue;
+			}
 			
 			if (cha.isPlayable())
 			{
@@ -74,11 +78,15 @@ public class SignetAntiSummon extends L2Effect
 				{
 					L2PcInstance owner = null;
 					if (cha.isSummon())
+					{
 						owner = ((L2Summon) cha).getOwner();
+					}
 					else
+					{
 						owner = cha.getActingPlayer();
+					}
 					
-					if (owner != null && owner.hasSummon())
+					if ((owner != null) && owner.hasSummon())
 					{
 						if (mpConsume > getEffector().getCurrentMp())
 						{
@@ -100,6 +108,8 @@ public class SignetAntiSummon extends L2Effect
 	public void onExit()
 	{
 		if (_actor != null)
+		{
 			_actor.deleteMe();
+		}
 	}
 }

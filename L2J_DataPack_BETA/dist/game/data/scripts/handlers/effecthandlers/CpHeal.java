@@ -47,8 +47,10 @@ public class CpHeal extends L2Effect
 	public boolean onStart()
 	{
 		L2Character target = getEffected();
-		if (target == null || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor())
+		{
 			return false;
+		}
 		StatusUpdate su = new StatusUpdate(target);
 		
 		double amount = calc();
@@ -57,11 +59,15 @@ public class CpHeal extends L2Effect
 		
 		// Prevent negative amounts
 		if (amount < 0)
+		{
 			amount = 0;
+		}
 		
 		// To prevent -value heals, set the value only if current Cp is less than max recoverable.
 		if (target.getCurrentCp() < target.getMaxRecoverableCp())
+		{
 			target.setCurrentCp(amount + target.getCurrentCp());
+		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 		sm.addNumber((int) amount);

@@ -33,7 +33,9 @@ public class ScrollBlue extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5852, 5491, 619
+		5852,
+		5491,
+		619
 	};
 	
 	public ScrollBlue()

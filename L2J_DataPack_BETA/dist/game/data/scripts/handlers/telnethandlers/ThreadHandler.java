@@ -31,7 +31,7 @@ public class ThreadHandler implements ITelnetHandler
 {
 	private final String[] _commands =
 	{
-		"purge", 
+		"purge",
 		"performance"
 	};
 	

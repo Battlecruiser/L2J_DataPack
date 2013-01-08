@@ -56,11 +56,15 @@ public class OlympiadObservation implements IBypassHandler
 			}
 			else
 			{
-				if (olymanager == null || !(olymanager instanceof L2OlympiadManagerInstance))
+				if ((olymanager == null) || !(olymanager instanceof L2OlympiadManagerInstance))
+				{
 					return false;
+				}
 				
 				if (!activeChar.inObserverMode() && !activeChar.isInsideRadius(olymanager, 300, false, false))
+				{
 					return false;
+				}
 				
 				if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
 				{

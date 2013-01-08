@@ -50,19 +50,27 @@ public class AdminEvents implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
+		{
 			return false;
+		}
 		
 		String _event_name = "";
 		String _event_bypass = "";
 		StringTokenizer st = new StringTokenizer(command, " ");
 		st.nextToken();
-		if(st.hasMoreTokens())
+		if (st.hasMoreTokens())
+		{
 			_event_name = st.nextToken();
-		if(st.hasMoreTokens())
+		}
+		if (st.hasMoreTokens())
+		{
 			_event_bypass = st.nextToken();
+		}
 		
 		if (command.contains("_menu"))
+		{
 			showMenu(activeChar);
+		}
 		
 		if (command.startsWith("admin_event_start"))
 		{
@@ -71,15 +79,15 @@ public class AdminEvents implements IAdminCommandHandler
 				if (_event_name != null)
 				{
 					Event _event = (Event) QuestManager.getInstance().getQuest(_event_name);
-					if(_event != null)
+					if (_event != null)
 					{
-						if(_event.eventStart())
+						if (_event.eventStart())
 						{
-							activeChar.sendMessage("Event '"+_event_name+"' started.");
+							activeChar.sendMessage("Event '" + _event_name + "' started.");
 							return true;
 						}
 						
-						activeChar.sendMessage("There is problem with starting '"+_event_name+"' event.");
+						activeChar.sendMessage("There is problem with starting '" + _event_name + "' event.");
 						return true;
 					}
 				}
@@ -98,15 +106,15 @@ public class AdminEvents implements IAdminCommandHandler
 				if (_event_name != null)
 				{
 					Event _event = (Event) QuestManager.getInstance().getQuest(_event_name);
-					if(_event != null)
+					if (_event != null)
 					{
-						if(_event.eventStop())
+						if (_event.eventStop())
 						{
-							activeChar.sendMessage("Event '"+_event_name+"' stopped.");
+							activeChar.sendMessage("Event '" + _event_name + "' stopped.");
 							return true;
 						}
 						
-						activeChar.sendMessage("There is problem with stoping '"+_event_name+"' event.");
+						activeChar.sendMessage("There is problem with stoping '" + _event_name + "' event.");
 						return true;
 					}
 				}
@@ -125,7 +133,7 @@ public class AdminEvents implements IAdminCommandHandler
 				if (_event_name != null)
 				{
 					Event _event = (Event) QuestManager.getInstance().getQuest(_event_name);
-					if(_event != null)
+					if (_event != null)
 					{
 						_event.eventBypass(activeChar, _event_bypass);
 					}
@@ -148,14 +156,9 @@ public class AdminEvents implements IAdminCommandHandler
 		final StringBuilder cList = new StringBuilder(500);
 		for (Quest event : QuestManager.getInstance().getAllManagedScripts())
 		{
-			if (event instanceof Event && event.getName().startsWith("eventmod"))
+			if ((event instanceof Event) && event.getName().startsWith("eventmod"))
 			{
-				StringUtil.append(cList,"<font color=\"LEVEL\">"+event.getName()+":</font><br1>",
-						"<table width=270><tr>",
-						"<td><button value=\"Start\" action=\"bypass -h admin_event_start_menu "+event.getName()+"\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>",
-						"<td><button value=\"Stop\" action=\"bypass -h admin_event_stop_menu "+event.getName()+"\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>",
-						"<td><button value=\"Menu\" action=\"bypass -h admin_event_bypass "+event.getName()+"\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>",
-				"</tr></table><br>");
+				StringUtil.append(cList, "<font color=\"LEVEL\">" + event.getName() + ":</font><br1>", "<table width=270><tr>", "<td><button value=\"Start\" action=\"bypass -h admin_event_start_menu " + event.getName() + "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>", "<td><button value=\"Stop\" action=\"bypass -h admin_event_stop_menu " + event.getName() + "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>", "<td><button value=\"Menu\" action=\"bypass -h admin_event_bypass " + event.getName() + "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>", "</tr></table><br>");
 			}
 		}
 		html.replace("%LIST%", cList.toString());

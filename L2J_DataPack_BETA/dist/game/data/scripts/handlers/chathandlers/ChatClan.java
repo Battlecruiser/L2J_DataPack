@@ -27,8 +27,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- *
- * @author  durgus
+ * @author durgus
  */
 public class ChatClan implements IChatHandler
 {

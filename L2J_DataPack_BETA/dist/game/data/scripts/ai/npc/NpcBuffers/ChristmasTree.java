@@ -83,7 +83,7 @@ public class ChristmasTree extends AbstractNpcAI
 			{
 				L2Skill skill = _holder.getSkill();
 				
-				if (_npc.getSummoner() == null || !_npc.getSummoner().isPlayer())
+				if ((_npc.getSummoner() == null) || !_npc.getSummoner().isPlayer())
 				{
 					ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
 					return;

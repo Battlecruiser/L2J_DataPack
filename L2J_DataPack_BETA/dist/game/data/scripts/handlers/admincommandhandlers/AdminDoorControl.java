@@ -27,20 +27,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Castle;
 
 /**
- * This class handles following admin commands:
- * - open1 = open coloseum door 24190001
- * - open2 = open coloseum door 24190002
- * - open3 = open coloseum door 24190003
- * - open4 = open coloseum door 24190004
- * - openall = open all coloseum door
- * - close1 = close coloseum door 24190001
- * - close2 = close coloseum door 24190002
- * - close3 = close coloseum door 24190003
- * - close4 = close coloseum door 24190004
- * - closeall = close all coloseum door
- *
- * - open = open selected door
- * - close = close selected door
+ * This class handles following admin commands: - open1 = open coloseum door 24190001 - open2 = open coloseum door 24190002 - open3 = open coloseum door 24190003 - open4 = open coloseum door 24190004 - openall = open all coloseum door - close1 = close coloseum door 24190001 - close2 = close coloseum
+ * door 24190002 - close3 = close coloseum door 24190003 - close4 = close coloseum door 24190004 - closeall = close all coloseum door - open = open selected door - close = close selected door
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminDoorControl implements IAdminCommandHandler
@@ -63,45 +51,65 @@ public class AdminDoorControl implements IAdminCommandHandler
 			{
 				int doorId = Integer.parseInt(command.substring(11));
 				if (_doorTable.getDoor(doorId) != null)
+				{
 					_doorTable.getDoor(doorId).openMe();
+				}
 				else
 				{
 					for (Castle castle : CastleManager.getInstance().getCastles())
+					{
 						if (castle.getDoor(doorId) != null)
 						{
 							castle.getDoor(doorId).openMe();
 						}
+					}
 				}
 			}
 			else if (command.startsWith("admin_close "))
 			{
 				int doorId = Integer.parseInt(command.substring(12));
 				if (_doorTable.getDoor(doorId) != null)
+				{
 					_doorTable.getDoor(doorId).closeMe();
+				}
 				else
 				{
 					for (Castle castle : CastleManager.getInstance().getCastles())
+					{
 						if (castle.getDoor(doorId) != null)
 						{
 							castle.getDoor(doorId).closeMe();
 						}
+					}
 				}
 			}
 			if (command.equals("admin_closeall"))
 			{
 				for (L2DoorInstance door : _doorTable.getDoors())
+				{
 					door.closeMe();
+				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
+				{
 					for (L2DoorInstance door : castle.getDoors())
+					{
 						door.closeMe();
+					}
+				}
 			}
 			if (command.equals("admin_openall"))
 			{
 				for (L2DoorInstance door : _doorTable.getDoors())
+				{
 					door.openMe();
+				}
 				for (Castle castle : CastleManager.getInstance().getCastles())
+				{
 					for (L2DoorInstance door : castle.getDoors())
+					{
 						door.openMe();
+					}
+				}
 			}
 			if (command.equals("admin_open"))
 			{

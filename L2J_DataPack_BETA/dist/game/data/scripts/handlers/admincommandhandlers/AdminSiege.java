@@ -76,7 +76,6 @@ public class AdminSiege implements IAdminCommandHandler
 		StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
 		
-		
 		// Get castle
 		Castle castle = null;
 		ClanHall clanhall = null;

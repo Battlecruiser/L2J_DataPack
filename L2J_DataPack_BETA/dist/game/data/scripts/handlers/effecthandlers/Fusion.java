@@ -66,9 +66,13 @@ public class Fusion extends L2Effect
 	{
 		_effect--;
 		if (_effect < 1)
+		{
 			exit();
+		}
 		else
+		{
 			updateBuff();
+		}
 	}
 	
 	private void updateBuff()

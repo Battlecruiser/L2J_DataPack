@@ -26,7 +26,8 @@ public class DarkmanePacer extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5437, 839
+		5437,
+		839
 	};
 	
 	public DarkmanePacer()

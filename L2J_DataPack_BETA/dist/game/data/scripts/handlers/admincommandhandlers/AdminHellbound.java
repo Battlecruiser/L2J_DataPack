@@ -32,7 +32,8 @@ public class AdminHellbound implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_hellbound_setlevel", "admin_hellbound"
+		"admin_hellbound_setlevel",
+		"admin_hellbound"
 	};
 	
 	@Override

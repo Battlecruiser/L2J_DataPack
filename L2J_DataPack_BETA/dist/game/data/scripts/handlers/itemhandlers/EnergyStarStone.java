@@ -38,7 +38,7 @@ public class EnergyStarStone extends ItemSkills
 		}
 		
 		final L2AirShipInstance ship = playable.getActingPlayer().getAirShip();
-		if (ship == null || !(ship instanceof L2ControllableAirShipInstance) || ship.getFuel() >= ship.getMaxFuel())
+		if ((ship == null) || !(ship instanceof L2ControllableAirShipInstance) || (ship.getFuel() >= ship.getMaxFuel()))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addItemName(item);

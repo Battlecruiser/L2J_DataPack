@@ -40,19 +40,21 @@ import com.l2jserver.util.ValueSortMap;
  */
 public class ChainHeal implements ISkillHandler
 {
-	private static final L2SkillType[] SKILL_IDS = 
-	{ 
-		L2SkillType.CHAIN_HEAL 
+	private static final L2SkillType[] SKILL_IDS =
+	{
+		L2SkillType.CHAIN_HEAL
 	};
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		//check for other effects
+		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
 		if (handler != null)
+		{
 			handler.useSkill(activeChar, skill, targets);
+		}
 		
 		SystemMessage sm;
 		double amount = 0;
@@ -63,26 +65,36 @@ public class ChainHeal implements ISkillHandler
 		// Get top 10 most damaged and iterate the heal over them
 		for (L2Character character : characters)
 		{
-			//1505 - sublime self sacrifice
-			if ((character.isDead() || character.isInvul()) && skill.getId() != 1505)
+			// 1505 - sublime self sacrifice
+			if ((character.isDead() || character.isInvul()) && (skill.getId() != 1505))
+			{
 				continue;
+			}
 			
 			// Cursed weapon owner can't heal or be healed
 			if (character != activeChar)
 			{
 				if (character.isPlayer() && character.getActingPlayer().isCursedWeaponEquipped())
+				{
 					continue;
+				}
 			}
 			
 			if (power == 100.)
+			{
 				amount = character.getMaxHp();
+			}
 			else
-				amount = character.getMaxHp() * power / 100.0;
+			{
+				amount = (character.getMaxHp() * power) / 100.0;
+			}
 			
 			amount = Math.min(amount, character.getMaxRecoverableHp() - character.getCurrentHp());
 			
 			if (amount < 0)
+			{
 				amount = 0;
+			}
 			
 			character.setCurrentHp(amount + character.getCurrentHp());
 			
@@ -92,7 +104,9 @@ public class ChainHeal implements ISkillHandler
 				sm.addCharName(activeChar);
 			}
 			else
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
+			}
 			sm.addNumber((int) amount);
 			character.sendPacket(sm);
 			
@@ -112,19 +126,25 @@ public class ChainHeal implements ISkillHandler
 		
 		for (L2Character target : targets)
 		{
-			//1505 - sublime self sacrifice
-			if ((target == null || target.isDead() || target.isInvul()))
+			// 1505 - sublime self sacrifice
+			if (((target == null) || target.isDead() || target.isInvul()))
+			{
 				continue;
+			}
 			
-			if (target.getMaxHp() == target.getCurrentHp()) // Full hp ..
+			if (target.getMaxHp() == target.getCurrentHp())
+			{
 				continue;
+			}
 			
 			double hpPercent = target.getCurrentHp() / target.getMaxHp();
 			tmpTargets.put(target, hpPercent);
 			
 			curTargets++;
-			if (curTargets >= 10) // Unhardcode?
+			if (curTargets >= 10)
+			{
 				break;
+			}
 		}
 		
 		// Sort in ascending order then add the values to the list

@@ -44,8 +44,8 @@ public class Grow extends L2Effect
 		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
-			//TODO: Uncomment line when fix for mobs falling underground is found
-			//npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
+			// TODO: Uncomment line when fix for mobs falling underground is found
+			// npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
 			npc.setCollisionRadius((npc.getCollisionRadius() * 1.19));
 			
 			getEffected().startAbnormalEffect(AbnormalEffect.GROW);
@@ -66,8 +66,8 @@ public class Grow extends L2Effect
 		if (getEffected().isNpc())
 		{
 			L2Npc npc = (L2Npc) getEffected();
-			//TODO: Uncomment line when fix for mobs falling underground is found
-			//npc.setCollisionHeight(npc.getTemplate().collisionHeight);
+			// TODO: Uncomment line when fix for mobs falling underground is found
+			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
 			
 			getEffected().stopAbnormalEffect(AbnormalEffect.GROW);

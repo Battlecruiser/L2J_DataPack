@@ -26,7 +26,8 @@ public class Kadomas extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		23154, 619
+		23154,
+		619
 	};
 	
 	public Kadomas()

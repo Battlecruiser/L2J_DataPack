@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jserver.gameserver.pathfinding.PathFinding;
 
-
 public class AdminPathNode implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
@@ -45,10 +44,16 @@ public class AdminPathNode implements IAdminCommandHandler
 		{
 			final String[] info = PathFinding.getInstance().getStat();
 			if (info == null)
+			{
 				activeChar.sendMessage("Not supported");
+			}
 			else
+			{
 				for (String msg : info)
+				{
 					activeChar.sendMessage(msg);
+				}
+			}
 		}
 		else if (command.equals("admin_show_path"))
 		{
@@ -83,7 +88,9 @@ public class AdminPathNode implements IAdminCommandHandler
 				}
 			}
 			else
+			{
 				activeChar.sendMessage("No Target!");
+			}
 		}
 		return true;
 	}

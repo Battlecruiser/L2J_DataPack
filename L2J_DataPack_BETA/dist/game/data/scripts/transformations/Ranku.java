@@ -26,7 +26,10 @@ public class Ranku extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		731, 732, 5491, 619
+		731,
+		732,
+		5491,
+		619
 	};
 	
 	public Ranku()

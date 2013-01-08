@@ -26,7 +26,12 @@ public class Heretic extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		738, 739, 740, 741, 5491, 619
+		738,
+		739,
+		740,
+		741,
+		5491,
+		619
 	};
 	
 	public Heretic()

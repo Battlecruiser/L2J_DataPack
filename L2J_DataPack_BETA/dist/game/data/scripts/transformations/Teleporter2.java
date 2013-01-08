@@ -26,7 +26,11 @@ public class Teleporter2 extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5656, 5657, 5658, 5491, 8248
+		5656,
+		5657,
+		5658,
+		5491,
+		8248
 	};
 	
 	public Teleporter2()

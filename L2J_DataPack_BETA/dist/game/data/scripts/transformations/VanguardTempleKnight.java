@@ -64,7 +64,19 @@ public class VanguardTempleKnight extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			10, 18, 28, 67, 197, 293, 400, 449, 814, 816, 838, 956, 957
+			10,
+			18,
+			28,
+			67,
+			197,
+			293,
+			400,
+			449,
+			814,
+			816,
+			838,
+			956,
+			957
 		});
 	}
 	

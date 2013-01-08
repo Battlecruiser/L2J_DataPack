@@ -46,12 +46,14 @@ public class Resurrect implements ISkillHandler
 	{
 		L2PcInstance player = null;
 		if (activeChar.isPlayer())
+		{
 			player = activeChar.getActingPlayer();
+		}
 		
 		L2PcInstance targetPlayer;
 		List<L2Character> targetToRes = new FastList<>();
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Character target : (L2Character[]) targets)
 		{
 			if (target.isPlayer())
 			{
@@ -67,7 +69,9 @@ public class Resurrect implements ISkillHandler
 				}
 			}
 			if (target.isVisible())
+			{
 				targetToRes.add(target);
+			}
 		}
 		
 		if (targetToRes.isEmpty())
@@ -81,9 +85,13 @@ public class Resurrect implements ISkillHandler
 			if (activeChar.isPlayer())
 			{
 				if (cha.isPlayer())
+				{
 					cha.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), skill, false);
+				}
 				else if (cha.isPet())
+				{
 					((L2PetInstance) cha).getOwner().reviveRequest(activeChar.getActingPlayer(), skill, true);
+				}
 			}
 			else
 			{

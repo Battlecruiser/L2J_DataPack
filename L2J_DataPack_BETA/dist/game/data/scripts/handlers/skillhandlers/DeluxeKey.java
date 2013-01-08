@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
 /**
- * @author  Julian
+ * @author Julian
  */
 public class DeluxeKey implements ISkillHandler
 {
@@ -42,7 +42,9 @@ public class DeluxeKey implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		

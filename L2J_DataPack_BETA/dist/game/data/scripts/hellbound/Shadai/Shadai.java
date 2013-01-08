@@ -32,11 +32,15 @@ public class Shadai extends Quest
 	
 	private static final int[] DAY_COORDS =
 	{
-		16882, 238952, 9776
+		16882,
+		238952,
+		9776
 	};
 	private static final int[] NIGHT_COORDS =
 	{
-		9064, 253037, -1928
+		9064,
+		253037,
+		-1928
 	};
 	
 	@Override

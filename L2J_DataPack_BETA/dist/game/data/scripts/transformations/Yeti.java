@@ -26,7 +26,8 @@ public class Yeti extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5437, 619
+		5437,
+		619
 	};
 	
 	public Yeti()

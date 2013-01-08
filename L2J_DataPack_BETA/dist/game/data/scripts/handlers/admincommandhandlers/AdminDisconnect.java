@@ -23,9 +23,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * This class handles following admin commands:
- * - character_disconnect = disconnects target player
- *
+ * This class handles following admin commands: - character_disconnect = disconnects target player
  * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:00 $
  */
 public class AdminDisconnect implements IAdminCommandHandler
@@ -56,9 +54,13 @@ public class AdminDisconnect implements IAdminCommandHandler
 		L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
+		{
 			player = (L2PcInstance) target;
+		}
 		else
+		{
 			return;
+		}
 		
 		if (player == activeChar)
 		{

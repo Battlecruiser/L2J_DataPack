@@ -37,7 +37,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Some parts taken from EffectWarp, which cannot be used for this case.
- * @author  Didldak
+ * @author Didldak
  */
 public class InstantJump implements ISkillHandler
 {
@@ -78,7 +78,9 @@ public class InstantJump implements ISkillHandler
 		ph += 180;
 		
 		if (ph > 360)
+		{
 			ph -= 360;
+		}
 		
 		ph = (Math.PI * ph) / 180;
 		
@@ -89,7 +91,9 @@ public class InstantJump implements ISkillHandler
 		Location loc = new Location(x, y, z);
 		
 		if (Config.GEODATA > 0)
+		{
 			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
+		}
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
@@ -106,9 +110,9 @@ public class InstantJump implements ISkillHandler
 				activeChar.stopSkillEffects(skill.getId());
 				skill.getEffects(target, activeChar);
 				
-				//SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-				//sm.addSkillName(skill);
-				//activeChar.sendPacket(sm);
+				// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				// sm.addSkillName(skill);
+				// activeChar.sendPacket(sm);
 			}
 			else
 			{

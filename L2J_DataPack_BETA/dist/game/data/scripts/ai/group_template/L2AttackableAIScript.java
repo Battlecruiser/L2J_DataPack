@@ -179,9 +179,9 @@ public final class L2AttackableAIScript extends QuestJython
 		if (npc instanceof L2MonsterInstance)
 		{
 			final L2MonsterInstance mob = (L2MonsterInstance) npc;
-			if (mob.getLeader() != null && mob.getLeader().hasMinions())
+			if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
 			{
-				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(npc.getNpcId()) ? Config.MINIONS_RESPAWN_TIME.get(mob.getNpcId()) * 1000 : -1;	
+				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(npc.getNpcId()) ? Config.MINIONS_RESPAWN_TIME.get(mob.getNpcId()) * 1000 : -1;
 				mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
 			}
 			

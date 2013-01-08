@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands: - delete = deletes target
- *
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/04/11 10:05:56 $
  */
 public class AdminDelete implements IAdminCommandHandler
@@ -42,7 +41,9 @@ public class AdminDelete implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_delete"))
+		{
 			handleDelete(activeChar);
+		}
 		return true;
 	}
 	
@@ -67,14 +68,20 @@ public class AdminDelete implements IAdminCommandHandler
 				spawn.stopRespawn();
 				
 				if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcid()))
+				{
 					RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
+				}
 				else
+				{
 					SpawnTable.getInstance().deleteSpawn(spawn, true);
+				}
 			}
 			
 			activeChar.sendMessage("Deleted " + target.getName() + " from " + target.getObjectId() + ".");
 		}
 		else
+		{
 			activeChar.sendMessage("Incorrect target.");
+		}
 	}
 }

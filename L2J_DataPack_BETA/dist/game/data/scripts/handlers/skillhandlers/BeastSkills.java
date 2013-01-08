@@ -45,13 +45,15 @@ public class BeastSkills implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		L2SkillType type = skill.getSkillType();
 		L2PcInstance player = activeChar.getActingPlayer();
 		L2Object target = player.getTarget();
 		
-		switch(type)
+		switch (type)
 		{
 			case BEAST_FEED:
 				L2Object[] targetList = skill.getTargetList(activeChar);
@@ -65,20 +67,28 @@ public class BeastSkills implements ISkillHandler
 				// since the AI responce onSkillUse handles the rest.
 				break;
 			case BEAST_RELEASE:
-				if (target != null && target instanceof L2TamedBeastInstance)
-					((L2TamedBeastInstance)target).deleteMe();
+				if ((target != null) && (target instanceof L2TamedBeastInstance))
+				{
+					((L2TamedBeastInstance) target).deleteMe();
+				}
 				break;
 			case BEAST_RELEASE_ALL:
 				if (player.getTrainedBeasts() != null)
-					for(L2TamedBeastInstance beast : player.getTrainedBeasts())
+				{
+					for (L2TamedBeastInstance beast : player.getTrainedBeasts())
+					{
 						beast.deleteMe();
+					}
+				}
 				break;
 			case BEAST_ACCOMPANY:
 				// Unknown effect now
 				break;
 			case BEAST_SKILL:
-				if (target != null && target instanceof L2TamedBeastInstance)
-					((L2TamedBeastInstance)target).castBeastSkills();
+				if ((target != null) && (target instanceof L2TamedBeastInstance))
+				{
+					((L2TamedBeastInstance) target).castBeastSkills();
+				}
 				break;
 		}
 	}

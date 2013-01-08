@@ -46,7 +46,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
 	{
-		if (skill != null && !skill.isMagic())
+		if ((skill != null) && !skill.isMagic())
 		{
 			int spawnId = LOST_BUFFALO;
 			if (npc.getNpcId() == PRONGHORN)
@@ -54,7 +54,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 				spawnId = PRONGHORN_SPIRIT;
 			}
 			
-			int diff = 0; 
+			int diff = 0;
 			for (int i = 0; i < 6; i++)
 			{
 				int x = diff < 60 ? npc.getX() + diff : npc.getX();

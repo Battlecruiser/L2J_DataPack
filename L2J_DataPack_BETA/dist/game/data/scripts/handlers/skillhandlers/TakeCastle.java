@@ -40,17 +40,23 @@ public class TakeCastle implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!activeChar.isPlayer() || targets.length == 0)
+		if (!activeChar.isPlayer() || (targets.length == 0))
+		{
 			return;
+		}
 		
 		L2PcInstance player = activeChar.getActingPlayer();
 		
-		if (player.getClan() == null || player.getClan().getLeaderId() != player.getObjectId())
+		if ((player.getClan() == null) || (player.getClan().getLeaderId() != player.getObjectId()))
+		{
 			return;
+		}
 		
 		Castle castle = CastleManager.getInstance().getCastle(player);
-		if (castle == null || !player.checkIfOkToCastSealOfRule(castle, true, skill, targets[0]))
+		if ((castle == null) || !player.checkIfOkToCastSealOfRule(castle, true, skill, targets[0]))
+		{
 			return;
+		}
 		
 		try
 		{

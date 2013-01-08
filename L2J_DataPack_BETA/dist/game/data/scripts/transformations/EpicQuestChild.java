@@ -26,7 +26,8 @@ public class EpicQuestChild extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5437, 960
+		5437,
+		960
 	};
 	
 	public EpicQuestChild()

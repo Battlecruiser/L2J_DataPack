@@ -64,7 +64,18 @@ public class VanguardDarkAvenger extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			18, 28, 65, 86, 144, 283, 815, 817, 838, 956, 958, 401
+			18,
+			28,
+			65,
+			86,
+			144,
+			283,
+			815,
+			817,
+			838,
+			956,
+			958,
+			401
 		});
 	}
 	

@@ -26,7 +26,12 @@ public class DoomWraith extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		586, 587, 588, 589, 5491, 619
+		586,
+		587,
+		588,
+		589,
+		5491,
+		619
 	};
 	
 	public DoomWraith()

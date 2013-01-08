@@ -44,7 +44,9 @@ public class Disarm extends L2Effect
 	public boolean onStart()
 	{
 		if (!getEffected().isPlayer())
+		{
 			return false;
+		}
 		
 		getEffected().getActingPlayer().disarmWeapons();
 		return true;

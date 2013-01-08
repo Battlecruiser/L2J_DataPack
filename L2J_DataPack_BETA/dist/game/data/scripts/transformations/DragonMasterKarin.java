@@ -29,7 +29,11 @@ public class DragonMasterKarin extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5491, 619, 20003, 20004, 20005
+		5491,
+		619,
+		20003,
+		20004,
+		20005
 	};
 	
 	public DragonMasterKarin()

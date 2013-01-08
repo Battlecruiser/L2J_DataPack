@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author  Luno, Dezmond
+ * @author Luno, Dezmond
  */
 public class AdminGeoEditor implements IAdminCommandHandler
 {

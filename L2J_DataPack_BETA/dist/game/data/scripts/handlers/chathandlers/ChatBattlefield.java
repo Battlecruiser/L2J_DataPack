@@ -29,8 +29,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- *
- * @author  Gigiikun
+ * @author Gigiikun
  */
 public class ChatBattlefield implements IChatHandler
 {
@@ -45,7 +44,7 @@ public class ChatBattlefield implements IChatHandler
 	@Override
 	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
 	{
-		if (TerritoryWarManager.getInstance().isTWChannelOpen() && activeChar.getSiegeSide() > 0)
+		if (TerritoryWarManager.getInstance().isTWChannelOpen() && (activeChar.getSiegeSide() > 0))
 		{
 			if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 			{
@@ -55,8 +54,12 @@ public class ChatBattlefield implements IChatHandler
 			
 			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+			{
 				if (player.getSiegeSide() == activeChar.getSiegeSide())
+				{
 					player.sendPacket(cs);
+				}
+			}
 		}
 	}
 	

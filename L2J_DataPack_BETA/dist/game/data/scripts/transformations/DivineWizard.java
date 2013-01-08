@@ -26,7 +26,14 @@ public class DivineWizard extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		692, 693, 694, 695, 696, 697, 5491, 619
+		692,
+		693,
+		694,
+		695,
+		696,
+		697,
+		5491,
+		619
 	};
 	
 	public DivineWizard()

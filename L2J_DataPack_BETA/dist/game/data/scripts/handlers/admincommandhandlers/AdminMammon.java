@@ -32,9 +32,13 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class AdminMammon implements IAdminCommandHandler
 {
-	private static final String[] ADMIN_COMMANDS = { "admin_mammon_find", "admin_mammon_respawn", };
+	private static final String[] ADMIN_COMMANDS =
+	{
+		"admin_mammon_find",
+		"admin_mammon_respawn",
+	};
 	
-	private boolean _isSealValidation = SevenSigns.getInstance().isSealValidationPeriod();
+	private final boolean _isSealValidation = SevenSigns.getInstance().isSealValidationPeriod();
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)

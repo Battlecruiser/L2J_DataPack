@@ -55,7 +55,7 @@ public class AdminMessages implements IAdminCommandHandler
 		else if (command.startsWith("admin_msgx "))
 		{
 			String[] tokens = command.split(" ");
-			if (tokens.length <= 2 || !Util.isDigit(tokens[1]))
+			if ((tokens.length <= 2) || !Util.isDigit(tokens[1]))
 			{
 				activeChar.sendMessage("Command format: //msgx <SYSTEM_MSG_ID> [item:Id] [skill:Id] [npc:Id] [zone:x,y,x] [castle:Id] [str:'text']");
 				return false;
@@ -94,7 +94,7 @@ public class AdminMessages implements IAdminCommandHandler
 					}
 					else if (val.startsWith("str:"))
 					{
-						final int pos = command.indexOf("'", lastPos+1);
+						final int pos = command.indexOf("'", lastPos + 1);
 						lastPos = command.indexOf("'", pos + 1);
 						sm.addString(command.substring(pos + 1, lastPos));
 					}

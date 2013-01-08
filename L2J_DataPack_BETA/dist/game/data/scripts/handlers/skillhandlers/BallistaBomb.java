@@ -37,11 +37,13 @@ public class BallistaBomb implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		
-		if (targetList == null || targetList.length == 0)
+		if ((targetList == null) || (targetList.length == 0))
 		{
 			return;
 		}

@@ -50,14 +50,22 @@ public class IOPRace extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		
 		if (player.getLevel() < 78)
+		{
 			return "32349-notavailable.htm";
+		}
 		else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
+		{
 			return "32349-return.htm";
+		}
 		else if (_player != -1)
+		{
 			return "32349-notavailable.htm";
+		}
 		
 		npc.showChatWindow(player);
 		return null;
@@ -68,14 +76,18 @@ public class IOPRace extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		
 		if (_player == -1)
 		{
 			// clean old data
 			player.stopSkillEffects(5239);
 			if (player.hasSummon())
+			{
 				player.getSummon().stopSkillEffects(5239);
+			}
 			
 			st.takeItems(STAMP, -1);
 			st.set("1st", "0");
@@ -88,7 +100,9 @@ public class IOPRace extends Quest
 			{
 				skill.getEffects(npc, player);
 				if (player.hasSummon())
+				{
 					skill.getEffects(npc, player.getSummon());
+				}
 			}
 			
 			startQuestTimer("timer", 1800000, null, null); // 30 min

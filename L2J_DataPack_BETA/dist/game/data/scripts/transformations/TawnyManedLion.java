@@ -26,7 +26,8 @@ public class TawnyManedLion extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5491, 839
+		5491,
+		839
 	};
 	
 	public TawnyManedLion()

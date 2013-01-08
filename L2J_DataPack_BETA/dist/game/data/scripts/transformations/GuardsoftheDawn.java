@@ -26,7 +26,9 @@ public class GuardsoftheDawn extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5491, 619, 963
+		5491,
+		619,
+		963
 	};
 	
 	public GuardsoftheDawn()

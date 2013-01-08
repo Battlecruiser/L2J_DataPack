@@ -66,43 +66,54 @@ public class Continuous implements ISkillHandler
 		
 		L2PcInstance player = null;
 		if (activeChar.isPlayer())
+		{
 			player = activeChar.getActingPlayer();
+		}
 		
 		if (skill.getEffectId() != 0)
 		{
 			L2Skill sk = SkillTable.getInstance().getInfo(skill.getEffectId(), skill.getEffectLvl() == 0 ? 1 : skill.getEffectLvl());
 			
 			if (sk != null)
+			{
 				skill = sk;
+			}
 		}
 		
 		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		boolean sps = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
 		boolean bss = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-				
-		for (L2Character target: (L2Character[]) targets)
+		
+		for (L2Character target : (L2Character[]) targets)
 		{
 			byte shld = 0;
 			
 			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
+			{
 				target = activeChar;
+			}
 			
 			// Player holding a cursed weapon can't be buffed and can't buff
-			if (skill.getSkillType() == L2SkillType.BUFF && !(activeChar instanceof L2ClanHallManagerInstance))
+			if ((skill.getSkillType() == L2SkillType.BUFF) && !(activeChar instanceof L2ClanHallManagerInstance))
 			{
 				if (target != activeChar)
 				{
 					if (target.isPlayer())
 					{
 						L2PcInstance trg = target.getActingPlayer();
-						if(trg.isCursedWeaponEquipped())
+						if (trg.isCursedWeaponEquipped())
+						{
 							continue;
-						// Avoiding block checker players get buffed from outside
-						else if(trg.getBlockCheckerArena() != -1)
+						}
+						else if (trg.getBlockCheckerArena() != -1)
+						{
 							continue;
+						}
 					}
-					else if (player != null && player.isCursedWeaponEquipped())
+					else if ((player != null) && player.isCursedWeaponEquipped())
+					{
 						continue;
+					}
 				}
 			}
 			
@@ -112,7 +123,9 @@ public class Continuous implements ISkillHandler
 				case CPHOT:
 				case MPHOT:
 					if (activeChar.isInvul())
+					{
 						continue;
+					}
 					break;
 			}
 			
@@ -146,35 +159,46 @@ public class Continuous implements ISkillHandler
 				// if this is a debuff let the duel manager know about it
 				// so the debuff can be removed after the duel
 				// (player & target must be in the same duel)
-				if (target.isPlayer() && target.getActingPlayer().isInDuel() && (skill.getSkillType() == L2SkillType.DEBUFF || skill.getSkillType() == L2SkillType.BUFF) && player != null
-						&& player.getDuelId() == target.getActingPlayer().getDuelId())
+				if (target.isPlayer() && target.getActingPlayer().isInDuel() && ((skill.getSkillType() == L2SkillType.DEBUFF) || (skill.getSkillType() == L2SkillType.BUFF)) && (player != null) && (player.getDuelId() == target.getActingPlayer().getDuelId()))
 				{
 					DuelManager dm = DuelManager.getInstance();
 					for (L2Effect buff : skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss)))
+					{
 						if (buff != null)
+						{
 							dm.onBuff(target.getActingPlayer(), buff);
+						}
+					}
 				}
 				else
 				{
 					L2Effect[] effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					L2Summon summon = target.getSummon();
-					if (summon != null && summon != activeChar && summon.isServitor() && effects.length > 0)
+					if ((summon != null) && (summon != activeChar) && summon.isServitor() && (effects.length > 0))
 					{
 						if (effects[0].canBeStolen() || skill.isHeroSkill() || skill.isStatic())
+						{
 							skill.getEffects(activeChar, target.getSummon(), new Env(shld, ss, sps, bss));
+						}
 					}
 				}
 				
 				if (skill.getSkillType() == L2SkillType.AGGDEBUFF)
 				{
 					if (target.isL2Attackable())
+					{
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) skill.getPower());
+					}
 					else if (target.isPlayable())
 					{
 						if (target.getTarget() == activeChar)
+						{
 							target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
+						}
 						else
+						{
 							target.setTarget(activeChar);
+						}
 					}
 				}
 			}
@@ -191,9 +215,9 @@ public class Continuous implements ISkillHandler
 		if (skill.hasSelfEffects())
 		{
 			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
+			if ((effect != null) && effect.isSelfEffect())
 			{
-				//Replace old effect with new one.
+				// Replace old effect with new one.
 				effect.exit();
 			}
 			skill.getEffectsSelf(activeChar);

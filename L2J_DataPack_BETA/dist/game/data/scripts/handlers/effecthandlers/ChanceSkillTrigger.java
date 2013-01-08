@@ -54,7 +54,7 @@ public class ChanceSkillTrigger extends L2Effect
 	{
 		return true;
 	}
-
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
@@ -80,8 +80,10 @@ public class ChanceSkillTrigger extends L2Effect
 	public void onExit()
 	{
 		// trigger only if effect in use and successfully ticked to the end
-		if (getInUse() && getCount() == 0)
+		if (getInUse() && (getCount() == 0))
+		{
 			getEffected().onExitChanceEffect(getSkill().getElement());
+		}
 		getEffected().removeChanceEffect(this);
 		super.onExit();
 	}

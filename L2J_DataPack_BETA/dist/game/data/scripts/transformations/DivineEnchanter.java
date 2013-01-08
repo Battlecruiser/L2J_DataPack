@@ -26,7 +26,14 @@ public class DivineEnchanter extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		704, 705, 706, 707, 708, 709, 5779, 619
+		704,
+		705,
+		706,
+		707,
+		708,
+		709,
+		5779,
+		619
 	};
 	
 	public DivineEnchanter()

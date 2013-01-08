@@ -46,22 +46,28 @@ public class Quarry extends Quest
 	protected static final int[][] DROPLIST =
 	{
 		{
-			9628, 261
+			9628,
+			261
 		}, // Leonard
 		{
-			9630, 175
+			9630,
+			175
 		}, // Orichalcum
 		{
-			9629, 145
+			9629,
+			145
 		}, // Adamantine
 		{
-			1876, 6667
+			1876,
+			6667
 		}, // Mithril ore
 		{
-			1877, 1333
+			1877,
+			1333
 		}, // Adamantine nugget
 		{
-			1874, 2222
+			1874,
+			2222
 		}
 	// Oriharukon ore
 	};

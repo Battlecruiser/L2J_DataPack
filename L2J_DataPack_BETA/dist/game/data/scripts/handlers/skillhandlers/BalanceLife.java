@@ -46,28 +46,38 @@ public class BalanceLife implements ISkillHandler
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
 		if (handler != null)
+		{
 			handler.useSkill(activeChar, skill, targets);
+		}
 		
 		L2PcInstance player = null;
 		if (activeChar.isPlayer())
+		{
 			player = activeChar.getActingPlayer();
+		}
 		
 		double fullHP = 0;
 		double currentHPs = 0;
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Character target : (L2Character[]) targets)
 		{
 			// We should not heal if char is dead/
-			if (target == null || target.isDead())
+			if ((target == null) || target.isDead())
+			{
 				continue;
+			}
 			
 			// Player holding a cursed weapon can't be healed and can't heal
 			if (target != activeChar)
 			{
 				if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
+				{
 					continue;
-				else if (player != null && player.isCursedWeaponEquipped())
+				}
+				else if ((player != null) && player.isCursedWeaponEquipped())
+				{
 					continue;
+				}
 			}
 			
 			fullHP += target.getMaxHp();
@@ -76,18 +86,24 @@ public class BalanceLife implements ISkillHandler
 		
 		double percentHP = currentHPs / fullHP;
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Character target : (L2Character[]) targets)
 		{
-			if (target == null || target.isDead())
+			if ((target == null) || target.isDead())
+			{
 				continue;
+			}
 			
 			// Player holding a cursed weapon can't be healed and can't heal
 			if (target != activeChar)
 			{
 				if (target.isPlayer() && target.getActingPlayer().isCursedWeaponEquipped())
+				{
 					continue;
-				else if (player != null && player.isCursedWeaponEquipped())
+				}
+				else if ((player != null) && player.isCursedWeaponEquipped())
+				{
 					continue;
+				}
 			}
 			
 			double newHP = target.getMaxHp() * percentHP;
@@ -96,10 +112,13 @@ public class BalanceLife implements ISkillHandler
 			{
 				// The heal will be blocked if the current hp passes the limit
 				if (target.getCurrentHp() > target.getMaxRecoverableHp())
+				{
 					newHP = target.getCurrentHp();
-				// Else dont let the newHP pass the limit
+				}
 				else if (newHP > target.getMaxRecoverableHp())
+				{
 					newHP = target.getMaxRecoverableHp();
+				}
 			}
 			
 			target.setCurrentHp(newHP);

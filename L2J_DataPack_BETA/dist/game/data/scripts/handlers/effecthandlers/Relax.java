@@ -47,7 +47,9 @@ public class Relax extends L2Effect
 			getEffected().getActingPlayer().sitDown(false);
 		}
 		else
+		{
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
 		return super.onStart();
 	}
 	
@@ -61,15 +63,19 @@ public class Relax extends L2Effect
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())
+		{
 			return false;
+		}
 		
 		if (getEffected().isPlayer())
 		{
 			if (!getEffected().getActingPlayer().isSitting())
+			{
 				return false;
+			}
 		}
 		
-		if (getEffected().getCurrentHp() + 1 > getEffected().getMaxRecoverableHp())
+		if ((getEffected().getCurrentHp() + 1) > getEffected().getMaxRecoverableHp())
 		{
 			if (getSkill().isToggle())
 			{

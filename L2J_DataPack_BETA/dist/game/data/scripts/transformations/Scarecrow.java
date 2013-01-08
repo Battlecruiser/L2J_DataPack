@@ -26,7 +26,10 @@ public class Scarecrow extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		940, 942, 5437, 619
+		940,
+		942,
+		5437,
+		619
 	};
 	
 	public Scarecrow()

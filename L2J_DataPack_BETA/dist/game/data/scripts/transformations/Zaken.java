@@ -26,7 +26,13 @@ public class Zaken extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		715, 716, 717, 718, 719, 5491, 619
+		715,
+		716,
+		717,
+		718,
+		719,
+		5491,
+		619
 	};
 	
 	public Zaken()

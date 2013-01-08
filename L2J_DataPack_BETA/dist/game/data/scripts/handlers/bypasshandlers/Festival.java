@@ -42,7 +42,7 @@ public class Festival implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"festival", 
+		"festival",
 		"festivaldesc"
 	};
 	

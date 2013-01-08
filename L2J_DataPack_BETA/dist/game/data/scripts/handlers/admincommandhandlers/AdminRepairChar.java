@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class handles following admin commands: - delete = deletes target
- *
  * @version $Revision: 1.1.2.6.2.3 $ $Date: 2005/04/11 10:05:59 $
  */
 public class AdminRepairChar implements IAdminCommandHandler
@@ -90,13 +89,13 @@ public class AdminRepairChar implements IAdminCommandHandler
 				return;
 			}
 			
-			//connection = L2DatabaseFactory.getInstance().getConnection();
+			// connection = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=?");
 			statement.setInt(1, objId);
 			statement.execute();
 			statement.close();
 			
-			//connection = L2DatabaseFactory.getInstance().getConnection();
+			// connection = L2DatabaseFactory.getInstance().getConnection();
 			statement = con.prepareStatement("UPDATE items SET loc=\"INVENTORY\" WHERE owner_id=?");
 			statement.setInt(1, objId);
 			statement.execute();

@@ -26,7 +26,13 @@ public class DivineSummoner extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		710, 711, 712, 713, 714, 5779, 619
+		710,
+		711,
+		712,
+		713,
+		714,
+		5779,
+		619
 	};
 	
 	public DivineSummoner()

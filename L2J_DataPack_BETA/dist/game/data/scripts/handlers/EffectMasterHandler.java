@@ -18,6 +18,12 @@
  */
 package handlers;
 
+import java.lang.reflect.Method;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.l2jserver.gameserver.handler.EffectHandler;
+
 import handlers.effecthandlers.AbortCast;
 import handlers.effecthandlers.Betray;
 import handlers.effecthandlers.BigHead;
@@ -95,12 +101,6 @@ import handlers.effecthandlers.TransferDamage;
 import handlers.effecthandlers.Transformation;
 import handlers.effecthandlers.UnsummonAgathion;
 import handlers.effecthandlers.Warp;
-
-import java.lang.reflect.Method;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import com.l2jserver.gameserver.handler.EffectHandler;
 
 /**
  * Effect Master handler.
@@ -216,10 +216,14 @@ public final class EffectMasterHandler
 			try
 			{
 				if (c == null)
+				{
 					continue; // Disabled handler
-					
+				}
+				
 				if (method == null)
+				{
 					method = loadInstance.getClass().getMethod("registerHandler", Class.class);
+				}
 				
 				method.invoke(loadInstance, c);
 				

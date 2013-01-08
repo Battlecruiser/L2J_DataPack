@@ -32,7 +32,10 @@ public class StrongholdsTeleports extends AbstractNpcAI
 {
 	private final static int[] NPCs =
 	{
-		32163, 32181, 32184, 32186
+		32163,
+		32181,
+		32184,
+		32186
 	};
 	
 	@Override
@@ -41,9 +44,13 @@ public class StrongholdsTeleports extends AbstractNpcAI
 		String htmltext = "";
 		
 		if (player.getLevel() < 20)
+		{
 			htmltext = String.valueOf(npc.getNpcId()) + ".htm";
+		}
 		else
+		{
 			htmltext = String.valueOf(npc.getNpcId()) + "-no.htm";
+		}
 		
 		return htmltext;
 	}

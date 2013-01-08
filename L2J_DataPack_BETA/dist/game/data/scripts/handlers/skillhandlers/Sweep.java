@@ -36,7 +36,10 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Sweep implements ISkillHandler
 {
-	private static final L2SkillType[] SKILL_IDS = { L2SkillType.SWEEP };
+	private static final L2SkillType[] SKILL_IDS =
+	{
+		L2SkillType.SWEEP
+	};
 	private static final int maxSweepTime = 15000;
 	
 	@Override

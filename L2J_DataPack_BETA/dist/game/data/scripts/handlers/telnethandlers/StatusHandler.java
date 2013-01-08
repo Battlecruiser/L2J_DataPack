@@ -89,12 +89,12 @@ public class StatusHandler implements ITelnetHandler
 			
 			_print.println("+----");// ...
 			_print.println("| Allowed Memory:" + df2.format(max));
-			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format(allocated / max * 100));
-			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format(nonAllocated / max * 100));
+			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100));
+			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format((nonAllocated / max) * 100));
 			_print.println("| Allocated Memory:" + df2.format(allocated));
-			_print.println("|    |= Used Memory:" + df2.format(used) + df.format(used / max * 100));
-			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format(cached / max * 100));
-			_print.println("| Useable Memory:" + df2.format(useable) + df.format(useable / max * 100)); // ...
+			_print.println("|    |= Used Memory:" + df2.format(used) + df.format((used / max) * 100));
+			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format((cached / max) * 100));
+			_print.println("| Useable Memory:" + df2.format(useable) + df.format((useable / max) * 100)); // ...
 			_print.println("+----");
 		}
 		else if (command.equals("gmlist"))
@@ -109,7 +109,9 @@ public class StatusHandler implements ITelnetHandler
 			}
 			_print.println("There are currently " + igm + " GM(s) online...");
 			if (!gmList.isEmpty())
+			{
 				_print.println(gmList);
+			}
 		}
 		return false;
 	}
@@ -139,16 +141,27 @@ public class StatusHandler implements ITelnetHandler
 		for (L2Object obj : objs)
 		{
 			if (obj == null)
+			{
 				continue;
+			}
 			if (obj instanceof L2Character)
+			{
 				if (((L2Character) obj).hasAI())
+				{
 					AICount++;
+				}
+			}
 			if (obj instanceof L2ItemInstance)
+			{
 				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				{
 					itemVoidCount++;
+				}
 				else
+				{
 					itemCount++;
-			
+				}
+			}
 			else if (obj instanceof L2MonsterInstance)
 			{
 				monsterCount++;
@@ -159,19 +172,29 @@ public class StatusHandler implements ITelnetHandler
 				}
 			}
 			else if (obj instanceof L2Npc)
+			{
 				npcCount++;
+			}
 			else if (obj instanceof L2PcInstance)
 			{
 				pcCount++;
-				if (((L2PcInstance) obj).getClient() != null && ((L2PcInstance) obj).getClient().isDetached())
+				if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached())
+				{
 					detachedCount++;
+				}
 			}
 			else if (obj instanceof L2Summon)
+			{
 				summonCount++;
+			}
 			else if (obj instanceof L2DoorInstance)
+			{
 				doorCount++;
+			}
 			else if (obj instanceof L2Character)
+			{
 				charCount++;
+			}
 		}
 		StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");

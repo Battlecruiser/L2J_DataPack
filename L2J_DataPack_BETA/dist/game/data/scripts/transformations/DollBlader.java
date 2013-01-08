@@ -26,7 +26,11 @@ public class DollBlader extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		752, 753, 754, 5491, 619
+		752,
+		753,
+		754,
+		5491,
+		619
 	};
 	
 	public DollBlader()

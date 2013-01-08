@@ -30,7 +30,7 @@ public class EventEngine implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"event_participate", 
+		"event_participate",
 		"event_unregister"
 	};
 	

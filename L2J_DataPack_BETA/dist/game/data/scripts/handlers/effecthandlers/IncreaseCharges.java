@@ -45,12 +45,16 @@ public class IncreaseCharges extends L2Effect
 	public boolean onStart()
 	{
 		if (getEffected() == null)
+		{
 			return false;
+		}
 		
 		if (!getEffected().isPlayer())
+		{
 			return false;
+		}
 		
-		getEffected().getActingPlayer().increaseCharges((int)calc(), getCount());
+		getEffected().getActingPlayer().increaseCharges((int) calc(), getCount());
 		return true;
 	}
 	

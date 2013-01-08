@@ -33,11 +33,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-
 /**
- * This class handles following admin commands:
- * - handles every admin menu command
- *
+ * This class handles following admin commands: - handles every admin menu command
  * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminMenu implements IAdminCommandHandler
@@ -62,7 +59,9 @@ public class AdminMenu implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (command.equals("admin_char_manage"))
+		{
 			showMainPage(activeChar);
+		}
 		else if (command.startsWith("admin_teleport_character_to_menu"))
 		{
 			String[] data = command.split(" ");
@@ -71,7 +70,9 @@ public class AdminMenu implements IAdminCommandHandler
 				String playerName = data[1];
 				L2PcInstance player = L2World.getInstance().getPlayer(playerName);
 				if (player != null)
+				{
 					teleportCharacter(player, Integer.parseInt(data[2]), Integer.parseInt(data[3]), Integer.parseInt(data[4]), activeChar, "Admin is teleporting you.");
+				}
 			}
 			showMainPage(activeChar);
 		}
@@ -106,7 +107,9 @@ public class AdminMenu implements IAdminCommandHandler
 					return true;
 				}
 				for (L2PcInstance pm : player.getParty().getMembers())
+				{
 					teleportCharacter(pm, x, y, z, activeChar, "Your party is being teleported by an Admin.");
+				}
 			}
 			catch (Exception e)
 			{
@@ -134,7 +137,9 @@ public class AdminMenu implements IAdminCommandHandler
 				}
 				
 				for (L2PcInstance member : clan.getOnlineMembers(0))
+				{
 					teleportCharacter(member, x, y, z, activeChar, "Your clan is being teleported by an Admin.");
+				}
 			}
 			catch (Exception e)
 			{
@@ -173,7 +178,9 @@ public class AdminMenu implements IAdminCommandHandler
 					text = "You kicked " + plyr.getName() + " from the game.";
 				}
 				else
+				{
 					text = "Player " + player + " was not found in the game.";
+				}
 				activeChar.sendMessage(text);
 			}
 			showMainPage(activeChar);
@@ -191,7 +198,7 @@ public class AdminMenu implements IAdminCommandHandler
 					return false;
 				}
 				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand+command.substring(14), activeChar);
+				ach.useAdminCommand(subCommand + command.substring(14), activeChar);
 			}
 			showMainPage(activeChar);
 		}
@@ -208,7 +215,7 @@ public class AdminMenu implements IAdminCommandHandler
 					return false;
 				}
 				IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand+command.substring(16), activeChar);
+				ach.useAdminCommand(subCommand + command.substring(16), activeChar);
 			}
 			showMainPage(activeChar);
 		}
@@ -248,9 +255,13 @@ public class AdminMenu implements IAdminCommandHandler
 				filename = "charmanage.htm";
 			}
 			else if (Config.L2JMOD_CHAMPION_ENABLE && target.isChampion())
-				target.reduceCurrentHp(target.getMaxHp() * Config.L2JMOD_CHAMPION_HP + 1, activeChar, null);
+			{
+				target.reduceCurrentHp((target.getMaxHp() * Config.L2JMOD_CHAMPION_HP) + 1, activeChar, null);
+			}
 			else
+			{
 				target.reduceCurrentHp(target.getMaxHp() + 1, activeChar, null);
+			}
 		}
 		else
 		{
@@ -273,14 +284,18 @@ public class AdminMenu implements IAdminCommandHandler
 	{
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
+		{
 			player = (L2PcInstance) target;
+		}
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
 		if (player.getObjectId() == activeChar.getObjectId())
+		{
 			player.sendPacket(SystemMessageId.CANNOT_USE_ON_YOURSELF);
+		}
 		else
 		{
 			activeChar.setInstanceId(player.getInstanceId());

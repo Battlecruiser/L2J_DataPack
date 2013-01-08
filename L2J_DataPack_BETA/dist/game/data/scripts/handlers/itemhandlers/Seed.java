@@ -60,7 +60,7 @@ public class Seed implements IItemHandler
 			playable.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (!(tgt instanceof L2MonsterInstance) || tgt instanceof L2ChestInstance || ((L2Character) tgt).isRaid())
+		if (!(tgt instanceof L2MonsterInstance) || (tgt instanceof L2ChestInstance) || ((L2Character) tgt).isRaid())
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			playable.sendPacket(ActionFailed.STATIC_PACKET);

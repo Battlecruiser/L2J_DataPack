@@ -80,7 +80,7 @@ public class NoblesseTeleport extends AbstractNpcAI
 		{
 			return "nobleteleporter.htm";
 		}
-
+		
 		return "nobleteleporter-no.htm";
 	}
 	

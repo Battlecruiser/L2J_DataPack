@@ -36,7 +36,14 @@ public class RemoveDeathPenalty implements IBypassHandler
 	
 	private static final int[] pen_clear_price =
 	{
-		3600, 8640, 25200, 50400, 86400, 144000, 144000, 144000
+		3600,
+		8640,
+		25200,
+		50400,
+		86400,
+		144000,
+		144000,
+		144000
 	};
 	
 	@Override

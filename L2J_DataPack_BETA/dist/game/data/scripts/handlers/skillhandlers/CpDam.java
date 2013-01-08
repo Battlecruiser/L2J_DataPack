@@ -67,7 +67,7 @@ public class CpDam implements ISkillHandler
 				target.breakAttack();
 				target.breakCast();
 			}
-					
+			
 			skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 			activeChar.sendDamageMessage(target, damage, false, false, false);
 			target.setCurrentCp(target.getCurrentCp() - damage);
