@@ -1,14 +1,14 @@
 /*
- * Copyright (C) 2004-2012 L2J Server
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This file is part of L2J Server.
+ * This file is part of L2J DataPack.
  * 
- * L2J Server is free software: you can redistribute it and/or modify
+ * L2J DataPack is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J Server is distributed in the hope that it will be useful,
+ * L2J DataPack is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
