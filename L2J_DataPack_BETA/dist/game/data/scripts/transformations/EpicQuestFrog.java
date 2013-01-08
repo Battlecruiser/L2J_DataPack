@@ -26,7 +26,8 @@ public class EpicQuestFrog extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5437, 959
+		5437,
+		959
 	};
 	
 	public EpicQuestFrog()

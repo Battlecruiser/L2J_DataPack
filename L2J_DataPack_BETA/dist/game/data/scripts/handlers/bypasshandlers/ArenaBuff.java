@@ -36,7 +36,7 @@ public class ArenaBuff implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"ArenaBuffs", 
+		"ArenaBuffs",
 		"HPRecovery",
 		"CPRecovery"
 	};
@@ -44,10 +44,19 @@ public class ArenaBuff implements IBypassHandler
 	private final int[][] _Buffs =
 	{
 		{ // Fighter Buffs
-			6803, 6804, 6808, 6809, 6811, 6812
+			6803,
+			6804,
+			6808,
+			6809,
+			6811,
+			6812
 		},
 		{ // Mage Buffs
-			6804, 6805, 6806, 6807, 6812
+			6804,
+			6805,
+			6806,
+			6807,
+			6812
 		}
 	};
 	
@@ -66,7 +75,7 @@ public class ArenaBuff implements IBypassHandler
 			String cmd = st.nextToken();
 			
 			if (cmd.equalsIgnoreCase(COMMANDS[0]))
-			{	
+			{
 				if (!activeChar.reduceAdena("ArenaBuffs", 2000, activeChar.getLastFolkNPC(), true))
 				{
 					return false;

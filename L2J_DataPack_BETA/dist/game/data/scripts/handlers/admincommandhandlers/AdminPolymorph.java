@@ -66,7 +66,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		else if (command.startsWith("admin_transform"))
 		{
 			L2Object obj = activeChar.getTarget();
-			if (obj != null && obj.isPlayer())
+			if ((obj != null) && obj.isPlayer())
 			{
 				L2PcInstance cha = obj.getActingPlayer();
 				

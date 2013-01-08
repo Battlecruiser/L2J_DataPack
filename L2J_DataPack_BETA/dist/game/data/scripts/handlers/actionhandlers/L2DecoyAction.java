@@ -32,14 +32,14 @@ public class L2DecoyAction implements IActionHandler
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Aggression target lock effect
-		if (activeChar.isLockedTarget() && activeChar.getLockedTarget() != target)
+		if (activeChar.isLockedTarget() && (activeChar.getLockedTarget() != target))
 		{
 			activeChar.sendPacket(SystemMessageId.FAILED_CHANGE_TARGET);
 			return false;
 		}
 		
 		activeChar.setTarget(target);
-		activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel()- ((L2Character)target).getLevel()));
+		activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel()));
 		return true;
 	}
 	

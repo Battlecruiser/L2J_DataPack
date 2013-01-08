@@ -48,9 +48,13 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 		}
 		
 		if (actualCommand.equalsIgnoreCase("admin_kill_tiat"))
+		{
 			GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
+		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_sodstate"))
+		{
 			GraciaSeedsManager.getInstance().setSoDState(Integer.parseInt(val), true);
+		}
 		
 		showMenu(activeChar);
 		return true;
@@ -69,7 +73,9 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 			html.replace("%sodtime%", nextChangeDate.getTime().toString());
 		}
 		else
+		{
 			html.replace("%sodtime%", "-1");
+		}
 		activeChar.sendPacket(html);
 	}
 	

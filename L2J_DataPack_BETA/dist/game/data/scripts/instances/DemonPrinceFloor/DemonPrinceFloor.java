@@ -52,7 +52,7 @@ public class DemonPrinceFloor extends Quest
 	private static final int SEAL_BREAKER_5 = 15515;
 	
 	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
-	private static final Location EXIT_POINT =  new Location(-19024, 277122, -8256);
+	private static final Location EXIT_POINT = new Location(-19024, 277122, -8256);
 	
 	public DemonPrinceFloor(int questId, String name, String descr)
 	{

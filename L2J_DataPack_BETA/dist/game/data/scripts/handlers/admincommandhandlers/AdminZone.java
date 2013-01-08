@@ -50,18 +50,20 @@ public class AdminZone implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
+		{
 			return false;
+		}
 		
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
 		
-		//String val = "";
-		//if (st.countTokens() >= 1) {val = st.nextToken();}
+		// String val = "";
+		// if (st.countTokens() >= 1) {val = st.nextToken();}
 		
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
 			showHtml(activeChar);
-			activeChar.sendMessage("MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(activeChar.getY()) + " ("+MapRegionManager.getInstance().getMapRegionLocId(activeChar)+")");
+			activeChar.sendMessage("MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(activeChar.getY()) + " (" + MapRegionManager.getInstance().getMapRegionLocId(activeChar) + ")");
 			getGeoRegionXY(activeChar);
 			activeChar.sendMessage("Closest Town: " + MapRegionManager.getInstance().getClosestTownName(activeChar));
 			
@@ -134,16 +136,20 @@ public class AdminZone implements IAdminCommandHandler
 		L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
 		for (L2ZoneType zone : region.getZones())
 		{
-			if(zone.isCharacterInZone(activeChar))
+			if (zone.isCharacterInZone(activeChar))
 			{
 				if (zone.getName() != null)
 				{
 					StringUtil.append(zones, zone.getName() + "<br1>");
-					if (zone.getId() < 300000) // not display id for dynamic zones
+					if (zone.getId() < 300000)
+					{
 						StringUtil.append(zones, "(", String.valueOf(zone.getId()), ")");
+					}
 				}
 				else
+				{
 					StringUtil.append(zones, String.valueOf(zone.getId()));
+				}
 				StringUtil.append(zones, " ");
 			}
 		}
@@ -154,10 +160,10 @@ public class AdminZone implements IAdminCommandHandler
 	private static void getGeoRegionXY(L2PcInstance activeChar)
 	{
 		int worldX = activeChar.getX();
-		int worldY = activeChar.getY();				
-		int geoX = ((((worldX - (-327680)) >> 4) >> 11)+10);
-		int geoY = ((((worldY - (-262144)) >> 4) >> 11)+10);
-		activeChar.sendMessage("GeoRegion: "+geoX+"_"+geoY+"");
+		int worldY = activeChar.getY();
+		int geoX = ((((worldX - (-327680)) >> 4) >> 11) + 10);
+		int geoY = ((((worldY - (-262144)) >> 4) >> 11) + 10);
+		activeChar.sendMessage("GeoRegion: " + geoX + "_" + geoY + "");
 	}
 	
 	@Override

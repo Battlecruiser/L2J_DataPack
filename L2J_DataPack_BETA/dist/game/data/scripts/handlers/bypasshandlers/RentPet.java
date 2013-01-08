@@ -95,11 +95,17 @@ public class RentPet implements IBypassHandler
 		double price = 1;
 		int cost[] =
 		{
-			1800, 7200, 720000, 6480000
+			1800,
+			7200,
+			720000,
+			6480000
 		};
 		int ridetime[] =
 		{
-			30, 60, 600, 1800
+			30,
+			60,
+			600,
+			1800
 		};
 		
 		if (val > 10)

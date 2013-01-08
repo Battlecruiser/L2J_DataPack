@@ -26,7 +26,12 @@ public class UnicornWeak extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		563, 564, 565, 567, 5491, 619
+		563,
+		564,
+		565,
+		567,
+		5491,
+		619
 	};
 	
 	public UnicornWeak()

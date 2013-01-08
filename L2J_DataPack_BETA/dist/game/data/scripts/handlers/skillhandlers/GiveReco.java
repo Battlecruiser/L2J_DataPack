@@ -47,16 +47,18 @@ public class GiveReco implements ISkillHandler
 			if (obj.isPlayer())
 			{
 				L2PcInstance target = obj.getActingPlayer();
-				int power = (int)skill.getPower();
-				int reco  = target.getRecomHave();
+				int power = (int) skill.getPower();
+				int reco = target.getRecomHave();
 				
-				if(reco + power >= 255)
-					power = 255-reco;
-
-				if(power > 0)
+				if ((reco + power) >= 255)
 				{
-					target.setRecomHave(reco+power);
-
+					power = 255 - reco;
+				}
+				
+				if (power > 0)
+				{
+					target.setRecomHave(reco + power);
+					
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATIONS);
 					sm.addNumber(power);
 					target.sendPacket(sm);
@@ -64,7 +66,9 @@ public class GiveReco implements ISkillHandler
 					target.sendPacket(new ExVoteSystemInfo(target));
 				}
 				else
+				{
 					target.sendPacket(SystemMessageId.NOTHING_HAPPENED);
+				}
 			}
 		}
 	}

@@ -47,33 +47,28 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 public class Kamaloka extends Quest
 {
 	/*
-	 * Reset time for all kamaloka
-	 * Default: 6:30AM on server time
+	 * Reset time for all kamaloka Default: 6:30AM on server time
 	 */
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
 	
 	/*
-	 * Time after which instance without players will be destroyed
-	 * Default: 5 minutes
+	 * Time after which instance without players will be destroyed Default: 5 minutes
 	 */
 	private static final int EMPTY_DESTROY_TIME = 5;
 	
 	/*
-	 * Time to destroy instance (and eject players away) after boss defeat
-	 * Default: 5 minutes
+	 * Time to destroy instance (and eject players away) after boss defeat Default: 5 minutes
 	 */
 	private static final int EXIT_TIME = 5;
 	
 	/*
-	 * Maximum level difference between players level and kamaloka level
-	 * Default: 5
+	 * Maximum level difference between players level and kamaloka level Default: 5
 	 */
 	private static final int MAX_LEVEL_DIFFERENCE = 5;
 	
 	/*
-	 * If true shaman in the first room will have same npcId as other mobs, making radar useless
-	 * Default: true (but not retail like)
+	 * If true shaman in the first room will have same npcId as other mobs, making radar useless Default: true (but not retail like)
 	 */
 	private static final boolean STEALTH_SHAMAN = true;
 	
@@ -81,242 +76,906 @@ public class Kamaloka extends Quest
 	 * Hardcoded instance ids for kamaloka
 	 */
 	private static final int[] INSTANCE_IDS =
-	{ 57, 58, 73, 60, 61, 74, 63, 64, 75, 66, 67, 76, 69, 70, 77, 72, 78, 79, 134 };
+	{
+		57,
+		58,
+		73,
+		60,
+		61,
+		74,
+		63,
+		64,
+		75,
+		66,
+		67,
+		76,
+		69,
+		70,
+		77,
+		72,
+		78,
+		79,
+		134
+	};
 	
 	/*
 	 * Level of the kamaloka
 	 */
 	private static final int[] LEVEL =
-	{ 23, 26, 29, 33, 36, 39, 43, 46, 49, 53, 56, 59, 63, 66, 69, 73, 78, 81, 83 };
+	{
+		23,
+		26,
+		29,
+		33,
+		36,
+		39,
+		43,
+		46,
+		49,
+		53,
+		56,
+		59,
+		63,
+		66,
+		69,
+		73,
+		78,
+		81,
+		83
+	};
 	
 	/*
 	 * Duration of the instance, minutes
 	 */
 	private static final int[] DURATION =
-	{ 30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 30, 45, 30, 45, 45, 45 };
+	{
+		30,
+		30,
+		45,
+		30,
+		30,
+		45,
+		30,
+		30,
+		45,
+		30,
+		30,
+		45,
+		30,
+		30,
+		45,
+		30,
+		45,
+		45,
+		45
+	};
 	
 	/*
 	 * Maximum party size for the instance
 	 */
 	private static final int[] MAX_PARTY_SIZE =
-	{  6,  6,  9,  6,  6,  9,  6,  6,  9,  6,  6,  9,  6,  6,  9,  6,  9,  9,  9 };
-	
-	/*
-	 * List of buffs NOT removed on enter from player and pet
-	 * On retail only newbie guide buffs not removed
-	 * CAUTION: array must be sorted in ascension order !
-	 */
-	private static final int[] BUFFS_WHITELIST =
-	{ 5627, 5628, 5629, 5630, 5631, 5632, 5633, 5634, 5635, 5636, 5637, 5950 };
-	
-	/*
-	 * Teleport points into instances
-	 * 
-	 * x, y, z
-	 */
-	private static final Location[] TELEPORTS =
 	{
-		new Location(-88429, -220629,  -7903),
-		new Location(-82464, -219532,  -7899),
-		new Location(-10700, -174882, -10936),  // -76280, -185540, -10936
-		new Location(-89683, -213573,  -8106),
-		new Location(-81413, -213568,  -8104),
-		new Location(-10700, -174882, -10936),  // -76280, -174905, -10936
-		new Location(-89759, -206143,  -8120),
-		new Location(-81415, -206078,  -8107),
-		new Location(-10700, -174882, -10936),
-		new Location(-56999, -219856,  -8117),
-		new Location(-48794, -220261,  -8075),
-		new Location(-10700, -174882, -10936),
-		new Location(-56940, -212939,  -8072),
-		new Location(-55566, -206139,  -8120),
-		new Location(-10700, -174882, -10936),
-		new Location(-49805, -206139,  -8117),
-		new Location(-10700, -174882, -10936),
-		new Location(-10700, -174882, -10936),
-		new Location( 22003, -174886, -10900),
+		6,
+		6,
+		9,
+		6,
+		6,
+		9,
+		6,
+		6,
+		9,
+		6,
+		6,
+		9,
+		6,
+		6,
+		9,
+		6,
+		9,
+		9,
+		9
 	};
 	
 	/*
-	 * Respawn delay for the mobs in the first room, seconds
-	 * Default: 25
+	 * List of buffs NOT removed on enter from player and pet On retail only newbie guide buffs not removed CAUTION: array must be sorted in ascension order !
+	 */
+	private static final int[] BUFFS_WHITELIST =
+	{
+		5627,
+		5628,
+		5629,
+		5630,
+		5631,
+		5632,
+		5633,
+		5634,
+		5635,
+		5636,
+		5637,
+		5950
+	};
+	
+	/*
+	 * Teleport points into instances x, y, z
+	 */
+	private static final Location[] TELEPORTS =
+	{
+		new Location(-88429, -220629, -7903),
+		new Location(-82464, -219532, -7899),
+		new Location(-10700, -174882, -10936), // -76280, -185540, -10936
+		new Location(-89683, -213573, -8106),
+		new Location(-81413, -213568, -8104),
+		new Location(-10700, -174882, -10936), // -76280, -174905, -10936
+		new Location(-89759, -206143, -8120),
+		new Location(-81415, -206078, -8107),
+		new Location(-10700, -174882, -10936),
+		new Location(-56999, -219856, -8117),
+		new Location(-48794, -220261, -8075),
+		new Location(-10700, -174882, -10936),
+		new Location(-56940, -212939, -8072),
+		new Location(-55566, -206139, -8120),
+		new Location(-10700, -174882, -10936),
+		new Location(-49805, -206139, -8117),
+		new Location(-10700, -174882, -10936),
+		new Location(-10700, -174882, -10936),
+		new Location(22003, -174886, -10900),
+	};
+	
+	/*
+	 * Respawn delay for the mobs in the first room, seconds Default: 25
 	 */
 	private static final int FIRST_ROOM_RESPAWN_DELAY = 25;
 	
 	/*
-	 * First room information, null if room not spawned
-	 * Skill is casted on the boss when shaman is defeated and mobs respawn stopped
-	 * Default: 5699 (decrease pdef)
-	 * 
-	 * shaman npcId, minions npcId, skillId, skillLvl
+	 * First room information, null if room not spawned Skill is casted on the boss when shaman is defeated and mobs respawn stopped Default: 5699 (decrease pdef) shaman npcId, minions npcId, skillId, skillLvl
 	 */
 	private static final int[][] FIRST_ROOM =
 	{
-		null, null,
-		{ 22485, 22486, 5699, 1 },
-		null, null,
-		{ 22488, 22489, 5699, 2 },
-		null, null,
-		{ 22491, 22492, 5699, 3 },
-		null, null,
-		{ 22494, 22495, 5699, 4 },
-		null, null,
-		{ 22497, 22498, 5699, 5 },
 		null,
-		{ 22500, 22501, 5699, 6 },
-		{ 22503, 22504, 5699, 7 },
-		{ 25706, 25707, 5699, 7 }
-	};
-	
-	/*
-	 * First room spawns, null if room not spawned
-	 * 
-	 * x, y, z
-	 */
-	private static final int[][][] FIRST_ROOM_SPAWNS =
-	{
-		null, null,
+		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22485,
+			22486,
+			5699,
+			1
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22488,
+			22489,
+			5699,
+			2
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22491,
+			22492,
+			5699,
+			3
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22494,
+			22495,
+			5699,
+			4
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22497,
+			22498,
+			5699,
+			5
 		},
 		null,
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22500,
+			22501,
+			5699,
+			6
 		},
 		{
-			{ -12381, -174973, -10955 }, { -12413, -174905, -10955 },
-			{ -12377, -174838, -10953 }, { -12316, -174903, -10953 },
-			{ -12326, -174786, -10953 }, { -12330, -175024, -10953 },
-			{ -12211, -174900, -10955 }, { -12238, -174849, -10953 },
-			{ -12233, -174954, -10953 }
+			22503,
+			22504,
+			5699,
+			7
 		},
 		{
-			{  20409, -174827, -10912 }, {  20409, -174947, -10912 },
-			{  20494, -174887, -10912 }, {  20494, -174767, -10912 },
-			{  20614, -174887, -10912 }, {  20579, -174827, -10912 },
-			{  20579, -174947, -10912 }, {  20494, -175007, -10912 },
-			{  20374, -174887, -10912 }
+			25706,
+			25707,
+			5699,
+			7
 		}
 	};
 	
 	/*
-	 * Second room information, null if room not spawned
-	 * Skill is casted on the boss when all mobs are defeated
-	 * Default: 5700 (decrease mdef)
-	 * 
-	 * npcId, skillId, skillLvl
+	 * First room spawns, null if room not spawned x, y, z
 	 */
-	private static final int[][] SECOND_ROOM =
+	private static final int[][][] FIRST_ROOM_SPAWNS =
 	{
-		null, null,
-		{ 22487, 5700, 1 },
-		null, null,
-		{ 22490, 5700, 2 },
-		null, null,
-		{ 22493, 5700, 3 },
-		null, null,
-		{ 22496, 5700, 4 },
-		null, null,
-		{ 22499, 5700, 5 },
 		null,
-		{ 22502, 5700, 6 },
-		{ 22505, 5700, 7 },
-		{ 25708, 5700, 7 }
-		
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		null,
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		{
+			{
+				-12381,
+				-174973,
+				-10955
+			},
+			{
+				-12413,
+				-174905,
+				-10955
+			},
+			{
+				-12377,
+				-174838,
+				-10953
+			},
+			{
+				-12316,
+				-174903,
+				-10953
+			},
+			{
+				-12326,
+				-174786,
+				-10953
+			},
+			{
+				-12330,
+				-175024,
+				-10953
+			},
+			{
+				-12211,
+				-174900,
+				-10955
+			},
+			{
+				-12238,
+				-174849,
+				-10953
+			},
+			{
+				-12233,
+				-174954,
+				-10953
+			}
+		},
+		{
+			{
+				20409,
+				-174827,
+				-10912
+			},
+			{
+				20409,
+				-174947,
+				-10912
+			},
+			{
+				20494,
+				-174887,
+				-10912
+			},
+			{
+				20494,
+				-174767,
+				-10912
+			},
+			{
+				20614,
+				-174887,
+				-10912
+			},
+			{
+				20579,
+				-174827,
+				-10912
+			},
+			{
+				20579,
+				-174947,
+				-10912
+			},
+			{
+				20494,
+				-175007,
+				-10912
+			},
+			{
+				20374,
+				-174887,
+				-10912
+			}
+		}
 	};
 	
 	/*
-	 * Spawns for second room, null if room not spawned
-	 * 
-	 * x, y, z
+	 * Second room information, null if room not spawned Skill is casted on the boss when all mobs are defeated Default: 5700 (decrease mdef) npcId, skillId, skillLvl
 	 */
-	private static final int[][][] SECOND_ROOM_SPAWNS =
+	private static final int[][] SECOND_ROOM =
 	{
-		null, null,
+		null,
+		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22487,
+			5700,
+			1
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22490,
+			5700,
+			2
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22493,
+			5700,
+			3
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22496,
+			5700,
+			4
 		},
-		null, null,
+		null,
+		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22499,
+			5700,
+			5
 		},
 		null,
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22502,
+			5700,
+			6
 		},
 		{
-			{ -14547, -174901, -10690 }, { -14543, -175030, -10690 },
-			{ -14668, -174900, -10690 }, { -14538, -174774, -10690 },
-			{ -14410, -174904, -10690 }
+			22505,
+			5700,
+			7
 		},
 		{
-			{  18175, -174991, -10653 }, {  18070, -174890, -10655 },
-			{  18157, -174886, -10655 }, {  18249, -174885, -10653 },
-			{  18144, -174821, -10648 }
+			25708,
+			5700,
+			7
+		}
+	
+	};
+	
+	/*
+	 * Spawns for second room, null if room not spawned x, y, z
+	 */
+	private static final int[][][] SECOND_ROOM_SPAWNS =
+	{
+		null,
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		null,
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		null,
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		{
+			{
+				-14547,
+				-174901,
+				-10690
+			},
+			{
+				-14543,
+				-175030,
+				-10690
+			},
+			{
+				-14668,
+				-174900,
+				-10690
+			},
+			{
+				-14538,
+				-174774,
+				-10690
+			},
+			{
+				-14410,
+				-174904,
+				-10690
+			}
+		},
+		{
+			{
+				18175,
+				-174991,
+				-10653
+			},
+			{
+				18070,
+				-174890,
+				-10655
+			},
+			{
+				18157,
+				-174886,
+				-10655
+			},
+			{
+				18249,
+				-174885,
+				-10653
+			},
+			{
+				18144,
+				-174821,
+				-10648
+			}
 		}
 	};
 	
@@ -324,80 +983,264 @@ public class Kamaloka extends Quest
 	// skill is casted on the boss when miniboss is defeated
 	// npcId, x, y, z, skill id, skill level
 	/*
-	 * Miniboss information, null if miniboss not spawned
-	 * Skill is casted on the boss when miniboss is defeated
-	 * Default: 5701 (decrease patk)
-	 * 
-	 * npcId, x, y, z, skillId, skillLvl
+	 * Miniboss information, null if miniboss not spawned Skill is casted on the boss when miniboss is defeated Default: 5701 (decrease patk) npcId, x, y, z, skillId, skillLvl
 	 */
 	private static final int[][] MINIBOSS =
 	{
-		null, null,
-		{ 25616, -16874, -174900, -10427, 5701, 1 },
-		null, null,
-		{ 25617, -16874, -174900, -10427, 5701, 2 },
-		null, null,
-		{ 25618, -16874, -174900, -10427, 5701, 3 },
-		null, null,
-		{ 25619, -16874, -174900, -10427, 5701, 4 },
-		null, null,
-		{ 25620, -16874, -174900, -10427, 5701, 5 },
 		null,
-		{ 25621, -16874, -174900, -10427, 5701, 6 },
-		{ 25622, -16874, -174900, -10427, 5701, 7 },
-		{ 25709,  15828, -174885, -10384, 5701, 7 }
+		null,
+		{
+			25616,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			1
+		},
+		null,
+		null,
+		{
+			25617,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			2
+		},
+		null,
+		null,
+		{
+			25618,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			3
+		},
+		null,
+		null,
+		{
+			25619,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			4
+		},
+		null,
+		null,
+		{
+			25620,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			5
+		},
+		null,
+		{
+			25621,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			6
+		},
+		{
+			25622,
+			-16874,
+			-174900,
+			-10427,
+			5701,
+			7
+		},
+		{
+			25709,
+			15828,
+			-174885,
+			-10384,
+			5701,
+			7
+		}
 	};
 	
 	/*
-	 * Bosses of the kamaloka
-	 * Instance ends when boss is defeated
-	 * 
-	 * npcId, x, y, z
+	 * Bosses of the kamaloka Instance ends when boss is defeated npcId, x, y, z
 	 */
 	private static final int[][] BOSS =
 	{
-		{ 18554, -88998, -220077,  -7892 },
-		{ 18555, -81891, -220078,  -7893 },
-		{ 29129, -20659, -174903,  -9983 },
-		{ 18558, -89183, -213564,  -8100 },
-		{ 18559, -81937, -213566,  -8100 },
-		{ 29132, -20659, -174903,  -9983 },
-		{ 18562, -89054, -206144,  -8115 },
-		{ 18564, -81937, -206077,  -8100 },
-		{ 29135, -20659, -174903,  -9983 },
-		{ 18566, -56281, -219859,  -8115 },
-		{ 18568, -49336, -220260,  -8068 },
-		{ 29138, -20659, -174903,  -9983 },
-		{ 18571, -56415, -212939,  -8068 },
-		{ 18573, -56281, -206140,  -8115 },
-		{ 29141, -20659, -174903,  -9983 },
-		{ 18577, -49084, -206140,  -8115 },
-		{ 29144, -20659, -174903,  -9983 },
-		{ 29147, -20659, -174903,  -9983 },
-		{ 25710,  12047, -174887,  -9944 }
+		{
+			18554,
+			-88998,
+			-220077,
+			-7892
+		},
+		{
+			18555,
+			-81891,
+			-220078,
+			-7893
+		},
+		{
+			29129,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			18558,
+			-89183,
+			-213564,
+			-8100
+		},
+		{
+			18559,
+			-81937,
+			-213566,
+			-8100
+		},
+		{
+			29132,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			18562,
+			-89054,
+			-206144,
+			-8115
+		},
+		{
+			18564,
+			-81937,
+			-206077,
+			-8100
+		},
+		{
+			29135,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			18566,
+			-56281,
+			-219859,
+			-8115
+		},
+		{
+			18568,
+			-49336,
+			-220260,
+			-8068
+		},
+		{
+			29138,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			18571,
+			-56415,
+			-212939,
+			-8068
+		},
+		{
+			18573,
+			-56281,
+			-206140,
+			-8115
+		},
+		{
+			29141,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			18577,
+			-49084,
+			-206140,
+			-8115
+		},
+		{
+			29144,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			29147,
+			-20659,
+			-174903,
+			-9983
+		},
+		{
+			25710,
+			12047,
+			-174887,
+			-9944
+		}
 	};
 	
 	/*
-	 * Escape telepoters spawns, null if not spawned
-	 * 
-	 * x, y, z
+	 * Escape telepoters spawns, null if not spawned x, y, z
 	 */
 	private static final int[][] TELEPORTERS =
 	{
-		null, null,
-		{ -10865, -174905, -10944 },
-		null, null,
-		{ -10865, -174905, -10944 },
-		null, null,
-		{ -10865, -174905, -10944 },
-		null, null,
-		{ -10865, -174905, -10944 },
-		null, null,
-		{ -10865, -174905, -10944 },
 		null,
-		{ -10865, -174905, -10944 },
-		{ -10865, -174905, -10944 },
-		{  21837, -174885, -10904 }
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		null,
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		null,
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		null,
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		null,
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		null,
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		{
+			-10865,
+			-174905,
+			-10944
+		},
+		{
+			21837,
+			-174885,
+			-10904
+		}
 	};
 	
 	/*
@@ -406,24 +1249,30 @@ public class Kamaloka extends Quest
 	private static final int TELEPORTER = 32496;
 	
 	/** Kamaloka captains (start npc's) npcIds. */
-	private static final int[] CAPTAINS = { 30332, 30071, 30916, 30196, 31981, 31340 };
+	private static final int[] CAPTAINS =
+	{
+		30332,
+		30071,
+		30916,
+		30196,
+		31981,
+		31340
+	};
 	
 	protected class KamaWorld extends InstanceWorld
 	{
-		public int index;				// 0-18 index of the kama type in arrays
-		public int shaman = 0;			// objectId of the shaman
-		public List<L2Spawn> firstRoom;	// list of the spawns in the first room (excluding shaman)
+		public int index; // 0-18 index of the kama type in arrays
+		public int shaman = 0; // objectId of the shaman
+		public List<L2Spawn> firstRoom; // list of the spawns in the first room (excluding shaman)
 		public List<Integer> secondRoom;// list of objectIds mobs in the second room
-		public int miniBoss = 0;		// objectId of the miniboss
-		public L2Npc boss = null;		// boss
+		public int miniBoss = 0; // objectId of the miniboss
+		public L2Npc boss = null; // boss
 	}
 	
 	/**
 	 * Check if party with player as leader allowed to enter
-	 * 
 	 * @param player party leader
 	 * @param index (0-18) index of the kamaloka in arrays
-	 * 
 	 * @return true if party allowed to enter
 	 */
 	private static final boolean checkConditions(L2PcInstance player, int index)
@@ -482,7 +1331,9 @@ public class Kamaloka extends Quest
 					// find instance with same name (kamaloka or labyrinth)
 					// TODO: Zoey76: Don't use instance name, use other system.
 					if (!instanceName.equals(InstanceManager.getInstance().getInstanceIdName(id)))
+					{
 						continue;
+					}
 					// if found instance still can't be reentered - exit
 					if (System.currentTimeMillis() < instanceTimes.get(id))
 					{
@@ -499,7 +1350,6 @@ public class Kamaloka extends Quest
 	
 	/**
 	 * Removing all buffs from player and pet except BUFFS_WHITELIST
-	 * 
 	 * @param ch player
 	 */
 	private static final void removeBuffs(L2Character ch)
@@ -507,12 +1357,18 @@ public class Kamaloka extends Quest
 		for (L2Effect e : ch.getAllEffects())
 		{
 			if (e == null)
+			{
 				continue;
+			}
 			L2Skill skill = e.getSkill();
 			if (skill.isDebuff() || skill.isStayAfterDeath())
+			{
 				continue;
+			}
 			if (Arrays.binarySearch(BUFFS_WHITELIST, skill.getId()) >= 0)
+			{
 				continue;
+			}
 			e.exit();
 		}
 		if (ch.getSummon() != null)
@@ -520,12 +1376,18 @@ public class Kamaloka extends Quest
 			for (L2Effect e : ch.getSummon().getAllEffects())
 			{
 				if (e == null)
+				{
 					continue;
+				}
 				L2Skill skill = e.getSkill();
 				if (skill.isDebuff() || skill.isStayAfterDeath())
+				{
 					continue;
+				}
 				if (Arrays.binarySearch(BUFFS_WHITELIST, skill.getId()) >= 0)
+				{
 					continue;
+				}
 				e.exit();
 			}
 		}
@@ -533,7 +1395,6 @@ public class Kamaloka extends Quest
 	
 	/**
 	 * Teleport player and pet to/from instance
-	 * 
 	 * @param player
 	 * @param loc
 	 * @param instanceId
@@ -547,7 +1408,6 @@ public class Kamaloka extends Quest
 	
 	/**
 	 * Handling enter of the players into kamaloka
-	 * 
 	 * @param player party leader
 	 * @param index (0-18) kamaloka index in arrays
 	 */
@@ -569,14 +1429,13 @@ public class Kamaloka extends Quest
 		if (world != null)
 		{
 			// but not in kamaloka
-			if (!(world instanceof KamaWorld)
-					|| world.getTemplateId() != templateId)
+			if (!(world instanceof KamaWorld) || (world.getTemplateId() != templateId))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return;
 			}
 			// check for level difference again on reenter
-			if (Math.abs(player.getLevel() - LEVEL[((KamaWorld)world).index]) > MAX_LEVEL_DIFFERENCE)
+			if (Math.abs(player.getLevel() - LEVEL[((KamaWorld) world).index]) > MAX_LEVEL_DIFFERENCE)
 			{
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_LEVEL_REQUIREMENT_NOT_SUFFICIENT);
 				sm.addPcName(player);
@@ -594,7 +1453,9 @@ public class Kamaloka extends Quest
 		}
 		// Creating new kamaloka instance
 		if (!checkConditions(player, index))
+		{
 			return;
+		}
 		
 		// Creating dynamic instance without template
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance(null);
@@ -614,11 +1475,11 @@ public class Kamaloka extends Quest
 		world.setInstanceId(instanceId);
 		world.setTemplateId(templateId);
 		// set index for easy access to the arrays
-		((KamaWorld)world).index = index;
+		((KamaWorld) world).index = index;
 		InstanceManager.getInstance().addWorld(world);
 		world.setStatus(0);
 		// spawn npcs
-		spawnKama((KamaWorld)world);
+		spawnKama((KamaWorld) world);
 		
 		// and finally teleport party into instance
 		final L2Party party = player.getParty();
@@ -643,7 +1504,9 @@ public class Kamaloka extends Quest
 			reenter.set(Calendar.MINUTE, RESET_MIN);
 			// if time is >= RESET_HOUR - roll to the next day
 			if (reenter.get(Calendar.HOUR_OF_DAY) >= RESET_HOUR)
+			{
 				reenter.add(Calendar.DATE, 1);
+			}
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
@@ -653,7 +1516,7 @@ public class Kamaloka extends Quest
 			for (int objectId : world.getAllowed())
 			{
 				L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
-				if (obj != null && obj.isOnline())
+				if ((obj != null) && obj.isOnline())
 				{
 					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
 					obj.sendPacket(sm);
@@ -702,7 +1565,7 @@ public class Kamaloka extends Quest
 					spawn.setRespawnDelay(FIRST_ROOM_RESPAWN_DELAY);
 					spawn.setAmount(1);
 					spawn.startRespawn();
-					world.firstRoom.add(spawn); //store mobs spawns
+					world.firstRoom.add(spawn); // store mobs spawns
 				}
 				npc.setIsNoRndWalk(true);
 			}
@@ -715,9 +1578,9 @@ public class Kamaloka extends Quest
 		{
 			world.secondRoom = new ArrayList<Integer>(spawns.length);
 			
-			for (int i = 0; i < spawns.length; i++)
+			for (int[] spawn : spawns)
 			{
-				npc = addSpawn(npcs[0], spawns[i][0], spawns[i][1], spawns[i][2], 0, false, 0, false, world.getInstanceId());
+				npc = addSpawn(npcs[0], spawn[0], spawn[1], spawn[2], 0, false, 0, false, world.getInstanceId());
 				npc.setIsNoRndWalk(true);
 				world.secondRoom.add(npc.getObjectId());
 			}
@@ -733,11 +1596,13 @@ public class Kamaloka extends Quest
 		
 		// escape teleporter
 		if (TELEPORTERS[index] != null)
+		{
 			addSpawn(TELEPORTER, TELEPORTERS[index][0], TELEPORTERS[index][1], TELEPORTERS[index][2], 0, false, 0, false, world.getInstanceId());
+		}
 		
 		// boss
 		npc = addSpawn(BOSS[index][0], BOSS[index][1], BOSS[index][2], BOSS[index][3], 0, false, 0, false, world.getInstanceId());
-		((L2MonsterInstance)npc).setOnKillDelay(100);
+		((L2MonsterInstance) npc).setOnKillDelay(100);
 		world.boss = npc;
 	}
 	
@@ -745,10 +1610,12 @@ public class Kamaloka extends Quest
 	 * Handles only player's enter, single parameter - integer kamaloka index
 	 */
 	@Override
-	public final String onAdvEvent (String event, L2Npc npc, L2PcInstance player)
+	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (npc == null)
+		{
 			return "";
+		}
 		
 		try
 		{
@@ -773,7 +1640,7 @@ public class Kamaloka extends Quest
 		{
 			final L2Party party = player.getParty();
 			// only party leader can talk with escape teleporter
-			if (party != null && party.isLeader(player))
+			if ((party != null) && party.isLeader(player))
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 				if (world instanceof KamaWorld)
@@ -785,14 +1652,20 @@ public class Kamaloka extends Quest
 						
 						// teleports entire party away
 						for (L2PcInstance partyMember : party.getMembers())
-							if (partyMember != null && partyMember.getInstanceId() == world.getInstanceId())
+						{
+							if ((partyMember != null) && (partyMember.getInstanceId() == world.getInstanceId()))
+							{
 								teleportPlayer(partyMember, inst.getSpawnLoc(), 0);
+							}
+						}
 					}
 				}
 			}
 		}
 		else
+		{
 			return npcId + ".htm";
+		}
 		
 		return "";
 	}
@@ -801,12 +1674,14 @@ public class Kamaloka extends Quest
 	 * Only escape teleporters first talk handled
 	 */
 	@Override
-	public final String onFirstTalk (L2Npc npc, L2PcInstance player)
+	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getNpcId() == TELEPORTER)
 		{
 			if (player.isInParty() && player.getParty().isLeader(player))
+			{
 				return "32496.htm";
+			}
 			return "32496-no.htm";
 		}
 		return "";
@@ -818,21 +1693,23 @@ public class Kamaloka extends Quest
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpWorld instanceof KamaWorld)
 		{
-			final KamaWorld world = (KamaWorld)tmpWorld;
+			final KamaWorld world = (KamaWorld) tmpWorld;
 			final int objectId = npc.getObjectId();
 			
 			// first room was spawned ?
 			if (world.firstRoom != null)
 			{
 				// is shaman killed ?
-				if (world.shaman != 0 && world.shaman == objectId)
+				if ((world.shaman != 0) && (world.shaman == objectId))
 				{
 					world.shaman = 0;
 					// stop respawn of the minions
 					for (L2Spawn spawn : world.firstRoom)
 					{
 						if (spawn != null)
+						{
 							spawn.stopRespawn();
+						}
 					}
 					world.firstRoom.clear();
 					world.firstRoom = null;
@@ -841,11 +1718,13 @@ public class Kamaloka extends Quest
 					{
 						final int skillId = FIRST_ROOM[world.index][2];
 						final int skillLvl = FIRST_ROOM[world.index][3];
-						if (skillId != 0 && skillLvl != 0)
+						if ((skillId != 0) && (skillLvl != 0))
 						{
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
+							{
 								skill.getEffects(world.boss, world.boss);
+							}
 						}
 					}
 					
@@ -862,10 +1741,13 @@ public class Kamaloka extends Quest
 				{
 					// found killed now mob
 					if (world.secondRoom.get(i) == objectId)
+					{
 						world.secondRoom.set(i, 0);
-					// found alive mob
+					}
 					else if (world.secondRoom.get(i) != 0)
+					{
 						all = false;
+					}
 				}
 				// all mobs killed ?
 				if (all)
@@ -877,11 +1759,13 @@ public class Kamaloka extends Quest
 					{
 						final int skillId = SECOND_ROOM[world.index][1];
 						final int skillLvl = SECOND_ROOM[world.index][2];
-						if (skillId != 0 && skillLvl != 0)
+						if ((skillId != 0) && (skillLvl != 0))
 						{
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
+							{
 								skill.getEffects(world.boss, world.boss);
+							}
 						}
 					}
 					
@@ -890,7 +1774,7 @@ public class Kamaloka extends Quest
 			}
 			
 			// miniboss spawned ?
-			if (world.miniBoss != 0 && world.miniBoss == objectId)
+			if ((world.miniBoss != 0) && (world.miniBoss == objectId))
 			{
 				world.miniBoss = 0;
 				
@@ -898,11 +1782,13 @@ public class Kamaloka extends Quest
 				{
 					final int skillId = MINIBOSS[world.index][4];
 					final int skillLvl = MINIBOSS[world.index][5];
-					if (skillId != 0 && skillLvl != 0)
+					if ((skillId != 0) && (skillLvl != 0))
 					{
 						final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 						if (skill != null)
+						{
 							skill.getEffects(world.boss, world.boss);
+						}
 					}
 				}
 				
@@ -910,7 +1796,7 @@ public class Kamaloka extends Quest
 			}
 			
 			// boss was killed, finish instance
-			if (world.boss != null && world.boss == npc)
+			if ((world.boss != null) && (world.boss == npc))
 			{
 				world.boss = null;
 				finishInstance(world);
@@ -929,20 +1815,38 @@ public class Kamaloka extends Quest
 			addStartNpc(cap);
 			addTalkId(cap);
 		}
-		for (int[] mob : FIRST_ROOM) //shaman
+		for (int[] mob : FIRST_ROOM)
+		{
 			if (mob != null)
+			{
 				if (STEALTH_SHAMAN)
+				{
 					addKillId(mob[1]);
+				}
 				else
+				{
 					addKillId(mob[0]);
+				}
+			}
+		}
 		for (int[] mob : SECOND_ROOM)
+		{
 			if (mob != null)
+			{
 				addKillId(mob[0]);
+			}
+		}
 		for (int[] mob : MINIBOSS)
+		{
 			if (mob != null)
+			{
 				addKillId(mob[0]);
+			}
+		}
 		for (int[] mob : BOSS)
+		{
 			addKillId(mob[0]);
+		}
 	}
 	
 	public static void main(String[] args)

@@ -32,45 +32,55 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 public class NewbieCoupons extends Quest
 {
 	private static final String qn = "NewbieCoupons";
-
+	
 	private static final int COUPON_ONE = 7832;
 	private static final int COUPON_TWO = 7833;
-
+	
 	private static final int[] NPCs =
 	{
-		30598, 30599, 30600, 30601, 30602, 31076, 31077, 32135
+		30598,
+		30599,
+		30600,
+		30601,
+		30602,
+		31076,
+		31077,
+		32135
 	};
-
+	
 	private static final int WEAPON_MULTISELL = 305986001;
 	private static final int ACCESORIES_MULTISELL = 305986002;
-
+	
 	// enable/disable coupon give
 	private static final boolean NEWBIE_COUPONS_ENABLED = true;
-
+	
 	/*
-	 * Newbie/one time rewards section Any quest should rely on a unique bit, but it could be shared among quests that were mutually exclusive or race restricted. Bit //1 isn't used for backwards compatibility. This script uses 2 bits, one for newbie coupons and another for travelers These 2 bits happen to be the same used by the Miss Queen script
+	 * Newbie/one time rewards section Any quest should rely on a unique bit, but it could be shared among quests that were mutually exclusive or race restricted. Bit //1 isn't used for backwards compatibility. This script uses 2 bits, one for newbie coupons and another for travelers These 2 bits
+	 * happen to be the same used by the Miss Queen script
 	 */
 	private static final int NEWBIE_WEAPON = 16;
 	private static final int NEWBIE_ACCESORY = 32;
-
+	
 	public NewbieCoupons(int id, String name, String descr)
 	{
 		super(id, name, descr);
-
+		
 		for (int i : NPCs)
 		{
 			addStartNpc(i);
 			addTalkId(i);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
 		if (!NEWBIE_COUPONS_ENABLED)
+		{
 			return htmltext;
-
+		}
+		
 		QuestState st = player.getQuestState(qn);
 		int newbie = player.getNewbie();
 		int level = player.getLevel();
@@ -81,7 +91,7 @@ public class NewbieCoupons extends Quest
 			/*
 			 * TODO: check if this is the very first character for this account would need a bit of SQL, or a core method to determine it. This condition should be stored by the core in the account_data table upon character creation.
 			 */
-			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level == 0)
+			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level == 0))
 			{
 				// check the player state against this quest newbie rewarding mark.
 				if ((newbie | NEWBIE_WEAPON) != newbie)
@@ -91,14 +101,18 @@ public class NewbieCoupons extends Quest
 					htmltext = "30598-2.htm"; // here's the coupon you requested
 				}
 				else
+				{
 					htmltext = "30598-1.htm"; // you got a coupon already!
+				}
 			}
 			else
+			{
 				htmltext = "30598-3.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
+			}
 		}
 		else if (event.equals("newbie_give_armor_coupon"))
 		{
-			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level == 1)
+			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level == 1))
 			{
 				// check the player state against this quest newbie rewarding mark.
 				if ((newbie | NEWBIE_ACCESORY) != newbie)
@@ -108,14 +122,18 @@ public class NewbieCoupons extends Quest
 					htmltext = "30598-5.htm"; // here's the coupon you requested
 				}
 				else
+				{
 					htmltext = "30598-4.htm"; // you got a coupon already!
+				}
 			}
 			else
+			{
 				htmltext = "30598-6.htm"; // you're not eligible to get a coupon (level caps, pkkills or didnt change class yet)
+			}
 		}
 		else if (event.equals("newbie_show_weapon"))
 		{
-			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level == 0)
+			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level == 0))
 			{
 				MultiSell.getInstance().separateAndSend(WEAPON_MULTISELL, player, npc, false);
 				return null;
@@ -124,27 +142,29 @@ public class NewbieCoupons extends Quest
 		}
 		else if (event.equals("newbie_show_armor"))
 		{
-			if (level >= 6 && level <= 39 && pkkills == 0 && occupation_level > 0)
+			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level > 0))
 			{
 				MultiSell.getInstance().separateAndSend(ACCESORIES_MULTISELL, player, npc, false);
 				return null;
 			}
 			htmltext = "30598-8.htm"; // you're not eligible to use warehouse
 		}
-
+		
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			st = this.newQuestState(player);
-
+		{
+			st = newQuestState(player);
+		}
+		
 		return "30598.htm";
 	}
-
+	
 	public static void main(String args[])
 	{
 		new NewbieCoupons(-1, qn, "custom");

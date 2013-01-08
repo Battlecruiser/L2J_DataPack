@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Hero chat handler.
- * @author  durgus
+ * @author durgus
  */
 public class ChatHeroVoice implements IChatHandler
 {
@@ -62,8 +62,10 @@ public class ChatHeroVoice implements IChatHandler
 			
 			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 			{
-				if (player != null && !BlockList.isBlocked(player, activeChar))
+				if ((player != null) && !BlockList.isBlocked(player, activeChar))
+				{
 					player.sendPacket(cs);
+				}
 			}
 		}
 	}

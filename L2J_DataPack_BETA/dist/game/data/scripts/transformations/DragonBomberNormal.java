@@ -26,7 +26,12 @@ public class DragonBomberNormal extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		580, 581, 582, 583, 5491, 619
+		580,
+		581,
+		582,
+		583,
+		5491,
+		619
 	};
 	
 	public DragonBomberNormal()

@@ -26,7 +26,11 @@ public class Benom extends L2Transformation
 {
 	private static final int[] SKILLS = new int[]
 	{
-		725, 726, 727, 5491, 619
+		725,
+		726,
+		727,
+		5491,
+		619
 	};
 	
 	public Benom()

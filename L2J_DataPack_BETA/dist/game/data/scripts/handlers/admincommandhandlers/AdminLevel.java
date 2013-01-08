@@ -53,7 +53,9 @@ public class AdminLevel implements IAdminCommandHandler
 			try
 			{
 				if (targetChar instanceof L2Playable)
+				{
 					((L2Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
+				}
 			}
 			catch (NumberFormatException e)
 			{
@@ -72,7 +74,7 @@ public class AdminLevel implements IAdminCommandHandler
 				L2PcInstance targetPlayer = (L2PcInstance) targetChar;
 				
 				byte lvl = Byte.parseByte(val);
-				if (lvl >= 1 && lvl <= ExperienceTable.getInstance().getMaxLevel())
+				if ((lvl >= 1) && (lvl <= ExperienceTable.getInstance().getMaxLevel()))
 				{
 					long pXp = targetPlayer.getExp();
 					long tXp = ExperienceTable.getInstance().getExpForLevel(lvl);

@@ -49,7 +49,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		31540, // Watcher of Valakas Klein : Teleport into Hall of Flames
 		31686, // Gatekeeper of Fire Dragon : Opens doors to Heart of Volcano
 		31687, // Gatekeeper of Fire Dragon : Opens doors to Heart of Volcano
-		31759 // Teleportation Cubic : Teleport out of Lair of Valakas
+		31759, // Teleportation Cubic : Teleport out of Lair of Valakas
 	};
 	
 	private Quest valakasAI()

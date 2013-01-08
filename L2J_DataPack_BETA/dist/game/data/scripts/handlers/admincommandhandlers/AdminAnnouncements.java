@@ -35,16 +35,9 @@ import com.l2jserver.gameserver.taskmanager.AutoAnnounceTaskManager.AutoAnnounce
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
-
 /**
- * This class handles following admin commands:
- * - announce text = announces text to all players
- * - list_announcements = show menu
- * - reload_announcements = reloads announcements from txt file
- * - announce_announcements = announce all stored announcements to all players
- * - add_announcement text = adds text to startup announcements
- * - del_announcement id = deletes announcement with respective id
- *
+ * This class handles following admin commands: - announce text = announces text to all players - list_announcements = show menu - reload_announcements = reloads announcements from txt file - announce_announcements = announce all stored announcements to all players - add_announcement text = adds
+ * text to startup announcements - del_announcement id = deletes announcement with respective id
  * @version $Revision: 1.4.4.5 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminAnnouncements implements IAdminCommandHandler
@@ -88,8 +81,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_announce_menu"))
 		{
-			if (Config.GM_ANNOUNCER_NAME && command.length() > 20)
-				command += " ("+activeChar.getName()+")";
+			if (Config.GM_ANNOUNCER_NAME && (command.length() > 20))
+			{
+				command += " (" + activeChar.getName() + ")";
+			}
 			Announcements.getInstance().handleAnnounce(command, 20, false);
 			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
 		}
@@ -99,8 +94,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			{
 				command = command.substring(24);
 				
-				if (Config.GM_CRITANNOUNCER_NAME && command.length() > 0)
+				if (Config.GM_CRITANNOUNCER_NAME && (command.length() > 0))
+				{
 					command = activeChar.getName() + ": " + command;
+				}
 				Announcements.getInstance().handleAnnounce(command, 0, true);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -112,7 +109,9 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		else if (command.equals("admin_announce_announcements"))
 		{
 			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+			{
 				Announcements.getInstance().showAnnouncements(player);
+			}
 			Announcements.getInstance().listAnnouncements(activeChar);
 		}
 		else if (command.startsWith("admin_add_announcement"))
@@ -177,8 +176,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 		// Command is admin announce
 		else if (command.startsWith("admin_announce"))
 		{
-			if (Config.GM_ANNOUNCER_NAME && command.length() > 15)
-				command += " ("+activeChar.getName()+")";
+			if (Config.GM_ANNOUNCER_NAME && (command.length() > 15))
+			{
+				command += " (" + activeChar.getName() + ")";
+			}
 			// Call method from another class
 			Announcements.getInstance().handleAnnounce(command, 15, false);
 		}
@@ -188,8 +189,10 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			{
 				command = command.substring(19);
 				
-				if (Config.GM_CRITANNOUNCER_NAME && command.length() > 0)
+				if (Config.GM_CRITANNOUNCER_NAME && (command.length() > 0))
+				{
 					command = activeChar.getName() + ": " + command;
+				}
 				Announcements.getInstance().handleAnnounce(command, 0, true);
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -265,7 +268,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				memo.append(" ");
 			}
 			
-			AutoAnnounceTaskManager.getInstance().addAutoAnnounce(initial*1000, delay*1000, repeat, memo.toString().trim(), isCritical);
+			AutoAnnounceTaskManager.getInstance().addAutoAnnounce(initial * 1000, delay * 1000, repeat, memo.toString().trim(), isCritical);
 			listAutoAnnouncements(activeChar);
 		}
 		

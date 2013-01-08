@@ -76,10 +76,14 @@ public class EventItem implements IItemHandler
 		
 		final L2Skill sk = item.getEtcItem().getSkills()[0].getSkill();
 		if (sk == null)
+		{
 			return false;
+		}
 		
 		if (!castor.destroyItem("Consume", item, 1, castor, true))
+		{
 			return false;
+		}
 		
 		final L2BlockInstance block = (L2BlockInstance) castor.getTarget();
 		
@@ -90,8 +94,10 @@ public class EventItem implements IItemHandler
 			for (final L2PcInstance pc : block.getKnownList().getKnownPlayersInRadius(sk.getEffectRange()))
 			{
 				final int enemyTeam = holder.getPlayerTeam(pc);
-				if (enemyTeam != -1 && enemyTeam != team)
+				if ((enemyTeam != -1) && (enemyTeam != team))
+				{
 					sk.getEffects(castor, pc);
+				}
 			}
 			return true;
 		}

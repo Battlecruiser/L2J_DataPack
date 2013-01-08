@@ -49,25 +49,31 @@ public class TargetMe extends L2Effect
 		if (getEffected().isPlayable())
 		{
 			if (getEffected() instanceof L2SiegeSummonInstance)
+			{
 				return false;
+			}
 			
 			if (getEffected().getTarget() != getEffector())
 			{
 				L2PcInstance effector = getEffector().getActingPlayer();
 				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if (effector == null || effector.checkPvpSkill(getEffected(), getSkill()))
+				if ((effector == null) || effector.checkPvpSkill(getEffected(), getSkill()))
 				{
 					// Target is different
 					getEffected().setTarget(getEffector());
 					if (getEffected().isPlayer())
+					{
 						getEffected().sendPacket(new MyTargetSelected(getEffector().getObjectId(), 0));
+					}
 				}
 			}
-			((L2Playable)getEffected()).setLockedTarget(getEffector());
+			((L2Playable) getEffected()).setLockedTarget(getEffector());
 			return true;
 		}
 		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
+		{
 			return true;
+		}
 		
 		return false;
 	}
@@ -76,7 +82,9 @@ public class TargetMe extends L2Effect
 	public void onExit()
 	{
 		if (getEffected().isPlayable())
-			((L2Playable)getEffected()).setLockedTarget(null);
+		{
+			((L2Playable) getEffected()).setLockedTarget(null);
+		}
 	}
 	
 	@Override

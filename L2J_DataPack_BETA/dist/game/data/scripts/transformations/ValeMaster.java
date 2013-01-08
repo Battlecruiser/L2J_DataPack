@@ -26,7 +26,12 @@ public class ValeMaster extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		742, 743, 744, 745, 5491, 619
+		742,
+		743,
+		744,
+		745,
+		5491,
+		619
 	};
 	
 	public ValeMaster()

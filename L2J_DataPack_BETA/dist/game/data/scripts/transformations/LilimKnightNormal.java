@@ -26,7 +26,12 @@ public class LilimKnightNormal extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		568, 569, 570, 571, 5491, 619
+		568,
+		569,
+		570,
+		571,
+		5491,
+		619
 	};
 	
 	public LilimKnightNormal()

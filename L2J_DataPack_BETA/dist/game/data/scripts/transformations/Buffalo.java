@@ -26,7 +26,8 @@ public class Buffalo extends L2Transformation
 {
 	private static final int[] SKILLS = new int[]
 	{
-		5437, 619
+		5437,
+		619
 	};
 	
 	public Buffalo()

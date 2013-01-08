@@ -53,8 +53,10 @@ public class Heal extends L2Effect
 	{
 		L2Character target = getEffected();
 		L2Character activeChar = getEffector();
-		if (target == null || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor())
+		{
 			return false;
+		}
 		
 		double amount = calc();
 		double staticShotBonus = 0;
@@ -62,7 +64,7 @@ public class Heal extends L2Effect
 		boolean sps = getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
 		boolean bss = getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		if ((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
+		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
 			staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
 			
@@ -72,7 +74,9 @@ public class Heal extends L2Effect
 				staticShotBonus *= 2.4; // static bonus for blessed spiritshots
 			}
 			else
+			{
 				mAtkMul = 2;
+			}
 		}
 		else if ((sps || bss) && activeChar.isNpc())
 		{
@@ -98,9 +102,13 @@ public class Heal extends L2Effect
 			}
 			// shot dynamic bonus
 			if (bss)
+			{
 				mAtkMul *= 4; // 16x/8x/4x s84/s80/other
+			}
 			else
+			{
 				mAtkMul += 1; // 5x/3x/1x s84/s80/other
+			}
 		}
 		
 		if (!getSkill().isStaticHeal())
@@ -111,18 +119,24 @@ public class Heal extends L2Effect
 			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
 			if (!getSkill().isStatic())
+			{
 				amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
+			}
 			
 			// Heal critic, since CT2.3 Gracia Final
 			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			{
 				amount *= 3;
+			}
 		}
 		
 		amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
 		
 		// Prevent negative amounts
 		if (amount < 0)
+		{
 			amount = 0;
+		}
 		
 		target.setCurrentHp(amount + target.getCurrentHp());
 		StatusUpdate su = new StatusUpdate(target);
@@ -138,7 +152,7 @@ public class Heal extends L2Effect
 			}
 			else
 			{
-				if (activeChar.isPlayer() && activeChar != target)
+				if (activeChar.isPlayer() && (activeChar != target))
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());

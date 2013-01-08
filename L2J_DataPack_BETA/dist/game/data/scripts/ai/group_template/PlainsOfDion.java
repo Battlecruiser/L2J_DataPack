@@ -88,7 +88,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 					broadcastNpcSay(monster, Say2.NPC_ALL, MONSTERS_ASSIST_MSG[getRandom(3)]);
 				}
 			}
-            npc.setScriptValue(1);
+			npc.setScriptValue(1);
 		}
 		return super.onAttack(npc, player, damage, isPet);
 	}

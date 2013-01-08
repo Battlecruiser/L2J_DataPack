@@ -26,7 +26,10 @@ public class TinGolem extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		940, 941, 5437, 619
+		940,
+		941,
+		5437,
+		619
 	};
 	
 	public TinGolem()

@@ -24,9 +24,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * This class handles following admin commands:
- * - help path = shows /data/html/admin/path file to char, should not be used by GM's directly
- *
+ * This class handles following admin commands: - help path = shows /data/html/admin/path file to char, should not be used by GM's directly
  * @version $Revision: 1.2.4.3 $ $Date: 2005/04/11 10:06:02 $
  */
 public class AdminHelpPage implements IAdminCommandHandler
@@ -50,7 +48,7 @@ public class AdminHelpPage implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				//case of empty filename
+				// case of empty filename
 			}
 		}
 		
@@ -63,8 +61,8 @@ public class AdminHelpPage implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	//FIXME: implement method to send html to player in L2PcInstance directly
-	//PUBLIC & STATIC so other classes from package can include it directly
+	// FIXME: implement method to send html to player in L2PcInstance directly
+	// PUBLIC & STATIC so other classes from package can include it directly
 	public static void showHelpPage(L2PcInstance targetChar, String filename)
 	{
 		String content = HtmCache.getInstance().getHtmForce(targetChar.getHtmlPrefix(), "data/html/admin/" + filename);

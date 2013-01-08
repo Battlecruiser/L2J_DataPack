@@ -39,11 +39,15 @@ public class AbortCast extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() == null || getEffected() == getEffector())
+		if ((getEffected() == null) || (getEffected() == getEffector()))
+		{
 			return false;
+		}
 		
 		if (getEffected().isRaid())
+		{
 			return false;
+		}
 		
 		getEffected().breakCast();
 		return true;

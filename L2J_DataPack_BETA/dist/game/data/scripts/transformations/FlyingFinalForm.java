@@ -26,7 +26,13 @@ public class FlyingFinalForm extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		932, 950, 951, 953, 1544, 1545, 619
+		932,
+		950,
+		951,
+		953,
+		1544,
+		1545,
+		619
 	};
 	
 	public FlyingFinalForm()

@@ -44,7 +44,8 @@ public class Natives extends Quest
 	
 	private static final int[] doors =
 	{
-		19250003, 19250004
+		19250003,
+		19250004
 	};
 	
 	@Override

@@ -54,11 +54,15 @@ public class ChristmasTree implements IItemHandler
 		}
 		
 		if (template1 == null)
+		{
 			return false;
+		}
 		
 		L2Object target = activeChar.getTarget();
 		if (target == null)
+		{
 			target = activeChar;
+		}
 		
 		try
 		{

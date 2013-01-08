@@ -26,7 +26,10 @@ public class Kiyachi extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		733, 734, 5491, 619
+		733,
+		734,
+		5491,
+		619
 	};
 	
 	public Kiyachi()

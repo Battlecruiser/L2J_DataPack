@@ -48,7 +48,9 @@ public class ChameleonRest extends L2Effect
 			getEffected().getActingPlayer().sitDown(false);
 		}
 		else
+		{
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
 		return super.onStart();
 	}
 	
@@ -62,16 +64,22 @@ public class ChameleonRest extends L2Effect
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())
+		{
 			return false;
+		}
 		
 		// Only cont skills shouldn't end
 		if (getSkill().getSkillType() != L2SkillType.CONT)
+		{
 			return false;
+		}
 		
 		if (getEffected().isPlayer())
 		{
 			if (!getEffected().getActingPlayer().isSitting())
+			{
 				return false;
+			}
 		}
 		
 		double manaDam = calc();

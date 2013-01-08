@@ -64,7 +64,18 @@ public class VanguardPaladin extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			18, 28, 196, 197, 293, 400, 406, 814, 816, 838, 956, 957
+			18,
+			28,
+			196,
+			197,
+			293,
+			400,
+			406,
+			814,
+			816,
+			838,
+			956,
+			957
 		});
 	}
 	

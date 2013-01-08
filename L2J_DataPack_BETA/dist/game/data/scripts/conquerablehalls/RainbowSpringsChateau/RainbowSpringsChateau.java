@@ -110,7 +110,7 @@ public class RainbowSpringsChateau extends Quest
 							clan = actingClan;
 						}
 					}
-					if ((clan != null) && _acceptedClans.size() < 4)
+					if ((clan != null) && (_acceptedClans.size() < 4))
 					{
 						_acceptedClans.add(clan);
 						L2PcInstance leader = clan.getLeader().getPlayerInstance();

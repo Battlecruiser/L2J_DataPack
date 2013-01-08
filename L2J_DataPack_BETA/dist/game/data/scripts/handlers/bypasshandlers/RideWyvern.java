@@ -36,7 +36,14 @@ public class RideWyvern implements IBypassHandler
 	
 	private static final int[] STRIDERS =
 	{
-		12526, 12527, 12528, 16038, 16039, 16040, 16068, 13197
+		12526,
+		12527,
+		12528,
+		16038,
+		16039,
+		16040,
+		16068,
+		13197
 	};
 	
 	@Override

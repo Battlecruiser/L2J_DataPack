@@ -60,7 +60,16 @@ public class InquisitorBishop extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			838, 1523, 1528, 1524, 1525, 1430, 1043, 1042, 1400, 1418
+			838,
+			1523,
+			1528,
+			1524,
+			1525,
+			1430,
+			1043,
+			1042,
+			1400,
+			1418
 		});
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);

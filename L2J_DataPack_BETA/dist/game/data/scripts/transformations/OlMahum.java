@@ -26,7 +26,11 @@ public class OlMahum extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		749, 750, 751, 5491, 619
+		749,
+		750,
+		751,
+		5491,
+		619
 	};
 	
 	public OlMahum()

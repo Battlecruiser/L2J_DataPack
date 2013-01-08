@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * A chat handler
- * @author  Gnacik
+ * @author Gnacik
  */
 public class ChatPartyMatchRoom implements IChatHandler
 {
@@ -47,7 +47,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 		if (activeChar.isInPartyMatchRoom())
 		{
 			PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
-			if(_room != null)
+			if (_room != null)
 			{
 				if (activeChar.isChatBanned() && Util.contains(Config.BAN_CHAT_CHANNELS, type))
 				{
@@ -56,7 +56,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 				}
 				
 				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
-				for(L2PcInstance _member : _room.getPartyMembers())
+				for (L2PcInstance _member : _room.getPartyMembers())
 				{
 					_member.sendPacket(cs);
 				}

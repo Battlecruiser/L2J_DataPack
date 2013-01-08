@@ -50,15 +50,21 @@ public class Spoil extends L2Effect
 	{
 		
 		if (!getEffector().isPlayer())
+		{
 			return false;
+		}
 		
 		if (!getEffected().isMonster())
+		{
 			return false;
+		}
 		
 		L2MonsterInstance target = (L2MonsterInstance) getEffected();
 		
 		if (target == null)
+		{
 			return false;
+		}
 		
 		if (target.isSpoil())
 		{

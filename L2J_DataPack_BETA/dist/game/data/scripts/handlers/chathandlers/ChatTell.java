@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Tell chat handler.
- * @author  durgus
+ * @author durgus
  */
 public class ChatTell implements IChatHandler
 {
@@ -59,14 +59,16 @@ public class ChatTell implements IChatHandler
 		
 		// Return if no target is set
 		if (target == null)
+		{
 			return;
+		}
 		
 		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		L2PcInstance receiver = null;
 		
 		receiver = L2World.getInstance().getPlayer(target);
 		
-		if (receiver != null && !receiver.isSilenceMode(activeChar.getObjectId()))
+		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
 			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
@@ -78,7 +80,7 @@ public class ChatTell implements IChatHandler
 				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
 				return;
 			}
-			if (receiver.getClient() == null || receiver.getClient().isDetached())
+			if ((receiver.getClient() == null) || receiver.getClient().isDetached())
 			{
 				activeChar.sendMessage("Player is in offline mode.");
 				return;
@@ -87,16 +89,22 @@ public class ChatTell implements IChatHandler
 			{
 				// Allow reciever to send PMs to this char, which is in silence mode.
 				if (Config.SILENCE_MODE_EXCLUDE && activeChar.isSilenceMode())
+				{
 					activeChar.addSilenceModeExcluded(receiver.getObjectId());
+				}
 				
 				receiver.sendPacket(cs);
 				activeChar.sendPacket(new CreatureSay(activeChar.getObjectId(), type, "->" + receiver.getName(), text));
 			}
 			else
+			{
 				activeChar.sendPacket(SystemMessageId.THE_PERSON_IS_IN_MESSAGE_REFUSAL_MODE);
+			}
 		}
 		else
+		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_NOT_FOUND_IN_THE_GAME);
+		}
 	}
 	
 	/**

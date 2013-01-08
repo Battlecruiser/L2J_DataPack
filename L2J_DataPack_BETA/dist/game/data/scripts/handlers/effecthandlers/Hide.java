@@ -59,9 +59,10 @@ public class Hide extends L2Effect
 			activeChar.getAppearance().setInvisible();
 			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
 			
-			if (activeChar.getAI().getNextIntention() != null
-					&& activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
+			{
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
 			
 			L2GameServerPacket del = new DeleteObject(activeChar);
 			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
@@ -77,7 +78,9 @@ public class Hide extends L2Effect
 					}
 					
 					if (target.isPlayer())
+					{
 						target.sendPacket(del);
+					}
 				}
 				catch (NullPointerException e)
 				{
@@ -94,7 +97,9 @@ public class Hide extends L2Effect
 		{
 			L2PcInstance activeChar = getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
+			{
 				activeChar.getAppearance().setVisible();
+			}
 			activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
 		}
 	}

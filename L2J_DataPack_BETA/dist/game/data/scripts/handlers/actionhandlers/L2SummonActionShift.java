@@ -45,11 +45,13 @@ public class L2SummonActionShift implements IActionHandler
 			}
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2PcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character)target));
+			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 			
 			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_summon_info");
 			if (ach != null)
+			{
 				ach.useAdminCommand("admin_summon_info", activeChar);
+			}
 		}
 		return true;
 	}

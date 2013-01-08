@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * This class handles commands for GMs to respond to petitions.
- *
  * @author Tempy
  */
 public class AdminPetition implements IAdminCommandHandler
@@ -55,9 +54,13 @@ public class AdminPetition implements IAdminCommandHandler
 		}
 		
 		if (command.equals("admin_view_petitions"))
+		{
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
+		}
 		else if (command.startsWith("admin_view_petition"))
+		{
 			PetitionManager.getInstance().viewPetition(activeChar, petitionId);
+		}
 		else if (command.startsWith("admin_accept_petition"))
 		{
 			if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
@@ -73,12 +76,16 @@ public class AdminPetition implements IAdminCommandHandler
 			}
 			
 			if (!PetitionManager.getInstance().acceptPetition(activeChar, petitionId))
+			{
 				activeChar.sendPacket(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION);
+			}
 		}
 		else if (command.startsWith("admin_reject_petition"))
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
+			{
 				activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+			}
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.equals("admin_reset_petitions"))
@@ -96,7 +103,7 @@ public class AdminPetition implements IAdminCommandHandler
 			try
 			{
 				L2Object targetChar = activeChar.getTarget();
-				if (targetChar == null || !(targetChar instanceof L2PcInstance))
+				if ((targetChar == null) || !(targetChar instanceof L2PcInstance))
 				{
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 					return false;

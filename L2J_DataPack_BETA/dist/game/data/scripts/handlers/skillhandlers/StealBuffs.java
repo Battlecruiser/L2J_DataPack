@@ -42,7 +42,7 @@ public class StealBuffs implements ISkillHandler
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
-	{	
+	{
 		L2Character target;
 		L2Effect effect;
 		

@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.GMAudit;
 import com.l2jserver.util.StringUtil;
 
-
 public class AdminInstanceZone implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
@@ -55,7 +54,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				final int instanceId = Integer.parseInt(st.nextToken());
 				final String name = InstanceManager.getInstance().getInstanceIdName(instanceId);
 				InstanceManager.getInstance().deleteInstanceTime(player.getObjectId(), instanceId);
-				activeChar.sendMessage("Instance zone " + name + " cleared for player "+player.getName());
+				activeChar.sendMessage("Instance zone " + name + " cleared for player " + player.getName());
 				player.sendMessage("Admin cleared instance zone " + name + " for you");
 				
 				return true;
@@ -86,7 +85,9 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				}
 				
 				if (player != null)
+				{
 					display(player, activeChar);
+				}
 				else
 				{
 					activeChar.sendMessage("The player " + playername + " is not online");
@@ -97,10 +98,14 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			else if (activeChar.getTarget() != null)
 			{
 				if (activeChar.getTarget() instanceof L2PcInstance)
+				{
 					display((L2PcInstance) activeChar.getTarget(), activeChar);
+				}
 			}
 			else
+			{
 				display(activeChar, activeChar);
+			}
 		}
 		return true;
 	}
@@ -115,18 +120,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 	{
 		Map<Integer, Long> instanceTimes = InstanceManager.getInstance().getAllInstanceTimes(player.getObjectId());
 		
-		final StringBuilder html = StringUtil.startAppend(500 + instanceTimes.size() * 200,
-				"<html><center><table width=260><tr>"+
-				"<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
-				"<td width=180><center>Character Instances</center></td>"+
-				"<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>"+
-				"</tr></table><br><font color=\"LEVEL\">Instances for ",
-				player.getName(),
-				"</font><center><br>" +
-				"<table>" +
-				"<tr><td width=150>Name</td><td width=50>Time</td><td width=70>Action</td></tr>"
-		);
-		
+		final StringBuilder html = StringUtil.startAppend(500 + (instanceTimes.size() * 200), "<html><center><table width=260><tr>" + "<td width=40><button value=\"Main\" action=\"bypass -h admin_admin\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "<td width=180><center>Character Instances</center></td>" + "<td width=40><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td>" + "</tr></table><br><font color=\"LEVEL\">Instances for ", player.getName(), "</font><center><br>" + "<table>" + "<tr><td width=150>Name</td><td width=50>Time</td><td width=70>Action</td></tr>");
 		
 		for (int id : instanceTimes.keySet())
 		{
@@ -139,19 +133,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 				minutes = (int) ((remainingTime % 3600) / 60);
 			}
 			
-			StringUtil.append(html,
-					"<tr><td>",
-					InstanceManager.getInstance().getInstanceIdName(id),
-					"</td><td>",
-					String.valueOf(hours),
-					":",
-					String.valueOf(minutes),
-					"</td><td><button value=\"Clear\" action=\"bypass -h admin_instancezone_clear ",
-					player.getName(),
-					" ",
-					String.valueOf(id),
-					"\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>"
-			);
+			StringUtil.append(html, "<tr><td>", InstanceManager.getInstance().getInstanceIdName(id), "</td><td>", String.valueOf(hours), ":", String.valueOf(minutes), "</td><td><button value=\"Clear\" action=\"bypass -h admin_instancezone_clear ", player.getName(), " ", String.valueOf(id), "\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 		}
 		
 		StringUtil.append(html, "</table></html>");

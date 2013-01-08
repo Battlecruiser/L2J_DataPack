@@ -126,7 +126,7 @@ public class Manadam implements ISkillHandler
 		if (skill.hasSelfEffects())
 		{
 			L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
+			if ((effect != null) && effect.isSelfEffect())
 			{
 				// Replace old effect with new one.
 				effect.exit();

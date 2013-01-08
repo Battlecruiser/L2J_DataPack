@@ -26,7 +26,10 @@ public class Rabbit extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		629, 630, 5491, 619
+		629,
+		630,
+		5491,
+		619
 	};
 	
 	public Rabbit()

@@ -37,7 +37,25 @@ public class CharacterBirthday extends Quest
 	
 	private final static int[] GK =
 	{
-		30006, 30059, 30080, 30134, 30146, 30177, 30233, 30256, 30320, 30540, 30576, 30836, 30848, 30878, 30899, 31275, 31320, 31964, 32163
+		30006,
+		30059,
+		30080,
+		30134,
+		30146,
+		30177,
+		30233,
+		30256,
+		30320,
+		30540,
+		30576,
+		30836,
+		30848,
+		30878,
+		30899,
+		31275,
+		31320,
+		31964,
+		32163
 	};
 	
 	public CharacterBirthday(int questId, String name, String descr)

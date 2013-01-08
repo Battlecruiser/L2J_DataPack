@@ -26,7 +26,11 @@ public class DemonPrince extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		735, 736, 737, 5491, 619
+		735,
+		736,
+		737,
+		5491,
+		619
 	};
 	
 	public DemonPrince()

@@ -40,16 +40,22 @@ public class TakeFort implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (!activeChar.isPlayer() || targets.length == 0)
+		if (!activeChar.isPlayer() || (targets.length == 0))
+		{
 			return;
+		}
 		
 		L2PcInstance player = activeChar.getActingPlayer();
 		if (player.getClan() == null)
+		{
 			return;
+		}
 		
 		Fort fort = FortManager.getInstance().getFort(player);
-		if (fort == null || !player.checkIfOkToCastFlagDisplay(fort, true, skill, targets[0]))
+		if ((fort == null) || !player.checkIfOkToCastFlagDisplay(fort, true, skill, targets[0]))
+		{
 			return;
+		}
 		
 		try
 		{

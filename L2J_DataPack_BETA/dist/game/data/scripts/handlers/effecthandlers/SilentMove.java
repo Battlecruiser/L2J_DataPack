@@ -69,10 +69,14 @@ public class SilentMove extends L2Effect
 	{
 		// Only cont skills shouldn't end
 		if (getSkill().getSkillType() != L2SkillType.CONT)
+		{
 			return false;
+		}
 		
 		if (getEffected().isDead())
+		{
 			return false;
+		}
 		
 		double manaDam = calc();
 		

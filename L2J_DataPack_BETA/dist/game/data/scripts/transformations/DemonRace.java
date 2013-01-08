@@ -29,7 +29,13 @@ public class DemonRace extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		901, 902, 903, 904, 905, 5491, 619
+		901,
+		902,
+		903,
+		904,
+		905,
+		5491,
+		619
 	};
 	
 	public DemonRace()

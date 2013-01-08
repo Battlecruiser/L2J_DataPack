@@ -42,7 +42,7 @@ public class EngineerLekon extends Quest
 	{
 		if ("license".equalsIgnoreCase(event))
 		{
-			if (player.getClan() == null || player.getClan().getLevel() < 5)
+			if ((player.getClan() == null) || (player.getClan().getLevel() < 5))
 			{
 				player.sendPacket(SM_NEED_CLANLVL5);
 				return null;
@@ -63,7 +63,9 @@ public class EngineerLekon extends Quest
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipLicense", STARSTONE, LICENSE_COST, npc, true))
+			{
 				return null;
+			}
 			
 			player.addItem("AirShipLicense", LICENSE, 1, npc, true);
 			return null;

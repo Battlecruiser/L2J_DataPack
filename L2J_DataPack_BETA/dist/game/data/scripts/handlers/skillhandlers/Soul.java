@@ -42,10 +42,12 @@ public class Soul implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer() || activeChar.isAlikeDead())
+		{
 			return;
+		}
 		
 		L2PcInstance player = activeChar.getActingPlayer();
-
+		
 		int level = player.getSkillLevel(467);
 		if (level > 0)
 		{
@@ -57,10 +59,14 @@ public class Soul implements ISkillHandler
 				{
 					int count = 0;
 					
-					if (player.getSouls() + skill.getNumSouls() <= soulmastery.getNumSouls())
+					if ((player.getSouls() + skill.getNumSouls()) <= soulmastery.getNumSouls())
+					{
 						count = skill.getNumSouls();
+					}
 					else
+					{
 						count = soulmastery.getNumSouls() - player.getSouls();
+					}
 					
 					player.increaseSouls(count);
 				}

@@ -35,21 +35,25 @@ public class NornilsPower implements ISkillHandler
 	{
 		L2SkillType.NORNILS_POWER
 	};
-
+	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		InstanceWorld world = null;
 		final int instanceId = activeChar.getInstanceId();
 		if (instanceId > 0)
-			world = InstanceManager.getInstance().getPlayerWorld(activeChar.getActingPlayer());
-		
-		if (world != null && world.getInstanceId() == instanceId && world.getTemplateId() == 11)
 		{
-			if(activeChar.isInsideRadius(-107393, 83677, 100, true))
+			world = InstanceManager.getInstance().getPlayerWorld(activeChar.getActingPlayer());
+		}
+		
+		if ((world != null) && (world.getInstanceId() == instanceId) && (world.getTemplateId() == 11))
+		{
+			if (activeChar.isInsideRadius(-107393, 83677, 100, true))
 			{
 				activeChar.destroyItemByItemId("NornilsPower", 9713, 1, activeChar, true);
 				L2DoorInstance door = InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(16200010);
@@ -65,12 +69,14 @@ public class NornilsPower implements ISkillHandler
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 				sm.addSkillName(skill);
 				activeChar.sendPacket(sm);
-			}			
+			}
 		}
 		else
+		{
 			activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
+		}
 	}
-
+	
 	@Override
 	public L2SkillType[] getSkillIds()
 	{

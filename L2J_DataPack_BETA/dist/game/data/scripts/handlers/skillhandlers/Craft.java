@@ -42,7 +42,9 @@ public class Craft implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		L2PcInstance player = activeChar.getActingPlayer();
 		

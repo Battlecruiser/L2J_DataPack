@@ -41,22 +41,32 @@ public class TransformDispel implements ISkillHandler
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		if (activeChar.isAlikeDead())
+		{
 			return;
+		}
 		
 		if (!activeChar.isPlayer())
+		{
 			return;
+		}
 		
 		L2PcInstance pc = activeChar.getActingPlayer();
 		
 		if (pc.isAlikeDead() || pc.isCursedWeaponEquipped())
+		{
 			return;
+		}
 		
 		if (pc.isTransformed() || pc.isInStance())
 		{
 			if (pc.isFlyingMounted() && !pc.isInsideZone(ZoneId.LANDING))
+			{
 				pc.sendPacket(SystemMessageId.BOARD_OR_CANCEL_NOT_POSSIBLE_HERE);
+			}
 			else
+			{
 				pc.stopTransformation(true);
+			}
 		}
 	}
 	

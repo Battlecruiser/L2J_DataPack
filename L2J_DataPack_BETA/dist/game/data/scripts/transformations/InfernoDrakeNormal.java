@@ -26,7 +26,12 @@ public class InfernoDrakeNormal extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		619, 5491, 576, 577, 578, 579
+		619,
+		5491,
+		576,
+		577,
+		578,
+		579
 	};
 	
 	public InfernoDrakeNormal()

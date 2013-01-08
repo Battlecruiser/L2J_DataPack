@@ -42,14 +42,16 @@ public class Dummy implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		switch(skill.getId())
+		switch (skill.getId())
 		{
 			case 5852:
 			case 5853:
 			{
 				final L2Object obj = targets[0];
-				if(obj != null)
+				if (obj != null)
+				{
 					useBlockCheckerSkill(activeChar.getActingPlayer(), skill, obj);
+				}
 				break;
 			}
 			default:
@@ -79,23 +81,32 @@ public class Dummy implements ISkillHandler
 	
 	private final void useBlockCheckerSkill(L2PcInstance activeChar, L2Skill skill, L2Object target)
 	{
-		if(!(target instanceof L2BlockInstance))
+		if (!(target instanceof L2BlockInstance))
+		{
 			return;
+		}
 		
-		L2BlockInstance block = (L2BlockInstance)target;
+		L2BlockInstance block = (L2BlockInstance) target;
 		
 		final int arena = activeChar.getBlockCheckerArena();
-		if(arena != -1)
+		if (arena != -1)
 		{
 			final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
-			if(holder == null) return;
+			if (holder == null)
+			{
+				return;
+			}
 			
 			final int team = holder.getPlayerTeam(activeChar);
 			final int color = block.getColorEffect();
-			if(team == 0 && color == 0x00)
+			if ((team == 0) && (color == 0x00))
+			{
 				block.changeColor(activeChar, holder, team);
-			else if(team == 1 && color == 0x53)
+			}
+			else if ((team == 1) && (color == 0x53))
+			{
 				block.changeColor(activeChar, holder, team);
+			}
 		}
 	}
 }

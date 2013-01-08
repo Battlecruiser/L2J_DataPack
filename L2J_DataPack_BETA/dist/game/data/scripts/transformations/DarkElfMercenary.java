@@ -26,7 +26,8 @@ public class DarkElfMercenary extends L2Transformation
 {
 	private static final int[] SKILLS = new int[]
 	{
-		5491, 619
+		5491,
+		619
 	};
 	
 	public DarkElfMercenary()

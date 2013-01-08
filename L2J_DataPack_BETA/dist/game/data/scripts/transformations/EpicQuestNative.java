@@ -26,7 +26,8 @@ public class EpicQuestNative extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		5437, 961
+		5437,
+		961
 	};
 	
 	public EpicQuestNative()

@@ -48,12 +48,18 @@ public class AdminDebug implements IAdminCommandHandler
 				}
 			}
 			else
+			{
 				target = activeChar.getTarget();
+			}
 			
 			if (target instanceof L2Character)
-				setDebug(activeChar, (L2Character)target);
+			{
+				setDebug(activeChar, (L2Character) target);
+			}
 			else
+			{
 				setDebug(activeChar, activeChar);
+			}
 		}
 		return true;
 	}
@@ -69,12 +75,12 @@ public class AdminDebug implements IAdminCommandHandler
 		if (target.isDebug())
 		{
 			target.setDebug(null);
-			activeChar.sendMessage("Stop debugging "+target.getName());
+			activeChar.sendMessage("Stop debugging " + target.getName());
 		}
 		else
 		{
 			target.setDebug(activeChar);
-			activeChar.sendMessage("Start debugging "+target.getName());
+			activeChar.sendMessage("Start debugging " + target.getName());
 		}
 	}
 }

@@ -41,16 +41,20 @@ public class CombatPointHeal implements ISkillHandler
 	@Override
 	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
 	{
-		//check for other effects
+		// check for other effects
 		ISkillHandler handler = SkillHandler.getInstance().getHandler(L2SkillType.BUFF);
 		
 		if (handler != null)
+		{
 			handler.useSkill(actChar, skill, targets);
+		}
 		
-		for (L2Character target: (L2Character[]) targets)
+		for (L2Character target : (L2Character[]) targets)
 		{
 			if (target.isInvul())
+			{
 				continue;
+			}
 			
 			double cp = skill.getPower();
 			
@@ -58,7 +62,9 @@ public class CombatPointHeal implements ISkillHandler
 			
 			// Prevent negative amounts
 			if (cp < 0)
+			{
 				cp = 0;
+			}
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 			sm.addNumber((int) cp);

@@ -26,9 +26,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 /**
  * This class handles following admin commands:
  * <ul>
- * 	<li>admin_unblockip</li>
+ * <li>admin_unblockip</li>
  * </ul>
- *
  * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminUnblockIp implements IAdminCommandHandler
@@ -71,7 +70,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 	
 	private boolean unblockIp(String ipAddress, L2PcInstance activeChar)
 	{
-		//LoginServerThread.getInstance().unBlockip(ipAddress);
+		// LoginServerThread.getInstance().unBlockip(ipAddress);
 		_log.warning("IP removed by GM " + activeChar.getName());
 		return true;
 	}

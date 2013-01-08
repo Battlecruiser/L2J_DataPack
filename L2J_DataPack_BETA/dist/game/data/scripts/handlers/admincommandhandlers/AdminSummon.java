@@ -48,7 +48,7 @@ public class AdminSummon implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		int id;
-		int count=1;
+		int count = 1;
 		String[] data = command.split(" ");
 		try
 		{

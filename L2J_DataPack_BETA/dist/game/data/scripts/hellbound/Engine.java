@@ -48,22 +48,37 @@ public class Engine extends Quest implements Runnable
 	private static final int[][] DOOR_LIST =
 	{
 		{
-			19250001, 5
+			19250001,
+			5
 		},
 		{
-			19250002, 5
+			19250002,
+			5
 		},
 		{
-			20250001, 9
+			20250001,
+			9
 		},
 		{
-			20250002, 7
+			20250002,
+			7
 		}
 	};
 	
 	private static final int[] MAX_TRUST =
 	{
-		0, 300000, 600000, 1000000, 1010000, 1400000, 1490000, 2000000, 2000001, 2500000, 4000000, 0
+		0,
+		300000,
+		600000,
+		1000000,
+		1010000,
+		1400000,
+		1490000,
+		2000000,
+		2000001,
+		2500000,
+		4000000,
+		0
 	};
 	
 	private static final String ANNOUNCE = "Hellbound now has reached level: %lvl%";

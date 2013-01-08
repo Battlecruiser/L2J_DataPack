@@ -26,7 +26,16 @@ public class DivineKnight extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		680, 681, 682, 683, 684, 685, 795, 796, 5491, 619
+		680,
+		681,
+		682,
+		683,
+		684,
+		685,
+		795,
+		796,
+		5491,
+		619
 	};
 	
 	public DivineKnight()

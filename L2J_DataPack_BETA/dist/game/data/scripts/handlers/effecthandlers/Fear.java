@@ -60,22 +60,26 @@ public class Fear extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2NpcInstance
-				|| getEffected() instanceof L2DefenderInstance
-				|| getEffected() instanceof L2FortCommanderInstance
-				|| getEffected() instanceof L2SiegeFlagInstance
-				|| getEffected() instanceof L2SiegeSummonInstance)
+		if ((getEffected() instanceof L2NpcInstance) || (getEffected() instanceof L2DefenderInstance) || (getEffected() instanceof L2FortCommanderInstance) || (getEffected() instanceof L2SiegeFlagInstance) || (getEffected() instanceof L2SiegeSummonInstance))
+		{
 			return false;
+		}
 		
 		if (!getEffected().isAfraid())
 		{
-			if(getEffected().isCastingNow() && getEffected().canAbortCast())
+			if (getEffected().isCastingNow() && getEffected().canAbortCast())
+			{
 				getEffected().abortCast();
-
+			}
+			
 			if (getEffected().getX() > getEffector().getX())
+			{
 				_dX = 1;
+			}
 			if (getEffected().getY() > getEffector().getY())
+			{
 				_dY = 1;
+			}
 			
 			getEffected().startFear();
 			onActionTime();
@@ -98,9 +102,13 @@ public class Fear extends L2Effect
 		int posZ = getEffected().getZ();
 		
 		if (getEffected().getX() > getEffector().getX())
+		{
 			_dX = 1;
+		}
 		if (getEffected().getY() > getEffector().getY())
+		{
 			_dY = 1;
+		}
 		
 		posX += _dX * FEAR_RANGE;
 		posY += _dY * FEAR_RANGE;
@@ -113,7 +121,9 @@ public class Fear extends L2Effect
 		}
 		
 		if (!(getEffected() instanceof L2PetInstance))
+		{
 			getEffected().setRunning();
+		}
 		
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(posX, posY, posZ, 0));
 		return true;

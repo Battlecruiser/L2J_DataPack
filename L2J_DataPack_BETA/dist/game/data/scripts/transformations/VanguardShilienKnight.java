@@ -64,7 +64,20 @@ public class VanguardShilienKnight extends L2Transformation
 		// Set allowed skills
 		getPlayer().setTransformAllowedSkills(new int[]
 		{
-			18, 22, 28, 33, 144, 278, 279, 289, 401, 815, 817, 838, 956, 958
+			18,
+			22,
+			28,
+			33,
+			144,
+			278,
+			279,
+			289,
+			401,
+			815,
+			817,
+			838,
+			956,
+			958
 		});
 	}
 	

@@ -29,7 +29,13 @@ public class MyoRace extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		896, 897, 898, 899, 900, 5491, 619
+		896,
+		897,
+		898,
+		899,
+		900,
+		5491,
+		619
 	};
 	
 	public MyoRace()

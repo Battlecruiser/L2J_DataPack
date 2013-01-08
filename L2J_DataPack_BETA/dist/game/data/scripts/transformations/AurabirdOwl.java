@@ -26,7 +26,16 @@ public class AurabirdOwl extends L2Transformation
 {
 	private static final int[] SKILLS = new int[]
 	{
-		884, 885, 887, 889, 892, 893, 895, 911, 932, 619
+		884,
+		885,
+		887,
+		889,
+		892,
+		893,
+		895,
+		911,
+		932,
+		619
 	};
 	
 	public AurabirdOwl()

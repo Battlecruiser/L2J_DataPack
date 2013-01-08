@@ -60,27 +60,34 @@ public class HellboundTown extends Quest
 	
 	private static final NpcStringId[] NPCSTRING_ID =
 	{
-		NpcStringId.INVADER, NpcStringId.YOU_HAVE_DONE_WELL_IN_FINDING_ME_BUT_I_CANNOT_JUST_HAND_YOU_THE_KEY
+		NpcStringId.INVADER,
+		NpcStringId.YOU_HAVE_DONE_WELL_IN_FINDING_ME_BUT_I_CANNOT_JUST_HAND_YOU_THE_KEY
 	};
 	
 	private static final NpcStringId[] NATIVES_NPCSTRING_ID =
 	{
-		NpcStringId.THANK_YOU_FOR_SAVING_ME, NpcStringId.GUARDS_ARE_COMING_RUN, NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
+		NpcStringId.THANK_YOU_FOR_SAVING_ME,
+		NpcStringId.GUARDS_ARE_COMING_RUN,
+		NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
 	};
 	
 	private static final int[][] ROUTE_DATA =
 	{
 		{
-			14840, 251949
+			14840,
+			251949
 		},
 		{
-			16082, 251790
+			16082,
+			251790
 		},
 		{
-			16524, 255244
+			16524,
+			255244
 		},
 		{
-			17670, 252256
+			17670,
+			252256
 		}
 	};
 	
@@ -94,17 +101,24 @@ public class HellboundTown extends Quest
 	
 	private static final int[] AMASKARI_SPAWN_POINT =
 	{
-		19424, 253360, -2032, 16860
+		19424,
+		253360,
+		-2032,
+		16860
 	};
 	
 	private static final int[] ENTRY_POINT =
 	{
-		14117, 255434, -2016
+		14117,
+		255434,
+		-2016
 	};
 	
 	protected static final int[] EXIT_POINT =
 	{
-		16262, 283651, -9700
+		16262,
+		283651,
+		-9700
 	};
 	
 	private static final SkillHolder STONE = new SkillHolder(4616, 1);

@@ -331,7 +331,7 @@ public class Listeners extends L2Script
 	@Override
 	public void onItemTrackerEvent(L2Event event)
 	{
-		//_log.log(Level.INFO, "ItemTrackerEvent: " + event.getName() + " has been " + event + " owner: " + player + " target: " + target);
+		// _log.log(Level.INFO, "ItemTrackerEvent: " + event.getName() + " has been " + event + " owner: " + player + " target: " + target);
 		// TODO: Fix it?
 	}
 	

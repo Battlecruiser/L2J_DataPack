@@ -54,15 +54,19 @@ public class SignetNoise extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() == getTotalCount() - 1)
+		if (getCount() == (getTotalCount() - 1))
+		{
 			return true; // do nothing first time
+		}
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
 		
 		for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
 		{
-			if (target == null || target == caster)
+			if ((target == null) || (target == caster))
+			{
 				continue;
+			}
 			
 			if (caster.canAttackCharacter(target))
 			{
@@ -72,7 +76,9 @@ public class SignetNoise extends L2Effect
 					for (L2Effect effect : effects)
 					{
 						if (effect.getSkill().isDance())
+						{
 							effect.exit();
+						}
 					}
 				}
 			}
@@ -84,6 +90,8 @@ public class SignetNoise extends L2Effect
 	public void onExit()
 	{
 		if (_actor != null)
+		{
 			_actor.deleteMe();
+		}
 	}
 }

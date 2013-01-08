@@ -63,7 +63,7 @@ public class PaganKeys implements IItemHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
-		if (activeChar.getAbnormalEffect() > 0 || activeChar.isInCombat())
+		if ((activeChar.getAbnormalEffect() > 0) || activeChar.isInCombat())
 		{
 			activeChar.sendMessage("You cannot use the key now.");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -71,7 +71,9 @@ public class PaganKeys implements IItemHandler
 		}
 		
 		if (!playable.destroyItem("Consume", item.getObjectId(), 1, null, false))
+		{
 			return false;
+		}
 		
 		// TODO: Unhardcode these!
 		switch (itemId)
@@ -125,7 +127,7 @@ public class PaganKeys implements IItemHandler
 				}
 				break;
 			case 8056:
-				if (door.getDoorId() == 23150004 || door.getDoorId() == 23150003)
+				if ((door.getDoorId() == 23150004) || (door.getDoorId() == 23150003))
 				{
 					DoorTable.getInstance().getDoor(23150003).openMe();
 					DoorTable.getInstance().getDoor(23150004).openMe();

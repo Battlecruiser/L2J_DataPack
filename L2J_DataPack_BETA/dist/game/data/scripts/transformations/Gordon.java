@@ -26,7 +26,11 @@ public class Gordon extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		728, 729, 730, 5491, 619
+		728,
+		729,
+		730,
+		5491,
+		619
 	};
 	
 	public Gordon()

@@ -52,8 +52,8 @@ public class OlympiadManagerLink implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"olympiaddesc", 
-		"olympiadnoble", 
+		"olympiaddesc",
+		"olympiadnoble",
 		"olybuff",
 		"olympiad"
 	};

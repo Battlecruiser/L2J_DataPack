@@ -41,7 +41,9 @@ public class ManaDamOverTime extends L2Effect
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())
+		{
 			return false;
+		}
 		
 		double manaDam = calc();
 		

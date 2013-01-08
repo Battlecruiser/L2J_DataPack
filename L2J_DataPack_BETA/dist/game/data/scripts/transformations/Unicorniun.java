@@ -29,7 +29,13 @@ public class Unicorniun extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		906, 907, 908, 909, 910, 5491, 619
+		906,
+		907,
+		908,
+		909,
+		910,
+		5491,
+		619
 	};
 	
 	public Unicorniun()

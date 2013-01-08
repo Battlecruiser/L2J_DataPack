@@ -52,7 +52,7 @@ public class Harvester implements IItemHandler
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		L2MonsterInstance target = null;
-		if (activeChar.getTarget() != null && activeChar.getTarget().isMonster())
+		if ((activeChar.getTarget() != null) && activeChar.getTarget().isMonster())
 		{
 			target = (L2MonsterInstance) activeChar.getTarget();
 		}
@@ -63,7 +63,7 @@ public class Harvester implements IItemHandler
 			return false;
 		}
 		
-		if (target == null || !target.isDead())
+		if ((target == null) || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);

@@ -64,21 +64,28 @@ public class HealOverTime extends L2Effect
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())
+		{
 			return false;
-		
+		}
 		else if (getEffected().isDoor())
+		{
 			return false;
+		}
 		
 		double hp = getEffected().getCurrentHp();
 		double maxhp = getEffected().getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)
+		{
 			return true;
+		}
 		
 		hp += calc();
 		if (hp > maxhp)
+		{
 			hp = maxhp;
+		}
 		
 		getEffected().setCurrentHp(hp);
 		StatusUpdate suhp = new StatusUpdate(getEffected());

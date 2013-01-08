@@ -26,7 +26,12 @@ public class DwarfGolem extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		806, 807, 808, 809, 5491, 619
+		806,
+		807,
+		808,
+		809,
+		5491,
+		619
 	};
 	
 	public DwarfGolem()

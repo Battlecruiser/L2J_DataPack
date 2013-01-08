@@ -26,7 +26,15 @@ public class DivineRogue extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		686, 687, 688, 689, 690, 691, 797, 5491, 619
+		686,
+		687,
+		688,
+		689,
+		690,
+		691,
+		797,
+		5491,
+		619
 	};
 	
 	public DivineRogue()

@@ -24,22 +24,27 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Miss Queen AI.
- * Original Jython script by DrLecter, based in Eduu, biti and Newbie contributions.
+ * Miss Queen AI. Original Jython script by DrLecter, based in Eduu, biti and Newbie contributions.
  * @author Nyaran
  */
 public class MissQueen extends Quest
 {
 	private static final String qn = "MissQueen";
-
+	
 	private static final int COUPNE_ONE = 7832;
 	private static final int COUPNE_TWO = 7833;
-
+	
 	private static final int[] NPCs =
 	{
-			31760, 31761, 31762, 31763, 31764, 31765, 31766
+		31760,
+		31761,
+		31762,
+		31763,
+		31764,
+		31765,
+		31766
 	};
-
+	
 	// enable/disable coupon give
 	private static boolean QUEEN_ENABLED = false;
 	// Newbie/one time rewards section
@@ -50,11 +55,11 @@ public class MissQueen extends Quest
 	// This script uses 2 bits, one for newbie coupons and another for travelers
 	private static final int NEWBIE_REWARD = 16;
 	private static final int TRAVELER_REWARD = 32;
-
+	
 	public MissQueen(int id, String name, String descr)
 	{
 		super(id, name, descr);
-
+		
 		for (int i : NPCs)
 		{
 			addStartNpc(i);
@@ -62,7 +67,7 @@ public class MissQueen extends Quest
 			addTalkId(i);
 		}
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -83,7 +88,7 @@ public class MissQueen extends Quest
 			/*
 			 * TODO: check if this is the very first character for this account would need a bit of SQL, or a core method to determine it. This condition should be stored by the core in the account_data table upon character creation.
 			 */
-			if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 0)
+			if ((level >= 6) && (level <= 25) && (pkkills == 0) && (occupation_level == 0))
 			{
 				if ((newbie | NEWBIE_REWARD) != newbie)
 				{
@@ -92,14 +97,18 @@ public class MissQueen extends Quest
 					htmltext = "31760-2.htm"; // here's the coupon you requested
 				}
 				else
+				{
 					htmltext = "31760-1.htm"; // you got a coupon already!
+				}
 			}
 			else
+			{
 				htmltext = "31760-3.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
+			}
 		}
 		else if (event.equals("traveller_give_coupon"))
 		{
-			if (level >= 6 && level <= 25 && pkkills == 0 && occupation_level == 1)
+			if ((level >= 6) && (level <= 25) && (pkkills == 0) && (occupation_level == 1))
 			{ // check the player state against this quest newbie rewarding mark.
 				if ((newbie | TRAVELER_REWARD) != newbie)
 				{
@@ -108,24 +117,30 @@ public class MissQueen extends Quest
 					htmltext = "31760-5.htm"; // here's the coupon you requested
 				}
 				else
+				{
 					htmltext = "31760-4.htm"; // you got a coupon already!
+				}
 			}
 			else
+			{
 				htmltext = "31760-6.htm"; // you're not eligible to get a coupon (level caps, pkkills or already changed class)
+			}
 		}
 		
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		return "31760.htm";
 	}
-
+	
 	public static void main(String args[])
 	{
 		new MissQueen(-1, qn, "custom");

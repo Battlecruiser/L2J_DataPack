@@ -76,8 +76,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Final Emperial Tomb instance zone.
- * TODO:<br>
+ * Final Emperial Tomb instance zone. TODO:<br>
  * Test when Frintezza song use 5008 effect skill.<br>
  * Test deeply Scarlet van Halisha's AI.<br>
  * Use correct Song names.<br>

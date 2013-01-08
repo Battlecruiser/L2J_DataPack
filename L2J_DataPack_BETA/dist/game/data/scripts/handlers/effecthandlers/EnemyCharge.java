@@ -52,7 +52,9 @@ public class EnemyCharge extends L2Effect
 	public boolean onStart()
 	{
 		if (getEffected().isMovementDisabled())
+		{
 			return false;
+		}
 		
 		// Get current position of the L2Character
 		final int curX = getEffector().getX();
@@ -63,10 +65,10 @@ public class EnemyCharge extends L2Effect
 		double dx = getEffected().getX() - curX;
 		double dy = getEffected().getY() - curY;
 		double dz = getEffected().getZ() - curZ;
-		double distance = Math.sqrt(dx * dx + dy * dy);
+		double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: "+curX+","+curY+" and getEffected: "+getEffected().getX()+","+getEffected().getY());
+			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + getEffected().getX() + "," + getEffected().getY());
 			return false;
 		}
 		int offset = Math.max((int) distance - getSkill().getFlyRadius(), 30);
@@ -78,11 +80,15 @@ public class EnemyCharge extends L2Effect
 		// TODO: handle Z axis movement better
 		offset -= Math.abs(dz);
 		if (offset < 5)
+		{
 			offset = 5;
+		}
 		
 		// If no distance
-		if (distance < 1 || distance - offset <= 0)
+		if ((distance < 1) || ((distance - offset) <= 0))
+		{
 			return false;
+		}
 		
 		// Calculate movement angles needed
 		sin = dy / distance;

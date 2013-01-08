@@ -87,12 +87,12 @@ public class SecretArea extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		if (npc.getNpcId() == GINBY && event.equalsIgnoreCase("enter"))
-		{	
+		if ((npc.getNpcId() == GINBY) && event.equalsIgnoreCase("enter"))
+		{
 			enterInstance(player);
-			return _ENTER;	
+			return _ENTER;
 		}
-		else if (npc.getNpcId() == LELRIKIA && event.equalsIgnoreCase("exit"))
+		else if ((npc.getNpcId() == LELRIKIA) && event.equalsIgnoreCase("exit"))
 		{
 			teleportPlayer(player, TELEPORTS[EXIT], 0);
 			return _EXIT;

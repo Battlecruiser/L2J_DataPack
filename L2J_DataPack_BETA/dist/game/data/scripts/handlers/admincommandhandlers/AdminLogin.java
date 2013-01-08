@@ -88,9 +88,9 @@ public class AdminLogin implements IAdminCommandHandler
 			if (tokens > 1)
 			{
 				st.nextToken();
-				String[] modes = new String[tokens-1];
+				String[] modes = new String[tokens - 1];
 				
-				for (int i = 0; i < tokens-1; i++)
+				for (int i = 0; i < (tokens - 1); i++)
 				{
 					modes[i] = st.nextToken().trim();
 				}
@@ -107,12 +107,12 @@ public class AdminLogin implements IAdminCommandHandler
 				{
 					Config.SERVER_LIST_TYPE = newType;
 					LoginServerThread.getInstance().sendServerType();
-					activeChar.sendMessage("Server Type changed to "+getServerTypeName(newType));
+					activeChar.sendMessage("Server Type changed to " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}
 				else
 				{
-					activeChar.sendMessage("Server Type is already "+getServerTypeName(newType));
+					activeChar.sendMessage("Server Type is already " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}
 			}
@@ -136,12 +136,12 @@ public class AdminLogin implements IAdminCommandHandler
 					{
 						Config.SERVER_LIST_TYPE = age;
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
-						activeChar.sendMessage("Server Age changed to "+age);
+						activeChar.sendMessage("Server Age changed to " + age);
 						showMainPage(activeChar);
 					}
 					else
 					{
-						activeChar.sendMessage("Server Age is already "+age);
+						activeChar.sendMessage("Server Age is already " + age);
 						showMainPage(activeChar);
 					}
 				}
@@ -163,7 +163,7 @@ public class AdminLogin implements IAdminCommandHandler
 	}
 	
 	/**
-	 * @param activeChar 
+	 * @param activeChar
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
@@ -182,12 +182,14 @@ public class AdminLogin implements IAdminCommandHandler
 		String nameType = "";
 		for (int i = 0; i < 7; i++)
 		{
-			int currentType = serverType & (int)Math.pow(2, i);
+			int currentType = serverType & (int) Math.pow(2, i);
 			
 			if (currentType > 0)
 			{
-				if(!nameType.isEmpty())
-					nameType+="+";
+				if (!nameType.isEmpty())
+				{
+					nameType += "+";
+				}
 				
 				switch (currentType)
 				{

@@ -26,7 +26,17 @@ public class DivineHealer extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		648, 803, 1490, 698, 699, 700, 701, 702, 703, 5491, 619
+		648,
+		803,
+		1490,
+		698,
+		699,
+		700,
+		701,
+		702,
+		703,
+		5491,
+		619
 	};
 	
 	public DivineHealer()

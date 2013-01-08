@@ -26,7 +26,12 @@ public class GrailApostleStrong extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		559, 560, 561, 562, 5491, 619
+		559,
+		560,
+		561,
+		562,
+		5491,
+		619
 	};
 	
 	public GrailApostleStrong()

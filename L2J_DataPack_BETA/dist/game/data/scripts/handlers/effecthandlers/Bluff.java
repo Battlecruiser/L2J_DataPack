@@ -49,13 +49,19 @@ public class Bluff extends L2Effect
 	public boolean onStart()
 	{
 		if (getEffected() instanceof L2NpcInstance)
+		{
 			return false;
+		}
 		
-		if (getEffected() instanceof L2Npc && ((L2Npc) getEffected()).getNpcId() == 35062)
+		if ((getEffected() instanceof L2Npc) && (((L2Npc) getEffected()).getNpcId() == 35062))
+		{
 			return false;
+		}
 		
 		if (getEffected() instanceof L2SiegeSummonInstance)
+		{
 			return false;
+		}
 		
 		getEffected().broadcastPacket(new StartRotation(getEffected().getObjectId(), getEffected().getHeading(), 1, 65535));
 		getEffected().broadcastPacket(new StopRotation(getEffected().getObjectId(), getEffector().getHeading(), 65535));

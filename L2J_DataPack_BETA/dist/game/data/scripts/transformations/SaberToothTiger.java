@@ -26,7 +26,11 @@ public class SaberToothTiger extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		746, 747, 748, 5491, 619
+		746,
+		747,
+		748,
+		5491,
+		619
 	};
 	
 	public SaberToothTiger()

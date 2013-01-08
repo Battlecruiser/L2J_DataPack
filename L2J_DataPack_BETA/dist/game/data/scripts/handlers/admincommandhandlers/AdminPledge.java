@@ -30,12 +30,10 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.GMViewPledgeInfo;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
-
 /**
  * <B>Pledge Manipulation:</B><BR>
  * <LI>With target in a character without clan:<BR>
- * //pledge create clanname
- * <LI>With target in a clan leader:<BR>
+ * //pledge create clanname <LI>With target in a clan leader:<BR>
  * //pledge info<BR>
  * //pledge dismiss<BR>
  * //pledge setlevel level<BR>
@@ -54,7 +52,9 @@ public class AdminPledge implements IAdminCommandHandler
 		L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
 		if (target instanceof L2PcInstance)
+		{
 			player = (L2PcInstance) target;
+		}
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
@@ -84,7 +84,9 @@ public class AdminPledge implements IAdminCommandHandler
 				player.setClanCreateExpiryTime(0);
 				L2Clan clan = ClanTable.getInstance().createClan(player, parameter);
 				if (clan != null)
+				{
 					activeChar.sendMessage("Clan " + parameter + " created. Leader: " + player.getName());
+				}
 				else
 				{
 					player.setClanCreateExpiryTime(cet);
@@ -104,26 +106,34 @@ public class AdminPledge implements IAdminCommandHandler
 				ClanTable.getInstance().destroyClan(player.getClanId());
 				L2Clan clan = player.getClan();
 				if (clan == null)
+				{
 					activeChar.sendMessage("Clan disbanded.");
+				}
 				else
+				{
 					activeChar.sendMessage("There was a problem while destroying the clan.");
+				}
 			}
 			else if (action.equals("info"))
 			{
 				activeChar.sendPacket(new GMViewPledgeInfo(player.getClan(), player));
 			}
 			else if (parameter == null)
+			{
 				activeChar.sendMessage("Usage: //pledge <setlevel|rep> <number>");
+			}
 			else if (action.equals("setlevel"))
 			{
 				int level = Integer.parseInt(parameter);
-				if (level >= 0 && level < 12)
+				if ((level >= 0) && (level < 12))
 				{
 					player.getClan().changeLevel(level);
 					activeChar.sendMessage("You set level " + level + " for clan " + player.getClan().getName());
 				}
 				else
+				{
 					activeChar.sendMessage("Level incorrect.");
+				}
 			}
 			else if (action.startsWith("rep"))
 			{

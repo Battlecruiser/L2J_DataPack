@@ -26,7 +26,10 @@ public class SnowKung extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		940, 943, 5437, 619
+		940,
+		943,
+		5437,
+		619
 	};
 	
 	public SnowKung()

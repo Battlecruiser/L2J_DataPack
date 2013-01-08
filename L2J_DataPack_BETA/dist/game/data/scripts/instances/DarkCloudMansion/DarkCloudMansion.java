@@ -491,7 +491,7 @@ public class DarkCloudMansion extends Quest
 		int y;
 		int z;
 	}
-		
+	
 	protected void openDoor(int doorId, int instanceId)
 	{
 		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())

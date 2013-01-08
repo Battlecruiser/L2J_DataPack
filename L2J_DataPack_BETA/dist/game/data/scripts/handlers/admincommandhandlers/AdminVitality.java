@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.actor.stat.PcStat;
 public class AdminVitality implements IAdminCommandHandler
 {
 	
-	private static final String[]	ADMIN_COMMANDS	=
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_set_vitality",
 		"admin_set_vitality_level",
@@ -44,7 +44,9 @@ public class AdminVitality implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
+		{
 			return false;
+		}
 		
 		if (!Config.ENABLE_VITALITY)
 		{
@@ -75,7 +77,7 @@ public class AdminVitality implements IAdminCommandHandler
 				}
 				
 				target.setVitalityPoints(vitality, true);
-				target.sendMessage("Admin set your Vitality points to "  + vitality);
+				target.sendMessage("Admin set your Vitality points to " + vitality);
 			}
 			else if (cmd.equals("admin_set_vitality_level"))
 			{
@@ -88,17 +90,23 @@ public class AdminVitality implements IAdminCommandHandler
 					activeChar.sendMessage("Incorrect vitality level (0-4)");
 				}
 				
-				if (level >= 0 && level <= 4)
+				if ((level >= 0) && (level <= 4))
 				{
 					if (level == 0)
+					{
 						vitality = PcStat.MIN_VITALITY_POINTS;
+					}
 					else
-						vitality = PcStat.VITALITY_LEVELS[level-1];
+					{
+						vitality = PcStat.VITALITY_LEVELS[level - 1];
+					}
 					target.setVitalityPoints(vitality, true);
-					target.sendMessage("Admin set your Vitality level to "  + level);
+					target.sendMessage("Admin set your Vitality level to " + level);
 				}
 				else
+				{
 					activeChar.sendMessage("Incorrect vitality level (0-4)");
+				}
 			}
 			else if (cmd.equals("admin_full_vitality"))
 			{
@@ -115,8 +123,8 @@ public class AdminVitality implements IAdminCommandHandler
 				level = target.getVitalityLevel();
 				vitality = target.getVitalityPoints();
 				
-				activeChar.sendMessage("Player vitality level: "  + level);
-				activeChar.sendMessage("Player vitality points: "  + vitality);
+				activeChar.sendMessage("Player vitality level: " + level);
+				activeChar.sendMessage("Player vitality points: " + vitality);
 			}
 			return true;
 		}

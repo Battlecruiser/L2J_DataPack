@@ -59,7 +59,7 @@ public class Monastery extends AbstractNpcAI
 		22794, // Divinity Judge
 		22795, // Divinity Manager
 	};
-
+	
 	private static final NpcStringId[] SOLINA_KNIGHTS_MSG =
 	{
 		NpcStringId.PUNISH_ALL_THOSE_WHO_TREAD_FOOTSTEPS_IN_THIS_PLACE,
@@ -106,7 +106,7 @@ public class Monastery extends AbstractNpcAI
 		switch (event)
 		{
 			case "training":
-				if (!npc.isInCombat() && getRandom(100) < 25)
+				if (!npc.isInCombat() && (getRandom(100) < 25))
 				{
 					for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(300))
 					{

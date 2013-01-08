@@ -32,7 +32,7 @@ public class FortSiege implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"fort_register", 
+		"fort_register",
 		"fort_unregister"
 	};
 	

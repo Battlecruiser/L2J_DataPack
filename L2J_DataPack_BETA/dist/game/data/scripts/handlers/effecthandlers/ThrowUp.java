@@ -61,10 +61,10 @@ public class ThrowUp extends L2Effect
 		double dx = getEffector().getX() - curX;
 		double dy = getEffector().getY() - curY;
 		double dz = getEffector().getZ() - curZ;
-		double distance = Math.sqrt(dx * dx + dy * dy);
+		double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: "+curX+","+curY+" and getEffector: "+getEffector().getX()+","+getEffector().getY());
+			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + getEffector().getX() + "," + getEffector().getY());
 			return false;
 		}
 		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
@@ -76,11 +76,15 @@ public class ThrowUp extends L2Effect
 		// TODO: handle Z axis movement better
 		offset += Math.abs(dz);
 		if (offset < 5)
+		{
 			offset = 5;
+		}
 		
 		// If no distance
 		if (distance < 1)
+		{
 			return false;
+		}
 		
 		// Calculate movement angles needed
 		sin = dy / distance;

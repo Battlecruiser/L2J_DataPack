@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * @author JIV
- *
  */
 public class Bypass implements IItemHandler
 {
@@ -35,8 +34,9 @@ public class Bypass implements IItemHandler
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
 		if (!(playable instanceof L2PcInstance))
-			return false
-				;
+		{
+			return false;
+		}
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getItemId();
 		

@@ -44,31 +44,41 @@ public class DispelBySlot extends L2Effect
 	public boolean onStart()
 	{
 		L2Character target = getEffected();
-		if (target == null || target.isDead())
+		if ((target == null) || target.isDead())
+		{
 			return false;
+		}
 		
 		String stackType = getAbnormalType();
-		float  stackOrder = getAbnormalLvl();
+		float stackOrder = getAbnormalLvl();
 		int skillCast = getSkill().getId();
 		
 		// If order is 0 don't remove effect
 		if (stackOrder == 0)
+		{
 			return true;
+		}
 		
 		final L2Effect[] effects = target.getAllEffects();
 		
 		for (L2Effect e : effects)
 		{
 			if (!e.getSkill().canBeDispeled())
+			{
 				continue;
+			}
 			
 			// Fist check for stacktype
-			if (stackType.equalsIgnoreCase(e.getAbnormalType()) && e.getSkill().getId() != skillCast)
+			if (stackType.equalsIgnoreCase(e.getAbnormalType()) && (e.getSkill().getId() != skillCast))
 			{
 				if (stackOrder == -1)
+				{
 					e.exit();
+				}
 				else if (stackOrder >= e.getAbnormalLvl())
+				{
 					e.exit();
+				}
 			}
 		}
 		return true;

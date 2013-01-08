@@ -189,7 +189,7 @@ public class TarBeetleSpawn extends DocumentParser
 	
 	private class SpawnZone extends L2Territory
 	{
-		private int[] _bZones;
+		private final int[] _bZones;
 		
 		public SpawnZone(int terr, int[] bZones)
 		{
