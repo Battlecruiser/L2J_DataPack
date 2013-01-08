@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q00455_WingsOfSand extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int[] SEPARATED_SOULS =
 	{
 		32864,

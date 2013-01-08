@@ -163,8 +163,15 @@ public class Q00903_TheCallOfAntharas extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false))
+		executeForEachPlayer(killer, npc, isPet, true, false);
+		return super.onKill(npc, killer, isPet);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			switch (npc.getNpcId())
 			{
@@ -187,7 +194,6 @@ public class Q00903_TheCallOfAntharas extends Quest
 				st.setCond(2, true);
 			}
 		}
-		return super.onKill(npc, killer, isPet);
 	}
 	
 	public static void main(String[] args)

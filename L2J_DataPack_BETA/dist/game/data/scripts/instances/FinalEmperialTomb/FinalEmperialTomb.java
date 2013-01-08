@@ -804,7 +804,7 @@ public class FinalEmperialTomb extends Quest
 						}
 						break;
 				}
-				world.setStatus(world.getStatus() + 1);
+				world.incStatus();
 				return true;
 			}
 			finally
