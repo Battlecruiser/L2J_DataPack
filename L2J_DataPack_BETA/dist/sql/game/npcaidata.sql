@@ -2334,8 +2334,8 @@ INSERT INTO `npcaidata` VALUES
 (18831, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- ssq For Presentation Camera Dummy 2
 (18832, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- ssq For Presentation Camera Dummy 3
 (18833, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Emperor's Seal Device
-(18834, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
-(18835, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
+(18834, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
+(18835, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 200, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
 (18836, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "baranka_clan", 300, "null", 0, 0, "fighter"), -- Varangka's Guardian
 (18837, 7, 15, 0, 150, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- 
 (18838, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Treasure Chest of Invader Soldier of Nightmare
@@ -6062,7 +6062,7 @@ INSERT INTO `npcaidata` VALUES
 (27348, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn Oracle
 (27349, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "fighter"), -- Guards of the Dawn Oracle
 (27350, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn Oracle
-(27351, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
+(27351, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn
 (27352, 7, 15, 0, 150, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Guards of the Dawn Oracle
 (27353, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Butcher
 (27354, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Lilim Magus
