@@ -47,6 +47,7 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -109,24 +110,9 @@ public class Stage1 extends Quest
 	private final List<Integer> _mustKillMobsId = new FastList<>();
 	
 	// teleports
-	private static final int[] ENTER_TELEPORT_1 =
-	{
-		-242759,
-		219981,
-		-9986
-	};
-	private static final int[] ENTER_TELEPORT_2 =
-	{
-		-245800,
-		220488,
-		-12112
-	};
-	private static final int[] CENTER_TELEPORT =
-	{
-		-245802,
-		220528,
-		-12104
-	};
+	private static final Location ENTER_TELEPORT_1 = new Location(-242759, 219981, -9986);
+	private static final Location ENTER_TELEPORT_2 = new Location(-245800, 220488, -12112);
+	private static final Location CENTER_TELEPORT = new Location(-245802, 220528, -12104);
 	
 	// Traps/Skills
 	private static final SkillHolder TRAP_HOLD = new SkillHolder(4186, 9); // 18720-18728
@@ -509,13 +495,7 @@ public class Stage1 extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2]);
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, int[] coords)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		int instanceId = 0;
 		// check for existing instances for this player
@@ -528,7 +508,7 @@ public class Stage1 extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, coords, world.getInstanceId());
+			teleportPlayer(player, loc, world.getInstanceId(), false);
 			return world.getInstanceId();
 		}
 		// New instance
@@ -538,6 +518,7 @@ public class Stage1 extends Quest
 		}
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
 		world = new SOD1World();
+		world.setTemplateId(INSTANCEID);
 		world.setInstanceId(instanceId);
 		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
@@ -553,14 +534,14 @@ public class Stage1 extends Quest
 		// teleport players
 		if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 		{
-			teleportPlayer(player, coords, instanceId);
+			teleportPlayer(player, loc, instanceId, false);
 			world.addAllowed(player.getObjectId());
 		}
 		else
 		{
 			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
-				teleportPlayer(channelMember, coords, instanceId);
+				teleportPlayer(channelMember, loc, instanceId, false);
 				world.addAllowed(channelMember.getObjectId());
 			}
 		}
@@ -1025,12 +1006,12 @@ public class Stage1 extends Quest
 			}
 			else if (GraciaSeedsManager.getInstance().getSoDState() == 2)
 			{
-				teleportPlayer(player, ENTER_TELEPORT_2, 0);
+				teleportPlayer(player, ENTER_TELEPORT_2, 0, false);
 			}
 		}
 		else if (npcId == TELEPORT)
 		{
-			teleportPlayer(player, CENTER_TELEPORT, player.getInstanceId());
+			teleportPlayer(player, CENTER_TELEPORT, player.getInstanceId(), false);
 		}
 		return "";
 	}
