@@ -296,8 +296,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			loc.setInstanceId(world.getInstanceId());
-			teleportPlayer(player, loc);
+			teleportPlayer(player, loc, world.getInstanceId());
 			return world.getInstanceId();
 		}
 		// New instance
@@ -310,8 +309,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 		spawnState((HSWorld) world);
 		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
-		loc.setInstanceId(world.getInstanceId());
-		teleportPlayer(player, loc);
+		teleportPlayer(player, loc, world.getInstanceId());
 		world.addAllowed(player.getObjectId());
 		return world.getInstanceId();
 	}
@@ -547,12 +545,6 @@ public class SanctumOftheLordsOfDawn extends Quest
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 3000, npc, player);
 		return super.onAggroRangeEnter(npc, player, isPet);
-	}
-	
-	private void teleportPlayer(L2PcInstance player, Location loc)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.teleToLocation(loc, 0);
 	}
 	
 	public static void main(String[] args)
