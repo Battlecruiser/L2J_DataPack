@@ -48,6 +48,7 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -153,12 +154,7 @@ public class FinalEmperialTomb extends Quest
 	private final List<Integer> _mustKillMobsId = new FastList<>();
 	
 	// Teleports
-	private static final int[] ENTER_TELEPORT =
-	{
-		-88015,
-		-141153,
-		-9168
-	};
+	private static final Location ENTER_TELEPORT = new Location(-88015, -141153, -9168);
 	
 	// NPCs
 	private static final int GUIDE = 32011;
@@ -583,13 +579,7 @@ public class FinalEmperialTomb extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2]);
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, int[] coords)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		int instanceId = 0;
 		// check for existing instances for this player
@@ -602,7 +592,7 @@ public class FinalEmperialTomb extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, coords, world.getInstanceId());
+			teleportPlayer(player, loc, world.getInstanceId(), false);
 			return world.getInstanceId();
 		}
 		
@@ -619,6 +609,7 @@ public class FinalEmperialTomb extends Quest
 		// Instance ins = InstanceManager.getInstance().getInstance(instanceId);
 		// ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
 		world = new FETWorld();
+		world.setTemplateId(INSTANCEID);
 		world.setInstanceId(instanceId);
 		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
@@ -628,14 +619,14 @@ public class FinalEmperialTomb extends Quest
 		if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 		{
 			world.addAllowed(player.getObjectId());
-			teleportPlayer(player, coords, instanceId);
+			teleportPlayer(player, loc, instanceId, false);
 		}
 		else
 		{
 			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
 				world.addAllowed(channelMember.getObjectId());
-				teleportPlayer(channelMember, coords, instanceId);
+				teleportPlayer(channelMember, loc, instanceId, false);
 			}
 		}
 		return instanceId;
