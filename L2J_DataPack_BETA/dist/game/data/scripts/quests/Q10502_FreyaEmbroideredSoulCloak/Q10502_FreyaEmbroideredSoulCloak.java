@@ -36,7 +36,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	// Monster
 	private static final int FREYA = 29179;
 	// Items
-	private static final int FREYAS_SOUL_FRAGMENT = 21722;
+	private static final int FREYAS_SOUL_FRAGMENT = 21723;
 	private static final int SOUL_CLOAK_OF_FREYA = 21719;
 	// Misc
 	private static final int MIN_LEVEL = 82;
