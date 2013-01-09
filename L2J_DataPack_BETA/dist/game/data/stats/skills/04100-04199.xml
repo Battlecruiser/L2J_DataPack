@@ -133,7 +133,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4106" levels="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<!-- Antharas Jump from Front -->
 		<set name="abnormalLvl" val="1" />
@@ -141,7 +141,7 @@
 		<set name="coolTime" val="2000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
-		<set name="hitTime" val="6000" />
+		<set name="hitTime" val="7000" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -155,7 +155,7 @@
 		</for>
 	</skill>
 	<skill id="4107" levels="1" name="Antharas Stun">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<!-- Antharas Tail from Behind -->
 		<set name="abnormalLvl" val="1" />
@@ -166,7 +166,7 @@
 		<set name="fanRange" val="0,180,1500,400" />
 		<set name="flyRadius" val="600" />
 		<set name="flyType" val="THROW_UP" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -181,7 +181,7 @@
 		</for>
 	</skill>
 	<skill id="4108" levels="1" name="Antharas Terror">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
@@ -190,7 +190,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
-		<set name="hitTime" val="2300" />
+		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
@@ -239,7 +239,7 @@
 		</for>
 	</skill>
 	<skill id="4110" levels="2" name="Breath Attack">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<table name="#castRange"> 500 1000 </table>
 		<table name="#effectRange"> 1000 1500 </table>
@@ -249,7 +249,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="fanRange" val="0,0,1200,300" />
-		<set name="hitTime" val="2300" />
+		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="650" />
@@ -258,7 +258,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="4111" levels="1" name="Antharas Fossilization">
-		<!-- Confirmed CT2.5 -->
+		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_stone" />
@@ -267,7 +267,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
-		<set name="hitTime" val="3200" />
+		<set name="hitTime" val="5000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlDepend" val="1" />
 		<set name="magicLvl" val="85" />
