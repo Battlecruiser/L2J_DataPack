@@ -47,12 +47,6 @@ public class SecretArea extends Quest
 		new Location(-185057, 242821, 1576)
 	};
 	
-	private void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation(loc, false);
-	}
-	
 	protected void enterInstance(L2PcInstance player)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);

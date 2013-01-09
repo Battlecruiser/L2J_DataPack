@@ -83,13 +83,10 @@ public class PaganKeys implements IItemHandler
 				{
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
-						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						final L2DoorInstance instanceDoor = InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoor(door.getDoorId());
+						if (instanceDoor != null)
 						{
-							if (instanceDoor.getDoorId() == door.getDoorId())
-							{
-								instanceDoor.openMe();
-								break;
-							}
+							instanceDoor.openMe();
 						}
 					}
 					else
@@ -107,13 +104,10 @@ public class PaganKeys implements IItemHandler
 				{
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
-						for (L2DoorInstance instanceDoor : InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoors())
+						final L2DoorInstance instanceDoor = InstanceManager.getInstance().getInstance(activeChar.getInstanceId()).getDoor(door.getDoorId());
+						if (instanceDoor != null)
 						{
-							if (instanceDoor.getDoorId() == door.getDoorId())
-							{
-								instanceDoor.openMe();
-								break;
-							}
+							instanceDoor.openMe();
 						}
 					}
 					else

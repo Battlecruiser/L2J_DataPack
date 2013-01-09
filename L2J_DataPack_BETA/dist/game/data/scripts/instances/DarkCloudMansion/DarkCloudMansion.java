@@ -21,11 +21,10 @@ package instances.DarkCloudMansion;
 import javolution.util.FastList;
 import javolution.util.FastMap;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -484,25 +483,6 @@ public class DarkCloudMansion extends Quest
 		public FastMap<String, DMCRoom> rooms = new FastMap<>();
 	}
 	
-	protected static class teleCoord
-	{
-		int instanceId;
-		int x;
-		int y;
-		int z;
-	}
-	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				door.openMe();
-			}
-		}
-	}
-	
 	private boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
@@ -547,15 +527,7 @@ public class DarkCloudMansion extends Quest
 		return true;
 	}
 	
-	private void teleportplayer(L2PcInstance player, teleCoord teleto)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(teleto.instanceId);
-		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		return;
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		int instanceId = 0;
 		// check for existing instances for this player
@@ -568,8 +540,7 @@ public class DarkCloudMansion extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleto.instanceId = world.getInstanceId();
-			teleportplayer(player, teleto);
+			teleportPlayer(player, loc, world.getInstanceId());
 			return instanceId;
 		}
 		// New instance
@@ -586,11 +557,10 @@ public class DarkCloudMansion extends Quest
 		_log.info("DarkCloudMansion: started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		runStartRoom((DMCWorld) world);
 		// teleport players
-		teleto.instanceId = instanceId;
 		if (debug && (party == null))
 		{
 			world.addAllowed(player.getObjectId());
-			teleportplayer(player, teleto);
+			teleportPlayer(player, loc, instanceId);
 		}
 		else
 		{
@@ -601,18 +571,11 @@ public class DarkCloudMansion extends Quest
 					newQuestState(partyMember);
 				}
 				world.addAllowed(partyMember.getObjectId());
-				teleportplayer(partyMember, teleto);
+				teleportPlayer(partyMember, loc, instanceId);
 			}
 		}
 		
 		return instanceId;
-	}
-	
-	protected void exitInstance(L2PcInstance player, teleCoord tele)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(0);
-		player.teleToLocation(tele.x, tele.y, tele.z);
 	}
 	
 	protected void runStartRoom(DMCWorld world)
@@ -1474,11 +1437,7 @@ public class DarkCloudMansion extends Quest
 		int npcId = npc.getNpcId();
 		if (npcId == YIYEN)
 		{
-			teleCoord tele = new teleCoord();
-			tele.x = 146534;
-			tele.y = 180464;
-			tele.z = -6117;
-			enterInstance(player, "DarkCloudMansion.xml", tele);
+			enterInstance(player, "DarkCloudMansion.xml", new Location(146534, 180464, -6117));
 		}
 		else
 		{
@@ -1495,10 +1454,6 @@ public class DarkCloudMansion extends Quest
 			
 			if (npcId == SOTruth)
 			{
-				teleCoord tele = new teleCoord();
-				tele.x = 139968;
-				tele.y = 150367;
-				tele.z = -3111;
 				if (world.isAllowed(player.getObjectId()))
 				{
 					if (debug)
@@ -1507,7 +1462,7 @@ public class DarkCloudMansion extends Quest
 					}
 					world.removeAllowed(player.getObjectId());
 				}
-				exitInstance(player, tele);
+				teleportPlayer(player, new Location(139968, 150367, -3111), 0);
 				int instanceId = npc.getInstanceId();
 				Instance instance = InstanceManager.getInstance().getInstance(instanceId);
 				if (instance.getPlayers().isEmpty())

@@ -52,7 +52,6 @@ import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -518,31 +517,6 @@ public class FinalEmperialTomb extends Quest
 		{
 			_log.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 			_log.info("[Final Emperial Tomb] Loaded " + spawnCount + " spawns data.");
-		}
-	}
-	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				door.openMe();
-			}
-		}
-	}
-	
-	protected void closeDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				if (door.getOpen())
-				{
-					door.closeMe();
-				}
-			}
 		}
 	}
 	

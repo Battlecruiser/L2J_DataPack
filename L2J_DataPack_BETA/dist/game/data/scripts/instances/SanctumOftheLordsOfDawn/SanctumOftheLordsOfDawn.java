@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -458,17 +457,6 @@ public class SanctumOftheLordsOfDawn extends Quest
 		world.w_npc_60 = addSpawn(GUARDS_OF_THE_DAWN_3, -78891, 206272, -7904, 59013, false, 0, false, world.getInstanceId());
 		world.w_npc_60.setIsNoRndWalk(true);
 		startQuestTimer("Part2", 3000, world.w_npc_7, null);
-	}
-	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				door.openMe();
-			}
-		}
 	}
 	
 	@Override

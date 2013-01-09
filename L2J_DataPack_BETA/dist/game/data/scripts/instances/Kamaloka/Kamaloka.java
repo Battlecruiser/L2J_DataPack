@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
@@ -1391,19 +1390,6 @@ public class Kamaloka extends Quest
 				e.exit();
 			}
 		}
-	}
-	
-	/**
-	 * Teleport player and pet to/from instance
-	 * @param player
-	 * @param loc
-	 * @param instanceId
-	 */
-	private static final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(instanceId);
-		player.teleToLocation(loc, true);
 	}
 	
 	/**

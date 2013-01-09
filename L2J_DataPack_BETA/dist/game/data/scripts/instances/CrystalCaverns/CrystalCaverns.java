@@ -1437,39 +1437,6 @@ public class CrystalCaverns extends Quest
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
-	protected static class teleCoord
-	{
-		int instanceId;
-		int x;
-		int y;
-		int z;
-	}
-	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				door.openMe();
-			}
-		}
-	}
-	
-	protected void closeDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				if (door.getOpen())
-				{
-					door.closeMe();
-				}
-			}
-		}
-	}
-	
 	private boolean checkConditions(L2PcInstance player)
 	{
 		if (debug)
@@ -1649,15 +1616,7 @@ public class CrystalCaverns extends Quest
 		effected.broadcastPacket(new ValidateLocation(effected));
 	}
 	
-	private void teleportplayer(L2PcInstance player, teleCoord teleto)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(teleto.instanceId);
-		player.teleToLocation(teleto.x, teleto.y, teleto.z);
-		return;
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -1669,8 +1628,7 @@ public class CrystalCaverns extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleto.instanceId = world.getInstanceId();
-			teleportplayer(player, teleto);
+			teleportPlayer(player, loc, world.getInstanceId());
 			return world.getInstanceId();
 		}
 		
@@ -1688,13 +1646,12 @@ public class CrystalCaverns extends Quest
 		_log.info("Crystal Caverns started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		runOracle((CCWorld) world);
 		// teleport players
-		teleto.instanceId = instanceId;
 		if (player.getParty() == null)
 		{
 			// this can happen only if debug is true
 			player.sendMessage("Welcome to Crystal Caverns.");
 			InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-			teleportplayer(player, teleto);
+			teleportPlayer(player, loc, world.getInstanceId());
 			world.isAllowed(player.getObjectId());
 		}
 		else
@@ -1703,18 +1660,11 @@ public class CrystalCaverns extends Quest
 			{
 				partyMember.sendMessage("Welcome to Crystal Caverns.");
 				InstanceManager.getInstance().setInstanceTime(partyMember.getObjectId(), INSTANCEID, ((System.currentTimeMillis() + INSTANCEPENALTY)));
-				teleportplayer(partyMember, teleto);
+				teleportPlayer(partyMember, loc, world.getInstanceId());
 				world.addAllowed(partyMember.getObjectId());
 			}
 		}
 		return instanceId;
-	}
-	
-	protected void exitInstance(L2PcInstance player, teleCoord tele)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(0);
-		player.teleToLocation(tele.x, tele.y, tele.z);
 	}
 	
 	protected void stopAttack(L2PcInstance player)
@@ -2049,11 +1999,7 @@ public class CrystalCaverns extends Quest
 				if ((world.getStatus() != 4) && (attacker != null))
 				{
 					// Lucky cheater, the code only kicks his/her ass out of the dungeon
-					teleCoord tele = new teleCoord();
-					tele.x = 149361;
-					tele.y = 172327;
-					tele.z = -945;
-					exitInstance(attacker, tele);
+					teleportPlayer(attacker, new Location(149361, 172327, -945), 0);
 					world.removeAllowed(attacker.getObjectId());
 				}
 				else if (world.tears != npc)
@@ -2141,33 +2087,19 @@ public class CrystalCaverns extends Quest
 		if (tmpworld instanceof CCWorld)
 		{
 			CCWorld world = (CCWorld) tmpworld;
-			teleCoord teleto = new teleCoord();
-			teleto.instanceId = world.getInstanceId();
 			if (event.equalsIgnoreCase("TeleportOut"))
 			{
-				teleCoord tele = new teleCoord();
-				tele.x = 149413;
-				tele.y = 173078;
-				tele.z = -5014;
-				exitInstance(player, tele);
+				teleportPlayer(player, new Location(149413, 173078, -5014), 0);
 			}
 			else if (event.equalsIgnoreCase("TeleportParme"))
 			{
-				teleCoord tele = new teleCoord();
-				tele.x = 153689;
-				tele.y = 142226;
-				tele.z = -9750;
-				tele.instanceId = world.getInstanceId();
-				teleportplayer(player, tele);
+				teleportPlayer(player, new Location(153689, 142226, -9750), world.getInstanceId());
 			}
 			else if (event.equalsIgnoreCase("Timer2") || event.equalsIgnoreCase("Timer3") || event.equalsIgnoreCase("Timer4") || event.equalsIgnoreCase("Timer5"))
 			{
-				teleto.x = 144653;
-				teleto.y = 152606;
-				teleto.z = -12126;
 				if (player.getInstanceId() == world.getInstanceId())
 				{
-					teleportplayer(player, teleto);
+					teleportPlayer(player, new Location(144653, 152606, -12126), world.getInstanceId());
 					player.stopSkillEffects(5239);
 					SkillTable.getInstance().getInfo(5239, 1).getEffects(player, player);
 					startQuestTimer("Timer2", 300000, npc, player);
@@ -2794,11 +2726,7 @@ public class CrystalCaverns extends Quest
 		}
 		if (npcId == ORACLE_GUIDE_1)
 		{
-			teleCoord tele = new teleCoord();
-			tele.x = 143348;
-			tele.y = 148707;
-			tele.z = -11972;
-			enterInstance(player, "CrystalCaverns.xml", tele);
+			enterInstance(player, "CrystalCaverns.xml", new Location(143348, 148707, -11972));
 			return "";
 		}
 		
@@ -2812,8 +2740,7 @@ public class CrystalCaverns extends Quest
 			else if ((npc.getNpcId() >= 32275) && (npc.getNpcId() <= 32277) && world.OracleTriggered[npc.getNpcId() - 32275])
 			{
 				boolean doTeleport = false;
-				teleCoord teleto = new teleCoord();
-				teleto.instanceId = npc.getInstanceId();
+				Location loc = null;
 				L2Party party = player.getParty();
 				doTeleport = true;
 				switch (npc.getNpcId())
@@ -2823,9 +2750,7 @@ public class CrystalCaverns extends Quest
 						{
 							runSteamRooms(world, STEAM2_SPAWNS, 23);
 						}
-						teleto.x = 147529;
-						teleto.y = 152587;
-						teleto.z = -12169;
+						loc = new Location(147529, 152587, -12169);
 						cancelQuestTimers("Timer2");
 						cancelQuestTimers("Timer21");
 						if (party != null)
@@ -2853,9 +2778,7 @@ public class CrystalCaverns extends Quest
 						{
 							runSteamRooms(world, STEAM3_SPAWNS, 24);
 						}
-						teleto.x = 150194;
-						teleto.y = 152610;
-						teleto.z = -12169;
+						loc = new Location(150194, 152610, -12169);
 						cancelQuestTimers("Timer3");
 						cancelQuestTimers("Timer31");
 						if (party != null)
@@ -2883,9 +2806,7 @@ public class CrystalCaverns extends Quest
 						{
 							runSteamRooms(world, STEAM4_SPAWNS, 25);
 						}
-						teleto.x = 149743;
-						teleto.y = 149986;
-						teleto.z = -12141;
+						loc = new Location(149743, 149986, -12141);
 						cancelQuestTimers("Timer4");
 						cancelQuestTimers("Timer41");
 						if (party != null)
@@ -2912,7 +2833,7 @@ public class CrystalCaverns extends Quest
 						// something is wrong
 						doTeleport = false;
 				}
-				if (doTeleport)
+				if (doTeleport && (loc != null))
 				{
 					if (!checkOracleConditions(player))
 					{
@@ -2923,12 +2844,12 @@ public class CrystalCaverns extends Quest
 						for (L2PcInstance partyMember : party.getMembers())
 						{
 							partyMember.destroyItemByItemId("Quest", RED_CORAL, 1, player, true);
-							teleportplayer(partyMember, teleto);
+							teleportPlayer(partyMember, loc, npc.getInstanceId());
 						}
 					}
 					else
 					{
-						teleportplayer(player, teleto);
+						teleportPlayer(player, loc, npc.getInstanceId());
 					}
 				}
 			}
@@ -2982,12 +2903,7 @@ public class CrystalCaverns extends Quest
 			}
 			else if ((npc.getNpcId() == ORACLE_GUIDE_4) && (world.getStatus() == 31))
 			{
-				teleCoord teleto = new teleCoord();
-				teleto.instanceId = npc.getInstanceId();
-				teleto.x = 153522;
-				teleto.y = 144212;
-				teleto.z = -9747;
-				teleportplayer(player, teleto);
+				teleportPlayer(player, new Location(153522, 144212, -9747), npc.getInstanceId());
 			}
 		}
 		return "";

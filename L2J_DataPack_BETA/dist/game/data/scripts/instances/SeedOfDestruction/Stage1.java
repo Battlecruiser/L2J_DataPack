@@ -457,31 +457,6 @@ public class Stage1 extends Quest
 		}
 	}
 	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				door.openMe();
-			}
-		}
-	}
-	
-	protected void closeDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-		{
-			if (door.getDoorId() == doorId)
-			{
-				if (door.getOpen())
-				{
-					door.closeMe();
-				}
-			}
-		}
-	}
-	
 	private boolean checkConditions(L2PcInstance player)
 	{
 		final L2Party party = player.getParty();
@@ -918,7 +893,7 @@ public class Stage1 extends Quest
 			}
 			else if (event.equalsIgnoreCase("DoorCheck"))
 			{
-				L2DoorInstance tmp = InstanceManager.getInstance().getInstance(npc.getInstanceId()).getDoor(FORTRESS_DOOR);
+				L2DoorInstance tmp = getDoor(FORTRESS_DOOR, npc.getInstanceId());
 				if (tmp.getCurrentHp() < tmp.getMaxHp())
 				{
 					world.deviceSpawnedMobCount = 0;

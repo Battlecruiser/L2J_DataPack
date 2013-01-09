@@ -20,7 +20,6 @@ package instances.NornilsGarden;
 
 import quests.Q00179_IntoTheLargeCavern.Q00179_IntoTheLargeCavern;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
@@ -76,18 +75,8 @@ public class NornilsGarden extends Quest
 		32262
 	};
 	
-	private static final int[] SPAWN_PPL =
-	{
-		-111184,
-		74540,
-		-12430
-	};
-	private static final int[] EXIT_PPL =
-	{
-		-74058,
-		52040,
-		-3680
-	};
+	private static final Location SPAWN_PPL = new Location(-111184, 74540, -12430);
+	private static final Location EXIT_PPL = new Location(-74058, 52040, -3680);
 	
 	private static final int[][] _auto_gates =
 	{
@@ -242,7 +231,8 @@ public class NornilsGarden extends Quest
 		}
 	}
 	
-	private final void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	@Override
+	public final void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -256,9 +246,7 @@ public class NornilsGarden extends Quest
 			removeBuffs(player.getSummon());
 			giveBuffs(player.getSummon());
 		}
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2], true);
+		super.teleportPlayer(player, loc, instanceId);
 	}
 	
 	private void exitInstance(L2PcInstance player)
@@ -268,9 +256,7 @@ public class NornilsGarden extends Quest
 		{
 			NornilsWorld world = ((NornilsWorld) inst);
 			world.removeAllowed(player.getObjectId());
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.setInstanceId(0);
-			player.teleToLocation(EXIT_PPL[0], EXIT_PPL[1], EXIT_PPL[2], true);
+			teleportPlayer(player, EXIT_PPL, 0);
 		}
 	}
 	
@@ -340,7 +326,7 @@ public class NornilsGarden extends Quest
 	{
 		world.first_npc = addSpawn(18362, -109702, 74696, -12528, 49568, false, 0, false, world.getInstanceId());
 		
-		L2DoorInstance door = InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(16200010);
+		final L2DoorInstance door = getDoor(16200010, world.getInstanceId());
 		if (door != null)
 		{
 			door.setTargetable(false);
@@ -420,17 +406,13 @@ public class NornilsGarden extends Quest
 		}
 	}
 	
-	private void openDoor(QuestState st, L2PcInstance player, int doorId)
+	public void openDoor(QuestState st, L2PcInstance player, int doorId)
 	{
 		st.unset("correct");
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 		if (tmpworld instanceof NornilsWorld)
 		{
-			L2DoorInstance door = InstanceManager.getInstance().getInstance(tmpworld.getInstanceId()).getDoor(doorId);
-			if (door != null)
-			{
-				door.openMe();
-			}
+			openDoor(doorId, tmpworld.getInstanceId());
 		}
 	}
 	
@@ -518,11 +500,7 @@ public class NornilsGarden extends Quest
 				{
 					if (zone.getId() == _auto[0])
 					{
-						L2DoorInstance door = InstanceManager.getInstance().getInstance(tmpworld.getInstanceId()).getDoor(_auto[1]);
-						if (door != null)
-						{
-							door.openMe();
-						}
+						openDoor(_auto[1], tmpworld.getInstanceId());
 					}
 					if (zone.getId() == 20111)
 					{
@@ -673,12 +651,7 @@ public class NornilsGarden extends Quest
 					InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
 					if (tmpworld instanceof NornilsWorld)
 					{
-						L2DoorInstance door = InstanceManager.getInstance().getInstance(tmpworld.getInstanceId()).getDoor(_gk[2]);
-						if (door != null)
-						{
-							door.openMe();
-							door.sendInfo(player);
-						}
+						openDoor(_gk[2], tmpworld.getInstanceId());
 					}
 				}
 			}
