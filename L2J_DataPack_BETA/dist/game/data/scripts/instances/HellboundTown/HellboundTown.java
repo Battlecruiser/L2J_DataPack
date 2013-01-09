@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -99,27 +100,11 @@ public class HellboundTown extends Quest
 	private static final int TOWN_GUARD = 22359;
 	private static final int TOWN_PATROL = 22360;
 	
-	private static final int[] AMASKARI_SPAWN_POINT =
-	{
-		19424,
-		253360,
-		-2032,
-		16860
-	};
+	private static final Location AMASKARI_SPAWN_POINT = new Location(19424, 253360, -2032, 16860);
 	
-	private static final int[] ENTRY_POINT =
-	{
-		14117,
-		255434,
-		-2016
-	};
+	private static final Location ENTRY_POINT = new Location(14117, 255434, -2016);
 	
-	protected static final int[] EXIT_POINT =
-	{
-		16262,
-		283651,
-		-9700
-	};
+	protected static final Location EXIT_POINT = new Location(16262, 283651, -9700);
 	
 	private static final SkillHolder STONE = new SkillHolder(4616, 1);
 	
@@ -436,12 +421,6 @@ public class HellboundTown extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation((tele[0] - 50) + getRandom(100), (tele[1] - 50) + getRandom(100), tele[2]);
-	}
-	
 	private int enterInstance(L2PcInstance player, String template)
 	{
 		int instanceId = 0;
@@ -478,7 +457,7 @@ public class HellboundTown extends Quest
 			world.addAllowed(partyMember.getObjectId());
 		}
 		
-		((TownWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT[0], AMASKARI_SPAWN_POINT[1], AMASKARI_SPAWN_POINT[2], AMASKARI_SPAWN_POINT[3], false, 0, false, instanceId);
+		((TownWorld) world).spawnedAmaskari = (L2MonsterInstance) addSpawn(AMASKARI, AMASKARI_SPAWN_POINT, false, 0, false, instanceId);
 		return instanceId;
 	}
 	
@@ -530,7 +509,7 @@ public class HellboundTown extends Quest
 		return ret >= 0 ? ret + 2 : -1;
 	}
 	
-	private static class ExitInstance implements Runnable
+	private class ExitInstance implements Runnable
 	{
 		private final L2Party _party;
 		private final TownWorld _world;
@@ -551,8 +530,7 @@ public class HellboundTown extends Quest
 					if ((partyMember != null) && !partyMember.isDead())
 					{
 						_world.removeAllowed(partyMember.getObjectId());
-						partyMember.setInstanceId(0);
-						partyMember.teleToLocation((EXIT_POINT[0] - 100) + getRandom(50), (EXIT_POINT[1] - 100) + getRandom(50), EXIT_POINT[2]);
+						teleportPlayer(partyMember, EXIT_POINT, 0);
 					}
 				}
 			}

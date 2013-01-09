@@ -20,7 +20,6 @@ package instances.RankuFloor;
 
 import java.util.Calendar;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
@@ -273,13 +272,6 @@ public class RankuFloor extends Quest
 				}
 			}
 		}
-	}
-	
-	private void teleportPlayer(L2PcInstance player, Location loc, int instanceId)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(instanceId);
-		player.teleToLocation(loc, true);
 	}
 	
 	public static void main(String[] args)

@@ -66,15 +66,13 @@ public class Unlock implements ISkillHandler
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					for (L2DoorInstance instanceDoor : inst.getDoors())
+					final L2DoorInstance instanceDoor = inst.getDoor(door.getDoorId());
+					if (instanceDoor != null)
 					{
-						if (instanceDoor.getDoorId() == door.getDoorId())
-						{
-							// Door found
-							door = instanceDoor;
-							break;
-						}
+						// Door found
+						door = instanceDoor;
 					}
+					
 					// Checking instance again
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{

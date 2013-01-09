@@ -18,7 +18,6 @@
  */
 package instances.HideoutOfTheDawn;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -79,13 +78,6 @@ public class HideoutOfTheDawn extends Quest
 		return super.onTalk(npc, talker);
 	}
 	
-	private void teleportPlayer(L2PcInstance player, Location loc)
-	{
-		removeBuffs(player);
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.teleToLocation(loc, 0);
-	}
-	
 	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		// check for existing instances for this player
@@ -98,8 +90,8 @@ public class HideoutOfTheDawn extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			loc.setInstanceId(world.getInstanceId());
-			teleportPlayer(player, loc);
+			teleportPlayer(player, loc, world.getInstanceId(), false);
+			removeBuffs(player);
 			return 0;
 		}
 		// New instance
@@ -111,8 +103,8 @@ public class HideoutOfTheDawn extends Quest
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("SevenSign started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 		// teleport players
-		loc.setInstanceId(world.getInstanceId());
-		teleportPlayer(player, loc);
+		teleportPlayer(player, loc, world.getInstanceId(), false);
+		removeBuffs(player);
 		world.addAllowed(player.getObjectId());
 		
 		return world.getInstanceId();
