@@ -34,7 +34,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 		"remove_dp"
 	};
 	
-	private static final int[] pen_clear_price =
+	private static final int[] PEN_CLEAR_PRICE =
 	{
 		3600,
 		8640,
@@ -49,7 +49,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc())
 		{
 			return false;
 		}
@@ -65,7 +65,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setFile(activeChar.getHtmlPrefix(), filename);
 					html.replace("%objectId%", String.valueOf(npc.getObjectId()));
-					html.replace("%dp_price%", String.valueOf(pen_clear_price[activeChar.getExpertiseLevel()]));
+					html.replace("%dp_price%", String.valueOf(PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()]));
 					activeChar.sendPacket(html);
 					break;
 				case 2:
@@ -74,9 +74,9 @@ public class RemoveDeathPenalty implements IBypassHandler
 					
 					if (activeChar.getDeathPenaltyBuffLevel() > 0)
 					{
-						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseLevel()])
+						if (activeChar.getAdena() >= PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()])
 						{
-							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseLevel()], npc, true))
+							if (!activeChar.reduceAdena("DeathPenality", PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()], npc, true))
 							{
 								return false;
 							}

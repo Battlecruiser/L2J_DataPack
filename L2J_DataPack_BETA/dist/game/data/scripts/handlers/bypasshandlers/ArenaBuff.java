@@ -21,12 +21,11 @@ package handlers.bypasshandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
 /**
@@ -41,7 +40,7 @@ public class ArenaBuff implements IBypassHandler
 		"CPRecovery"
 	};
 	
-	private final int[][] _Buffs =
+	private final int[][] BUFFS =
 	{
 		{ // Fighter Buffs
 			6803,
@@ -63,7 +62,7 @@ public class ArenaBuff implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc())
 		{
 			return false;
 		}
@@ -81,14 +80,14 @@ public class ArenaBuff implements IBypassHandler
 					return false;
 				}
 				
-				for (int skillId : _Buffs[activeChar.isMageClass() ? 1 : 0])
+				for (int skillId : BUFFS[activeChar.isMageClass() ? 1 : 0])
 				{
-					L2Skill skill = SkillTable.getInstance().getInfo(skillId, 1);
+					SkillHolder skill = new SkillHolder(skillId, 1);
 					
-					if (skill != null)
+					if (skill.getSkill() != null)
 					{
 						npc.setTarget(activeChar);
-						npc.doCast(skill);
+						npc.doCast(skill.getSkill());
 					}
 				}
 				return true;
@@ -104,11 +103,11 @@ public class ArenaBuff implements IBypassHandler
 					return false;
 				}
 				
-				L2Skill skill = SkillTable.getInstance().getInfo(6817, 1);
-				if (skill != null)
+				SkillHolder skill = new SkillHolder(6817, 1);
+				if (skill.getSkill() != null)
 				{
 					npc.setTarget(activeChar);
-					npc.doCast(skill);
+					npc.doCast(skill.getSkill());
 				}
 				return true;
 			}
@@ -123,11 +122,11 @@ public class ArenaBuff implements IBypassHandler
 					return false;
 				}
 				
-				L2Skill skill = SkillTable.getInstance().getInfo(4380, 1);
-				if (skill != null)
+				SkillHolder skill = new SkillHolder(4380, 1);
+				if (skill.getSkill() != null)
 				{
 					npc.setTarget(activeChar);
-					npc.doCast(skill);
+					npc.doCast(skill.getSkill());
 				}
 				return true;
 			}

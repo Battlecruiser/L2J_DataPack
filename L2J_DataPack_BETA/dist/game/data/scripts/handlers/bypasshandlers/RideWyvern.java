@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WyvernManagerInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
 public class RideWyvern implements IBypassHandler
@@ -76,7 +77,7 @@ public class RideWyvern implements IBypassHandler
 		{
 			if (activeChar.isMounted())
 			{
-				activeChar.sendMessage("You already have a pet.");
+				activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			}
 			else
 			{
