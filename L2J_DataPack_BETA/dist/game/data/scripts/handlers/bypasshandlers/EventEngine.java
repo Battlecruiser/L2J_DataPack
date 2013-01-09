@@ -22,7 +22,6 @@ import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.L2Event;
 
@@ -37,7 +36,7 @@ public class EventEngine implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc())
 		{
 			return false;
 		}
