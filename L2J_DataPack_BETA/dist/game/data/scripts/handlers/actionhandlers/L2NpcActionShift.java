@@ -132,7 +132,18 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%spawn%", ((L2Npc) target).getSpawn().getLocx() + " " + ((L2Npc) target).getSpawn().getLocy() + " " + ((L2Npc) target).getSpawn().getLocz());
 				html.replace("%loc2d%", String.valueOf((int) Math.sqrt(((L2Character) target).getPlanDistanceSq(((L2Npc) target).getSpawn().getLocx(), ((L2Npc) target).getSpawn().getLocy()))));
 				html.replace("%loc3d%", String.valueOf((int) Math.sqrt(((L2Character) target).getDistanceSq(((L2Npc) target).getSpawn().getLocx(), ((L2Npc) target).getSpawn().getLocy(), ((L2Npc) target).getSpawn().getLocz()))));
-				html.replace("%resp%", String.valueOf(((L2Npc) target).getSpawn().getRespawnDelay() / 1000));
+				if (((L2Npc)target).getSpawn().getRespawnMinDelay() == 0)
+				{
+					html.replace("%resp%",  "None");
+				}
+				else if (((L2Npc)target).getSpawn().hasRespawnRandom())
+				{
+					html.replace("%resp%",  String.valueOf(((L2Npc)target).getSpawn().getRespawnMinDelay() / 1000) + "-" + String.valueOf(((L2Npc)target).getSpawn().getRespawnMaxDelay() / 1000 + " sec"));
+				}
+				else
+				{
+					html.replace("%resp%",  String.valueOf(((L2Npc)target).getSpawn().getRespawnMinDelay() / 1000) + " sec");
+				}
 			}
 			else
 			{
