@@ -53,14 +53,12 @@ public class SanctumOftheLordsOfDawn extends Quest
 	
 	// Instance
 	private static final int INSTANCEID = 111;
-	// NPCs
-	private static final int HIGH_PRIEST_OF_DAWN = 18828;
 	private static final int GUARDS_OF_THE_DAWN = 18834;
 	private static final int GUARDS_OF_THE_DAWN_2 = 18835;
 	private static final int GUARDS_OF_THE_DAWN_3 = 27351;
 	private static final int LIGHT_OF_DAWN = 32575;
-	private static final int IDENTITY_CONFIRM_DEVICE = 32578;
 	private static final int PASSWORD_ENTRY_DEVICE = 32577;
+	private static final int IDENTITY_CONFIRM_DEVICE = 32578;
 	private static final int DARKNESS_OF_DAWN = 32579;
 	private static final int SHELF = 32580;
 	// Doors
@@ -316,23 +314,6 @@ public class SanctumOftheLordsOfDawn extends Quest
 	
 	protected void spawnState(HSWorld world)
 	{
-		// Static Npcs
-		L2Npc s_npc_1 = addSpawn(DARKNESS_OF_DAWN, -75988, 213411, -7124, 0, false, 0, false, world.getInstanceId());
-		s_npc_1.setIsNoRndWalk(true);
-		L2Npc s_npc_2 = addSpawn(IDENTITY_CONFIRM_DEVICE, -75695, 213537, -7128, 0, false, 0, false, world.getInstanceId());
-		s_npc_2.setIsNoRndWalk(true);
-		L2Npc s_npc_3 = addSpawn(PASSWORD_ENTRY_DEVICE, -80152, 205740, -7904, 0, false, 0, false, world.getInstanceId());
-		s_npc_3.setIsNoRndWalk(true);
-		L2Npc s_npc_4 = addSpawn(IDENTITY_CONFIRM_DEVICE, -78289, 205749, -7884, 0, false, 0, false, world.getInstanceId());
-		s_npc_4.setIsNoRndWalk(true);
-		L2Npc s_npc_5 = addSpawn(SHELF, -81393, 205565, -7960, 0, false, 0, false, world.getInstanceId());
-		s_npc_5.setIsNoRndWalk(true);
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79229, 205782, -7896, 28672, false, 0, false, world.getInstanceId());
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79362, 205706, -7896, 16383, false, 0, false, world.getInstanceId());
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79495, 205774, -7896, 4096, false, 0, false, world.getInstanceId());
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79493, 205930, -7896, 61440, false, 0, false, world.getInstanceId());
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79362, 206012, -7896, 49152, false, 0, false, world.getInstanceId());
-		addSpawn(HIGH_PRIEST_OF_DAWN, -79230, 205935, -7896, 36864, false, 0, false, world.getInstanceId());
 		// Guard Npcs
 		world.w_npc_1 = addSpawn(GUARDS_OF_THE_DAWN_3, -81938, 205856, -8000, 0, false, 0, false, world.getInstanceId());
 		world.w_npc_1.setIsNoRndWalk(true);
