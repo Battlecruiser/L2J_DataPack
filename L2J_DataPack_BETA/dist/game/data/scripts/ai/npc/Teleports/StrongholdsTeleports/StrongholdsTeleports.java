@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class StrongholdsTeleports extends AbstractNpcAI
 {
+	// NPCs
 	private final static int[] NPCs =
 	{
 		32163,
@@ -41,24 +42,12 @@ public class StrongholdsTeleports extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		
-		if (player.getLevel() < 20)
-		{
-			htmltext = String.valueOf(npc.getNpcId()) + ".htm";
-		}
-		else
-		{
-			htmltext = String.valueOf(npc.getNpcId()) + "-no.htm";
-		}
-		
-		return htmltext;
+		return player.getLevel() < 20 ? String.valueOf(npc.getNpcId()) + ".htm" : String.valueOf(npc.getNpcId()) + "-no.htm";
 	}
 	
 	private StrongholdsTeleports(String name, String descr)
 	{
 		super(name, descr);
-		
 		addFirstTalkId(NPCs);
 	}
 	

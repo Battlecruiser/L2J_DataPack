@@ -22,7 +22,6 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Charm teleport AI.<br>
@@ -34,63 +33,48 @@ public class TeleportWithCharm extends AbstractNpcAI
 	// NPCs
 	private final static int WHIRPY = 30540;
 	private final static int TAMIL = 30576;
-	
-	// ITEMS
+	// Items
 	private final static int ORC_GATEKEEPER_CHARM = 1658;
 	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return null;
-		}
-		
 		switch (npc.getNpcId())
 		{
 			case WHIRPY:
 			{
-				if (st.hasQuestItems(DWARF_GATEKEEPER_TOKEN))
+				if (hasQuestItems(player, DWARF_GATEKEEPER_TOKEN))
 				{
-					st.takeItems(DWARF_GATEKEEPER_TOKEN, 1);
-					st.getPlayer().teleToLocation(-80826, 149775, -3043);
-					st.exitQuest(true);
+					takeItems(player, DWARF_GATEKEEPER_TOKEN, 1);
+					player.teleToLocation(-80826, 149775, -3043);
 				}
 				else
 				{
-					st.exitQuest(true);
-					htmltext = "30540-01.htm";
+					return "30540-01.htm";
 				}
 				break;
 			}
 			case TAMIL:
 			{
-				if (st.hasQuestItems(ORC_GATEKEEPER_CHARM))
+				if (hasQuestItems(player, ORC_GATEKEEPER_CHARM))
 				{
-					st.takeItems(ORC_GATEKEEPER_CHARM, 1);
-					st.getPlayer().teleToLocation(-80826, 149775, -3043);
-					st.exitQuest(true);
+					takeItems(player, ORC_GATEKEEPER_CHARM, 1);
+					player.teleToLocation(-80826, 149775, -3043);
 				}
 				else
 				{
-					st.exitQuest(true);
-					htmltext = "30576-01.htm";
+					return "30576-01.htm";
 				}
 				break;
 			}
 		}
-		
-		return htmltext;
+		return super.onTalk(npc, player);
 	}
 	
 	private TeleportWithCharm(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(WHIRPY, TAMIL);
 		addTalkId(WHIRPY, TAMIL);
 	}

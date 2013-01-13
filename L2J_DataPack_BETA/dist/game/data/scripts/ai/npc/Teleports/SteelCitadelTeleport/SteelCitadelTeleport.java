@@ -35,13 +35,13 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
  */
 public class SteelCitadelTeleport extends AbstractNpcAI
 {
+	// NPCs
 	private static final int BELETH = 29118;
 	private static final int NAIA_CUBE = 32376;
 	
 	private SteelCitadelTeleport(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(NAIA_CUBE);
 		addTalkId(NAIA_CUBE);
 	}
@@ -49,48 +49,44 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		switch (npc.getNpcId())
+		if (GrandBossManager.getInstance().getBossStatus(BELETH) == 3)
 		{
-			case NAIA_CUBE:
-				if (GrandBossManager.getInstance().getBossStatus(BELETH) == 3)
+			return "32376-02.htm";
+		}
+		
+		final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
+		
+		if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
+		{
+			return "32376-02a.htm";
+		}
+		
+		if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
+		{
+			return "32376-03.htm";
+		}
+		
+		final L2BossZone zone = (L2BossZone) ZoneManager.getInstance().getZoneById(12018);
+		if (zone != null)
+		{
+			GrandBossManager.getInstance().setBossStatus(BELETH, 1);
+			
+			for (L2Party party : channel.getPartys())
+			{
+				if (party == null)
 				{
-					return "32376-02.htm";
+					continue;
 				}
 				
-				final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
-				
-				if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
+				for (L2PcInstance pl : party.getMembers())
 				{
-					return "32376-02a.htm";
-				}
-				
-				if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
-				{
-					return "32376-03.htm";
-				}
-				
-				final L2BossZone zone = (L2BossZone) ZoneManager.getInstance().getZoneById(12018);
-				if (zone != null)
-				{
-					GrandBossManager.getInstance().setBossStatus(BELETH, 1);
-					
-					for (L2Party party : channel.getPartys())
+					if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
 					{
-						if (party == null)
-						{
-							continue;
-						}
-						
-						for (L2PcInstance pl : party.getMembers())
-						{
-							if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
-							{
-								zone.allowPlayerEntry(pl, 30);
-								pl.teleToLocation(16342, 209557, -9352, true);
-							}
-						}
+						zone.allowPlayerEntry(pl, 30);
+						pl.teleToLocation(16342, 209557, -9352, true);
 					}
 				}
+			}
 		}
 		return null;
 	}

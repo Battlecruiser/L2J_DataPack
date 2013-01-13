@@ -40,6 +40,7 @@ import com.l2jserver.gameserver.model.zone.type.L2BossZone;
  */
 public class GrandBossTeleporters extends AbstractNpcAI
 {
+	// NPCs
 	private static final int[] NPCs =
 	{
 		13001, // Heart of Warding : Teleport into Lair of Antharas
@@ -51,6 +52,9 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		31687, // Gatekeeper of Fire Dragon : Opens doors to Heart of Volcano
 		31759, // Teleportation Cubic : Teleport out of Lair of Valakas
 	};
+	// Items
+	private static final int PORTAL_STONE = 3865;
+	private static final int VACUALITE_FLOATING_STONE = 7267;
 	
 	private Quest valakasAI()
 	{
@@ -75,9 +79,8 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			st = newQuestState(player);
 		}
 		
-		if (st.hasQuestItems(7267))
+		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
 		{
-			// st.takeItems(7267, 1); // No longer consumed in h5
 			player.teleToLocation(183813, -115157, -3303);
 			st.set("allowEnter", "1");
 		}
@@ -85,7 +88,6 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		{
 			htmltext = "31540-06.htm";
 		}
-		
 		return htmltext;
 	}
 	
@@ -103,6 +105,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		switch (npc.getNpcId())
 		{
 			case 13001:
+			{
 				if (antharasAI() != null)
 				{
 					int status = GrandBossManager.getInstance().getBossStatus(29019);
@@ -120,9 +123,8 @@ public class GrandBossTeleporters extends AbstractNpcAI
 					}
 					else if ((status == 0) || (status == 1)) // If entrance to see Antharas is unlocked (he is Dormant or Waiting)
 					{
-						if (st.hasQuestItems(3865))
+						if (st.hasQuestItems(PORTAL_STONE))
 						{
-							// st.takeItems(3865, 1); // No longer consumed in h5
 							L2BossZone zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
 							
 							if (zone != null)
@@ -145,12 +147,14 @@ public class GrandBossTeleporters extends AbstractNpcAI
 					}
 				}
 				break;
-			
+			}
 			case 31859:
+			{
 				player.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 				break;
-			
+			}
 			case 31385:
+			{
 				if (valakasAI() != null)
 				{
 					int status = GrandBossManager.getInstance().getBossStatus(29028);
@@ -201,20 +205,24 @@ public class GrandBossTeleporters extends AbstractNpcAI
 					htmltext = "31385-01.htm";
 				}
 				break;
-			
+			}
 			case 31384:
+			{
 				DoorTable.getInstance().getDoor(24210004).openMe();
 				break;
-			
+			}
 			case 31686:
+			{
 				DoorTable.getInstance().getDoor(24210006).openMe();
 				break;
-			
+			}
 			case 31687:
+			{
 				DoorTable.getInstance().getDoor(24210005).openMe();
 				break;
-			
+			}
 			case 31540:
+			{
 				if (playerCount < 50)
 				{
 					htmltext = "31540-01.htm";
@@ -236,19 +244,19 @@ public class GrandBossTeleporters extends AbstractNpcAI
 					htmltext = "31540-05.htm";
 				}
 				break;
-			
+			}
 			case 31759:
+			{
 				player.teleToLocation(150037 + getRandom(500), -57720 + getRandom(500), -2976);
 				break;
+			}
 		}
-		
 		return htmltext;
 	}
 	
 	private GrandBossTeleporters(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(NPCs);
 		addTalkId(NPCs);
 	}

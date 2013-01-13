@@ -30,8 +30,9 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class NoblesseTeleport extends AbstractNpcAI
 {
+	// Item
 	private static final int OLYMPIAD_TOKEN = 13722;
-	
+	// NPCs
 	private static final int[] NPCs =
 	{
 		30006,
@@ -69,28 +70,20 @@ public class NoblesseTeleport extends AbstractNpcAI
 				return "noble-nopass.htm";
 			}
 		}
-		
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.isNoble())
-		{
-			return "nobleteleporter.htm";
-		}
-		
-		return "nobleteleporter-no.htm";
+		return player.isNoble() ? "nobleteleporter.htm" : "nobleteleporter-no.htm";
 	}
 	
 	private NoblesseTeleport(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(NPCs);
 		addTalkId(NPCs);
-		
 	}
 	
 	public static void main(String[] args)

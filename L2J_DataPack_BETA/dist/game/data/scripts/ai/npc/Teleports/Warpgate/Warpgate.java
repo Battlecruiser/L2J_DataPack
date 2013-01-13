@@ -37,9 +37,10 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
  */
 public class Warpgate extends AbstractNpcAI
 {
+	// Misc
 	private static final int MAP = 9994;
 	private static final int ZONE = 40101;
-	
+	// Teleports
 	private static final int[] WARPGATES =
 	{
 		32314,
@@ -142,7 +143,6 @@ public class Warpgate extends AbstractNpcAI
 	private Warpgate(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(WARPGATES);
 		addFirstTalkId(WARPGATES);
 		addTalkId(WARPGATES);

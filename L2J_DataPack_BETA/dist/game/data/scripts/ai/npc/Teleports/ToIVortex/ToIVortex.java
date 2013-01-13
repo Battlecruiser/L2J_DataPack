@@ -230,14 +230,12 @@ public class ToIVortex extends AbstractNpcAI
 				break;
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	private ToIVortex(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
 		addTalkId(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
 	}
