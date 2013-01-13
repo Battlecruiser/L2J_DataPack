@@ -35,6 +35,9 @@ import handlers.effecthandlers.CancelAll;
 import handlers.effecthandlers.CancelDebuff;
 import handlers.effecthandlers.ChameleonRest;
 import handlers.effecthandlers.ChanceSkillTrigger;
+import handlers.effecthandlers.ChangeFace;
+import handlers.effecthandlers.ChangeHairColor;
+import handlers.effecthandlers.ChangeHairStyle;
 import handlers.effecthandlers.CharmOfCourage;
 import handlers.effecthandlers.CharmOfLuck;
 import handlers.effecthandlers.ClanGate;
@@ -125,6 +128,9 @@ public final class EffectMasterHandler
 		CancelDebuff.class,
 		ChameleonRest.class,
 		ChanceSkillTrigger.class,
+		ChangeFace.class,
+		ChangeHairColor.class,
+		ChangeHairStyle.class,
 		CharmOfCourage.class,
 		CharmOfLuck.class,
 		ClanGate.class,
