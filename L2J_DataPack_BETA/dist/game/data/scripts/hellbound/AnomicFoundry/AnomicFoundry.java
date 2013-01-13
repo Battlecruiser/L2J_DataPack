@@ -257,7 +257,7 @@ public class AnomicFoundry extends Quest
 				npc.setIsNoRndWalk(true);
 			}
 		}
-
+		
 		else
 		{
 			if ((getSpawnGroup(npc) >= 0) && (getSpawnGroup(npc) <= 2))
@@ -279,7 +279,7 @@ public class AnomicFoundry extends Quest
 				npc.scheduleDespawn(100);
 			}
 		}
-
+		
 		return super.onSpawn(npc);
 	}
 	
@@ -298,7 +298,7 @@ public class AnomicFoundry extends Quest
 		}
 		return -1;
 	}
-
+	
 	private static void requestHelp(L2Npc requester, L2PcInstance agressor, int range)
 	{
 		for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawnTable())

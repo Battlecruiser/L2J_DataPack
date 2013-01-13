@@ -70,7 +70,7 @@ public class HellboundTown extends Quest
 		NpcStringId.GUARDS_ARE_COMING_RUN,
 		NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
 	};
-
+	
 	private static final int TOMBSTONE = 32343;
 	private static final int KANAF = 32346;
 	private static final int KEYMASTER = 22361;
@@ -249,7 +249,7 @@ public class HellboundTown extends Quest
 			npc.setBusy(false);
 			npc.setBusyMessage("");
 		}
-
+		
 		return super.onSpawn(npc);
 	}
 	
@@ -465,7 +465,7 @@ public class HellboundTown extends Quest
 			}
 		}
 	}
-
+	
 	private class ExitInstance implements Runnable
 	{
 		private final L2Party _party;
