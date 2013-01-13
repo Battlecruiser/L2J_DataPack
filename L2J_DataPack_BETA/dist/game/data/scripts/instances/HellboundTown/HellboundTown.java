@@ -23,7 +23,6 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -71,27 +70,7 @@ public class HellboundTown extends Quest
 		NpcStringId.GUARDS_ARE_COMING_RUN,
 		NpcStringId.NOW_I_CAN_ESCAPE_ON_MY_OWN
 	};
-	
-	private static final int[][] ROUTE_DATA =
-	{
-		{
-			14840,
-			251949
-		},
-		{
-			16082,
-			251790
-		},
-		{
-			16524,
-			255244
-		},
-		{
-			17670,
-			252256
-		}
-	};
-	
+
 	private static final int TOMBSTONE = 32343;
 	private static final int KANAF = 32346;
 	private static final int KEYMASTER = 22361;
@@ -270,10 +249,7 @@ public class HellboundTown extends Quest
 			npc.setBusy(false);
 			npc.setBusyMessage("");
 		}
-		else if ((npc.getNpcId() == TOWN_PATROL) && (getRoute(npc) > 0))
-		{
-			WalkingManager.getInstance().startMoving(npc, getRoute(npc));
-		}
+
 		return super.onSpawn(npc);
 	}
 	
@@ -489,26 +465,7 @@ public class HellboundTown extends Quest
 			}
 		}
 	}
-	
-	private static int getRoute(L2Npc npc)
-	{
-		int ret = -1;
-		int[] coords = new int[2];
-		coords[0] = npc.getSpawn().getLocx();
-		coords[1] = npc.getSpawn().getLocy();
-		
-		for (int i = 0; i < 4; i++)
-		{
-			if ((ROUTE_DATA[i][0] == coords[0]) && (ROUTE_DATA[i][1] == coords[1]))
-			{
-				ret = i;
-				break;
-			}
-		}
-		
-		return ret >= 0 ? ret + 2 : -1;
-	}
-	
+
 	private class ExitInstance implements Runnable
 	{
 		private final L2Party _party;
