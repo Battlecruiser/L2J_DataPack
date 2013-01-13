@@ -25,7 +25,6 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -258,14 +257,10 @@ public class AnomicFoundry extends Quest
 				npc.setIsNoRndWalk(true);
 			}
 		}
-		
-		if ((getSpawnGroup(npc) >= 0) && (getSpawnGroup(npc) <= 2))
+
+		else
 		{
-			if (!npc.isTeleporting())
-			{
-				WalkingManager.getInstance().startMoving(npc, getRoute(npc));
-			}
-			else
+			if ((getSpawnGroup(npc) >= 0) && (getSpawnGroup(npc) <= 2))
 			{
 				_spawned[getSpawnGroup(npc)]--;
 				SpawnTable.getInstance().deleteSpawn(npc.getSpawn(), false);
@@ -275,15 +270,7 @@ public class AnomicFoundry extends Quest
 					addSpawn(SPAWNS[3][0], SPAWNS[3][1], SPAWNS[3][2], SPAWNS[3][3], SPAWNS[3][4], false, 0, false);
 				}
 			}
-		}
-		
-		else if (getSpawnGroup(npc) == 3)
-		{
-			if (!npc.isTeleporting())
-			{
-				WalkingManager.getInstance().startMoving(npc, getRoute(npc));
-			}
-			else
+			else if (getSpawnGroup(npc) == 3)
 			{
 				// Announcements.getInstance().announceToAll("Greater spawn is added");
 				startQuestTimer("make_spawn_2", respawnTime * 2, null, null);
@@ -292,12 +279,7 @@ public class AnomicFoundry extends Quest
 				npc.scheduleDespawn(100);
 			}
 		}
-		
-		else if ((getSpawnGroup(npc) == 4) && !npc.isTeleporting())
-		{
-			WalkingManager.getInstance().startMoving(npc, getRoute(npc));
-		}
-		
+
 		return super.onSpawn(npc);
 	}
 	
@@ -316,14 +298,7 @@ public class AnomicFoundry extends Quest
 		}
 		return -1;
 	}
-	
-	private static int getRoute(L2Npc npc)
-	{
-		final int ret = getSpawnGroup(npc);
-		
-		return ret >= 0 ? ret + 6 : -1;
-	}
-	
+
 	private static void requestHelp(L2Npc requester, L2PcInstance agressor, int range)
 	{
 		for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawnTable())
