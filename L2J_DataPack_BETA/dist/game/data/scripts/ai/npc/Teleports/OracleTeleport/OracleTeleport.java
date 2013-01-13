@@ -228,7 +228,6 @@ public class OracleTeleport extends AbstractNpcAI
 	private OracleTeleport(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(RIFT_POSTERS);
 		addStartNpc(TELEPORTERS);
 		addStartNpc(TEMPLE_PRIEST);
@@ -240,6 +239,9 @@ public class OracleTeleport extends AbstractNpcAI
 		addTalkId(TOWN_DAWN);
 		addTalkId(TOWN_DUSK);
 	}
+	
+	// Item
+	private static final int DIMENSIONAL_FRAGMENT = 7079;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -318,27 +320,27 @@ public class OracleTeleport extends AbstractNpcAI
 			int playerLevel = player.getLevel();
 			if ((playerLevel >= 20) && (playerLevel < 30))
 			{
-				st.takeItems(57, 2000);
+				st.takeItems(PcInventory.ADENA_ID, 2000);
 			}
 			else if ((playerLevel >= 30) && (playerLevel < 40))
 			{
-				st.takeItems(57, 4500);
+				st.takeItems(PcInventory.ADENA_ID, 4500);
 			}
 			else if ((playerLevel >= 40) && (playerLevel < 50))
 			{
-				st.takeItems(57, 8000);
+				st.takeItems(PcInventory.ADENA_ID, 8000);
 			}
 			else if ((playerLevel >= 50) && (playerLevel < 60))
 			{
-				st.takeItems(57, 12500);
+				st.takeItems(PcInventory.ADENA_ID, 12500);
 			}
 			else if ((playerLevel >= 60) && (playerLevel < 70))
 			{
-				st.takeItems(57, 18000);
+				st.takeItems(PcInventory.ADENA_ID, 18000);
 			}
 			else if (playerLevel >= 70)
 			{
-				st.takeItems(57, 24500);
+				st.takeItems(PcInventory.ADENA_ID, 24500);
 			}
 			int i = 0;
 			for (int ziggurat : TELEPORTERS)
@@ -355,7 +357,6 @@ public class OracleTeleport extends AbstractNpcAI
 			htmltext = "ziggurat_rift.htm";
 			player.teleToLocation(-114755, -179466, -6752);
 		}
-		
 		return htmltext;
 	}
 	
@@ -412,7 +413,7 @@ public class OracleTeleport extends AbstractNpcAI
 				htmltext = "1a.htm";
 				st.exitQuest(true);
 			}
-			else if (!st.hasQuestItems(7079))
+			else if (!st.hasQuestItems(DIMENSIONAL_FRAGMENT))
 			{
 				htmltext = "3.htm";
 			}
@@ -435,37 +436,37 @@ public class OracleTeleport extends AbstractNpcAI
 				player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
 				st.exitQuest(true);
 			}
-			else if (!st.hasQuestItems(7079))
+			else if (!st.hasQuestItems(DIMENSIONAL_FRAGMENT))
 			{
 				htmltext = "ziggurat_nofrag.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 20) && (playerLevel < 30) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 2000))
+			else if ((playerLevel >= 20) && (playerLevel < 30) && (player.getAdena() < 2000))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 30) && (playerLevel < 40) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 4500))
+			else if ((playerLevel >= 30) && (playerLevel < 40) && (player.getAdena() < 4500))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 40) && (playerLevel < 50) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 8000))
+			else if ((playerLevel >= 40) && (playerLevel < 50) && (player.getAdena() < 8000))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 50) && (playerLevel < 60) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 12500))
+			else if ((playerLevel >= 50) && (playerLevel < 60) && (player.getAdena() < 12500))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 60) && (playerLevel < 70) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 18000))
+			else if ((playerLevel >= 60) && (playerLevel < 70) && (player.getAdena() < 18000))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
 			}
-			else if ((playerLevel >= 70) && (st.getQuestItemsCount(PcInventory.ADENA_ID) < 24500))
+			else if ((playerLevel >= 70) && (player.getAdena() < 24500))
 			{
 				htmltext = "ziggurat_noadena.htm";
 				st.exitQuest(true);
@@ -475,7 +476,6 @@ public class OracleTeleport extends AbstractNpcAI
 				htmltext = "ziggurat.htm";
 			}
 		}
-		
 		return htmltext;
 	}
 	

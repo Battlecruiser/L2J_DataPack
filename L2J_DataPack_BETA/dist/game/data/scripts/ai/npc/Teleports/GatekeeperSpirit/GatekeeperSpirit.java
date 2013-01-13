@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
  */
 public class GatekeeperSpirit extends AbstractNpcAI
 {
+	// NPCs
 	private final static int GATEKEEPER_SPIRIT_ENTER = 31111;
 	private final static int GATEKEEPER_SPIRIT_EXIT = 31112;
 	private final static int LILITH = 25283;
@@ -39,7 +40,6 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	private GatekeeperSpirit(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
 		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
 		addTalkId(GATEKEEPER_SPIRIT_ENTER);
@@ -50,7 +50,6 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
 		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 		int sealAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
 		int compWinner = SevenSigns.getInstance().getCabalHighestScore();
@@ -60,22 +59,25 @@ public class GatekeeperSpirit extends AbstractNpcAI
 			switch (sealAvariceOwner)
 			{
 				case SevenSigns.CABAL_DAWN:
-					htmltext = "dawn.htm";
-					break;
+				{
+					return "dawn.htm";
+				}
 				case SevenSigns.CABAL_DUSK:
-					htmltext = "dusk.htm";
-					break;
+				{
+					return "dusk.htm";
+				}
 				case SevenSigns.CABAL_NULL:
+				{
 					npc.showChatWindow(player);
 					break;
+				}
 			}
 		}
 		else
 		{
 			npc.showChatWindow(player);
 		}
-		
-		return htmltext;
+		return super.onFirstTalk(npc, player);
 	}
 	
 	@Override
@@ -95,7 +97,6 @@ public class GatekeeperSpirit extends AbstractNpcAI
 			// exit_necropolis_boss_anakim
 			addSpawn(GATEKEEPER_SPIRIT_EXIT, 184410, -13102, -5488, 0, false, 900000);
 		}
-		
 		return super.onKill(npc, killer, isPet);
 	}
 	

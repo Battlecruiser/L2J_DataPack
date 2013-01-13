@@ -23,7 +23,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Mithril Mines teleport AI.
@@ -31,6 +30,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class MithrilMines extends AbstractNpcAI
 {
+	// Location
 	private static final Location[] LOCS =
 	{
 		new Location(171946, -173352, 3440),
@@ -40,60 +40,45 @@ public class MithrilMines extends AbstractNpcAI
 		new Location(178591, -184615, 360),
 		new Location(175499, -181586, -904)
 	};
-	
-	private final static int NPC = 32652;
+	// NPC
+	private final static int TELEPORT_CRYSTAL = 32652;
 	
 	private MithrilMines(String name, String descr)
 	{
 		super(name, descr);
-		
-		addStartNpc(NPC);
-		addFirstTalkId(NPC);
-		addTalkId(NPC);
+		addStartNpc(TELEPORT_CRYSTAL);
+		addFirstTalkId(TELEPORT_CRYSTAL);
+		addTalkId(TELEPORT_CRYSTAL);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
 		int index = Integer.parseInt(event) - 1;
 		if (LOCS.length > index)
 		{
 			Location loc = LOCS[index];
-			
 			player.teleToLocation(loc, false);
-			st.exitQuest(true);
 		}
-		
-		return htmltext;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
-		
 		if (npc.isInsideRadius(173147, -173762, L2Npc.INTERACTION_DISTANCE, true))
 		{
-			htmltext = "32652-01.htm";
+			return "32652-01.htm";
 		}
 		else if (npc.isInsideRadius(181941, -174614, L2Npc.INTERACTION_DISTANCE, true))
 		{
-			htmltext = "32652-02.htm";
+			return "32652-02.htm";
 		}
 		else if (npc.isInsideRadius(179560, -182956, L2Npc.INTERACTION_DISTANCE, true))
 		{
-			htmltext = "32652-03.htm";
+			return "32652-03.htm";
 		}
-		
-		return htmltext;
+		return super.onFirstTalk(npc, player);
 	}
 	
 	public static void main(String[] args)

@@ -31,18 +31,21 @@ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
  */
 public class Survivor extends AbstractNpcAI
 {
+	// NPC
 	private static final int SURVIVOR = 32632;
+	// Misc
+	private static final int MIN_LEVEL = 75;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if ("32632-2.htm".equals(event))
 		{
-			if (player.getLevel() < 75)
+			if (player.getLevel() < MIN_LEVEL)
 			{
 				event = "32632-3.htm";
 			}
-			else if (getQuestItemsCount(player, PcInventory.ADENA_ID) < 150000)
+			else if (player.getAdena() < 150000)
 			{
 				return event;
 			}
@@ -65,7 +68,6 @@ public class Survivor extends AbstractNpcAI
 	private Survivor(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(SURVIVOR);
 		addTalkId(SURVIVOR);
 	}

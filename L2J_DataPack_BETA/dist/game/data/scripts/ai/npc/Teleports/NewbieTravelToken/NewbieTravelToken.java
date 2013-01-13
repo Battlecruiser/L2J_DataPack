@@ -26,7 +26,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
@@ -37,6 +36,7 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class NewbieTravelToken extends AbstractNpcAI
 {
+	// Item
 	private static final int NEWBIE_TRAVEL_TOKEN = 8542;
 	// NPC Id - Teleport Location
 	private static final Map<Integer, Location> DATA = new FastMap<>();
@@ -44,24 +44,18 @@ public class NewbieTravelToken extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
 		if (Util.isDigit(event))
 		{
 			final int npcId = Integer.parseInt(event);
 			if (DATA.keySet().contains(npcId))
 			{
-				if (st.hasQuestItems(NEWBIE_TRAVEL_TOKEN))
+				if (hasQuestItems(player, NEWBIE_TRAVEL_TOKEN))
 				{
-					st.takeItems(NEWBIE_TRAVEL_TOKEN, 1);
+					takeItems(player, NEWBIE_TRAVEL_TOKEN, 1);
 					player.teleToLocation(DATA.get(npcId), false);
 				}
 				else
 				{
-					st.exitQuest(true);
 					player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
 				}
 				return super.onAdvEvent(event, npc, player);
@@ -73,27 +67,12 @@ public class NewbieTravelToken extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st != null)
-		{
-			if (player.getLevel() >= 20)
-			{
-				htmltext = "cant-travel.htm";
-				st.exitQuest(true);
-			}
-			else
-			{
-				htmltext = npc.getNpcId() + ".htm";
-			}
-		}
-		return htmltext;
+		return player.getLevel() >= 20 ? "cant-travel.htm" : npc.getNpcId() + ".htm";
 	}
 	
 	private NewbieTravelToken(String name, String descr)
 	{
 		super(name, descr);
-		
 		// Initialize Map
 		DATA.put(30600, new Location(12160, 16554, -4583)); // DE
 		DATA.put(30601, new Location(115594, -177993, -912)); // DW

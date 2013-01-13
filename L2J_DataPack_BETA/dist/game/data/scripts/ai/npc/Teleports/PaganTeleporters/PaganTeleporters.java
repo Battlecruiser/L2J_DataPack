@@ -23,7 +23,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Pagan Temple teleport AI.<br>
@@ -63,7 +62,6 @@ public class PaganTeleporters extends AbstractNpcAI
 			DoorTable.getInstance().getDoor(19160010).closeMe();
 			DoorTable.getInstance().getDoor(19160011).closeMe();
 		}
-		
 		return "";
 	}
 	
@@ -78,74 +76,58 @@ public class PaganTeleporters extends AbstractNpcAI
 		{
 			player.teleToLocation(36640, -51218, 718);
 		}
-		
 		return "";
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return null;
-		}
-		
 		switch (npc.getNpcId())
 		{
 			case 32034:
-				if (!st.hasQuestItems(VISITORS_MARK) && !st.hasQuestItems(FADED_VISITORS_MARK) && !st.hasQuestItems(PAGANS_MARK))
+			{
+				if (!hasQuestItems(player, VISITORS_MARK) && !hasQuestItems(player, FADED_VISITORS_MARK) && !hasQuestItems(player, PAGANS_MARK))
 				{
-					htmltext = "noItem.htm";
+					return "noItem.htm";
 				}
-				else
-				{
-					htmltext = "FadedMark.htm";
-					DoorTable.getInstance().getDoor(19160001).openMe();
-					startQuestTimer("Close_Door1", 10000, null, null);
-				}
-				break;
-			case 32035:
 				DoorTable.getInstance().getDoor(19160001).openMe();
 				startQuestTimer("Close_Door1", 10000, null, null);
-				htmltext = "FadedMark.htm";
-				break;
+				return "FadedMark.htm";
+			}
+			case 32035:
+			{
+				DoorTable.getInstance().getDoor(19160001).openMe();
+				startQuestTimer("Close_Door1", 10000, null, null);
+				return "FadedMark.htm";
+			}
 			case 32036:
-				if (!st.hasQuestItems(PAGANS_MARK))
+			{
+				if (!hasQuestItems(player, PAGANS_MARK))
 				{
-					htmltext = "noMark.htm";
+					return "noMark.htm";
 				}
-				else
-				{
-					htmltext = "openDoor.htm";
-					startQuestTimer("Close_Door2", 10000, null, null);
-					DoorTable.getInstance().getDoor(19160010).openMe();
-					DoorTable.getInstance().getDoor(19160011).openMe();
-				}
-				break;
+				startQuestTimer("Close_Door2", 10000, null, null);
+				DoorTable.getInstance().getDoor(19160010).openMe();
+				DoorTable.getInstance().getDoor(19160011).openMe();
+				return "openDoor.htm";
+			}
 			case 32037:
+			{
 				DoorTable.getInstance().getDoor(19160010).openMe();
 				DoorTable.getInstance().getDoor(19160011).openMe();
 				startQuestTimer("Close_Door2", 10000, null, null);
-				htmltext = "FadedMark.htm";
-				break;
+				return "FadedMark.htm";
+			}
 		}
-		
-		st.exitQuest(true);
-		
-		return htmltext;
+		return super.onTalk(npc, player);
 	}
 	
 	private PaganTeleporters(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(TRIOLS_MIRROR_1, TRIOLS_MIRROR_2);
-		
 	}
 	
 	public static void main(String[] args)

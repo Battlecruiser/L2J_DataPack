@@ -30,6 +30,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class ElrokiTeleporters extends AbstractNpcAI
 {
+	// NPCs
 	private static final int ORAHOCHIN = 32111;
 	private static final int GARIACHIN = 32112;
 	
@@ -39,24 +40,26 @@ public class ElrokiTeleporters extends AbstractNpcAI
 		switch (npc.getNpcId())
 		{
 			case ORAHOCHIN:
+			{
 				if (player.isInCombat())
 				{
 					return "32111-no.htm";
 				}
 				player.teleToLocation(4990, -1879, -3178);
 				break;
+			}
 			case GARIACHIN:
+			{
 				player.teleToLocation(7557, -5513, -3221);
 				break;
+			}
 		}
-		
-		return null;
+		return super.onTalk(npc, player);
 	}
 	
 	private ElrokiTeleporters(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(ORAHOCHIN, GARIACHIN);
 		addTalkId(ORAHOCHIN, GARIACHIN);
 	}

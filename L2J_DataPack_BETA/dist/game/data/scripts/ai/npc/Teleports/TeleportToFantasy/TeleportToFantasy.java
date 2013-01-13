@@ -39,9 +39,11 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public class TeleportToFantasy extends AbstractNpcAI
 {
+	// NPC
 	private static final int PADDIES = 32378;
+	// Misc
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
-	
+	// Locations
 	private static final Location[] RETURN_LOCS =
 	{
 		new Location(-80826, 149775, -3043),
@@ -85,7 +87,6 @@ public class TeleportToFantasy extends AbstractNpcAI
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
 		}
-		
 		else if (npc.getNpcId() == PADDIES)
 		{
 			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
@@ -100,17 +101,14 @@ public class TeleportToFantasy extends AbstractNpcAI
 				player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
 				player.teleToLocation(43835, -47749, -792);
 			}
-			
 			st.exitQuest(true);
 		}
-		
 		return htmltext;
 	}
 	
 	private TeleportToFantasy(String name, String descr)
 	{
 		super(name, descr);
-		
 		TELEPORTERS.put(30059, 3); // TRISHA
 		TELEPORTERS.put(30080, 4); // CLARISSA
 		TELEPORTERS.put(30177, 6); // VALENTIA

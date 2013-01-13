@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public class StakatoNestTeleporter extends AbstractNpcAI
 {
+	// Locations
 	private final static Location[] LOCS =
 	{
 		new Location(80456, -52322, -5640),
@@ -40,13 +41,12 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 		new Location(80848, -49426, -5128),
 		new Location(87682, -43291, -4128)
 	};
-	
+	// NPC
 	private final static int KINTAIJIN = 32640;
 	
 	private StakatoNestTeleporter(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 	}
@@ -54,13 +54,6 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
-		
 		int index = Integer.parseInt(event) - 1;
 		
 		if (LOCS.length > index)
@@ -78,27 +71,15 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 				}
 			}
 			player.teleToLocation(loc, false);
-			st.exitQuest(true);
 		}
-		
-		return htmltext;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
 		QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
-		if ((accessQuest != null) && accessQuest.isCompleted())
-		{
-			htmltext = "32640.htm";
-		}
-		else
-		{
-			htmltext = "32640-no.htm";
-		}
-		
-		return htmltext;
+		return ((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm";
 	}
 	
 	public static void main(String[] args)

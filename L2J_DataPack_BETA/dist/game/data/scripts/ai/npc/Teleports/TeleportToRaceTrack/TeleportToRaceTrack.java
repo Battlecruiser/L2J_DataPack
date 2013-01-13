@@ -37,10 +37,11 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public class TeleportToRaceTrack extends AbstractNpcAI
 {
+	// NPC
 	private static final int RACE_MANAGER = 30995;
-	
+	// Misc
 	private static final Map<Integer, Integer> TELEPORTERS = new FastMap<>();
-	
+	// Locations
 	private static final Location[] RETURN_LOCS =
 	{
 		new Location(-80826, 149775, -3043),
@@ -74,7 +75,6 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
 		}
-		
 		else if (npc.getNpcId() == RACE_MANAGER)
 		{
 			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
@@ -86,23 +86,19 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 					st.unset("id");
 				}
 			}
-			
 			else
 			{
 				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "You've arrived here from a different way. I'll send you to Dion Castle Town which is the nearest town."));
 				st.getPlayer().teleToLocation(15670, 142983, -2700);
 			}
-			
 			st.exitQuest(true);
 		}
-		
 		return htmltext;
 	}
 	
 	public TeleportToRaceTrack(String name, String descr)
 	{
 		super(name, descr);
-		
 		TELEPORTERS.put(30059, 3); // TRISHA
 		TELEPORTERS.put(30080, 4); // CLARISSA
 		TELEPORTERS.put(30177, 6); // VALENTIA

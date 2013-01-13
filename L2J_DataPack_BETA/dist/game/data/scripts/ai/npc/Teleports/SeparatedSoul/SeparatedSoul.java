@@ -50,10 +50,8 @@ public class SeparatedSoul extends AbstractNpcAI
 	private static final int WILL_OF_ANTHARAS = 17266;
 	private static final int SEALED_BLOOD_CRYSTAL = 17267;
 	private static final int ANTHARAS_BLOOD_CRYSTAL = 17268;
-	
 	// Misc
 	private static final int MIN_LEVEL = 80;
-	
 	// Locations
 	private static final Map<String, Location> LOCATIONS = new HashMap<>();
 	static
@@ -84,7 +82,7 @@ public class SeparatedSoul extends AbstractNpcAI
 		}
 		else if ("Synthesis".equals(event)) // Request Item Synthesis
 		{
-			if (hasQuestItems(player, WILL_OF_ANTHARAS) && hasQuestItems(player, SEALED_BLOOD_CRYSTAL))
+			if (hasQuestItems(player, WILL_OF_ANTHARAS, SEALED_BLOOD_CRYSTAL))
 			{
 				takeItems(player, WILL_OF_ANTHARAS, 1);
 				takeItems(player, SEALED_BLOOD_CRYSTAL, 1);
@@ -95,14 +93,12 @@ public class SeparatedSoul extends AbstractNpcAI
 				return "no-items.htm";
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	private SeparatedSoul(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
 	}
