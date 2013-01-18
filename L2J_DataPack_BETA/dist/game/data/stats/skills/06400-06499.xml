@@ -428,12 +428,18 @@
 	<skill id="6425" levels="1" name="Demotivation Hex">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pd_down" />
+		<set name="magicLvl" val="84" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="lvlDepend" val="2" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="10" abnormalLvl="3" abnormalType="pd_down">
+				<mul order="0x30" stat="pDef" val="0.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6426" levels="1" name="Priest's Ire">
 		<!-- Confirmed CT2.5 -->
@@ -454,7 +460,8 @@
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
 		<!-- Fantasy Mushroom Skill -->
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="magicLvl" val="84" />
+		<set name="target" val="TARGET_SELF" />
 		<set name="skillRadius" val="300" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
@@ -507,13 +514,12 @@
 	<skill id="6430" levels="1" name="Roar Hip Heal">
 		<!-- Energy Plant Skill -->
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<for>
-			<effect name="HealPercent" noicon="1" val="30" />
-		</for>
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="power" val="30" />
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->
