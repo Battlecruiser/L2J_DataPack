@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
@@ -194,16 +193,6 @@ public abstract class AbstractNpcAI extends L2Script
 	protected void broadcastSocialAction(L2Character character, int actionId, int radius)
 	{
 		Broadcast.toSelfAndKnownPlayersInRadius(character, new SocialAction(character.getObjectId(), actionId), radius);
-	}
-	
-	/**
-	 * Give item/reward to the player
-	 * @param player
-	 * @param holder
-	 */
-	protected void giveItems(L2PcInstance player, ItemHolder holder)
-	{
-		super.giveItems(player, holder.getId(), holder.getCount());
 	}
 	
 	/**
