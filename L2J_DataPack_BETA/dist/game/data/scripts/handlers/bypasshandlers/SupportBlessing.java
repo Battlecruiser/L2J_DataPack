@@ -18,13 +18,11 @@
  */
 package handlers.bypasshandlers;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.SkillTable.FrequentSkill;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class SupportBlessing implements IBypassHandler
 {
@@ -41,20 +39,16 @@ public class SupportBlessing implements IBypassHandler
 			return false;
 		}
 		
-		int player_level = activeChar.getLevel();
-		// Select the player
-		((L2Npc) target).setTarget(activeChar);
+		final L2Npc npc = (L2Npc) target;
+		
 		// If the player is too high level, display a message and return
-		if ((player_level > 39) || (activeChar.getClassId().level() >= 2))
+		if ((activeChar.getLevel() > 39) || (activeChar.getClassId().level() >= 2))
 		{
-			NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-			msg.setHtml("<html><body>Newbie Guide:<br>I'm sorry, but you are not eligible to receive the protection blessing.<br1>It can only be bestowed on <font color=\"LEVEL\">characters below level 39 who have not made a seccond transfer.</font></body></html>");
-			activeChar.sendPacket(msg);
+			npc.showChatWindow(activeChar, "data/html/default/SupportBlessingHighLevel.htm");
 			return true;
 		}
-		L2Skill skill = SkillTable.FrequentSkill.BLESSING_OF_PROTECTION.getSkill();
-		((L2Npc) target).doCast(skill);
-		
+		npc.setTarget(activeChar);
+		npc.doCast(FrequentSkill.BLESSING_OF_PROTECTION.getSkill());
 		return false;
 	}
 	
