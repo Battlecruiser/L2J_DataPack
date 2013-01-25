@@ -150,7 +150,7 @@ public class Monastery extends AbstractNpcAI
 			{
 				if (getRandom(10) < 3)
 				{
-					broadcastNpcSay(npc, Say2.ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
+					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
 				}
 				npc.doCast(DECREASE_SPEED.getSkill());
 			}
@@ -169,7 +169,7 @@ public class Monastery extends AbstractNpcAI
 			{
 				if (obj.equals(npc))
 				{
-					NpcSay packet = new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), DIVINITY_MSG[getRandom(1)]);
+					NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), DIVINITY_MSG[getRandom(1)]);
 					packet.addStringParameter(caster.getName());
 					npc.broadcastPacket(packet);
 					((L2Attackable) npc).addDamageHate(caster, 0, 999);
@@ -186,7 +186,7 @@ public class Monastery extends AbstractNpcAI
 	{
 		if (getRandom(10) < 1)
 		{
-			broadcastNpcSay(npc, Say2.ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
+			broadcastNpcSay(npc, Say2.NPC_ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
 		}
 		return super.onAttack(npc, player, damage, isPet);
 	}
@@ -194,7 +194,7 @@ public class Monastery extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		broadcastNpcSay(npc, Say2.ALL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
+		broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
 		return super.onSpawn(npc);
 	}
 	

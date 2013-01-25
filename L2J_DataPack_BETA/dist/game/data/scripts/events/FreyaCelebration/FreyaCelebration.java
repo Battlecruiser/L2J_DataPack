@@ -126,7 +126,7 @@ public class FreyaCelebration extends LongTimeEvent
 		{
 			if (getRandom(100) < 5)
 			{
-				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
+				CreatureSay cs = new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.DEAR_S1_THINK_OF_THIS_AS_MY_APPRECIATION_FOR_THE_GIFT_TAKE_THIS_WITH_YOU_THERES_NOTHING_STRANGE_ABOUT_IT_ITS_JUST_A_BIT_OF_MY_CAPRICIOUSNESS);
 				cs.addStringParameter(caster.getName());
 				
 				npc.broadcastPacket(cs);
@@ -137,7 +137,7 @@ public class FreyaCelebration extends LongTimeEvent
 			{
 				if (getRandom(10) < 2)
 				{
-					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
+					npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), FREYA_TEXT[getRandom(FREYA_TEXT.length - 1)]));
 				}
 			}
 		}

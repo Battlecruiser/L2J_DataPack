@@ -127,14 +127,14 @@ public final class Q00457_LostAndFound extends Quest
 				startQuestTimer("talk_time2", 30000, npc, player);
 				break;
 			case "talk_time":
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.AH_I_THINK_I_REMEMBER_THIS_PLACE));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.AH_I_THINK_I_REMEMBER_THIS_PLACE));
 				break;
 			case "talk_time2":
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.WHAT_WERE_YOU_DOING_HERE));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.WHAT_WERE_YOU_DOING_HERE));
 				startQuestTimer("talk_time3", 10 * 1000, npc, player);
 				break;
 			case "talk_time3":
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.I_GUESS_YOURE_THE_SILENT_TYPE_THEN_ARE_YOU_LOOKING_FOR_TREASURE_LIKE_ME));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.I_GUESS_YOURE_THE_SILENT_TYPE_THEN_ARE_YOU_LOOKING_FOR_TREASURE_LIKE_ME));
 				break;
 			case "time_limit":
 				startQuestTimer("stop", 2000, npc, player);
@@ -151,12 +151,12 @@ public final class Q00457_LostAndFound extends Quest
 					}
 					else if (_count == 0)
 					{
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.HEY_DONT_GO_SO_FAST));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.HEY_DONT_GO_SO_FAST));
 						_count = 1;
 					}
 					else if (_count == 1)
 					{
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.ITS_HARD_TO_FOLLOW));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.ITS_HARD_TO_FOLLOW));
 						_count = 2;
 					}
 					else if (_count == 2)
@@ -172,7 +172,7 @@ public final class Q00457_LostAndFound extends Quest
 						startQuestTimer("stop", 1000, npc, player);
 						startQuestTimer("bye", 3000, npc, player);
 						cancelQuestTimer("check", npc, player);
-						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.ALL, npc.getName(), NpcStringId.AH_FRESH_AIR));
+						npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_ALL, npc.getName(), NpcStringId.AH_FRESH_AIR));
 						st.giveItems(PACKAGED_BOOK, 1);
 						st.exitQuest(QuestType.DAILY, true);
 						break;
