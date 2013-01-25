@@ -61,7 +61,7 @@ public class GiantScouts extends AbstractNpcAI
 		{
 			if (!npc.isInCombat() && (npc.getTarget() == null))
 			{
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
 			}
 			
 			npc.setTarget(target);
