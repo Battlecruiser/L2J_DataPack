@@ -47,7 +47,6 @@ public class Knoriks extends AbstractNpcAI
 		34,
 		35
 	};
-	private long CAN_TALK = 0;
 	
 	private Knoriks(String name, String descr)
 	{
@@ -71,10 +70,6 @@ public class Knoriks extends AbstractNpcAI
 		for (int element : ROUTE_ID)
 		{
 			WalkingManager.getInstance().startMoving(npc, element);
-			if ((CAN_TALK & npc.getObjectId()) < 1)
-			{
-				CAN_TALK |= npc.getObjectId();
-			}
 		}
 		
 		return super.onSpawn(npc);
@@ -83,13 +78,13 @@ public class Knoriks extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		if (((CAN_TALK & npc.getObjectId()) > 0) && (Rnd.get(100) < 60))
+		if ((npc.isScriptValue(0)) && (Rnd.get(100) < 60))
 		{
 			if (Rnd.get(100) < 50)
 			{
-				CAN_TALK &= ~npc.getObjectId();
+				npc.setScriptValue(1);
 			}
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU), 1000);
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU), 1000);
 		}
 		
 		return super.onAggroRangeEnter(npc, player, isPet);

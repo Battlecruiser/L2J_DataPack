@@ -186,7 +186,7 @@ public final class Venom extends AbstractNpcAI
 				if (CastleManager.getInstance().getCastleById(CASTLE).getSiege().getControlTowerCount() <= 1)
 				{
 					changeLocation(MoveTo.THRONE);
-					broadcastNpcSay(_massymore, Say2.SHOUT, NpcStringId.OH_NO_THE_DEFENSES_HAVE_FAILED_IT_IS_TOO_DANGEROUS_TO_REMAIN_INSIDE_THE_CASTLE_FLEE_EVERY_MAN_FOR_HIMSELF);
+					broadcastNpcSay(_massymore, Say2.NPC_SHOUT, NpcStringId.OH_NO_THE_DEFENSES_HAVE_FAILED_IT_IS_TOO_DANGEROUS_TO_REMAIN_INSIDE_THE_CASTLE_FLEE_EVERY_MAN_FOR_HIMSELF);
 					cancelQuestTimer("tower_check", npc, null);
 					startQuestTimer("raid_check", 10000, npc, null, true);
 				}
@@ -312,7 +312,7 @@ public final class Venom extends AbstractNpcAI
 			else
 			{
 				npc.doRevive();
-				broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
+				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
 			}
 		}
 		return super.onSpawn(npc);
@@ -349,7 +349,7 @@ public final class Venom extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		updateStatus(DEAD);
-		broadcastNpcSay(npc, Say2.SHOUT, NpcStringId.ITS_NOT_OVER_YET_IT_WONT_BE_OVER_LIKE_THIS_NEVER);
+		broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ITS_NOT_OVER_YET_IT_WONT_BE_OVER_LIKE_THIS_NEVER);
 		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().getIsInProgress())
 		{
 			L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);
