@@ -1235,7 +1235,12 @@
 		<!-- Description: Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange it for 100 Fame points. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21875" type="EtcItem" name="Campfire Flint">
 		<!-- Description: You can use this item if you have gathered 30 tree branches to start a campfire. A campfire near a battlefield can help to raise HP, MP, and CP recovery rate. You can only make campfires when you are away from towns. You can only receive the recovery bonus while near the campfire. . Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
