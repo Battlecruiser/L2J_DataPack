@@ -56,8 +56,12 @@ public class Q00464_Oath extends Quest
 	private static final int STRONGBOX = 15537;
 	private static final int BOOK = 15538;
 	private static final int BOOK2 = 15539;
+	// Misc
+	private static final int MIN_LEVEL = 82;
+	
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
+	
 	
 	static
 	{
@@ -78,10 +82,10 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
 		String htmltext = event;
@@ -152,7 +156,7 @@ public class Q00464_Oath extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if ((st != null) && st.isStarted())
 		{
@@ -203,7 +207,7 @@ public class Q00464_Oath extends Quest
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -233,7 +237,7 @@ public class Q00464_Oath extends Quest
 		
 		if (startQuest)
 		{
-			if (player.getLevel() >= 82)
+			if (player.getLevel() >= MIN_LEVEL)
 			{
 				st.startQuest();
 				st.takeItems(STRONGBOX, 1);
