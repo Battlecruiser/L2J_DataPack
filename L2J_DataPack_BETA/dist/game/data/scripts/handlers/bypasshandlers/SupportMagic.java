@@ -22,6 +22,7 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 public class SupportMagic implements IBypassHandler
@@ -113,6 +114,11 @@ public class SupportMagic implements IBypassHandler
 			npc.showChatWindow(player, "data/html/default/SupportMagicLowLevel.htm");
 			return;
 		}
+		else if (player.getClassId().level() == 3)
+		{
+			player.sendMessage("Only adventurers who have not completed their 3rd class transfer may receive these buffs."); // Custom message
+			return;
+		}
 		
 		if (isSummon)
 		{
@@ -134,7 +140,7 @@ public class SupportMagic implements IBypassHandler
 		else
 		{
 			npc.setTarget(player);
-			if (player.isMageClass())
+			if (player.isMageClass() && (player.getClassId() != ClassId.overlord) && (player.getClassId() != ClassId.warcryer))
 			{
 				for (SkillHolder skill : MAGE_BUFFS)
 				{
