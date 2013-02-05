@@ -35,6 +35,13 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 	private static final int MOUEN = 30196;
 	private static final int JOHNNY = 32744;
 	
+	public Q00249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MOUEN);
+		addTalkId(MOUEN, JOHNNY);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -101,13 +108,6 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00249_PoisonedPlainsOfTheLizardmen(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MOUEN);
-		addTalkId(MOUEN, JOHNNY);
 	}
 	
 	public static void main(String[] args)

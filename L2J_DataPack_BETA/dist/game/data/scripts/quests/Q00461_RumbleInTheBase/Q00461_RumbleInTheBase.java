@@ -55,6 +55,15 @@ public class Q00461_RumbleInTheBase extends Quest
 		MONSTERS.put(18908, 782);
 	}
 	
+	public Q00461_RumbleInTheBase(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(STAN);
+		addTalkId(STAN);
+		addKillId(MONSTERS.keySet());
+		registerQuestItems(SHINY_SALMON, SHOES_STRING_OF_SEL_MAHUM);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -75,6 +84,50 @@ public class Q00461_RumbleInTheBase extends Quest
 			htmltext = event;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		QuestState st = null;
+		if (getRandom(1000) >= MONSTERS.get(npc.getNpcId()))
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		if (npc.getNpcId() == 18908)
+		{
+			st = player.getQuestState(getName());
+			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))
+			{
+				st.giveItems(SHINY_SALMON, 1);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
+				{
+					st.setCond(2, true);
+				}
+			}
+		}
+		else
+		{
+			final L2PcInstance member = getRandomPartyMember(player, 1);
+			if (member == null)
+			{
+				return super.onKill(npc, player, isPet);
+			}
+			
+			st = member.getQuestState(getName());
+			if (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) < 10)
+			{
+				st.giveItems(SHOES_STRING_OF_SEL_MAHUM, 1);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
+				{
+					st.setCond(2, true);
+				}
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -118,59 +171,6 @@ public class Q00461_RumbleInTheBase extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		QuestState st = null;
-		if (getRandom(1000) >= MONSTERS.get(npc.getNpcId()))
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		if (npc.getNpcId() == 18908)
-		{
-			st = player.getQuestState(getName());
-			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))
-			{
-				st.giveItems(SHINY_SALMON, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
-				{
-					st.setCond(2, true);
-				}
-			}
-		}
-		else
-		{
-			final L2PcInstance member = getRandomPartyMember(player, "1");
-			if (member == null)
-			{
-				return super.onKill(npc, player, isPet);
-			}
-			
-			st = member.getQuestState(getName());
-			if (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) < 10)
-			{
-				st.giveItems(SHOES_STRING_OF_SEL_MAHUM, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
-				{
-					st.setCond(2, true);
-				}
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00461_RumbleInTheBase(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(STAN);
-		addTalkId(STAN);
-		addKillId(MONSTERS.keySet());
-		registerQuestItems(SHINY_SALMON, SHOES_STRING_OF_SEL_MAHUM);
 	}
 	
 	public static void main(String[] args)

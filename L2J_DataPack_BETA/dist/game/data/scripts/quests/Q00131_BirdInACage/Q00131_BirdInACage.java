@@ -52,81 +52,6 @@ public class Q00131_BirdInACage extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			}
-			case State.CREATED:
-			{
-				if (npc.getNpcId() == KANIS)
-				{
-					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
-				}
-				break;
-			}
-			case State.STARTED:
-			{
-				if (npc.getNpcId() == KANIS)
-				{
-					switch (st.getCond())
-					{
-						case 1:
-						{
-							htmltext = "32264-05.html";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "32264-08.html";
-							break;
-						}
-						case 3:
-						{
-							htmltext = "32264-13.html";
-							break;
-						}
-						case 4:
-						{
-							htmltext = "32264-16.html";
-							break;
-						}
-						case 5:
-						{
-							htmltext = "32264-18.html";
-							break;
-						}
-					}
-				}
-				else if (npc.getNpcId() == PARME)
-				{
-					if (st.getCond() < 3)
-					{
-						htmltext = "32271-01.html";
-					}
-					else if (st.isCond(3))
-					{
-						htmltext = "32271-02.html";
-					}
-				}
-				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -231,6 +156,81 @@ public class Q00131_BirdInACage extends Quest
 					player.setInstanceId(0);
 					player.teleToLocation(INSTANCE_EXIT, true);
 					htmltext = event;
+				}
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
+			}
+			case State.CREATED:
+			{
+				if (npc.getNpcId() == KANIS)
+				{
+					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				if (npc.getNpcId() == KANIS)
+				{
+					switch (st.getCond())
+					{
+						case 1:
+						{
+							htmltext = "32264-05.html";
+							break;
+						}
+						case 2:
+						{
+							htmltext = "32264-08.html";
+							break;
+						}
+						case 3:
+						{
+							htmltext = "32264-13.html";
+							break;
+						}
+						case 4:
+						{
+							htmltext = "32264-16.html";
+							break;
+						}
+						case 5:
+						{
+							htmltext = "32264-18.html";
+							break;
+						}
+					}
+				}
+				else if (npc.getNpcId() == PARME)
+				{
+					if (st.getCond() < 3)
+					{
+						htmltext = "32271-01.html";
+					}
+					else if (st.isCond(3))
+					{
+						htmltext = "32271-02.html";
+					}
 				}
 				break;
 			}

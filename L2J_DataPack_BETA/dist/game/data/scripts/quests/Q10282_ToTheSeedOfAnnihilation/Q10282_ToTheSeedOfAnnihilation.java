@@ -37,6 +37,38 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 	// Item
 	private static final int SOA_ORDERS = 15512;
 	
+	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KBALDIR);
+		addTalkId(KBALDIR, KLEMIS);
+		registerQuestItems(SOA_ORDERS);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = event;
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "32733-07.htm":
+				st.startQuest();
+				st.giveItems(SOA_ORDERS, 1);
+				break;
+			case "32734-02.htm":
+				st.addExpAndSp(1148480, 99110);
+				st.exitQuest(false);
+				break;
+		}
+		return htmltext;
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -78,38 +110,6 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (event)
-		{
-			case "32733-07.htm":
-				st.startQuest();
-				st.giveItems(SOA_ORDERS, 1);
-				break;
-			case "32734-02.htm":
-				st.addExpAndSp(1148480, 99110);
-				st.exitQuest(false);
-				break;
-		}
-		return htmltext;
-	}
-	
-	public Q10282_ToTheSeedOfAnnihilation(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KBALDIR);
-		addTalkId(KBALDIR, KLEMIS);
-		registerQuestItems(SOA_ORDERS);
 	}
 	
 	public static void main(String[] args)

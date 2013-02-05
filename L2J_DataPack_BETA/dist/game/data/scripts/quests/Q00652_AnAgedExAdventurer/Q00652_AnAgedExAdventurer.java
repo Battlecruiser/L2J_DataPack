@@ -37,6 +37,13 @@ public class Q00652_AnAgedExAdventurer extends Quest
 	private static final int SOULSHOT_C = 1464;
 	private static final int ENCHANT_ARMOR_D = 956;
 	
+	public Q00652_AnAgedExAdventurer(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(TANTAN);
+		addTalkId(TANTAN, SARA);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -108,13 +115,6 @@ public class Q00652_AnAgedExAdventurer extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00652_AnAgedExAdventurer(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(TANTAN);
-		addTalkId(TANTAN, SARA);
 	}
 	
 	public static void main(String[] args)

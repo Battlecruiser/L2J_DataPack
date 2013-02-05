@@ -90,27 +90,6 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (st.getState() == State.CREATED)
-		{
-			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.html";
-		}
-		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
-		{
-			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
@@ -137,6 +116,27 @@ public final class Q00279_TargetOfOpportunity extends Quest
 			}
 		}
 		return null;
+	}
+	
+	@Override
+	public final String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (st.getState() == State.CREATED)
+		{
+			htmltext = (player.getLevel() >= 82) ? "32302-01.htm" : "32302-02.html";
+		}
+		else if ((st.getState() == State.STARTED) && (st.getInt("progress") == 1))
+		{
+			htmltext = (st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3])) ? "32302-07.html" : "32302-06.html";
+		}
+		return htmltext;
 	}
 	
 	private static final boolean haveAllExceptThis(QuestState st, int idx)

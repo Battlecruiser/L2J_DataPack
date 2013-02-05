@@ -44,42 +44,71 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 public abstract class AirShipController extends Quest
 {
+	protected final class DecayTask implements Runnable
+	{
+		@Override
+		public void run()
+		{
+			if (_dockedShip != null)
+			{
+				_dockedShip.deleteMe();
+			}
+		}
+	}
+	
+	protected final class DepartTask implements Runnable
+	{
+		@Override
+		public void run()
+		{
+			if ((_dockedShip != null) && _dockedShip.isInDock() && !_dockedShip.isMoving())
+			{
+				if (_departPath != null)
+				{
+					_dockedShip.executePath(_departPath);
+				}
+				else
+				{
+					_dockedShip.deleteMe();
+				}
+			}
+		}
+	}
+	
 	public static final Logger _log = Logger.getLogger(AirShipController.class.getName());
-	
 	protected int _dockZone = 0;
-	
 	protected int _shipSpawnX = 0;
 	protected int _shipSpawnY = 0;
+	
 	protected int _shipSpawnZ = 0;
+	
 	protected int _shipHeading = 0;
-	
 	protected Location _oustLoc = null;
-	
 	protected int _locationId = 0;
+	
 	protected VehiclePathPoint[] _arrivalPath = null;
 	protected VehiclePathPoint[] _departPath = null;
 	
 	protected VehiclePathPoint[][] _teleportsTable = null;
+	
 	protected int[] _fuelTable = null;
 	
 	protected int _movieId = 0;
 	
 	protected boolean _isBusy = false;
-	
 	protected L2ControllableAirShipInstance _dockedShip = null;
-	
 	private final Runnable _decayTask = new DecayTask();
+	
 	private final Runnable _departTask = new DepartTask();
+	
 	private Future<?> _departSchedule = null;
 	
 	private NpcSay _arrivalMessage = null;
-	
 	private static final int DEPART_INTERVAL = 300000; // 5 min
-	
 	private static final int LICENSE = 13559;
+	
 	private static final int STARSTONE = 13277;
 	private static final int SUMMON_COST = 5;
-	
 	private static final SystemMessage SM_ALREADY_EXISTS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS);
 	private static final SystemMessage SM_ALREADY_SUMMONED = SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED);
 	private static final SystemMessage SM_NEED_LICENSE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON);
@@ -87,8 +116,15 @@ public abstract class AirShipController extends Quest
 	private static final SystemMessage SM_NO_PRIVS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
 	private static final SystemMessage SM_ALREADY_USED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_ALREADY_USED);
 	private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
+	
 	private static final SystemMessage SM_LICENSE_ENTERED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
+	
 	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE);
+	
+	public AirShipController(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -258,12 +294,6 @@ public abstract class AirShipController extends Quest
 	}
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		return npc.getNpcId() + ".htm";
-	}
-	
-	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
 		if (character instanceof L2ControllableAirShipInstance)
@@ -318,6 +348,12 @@ public abstract class AirShipController extends Quest
 			}
 		}
 		return null;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		return npc.getNpcId() + ".htm";
 	}
 	
 	protected void validityCheck()
@@ -394,41 +430,5 @@ public abstract class AirShipController extends Quest
 				}
 			}
 		}
-	}
-	
-	protected final class DecayTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			if (_dockedShip != null)
-			{
-				_dockedShip.deleteMe();
-			}
-		}
-	}
-	
-	protected final class DepartTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			if ((_dockedShip != null) && _dockedShip.isInDock() && !_dockedShip.isMoving())
-			{
-				if (_departPath != null)
-				{
-					_dockedShip.executePath(_departPath);
-				}
-				else
-				{
-					_dockedShip.deleteMe();
-				}
-			}
-		}
-	}
-	
-	public AirShipController(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
 	}
 }

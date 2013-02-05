@@ -42,6 +42,14 @@ public class Q00017_LightAndDarkness extends Quest
 	// Item
 	private static final int BLOOD_OF_SAINT = 7168;
 	
+	private Q00017_LightAndDarkness(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(HIERARCH);
+		addTalkId(HIERARCH, SAINT_ALTAR_1, SAINT_ALTAR_2, SAINT_ALTAR_3, SAINT_ALTAR_4);
+		registerQuestItems(BLOOD_OF_SAINT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -135,14 +143,6 @@ public class Q00017_LightAndDarkness extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00017_LightAndDarkness(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(HIERARCH);
-		addTalkId(HIERARCH, SAINT_ALTAR_1, SAINT_ALTAR_2, SAINT_ALTAR_3, SAINT_ALTAR_4);
-		registerQuestItems(BLOOD_OF_SAINT);
 	}
 	
 	public static void main(String[] args)

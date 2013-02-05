@@ -46,6 +46,14 @@ public class Q00510_AClansPrestige extends Quest
 		22217
 	};
 	
+	public Q00510_AClansPrestige(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(VALDIS);
+		addTalkId(VALDIS);
+		addKillId(MOBS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -65,6 +73,36 @@ public class Q00510_AClansPrestige extends Quest
 				break;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (player.getClan() == null)
+		{
+			return null;
+		}
+		
+		QuestState st = null;
+		if (player.isClanLeader())
+		{
+			st = player.getQuestState(getName());
+		}
+		else
+		{
+			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
+			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
+			{
+				st = pleader.getQuestState(getName());
+			}
+		}
+		
+		if ((st != null) && st.isStarted())
+		{
+			st.rewardItems(TYRANNOSAURUS_CLAW, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return null;
 	}
 	
 	@Override
@@ -110,44 +148,6 @@ public class Q00510_AClansPrestige extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (player.getClan() == null)
-		{
-			return null;
-		}
-		
-		QuestState st = null;
-		if (player.isClanLeader())
-		{
-			st = player.getQuestState(getName());
-		}
-		else
-		{
-			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
-			{
-				st = pleader.getQuestState(getName());
-			}
-		}
-		
-		if ((st != null) && st.isStarted())
-		{
-			st.rewardItems(TYRANNOSAURUS_CLAW, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return null;
-	}
-	
-	public Q00510_AClansPrestige(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(VALDIS);
-		addTalkId(VALDIS);
-		addKillId(MOBS);
 	}
 	
 	public static void main(String[] args)

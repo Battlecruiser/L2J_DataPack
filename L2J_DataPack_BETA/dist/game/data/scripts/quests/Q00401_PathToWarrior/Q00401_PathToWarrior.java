@@ -53,6 +53,15 @@ public class Q00401_PathToWarrior extends Quest
 		20043
 	};
 	
+	public Q00401_PathToWarrior(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(AURON);
+		addTalkId(AURON, SIMPLON);
+		addKillId(MONSTERS);
+		registerQuestItems(AURONSLETTER, WARRIORGUILDMARK, RUSTEDBRONZESWORD1, RUSTEDBRONZESWORD2, RUSTEDBRONZESWORD3, SIMPLONSLETTER, POISONSPIDERLEG);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -123,6 +132,57 @@ public class Q00401_PathToWarrior extends Quest
 			htmltext = "30010-11.html";
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		QuestState st = killer.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
+		
+		switch (st.getCond())
+		{
+			case 2:
+			{
+				if ((npc.getNpcId() == MONSTERS[0]) || (npc.getNpcId() == MONSTERS[2]))
+				{
+					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) < 10)
+					{
+						if (getRandom(10) < 4)
+						{
+							st.giveItems(RUSTEDBRONZESWORD1, 1);
+							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						}
+					}
+					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) == 10)
+					{
+						st.setCond(3, true);
+					}
+				}
+				break;
+			}
+			case 5:
+			{
+				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getNpcId() == MONSTERS[1])) || (npc.getNpcId() == MONSTERS[3]))
+				{
+					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
+					{
+						st.giveItems(POISONSPIDERLEG, 1);
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					
+					if (st.getQuestItemsCount(POISONSPIDERLEG) == 20)
+					{
+						st.setCond(6, true);
+					}
+				}
+			}
+		}
+		
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -230,66 +290,6 @@ public class Q00401_PathToWarrior extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		QuestState st = killer.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
-		switch (st.getCond())
-		{
-			case 2:
-			{
-				if ((npc.getNpcId() == MONSTERS[0]) || (npc.getNpcId() == MONSTERS[2]))
-				{
-					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) < 10)
-					{
-						if (getRandom(10) < 4)
-						{
-							st.giveItems(RUSTEDBRONZESWORD1, 1);
-							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						}
-					}
-					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) == 10)
-					{
-						st.setCond(3, true);
-					}
-				}
-				break;
-			}
-			case 5:
-			{
-				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getNpcId() == MONSTERS[1])) || (npc.getNpcId() == MONSTERS[3]))
-				{
-					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
-					{
-						st.giveItems(POISONSPIDERLEG, 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-					
-					if (st.getQuestItemsCount(POISONSPIDERLEG) == 20)
-					{
-						st.setCond(6, true);
-					}
-				}
-			}
-		}
-		
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	public Q00401_PathToWarrior(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(AURON);
-		addTalkId(AURON, SIMPLON);
-		addKillId(MONSTERS);
-		registerQuestItems(AURONSLETTER, WARRIORGUILDMARK, RUSTEDBRONZESWORD1, RUSTEDBRONZESWORD2, RUSTEDBRONZESWORD3, SIMPLONSLETTER, POISONSPIDERLEG);
 	}
 	
 	public static void main(String[] args)

@@ -52,26 +52,6 @@ public class Zaken extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Zaken Energy Drain (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(715, 4), false);
-		// Zaken Hold (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(716, 4), false);
-		// Zaken Concentrated Attack (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(717, 4), false);
-		// Zaken Dancing Sword (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(718, 4), false);
-		// Zaken Vampiric Rage
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(719, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -96,6 +76,26 @@ public class Zaken extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Zaken Energy Drain (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(715, 4), false);
+		// Zaken Hold (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(716, 4), false);
+		// Zaken Concentrated Attack (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(717, 4), false);
+		// Zaken Dancing Sword (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(718, 4), false);
+		// Zaken Vampiric Rage
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(719, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

@@ -47,6 +47,14 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	private final static int RESPAWN_DELAY = 3600000; // 1 hour
 	private static L2Npc hekaton;
 	
+	public Q00307_ControlDeviceOfTheGiants(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(DROPH);
+		addTalkId(DROPH);
+		addKillId(GORGOLOS, LAST_TITAN_UTENUS, GIANT_MARPANAK, HEKATON_PRIME);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -108,48 +116,9 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-			{
-				htmltext = (player.getLevel() >= 79) ? "32711-01.htm" : "32711-02.htm";
-				break;
-			}
-			case State.STARTED:
-			{
-				if ((hekaton != null) && !hekaton.isDead())
-				{
-					htmltext = "32711-09.html";
-				}
-				else if (st.isCond(1))
-				{
-					htmltext = (!hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-07.html" : "32711-08.html";
-				}
-				else if (st.isCond(2))
-				{
-					st.giveItems(SUPPORT_ITEMS, 1);
-					st.exitQuest(true, true);
-					htmltext = "32711-10.html";
-				}
-				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isPet);
@@ -197,12 +166,43 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00307_ControlDeviceOfTheGiants(int id, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(id, name, descr);
-		addStartNpc(DROPH);
-		addTalkId(DROPH);
-		addKillId(GORGOLOS, LAST_TITAN_UTENUS, GIANT_MARPANAK, HEKATON_PRIME);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+			{
+				htmltext = (player.getLevel() >= 79) ? "32711-01.htm" : "32711-02.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if ((hekaton != null) && !hekaton.isDead())
+				{
+					htmltext = "32711-09.html";
+				}
+				else if (st.isCond(1))
+				{
+					htmltext = (!hasQuestItems(player, CET_1_SHEET, CET_2_SHEET, CET_3_SHEET)) ? "32711-07.html" : "32711-08.html";
+				}
+				else if (st.isCond(2))
+				{
+					st.giveItems(SUPPORT_ITEMS, 1);
+					st.exitQuest(true, true);
+					htmltext = "32711-10.html";
+				}
+				break;
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

@@ -44,7 +44,7 @@ public class ProtectTheReligious extends TerritoryWarSuperClass
 			36558
 		};
 		qn = qn1;
-		registerAttackIds();
+		addAttackId(NPC_IDS);
 	}
 	
 	@Override

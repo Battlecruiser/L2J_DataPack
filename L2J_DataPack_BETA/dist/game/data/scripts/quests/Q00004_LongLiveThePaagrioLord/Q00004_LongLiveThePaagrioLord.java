@@ -40,7 +40,6 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	private static final int NAKUSIN = 30578;
 	private static final int HESTUI = 30585;
 	private static final int URUTU = 30587;
-	
 	// Items
 	private static final int CLUB = 4;
 	private static final int HONEY_KHANDAR = 1541;
@@ -49,9 +48,16 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	private static final int ANCESTOR_SKULL = 1544;
 	private static final int SPIDER_DUST = 1545;
 	private static final int DEEP_SEA_ORB = 1546;
-	
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	
+	private Q00004_LongLiveThePaagrioLord(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(NAKUSIN);
+		addTalkId(NAKUSIN, VARKEES, URUTU, HESTUI, KUNAI, USKA, GROOKIN);
+		registerQuestItems(HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -117,28 +123,28 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 				}
 				break;
 			case VARKEES:
-				htmltext = giveItem(st, npc.getNpcId(), HONEY_KHANDAR);
+				htmltext = giveItem(st, npc.getNpcId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			case URUTU:
-				htmltext = giveItem(st, npc.getNpcId(), DEEP_SEA_ORB);
+				htmltext = giveItem(st, npc.getNpcId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			case HESTUI:
-				htmltext = giveItem(st, npc.getNpcId(), BEAR_FUR_CLOAK);
+				htmltext = giveItem(st, npc.getNpcId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			case KUNAI:
-				htmltext = giveItem(st, npc.getNpcId(), SPIDER_DUST);
+				htmltext = giveItem(st, npc.getNpcId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			case USKA:
-				htmltext = giveItem(st, npc.getNpcId(), ANCESTOR_SKULL);
+				htmltext = giveItem(st, npc.getNpcId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			case GROOKIN:
-				htmltext = giveItem(st, npc.getNpcId(), BLOODY_AXE);
+				htmltext = giveItem(st, npc.getNpcId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 		}
 		return htmltext;
 	}
 	
-	private String giveItem(QuestState st, int npcId, int itemId)
+	private static String giveItem(QuestState st, int npcId, int itemId, int... items)
 	{
 		if (!st.isStarted())
 		{
@@ -150,20 +156,11 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		}
 		st.giveItems(itemId, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		if (st.hasQuestItems(getRegisteredItemIds()))
+		if (st.hasQuestItems(items))
 		{
 			st.setCond(2, true);
 		}
 		return npcId + "-01.html";
-	}
-	
-	public Q00004_LongLiveThePaagrioLord(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(NAKUSIN);
-		addTalkId(NAKUSIN, VARKEES, URUTU, HESTUI, KUNAI, USKA, GROOKIN);
-		
-		registerQuestItems(HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB);
 	}
 	
 	public static void main(String[] args)

@@ -43,47 +43,13 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	private static final int TISSUE_TK = 13830;
 	private static final int TISSUE_OA = 13831;
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q10276_MutatedKaneusGludio(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case BATHIS:
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() > 17) ? "30332-01.htm" : "30332-00.htm";
-						break;
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30332-05.htm" : "30332-04.htm";
-						break;
-					case State.COMPLETED:
-						htmltext = "30332-06.htm";
-						break;
-				}
-				break;
-			case ROHMER:
-				switch (st.getState())
-				{
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30344-02.htm" : "30344-01.htm";
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					default:
-						break;
-				}
-				break;
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(BATHIS);
+		addTalkId(BATHIS, ROHMER);
+		addKillId(TOMLAN_KAMOS, OL_ARIOSH);
+		registerQuestItems(TISSUE_TK, TISSUE_OA);
 	}
 	
 	@Override
@@ -142,6 +108,49 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		return null;
 	}
 	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case BATHIS:
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 17) ? "30332-01.htm" : "30332-00.htm";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30332-05.htm" : "30332-04.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = "30332-06.htm";
+						break;
+				}
+				break;
+			case ROHMER:
+				switch (st.getState())
+				{
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_TK) && st.hasQuestItems(TISSUE_OA)) ? "30344-02.htm" : "30344-01.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
+				}
+				break;
+		}
+		return htmltext;
+	}
+	
 	/**
 	 * @param npcId the ID of the killed monster
 	 * @param st the quest state of the killer or party member
@@ -158,15 +167,6 @@ public class Q10276_MutatedKaneusGludio extends Quest
 			st.giveItems(TISSUE_OA, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public Q10276_MutatedKaneusGludio(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(BATHIS);
-		addTalkId(BATHIS, ROHMER);
-		addKillId(TOMLAN_KAMOS, OL_ARIOSH);
-		registerQuestItems(TISSUE_TK, TISSUE_OA);
 	}
 	
 	public static void main(String[] args)

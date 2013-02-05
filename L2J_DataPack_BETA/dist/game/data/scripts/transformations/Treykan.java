@@ -50,22 +50,6 @@ public class Treykan extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		// Cursed Body
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(967, 1), false);
-		// Treykan Claw
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(968, 1), false);
-		// Treykan Dash
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(969, 1), false);
-		// Dissonance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -86,6 +70,22 @@ public class Treykan extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(5437, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		// Cursed Body
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(967, 1), false);
+		// Treykan Claw
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(968, 1), false);
+		// Treykan Dash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(969, 1), false);
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

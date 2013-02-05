@@ -55,6 +55,35 @@ public class Q00903_TheCallOfAntharas extends Quest
 	}
 	
 	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			switch (npc.getNpcId())
+			{
+				case BEHEMOTH_DRAGON:
+				{
+					st.giveItems(BEHEMOTH_DRAGON_LEATHER, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+				case TARASK_DRAGON:
+				{
+					st.giveItems(TARASK_DRAGONS_LEATHER_FRAGMENT, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					break;
+				}
+			}
+			
+			if (st.hasQuestItems(BEHEMOTH_DRAGON_LEATHER) && st.hasQuestItems(TARASK_DRAGONS_LEATHER_FRAGMENT))
+			{
+				st.setCond(2, true);
+			}
+		}
+	}
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -82,6 +111,13 @@ public class Q00903_TheCallOfAntharas extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		executeForEachPlayer(killer, npc, isPet, true, false);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -158,42 +194,6 @@ public class Q00903_TheCallOfAntharas extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		executeForEachPlayer(killer, npc, isPet, true, false);
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
-		{
-			switch (npc.getNpcId())
-			{
-				case BEHEMOTH_DRAGON:
-				{
-					st.giveItems(BEHEMOTH_DRAGON_LEATHER, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					break;
-				}
-				case TARASK_DRAGON:
-				{
-					st.giveItems(TARASK_DRAGONS_LEATHER_FRAGMENT, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					break;
-				}
-			}
-			
-			if (st.hasQuestItems(BEHEMOTH_DRAGON_LEATHER) && st.hasQuestItems(TARASK_DRAGONS_LEATHER_FRAGMENT))
-			{
-				st.setCond(2, true);
-			}
-		}
 	}
 	
 	public static void main(String[] args)

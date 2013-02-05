@@ -35,14 +35,20 @@ public class Q00006_StepIntoTheFuture extends Quest
 	private static final int ROXXY = 30006;
 	private static final int BAULRO = 30033;
 	private static final int SIR_COLLIN = 30311;
-	
 	// Items
 	private static final int BAULRO_LETTER = 7571;
 	private static final int SCROLL_OF_ESCAPE_GIRAN = 7559;
 	private static final int MARK_OF_TRAVELER = 7570;
-	
 	// Misc
 	private static final int MIN_LEVEL = 3;
+	
+	private Q00006_StepIntoTheFuture(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ROXXY);
+		addTalkId(ROXXY, BAULRO, SIR_COLLIN);
+		registerQuestItems(BAULRO_LETTER);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -144,15 +150,6 @@ public class Q00006_StepIntoTheFuture extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00006_StepIntoTheFuture(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ROXXY);
-		addTalkId(ROXXY, BAULRO, SIR_COLLIN);
-		
-		registerQuestItems(BAULRO_LETTER);
 	}
 	
 	public static void main(String[] args)

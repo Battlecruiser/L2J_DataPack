@@ -86,6 +86,15 @@ public class Q00287_FiguringItOut extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
+	public Q00287_FiguringItOut(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LAKI);
+		addTalkId(LAKI);
+		addKillId(MONSTERS.keySet());
+		registerQuestItems(VIAL_OF_TANTA_BLOOD);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -151,6 +160,24 @@ public class Q00287_FiguringItOut extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		final QuestState st = partyMember.getQuestState(getName());
+		
+		if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
+		{
+			st.giveItems(VIAL_OF_TANTA_BLOOD, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -172,33 +199,6 @@ public class Q00287_FiguringItOut extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
-		{
-			st.giveItems(VIAL_OF_TANTA_BLOOD, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00287_FiguringItOut(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LAKI);
-		addTalkId(LAKI);
-		addKillId(MONSTERS.keySet());
-		registerQuestItems(VIAL_OF_TANTA_BLOOD);
 	}
 	
 	public static void main(String[] args)

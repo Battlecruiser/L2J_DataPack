@@ -47,6 +47,15 @@ public class Q00138_TempleChampionPart2 extends Quest
 	private static final int ANGUS_RECOMMENDATION = 10343;
 	private static final int PUPINAS_RECOMMENDATION = 10344;
 	
+	public Q00138_TempleChampionPart2(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(SYLVAIN);
+		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
+		addKillId(MOBS);
+		registerQuestItems(TEMPLE_MANIFESTO, RELICS_OF_THE_DARK_ELF_TRAINEE, ANGUS_RECOMMENDATION, PUPINAS_RECOMMENDATION);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -102,6 +111,25 @@ public class Q00138_TempleChampionPart2 extends Quest
 				break;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isStarted() && st.isCond(4) && (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
+		{
+			st.giveItems(RELICS_OF_THE_DARK_ELF_TRAINEE, 1);
+			if (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			}
+			else
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -210,34 +238,6 @@ public class Q00138_TempleChampionPart2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && st.isCond(4) && (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
-		{
-			st.giveItems(RELICS_OF_THE_DARK_ELF_TRAINEE, 1);
-			if (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00138_TempleChampionPart2(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(SYLVAIN);
-		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
-		addKillId(MOBS);
-		registerQuestItems(TEMPLE_MANIFESTO, RELICS_OF_THE_DARK_ELF_TRAINEE, ANGUS_RECOMMENDATION, PUPINAS_RECOMMENDATION);
 	}
 	
 	public static void main(String[] args)

@@ -62,6 +62,29 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		290
 	};
 	
+	public Q00136_MoreThanMeetsTheEye(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(HARDIN);
+		addTalkId(HARDIN, ERRICKIN, CLAYTON);
+		addKillId(GHOST1, GHOST2, GHOST3, GLASS_JAGUAR, MIRROR);
+		
+		registerQuestItems(ECTOPLASM, STABILIZED_ECTOPLASM, ORDER, GLASS_JAGUAR_CRYSTAL, BOOK_OF_SEAL);
+	}
+	
+	private void giveItem(QuestState st, int itemId, int count, int maxCount, int cond)
+	{
+		st.giveItems(itemId, count);
+		if (st.getQuestItemsCount(itemId) >= maxCount)
+		{
+			st.setCond(cond, true);
+		}
+		else
+		{
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -114,6 +137,34 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		final QuestState st = killer.getQuestState(getName());
+		if (st == null)
+		{
+			return super.onKill(npc, killer, isPet);
+		}
+		
+		final int npcId = npc.getNpcId();
+		if ((npcId != GLASS_JAGUAR) && st.isCond(3))
+		{
+			final int count = ((npcId == MIRROR) && ((st.getQuestItemsCount(ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
+			final int index = npcId - GHOST1;
+			
+			if ((getRandom(1000) < CHANCES[index]) && ((st.getQuestItemsCount(ECTOPLASM) + count) < ECTOPLASM_COUNT))
+			{
+				st.giveItems(ECTOPLASM, 1);
+			}
+			giveItem(st, ECTOPLASM, count, ECTOPLASM_COUNT, 4);
+		}
+		else if ((npcId == GLASS_JAGUAR) && st.isCond(7))
+		{
+			giveItem(st, GLASS_JAGUAR_CRYSTAL, 1, CRYSTAL_COUNT, 8);
+		}
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -259,57 +310,6 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		final QuestState st = killer.getQuestState(getName());
-		if (st == null)
-		{
-			return super.onKill(npc, killer, isPet);
-		}
-		
-		final int npcId = npc.getNpcId();
-		if ((npcId != GLASS_JAGUAR) && st.isCond(3))
-		{
-			final int count = ((npcId == MIRROR) && ((st.getQuestItemsCount(ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
-			final int index = npcId - GHOST1;
-			
-			if ((getRandom(1000) < CHANCES[index]) && ((st.getQuestItemsCount(ECTOPLASM) + count) < ECTOPLASM_COUNT))
-			{
-				st.giveItems(ECTOPLASM, 1);
-			}
-			giveItem(st, ECTOPLASM, count, ECTOPLASM_COUNT, 4);
-		}
-		else if ((npcId == GLASS_JAGUAR) && st.isCond(7))
-		{
-			giveItem(st, GLASS_JAGUAR_CRYSTAL, 1, CRYSTAL_COUNT, 8);
-		}
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	private void giveItem(QuestState st, int itemId, int count, int maxCount, int cond)
-	{
-		st.giveItems(itemId, count);
-		if (st.getQuestItemsCount(itemId) >= maxCount)
-		{
-			st.setCond(cond, true);
-		}
-		else
-		{
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-	}
-	
-	public Q00136_MoreThanMeetsTheEye(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(HARDIN);
-		addTalkId(HARDIN, ERRICKIN, CLAYTON);
-		addKillId(GHOST1, GHOST2, GHOST3, GLASS_JAGUAR, MIRROR);
-		
-		registerQuestItems(ECTOPLASM, STABILIZED_ECTOPLASM, ORDER, GLASS_JAGUAR_CRYSTAL, BOOK_OF_SEAL);
 	}
 	
 	public static void main(String[] args)

@@ -57,26 +57,6 @@ public class DivineSummoner extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Divine Summoner Summon Divine Beast
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(710, 1), false);
-		// Divine Summoner Transfer Pain
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(711, 1), false);
-		// Divine Summoner Final Servitor
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(712, 1), false);
-		// Divine Summoner Servitor Hill
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(713, 1), false);
-		// Sacrifice Summoner
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(714, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -106,6 +86,26 @@ public class DivineSummoner extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Divine Summoner Summon Divine Beast
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(710, 1), false);
+		// Divine Summoner Transfer Pain
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(711, 1), false);
+		// Divine Summoner Final Servitor
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(712, 1), false);
+		// Divine Summoner Servitor Hill
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(713, 1), false);
+		// Sacrifice Summoner
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(714, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

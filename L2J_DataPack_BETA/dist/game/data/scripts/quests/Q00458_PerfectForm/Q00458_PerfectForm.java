@@ -84,51 +84,6 @@ public class Q00458_PerfectForm extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				if (!st.isNowAvailable())
-				{
-					htmltext = "32768-18.htm";
-					break;
-				}
-				st.setState(State.CREATED);
-				//$FALL-THROUGH$
-			case State.CREATED:
-				htmltext = (player.getLevel() > 81) ? "32768-01.htm" : "32768-00.htm";
-				break;
-			case State.STARTED:
-				switch (st.getCond())
-				{
-					case 1:
-						if ((st.getInt("18879") == 0) && (st.getInt("18886") == 0) && (st.getInt("18893") == 0) && (st.getInt("18900") == 0))
-						{
-							htmltext = "32768-11.html";
-						}
-						else
-						{
-							htmltext = "32768-12.html";
-						}
-						break;
-					case 2:
-						htmltext = "32768-13.html";
-						break;
-				}
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String noQuest = getNoQuestMsg(player);
@@ -323,6 +278,51 @@ public class Q00458_PerfectForm extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				if (!st.isNowAvailable())
+				{
+					htmltext = "32768-18.htm";
+					break;
+				}
+				st.setState(State.CREATED);
+				//$FALL-THROUGH$
+			case State.CREATED:
+				htmltext = (player.getLevel() > 81) ? "32768-01.htm" : "32768-00.htm";
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
+						if ((st.getInt("18879") == 0) && (st.getInt("18886") == 0) && (st.getInt("18893") == 0) && (st.getInt("18900") == 0))
+						{
+							htmltext = "32768-11.html";
+						}
+						else
+						{
+							htmltext = "32768-12.html";
+						}
+						break;
+					case 2:
+						htmltext = "32768-13.html";
+						break;
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

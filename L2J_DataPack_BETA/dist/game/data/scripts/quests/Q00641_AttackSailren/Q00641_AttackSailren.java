@@ -48,6 +48,15 @@ public class Q00641_AttackSailren extends Quest
 		22199, // Pterosaur
 	};
 	
+	public Q00641_AttackSailren(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(SHILENS_STONE_STATUE);
+		addTalkId(SHILENS_STONE_STATUE);
+		addKillId(MOBS);
+		registerQuestItems(GAZKH_FRAGMENT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -71,6 +80,29 @@ public class Q00641_AttackSailren extends Quest
 				break;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember != null)
+		{
+			final QuestState st = partyMember.getQuestState(getName());
+			if (st != null)
+			{
+				st.giveItems(GAZKH_FRAGMENT, 1);
+				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
+				{
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				else
+				{
+					st.setCond(2, true);
+				}
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -101,38 +133,6 @@ public class Q00641_AttackSailren extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember != null)
-		{
-			final QuestState st = partyMember.getQuestState(getName());
-			if (st != null)
-			{
-				st.giveItems(GAZKH_FRAGMENT, 1);
-				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
-				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-				else
-				{
-					st.setCond(2, true);
-				}
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00641_AttackSailren(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(SHILENS_STONE_STATUE);
-		addTalkId(SHILENS_STONE_STATUE);
-		addKillId(MOBS);
-		registerQuestItems(GAZKH_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

@@ -56,51 +56,24 @@ public final class Q00457_LostAndFound extends Quest
 	private static L2Npc[] _escortCheckers = new L2Npc[2];
 	private static L2Npc _gumiel = null;
 	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	private Q00457_LostAndFound(int id, String name, String descr)
 	{
-		if (npc.getTarget() != null)
-		{
-			if (npc.getTarget().equals(player))
-			{
-				return "32759-08.html";
-			}
-			else if (_gumiel != null)
-			{
-				return "32759-01a.html";
-			}
-		}
-		return "32759.html";
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		super(id, name, descr);
+		addStartNpc(GUMIEL);
+		addFirstTalkId(GUMIEL);
+		addTalkId(GUMIEL);
+		addSpawnId(GUMIEL);
+		addKillId(SOLINA_CLAN);
 		
-		switch (st.getState())
+		int i = 0;
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
 		{
-			case State.CREATED:
-				htmltext = (player.getLevel() > 81) ? "32759-01.htm" : "32759-03.html";
-				break;
-			case State.COMPLETED:
-				if (st.isNowAvailable())
-				{
-					st.setState(State.CREATED);
-					htmltext = (player.getLevel() > 81) ? "32759-01.htm" : "32759-03.html";
-				}
-				else
-				{
-					htmltext = "32759-02.html";
-				}
-				break;
+			if (spawn.getNpcid() == ESCORT_CHECKER)
+			{
+				_escortCheckers[i] = spawn.getLastSpawn();
+				i++;
+			}
 		}
-		return htmltext;
 	}
 	
 	@Override
@@ -202,6 +175,23 @@ public final class Q00457_LostAndFound extends Quest
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (npc.getTarget() != null)
+		{
+			if (npc.getTarget().equals(player))
+			{
+				return "32759-08.html";
+			}
+			else if (_gumiel != null)
+			{
+				return "32759-01a.html";
+			}
+		}
+		return "32759.html";
+	}
+	
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		if ((_gumiel == null) && (getRandom(100) < CHANCE_SPAWN))
@@ -219,24 +209,34 @@ public final class Q00457_LostAndFound extends Quest
 		return super.onSpawn(npc);
 	}
 	
-	private Q00457_LostAndFound(int id, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(id, name, descr);
-		addStartNpc(GUMIEL);
-		addFirstTalkId(GUMIEL);
-		addTalkId(GUMIEL);
-		addSpawnId(GUMIEL);
-		addKillId(SOLINA_CLAN);
-		
-		int i = 0;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			if (spawn.getNpcid() == ESCORT_CHECKER)
-			{
-				_escortCheckers[i] = spawn.getLastSpawn();
-				i++;
-			}
+			st = newQuestState(player);
 		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = (player.getLevel() > 81) ? "32759-01.htm" : "32759-03.html";
+				break;
+			case State.COMPLETED:
+				if (st.isNowAvailable())
+				{
+					st.setState(State.CREATED);
+					htmltext = (player.getLevel() > 81) ? "32759-01.htm" : "32759-03.html";
+				}
+				else
+				{
+					htmltext = "32759-02.html";
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

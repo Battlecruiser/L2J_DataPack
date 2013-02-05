@@ -48,6 +48,14 @@ public class Q00450_GraveRobberRescue extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
+	public Q00450_GraveRobberRescue(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KANEMIKA);
+		addTalkId(KANEMIKA, WARRIOR);
+		registerQuestItems(EVIDENCE_OF_MIGRATION);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -163,14 +171,6 @@ public class Q00450_GraveRobberRescue extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public Q00450_GraveRobberRescue(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KANEMIKA);
-		addTalkId(KANEMIKA, WARRIOR);
-		registerQuestItems(EVIDENCE_OF_MIGRATION);
 	}
 	
 	public static void main(String[] args)

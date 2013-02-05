@@ -41,6 +41,14 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 	private static final int KIKIS_LETTER = 7626;
 	private static final int ELVEN_RING = 881;
 	
+	public Q00028_ChestCaughtWithABaitOfIcyAir(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(OFULLE);
+		addTalkId(OFULLE, KIKI);
+		registerQuestItems(KIKIS_LETTER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -133,14 +141,6 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00028_ChestCaughtWithABaitOfIcyAir(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(OFULLE);
-		addTalkId(OFULLE, KIKI);
-		registerQuestItems(KIKIS_LETTER);
 	}
 	
 	public static void main(String[] args)

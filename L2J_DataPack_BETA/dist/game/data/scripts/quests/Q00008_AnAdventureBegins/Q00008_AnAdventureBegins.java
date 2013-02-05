@@ -35,14 +35,20 @@ public class Q00008_AnAdventureBegins extends Quest
 	private static final int JASMINE = 30134;
 	private static final int ROSELYN = 30355;
 	private static final int HARNE = 30144;
-	
 	// Items
 	private static final int ROSELYNS_NOTE = 7573;
 	private static final int SCROLL_OF_ESCAPE_GIRAN = 7559;
 	private static final int MARK_OF_TRAVELER = 7570;
-	
 	// Misc
 	private static final int MIN_LEVEL = 3;
+	
+	private Q00008_AnAdventureBegins(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(JASMINE);
+		addTalkId(JASMINE, ROSELYN, HARNE);
+		registerQuestItems(ROSELYNS_NOTE);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -144,15 +150,6 @@ public class Q00008_AnAdventureBegins extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00008_AnAdventureBegins(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(JASMINE);
-		addTalkId(JASMINE, ROSELYN, HARNE);
-		
-		registerQuestItems(ROSELYNS_NOTE);
 	}
 	
 	public static void main(String[] args)

@@ -51,24 +51,6 @@ public class GolemGuardianWeak extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Double Slasher (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(572, 2), false);
-		// Earthquake (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(573, 2), false);
-		// Bomb Installation (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(574, 2), false);
-		// Steel Cutter (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(575, 2), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -91,6 +73,24 @@ public class GolemGuardianWeak extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Double Slasher (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(572, 2), false);
+		// Earthquake (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(573, 2), false);
+		// Bomb Installation (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(574, 2), false);
+		// Steel Cutter (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(575, 2), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

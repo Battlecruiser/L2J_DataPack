@@ -68,67 +68,22 @@ public class Q00455_WingsOfSand extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if ((st != null) && Util.checkIfInRange(1500, npc, player, false) && (getRandom(1000) < CHANCE))
 		{
-			return getNoQuestMsg(player);
-		}
-		
-		String htmltext = getNoQuestMsg(player);
-		switch (st.getState())
-		{
-			case State.CREATED:
+			st.giveItems(LARGE_BABY_DRAGON, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 1)
 			{
-				if (player.getLevel() >= MIN_LEVEL)
-				{
-					htmltext = "32864-01.htm";
-				}
-				break;
+				st.setCond(2, true);
 			}
-			case State.STARTED:
+			else if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 2)
 			{
-				switch (st.getCond())
-				{
-					case 1:
-					{
-						htmltext = "32864-06.html";
-						break;
-					}
-					case 2:
-					{
-						reward(st);
-						htmltext = "32864-07.html";
-						break;
-					}
-					case 3:
-					{
-						reward(st);
-						htmltext = "32864-07.html";
-						break;
-					}
-				}
-				break;
-			}
-			case State.COMPLETED:
-			{
-				if (!st.isNowAvailable())
-				{
-					htmltext = "32864-08.html";
-				}
-				else
-				{
-					st.setState(State.CREATED);
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						htmltext = "32864-01.htm";
-					}
-				}
-				break;
+				st.setCond(3, true);
 			}
 		}
-		return htmltext;
 	}
 	
 	@Override
@@ -169,52 +124,79 @@ public class Q00455_WingsOfSand extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		QuestState st;
-		if (killer.isInParty())
+		executeForEachPlayer(killer, npc, isPet, true, false);
+		return super.onKill(npc, killer, isPet);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			for (L2PcInstance player : killer.getParty().getMembers())
+			return getNoQuestMsg(player);
+		}
+		
+		String htmltext = getNoQuestMsg(player);
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				st = player.getQuestState(getName());
-				if ((st != null) && Util.checkIfInRange(1500, npc, player, false) && (getRandom(1000) < CHANCE))
+				if (player.getLevel() >= MIN_LEVEL)
 				{
-					st.giveItems(LARGE_BABY_DRAGON, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 1)
+					htmltext = "32864-01.htm";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
+				{
+					case 1:
 					{
-						st.setCond(2, true);
+						htmltext = "32864-06.html";
+						break;
 					}
-					else if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 2)
+					case 2:
 					{
-						st.setCond(3, true);
+						giveItems(st);
+						htmltext = "32864-07.html";
+						break;
+					}
+					case 3:
+					{
+						giveItems(st);
+						htmltext = "32864-07.html";
+						break;
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				if (!st.isNowAvailable())
+				{
+					htmltext = "32864-08.html";
+				}
+				else
+				{
+					st.setState(State.CREATED);
+					if (player.getLevel() >= MIN_LEVEL)
+					{
+						htmltext = "32864-01.htm";
+					}
+				}
+				break;
 			}
 		}
-		else
-		{
-			st = killer.getQuestState(getName());
-			if ((st != null) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(1000) < CHANCE))
-			{
-				st.giveItems(LARGE_BABY_DRAGON, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 1)
-				{
-					st.setCond(2, true);
-				}
-				else if (st.getQuestItemsCount(LARGE_BABY_DRAGON) == 2)
-				{
-					st.setCond(3, true);
-				}
-			}
-		}
-		return null;
+		return htmltext;
 	}
 	
 	/**
 	 * Reward the player.
 	 * @param st the quest state of the player to reward
 	 */
-	private static final void reward(QuestState st)
+	private static final void giveItems(QuestState st)
 	{
 		int chance;
 		for (int i = 1; i <= (st.getCond() - 1); i++)

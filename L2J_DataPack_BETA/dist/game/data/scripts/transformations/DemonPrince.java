@@ -50,22 +50,6 @@ public class DemonPrince extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Devil Spinning Weapon
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(735, 1), false);
-		// Devil Seed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(736, 1), false);
-		// Devil Ultimate Defense
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(737, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -86,6 +70,22 @@ public class DemonPrince extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Devil Spinning Weapon
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(735, 1), false);
+		// Devil Seed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(736, 1), false);
+		// Devil Ultimate Defense
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(737, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

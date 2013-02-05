@@ -41,6 +41,34 @@ public class InquisitorBishop extends L2Transformation
 		transformedSkills();
 	}
 	
+	@Override
+	public void onUntransform()
+	{
+		removeSkills();
+	}
+	
+	public void removeSkills()
+	{
+		int lvl = 1;
+		if (getPlayer().getLevel() > 43)
+		{
+			lvl = (getPlayer().getLevel() - 43);
+		}
+		
+		// Divine Punishment
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, lvl), false);
+		// Divine Flash
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, lvl), false);
+		// Surrender to the Holy
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, lvl), false);
+		// Divine Curse
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, lvl), false);
+		// Switch Stance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
 	public void transformedSkills()
 	{
 		int lvl = 1;
@@ -73,34 +101,6 @@ public class InquisitorBishop extends L2Transformation
 		});
 		// Switch Stance
 		getPlayer().addSkill(SkillTable.getInstance().getInfo(838, 1), false);
-	}
-	
-	@Override
-	public void onUntransform()
-	{
-		removeSkills();
-	}
-	
-	public void removeSkills()
-	{
-		int lvl = 1;
-		if (getPlayer().getLevel() > 43)
-		{
-			lvl = (getPlayer().getLevel() - 43);
-		}
-		
-		// Divine Punishment
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1523, lvl), false);
-		// Divine Flash
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1528, lvl), false);
-		// Surrender to the Holy
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1524, lvl), false);
-		// Divine Curse
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(1525, lvl), false);
-		// Switch Stance
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
 	public static void main(String[] args)

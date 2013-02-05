@@ -71,6 +71,15 @@ public class Q00601_WatchingEyes extends Quest
 		}
 	};
 	
+	public Q00601_WatchingEyes(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(EYE_OF_ARGOS);
+		addTalkId(EYE_OF_ARGOS);
+		addKillId(MOBS.keySet());
+		registerQuestItems(PROOF_OF_AVENGER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -110,6 +119,26 @@ public class Q00601_WatchingEyes extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		
+		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		{
+			st.giveItems(PROOF_OF_AVENGER, 1);
+			if (st.getQuestItemsCount(PROOF_OF_AVENGER) == 100)
+			{
+				st.setCond(2, true);
+			}
+			else
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -130,35 +159,6 @@ public class Q00601_WatchingEyes extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		
-		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
-		{
-			st.giveItems(PROOF_OF_AVENGER, 1);
-			if (st.getQuestItemsCount(PROOF_OF_AVENGER) == 100)
-			{
-				st.setCond(2, true);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00601_WatchingEyes(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(EYE_OF_ARGOS);
-		addTalkId(EYE_OF_ARGOS);
-		addKillId(MOBS.keySet());
-		registerQuestItems(PROOF_OF_AVENGER);
 	}
 	
 	public static void main(String[] args)

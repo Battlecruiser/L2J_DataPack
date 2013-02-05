@@ -35,21 +35,18 @@ public class Q00010_IntoTheWorld extends Quest
 	private static final int REED = 30520;
 	private static final int BALANKI = 30533;
 	private static final int GERALD = 30650;
-	
 	// Items
 	private static final int VERY_EXPENSIVE_NECKLACE = 7574;
 	private static final int SCROLL_OF_ESCAPE_GIRAN = 7559;
 	private static final int MARK_OF_TRAVELER = 7570;
-	
 	// Misc
 	private static final int MIN_LEVEL = 3;
 	
-	public Q00010_IntoTheWorld(int questId, String name, String descr)
+	private Q00010_IntoTheWorld(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(BALANKI);
 		addTalkId(BALANKI, REED, GERALD);
-		
 		registerQuestItems(VERY_EXPENSIVE_NECKLACE);
 	}
 	

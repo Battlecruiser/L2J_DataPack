@@ -35,6 +35,13 @@ public class Q00122_OminousNews extends Quest
 	private static final int MOIRA = 31979;
 	private static final int KARUDA = 32017;
 	
+	public Q00122_OminousNews(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MOIRA);
+		addTalkId(MOIRA, KARUDA);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -92,13 +99,6 @@ public class Q00122_OminousNews extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00122_OminousNews(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MOIRA);
-		addTalkId(MOIRA, KARUDA);
 	}
 	
 	public static void main(String[] args)

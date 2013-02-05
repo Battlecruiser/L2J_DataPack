@@ -121,11 +121,11 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet):
    npcId = npc.getNpcId()
-   partyMember = self.getRandomPartyMember(player,"2")
+   partyMember = self.getRandomPartyMember(player, 2)
    if (partyMember and npcId != ARANEID) :
        drop(partyMember,NECKLACE[npcId])
    else:
-       partyMember = self.getRandomPartyMember(player,"4")
+       partyMember = self.getRandomPartyMember(player, 4)
        if (partyMember and npcId != M_LIZARDMAN) :     
            drop(partyMember,DROPLIST[npcId])
    return

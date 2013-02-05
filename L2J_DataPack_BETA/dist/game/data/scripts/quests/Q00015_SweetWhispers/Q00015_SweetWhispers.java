@@ -36,6 +36,13 @@ public class Q00015_SweetWhispers extends Quest
 	private static final int HIERARCH = 31517;
 	private static final int M_NECROMANCER = 31518;
 	
+	private Q00015_SweetWhispers(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(VLADIMIR);
+		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -120,13 +127,6 @@ public class Q00015_SweetWhispers extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00015_SweetWhispers(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(VLADIMIR);
-		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}
 	
 	public static void main(String[] args)

@@ -32,6 +32,33 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10291_FireDragonDestroyer extends Quest
 {
+	public class RewardCheck implements IL2Procedure<L2PcInstance>
+	{
+		private final L2Npc _npc;
+		
+		public RewardCheck(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
+		@Override
+		public boolean execute(L2PcInstance member)
+		{
+			if (Util.checkIfInRange(8000, _npc, member, false))
+			{
+				QuestState st = member.getQuestState(getName());
+				
+				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
+				{
+					st.takeItems(POOR_NECKLACE, -1);
+					st.giveItems(VALOR_NECKLACE, 1);
+					st.setCond(2, true);
+				}
+			}
+			return true;
+		}
+	}
+	
 	// NPC
 	private static final int KLEIN = 31540;
 	// Monster
@@ -40,7 +67,17 @@ public class Q10291_FireDragonDestroyer extends Quest
 	private static final int FLOATING_STONE = 7267;
 	private static final int POOR_NECKLACE = 15524;
 	private static final int VALOR_NECKLACE = 15525;
+	
 	private static final int VALAKAS_SLAYER_CIRCLET = 8567;
+	
+	public Q10291_FireDragonDestroyer(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KLEIN);
+		addTalkId(KLEIN);
+		addKillId(VALAKAS);
+		registerQuestItems(POOR_NECKLACE, VALOR_NECKLACE);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -58,6 +95,26 @@ public class Q10291_FireDragonDestroyer extends Quest
 		}
 		
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (!player.isInParty())
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		// Rewards go only to command channel, not to a single party or player.
+		if (player.getParty().isInCommandChannel())
+		{
+			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
+		}
+		else
+		{
+			player.getParty().forEachMember(new RewardCheck(npc));
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -117,62 +174,6 @@ public class Q10291_FireDragonDestroyer extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (!player.isInParty())
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		// rewards go only to command channel, not to a single party or player (retail Freya AI)
-		if (player.getParty().isInCommandChannel())
-		{
-			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
-		}
-		else
-		{
-			player.getParty().forEachMember(new RewardCheck(npc));
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public class RewardCheck implements IL2Procedure<L2PcInstance>
-	{
-		private final L2Npc _npc;
-		
-		public RewardCheck(L2Npc npc)
-		{
-			_npc = npc;
-		}
-		
-		@Override
-		public boolean execute(L2PcInstance member)
-		{
-			if (Util.checkIfInRange(8000, _npc, member, false))
-			{
-				QuestState st = member.getQuestState(getName());
-				
-				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
-				{
-					st.takeItems(POOR_NECKLACE, -1);
-					st.giveItems(VALOR_NECKLACE, 1);
-					st.setCond(2, true);
-				}
-			}
-			return true;
-		}
-	}
-	
-	public Q10291_FireDragonDestroyer(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KLEIN);
-		addTalkId(KLEIN);
-		addKillId(VALAKAS);
-		registerQuestItems(POOR_NECKLACE, VALOR_NECKLACE);
 	}
 	
 	public static void main(String[] args)

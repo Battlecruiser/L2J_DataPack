@@ -50,77 +50,6 @@ public class Q00133_ThatsBloodyHot extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			}
-			case State.CREATED:
-			{
-				if (npc.getNpcId() == KANIS)
-				{
-					final QuestState qs = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
-					if ((qs != null) && qs.isCompleted())
-					{
-						htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
-					}
-					else
-					{
-						htmltext = "32264-03.html";
-					}
-				}
-				break;
-			}
-			case State.STARTED:
-			{
-				if (npc.getNpcId() == KANIS)
-				{
-					if (st.isCond(1))
-					{
-						htmltext = "32264-05.html";
-					}
-					else if (st.isCond(2))
-					{
-						htmltext = "32264-09.html";
-					}
-					else if (st.getCond() >= 3)
-					{
-						htmltext = "32264-13.html";
-					}
-				}
-				else if (npc.getNpcId() == GALATE)
-				{
-					if (st.getCond() < 3)
-					{
-						htmltext = "32292-01.html";
-					}
-					else if (st.isCond(3))
-					{
-						htmltext = "32292-02.html";
-					}
-					else if (st.isCond(4))
-					{
-						htmltext = "32292-04.html";
-					}
-				}
-				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -208,6 +137,77 @@ public class Q00133_ThatsBloodyHot extends Quest
 						st.addExpAndSp(325881, 32524);
 						st.exitQuest(false, true);
 						htmltext = "32292-07.html";
+					}
+				}
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
+			}
+			case State.CREATED:
+			{
+				if (npc.getNpcId() == KANIS)
+				{
+					final QuestState qs = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
+					if ((qs != null) && qs.isCompleted())
+					{
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
+					}
+					else
+					{
+						htmltext = "32264-03.html";
+					}
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				if (npc.getNpcId() == KANIS)
+				{
+					if (st.isCond(1))
+					{
+						htmltext = "32264-05.html";
+					}
+					else if (st.isCond(2))
+					{
+						htmltext = "32264-09.html";
+					}
+					else if (st.getCond() >= 3)
+					{
+						htmltext = "32264-13.html";
+					}
+				}
+				else if (npc.getNpcId() == GALATE)
+				{
+					if (st.getCond() < 3)
+					{
+						htmltext = "32292-01.html";
+					}
+					else if (st.isCond(3))
+					{
+						htmltext = "32292-02.html";
+					}
+					else if (st.isCond(4))
+					{
+						htmltext = "32292-04.html";
 					}
 				}
 				break;

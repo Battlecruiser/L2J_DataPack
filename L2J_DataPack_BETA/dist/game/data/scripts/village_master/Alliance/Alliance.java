@@ -53,12 +53,6 @@ public class Alliance extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
-	{
-		return "9001-01.htm";
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (!"9001-01.htm".equals(event) && (player.getClan() == null))
@@ -66,6 +60,12 @@ public class Alliance extends Quest
 			return "9001-04.htm";
 		}
 		return event;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		return "9001-01.htm";
 	}
 	
 	public static void main(String[] args)

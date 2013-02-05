@@ -99,128 +99,14 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		}
 	};
 	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public Q00453_NotStrongEnoughAlone(int questId, String name, String descr)
 	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (event.equalsIgnoreCase("32734-06.htm"))
-		{
-			st.startQuest();
-		}
-		else if (event.equalsIgnoreCase("32734-07.html"))
-		{
-			st.setCond(2, true);
-		}
-		else if (event.equalsIgnoreCase("32734-08.html"))
-		{
-			st.setCond(3, true);
-		}
-		else if (event.equalsIgnoreCase("32734-09.html"))
-		{
-			st.setCond(4, true);
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				if ((player.getLevel() >= 84) && (prev != null) && prev.isCompleted())
-				{
-					htmltext = "32734-01.htm";
-				}
-				else
-				{
-					htmltext = "32734-03.html";
-				}
-				break;
-			case State.STARTED:
-				switch (st.getCond())
-				{
-					case 1:
-					{
-						htmltext = "32734-10.html";
-						break;
-					}
-					case 2:
-					{
-						htmltext = "32734-11.html";
-						break;
-					}
-					case 3:
-					{
-						htmltext = "32734-12.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "32734-13.html";
-						break;
-					}
-					case 5:
-					{
-						st.giveItems(REWARD[Rnd.get(REWARD.length)][getRandom(REWARD[0].length)], 1);
-						st.exitQuest(QuestType.DAILY, true);
-						htmltext = "32734-14.html";
-						break;
-					}
-				}
-				break;
-			case State.COMPLETED:
-				if (!st.isNowAvailable())
-				{
-					htmltext = "32734-02.htm";
-				}
-				else
-				{
-					st.setState(State.CREATED);
-					if ((player.getLevel() >= 84) && (prev != null) && (prev.getState() == State.COMPLETED))
-					{
-						htmltext = "32734-01.htm";
-					}
-					else
-					{
-						htmltext = "32734-03.html";
-					}
-				}
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (player.getParty() != null)
-		{
-			for (L2PcInstance member : player.getParty().getMembers())
-			{
-				increaseKill(member, npc);
-			}
-		}
-		else
-		{
-			increaseKill(player, npc);
-		}
-		return null;
+		super(questId, name, descr);
+		addStartNpc(KLEMIS);
+		addTalkId(KLEMIS);
+		addKillId(MONSTER1);
+		addKillId(MONSTER2);
+		addKillId(MONSTER3);
 	}
 	
 	private void increaseKill(L2PcInstance player, L2Npc npc)
@@ -331,6 +217,130 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		}
 	}
 	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = event;
+		QuestState st = player.getQuestState(getName());
+		
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (event.equalsIgnoreCase("32734-06.htm"))
+		{
+			st.startQuest();
+		}
+		else if (event.equalsIgnoreCase("32734-07.html"))
+		{
+			st.setCond(2, true);
+		}
+		else if (event.equalsIgnoreCase("32734-08.html"))
+		{
+			st.setCond(3, true);
+		}
+		else if (event.equalsIgnoreCase("32734-09.html"))
+		{
+			st.setCond(4, true);
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (player.getParty() != null)
+		{
+			for (L2PcInstance member : player.getParty().getMembers())
+			{
+				increaseKill(member, npc);
+			}
+		}
+		else
+		{
+			increaseKill(player, npc);
+		}
+		return null;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		QuestState prev = player.getQuestState(Q10282_ToTheSeedOfAnnihilation.class.getSimpleName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				if ((player.getLevel() >= 84) && (prev != null) && prev.isCompleted())
+				{
+					htmltext = "32734-01.htm";
+				}
+				else
+				{
+					htmltext = "32734-03.html";
+				}
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
+					{
+						htmltext = "32734-10.html";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "32734-11.html";
+						break;
+					}
+					case 3:
+					{
+						htmltext = "32734-12.html";
+						break;
+					}
+					case 4:
+					{
+						htmltext = "32734-13.html";
+						break;
+					}
+					case 5:
+					{
+						st.giveItems(REWARD[Rnd.get(REWARD.length)][getRandom(REWARD[0].length)], 1);
+						st.exitQuest(QuestType.DAILY, true);
+						htmltext = "32734-14.html";
+						break;
+					}
+				}
+				break;
+			case State.COMPLETED:
+				if (!st.isNowAvailable())
+				{
+					htmltext = "32734-02.htm";
+				}
+				else
+				{
+					st.setState(State.CREATED);
+					if ((player.getLevel() >= 84) && (prev != null) && (prev.getState() == State.COMPLETED))
+					{
+						htmltext = "32734-01.htm";
+					}
+					else
+					{
+						htmltext = "32734-03.html";
+					}
+				}
+				break;
+		}
+		return htmltext;
+	}
+	
 	private static void checkProgress(QuestState st, int count, int... mobs)
 	{
 		for (int mob : mobs)
@@ -341,16 +351,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 			}
 		}
 		st.setCond(5, true);
-	}
-	
-	public Q00453_NotStrongEnoughAlone(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KLEMIS);
-		addTalkId(KLEMIS);
-		addKillId(MONSTER1);
-		addKillId(MONSTER2);
-		addKillId(MONSTER3);
 	}
 	
 	public static void main(String[] args)

@@ -56,43 +56,6 @@ public class AurabirdFalcon extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Air Blink
-		if (getPlayer().getLevel() >= 75)
-		{
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(885, 1), false);
-		}
-		
-		// Exhilarate
-		if (getPlayer().getLevel() >= 83)
-		{
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(894, 1), false);
-		}
-		
-		int lvl = getPlayer().getLevel() - 74;
-		
-		if (lvl > 0)
-		{
-			// Air Assault (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(884, lvl), false);
-			// Air Shock Bomb (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(886, lvl), false);
-			// Energy Storm (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(888, lvl), false);
-			// Prodigious Flare (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(890, lvl), false);
-			// Energy Shot (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(891, lvl), false);
-			// Energy Burst (up to 11 levels)
-			getPlayer().addSkill(SkillTable.getInstance().getInfo(911, lvl), false);
-		}
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -130,6 +93,43 @@ public class AurabirdFalcon extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Air Blink
+		if (getPlayer().getLevel() >= 75)
+		{
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(885, 1), false);
+		}
+		
+		// Exhilarate
+		if (getPlayer().getLevel() >= 83)
+		{
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(894, 1), false);
+		}
+		
+		int lvl = getPlayer().getLevel() - 74;
+		
+		if (lvl > 0)
+		{
+			// Air Assault (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(884, lvl), false);
+			// Air Shock Bomb (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(886, lvl), false);
+			// Energy Storm (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(888, lvl), false);
+			// Prodigious Flare (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(890, lvl), false);
+			// Energy Shot (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(891, lvl), false);
+			// Energy Burst (up to 11 levels)
+			getPlayer().addSkill(SkillTable.getInstance().getInfo(911, lvl), false);
+		}
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

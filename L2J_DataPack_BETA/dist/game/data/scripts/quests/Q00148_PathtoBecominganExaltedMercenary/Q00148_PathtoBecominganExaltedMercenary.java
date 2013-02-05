@@ -50,6 +50,13 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 	private static final int ELITE_CERTIFICATE = 13767;
 	private static final int TOP_ELITE_CERTIFICATE = 13768;
 	
+	public Q00148_PathtoBecominganExaltedMercenary(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MERC);
+		addTalkId(MERC);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -123,13 +130,6 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00148_PathtoBecominganExaltedMercenary(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MERC);
-		addTalkId(MERC);
 	}
 	
 	public static void main(String[] args)

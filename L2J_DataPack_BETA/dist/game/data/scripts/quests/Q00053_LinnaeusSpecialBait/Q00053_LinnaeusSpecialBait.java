@@ -39,11 +39,19 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	// Items
 	private static final int CRIMSON_DRAKE_HEART = 7624;
 	private static final int FLAMING_FISHING_LURE = 7613;
-	
+	// Misc
 	// Custom setting: whether or not to check for fishing skill level?
-	// default False to require fishing skill level, any other value to ignore fishing
-	// and evaluate char level only.
+	// Default False to require fishing skill level, any other value to ignore fishing and evaluate char level only.
 	private static final boolean ALT_IGNORE_FISHING = false;
+	
+	public Q00053_LinnaeusSpecialBait(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LINNAEUS);
+		addTalkId(LINNAEUS);
+		addKillId(CRIMSON_DRAKE);
+		registerQuestItems(CRIMSON_DRAKE_HEART);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -77,34 +85,9 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			case State.CREATED:
-				htmltext = ((player.getLevel() > 59) && (fishingLevel(player) > 19)) ? "31577-0.htm" : "31577-0a.html";
-				break;
-			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "31577-4.html" : "31577-2.html";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -131,10 +114,34 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	private int fishingLevel(L2PcInstance player)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
+			case State.CREATED:
+				htmltext = ((player.getLevel() > 59) && (fishingLevel(player) > 19)) ? "31577-0.htm" : "31577-0a.html";
+				break;
+			case State.STARTED:
+				htmltext = (st.isCond(1)) ? "31577-4.html" : "31577-2.html";
+				break;
+		}
+		return htmltext;
+	}
+	
+	private static int fishingLevel(L2PcInstance player)
 	{
 		int level = 20;
-		
 		if (!ALT_IGNORE_FISHING)
 		{
 			level = player.getSkillLevel(1315);
@@ -145,15 +152,6 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 			}
 		}
 		return level;
-	}
-	
-	public Q00053_LinnaeusSpecialBait(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LINNAEUS);
-		addTalkId(LINNAEUS);
-		addKillId(CRIMSON_DRAKE);
-		registerQuestItems(CRIMSON_DRAKE_HEART);
 	}
 	
 	public static void main(String[] args)

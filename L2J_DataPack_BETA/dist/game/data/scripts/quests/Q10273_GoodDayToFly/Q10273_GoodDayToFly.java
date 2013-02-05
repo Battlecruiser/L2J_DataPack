@@ -47,52 +47,13 @@ public class Q10273_GoodDayToFly extends Quest
 	private static final SkillHolder AURA_BIRD_FALCON = new SkillHolder(5982, 1);
 	private static final SkillHolder AURA_BIRD_OWL = new SkillHolder(5983, 1);
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q10273_GoodDayToFly(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		final int transform = st.getInt("transform");
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				htmltext = "32557-0a.html";
-				break;
-			case State.CREATED:
-				htmltext = (player.getLevel() < 75) ? "32557-00.html" : "32557-01.htm";
-				break;
-			default:
-				if (st.getQuestItemsCount(MARK) >= 5)
-				{
-					htmltext = "32557-14.html";
-					if (transform == 1)
-					{
-						st.giveItems(13553, 1);
-					}
-					else if (transform == 2)
-					{
-						st.giveItems(13554, 1);
-					}
-					st.giveItems(13857, 1);
-					st.addExpAndSp(25160, 2525);
-					st.exitQuest(false, true);
-				}
-				else if (transform == 0)
-				{
-					htmltext = "32557-07.html";
-				}
-				else
-				{
-					htmltext = "32557-11.html";
-				}
-				break;
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(LEKON);
+		addTalkId(LEKON);
+		addKillId(MOBS);
+		registerQuestItems(MARK);
 	}
 	
 	@Override
@@ -157,13 +118,52 @@ public class Q10273_GoodDayToFly extends Quest
 		return null;
 	}
 	
-	public Q10273_GoodDayToFly(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(LEKON);
-		addTalkId(LEKON);
-		addKillId(MOBS);
-		registerQuestItems(MARK);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		final int transform = st.getInt("transform");
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				htmltext = "32557-0a.html";
+				break;
+			case State.CREATED:
+				htmltext = (player.getLevel() < 75) ? "32557-00.html" : "32557-01.htm";
+				break;
+			default:
+				if (st.getQuestItemsCount(MARK) >= 5)
+				{
+					htmltext = "32557-14.html";
+					if (transform == 1)
+					{
+						st.giveItems(13553, 1);
+					}
+					else if (transform == 2)
+					{
+						st.giveItems(13554, 1);
+					}
+					st.giveItems(13857, 1);
+					st.addExpAndSp(25160, 2525);
+					st.exitQuest(false, true);
+				}
+				else if (transform == 0)
+				{
+					htmltext = "32557-07.html";
+				}
+				else
+				{
+					htmltext = "32557-11.html";
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

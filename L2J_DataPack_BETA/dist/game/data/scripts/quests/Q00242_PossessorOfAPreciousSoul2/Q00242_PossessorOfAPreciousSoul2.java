@@ -53,6 +53,15 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	// Rewards
 	private static final int CHANCE_FOR_HAIR = 20;
 	
+	public Q00242_PossessorOfAPreciousSoul2(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(VIRGIL);
+		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
+		addKillId(RESTRAINER_OF_GLORY);
+		registerQuestItems(GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -106,6 +115,28 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				return null;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		if (st.isCond(9) && (st.getQuestItemsCount(ORB_OF_BINDING) < 4))
+		{
+			st.giveItems(ORB_OF_BINDING, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		if (st.getQuestItemsCount(ORB_OF_BINDING) >= 4)
+		{
+			st.unset("awaitsDrops");
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -300,37 +331,6 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		if (st.isCond(9) && (st.getQuestItemsCount(ORB_OF_BINDING) < 4))
-		{
-			st.giveItems(ORB_OF_BINDING, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		if (st.getQuestItemsCount(ORB_OF_BINDING) >= 4)
-		{
-			st.unset("awaitsDrops");
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00242_PossessorOfAPreciousSoul2(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(VIRGIL);
-		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
-		addKillId(RESTRAINER_OF_GLORY);
-		registerQuestItems(GOLDEN_HAIR, ORB_OF_BINDING, SORCERY_INGREDIENT);
 	}
 	
 	public static void main(String[] args)

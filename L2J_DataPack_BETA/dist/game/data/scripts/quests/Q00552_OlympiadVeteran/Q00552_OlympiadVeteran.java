@@ -83,54 +83,49 @@ public class Q00552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (loser != null)
 		{
-			return htmltext;
-		}
-		
-		if ((player.getLevel() < 75) || !player.isNoble())
-		{
-			htmltext = "31688-00.htm";
-		}
-		else if (st.isCreated())
-		{
-			htmltext = "31688-01.htm";
-		}
-		else if (st.isCompleted())
-		{
-			if (st.isNowAvailable())
+			final QuestState st = loser.getQuestState(getName());
+			if ((st != null) && st.isStarted())
 			{
-				st.setState(State.CREATED);
-				if ((player.getLevel() < 75) || !player.isNoble())
+				int matches;
+				switch (type)
 				{
-					htmltext = "31688-00.htm";
+					case CLASSED:
+					{
+						matches = st.getInt("classed") + 1;
+						st.set("classed", String.valueOf(matches));
+						if (matches == 5)
+						{
+							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
+						}
+						break;
+					}
+					case NON_CLASSED:
+					{
+						matches = st.getInt("nonclassed") + 1;
+						st.set("nonclassed", String.valueOf(matches));
+						if (matches == 5)
+						{
+							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
+						}
+						break;
+					}
+					case TEAMS:
+					{
+						matches = st.getInt("teams") + 1;
+						st.set("teams", String.valueOf(matches));
+						if (matches == 5)
+						{
+							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
+						}
+						break;
+					}
 				}
 			}
-			else
-			{
-				htmltext = "31688-05.html";
-			}
 		}
-		else if (st.isStarted())
-		{
-			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
-			
-			if (count == 3)
-			{
-				htmltext = "31688-04.html";
-				st.giveItems(OLY_CHEST, 4);
-				st.exitQuest(QuestType.DAILY, true);
-			}
-			else
-			{
-				htmltext = "31688-s" + count + ".html";
-			}
-		}
-		return htmltext;
 	}
 	
 	@Override
@@ -180,49 +175,54 @@ public class Q00552_OlympiadVeteran extends Quest
 	}
 	
 	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (loser != null)
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
 		{
-			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted())
+			return htmltext;
+		}
+		
+		if ((player.getLevel() < 75) || !player.isNoble())
+		{
+			htmltext = "31688-00.htm";
+		}
+		else if (st.isCreated())
+		{
+			htmltext = "31688-01.htm";
+		}
+		else if (st.isCompleted())
+		{
+			if (st.isNowAvailable())
 			{
-				int matches;
-				switch (type)
+				st.setState(State.CREATED);
+				if ((player.getLevel() < 75) || !player.isNoble())
 				{
-					case CLASSED:
-					{
-						matches = st.getInt("classed") + 1;
-						st.set("classed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(CLASS_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case NON_CLASSED:
-					{
-						matches = st.getInt("nonclassed") + 1;
-						st.set("nonclassed", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(CLASS_FREE_BATTLE_CERTIFICATE, 1);
-						}
-						break;
-					}
-					case TEAMS:
-					{
-						matches = st.getInt("teams") + 1;
-						st.set("teams", String.valueOf(matches));
-						if (matches == 5)
-						{
-							st.giveItems(TEAM_EVENT_CERTIFICATE, 1);
-						}
-						break;
-					}
+					htmltext = "31688-00.htm";
 				}
 			}
+			else
+			{
+				htmltext = "31688-05.html";
+			}
 		}
+		else if (st.isStarted())
+		{
+			final long count = st.getQuestItemsCount(TEAM_EVENT_CERTIFICATE) + st.getQuestItemsCount(CLASS_FREE_BATTLE_CERTIFICATE) + st.getQuestItemsCount(CLASS_BATTLE_CERTIFICATE);
+			
+			if (count == 3)
+			{
+				htmltext = "31688-04.html";
+				st.giveItems(OLY_CHEST, 4);
+				st.exitQuest(QuestType.DAILY, true);
+			}
+			else
+			{
+				htmltext = "31688-s" + count + ".html";
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

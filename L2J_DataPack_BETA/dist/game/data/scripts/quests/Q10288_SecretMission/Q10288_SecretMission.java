@@ -37,6 +37,15 @@ public class Q10288_SecretMission extends Quest
 	// Item
 	private static final int LETTER = 15529;
 	
+	public Q10288_SecretMission(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(AQUILANI, DOMINIC);
+		addFirstTalkId(AQUILANI);
+		addTalkId(DOMINIC, GREYMORE, AQUILANI);
+		registerQuestItems(LETTER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -82,6 +91,18 @@ public class Q10288_SecretMission extends Quest
 				}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		QuestState st = player.getQuestState(getName());
+		// dialog only changes when you talk to Aquilani after quest completion
+		if ((st != null) && st.isCompleted())
+		{
+			return "32780-05.html";
+		}
+		return "data/html/default/32780.htm";
 	}
 	
 	@Override
@@ -134,27 +155,6 @@ public class Q10288_SecretMission extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		// dialog only changes when you talk to Aquilani after quest completion
-		if ((st != null) && st.isCompleted())
-		{
-			return "32780-05.html";
-		}
-		return "data/html/default/32780.htm";
-	}
-	
-	public Q10288_SecretMission(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(AQUILANI, DOMINIC);
-		addFirstTalkId(AQUILANI);
-		addTalkId(DOMINIC, GREYMORE, AQUILANI);
-		registerQuestItems(LETTER);
 	}
 	
 	public static void main(String[] args)

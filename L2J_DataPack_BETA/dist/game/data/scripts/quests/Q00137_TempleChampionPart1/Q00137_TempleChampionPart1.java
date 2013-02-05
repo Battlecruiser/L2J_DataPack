@@ -45,6 +45,15 @@ public class Q00137_TempleChampionPart1 extends Quest
 	private static final int EXECUTOR = 10334;
 	private static final int MISSIONARY = 10339;
 	
+	public Q00137_TempleChampionPart1(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(SYLVAIN);
+		addTalkId(SYLVAIN);
+		addKillId(MOBS);
+		registerQuestItems(FRAGMENT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -83,6 +92,25 @@ public class Q00137_TempleChampionPart1 extends Quest
 				break;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isStarted() && st.isCond(2) && (st.getQuestItemsCount(FRAGMENT) < 30))
+		{
+			st.giveItems(FRAGMENT, 1);
+			if (st.getQuestItemsCount(FRAGMENT) >= 30)
+			{
+				st.setCond(3, true);
+			}
+			else
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -134,34 +162,6 @@ public class Q00137_TempleChampionPart1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && st.isCond(2) && (st.getQuestItemsCount(FRAGMENT) < 30))
-		{
-			st.giveItems(FRAGMENT, 1);
-			if (st.getQuestItemsCount(FRAGMENT) >= 30)
-			{
-				st.setCond(3, true);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00137_TempleChampionPart1(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(SYLVAIN);
-		addTalkId(SYLVAIN);
-		addKillId(MOBS);
-		registerQuestItems(FRAGMENT);
 	}
 	
 	public static void main(String[] args)

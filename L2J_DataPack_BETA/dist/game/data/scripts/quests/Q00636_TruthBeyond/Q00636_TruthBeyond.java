@@ -70,6 +70,20 @@ public final class Q00636_TruthBeyond extends Quest
 	}
 	
 	@Override
+	public final String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		// QuestState already null on enter because quest is finished
+		if (character.isPlayer())
+		{
+			if (character.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
+			{
+				character.getActingPlayer().addItem("Mark", FADED_MARK, 1, character, true);
+			}
+		}
+		return null;
+	}
+	
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -110,20 +124,6 @@ public final class Q00636_TruthBeyond extends Quest
 			return "32010-03.htm";
 		}
 		return getNoQuestMsg(player);
-	}
-	
-	@Override
-	public final String onEnterZone(L2Character character, L2ZoneType zone)
-	{
-		// QuestState already null on enter because quest is finished
-		if (character.isPlayer())
-		{
-			if (character.getActingPlayer().destroyItemByItemId("Mark", VISITOR_MARK, 1, character, false))
-			{
-				character.getActingPlayer().addItem("Mark", FADED_MARK, 1, character, true);
-			}
-		}
-		return null;
 	}
 	
 	public static void main(String[] args)

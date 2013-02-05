@@ -37,7 +37,6 @@ public class Q00005_MinersFavor extends Quest
 	private static final int GARITA = 30518;
 	private static final int REED = 30520;
 	private static final int BRUNON = 30526;
-	
 	// Items
 	private static final int BOLTERS_LIST = 1547;
 	private static final int MINING_BOOTS = 1548;
@@ -46,9 +45,16 @@ public class Q00005_MinersFavor extends Quest
 	private static final int REDSTONE_BEER = 1551;
 	private static final int BOLTERS_SMELLY_SOCKS = 1552;
 	private static final int NECKLACE = 906;
-	
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	
+	private Q00005_MinersFavor(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(BOLTER);
+		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
+		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -143,7 +149,7 @@ public class Q00005_MinersFavor extends Quest
 		return htmltext;
 	}
 	
-	private void checkProgress(QuestState st)
+	private static void checkProgress(QuestState st)
 	{
 		if (st.hasQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER))
 		{
@@ -151,7 +157,7 @@ public class Q00005_MinersFavor extends Quest
 		}
 	}
 	
-	private String giveItem(QuestState st, int npcId, int itemId)
+	private static String giveItem(QuestState st, int npcId, int itemId)
 	{
 		if (!st.isStarted())
 		{
@@ -165,15 +171,6 @@ public class Q00005_MinersFavor extends Quest
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		checkProgress(st);
 		return npcId + "-01.html";
-	}
-	
-	public Q00005_MinersFavor(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(BOLTER);
-		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
-		
-		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
 	}
 	
 	public static void main(String[] args)

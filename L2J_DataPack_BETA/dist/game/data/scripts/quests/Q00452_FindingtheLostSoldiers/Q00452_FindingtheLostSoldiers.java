@@ -42,6 +42,15 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 		32772
 	};
 	
+	public Q00452_FindingtheLostSoldiers(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(JAKAN);
+		addTalkId(JAKAN);
+		addTalkId(SOLDIER_CORPSES);
+		registerQuestItems(TAG_ID);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -135,15 +144,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00452_FindingtheLostSoldiers(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(JAKAN);
-		addTalkId(JAKAN);
-		addTalkId(SOLDIER_CORPSES);
-		registerQuestItems(TAG_ID);
 	}
 	
 	public static void main(String[] args)

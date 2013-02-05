@@ -39,6 +39,15 @@ public class Q00051_OFullesSpecialBait extends Quest
 	private static final int LOST_BAIT = 7622;
 	private static final int ICY_AIR_LURE = 7611;
 	
+	public Q00051_OFullesSpecialBait(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(OFULLE);
+		addTalkId(OFULLE);
+		addKillId(FETTERED_SOUL);
+		registerQuestItems(LOST_BAIT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -49,7 +58,6 @@ public class Q00051_OFullesSpecialBait extends Quest
 		}
 		
 		String htmltext = event;
-		
 		switch (event)
 		{
 			case "31572-03.htm":
@@ -65,6 +73,33 @@ public class Q00051_OFullesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		if (st.getQuestItemsCount(LOST_BAIT) < 100)
+		{
+			float chance = 33 * Config.RATE_QUEST_DROP;
+			if (getRandom(100) < chance)
+			{
+				st.rewardItems(LOST_BAIT, 1);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		
+		if (st.getQuestItemsCount(LOST_BAIT) >= 100)
+		{
+			st.setCond(2, true);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -90,45 +125,6 @@ public class Q00051_OFullesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return null;
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (st.getQuestItemsCount(LOST_BAIT) < 100)
-		{
-			float chance = 33 * Config.RATE_QUEST_DROP;
-			if (getRandom(100) < chance)
-			{
-				st.rewardItems(LOST_BAIT, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		
-		if (st.getQuestItemsCount(LOST_BAIT) >= 100)
-		{
-			st.setCond(2, true);
-			
-		}
-		
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00051_OFullesSpecialBait(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(OFULLE);
-		addTalkId(OFULLE);
-		addKillId(FETTERED_SOUL);
-		registerQuestItems(LOST_BAIT);
 	}
 	
 	public static void main(String[] args)

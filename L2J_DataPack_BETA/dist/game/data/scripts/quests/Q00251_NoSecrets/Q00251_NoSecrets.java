@@ -78,41 +78,6 @@ public class Q00251_NoSecrets extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
-				break;
-			case State.STARTED:
-				if (st.isCond(1))
-				{
-					htmltext = "30201-05.htm";
-				}
-				else if ((st.isCond(2)) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
-				{
-					htmltext = "30201-04.htm";
-					st.giveAdena(313355, true);
-					st.addExpAndSp(56787, 160578);
-					st.exitQuest(false, true);
-				}
-				break;
-			case State.COMPLETED:
-				htmltext = "30201-06.htm";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -146,6 +111,41 @@ public class Q00251_NoSecrets extends Quest
 			}
 		}
 		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
+				break;
+			case State.STARTED:
+				if (st.isCond(1))
+				{
+					htmltext = "30201-05.htm";
+				}
+				else if ((st.isCond(2)) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
+				{
+					htmltext = "30201-04.htm";
+					st.giveAdena(313355, true);
+					st.addExpAndSp(56787, 160578);
+					st.exitQuest(false, true);
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = "30201-06.htm";
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

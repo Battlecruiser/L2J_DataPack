@@ -81,6 +81,22 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (npc.getInstanceId() > 0)
+		{
+			return "32760-10.html";
+		}
+		
+		final QuestState st = player.getQuestState(getName());
+		if ((npc.getNpcId() == JINIA) && (st != null) && (st.isCond(2)))
+		{
+			return "32760-01.html";
+		}
+		return null;
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -128,22 +144,6 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.getInstanceId() > 0)
-		{
-			return "32760-10.html";
-		}
-		
-		final QuestState st = player.getQuestState(getName());
-		if ((npc.getNpcId() == JINIA) && (st != null) && (st.isCond(2)))
-		{
-			return "32760-01.html";
-		}
-		return null;
 	}
 	
 	public static void main(String[] args)

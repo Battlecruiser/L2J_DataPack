@@ -116,6 +116,27 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		L2PcInstance pl = getRandomPartyMember(player, 1);
+		if (pl == null)
+		{
+			return null;
+		}
+		
+		final QuestState st = pl.getQuestState(getName());
+		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
+		int numItems = Math.max((chance / 1000), 1);
+		chance = chance % 1000;
+		if (getRandom(1000) <= chance)
+		{
+			st.giveItems(RED_GEM, numItems);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return null;
+	}
+	
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = Quest.getNoQuestMsg(player);
@@ -153,27 +174,6 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		L2PcInstance pl = getRandomPartyMember(player, "1");
-		if (pl == null)
-		{
-			return null;
-		}
-		
-		final QuestState st = pl.getQuestState(getName());
-		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
-		int numItems = Math.max((chance / 1000), 1);
-		chance = chance % 1000;
-		if (getRandom(1000) <= chance)
-		{
-			st.giveItems(RED_GEM, numItems);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return null;
 	}
 	
 	public static void main(String[] args)

@@ -174,6 +174,26 @@ public class Q00290_ThreatRemoval extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		float chance = (MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP);
+		if (getRandom(1000) < chance)
+		{
+			st.rewardItems(SEL_MAHUM_ID_TAG, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -201,26 +221,6 @@ public class Q00290_ThreatRemoval extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		float chance = (MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP);
-		if (getRandom(1000) < chance)
-		{
-			st.rewardItems(SEL_MAHUM_ID_TAG, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
 	}
 	
 	public static void main(String[] args)

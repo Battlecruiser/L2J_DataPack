@@ -65,6 +65,16 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	
 	private static L2Attackable golem = null;
 	
+	public Q00114_ResurrectionOfAnOldManager(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(YUMI);
+		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
+		addKillId(GUARDIAN);
+		addEnterZoneId(ZONES);
+		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -320,6 +330,39 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		return htmltext;
 	}
 	
+	// TODO: Custom until onNpcSee support is done
+	@Override
+	public String onEnterZone(L2Character character, L2ZoneType zone)
+	{
+		if (character.isPlayer())
+		{
+			final QuestState st = character.getActingPlayer().getQuestState(getName());
+			if ((st != null) && st.isCond(17))
+			{
+				st.takeItems(DETCTOR, 1);
+				st.giveItems(DETCTOR2, 1);
+				st.setCond(18, true);
+				showOnScreenMsg(character.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
+			}
+		}
+		return super.onEnterZone(character, zone);
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		
+		if ((st != null) && st.isCond(10) && (st.getInt("spawned") == 1))
+		{
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
+			st.setCond(11, true);
+			st.unset("spawned");
+			cancelQuestTimers("golem_despawn");
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -556,49 +599,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		
-		if ((st != null) && st.isCond(10) && (st.getInt("spawned") == 1))
-		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
-			st.setCond(11, true);
-			st.unset("spawned");
-			cancelQuestTimers("golem_despawn");
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	// TODO: Custom until onNpcSee support is done
-	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
-	{
-		if (character.isPlayer())
-		{
-			final QuestState st = character.getActingPlayer().getQuestState(getName());
-			if ((st != null) && st.isCond(17))
-			{
-				st.takeItems(DETCTOR, 1);
-				st.giveItems(DETCTOR2, 1);
-				st.setCond(18, true);
-				showOnScreenMsg(character.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
-			}
-		}
-		return super.onEnterZone(character, zone);
-	}
-	
-	public Q00114_ResurrectionOfAnOldManager(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(YUMI);
-		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
-		addKillId(GUARDIAN);
-		addEnterZoneId(ZONES);
-		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
 	}
 	
 	public static void main(String[] args)

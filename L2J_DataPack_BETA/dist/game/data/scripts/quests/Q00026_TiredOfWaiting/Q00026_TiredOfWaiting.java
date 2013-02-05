@@ -39,6 +39,14 @@ public class Q00026_TiredOfWaiting extends Quest
 	private static final int LARGE_DRAGON_BONE = 17248;
 	private static final int SEALED_BLOOD_CRYSTAL = 17267;
 	
+	public Q00026_TiredOfWaiting(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ISAEL_SILVERSHADOW);
+		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
+		registerQuestItems(DELIVERY_BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -124,14 +132,6 @@ public class Q00026_TiredOfWaiting extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00026_TiredOfWaiting(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ISAEL_SILVERSHADOW);
-		addTalkId(ISAEL_SILVERSHADOW, KITZKA);
-		registerQuestItems(DELIVERY_BOX);
 	}
 	
 	public static void main(String[] args)

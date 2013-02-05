@@ -43,47 +43,13 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	private static final int TISSUE_VS = 13838;
 	private static final int TISSUE_KB = 13839;
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q10280_MutatedKaneusSchuttgart(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case VISHOTSKY:
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() > 57) ? "31981-01.htm" : "31981-00.htm";
-						break;
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB)) ? "31981-05.htm" : "31981-04.htm";
-						break;
-					case State.COMPLETED:
-						htmltext = "31981-06.htm";
-						break;
-				}
-				break;
-			case ATRAXIA:
-				switch (st.getState())
-				{
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB)) ? "31972-02.htm" : "31972-01.htm";
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					default:
-						break;
-				}
-				break;
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(VISHOTSKY);
+		addTalkId(VISHOTSKY, ATRAXIA);
+		addKillId(VENOMOUS_STORACE, KEL_BILETTE);
+		registerQuestItems(TISSUE_VS, TISSUE_KB);
 	}
 	
 	@Override
@@ -142,6 +108,49 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		return null;
 	}
 	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case VISHOTSKY:
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 57) ? "31981-01.htm" : "31981-00.htm";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB)) ? "31981-05.htm" : "31981-04.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = "31981-06.htm";
+						break;
+				}
+				break;
+			case ATRAXIA:
+				switch (st.getState())
+				{
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_VS) && st.hasQuestItems(TISSUE_KB)) ? "31972-02.htm" : "31972-01.htm";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
+				}
+				break;
+		}
+		return htmltext;
+	}
+	
 	/**
 	 * @param npcId the ID of the killed monster
 	 * @param st the quest state of the killer or party member
@@ -158,15 +167,6 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 			st.giveItems(TISSUE_KB, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-	}
-	
-	public Q10280_MutatedKaneusSchuttgart(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(VISHOTSKY);
-		addTalkId(VISHOTSKY, ATRAXIA);
-		addKillId(VENOMOUS_STORACE, KEL_BILETTE);
-		registerQuestItems(TISSUE_VS, TISSUE_KB);
 	}
 	
 	public static void main(String[] args)

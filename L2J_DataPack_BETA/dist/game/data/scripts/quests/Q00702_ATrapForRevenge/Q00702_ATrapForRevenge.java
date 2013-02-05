@@ -53,6 +53,15 @@ public class Q00702_ATrapForRevenge extends Quest
 	private static final int VARIANT_DRAKE_WING_HORNS = 13880;
 	private static final int EXTRACTED_RED_STAR_STONE = 14009;
 	
+	public Q00702_ATrapForRevenge(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(PLENOS);
+		addTalkId(PLENOS, LEKON, TENIUS);
+		addKillId(MONSTERS);
+		registerQuestItems(DRAKES_FLESH, ROTTEN_BLOOD, BAIT_FOR_DRAKES, VARIANT_DRAKE_WING_HORNS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -255,62 +264,9 @@ public class Q00702_ATrapForRevenge extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (npc.getNpcId() == PLENOS)
-		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					final QuestState prev = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
-					break;
-				case State.STARTED:
-					htmltext = (st.isCond(1)) ? "32563-05.html" : "32563-06.html";
-					break;
-			}
-		}
-		if (st.getState() == State.STARTED)
-		{
-			if (npc.getNpcId() == LEKON)
-			{
-				switch (st.getCond())
-				{
-					case 1:
-						htmltext = "32557-01.html";
-						break;
-					case 2:
-						htmltext = "32557-02.html";
-						break;
-				}
-			}
-			else if (npc.getNpcId() == TENIUS)
-			{
-				switch (st.getCond())
-				{
-					case 1:
-						htmltext = "32555-01.html";
-						break;
-					case 2:
-						htmltext = "32555-04.html";
-						break;
-				}
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "2");
+		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
 		if (partyMember == null)
 		{
 			return null;
@@ -404,13 +360,57 @@ public class Q00702_ATrapForRevenge extends Quest
 		return null;
 	}
 	
-	public Q00702_ATrapForRevenge(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(PLENOS);
-		addTalkId(PLENOS, LEKON, TENIUS);
-		addKillId(MONSTERS);
-		registerQuestItems(DRAKES_FLESH, ROTTEN_BLOOD, BAIT_FOR_DRAKES, VARIANT_DRAKE_WING_HORNS);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (npc.getNpcId() == PLENOS)
+		{
+			switch (st.getState())
+			{
+				case State.CREATED:
+					final QuestState prev = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
+					break;
+				case State.STARTED:
+					htmltext = (st.isCond(1)) ? "32563-05.html" : "32563-06.html";
+					break;
+			}
+		}
+		if (st.getState() == State.STARTED)
+		{
+			if (npc.getNpcId() == LEKON)
+			{
+				switch (st.getCond())
+				{
+					case 1:
+						htmltext = "32557-01.html";
+						break;
+					case 2:
+						htmltext = "32557-02.html";
+						break;
+				}
+			}
+			else if (npc.getNpcId() == TENIUS)
+			{
+				switch (st.getCond())
+				{
+					case 1:
+						htmltext = "32555-01.html";
+						break;
+					case 2:
+						htmltext = "32555-04.html";
+						break;
+				}
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

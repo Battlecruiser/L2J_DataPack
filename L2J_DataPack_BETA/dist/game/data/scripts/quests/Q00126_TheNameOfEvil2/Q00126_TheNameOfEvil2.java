@@ -47,6 +47,14 @@ public class Q00126_TheNameOfEvil2 extends Quest
 	// Reward
 	private static final int ENCHANT_WEAPON_A = 729;
 	
+	public Q00126_TheNameOfEvil2(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(ASAMAH);
+		addTalkId(ASAMAH, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIORS_GRAVE, SHILENS_STONE_STATUE, MUSHIKA);
+		registerQuestItems(GAZKH_FRAGMENT, BONE_POWDER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -599,14 +607,6 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00126_TheNameOfEvil2(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(ASAMAH);
-		addTalkId(ASAMAH, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU, WARRIORS_GRAVE, SHILENS_STONE_STATUE, MUSHIKA);
-		registerQuestItems(GAZKH_FRAGMENT, BONE_POWDER);
 	}
 	
 	public static void main(String[] args)

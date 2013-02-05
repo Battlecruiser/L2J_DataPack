@@ -37,6 +37,31 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 	// Item
 	private static final int INTRODUCTION = 13812;
 	
+	public Q10269_ToTheSeedOfDestruction(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KEUCEREUS);
+		addTalkId(KEUCEREUS, ALLENOS);
+		registerQuestItems(INTRODUCTION);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		if (event.equals("32548-05.html"))
+		{
+			st.startQuest();
+			st.giveItems(INTRODUCTION, 1);
+		}
+		return event;
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -81,31 +106,6 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
-		if (event.equals("32548-05.html"))
-		{
-			st.startQuest();
-			st.giveItems(INTRODUCTION, 1);
-		}
-		return event;
-	}
-	
-	public Q10269_ToTheSeedOfDestruction(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KEUCEREUS);
-		addTalkId(KEUCEREUS, ALLENOS);
-		registerQuestItems(INTRODUCTION);
 	}
 	
 	public static void main(String[] args)

@@ -34,7 +34,8 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 	// NPC
 	private static final int OLF_ADAMS = 32612;
 	// Monster
-	private static final int FRINTEZZA = 29045;
+	// private static final int FRINTEZZA = 29045;
+	private static final int SCARLET_VAN_HALISHA = 29047;
 	// Items
 	private static final int FRINTEZZAS_SOUL_FRAGMENT = 21724;
 	private static final int SOUL_CLOAK_OF_FRINTEZZA = 21721;
@@ -47,8 +48,24 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 		super(questId, name, descr);
 		addStartNpc(OLF_ADAMS);
 		addTalkId(OLF_ADAMS);
-		addKillId(FRINTEZZA);
+		addKillId(SCARLET_VAN_HALISHA);
 		registerQuestItems(FRINTEZZAS_SOUL_FRAGMENT);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			
+			if (st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+			{
+				st.setCond(2, true);
+			}
+		}
 	}
 	
 	@Override
@@ -61,6 +78,13 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 			return event;
 		}
 		return null;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		executeForEachPlayer(killer, npc, isPet, true, true);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -110,29 +134,6 @@ public class Q10503_FrintezzaEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		executeForEachPlayer(killer, npc, isPet, true, true);
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
-		{
-			st.giveItems(FRINTEZZAS_SOUL_FRAGMENT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
-			if (st.getQuestItemsCount(FRINTEZZAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
-			{
-				st.setCond(2, true);
-			}
-		}
 	}
 	
 	public static void main(String[] args)

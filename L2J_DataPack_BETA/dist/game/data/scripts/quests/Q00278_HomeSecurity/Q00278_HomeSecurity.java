@@ -41,6 +41,15 @@ public class Q00278_HomeSecurity extends Quest
 	// Item
 	private static final int SEL_MAHUM_MANE = 15531;
 	
+	public Q00278_HomeSecurity(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(TUNATUN);
+		addTalkId(TUNATUN);
+		addKillId(MONSTER);
+		registerQuestItems(SEL_MAHUM_MANE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -123,38 +132,9 @@ public class Q00278_HomeSecurity extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				htmltext = "31537-01.htm";
-				break;
-			case State.STARTED:
-				if (st.isCond(1) || (st.getQuestItemsCount(SEL_MAHUM_MANE) < 300))
-				{
-					htmltext = "31537-06.html";
-				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300))
-				{
-					htmltext = "31537-05.html";
-				}
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -218,13 +198,33 @@ public class Q00278_HomeSecurity extends Quest
 		return null;
 	}
 	
-	public Q00278_HomeSecurity(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(TUNATUN);
-		addTalkId(TUNATUN);
-		addKillId(MONSTER);
-		registerQuestItems(SEL_MAHUM_MANE);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = "31537-01.htm";
+				break;
+			case State.STARTED:
+				if (st.isCond(1) || (st.getQuestItemsCount(SEL_MAHUM_MANE) < 300))
+				{
+					htmltext = "31537-06.html";
+				}
+				else if (st.isCond(2) && (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300))
+				{
+					htmltext = "31537-05.html";
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

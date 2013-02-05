@@ -49,6 +49,15 @@ public class Q00451_LuciensAltar extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	
+	public Q00451_LuciensAltar(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(DAICHIR);
+		addTalkId(ALTARS);
+		addTalkId(DAICHIR);
+		registerQuestItems(REPLENISHED_BEAD, DISCHARGED_BEAD);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -143,15 +152,6 @@ public class Q00451_LuciensAltar extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	public Q00451_LuciensAltar(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(DAICHIR);
-		addTalkId(ALTARS);
-		addTalkId(DAICHIR);
-		registerQuestItems(REPLENISHED_BEAD, DISCHARGED_BEAD);
 	}
 	
 	public static void main(String[] args)

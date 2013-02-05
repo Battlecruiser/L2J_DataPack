@@ -60,6 +60,16 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	private static final int CHANCE_FOR_DROP = 30;
 	private static final int CHANCE_FOR_DROP_FRAGMENTS = 60;
 	
+	public Q00246_PossessorOfAPreciousSoul3(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(CARADINE);
+		addTalkId(LADD, CARADINE, OSSIAN);
+		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
+		addKillId(MOBS);
+		registerQuestItems(WATERBINDER, EVERGREEN, FRAGMENTS, RAIN_SONG, RELIC_BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -125,90 +135,6 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				break;
 		}
 		return event;
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		if (st.isStarted() && !player.isSubClassActive())
-		{
-			return "no_sub.html";
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case CARADINE:
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() >= 65) ? "31740-1.htm" : "31740-2.html";
-						break;
-					case State.STARTED:
-						htmltext = "31740-5.html";
-						break;
-				}
-				break;
-			case OSSIAN:
-				switch (st.getState())
-				{
-					case State.STARTED:
-						switch (st.getCond())
-						{
-							case 1:
-								htmltext = "31741-1.html";
-								break;
-							case 2:
-								htmltext = "31741-4.html";
-								break;
-							case 3:
-								if (st.hasQuestItems(WATERBINDER) && st.hasQuestItems(EVERGREEN))
-								{
-									htmltext = "31741-3.html";
-								}
-								break;
-							case 4:
-								htmltext = "31741-8.html";
-								break;
-							case 5:
-								if (st.hasQuestItems(RAIN_SONG) || (st.getQuestItemsCount(FRAGMENTS) >= 100))
-								{
-									htmltext = "31741-7.html";
-								}
-								else
-								{
-									htmltext = "31741-8.html";
-								}
-								break;
-							case 6:
-								if (st.getQuestItemsCount(RELIC_BOX) == 1)
-								{
-									htmltext = "31741-11.html";
-								}
-								break;
-						}
-				}
-				break;
-			case LADD:
-				switch (st.getState())
-				{
-					case State.STARTED:
-						if (st.isCond(6))
-						{
-							htmltext = "30721-1.html";
-						}
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-				}
-		}
-		return htmltext;
 	}
 	
 	@Override
@@ -324,14 +250,88 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00246_PossessorOfAPreciousSoul3(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(CARADINE);
-		addTalkId(LADD, CARADINE, OSSIAN);
-		addKillId(PILGRIM_OF_SPLENDOR, JUDGE_OF_SPLENDOR, BARAKIEL);
-		addKillId(MOBS);
-		registerQuestItems(WATERBINDER, EVERGREEN, FRAGMENTS, RAIN_SONG, RELIC_BOX);
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		if (st.isStarted() && !player.isSubClassActive())
+		{
+			return "no_sub.html";
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case CARADINE:
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() >= 65) ? "31740-1.htm" : "31740-2.html";
+						break;
+					case State.STARTED:
+						htmltext = "31740-5.html";
+						break;
+				}
+				break;
+			case OSSIAN:
+				switch (st.getState())
+				{
+					case State.STARTED:
+						switch (st.getCond())
+						{
+							case 1:
+								htmltext = "31741-1.html";
+								break;
+							case 2:
+								htmltext = "31741-4.html";
+								break;
+							case 3:
+								if (st.hasQuestItems(WATERBINDER) && st.hasQuestItems(EVERGREEN))
+								{
+									htmltext = "31741-3.html";
+								}
+								break;
+							case 4:
+								htmltext = "31741-8.html";
+								break;
+							case 5:
+								if (st.hasQuestItems(RAIN_SONG) || (st.getQuestItemsCount(FRAGMENTS) >= 100))
+								{
+									htmltext = "31741-7.html";
+								}
+								else
+								{
+									htmltext = "31741-8.html";
+								}
+								break;
+							case 6:
+								if (st.getQuestItemsCount(RELIC_BOX) == 1)
+								{
+									htmltext = "31741-11.html";
+								}
+								break;
+						}
+				}
+				break;
+			case LADD:
+				switch (st.getState())
+				{
+					case State.STARTED:
+						if (st.isCond(6))
+						{
+							htmltext = "30721-1.html";
+						}
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+				}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

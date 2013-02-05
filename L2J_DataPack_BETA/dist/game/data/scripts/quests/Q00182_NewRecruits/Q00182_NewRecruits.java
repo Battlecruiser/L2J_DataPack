@@ -36,6 +36,13 @@ public class Q00182_NewRecruits extends Quest
 	private static final int KEKROPUS = 32138;
 	private static final int MENACING_MACHINE = 32258;
 	
+	public Q00182_NewRecruits(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KEKROPUS);
+		addTalkId(KEKROPUS, MENACING_MACHINE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -115,13 +122,6 @@ public class Q00182_NewRecruits extends Quest
 			htmltext = "32258-01.html";
 		}
 		return htmltext;
-	}
-	
-	public Q00182_NewRecruits(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KEKROPUS);
-		addTalkId(KEKROPUS, MENACING_MACHINE);
 	}
 	
 	public static void main(String[] args)

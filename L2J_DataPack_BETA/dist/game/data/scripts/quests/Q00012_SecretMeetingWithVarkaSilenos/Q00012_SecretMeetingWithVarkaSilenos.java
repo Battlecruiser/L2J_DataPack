@@ -38,6 +38,14 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	// Item
 	private static final int BOX = 7232;
 	
+	private Q00012_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(CADMON);
+		addTalkId(CADMON, HELMUT, NARAN);
+		registerQuestItems(BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -121,14 +129,6 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00012_SecretMeetingWithVarkaSilenos(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(CADMON);
-		addTalkId(CADMON, HELMUT, NARAN);
-		registerQuestItems(BOX);
 	}
 	
 	public static void main(String[] args)

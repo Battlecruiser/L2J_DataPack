@@ -38,6 +38,14 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	private static final int FLAME_BOX = 14860;
 	private static final int FIRE_BOX = 8086;
 	
+	public Q00113_StatusOfTheBeaconTower(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MOIRA);
+		addTalkId(MOIRA, TORRANT);
+		registerQuestItems(FIRE_BOX, FLAME_BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -110,14 +118,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00113_StatusOfTheBeaconTower(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MOIRA);
-		addTalkId(MOIRA, TORRANT);
-		registerQuestItems(FIRE_BOX, FLAME_BOX);
 	}
 	
 	public static void main(String[] args)

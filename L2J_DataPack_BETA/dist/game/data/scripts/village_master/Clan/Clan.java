@@ -73,12 +73,6 @@ public class Clan extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
-	{
-		return "9000-01.htm";
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (LEADER_REQUIRED.containsKey(event))
@@ -89,6 +83,12 @@ public class Clan extends Quest
 			}
 		}
 		return event;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		return "9000-01.htm";
 	}
 	
 	public static void main(String[] args)

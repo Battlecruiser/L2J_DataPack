@@ -38,6 +38,14 @@ public class Q00019_GoToThePastureland extends Quest
 	private static final int VEAL = 15532;
 	private static final int YOUNG_WILD_BEAST_MEAT = 7547;
 	
+	public Q00019_GoToThePastureland(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(VLADIMIR);
+		addTalkId(VLADIMIR, TUNATUN);
+		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -115,14 +123,6 @@ public class Q00019_GoToThePastureland extends Quest
 			htmltext = "31537-01.html";
 		}
 		return htmltext;
-	}
-	
-	public Q00019_GoToThePastureland(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(VLADIMIR);
-		addTalkId(VLADIMIR, TUNATUN);
-		registerQuestItems(VEAL, YOUNG_WILD_BEAST_MEAT);
 	}
 	
 	public static void main(String[] args)

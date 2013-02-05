@@ -60,26 +60,6 @@ public class DemonRace extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Dark Strike (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(901, 4), false);
-		// Bursting Flame (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(902, 4), false);
-		// Stratum Explosion (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(903, 4), false);
-		// Corpse Burst (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(904, 4), false);
-		// Dark Detonation (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(905, 4), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -104,6 +84,26 @@ public class DemonRace extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Dark Strike (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(901, 4), false);
+		// Bursting Flame (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(902, 4), false);
+		// Stratum Explosion (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(903, 4), false);
+		// Corpse Burst (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(904, 4), false);
+		// Dark Detonation (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(905, 4), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

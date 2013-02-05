@@ -46,6 +46,15 @@ public class Q00423_TakeYourBestShot extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
+	public Q00423_TakeYourBestShot(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(JOHNNY, BATRACOS);
+		addTalkId(JOHNNY, BATRACOS);
+		addFirstTalkId(BATRACOS);
+		addKillId(TANTA_GUARD);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -74,6 +83,27 @@ public class Q00423_TakeYourBestShot extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		if (npc.isInsideRadius(96782, 85918, 100, true))
+		{
+			return "32740-ugoros.html";
+		}
+		return "32740.html";
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		final QuestState st = killer.getQuestState(getName());
+		if ((st != null) && st.isCond(1))
+		{
+			st.setCond(2, true);
+		}
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -135,36 +165,6 @@ public class Q00423_TakeYourBestShot extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.isInsideRadius(96782, 85918, 100, true))
-		{
-			return "32740-ugoros.html";
-		}
-		return "32740.html";
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1))
-		{
-			st.setCond(2, true);
-		}
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	public Q00423_TakeYourBestShot(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(JOHNNY, BATRACOS);
-		addTalkId(JOHNNY, BATRACOS);
-		addFirstTalkId(BATRACOS);
-		addKillId(TANTA_GUARD);
 	}
 	
 	public static void main(String[] args)

@@ -101,6 +101,27 @@ public class Q00654_JourneyToASettlement extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		float chance = (MOBS_SKIN.get(npcId) * Config.RATE_QUEST_DROP);
+		if (getRandom(1000) < chance)
+		{
+			st.rewardItems(ANTELOPE_SKIN, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			st.setCond(3, true);
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -132,27 +153,6 @@ public class Q00654_JourneyToASettlement extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "2");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		float chance = (MOBS_SKIN.get(npcId) * Config.RATE_QUEST_DROP);
-		if (getRandom(1000) < chance)
-		{
-			st.rewardItems(ANTELOPE_SKIN, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			st.setCond(3, true);
-		}
-		return super.onKill(npc, player, isPet);
 	}
 	
 	public static void main(String[] args)

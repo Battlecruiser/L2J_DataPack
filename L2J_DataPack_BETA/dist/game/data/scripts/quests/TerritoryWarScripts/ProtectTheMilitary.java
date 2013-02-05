@@ -44,7 +44,7 @@ public class ProtectTheMilitary extends TerritoryWarSuperClass
 			36556
 		};
 		qn = qn1;
-		registerAttackIds();
+		addAttackId(NPC_IDS);
 	}
 	
 	@Override

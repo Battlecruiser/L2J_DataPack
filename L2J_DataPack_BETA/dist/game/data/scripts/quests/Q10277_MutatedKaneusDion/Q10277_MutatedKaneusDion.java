@@ -53,49 +53,6 @@ public class Q10277_MutatedKaneusDion extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case LUKAS:
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() > 27) ? "30071-01.htm" : "30071-00.html";
-						break;
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30071-05.html" : "30071-04.html";
-						break;
-					case State.COMPLETED:
-						htmltext = "30071-06.html";
-						break;
-				}
-				break;
-			case MIRIEN:
-				switch (st.getState())
-				{
-					case State.STARTED:
-						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30461-02.html" : "30461-01.html";
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					default:
-						break;
-				}
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -149,6 +106,49 @@ public class Q10277_MutatedKaneusDion extends Quest
 			rewardItem(npcId, st);
 		}
 		return super.onKill(npc, killer, isPet);
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case LUKAS:
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 27) ? "30071-01.htm" : "30071-00.html";
+						break;
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30071-05.html" : "30071-04.html";
+						break;
+					case State.COMPLETED:
+						htmltext = "30071-06.html";
+						break;
+				}
+				break;
+			case MIRIEN:
+				switch (st.getState())
+				{
+					case State.STARTED:
+						htmltext = (st.hasQuestItems(TISSUE_CH) && st.hasQuestItems(TISSUE_SF)) ? "30461-02.html" : "30461-01.html";
+						break;
+					case State.COMPLETED:
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					default:
+						break;
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	/**
