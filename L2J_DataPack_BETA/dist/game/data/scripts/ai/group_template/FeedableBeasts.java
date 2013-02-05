@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -237,40 +236,41 @@ public class FeedableBeasts extends AbstractNpcAI
 		}
 	}
 	
-	private FeedableBeasts(String name, String descr)
+	private FeedableBeasts()
 	{
-		super(name, descr);
+		super(FeedableBeasts.class.getSimpleName(), "ai");
 		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
 		
+		// TODO: no grendels?
 		GrowthCapableMob temp;
 		
 		//@formatter:off
-		final int[][] Kookabura_0_Gold = {{21452,21453, 21454, 21455}};
-		final int[][] Kookabura_0_Crystal = {{21456,21457, 21458, 21459}};
-		final int[][] Kookabura_1_Gold_1= {{21460,21462}};
-		final int[][] Kookabura_1_Gold_2 = {{21461,21463}};
-		final int[][] Kookabura_1_Crystal_1 = {{21464,21466}};
-		final int[][] Kookabura_1_Crystal_2 = {{21465,21467}};
-		final int[][] Kookabura_2_1 = {{21468,21824},{16017,16018}};
-		final int[][] Kookabura_2_2 = {{21469,21825},{16017,16018}};
+		final int[][] Kookabura_0_Gold = {{ 21452, 21453, 21454, 21455 }};
+		final int[][] Kookabura_0_Crystal = {{ 21456, 21457, 21458, 21459 }};
+		final int[][] Kookabura_1_Gold_1= {{ 21460, 21462 }};
+		final int[][] Kookabura_1_Gold_2 = {{ 21461, 21463 }};
+		final int[][] Kookabura_1_Crystal_1 = {{ 21464, 21466 }};
+		final int[][] Kookabura_1_Crystal_2 = {{ 21465, 21467 }};
+		final int[][] Kookabura_2_1 = {{ 21468, 21824}, { 16017, 16018 }};
+		final int[][] Kookabura_2_2 = {{ 21469, 21825}, { 16017, 16018 }};
 		
-		final int[][] Buffalo_0_Gold = {{21471,21472, 21473, 21474}};
-		final int[][] Buffalo_0_Crystal = {{21475,21476, 21477, 21478}};
-		final int[][] Buffalo_1_Gold_1 = {{21479,21481}};
-		final int[][] Buffalo_1_Gold_2 = {{21481,21482}};
-		final int[][] Buffalo_1_Crystal_1 = {{21483,21485}};
-		final int[][] Buffalo_1_Crystal_2 = {{21484,21486}};
-		final int[][] Buffalo_2_1 = {{21487,21826},{16013,16014}};
-		final int[][] Buffalo_2_2 = {{21488,21827},{16013,16014}};
+		final int[][] Buffalo_0_Gold = {{ 21471, 21472, 21473, 21474 }};
+		final int[][] Buffalo_0_Crystal = {{ 21475, 21476, 21477, 21478 }};
+		final int[][] Buffalo_1_Gold_1 = {{ 21479, 21481 }};
+		final int[][] Buffalo_1_Gold_2 = {{ 21481, 21482 }};
+		final int[][] Buffalo_1_Crystal_1 = {{ 21483, 21485 }};
+		final int[][] Buffalo_1_Crystal_2 = {{ 21484, 21486 }};
+		final int[][] Buffalo_2_1 = {{ 21487,21826}, {16013, 16014 }};
+		final int[][] Buffalo_2_2 = {{ 21488,21827}, {16013, 16014 }};
 		
-		final int[][] Cougar_0_Gold = {{21490,21491, 21492, 21493}};
-		final int[][] Cougar_0_Crystal = {{21494,21495, 21496, 21497}};
-		final int[][] Cougar_1_Gold_1 = {{21498,21500}};
-		final int[][] Cougar_1_Gold_2 = {{21499,21501}};
-		final int[][] Cougar_1_Crystal_1 = {{21502,21504}};
-		final int[][] Cougar_1_Crystal_2 = {{21503,21505}};
-		final int[][] Cougar_2_1 = {{21506,21828},{16015,16016}};
-		final int[][] Cougar_2_2 = {{21507,21829},{16015,16016}};
+		final int[][] Cougar_0_Gold = {{ 21490, 21491, 21492, 21493 }};
+		final int[][] Cougar_0_Crystal = {{ 21494,21495, 21496, 21497 }};
+		final int[][] Cougar_1_Gold_1 = {{ 21498, 21500 }};
+		final int[][] Cougar_1_Gold_2 = {{ 21499, 21501 }};
+		final int[][] Cougar_1_Crystal_1 = {{ 21502,21504 }};
+		final int[][] Cougar_1_Crystal_2 = {{ 21503,21505 }};
+		final int[][] Cougar_2_1 = {{ 21506, 21828 }, { 16015,16016 }};
+		final int[][] Cougar_2_2 = {{ 21507, 21829 }, { 16015,16016 }};
 		//@formatter:on
 		
 		// Alpen Kookabura
@@ -490,46 +490,37 @@ public class FeedableBeasts extends AbstractNpcAI
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
+			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
 			
-			int objectId = nextNpc.getObjectId();
-			
-			QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
-			if (st != null)
+			// also, perform a rare random chat
+			if (getRandom(20) == 0)
 			{
-				if ((getRandom(100) <= 5) && !st.hasQuestItems(7185))
+				NpcStringId message = NpcStringId.getNpcStringId(getRandom(2024, 2029));
+				NpcSay packet = new NpcSay(nextNpc, 0, message);
+				if (message.getParamCount() > 0) // player name, $s1
 				{
-					// if player has quest 20 going, give quest item
-					// it's easier to hardcode it in here than to try and repeat this stuff in the quest
-					st.giveItems(7185, 1);
-					st.set("cond", "2");
+					packet.addStringParameter(player.getName());
+				}
+				npc.broadcastPacket(packet);
+			}
+			// @formatter:off
+			/*
+			TODO: The tamed beast consumes one golden/crystal spice
+			every 60 seconds with an initial delay of 60 seconds
+			if (tamed beast exists and is alive)
+			{
+				if (player has 1+ golden/crystal spice)
+				{
+					take one golden/crystal spice;
+					say random NpcString(getRandom(2029, 2038));
 				}
 			}
-			// also, perform a rare random chat
-			int rand = getRandom(20);
-			if (rand == 0)
-			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), player.getName() + ", will you show me your hideaway?"));
-			}
-			else if (rand == 1)
-			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), player.getName() + ", whenever I look at spice, I think about you."));
-			}
-			else if (rand == 2)
-			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), player.getName() + ", you do not need to return to the village.  I will give you strength"));
-			}
-			else if (rand == 3)
-			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), "Thanks, " + player.getName() + ".  I hope I can help you"));
-			}
-			else if (rand == 4)
-			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, nextNpc.getNpcId(), player.getName() + ", what can I do to help you?"));
-			}
+			*/
+			// @formatter:on
 		}
 		else
 		{
-			// if not trained, the newly spawned mob will automatically be agro against its feeder
+			// if not trained, the newly spawned mob will automatically be aggro against its feeder
 			// (what happened to "never bite the hand that feeds you" anyway?!)
 			L2Attackable nextNpc = (L2Attackable) addSpawn(nextNpcId, npc);
 			
@@ -633,7 +624,13 @@ public class FeedableBeasts extends AbstractNpcAI
 			// rare random talk...
 			if (getRandom(20) == 0)
 			{
-				npc.broadcastPacket(new NpcSay(objectId, 0, npc.getNpcId(), TEXT[growthLevel][getRandom(TEXT[growthLevel].length)]));
+				NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
+				NpcSay packet = new NpcSay(npc, 0, message);
+				if (message.getParamCount() > 0) // player name, $s1
+				{
+					packet.addStringParameter(caster.getName());
+				}
+				npc.broadcastPacket(packet);
 			}
 			
 			if ((growthLevel > 0) && (_FeedInfo.get(objectId) != caster.getObjectId()))
@@ -655,7 +652,13 @@ public class FeedableBeasts extends AbstractNpcAI
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
-				beast.broadcastPacket(new NpcSay(objectId, 0, npcId, TAMED_TEXT[getRandom(TAMED_TEXT.length)]));
+				NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
+				NpcSay packet = new NpcSay(npc, 0, message);
+				if (message.getParamCount() > 0)
+				{
+					packet.addStringParameter(caster.getName());
+				}
+				beast.broadcastPacket(packet);
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
@@ -674,6 +677,6 @@ public class FeedableBeasts extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new FeedableBeasts(FeedableBeasts.class.getSimpleName(), "ai");
+		new FeedableBeasts();
 	}
 }

@@ -26,17 +26,16 @@ import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Bring Up With Love (20)
- * @author Gnacik
- * @version 2010-09-29 Based on official server Franz
+ * @author Gnacik, jurchiks
  */
 public class Q00020_BringUpWithLove extends Quest
 {
 	// NPC
 	private static final int TUNATUN = 31537;
 	// Items
-	private static final int BEAST_WHIP = 15473;
-	private static final int CRYSTAL = 9553;
-	private static final int JEWEL = 7185;
+	private static final int BEAST_HANDLERS_WHIP = 15473;
+	private static final int WATER_CRYSTAL = 9553;
+	private static final int JEWEL_OF_INNOCENCE = 7185;
 	
 	public Q00020_BringUpWithLove(int questId, String name, String descr)
 	{
@@ -49,46 +48,43 @@ public class Q00020_BringUpWithLove extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
-		
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == TUNATUN)
+		String htmltext = event;
+		
+		switch (event)
 		{
-			if (event.equalsIgnoreCase("31537-12.htm"))
-			{
+			case "31537-12.htm":
 				st.startQuest();
-			}
-			else if (event.equalsIgnoreCase("31537-03.htm"))
-			{
-				if (st.hasQuestItems(BEAST_WHIP))
+				break;
+			case "31537-03.htm":
+				if (hasQuestItems(player, BEAST_HANDLERS_WHIP))
 				{
 					return "31537-03a.htm";
 				}
-				st.giveItems(BEAST_WHIP, 1);
-			}
-			else if (event.equalsIgnoreCase("31537-15.htm"))
-			{
-				st.takeItems(JEWEL, -1);
-				st.giveItems(CRYSTAL, 1);
+				giveItems(player, BEAST_HANDLERS_WHIP, 1);
+				break;
+			
+			case "31537-15.htm":
+				takeItems(player, JEWEL_OF_INNOCENCE, -1);
+				giveItems(player, WATER_CRYSTAL, 1);
 				st.exitQuest(false, true);
-			}
-			else if (event.equalsIgnoreCase("31537-21.html"))
-			{
+				break;
+			case "31537-21.html":
 				if (player.getLevel() < 82)
 				{
 					return "31537-23.html";
 				}
-				if (st.hasQuestItems(BEAST_WHIP))
+				if (hasQuestItems(player, BEAST_HANDLERS_WHIP))
 				{
 					return "31537-22.html";
 				}
-				st.giveItems(BEAST_WHIP, 1);
-			}
+				giveItems(player, BEAST_HANDLERS_WHIP, 1);
+				break;
 		}
 		return htmltext;
 	}
@@ -114,33 +110,34 @@ public class Q00020_BringUpWithLove extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == TUNATUN)
+		switch (st.getState())
 		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					if (player.getLevel() >= 82)
-					{
-						htmltext = "31537-01.htm";
-					}
-					else
-					{
-						htmltext = "31537-00.htm";
-					}
-					break;
-				case State.STARTED:
-					if (st.isCond(1))
-					{
+			case State.CREATED:
+				htmltext = ((player.getLevel() < 82) ? "31537-00.htm" : "31537-01.htm");
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
 						htmltext = "31537-13.htm";
-					}
-					else if (st.isCond(2))
-					{
+						break;
+					case 2:
 						htmltext = "31537-14.htm";
-					}
-					break;
-			}
+						break;
+				}
+				break;
 		}
 		return htmltext;
+	}
+	
+	public static void checkJewelOfInnocence(L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
+		if ((st != null) && st.isCond(1) && !st.hasQuestItems(JEWEL_OF_INNOCENCE) && (getRandom(20) == 0))
+		{
+			st.giveItems(JEWEL_OF_INNOCENCE, 1);
+			st.setCond(2, true);
+		}
 	}
 	
 	public static void main(String[] args)
