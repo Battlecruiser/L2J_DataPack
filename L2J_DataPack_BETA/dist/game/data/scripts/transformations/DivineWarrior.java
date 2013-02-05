@@ -53,28 +53,6 @@ public class DivineWarrior extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Cross Slash
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(675, 1), false);
-		// Sonic Blaster
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(676, 1), false);
-		// Transfixition of Earth
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(677, 1), false);
-		// Divine Warrior War Cry
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(678, 1), false);
-		// Sacrifice Warrior
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(679, 1), false);
-		// Divine Warrior Assault Attack
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(798, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -101,6 +79,28 @@ public class DivineWarrior extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Cross Slash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(675, 1), false);
+		// Sonic Blaster
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(676, 1), false);
+		// Transfixition of Earth
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(677, 1), false);
+		// Divine Warrior War Cry
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(678, 1), false);
+		// Sacrifice Warrior
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(679, 1), false);
+		// Divine Warrior Assault Attack
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(798, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

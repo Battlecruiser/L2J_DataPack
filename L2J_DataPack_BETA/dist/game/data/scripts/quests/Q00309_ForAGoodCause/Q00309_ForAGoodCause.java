@@ -76,6 +76,14 @@ public class Q00309_ForAGoodCause extends Quest
 		15774
 	};
 	
+	public Q00309_ForAGoodCause(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(ATRA);
+		addTalkId(ATRA);
+		addKillId(MUCROKIANS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -247,35 +255,6 @@ public class Q00309_ForAGoodCause extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (npc.getNpcId() == ATRA)
-		{
-			final QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
-			if ((qs != null) && qs.isStarted())
-			{
-				htmltext = "32647-17.html";
-			}
-			else if (st.isStarted())
-			{
-				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.html" : "32647-06.html";
-			}
-			else
-			{
-				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.html";
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -327,12 +306,33 @@ public class Q00309_ForAGoodCause extends Quest
 		return "32647-15.html";
 	}
 	
-	public Q00309_ForAGoodCause(int id, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(id, name, descr);
-		addStartNpc(ATRA);
-		addTalkId(ATRA);
-		addKillId(MUCROKIANS);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (npc.getNpcId() == ATRA)
+		{
+			final QuestState qs = player.getQuestState("308_ReedFieldMaintenance");
+			if ((qs != null) && qs.isStarted())
+			{
+				htmltext = "32647-17.html";
+			}
+			else if (st.isStarted())
+			{
+				htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.html" : "32647-06.html";
+			}
+			else
+			{
+				htmltext = (player.getLevel() >= 82) ? "32647-01.htm" : "32647-00.html";
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

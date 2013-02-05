@@ -60,26 +60,6 @@ public class MyoRace extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Rolling Step (up to 6 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(896, 4), false);
-		// Double Blast (up to 6 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(897, 4), false);
-		// Tornado Slash (up to 6 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(898, 4), false);
-		// Cat Roar (up to 6 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(899, 4), false);
-		// Energy Blast (up to 6)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(900, 4), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -104,6 +84,26 @@ public class MyoRace extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Rolling Step (up to 6 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(896, 4), false);
+		// Double Blast (up to 6 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(897, 4), false);
+		// Tornado Slash (up to 6 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(898, 4), false);
+		// Cat Roar (up to 6 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(899, 4), false);
+		// Energy Blast (up to 6)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(900, 4), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

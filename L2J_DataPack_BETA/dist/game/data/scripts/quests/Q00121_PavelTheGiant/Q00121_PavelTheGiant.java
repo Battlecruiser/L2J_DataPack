@@ -35,6 +35,13 @@ public class Q00121_PavelTheGiant extends Quest
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
 	
+	public Q00121_PavelTheGiant(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(NEWYEAR);
+		addTalkId(NEWYEAR, YUMI);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -91,13 +98,6 @@ public class Q00121_PavelTheGiant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00121_PavelTheGiant(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(NEWYEAR);
-		addTalkId(NEWYEAR, YUMI);
 	}
 	
 	public static void main(String[] args)

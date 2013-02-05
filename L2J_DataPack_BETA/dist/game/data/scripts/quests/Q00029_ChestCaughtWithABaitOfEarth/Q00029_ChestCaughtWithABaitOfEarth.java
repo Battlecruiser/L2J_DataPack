@@ -41,6 +41,14 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	private static final int SMALL_GLASS_BOX = 7627;
 	private static final int PLATED_LEATHER_GLOVES = 2455;
 	
+	public Q00029_ChestCaughtWithABaitOfEarth(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(WILLIE);
+		addTalkId(WILLIE, ANABEL);
+		registerQuestItems(SMALL_GLASS_BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -133,14 +141,6 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00029_ChestCaughtWithABaitOfEarth(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(WILLIE);
-		addTalkId(WILLIE, ANABEL);
-		registerQuestItems(SMALL_GLASS_BOX);
 	}
 	
 	public static void main(String[] args)

@@ -47,6 +47,33 @@ public class FirstClassTransferTalk extends Quest
 	private static final int PRANA = 32153; // Kamael Village Human Guild High Priest
 	private static final int ALDENIA = 32154; // Kamael Village Human Guild Grand Master
 	
+	public FirstClassTransferTalk(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		for (int npc : new int[]
+		{
+			BITZ,
+			BIOTIN,
+			ASTERIOS,
+			THIFIELL,
+			KAKAI,
+			REED,
+			BRONK,
+			HOFFA,
+			FISLER,
+			MOKA,
+			DEVON,
+			RIVIAN,
+			TOOK,
+			PRANA,
+			ALDENIA
+		})
+		{
+			addStartNpc(npc);
+			addTalkId(npc);
+		}
+	}
+	
 	@Override
 	public String onEvent(String event, QuestState st)
 	{
@@ -227,33 +254,6 @@ public class FirstClassTransferTalk extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public FirstClassTransferTalk(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npc : new int[]
-		{
-			BITZ,
-			BIOTIN,
-			ASTERIOS,
-			THIFIELL,
-			KAKAI,
-			REED,
-			BRONK,
-			HOFFA,
-			FISLER,
-			MOKA,
-			DEVON,
-			RIVIAN,
-			TOOK,
-			PRANA,
-			ALDENIA
-		})
-		{
-			addStartNpc(npc);
-			addTalkId(npc);
-		}
 	}
 	
 	public static void main(String[] args)

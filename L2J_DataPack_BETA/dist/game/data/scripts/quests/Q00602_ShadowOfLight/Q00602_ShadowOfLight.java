@@ -71,6 +71,15 @@ public class Q00602_ShadowOfLight extends Quest
 		}
 	};
 	
+	public Q00602_ShadowOfLight(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(EYE_OF_ARGOS);
+		addTalkId(EYE_OF_ARGOS);
+		addKillId(MOBS);
+		registerQuestItems(EYE_OF_DARKNESS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -110,29 +119,6 @@ public class Q00602_ShadowOfLight extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				htmltext = (player.getLevel() >= 68) ? "31683-01.htm" : "31683-00.htm";
-				break;
-			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "31683-03.html" : "31683-04.html";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -159,13 +145,27 @@ public class Q00602_ShadowOfLight extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00602_ShadowOfLight(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(EYE_OF_ARGOS);
-		addTalkId(EYE_OF_ARGOS);
-		addKillId(MOBS);
-		registerQuestItems(EYE_OF_DARKNESS);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = (player.getLevel() >= 68) ? "31683-01.htm" : "31683-00.htm";
+				break;
+			case State.STARTED:
+				htmltext = (st.isCond(1)) ? "31683-03.html" : "31683-04.html";
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

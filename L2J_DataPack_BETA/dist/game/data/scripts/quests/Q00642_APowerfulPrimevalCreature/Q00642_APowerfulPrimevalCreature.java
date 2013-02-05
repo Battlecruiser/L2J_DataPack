@@ -57,6 +57,16 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	private static final int ANCIENT_EGG = 18344;
 	
+	public Q00642_APowerfulPrimevalCreature(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(DINN);
+		addTalkId(DINN);
+		addKillId(ANCIENT_EGG);
+		addKillId(MOBS_TISSUE.keySet());
+		registerQuestItems(DINOSAUR_TISSUE, DINOSAUR_EGG);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -100,31 +110,9 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				htmltext = player.getLevel() < 75 ? "32105-01.htm" : "32105-02.htm";
-				break;
-			case State.STARTED:
-				htmltext = (!st.hasQuestItems(DINOSAUR_TISSUE) && !st.hasQuestItems(DINOSAUR_EGG)) ? "32105-07.html" : "32105-08.html";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return super.onKill(npc, player, isPet);
@@ -149,14 +137,26 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00642_APowerfulPrimevalCreature(int id, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(id, name, descr);
-		addStartNpc(DINN);
-		addTalkId(DINN);
-		addKillId(ANCIENT_EGG);
-		addKillId(MOBS_TISSUE.keySet());
-		registerQuestItems(DINOSAUR_TISSUE, DINOSAUR_EGG);
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				htmltext = player.getLevel() < 75 ? "32105-01.htm" : "32105-02.htm";
+				break;
+			case State.STARTED:
+				htmltext = (!st.hasQuestItems(DINOSAUR_TISSUE) && !st.hasQuestItems(DINOSAUR_EGG)) ? "32105-07.html" : "32105-08.html";
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

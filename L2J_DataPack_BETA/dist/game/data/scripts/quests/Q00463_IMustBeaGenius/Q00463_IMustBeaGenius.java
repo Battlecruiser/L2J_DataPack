@@ -38,11 +38,33 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  */
 public class Q00463_IMustBeaGenius extends Quest
 {
+	private static class DropInfo
+	{
+		private final int _count;
+		private final int _chance;
+		
+		public DropInfo(int count, int chance)
+		{
+			_count = count;
+			_chance = chance;
+		}
+		
+		public int getCount()
+		{
+			return _count;
+		}
+		
+		public int getSpecialChance()
+		{
+			return _chance;
+		}
+	}
 	// NPC
 	private static final int GUTENHAGEN = 32069;
 	// Items
 	private static final int CORPSE_LOG = 15510;
 	private static final int COLLECTION = 15511;
+	
 	// Mobs
 	private static final Map<Integer, DropInfo> MOBS = new HashMap<>();
 	
@@ -79,6 +101,15 @@ public class Q00463_IMustBeaGenius extends Quest
 	
 	// Misc @formatter:on
 	private static final int MIN_LEVEL = 70;
+	
+	public Q00463_IMustBeaGenius(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(GUTENHAGEN);
+		addTalkId(GUTENHAGEN);
+		addKillId(MOBS.keySet());
+		registerQuestItems(COLLECTION, CORPSE_LOG);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -117,51 +148,6 @@ public class Q00463_IMustBeaGenius extends Quest
 				break;
 			default:
 				htmltext = null;
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				if (!st.isNowAvailable())
-				{
-					htmltext = "32069-07.htm";
-					break;
-				}
-				st.setState(State.CREATED);
-			case State.CREATED:
-				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32069-01.htm" : "32069-00.htm";
-				break;
-			case State.STARTED:
-				if (st.isCond(1))
-				{
-					htmltext = "32069-04.html";
-				}
-				else
-				{
-					if (st.getInt("var") == 1)
-					{
-						htmltext = "32069-06a.html";
-					}
-					else
-					{
-						st.takeItems(COLLECTION, -1);
-						st.set("var", "1");
-						htmltext = "32069-06.html";
-					}
-				}
 				break;
 		}
 		return htmltext;
@@ -216,39 +202,53 @@ public class Q00463_IMustBeaGenius extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00463_IMustBeaGenius(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(GUTENHAGEN);
-		addTalkId(GUTENHAGEN);
-		addKillId(MOBS.keySet());
-		registerQuestItems(COLLECTION, CORPSE_LOG);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				if (!st.isNowAvailable())
+				{
+					htmltext = "32069-07.htm";
+					break;
+				}
+				st.setState(State.CREATED);
+			case State.CREATED:
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32069-01.htm" : "32069-00.htm";
+				break;
+			case State.STARTED:
+				if (st.isCond(1))
+				{
+					htmltext = "32069-04.html";
+				}
+				else
+				{
+					if (st.getInt("var") == 1)
+					{
+						htmltext = "32069-06a.html";
+					}
+					else
+					{
+						st.takeItems(COLLECTION, -1);
+						st.set("var", "1");
+						htmltext = "32069-06.html";
+					}
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)
 	{
 		new Q00463_IMustBeaGenius(463, Q00463_IMustBeaGenius.class.getSimpleName(), "I Must Be a Genius");
-	}
-	
-	private static class DropInfo
-	{
-		private final int _count;
-		private final int _chance;
-		
-		public DropInfo(int count, int chance)
-		{
-			_count = count;
-			_chance = chance;
-		}
-		
-		public int getSpecialChance()
-		{
-			return _chance;
-		}
-		
-		public int getCount()
-		{
-			return _count;
-		}
 	}
 }

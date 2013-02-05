@@ -37,6 +37,14 @@ public class Q00013_ParcelDelivery extends Quest
 	// Item
 	private static final int PACKAGE = 7263;
 	
+	private Q00013_ParcelDelivery(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(FUNDIN);
+		addTalkId(FUNDIN, VULCAN);
+		registerQuestItems(PACKAGE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -107,14 +115,6 @@ public class Q00013_ParcelDelivery extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00013_ParcelDelivery(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(FUNDIN);
-		addTalkId(FUNDIN, VULCAN);
-		registerQuestItems(PACKAGE);
 	}
 	
 	public static void main(String[] args)

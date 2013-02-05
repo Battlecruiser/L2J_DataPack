@@ -56,47 +56,13 @@ public class Q10274_CollectingInTheAir extends Quest
 		18692, // Green Star Stone
 	};
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q10274_CollectingInTheAir(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				htmltext = "32557-0a.html";
-				break;
-			case State.CREATED:
-				st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-				if (st == null)
-				{
-					htmltext = "32557-00.html";
-				}
-				else
-				{
-					htmltext = ((player.getLevel() >= 75) && st.isCompleted()) ? "32557-01.htm" : "32557-00.html";
-				}
-				break;
-			case State.STARTED:
-				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8)
-				{
-					htmltext = "32557-05.html";
-					st.giveItems(13728, 1);
-					st.addExpAndSp(25160, 2525);
-					st.exitQuest(false, true);
-				}
-				else
-				{
-					htmltext = "32557-04.html";
-				}
-				break;
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(LEKON);
+		addTalkId(LEKON);
+		addSkillSeeId(MOBS);
+		registerQuestItems(SCROLL, RED, BLUE, GREEN);
 	}
 	
 	@Override
@@ -151,13 +117,47 @@ public class Q10274_CollectingInTheAir extends Quest
 		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
-	public Q10274_CollectingInTheAir(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(LEKON);
-		addTalkId(LEKON);
-		addSkillSeeId(MOBS);
-		registerQuestItems(SCROLL, RED, BLUE, GREEN);
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				htmltext = "32557-0a.html";
+				break;
+			case State.CREATED:
+				st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+				if (st == null)
+				{
+					htmltext = "32557-00.html";
+				}
+				else
+				{
+					htmltext = ((player.getLevel() >= 75) && st.isCompleted()) ? "32557-01.htm" : "32557-00.html";
+				}
+				break;
+			case State.STARTED:
+				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8)
+				{
+					htmltext = "32557-05.html";
+					st.giveItems(13728, 1);
+					st.addExpAndSp(25160, 2525);
+					st.exitQuest(false, true);
+				}
+				else
+				{
+					htmltext = "32557-04.html";
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

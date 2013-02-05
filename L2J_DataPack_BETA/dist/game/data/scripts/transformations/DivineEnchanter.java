@@ -53,28 +53,6 @@ public class DivineEnchanter extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Divine Enchanter Water Spirit
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(704, 1), false);
-		// Divine Enchanter Fire Spirit
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(705, 1), false);
-		// Divine Enchanter Wind Spirit
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(706, 1), false);
-		// Divine Enchanter Hero Spirit
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(707, 1), false);
-		// Divine Enchanter Mass Binding
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(708, 1), false);
-		// Sacrifice Enchanter
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(709, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -101,6 +79,28 @@ public class DivineEnchanter extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Divine Enchanter Water Spirit
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(704, 1), false);
+		// Divine Enchanter Fire Spirit
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(705, 1), false);
+		// Divine Enchanter Wind Spirit
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(706, 1), false);
+		// Divine Enchanter Hero Spirit
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(707, 1), false);
+		// Divine Enchanter Mass Binding
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(708, 1), false);
+		// Sacrifice Enchanter
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(709, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

@@ -47,16 +47,6 @@ public class EpicQuestChild extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Dissonance
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
-		// Race Running
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(960, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -71,6 +61,16 @@ public class EpicQuestChild extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(960, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Dissonance
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5437, 1), false);
+		// Race Running
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(960, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

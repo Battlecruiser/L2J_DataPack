@@ -37,6 +37,44 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	private static final int MEDIBAL_CORPSE = 32528;
 	private static final int MEDIBAL_DOCUMENT = 13852;
 	
+	public Q10271_TheEnvelopingDarkness(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ORBYU);
+		addTalkId(ORBYU, EL, MEDIBAL_CORPSE);
+		registerQuestItems(MEDIBAL_DOCUMENT);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		switch (event)
+		{
+			case "32560-05.html":
+				st.startQuest();
+				break;
+			case "32556-06.html":
+				st.setCond(2, true);
+				break;
+			case "32556-09.html":
+				if (st.hasQuestItems(MEDIBAL_DOCUMENT))
+				{
+					st.takeItems(MEDIBAL_DOCUMENT, -1);
+					st.setCond(4, true);
+				}
+				break;
+			default:
+				break;
+		}
+		return event;
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -129,44 +167,6 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
-		switch (event)
-		{
-			case "32560-05.html":
-				st.startQuest();
-				break;
-			case "32556-06.html":
-				st.setCond(2, true);
-				break;
-			case "32556-09.html":
-				if (st.hasQuestItems(MEDIBAL_DOCUMENT))
-				{
-					st.takeItems(MEDIBAL_DOCUMENT, -1);
-					st.setCond(4, true);
-				}
-				break;
-			default:
-				break;
-		}
-		return event;
-	}
-	
-	public Q10271_TheEnvelopingDarkness(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ORBYU);
-		addTalkId(ORBYU, EL, MEDIBAL_CORPSE);
-		registerQuestItems(MEDIBAL_DOCUMENT);
 	}
 	
 	public static void main(String[] args)

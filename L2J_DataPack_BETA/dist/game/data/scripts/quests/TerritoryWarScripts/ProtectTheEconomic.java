@@ -44,7 +44,7 @@ public class ProtectTheEconomic extends TerritoryWarSuperClass
 			36561
 		};
 		qn = qn1;
-		registerAttackIds();
+		addAttackId(NPC_IDS);
 	}
 	
 	@Override

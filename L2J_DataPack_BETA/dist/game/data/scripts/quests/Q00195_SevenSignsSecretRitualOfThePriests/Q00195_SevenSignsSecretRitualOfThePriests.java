@@ -184,6 +184,42 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case IDENTITY_CONFIRM_DEVICE:
+			{
+				htmltext = "32578-01.html";
+				break;
+			}
+			case PASSWORD_ENTRY_DEVICE:
+			{
+				htmltext = "32577-01.html";
+				break;
+			}
+			case DARKNESS_OF_DAWN:
+			{
+				htmltext = "32579-01.html";
+				break;
+			}
+			case SHELF:
+			{
+				htmltext = "32580-01.html";
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -301,42 +337,6 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						htmltext = "30969-01.html";
 					}
 				}
-				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case IDENTITY_CONFIRM_DEVICE:
-			{
-				htmltext = "32578-01.html";
-				break;
-			}
-			case PASSWORD_ENTRY_DEVICE:
-			{
-				htmltext = "32577-01.html";
-				break;
-			}
-			case DARKNESS_OF_DAWN:
-			{
-				htmltext = "32579-01.html";
-				break;
-			}
-			case SHELF:
-			{
-				htmltext = "32580-01.html";
 				break;
 			}
 		}

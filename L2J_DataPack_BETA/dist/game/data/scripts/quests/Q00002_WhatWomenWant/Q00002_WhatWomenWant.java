@@ -37,7 +37,6 @@ public class Q00002_WhatWomenWant extends Quest
 	private static final int MIRABEL = 30146;
 	private static final int HERBIEL = 30150;
 	private static final int GREENIS = 30157;
-	
 	// Items
 	private static final int ARUJIENS_LETTER1 = 1092;
 	private static final int ARUJIENS_LETTER2 = 1093;
@@ -45,9 +44,16 @@ public class Q00002_WhatWomenWant extends Quest
 	private static final int POETRY_BOOK = 689;
 	private static final int GREENIS_LETTER = 693;
 	private static final int EARRING = 113;
-	
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	
+	private Q00002_WhatWomenWant(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ARUJIEN);
+		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
+		registerQuestItems(ARUJIENS_LETTER1, ARUJIENS_LETTER2, ARUJIENS_LETTER3, POETRY_BOOK, GREENIS_LETTER);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -190,15 +196,6 @@ public class Q00002_WhatWomenWant extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00002_WhatWomenWant(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ARUJIEN);
-		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
-		
-		registerQuestItems(ARUJIENS_LETTER1, ARUJIENS_LETTER2, ARUJIENS_LETTER3, POETRY_BOOK, GREENIS_LETTER);
 	}
 	
 	public static void main(String[] args)

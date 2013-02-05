@@ -41,6 +41,36 @@ public class VanguardTempleKnight extends L2Transformation
 		transformedSkills();
 	}
 	
+	@Override
+	public void onUntransform()
+	{
+		removeSkills();
+	}
+	
+	public void removeSkills()
+	{
+		int lvl = 1;
+		if (getPlayer().getLevel() > 42)
+		{
+			lvl = (getPlayer().getLevel() - 42);
+		}
+		
+		// Two handed mastery
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(293, lvl), false);
+		// Full Swing
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, lvl), false);
+		// Power Divide
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, lvl), false);
+		// Boost Morale
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, lvl), false, false);
+		// Guillotine Attack
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, lvl), false);
+		// Switch Stance
+		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
 	public void transformedSkills()
 	{
 		int lvl = 1;
@@ -78,36 +108,6 @@ public class VanguardTempleKnight extends L2Transformation
 			956,
 			957
 		});
-	}
-	
-	@Override
-	public void onUntransform()
-	{
-		removeSkills();
-	}
-	
-	public void removeSkills()
-	{
-		int lvl = 1;
-		if (getPlayer().getLevel() > 42)
-		{
-			lvl = (getPlayer().getLevel() - 42);
-		}
-		
-		// Two handed mastery
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(293, lvl), false);
-		// Full Swing
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(814, lvl), false);
-		// Power Divide
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(816, lvl), false);
-		// Boost Morale
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(956, lvl), false, false);
-		// Guillotine Attack
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(957, lvl), false);
-		// Switch Stance
-		getPlayer().removeSkill(SkillTable.getInstance().getInfo(838, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
 	}
 	
 	public static void main(String[] args)

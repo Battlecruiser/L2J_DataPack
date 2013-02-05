@@ -74,8 +74,8 @@ class Quest (JQuest) :
 
 
  def onKill(self,npc,player,isPet):
-   partyMember1 = self.getRandomPartyMember(player,"1")
-   partyMember2 = self.getRandomPartyMember(player,"2")
+   partyMember1 = self.getRandomPartyMember(player, 1)
+   partyMember2 = self.getRandomPartyMember(player, 2)
    partyMember = partyMember1 # initialize
    if not partyMember1 and not partyMember2: return
    elif not partyMember2 : partyMember = partyMember1

@@ -38,6 +38,13 @@ public class Q00651_RunawayYouth extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 26;
 	
+	public Q00651_RunawayYouth(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(IVAN);
+		addTalkId(BATIDAE, IVAN);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -99,13 +106,6 @@ public class Q00651_RunawayYouth extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00651_RunawayYouth(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(IVAN);
-		addTalkId(BATIDAE, IVAN);
 	}
 	
 	public static void main(String[] args)

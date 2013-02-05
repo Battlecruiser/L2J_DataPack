@@ -41,6 +41,14 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 	private static final int STRANGE_BLUESPRINT = 7625;
 	private static final int BLACK_PEARL_RING = 880;
 	
+	public Q00027_ChestCaughtWithABaitOfWind(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LANOSCO);
+		addTalkId(LANOSCO, SHALING);
+		registerQuestItems(STRANGE_BLUESPRINT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -133,14 +141,6 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 				}
 		}
 		return htmltext;
-	}
-	
-	public Q00027_ChestCaughtWithABaitOfWind(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LANOSCO);
-		addTalkId(LANOSCO, SHALING);
-		registerQuestItems(STRANGE_BLUESPRINT);
 	}
 	
 	public static void main(String[] args)

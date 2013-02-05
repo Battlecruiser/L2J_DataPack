@@ -38,6 +38,13 @@ public class Q00653_WildMaiden extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 36;
 	
+	public Q00653_WildMaiden(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(SUKI);
+		addTalkId(GALIBREDO, SUKI);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -99,13 +106,6 @@ public class Q00653_WildMaiden extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00653_WildMaiden(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(SUKI);
-		addTalkId(GALIBREDO, SUKI);
 	}
 	
 	public static void main(String[] args)

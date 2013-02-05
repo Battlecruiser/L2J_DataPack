@@ -38,44 +38,12 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 	// Item
 	private static final int BOX = 7245;
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q00018_MeetingWithTheGoldenRam(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		final int npcId = npc.getNpcId();
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			case State.CREATED:
-				if (npcId == DONAL)
-				{
-					htmltext = "31314-01.htm";
-				}
-				break;
-			case State.STARTED:
-				if (npcId == DONAL)
-				{
-					htmltext = "31314-04.html";
-				}
-				else if (npcId == DAISY)
-				{
-					htmltext = (st.getCond() < 2) ? "31315-01.html" : "31315-03.html";
-				}
-				else if ((npcId == ABERCROMBIE) && st.isCond(2) && st.hasQuestItems(BOX))
-				{
-					htmltext = "31555-01.html";
-				}
-				break;
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(DONAL);
+		addTalkId(DONAL, DAISY, ABERCROMBIE);
+		registerQuestItems(BOX);
 	}
 	
 	@Override
@@ -116,12 +84,44 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 		return htmltext;
 	}
 	
-	public Q00018_MeetingWithTheGoldenRam(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(DONAL);
-		addTalkId(DONAL, DAISY, ABERCROMBIE);
-		registerQuestItems(BOX);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		final int npcId = npc.getNpcId();
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
+			case State.CREATED:
+				if (npcId == DONAL)
+				{
+					htmltext = "31314-01.htm";
+				}
+				break;
+			case State.STARTED:
+				if (npcId == DONAL)
+				{
+					htmltext = "31314-04.html";
+				}
+				else if (npcId == DAISY)
+				{
+					htmltext = (st.getCond() < 2) ? "31315-01.html" : "31315-03.html";
+				}
+				else if ((npcId == ABERCROMBIE) && st.isCond(2) && st.hasQuestItems(BOX))
+				{
+					htmltext = "31555-01.html";
+				}
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

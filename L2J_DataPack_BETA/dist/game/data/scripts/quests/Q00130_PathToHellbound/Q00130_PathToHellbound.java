@@ -48,6 +48,77 @@ public class Q00130_PathToHellbound extends Quest
 	}
 	
 	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
+		
+		String htmltext = null;
+		switch (event)
+		{
+			case "30612-04.htm":
+			{
+				htmltext = event;
+				break;
+			}
+			case "32292-02.html":
+			{
+				if (st.isCond(1))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "32292-06.html":
+			{
+				if (st.isCond(3))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "30612-05.html":
+			{
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30612-08.html":
+			{
+				if (st.isCond(2))
+				{
+					st.giveItems(CASIANS_BLUE_CRYSTAL, 1);
+					st.setCond(3, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "32292-03.html":
+			{
+				if (st.isCond(1))
+				{
+					st.setCond(2, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "32292-07.html":
+			{
+				if (st.isCond(3) && st.hasQuestItems(CASIANS_BLUE_CRYSTAL))
+				{
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -122,77 +193,6 @@ public class Q00130_PathToHellbound extends Quest
 							break;
 						}
 					}
-				}
-				break;
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
-		String htmltext = null;
-		switch (event)
-		{
-			case "30612-04.htm":
-			{
-				htmltext = event;
-				break;
-			}
-			case "32292-02.html":
-			{
-				if (st.isCond(1))
-				{
-					htmltext = event;
-				}
-				break;
-			}
-			case "32292-06.html":
-			{
-				if (st.isCond(3))
-				{
-					htmltext = event;
-				}
-				break;
-			}
-			case "30612-05.html":
-			{
-				st.startQuest();
-				htmltext = event;
-				break;
-			}
-			case "30612-08.html":
-			{
-				if (st.isCond(2))
-				{
-					st.giveItems(CASIANS_BLUE_CRYSTAL, 1);
-					st.setCond(3, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "32292-03.html":
-			{
-				if (st.isCond(1))
-				{
-					st.setCond(2, true);
-					htmltext = event;
-				}
-				break;
-			}
-			case "32292-07.html":
-			{
-				if (st.isCond(3) && st.hasQuestItems(CASIANS_BLUE_CRYSTAL))
-				{
-					st.exitQuest(false, true);
-					htmltext = event;
 				}
 				break;
 			}

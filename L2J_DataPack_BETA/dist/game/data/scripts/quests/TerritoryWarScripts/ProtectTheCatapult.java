@@ -44,7 +44,7 @@ public class ProtectTheCatapult extends TerritoryWarSuperClass
 			36507
 		};
 		qn = qn1;
-		registerAttackIds();
+		addAttackId(NPC_IDS);
 	}
 	
 	@Override

@@ -216,6 +216,23 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		QuestState st = player.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		if ((st == null) || (st.getState() != State.STARTED))
+		{
+			return null;
+		}
+		if (Util.contains(MOBS, npcId))
+		{
+			st.giveItems(SOUP, 1 * RATE);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -242,23 +259,6 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		if ((st == null) || (st.getState() != State.STARTED))
-		{
-			return null;
-		}
-		if (Util.contains(MOBS, npcId))
-		{
-			st.giveItems(SOUP, 1 * RATE);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
 	}
 	
 	public static void main(String[] args)

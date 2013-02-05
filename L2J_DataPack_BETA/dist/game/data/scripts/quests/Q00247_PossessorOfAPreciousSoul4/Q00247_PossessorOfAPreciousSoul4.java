@@ -45,6 +45,13 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 	// Skill
 	private static SkillHolder MIMIRS_ELIXIR = new SkillHolder(4339, 1);
 	
+	public Q00247_PossessorOfAPreciousSoul4(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(CARADINE);
+		addTalkId(CARADINE, LADY_OF_LAKE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -132,13 +139,6 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	public Q00247_PossessorOfAPreciousSoul4(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(CARADINE);
-		addTalkId(CARADINE, LADY_OF_LAKE);
 	}
 	
 	public static void main(String[] args)

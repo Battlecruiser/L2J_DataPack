@@ -51,24 +51,6 @@ public class Kamael extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Nail Attack
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(539, 1), false);
-		// Wing Assault
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(540, 1), false);
-		// Soul Sucking
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(1471, 1), false);
-		// Death Beam
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(1472, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -91,6 +73,24 @@ public class Kamael extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Nail Attack
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(539, 1), false);
+		// Wing Assault
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(540, 1), false);
+		// Soul Sucking
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1471, 1), false);
+		// Death Beam
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(1472, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

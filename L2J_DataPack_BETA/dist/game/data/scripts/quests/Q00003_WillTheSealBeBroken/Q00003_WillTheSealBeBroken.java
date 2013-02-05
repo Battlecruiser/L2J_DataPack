@@ -33,7 +33,6 @@ public class Q00003_WillTheSealBeBroken extends Quest
 {
 	// NPC
 	private static final int TALLOTH = 30141;
-	
 	// Monsters
 	private static final int OMEN_BEAST = 20031;
 	private static final int TAINTED_ZOMBIE = 20041;
@@ -41,15 +40,22 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	private static final int LESSER_SUCCUBUS = 20048;
 	private static final int LESSER_SUCCUBUS_TUREN = 20052;
 	private static final int LESSER_SUCCUBUS_TILFO = 20057;
-	
 	// Items
 	private static final int OMEN_BEAST_EYE = 1081;
 	private static final int TAINT_STONE = 1082;
 	private static final int SUCCUBUS_BLOOD = 1083;
 	private static final int ENCHANT = 956;
-	
 	// Misc
 	private static final int MIN_LEVEL = 16;
+	
+	private Q00003_WillTheSealBeBroken(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(TALLOTH);
+		addTalkId(TALLOTH);
+		addKillId(OMEN_BEAST, TAINTED_ZOMBIE, STINK_ZOMBIE, LESSER_SUCCUBUS, LESSER_SUCCUBUS_TILFO, LESSER_SUCCUBUS_TUREN);
+		registerQuestItems(OMEN_BEAST_EYE, TAINT_STONE, SUCCUBUS_BLOOD);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -73,6 +79,33 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance member = getRandomPartyMember(player, 1);
+		if (member == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		final QuestState st = member.getQuestState(getName());
+		switch (npc.getNpcId())
+		{
+			case OMEN_BEAST:
+				giveItem(st, OMEN_BEAST_EYE, getRegisteredItemIds());
+				break;
+			case STINK_ZOMBIE:
+			case TAINTED_ZOMBIE:
+				giveItem(st, TAINT_STONE, getRegisteredItemIds());
+				break;
+			case LESSER_SUCCUBUS:
+			case LESSER_SUCCUBUS_TILFO:
+			case LESSER_SUCCUBUS_TUREN:
+				giveItem(st, SUCCUBUS_BLOOD, getRegisteredItemIds());
+				break;
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -109,54 +142,17 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance member = getRandomPartyMember(player, "1");
-		if (member == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		final QuestState st = member.getQuestState(getName());
-		switch (npc.getNpcId())
-		{
-			case OMEN_BEAST:
-				giveItem(st, OMEN_BEAST_EYE);
-				break;
-			case STINK_ZOMBIE:
-			case TAINTED_ZOMBIE:
-				giveItem(st, TAINT_STONE);
-				break;
-			case LESSER_SUCCUBUS:
-			case LESSER_SUCCUBUS_TILFO:
-			case LESSER_SUCCUBUS_TUREN:
-				giveItem(st, SUCCUBUS_BLOOD);
-				break;
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	private void giveItem(QuestState st, int item)
+	private static void giveItem(QuestState st, int item, int... items)
 	{
 		if (!st.hasQuestItems(item))
 		{
 			st.giveItems(item, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			if (hasQuestItems(st.getPlayer(), getRegisteredItemIds()))
+			if (st.hasQuestItems(items))
 			{
 				st.setCond(2, true);
 			}
 		}
-	}
-	
-	public Q00003_WillTheSealBeBroken(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(TALLOTH);
-		addTalkId(TALLOTH);
-		addKillId(OMEN_BEAST, TAINTED_ZOMBIE, STINK_ZOMBIE, LESSER_SUCCUBUS, LESSER_SUCCUBUS_TILFO, LESSER_SUCCUBUS_TUREN);
-		
-		registerQuestItems(OMEN_BEAST_EYE, TAINT_STONE, SUCCUBUS_BLOOD);
 	}
 	
 	public static void main(String[] args)

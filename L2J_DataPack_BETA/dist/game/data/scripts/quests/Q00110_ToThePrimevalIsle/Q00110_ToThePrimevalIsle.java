@@ -36,6 +36,14 @@ public class Q00110_ToThePrimevalIsle extends Quest
 	// Item
 	private static final int ANCIENT_BOOK = 8777;
 	
+	public Q00110_ToThePrimevalIsle(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(ANTON);
+		addTalkId(ANTON, MARQUEZ);
+		registerQuestItems(ANCIENT_BOOK);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -95,14 +103,6 @@ public class Q00110_ToThePrimevalIsle extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00110_ToThePrimevalIsle(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(ANTON);
-		addTalkId(ANTON, MARQUEZ);
-		registerQuestItems(ANCIENT_BOOK);
 	}
 	
 	public static void main(String[] args)

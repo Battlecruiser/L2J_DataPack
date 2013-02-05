@@ -37,6 +37,14 @@ public class Q00109_InSearchOfTheNest extends Quest
 	// Items
 	private static final int SCOUTS_NOTE = 14858;
 	
+	private Q00109_InSearchOfTheNest(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(PIERCE);
+		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
+		registerQuestItems(SCOUTS_NOTE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -126,14 +134,6 @@ public class Q00109_InSearchOfTheNest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00109_InSearchOfTheNest(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(PIERCE);
-		addTalkId(PIERCE, SCOUTS_CORPSE, KAHMAN);
-		registerQuestItems(SCOUTS_NOTE);
 	}
 	
 	public static void main(String[] args)

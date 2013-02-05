@@ -112,7 +112,7 @@ class Quest (JQuest):
                 st.giveItems(Z_LIVER, 1)  
                 st.playSound("ItemSound.quest_itemget")  
         elif npcId in DAMOBS.keys():
-            partyMember = self.getRandomPartyMember(player, "cond", "1")
+            partyMember = self.getRandomPartyMember(player, 1)
             if not partyMember: return                
             st = partyMember.getQuestState(qn)
             if not st : return

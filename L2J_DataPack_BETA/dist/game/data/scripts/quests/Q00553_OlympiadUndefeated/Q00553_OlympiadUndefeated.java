@@ -88,6 +88,58 @@ public class Q00553_OlympiadUndefeated extends Quest
 	}
 	
 	@Override
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
+	{
+		if (loser != null)
+		{
+			final QuestState st = loser.getQuestState(getName());
+			if ((st != null) && st.isStarted() && (st.isCond(1)))
+			{
+				st.unset("undefeatable");
+				st.takeItems(WIN_CONF_2, -1);
+				st.takeItems(WIN_CONF_5, -1);
+				st.takeItems(WIN_CONF_10, -1);
+			}
+		}
+	}
+	
+	@Override
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
+	{
+		if (winner != null)
+		{
+			final QuestState st = winner.getQuestState(getName());
+			if ((st != null) && st.isStarted() && (st.isCond(1)))
+			{
+				final int matches = st.getInt("undefeatable") + 1;
+				st.set("undefeatable", String.valueOf(matches));
+				switch (matches)
+				{
+					case 2:
+						if (!st.hasQuestItems(WIN_CONF_2))
+						{
+							st.giveItems(WIN_CONF_2, 1);
+						}
+						break;
+					case 5:
+						if (!st.hasQuestItems(WIN_CONF_5))
+						{
+							st.giveItems(WIN_CONF_5, 1);
+						}
+						break;
+					case 10:
+						if (!st.hasQuestItems(WIN_CONF_10))
+						{
+							st.giveItems(WIN_CONF_10, 1);
+							st.setCond(2);
+						}
+						break;
+				}
+			}
+		}
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -136,58 +188,6 @@ public class Q00553_OlympiadUndefeated extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
-	{
-		if (winner != null)
-		{
-			final QuestState st = winner.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.isCond(1)))
-			{
-				final int matches = st.getInt("undefeatable") + 1;
-				st.set("undefeatable", String.valueOf(matches));
-				switch (matches)
-				{
-					case 2:
-						if (!st.hasQuestItems(WIN_CONF_2))
-						{
-							st.giveItems(WIN_CONF_2, 1);
-						}
-						break;
-					case 5:
-						if (!st.hasQuestItems(WIN_CONF_5))
-						{
-							st.giveItems(WIN_CONF_5, 1);
-						}
-						break;
-					case 10:
-						if (!st.hasQuestItems(WIN_CONF_10))
-						{
-							st.giveItems(WIN_CONF_10, 1);
-							st.setCond(2);
-						}
-						break;
-				}
-			}
-		}
-	}
-	
-	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
-	{
-		if (loser != null)
-		{
-			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.isCond(1)))
-			{
-				st.unset("undefeatable");
-				st.takeItems(WIN_CONF_2, -1);
-				st.takeItems(WIN_CONF_5, -1);
-				st.takeItems(WIN_CONF_10, -1);
-			}
-		}
 	}
 	
 	public static void main(String[] args)

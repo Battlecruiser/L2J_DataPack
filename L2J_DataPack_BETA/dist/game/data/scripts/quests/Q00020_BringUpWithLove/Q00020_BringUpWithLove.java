@@ -38,6 +38,14 @@ public class Q00020_BringUpWithLove extends Quest
 	private static final int CRYSTAL = 9553;
 	private static final int JEWEL = 7185;
 	
+	public Q00020_BringUpWithLove(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(TUNATUN);
+		addTalkId(TUNATUN);
+		addFirstTalkId(TUNATUN);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -86,6 +94,17 @@ public class Q00020_BringUpWithLove extends Quest
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			newQuestState(player);
+		}
+		return "31537-20.html";
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -122,25 +141,6 @@ public class Q00020_BringUpWithLove extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			newQuestState(player);
-		}
-		return "31537-20.html";
-	}
-	
-	public Q00020_BringUpWithLove(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(TUNATUN);
-		addTalkId(TUNATUN);
-		addFirstTalkId(TUNATUN);
 	}
 	
 	public static void main(String[] args)

@@ -50,22 +50,6 @@ public class Benom extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Benom Power Smash
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(725, 1), false);
-		// Benom Sonic Storm
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(726, 1), false);
-		// Benom Disillusion
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(727, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -86,6 +70,22 @@ public class Benom extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Benom Power Smash
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(725, 1), false);
+		// Benom Sonic Storm
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(726, 1), false);
+		// Benom Disillusion
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(727, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

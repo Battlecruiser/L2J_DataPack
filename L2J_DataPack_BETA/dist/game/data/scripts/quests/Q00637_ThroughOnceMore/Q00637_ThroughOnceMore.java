@@ -76,6 +76,41 @@ public final class Q00637_ThroughOnceMore extends Quest
 	}
 	
 	@Override
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && (st.getState() == State.STARTED))
+		{
+			final long count = st.getQuestItemsCount(NECRO_HEART);
+			if (count < 10)
+			{
+				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
+				int numItems = chance / 100;
+				chance = chance % 100;
+				if (getRandom(100) < chance)
+				{
+					numItems++;
+				}
+				if (numItems > 0)
+				{
+					if ((count + numItems) >= 10)
+					{
+						numItems = 10 - (int) count;
+						st.setCond(2, true);
+					}
+					else
+					{
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					
+					st.giveItems(NECRO_HEART, numItems);
+				}
+			}
+		}
+		return null;
+	}
+	
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -121,41 +156,6 @@ public final class Q00637_ThroughOnceMore extends Quest
 			return "32010-04.htm";
 		}
 		return getNoQuestMsg(player);
-	}
-	
-	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && (st.getState() == State.STARTED))
-		{
-			final long count = st.getQuestItemsCount(NECRO_HEART);
-			if (count < 10)
-			{
-				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
-				int numItems = chance / 100;
-				chance = chance % 100;
-				if (getRandom(100) < chance)
-				{
-					numItems++;
-				}
-				if (numItems > 0)
-				{
-					if ((count + numItems) >= 10)
-					{
-						numItems = 10 - (int) count;
-						st.setCond(2, true);
-					}
-					else
-					{
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-					
-					st.giveItems(NECRO_HEART, numItems);
-				}
-			}
-		}
-		return null;
 	}
 	
 	public static void main(String[] args)

@@ -66,6 +66,41 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 	}
 	
 	@Override
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		if (!BANDIT_STRONGHOLD.isInSiege())
+		{
+			return null;
+		}
+		
+		QuestState st = killer.getQuestState(getName());
+		
+		if (st == null)
+		{
+			return null;
+		}
+		
+		if (!Util.contains(MOBS, npc.getNpcId()))
+		{
+			return null;
+		}
+		
+		if (st.isStarted() && st.isCond(1))
+		{
+			st.giveItems(TARLK_AMULET, 1);
+			if (st.getQuestItemsCount(TARLK_AMULET) < 30)
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			else
+			{
+				st.setCond(2, true);
+			}
+		}
+		return null;
+	}
+	
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String result = "azit_messenger_q0504_01.htm";
@@ -128,41 +163,6 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 			}
 		}
 		return result;
-	}
-	
-	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (!BANDIT_STRONGHOLD.isInSiege())
-		{
-			return null;
-		}
-		
-		QuestState st = killer.getQuestState(getName());
-		
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if (!Util.contains(MOBS, npc.getNpcId()))
-		{
-			return null;
-		}
-		
-		if (st.isStarted() && st.isCond(1))
-		{
-			st.giveItems(TARLK_AMULET, 1);
-			if (st.getQuestItemsCount(TARLK_AMULET) < 30)
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else
-			{
-				st.setCond(2, true);
-			}
-		}
-		return null;
 	}
 	
 	private final void sendDatePage(final String page, final L2PcInstance player, final L2Npc npc)

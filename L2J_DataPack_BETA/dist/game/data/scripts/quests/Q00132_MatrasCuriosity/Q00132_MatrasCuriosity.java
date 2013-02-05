@@ -43,6 +43,15 @@ public final class Q00132_MatrasCuriosity extends Quest
 	private static final int BLUEPRINT_RANKU = 9800;
 	private static final int BLUEPRINT_PRINCE = 9801;
 	
+	public Q00132_MatrasCuriosity(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MATRAS);
+		addTalkId(MATRAS);
+		addKillId(RANKU, DEMON_PRINCE);
+		registerQuestItems(BLUEPRINT_RANKU, BLUEPRINT_PRINCE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -78,50 +87,6 @@ public final class Q00132_MatrasCuriosity extends Quest
 			st.giveItems(DARKNESS, 1);
 			st.giveItems(DIVINITY, 1);
 			st.exitQuest(false, true);
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (st.isCreated())
-		{
-			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";
-		}
-		else if (st.isCompleted())
-		{
-			htmltext = getAlreadyCompletedMsg(player);
-		}
-		else if (st.isStarted())
-		{
-			switch (st.getCond())
-			{
-				case 1:
-				case 2:
-					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE))
-					{
-						st.takeItems(BLUEPRINT_RANKU, -1);
-						st.takeItems(BLUEPRINT_PRINCE, -1);
-						st.setCond(3, true);
-						htmltext = "32245-05.htm";
-					}
-					else
-					{
-						htmltext = "32245-04.htm";
-					}
-					
-					break;
-				case 3:
-					htmltext = "32245-06.htm";
-			}
 		}
 		return htmltext;
 	}
@@ -172,13 +137,48 @@ public final class Q00132_MatrasCuriosity extends Quest
 		return null;
 	}
 	
-	public Q00132_MatrasCuriosity(int questId, String name, String descr)
+	@Override
+	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(MATRAS);
-		addTalkId(MATRAS);
-		addKillId(RANKU, DEMON_PRINCE);
-		registerQuestItems(BLUEPRINT_RANKU, BLUEPRINT_PRINCE);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (st.isCreated())
+		{
+			htmltext = (player.getLevel() >= 76) ? "32245-01.htm" : "32245-02.htm";
+		}
+		else if (st.isCompleted())
+		{
+			htmltext = getAlreadyCompletedMsg(player);
+		}
+		else if (st.isStarted())
+		{
+			switch (st.getCond())
+			{
+				case 1:
+				case 2:
+					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE))
+					{
+						st.takeItems(BLUEPRINT_RANKU, -1);
+						st.takeItems(BLUEPRINT_PRINCE, -1);
+						st.setCond(3, true);
+						htmltext = "32245-05.htm";
+					}
+					else
+					{
+						htmltext = "32245-04.htm";
+					}
+					
+					break;
+				case 3:
+					htmltext = "32245-06.htm";
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

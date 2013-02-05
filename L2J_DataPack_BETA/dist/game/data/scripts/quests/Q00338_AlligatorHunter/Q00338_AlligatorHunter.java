@@ -43,6 +43,16 @@ public class Q00338_AlligatorHunter extends Quest
 	private static final int MIN_LEVEL = 40;
 	private static final int SECOND_CHANCE = 19;
 	
+	public Q00338_AlligatorHunter(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ENVERUN);
+		addTalkId(ENVERUN);
+		addKillId(ALLIGATOR);
+		
+		registerQuestItems(ALLIGATOR_LEATHER);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -83,6 +93,22 @@ public class Q00338_AlligatorHunter extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st != null)
+		{
+			st.giveItems(ALLIGATOR_LEATHER, 1);
+			if (getRandom(100) < SECOND_CHANCE)
+			{
+				st.giveItems(ALLIGATOR_LEATHER, 1);
+			}
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -102,32 +128,6 @@ public class Q00338_AlligatorHunter extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st != null)
-		{
-			st.giveItems(ALLIGATOR_LEATHER, 1);
-			if (getRandom(100) < SECOND_CHANCE)
-			{
-				st.giveItems(ALLIGATOR_LEATHER, 1);
-			}
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00338_AlligatorHunter(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ENVERUN);
-		addTalkId(ENVERUN);
-		addKillId(ALLIGATOR);
-		
-		registerQuestItems(ALLIGATOR_LEATHER);
 	}
 	
 	public static void main(String[] args)

@@ -41,6 +41,14 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 	private static final int RUKAL_MUSICAL = 7628;
 	private static final int PROTECTION_NECKLACE = 916;
 	
+	public Q00030_ChestCaughtWithABaitOfFire(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LINNAEUS);
+		addTalkId(LINNAEUS, RUKAL);
+		registerQuestItems(RUKAL_MUSICAL);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -73,7 +81,6 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 					htmltext = "30629-03.htm";
 				}
 				break;
-		
 		}
 		return htmltext;
 	}
@@ -134,14 +141,6 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00030_ChestCaughtWithABaitOfFire(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LINNAEUS);
-		addTalkId(LINNAEUS, RUKAL);
-		registerQuestItems(RUKAL_MUSICAL);
 	}
 	
 	public static void main(String[] args)

@@ -87,6 +87,76 @@ public class Q00551_OlympiadStarter extends Quest
 	}
 	
 	@Override
+	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
+	{
+		if (loser != null)
+		{
+			final QuestState st = loser.getQuestState(getName());
+			if ((st != null) && st.isStarted())
+			{
+				final int matches = st.getInt("matches") + 1;
+				switch (matches)
+				{
+					case 3:
+						if (!st.hasQuestItems(CERT_3))
+						{
+							st.giveItems(CERT_3, 1);
+						}
+						break;
+					case 5:
+						if (!st.hasQuestItems(CERT_5))
+						{
+							st.giveItems(CERT_5, 1);
+						}
+						break;
+					case 10:
+						if (!st.hasQuestItems(CERT_10))
+						{
+							st.giveItems(CERT_10, 1);
+						}
+						break;
+				}
+				st.set("matches", String.valueOf(matches));
+			}
+		}
+	}
+	
+	@Override
+	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
+	{
+		if (winner != null)
+		{
+			final QuestState st = winner.getQuestState(getName());
+			if ((st != null) && st.isStarted())
+			{
+				final int matches = st.getInt("matches") + 1;
+				switch (matches)
+				{
+					case 3:
+						if (!st.hasQuestItems(CERT_3))
+						{
+							st.giveItems(CERT_3, 1);
+						}
+						break;
+					case 5:
+						if (!st.hasQuestItems(CERT_5))
+						{
+							st.giveItems(CERT_5, 1);
+						}
+						break;
+					case 10:
+						if (!st.hasQuestItems(CERT_10))
+						{
+							st.giveItems(CERT_10, 1);
+						}
+						break;
+				}
+				st.set("matches", String.valueOf(matches));
+			}
+		}
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -135,76 +205,6 @@ public class Q00551_OlympiadStarter extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public void onOlympiadWin(L2PcInstance winner, CompetitionType type)
-	{
-		if (winner != null)
-		{
-			final QuestState st = winner.getQuestState(getName());
-			if ((st != null) && st.isStarted())
-			{
-				final int matches = st.getInt("matches") + 1;
-				switch (matches)
-				{
-					case 3:
-						if (!st.hasQuestItems(CERT_3))
-						{
-							st.giveItems(CERT_3, 1);
-						}
-						break;
-					case 5:
-						if (!st.hasQuestItems(CERT_5))
-						{
-							st.giveItems(CERT_5, 1);
-						}
-						break;
-					case 10:
-						if (!st.hasQuestItems(CERT_10))
-						{
-							st.giveItems(CERT_10, 1);
-						}
-						break;
-				}
-				st.set("matches", String.valueOf(matches));
-			}
-		}
-	}
-	
-	@Override
-	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
-	{
-		if (loser != null)
-		{
-			final QuestState st = loser.getQuestState(getName());
-			if ((st != null) && st.isStarted())
-			{
-				final int matches = st.getInt("matches") + 1;
-				switch (matches)
-				{
-					case 3:
-						if (!st.hasQuestItems(CERT_3))
-						{
-							st.giveItems(CERT_3, 1);
-						}
-						break;
-					case 5:
-						if (!st.hasQuestItems(CERT_5))
-						{
-							st.giveItems(CERT_5, 1);
-						}
-						break;
-					case 10:
-						if (!st.hasQuestItems(CERT_10))
-						{
-							st.giveItems(CERT_10, 1);
-						}
-						break;
-				}
-				st.set("matches", String.valueOf(matches));
-			}
-		}
 	}
 	
 	public static void main(String[] args)

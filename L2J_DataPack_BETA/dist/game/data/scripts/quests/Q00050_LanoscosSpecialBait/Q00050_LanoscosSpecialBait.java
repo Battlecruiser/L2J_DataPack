@@ -39,6 +39,15 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	private static final int ESSENCE_OF_WIND = 7621;
 	private static final int WIND_FISHING_LURE = 7610;
 	
+	public Q00050_LanoscosSpecialBait(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LANOSCO);
+		addTalkId(LANOSCO);
+		addKillId(SINGING_WIND);
+		registerQuestItems(ESSENCE_OF_WIND);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -68,34 +77,9 @@ public class Q00050_LanoscosSpecialBait extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.COMPLETED:
-				htmltext = getAlreadyCompletedMsg(player);
-				break;
-			case State.CREATED:
-				htmltext = (player.getLevel() >= 27) ? "31570-01.htm" : "31570-02.html";
-				break;
-			case State.STARTED:
-				htmltext = (st.isCond(1)) ? "31570-05.html" : "31570-04.html";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
 			return null;
@@ -122,13 +106,29 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		return super.onKill(npc, player, isPet);
 	}
 	
-	public Q00050_LanoscosSpecialBait(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(LANOSCO);
-		addTalkId(LANOSCO);
-		addKillId(SINGING_WIND);
-		registerQuestItems(ESSENCE_OF_WIND);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.COMPLETED:
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
+			case State.CREATED:
+				htmltext = (player.getLevel() >= 27) ? "31570-01.htm" : "31570-02.html";
+				break;
+			case State.STARTED:
+				htmltext = (st.isCond(1)) ? "31570-05.html" : "31570-04.html";
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

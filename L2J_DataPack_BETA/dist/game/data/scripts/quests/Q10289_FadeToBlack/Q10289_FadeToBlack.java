@@ -45,6 +45,15 @@ public class Q10289_FadeToBlack extends Quest
 	// Monster
 	private static final int ANAYS = 25701;
 	
+	public Q10289_FadeToBlack(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(GREYMORE);
+		addTalkId(GREYMORE);
+		addKillId(ANAYS);
+		registerQuestItems(MARK_OF_SPLENDOR, MARK_OF_DARKNESS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -173,41 +182,6 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (st.getState())
-		{
-			case State.CREATED:
-				st = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
-				htmltext = ((player.getLevel() < 82) || (st == null) || !st.isCompleted()) ? "32757-00.htm" : "32757-01.htm";
-				break;
-			case State.STARTED:
-				switch (st.getCond())
-				{
-					case 1:
-						htmltext = "32757-04.html";
-						break;
-					case 2:
-					case 3:
-						htmltext = "32757-05.html";
-						break;
-				}
-				break;
-			case State.COMPLETED:
-				htmltext = "32757-10.html";
-				break;
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onKill(L2Npc anays, L2PcInstance killer, boolean isPet)
 	{
 		List<L2PcInstance> killers = new ArrayList<>();
@@ -282,13 +256,39 @@ public class Q10289_FadeToBlack extends Quest
 		return super.onKill(anays, killer, isPet);
 	}
 	
-	public Q10289_FadeToBlack(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(GREYMORE);
-		addTalkId(GREYMORE);
-		addKillId(ANAYS);
-		registerQuestItems(MARK_OF_SPLENDOR, MARK_OF_DARKNESS);
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
+				st = player.getQuestState(Q10288_SecretMission.class.getSimpleName());
+				htmltext = ((player.getLevel() < 82) || (st == null) || !st.isCompleted()) ? "32757-00.htm" : "32757-01.htm";
+				break;
+			case State.STARTED:
+				switch (st.getCond())
+				{
+					case 1:
+						htmltext = "32757-04.html";
+						break;
+					case 2:
+					case 3:
+						htmltext = "32757-05.html";
+						break;
+				}
+				break;
+			case State.COMPLETED:
+				htmltext = "32757-10.html";
+				break;
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

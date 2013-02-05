@@ -38,6 +38,41 @@ public class Q10267_JourneyToGracia extends Quest
 	// Item
 	private static final int LETTER = 13810;
 	
+	public Q10267_JourneyToGracia(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ORVEN);
+		addTalkId(ORVEN, KEUCEREUS, PAPIKU);
+		registerQuestItems(LETTER);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		switch (event)
+		{
+			case "30857-06.html":
+				st.startQuest();
+				st.giveItems(LETTER, 1);
+				break;
+			case "32564-02.html":
+				st.setCond(2, true);
+				break;
+			case "32548-02.html":
+				st.giveAdena(92500, true);
+				st.addExpAndSp(75480, 7570);
+				st.exitQuest(false, true);
+				break;
+		}
+		return event;
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -82,41 +117,6 @@ public class Q10267_JourneyToGracia extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
-		switch (event)
-		{
-			case "30857-06.html":
-				st.startQuest();
-				st.giveItems(LETTER, 1);
-				break;
-			case "32564-02.html":
-				st.setCond(2, true);
-				break;
-			case "32548-02.html":
-				st.giveAdena(92500, true);
-				st.addExpAndSp(75480, 7570);
-				st.exitQuest(false, true);
-				break;
-		}
-		return event;
-	}
-	
-	public Q10267_JourneyToGracia(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ORVEN);
-		addTalkId(ORVEN, KEUCEREUS, PAPIKU);
-		registerQuestItems(LETTER);
 	}
 	
 	public static void main(String[] args)

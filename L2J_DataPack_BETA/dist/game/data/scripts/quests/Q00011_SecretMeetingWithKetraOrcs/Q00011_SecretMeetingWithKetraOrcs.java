@@ -38,6 +38,14 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	// Item
 	private static final int BOX = 7231;
 	
+	private Q00011_SecretMeetingWithKetraOrcs(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(CADMON);
+		addTalkId(CADMON, LEON, WAHKAN);
+		registerQuestItems(BOX);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -121,14 +129,6 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00011_SecretMeetingWithKetraOrcs(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(CADMON);
-		addTalkId(CADMON, LEON, WAHKAN);
-		registerQuestItems(BOX);
 	}
 	
 	public static void main(String[] args)

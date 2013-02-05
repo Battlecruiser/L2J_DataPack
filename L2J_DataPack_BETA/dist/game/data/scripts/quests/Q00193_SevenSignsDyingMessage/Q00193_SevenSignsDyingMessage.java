@@ -204,6 +204,34 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 4);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		
+		if (npc.isInsideRadius(player, 1500, true, false))
+		{
+			st.giveItems(SCULPTURE_OF_DOUBT, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
+			st.setCond(5);
+		}
+		
+		isBusy = false;
+		cancelQuestTimers("despawn");
+		cancelQuestTimers("heal");
+		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
+		ns.addStringParameter(player.getName());
+		npc.broadcastPacket(ns);
+		
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -319,34 +347,6 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "4");
-		if (partyMember == null)
-		{
-			return null;
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (npc.isInsideRadius(player, 1500, true, false))
-		{
-			st.giveItems(SCULPTURE_OF_DOUBT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			st.setCond(5);
-		}
-		
-		isBusy = false;
-		cancelQuestTimers("despawn");
-		cancelQuestTimers("heal");
-		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
-		ns.addStringParameter(player.getName());
-		npc.broadcastPacket(ns);
-		
-		return super.onKill(npc, player, isPet);
 	}
 	
 	public static void main(String args[])

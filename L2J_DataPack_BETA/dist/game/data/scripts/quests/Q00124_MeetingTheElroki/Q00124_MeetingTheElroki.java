@@ -39,6 +39,14 @@ public class Q00124_MeetingTheElroki extends Quest
 	// Item
 	private static final int MANTARASA_EGG = 8778;
 	
+	public Q00124_MeetingTheElroki(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(MARQUEZ);
+		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
+		registerQuestItems(MANTARASA_EGG);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -219,14 +227,6 @@ public class Q00124_MeetingTheElroki extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00124_MeetingTheElroki(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(MARQUEZ);
-		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KARAKAWEI, MANTARASA);
-		registerQuestItems(MANTARASA_EGG);
 	}
 	
 	public static void main(String[] args)

@@ -50,21 +50,6 @@ public class Teleporter extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		/*
-		 * Commented out until we figure out how to remove the skills properly. What happens if a player transforms at level 40, gets the level 40 version of the skill, then somehow levels up? Then when we untransform, the script will look for the level 41 version of the skill, right? Or will it
-		 * still remove the level 40 skill? Needs to be tested. // Gatekeeper Aura Flare getPlayer().addSkill(SkillTable.getInstance().getInfo(5656, getPlayer().getLevel()), false); // Gatekeeper Prominence getPlayer().addSkill(SkillTable.getInstance().getInfo(5657, getPlayer().getLevel()), false);
-		 * // Gatekeeper Flame Strike getPlayer().addSkill(SkillTable.getInstance().getInfo(5658, getPlayer().getLevel()), false); // Gatekeeper Berserker Spirit (there are two levels, when do players get access to level 2?) getPlayer().addSkill(SkillTable.getInstance().getInfo(5659, 1), false);
-		 */
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Cancel Gatekeeper Transformation
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(8248, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -85,6 +70,21 @@ public class Teleporter extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(8248, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		/*
+		 * Commented out until we figure out how to remove the skills properly. What happens if a player transforms at level 40, gets the level 40 version of the skill, then somehow levels up? Then when we untransform, the script will look for the level 41 version of the skill, right? Or will it
+		 * still remove the level 40 skill? Needs to be tested. // Gatekeeper Aura Flare getPlayer().addSkill(SkillTable.getInstance().getInfo(5656, getPlayer().getLevel()), false); // Gatekeeper Prominence getPlayer().addSkill(SkillTable.getInstance().getInfo(5657, getPlayer().getLevel()), false);
+		 * // Gatekeeper Flame Strike getPlayer().addSkill(SkillTable.getInstance().getInfo(5658, getPlayer().getLevel()), false); // Gatekeeper Berserker Spirit (there are two levels, when do players get access to level 2?) getPlayer().addSkill(SkillTable.getInstance().getInfo(5659, 1), false);
+		 */
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Cancel Gatekeeper Transformation
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(8248, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

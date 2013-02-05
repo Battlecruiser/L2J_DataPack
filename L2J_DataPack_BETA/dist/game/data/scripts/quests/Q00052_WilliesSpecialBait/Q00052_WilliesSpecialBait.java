@@ -39,10 +39,19 @@ public class Q00052_WilliesSpecialBait extends Quest
 	private static final int TARLK_EYE = 7623;
 	private static final int EARTH_FISHING_LURE = 7612;
 	
+	public Q00052_WilliesSpecialBait(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(WILLIE);
+		addTalkId(WILLIE);
+		addKillId(TARLK_BASILISK);
+		registerQuestItems(TARLK_EYE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -64,6 +73,33 @@ public class Q00052_WilliesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		if (st.getQuestItemsCount(TARLK_EYE) < 100)
+		{
+			float chance = 33 * Config.RATE_QUEST_DROP;
+			if (getRandom(100) < chance)
+			{
+				st.rewardItems(TARLK_EYE, 1);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		
+		if (st.getQuestItemsCount(TARLK_EYE) >= 100)
+		{
+			st.setCond(2, true);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -89,42 +125,6 @@ public class Q00052_WilliesSpecialBait extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return null;
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		if (st.getQuestItemsCount(TARLK_EYE) < 100)
-		{
-			float chance = 33 * Config.RATE_QUEST_DROP;
-			if (getRandom(100) < chance)
-			{
-				st.rewardItems(TARLK_EYE, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		
-		if (st.getQuestItemsCount(TARLK_EYE) >= 100)
-		{
-			st.setCond(2, true);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00052_WilliesSpecialBait(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(WILLIE);
-		addTalkId(WILLIE);
-		addKillId(TARLK_BASILISK);
-		registerQuestItems(TARLK_EYE);
 	}
 	
 	public static void main(String[] args)

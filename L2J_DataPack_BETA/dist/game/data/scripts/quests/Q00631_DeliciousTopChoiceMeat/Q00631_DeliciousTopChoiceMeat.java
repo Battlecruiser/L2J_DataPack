@@ -186,6 +186,33 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		float chance = (MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP);
+		if (getRandom(1000) < chance)
+		{
+			st.rewardItems(PRIME_MEAT, 1);
+			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+			else
+			{
+				st.setCond(2, true);
+			}
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(getName());
@@ -222,33 +249,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		float chance = (MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP);
-		if (getRandom(1000) < chance)
-		{
-			st.rewardItems(PRIME_MEAT, 1);
-			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else
-			{
-				st.setCond(2, true);
-			}
-		}
-		return super.onKill(npc, player, isPet);
 	}
 	
 	public static void main(String args[])

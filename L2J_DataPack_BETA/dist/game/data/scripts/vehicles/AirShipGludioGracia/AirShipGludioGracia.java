@@ -109,6 +109,66 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	private boolean _foundAtcGracia = false;
 	private L2Npc _atcGracia = null;
 	
+	public AirShipGludioGracia(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		
+		addStartNpc(CONTROLLERS);
+		addFirstTalkId(CONTROLLERS);
+		addTalkId(CONTROLLERS);
+		
+		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
+		_ship.setOustLoc(OUST_GLUDIO);
+		_ship.setInDock(GLUDIO_DOCK_ID);
+		_ship.registerEngine(this);
+		_ship.runEngine(60000);
+	}
+	
+	private final void broadcastInGludio(NpcStringId npcString)
+	{
+		if (!_foundAtcGludio)
+		{
+			_foundAtcGludio = true;
+			_atcGludio = findController();
+		}
+		if (_atcGludio != null)
+		{
+			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
+		}
+	}
+	
+	private final void broadcastInGracia(NpcStringId npcStringId)
+	{
+		if (!_foundAtcGracia)
+		{
+			_foundAtcGracia = true;
+			_atcGracia = findController();
+		}
+		if (_atcGracia != null)
+		{
+			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
+		}
+	}
+	
+	private final L2Npc findController()
+	{
+		// check objects around the ship
+		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
+		{
+			if (obj.isNpc())
+			{
+				for (int id : CONTROLLERS)
+				{
+					if (((L2Npc) obj).getNpcId() == id)
+					{
+						return (L2Npc) obj;
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -182,32 +242,6 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	}
 	
 	@Override
-	public boolean unload(boolean removeFromList)
-	{
-		if (_ship != null)
-		{
-			_ship.oustPlayers();
-			_ship.deleteMe();
-		}
-		return super.unload(removeFromList);
-	}
-	
-	public AirShipGludioGracia(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(CONTROLLERS);
-		addFirstTalkId(CONTROLLERS);
-		addTalkId(CONTROLLERS);
-		
-		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
-		_ship.setOustLoc(OUST_GLUDIO);
-		_ship.setInDock(GLUDIO_DOCK_ID);
-		_ship.registerEngine(this);
-		_ship.runEngine(60000);
-	}
-	
-	@Override
 	public void run()
 	{
 		try
@@ -265,49 +299,15 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 	}
 	
-	private final void broadcastInGludio(NpcStringId npcString)
+	@Override
+	public boolean unload(boolean removeFromList)
 	{
-		if (!_foundAtcGludio)
+		if (_ship != null)
 		{
-			_foundAtcGludio = true;
-			_atcGludio = findController();
+			_ship.oustPlayers();
+			_ship.deleteMe();
 		}
-		if (_atcGludio != null)
-		{
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
-		}
-	}
-	
-	private final void broadcastInGracia(NpcStringId npcStringId)
-	{
-		if (!_foundAtcGracia)
-		{
-			_foundAtcGracia = true;
-			_atcGracia = findController();
-		}
-		if (_atcGracia != null)
-		{
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
-		}
-	}
-	
-	private final L2Npc findController()
-	{
-		// check objects around the ship
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
-		{
-			if (obj.isNpc())
-			{
-				for (int id : CONTROLLERS)
-				{
-					if (((L2Npc) obj).getNpcId() == id)
-					{
-						return (L2Npc) obj;
-					}
-				}
-			}
-		}
-		return null;
+		return super.unload(removeFromList);
 	}
 	
 	public static void main(String[] args)

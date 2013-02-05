@@ -50,6 +50,19 @@ public class Q00250_WatchWhatYouEat extends Quest
 		}
 	};
 	
+	public Q00250_WatchWhatYouEat(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(SALLY);
+		addFirstTalkId(SALLY);
+		addTalkId(SALLY);
+		for (int[] mob : MOBS)
+		{
+			addKillId(mob[0]);
+		}
+		registerQuestItems(15493, 15494, 15495);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -79,6 +92,52 @@ public class Q00250_WatchWhatYouEat extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			newQuestState(player);
+		}
+		
+		if (npc.getNpcId() == SALLY)
+		{
+			return "32743-20.html";
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
+		if (st.isStarted() && st.isCond(1))
+		{
+			for (int[] mob : MOBS)
+			{
+				if (npc.getNpcId() == mob[0])
+				{
+					if (!st.hasQuestItems(mob[1]))
+					{
+						st.giveItems(mob[1], 1);
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+				}
+			}
+			if (st.hasQuestItems(MOBS[0][1]) && st.hasQuestItems(MOBS[1][1]) && st.hasQuestItems(MOBS[2][1]))
+			{
+				st.setCond(2, true);
+			}
+		}
+		return null;
 	}
 	
 	@Override
@@ -125,65 +184,6 @@ public class Q00250_WatchWhatYouEat extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		if (st.isStarted() && st.isCond(1))
-		{
-			for (int[] mob : MOBS)
-			{
-				if (npc.getNpcId() == mob[0])
-				{
-					if (!st.hasQuestItems(mob[1]))
-					{
-						st.giveItems(mob[1], 1);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-				}
-			}
-			if (st.hasQuestItems(MOBS[0][1]) && st.hasQuestItems(MOBS[1][1]) && st.hasQuestItems(MOBS[2][1]))
-			{
-				st.setCond(2, true);
-			}
-		}
-		return null;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			newQuestState(player);
-		}
-		
-		if (npc.getNpcId() == SALLY)
-		{
-			return "32743-20.html";
-		}
-		
-		return null;
-	}
-	
-	public Q00250_WatchWhatYouEat(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(SALLY);
-		addFirstTalkId(SALLY);
-		addTalkId(SALLY);
-		for (int[] mob : MOBS)
-		{
-			addKillId(mob[0]);
-		}
-		registerQuestItems(15493, 15494, 15495);
 	}
 	
 	public static void main(String[] args)

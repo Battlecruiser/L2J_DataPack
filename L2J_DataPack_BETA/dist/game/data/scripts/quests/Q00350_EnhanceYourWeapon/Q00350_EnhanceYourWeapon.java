@@ -52,55 +52,12 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00350_EnhanceYourWeapon extends Quest
 {
-	private static final int[] STARTING_NPCS =
-	{
-		30115,
-		30856,
-		30194
-	};
-	private static final int RED_SOUL_CRYSTAL0_ID = 4629;
-	private static final int GREEN_SOUL_CRYSTAL0_ID = 4640;
-	private static final int BLUE_SOUL_CRYSTAL0_ID = 4651;
-	
-	private final FastMap<Integer, SoulCrystal> _soulCrystals = new FastMap<>();
-	// <npcid, <level, LevelingInfo>>
-	private final FastMap<Integer, FastMap<Integer, LevelingInfo>> _npcLevelingInfos = new FastMap<>();
-	
 	private static enum AbsorbCrystalType
 	{
 		LAST_HIT,
 		FULL_PARTY,
 		PARTY_ONE_RANDOM,
 		PARTY_RANDOM
-	}
-	
-	private static final class SoulCrystal
-	{
-		private final int _level;
-		private final int _itemId;
-		private final int _leveledItemId;
-		
-		public SoulCrystal(int level, int itemId, int leveledItemId)
-		{
-			_level = level;
-			_itemId = itemId;
-			_leveledItemId = leveledItemId;
-		}
-		
-		public final int getLevel()
-		{
-			return _level;
-		}
-		
-		public final int getItemId()
-		{
-			return _itemId;
-		}
-		
-		public final int getLeveledItemId()
-		{
-			return _leveledItemId;
-		}
 	}
 	
 	private static final class LevelingInfo
@@ -121,18 +78,173 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			return _absorbCrystalType;
 		}
 		
-		public final boolean isSkillNeeded()
-		{
-			return _isSkillNeeded;
-		}
-		
 		public final int getChance()
 		{
 			return _chance;
 		}
+		
+		public final boolean isSkillNeeded()
+		{
+			return _isSkillNeeded;
+		}
 	}
 	
-	private boolean check(QuestState st)
+	private static final class SoulCrystal
+	{
+		private final int _level;
+		private final int _itemId;
+		private final int _leveledItemId;
+		
+		public SoulCrystal(int level, int itemId, int leveledItemId)
+		{
+			_level = level;
+			_itemId = itemId;
+			_leveledItemId = leveledItemId;
+		}
+		
+		public final int getItemId()
+		{
+			return _itemId;
+		}
+		
+		public final int getLevel()
+		{
+			return _level;
+		}
+		
+		public final int getLeveledItemId()
+		{
+			return _leveledItemId;
+		}
+	}
+	
+	// NPCs
+	private static final int[] STARTING_NPCS =
+	{
+		30115,
+		30856,
+		30194
+	};
+	// Items
+	private static final int RED_SOUL_CRYSTAL0_ID = 4629;
+	private static final int GREEN_SOUL_CRYSTAL0_ID = 4640;
+	private static final int BLUE_SOUL_CRYSTAL0_ID = 4651;
+	
+	private static final FastMap<Integer, SoulCrystal> _soulCrystals = new FastMap<>();
+	// <npcid, <level, LevelingInfo>>
+	private static final FastMap<Integer, FastMap<Integer, LevelingInfo>> _npcLevelingInfos = new FastMap<>();
+	
+	public Q00350_EnhanceYourWeapon(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(STARTING_NPCS);
+		addTalkId(STARTING_NPCS);
+		load();
+		for (int npcId : _npcLevelingInfos.keySet())
+		{
+			addSkillSeeId(npcId);
+			addKillId(npcId);
+		}
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = event;
+		QuestState st = player.getQuestState(getName());
+		if (event.endsWith("-04.htm"))
+		{
+			st.startQuest();
+		}
+		else if (event.endsWith("-09.htm"))
+		{
+			st.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
+		}
+		else if (event.endsWith("-10.htm"))
+		{
+			st.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
+		}
+		else if (event.endsWith("-11.htm"))
+		{
+			st.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
+		}
+		else if (event.equalsIgnoreCase("exit.htm"))
+		{
+			st.exitQuest(true);
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		if (npc.isL2Attackable() && _npcLevelingInfos.containsKey(npc.getNpcId()))
+		{
+			levelSoulCrystals((L2Attackable) npc, killer);
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	{
+		super.onSkillSee(npc, caster, skill, targets, isPet);
+		
+		if ((skill == null) || (skill.getId() != 2096))
+		{
+			return null;
+		}
+		else if ((caster == null) || caster.isDead())
+		{
+			return null;
+		}
+		if (!npc.isL2Attackable() || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getNpcId()))
+		{
+			return null;
+		}
+		
+		try
+		{
+			((L2Attackable) npc).addAbsorber(caster);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.SEVERE, "", e);
+		}
+		return null;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		if (st.getState() == State.CREATED)
+		{
+			st.set("cond", "0");
+		}
+		if (st.getInt("cond") == 0)
+		{
+			htmltext = npc.getNpcId() + "-01.htm";
+		}
+		else if (check(st))
+		{
+			htmltext = npc.getNpcId() + "-03.htm";
+		}
+		else if (!st.hasQuestItems(RED_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(GREEN_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(BLUE_SOUL_CRYSTAL0_ID))
+		{
+			htmltext = npc.getNpcId() + "-21.htm";
+		}
+		return htmltext;
+	}
+	
+	private static boolean check(QuestState st)
 	{
 		for (int i = 4629; i < 4665; i++)
 		{
@@ -144,7 +256,255 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		return false;
 	}
 	
-	private void load()
+	private static void exchangeCrystal(L2PcInstance player, L2Attackable mob, int takeid, int giveid, boolean broke)
+	{
+		L2ItemInstance Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
+		if (Item != null)
+		{
+			// Prepare inventory update packet
+			InventoryUpdate playerIU = new InventoryUpdate();
+			playerIU.addRemovedItem(Item);
+			
+			// Add new crystal to the killer's inventory
+			Item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, mob);
+			playerIU.addItem(Item);
+			
+			// Send a sound event and text message to the player
+			if (broke)
+			{
+				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_BROKE);
+			}
+			else
+			{
+				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED);
+			}
+			
+			// Send system message
+			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
+			sms.addItemName(giveid);
+			player.sendPacket(sms);
+			
+			// Send inventory update packet
+			player.sendPacket(playerIU);
+		}
+	}
+	
+	private static SoulCrystal getSCForPlayer(L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(Q00350_EnhanceYourWeapon.class.getSimpleName());
+		if ((st == null) || !st.isStarted())
+		{
+			return null;
+		}
+		
+		L2ItemInstance[] inv = player.getInventory().getItems();
+		SoulCrystal ret = null;
+		for (L2ItemInstance item : inv)
+		{
+			int itemId = item.getItemId();
+			if (!_soulCrystals.containsKey(itemId))
+			{
+				continue;
+			}
+			
+			if (ret != null)
+			{
+				return null;
+			}
+			ret = _soulCrystals.get(itemId);
+		}
+		return ret;
+	}
+	
+	private static boolean isPartyLevelingMonster(int npcId)
+	{
+		for (LevelingInfo li : _npcLevelingInfos.get(npcId).values())
+		{
+			if (li.getAbsorbCrystalType() != AbsorbCrystalType.LAST_HIT)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private static void levelCrystal(L2PcInstance player, SoulCrystal sc, L2Attackable mob)
+	{
+		if ((sc == null) || !_npcLevelingInfos.containsKey(mob.getNpcId()))
+		{
+			return;
+		}
+		
+		// If the crystal level is way too high for this mob, say that we can't increase it
+		if (!_npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
+		{
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED);
+			return;
+		}
+		
+		if (getRandom(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
+		{
+			exchangeCrystal(player, mob, sc.getItemId(), sc.getLeveledItemId(), false);
+		}
+		else
+		{
+			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);
+		}
+	}
+	
+	/**
+	 * Calculate the leveling chance of Soul Crystals based on the attacker that killed this L2Attackable
+	 * @param mob
+	 * @param killer The player that last killed this L2Attackable $ Rewrite 06.12.06 - Yesod $ Rewrite 08.01.10 - Gigiikun
+	 */
+	public static void levelSoulCrystals(L2Attackable mob, L2PcInstance killer)
+	{
+		// Only L2PcInstance can absorb a soul
+		if (killer == null)
+		{
+			mob.resetAbsorbList();
+			return;
+		}
+		
+		FastMap<L2PcInstance, SoulCrystal> players = FastMap.newInstance();
+		int maxSCLevel = 0;
+		
+		// TODO: what if mob support last_hit + party?
+		if (isPartyLevelingMonster(mob.getNpcId()) && (killer.getParty() != null))
+		{
+			// firts get the list of players who has one Soul Cry and the quest
+			for (L2PcInstance pl : killer.getParty().getMembers())
+			{
+				if (pl == null)
+				{
+					continue;
+				}
+				
+				SoulCrystal sc = getSCForPlayer(pl);
+				if (sc == null)
+				{
+					continue;
+				}
+				
+				players.put(pl, sc);
+				if ((maxSCLevel < sc.getLevel()) && _npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
+				{
+					maxSCLevel = sc.getLevel();
+				}
+			}
+		}
+		else
+		{
+			SoulCrystal sc = getSCForPlayer(killer);
+			if (sc != null)
+			{
+				players.put(killer, sc);
+				if ((maxSCLevel < sc.getLevel()) && _npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
+				{
+					maxSCLevel = sc.getLevel();
+				}
+			}
+		}
+		// Init some useful vars
+		LevelingInfo mainlvlInfo = _npcLevelingInfos.get(mob.getNpcId()).get(maxSCLevel);
+		
+		if (mainlvlInfo == null)
+		{
+			/* throw new NullPointerException("Target: "+mob+ " player: "+killer+" level: "+maxSCLevel); */
+			return;
+		}
+		
+		// If this mob is not require skill, then skip some checkings
+		if (mainlvlInfo.isSkillNeeded())
+		{
+			// Fail if this L2Attackable isn't absorbed or there's no one in its _absorbersList
+			if (!mob.isAbsorbed() /* || _absorbersList == null */)
+			{
+				mob.resetAbsorbList();
+				return;
+			}
+			
+			// Fail if the killer isn't in the _absorbersList of this L2Attackable and mob is not boss
+			AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
+			boolean isSuccess = true;
+			if ((ai == null) || (ai._objId != killer.getObjectId()))
+			{
+				isSuccess = false;
+			}
+			
+			// Check if the soul crystal was used when HP of this L2Attackable wasn't higher than half of it
+			if ((ai != null) && (ai._absorbedHP > (mob.getMaxHp() / 2.0)))
+			{
+				isSuccess = false;
+			}
+			
+			if (!isSuccess)
+			{
+				mob.resetAbsorbList();
+				return;
+			}
+		}
+		
+		switch (mainlvlInfo.getAbsorbCrystalType())
+		{
+			case PARTY_ONE_RANDOM:
+				// This is a naive method for selecting a random member. It gets any random party member and
+				// then checks if the member has a valid crystal. It does not select the random party member
+				// among those who have crystals, only. However, this might actually be correct (same as retail).
+				if (killer.getParty() != null)
+				{
+					L2PcInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
+					levelCrystal(lucky, players.get(lucky), mob);
+				}
+				else
+				{
+					levelCrystal(killer, players.get(killer), mob);
+				}
+				break;
+			case PARTY_RANDOM:
+				if (killer.getParty() != null)
+				{
+					FastList<L2PcInstance> luckyParty = FastList.newInstance();
+					luckyParty.addAll(killer.getParty().getMembers());
+					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
+					{
+						L2PcInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
+						if (players.containsKey(lucky))
+						{
+							levelCrystal(lucky, players.get(lucky), mob);
+						}
+					}
+					FastList.recycle(luckyParty);
+				}
+				else if (getRandom(100) < 33)
+				{
+					levelCrystal(killer, players.get(killer), mob);
+				}
+				break;
+			case FULL_PARTY:
+				if (killer.getParty() != null)
+				{
+					for (L2PcInstance pl : killer.getParty().getMembers())
+					{
+						levelCrystal(pl, players.get(pl), mob);
+					}
+				}
+				else
+				{
+					levelCrystal(killer, players.get(killer), mob);
+				}
+				break;
+			case LAST_HIT:
+				levelCrystal(killer, players.get(killer), mob);
+				break;
+		}
+		FastMap.recycle(players);
+	}
+	
+	/**
+	 * TODO: Implement using DocumentParser.
+	 */
+	private static void load()
 	{
 		try
 		{
@@ -299,364 +659,8 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		_log.info("[EnhanceYourWeapon] Loaded " + _npcLevelingInfos.size() + " npc Leveling info data.");
 	}
 	
-	public Q00350_EnhanceYourWeapon(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(STARTING_NPCS);
-		addTalkId(STARTING_NPCS);
-		load();
-		for (int npcId : _npcLevelingInfos.keySet())
-		{
-			addSkillSeeId(npcId);
-			addKillId(npcId);
-		}
-	}
-	
-	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		super.onSkillSee(npc, caster, skill, targets, isPet);
-		
-		if ((skill == null) || (skill.getId() != 2096))
-		{
-			return null;
-		}
-		else if ((caster == null) || caster.isDead())
-		{
-			return null;
-		}
-		if (!npc.isL2Attackable() || npc.isDead() || !_npcLevelingInfos.containsKey(npc.getNpcId()))
-		{
-			return null;
-		}
-		
-		try
-		{
-			((L2Attackable) npc).addAbsorber(caster);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "", e);
-		}
-		return null;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		if (npc.isL2Attackable() && _npcLevelingInfos.containsKey(npc.getNpcId()))
-		{
-			levelSoulCrystals((L2Attackable) npc, killer);
-		}
-		
-		return null;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
-		if (event.endsWith("-04.htm"))
-		{
-			st.startQuest();
-		}
-		else if (event.endsWith("-09.htm"))
-		{
-			st.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
-		}
-		else if (event.endsWith("-10.htm"))
-		{
-			st.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
-		}
-		else if (event.endsWith("-11.htm"))
-		{
-			st.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
-		}
-		else if (event.equalsIgnoreCase("exit.htm"))
-		{
-			st.exitQuest(true);
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		if (st.getState() == State.CREATED)
-		{
-			st.set("cond", "0");
-		}
-		if (st.getInt("cond") == 0)
-		{
-			htmltext = npc.getNpcId() + "-01.htm";
-		}
-		else if (check(st))
-		{
-			htmltext = npc.getNpcId() + "-03.htm";
-		}
-		else if (!st.hasQuestItems(RED_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(GREEN_SOUL_CRYSTAL0_ID) && !st.hasQuestItems(BLUE_SOUL_CRYSTAL0_ID))
-		{
-			htmltext = npc.getNpcId() + "-21.htm";
-		}
-		return htmltext;
-	}
-	
 	public static void main(String[] args)
 	{
 		new Q00350_EnhanceYourWeapon(350, Q00350_EnhanceYourWeapon.class.getSimpleName(), "Enhance Your Weapon");
-	}
-	
-	/**
-	 * Calculate the leveling chance of Soul Crystals based on the attacker that killed this L2Attackable
-	 * @param mob
-	 * @param killer The player that last killed this L2Attackable $ Rewrite 06.12.06 - Yesod $ Rewrite 08.01.10 - Gigiikun
-	 */
-	public void levelSoulCrystals(L2Attackable mob, L2PcInstance killer)
-	{
-		// Only L2PcInstance can absorb a soul
-		if (killer == null)
-		{
-			mob.resetAbsorbList();
-			return;
-		}
-		
-		FastMap<L2PcInstance, SoulCrystal> players = FastMap.newInstance();
-		int maxSCLevel = 0;
-		
-		// TODO: what if mob support last_hit + party?
-		if (isPartyLevelingMonster(mob.getNpcId()) && (killer.getParty() != null))
-		{
-			// firts get the list of players who has one Soul Cry and the quest
-			for (L2PcInstance pl : killer.getParty().getMembers())
-			{
-				if (pl == null)
-				{
-					continue;
-				}
-				
-				SoulCrystal sc = getSCForPlayer(pl);
-				if (sc == null)
-				{
-					continue;
-				}
-				
-				players.put(pl, sc);
-				if ((maxSCLevel < sc.getLevel()) && _npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
-				{
-					maxSCLevel = sc.getLevel();
-				}
-			}
-		}
-		else
-		{
-			SoulCrystal sc = getSCForPlayer(killer);
-			if (sc != null)
-			{
-				players.put(killer, sc);
-				if ((maxSCLevel < sc.getLevel()) && _npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
-				{
-					maxSCLevel = sc.getLevel();
-				}
-			}
-		}
-		// Init some useful vars
-		LevelingInfo mainlvlInfo = _npcLevelingInfos.get(mob.getNpcId()).get(maxSCLevel);
-		
-		if (mainlvlInfo == null)
-		{
-			/* throw new NullPointerException("Target: "+mob+ " player: "+killer+" level: "+maxSCLevel); */
-			return;
-		}
-		
-		// If this mob is not require skill, then skip some checkings
-		if (mainlvlInfo.isSkillNeeded())
-		{
-			// Fail if this L2Attackable isn't absorbed or there's no one in its _absorbersList
-			if (!mob.isAbsorbed() /* || _absorbersList == null */)
-			{
-				mob.resetAbsorbList();
-				return;
-			}
-			
-			// Fail if the killer isn't in the _absorbersList of this L2Attackable and mob is not boss
-			AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
-			boolean isSuccess = true;
-			if ((ai == null) || (ai._objId != killer.getObjectId()))
-			{
-				isSuccess = false;
-			}
-			
-			// Check if the soul crystal was used when HP of this L2Attackable wasn't higher than half of it
-			if ((ai != null) && (ai._absorbedHP > (mob.getMaxHp() / 2.0)))
-			{
-				isSuccess = false;
-			}
-			
-			if (!isSuccess)
-			{
-				mob.resetAbsorbList();
-				return;
-			}
-		}
-		
-		switch (mainlvlInfo.getAbsorbCrystalType())
-		{
-			case PARTY_ONE_RANDOM:
-				// This is a naive method for selecting a random member. It gets any random party member and
-				// then checks if the member has a valid crystal. It does not select the random party member
-				// among those who have crystals, only. However, this might actually be correct (same as retail).
-				if (killer.getParty() != null)
-				{
-					L2PcInstance lucky = killer.getParty().getMembers().get(getRandom(killer.getParty().getMemberCount()));
-					tryToLevelCrystal(lucky, players.get(lucky), mob);
-				}
-				else
-				{
-					tryToLevelCrystal(killer, players.get(killer), mob);
-				}
-				break;
-			case PARTY_RANDOM:
-				if (killer.getParty() != null)
-				{
-					FastList<L2PcInstance> luckyParty = FastList.newInstance();
-					luckyParty.addAll(killer.getParty().getMembers());
-					while ((getRandom(100) < 33) && !luckyParty.isEmpty())
-					{
-						L2PcInstance lucky = luckyParty.remove(getRandom(luckyParty.size()));
-						if (players.containsKey(lucky))
-						{
-							tryToLevelCrystal(lucky, players.get(lucky), mob);
-						}
-					}
-					FastList.recycle(luckyParty);
-				}
-				else if (getRandom(100) < 33)
-				{
-					tryToLevelCrystal(killer, players.get(killer), mob);
-				}
-				break;
-			case FULL_PARTY:
-				if (killer.getParty() != null)
-				{
-					for (L2PcInstance pl : killer.getParty().getMembers())
-					{
-						tryToLevelCrystal(pl, players.get(pl), mob);
-					}
-				}
-				else
-				{
-					tryToLevelCrystal(killer, players.get(killer), mob);
-				}
-				break;
-			case LAST_HIT:
-				tryToLevelCrystal(killer, players.get(killer), mob);
-				break;
-		}
-		FastMap.recycle(players);
-	}
-	
-	private boolean isPartyLevelingMonster(int npcId)
-	{
-		for (LevelingInfo li : _npcLevelingInfos.get(npcId).values())
-		{
-			if (li.getAbsorbCrystalType() != AbsorbCrystalType.LAST_HIT)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	private SoulCrystal getSCForPlayer(L2PcInstance player)
-	{
-		QuestState st = player.getQuestState(getName());
-		if ((st == null) || (st.getState() != State.STARTED))
-		{
-			return null;
-		}
-		
-		L2ItemInstance[] inv = player.getInventory().getItems();
-		SoulCrystal ret = null;
-		for (L2ItemInstance item : inv)
-		{
-			int itemId = item.getItemId();
-			if (!_soulCrystals.containsKey(itemId))
-			{
-				continue;
-			}
-			
-			if (ret != null)
-			{
-				return null;
-			}
-			ret = _soulCrystals.get(itemId);
-		}
-		return ret;
-	}
-	
-	private void tryToLevelCrystal(L2PcInstance player, SoulCrystal sc, L2Attackable mob)
-	{
-		if ((sc == null) || !_npcLevelingInfos.containsKey(mob.getNpcId()))
-		{
-			return;
-		}
-		
-		// If the crystal level is way too high for this mob, say that we can't increase it
-		if (!_npcLevelingInfos.get(mob.getNpcId()).containsKey(sc.getLevel()))
-		{
-			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_REFUSED);
-			return;
-		}
-		
-		if (getRandom(100) <= _npcLevelingInfos.get(mob.getNpcId()).get(sc.getLevel()).getChance())
-		{
-			exchangeCrystal(player, mob, sc.getItemId(), sc.getLeveledItemId(), false);
-		}
-		else
-		{
-			player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_FAILED);
-		}
-	}
-	
-	private void exchangeCrystal(L2PcInstance player, L2Attackable mob, int takeid, int giveid, boolean broke)
-	{
-		L2ItemInstance Item = player.getInventory().destroyItemByItemId("SoulCrystal", takeid, 1, player, mob);
-		
-		if (Item != null)
-		{
-			// Prepare inventory update packet
-			InventoryUpdate playerIU = new InventoryUpdate();
-			playerIU.addRemovedItem(Item);
-			
-			// Add new crystal to the killer's inventory
-			Item = player.getInventory().addItem("SoulCrystal", giveid, 1, player, mob);
-			playerIU.addItem(Item);
-			
-			// Send a sound event and text message to the player
-			if (broke)
-			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_BROKE);
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.SOUL_CRYSTAL_ABSORBING_SUCCEEDED);
-			}
-			
-			// Send system message
-			SystemMessage sms = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
-			sms.addItemName(giveid);
-			player.sendPacket(sms);
-			
-			// Send inventory update packet
-			player.sendPacket(playerIU);
-		}
 	}
 }

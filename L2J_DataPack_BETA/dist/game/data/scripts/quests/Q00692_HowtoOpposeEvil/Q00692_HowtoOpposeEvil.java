@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 public final class Q00692_HowtoOpposeEvil extends Quest
 {
 	private static final int DILIOS = 32549;
+	private static final int KIRKLAN = 32550;
 	private static final int LEKONS_CERTIFICATE = 13857;
 	private static final int[] QUEST_ITEMS =
 	{
@@ -48,7 +49,6 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	};
 	
 	private static final Map<Integer, ItemHolder> QUEST_MOBS = new HashMap<>();
-	
 	static
 	{
 		// Seed of Infinity
@@ -101,18 +101,12 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		QUEST_MOBS.put(22765, new ItemHolder(15536, 125));
 	}
 	
-	private static final boolean giveReward(QuestState st, int itemId, int minCount, int rewardItemId, long rewardCount)
+	public Q00692_HowtoOpposeEvil(int questId, String name, String descr)
 	{
-		long count = st.getQuestItemsCount(itemId);
-		if (count < minCount)
-		{
-			return false;
-		}
-		
-		count = count / minCount;
-		st.takeItems(itemId, count * minCount);
-		st.rewardItems(rewardItemId, rewardCount * count);
-		return true;
+		super(questId, name, descr);
+		addStartNpc(DILIOS);
+		addTalkId(DILIOS, KIRKLAN);
+		addKillId(QUEST_MOBS.keySet());
 	}
 	
 	@Override
@@ -177,6 +171,34 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		final QuestState st = partyMember.getQuestState(getName());
+		final int npcId = npc.getNpcId();
+		if ((st != null) && QUEST_MOBS.containsKey(npcId))
+		{
+			int chance = (int) (QUEST_MOBS.get(npcId).getCount() * Config.RATE_QUEST_DROP);
+			int numItems = chance / 1000;
+			chance = chance % 1000;
+			if (getRandom(1000) < chance)
+			{
+				numItems++;
+			}
+			if (numItems > 0)
+			{
+				st.giveItems(QUEST_MOBS.get(npcId).getId(), numItems);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return null;
+	}
+	
+	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -227,41 +249,18 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	private static final boolean giveReward(QuestState st, int itemId, int minCount, int rewardItemId, long rewardCount)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "3");
-		if (partyMember == null)
+		long count = st.getQuestItemsCount(itemId);
+		if (count < minCount)
 		{
-			return null;
+			return false;
 		}
-		final QuestState st = partyMember.getQuestState(getName());
-		final int npcId = npc.getNpcId();
-		if ((st != null) && QUEST_MOBS.containsKey(npcId))
-		{
-			int chance = (int) (QUEST_MOBS.get(npcId).getCount() * Config.RATE_QUEST_DROP);
-			int numItems = chance / 1000;
-			chance = chance % 1000;
-			if (getRandom(1000) < chance)
-			{
-				numItems++;
-			}
-			if (numItems > 0)
-			{
-				st.giveItems(QUEST_MOBS.get(npcId).getId(), numItems);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return null;
-	}
-	
-	public Q00692_HowtoOpposeEvil(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(DILIOS);
-		addTalkId(DILIOS);
-		addTalkId(32550);
-		addKillId(QUEST_MOBS.keySet());
+		
+		count = count / minCount;
+		st.takeItems(itemId, count * minCount);
+		st.rewardItems(rewardItemId, rewardCount * count);
+		return true;
 	}
 	
 	public static void main(String[] args)

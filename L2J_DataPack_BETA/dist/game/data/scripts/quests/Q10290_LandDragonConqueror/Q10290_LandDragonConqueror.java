@@ -32,6 +32,33 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class Q10290_LandDragonConqueror extends Quest
 {
+	public class RewardCheck implements IL2Procedure<L2PcInstance>
+	{
+		private final L2Npc _npc;
+		
+		public RewardCheck(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
+		@Override
+		public boolean execute(L2PcInstance member)
+		{
+			if (Util.checkIfInRange(8000, _npc, member, false))
+			{
+				QuestState st = member.getQuestState(getName());
+				
+				if ((st != null) && st.isCond(1) && st.hasQuestItems(SHABBY_NECKLACE))
+				{
+					st.takeItems(SHABBY_NECKLACE, -1);
+					st.giveItems(MIRACLE_NECKLACE, 1);
+					st.setCond(2, true);
+				}
+			}
+			return true;
+		}
+	}
+	
 	// NPC
 	private static final int THEODRIC = 30755;
 	
@@ -43,12 +70,21 @@ public class Q10290_LandDragonConqueror extends Quest
 		29068
 	// Strong
 	};
-	
 	// Items
 	private static final int PORTAL_STONE = 3865;
 	private static final int SHABBY_NECKLACE = 15522;
 	private static final int MIRACLE_NECKLACE = 15523;
+	
 	private static final int ANTHARAS_SLAYER_CIRCLET = 8568;
+	
+	public Q10290_LandDragonConqueror(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(THEODRIC);
+		addTalkId(THEODRIC);
+		addKillId(ANTHARAS);
+		registerQuestItems(MIRACLE_NECKLACE, SHABBY_NECKLACE);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -66,6 +102,27 @@ public class Q10290_LandDragonConqueror extends Quest
 		}
 		
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (!player.isInParty())
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		// rewards go only to command channel, not to a single party or player (retail Freya AI)
+		if (player.getParty().isInCommandChannel())
+		{
+			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
+		}
+		else
+		{
+			player.getParty().forEachMember(new RewardCheck(npc));
+		}
+		
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -125,63 +182,6 @@ public class Q10290_LandDragonConqueror extends Quest
 		}
 		
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (!player.isInParty())
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		// rewards go only to command channel, not to a single party or player (retail Freya AI)
-		if (player.getParty().isInCommandChannel())
-		{
-			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
-		}
-		else
-		{
-			player.getParty().forEachMember(new RewardCheck(npc));
-		}
-		
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public class RewardCheck implements IL2Procedure<L2PcInstance>
-	{
-		private final L2Npc _npc;
-		
-		public RewardCheck(L2Npc npc)
-		{
-			_npc = npc;
-		}
-		
-		@Override
-		public boolean execute(L2PcInstance member)
-		{
-			if (Util.checkIfInRange(8000, _npc, member, false))
-			{
-				QuestState st = member.getQuestState(getName());
-				
-				if ((st != null) && st.isCond(1) && st.hasQuestItems(SHABBY_NECKLACE))
-				{
-					st.takeItems(SHABBY_NECKLACE, -1);
-					st.giveItems(MIRACLE_NECKLACE, 1);
-					st.setCond(2, true);
-				}
-			}
-			return true;
-		}
-	}
-	
-	public Q10290_LandDragonConqueror(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(THEODRIC);
-		addTalkId(THEODRIC);
-		addKillId(ANTHARAS);
-		registerQuestItems(MIRACLE_NECKLACE, SHABBY_NECKLACE);
 	}
 	
 	public static void main(String[] args)

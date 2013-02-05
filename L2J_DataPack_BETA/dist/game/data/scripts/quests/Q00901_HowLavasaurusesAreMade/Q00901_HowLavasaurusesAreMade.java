@@ -103,6 +103,31 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(1))
+		{
+			switch (npc.getNpcId())
+			{
+				case LAVASAURUS_NEWBORN:
+					giveQuestItems(st, FRAGMENT_STONE);
+					break;
+				case LAVASAURUS_FLEDGIING:
+					giveQuestItems(st, FRAGMENT_HEAD);
+					break;
+				case LAVASAURUS_ADULT:
+					giveQuestItems(st, FRAGMENT_BODY);
+					break;
+				case LAVASAURUS_ELDERLY:
+					giveQuestItems(st, FRAGMENT_HORN);
+					break;
+			}
+		}
+		return super.onKill(npc, player, isPet);
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -153,37 +178,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isCond(1))
-		{
-			switch (npc.getNpcId())
-			{
-				case LAVASAURUS_NEWBORN:
-					giveQuestItems(st, FRAGMENT_STONE);
-					break;
-				case LAVASAURUS_FLEDGIING:
-					giveQuestItems(st, FRAGMENT_HEAD);
-					break;
-				case LAVASAURUS_ADULT:
-					giveQuestItems(st, FRAGMENT_BODY);
-					break;
-				case LAVASAURUS_ELDERLY:
-					giveQuestItems(st, FRAGMENT_HORN);
-					break;
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public boolean gotAllQuestItems(QuestState st)
-	{
-		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
-	}
-	
-	public void giveQuestItems(QuestState st, int itemId)
+	public static void giveQuestItems(QuestState st, int itemId)
 	{
 		if (st.getQuestItemsCount(itemId) < 10)
 		{
@@ -194,6 +189,11 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		{
 			st.setCond(2, true);
 		}
+	}
+	
+	public static boolean gotAllQuestItems(QuestState st)
+	{
+		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
 	}
 	
 	public static void main(String[] values)

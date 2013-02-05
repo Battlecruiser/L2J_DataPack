@@ -66,6 +66,16 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		DEINONYCHUS.put(22225, 319);
 	}
 	
+	public Q00125_TheNameOfEvil1(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(MUSHIKA);
+		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
+		addKillId(ORNITHOMIMUS.keySet());
+		addKillId(DEINONYCHUS.keySet());
+		registerQuestItems(ORNITHOMIMUS_CLAW, DEINONYCHUS_BONE, EPITAPH_OF_WISDOM, GAZKH_FRAGMENT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -232,6 +242,49 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		int npcId = npc.getNpcId();
+		if (ORNITHOMIMUS.containsKey(npcId))
+		{
+			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
+			{
+				float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
+				if (getRandom(1000) < chance)
+				{
+					st.giveItems(ORNITHOMIMUS_CLAW, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+			}
+		}
+		else if (DEINONYCHUS.containsKey(npcId))
+		{
+			if (st.getQuestItemsCount(DEINONYCHUS_BONE) < 2)
+			{
+				float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
+				if (getRandom(1000) < chance)
+				{
+					st.giveItems(DEINONYCHUS_BONE, 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+			}
+		}
+		
+		if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
+		{
+			st.setCond(4, true);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -440,59 +493,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "3");
-		if (partyMember == null)
-		{
-			return null;
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
-		if (ORNITHOMIMUS.containsKey(npcId))
-		{
-			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
-			{
-				float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
-				if (getRandom(1000) < chance)
-				{
-					st.giveItems(ORNITHOMIMUS_CLAW, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-			}
-		}
-		else if (DEINONYCHUS.containsKey(npcId))
-		{
-			if (st.getQuestItemsCount(DEINONYCHUS_BONE) < 2)
-			{
-				float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
-				if (getRandom(1000) < chance)
-				{
-					st.giveItems(DEINONYCHUS_BONE, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-			}
-		}
-		
-		if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
-		{
-			st.setCond(4, true);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00125_TheNameOfEvil1(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(MUSHIKA);
-		addTalkId(MUSHIKA, KARAKAWEI, ULU_KAIMU, BALU_KAIMU, CHUTA_KAIMU);
-		addKillId(ORNITHOMIMUS.keySet());
-		addKillId(DEINONYCHUS.keySet());
-		registerQuestItems(ORNITHOMIMUS_CLAW, DEINONYCHUS_BONE, EPITAPH_OF_WISDOM, GAZKH_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

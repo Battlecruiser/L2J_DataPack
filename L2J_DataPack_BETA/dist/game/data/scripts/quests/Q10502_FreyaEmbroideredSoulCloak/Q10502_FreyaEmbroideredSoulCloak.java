@@ -52,6 +52,22 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 	}
 	
 	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			
+			if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+			{
+				st.setCond(2, true);
+			}
+		}
+	}
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
@@ -61,6 +77,13 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 			return event;
 		}
 		return null;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	{
+		executeForEachPlayer(killer, npc, isPet, true, true);
+		return super.onKill(npc, killer, isPet);
 	}
 	
 	@Override
@@ -110,29 +133,6 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		executeForEachPlayer(killer, npc, isPet, true, true);
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
-		{
-			st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
-			if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
-			{
-				st.setCond(2, true);
-			}
-		}
 	}
 	
 	public static void main(String[] args)

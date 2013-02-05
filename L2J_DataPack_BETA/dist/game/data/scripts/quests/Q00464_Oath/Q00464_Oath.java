@@ -79,6 +79,17 @@ public class Q00464_Oath extends Quest
 		MOBS.put(22793, 5);
 	}
 	
+	public Q00464_Oath(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		for (int[] npc : NPC)
+		{
+			addTalkId(npc[0]);
+		}
+		addKillId(MOBS.keySet());
+		registerQuestItems(BOOK, BOOK2);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -153,57 +164,6 @@ public class Q00464_Oath extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		
-		if ((st != null) && st.isStarted())
-		{
-			int npcId = npc.getNpcId();
-			
-			if (npcId == NPC[0][0])
-			{
-				switch (st.getCond())
-				{
-					case 1:
-						htmltext = "32596-01.html";
-						break;
-					case 2:
-						htmltext = "32596-05.html";
-						break;
-					case 3:
-						htmltext = "32596-05a.html";
-						break;
-					case 4:
-						htmltext = "32596-05b.html";
-						break;
-					case 5:
-						htmltext = "32596-05c.html";
-						break;
-					case 6:
-						htmltext = "32596-05d.html";
-						break;
-					case 7:
-						htmltext = "32596-05e.html";
-						break;
-					case 8:
-						htmltext = "32596-05f.html";
-						break;
-					case 9:
-						htmltext = "32596-05g.html";
-						break;
-				}
-			}
-			else if ((st.getCond() > 1) && (st.getInt("npc") == npcId))
-			{
-				htmltext = npcId + "-01.html";
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -263,15 +223,55 @@ public class Q00464_Oath extends Quest
 		return super.onKill(npc, killer, isPet);
 	}
 	
-	public Q00464_Oath(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		for (int[] npc : NPC)
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		
+		if ((st != null) && st.isStarted())
 		{
-			addTalkId(npc[0]);
+			int npcId = npc.getNpcId();
+			
+			if (npcId == NPC[0][0])
+			{
+				switch (st.getCond())
+				{
+					case 1:
+						htmltext = "32596-01.html";
+						break;
+					case 2:
+						htmltext = "32596-05.html";
+						break;
+					case 3:
+						htmltext = "32596-05a.html";
+						break;
+					case 4:
+						htmltext = "32596-05b.html";
+						break;
+					case 5:
+						htmltext = "32596-05c.html";
+						break;
+					case 6:
+						htmltext = "32596-05d.html";
+						break;
+					case 7:
+						htmltext = "32596-05e.html";
+						break;
+					case 8:
+						htmltext = "32596-05f.html";
+						break;
+					case 9:
+						htmltext = "32596-05g.html";
+						break;
+				}
+			}
+			else if ((st.getCond() > 1) && (st.getInt("npc") == npcId))
+			{
+				htmltext = npcId + "-01.html";
+			}
 		}
-		addKillId(MOBS.keySet());
-		registerQuestItems(BOOK, BOOK2);
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

@@ -70,7 +70,7 @@ class Quest (JQuest):
               st.giveItems(Z_BRAIN,int(numItems))
               st.playSound("ItemSound.quest_itemget")
         elif npcId in VAMPIRES:
-           partyMember = self.getRandomPartyMember(player, "cond", "1")
+           partyMember = self.getRandomPartyMember(player, 1)
            if not partyMember: return                
            st = partyMember.getQuestState(qn)
            if not st: return

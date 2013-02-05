@@ -66,6 +66,15 @@ public class Q00310_OnlyWhatRemains extends Quest
 		MOBS.put(22633, 638);
 	}
 	
+	public Q00310_OnlyWhatRemains(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KINTAIJIN);
+		addTalkId(KINTAIJIN);
+		addKillId(MOBS.keySet());
+		registerQuestItems(DIRTY_BEAD);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -96,6 +105,26 @@ public class Q00310_OnlyWhatRemains extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		
+		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		{
+			st.giveItems(DIRTY_BEAD, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -134,35 +163,6 @@ public class Q00310_OnlyWhatRemains extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
-		{
-			st.giveItems(DIRTY_BEAD, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00310_OnlyWhatRemains(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KINTAIJIN);
-		addTalkId(KINTAIJIN);
-		addKillId(MOBS.keySet());
-		registerQuestItems(DIRTY_BEAD);
 	}
 	
 	public static void main(String[] args)

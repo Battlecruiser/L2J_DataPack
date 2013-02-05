@@ -56,6 +56,15 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	// Item
 	private static final int STAKATO_FANG = 14879;
 	
+	public Q00240_ImTheOnlyOneYouCanTrust(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(KINTAIJIN);
+		addTalkId(KINTAIJIN);
+		addKillId(MOBS);
+		registerQuestItems(STAKATO_FANG);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -70,6 +79,28 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 			st.startQuest();
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return super.onKill(npc, player, isPet);
+		}
+		
+		final QuestState st = partyMember.getQuestState(getName());
+		st.giveItems(STAKATO_FANG, 1);
+		if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
+		{
+			st.setCond(2, true);
+		}
+		else
+		{
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -110,37 +141,6 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return super.onKill(npc, player, isPet);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		st.giveItems(STAKATO_FANG, 1);
-		if (st.getQuestItemsCount(STAKATO_FANG) >= 25)
-		{
-			st.setCond(2, true);
-		}
-		else
-		{
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00240_ImTheOnlyOneYouCanTrust(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(KINTAIJIN);
-		addTalkId(KINTAIJIN);
-		addKillId(MOBS);
-		registerQuestItems(STAKATO_FANG);
 	}
 	
 	public static void main(String[] args)

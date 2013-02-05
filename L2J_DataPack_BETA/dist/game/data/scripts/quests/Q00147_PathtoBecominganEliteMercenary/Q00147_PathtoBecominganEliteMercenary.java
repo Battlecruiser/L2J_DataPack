@@ -48,6 +48,13 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 	private static final int ORDINARY_CERTIFICATE = 13766;
 	private static final int ELITE_CERTIFICATE = 13767;
 	
+	public Q00147_PathtoBecominganEliteMercenary(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(MERC);
+		addTalkId(MERC);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -114,13 +121,6 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00147_PathtoBecominganEliteMercenary(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(MERC);
-		addTalkId(MERC);
 	}
 	
 	public static void main(String[] args)

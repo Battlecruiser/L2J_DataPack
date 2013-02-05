@@ -44,6 +44,14 @@ public class Q00016_TheComingDarkness extends Quest
 	// Item
 	private static final int CRYSTAL_OF_SEAL = 7167;
 	
+	private Q00016_TheComingDarkness(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(HIERARCH);
+		addTalkId(HIERARCH, EVIL_ALTAR_1, EVIL_ALTAR_2, EVIL_ALTAR_3, EVIL_ALTAR_4, EVIL_ALTAR_5);
+		registerQuestItems(CRYSTAL_OF_SEAL);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -127,14 +135,6 @@ public class Q00016_TheComingDarkness extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	public Q00016_TheComingDarkness(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(HIERARCH);
-		addTalkId(HIERARCH, EVIL_ALTAR_1, EVIL_ALTAR_2, EVIL_ALTAR_3, EVIL_ALTAR_4, EVIL_ALTAR_5);
-		registerQuestItems(CRYSTAL_OF_SEAL);
 	}
 	
 	public static void main(String[] args)

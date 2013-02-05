@@ -44,7 +44,7 @@ public class ProtectTheSupplies extends TerritoryWarSuperClass
 			36599
 		};
 		qn = qn1;
-		registerAttackIds();
+		addAttackId(NPC_IDS);
 	}
 	
 	@Override

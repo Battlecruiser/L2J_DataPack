@@ -43,6 +43,15 @@ public class Q00043_HelpTheSister extends Quest
 	private static final int MAP = 7551;
 	private static final int PET_TICKET = 7584;
 	
+	public Q00043_HelpTheSister(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(COOPER);
+		addTalkId(COOPER, GALLADUCCI);
+		addKillId(SORROW_MAIDEN, SPECTER);
+		registerQuestItems(MAP, MAP_PIECE);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -98,6 +107,26 @@ public class Q00043_HelpTheSister extends Quest
 				break;
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		QuestState st = player.getQuestState(getName());
+		
+		if ((st != null) && st.isCond(2))
+		{
+			st.giveItems(MAP_PIECE, 1);
+			if (st.getQuestItemsCount(MAP_PIECE) == 30)
+			{
+				st.setCond(3, true);
+			}
+			else
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -159,35 +188,6 @@ public class Q00043_HelpTheSister extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		QuestState st = player.getQuestState(getName());
-		
-		if ((st != null) && st.isCond(2))
-		{
-			st.giveItems(MAP_PIECE, 1);
-			if (st.getQuestItemsCount(MAP_PIECE) == 30)
-			{
-				st.setCond(3, true);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00043_HelpTheSister(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(COOPER);
-		addTalkId(COOPER, GALLADUCCI);
-		addKillId(SORROW_MAIDEN, SPECTER);
-		registerQuestItems(MAP, MAP_PIECE);
 	}
 	
 	public static void main(String[] args)

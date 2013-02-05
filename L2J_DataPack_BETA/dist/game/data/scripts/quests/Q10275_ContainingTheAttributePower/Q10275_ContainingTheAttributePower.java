@@ -51,118 +51,13 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	private static final SkillHolder BLESSING_OF_FIRE = new SkillHolder(2635, 1);
 	private static final SkillHolder BLESSING_OF_EARTH = new SkillHolder(2636, 1);
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public Q10275_ContainingTheAttributePower(int questId, String name, String descr)
 	{
-		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case HOLLY:
-			{
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() > 75) ? "30839-01.htm" : "30839-00.html";
-						break;
-					case State.STARTED:
-						switch (st.getCond())
-						{
-							case 1:
-								htmltext = "30839-03.html";
-								break;
-							case 2:
-								htmltext = "30839-05.html";
-								break;
-						}
-						break;
-					case State.COMPLETED:
-						htmltext = "30839-0a.html";
-						break;
-				}
-				break;
-			}
-			case WEBER:
-			{
-				switch (st.getState())
-				{
-					case State.CREATED:
-						htmltext = (player.getLevel() > 75) ? "31307-01.htm" : "31307-00.html";
-						break;
-					case State.STARTED:
-						switch (st.getCond())
-						{
-							case 1:
-								htmltext = "31307-03.html";
-								break;
-							case 7:
-								htmltext = "31307-05.html";
-								break;
-						}
-						break;
-					case State.COMPLETED:
-						htmltext = "31307-0a.html";
-						break;
-				}
-				break;
-			}
-			case YIN:
-			{
-				if (st.isStarted())
-				{
-					switch (st.getCond())
-					{
-						case 2:
-							htmltext = "32325-01.html";
-							break;
-						case 3:
-						case 5:
-							htmltext = "32325-04.html";
-							break;
-						case 4:
-							htmltext = "32325-08.html";
-							st.takeItems(YINSWORD, 1);
-							st.takeItems(SOULPIECEWATER, -1);
-							break;
-						case 6:
-							htmltext = "32325-10.html";
-							break;
-					}
-				}
-				break;
-			}
-			case YANG:
-			{
-				if (st.isStarted())
-				{
-					switch (st.getCond())
-					{
-						case 7:
-							htmltext = "32326-01.html";
-							break;
-						case 8:
-						case 10:
-							htmltext = "32326-04.html";
-							break;
-						case 9:
-							htmltext = "32326-08.html";
-							st.takeItems(YANGSWORD, 1);
-							st.takeItems(SOULPIECEAIR, -1);
-							break;
-						case 11:
-							htmltext = "32326-10.html";
-							break;
-					}
-				}
-				break;
-			}
-		}
-		return htmltext;
+		super(questId, name, descr);
+		addStartNpc(HOLLY, WEBER);
+		addTalkId(HOLLY, WEBER, YIN, YANG);
+		addKillId(AIR, WATER);
+		registerQuestItems(YINSWORD, YANGSWORD, SOULPIECEWATER, SOULPIECEAIR);
 	}
 	
 	@Override
@@ -278,13 +173,118 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		
 	}
 	
-	public Q10275_ContainingTheAttributePower(int questId, String name, String descr)
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		super(questId, name, descr);
-		addStartNpc(HOLLY, WEBER);
-		addTalkId(HOLLY, WEBER, YIN, YANG);
-		addKillId(AIR, WATER);
-		registerQuestItems(YINSWORD, YANGSWORD, SOULPIECEWATER, SOULPIECEAIR);
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case HOLLY:
+			{
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 75) ? "30839-01.htm" : "30839-00.html";
+						break;
+					case State.STARTED:
+						switch (st.getCond())
+						{
+							case 1:
+								htmltext = "30839-03.html";
+								break;
+							case 2:
+								htmltext = "30839-05.html";
+								break;
+						}
+						break;
+					case State.COMPLETED:
+						htmltext = "30839-0a.html";
+						break;
+				}
+				break;
+			}
+			case WEBER:
+			{
+				switch (st.getState())
+				{
+					case State.CREATED:
+						htmltext = (player.getLevel() > 75) ? "31307-01.htm" : "31307-00.html";
+						break;
+					case State.STARTED:
+						switch (st.getCond())
+						{
+							case 1:
+								htmltext = "31307-03.html";
+								break;
+							case 7:
+								htmltext = "31307-05.html";
+								break;
+						}
+						break;
+					case State.COMPLETED:
+						htmltext = "31307-0a.html";
+						break;
+				}
+				break;
+			}
+			case YIN:
+			{
+				if (st.isStarted())
+				{
+					switch (st.getCond())
+					{
+						case 2:
+							htmltext = "32325-01.html";
+							break;
+						case 3:
+						case 5:
+							htmltext = "32325-04.html";
+							break;
+						case 4:
+							htmltext = "32325-08.html";
+							st.takeItems(YINSWORD, 1);
+							st.takeItems(SOULPIECEWATER, -1);
+							break;
+						case 6:
+							htmltext = "32325-10.html";
+							break;
+					}
+				}
+				break;
+			}
+			case YANG:
+			{
+				if (st.isStarted())
+				{
+					switch (st.getCond())
+					{
+						case 7:
+							htmltext = "32326-01.html";
+							break;
+						case 8:
+						case 10:
+							htmltext = "32326-04.html";
+							break;
+						case 9:
+							htmltext = "32326-08.html";
+							st.takeItems(YANGSWORD, 1);
+							st.takeItems(SOULPIECEAIR, -1);
+							break;
+						case 11:
+							htmltext = "32326-10.html";
+							break;
+					}
+				}
+				break;
+			}
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)

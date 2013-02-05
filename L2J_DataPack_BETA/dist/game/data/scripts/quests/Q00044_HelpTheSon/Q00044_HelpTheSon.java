@@ -44,6 +44,15 @@ public class Q00044_HelpTheSon extends Quest
 	private static final int GEMSTONE = 7553;
 	private static final int PET_TICKET = 7585;
 	
+	public Q00044_HelpTheSon(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(LUNDY);
+		addTalkId(LUNDY, DRIKUS);
+		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
+		registerQuestItems(GEMSTONE, GEMSTONE_FRAGMENT);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -100,6 +109,25 @@ public class Q00044_HelpTheSon extends Quest
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(2))
+		{
+			st.giveItems(GEMSTONE_FRAGMENT, 1);
+			if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) == 30)
+			{
+				st.setCond(3, true);
+			}
+			else
+			{
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -161,34 +189,6 @@ public class Q00044_HelpTheSon extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isCond(2))
-		{
-			st.giveItems(GEMSTONE_FRAGMENT, 1);
-			if (st.getQuestItemsCount(GEMSTONE_FRAGMENT) == 30)
-			{
-				st.setCond(3, true);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	public Q00044_HelpTheSon(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(LUNDY);
-		addTalkId(LUNDY, DRIKUS);
-		addKillId(MAILLE_GUARD, MAILLE_LIZARDMAN, MAILLE_SCOUT);
-		registerQuestItems(GEMSTONE, GEMSTONE_FRAGMENT);
 	}
 	
 	public static void main(String[] args)

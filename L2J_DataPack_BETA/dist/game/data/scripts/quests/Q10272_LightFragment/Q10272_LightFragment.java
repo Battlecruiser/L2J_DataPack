@@ -62,6 +62,116 @@ public class Q10272_LightFragment extends Quest
 	private static final int LIGHT_FRAGMENT = 13855;
 	private static final double DROP_CHANCE = 60;
 	
+	public Q10272_LightFragment(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(ORBYU);
+		addTalkId(ORBYU, ARTIUS, GINBY, LELRIKIA, LEKON);
+		addKillId(MOBS);
+		registerQuestItems(FRAGMENT_POWDER, LIGHT_FRAGMENT_POWDER);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		switch (event)
+		{
+			case "32560-06.html":
+			{
+				st.startQuest();
+				break;
+			}
+			case "32559-03.html":
+			{
+				st.setCond(2, true);
+				break;
+			}
+			case "32559-07.html":
+			{
+				st.setCond(3, true);
+				break;
+			}
+			case "pay":
+			{
+				if (st.getQuestItemsCount(PcInventory.ADENA_ID) >= 10000)
+				{
+					st.takeItems(PcInventory.ADENA_ID, 10000);
+					event = "32566-05.html";
+				}
+				else
+				{
+					event = "32566-04a.html";
+				}
+				break;
+			}
+			case "32567-04.html":
+			{
+				st.setCond(4, true);
+				break;
+			}
+			case "32559-12.html":
+			{
+				st.setCond(5, true);
+				break;
+			}
+			case "32557-03.html":
+			{
+				if (st.getQuestItemsCount(LIGHT_FRAGMENT_POWDER) >= 100)
+				{
+					st.takeItems(LIGHT_FRAGMENT_POWDER, 100);
+					st.set("wait", "1");
+				}
+				else
+				{
+					event = "32557-04.html";
+				}
+				break;
+			}
+			default:
+				break;
+		}
+		return event;
+	}
+	
+	@Override
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isCond(5))
+		{
+			final long count = st.getQuestItemsCount(FRAGMENT_POWDER);
+			if (count < 100)
+			{
+				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
+				int numItems = chance / 100;
+				chance = chance % 100;
+				if (getRandom(100) < chance)
+				{
+					numItems++;
+				}
+				if (numItems > 0)
+				{
+					if ((count + numItems) > 100)
+					{
+						numItems = 100 - (int) count;
+					}
+					if (numItems > 0)
+					{
+						st.giveItems(FRAGMENT_POWDER, numItems);
+						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+				}
+			}
+		}
+		return null;
+	}
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -216,116 +326,6 @@ public class Q10272_LightFragment extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
-		switch (event)
-		{
-			case "32560-06.html":
-			{
-				st.startQuest();
-				break;
-			}
-			case "32559-03.html":
-			{
-				st.setCond(2, true);
-				break;
-			}
-			case "32559-07.html":
-			{
-				st.setCond(3, true);
-				break;
-			}
-			case "pay":
-			{
-				if (st.getQuestItemsCount(PcInventory.ADENA_ID) >= 10000)
-				{
-					st.takeItems(PcInventory.ADENA_ID, 10000);
-					event = "32566-05.html";
-				}
-				else
-				{
-					event = "32566-04a.html";
-				}
-				break;
-			}
-			case "32567-04.html":
-			{
-				st.setCond(4, true);
-				break;
-			}
-			case "32559-12.html":
-			{
-				st.setCond(5, true);
-				break;
-			}
-			case "32557-03.html":
-			{
-				if (st.getQuestItemsCount(LIGHT_FRAGMENT_POWDER) >= 100)
-				{
-					st.takeItems(LIGHT_FRAGMENT_POWDER, 100);
-					st.set("wait", "1");
-				}
-				else
-				{
-					event = "32557-04.html";
-				}
-				break;
-			}
-			default:
-				break;
-		}
-		return event;
-	}
-	
-	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isCond(5))
-		{
-			final long count = st.getQuestItemsCount(FRAGMENT_POWDER);
-			if (count < 100)
-			{
-				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
-				int numItems = chance / 100;
-				chance = chance % 100;
-				if (getRandom(100) < chance)
-				{
-					numItems++;
-				}
-				if (numItems > 0)
-				{
-					if ((count + numItems) > 100)
-					{
-						numItems = 100 - (int) count;
-					}
-					if (numItems > 0)
-					{
-						st.giveItems(FRAGMENT_POWDER, numItems);
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-				}
-			}
-		}
-		return null;
-	}
-	
-	public Q10272_LightFragment(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(ORBYU);
-		addTalkId(ORBYU, ARTIUS, GINBY, LELRIKIA, LEKON);
-		addKillId(MOBS);
-		registerQuestItems(FRAGMENT_POWDER, LIGHT_FRAGMENT_POWDER);
 	}
 	
 	public static void main(String[] args)

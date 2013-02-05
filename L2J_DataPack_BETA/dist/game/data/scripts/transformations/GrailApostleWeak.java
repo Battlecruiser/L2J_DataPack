@@ -51,24 +51,6 @@ public class GrailApostleWeak extends L2Transformation
 		transformedSkills();
 	}
 	
-	public void transformedSkills()
-	{
-		// Spear (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(559, 2), false);
-		// Power Slash (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(560, 2), false);
-		// Bless of Angel (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(561, 2), false);
-		// Wind of Angel (up to 4 levels)
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(562, 2), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
-	}
-	
 	@Override
 	public void onUntransform()
 	{
@@ -91,6 +73,24 @@ public class GrailApostleWeak extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Spear (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(559, 2), false);
+		// Power Slash (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(560, 2), false);
+		// Bless of Angel (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(561, 2), false);
+		// Wind of Angel (up to 4 levels)
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(562, 2), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

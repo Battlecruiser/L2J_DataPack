@@ -65,6 +65,15 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	private static final int ADAMANTINE = 9629;
 	private static final int ORICHALCUM = 9630;
 	
+	public Q00377_ExplorationOfTheGiantsCavePart2(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(SOBLING);
+		addTalkId(SOBLING);
+		addKillId(MOBS);
+		registerQuestItems(TITAN_ANCIENT_BOOK);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -90,23 +99,40 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			switch (val)
 			{
 				case OBLIVION:
-					htmltext = onExchangeRequest(st, val, 1, 5); // Giant's Codex - Oblivion
+					htmltext = exchangeRequest(st, val, 1, 5); // Giant's Codex - Oblivion
 					break;
 				case DISCIPLINE:
-					htmltext = onExchangeRequest(st, val, 1, 5); // Giant's Codex - Discipline
+					htmltext = exchangeRequest(st, val, 1, 5); // Giant's Codex - Discipline
 					break;
 				case LEONARD:
-					htmltext = onExchangeRequest(st, val, 6, 1); // Leonard
+					htmltext = exchangeRequest(st, val, 6, 1); // Leonard
 					break;
 				case ADAMANTINE:
-					htmltext = onExchangeRequest(st, val, 3, 1); // Adamantine
+					htmltext = exchangeRequest(st, val, 3, 1); // Adamantine
 					break;
 				case ORICHALCUM:
-					htmltext = onExchangeRequest(st, val, 4, 1); // Orichalcum
+					htmltext = exchangeRequest(st, val, 4, 1); // Orichalcum
 					break;
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		final QuestState st = player.getQuestState(getName());
+		if (st == null)
+		{
+			return null;
+		}
+		
+		if ((st.isCond(1)) && (getRandom(100) < DROP_CHANCE))
+		{
+			st.giveItems(TITAN_ANCIENT_BOOK, 1);
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return super.onKill(npc, player, isPet);
 	}
 	
 	@Override
@@ -135,24 +161,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
-		
-		if ((st.isCond(1)) && (getRandom(100) < DROP_CHANCE))
-		{
-			st.giveItems(TITAN_ANCIENT_BOOK, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return super.onKill(npc, player, isPet);
-	}
-	
-	private String onExchangeRequest(QuestState st, int giveid, int qty, int rem)
+	private static String exchangeRequest(QuestState st, int giveid, int qty, int rem)
 	{
 		if ((st.getQuestItemsCount(BOOK1) >= rem) && (st.getQuestItemsCount(BOOK2) >= rem) && (st.getQuestItemsCount(BOOK3) >= rem) && (st.getQuestItemsCount(BOOK4) >= rem) && (st.getQuestItemsCount(BOOK5) >= rem))
 		{
@@ -166,15 +175,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			return "31147-ok.html";
 		}
 		return "31147-no.html";
-	}
-	
-	public Q00377_ExplorationOfTheGiantsCavePart2(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(SOBLING);
-		addTalkId(SOBLING);
-		addKillId(MOBS);
-		registerQuestItems(TITAN_ANCIENT_BOOK);
 	}
 	
 	public static void main(String[] args)

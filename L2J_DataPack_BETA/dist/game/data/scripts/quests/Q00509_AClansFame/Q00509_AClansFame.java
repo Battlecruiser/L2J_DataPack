@@ -61,6 +61,14 @@ public class Q00509_AClansFame extends Quest
 		25322
 	};
 	
+	public Q00509_AClansFame(int id, String name, String descr)
+	{
+		super(id, name, descr);
+		addStartNpc(VALDIS);
+		addTalkId(VALDIS);
+		addKillId(RAID_BOSS);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -96,6 +104,43 @@ public class Q00509_AClansFame extends Quest
 				break;
 		}
 		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		if (player.getClan() == null)
+		{
+			return null;
+		}
+		
+		QuestState st = null;
+		if (player.isClanLeader())
+		{
+			st = player.getQuestState(getName());
+		}
+		else
+		{
+			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
+			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
+			{
+				st = pleader.getQuestState(getName());
+			}
+		}
+		
+		if ((st != null) && st.isStarted())
+		{
+			int raid = st.getInt("raid");
+			if (REWARD_POINTS.containsKey(raid))
+			{
+				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
+				{
+					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+			}
+		}
+		return null;
 	}
 	
 	@Override
@@ -149,51 +194,6 @@ public class Q00509_AClansFame extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (player.getClan() == null)
-		{
-			return null;
-		}
-		
-		QuestState st = null;
-		if (player.isClanLeader())
-		{
-			st = player.getQuestState(getName());
-		}
-		else
-		{
-			L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if ((pleader != null) && player.isInsideRadius(pleader, 1500, true, false))
-			{
-				st = pleader.getQuestState(getName());
-			}
-		}
-		
-		if ((st != null) && st.isStarted())
-		{
-			int raid = st.getInt("raid");
-			if (REWARD_POINTS.containsKey(raid))
-			{
-				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
-				{
-					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
-			}
-		}
-		return null;
-	}
-	
-	public Q00509_AClansFame(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		addStartNpc(VALDIS);
-		addTalkId(VALDIS);
-		addKillId(RAID_BOSS);
 	}
 	
 	public static void main(String[] args)

@@ -63,6 +63,14 @@ public class Q00690_JudesRequest extends Quest
 		}
 	};
 	
+	public Q00690_JudesRequest(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(JUDE);
+		addTalkId(JUDE);
+		addKillId(LESSER_EVIL, GREATER_EVIL);
+	}
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -115,6 +123,39 @@ public class Q00690_JudesRequest extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	{
+		L2PcInstance partyMember = getRandomPartyMember(player, 1);
+		if (partyMember == null)
+		{
+			return null;
+		}
+		final QuestState st = partyMember.getQuestState(getName());
+		
+		final int npcId = npc.getNpcId();
+		int chance = 0;
+		if (npcId == LESSER_EVIL)
+		{
+			chance = 173;
+		}
+		else if (npcId == GREATER_EVIL)
+		{
+			chance = 246;
+		}
+		// Apply the quest drop rate:
+		chance *= Config.RATE_QUEST_DROP;
+		// Normalize
+		chance %= 1000;
+		
+		if (getRandom(1000) <= chance)
+		{
+			st.giveItems(EVIL_WEAPON, Math.max(chance / 1000, 1));
+			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+		return null;
+	}
+	
+	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
@@ -153,47 +194,6 @@ public class Q00690_JudesRequest extends Quest
 				break;
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		L2PcInstance partyMember = getRandomPartyMember(player, "1");
-		if (partyMember == null)
-		{
-			return null;
-		}
-		final QuestState st = partyMember.getQuestState(getName());
-		
-		final int npcId = npc.getNpcId();
-		int chance = 0;
-		if (npcId == LESSER_EVIL)
-		{
-			chance = 173;
-		}
-		else if (npcId == GREATER_EVIL)
-		{
-			chance = 246;
-		}
-		// Apply the quest drop rate:
-		chance *= Config.RATE_QUEST_DROP;
-		// Normalize
-		chance %= 1000;
-		
-		if (getRandom(1000) <= chance)
-		{
-			st.giveItems(EVIL_WEAPON, Math.max(chance / 1000, 1));
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		return null;
-	}
-	
-	public Q00690_JudesRequest(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(JUDE);
-		addTalkId(JUDE);
-		addKillId(LESSER_EVIL, GREATER_EVIL);
 	}
 	
 	public static void main(String[] args)
