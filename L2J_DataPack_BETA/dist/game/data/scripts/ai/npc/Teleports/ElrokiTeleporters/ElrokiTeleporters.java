@@ -57,15 +57,15 @@ public class ElrokiTeleporters extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	private ElrokiTeleporters(String name, String descr)
+	private ElrokiTeleporters()
 	{
-		super(name, descr);
+		super(ElrokiTeleporters.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(ORAHOCHIN, GARIACHIN);
 		addTalkId(ORAHOCHIN, GARIACHIN);
 	}
 	
 	public static void main(String[] args)
 	{
-		new ElrokiTeleporters(ElrokiTeleporters.class.getSimpleName(), "ai/npc/Teleports/");
+		new ElrokiTeleporters();
 	}
 }

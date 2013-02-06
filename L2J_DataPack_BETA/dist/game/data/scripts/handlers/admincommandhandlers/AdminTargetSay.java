@@ -54,8 +54,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 				
 				final String message = command.substring(16);
 				final L2Character target = (L2Character) obj;
-				int type = target.isPlayer() ? Say2.ALL : Say2.NPC_ALL;
-				target.broadcastPacket(new CreatureSay(target.getObjectId(), type, target.getName(), message));
+				target.broadcastPacket(new CreatureSay(target.getObjectId(), (target.isPlayer() ? Say2.ALL : Say2.NPC_ALL), target.getName(), message));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{

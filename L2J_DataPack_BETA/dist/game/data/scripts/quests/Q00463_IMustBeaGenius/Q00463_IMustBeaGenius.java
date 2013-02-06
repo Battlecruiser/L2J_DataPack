@@ -59,6 +59,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			return _chance;
 		}
 	}
+	
 	// NPC
 	private static final int GUTENHAGEN = 32069;
 	// Items

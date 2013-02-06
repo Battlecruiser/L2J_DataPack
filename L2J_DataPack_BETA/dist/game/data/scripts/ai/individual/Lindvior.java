@@ -54,9 +54,9 @@ public class Lindvior extends AbstractNpcAI
 	private L2Npc _tomaris = null;
 	private L2Npc _artius = null;
 	
-	private Lindvior(String name, String descr)
+	private Lindvior()
 	{
-		super(name, descr);
+		super(Lindvior.class.getSimpleName(), "ai/individual/");
 		scheduleNextLindviorVisit();
 	}
 	
@@ -146,6 +146,6 @@ public class Lindvior extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Lindvior(Lindvior.class.getSimpleName(), "ai/individual");
+		new Lindvior();
 	}
 }

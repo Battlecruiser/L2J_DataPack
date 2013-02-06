@@ -62,7 +62,6 @@ public class Q00464_Oath extends Quest
 	// Monsters
 	private static final Map<Integer, Integer> MOBS = new HashMap<>();
 	
-	
 	static
 	{
 		MOBS.put(22799, 9);

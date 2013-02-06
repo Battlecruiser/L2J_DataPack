@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.util.Rnd;
 
 /**
  * Pailaka (Devil's Isle) instance zone.
@@ -172,7 +171,7 @@ public class PailakaDevilsLegacy extends Quest
 		{ 84808, -208633, -3339, 65039, 60 },
 		{ 84808, -208856, -3339,     0, 60 },
 		{ 85144, -208855, -3341, 33380, 60 },
-		{ 85139, -208630, -3339, 31777, 60 }		
+		{ 85139, -208630, -3339, 31777, 60 }
 	};
 	// @formatter:on
 	
@@ -188,7 +187,7 @@ public class PailakaDevilsLegacy extends Quest
 	
 	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		for (int[] element : drop)
 		{
 			if (chance < element[2])
@@ -202,14 +201,14 @@ public class PailakaDevilsLegacy extends Quest
 	private static final void dropItem(L2Npc mob, L2PcInstance player)
 	{
 		final int npcId = mob.getNpcId();
-		final int chance = Rnd.get(100);
+		final int chance = getRandom(100);
 		for (int[] drop : DROPLIST)
 		{
 			if (npcId == drop[0])
 			{
 				if (chance < drop[2])
 				{
-					((L2MonsterInstance) mob).dropItem(player, drop[1], Rnd.get(1, 6));
+					((L2MonsterInstance) mob).dropItem(player, drop[1], getRandom(1, 6));
 					return;
 				}
 			}
@@ -270,7 +269,7 @@ public class PailakaDevilsLegacy extends Quest
 				npc.setTarget(_lematanNpc);
 				npc.doCast(energy_skill);
 			}
-			startQuestTimer("follower_cast", 2000 + Rnd.get(100, 1000), npc, null);
+			startQuestTimer("follower_cast", 2000 + getRandom(100, 1000), npc, null);
 			return null;
 		}
 		else if ((npc.getNpcId() == POWDER_KEG) && event.equalsIgnoreCase("keg_trigger"))
@@ -289,7 +288,7 @@ public class PailakaDevilsLegacy extends Quest
 			enterInstance(player);
 			if (st.isCond(1))
 			{
-				st.setCond(2);
+				st.setCond(2, true);
 				return "32498-07.htm";
 			}
 			return "32498-09.htm";
@@ -305,13 +304,12 @@ public class PailakaDevilsLegacy extends Quest
 		{
 			if (st.isCond(2))
 			{
-				st.giveItems(SWORD, 1);
+				giveItems(player, SWORD, 1);
 				st.setCond(3, true);
 			}
 		}
 		else if (event.equalsIgnoreCase("32510-02.htm"))
 		{
-			st.unset("cond");
 			st.exitQuest(false, true);
 			
 			Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
@@ -324,7 +322,7 @@ public class PailakaDevilsLegacy extends Quest
 				st.addExpAndSp(810000, 50000);
 				for (int id : REWARDS)
 				{
-					st.giveItems(id, 1);
+					giveItems(player, id, 1);
 				}
 			}
 		}
@@ -378,11 +376,11 @@ public class PailakaDevilsLegacy extends Quest
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && (npc.getNpcId() == ADVENTURER2) && st.isCompleted())
+		if ((npc.getNpcId() != ADVENTURER2) || (st == null) || !st.isCompleted())
 		{
-			return "32511-03.htm";
+			return npc.getNpcId() + ".htm";
 		}
-		return npc.getNpcId() + ".htm";
+		return "32511-03.htm";
 	}
 	
 	@Override
@@ -429,42 +427,40 @@ public class PailakaDevilsLegacy extends Quest
 			case ADVENTURER1:
 				if (!player.hasSummon())
 				{
-					if (st.hasQuestItems(SWORD))
+					if (hasQuestItems(player, SWORD))
 					{
-						if (st.getQuestItemsCount(SCROLL_1) > 0)
+						if (hasQuestItems(player, SCROLL_1))
 						{
-							st.takeItems(SWORD, -1);
-							st.takeItems(SCROLL_1, -1);
-							st.giveItems(ENH_SWORD1, 1);
+							takeItems(player, SWORD, -1);
+							takeItems(player, SCROLL_1, -1);
+							giveItems(player, ENH_SWORD1, 1);
 							return "32508-03.htm";
 						}
 						return "32508-02.htm";
 					}
-					else if (st.getQuestItemsCount(ENH_SWORD1) > 0)
+					
+					if (hasQuestItems(player, ENH_SWORD1))
 					{
-						if (st.getQuestItemsCount(SCROLL_2) > 0)
+						if (hasQuestItems(player, SCROLL_2))
 						{
-							st.takeItems(ENH_SWORD1, -1);
-							st.takeItems(SCROLL_2, -1);
-							st.giveItems(ENH_SWORD2, 1);
+							takeItems(player, ENH_SWORD1, -1);
+							takeItems(player, SCROLL_2, -1);
+							giveItems(player, ENH_SWORD2, 1);
 							return "32508-05.htm";
 						}
 						return "32508-04.htm";
 					}
-					else if (st.getQuestItemsCount(ENH_SWORD2) > 0)
+					
+					if (hasQuestItems(player, ENH_SWORD2))
 					{
 						return "32508-06.htm";
 					}
-					else
-					{
-						return "32508-00.htm";
-					}
+					return "32508-00.htm";
 				}
 				return "32508-07.htm";
 			case ADVENTURER2:
 				if (!player.hasSummon())
 				{
-					st.unset("cond");
 					st.exitQuest(false, true);
 					
 					Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
@@ -474,10 +470,10 @@ public class PailakaDevilsLegacy extends Quest
 					if (inst.containsPlayer(player.getObjectId()))
 					{
 						player.setVitalityPoints(20000, true);
-						st.addExpAndSp(10800000, 950000);
+						addExpAndSp(player, 10800000, 950000);
 						for (int id : REWARDS)
 						{
-							st.giveItems(id, 1);
+							giveItems(player, id, 1);
 						}
 					}
 					return "32511-01.htm";
@@ -498,7 +494,7 @@ public class PailakaDevilsLegacy extends Quest
 			{
 				for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(900))
 				{
-					target.reduceCurrentHp(500 + Rnd.get(0, 200), npc, boom_skill);
+					target.reduceCurrentHp(500 + getRandom(0, 200), npc, boom_skill);
 					
 					if (target instanceof L2MonsterInstance)
 					{
@@ -542,49 +538,47 @@ public class PailakaDevilsLegacy extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		QuestState st = player.getQuestState(qn);
-		if ((st == null) || (st.getState() != State.STARTED))
+		if ((st != null) && st.isStarted())
 		{
-			return null;
-		}
-		
-		switch (npc.getNpcId())
-		{
-			case KAMS:
-				if (st.hasQuestItems(SWORD))
-				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					st.giveItems(SCROLL_1, 1);
-				}
-				break;
-			case ALKASO:
-				if (st.hasQuestItems(ENH_SWORD1))
-				{
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					st.giveItems(SCROLL_2, 1);
-				}
-				break;
-			case LEMATAN:
-				if ((_followerslist != null) && !_followerslist.isEmpty())
-				{
-					for (L2Npc _follower : _followerslist)
+			switch (npc.getNpcId())
+			{
+				case KAMS:
+					if (hasQuestItems(player, SWORD))
 					{
-						_follower.deleteMe();
+						giveItems(player, SCROLL_1, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
-					_followerslist.clear();
-				}
-				st.setCond(4, true);
-				addSpawn(ADVENTURER2, 84983, -208736, -3336, 49915, false, 0, false, npc.getInstanceId());
-				break;
-			case POWDER_KEG:
-			case TREASURE_BOX:
-			case FOLLOWERS:
-				// do nothing
-				break;
-			default:
-				// hardcoded herb drops
-				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				dropHerb(npc, player, MP_HERBS_DROPLIST);
-				break;
+					break;
+				case ALKASO:
+					if (hasQuestItems(player, ENH_SWORD1))
+					{
+						giveItems(player, SCROLL_2, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				case LEMATAN:
+					if ((_followerslist != null) && !_followerslist.isEmpty())
+					{
+						for (L2Npc _follower : _followerslist)
+						{
+							_follower.deleteMe();
+						}
+						_followerslist.clear();
+					}
+					st.setCond(4, true);
+					addSpawn(ADVENTURER2, 84983, -208736, -3336, 49915, false, 0, false, npc.getInstanceId());
+					break;
+				case POWDER_KEG:
+				case TREASURE_BOX:
+				case FOLLOWERS:
+					// do nothing
+					break;
+				default:
+					// hardcoded herb drops
+					dropHerb(npc, player, HP_HERBS_DROPLIST);
+					dropHerb(npc, player, MP_HERBS_DROPLIST);
+					break;
+			}
 		}
 		return super.onKill(npc, player, isPet);
 	}
@@ -592,7 +586,7 @@ public class PailakaDevilsLegacy extends Quest
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		startQuestTimer("follower_cast", 1000 + Rnd.get(100, 1000), npc, null);
+		startQuestTimer("follower_cast", 1000 + getRandom(100, 1000), npc, null);
 		npc.disableCoreAI(true);
 		return null;
 	}
@@ -636,18 +630,16 @@ public class PailakaDevilsLegacy extends Quest
 		}
 	}
 	
-	public PailakaDevilsLegacy(int questId, String name, String descr)
+	public PailakaDevilsLegacy()
 	{
-		super(questId, name, descr);
+		super(129, qn, "Pailaka - Devil's Legacy");
 		addStartNpc(SURVIVOR);
 		for (int npcId : NPCS)
 		{
 			addFirstTalkId(npcId);
 			addTalkId(npcId);
 		}
-		addAttackId(TREASURE_BOX);
-		addAttackId(POWDER_KEG);
-		addAttackId(LEMATAN);
+		addAttackId(TREASURE_BOX, POWDER_KEG, LEMATAN);
 		addKillId(MONSTERS);
 		addEnterZoneId(ZONE);
 		addSpawnId(FOLLOWERS);
@@ -656,6 +648,6 @@ public class PailakaDevilsLegacy extends Quest
 	
 	public static void main(String[] args)
 	{
-		new PailakaDevilsLegacy(129, qn, "Pailaka - Devil's Legacy");
+		new PailakaDevilsLegacy();
 	}
 }

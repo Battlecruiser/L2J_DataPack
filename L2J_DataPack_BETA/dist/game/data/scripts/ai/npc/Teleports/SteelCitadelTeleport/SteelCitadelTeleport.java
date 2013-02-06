@@ -39,9 +39,9 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	private static final int BELETH = 29118;
 	private static final int NAIA_CUBE = 32376;
 	
-	private SteelCitadelTeleport(String name, String descr)
+	private SteelCitadelTeleport()
 	{
-		super(name, descr);
+		super(SteelCitadelTeleport.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(NAIA_CUBE);
 		addTalkId(NAIA_CUBE);
 	}
@@ -49,21 +49,21 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (GrandBossManager.getInstance().getBossStatus(BELETH) == 3)
+		final int belethStatus = GrandBossManager.getInstance().getBossStatus(BELETH);
+		if (belethStatus == 3)
 		{
 			return "32376-02.htm";
 		}
 		
-		final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
+		if (belethStatus > 0)
+		{
+			return "32376-03.htm";
+		}
 		
+		final L2CommandChannel channel = player.getParty() == null ? null : player.getParty().getCommandChannel();
 		if ((channel == null) || (channel.getLeader().getObjectId() != player.getObjectId()) || (channel.getMemberCount() < Config.BELETH_MIN_PLAYERS))
 		{
 			return "32376-02a.htm";
-		}
-		
-		if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
-		{
-			return "32376-03.htm";
 		}
 		
 		final L2BossZone zone = (L2BossZone) ZoneManager.getInstance().getZoneById(12018);
@@ -93,6 +93,6 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SteelCitadelTeleport(SteelCitadelTeleport.class.getSimpleName(), "ai/npc/Teleports/");
+		new SteelCitadelTeleport();
 	}
 }

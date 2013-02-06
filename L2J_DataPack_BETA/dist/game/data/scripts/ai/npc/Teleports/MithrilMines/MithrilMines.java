@@ -30,6 +30,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class MithrilMines extends AbstractNpcAI
 {
+	// NPC
+	private final static int TELEPORT_CRYSTAL = 32652;
 	// Location
 	private static final Location[] LOCS =
 	{
@@ -40,12 +42,10 @@ public class MithrilMines extends AbstractNpcAI
 		new Location(178591, -184615, 360),
 		new Location(175499, -181586, -904)
 	};
-	// NPC
-	private final static int TELEPORT_CRYSTAL = 32652;
 	
-	private MithrilMines(String name, String descr)
+	private MithrilMines()
 	{
-		super(name, descr);
+		super(MithrilMines.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(TELEPORT_CRYSTAL);
 		addFirstTalkId(TELEPORT_CRYSTAL);
 		addTalkId(TELEPORT_CRYSTAL);
@@ -70,11 +70,13 @@ public class MithrilMines extends AbstractNpcAI
 		{
 			return "32652-01.htm";
 		}
-		else if (npc.isInsideRadius(181941, -174614, L2Npc.INTERACTION_DISTANCE, true))
+		
+		if (npc.isInsideRadius(181941, -174614, L2Npc.INTERACTION_DISTANCE, true))
 		{
 			return "32652-02.htm";
 		}
-		else if (npc.isInsideRadius(179560, -182956, L2Npc.INTERACTION_DISTANCE, true))
+		
+		if (npc.isInsideRadius(179560, -182956, L2Npc.INTERACTION_DISTANCE, true))
 		{
 			return "32652-03.htm";
 		}
@@ -83,6 +85,6 @@ public class MithrilMines extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MithrilMines(MithrilMines.class.getSimpleName(), "ai/npc/Teleports/");
+		new MithrilMines();
 	}
 }
