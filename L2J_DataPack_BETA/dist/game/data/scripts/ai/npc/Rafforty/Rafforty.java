@@ -24,14 +24,13 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Rafforty AI
+ * Rafforty AI.
  * @author malyelfik, Gladicek
  */
 public class Rafforty extends AbstractNpcAI
 {
-	// NPC ID
+	// NPC
 	private static final int RAFFORTY = 32020;
-	
 	// Items
 	private static final int NECKLACE = 16025;
 	private static final int BLESSED_NECKLACE = 16026;

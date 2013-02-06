@@ -37,9 +37,9 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	private final static int LILITH = 25283;
 	private final static int ANAKIM = 25286;
 	
-	private GatekeeperSpirit(String name, String descr)
+	private GatekeeperSpirit()
 	{
-		super(name, descr);
+		super(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
 		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
 		addTalkId(GATEKEEPER_SPIRIT_ENTER);
@@ -102,6 +102,6 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new GatekeeperSpirit(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports/");
+		new GatekeeperSpirit();
 	}
 }

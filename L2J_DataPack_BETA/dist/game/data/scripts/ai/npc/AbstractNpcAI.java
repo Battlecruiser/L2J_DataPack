@@ -55,7 +55,7 @@ public abstract class AbstractNpcAI extends L2Script
 	}
 	
 	/**
-	 * Registers the fallowing events to the current script:<br>
+	 * Registers the following events to the current script:<br>
 	 * <ul>
 	 * <li>ON_ATTACK</li>
 	 * <li>ON_KILL</li>

@@ -32,50 +32,24 @@ import com.l2jserver.gameserver.util.Util;
 public class HuntingGroundsTeleport extends AbstractNpcAI
 {
 	// NPCs
+	// @formatter:off
 	private final static int[] PRIESTS =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31082,
-		31083,
-		31084,
-		31085,
-		31086,
-		31087,
-		31088,
-		31089,
-		31090,
-		31091,
-		31168,
-		31169,
-		31692,
-		31693,
-		31694,
-		31695,
-		31997,
-		31998
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31085, 31086, 31087,
+		31088, 31089, 31090, 31091, 31168, 31169, 31692, 31693, 31694, 31695,
+		31997, 31998
 	};
 	
 	private static final int[] DAWN_NPCS =
 	{
-		31078,
-		31079,
-		31080,
-		31081,
-		31082,
-		31083,
-		31084,
-		31168,
-		31692,
-		31694,
+		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31168, 31692, 31694,
 		31997
 	};
+	// @formatter:on
 	
-	private HuntingGroundsTeleport(String name, String descr)
+	private HuntingGroundsTeleport()
 	{
-		super(name, descr);
+		super(HuntingGroundsTeleport.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(PRIESTS);
 		addTalkId(PRIESTS);
 	}
@@ -171,6 +145,6 @@ public class HuntingGroundsTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new HuntingGroundsTeleport(HuntingGroundsTeleport.class.getSimpleName(), "ai/npc/Teleports/");
+		new HuntingGroundsTeleport();
 	}
 }

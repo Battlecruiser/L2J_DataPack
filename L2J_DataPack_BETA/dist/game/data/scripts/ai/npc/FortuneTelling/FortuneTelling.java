@@ -27,18 +27,20 @@ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 /**
  * Fortune Telling AI.<br>
  * Original Jython script by Kerberos.
- * @authors Nyaran
+ * @author Nyaran
  */
 public class FortuneTelling extends AbstractNpcAI
 {
-	private static final int NPC_ID = 32616;
+	// NPC
+	private static final int MINE = 32616;
+	// Misc
 	private static final int COST = 1000;
 	
-	public FortuneTelling(String name, String descr)
+	public FortuneTelling()
 	{
-		super(name, descr);
-		addStartNpc(NPC_ID);
-		addTalkId(NPC_ID);
+		super(FortuneTelling.class.getSimpleName(), "ai/npc/");
+		addStartNpc(MINE);
+		addTalkId(MINE);
 	}
 	
 	@Override
@@ -52,13 +54,13 @@ public class FortuneTelling extends AbstractNpcAI
 		else
 		{
 			takeItems(player, PcInventory.ADENA_ID, COST);
-			htmltext = getHtm(player.getHtmlPrefix(), "fortune.htm").replace("%fortune%", "<fstring>" + (1800309 + getRandom(386)) + "</fstring>");
+			htmltext = getHtm(player.getHtmlPrefix(), "fortune.htm").replace("%fortune%", String.valueOf(getRandom(1800309, 1800695)));
 		}
 		return htmltext;
 	}
 	
 	public static void main(String args[])
 	{
-		new FortuneTelling(FortuneTelling.class.getSimpleName(), "ai/npc");
+		new FortuneTelling();
 	}
 }

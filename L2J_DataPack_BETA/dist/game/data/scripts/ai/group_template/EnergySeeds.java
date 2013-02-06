@@ -61,7 +61,7 @@ public class EnergySeeds extends AbstractNpcAI
 	protected static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
-	private static final int[] SEEDIDS =
+	private static final int[] SEED_IDS =
 	{
 		18678,
 		18679,
@@ -139,17 +139,6 @@ public class EnergySeeds extends AbstractNpcAI
 		ANNIHILATION_BISTAKON,
 		ANNIHILATION_REPTILIKON,
 		ANNIHILATION_COKRAKON
-	}
-	
-	private EnergySeeds(String name, String descr)
-	{
-		super(name, descr);
-		registerMobs(SEEDIDS);
-		addFirstTalkId(SEEDIDS);
-		addFirstTalkId(TEMPORARY_TELEPORTER);
-		addEnterZoneId(SOD_ZONE);
-		addSpawnsToList();
-		startAI();
 	}
 	
 	protected boolean isSeedActive(GraciaSeeds seed)
@@ -420,25 +409,14 @@ public class EnergySeeds extends AbstractNpcAI
 	
 	private L2MonsterInstance spawnSupriseMob(L2Npc energy, int npcId)
 	{
-		// Get the template of the Minion to spawn
 		L2NpcTemplate supriseMobTemplate = NpcTable.getInstance().getTemplate(npcId);
-		
-		// Create and Init the Minion and generate its Identifier
 		L2MonsterInstance monster = new L2MonsterInstance(IdFactory.getInstance().getNextId(), supriseMobTemplate);
-		
-		// Set the Minion HP, MP and Heading
 		monster.setCurrentHpMp(monster.getMaxHp(), monster.getMaxMp());
 		monster.setHeading(energy.getHeading());
-		
-		// move monster to masters instance
 		monster.setInstanceId(energy.getInstanceId());
-		
 		monster.setShowSummonAnimation(true);
-		
 		monster.spawnMe(energy.getX(), energy.getY(), energy.getZ());
-		
 		startQuestTimer("DeSpawnTask", 30000, monster, null);
-		
 		return monster;
 	}
 	
@@ -470,122 +448,122 @@ public class EnergySeeds extends AbstractNpcAI
 		_spawns.put(4, new ESSpawn(4, GraciaSeeds.DESTRUCTION, new Location(-249448,219256,-12448), new int[]{18678,18679,18680}));
 		_spawns.put(5, new ESSpawn(5, GraciaSeeds.DESTRUCTION, new Location(-249432,220872,-12448), new int[]{18678,18679,18680}));
 		_spawns.put(6, new ESSpawn(6, GraciaSeeds.DESTRUCTION, new Location(-248360,220888,-12448), new int[]{18678,18679,18680}));
-
+		
 		_spawns.put(7, new ESSpawn(7, GraciaSeeds.DESTRUCTION, new Location(-250088,219256,-12448), new int[]{18681,18682}));
 		_spawns.put(8, new ESSpawn(8, GraciaSeeds.DESTRUCTION, new Location(-250600,219272,-12448), new int[]{18681,18682}));
 		_spawns.put(9, new ESSpawn(9, GraciaSeeds.DESTRUCTION, new Location(-250584,220904,-12448), new int[]{18681,18682}));
 		_spawns.put(10, new ESSpawn(10, GraciaSeeds.DESTRUCTION, new Location(-250072,220888,-12448), new int[]{18681,18682}));
-
+		
 		_spawns.put(11, new ESSpawn(11, GraciaSeeds.DESTRUCTION, new Location(-253096,217704,-12296), new int[]{18683,18678}));
 		_spawns.put(12, new ESSpawn(12, GraciaSeeds.DESTRUCTION, new Location(-253112,217048,-12288), new int[]{18683,18678}));
 		_spawns.put(13, new ESSpawn(13, GraciaSeeds.DESTRUCTION, new Location(-251448,217032,-12288), new int[]{18683,18678}));
 		_spawns.put(14, new ESSpawn(14, GraciaSeeds.DESTRUCTION, new Location(-251416,217672,-12296), new int[]{18683,18678}));
-
+		
 		_spawns.put(15, new ESSpawn(15, GraciaSeeds.DESTRUCTION, new Location(-251416,217672,-12296), new int[]{18679,18680}));
 		_spawns.put(16, new ESSpawn(16, GraciaSeeds.DESTRUCTION, new Location(-251416,217016,-12280), new int[]{18679,18680}));
 		_spawns.put(17, new ESSpawn(17, GraciaSeeds.DESTRUCTION, new Location(-249752,217016,-12280), new int[]{18679,18680}));
 		_spawns.put(18, new ESSpawn(18, GraciaSeeds.DESTRUCTION, new Location(-249736,217688,-12296), new int[]{18679,18680}));
-
+		
 		_spawns.put(19, new ESSpawn(19, GraciaSeeds.DESTRUCTION, new Location(-252472,215208,-12120), new int[]{18681,18682}));
 		_spawns.put(20, new ESSpawn(20, GraciaSeeds.DESTRUCTION, new Location(-252552,216760,-12248), new int[]{18681,18682}));
 		_spawns.put(21, new ESSpawn(21, GraciaSeeds.DESTRUCTION, new Location(-253160,216744,-12248), new int[]{18681,18682}));
 		_spawns.put(22, new ESSpawn(22, GraciaSeeds.DESTRUCTION, new Location(-253128,215160,-12096), new int[]{18681,18682}));
-
+		
 		_spawns.put(23, new ESSpawn(23, GraciaSeeds.DESTRUCTION, new Location(-250392,215208,-12120), new int[]{18683,18678}));
 		_spawns.put(24, new ESSpawn(24, GraciaSeeds.DESTRUCTION, new Location(-250264,216744,-12248), new int[]{18683,18678}));
 		_spawns.put(25, new ESSpawn(25, GraciaSeeds.DESTRUCTION, new Location(-249720,216744,-12248), new int[]{18683,18678}));
 		_spawns.put(26, new ESSpawn(26, GraciaSeeds.DESTRUCTION, new Location(-249752,215128,-12096), new int[]{18683,18678}));
-
+		
 		_spawns.put(27, new ESSpawn(27, GraciaSeeds.DESTRUCTION, new Location(-250280,216760,-12248), new int[]{18679,18680,18681}));
 		_spawns.put(28, new ESSpawn(28, GraciaSeeds.DESTRUCTION, new Location(-250344,216152,-12248), new int[]{18679,18680,18681}));
 		_spawns.put(29, new ESSpawn(29, GraciaSeeds.DESTRUCTION, new Location(-252504,216152,-12248), new int[]{18679,18680,18681}));
 		_spawns.put(30, new ESSpawn(30, GraciaSeeds.DESTRUCTION, new Location(-252520,216792,-12248), new int[]{18679,18680,18681}));
-
+		
 		_spawns.put(31, new ESSpawn(31, GraciaSeeds.DESTRUCTION, new Location(-242520,217272,-12384), new int[]{18681,18682,18683}));
 		_spawns.put(32, new ESSpawn(32, GraciaSeeds.DESTRUCTION, new Location(-241432,217288,-12384), new int[]{18681,18682,18683}));
 		_spawns.put(33, new ESSpawn(33, GraciaSeeds.DESTRUCTION, new Location(-241432,218936,-12384), new int[]{18681,18682,18683}));
 		_spawns.put(34, new ESSpawn(34, GraciaSeeds.DESTRUCTION, new Location(-242536,218936,-12384), new int[]{18681,18682,18683}));
-
+		
 		_spawns.put(35, new ESSpawn(35, GraciaSeeds.DESTRUCTION, new Location(-240808,217272,-12384), new int[]{18678,18679}));
 		_spawns.put(36, new ESSpawn(36, GraciaSeeds.DESTRUCTION, new Location(-240280,217272,-12384), new int[]{18678,18679}));
 		_spawns.put(37, new ESSpawn(37, GraciaSeeds.DESTRUCTION, new Location(-240280,218952,-12384), new int[]{18678,18679}));
 		_spawns.put(38, new ESSpawn(38, GraciaSeeds.DESTRUCTION, new Location(-240792,218936,-12384), new int[]{18678,18679}));
-
+		
 		_spawns.put(39, new ESSpawn(39, GraciaSeeds.DESTRUCTION, new Location(-239576,217240,-12640), new int[]{18680,18681,18682}));
 		_spawns.put(40, new ESSpawn(40, GraciaSeeds.DESTRUCTION, new Location(-239560,216168,-12640), new int[]{18680,18681,18682}));
 		_spawns.put(41, new ESSpawn(41, GraciaSeeds.DESTRUCTION, new Location(-237896,216152,-12640), new int[]{18680,18681,18682}));
 		_spawns.put(42, new ESSpawn(42, GraciaSeeds.DESTRUCTION, new Location(-237912,217256,-12640), new int[]{18680,18681,18682}));
-
+		
 		_spawns.put(43, new ESSpawn(43, GraciaSeeds.DESTRUCTION, new Location(-237896,215528,-12640), new int[]{18683,18678}));
 		_spawns.put(44, new ESSpawn(44, GraciaSeeds.DESTRUCTION, new Location(-239560,215528,-12640), new int[]{18683,18678}));
 		_spawns.put(45, new ESSpawn(45, GraciaSeeds.DESTRUCTION, new Location(-239560,214984,-12640), new int[]{18683,18678}));
 		_spawns.put(46, new ESSpawn(46, GraciaSeeds.DESTRUCTION, new Location(-237896,215000,-12640), new int[]{18683,18678}));
-
+		
 		_spawns.put(47, new ESSpawn(47, GraciaSeeds.DESTRUCTION, new Location(-237896,213640,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(48, new ESSpawn(48, GraciaSeeds.DESTRUCTION, new Location(-239560,213640,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(49, new ESSpawn(49, GraciaSeeds.DESTRUCTION, new Location(-239544,212552,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(50, new ESSpawn(50, GraciaSeeds.DESTRUCTION, new Location(-237912,212552,-12768), new int[]{18678,18679,18680}));
-
+		
 		_spawns.put(51, new ESSpawn(51, GraciaSeeds.DESTRUCTION, new Location(-237912,211912,-12768), new int[]{18681,18682}));
 		_spawns.put(52, new ESSpawn(52, GraciaSeeds.DESTRUCTION, new Location(-237912,211400,-12768), new int[]{18681,18682}));
 		_spawns.put(53, new ESSpawn(53, GraciaSeeds.DESTRUCTION, new Location(-239560,211400,-12768), new int[]{18681,18682}));
 		_spawns.put(54, new ESSpawn(54, GraciaSeeds.DESTRUCTION, new Location(-239560,211912,-12768), new int[]{18681,18682}));
-
+		
 		_spawns.put(55, new ESSpawn(55, GraciaSeeds.DESTRUCTION, new Location(-241960,214536,-12512), new int[]{18683,18678,18679}));
 		_spawns.put(56, new ESSpawn(56, GraciaSeeds.DESTRUCTION, new Location(-241976,213448,-12512), new int[]{18683,18678,18679}));
 		_spawns.put(57, new ESSpawn(57, GraciaSeeds.DESTRUCTION, new Location(-243624,213448,-12512), new int[]{18683,18678,18679}));
 		_spawns.put(58, new ESSpawn(58, GraciaSeeds.DESTRUCTION, new Location(-243624,214520,-12512), new int[]{18683,18678,18679}));
-
+		
 		_spawns.put(59, new ESSpawn(59, GraciaSeeds.DESTRUCTION, new Location(-241976,212808,-12504), new int[]{18680,18681}));
 		_spawns.put(60, new ESSpawn(60, GraciaSeeds.DESTRUCTION, new Location(-241960,212280,-12504), new int[]{18680,18681}));
 		_spawns.put(61, new ESSpawn(61, GraciaSeeds.DESTRUCTION, new Location(-243624,212264,-12504), new int[]{18680,18681}));
 		_spawns.put(62, new ESSpawn(62, GraciaSeeds.DESTRUCTION, new Location(-243624,212792,-12504), new int[]{18680,18681}));
-
+		
 		_spawns.put(63, new ESSpawn(63, GraciaSeeds.DESTRUCTION, new Location(-243640,210920,-12640), new int[]{18682,18683,18678}));
 		_spawns.put(64, new ESSpawn(64, GraciaSeeds.DESTRUCTION, new Location(-243624,209832,-12640), new int[]{18682,18683,18678}));
 		_spawns.put(65, new ESSpawn(65, GraciaSeeds.DESTRUCTION, new Location(-241976,209832,-12640), new int[]{18682,18683,18678}));
 		_spawns.put(66, new ESSpawn(66, GraciaSeeds.DESTRUCTION, new Location(-241976,210920,-12640), new int[]{18682,18683,18678}));
-
+		
 		_spawns.put(67, new ESSpawn(67, GraciaSeeds.DESTRUCTION, new Location(-241976,209192,-12640), new int[]{18679,18680}));
 		_spawns.put(68, new ESSpawn(68, GraciaSeeds.DESTRUCTION, new Location(-241976,208664,-12640), new int[]{18679,18680}));
 		_spawns.put(69, new ESSpawn(69, GraciaSeeds.DESTRUCTION, new Location(-243624,208664,-12640), new int[]{18679,18680}));
 		_spawns.put(70, new ESSpawn(70, GraciaSeeds.DESTRUCTION, new Location(-243624,209192,-12640), new int[]{18679,18680}));
-
+		
 		_spawns.put(71, new ESSpawn(71, GraciaSeeds.DESTRUCTION, new Location(-241256,208664,-12896), new int[]{18681,18682,18683}));
 		_spawns.put(72, new ESSpawn(72, GraciaSeeds.DESTRUCTION, new Location(-240168,208648,-12896), new int[]{18681,18682,18683}));
 		_spawns.put(73, new ESSpawn(73, GraciaSeeds.DESTRUCTION, new Location(-240168,207000,-12896), new int[]{18681,18682,18683}));
 		_spawns.put(74, new ESSpawn(74, GraciaSeeds.DESTRUCTION, new Location(-241256,207000,-12896), new int[]{18681,18682,18683}));
-
+		
 		_spawns.put(75, new ESSpawn(75, GraciaSeeds.DESTRUCTION, new Location(-239528,208648,-12896), new int[]{18678,18679}));
 		_spawns.put(76, new ESSpawn(76, GraciaSeeds.DESTRUCTION, new Location(-238984,208664,-12896), new int[]{18678,18679}));
 		_spawns.put(77, new ESSpawn(77, GraciaSeeds.DESTRUCTION, new Location(-239000,207000,-12896), new int[]{18678,18679}));
 		_spawns.put(78, new ESSpawn(78, GraciaSeeds.DESTRUCTION, new Location(-239512,207000,-12896), new int[]{18678,18679}));
-
+		
 		_spawns.put(79, new ESSpawn(79, GraciaSeeds.DESTRUCTION, new Location(-245064,213144,-12384), new int[]{18680,18681,18682}));
 		_spawns.put(80, new ESSpawn(80, GraciaSeeds.DESTRUCTION, new Location(-245064,212072,-12384), new int[]{18680,18681,18682}));
 		_spawns.put(81, new ESSpawn(81, GraciaSeeds.DESTRUCTION, new Location(-246696,212072,-12384), new int[]{18680,18681,18682}));
 		_spawns.put(82, new ESSpawn(82, GraciaSeeds.DESTRUCTION, new Location(-246696,213160,-12384), new int[]{18680,18681,18682}));
-
+		
 		_spawns.put(83, new ESSpawn(83, GraciaSeeds.DESTRUCTION, new Location(-245064,211416,-12384), new int[]{18683,18678}));
 		_spawns.put(84, new ESSpawn(84, GraciaSeeds.DESTRUCTION, new Location(-245048,210904,-12384), new int[]{18683,18678}));
 		_spawns.put(85, new ESSpawn(85, GraciaSeeds.DESTRUCTION, new Location(-246712,210888,-12384), new int[]{18683,18678}));
 		_spawns.put(86, new ESSpawn(86, GraciaSeeds.DESTRUCTION, new Location(-246712,211416,-12384), new int[]{18683,18678}));
-
+		
 		_spawns.put(87, new ESSpawn(87, GraciaSeeds.DESTRUCTION, new Location(-245048,209544,-12512), new int[]{18679,18680,18681}));
 		_spawns.put(88, new ESSpawn(88, GraciaSeeds.DESTRUCTION, new Location(-245064,208456,-12512), new int[]{18679,18680,18681}));
 		_spawns.put(89, new ESSpawn(89, GraciaSeeds.DESTRUCTION, new Location(-246696,208456,-12512), new int[]{18679,18680,18681}));
 		_spawns.put(90, new ESSpawn(90, GraciaSeeds.DESTRUCTION, new Location(-246712,209544,-12512), new int[]{18679,18680,18681}));
-
+		
 		_spawns.put(91, new ESSpawn(91, GraciaSeeds.DESTRUCTION, new Location(-245048,207816,-12512), new int[]{18682,18683}));
 		_spawns.put(92, new ESSpawn(92, GraciaSeeds.DESTRUCTION, new Location(-245048,207288,-12512), new int[]{18682,18683}));
 		_spawns.put(93, new ESSpawn(93, GraciaSeeds.DESTRUCTION, new Location(-246696,207304,-12512), new int[]{18682,18683}));
 		_spawns.put(94, new ESSpawn(94, GraciaSeeds.DESTRUCTION, new Location(-246712,207816,-12512), new int[]{18682,18683}));
-
+		
 		_spawns.put(95, new ESSpawn(95, GraciaSeeds.DESTRUCTION, new Location(-244328,207272,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(96, new ESSpawn(96, GraciaSeeds.DESTRUCTION, new Location(-243256,207256,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(97, new ESSpawn(97, GraciaSeeds.DESTRUCTION, new Location(-243256,205624,-12768), new int[]{18678,18679,18680}));
 		_spawns.put(98, new ESSpawn(98, GraciaSeeds.DESTRUCTION, new Location(-244328,205608,-12768), new int[]{18678,18679,18680}));
-
+		
 		_spawns.put(99, new ESSpawn(99, GraciaSeeds.DESTRUCTION, new Location(-242616,207272,-12768), new int[]{18681,18682}));
 		_spawns.put(100, new ESSpawn(100, GraciaSeeds.DESTRUCTION, new Location(-242104,207272,-12768), new int[]{18681,18682}));
 		_spawns.put(101, new ESSpawn(101, GraciaSeeds.DESTRUCTION, new Location(-242088,205624,-12768), new int[]{18681,18682}));
@@ -646,7 +624,7 @@ public class EnergySeeds extends AbstractNpcAI
 		_spawns.put(154, new ESSpawn(154, GraciaSeeds.ANNIHILATION_BISTAKON, new Location(-174975,177172,-10216), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(155, new ESSpawn(155, GraciaSeeds.ANNIHILATION_BISTAKON, new Location(-176019,178242,-10352), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(156, new ESSpawn(156, GraciaSeeds.ANNIHILATION_BISTAKON, new Location(-174801,178456,-10264), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
-
+		
 		_spawns.put(157, new ESSpawn(157, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-185648,183384,-15680), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(158, new ESSpawn(158, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-186740,180908,-15528), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(159, new ESSpawn(159, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-185297,184658,-15680), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
@@ -713,7 +691,7 @@ public class EnergySeeds extends AbstractNpcAI
 		_spawns.put(220, new ESSpawn(220, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-174240,182391,-15688), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(221, new ESSpawn(221, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-174105,182806,-15672), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(222, new ESSpawn(222, GraciaSeeds.ANNIHILATION_REPTILIKON, new Location(-174645,182806,-15712), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
-
+		
 		_spawns.put(223, new ESSpawn(223, GraciaSeeds.ANNIHILATION_COKRAKON, new Location(-214962,182403,-10992), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(224, new ESSpawn(224, GraciaSeeds.ANNIHILATION_COKRAKON, new Location(-215019,182493,-11000), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
 		_spawns.put(225, new ESSpawn(225, GraciaSeeds.ANNIHILATION_COKRAKON, new Location(-211374,180793,-11672), new int[]{ 18678, 18679, 18680, 18681, 18682, 18683 }));
@@ -830,8 +808,19 @@ public class EnergySeeds extends AbstractNpcAI
 		}
 	}
 	
+	private EnergySeeds()
+	{
+		super(EnergySeeds.class.getSimpleName(), "instances");
+		registerMobs(SEED_IDS);
+		addFirstTalkId(SEED_IDS);
+		addFirstTalkId(TEMPORARY_TELEPORTER);
+		addEnterZoneId(SOD_ZONE);
+		addSpawnsToList();
+		startAI();
+	}
+	
 	public static void main(String[] args)
 	{
-		new EnergySeeds(EnergySeeds.class.getSimpleName(), "instances");
+		new EnergySeeds();
 	}
 }

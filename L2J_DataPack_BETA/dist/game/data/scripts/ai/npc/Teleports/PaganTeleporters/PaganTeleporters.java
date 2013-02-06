@@ -20,7 +20,6 @@ package ai.npc.Teleports.PaganTeleporters;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -34,17 +33,12 @@ public class PaganTeleporters extends AbstractNpcAI
 	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;
 	private static final int TRIOLS_MIRROR_2 = 32040;
-	
+	// @formatter:off
 	private static final int[] NPCS =
 	{
-		32034,
-		32035,
-		32036,
-		32037,
-		32039,
-		32040
+		32034, 32035, 32036, 32037, 32039, 32040
 	};
-	
+	// @formatter:on
 	// Items
 	private static final int VISITORS_MARK = 8064;
 	private static final int FADED_VISITORS_MARK = 8065;
@@ -53,14 +47,19 @@ public class PaganTeleporters extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("Close_Door1"))
+		switch (event)
 		{
-			DoorTable.getInstance().getDoor(19160001).closeMe();
-		}
-		else if (event.equalsIgnoreCase("Close_Door2"))
-		{
-			DoorTable.getInstance().getDoor(19160010).closeMe();
-			DoorTable.getInstance().getDoor(19160011).closeMe();
+			case "Close_Door1":
+			{
+				closeDoor(19160001, 0);
+				break;
+			}
+			case "Close_Door2":
+			{
+				closeDoor(19160010, 0);
+				closeDoor(19160011, 0);
+				break;
+			}
 		}
 		return "";
 	}
@@ -68,13 +67,18 @@ public class PaganTeleporters extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == TRIOLS_MIRROR_1)
+		switch (npc.getNpcId())
 		{
-			player.teleToLocation(-12766, -35840, -10856);
-		}
-		else if (npc.getNpcId() == TRIOLS_MIRROR_2)
-		{
-			player.teleToLocation(36640, -51218, 718);
+			case TRIOLS_MIRROR_1:
+			{
+				player.teleToLocation(-12766, -35840, -10856);
+				break;
+			}
+			case TRIOLS_MIRROR_2:
+			{
+				player.teleToLocation(36640, -51218, 718);
+				break;
+			}
 		}
 		return "";
 	}
@@ -86,17 +90,17 @@ public class PaganTeleporters extends AbstractNpcAI
 		{
 			case 32034:
 			{
-				if (!hasQuestItems(player, VISITORS_MARK) && !hasQuestItems(player, FADED_VISITORS_MARK) && !hasQuestItems(player, PAGANS_MARK))
+				if (!hasAtLeastOneQuestItem(player, VISITORS_MARK, FADED_VISITORS_MARK, PAGANS_MARK))
 				{
 					return "noItem.htm";
 				}
-				DoorTable.getInstance().getDoor(19160001).openMe();
+				openDoor(19160001, 0);
 				startQuestTimer("Close_Door1", 10000, null, null);
 				return "FadedMark.htm";
 			}
 			case 32035:
 			{
-				DoorTable.getInstance().getDoor(19160001).openMe();
+				openDoor(19160001, 0);
 				startQuestTimer("Close_Door1", 10000, null, null);
 				return "FadedMark.htm";
 			}
@@ -107,14 +111,14 @@ public class PaganTeleporters extends AbstractNpcAI
 					return "noMark.htm";
 				}
 				startQuestTimer("Close_Door2", 10000, null, null);
-				DoorTable.getInstance().getDoor(19160010).openMe();
-				DoorTable.getInstance().getDoor(19160011).openMe();
+				openDoor(19160010, 0);
+				openDoor(19160011, 0);
 				return "openDoor.htm";
 			}
 			case 32037:
 			{
-				DoorTable.getInstance().getDoor(19160010).openMe();
-				DoorTable.getInstance().getDoor(19160011).openMe();
+				openDoor(19160010, 0);
+				openDoor(19160011, 0);
 				startQuestTimer("Close_Door2", 10000, null, null);
 				return "FadedMark.htm";
 			}
@@ -122,9 +126,9 @@ public class PaganTeleporters extends AbstractNpcAI
 		return super.onTalk(npc, player);
 	}
 	
-	private PaganTeleporters(String name, String descr)
+	private PaganTeleporters()
 	{
-		super(name, descr);
+		super(PaganTeleporters.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 		addFirstTalkId(TRIOLS_MIRROR_1, TRIOLS_MIRROR_2);
@@ -132,6 +136,6 @@ public class PaganTeleporters extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PaganTeleporters(PaganTeleporters.class.getSimpleName(), "ai/npc/Teleports/");
+		new PaganTeleporters();
 	}
 }

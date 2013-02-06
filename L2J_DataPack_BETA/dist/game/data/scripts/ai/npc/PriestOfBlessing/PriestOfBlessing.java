@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
@@ -35,23 +34,12 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class PriestOfBlessing extends AbstractNpcAI
 {
-	// Spawn state
-	private static boolean SPAWNED = false;
 	// NPC
 	private static final int PRIEST = 32783;
-	// Prices
-	private static final int PRICE_VOICE = 100000;
+	// Spawn state
+	private static boolean SPAWNED = false;
+	// Items
 	private static final int NEVIT_VOICE = 17094;
-	private static final int[] PRIEVE_HOURGLASS =
-	{
-		4000,
-		30000,
-		110000,
-		310000,
-		970000,
-		2160000,
-		5000000
-	};
 	// @formatter:off
 	private static final int[][] HOURGLASSES =
 	{
@@ -64,7 +52,19 @@ public class PriestOfBlessing extends AbstractNpcAI
 		{ 17125, 17126, 17127, 17128, 17129 }
 	};
 	// @formatter:on
-	// Spawns
+	// Prices
+	private static final int PRICE_VOICE = 100000;
+	private static final int[] PRICE_HOURGLASS =
+	{
+		4000,
+		30000,
+		110000,
+		310000,
+		970000,
+		2160000,
+		5000000
+	};
+	// Locations
 	private static final Location[] SPAWNS =
 	{
 		new Location(-84139, 243145, -3704, 8473),
@@ -86,13 +86,13 @@ public class PriestOfBlessing extends AbstractNpcAI
 		new Location(116972, 77255, -2688, 41951)
 	};
 	
-	public PriestOfBlessing(String name, String descr)
+	public PriestOfBlessing()
 	{
-		super(name, descr);
-		
+		super(PriestOfBlessing.class.getSimpleName(), "ai/npc/");
 		addStartNpc(PRIEST);
 		addFirstTalkId(PRIEST);
 		addTalkId(PRIEST);
+		
 		if (!SPAWNED)
 		{
 			for (Location spawn : SPAWNS)
@@ -117,7 +117,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 				if (System.currentTimeMillis() > _reuse_time)
 				{
 					takeItems(player, PcInventory.ADENA_ID, PRICE_VOICE);
-					giveItems(player, NEVIT_VOICE, 1, -1);
+					giveItems(player, NEVIT_VOICE, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
@@ -138,7 +138,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("buy_hourglass"))
 		{
 			int _index = getHGIndex(player.getLevel());
-			int _price_hourglass = PRIEVE_HOURGLASS[_index];
+			int _price_hourglass = PRICE_HOURGLASS[_index];
 			
 			if (player.getAdena() >= _price_hourglass)
 			{
@@ -150,7 +150,7 @@ public class PriestOfBlessing extends AbstractNpcAI
 					int[] _hg = HOURGLASSES[_index];
 					int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
 					takeItems(player, PcInventory.ADENA_ID, _price_hourglass);
-					giveItems(player, _nevit_hourglass, 1, -1);
+					giveItems(player, _nevit_hourglass, 1);
 					saveGlobalQuestVar(player.getAccountName() + "_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
@@ -174,12 +174,9 @@ public class PriestOfBlessing extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final NpcHtmlMessage html = new NpcHtmlMessage(0);
-		final String content = getHtm(player.getHtmlPrefix(), "32783.htm");
-		html.setHtml(content);
-		html.replace("%donate%", Util.formatAdena(PRIEVE_HOURGLASS[getHGIndex(player.getLevel())]));
-		player.sendPacket(html);
-		return null;
+		String content = getHtm(player.getHtmlPrefix(), "32783.htm");
+		content = content.replace("%donate%", Util.formatAdena(PRICE_HOURGLASS[getHGIndex(player.getLevel())]));
+		return content;
 	}
 	
 	private int getHGIndex(int lvl)
@@ -218,6 +215,6 @@ public class PriestOfBlessing extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PriestOfBlessing(PriestOfBlessing.class.getSimpleName(), "ai/npc/");
+		new PriestOfBlessing();
 	}
 }
