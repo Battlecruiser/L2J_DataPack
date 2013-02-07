@@ -20,6 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
@@ -43,5 +44,11 @@ public class UnsummonAgathion extends SummonAgathion
 	public boolean onActionTime()
 	{
 		return false;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.UNSUMMON_AGATHION;
 	}
 }
