@@ -18,9 +18,9 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
@@ -59,6 +59,6 @@ public class Mute extends L2Effect
 	@Override
 	public int getEffectFlags()
 	{
-		return CharEffectList.EFFECT_FLAG_MUTED;
+		return EffectFlag.MUTED.getMask();
 	}
 }
