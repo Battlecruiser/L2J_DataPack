@@ -621,6 +621,7 @@ public class FinalEmperialTomb extends Quest
 		// teleport players
 		if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 		{
+			player.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
 			world.addAllowed(player.getObjectId());
 			teleportPlayer(player, loc, instanceId, false);
 		}
@@ -628,6 +629,7 @@ public class FinalEmperialTomb extends Quest
 		{
 			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
+				channelMember.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, channelMember.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
 				world.addAllowed(channelMember.getObjectId());
 				teleportPlayer(channelMember, loc, instanceId, false);
 			}
