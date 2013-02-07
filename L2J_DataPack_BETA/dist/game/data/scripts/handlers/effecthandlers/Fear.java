@@ -21,7 +21,6 @@ package handlers.effecthandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2DefenderInstance;
@@ -32,6 +31,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
@@ -132,6 +132,6 @@ public class Fear extends L2Effect
 	@Override
 	public int getEffectFlags()
 	{
-		return CharEffectList.EFFECT_FLAG_FEAR;
+		return EffectFlag.FEAR.getMask();
 	}
 }

@@ -18,9 +18,9 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -70,6 +70,6 @@ public class CharmOfCourage extends L2Effect
 	@Override
 	public int getEffectFlags()
 	{
-		return CharEffectList.EFFECT_FLAG_CHARM_OF_COURAGE;
+		return EffectFlag.CHARM_OF_COURAGE.getMask();
 	}
 }

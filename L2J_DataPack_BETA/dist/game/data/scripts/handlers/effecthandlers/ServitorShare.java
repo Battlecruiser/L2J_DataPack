@@ -18,11 +18,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
@@ -93,6 +93,6 @@ public class ServitorShare extends L2Effect
 	@Override
 	public int getEffectFlags()
 	{
-		return CharEffectList.EFFECT_FLAG_SERVITOR_SHARE;
+		return EffectFlag.SERVITOR_SHARE.getMask();
 	}
 }

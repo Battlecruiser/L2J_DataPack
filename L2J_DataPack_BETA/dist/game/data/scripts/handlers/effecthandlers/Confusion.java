@@ -24,11 +24,11 @@ import java.util.List;
 import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.CharEffectList;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
@@ -104,6 +104,6 @@ public class Confusion extends L2Effect
 	@Override
 	public int getEffectFlags()
 	{
-		return CharEffectList.EFFECT_FLAG_CONFUSED;
+		return EffectFlag.CONFUSED.getMask();
 	}
 }
