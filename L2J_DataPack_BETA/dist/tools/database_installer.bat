@@ -4,22 +4,22 @@ REM ## L2JDP Database Installer - (by DrLecter) ##
 REM ##############################################
 REM ## Interactive script setup -  (by TanelTM) ##
 REM ##############################################
-REM Copyright (C) 2012 L2J DataPack
-REM This program is free software; you can redistribute it and/or modify
+REM Copyright (C) 2004-2013 L2J DataPack
+REM
+REM This file is part of L2J DataPack.
+REM
+REM L2J DataPack is free software: you can redistribute it and/or modify
 REM it under the terms of the GNU General Public License as published by
-REM the Free Software Foundation; either version 3 of the License, or (at
-REM your option) any later version.
+REM the Free Software Foundation, either version 3 of the License, or
+REM (at your option) any later version.
 REM
-REM This program is distributed in the hope that it will be useful, but
-REM WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-REM or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
-REM for more details.
+REM L2J DataPack is distributed in the hope that it will be useful,
+REM but WITHOUT ANY WARRANTY; without even the implied warranty of
+REM MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+REM General Public License for more details.
 REM
-REM You should have received a copy of the GNU General Public License along
-REM with this program; if not, write to the Free Software Foundation, Inc.,
-REM 675 Mass Ave, Cambridge, MA 02139, USA. Or contact the Official L2J
-REM DataPack Project at http://www.l2jdp.com, http://www.l2jdp.com/forum or
-REM #l2j @ irc://irc.freenode.net
+REM You should have received a copy of the GNU General Public License
+REM along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 set config_file=vars.txt
 set config_version=0
@@ -89,7 +89,7 @@ title L2JDP Installer - Setup
 set config_version=2
 if NOT %upgrade_mode% == 2 (
 set fresh_setup=1
-set mysqlBinPath=%ProgramFiles%\MySQL\MySQL Server 5.5\bin
+set mysqlBinPath=%ProgramFiles%\MySQL\MySQL Server 5.6\bin
 set lsuser=root
 set lspass=
 set lsdb=l2jls
@@ -890,9 +890,9 @@ call :colors 17
 title L2JDP Installer - Script Execution Finished
 cls
 echo.
-echo L2JDP Database Installer 2012
+echo L2JDP Database Installer
 echo.
-echo (C) 2004-2012 L2J DataPack Team
+echo (C) 2004-2013 L2J DataPack Team
 echo L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY
 echo This is free software, and you are welcome to redistribute it
 echo under certain conditions; See the file gpl.txt for further
