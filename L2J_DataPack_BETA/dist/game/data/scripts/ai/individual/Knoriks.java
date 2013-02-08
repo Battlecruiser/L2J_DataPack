@@ -18,12 +18,8 @@
  */
 package ai.individual;
 
-import javolution.util.FastSet;
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -38,41 +34,11 @@ import com.l2jserver.util.Rnd;
 public class Knoriks extends AbstractNpcAI
 {
 	private static final int KNORIKS_ID = 22857;
-	private static final int[] ROUTE_ID =
-	{
-		30,
-		31,
-		32,
-		33,
-		34,
-		35
-	};
 	
 	private Knoriks(String name, String descr)
 	{
 		super(name, descr);
-		addSpawnId(KNORIKS_ID);
 		addAggroRangeEnterId(KNORIKS_ID);
-		
-		FastSet<L2Spawn> spawns = SpawnTable.getInstance().getSpawnTable();
-		for (L2Spawn spawn : spawns)
-		{
-			if (spawn.getNpcid() == KNORIKS_ID)
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
-		}
-	}
-	
-	@Override
-	public String onSpawn(L2Npc npc)
-	{
-		for (int element : ROUTE_ID)
-		{
-			WalkingManager.getInstance().startMoving(npc, element);
-		}
-		
-		return super.onSpawn(npc);
 	}
 	
 	@Override
@@ -86,7 +52,6 @@ public class Knoriks extends AbstractNpcAI
 			}
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.WHOS_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU), 1000);
 		}
-		
 		return super.onAggroRangeEnter(npc, player, isPet);
 	}
 	
