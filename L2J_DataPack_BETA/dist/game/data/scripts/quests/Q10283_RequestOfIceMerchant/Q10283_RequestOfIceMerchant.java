@@ -18,6 +18,8 @@
  */
 package quests.Q10283_RequestOfIceMerchant;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -27,7 +29,7 @@ import com.l2jserver.gameserver.model.quest.State;
 /**
  * Request of Ice Merchant (10283)
  * @author Gnacik
- * @version 2010-08-07 Based on Freya PTS
+ * @version 2013-02-07 Updated to High Five
  */
 public class Q10283_RequestOfIceMerchant extends Quest
 {
@@ -35,6 +37,10 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	private static final int RAFFORTY = 32020;
 	private static final int KIER = 32022;
 	private static final int JINIA = 32760;
+	// Location
+	private static final L2CharPosition MOVE_TO_END = new L2CharPosition(104457, -107010, -3698, 0);
+	// Misc
+	private boolean _jiniaOnSpawn = false;
 	
 	public Q10283_RequestOfIceMerchant(int questId, String name, String descr)
 	{
@@ -67,7 +73,21 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		}
 		else if ((npc.getNpcId() == KIER) && event.equalsIgnoreCase("spawn"))
 		{
-			addSpawn(JINIA, 104322, -107669, -3680, 44954, false, 60000);
+			if (_jiniaOnSpawn)
+			{
+				htmltext = "32022-02.html";
+			}
+			else
+			{
+				addSpawn(JINIA, 104473, -107549, -3695, 44954, false, 120000);
+				_jiniaOnSpawn = true;
+				startQuestTimer("despawn", 180000, npc, player);
+				return null;
+			}
+		}
+		else if (event.equalsIgnoreCase("despawn"))
+		{
+			_jiniaOnSpawn = false;
 			return null;
 		}
 		else if ((npc.getNpcId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
@@ -75,7 +95,9 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			st.giveAdena(190000, true);
 			st.addExpAndSp(627000, 50300);
 			st.exitQuest(false, true);
-			npc.deleteMe();
+			npc.setRunning();
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_END);
+			npc.decayMe();
 		}
 		return htmltext;
 	}
