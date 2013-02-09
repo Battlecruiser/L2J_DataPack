@@ -18,7 +18,6 @@
  */
 package quests.Q00504_CompetitionfortheBanditStronghold;
 
-import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.instancemanager.CHSiegeManager;
 import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -167,7 +166,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 	
 	private final void sendDatePage(final String page, final L2PcInstance player, final L2Npc npc)
 	{
-		String result = HtmCache.getInstance().getHtm(null, "data/scripts/quests/Q504_CompetitionfortheBanditStronghold/" + page + ".htm");
+		String result = getHtm(player.getHtmlPrefix(), page + ".htm");
 		if (result != null)
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
