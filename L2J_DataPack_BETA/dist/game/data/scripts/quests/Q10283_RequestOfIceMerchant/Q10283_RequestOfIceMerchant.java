@@ -79,7 +79,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			}
 			else
 			{
-				addSpawn(JINIA, 104473, -107549, -3695, 44954, false, 120000);
+				addSpawn(JINIA, 104473, -107549, -3695, 44954, false, 180000);
 				_jiniaOnSpawn = true;
 				startQuestTimer("despawn", 180000, npc, player);
 				return null;
