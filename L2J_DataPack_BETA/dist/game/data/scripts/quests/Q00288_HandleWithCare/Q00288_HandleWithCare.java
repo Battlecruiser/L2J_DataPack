@@ -146,11 +146,11 @@ public class Q00288_HandleWithCare extends Quest
 						{
 							reward = REWARDS[3];
 						}
-						st.giveItems(REWARDS[4].getId(), REWARDS[4].getCount());
+						st.giveItems(REWARDS[4]);
 					}
 					if (reward != null)
 					{
-						st.giveItems(reward.getId(), reward.getCount());
+						st.giveItems(reward);
 					}
 					st.exitQuest(true, true);
 					htmltext = event;

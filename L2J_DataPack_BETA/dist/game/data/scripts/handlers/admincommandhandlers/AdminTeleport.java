@@ -89,6 +89,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		if (command.equals("admin_instant_move"))
 		{
+			activeChar.sendMessage("Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(1);
 		}
 		if (command.equals("admin_teleto r"))
