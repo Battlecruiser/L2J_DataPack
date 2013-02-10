@@ -49,7 +49,7 @@ class Quest (JQuest) :
 		cond = st.getInt("cond")
 
 		if npc.getNpcId() == LEKON :
-			first = player.getQuestState("10273_GoodDayToFly")
+			first = player.getQuestState("Q10273_GoodDayToFly")
 			if first and first.getState() == State.COMPLETED and st.getState() == State.CREATED and player.getLevel() >= 75 :
 				htmltext = "32557-01.htm"
 			elif cond == 1 :
