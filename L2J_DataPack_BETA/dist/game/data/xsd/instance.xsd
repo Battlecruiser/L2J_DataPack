@@ -76,6 +76,7 @@
 												<xs:attribute name="onKillDelay" type="xs:nonNegativeInteger" />
 												<xs:attribute name="respawn" type="xs:nonNegativeInteger" use="required" />
 												<xs:attribute name="respawnRandom" type="xs:nonNegativeInteger" />
+												<xs:attribute name="allowRandomWalk" type="xs:boolean" />
 												<xs:attribute name="x" type="xs:integer" use="required" />
 												<xs:attribute name="y" type="xs:integer" use="required" />
 												<xs:attribute name="z" type="xs:integer" use="required" />
@@ -91,6 +92,7 @@
 			</xs:sequence>
 			<xs:attribute name="name" type="xs:normalizedString" use="required" />
 			<xs:attribute name="ejectTime" type="xs:positiveInteger" />
+			<xs:attribute name="allowRandomWalk" type="xs:boolean" />
 		</xs:complexType>
 	</xs:element>
 </xs:schema>
