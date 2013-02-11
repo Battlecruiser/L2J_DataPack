@@ -139,10 +139,10 @@ public class Quarry extends Quest
 	
 	// Let's manage kill points in Engine
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		npc.setAutoAttackable(false);
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

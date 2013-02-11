@@ -136,9 +136,9 @@ public class PrisonGuards extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		L2Character caster = isPet ? player.getSummon() : player;
+		L2Character caster = isSummon ? player.getSummon() : player;
 		
 		if (npc.getNpcId() == GUARD2)
 		{
@@ -146,18 +146,18 @@ public class PrisonGuards extends AbstractNpcAI
 			{
 				if (caster.getFirstEffect(silence) == null)
 				{
-					castDebuff(npc, caster, silence, isPet, false, true);
+					castDebuff(npc, caster, silence, isSummon, false, true);
 				}
 			}
 		}
 		
-		return super.onSkillSee(npc, player, skill, targets, isPet);
+		return super.onSkillSee(npc, player, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2Character target = isPet ? player.getSummon() : player;
+		L2Character target = isSummon ? player.getSummon() : player;
 		
 		if (npc.getNpcId() == GUARD2)
 		{
@@ -185,13 +185,13 @@ public class PrisonGuards extends AbstractNpcAI
 			}
 		}
 		
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		L2Character attacker = isPet ? player.getSummon() : player;
+		L2Character attacker = isSummon ? player.getSummon() : player;
 		
 		_firstAttacked = true;
 		
@@ -199,7 +199,7 @@ public class PrisonGuards extends AbstractNpcAI
 		{
 			if (attacker.getFirstEffect(pertification) == null)
 			{
-				castDebuff(npc, attacker, pertification, isPet, true, false);
+				castDebuff(npc, attacker, pertification, isSummon, true, false);
 			}
 			
 			npc.setTarget(null);
@@ -231,18 +231,18 @@ public class PrisonGuards extends AbstractNpcAI
 			}
 		}
 		
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (_guards.containsKey(npc))
 		{
 			startQuestTimer("Respawn", 20000, npc, null);
 		}
 		
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	private void castDebuff(L2Npc npc, L2Character player, int effectId, boolean isSummon, boolean fromAttack, boolean isSpell)

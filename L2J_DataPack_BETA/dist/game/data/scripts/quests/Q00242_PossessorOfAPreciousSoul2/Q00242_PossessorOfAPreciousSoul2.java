@@ -118,12 +118,12 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, "awaitsDrops", "1");
 		if (partyMember == null)
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
@@ -136,7 +136,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		{
 			st.unset("awaitsDrops");
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

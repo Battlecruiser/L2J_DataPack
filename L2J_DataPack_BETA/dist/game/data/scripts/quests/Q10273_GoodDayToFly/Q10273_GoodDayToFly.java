@@ -94,7 +94,7 @@ public class Q10273_GoodDayToFly extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
 		if ((st == null) || !st.isStarted())

@@ -119,7 +119,7 @@ public class Chests extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (npc instanceof L2ChestInstance)
 		{
@@ -127,7 +127,7 @@ public class Chests extends AbstractNpcAI
 			// i.e. when the player is attempting to open the chest using a skill
 			if (!Util.contains(targets, npc))
 			{
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			L2ChestInstance chest = ((L2ChestInstance) npc);
 			int npcId = chest.getNpcId();
@@ -137,7 +137,7 @@ public class Chests extends AbstractNpcAI
 			// check if the chest and skills used are valid for this script. Exit if invalid.
 			if (!Util.contains(NPC_IDS, npcId))
 			{
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			// if this has already been interacted, no further ai decisions are needed
 			// if it's the first interaction, check if this is a box or mimic
@@ -146,7 +146,7 @@ public class Chests extends AbstractNpcAI
 				chest.setInteracted();
 				if (getRandom(100) < IS_BOX)
 				{
-					// if it's a box, either it will be successfully openned by a proper key, or instantly disappear
+					// if it's a box, either it will be successfully opened by a proper key, or instantly disappear
 					if (skillId == SKILL_DELUXE_KEY)
 					{
 						// check the chance to open the box
@@ -172,18 +172,18 @@ public class Chests extends AbstractNpcAI
 				}
 				else
 				{
-					L2Character originalCaster = isPet ? caster.getSummon() : caster;
+					L2Character originalCaster = isSummon ? caster.getSummon() : caster;
 					chest.setRunning();
 					chest.addDamageHate(originalCaster, 0, 999);
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalCaster);
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc instanceof L2ChestInstance)
 		{
@@ -192,7 +192,7 @@ public class Chests extends AbstractNpcAI
 			// check if the chest and skills used are valid for this script. Exit if invalid.
 			if (!Util.contains(NPC_IDS, npcId))
 			{
-				return super.onAttack(npc, attacker, damage, isPet);
+				return super.onAttack(npc, attacker, damage, isSummon);
 			}
 			
 			// if this was a mimic, set the target, start the skills and become agro
@@ -206,15 +206,15 @@ public class Chests extends AbstractNpcAI
 				else
 				{
 					// if this weren't a box, upon interaction start the mimic behaviors...
-					// todo: perhaps a self-buff (skill id 4245) with random chance goes here?
-					L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
+					// TODO: perhaps a self-buff (skill id 4245) with random chance goes here?
+					L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 					chest.setRunning();
 					chest.addDamageHate(originalAttacker, 0, (damage * 100) / (chest.getLevel() + 7));
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
 				}
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	public static void main(String[] args)

@@ -54,7 +54,7 @@ public class StarStones extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (skill.getId() == 932)
 		{
@@ -82,7 +82,7 @@ public class StarStones extends AbstractNpcAI
 					break;
 				default:
 					// unknown npc!
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			if (getRandom(100) < 33)
 			{
@@ -100,7 +100,7 @@ public class StarStones extends AbstractNpcAI
 			}
 			npc.deleteMe();
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	public static void main(String[] args)

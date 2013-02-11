@@ -257,7 +257,7 @@ public class Engine extends Quest implements Runnable
 	
 	// Let's try to manage all trust changes for killing here
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (pointsInfo.containsKey(npcId))
@@ -275,7 +275,7 @@ public class Engine extends Quest implements Runnable
 			}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public Engine(int questId, String name, String descr)

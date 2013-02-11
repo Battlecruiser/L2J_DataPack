@@ -138,7 +138,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember;
 		final QuestState st;
@@ -227,7 +227,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				st = player.getQuestState(getName());
 				if ((st == null))
 				{
-					return super.onKill(npc, player, isPet);
+					return super.onKill(npc, player, isSummon);
 				}
 				
 				if (Util.contains(MOBS, npc.getNpcId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
@@ -247,7 +247,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 				}
 				break;
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

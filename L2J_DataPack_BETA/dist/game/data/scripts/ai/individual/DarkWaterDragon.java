@@ -141,7 +141,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		int npcObjId = npc.getObjectId();
@@ -151,7 +151,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 			{
 				MY_TRACKING_SET.add(npcObjId);
 				// Spawn first 5 shades on first attack on Dark Water Dragon
-				L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
+				L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() - 100, npc.getY() + 100, npc.getZ());
@@ -162,7 +162,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 			{
 				SECOND_SPAWN.add(npcObjId);
 				// Spawn second 5 shades on half hp of on Dark Water Dragon
-				L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
+				L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 				spawnShade(originalAttacker, SHADE2, npc.getX() + 100, npc.getY() + 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE1, npc.getX() + 100, npc.getY() - 100, npc.getZ());
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 100, npc.getY() + 100, npc.getZ());
@@ -170,11 +170,11 @@ public class DarkWaterDragon extends AbstractNpcAI
 				spawnShade(originalAttacker, SHADE2, npc.getX() - 150, npc.getY() + 150, npc.getZ());
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		int npcObjId = npc.getObjectId();
@@ -200,7 +200,7 @@ public class DarkWaterDragon extends AbstractNpcAI
 			MY_TRACKING_SET.remove(npcObjId);
 			ID_MAP.remove(npcObjId);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

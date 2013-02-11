@@ -93,12 +93,12 @@ public class Q00701_ProofOfExistence extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member == null)
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
 		if (npc.getNpcId() == ENIRA)
@@ -133,7 +133,7 @@ public class Q00701_ProofOfExistence extends Quest
 			st.giveItems(DEADMANS_REMAINS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

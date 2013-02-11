@@ -132,7 +132,7 @@ public class Q00278_HomeSecurity extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)

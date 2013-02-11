@@ -107,7 +107,7 @@ public class Q00509_AClansFame extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (player.getClan() == null)
 		{

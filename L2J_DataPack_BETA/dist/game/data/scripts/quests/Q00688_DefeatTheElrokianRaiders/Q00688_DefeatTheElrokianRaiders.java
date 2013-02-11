@@ -120,12 +120,12 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
@@ -136,7 +136,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			st.rewardItems(DINOSAUR_FANG_NECKLACE, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

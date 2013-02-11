@@ -367,7 +367,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public synchronized String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public synchronized String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (_hall.isInSiege())
 		{

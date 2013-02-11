@@ -87,7 +87,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.isVisible() && !npc.isDead())
 		{
@@ -104,14 +104,14 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 					}
 					npc.deleteMe();
 					L2Attackable newNpc = (L2Attackable) addSpawn(tmp.get(0), npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
-					L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
+					L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 					newNpc.setRunning();
 					newNpc.addDamageHate(originalAttacker, 0, 500);
 					newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalAttacker);
 				}
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	public static void main(String[] args)

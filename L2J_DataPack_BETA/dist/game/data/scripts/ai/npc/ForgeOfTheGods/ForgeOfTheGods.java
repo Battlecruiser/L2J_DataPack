@@ -103,7 +103,7 @@ public class ForgeOfTheGods extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int rand = getRandom(100);
 		L2Npc mob = null;
@@ -162,7 +162,7 @@ public class ForgeOfTheGods extends AbstractNpcAI
 			((L2Attackable) mob).addDamageHate(killer, 0, 9999);
 			mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

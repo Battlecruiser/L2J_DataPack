@@ -76,7 +76,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)
@@ -99,7 +99,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 		{
 			st.setCond(2, true);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

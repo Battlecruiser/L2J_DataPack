@@ -74,7 +74,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -106,11 +106,11 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, SkillTable.getInstance().getInfo(4235, 1), npc);
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -128,7 +128,7 @@ public final class DevastatedCastle extends ClanHallSiegeEngine
 			}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

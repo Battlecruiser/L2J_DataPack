@@ -208,18 +208,18 @@ public final class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if (isPet)
+		if (isSummon)
 		{
-			return super.onAggroRangeEnter(npc, player, isPet);
+			return super.onAggroRangeEnter(npc, player, isSummon);
 		}
 		
 		if (_aggroMode && (_targets.size() < 10) && (getRandom(3) < 1) && !player.isDead())
 		{
 			_targets.add(player);
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
@@ -319,7 +319,7 @@ public final class Venom extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		final double distance = Math.sqrt(npc.getPlanDistanceSq(attacker.getX(), attacker.getY()));
 		if (_aggroMode && (getRandom(100) < 25))
@@ -342,11 +342,11 @@ public final class Venom extends AbstractNpcAI
 			npc.setTarget(attacker);
 			npc.doCast(SONIC_STORM.getSkill());
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		updateStatus(DEAD);
 		broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.ITS_NOT_OVER_YET_IT_WONT_BE_OVER_LIKE_THIS_NEVER);
@@ -356,7 +356,7 @@ public final class Venom extends AbstractNpcAI
 			startQuestTimer("cube_despawn", 120000, cube, null);
 		}
 		cancelQuestTimer("raid_check", npc, null);
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	/**

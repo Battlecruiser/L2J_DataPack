@@ -412,17 +412,17 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (!_Zone.isInsideZone(attacker))
 		{
 			attacker.reduceCurrentHp(attacker.getCurrentHp(), attacker, false, false, null);
-			return super.onAttack(npc, attacker, damage, isPet);
+			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		if (npc.isInvul())
 		{
 			npc.getAI().setIntention(AI_INTENTION_IDLE);
-			return super.onAttack(npc, attacker, damage, isPet);
+			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		else if ((npc.getNpcId() == LIVE_BAIUM) && !npc.isInvul())
 		{
@@ -448,14 +448,14 @@ public class Baium extends AbstractNpcAI
 					{
 						if (npc.isMuted())
 						{
-							return super.onAttack(npc, attacker, damage, isPet);
+							return super.onAttack(npc, attacker, damage, isSummon);
 						}
 					}
 					else
 					{
 						if (npc.isPhysicalMuted())
 						{
-							return super.onAttack(npc, attacker, damage, isPet);
+							return super.onAttack(npc, attacker, damage, isSummon);
 						}
 					}
 					npc.doCast(skill);
@@ -465,11 +465,11 @@ public class Baium extends AbstractNpcAI
 			_LastAttackVsBaiumTime = System.currentTimeMillis();
 			callSkillAI(npc);
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		cancelQuestTimer("baium_despawn", npc, null);
 		npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -497,7 +497,7 @@ public class Baium extends AbstractNpcAI
 		{
 			timer.cancelAndRemove();
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public L2Character getRandomTarget(L2Npc npc)
@@ -718,7 +718,7 @@ public class Baium extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (npc.isInvul())
 		{
@@ -726,7 +726,7 @@ public class Baium extends AbstractNpcAI
 			return null;
 		}
 		npc.setTarget(caster);
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	public int getDist(int range)

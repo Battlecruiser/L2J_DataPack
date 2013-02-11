@@ -86,7 +86,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final int npcId = npc.getNpcId();
 		QuestState st;
@@ -118,7 +118,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 				}
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

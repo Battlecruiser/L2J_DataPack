@@ -618,7 +618,7 @@ public class RainbowSpringsChateau extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (!_rainbow.isInSiege())
 		{

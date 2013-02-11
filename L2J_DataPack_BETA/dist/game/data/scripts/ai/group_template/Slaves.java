@@ -67,7 +67,7 @@ public class Slaves extends AbstractNpcAI
 	
 	// Let's count trust points for killing in Engine
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (((L2MonsterInstance) npc).getMinionList() != null)
 		{
@@ -96,7 +96,7 @@ public class Slaves extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

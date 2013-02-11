@@ -64,7 +64,7 @@ public class Remnants extends AbstractNpcAI
 	}
 	
 	@Override
-	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (skill.getId() == HOLY_WATER)
 		{
@@ -90,7 +90,7 @@ public class Remnants extends AbstractNpcAI
 			}
 		}
 		
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	public static void main(String[] args)

@@ -75,12 +75,12 @@ public class Q10277_MutatedKaneusDion extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		QuestState st = killer.getQuestState(getName());
 		if (st == null)
 		{
-			return super.onKill(npc, killer, isPet);
+			return super.onKill(npc, killer, isSummon);
 		}
 		
 		final int npcId = npc.getNpcId();
@@ -105,7 +105,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 		{
 			rewardItem(npcId, st);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

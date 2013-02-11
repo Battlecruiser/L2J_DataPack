@@ -117,7 +117,7 @@ public class StakatoNest extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		L2MonsterInstance mob = (L2MonsterInstance) npc;
 		
@@ -141,11 +141,11 @@ public class StakatoNest extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		L2MonsterInstance _minion = checkMinion(npc);
 		
@@ -198,11 +198,11 @@ public class StakatoNest extends AbstractNpcAI
 				giveCocoon(killer, npc);
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (Util.contains(COCOONS, npc.getNpcId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
@@ -210,7 +210,7 @@ public class StakatoNest extends AbstractNpcAI
 			L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);
 			attackPlayer(caster, spawned);
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override

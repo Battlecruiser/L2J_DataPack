@@ -84,7 +84,7 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	/**
 	 * TODO: Should be spawned 10 seconds after boss dead
 	 */
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == LILITH)
@@ -97,7 +97,7 @@ public class GatekeeperSpirit extends AbstractNpcAI
 			// exit_necropolis_boss_anakim
 			addSpawn(GATEKEEPER_SPIRIT_EXIT, 184410, -13102, -5488, 0, false, 900000);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

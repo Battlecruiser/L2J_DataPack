@@ -131,14 +131,14 @@ public class Monastery extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (player.getActiveWeaponInstance() == null)
 		{
 			npc.setTarget(null);
 			((L2Attackable) npc).disableAllSkills();
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			return super.onAggroRangeEnter(npc, player, isPet);
+			return super.onAggroRangeEnter(npc, player, isSummon);
 		}
 		
 		if (player.isVisible() && !player.isGM())
@@ -157,11 +157,11 @@ public class Monastery extends AbstractNpcAI
 			((L2Attackable) npc).addDamageHate(player, 0, 100);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player, null);
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((skill.getSkillType() == L2SkillType.AGGDAMAGE) && (targets.length != 0))
 		{
@@ -178,17 +178,17 @@ public class Monastery extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if (getRandom(10) < 1)
 		{
 			broadcastNpcSay(npc, Say2.NPC_ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
 		}
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override

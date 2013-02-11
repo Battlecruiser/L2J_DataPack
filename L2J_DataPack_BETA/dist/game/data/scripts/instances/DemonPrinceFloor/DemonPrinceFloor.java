@@ -90,7 +90,7 @@ public class DemonPrinceFloor extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
@@ -114,7 +114,7 @@ public class DemonPrinceFloor extends Quest
 			
 			addSpawn(CUBE, -22144, 278744, -8239, 0, false, 0, false, instanceId);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private String checkConditions(L2PcInstance player)

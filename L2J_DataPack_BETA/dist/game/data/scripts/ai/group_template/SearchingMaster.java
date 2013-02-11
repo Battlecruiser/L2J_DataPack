@@ -51,7 +51,7 @@ public class SearchingMaster extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if (player == null)
 		{
@@ -62,7 +62,7 @@ public class SearchingMaster extends AbstractNpcAI
 		((L2Attackable) npc).addDamageHate(player, 0, 999);
 		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 		
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	public static void main(String[] args)

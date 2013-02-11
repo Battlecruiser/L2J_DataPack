@@ -82,12 +82,12 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
 		if (member == null)
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
 		switch (npc.getNpcId())
@@ -105,7 +105,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				giveItem(st, SUCCUBUS_BLOOD, getRegisteredItemIds());
 				break;
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

@@ -65,7 +65,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -90,7 +90,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 			}
 			npc.setScriptValue(1);
 		}
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	public static void main(String[] args)

@@ -75,7 +75,7 @@ public class BaseTower extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (!BODY_DESTROYER_TARGET_LIST.containsKey(npc.getObjectId()))
 		{
@@ -83,11 +83,11 @@ public class BaseTower extends Quest
 			npc.setTarget(player);
 			npc.doSimultaneousCast(DEATH_WORD.getSkill());
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		switch (npc.getNpcId())
 		{
@@ -115,7 +115,7 @@ public class BaseTower extends Quest
 				}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

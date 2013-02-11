@@ -121,7 +121,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		switch (npc.getNpcId())
 		{
@@ -161,11 +161,11 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 				}
 				break;
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// Tanta Guard
 		if (getRandom(1000) == 0)
@@ -215,7 +215,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 				buffer.doCast(BUFFS[5].getSkill());
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private void castRandomBuff(L2Npc npc, int chance1, int chance2, SkillHolder... buffs)

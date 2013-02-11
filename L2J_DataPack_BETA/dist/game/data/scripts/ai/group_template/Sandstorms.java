@@ -33,11 +33,11 @@ public class Sandstorms extends AbstractNpcAI
 	private static final int SANDSTORM = 32350;
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		npc.setTarget(player);
 		npc.doCast(SkillTable.getInstance().getInfo(5435, 1));
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public Sandstorms(String name, String descr)

@@ -47,7 +47,7 @@ public class TarBeetle extends AbstractNpcAI
 	private static final TarBeetleSpawn spawn = new TarBeetleSpawn();
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
 		{
@@ -64,7 +64,7 @@ public class TarBeetle extends AbstractNpcAI
 				npc.doCast(SKILLS[level].getSkill());
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override

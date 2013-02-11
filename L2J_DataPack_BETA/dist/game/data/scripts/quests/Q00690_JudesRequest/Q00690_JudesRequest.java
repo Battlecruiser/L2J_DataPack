@@ -123,7 +123,7 @@ public class Q00690_JudesRequest extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance partyMember = getRandomPartyMember(player, 1);
 		if (partyMember == null)

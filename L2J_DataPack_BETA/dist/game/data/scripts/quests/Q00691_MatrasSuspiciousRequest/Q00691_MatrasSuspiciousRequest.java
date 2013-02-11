@@ -116,7 +116,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = getRandomPartyMember(player, 1);
 		if (pl == null)

@@ -65,7 +65,7 @@ public final class Q00504_CompetitionfortheBanditStronghold extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (!BANDIT_STRONGHOLD.isInSiege())
 		{

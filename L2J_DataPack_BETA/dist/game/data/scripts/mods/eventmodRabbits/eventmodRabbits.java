@@ -236,7 +236,7 @@ public class eventmodRabbits extends Event
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (Util.contains(targets, npc))
 		{
@@ -260,11 +260,11 @@ public class eventmodRabbits extends Event
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		// Some retards go to event and disturb it by breaking chests
 		// So... Apply raid curse if player don't use skill on chest but attack it
@@ -273,7 +273,7 @@ public class eventmodRabbits extends Event
 			SkillTable.getInstance().getInfo(4515, 1).getEffects(npc, attacker);
 		}
 		
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	private static final void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)

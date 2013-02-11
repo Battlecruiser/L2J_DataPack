@@ -248,7 +248,7 @@ public class Gordon extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -262,11 +262,11 @@ public class Gordon extends AbstractNpcAI
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			}
 		}
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (npc.getNpcId() == GORDON)
 		{
@@ -274,7 +274,7 @@ public class Gordon extends AbstractNpcAI
 			cancelQuestTimer("time_isAttacked", null, null);
 			IS_SPAWNED = false;
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

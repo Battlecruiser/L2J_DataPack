@@ -182,7 +182,7 @@ public class Q10289_FadeToBlack extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc anays, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc anays, L2PcInstance killer, boolean isSummon)
 	{
 		List<L2PcInstance> killers = new ArrayList<>();
 		// first, populate the list of players liable for a reward
@@ -253,7 +253,7 @@ public class Q10289_FadeToBlack extends Quest
 				}
 			}
 		}
-		return super.onKill(anays, killer, isPet);
+		return super.onKill(anays, killer, isSummon);
 	}
 	
 	@Override

@@ -393,7 +393,7 @@ public class Valakas extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (!ZONE.isInsideZone(attacker))
 		{
@@ -424,11 +424,11 @@ public class Valakas extends AbstractNpcAI
 		}
 		_timeTracker = System.currentTimeMillis();
 		
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// Cancel skill_task and regen_task.
 		cancelQuestTimer("regen_task", npc, null);
@@ -455,11 +455,11 @@ public class Valakas extends AbstractNpcAI
 		info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
 		GrandBossManager.getInstance().setStatsSet(VALAKAS, info);
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		return null;
 	}

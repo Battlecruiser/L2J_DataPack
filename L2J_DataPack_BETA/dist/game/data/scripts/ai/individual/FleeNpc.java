@@ -48,7 +48,7 @@ public class FleeNpc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getNpcId() >= 18150) && (npc.getNpcId() <= 18157))
 		{
@@ -65,7 +65,7 @@ public class FleeNpc extends AbstractNpcAI
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 			return null;
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	// Register the new Script at the Script System

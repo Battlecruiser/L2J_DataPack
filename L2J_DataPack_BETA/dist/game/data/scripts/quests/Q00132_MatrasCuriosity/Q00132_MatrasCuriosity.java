@@ -92,7 +92,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = null;
 		switch (npc.getNpcId())

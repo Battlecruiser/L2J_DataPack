@@ -109,7 +109,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{
@@ -127,7 +127,7 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (!_hall.isInSiege())
 		{

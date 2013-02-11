@@ -123,7 +123,7 @@ public class eventmodElpies extends Event
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// Drop only if event is active
 		if (_isactive)
@@ -139,7 +139,7 @@ public class eventmodElpies extends Event
 			}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

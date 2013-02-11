@@ -212,14 +212,14 @@ public class Q00464_Oath extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
 		{
 			((L2MonsterInstance) npc).dropItem(killer, STRONGBOX, 1);
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

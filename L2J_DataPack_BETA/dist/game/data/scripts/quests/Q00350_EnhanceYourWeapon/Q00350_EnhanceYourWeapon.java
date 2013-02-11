@@ -176,7 +176,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (npc.isL2Attackable() && _npcLevelingInfos.containsKey(npc.getNpcId()))
 		{
@@ -187,9 +187,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		super.onSkillSee(npc, caster, skill, targets, isPet);
+		super.onSkillSee(npc, caster, skill, targets, isSummon);
 		
 		if ((skill == null) || (skill.getId() != 2096))
 		{
