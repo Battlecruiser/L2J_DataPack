@@ -103,7 +103,7 @@ public class SummonMinions extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		int npcObjId = npc.getObjectId();
@@ -148,7 +148,7 @@ public class SummonMinions extends AbstractNpcAI
 				case 22265:
 				case 22266:
 				{
-					if (isPet)
+					if (isSummon)
 					{
 						attacker = attacker.getSummon().getOwner();
 					}
@@ -219,11 +219,11 @@ public class SummonMinions extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcObjId = npc.getObjectId();
 		
@@ -233,7 +233,7 @@ public class SummonMinions extends AbstractNpcAI
 		{
 			_attackersList.get(npcObjId).clear();
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

@@ -105,11 +105,11 @@ public class Q10290_LandDragonConqueror extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (!player.isInParty())
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		
 		// rewards go only to command channel, not to a single party or player (retail Freya AI)
@@ -122,7 +122,7 @@ public class Q10290_LandDragonConqueror extends Quest
 			player.getParty().forEachMember(new RewardCheck(npc));
 		}
 		
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

@@ -120,7 +120,7 @@ public class Q00508_AClansReputation extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (player.getClan() == null)
 		{

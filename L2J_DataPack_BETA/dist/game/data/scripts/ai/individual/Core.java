@@ -169,7 +169,7 @@ public class Core extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.getNpcId() == CORE)
 		{
@@ -187,11 +187,11 @@ public class Core extends AbstractNpcAI
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.INTRUDER_REMOVAL_SYSTEM_INITIATED));
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == CORE)
@@ -218,7 +218,7 @@ public class Core extends AbstractNpcAI
 			Minions.remove(npc);
 			startQuestTimer("spawn_minion", 60000, npc, null);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

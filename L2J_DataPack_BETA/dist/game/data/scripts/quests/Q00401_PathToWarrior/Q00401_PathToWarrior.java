@@ -135,7 +135,7 @@ public class Q00401_PathToWarrior extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		QuestState st = killer.getQuestState(getName());
 		if (st == null)
@@ -182,7 +182,7 @@ public class Q00401_PathToWarrior extends Quest
 			}
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

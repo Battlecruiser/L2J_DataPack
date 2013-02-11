@@ -53,9 +53,9 @@ public class GiantScouts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2Character target = isPet ? player.getSummon() : player;
+		L2Character target = isSummon ? player.getSummon() : player;
 		
 		if (GeoData.getInstance().canSeeTarget(npc, target))
 		{
@@ -90,7 +90,7 @@ public class GiantScouts extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public static void main(String[] args)

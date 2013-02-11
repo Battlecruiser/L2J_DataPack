@@ -55,7 +55,7 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc.isScriptValue(0))
 		{
@@ -68,17 +68,17 @@ public final class FrightenedRagnaOrc extends AbstractNpcAI
 			broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.WAIT_WAIT_STOP_SAVE_ME_AND_ILL_GIVE_YOU_10000000_ADENA);
 			npc.setScriptValue(2);
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final NpcStringId msg = (Rnd.nextBoolean()) ? NpcStringId.UGH_A_CURSE_UPON_YOU : NpcStringId.I_REALLY_DIDNT_WANT_TO_FIGHT;
 		broadcastNpcSay(npc, Say2.NPC_ALL, msg);
 		cancelQuestTimer("say", npc, null);
 		cancelQuestTimer("reward", npc, player);
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

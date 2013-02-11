@@ -112,7 +112,7 @@ public class Q00044_HelpTheSon extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(2))
@@ -127,7 +127,7 @@ public class Q00044_HelpTheSon extends Quest
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

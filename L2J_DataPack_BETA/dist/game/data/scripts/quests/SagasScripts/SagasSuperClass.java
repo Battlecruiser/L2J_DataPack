@@ -494,12 +494,12 @@ public class SagasSuperClass extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		QuestState st2 = findRightState(npc);
 		if (st2 == null)
 		{
-			return super.onAttack(npc, player, damage, isPet);
+			return super.onAttack(npc, player, damage, isSummon);
 		}
 		int cond = st2.getInt("cond");
 		QuestState st = player.getQuestState(qn);
@@ -530,7 +530,7 @@ public class SagasSuperClass extends Quest
 				DeleteSpawn(st2, npc);
 			}
 		}
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override
@@ -612,7 +612,7 @@ public class SagasSuperClass extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		QuestState st = player.getQuestState(qn);
@@ -652,7 +652,7 @@ public class SagasSuperClass extends Quest
 						}
 					}
 				}
-				return super.onKill(npc, player, isPet);
+				return super.onKill(npc, player, isSummon);
 			}
 		}
 		
@@ -681,7 +681,7 @@ public class SagasSuperClass extends Quest
 					}
 					
 				}
-				return super.onKill(npc, player, isPet);
+				return super.onKill(npc, player, isSummon);
 			}
 		}
 		
@@ -706,7 +706,7 @@ public class SagasSuperClass extends Quest
 					}
 					
 				}
-				return super.onKill(npc, player, isPet);
+				return super.onKill(npc, player, isSummon);
 			}
 		}
 		if ((st != null) && (npcId != Mob[2]))
@@ -714,7 +714,7 @@ public class SagasSuperClass extends Quest
 			QuestState st2 = findRightState(npc);
 			if (st2 == null)
 			{
-				return super.onKill(npc, player, isPet);
+				return super.onKill(npc, player, isSummon);
 			}
 			int cond = st.getInt("cond");
 			if ((npcId == Mob[0]) && (cond == 8))
@@ -776,11 +776,11 @@ public class SagasSuperClass extends Quest
 				}
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (_spawnList.containsKey(npc) && (_spawnList.get(npc) != player.getObjectId()))
 		{
@@ -806,7 +806,7 @@ public class SagasSuperClass extends Quest
 				}
 			}
 		}
-		return super.onSkillSee(npc, player, skill, targets, isPet);
+		return super.onSkillSee(npc, player, skill, targets, isSummon);
 	}
 	
 	@Override

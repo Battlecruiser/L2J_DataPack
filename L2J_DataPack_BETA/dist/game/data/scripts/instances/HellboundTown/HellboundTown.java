@@ -254,7 +254,7 @@ public class HellboundTown extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
@@ -277,11 +277,11 @@ public class HellboundTown extends Quest
 				}
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
@@ -324,11 +324,11 @@ public class HellboundTown extends Quest
 				}
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet, skill);
+		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if ((tmpworld != null) && (tmpworld instanceof TownWorld))
@@ -336,7 +336,7 @@ public class HellboundTown extends Quest
 			TownWorld world = (TownWorld) tmpworld;
 			world.isAmaskariDead = true;
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private String checkConditions(L2PcInstance player)

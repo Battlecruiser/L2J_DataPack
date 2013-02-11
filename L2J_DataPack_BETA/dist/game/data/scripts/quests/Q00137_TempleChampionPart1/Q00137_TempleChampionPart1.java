@@ -95,7 +95,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isStarted() && st.isCond(2) && (st.getQuestItemsCount(FRAGMENT) < 30))
@@ -110,7 +110,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

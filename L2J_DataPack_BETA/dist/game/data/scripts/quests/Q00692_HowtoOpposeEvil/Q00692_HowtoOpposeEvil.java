@@ -171,7 +171,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
 		if (partyMember == null)

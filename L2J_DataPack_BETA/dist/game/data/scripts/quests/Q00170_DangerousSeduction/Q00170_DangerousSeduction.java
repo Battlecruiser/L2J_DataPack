@@ -74,7 +74,7 @@ public class Q00170_DangerousSeduction extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
@@ -83,7 +83,7 @@ public class Q00170_DangerousSeduction extends Quest
 			st.giveItems(NIGHTMARE_CRYSTAL, 1);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.SEND_MY_SOUL_TO_LICH_KING_ICARUS));
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

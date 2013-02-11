@@ -248,7 +248,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (player.getParty() != null)
 		{

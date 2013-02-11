@@ -1674,7 +1674,7 @@ public class Kamaloka extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpWorld instanceof KamaWorld)
@@ -1714,7 +1714,7 @@ public class Kamaloka extends Quest
 						}
 					}
 					
-					return super.onKill(npc, player, isPet);
+					return super.onKill(npc, player, isSummon);
 				}
 			}
 			
@@ -1755,7 +1755,7 @@ public class Kamaloka extends Quest
 						}
 					}
 					
-					return super.onKill(npc, player, isPet);
+					return super.onKill(npc, player, isSummon);
 				}
 			}
 			
@@ -1778,7 +1778,7 @@ public class Kamaloka extends Quest
 					}
 				}
 				
-				return super.onKill(npc, player, isPet);
+				return super.onKill(npc, player, isSummon);
 			}
 			
 			// boss was killed, finish instance
@@ -1788,7 +1788,7 @@ public class Kamaloka extends Quest
 				finishInstance(world);
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	public Kamaloka(int questId, String name, String descr)

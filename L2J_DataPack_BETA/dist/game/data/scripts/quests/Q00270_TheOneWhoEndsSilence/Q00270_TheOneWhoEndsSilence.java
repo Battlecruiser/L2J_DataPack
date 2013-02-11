@@ -270,7 +270,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		switch (npc.getNpcId())
 		{
@@ -325,7 +325,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 				break;
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

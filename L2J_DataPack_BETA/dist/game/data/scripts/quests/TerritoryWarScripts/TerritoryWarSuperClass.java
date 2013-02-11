@@ -235,7 +235,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getNpcId()))
 		{
@@ -260,7 +260,7 @@ public class TerritoryWarSuperClass extends Quest
 				}
 			}
 		}
-		return super.onAttack(npc, player, damage, isPet);
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override
@@ -339,7 +339,7 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		TerritoryWarManager manager = TerritoryWarManager.getInstance();
 		if (npc.getNpcId() == CATAPULT_ID)
@@ -358,11 +358,11 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			manager.getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (Util.contains(targets, npc))
 		{
@@ -370,7 +370,7 @@ public class TerritoryWarSuperClass extends Quest
 			{
 				if (TerritoryWarManager.getInstance().getHQForClan(caster.getClan()) != npc)
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
 				npc.deleteMe();
 				TerritoryWarManager.getInstance().setHQForClan(caster.getClan(), null);
@@ -379,12 +379,12 @@ public class TerritoryWarSuperClass extends Quest
 			{
 				if (TerritoryWarManager.getInstance().getHQForTerritory(caster.getSiegeSide()) != npc)
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
 				TerritoryWard ward = TerritoryWarManager.getInstance().getTerritoryWard(caster);
 				if (ward == null)
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
 				if ((caster.getSiegeSide() - 80) == ward.getOwnerCastleId())
 				{
@@ -407,7 +407,7 @@ public class TerritoryWarSuperClass extends Quest
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	// Used to register NPCs "For the Sake of the Territory ..." quests

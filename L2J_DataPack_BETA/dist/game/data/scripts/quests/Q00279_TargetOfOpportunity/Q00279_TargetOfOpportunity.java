@@ -90,7 +90,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
 		final int idx = Arrays.binarySearch(MONSTERS, npc.getNpcId());

@@ -236,11 +236,11 @@ public class SanctumOftheLordsOfDawn extends Quest
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 2000, npc, player);
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public static void main(String[] args)

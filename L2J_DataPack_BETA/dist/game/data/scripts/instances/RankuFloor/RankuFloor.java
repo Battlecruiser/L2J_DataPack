@@ -91,7 +91,7 @@ public class RankuFloor extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
@@ -115,7 +115,7 @@ public class RankuFloor extends Quest
 			
 			addSpawn(CUBE, -19056, 278732, -15000, 0, false, 0, false, instanceId);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private String checkConditions(L2PcInstance player)

@@ -158,11 +158,11 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (!Util.contains(targets, npc) || (skill.getId() != 5780))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		npc.deleteMe();
@@ -197,7 +197,7 @@ public class EnergySeeds extends AbstractNpcAI
 						itemId = 14019;
 						break;
 					default:
-						return super.onSkillSee(npc, caster, skill, targets, isPet);
+						return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
 				if (getRandom(100) < 33)
 				{
@@ -213,7 +213,7 @@ public class EnergySeeds extends AbstractNpcAI
 			}
 		}
 		
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
@@ -276,14 +276,14 @@ public class EnergySeeds extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (_spawnedNpcs.containsKey(npc) && _spawns.containsKey(_spawnedNpcs.get(npc)))
 		{
 			_spawns.get(_spawnedNpcs.get(npc)).scheduleRespawn(RESPAWN + getRandom(RANDOM_RESPAWN_OFFSET));
 			_spawnedNpcs.remove(npc);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

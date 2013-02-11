@@ -614,7 +614,7 @@ public class NornilsGarden extends Quest
 	}
 	
 	@Override
-	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getNpcId() == _herb_jar) && !npc.isDead())
 		{
@@ -630,7 +630,7 @@ public class NornilsGarden extends Quest
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
@@ -660,7 +660,7 @@ public class NornilsGarden extends Quest
 				spawn2(npc);
 			}
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	public NornilsGarden(int questId, String name, String descr)

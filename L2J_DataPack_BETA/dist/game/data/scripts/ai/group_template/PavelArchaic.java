@@ -49,7 +49,7 @@ public class PavelArchaic extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (!npc.isDead())
 		{
@@ -64,15 +64,15 @@ public class PavelArchaic extends AbstractNpcAI
 				attackPlayer(golem2, attacker);
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		L2Attackable _golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
 		attackPlayer(_golem, killer);
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

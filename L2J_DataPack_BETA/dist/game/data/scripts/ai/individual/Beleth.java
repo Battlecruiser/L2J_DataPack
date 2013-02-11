@@ -400,11 +400,11 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (npc == null)
 		{
-			return super.onKill(npc, killer, isPet);
+			return super.onKill(npc, killer, isSummon);
 		}
 		
 		if ((npc.getNpcId() == 29118) && (killer != null))
@@ -461,7 +461,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && (skill.getSkillType() == L2SkillType.HEAL) && (getRandom(100) < 80))
 		{
@@ -472,11 +472,11 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (npc == null)
 		{
-			return super.onAttack(npc, attacker, damage, isPet);
+			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
 		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
@@ -569,7 +569,7 @@ public class Beleth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && !MOVIE)
 		{

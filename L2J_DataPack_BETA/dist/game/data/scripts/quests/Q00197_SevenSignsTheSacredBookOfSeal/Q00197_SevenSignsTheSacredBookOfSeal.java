@@ -222,7 +222,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
 		if (partyMember == null)
@@ -244,7 +244,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 		ns.addStringParameter(player.getName());
 		npc.broadcastPacket(ns);
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

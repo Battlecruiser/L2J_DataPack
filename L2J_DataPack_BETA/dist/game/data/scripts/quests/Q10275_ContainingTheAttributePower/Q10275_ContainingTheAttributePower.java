@@ -130,7 +130,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)

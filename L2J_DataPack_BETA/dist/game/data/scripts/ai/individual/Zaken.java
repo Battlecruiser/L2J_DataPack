@@ -631,11 +631,11 @@ public class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null))
 		{
-			return super.onFactionCall(npc, caller, attacker, isPet);
+			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		int npcId = npc.getNpcId();
 		int callerId = caller.getNpcId();
@@ -652,7 +652,7 @@ public class Zaken extends AbstractNpcAI
 				startQuestTimer("1002", 300, caller, null);
 			}
 		}
-		return super.onFactionCall(npc, caller, attacker, isPet);
+		return super.onFactionCall(npc, caller, attacker, isSummon);
 	}
 	
 	@Override
@@ -781,7 +781,7 @@ public class Zaken extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -806,7 +806,7 @@ public class Zaken extends AbstractNpcAI
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
 				}
 			}
-			L2Character originalAttacker = isPet ? attacker.getSummon() : attacker;
+			L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 			int hate = (int) (((damage / npc.getMaxHp()) / 0.05) * 20000);
 			((L2Attackable) npc).addDamageHate(originalAttacker, 0, hate);
 			if (getRandom(10) < 1)
@@ -870,11 +870,11 @@ public class Zaken extends AbstractNpcAI
 				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -898,11 +898,11 @@ public class Zaken extends AbstractNpcAI
 				startQuestTimer("CreateOnePrivateEx", ((30 + getRandom(60)) * 1000), npc, null);
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -959,18 +959,18 @@ public class Zaken extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
 			if (_Zone.isInsideZone(npc))
 			{
-				L2Character target = isPet ? player.getSummon() : player;
+				L2Character target = isSummon ? player.getSummon() : player;
 				((L2Attackable) npc).addDamageHate(target, 1, 200);
 			}
 			if ((player.getZ() > (npc.getZ() - 100)) && (player.getZ() < (npc.getZ() + 100)))
@@ -1048,7 +1048,7 @@ public class Zaken extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public int getTimeHour()

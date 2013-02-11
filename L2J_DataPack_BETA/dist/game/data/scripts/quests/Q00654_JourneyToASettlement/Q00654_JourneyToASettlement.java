@@ -101,12 +101,12 @@ public class Q00654_JourneyToASettlement extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
 		if (partyMember == null)
 		{
-			return super.onKill(npc, player, isPet);
+			return super.onKill(npc, player, isSummon);
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
@@ -118,7 +118,7 @@ public class Q00654_JourneyToASettlement extends Quest
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(3, true);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

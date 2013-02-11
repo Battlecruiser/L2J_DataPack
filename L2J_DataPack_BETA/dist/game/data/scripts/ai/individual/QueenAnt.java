@@ -246,11 +246,11 @@ public class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null))
 		{
-			return super.onFactionCall(npc, caller, attacker, isPet);
+			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		
 		if (!npc.isCastingNow() && (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_CAST))
@@ -265,7 +265,7 @@ public class QueenAnt extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (npc == null)
 		{
@@ -274,7 +274,7 @@ public class QueenAnt extends AbstractNpcAI
 		
 		final boolean isMage;
 		final L2Playable character;
-		if (isPet)
+		if (isSummon)
 		{
 			isMage = false;
 			character = player.getSummon();
@@ -318,11 +318,11 @@ public class QueenAnt extends AbstractNpcAI
 			return null;
 		}
 		
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == QUEEN)
@@ -363,7 +363,7 @@ public class QueenAnt extends AbstractNpcAI
 				}
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

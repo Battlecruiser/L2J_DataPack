@@ -96,7 +96,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance player = getRandomPartyMember(killer, 1);
 		final QuestState st = player.getQuestState(getName());
@@ -115,7 +115,7 @@ public class Q00645_GhostsOfBatur extends Quest
 				}
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

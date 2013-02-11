@@ -141,7 +141,7 @@ public class DenOfEvil extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (Util.contains(EYE_IDS, npc.getNpcId()))
 		{

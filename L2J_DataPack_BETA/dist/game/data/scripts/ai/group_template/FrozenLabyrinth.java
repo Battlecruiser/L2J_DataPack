@@ -44,7 +44,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		if ((skill != null) && !skill.isMagic())
 		{
@@ -66,7 +66,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 			}
 			npc.deleteMe();
 		}
-		return super.onAttack(npc, attacker, damage, isPet, skill);
+		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
 	public static void main(String[] args)

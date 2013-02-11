@@ -45,11 +45,11 @@ public class NecromancerValley extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (Rnd.get(100) < 20)
 		{
-			L2Character attacker = isPet ? killer.getSummon() : killer;
+			L2Character attacker = isSummon ? killer.getSummon() : killer;
 			L2Attackable Orc = (L2Attackable) addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			Orc.setRunning();
 			Orc.addDamageHate(attacker, 0, 600);
@@ -61,15 +61,15 @@ public class NecromancerValley extends AbstractNpcAI
 			
 		}
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (Rnd.get(100) < 1)
 		{
-			L2Character player = isPet ? attacker.getSummon() : attacker;
+			L2Character player = isSummon ? attacker.getSummon() : attacker;
 			L2Attackable Orc = (L2Attackable) addSpawn(EXPLODING_ORC_GHOST, npc.getX(), npc.getY(), npc.getZ() + 10, npc.getHeading(), false, 0, true);
 			Orc.setRunning();
 			Orc.addDamageHate(player, 0, 600);
@@ -81,7 +81,7 @@ public class NecromancerValley extends AbstractNpcAI
 			
 		}
 		
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	public static void main(String[] args)

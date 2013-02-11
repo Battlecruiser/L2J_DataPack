@@ -264,7 +264,7 @@ public class Q00702_ATrapForRevenge extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 2);
 		if (partyMember == null)

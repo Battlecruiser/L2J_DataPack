@@ -76,7 +76,7 @@ public class Q00510_AClansPrestige extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		if (player.getClan() == null)
 		{

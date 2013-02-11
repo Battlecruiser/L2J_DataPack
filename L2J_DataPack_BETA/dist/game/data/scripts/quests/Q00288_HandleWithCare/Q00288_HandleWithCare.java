@@ -162,7 +162,7 @@ public class Q00288_HandleWithCare extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false))
@@ -180,7 +180,7 @@ public class Q00288_HandleWithCare extends Quest
 				st.setCond(3, true);
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

@@ -245,7 +245,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(player, 3);
 		if (partyMember == null)
@@ -284,7 +284,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		{
 			st.setCond(4, true);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

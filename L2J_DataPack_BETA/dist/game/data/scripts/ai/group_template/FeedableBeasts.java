@@ -565,13 +565,13 @@ public class FeedableBeasts extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
 		if (!Util.contains(targets, npc))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
 		int npcId = npc.getNpcId();
@@ -579,7 +579,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		// check if the npc and skills used are valid for this script. Exit if invalid.
 		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE)))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		// first gather some values on local variables
@@ -594,7 +594,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
 		if ((growthLevel == 0) && _FeedInfo.containsKey(objectId))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		_FeedInfo.put(objectId, caster.getObjectId());
@@ -618,7 +618,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			// do nothing if this mob doesn't eat the specified food (food gets consumed but has no effect).
 			if (_GrowthCapableMobs.get(npcId).getMob(food, 0, 0) == null)
 			{
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			
 			// rare random talk...
@@ -637,7 +637,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			{
 				// check if this is the same player as the one who raised it from growth 0.
 				// if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			
 			// Polymorph the mob, with a certain chance, given its current growth level
@@ -661,18 +661,18 @@ public class FeedableBeasts extends AbstractNpcAI
 				beast.broadcastPacket(packet);
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
 		if (_FeedInfo.containsKey(npc.getObjectId()))
 		{
 			_FeedInfo.remove(npc.getObjectId());
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

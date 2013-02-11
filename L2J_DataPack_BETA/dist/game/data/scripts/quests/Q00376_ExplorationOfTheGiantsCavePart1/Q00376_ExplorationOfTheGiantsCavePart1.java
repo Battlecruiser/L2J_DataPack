@@ -146,7 +146,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
@@ -159,7 +159,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 			st.giveItems(ANCIENT_PARCHMENT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override

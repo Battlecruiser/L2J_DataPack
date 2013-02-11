@@ -241,11 +241,11 @@ public class Orfen extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if (npc.getNpcId() == ORFEN)
 		{
-			L2Character originalCaster = isPet ? caster.getSummon() : caster;
+			L2Character originalCaster = isSummon ? caster.getSummon() : caster;
 			if ((skill.getAggroPoints() > 0) && (getRandom(5) == 0) && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
 				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), TEXT[getRandom(4)]);
@@ -256,15 +256,15 @@ public class Orfen extends AbstractNpcAI
 				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null) || npc.isCastingNow())
 		{
-			return super.onFactionCall(npc, caller, attacker, isPet);
+			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		int npcId = npc.getNpcId();
 		int callerId = caller.getNpcId();
@@ -287,11 +287,11 @@ public class Orfen extends AbstractNpcAI
 				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
 			}
 		}
-		return super.onFactionCall(npc, caller, attacker, isPet);
+		return super.onFactionCall(npc, caller, attacker, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ORFEN)
@@ -319,11 +319,11 @@ public class Orfen extends AbstractNpcAI
 				npc.doCast(SkillTable.getInstance().getInfo(4516, 1));
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (npc.getNpcId() == ORFEN)
 		{
@@ -346,7 +346,7 @@ public class Orfen extends AbstractNpcAI
 			_Minions.remove(npc);
 			startQuestTimer("spawn_minion", 360000, npc, null);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

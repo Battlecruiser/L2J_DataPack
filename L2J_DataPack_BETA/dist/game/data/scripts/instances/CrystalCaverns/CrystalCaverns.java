@@ -1877,7 +1877,7 @@ public class CrystalCaverns extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		
 		boolean doReturn = true;
@@ -1890,7 +1890,7 @@ public class CrystalCaverns extends Quest
 		}
 		if (doReturn)
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		switch (skill.getId())
@@ -1910,7 +1910,7 @@ public class CrystalCaverns extends Quest
 		}
 		if (doReturn)
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		if ((npc.getNpcId() >= 32275) && (npc.getNpcId() <= 32277) && (skill.getId() != 2360) && (skill.getId() != 2369))
@@ -1932,7 +1932,7 @@ public class CrystalCaverns extends Quest
 		{
 			if (caster.getParty() == null)
 			{
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if (tmpworld instanceof CCWorld)
@@ -1967,7 +1967,7 @@ public class CrystalCaverns extends Quest
 				CCWorld world = (CCWorld) tmpworld;
 				if (caster.getParty() == null)
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
 				}
 				else if (((world.dragonScaleStart + DRAGONSCALETIME) <= System.currentTimeMillis()) || (world.dragonScaleNeed <= 0))
 				{
@@ -1984,11 +1984,11 @@ public class CrystalCaverns extends Quest
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		if (npc.getNpcId() == TEARS)
 		{
@@ -2483,7 +2483,7 @@ public class CrystalCaverns extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof CCWorld)

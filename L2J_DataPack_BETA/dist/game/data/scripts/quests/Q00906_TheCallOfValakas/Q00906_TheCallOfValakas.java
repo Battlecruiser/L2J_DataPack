@@ -53,7 +53,7 @@ public class Q00906_TheCallOfValakas extends Quest
 	}
 	
 	@Override
-	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isPet)
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
@@ -95,10 +95,10 @@ public class Q00906_TheCallOfValakas extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		executeForEachPlayer(killer, npc, isPet, true, false);
-		return super.onKill(npc, killer, isPet);
+		executeForEachPlayer(killer, npc, isSummon, true, false);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

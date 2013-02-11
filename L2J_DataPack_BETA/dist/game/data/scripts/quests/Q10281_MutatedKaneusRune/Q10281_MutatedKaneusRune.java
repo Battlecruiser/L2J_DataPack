@@ -73,7 +73,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		QuestState st = killer.getQuestState(getName());
 		if (st == null)

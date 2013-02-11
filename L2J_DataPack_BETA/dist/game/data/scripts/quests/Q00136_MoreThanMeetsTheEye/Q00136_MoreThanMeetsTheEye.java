@@ -140,12 +140,12 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
 		if (st == null)
 		{
-			return super.onKill(npc, killer, isPet);
+			return super.onKill(npc, killer, isSummon);
 		}
 		
 		final int npcId = npc.getNpcId();
@@ -164,7 +164,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		{
 			giveItem(st, GLASS_JAGUAR_CRYSTAL, 1, CRYSTAL_COUNT, 8);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

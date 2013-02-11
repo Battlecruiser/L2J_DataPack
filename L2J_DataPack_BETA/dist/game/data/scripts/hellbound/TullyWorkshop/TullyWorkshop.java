@@ -1476,7 +1476,7 @@ public class TullyWorkshop extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		final int npcId = npc.getNpcId();
 		if (Arrays.binarySearch(TELEPORTING_MONSTERS, npcId) >= 0)
@@ -1530,11 +1530,11 @@ public class TullyWorkshop extends Quest
 				victim.setCurrentHp(victim.getCurrentHp() + (victim.getMaxHp() * 0.03)); // FIXME: not retail, it should be done after spell is finished, but it cannot be tracked now
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet, skill);
+		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if ((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH))
@@ -1558,11 +1558,11 @@ public class TullyWorkshop extends Quest
 				}
 			}
 		}
-		return super.onFactionCall(npc, caller, attacker, isPet);
+		return super.onFactionCall(npc, caller, attacker, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		
@@ -1717,7 +1717,7 @@ public class TullyWorkshop extends Quest
 		{
 			addSpawn(DWARVEN_GHOST, npc.getX() + 30, npc.getY() - 30, npc.getZ(), 0, false, 900000, false);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override

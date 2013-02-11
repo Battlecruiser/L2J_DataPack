@@ -1045,7 +1045,7 @@ public class TowerOfNaia extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		if ((_lock != null) && (npc.getObjectId() == _lock.getObjectId()))
 		{
@@ -1069,11 +1069,11 @@ public class TowerOfNaia extends Quest
 			}
 		}
 		
-		return super.onAttack(npc, attacker, damage, isPet, skill);
+		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		
@@ -1208,7 +1208,7 @@ public class TowerOfNaia extends Quest
 				}
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
