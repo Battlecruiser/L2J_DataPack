@@ -206,12 +206,12 @@ public final class L2AttackableAIScript extends QuestJython
 				{
 					if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance." + t.getType() + "Instance")))
 					{
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_ATTACK);
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_KILL);
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_SPAWN);
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_SKILL_SEE);
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_FACTION_CALL);
-						ai.addEventId(t.getNpcId(), Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
+						ai.addEventId(Quest.QuestEventType.ON_ATTACK, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_KILL, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_SPAWN, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_SKILL_SEE, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_FACTION_CALL, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_AGGRO_RANGE_ENTER, t.getNpcId());
 					}
 				}
 				catch (ClassNotFoundException ex)

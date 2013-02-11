@@ -49,7 +49,7 @@ public class GiantScouts extends AbstractNpcAI
 	private GiantScouts(String name, String descr)
 	{
 		super(name, descr);
-		registerMobs(SCOUTS, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		addAggroRangeEnterId(SCOUTS);
 	}
 	
 	@Override

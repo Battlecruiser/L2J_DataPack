@@ -69,16 +69,13 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	public void registerMobs(int... mobs)
 	{
-		for (int id : mobs)
-		{
-			addEventId(id, QuestEventType.ON_ATTACK);
-			addEventId(id, QuestEventType.ON_KILL);
-			addEventId(id, QuestEventType.ON_SPAWN);
-			addEventId(id, QuestEventType.ON_SPELL_FINISHED);
-			addEventId(id, QuestEventType.ON_SKILL_SEE);
-			addEventId(id, QuestEventType.ON_FACTION_CALL);
-			addEventId(id, QuestEventType.ON_AGGRO_RANGE_ENTER);
-		}
+		addAttackId(mobs);
+		addKillId(mobs);
+		addSpawnId(mobs);
+		addSpellFinishedId(mobs);
+		addSkillSeeId(mobs);
+		addAggroRangeEnterId(mobs);
+		addFactionCallId(mobs);
 	}
 	
 	/**
@@ -88,12 +85,9 @@ public abstract class AbstractNpcAI extends L2Script
 	 */
 	public void registerMobs(int[] mobs, QuestEventType... types)
 	{
-		for (int id : mobs)
+		for (QuestEventType type : types)
 		{
-			for (QuestEventType type : types)
-			{
-				addEventId(id, type);
-			}
+			addEventId(type, mobs);
 		}
 	}
 	
@@ -103,7 +97,7 @@ public abstract class AbstractNpcAI extends L2Script
 		{
 			for (QuestEventType type : types)
 			{
-				addEventId(id, type);
+				addEventId(type, id);
 			}
 		}
 	}

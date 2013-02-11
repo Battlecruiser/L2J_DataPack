@@ -23,7 +23,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 
 /**
  * Gatekeeper Spirit AI.
@@ -43,8 +42,7 @@ public class GatekeeperSpirit extends AbstractNpcAI
 		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
 		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
 		addTalkId(GATEKEEPER_SPIRIT_ENTER);
-		addEventId(LILITH, Quest.QuestEventType.ON_KILL);
-		addEventId(ANAKIM, Quest.QuestEventType.ON_KILL);
+		addKillId(LILITH, ANAKIM);
 	}
 	
 	@Override
