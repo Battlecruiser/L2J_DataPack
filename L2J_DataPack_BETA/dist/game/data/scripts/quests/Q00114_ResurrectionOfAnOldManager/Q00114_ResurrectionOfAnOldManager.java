@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -55,13 +54,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	private static final int DETCTOR2 = 8091;
 	// Monster
 	private static final int GUARDIAN = 27318;
-	// Zones
-	private static final int[] ZONES =
-	{
-		200032,
-		200033,
-		200034
-	};
 	
 	private static L2Attackable golem = null;
 	
@@ -71,7 +63,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		addStartNpc(YUMI);
 		addTalkId(YUMI, WENDY, BOX, STONES, NEWYEAR);
 		addKillId(GUARDIAN);
-		addEnterZoneId(ZONES);
+		addSeeCreatureId(STONES);
 		registerQuestItems(STARSTONE, STARSTONE2, DETCTOR, DETCTOR2, LETTER);
 	}
 	
@@ -330,24 +322,6 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		return htmltext;
 	}
 	
-	// TODO: Custom until onNpcSee support is done
-	@Override
-	public String onEnterZone(L2Character character, L2ZoneType zone)
-	{
-		if (character.isPlayer())
-		{
-			final QuestState st = character.getActingPlayer().getQuestState(getName());
-			if ((st != null) && st.isCond(17))
-			{
-				st.takeItems(DETCTOR, 1);
-				st.giveItems(DETCTOR2, 1);
-				st.setCond(18, true);
-				showOnScreenMsg(character.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
-			}
-		}
-		return super.onEnterZone(character, zone);
-	}
-	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
@@ -361,6 +335,23 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			cancelQuestTimers("golem_despawn");
 		}
 		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer())
+		{
+			final QuestState st = creature.getActingPlayer().getQuestState(getName());
+			if ((st != null) && st.isCond(17))
+			{
+				st.takeItems(DETCTOR, 1);
+				st.giveItems(DETCTOR2, 1);
+				st.setCond(18, true);
+				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
+			}
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
