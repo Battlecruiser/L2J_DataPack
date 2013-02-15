@@ -18,13 +18,15 @@
  */
 package quests.Q00138_TempleChampionPart2;
 
+import quests.Q00137_TempleChampionPart1.Q00137_TempleChampionPart1;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Temple Champion Part 2 (138)
+ * Temple Champion - 2 (138)
  * @author nonom
  */
 public class Q00138_TempleChampionPart2 extends Quest
@@ -164,7 +166,8 @@ public class Q00138_TempleChampionPart2 extends Quest
 						{
 							return getAlreadyCompletedMsg(player);
 						}
-						htmltext = (player.getLevel() >= 36) ? "30070-01.htm" : "30070-00.html";
+						final QuestState qs = player.getQuestState(Q00137_TempleChampionPart1.class.getSimpleName());
+						htmltext = (player.getLevel() >= 36) ? ((qs != null) && qs.isCompleted()) ? "30070-01.htm" : "30070-00a.htm" : "30070-00.htm";
 						break;
 				}
 				break;
@@ -242,6 +245,6 @@ public class Q00138_TempleChampionPart2 extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00138_TempleChampionPart2(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion Part 2");
+		new Q00138_TempleChampionPart2(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
 	}
 }
