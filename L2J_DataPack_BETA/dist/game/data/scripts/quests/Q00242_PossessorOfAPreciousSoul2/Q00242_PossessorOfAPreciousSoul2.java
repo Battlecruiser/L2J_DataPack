@@ -18,6 +18,8 @@
  */
 package quests.Q00242_PossessorOfAPreciousSoul2;
 
+import quests.Q00241_PossessorOfAPreciousSoul1.Q00241_PossessorOfAPreciousSoul1;
+
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -82,26 +84,44 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				st.takeItems(VIRGILS_LETTER, -1);
 				break;
 			case "31743-05.html":
-				st.setCond(2, true);
+				if (st.isCond(1))
+				{
+					st.setCond(2, true);
+				}
 				break;
 			case "31744-02.html":
-				st.setCond(3, true);
+				if (st.isCond(2))
+				{
+					st.setCond(3, true);
+				}
 				break;
 			case "31751-02.html":
-				st.setCond(4, true);
+				if (st.isCond(3))
+				{
+					st.setCond(4, true);
+				}
 				break;
 			case "30759-02.html":
-				st.setCond(7, true);
+				if (st.isCond(6))
+				{
+					st.setCond(7, true);
+				}
 				break;
 			case "30738-02.html":
-				st.setCond(8, true);
-				st.giveItems(SORCERY_INGREDIENT, 1);
+				if (st.isCond(7))
+				{
+					st.setCond(8, true);
+					st.giveItems(SORCERY_INGREDIENT, 1);
+				}
 				break;
 			case "30759-05.html":
-				st.takeItems(GOLDEN_HAIR, -1);
-				st.takeItems(SORCERY_INGREDIENT, -1);
-				st.set("awaitsDrops", "1");
-				st.setCond(9, true);
+				if (st.isCond(8))
+				{
+					st.takeItems(GOLDEN_HAIR, -1);
+					st.takeItems(SORCERY_INGREDIENT, -1);
+					st.set("awaitsDrops", "1");
+					st.setCond(9, true);
+				}
 				break;
 			case "PURE_UNICORN":
 				npc.getSpawn().stopRespawn();
@@ -159,7 +179,8 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						if (st.hasQuestItems(VIRGILS_LETTER))
+						final QuestState qs = player.getQuestState(Q00241_PossessorOfAPreciousSoul1.class.getSimpleName());
+						if ((qs != null) && qs.isCompleted())
 						{
 							htmltext = (player.isSubClassActive() && (player.getLevel() >= 60)) ? "31742-01.htm" : "31742-00.htm";
 						}
