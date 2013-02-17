@@ -67,7 +67,6 @@ public class Antharas extends AbstractNpcAI
 	private static final boolean FWA_DOSERVEREARTHQUAKE = true;
 	private static final int FWA_LIMITOFWEAK = 45;
 	private static final int FWA_LIMITOFNORMAL = 63;
-	
 	private static final int FWA_MAXMOBS = 10; // this includes Antharas itself
 	private static final int FWA_INTERVALOFMOBSWEAK = 180000;
 	private static final int FWA_INTERVALOFMOBSNORMAL = 150000;
@@ -88,20 +87,16 @@ public class Antharas extends AbstractNpcAI
 	
 	protected List<L2Spawn> _teleportCubeSpawn = new FastList<>();
 	protected List<L2Npc> _teleportCube = new FastList<>();
-	
 	// Spawn data of monsters.
 	protected Map<Integer, L2Spawn> _monsterSpawn = new FastMap<>();
-	
 	// Instance of monsters.
 	protected List<L2Npc> _monsters = new FastList<>();
 	protected L2GrandBossInstance _antharas = null;
-	
-	// monstersId
-	private static final int ANTHARASOLDID = 29019;
-	private static final int ANTHARASWEAKID = 29066;
-	private static final int ANTHARASNORMALID = 29067;
-	private static final int ANTHARASSTRONGID = 29068;
-	
+	// Antharas Ids
+	private static final int ANTHARAS_OLD_ID = 29019;
+	private static final int ANTHARAS_WEAK_ID = 29066;
+	private static final int ANTHARAS_NORMAL_ID = 29067;
+	private static final int ANTHARAS_STRONG_ID = 29068;
 	// Tasks.
 	protected ScheduledFuture<?> _cubeSpawnTask = null;
 	protected ScheduledFuture<?> _monsterSpawnTask = null;
@@ -112,7 +107,6 @@ public class Antharas extends AbstractNpcAI
 	protected ScheduledFuture<?> _selfDestructionTask = null;
 	protected ScheduledFuture<?> _moveAtRandomTask = null;
 	protected ScheduledFuture<?> _movieTask = null;
-	
 	// Antharas Status Tracking :
 	private static final byte DORMANT = 0; // Antharas is spawned and no one has entered yet. Entry is unlocked
 	private static final byte WAITING = 1; // Antharas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
@@ -124,26 +118,10 @@ public class Antharas extends AbstractNpcAI
 	
 	protected static L2BossZone _Zone;
 	
-	// Boss: Antharas
 	private Antharas(String name, String descr)
 	{
 		super(name, descr);
-		int[] mob =
-		{
-			ANTHARASOLDID,
-			ANTHARASWEAKID,
-			ANTHARASNORMALID,
-			ANTHARASSTRONGID,
-			29069,
-			29070,
-			29071,
-			29072,
-			29073,
-			29074,
-			29075,
-			29076
-		};
-		registerMobs(mob);
+		registerMobs(ANTHARAS_OLD_ID, ANTHARAS_WEAK_ID, ANTHARAS_NORMAL_ID, ANTHARAS_STRONG_ID, 29069, 29070, 29071, 29072, 29073, 29074, 29075, 29076);
 		init();
 	}
 	
@@ -158,7 +136,7 @@ public class Antharas extends AbstractNpcAI
 			L2Spawn tempSpawn;
 			
 			// Old Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASOLDID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_OLD_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -170,7 +148,7 @@ public class Antharas extends AbstractNpcAI
 			_monsterSpawn.put(29019, tempSpawn);
 			
 			// Weak Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASWEAKID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_WEAK_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -182,7 +160,7 @@ public class Antharas extends AbstractNpcAI
 			_monsterSpawn.put(29066, tempSpawn);
 			
 			// Normal Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASNORMALID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_NORMAL_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -194,7 +172,7 @@ public class Antharas extends AbstractNpcAI
 			_monsterSpawn.put(29067, tempSpawn);
 			
 			// Strong Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASSTRONGID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_STRONG_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -233,16 +211,16 @@ public class Antharas extends AbstractNpcAI
 		{
 			_log.warning(e.getMessage());
 		}
-		int status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
+		int status = GrandBossManager.getInstance().getBossStatus(ANTHARAS_OLD_ID);
 		if (FWA_OLDANTHARAS || (status == WAITING))
 		{
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARASOLDID);
+			StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS_OLD_ID);
 			Long respawnTime = info.getLong("respawn_time");
 			if ((status == DEAD) && (respawnTime <= System.currentTimeMillis()))
 			{
 				// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
 				// also, the status needs to be changed to DORMANT
-				GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+				GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, DORMANT);
 				status = DORMANT;
 			}
 			else if (status == FIGHTING)
@@ -253,7 +231,7 @@ public class Antharas extends AbstractNpcAI
 				int heading = info.getInteger("heading");
 				int hp = info.getInteger("currentHP");
 				int mp = info.getInteger("currentMP");
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS_OLD_ID, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
@@ -262,7 +240,7 @@ public class Antharas extends AbstractNpcAI
 			}
 			else if (status == DEAD)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(ANTHARASOLDID), respawnTime - System.currentTimeMillis());
+				ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(ANTHARAS_OLD_ID), respawnTime - System.currentTimeMillis());
 			}
 			else
 			{
@@ -271,23 +249,23 @@ public class Antharas extends AbstractNpcAI
 		}
 		else
 		{
-			int statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARASWEAKID);
-			int statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARASNORMALID);
-			int statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARASSTRONGID);
+			int statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARAS_WEAK_ID);
+			int statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARAS_NORMAL_ID);
+			int statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARAS_STRONG_ID);
 			int antharasId = 0;
 			if ((statusWeak == FIGHTING) || (statusWeak == DEAD))
 			{
-				antharasId = ANTHARASWEAKID;
+				antharasId = ANTHARAS_WEAK_ID;
 				status = statusWeak;
 			}
 			else if ((statusNormal == FIGHTING) || (statusNormal == DEAD))
 			{
-				antharasId = ANTHARASNORMALID;
+				antharasId = ANTHARAS_NORMAL_ID;
 				status = statusNormal;
 			}
 			else if ((statusStrong == FIGHTING) || (statusStrong == DEAD))
 			{
-				antharasId = ANTHARASSTRONGID;
+				antharasId = ANTHARAS_STRONG_ID;
 				status = statusStrong;
 			}
 			if ((antharasId != 0) && (status == FIGHTING))
@@ -359,7 +337,7 @@ public class Antharas extends AbstractNpcAI
 			{
 				if (_monsterSpawnTask == null)
 				{
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, WAITING);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, WAITING);
 					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), Config.Antharas_Wait_Time);
 				}
 			}
@@ -385,10 +363,10 @@ public class Antharas extends AbstractNpcAI
 		// that invaded the lair.
 		switch (antharasId)
 		{
-			case ANTHARASWEAKID:
+			case ANTHARAS_WEAK_ID:
 				intervalOfMobs = FWA_INTERVALOFMOBSWEAK;
 				break;
-			case ANTHARASNORMALID:
+			case ANTHARAS_NORMAL_ID:
 				intervalOfMobs = FWA_INTERVALOFMOBSNORMAL;
 				break;
 			default:
@@ -449,7 +427,7 @@ public class Antharas extends AbstractNpcAI
 					_monsters.add(_antharas);
 					_antharas.setIsImmobilized(true);
 					
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, DORMANT);
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
 					_LastAction = System.currentTimeMillis();
 					// Start repeating timer to check for inactivity
