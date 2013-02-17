@@ -333,34 +333,31 @@ public class AdminSpawn implements IAdminCommandHandler
 		int index = 0;
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 		{
-			if (npcId == spawn.getNpcid())
+			index++;
+			L2Npc npc = spawn.getLastSpawn();
+			if (teleportIndex > -1)
 			{
-				index++;
-				L2Npc _npc = spawn.getLastSpawn();
-				if (teleportIndex > -1)
+				if (teleportIndex == index)
 				{
-					if (teleportIndex == index)
+					if (showposition && (npc != null))
 					{
-						if (showposition && (_npc != null))
-						{
-							activeChar.teleToLocation(_npc.getX(), _npc.getY(), _npc.getZ(), true);
-						}
-						else
-						{
-							activeChar.teleToLocation(spawn.getLocx(), spawn.getLocy(), spawn.getLocz(), true);
-						}
-					}
-				}
-				else
-				{
-					if (showposition && (_npc != null))
-					{
-						activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + _npc.getX() + " " + _npc.getY() + " " + _npc.getZ());
+						activeChar.teleToLocation(npc.getX(), npc.getY(), npc.getZ(), true);
 					}
 					else
 					{
-						activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getLocx() + " " + spawn.getLocy() + " " + spawn.getLocz());
+						activeChar.teleToLocation(spawn.getLocx(), spawn.getLocy(), spawn.getLocz(), true);
 					}
+				}
+			}
+			else
+			{
+				if (showposition && (npc != null))
+				{
+					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + npc.getX() + " " + npc.getY() + " " + npc.getZ());
+				}
+				else
+				{
+					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getLocx() + " " + spawn.getLocy() + " " + spawn.getLocz());
 				}
 			}
 		}
