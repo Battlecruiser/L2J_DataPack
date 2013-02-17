@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -84,7 +83,7 @@ public final class Venom extends AbstractNpcAI
 	private static final SkillHolder RANGE_TELEPORT = new SkillHolder(4996, 1);
 	
 	private L2Npc _venom;
-	private L2Npc _massymore;
+	private final L2Npc _massymore;
 	
 	private int _venomX;
 	private int _venomY;
@@ -116,35 +115,23 @@ public final class Venom extends AbstractNpcAI
 		addAggroRangeEnterId(VENOM);
 		addSiegeNotify();
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
+		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
+		_venomX = _venom.getX();
+		_venomY = _venom.getY();
+		_venomZ = _venom.getZ();
+		_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
+		_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
+		_venom.doRevive();
+		((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
+		if (checkStatus() == DEAD)
 		{
-			
-			switch (spawn.getNpcid())
-			{
-				case DUNGEON_KEEPER:
-					_massymore = spawn.getLastSpawn();
-					break;
-				case VENOM:
-					_venom = spawn.getLastSpawn();
-					_venomX = _venom.getX();
-					_venomY = _venom.getY();
-					_venomZ = _venom.getZ();
-					_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
-					_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
-					_venom.doRevive();
-					((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
-					if (checkStatus() == DEAD)
-					{
-						_venom.deleteMe();
-					}
-					break;
-			}
+			_venom.deleteMe();
 		}
 		
 		final long currentTime = System.currentTimeMillis();
 		final long startSiegeDate = CastleManager.getInstance().getCastleById(CASTLE).getSiegeDate().getTimeInMillis();
 		final long openingDungeonDate = startSiegeDate - (HOURS_BEFORE * 360000);
-		
 		if ((currentTime > openingDungeonDate) && (currentTime < startSiegeDate))
 		{
 			_prisonIsOpen = true;

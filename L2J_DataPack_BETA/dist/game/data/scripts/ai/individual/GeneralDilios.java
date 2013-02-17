@@ -18,8 +18,7 @@
  */
 package ai.individual;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 import ai.npc.AbstractNpcAI;
 
@@ -41,7 +40,7 @@ public class GeneralDilios extends AbstractNpcAI
 	private static final int GUARD_ID = 32619;
 	
 	private L2Npc _general;
-	private final List<L2Npc> _guards = new ArrayList<>();
+	private final Set<L2Spawn> _guards;
 	
 	private static final NpcStringId[] diliosText =
 	{
@@ -58,30 +57,14 @@ public class GeneralDilios extends AbstractNpcAI
 	private GeneralDilios(String name, String descr)
 	{
 		super(name, descr);
-		findNpcs();
+		_general = SpawnTable.getInstance().getFirstSpawn(GENERAL_ID).getLastSpawn();
+		_guards = SpawnTable.getInstance().getSpawns(GUARD_ID);
 		if ((_general == null) || _guards.isEmpty())
 		{
-			throw new NullPointerException("Cannot find npcs!");
+			_log.warning(GeneralDilios.class.getSimpleName() + ": Cannot find NPCs!");
+			return;
 		}
 		startQuestTimer("command_0", 60000, null, null);
-	}
-	
-	private void findNpcs()
-	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-		{
-			if (spawn != null)
-			{
-				if (spawn.getNpcid() == GENERAL_ID)
-				{
-					_general = spawn.getLastSpawn();
-				}
-				else if (spawn.getNpcid() == GUARD_ID)
-				{
-					_guards.add(spawn.getLastSpawn());
-				}
-			}
-		}
 	}
 	
 	@Override
@@ -105,9 +88,9 @@ public class GeneralDilios extends AbstractNpcAI
 		else if (event.startsWith("guard_animation_"))
 		{
 			int value = Integer.parseInt(event.substring(16));
-			for (L2Npc guard : _guards)
+			for (L2Spawn guard : _guards)
 			{
-				guard.broadcastSocialAction(4);
+				guard.getLastSpawn().broadcastSocialAction(4);
 			}
 			if (value < 2)
 			{

@@ -284,15 +284,12 @@ public class NpcLocationInfo extends Quest
 			if (Util.contains(NPCRADAR, npcId))
 			{
 				int x = 0, y = 0, z = 0;
-				for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+				final L2Spawn spawn = SpawnTable.getInstance().getFirstSpawn(npcId);
+				if (spawn != null)
 				{
-					if (npcId == spawn.getNpcid())
-					{
-						x = spawn.getLocx();
-						y = spawn.getLocy();
-						z = spawn.getLocz();
-						break;
-					}
+					x = spawn.getLocx();
+					y = spawn.getLocy();
+					z = spawn.getLocz();
 				}
 				st.addRadar(x, y, z);
 				htmltext = "MoveToLoc.htm";
@@ -320,11 +317,8 @@ public class NpcLocationInfo extends Quest
 	{
 		super(id, name, descr);
 		
-		for (int i : NPC)
-		{
-			addStartNpc(i);
-			addTalkId(i);
-		}
+		addStartNpc(NPC);
+		addTalkId(NPC);
 	}
 	
 	public static void main(String args[])

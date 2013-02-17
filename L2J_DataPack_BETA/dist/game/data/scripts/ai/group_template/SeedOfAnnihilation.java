@@ -280,20 +280,17 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	
 	private void initialMinionsSpawn()
 	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		L2MonsterInstance mob;
+		for (SeedRegion sr : _regionsData)
 		{
-			if (spawn == null)
+			for (int npcId : sr.elite_mob_ids)
 			{
-				continue;
-			}
-			for (SeedRegion element : _regionsData)
-			{
-				if (Util.contains(element.elite_mob_ids, spawn.getNpcid()))
+				for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 				{
-					L2MonsterInstance mob = (L2MonsterInstance) spawn.getLastSpawn();
+					mob = (L2MonsterInstance) spawn.getLastSpawn();
 					if (mob != null)
 					{
-						spawnGroupOfMinion(mob, element.minion_lists[getRandom(element.minion_lists.length)]);
+						spawnGroupOfMinion(mob, sr.minion_lists[getRandom(sr.minion_lists.length)]);
 					}
 				}
 			}

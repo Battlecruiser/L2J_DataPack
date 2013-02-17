@@ -85,18 +85,15 @@ public class Monastery extends AbstractNpcAI
 		addAttackId(KNIGHT, CAPTAIN);
 		addSpawnId(KNIGHT);
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(KNIGHT))
 		{
-			switch (spawn.getNpcid())
-			{
-				case KNIGHT:
-					startQuestTimer("training", 5000, spawn.getLastSpawn(), null, true);
-					break;
-				case SCARECROW:
-					spawn.getLastSpawn().setIsInvul(true);
-					spawn.getLastSpawn().disableCoreAI(true);
-					break;
-			}
+			startQuestTimer("training", 5000, spawn.getLastSpawn(), null, true);
+		}
+		
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(SCARECROW))
+		{
+			spawn.getLastSpawn().setIsInvul(true);
+			spawn.getLastSpawn().disableCoreAI(true);
 		}
 	}
 	

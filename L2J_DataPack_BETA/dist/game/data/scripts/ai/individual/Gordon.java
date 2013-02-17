@@ -25,7 +25,6 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2CharPosition;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -108,34 +107,18 @@ public class Gordon extends AbstractNpcAI
 	private Gordon(String name, String descr)
 	{
 		super(name, descr);
-		int[] mobs =
-		{
-			GORDON
-		};
-		registerMobs(mobs, QuestEventType.ON_ATTACK, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN);
+		addAttackId(GORDON);
+		addKillId(GORDON);
+		addSpawnId(GORDON);
+		
 		// wait 2 minutes after Start AI
 		startQuestTimer("check_ai", 120000, null, null, true);
-		
 		IS_SPAWNED = false;
 		IS_ATTACKED = false;
 		IS_WALK_TO = 1;
 		NPC_MOVE_X = 0;
 		NPC_MOVE_Y = 0;
 		NPC_BLOCK = 0;
-	}
-	
-	public L2Npc findTemplate(int npcId)
-	{
-		L2Npc npc = null;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-		{
-			if ((spawn != null) && (spawn.getNpcid() == npcId))
-			{
-				npc = spawn.getLastSpawn();
-				break;
-			}
-		}
-		return npc;
 	}
 	
 	@Override
@@ -156,7 +139,7 @@ public class Gordon extends AbstractNpcAI
 			cancelQuestTimer("check_ai", null, null);
 			if (IS_SPAWNED == false)
 			{
-				final L2Npc gordon = findTemplate(GORDON);
+				final L2Npc gordon = SpawnTable.getInstance().getFirstSpawn(GORDON).getLastSpawn();
 				if (gordon != null)
 				{
 					IS_SPAWNED = true;

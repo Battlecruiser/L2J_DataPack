@@ -18,12 +18,13 @@
  */
 package ai.group_template;
 
+import java.util.Set;
+
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -35,20 +36,20 @@ public class NonLethalableNpcs extends AbstractNpcAI
 		35062, // Headquarters
 	};
 	
-	/**
-	 * @param name
-	 * @param descr
-	 */
 	public NonLethalableNpcs(String name, String descr)
 	{
 		super(name, descr);
 		addSpawnId(NPCS);
 		
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
+		for (int npcId : NPCS)
 		{
-			if (Util.contains(NPCS, spawn.getNpcid()))
+			final Set<L2Spawn> spawns = SpawnTable.getInstance().getSpawns(npcId);
+			if (spawns != null)
 			{
-				onSpawn(spawn.getLastSpawn());
+				for (L2Spawn spawn : spawns)
+				{
+					onSpawn(spawn.getLastSpawn());
+				}
 			}
 		}
 	}
