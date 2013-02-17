@@ -18,8 +18,6 @@
  */
 package ai.npc.Dorian;
 
-import java.util.Set;
-
 import quests.Q00024_InhabitantsOfTheForestOfTheDead.Q00024_InhabitantsOfTheForestOfTheDead;
 import ai.npc.AbstractNpcAI;
 
@@ -81,13 +79,10 @@ public class Dorian extends AbstractNpcAI
 	{
 		super(name, descr);
 		addSpawnId(DORIAN);
-		final Set<L2Spawn> spawns = SpawnTable.getInstance().getSpawns(DORIAN);
-		if (spawns != null)
+		
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(DORIAN))
 		{
-			for (L2Spawn spawn : spawns)
-			{
-				startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
-			}
+			startQuestTimer("checkArea", 3000, spawn.getLastSpawn(), null, true);
 		}
 	}
 	

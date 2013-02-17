@@ -18,8 +18,6 @@
  */
 package ai.group_template;
 
-import java.util.Set;
-
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -59,16 +57,12 @@ public class SeeThroughSilentMove extends AbstractNpcAI
 		super(name, descr);
 		for (int npcId : MOBIDS)
 		{
-			final Set<L2Spawn> spawns = SpawnTable.getInstance().getSpawns(npcId);
-			if (spawns != null)
+			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
 			{
-				for (L2Spawn spawn : spawns)
+				final L2Npc npc = spawn.getLastSpawn();
+				if ((npc != null) && npc.isL2Attackable())
 				{
-					final L2Npc npc = spawn.getLastSpawn();
-					if ((npc != null) && npc.isL2Attackable())
-					{
-						((L2Attackable) npc).setSeeThroughSilentMove(true);
-					}
+					((L2Attackable) npc).setSeeThroughSilentMove(true);
 				}
 			}
 		}
