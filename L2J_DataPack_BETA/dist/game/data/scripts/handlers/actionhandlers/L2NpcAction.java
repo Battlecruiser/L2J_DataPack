@@ -67,15 +67,12 @@ public class L2NpcAction implements IActionHandler
 		{
 			return false;
 		}
-		
 		activeChar.setLastFolkNPC((L2Npc) target);
-		
 		// Check if the L2PcInstance already target the L2Npc
 		if (target != activeChar.getTarget())
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
-			
 			// Check if the activeChar is attackable (without a forced attack)
 			if (target.isAutoAttackable(activeChar))
 			{
@@ -84,7 +81,6 @@ public class L2NpcAction implements IActionHandler
 				// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
 				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel());
 				activeChar.sendPacket(my);
-				
 				// Send a Server->Client packet StatusUpdate of the L2Npc to the L2PcInstance to update its HP bar
 				StatusUpdate su = new StatusUpdate(target);
 				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character) target).getCurrentHp());
@@ -97,7 +93,6 @@ public class L2NpcAction implements IActionHandler
 				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), 0);
 				activeChar.sendPacket(my);
 			}
-			
 			// Send a Server->Client packet ValidateLocation to correct the L2Npc position and heading on the client
 			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 		}
@@ -135,9 +130,8 @@ public class L2NpcAction implements IActionHandler
 					{
 						npc.onRandomAnimation(Rnd.get(8));
 					}
-					
 					// Open a chat window on client with the text of the L2Npc
-					if (npc.isEventMob)
+					if (npc.isEventMob())
 					{
 						L2Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
 					}
@@ -145,12 +139,10 @@ public class L2NpcAction implements IActionHandler
 					{
 						List<Quest> qlsa = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
 						List<Quest> qlst = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
-						
 						if ((qlsa != null) && !qlsa.isEmpty())
 						{
 							activeChar.setLastQuestNpcObject(target.getObjectId());
 						}
-						
 						if ((qlst != null) && (qlst.size() == 1))
 						{
 							qlst.get(0).notifyFirstTalk(npc, activeChar);
@@ -160,7 +152,6 @@ public class L2NpcAction implements IActionHandler
 							npc.showChatWindow(activeChar);
 						}
 					}
-					
 					if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !activeChar.isGM())
 					{
 						activeChar.updateNotMoveUntil();
