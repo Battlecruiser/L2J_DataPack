@@ -168,7 +168,9 @@ public class AnomicFoundry extends Quest
 	{
 		if (getRandom(10000) < 2000)
 		{
-			requestHelp(npc, player, 500);
+			requestHelp(npc, player, 500, FOREMAN);
+			requestHelp(npc, player, 500, LESSER_EVIL);
+			requestHelp(npc, player, 500, GREATER_EVIL);
 		}
 		
 		return super.onAggroRangeEnter(npc, player, isSummon);
@@ -198,8 +200,9 @@ public class AnomicFoundry extends Quest
 		{
 			atkIndex++;
 			_atkIndex.put(npc.getObjectId(), atkIndex);
-			requestHelp(npc, attacker, 1000 * atkIndex);
-			
+			requestHelp(npc, attacker, 1000 * atkIndex, FOREMAN);
+			requestHelp(npc, attacker, 1000 * atkIndex, LESSER_EVIL);
+			requestHelp(npc, attacker, 1000 * atkIndex, GREATER_EVIL);
 			if (getRandom(10) < 1)
 			{
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
@@ -249,8 +252,6 @@ public class AnomicFoundry extends Quest
 				_spawned[getSpawnGroup(npc)]++;
 			}
 			
-			// Announcements.getInstance().announceToAll("Spawned Evil in group " + Integer.toString(getSpawnGroup(npc)) + ". Total spawned = " + Integer.toString(_spawned[getSpawnGroup(npc)]));
-			
 			if (npc.getNpcId() == LABORER)
 			{
 				npc.setIsNoRndWalk(true);
@@ -298,18 +299,15 @@ public class AnomicFoundry extends Quest
 		return -1;
 	}
 	
-	private static void requestHelp(L2Npc requester, L2PcInstance agressor, int range)
+	// Zoey76: TODO: This should be done with onFactionCall(..)
+	private static void requestHelp(L2Npc requester, L2PcInstance agressor, int range, int helperId)
 	{
-		for (L2Spawn npcSpawn : SpawnTable.getInstance().getSpawnTable())
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(helperId))
 		{
-			if ((npcSpawn.getNpcid() == FOREMAN) || (npcSpawn.getNpcid() == LESSER_EVIL) || (npcSpawn.getNpcid() == GREATER_EVIL))
+			final L2MonsterInstance monster = (L2MonsterInstance) spawn.getLastSpawn();
+			if ((monster != null) && (agressor != null) && !monster.isDead() && monster.isInsideRadius(requester, range, true, false) && !agressor.isDead())
 			{
-				final L2MonsterInstance monster = (L2MonsterInstance) npcSpawn.getLastSpawn();
-				
-				if ((monster != null) && !monster.isDead() && monster.isInsideRadius(requester, range, true, false) && (agressor != null) && !agressor.isDead())
-				{
-					monster.addDamageHate(agressor, 0, 1000);
-				}
+				monster.addDamageHate(agressor, 0, 1000);
 			}
 		}
 	}

@@ -8,7 +8,6 @@ from com.l2jserver.gameserver.model.quest        			import State
 from com.l2jserver.gameserver.model.quest        			import QuestState
 from com.l2jserver.gameserver.model.quest.jython 			import QuestJython as JQuest
 from com.l2jserver.gameserver.network.serverpackets      	import NpcSay
-from com.l2jserver.gameserver.datatables         			import SpawnTable
 
 qn = "334_TheWishingPotion"
 
@@ -354,23 +353,8 @@ class Quest (JQuest) :
        except: pass
    return
 
-QUEST     = Quest(334,qn,"The Wishing Potion")
-
+QUEST = Quest(334, qn, "The Wishing Potion")
 QUEST.addStartNpc(ALCHEMIST_MATILD)
-
-QUEST.addTalkId(ALCHEMIST_MATILD)
-QUEST.addTalkId(TORAI)
-QUEST.addTalkId(RUPINA)
-QUEST.addTalkId(WISDOM_CHEST)
-
-QUEST.addKillId(SECRET_KEEPER_TREE)
-
-for mob in DROPLIST.keys():
-  QUEST.addKillId(mob)
-
-QUEST.addKillId(SUCCUBUS_OF_SEDUCTION)
-QUEST.addKillId(GRIMA)
-QUEST.addKillId(SANCHES)
-QUEST.addKillId(RAMSEBALIUS)
-QUEST.addKillId(BONAPARTERIUS)
-QUEST.addKillId(GREAT_DEMON_KING)
+QUEST.addTalkId([ALCHEMIST_MATILD, TORAI, RUPINA, WISDOM_CHEST])
+QUEST.addKillId(DROPLIST.keys())
+QUEST.addKillId([SECRET_KEEPER_TREE, SUCCUBUS_OF_SEDUCTION, GRIMA, SANCHES, RAMSEBALIUS, BONAPARTERIUS, GREAT_DEMON_KING])

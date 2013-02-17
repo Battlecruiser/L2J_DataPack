@@ -24,7 +24,6 @@ import java.util.GregorianCalendar;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
@@ -87,21 +86,10 @@ public class Lindvior extends AbstractNpcAI
 				}
 				break;
 			case "start":
-				for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-				{
-					switch (spawn.getNpcid())
-					{
-						case LINDVIOR_CAMERA:
-							_lindviorCamera = spawn.getLastSpawn();
-							break;
-						case TOMARIS:
-							_tomaris = spawn.getLastSpawn();
-							break;
-						case ARTIUS:
-							_artius = spawn.getLastSpawn();
-							break;
-					}
-				}
+				_lindviorCamera = SpawnTable.getInstance().getFirstSpawn(LINDVIOR_CAMERA).getLastSpawn();
+				_tomaris = SpawnTable.getInstance().getFirstSpawn(TOMARIS).getLastSpawn();
+				_artius = SpawnTable.getInstance().getFirstSpawn(ARTIUS).getLastSpawn();
+				
 				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
 				startQuestTimer("artius_shout", 60000, _artius, null);
 				startQuestTimer("tomaris_shout2", 90000, _tomaris, null);

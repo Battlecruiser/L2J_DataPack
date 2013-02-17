@@ -18,10 +18,11 @@
  */
 package quests.Q00457_LostAndFound;
 
+import java.util.Set;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -53,7 +54,7 @@ public final class Q00457_LostAndFound extends Quest
 	private static final int CHANCE_SPAWN = 1; // 1%
 	
 	private static int _count = 0;
-	private static L2Npc[] _escortCheckers = new L2Npc[2];
+	private static Set<L2Spawn> _escortCheckers;
 	private static L2Npc _gumiel = null;
 	
 	private Q00457_LostAndFound(int id, String name, String descr)
@@ -65,15 +66,7 @@ public final class Q00457_LostAndFound extends Quest
 		addSpawnId(GUMIEL);
 		addKillId(SOLINA_CLAN);
 		
-		int i = 0;
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-		{
-			if (spawn.getNpcid() == ESCORT_CHECKER)
-			{
-				_escortCheckers[i] = spawn.getLastSpawn();
-				i++;
-			}
-		}
+		_escortCheckers = SpawnTable.getInstance().getSpawns(ESCORT_CHECKER);
 	}
 	
 	@Override
@@ -138,9 +131,10 @@ public final class Q00457_LostAndFound extends Quest
 						st.exitQuest(QuestType.DAILY);
 					}
 				}
-				for (L2Npc escort : _escortCheckers)
+				for (L2Spawn escortSpawn : _escortCheckers)
 				{
-					if (npc.isInsideRadius(escort, 1000, false, false))
+					final L2Npc escort = escortSpawn.getLastSpawn();
+					if ((escort != null) && npc.isInsideRadius(escort, 1000, false, false))
 					{
 						startQuestTimer("stop", 1000, npc, player);
 						startQuestTimer("bye", 3000, npc, player);
@@ -196,7 +190,7 @@ public final class Q00457_LostAndFound extends Quest
 	{
 		if ((_gumiel == null) && (getRandom(100) < CHANCE_SPAWN))
 		{
-			addSpawn(GUMIEL, new Location(npc.getX(), npc.getY(), npc.getZ()), false, 0);
+			addSpawn(GUMIEL, npc);
 		}
 		return super.onKill(npc, player, isSummon);
 	}

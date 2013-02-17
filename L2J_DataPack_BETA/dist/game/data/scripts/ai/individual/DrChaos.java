@@ -29,34 +29,21 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
 /**
- * DrChaos' AI
+ * DrChaos' AI.
  * @author Kerberos
  */
 public class DrChaos extends Quest
 {
-	private static final int DOCTER_CHAOS = 32033;
+	private static final int DR_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
 	private static final int CHAOS_GOLEM = 25703;
 	private static boolean _IsGolemSpawned;
 	
-	public DrChaos(int questId, String name, String descr)
+	private DrChaos(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addFirstTalkId(32033);
+		addFirstTalkId(DR_CHAOS);
 		_IsGolemSpawned = false;
-	}
-	
-	public L2Npc findTemplate(int npcId)
-	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-		{
-			if ((spawn != null) && (spawn.getNpcid() == npcId))
-			{
-				return spawn.getLastSpawn();
-			}
-		}
-		return null;
 	}
 	
 	@Override
@@ -64,11 +51,18 @@ public class DrChaos extends Quest
 	{
 		if (event.equalsIgnoreCase("1"))
 		{
-			L2Npc machine_instance = findTemplate(STRANGE_MACHINE);
-			if (machine_instance != null)
+			L2Npc machine = null;
+			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(STRANGE_MACHINE))
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance);
-				machine_instance.broadcastPacket(new SpecialCamera(machine_instance.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
+				if (spawn != null)
+				{
+					machine = spawn.getLastSpawn();
+				}
+			}
+			if (machine != null)
+			{
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
+				machine.broadcastPacket(new SpecialCamera(machine.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
 			}
 			else
 			{
@@ -113,7 +107,7 @@ public class DrChaos extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == DOCTER_CHAOS)
+		if (npc.getNpcId() == DR_CHAOS)
 		{
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96323, -110914, -3328, 0));
 			this.startQuestTimer("1", 3000, npc, player);
