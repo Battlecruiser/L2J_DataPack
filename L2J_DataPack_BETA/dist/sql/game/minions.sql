@@ -564,11 +564,6 @@ INSERT INTO `minions` VALUES
 (25710, 25711, 2, 2),
 (25710, 25712, 2, 2);
 
--- Mithril Mines Minions (Temporary)
-INSERT INTO `minions` VALUES
-(22678, 22684, 1, 1),
-(22679, 22686, 1, 1);
-
 -- Giants Cave
 INSERT INTO `minions` VALUES
 (22666, 22667, 1, 4),
