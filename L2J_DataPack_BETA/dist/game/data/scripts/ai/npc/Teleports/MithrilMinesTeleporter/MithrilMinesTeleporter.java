@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.Teleports.MithrilMines;
+package ai.npc.Teleports.MithrilMinesTeleporter;
 
 import ai.npc.AbstractNpcAI;
 
@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Mithril Mines teleport AI.
  * @author Charus
  */
-public class MithrilMines extends AbstractNpcAI
+public class MithrilMinesTeleporter extends AbstractNpcAI
 {
 	// NPC
 	private final static int TELEPORT_CRYSTAL = 32652;
@@ -43,9 +43,9 @@ public class MithrilMines extends AbstractNpcAI
 		new Location(175499, -181586, -904)
 	};
 	
-	private MithrilMines()
+	private MithrilMinesTeleporter()
 	{
-		super(MithrilMines.class.getSimpleName(), "ai/npc/Teleports/");
+		super(MithrilMinesTeleporter.class.getSimpleName(), "ai/npc/Teleports/");
 		addStartNpc(TELEPORT_CRYSTAL);
 		addFirstTalkId(TELEPORT_CRYSTAL);
 		addTalkId(TELEPORT_CRYSTAL);
@@ -85,6 +85,6 @@ public class MithrilMines extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MithrilMines();
+		new MithrilMinesTeleporter();
 	}
 }
