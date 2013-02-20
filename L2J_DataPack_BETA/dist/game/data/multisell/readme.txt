@@ -14,6 +14,7 @@ of this directory a little bit.
 
 201.xml  -> Test server helper - Purchase wearable items
 202.xml  -> Test server helper - Purchase quest items and rare spellbooks
+312.xml  -> Quest 312: Take Advantage of the Crisis!
 382.xml  -> Quest 382: Head Blacksmith Vergara
 426.xml  -> Quest 426: Fishing Shots
 500.xml  -> Seven Signs - Purchase consumable items
