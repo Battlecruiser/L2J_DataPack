@@ -425,32 +425,47 @@
 	<skill id="21242" levels="1" name="Zaken's Call">
 		<!-- Can move to near Zaken's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="1500000" />
-		<set name="staticReuse" val="true" />
 		<set name="teleCoords" val="52195,218787,-3231" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="21243" levels="1" name="Freya's Call">
 		<!-- Can move to near Freya's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="1500000" />
-		<set name="staticReuse" val="true" />
 		<set name="teleCoords" val="102728,-126242,-2840" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<!-- Can move to near Frintezza's Headquarters. Reuse delay 30 minutes. -->
 		<set name="hitTime" val="20000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="1500000" />
-		<set name="staticReuse" val="true" />
 		<set name="teleCoords" val="181378,-80915,-2731" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="21245" levels="1" name="Release Seal on Agathion - Rudolph">
 		<!-- High Five Skill -->
