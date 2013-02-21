@@ -22,6 +22,7 @@ import java.util.Calendar;
 import java.util.StringTokenizer;
 
 import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
+import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
 
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
@@ -496,18 +497,35 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private static void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
 	{
+		int enemyCount = 10, catapultCount = 1;
 		QuestState st = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
+		if ((st != null) && st.isCompleted())
+		{
+			st = player.getQuestState(Q00148_PathtoBecominganExaltedMercenary.class.getSimpleName());
+			enemyCount = 30;
+			catapultCount = 2;
+		}
+		
 		if ((st != null) && st.isStarted())
 		{
 			if (catapult)
 			{
-				if (st.isCond(2))
+				if (st.isCond(1) || st.isCond(2))
 				{
-					st.setCond(4);
-				}
-				else if (st.isCond(1))
-				{
-					st.setCond(3);
+					int count = st.getInt("catapult");
+					count++;
+					st.set("catapult", String.valueOf(count));
+					if (count >= catapultCount)
+					{
+						if (st.isCond(1))
+						{
+							st.setCond(3);
+						}
+						else
+						{
+							st.setCond(4);
+						}
+					}
 				}
 			}
 			else
@@ -521,13 +539,13 @@ public class TerritoryWarSuperClass extends Quest
 					// Save
 					st.set("kills", String.valueOf(_kills));
 					// Check
-					if (_kills >= 10)
+					if (_kills >= enemyCount)
 					{
 						if (st.isCond(1))
 						{
 							st.setCond(2);
 						}
-						else if (st.isCond(3))
+						else
 						{
 							st.setCond(4);
 						}
