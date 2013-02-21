@@ -565,28 +565,64 @@
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="22290" levels="1" name="Scroll: Valakas Call">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames. -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="183624,-114891,-3340" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22291" levels="1" name="Jewel of Valakas">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes. -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="183624,-114891,-3340" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22292" levels="1" name="Scroll: Antharas Call">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- One-time use scroll that teleports you to the entrance to Antharas's Lair. -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="154596,121127,-3812" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22293" levels="1" name="Jewel of Antharas">
-		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="P" />
+		<!-- Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes. -->
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="teleCoords" val="154596,121127,-3812" />
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503" />
+			</not>
+		</cond>
 	</skill>
 	<skill id="22294" levels="1" name="Totem of Body">
 		<set name="target" val="TARGET_SELF" />

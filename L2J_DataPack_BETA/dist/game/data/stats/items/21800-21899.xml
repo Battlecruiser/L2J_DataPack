@@ -1424,9 +1424,16 @@
 	<item id="21895" type="EtcItem" name="Scroll: Valakas Call">
 		<!-- Description: One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames. -->
 		<set name="icon" val="BranchSys2.icon.call_of_fire_dragon" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22290-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21896" type="EtcItem" name="Jewel of Valakas">
 		<!-- Description: Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes. -->
@@ -1434,13 +1441,26 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22291-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21897" type="EtcItem" name="Scroll: Antharas Call">
 		<!-- Description: One-time use scroll that teleports you to the entrance to Antharas's Lair. -->
 		<set name="icon" val="BranchSys2.icon.call_of_earth_dragon" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22292-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21898" type="EtcItem" name="Jewel of Antharas">
 		<!-- Description: Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes. -->
@@ -1448,6 +1468,12 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22293-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21899" type="EtcItem" name="Totem of Body">
 		<!-- Description: Summons a totem that increases HP recovery speed by 30% and decreases damage from the topography by 80%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->
