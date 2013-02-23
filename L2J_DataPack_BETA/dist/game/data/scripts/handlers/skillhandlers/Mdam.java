@@ -84,7 +84,8 @@ public class Mdam implements ISkillHandler
 			if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 			{
 				// Souls Formula (each soul increase +4%)
-				damage *= ((activeChar.getActingPlayer().getSouls() * 0.04) + 1);
+				int chargedSouls = (activeChar.getActingPlayer().getSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getSouls() : skill.getMaxSoulConsumeCount();
+				damage *= 1 + (chargedSouls * 0.04);
 			}
 			
 			// Possibility of a lethal strike
