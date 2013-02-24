@@ -25,22 +25,29 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * Balance Life effect.
+ * Rebalance HP effect.
  * @author Adry_85, earendil
  */
-public class BalanceLife extends L2Effect
+public class RebalanceHP extends L2Effect
 {
-	public BalanceLife(Env env, EffectTemplate template)
+	public RebalanceHP(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
+	public boolean onActionTime()
+	{
+		return false;
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.BALANCE_LIFE;
+		return L2EffectType.REBALANCE_HP;
 	}
 	
 	@Override
@@ -51,13 +58,13 @@ public class BalanceLife extends L2Effect
 			return false;
 		}
 		
-		final L2Party party = getEffector().getActingPlayer().getParty();
 		double fullHP = 0;
 		double currentHPs = 0;
-		
+		final L2Party party = getEffector().getParty();
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead())
+			// TODO: Replace range with affectRange when it's implemented.
+			if (member.isDead() || !Util.checkIfInRange(1000, getEffector(), member, true))
 			{
 				continue;
 			}
@@ -67,16 +74,15 @@ public class BalanceLife extends L2Effect
 		}
 		
 		double percentHP = currentHPs / fullHP;
-		
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead())
+			// TODO: Replace range with affectRange when it's implemented.
+			if (member.isDead() || !Util.checkIfInRange(1000, getEffector(), member, true))
 			{
 				continue;
 			}
 			
 			double newHP = member.getMaxHp() * percentHP;
-			
 			if (newHP > member.getCurrentHp()) // The target gets healed
 			{
 				// The heal will be blocked if the current hp passes the limit
@@ -96,11 +102,5 @@ public class BalanceLife extends L2Effect
 			member.sendPacket(su);
 		}
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

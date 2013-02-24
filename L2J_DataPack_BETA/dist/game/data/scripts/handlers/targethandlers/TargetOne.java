@@ -34,7 +34,7 @@ public class TargetOne implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		boolean canTargetSelf = false;
+		boolean canTargetSelf = skill.getId() == 1335; // TODO: Unhardcode Balance Life
 		switch (skill.getSkillType())
 		{
 			case BUFF:
@@ -47,7 +47,6 @@ public class TargetOne implements ITargetTypeHandler
 			case NEGATE:
 			case CANCEL_DEBUFF:
 			case COMBATPOINTHEAL:
-			case BALANCE_LIFE:
 			case HPMPCPHEAL_PERCENT:
 			case HPMPHEAL_PERCENT:
 			case HPCPHEAL_PERCENT:

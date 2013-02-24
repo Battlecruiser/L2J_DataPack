@@ -46,7 +46,10 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Seed of Infinity (Hall of Suffering) instance zone.<br>
- * TODO: - after 15mins mobs are despawned - bound instance to quests Contributing authors: Gigiikun, ZakaX, Didldak Please maintain consistency between the Seed scripts.
+ * TODO:<br>
+ * - after 15mins mobs are despawned<br>
+ * - bound instance to quests<br>
+ * @author Gigiikun, ZakaX, Didldak
  */
 public class HallOfSuffering extends Quest
 {
@@ -668,7 +671,7 @@ public class HallOfSuffering extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if ((skill.getSkillType() == L2SkillType.BALANCE_LIFE) || (skill.getSkillType() == L2SkillType.HEAL) || (skill.getSkillType() == L2SkillType.HEAL_PERCENT) || (skill.getSkillType() == L2SkillType.HEAL_STATIC))
+		if ((skill.getId() == 1335) || (skill.getSkillType() == L2SkillType.HEAL) || (skill.getSkillType() == L2SkillType.HEAL_PERCENT) || (skill.getSkillType() == L2SkillType.HEAL_STATIC))
 		{
 			int hate = 2 * skill.getAggroPoints();
 			if (hate < 2)
