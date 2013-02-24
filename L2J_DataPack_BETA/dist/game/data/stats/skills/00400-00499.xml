@@ -1590,7 +1590,7 @@
 		<table name="#itemConsumeCount"> 8 9 10 11 </table>
 		<table name="#magicLvl"> 62 66 70 74 </table>
 		<table name="#mpConsume"> 58 62 65 69 </table>
-		<table name="#power"> 1026 1264 1530 1822 </table>
+		<table name="#cubicPower"> 1026 1264 1530 1822 </table>
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 1919 1967 2015 2061 2106 2151 2194 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 2235 </table>
 		<set name="hitTime" val="6000" />
@@ -1607,13 +1607,13 @@
 		<set name="cubicDelay" val="8" />
 		<set name="cubicDuration" val="900" />
 		<set name="cubicMaxCount" val="300" />
+		<set name="cubicPower" val="#cubicPower" />
 		<set name="cubicSkillChance" val="50" />
 		<!-- set name="cubicSkill1Chance" val="33" / TODO: needs support -->
 		<!-- set name="cubicSkill2Chance" val="33" / TODO: needs support -->
 		<!-- set name="cubicSkill3Chance" val="33" / TODO: needs support -->
 		<set name="isCubic" val="true" />
 		<set name="npcId" val="9" /> <!-- Cubic Id -->
-		<set name="power" val="#power" /> <!-- Cubic Power -->
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 	</skill>
