@@ -811,17 +811,21 @@
 		<enchant1 name="npcId" val="#enchantNpcId" />
 	</skill>
 	<skill id="1335" levels="1" name="Balance Life">
-		<set name="mpInitialConsume" val="25" />
-		<set name="mpConsume" val="98" />
-		<set name="power" val="1000" />
-		<set name="target" val="TARGET_PARTY" />
-		<set name="skillRadius" val="1000" />
-		<set name="reuseDelay" val="30000" />
-		<set name="hitTime" val="5000" />
-		<set name="skillType" val="BALANCE_LIFE" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="398" />
+		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="98" />
+		<set name="mpInitialConsume" val="25" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="skillRadius" val="1000" />
+		<set name="target" val="TARGET_PARTY" />
+		<for>
+			<effect name="BalanceLife" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1336" levels="1" name="Curse of Doom" enchantGroup1="6" enchantGroup2="6">
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

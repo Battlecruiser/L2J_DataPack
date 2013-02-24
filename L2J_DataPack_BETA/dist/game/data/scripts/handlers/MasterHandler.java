@@ -208,7 +208,6 @@ import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
 import handlers.itemhandlers.TeleportBookmark;
-import handlers.skillhandlers.BalanceLife;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
@@ -545,7 +544,6 @@ public class MasterHandler
 			HealPercent.class,
 			CombatPointHeal.class,
 			ManaHeal.class,
-			BalanceLife.class,
 			Charge.class,
 			Continuous.class,
 			Detection.class,

@@ -25,6 +25,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.handler.EffectHandler;
 
 import handlers.effecthandlers.AbortCast;
+import handlers.effecthandlers.BalanceLife;
 import handlers.effecthandlers.Betray;
 import handlers.effecthandlers.BigHead;
 import handlers.effecthandlers.BlockResurrection;
@@ -118,6 +119,7 @@ public final class EffectMasterHandler
 	private static final Class<?>[] _effects =
 	{
 		AbortCast.class,
+		BalanceLife.class,
 		Betray.class,
 		BigHead.class,
 		BlockResurrection.class,
