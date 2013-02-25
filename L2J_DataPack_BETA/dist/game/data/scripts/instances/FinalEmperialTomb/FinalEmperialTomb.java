@@ -1527,15 +1527,16 @@ public class FinalEmperialTomb extends Quest
 			{
 				controlStatus(world);
 			}
-			else if (npc.getNpcId() == HALL_KEEPER_CAPTAIN)
-			{
-				if (getRandom(100) < 5)
-				{
-					((L2MonsterInstance) npc).dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
-				}
-			}
 			else if (world.getStatus() <= 2)
 			{
+				if (npc.getNpcId() == HALL_KEEPER_CAPTAIN)
+				{
+					if (getRandom(100) < 5)
+					{
+						((L2MonsterInstance) npc).dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
+					}
+				}
+				
 				if (checkKillProgress(npc, world))
 				{
 					controlStatus(world);
