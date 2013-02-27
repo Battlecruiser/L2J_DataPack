@@ -21,171 +21,68 @@ package custom.ShadowWeapons;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
  * Shadow Weapons AI.<br>
  * Original Jython script by DrLecter.
- * @author Nyaran
+ * @author Nyaran, jurchiks
  */
 public class ShadowWeapons extends Quest
 {
-	private static final String qn = "ShadowWeapons";
-	
-	// NPCs that would need to figure out what to show when asked about coupons exchange
-	private static final int[] NPC =
+	// @formatter:off
+	private static final int[] NPCS =
 	{
-		30037,
-		30066,
-		30070,
-		30109,
-		30115,
-		30120,
-		30174,
-		30175,
-		30176,
-		30187,
-		30191,
-		30195,
-		30288,
-		30289,
-		30290,
-		30297,
-		30373,
-		30462,
-		30474,
-		30498,
-		30499,
-		30500,
-		30503,
-		30504,
-		30505,
-		30511,
-		30512,
-		30513,
-		30595,
-		30676,
-		30677,
-		30681,
-		30685,
-		30687,
-		30689,
-		30694,
-		30699,
-		30704,
-		30845,
-		30847,
-		30849,
-		30854,
-		30857,
-		30862,
-		30865,
-		30894,
-		30897,
-		30900,
-		30905,
-		30910,
-		30913,
-		31269,
-		31272,
-		31288,
-		31314,
-		31317,
-		31321,
-		31324,
-		31326,
-		31328,
-		31331,
-		31334,
-		31336,
-		31965,
-		31974,
-		31276,
-		31285,
-		31958,
-		31961,
-		31996,
-		31968,
-		31977,
-		32092,
-		32093,
-		32094,
-		32095,
-		32096,
-		32097,
-		32098,
-		32193,
-		32196,
-		32199,
-		32202,
-		32205,
-		32206,
-		32213,
-		32214,
-		32221,
-		32222,
-		32229,
-		32230,
-		32233,
-		32234
+		30037, 30066, 30070, 30109, 30115, 30120, 30174, 30175, 30176, 30187,
+		30191, 30195, 30288, 30289, 30290, 30297, 30373, 30462, 30474, 30498,
+		30499, 30500, 30503, 30504, 30505, 30511, 30512, 30513, 30595, 30676,
+		30677, 30681, 30685, 30687, 30689, 30694, 30699, 30704, 30845, 30847,
+		30849, 30854, 30857, 30862, 30865, 30894, 30897, 30900, 30905, 30910,
+		30913, 31269, 31272, 31276, 31285, 31288, 31314, 31317, 31321, 31324,
+		31326, 31328, 31331, 31334, 31336, 31958, 31961, 31965, 31968, 31974,
+		31977, 31996, 32092, 32093, 32094, 32095, 32096, 32097, 32098, 32193,
+		32196, 32199, 32202, 32205, 32206, 32213, 32214, 32221, 32222, 32229,
+		32230, 32233, 32234
 	};
+	// @formatter:on
 	
-	// itemId for shadow weapon coupons, it's not used more than once but increases readability
-	private static final int D_COUPON = 8869;
-	private static final int C_COUPON = 8870;
-	
-	public ShadowWeapons(int id, String name, String descr)
+	public ShadowWeapons()
 	{
-		super(id, name, descr);
-		
-		for (int item : NPC)
-		{
-			addStartNpc(item);
-			addTalkId(item);
-		}
+		super(-1, ShadowWeapons.class.getSimpleName(), "custom");
+		addStartNpc(NPCS);
+		addTalkId(NPCS);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(qn);
-		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
-		boolean has_d = st.hasQuestItems(D_COUPON);
-		boolean has_c = st.hasQuestItems(C_COUPON);
+		String htmltext;
+		boolean has_d = hasQuestItems(player, 8869); // Shadow Item Exchange Coupon (D-Grade)
+		boolean has_c = hasQuestItems(player, 8870); // Shadow Item Exchange Coupon (C-Grade)
 		
 		if (has_d || has_c)
 		{
-			// let's assume character had both c & d-grade coupons, we'll confirm later
-			String multisell = "306893003";
 			if (!has_d)
 			{
-				// if s/he had c-grade only...
-				multisell = "306893002";
+				htmltext = "exchange_c.html";
 			}
 			else if (!has_c)
 			{
-				// or d-grade only.
-				multisell = "306893001";
+				htmltext = "exchange_d.html";
 			}
-			// finally, return htm with proper multisell value in it.
-			htmltext = st.showHtmlFile("exchange.htm").replace("%msid%", multisell);
+			else
+			{
+				htmltext = "exchange_both.html";
+			}
 		}
 		else
 		{
-			htmltext = "exchange-no.htm";
+			htmltext = "exchange_no.html";
 		}
-		
-		st.exitQuest(true);
 		return htmltext;
 	}
 	
 	public static void main(String args[])
 	{
-		new ShadowWeapons(-1, qn, "custom");
+		new ShadowWeapons();
 	}
 }
