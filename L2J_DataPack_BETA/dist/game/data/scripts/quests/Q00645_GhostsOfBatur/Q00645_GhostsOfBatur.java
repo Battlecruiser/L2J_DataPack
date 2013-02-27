@@ -99,11 +99,11 @@ public class Q00645_GhostsOfBatur extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance player = getRandomPartyMember(killer, 1);
-		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			if (getRandom(1000) < CHANCES[npc.getNpcId() - CONTAMINATED_MOREK_WARRIOR])
 			{
+				final QuestState st = player.getQuestState(getName());
 				st.giveItems(CURSED_BURIAL_ITEMS, 1);
 				if (st.isCond(1) && (st.getQuestItemsCount(CURSED_BURIAL_ITEMS) >= 500))
 				{
