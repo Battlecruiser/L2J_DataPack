@@ -892,12 +892,6 @@ cls
 echo.
 echo L2JDP Database Installer
 echo.
-echo (C) 2004-2013 L2J DataPack Team
-echo L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY
-echo This is free software, and you are welcome to redistribute it
-echo under certain conditions; See the file gpl.txt for further
-echo details.
-echo.
 echo Thanks for using our software.
 echo visit http://www.l2jdp.com for more info about
 echo the L2J DataPack Project.
