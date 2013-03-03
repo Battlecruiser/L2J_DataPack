@@ -182,7 +182,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 							if (status == 0)
 							{
 								L2GrandBossInstance valakas = GrandBossManager.getInstance().getBoss(29028);
-								valakasAI().startQuestTimer("beginning", Config.Valakas_Wait_Time, valakas, null);
+								valakasAI().startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME, valakas, null);
 								GrandBossManager.getInstance().setBossStatus(29028, 1);
 							}
 						}
