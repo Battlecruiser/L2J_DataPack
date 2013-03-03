@@ -38,7 +38,7 @@ public class TargetUnlockable implements ITargetTypeHandler
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
 		List<L2Character> targetList = new FastList<>();
-		if (!target.isDoor() && !(target instanceof L2ChestInstance))
+		if ((target == null) || (!target.isDoor() && !(target instanceof L2ChestInstance)))
 		{
 			return _emptyTargetList;
 		}
