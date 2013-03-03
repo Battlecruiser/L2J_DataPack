@@ -173,7 +173,7 @@ public class Valakas extends AbstractNpcAI
 				// Start timer to lock entry after 30 minutes
 				if (status == WAITING)
 				{
-					startQuestTimer("beginning", Config.Valakas_Wait_Time, valakas, null);
+					startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME, valakas, null);
 				}
 			}
 		}
@@ -445,7 +445,9 @@ public class Valakas extends AbstractNpcAI
 		
 		GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 		// Calculate Min and Max respawn times randomly.
-		long respawnTime = getRandom((Config.Interval_Of_Valakas_Spawn - Config.Random_Of_Valakas_Spawn), (Config.Interval_Of_Valakas_Spawn + Config.Random_Of_Valakas_Spawn));
+		long respawnTime = Config.VALAKAS_SPAWN_INTERVAL + getRandom(-Config.VALAKAS_SPAWN_RANDOM, Config.VALAKAS_SPAWN_RANDOM);
+		respawnTime *= 60 * 60 * 1000;
+		
 		startQuestTimer("valakas_unlock", respawnTime, null, null);
 		// also save the respawn time so that the info is maintained past reboots
 		StatsSet info = GrandBossManager.getInstance().getStatsSet(VALAKAS);

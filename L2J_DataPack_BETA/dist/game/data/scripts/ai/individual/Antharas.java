@@ -338,7 +338,7 @@ public class Antharas extends AbstractNpcAI
 				if (_monsterSpawnTask == null)
 				{
 					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, WAITING);
-					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), Config.Antharas_Wait_Time);
+					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), Config.ANTHARAS_WAIT_TIME);
 				}
 			}
 		}
@@ -922,7 +922,9 @@ public class Antharas extends AbstractNpcAI
 			_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
 			// Calculate Min and Max respawn times randomly.
-			long respawnTime = getRandom((Config.Interval_Of_Antharas_Spawn - Config.Random_Of_Antharas_Spawn), (Config.Interval_Of_Antharas_Spawn + Config.Random_Of_Antharas_Spawn));
+			long respawnTime = Config.ANTHARAS_SPAWN_INTERVAL + getRandom(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM);
+			respawnTime *= 60 * 60 * 1000;
+			
 			ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(npc.getNpcId());
