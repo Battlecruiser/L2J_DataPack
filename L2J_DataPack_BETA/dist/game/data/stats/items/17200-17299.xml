@@ -388,7 +388,11 @@
 		<!-- Description: Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="material" val="paper" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17250" type="EtcItem" name="Large Baby Dragon">
 		<!-- Description: Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
