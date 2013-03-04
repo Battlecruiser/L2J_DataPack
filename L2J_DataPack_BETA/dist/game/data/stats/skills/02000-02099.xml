@@ -437,9 +437,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="COREDONE" />
 		<set name="target" val="TARGET_SELF" />
-		<!-- TODO: Implement conditions, unhardcode. -->
+		<for>
+			<effect name="SummonPet" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
