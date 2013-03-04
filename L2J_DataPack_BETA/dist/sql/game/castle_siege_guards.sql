@@ -401,7 +401,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (1,384,35085,-19950,111102,-2376,0,10800,0);
 
 -- Dion Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (2,385,35127,22420,156643,-2953,48376,10800,0),
 (2,386,35127,22392,156643,-2953,48376,10800,0),
 (2,387,35127,22364,156643,-2953,48376,10800,0),
@@ -792,7 +792,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (2,772,35107,83811,37243,-2348,32728,180,0);
 
 -- Giran Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (3,773,35169,112815,144749,-2826,31992,10800,0),
 (3,774,35169,112815,144777,-2826,31992,10800,0),
 (3,775,35169,112815,144805,-2826,31992,10800,0),
@@ -1177,7 +1177,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (3,1154,35169,114820,143259,-2443,16384,10800,0);
 
 -- Oren Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (4,1155,35211,78891,36844,-2553,31992,10800,0),
 (4,1156,35211,78891,36872,-2553,31992,10800,0),
 (4,1157,35211,78891,36900,-2553,31992,10800,0),
@@ -1562,7 +1562,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (4,1536,35211,80896,35354,-2170,16384,10800,0);
 
 -- Aden Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (5,1537,35250,147290,8527,-470,16389,10800,0),
 (5,1538,35250,147356,8527,-470,16389,10800,0),
 (5,1539,35250,147423,8527,-470,16389,10800,0),
@@ -1971,7 +1971,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (5,1942,35250,148261,9167,-212,32768,10800,0);
 
 -- Innadril Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (6,1943,35301,116371,245422,-1049,48376,10800,0),
 (6,1944,35301,116343,245422,-1049,48376,10800,0),
 (6,1945,35301,116315,245422,-1049,48376,10800,0),
@@ -2358,7 +2358,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (6,2326,35301,117861,247427,-666,32768,10800,0);
 
 -- Goddard
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (7,2327,35340,147134,-45144,-1357,16416,10800,0),
 (7,2328,35351,147218,-45144,-1357,16416,10800,0),
 (7,2329,35351,147105,-45263,-1357,31296,10800,0),
@@ -2945,7 +2945,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 
 -- Schuttgart Castle
 -- mirror image of Goddard siege guard spawns (by Deadmeat)
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (9,2910,35516,79062,-154856,122,15541,60,0),
 (9,2911,35516,79011,-154872,122,14451,60,0),
 (9,2912,35516,78957,-154862,122,16881,60,0),
@@ -3486,7 +3486,7 @@ REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading
 (9,3447,35543,80464,-151813,-17,6828,60,0);
 
 -- Rune Castle
-REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES 
+REPLACE INTO `castle_siege_guards` (`castleId`,`id`,`npcId`,`x`,`y`,`z`,`heading`,`respawnDelay`,`isHired`) VALUES
 (8,3448,35486,18535,-49055,-1217,63418,10800,0),
 (8,3449,35486,18535,-49095,-1217,63418,10800,0),
 (8,3450,35486,18535,-49135,-1217,63418,10800,0),

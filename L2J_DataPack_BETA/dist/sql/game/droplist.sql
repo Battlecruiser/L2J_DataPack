@@ -14,8 +14,8 @@
 -- This allows mobs to give 1 copy of the drop to each of several people (if they are lucky enough to get the drops).
 -- Calculation for each drop, when in categories, is equivalent in chance as when outside of categories.
 -- First, the sum of chances for each category is calculated as category chance.  If the category is selected
--- for drops (i.e. its chance is successful), then exactly 1 item from that category will be selected, with 
--- such a chance that the overall probability is maintained unchanged. 
+-- for drops (i.e. its chance is successful), then exactly 1 item from that category will be selected, with
+-- such a chance that the overall probability is maintained unchanged.
 --
 -- Category Explanation (non-RaidBoss & non-GrandBoss)
 --   -1 is sweep
@@ -7149,7 +7149,7 @@ INSERT INTO `droplist` VALUES
 (20573, 8745, 1, 1, 2, 26.353768), -- High-Grade Life Stone - Level 52
 (20573, 8755, 1, 1, 2, 5.34198), -- Top-Grade Life Stone - Level 52
 (20573, 1342, 10, 30, 2, 75861.992178), -- Steel Arrow
--- Elder Tarlk Basilisk 
+-- Elder Tarlk Basilisk
 (20574, 1867, 1, 3, -1, 836382), -- Animal Skin
 (20574, 1539, 1, 1, -1, 278794), -- Greater Healing Potion
 (20574, 4601, 1, 1, -1, 2788), -- Greater Dye of STR (Str+3 Con-3)
@@ -10022,7 +10022,7 @@ INSERT INTO `droplist` VALUES
 (20773, 8740, 1, 1, 2, 330.42002), -- Mid-Grade Life Stone - Level 67
 (20773, 8750, 1, 1, 2, 33.042002), -- High-Grade Life Stone - Level 67
 (20773, 8760, 1, 1, 2, 6.857774), -- Top-Grade Life Stone - Level 67
--- Conjurer Bat 
+-- Conjurer Bat
 (20774, 1807, 1, 1, -1, 6216), -- Recipe: Soulshot (A-Grade)
 (20774, 5478, 1, 1, -1, 39204), -- Sealed Dark Crystal Leather Armor Pattern
 (20774, 1889, 1, 1, -1, 310807), -- Compound Braid
@@ -13294,7 +13294,7 @@ INSERT INTO `droplist` VALUES
 (21008, 8739, 1, 1, 2, 273.812798), -- Mid-Grade Life Stone - Level 64
 (21008, 8749, 1, 1, 2, 27.478549), -- High-Grade Life Stone - Level 64
 (21008, 8759, 1, 1, 2, 5.349806), -- Top-Grade Life Stone - Level 64
--- Doom Trooper 
+-- Doom Trooper
 (21009, 4104, 1, 1, -1, 18708), -- Great Sword Blade
 (21009, 948, 1, 1, -1, 8173), -- Scroll: Enchant Armor (B-Grade)
 (21009, 4052, 1, 1, -1, 115743), -- Earring of Black Ore Piece
@@ -14473,7 +14473,7 @@ INSERT INTO `droplist` VALUES
 (21095, 1865, 1, 1, 2, 55516.67957), -- Varnish
 (21095, 1804, 1, 1, 2, 2220.771702), -- Recipe: Soulshot (D-Grade)
 (21095, 1831, 1, 1, 2, 148043.869158), -- Antidote
--- Cloudy Beast 
+-- Cloudy Beast
 (21096, 1926, 1, 1, -1, 37310), -- Piece Bone Breastplate Fragment
 (21096, 1866, 1, 1, -1, 246245), -- Suede
 (21096, 1871, 1, 1, -1, 369368), -- Charcoal
@@ -16637,7 +16637,7 @@ INSERT INTO `droplist` VALUES
 (21227, 8740, 1, 1, 2, 531.872352), -- Mid-Grade Life Stone - Level 67
 (21227, 8750, 1, 1, 2, 53.218176), -- High-Grade Life Stone - Level 67
 (21227, 8760, 1, 1, 2, 10.519872), -- Top-Grade Life Stone - Level 67
--- Sepulcher Guard 
+-- Sepulcher Guard
 (21228, 1807, 1, 1, -1, 9693), -- Recipe: Soulshot (A-Grade)
 (21228, 5478, 1, 1, -1, 61132), -- Sealed Dark Crystal Leather Armor Pattern
 (21228, 3035, 1, 1, -1, 9693), -- Recipe: Spiritshot A
@@ -17025,7 +17025,7 @@ INSERT INTO `droplist` VALUES
 (21251, 8750, 1, 1, 2, 53.208704), -- High-Grade Life Stone - Level 67
 (21251, 8760, 1, 1, 2, 10.808018), -- Top-Grade Life Stone - Level 67
 (21251, 1344, 20, 60, 2, 119658.061436), -- Mithril Arrow
--- Crypt Guard 
+-- Crypt Guard
 (21252, 5478, 1, 1, -1, 61132), -- Sealed Dark Crystal Leather Armor Pattern
 (21252, 4053, 1, 1, -1, 311606), -- Ring of Black Ore Gemstone
 (21252, 5230, 1, 1, -1, 9693), -- Recipe: Mithril Arrow (100%)
@@ -17670,7 +17670,7 @@ INSERT INTO `droplist` VALUES
 (21295, 5550, 1, 1, 2, 4003.57224), -- Durable Metal Plate
 (21295, 4043, 1, 1, 2, 10008.707808), -- Asofe
 (21295, 10304, 1, 1, 2, 1201.294464), -- Transformation Sealbook: Saber Tooth Tiger
--- Canyon Bandersnatch 
+-- Canyon Bandersnatch
 (21296, 5482, 1, 1, -1, 120055), -- Sealed Dark Crystal Leggings Design
 (21296, 5440, 1, 1, -1, 3369), -- Recipe: Elysian(60%)
 (21296, 5485, 1, 1, -1, 76488), -- Sealed Tallum Tunic Texture
@@ -17696,7 +17696,7 @@ INSERT INTO `droplist` VALUES
 (21297, 1895, 1, 1, 2, 128817.665964), -- Metallic Fiber
 (21297, 4042, 1, 1, 2, 7514.406216), -- Enria
 (21297, 10304, 1, 1, 2, 1803.186336), -- Transformation Sealbook: Saber Tooth Tiger
--- Eye of Restrainer 
+-- Eye of Restrainer
 (21298, 5478, 1, 1, -1, 39651), -- Sealed Dark Crystal Leather Armor Pattern
 (21298, 730, 1, 1, -1, 3929), -- Scroll: Enchant Armor (A-Grade)
 (21298, 1895, 1, 3, -1, 673616), -- Metallic Fiber
@@ -20261,7 +20261,7 @@ INSERT INTO `droplist` VALUES
 (21433, 8732, 1, 1, 2, 5674.55326), -- Life Stone - Level 76
 (21433, 8742, 1, 1, 2, 1418.638315), -- Mid-Grade Life Stone - Level 76
 (21433, 8752, 1, 1, 2, 141.632406), -- High-Grade Life Stone - Level 76
--- Priest of Blood 
+-- Priest of Blood
 (21434, 1877, 1, 3, -1, 631579), -- Adamantite Nugget
 (21434, 6342, 1, 1, -1, 715346), -- Sealed Majestic Earring Gemstone
 (21434, 5282, 1, 1, -1, 14035), -- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
@@ -20356,7 +20356,7 @@ INSERT INTO `droplist` VALUES
 (21438, 8739, 1, 1, 2, 60.631064), -- Mid-Grade Life Stone - Level 64
 (21438, 8749, 1, 1, 2, 6.052488), -- High-Grade Life Stone - Level 64
 (21438, 8759, 1, 1, 2, 1.168024), -- Top-Grade Life Stone - Level 64
--- Heathen Executed 
+-- Heathen Executed
 (21439, 4116, 1, 1, -1, 2781), -- Deadman's Glory Stone
 (21439, 5276, 1, 1, -1, 848), -- Recipe: Greater Spiritshot (A) Compressed Package(100%)
 (21439, 4117, 1, 1, -1, 2781), -- Art of Battle Axe Blade
@@ -22706,7 +22706,7 @@ INSERT INTO `droplist` VALUES
 (21575, 5466, 1, 1, 2, 41.675816), -- Recipe: Sword of Miracles(60%)
 (21575, 10305, 1, 1, 2, 449.374016), -- Transformation Sealbook: Oel Mahum
 (21575, 1343, 10, 30, 2, 160463.21655), -- Silver Arrow
--- Ghost of Guillotine 
+-- Ghost of Guillotine
 (21576, 5450, 1, 1, -1, 1316), -- Recipe: Dragon Grinder(60%)
 (21576, 5497, 1, 1, -1, 83285), -- Sealed Tallum Boots Lining
 (21576, 5456, 1, 1, -1, 1316), -- Recipe: Tallum Glaive(60%)
@@ -22724,7 +22724,7 @@ INSERT INTO `droplist` VALUES
 (21576, 8750, 1, 1, 2, 26.55712), -- High-Grade Life Stone - Level 67
 (21576, 8760, 1, 1, 2, 5.394415), -- Top-Grade Life Stone - Level 67
 (21576, 1343, 10, 30, 2, 136264.167765), -- Silver Arrow
--- Ghost of Guillotine 
+-- Ghost of Guillotine
 (21577, 5450, 1, 1, -1, 1270), -- Recipe: Dragon Grinder(60%)
 (21577, 5497, 1, 1, -1, 80418), -- Sealed Tallum Boots Lining
 (21577, 5456, 1, 1, -1, 1270), -- Recipe: Tallum Glaive(60%)
@@ -24842,7 +24842,7 @@ INSERT INTO `droplist` VALUES
 (21692, 5220, 1, 1, 2, 8688.633864), -- Metal Hardener
 (21692, 1885, 1, 1, 2, 18101.187891), -- High-Grade Suede
 (21692, 2199, 1, 1, 2, 9165.012333), -- Recipe: Karmian Stockings
--- Dimension Invader Berserker 
+-- Dimension Invader Berserker
 (21693, 2213, 1, 1, -1, 38957), -- Recipe: Dwarven Chain Mail Shirt
 (21693, 1960, 1, 1, -1, 137469), -- Chain Gaiters Part
 (21693, 2214, 1, 1, -1, 62254), -- Recipe: Dwarven Chain Gaiters
@@ -29656,7 +29656,7 @@ INSERT INTO `droplist` VALUES
 (22111, 8741, 1, 1, 2, 765.543405), -- Mid-Grade Life Stone - Level 70
 (22111, 8751, 1, 1, 2, 76.392492), -- High-Grade Life Stone - Level 70
 (22111, 8761, 1, 1, 2, 15.213759), -- Top-Grade Life Stone - Level 70
--- Cannibalistic Stakato Follower 
+-- Cannibalistic Stakato Follower
 (22112, 5478, 1, 1, -1, 95559), -- Sealed Dark Crystal Leather Armor Pattern
 (22112, 729, 1, 1, -1, 1263), -- Scroll: Enchant Weapon (A-Grade)
 (22112, 4041, 1, 1, -1, 98816), -- Mold Hardener
@@ -29695,7 +29695,7 @@ INSERT INTO `droplist` VALUES
 (22113, 8751, 1, 1, 2, 110.656416), -- High-Grade Life Stone - Level 70
 (22113, 8761, 1, 1, 2, 21.989416), -- Top-Grade Life Stone - Level 70
 (22113, 1344, 40, 120, 2, 149593.997048), -- Mithril Arrow
--- Cannibalistic Stakato Leader 
+-- Cannibalistic Stakato Leader
 (22114, 5481, 1, 1, -1, 42968), -- Sealed Majestic Leather Armor Fabric
 (22114, 5157, 1, 1, -1, 4256), -- Recipe: Soulshot (S) Compressed Package (100%)
 (22114, 5487, 1, 1, -1, 43119), -- Sealed Robe of Nightmare Fabric
@@ -32708,7 +32708,7 @@ INSERT INTO `droplist` VALUES
 (22314, 9630, 1, 1, 2, 3789.26899), -- Orichalcum
 (22314, 6901, 1, 1, 2, 719.8549), -- Recipe: Shining Arrow (100%)
 (22314, 9546, 1, 1, 2, 5759.783272), -- Fire Stone
--- Garden Guard 
+-- Garden Guard
 (22315, 6694, 1, 1, -1, 11476), -- Saint Spear Blade
 (22315, 959, 1, 1, -1, 209), -- Scroll: Enchant Weapon (S-Grade)
 (22315, 4040, 1, 1, -1, 104299), -- Mold Lubricant
@@ -34144,7 +34144,7 @@ INSERT INTO `droplist` VALUES
 (22396, 6901, 1, 1, 2, 144.973584), -- Recipe: Shining Arrow (100%)
 (22396, 9551, 1, 1, 2, 1160.294688), -- Holy Stone
 (22396, 9599, 1, 1, 2, 105800), -- Ancient Tome of the Demon
--- Foundry Foreman  
+-- Foundry Foreman
 (22397, 1894, 1, 1, -1, 735279), -- Crafted Leather
 (22397, 4042, 1, 1, -1, 349258), -- Enria
 (22397, 6706, 1, 1, -1, 339938), -- Sealed Imperial Crusader Helmet Pattern
@@ -34253,7 +34253,7 @@ INSERT INTO `droplist` VALUES
 (22402, 9628, 1, 1, 2, 1325.178864), -- Leonard
 (22402, 9630, 1, 1, 2, 889.270452), -- Orichalcum
 (22402, 6901, 1, 1, 2, 168.916536), -- Recipe: Shining Arrow (100%)
--- Foundry Foreman  
+-- Foundry Foreman
 (22403, 6901, 1, 1, -1, 21189), -- Recipe: Shining Arrow (100%)
 (22403, 6688, 1, 1, -1, 45799), -- Forgotten Blade Edge
 (22403, 57, 12417, 24868, 0, 700000), -- Adena
@@ -36239,7 +36239,7 @@ INSERT INTO `droplist` VALUES
 (22589, 9630, 1, 1, 2, 17329.4154), -- Orichalcum
 (22589, 6867, 1, 1, 2, 6131.36061), -- Recipe: Sealed Draconic Leather Gloves (60%)
 (22589, 1345, 300, 900, 2, 73169.77212), -- Shining Arrow
--- 
+--
 (22590, 8690, 1, 1, -1, 2276), -- Recipe: Sirra's Blade (60%)
 (22590, 5478, 1, 1, -1, 135121), -- Sealed Dark Crystal Leather Armor Pattern
 (22590, 8692, 1, 1, -1, 2276), -- Recipe: Sword of Ipos (60%)
@@ -40732,7 +40732,7 @@ INSERT INTO `droplist` VALUES
 (22842, 14168, 1, 1, 2, 213), -- High-Grade Life Stone - Level 84
 (22842, 9627, 1, 1, 2, 118), -- Giant's Codex - Mastery
 (22842, 14169, 1, 1, 2, 43), -- Top-Grade Life Stone - Level 84
--- Maluk Sniper 
+-- Maluk Sniper
 (22843, 4044, 1, 1, -1, 444872), -- Thons
 (22843, 9630, 1, 1, -1, 70243), -- Orichalcum
 (22843, 15634, 1, 1, -1, 7928), -- Vesper Cutter Piece
@@ -40837,7 +40837,7 @@ INSERT INTO `droplist` VALUES
 (22846, 9625, 1, 1, 2, 794), -- Giant's Codex - Oblivion
 (22846, 14168, 1, 1, 2, 479), -- High-Grade Life Stone - Level 84
 (22846, 14169, 1, 1, 2, 96), -- Top-Grade Life Stone - Level 84
--- Dragon Knight Warrior 
+-- Dragon Knight Warrior
 (22847, 4044, 1, 1, -1, 697851), -- Thons
 (22847, 14052, 1, 1, -1, 523388), -- Noble Enhancement Stone
 (22847, 9630, 1, 1, -1, 110187), -- Orichalcum
@@ -43297,7 +43297,7 @@ INSERT INTO `droplist` VALUES
 (25372, 6387, 24, 72, 2, 146188.069653), -- Blessed Scroll of Resurrection for Pets
 (25372, 955, 4, 10, 2, 100243.229583), -- Scroll: Enchant Weapon (D-Grade)
 (25372, 956, 8, 22, 2, 389835.700764), -- Scroll: Enchant Armor (D-Grade)
--- Malex Herald of Dagoniel 
+-- Malex Herald of Dagoniel
 (25373, 46, 2, 4, 0, 456101.094988), -- Bronze Helmet
 (25373, 627, 4, 12, 0, 244157.905012), -- Aspis
 (25373, 315, 1, 1, 1, 318120), -- Divine Tome
@@ -43463,7 +43463,7 @@ INSERT INTO `droplist` VALUES
 (25404, 2047, 4, 12, 1, 305138.182916), -- Claymore Blade
 (25404, 2967, 8, 22, 1, 160537.947692), -- Elven Long Sword Blade
 (25404, 6573, 1, 1, 2, 47994), -- Blessed Scroll: Enchant Weapon (C-Grade)
--- Lord Ishka 
+-- Lord Ishka
 (25407, 2398, 1, 1, 0, 21002.349345), -- Blue Wolf Tunic
 (25407, 2399, 1, 1, 0, 21002.349345), -- Tunic of Doom
 (25407, 2403, 1, 1, 0, 33613.267965), -- Blue Wolf Stockings
@@ -44047,7 +44047,7 @@ INSERT INTO `droplist` VALUES
 (25506, 281, 1, 1, 1, 70503.761262), -- Crystallized Ice Bow
 (25506, 2074, 12, 36, 1, 183398.238738), -- Crystallized Ice Bow Shaft
 (25506, 6574, 1, 1, 2, 460338), -- Blessed Scroll: Enchant Armor (C-Grade)
--- Dark Shaman Varangka 
+-- Dark Shaman Varangka
 (25509, 2397, 1, 1, 0, 35287.656295), -- Tunic of Zubei
 (25509, 2402, 1, 1, 0, 56446.459765), -- Stockings of Zubei
 (25509, 2406, 1, 1, 0, 21705.44627), -- Avadon Robe
@@ -45948,7 +45948,7 @@ INSERT INTO `droplist` VALUES
 (29096, 960, 1, 1, 2, 247446.643042), -- Scroll: Enchant Armor (S-Grade)
 (29096, 6577, 1, 1, 2, 4124.101988), -- Blessed Scroll: Enchant Weapon (S-Grade)
 (29096, 8920, 1, 1, 2, 247446.643042), -- Angel Halo
--- Disciple of Splendor 
+-- Disciple of Splendor
 (29097, 1344, 60, 180, 0, 384933), -- Mithril Arrow
 -- Splendor Worshiper
 (29098, 1344, 60, 180, 0, 384933), -- Mithril Arrow
@@ -46430,7 +46430,7 @@ INSERT INTO `droplist` VALUES
 (35720, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (35721, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (35722, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Supply Box
 (35734, 9580, 1, 1, 0, 53538.489), -- Thin Leather Shirt
@@ -46501,7 +46501,7 @@ INSERT INTO `droplist` VALUES
 (35789, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (35790, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (35791, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Supply Box
 (35803, 9590, 1, 1, 0, 51572.1084), -- Bronze Bracelet
@@ -46600,7 +46600,7 @@ INSERT INTO `droplist` VALUES
 (35889, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (35890, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (35891, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Rebel Commander
 (35908, 9581, 1, 1, 0, 91018.0024), -- Scale Shirt
@@ -46663,7 +46663,7 @@ INSERT INTO `droplist` VALUES
 (35958, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (35959, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (35960, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Rebel Commander
 (35978, 9581, 1, 1, 0, 91018.0024), -- Scale Shirt
@@ -46698,7 +46698,7 @@ INSERT INTO `droplist` VALUES
 (35996, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (35997, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (35998, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Rebel Commander
 (36015, 9581, 1, 1, 0, 91018.0024), -- Scale Shirt
@@ -46922,7 +46922,7 @@ INSERT INTO `droplist` VALUES
 (36241, 9912, 4, 16, 0, 710000), -- Knight's Epaulette
 -- General
 (36242, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
--- Minister 
+-- Minister
 (36243, 9912, 40, 154, 0, 704766), -- Knight's Epaulette
 -- Rebel Commander
 (36261, 9581, 1, 1, 0, 91018.0024), -- Scale Shirt
