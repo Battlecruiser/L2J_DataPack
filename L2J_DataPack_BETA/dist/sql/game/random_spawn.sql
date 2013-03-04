@@ -11,7 +11,7 @@ CREATE TABLE `random_spawn` (
   PRIMARY KEY (`groupId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `random_spawn` VALUES 
+INSERT INTO `random_spawn` VALUES
 (11,31113,1,-1,-1,-1,'true','true'), -- Merchant of Mammon
 (12,31126,1,-1,-1,-1,'true','true'), -- Blacksmith of Mammon
 (13,31094,1,-1,60,0,'false','false'), -- Orator of Revelations

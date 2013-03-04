@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `fort` (
   KEY `owner` (`owner`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT IGNORE INTO `fort` VALUES 
+INSERT IGNORE INTO `fort` VALUES
 (101,'Shanty',0,0,0,0,0,0,0),
 (102,'Southern',0,0,0,1,0,0,0),
 (103,'Hive',0,0,0,0,0,0,0),
