@@ -83,7 +83,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="MDAM" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -102,7 +102,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="isDebuff" val="true" />
@@ -124,7 +124,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
@@ -442,7 +442,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="2000" />
+		<set name="affectRange" val="2000" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
@@ -1333,7 +1333,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="100" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="AGGDEBUFF" />
 		<set name="target" val="TARGET_AURA" />
 		<for>

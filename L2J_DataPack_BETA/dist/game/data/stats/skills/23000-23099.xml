@@ -291,7 +291,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="8000" />
 		<set name="coolTime" val="500" />
-		<set name="skillRadius" val="500" />
+		<set name="affectRange" val="500" />
 	</skill>
 	<skill id="23021" levels="3" name="Turkey's Attack Scissors">
 		<!-- Confirmed CT2.5 -->
@@ -968,7 +968,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="500" />
-		<set name="skillRadius" val="600" />
+		<set name="affectRange" val="600" />
 		<for>
 			<effect name="Buff" abnormalTime="70" val="0" abnormalLvl="1" abnormalType="br_event_buf2" event="evaswrath" />
 		</for>

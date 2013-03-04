@@ -45,7 +45,7 @@ public class TargetFrontAura implements ITargetTypeHandler
 		
 		final L2PcInstance sourcePlayer = activeChar.getActingPlayer();
 		
-		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
+		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		
 		if (skill.getSkillType() == L2SkillType.DUMMY)
 		{

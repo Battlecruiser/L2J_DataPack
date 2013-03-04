@@ -15,7 +15,7 @@
 		<set name="triggeredId" val="5170" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SLEEP" />
 	</skill>
 	<skill id="3101" levels="10" name="Item Skill: Paralyze">
@@ -27,7 +27,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -45,7 +45,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -62,7 +62,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -81,7 +81,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -101,7 +101,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -119,7 +119,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -137,7 +137,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#activationChance" />
@@ -201,7 +201,7 @@
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
@@ -218,7 +218,7 @@
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
@@ -236,7 +236,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
@@ -254,7 +254,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
@@ -272,7 +272,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
@@ -291,7 +291,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -309,7 +309,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -327,7 +327,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="triggeredId" val="5173" />
@@ -344,7 +344,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
@@ -365,7 +365,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -383,7 +383,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -401,7 +401,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="activationChance" val="#activationChance" />
@@ -720,7 +720,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="300000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
@@ -1429,7 +1429,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1451,7 +1451,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1473,7 +1473,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1495,7 +1495,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1517,7 +1517,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1539,7 +1539,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1559,7 +1559,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1581,7 +1581,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1601,7 +1601,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1621,7 +1621,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1641,7 +1641,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1659,7 +1659,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1679,7 +1679,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1699,7 +1699,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="15000" />
@@ -1716,7 +1716,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="power" val="40" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
@@ -1744,7 +1744,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="saveVs" val="MEN" />
@@ -1774,7 +1774,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1500" />
@@ -1799,7 +1799,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
@@ -1835,7 +1835,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="trait" val="SLEEP" />
@@ -1858,7 +1858,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1891,7 +1891,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -1914,7 +1914,7 @@
 		<set name="abnormalType" val="turn_flee" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="target" val="TARGET_ONE" />
@@ -1945,7 +1945,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
@@ -1975,7 +1975,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1500" />
@@ -2001,7 +2001,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
@@ -2028,7 +2028,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />

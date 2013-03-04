@@ -116,7 +116,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="3" />
+		<set name="lvlBonusRate" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -142,7 +142,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="power" val="#power" />
-		<set name="lvlDepend" val="3" />
+		<set name="lvlBonusRate" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
@@ -222,7 +222,7 @@
 		<set name="power" val="2748" />
 		<set name="isDebuff" val="true" />
 		<set name="mpConsume" val="121" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
@@ -246,7 +246,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6625" levels="1" name="Energy of Life">
@@ -674,7 +674,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
@@ -897,7 +897,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6678" levels="1" name="Hold Cancel">
@@ -965,7 +965,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="aggroPoints" val="100" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="45" />
@@ -982,7 +982,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
-		<set name="skillRadius" val="100" />
+		<set name="affectRange" val="100" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503" />
@@ -999,7 +999,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
-		<set name="skillRadius" val="100" />
+		<set name="affectRange" val="100" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503" />
@@ -1033,7 +1033,7 @@
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="negateAbnormals" val="pa_up,9;pd_up,9" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1069,7 +1069,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="350" />
+		<set name="affectRange" val="350" />
 		<set name="skillType" val="DOT" />
 		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
@@ -1144,7 +1144,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="45257" />
 		<set name="reuseDelay" val="7000" />
-		<set name="skillRadius" val="3000" />
+		<set name="affectRange" val="3000" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -1160,7 +1160,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->

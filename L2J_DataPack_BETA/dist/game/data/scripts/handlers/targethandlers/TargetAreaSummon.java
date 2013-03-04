@@ -56,7 +56,7 @@ public class TargetAreaSummon implements ITargetTypeHandler
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharacters();
-		final int radius = skill.getSkillRadius();
+		final int radius = skill.getAffectRange();
 		
 		for (L2Character obj : objs)
 		{

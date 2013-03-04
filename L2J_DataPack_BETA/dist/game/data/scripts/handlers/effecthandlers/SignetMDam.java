@@ -117,7 +117,7 @@ public class SignetMDam extends L2Effect
 		
 		List<L2Character> targets = new ArrayList<>();
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if ((cha == null) || (cha == activeChar))
 			{

@@ -99,7 +99,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="400" />
@@ -860,7 +860,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="DA2" />
 		<set name="hitTime" val="800" />
 		<set name="saveVs" val="CON" />
@@ -879,7 +879,7 @@
 		<set name="operateType" val="DA2" />
 		<set name="hitTime" val="800" />
 		<set name="coolTime" val="200" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<cond msgId="113" addName="1">
@@ -960,7 +960,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 	</skill>
@@ -982,7 +982,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="300" />
 		<set name="coolTime" val="200" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 	</skill>

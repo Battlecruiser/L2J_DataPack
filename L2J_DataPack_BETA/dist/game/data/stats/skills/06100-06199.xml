@@ -268,7 +268,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
@@ -281,7 +281,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="2000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6131" levels="1" name="Decrease Spd">
@@ -294,7 +294,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 	</skill>
 	<skill id="6132" levels="1" name="Decrease Atk. Spd">
 		<set name="abnormalLvl" val="1" />
@@ -304,7 +304,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
 	</skill>
@@ -324,7 +324,7 @@
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
@@ -339,7 +339,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="staticDamage" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="coolTime" val="2000" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -399,7 +399,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 	</skill>
 	<skill id="6142" levels="3" name="Tar Spite">
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
@@ -420,7 +420,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
@@ -624,7 +624,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6167" levels="12" name="Shock">
@@ -635,7 +635,7 @@
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6168" levels="12" name="Shock">
@@ -646,7 +646,7 @@
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6169" levels="1" name="Shyeed's Fury">

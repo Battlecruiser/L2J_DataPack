@@ -59,7 +59,7 @@ public class TargetCorpseAlly implements ITargetTypeHandler
 				};
 			}
 			
-			final int radius = skill.getSkillRadius();
+			final int radius = skill.getAffectRange();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, true))
 			{

@@ -12,12 +12,12 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="CON" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1800" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -36,7 +36,7 @@
 		<set name="abnormalType" val="multi_buff" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
@@ -68,7 +68,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -96,7 +96,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -123,7 +123,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="hitTime" val="2000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -151,12 +151,12 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="80" />
+		<set name="affectRange" val="80" />
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1800" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
@@ -183,7 +183,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1800" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -222,7 +222,7 @@
 		<set name="abnormalType" val="berserker" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
@@ -251,7 +251,7 @@
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
@@ -274,7 +274,7 @@
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
@@ -297,7 +297,7 @@
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
@@ -319,7 +319,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1800" />
@@ -334,7 +334,7 @@
 		<table name="#amount"> 83 151 245 362 494 627 743 789 823 845 853 853 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -355,7 +355,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -374,7 +374,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -455,7 +455,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="6000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
@@ -495,7 +495,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -531,7 +531,7 @@
 		<set name="abnormalType" val="heal_effect_down" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
@@ -554,7 +554,7 @@
 		<set name="abnormalType" val="speed_down" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
@@ -875,7 +875,7 @@
 		<set name="abnormalType" val="multi_buff" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
@@ -906,7 +906,7 @@
 		<set name="abnormalType" val="multi_buff" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillRadius" val="900" />
+		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2000" />
@@ -938,7 +938,7 @@
 		<set name="skillType" val="SLEEP" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2500" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -990,7 +990,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="hitTime" val="1800" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
@@ -1106,9 +1106,9 @@
 		<set name="abnormalType" val="poison" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="35" /> <!-- Base Land Rate -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
@@ -1127,7 +1127,7 @@
 		<set name="mpInitialConsume" val="11" />
 		<set name="negateAbnormals" val="root_magically,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1144,7 +1144,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1157,7 +1157,7 @@
 		<set name="mpInitialConsume" val="11" />
 		<set name="negateAbnormals" val="silence,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -1241,7 +1241,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1269,7 +1269,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1296,7 +1296,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="2000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1323,7 +1323,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -1352,7 +1352,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="4000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1378,7 +1378,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DRAIN" />
 		<set name="hitTime" val="2000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1538,7 +1538,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1800" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
@@ -1711,7 +1711,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="30416" />
-		<set name="skillRadius" val="250" />
+		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="VALAKAS" />
@@ -1731,7 +1731,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="30416" />
-		<set name="skillRadius" val="250" />
+		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="VALAKAS" />
@@ -1750,12 +1750,12 @@
 		<set name="fanRange" val="0,0,1200,35" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="648" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="1200" />
+		<set name="affectRange" val="1200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
@@ -1777,12 +1777,12 @@
 		<set name="fanRange" val="0,0,1700,160" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="648" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="1700" />
+		<set name="affectRange" val="1700" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
@@ -1803,7 +1803,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="48391" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
 	</skill>
@@ -1817,7 +1817,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="157" />
-		<set name="skillRadius" val="500" />
+		<set name="affectRange" val="500" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
 	</skill>
@@ -1845,12 +1845,12 @@
 		<set name="flyType" val="THROW_UP" />
 		<set name="hitTime" val="3000" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="27849" />
 		<set name="saveVs" val="CON" />
-		<set name="skillRadius" val="250" />
+		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_BEHIND_AURA" />
 		<set name="trait" val="SHOCK" />
@@ -1874,12 +1874,12 @@
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="#lvlDepend" />
+		<set name="lvlBonusRate" val="#lvlDepend" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<set name="skillType" val="FEAR" />
 		<set name="target" val="TARGET_FRONT_AURA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1897,7 +1897,7 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="1084" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -2046,7 +2046,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="target" val="TARGET_PARTY" />
 		<for>

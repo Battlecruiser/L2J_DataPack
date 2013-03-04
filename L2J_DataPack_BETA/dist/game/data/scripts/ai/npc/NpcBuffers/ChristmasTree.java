@@ -93,7 +93,7 @@ public class ChristmasTree extends AbstractNpcAI
 				
 				if (!player.isInParty())
 				{
-					if (player.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
+					if (player.isInsideRadius(_npc, skill.getAffectRange(), true, true))
 					{
 						skill.getEffects(_npc, player);
 					}
@@ -102,7 +102,7 @@ public class ChristmasTree extends AbstractNpcAI
 				{
 					for (L2PcInstance member : player.getParty().getMembers())
 					{
-						if ((member != null) && member.isInsideRadius(_npc, skill.getSkillRadius(), true, true))
+						if ((member != null) && member.isInsideRadius(_npc, skill.getAffectRange(), true, true))
 						{
 							skill.getEffects(_npc, member);
 						}

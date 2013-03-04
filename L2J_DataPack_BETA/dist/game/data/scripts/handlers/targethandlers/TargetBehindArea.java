@@ -49,7 +49,7 @@ public class TargetBehindArea implements ITargetTypeHandler
 		
 		final L2Character origin;
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		final int radius = skill.getSkillRadius();
+		final int radius = skill.getAffectRange();
 		
 		if (skill.getCastRange() >= 0)
 		{

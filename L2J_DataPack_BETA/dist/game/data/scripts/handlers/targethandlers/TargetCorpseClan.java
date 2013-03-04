@@ -63,7 +63,7 @@ public class TargetCorpseClan implements ITargetTypeHandler
 				};
 			}
 			
-			final int radius = skill.getSkillRadius();
+			final int radius = skill.getAffectRange();
 			final L2Clan clan = player.getClan();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, true))

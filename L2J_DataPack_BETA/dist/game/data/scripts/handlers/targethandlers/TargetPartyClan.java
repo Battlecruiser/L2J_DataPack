@@ -57,7 +57,7 @@ public class TargetPartyClan implements ITargetTypeHandler
 		
 		targetList.add(player);
 		
-		final int radius = skill.getSkillRadius();
+		final int radius = skill.getAffectRange();
 		final boolean hasClan = player.getClan() != null;
 		final boolean hasParty = player.isInParty();
 		

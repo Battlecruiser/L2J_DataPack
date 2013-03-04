@@ -710,7 +710,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -758,7 +758,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -807,7 +807,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -836,7 +836,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="4" /> <!-- Base Land Rate -->
@@ -919,7 +919,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="25" /> <!-- Base Land Rate -->
@@ -955,7 +955,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_physical" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
@@ -991,7 +991,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="25" /> <!-- Base Land Rate -->
@@ -1029,7 +1029,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="5" /> <!-- Base Land Rate -->
@@ -1094,7 +1094,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="7" /> <!-- Base Land Rate -->
