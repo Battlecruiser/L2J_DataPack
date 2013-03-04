@@ -2282,7 +2282,7 @@ INSERT INTO `npcaidata` VALUES
 (18779, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- 
 (18780, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "aceed_clan", 300, "null", 0, 0, "balanced"), -- Symbol of Cohemenes
 (18781, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Young Drake Wing
-(18782, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "balanced"), -- Zealot of Shilen
+(18782, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "zealot_clan", 300, "airport_patrol", 0, 0, "balanced"), -- Zealot of Shilen
 (18783, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "des_dragon", 1000, "null", 0, 0, "balanced"), -- Defeated Troops Commander
 (18784, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "des_dragon", 1000, "null", 0, 0, "balanced"), -- Defeated Troops No 1 Battalion Commander
 (18785, 7, 15, 0, 450, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "des_dragon", 1000, "null", 0, 0, "balanced"), -- Defeated Troops White Dragon Leader
@@ -8644,8 +8644,8 @@ INSERT INTO `npcaidata` VALUES
 (32625, 7, 15, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Anciel
 (32626, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Royal Guard
 (32627, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Nottingale
-(32628, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Wharf Patrol
-(32629, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Wharf Patrol
+(32628, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "airport_patrol", 1500, "zealot_clan", 1500, 0, "balanced"), -- Wharf Patrol
+(32629, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "airport_patrol", 1500, "zealot_clan", 1500, 0, "balanced"), -- Wharf Patrol
 (32630, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Gracia Server Helper
 (32631, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Gracia Server Mark Manager
 (32632, 7, 15, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 0, "null", 0, 0, "balanced"), -- Gracian Survivor
