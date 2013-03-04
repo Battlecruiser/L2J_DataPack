@@ -30,18 +30,54 @@ public class Q00254_LegendaryTales extends Quest
 	private static final int GILMORE = 30754;
 	
 	// Monsters
-	private static final int EMERALD_HORN = 25718;
-	private static final int DUST_RIDER = 25719;
-	private static final int BLEEDING_FLY = 25720;
-	private static final int BLACK_DAGGER = 25721;
-	private static final int SHADOW_SUMMONER = 25722;
-	private static final int SPIKE_SLASHER = 25723;
-	private static final int MUSCLE_BOMBER = 25724;
+	public enum Bosses
+	{
+		EMERALD_HORN(25718),
+		DUST_RIDER(25719),
+		BLEEDING_FLY(25720),
+		BLACK_DAGGER(25721),
+		SHADOW_SUMMONER(25722),
+		SPIKE_SLASHER(25723),
+		MUSCLE_BOMBER(25724);
+		
+		private final int _bossId;
+		private final int _mask;
+		
+		private Bosses(int bossId)
+		{
+			_bossId = bossId;
+			_mask = 1 << ordinal();
+		}
+		
+		public int getId()
+		{
+			return _bossId;
+		}
+		
+		public int getMask()
+		{
+			return _mask;
+		}
+		
+		public static Bosses valueOf(int npcId)
+		{
+			for (Bosses val : values())
+			{
+				if (val.getId() == npcId)
+				{
+					return val;
+				}
+			}
+			return null;
+		}
+	}
+	
 	// @formatter:off
 	private static final int[] MONSTERS =
 	{
-		EMERALD_HORN, DUST_RIDER, BLEEDING_FLY, BLACK_DAGGER, SHADOW_SUMMONER,
-		SPIKE_SLASHER, MUSCLE_BOMBER
+		Bosses.EMERALD_HORN.getId(), Bosses.DUST_RIDER.getId(), Bosses.BLEEDING_FLY.getId(), 
+		Bosses.BLACK_DAGGER.getId(), Bosses.SHADOW_SUMMONER.getId(), Bosses.SPIKE_SLASHER.getId(), 
+		Bosses.MUSCLE_BOMBER.getId()
 	};
 	// @formatter:on
 	
@@ -119,25 +155,25 @@ public class Q00254_LegendaryTales extends Quest
 				htmltext = event;
 				break;
 			case "25718": // Emerald Horn
-				htmltext = (checkPosition(st, EMERALD_HORN) ? "30754-22.html" : "30754-16.html");
+				htmltext = (checkMask(st, Bosses.EMERALD_HORN) ? "30754-22.html" : "30754-16.html");
 				break;
 			case "25719": // Dust Rider
-				htmltext = (checkPosition(st, DUST_RIDER) ? "30754-23.html" : "30754-17.html");
+				htmltext = (checkMask(st, Bosses.DUST_RIDER) ? "30754-23.html" : "30754-17.html");
 				break;
 			case "25720": // Bleeding Fly
-				htmltext = (checkPosition(st, BLEEDING_FLY) ? "30754-24.html" : "30754-18.html");
+				htmltext = (checkMask(st, Bosses.BLEEDING_FLY) ? "30754-24.html" : "30754-18.html");
 				break;
 			case "25721": // Black Dagger Wing
-				htmltext = (checkPosition(st, BLACK_DAGGER) ? "30754-25.html" : "30754-19.html");
+				htmltext = (checkMask(st, Bosses.BLACK_DAGGER) ? "30754-25.html" : "30754-19.html");
 				break;
 			case "25722": // Shadow Summoner
-				htmltext = (checkPosition(st, SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html");
+				htmltext = (checkMask(st, Bosses.SHADOW_SUMMONER) ? "30754-26.html" : "30754-16.html");
 				break;
 			case "25723": // Spike Slasher
-				htmltext = (checkPosition(st, SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html");
+				htmltext = (checkMask(st, Bosses.SPIKE_SLASHER) ? "30754-27.html" : "30754-17.html");
 				break;
 			case "25724": // Muscle Bomber
-				htmltext = (checkPosition(st, MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html");
+				htmltext = (checkMask(st, Bosses.MUSCLE_BOMBER) ? "30754-28.html" : "30754-18.html");
 				break;
 			case "13467": // Vesper Thrower
 			case "13466": // Vesper Singer
@@ -185,18 +221,12 @@ public class Q00254_LegendaryTales extends Quest
 		
 		if ((st != null) && st.isCond(1))
 		{
-			boolean giveItem = false;
 			int raids = st.getInt("raids");
-			int pos = getPosition(npc.getNpcId());
+			Bosses boss = Bosses.valueOf(npc.getNpcId());
 			
-			if ((raids & pos) == 0)
+			if (!checkMask(st, boss))
 			{
-				st.set("raids", raids | pos);
-				giveItem = true;
-			}
-			
-			if (giveItem)
-			{
+				st.set("raids", raids | boss.getMask());
 				st.giveItems(LARGE_DRAGON_SKULL, 1);
 				
 				if (st.getQuestItemsCount(LARGE_DRAGON_SKULL) < 7)
@@ -211,24 +241,10 @@ public class Q00254_LegendaryTales extends Quest
 		}
 	}
 	
-	private static boolean checkPosition(QuestState qs, int npcId)
+	private static boolean checkMask(QuestState qs, Bosses boss)
 	{
-		int pos = getPosition(npcId);
+		int pos = boss.getMask();
 		return ((qs.getInt("raids") & pos) == pos);
-	}
-	
-	private static int getPosition(int npcId)
-	{
-		int pos = 1;
-		for (int mobId : MONSTERS)
-		{
-			if (mobId == npcId)
-			{
-				break;
-			}
-			pos = pos << 1;
-		}
-		return pos;
 	}
 	
 	public static void main(String[] args)
