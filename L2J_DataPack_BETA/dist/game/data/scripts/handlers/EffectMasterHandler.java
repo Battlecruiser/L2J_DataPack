@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.handler.EffectHandler;
 
 import handlers.effecthandlers.AbortCast;
-import handlers.effecthandlers.RebalanceHP;
 import handlers.effecthandlers.Betray;
 import handlers.effecthandlers.BigHead;
 import handlers.effecthandlers.BlockResurrection;
@@ -84,6 +83,7 @@ import handlers.effecthandlers.PhysicalAttackMute;
 import handlers.effecthandlers.PhysicalMute;
 import handlers.effecthandlers.ProtectionBlessing;
 import handlers.effecthandlers.RandomizeHate;
+import handlers.effecthandlers.RebalanceHP;
 import handlers.effecthandlers.Recovery;
 import handlers.effecthandlers.Relax;
 import handlers.effecthandlers.RemoveTarget;
@@ -99,6 +99,7 @@ import handlers.effecthandlers.Sleep;
 import handlers.effecthandlers.Spoil;
 import handlers.effecthandlers.Stun;
 import handlers.effecthandlers.SummonAgathion;
+import handlers.effecthandlers.SummonPet;
 import handlers.effecthandlers.TargetMe;
 import handlers.effecthandlers.ThrowUp;
 import handlers.effecthandlers.TransferDamage;
@@ -193,6 +194,7 @@ public final class EffectMasterHandler
 		Spoil.class,
 		Stun.class,
 		SummonAgathion.class,
+		SummonPet.class,
 		TargetMe.class,
 		ThrowUp.class,
 		TransferDamage.class,
