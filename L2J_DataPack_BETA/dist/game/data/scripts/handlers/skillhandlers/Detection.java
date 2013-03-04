@@ -50,7 +50,7 @@ public class Detection implements ISkillHandler
 			hasClan = player.getClanId() > 0;
 			hasAlly = player.getAllyId() > 0;
 			
-			for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
+			for (L2PcInstance target : activeChar.getKnownList().getKnownPlayersInRadius(skill.getAffectRange()))
 			{
 				if ((target != null) && target.getAppearance().getInvisible())
 				{

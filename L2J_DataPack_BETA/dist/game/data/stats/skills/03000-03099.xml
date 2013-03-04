@@ -20,7 +20,7 @@
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -145,7 +145,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -191,7 +191,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -210,7 +210,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="5" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -258,7 +258,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="12000" />
@@ -475,7 +475,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -497,7 +497,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -653,7 +653,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="222" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -671,7 +671,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="264" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
@@ -691,7 +691,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="768" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
@@ -711,7 +711,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="384" abnormalLvl="7" abnormalType="bleeding" abnormalVisualEffect="bleed">
@@ -808,7 +808,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -828,7 +828,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="672" abnormalLvl="7" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -939,7 +939,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1004,7 +1004,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
@@ -1024,7 +1024,7 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" chanceType="ON_EXIT" triggeredId="6126">
@@ -1072,7 +1072,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
@@ -1093,7 +1093,7 @@
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="15" val="0" chanceType="ON_EXIT" triggeredId="6126">
@@ -1158,7 +1158,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1176,7 +1176,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5167" />
@@ -1190,7 +1190,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1208,7 +1208,7 @@
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1228,7 +1228,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1244,7 +1244,7 @@
 		<set name="abnormalType" val="paralyze" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1266,7 +1266,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
@@ -1288,7 +1288,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5173" />
@@ -1306,7 +1306,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
@@ -1324,7 +1324,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1342,7 +1342,7 @@
 		<set name="abnormalType" val="silence" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1363,7 +1363,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="chanceType" val="ON_HIT" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5177" />
@@ -1394,7 +1394,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
@@ -1411,7 +1411,7 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
@@ -1432,7 +1432,7 @@
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5168" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
@@ -1450,7 +1450,7 @@
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />
 		<set name="triggeredId" val="5169" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="HOLD" />

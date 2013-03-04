@@ -48,7 +48,7 @@ public class TargetParty implements ITargetTypeHandler
 		
 		targetList.add(activeChar);
 		
-		final int radius = skill.getSkillRadius();
+		final int radius = skill.getAffectRange();
 		
 		L2PcInstance player = activeChar.getActingPlayer();
 		if (activeChar.isSummon())

@@ -63,7 +63,7 @@ public class RebalanceHP extends L2Effect
 		final L2Party party = getEffector().getParty();
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getSkillRadius(), getEffector(), member, true))
+			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
 			{
 				continue;
 			}
@@ -75,7 +75,7 @@ public class RebalanceHP extends L2Effect
 		double percentHP = currentHPs / fullHP;
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getSkillRadius(), getEffector(), member, true))
+			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
 			{
 				continue;
 			}

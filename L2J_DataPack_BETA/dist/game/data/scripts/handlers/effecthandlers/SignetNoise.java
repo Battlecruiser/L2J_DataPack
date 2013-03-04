@@ -61,7 +61,7 @@ public class SignetNoise extends L2Effect
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
 		
-		for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if ((target == null) || (target == caster))
 			{

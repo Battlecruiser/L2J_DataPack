@@ -9,7 +9,7 @@
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="47" />
-		<set name="skillRadius" val="1000" />
+		<set name="affectRange" val="1000" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_PARTY" />
 	</skill>
@@ -909,7 +909,7 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="5659" levels="2" name="Gatekeeper Berserker Spirit">
 		<table name="#mpInitialConsume"> 6 10 </table>
@@ -1019,7 +1019,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1037,7 +1037,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1055,7 +1055,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1073,7 +1073,7 @@
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="100" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -1091,7 +1091,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1109,7 +1109,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1127,7 +1127,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1145,7 +1145,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="power" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1157,7 +1157,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="5000" />
@@ -1242,11 +1242,11 @@
 		<set name="power" val="80" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="mirage_trap" triggeredId="5680" chanceType="ON_ATTACKED" activationChance="30" />
 		</for>
@@ -1583,7 +1583,7 @@
 		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>

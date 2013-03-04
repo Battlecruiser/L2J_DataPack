@@ -34,7 +34,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 	</skill>
 	<skill id="6402" levels="5" name="Torumba Poison Strike">
 		<table name="#dot"> 500 1100 2200 4400 8000 </table>
@@ -44,7 +44,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -71,9 +71,9 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="2" name="DamOverTime" effectPower="80" abnormalTime="5" val="290" abnormalLvl="3" abnormalType="speed_down" abnormalVisualEffect="poison">
@@ -92,9 +92,9 @@
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" effectPower="80" abnormalLvl="3" abnormalType="speed_down">
@@ -115,7 +115,7 @@
 		<set name="mpConsume" val="56" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="1" abnormalVisualEffect="mute" abnormalType="casting_time_down">
@@ -181,7 +181,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6410" levels="1" name="Reptilikon Rush">
 		<set name="abnormalLvl" val="1" />
@@ -198,9 +198,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
-		<set name="skillRadius" val="100" />
+		<set name="affectRange" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -239,7 +239,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6414" levels="1" name="Reptilikon Charge">
 		<set name="abnormalLvl" val="1" />
@@ -255,7 +255,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -273,7 +273,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 	</skill>
 	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
 		<set name="abnormalLvl" val="8" />
@@ -292,9 +292,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
@@ -316,9 +316,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
@@ -340,9 +340,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="345" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
@@ -390,7 +390,7 @@
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6423" levels="1" name="Shock">
 		<set name="abnormalLvl" val="1" />
@@ -405,7 +405,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -434,7 +434,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<for>
 			<effect name="Buff" val="0" abnormalTime="10" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.1" />
@@ -453,7 +453,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -462,7 +462,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
 	</skill>
@@ -475,7 +475,7 @@
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
@@ -607,7 +607,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -631,7 +631,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
@@ -662,7 +662,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -675,7 +675,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6439" levels="1" name="Energy of Wisdom">
@@ -683,7 +683,7 @@
 		<set name="abnormalType" val="signal_e" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -695,7 +695,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6441" levels="1" name="Energy of Agile">
@@ -703,7 +703,7 @@
 		<set name="abnormalType" val="signal_e" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -713,7 +713,7 @@
 		<set name="abnormalType" val="signal_e" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -728,7 +728,7 @@
 		<set name="abnormalType" val="signal_e" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -744,7 +744,7 @@
 		<set name="abnormalType" val="signal_e" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />

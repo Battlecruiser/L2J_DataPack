@@ -39,7 +39,7 @@ public class TargetAuraCorpseMob implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		// Go through the L2Character _knownList
-		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius());
+		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		for (L2Character obj : objs)
 		{
 			if (obj.isL2Attackable() && obj.isDead())

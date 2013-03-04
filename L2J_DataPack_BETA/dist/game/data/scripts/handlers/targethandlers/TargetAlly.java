@@ -67,7 +67,7 @@ public class TargetAlly implements ITargetTypeHandler
 			
 			targetList.add(player);
 			
-			final int radius = skill.getSkillRadius();
+			final int radius = skill.getAffectRange();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, false))
 			{

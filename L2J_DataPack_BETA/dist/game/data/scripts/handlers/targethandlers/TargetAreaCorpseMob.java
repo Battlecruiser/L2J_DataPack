@@ -59,7 +59,7 @@ public class TargetAreaCorpseMob implements ITargetTypeHandler
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		
-		final int radius = skill.getSkillRadius();
+		final int radius = skill.getAffectRange();
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{

@@ -87,7 +87,7 @@ public class Signet extends L2Effect
 		
 		getEffector().reduceCurrentMp(mpConsume);
 		FastList<L2Character> targets = FastList.newInstance();
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if (cha == null)
 			{

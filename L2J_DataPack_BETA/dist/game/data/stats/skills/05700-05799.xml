@@ -83,7 +83,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5707" levels="1" name="Paralysis">
@@ -180,13 +180,13 @@
 		<set name="hitTime" val="2500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="213" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="400" />
+		<set name="affectRange" val="400" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
@@ -206,7 +206,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5717" levels="1" name="Fire Breath">
@@ -266,7 +266,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -301,7 +301,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
@@ -402,7 +402,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -466,7 +466,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillRadius" val="500" />
+		<set name="affectRange" val="500" />
 		<set name="skillType" val="MDAM" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
@@ -536,7 +536,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -580,7 +580,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -596,7 +596,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -663,7 +663,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 	</skill>
 	<skill id="5745" levels="12" name="Death Blow">
 		<table name="#power"> 183 419 875 1665 2885 4544 6503 7503 8447 9280 9948 10466 </table>
@@ -722,7 +722,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="reuseDelay" val="13000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="720" />
 		<set name="nextActionAttack" val="true" />
@@ -792,7 +792,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="5752" levels="12" name="Flare">
 		<table name="#pvpPower"> 39 58 84 116 153 191 229 246 261 273 283 290 </table>
@@ -931,7 +931,7 @@
 		<set name="mpConsume" val="76" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="power" val="4472" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -944,7 +944,7 @@
 		<set name="mpConsume" val="76" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="power" val="4472" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -957,7 +957,7 @@
 		<set name="mpConsume" val="76" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="power" val="4472" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -970,7 +970,7 @@
 		<set name="mpConsume" val="78" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="power" val="4472" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1170,7 +1170,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 	</skill>
 	<skill id="5795" levels="1" name="Poison">
 		<set name="abnormalLvl" val="9" />
@@ -1182,7 +1182,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="hitTime" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5796" levels="1" name="Decrease Spd.">
@@ -1196,7 +1196,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 	</skill>
 	<skill id="5797" levels="1" name="Bursting Flame">
 		<set name="fanRange" val="0,0,600,60" />
@@ -1225,7 +1225,7 @@
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1800" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="trait" val="BLEED" />
 	</skill>
 </list>

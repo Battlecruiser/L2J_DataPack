@@ -78,7 +78,7 @@ public class TargetPartyNotMe implements ITargetTypeHandler
 				{
 					continue;
 				}
-				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getSkillRadius(), activeChar, partyMember, true))
+				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
 				{
 					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
 					{

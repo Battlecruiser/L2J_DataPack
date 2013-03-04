@@ -48,7 +48,7 @@ public class Trap implements ISkillHandler
 		{
 			case DETECT_TRAP:
 			{
-				for (L2Character target : activeChar.getKnownList().getKnownCharactersInRadius(skill.getSkillRadius()))
+				for (L2Character target : activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
 				{
 					if (!target.isTrap())
 					{

@@ -110,7 +110,7 @@ public class Totems extends AbstractNpcAI
 			}
 			
 			L2Skill skill = _holder.getSkill();
-			for (L2PcInstance player : _npc.getKnownList().getKnownPlayersInRadius(skill.getSkillRadius()))
+			for (L2PcInstance player : _npc.getKnownList().getKnownPlayersInRadius(skill.getAffectRange()))
 			{
 				if (player.getFirstEffect(skill.getId()) == null)
 				{

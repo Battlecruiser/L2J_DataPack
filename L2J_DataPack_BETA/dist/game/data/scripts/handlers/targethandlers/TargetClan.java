@@ -71,7 +71,7 @@ public class TargetClan implements ITargetTypeHandler
 			
 			targetList.add(player);
 			
-			final int radius = skill.getSkillRadius();
+			final int radius = skill.getAffectRange();
 			final L2Clan clan = player.getClan();
 			
 			if (L2Skill.addSummon(activeChar, player, radius, false))
