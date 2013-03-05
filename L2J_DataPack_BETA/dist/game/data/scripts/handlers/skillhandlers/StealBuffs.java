@@ -18,7 +18,7 @@
  */
 package handlers.skillhandlers;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
@@ -45,8 +45,6 @@ public class StealBuffs implements ISkillHandler
 	{
 		L2Character target;
 		L2Effect effect;
-		
-		int count = skill.getMaxNegatedEffects();
 		for (L2Object obj : targets)
 		{
 			if (!(obj instanceof L2Character))
@@ -66,81 +64,7 @@ public class StealBuffs implements ISkillHandler
 			}
 			
 			Env env;
-			int lastSkillId = 0;
-			final L2Effect[] effects = target.getAllEffects();
-			final ArrayList<L2Effect> toSteal = new ArrayList<>(count);
-			
-			for (int i = effects.length; --i >= 0;) // reverse order
-			{
-				effect = effects[i];
-				if (effect == null)
-				{
-					continue;
-				}
-				
-				if (!effect.canBeStolen()) // remove effect if can't be stolen
-				{
-					effects[i] = null;
-					continue;
-				}
-				
-				// if eff time is smaller than 5 sec, will not be stolen, just to save CPU,
-				// avoid synchronization(?) problems and NPEs
-				if ((effect.getAbnormalTime() - effect.getTime()) < 5)
-				{
-					effects[i] = null;
-					continue;
-				}
-				
-				// first pass - only dances/songs
-				if (!effect.getSkill().isDance())
-				{
-					continue;
-				}
-				
-				if (effect.getSkill().getId() != lastSkillId)
-				{
-					lastSkillId = effect.getSkill().getId();
-					count--;
-				}
-				
-				toSteal.add(effect);
-				if (count == 0)
-				{
-					break;
-				}
-			}
-			
-			if (count > 0) // second pass
-			{
-				lastSkillId = 0;
-				for (int i = effects.length; --i >= 0;)
-				{
-					effect = effects[i];
-					if (effect == null)
-					{
-						continue;
-					}
-					
-					// second pass - all except dances/songs
-					if (effect.getSkill().isDance())
-					{
-						continue;
-					}
-					
-					if (effect.getSkill().getId() != lastSkillId)
-					{
-						lastSkillId = effect.getSkill().getId();
-						count--;
-					}
-					
-					toSteal.add(effect);
-					if (count == 0)
-					{
-						break;
-					}
-				}
-			}
+			final List<L2Effect> toSteal = Formulas.calcCancel(activeChar, target, skill, skill.getPower());
 			
 			if (toSteal.size() == 0)
 			{
@@ -175,9 +99,6 @@ public class StealBuffs implements ISkillHandler
 					_log.log(Level.WARNING, "Cannot steal effect: " + eff + " Stealer: " + activeChar + " Stolen: " + target, e);
 				}
 			}
-			
-			// Possibility of a lethal strike
-			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		
 		if (skill.hasSelfEffects())
