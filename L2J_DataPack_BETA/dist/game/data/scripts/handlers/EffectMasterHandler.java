@@ -57,6 +57,7 @@ import handlers.effecthandlers.EnemyCharge;
 import handlers.effecthandlers.FakeDeath;
 import handlers.effecthandlers.Fear;
 import handlers.effecthandlers.Fusion;
+import handlers.effecthandlers.GiveSp;
 import handlers.effecthandlers.Grow;
 import handlers.effecthandlers.Harvesting;
 import handlers.effecthandlers.Heal;
@@ -153,6 +154,7 @@ public final class EffectMasterHandler
 		FakeDeath.class,
 		Fear.class,
 		Fusion.class,
+		GiveSp.class,
 		Grow.class,
 		Harvesting.class,
 		HealOverTime.class,

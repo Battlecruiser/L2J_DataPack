@@ -76,19 +76,20 @@
 		<!-- Lvl 1: Blue Crystal of Fantasy -->
 		<!-- Lvl 2: Green Crystal of Fantasy -->
 		<!-- Lvl 3: Red Crystal of Fantasy -->
-		<table name="#power"> 50000 100000 200000 </table>
+		<table name="#amount"> 50000 100000 200000 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="hitTime" val="200" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<player level="76" />
 		</cond>
+		<for>
+			<effect name="GiveSp" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
 		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 -117251,46771,360 </table>

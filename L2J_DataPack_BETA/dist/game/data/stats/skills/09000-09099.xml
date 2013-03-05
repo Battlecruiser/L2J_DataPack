@@ -808,10 +808,11 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="10000" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="GiveSp" noicon="1" val="10000" />
+		</for>
 	</skill>
 	<skill id="9070" levels="1" name="Halloween Pumpkin">
 		<!-- Confirmed CT2.5 -->

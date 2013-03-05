@@ -897,10 +897,11 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="500000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="GiveSp" noicon="1" val="500000" />
+		</for>
 	</skill>
 	<skill id="9175" levels="1" name="1,000,000 SP scroll">
 		<!-- High Five Skill --> 
@@ -908,10 +909,11 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="1000000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="GiveSp" noicon="1" val="1000000" />
+		</for>
 	</skill>
 	<skill id="9176" levels="1" name="Provided gift of cheers">
 		<!-- none -->
@@ -952,15 +954,16 @@
 	</skill>
 	<skill id="9180" levels="2" name="10,000,000 SP scroll">
 		<!-- High Five Skill --> 
-		<table name="#power">5000000 10000000 </table>
+		<table name="#amount">5000000 10000000 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="GiveSp" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
