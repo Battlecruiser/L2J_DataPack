@@ -30,27 +30,27 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class DragonVortex extends AbstractNpcAI
 {
+	// NPC
 	private static final int VORTEX = 32871;
-	
+	// Raids
 	private static final int[] RAIDS =
 	{
-		25724, // Muscle Bomber
-		25723, // Spike Slasher
-		25722, // Shadow Summoner
-		25721, // Blackdagger Wing
-		25720, // Bleeding Fly
-		25719, // Dust Rider
 		25718, // Emerald Horn
+		25719, // Dust Rider
+		25720, // Bleeding Fly
+		25721, // Blackdagger Wing
+		25722, // Shadow Summoner
+		25723, // Spike Slasher
+		25724, // Muscle Bomber
 	};
-	
+	// Item
 	private static final int LARGE_DRAGON_BONE = 17248;
-	
+	// Misc
 	private static final int DESPAWN_DELAY = 1800000; // 30min
 	
 	private DragonVortex(String name, String descr)
 	{
 		super(name, descr);
-		
 		addStartNpc(VORTEX);
 		addFirstTalkId(VORTEX);
 		addTalkId(VORTEX);
@@ -62,11 +62,39 @@ public class DragonVortex extends AbstractNpcAI
 	{
 		if ("Spawn".equals(event))
 		{
-			int raid = RAIDS[getRandom(RAIDS.length)];
-			
 			if (hasQuestItems(player, LARGE_DRAGON_BONE))
 			{
 				takeItems(player, LARGE_DRAGON_BONE, 1);
+				int random = getRandom(1000);
+				int raid = 0;
+				if (random < 292)
+				{
+					raid = RAIDS[0]; // Emerald Horn 29.2%
+				}
+				else if (random < 516)
+				{
+					raid = RAIDS[1]; // Dust Rider 22.4%
+				}
+				else if (random < 692)
+				{
+					raid = RAIDS[2]; // Bleeding Fly 17.6%
+				}
+				else if (random < 808)
+				{
+					raid = RAIDS[3]; // Blackdagger Wing 11.6%
+				}
+				else if (random < 900)
+				{
+					raid = RAIDS[4]; // Spike Slasher 9.2%
+				}
+				else if (random < 956)
+				{
+					raid = RAIDS[5]; // Shadow Summoner 5.6%
+				}
+				else if (random < 1000)
+				{
+					raid = RAIDS[6]; // Muscle Bomber 4.4%
+				}
 				addSpawn(raid, new Location(player.getX() + getRandom(100), player.getY() + getRandom(100), player.getZ(), player.getHeading()), true, DESPAWN_DELAY);
 			}
 			else
