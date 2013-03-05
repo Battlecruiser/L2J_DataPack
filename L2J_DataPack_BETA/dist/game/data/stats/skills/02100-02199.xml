@@ -749,16 +749,17 @@
 	</skill>
 	<skill id="2167" levels="4" name="Scroll of SP">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 500 5000 100000 500000 </table>
+		<table name="#amount"> 500 5000 100000 500000 </table>
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="GIVE_SP" />
 		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="GiveSp" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="2168" levels="6" name="Raid Blessing">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>

@@ -227,7 +227,6 @@ import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
-import handlers.skillhandlers.GiveSp;
 import handlers.skillhandlers.GiveVitality;
 import handlers.skillhandlers.Heal;
 import handlers.skillhandlers.HealPercent;
@@ -571,7 +570,6 @@ public class MasterHandler
 			GetPlayer.class,
 			TransformDispel.class,
 			Trap.class,
-			GiveSp.class,
 			GiveReco.class,
 			GiveVitality.class,
 			InstantJump.class,
