@@ -1,0 +1,1 @@
+UPDATE `characters` SET `fame`=100000 WHERE `fame`>100000;
