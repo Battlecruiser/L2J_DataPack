@@ -18,6 +18,9 @@
  */
 package quests.Q00455_WingsOfSand;
 
+import java.util.Arrays;
+import java.util.List;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -54,6 +57,7 @@ public class Q00455_WingsOfSand extends Quest
 	private static final int MUSCLE_BOMBER = 25724;
 	// Item
 	private static final int LARGE_BABY_DRAGON = 17250;
+	private static final List<Integer> ARMOR_PARTS = Arrays.asList(15660, 15661, 15662, 15663, 15664, 15665, 15666, 15667, 15668, 15669, 15670, 15671, 15672, 15673, 15674, 15675, 15691);
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	private static final int CHANCE = 350;
@@ -196,30 +200,44 @@ public class Q00455_WingsOfSand extends Quest
 	private static final void giveItems(QuestState st)
 	{
 		int chance;
+		int parts;
 		for (int i = 1; i <= (st.getCond() - 1); i++)
 		{
 			chance = getRandom(1000);
-			if (chance <= 250)
+			parts = getRandom(1, 2);
+			if (chance < 50)
 			{
-				st.giveItems(getRandom(15660, 15691), 1); // Armor Parts
+				st.giveItems(getRandom(15815, 15825), 1); // Weapon Recipes
 			}
-			else if ((chance > 250) && (chance <= 500))
+			else if (chance < 100)
 			{
-				st.giveItems(getRandom(15634, 15644), 1); // Weapon Parts
+				st.giveItems(getRandom(15792, 15808), parts); // Armor Recipes
 			}
-			else if ((chance > 550) && (chance <= 750))
+			else if (chance < 150)
 			{
-				st.giveItems(getRandom(15769, 15771), 1); // Jewelry Parts
+				st.giveItems(getRandom(15809, 15811), parts); // Jewelry Recipes
 			}
-			else if ((chance > 750) && (chance <= 900))
+			else if (chance < 250)
+			{
+				st.giveItems(ARMOR_PARTS.get(getRandom(ARMOR_PARTS.size())), parts); // Armor Parts
+			}
+			else if (chance < 500)
+			{
+				st.giveItems(getRandom(15634, 15644), parts); // Weapon Parts
+			}
+			else if (chance < 750)
+			{
+				st.giveItems(getRandom(15769, 15771), parts); // Jewelry Parts
+			}
+			else if (chance < 900)
 			{
 				st.giveItems(getRandom(9552, 9557), 1); // Crystals
 			}
-			else if ((chance > 900) && (chance <= 970))
+			else if (chance < 970)
 			{
 				st.giveItems(6578, 1); // Blessed Scroll: Enchant Armor (S-Grade)
 			}
-			else if (chance > 970)
+			else
 			{
 				st.giveItems(6577, 1); // Blessed Scroll: Enchant Weapon (S-Grade)
 			}
