@@ -100,6 +100,8 @@
 	<!-- ADMIN CLAN -->
 	<admin command="admin_clan_info" accessLevel="7" />
 	<admin command="admin_clan_changeleader" accessLevel="7" confirmDlg="true" />
+	<admin command="admin_clan_show_pending" accessLevel="7" />
+	<admin command="admin_clan_force_pending" accessLevel="7" confirmDlg="true" />
 
 	<!-- ADMIN CREATE ITEM -->
 	<admin command="admin_itemcreate" accessLevel="7" />
