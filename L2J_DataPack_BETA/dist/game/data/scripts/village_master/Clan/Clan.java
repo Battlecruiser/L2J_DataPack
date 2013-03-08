@@ -54,7 +54,6 @@ public class Clan extends Quest
 		LEADER_REQUIRED.put("9000-03.htm", "9000-03-no.htm");
 		LEADER_REQUIRED.put("9000-04.htm", "9000-04-no.htm");
 		LEADER_REQUIRED.put("9000-05.htm", "9000-05-no.htm");
-		LEADER_REQUIRED.put("9000-06a.htm", "9000-07-no.htm");
 		LEADER_REQUIRED.put("9000-07.htm", "9000-07-no.htm");
 		LEADER_REQUIRED.put("9000-12a.htm", "9000-07-no.htm");
 		LEADER_REQUIRED.put("9000-12b.htm", "9000-07-no.htm");
