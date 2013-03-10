@@ -272,7 +272,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="MANAHEAL_BY_LEVEL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -1535,7 +1535,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">

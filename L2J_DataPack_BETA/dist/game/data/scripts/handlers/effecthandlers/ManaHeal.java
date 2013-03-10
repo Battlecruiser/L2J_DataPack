@@ -57,24 +57,13 @@ public class ManaHeal extends L2Effect
 		
 		double amount = calc();
 		
-		if (!getSkill().isStaticHeal())
+		if (!getSkill().isStatic())
 		{
 			amount = target.calcStat(Stats.RECHARGE_MP_RATE, amount, null, null);
 		}
 		
-		amount = Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp());
-		
-		// Prevent negative amounts
-		if (amount < 0)
-		{
-			amount = 0;
-		}
-		
-		// To prevent -value heals, set the value only if current mp is less than max recoverable.
-		if (target.getCurrentMp() < target.getMaxRecoverableMp())
-		{
-			target.setCurrentMp(amount + target.getCurrentMp());
-		}
+		// Prevents overheal and negative amount
+		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
 		
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
@@ -90,7 +79,6 @@ public class ManaHeal extends L2Effect
 		target.sendPacket(sm);
 		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 		target.sendPacket(su);
-		
 		return true;
 	}
 	

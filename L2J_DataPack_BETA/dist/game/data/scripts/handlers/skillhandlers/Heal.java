@@ -39,7 +39,6 @@ public class Heal implements ISkillHandler
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.HEAL,
-		L2SkillType.HEAL_STATIC
 	};
 	
 	@Override
@@ -57,63 +56,57 @@ public class Heal implements ISkillHandler
 		boolean sps = skill.isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
 		boolean bss = skill.isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		switch (skill.getSkillType())
+		double staticShotBonus = 0;
+		int mAtkMul = 1; // mAtk multiplier
+		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
-			case HEAL_STATIC:
-				break;
-			default:
-				double staticShotBonus = 0;
-				int mAtkMul = 1; // mAtk multiplier
-				if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
-				{
-					staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
-					
-					if (bss)
-					{
-						mAtkMul = 4;
-						staticShotBonus *= 2.4; // static bonus for blessed spiritshots
-					}
-					else
-					{
-						mAtkMul = 2;
-					}
-				}
-				else if ((sps || bss) && activeChar.isNpc())
-				{
-					staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
-					mAtkMul = 4;
-				}
-				else
-				{
-					// no static bonus
-					// grade dynamic bonus
-					final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-					if (weaponInst != null)
-					{
-						switch (weaponInst.getItem().getItemGrade())
-						{
-							case L2Item.CRYSTAL_S84:
-								mAtkMul = 4;
-								break;
-							case L2Item.CRYSTAL_S80:
-								mAtkMul = 2;
-								break;
-						}
-					}
-					// shot dynamic bonus
-					if (bss)
-					{
-						mAtkMul *= 4; // 16x/8x/4x s84/s80/other
-					}
-					else
-					{
-						mAtkMul += 1; // 5x/3x/1x s84/s80/other
-					}
-				}
-				
-				power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
-				activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
+			
+			if (bss)
+			{
+				mAtkMul = 4;
+				staticShotBonus *= 2.4; // static bonus for blessed spiritshots
+			}
+			else
+			{
+				mAtkMul = 2;
+			}
 		}
+		else if ((sps || bss) && activeChar.isNpc())
+		{
+			staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
+			mAtkMul = 4;
+		}
+		else
+		{
+			// no static bonus
+			// grade dynamic bonus
+			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
+			if (weaponInst != null)
+			{
+				switch (weaponInst.getItem().getItemGrade())
+				{
+					case L2Item.CRYSTAL_S84:
+						mAtkMul = 4;
+						break;
+					case L2Item.CRYSTAL_S80:
+						mAtkMul = 2;
+						break;
+				}
+			}
+			// shot dynamic bonus
+			if (bss)
+			{
+				mAtkMul *= 4; // 16x/8x/4x s84/s80/other
+			}
+			else
+			{
+				mAtkMul += 1; // 5x/3x/1x s84/s80/other
+			}
+		}
+		
+		power += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		
 		double hp;
 		for (L2Character target : (L2Character[]) targets)
@@ -175,10 +168,8 @@ public class Heal implements ISkillHandler
 			// from CT2 u will receive exact HP, u can't go over it, if u have full HP and u get HP buff, u will receive 0HP restored message
 			hp = Math.min(hp, target.getMaxRecoverableHp() - target.getCurrentHp());
 			
-			if (hp < 0)
-			{
-				hp = 0;
-			}
+			// Prevent negative amounts
+			hp = Math.max(hp, 0);
 			
 			target.setCurrentHp(hp + target.getCurrentHp());
 			StatusUpdate su = new StatusUpdate(target);

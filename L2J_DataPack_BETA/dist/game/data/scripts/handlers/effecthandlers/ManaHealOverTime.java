@@ -67,10 +67,7 @@ public class ManaHealOverTime extends L2Effect
 		}
 		
 		mp += calc();
-		if (mp > maxmp)
-		{
-			mp = maxmp;
-		}
+		mp = Math.min(mp, maxmp);
 		
 		getEffected().setCurrentMp(mp);
 		StatusUpdate sump = new StatusUpdate(getEffected());

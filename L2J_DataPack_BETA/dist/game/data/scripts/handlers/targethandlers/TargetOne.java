@@ -39,11 +39,8 @@ public class TargetOne implements ITargetTypeHandler
 		{
 			case BUFF:
 			case HEAL:
-			case HOT:
 			case HEAL_PERCENT:
-			case MANARECHARGE:
-			case MANA_BY_LEVEL:
-			case MANAHEAL:
+			case MANAHEAL_BY_LEVEL:
 			case NEGATE:
 			case CANCEL_DEBUFF:
 			case COMBATPOINTHEAL:

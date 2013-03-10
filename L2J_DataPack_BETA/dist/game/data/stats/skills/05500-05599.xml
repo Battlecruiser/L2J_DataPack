@@ -1171,7 +1171,6 @@
 	</skill>
 	<skill id="5577" levels="1" name="Healer Ability - Heal">
 		<!-- CT2.5 retail confirmed -->
-		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
@@ -1435,7 +1434,6 @@
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#amount"> 189 196 203 210 217 223 229 234 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isStaticHeal" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
