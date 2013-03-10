@@ -50,7 +50,6 @@ public class CpDamPercent extends L2Effect
 		
 		double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
 		getEffected().setCurrentCp(cp);
-		
 		StatusUpdate sucp = new StatusUpdate(getEffected());
 		sucp.addAttribute(StatusUpdate.CUR_CP, (int) cp);
 		getEffected().sendPacket(sucp);

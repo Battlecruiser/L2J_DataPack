@@ -272,7 +272,7 @@
 	</skill>
 	<skill id="6726" levels="1" name="Bless the Blood">
 		<!-- High Five Skill -->
-		<set name="isStaticHeal" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
@@ -304,7 +304,7 @@
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="MANA_BY_LEVEL" />
+		<set name="skillType" val="MANAHEAL_BY_LEVEL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="136" />

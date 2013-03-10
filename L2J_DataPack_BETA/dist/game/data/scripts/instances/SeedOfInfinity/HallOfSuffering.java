@@ -35,11 +35,11 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
@@ -671,7 +671,7 @@ public class HallOfSuffering extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if ((skill.getId() == 1335) || (skill.getSkillType() == L2SkillType.HEAL) || (skill.getSkillType() == L2SkillType.HEAL_PERCENT) || (skill.getSkillType() == L2SkillType.HEAL_STATIC))
+		if (skill.hasEffectType(L2EffectType.REBALANCE_HP, L2EffectType.HEAL, L2EffectType.HEAL_PERCENT))
 		{
 			int hate = 2 * skill.getAggroPoints();
 			if (hate < 2)
@@ -918,27 +918,17 @@ public class HallOfSuffering extends Quest
 	public HallOfSuffering(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addStartNpc(MOUTHOFEKIMUS);
-		addTalkId(MOUTHOFEKIMUS);
-		addStartNpc(TEPIOS);
+		addStartNpc(MOUTHOFEKIMUS, TEPIOS);
+		addTalkId(MOUTHOFEKIMUS, TEPIOS);
 		addFirstTalkId(TEPIOS);
-		addTalkId(TEPIOS);
-		addKillId(TUMOR_ALIVE);
-		addKillId(KLODEKUS);
-		addKillId(KLANIKUS);
-		addAttackId(KLODEKUS);
-		addAttackId(KLANIKUS);
-		for (int mobId : TUMOR_MOBIDS)
-		{
-			addSkillSeeId(mobId);
-			addKillId(mobId);
-		}
+		addKillId(TUMOR_ALIVE, KLODEKUS, KLANIKUS);
+		addAttackId(KLODEKUS, KLANIKUS);
+		addSkillSeeId(TUMOR_MOBIDS);
+		addKillId(TUMOR_MOBIDS);
 	}
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
 		new HallOfSuffering(-1, qn, "instances");
 	}
 }

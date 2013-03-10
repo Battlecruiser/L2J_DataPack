@@ -231,7 +231,7 @@ import handlers.skillhandlers.GiveVitality;
 import handlers.skillhandlers.Heal;
 import handlers.skillhandlers.HealPercent;
 import handlers.skillhandlers.InstantJump;
-import handlers.skillhandlers.ManaHeal;
+import handlers.skillhandlers.ManaHealByLevel;
 import handlers.skillhandlers.Manadam;
 import handlers.skillhandlers.Mdam;
 import handlers.skillhandlers.NornilsPower;
@@ -542,7 +542,6 @@ public class MasterHandler
 			Heal.class,
 			HealPercent.class,
 			CombatPointHeal.class,
-			ManaHeal.class,
 			Charge.class,
 			Continuous.class,
 			Detection.class,
@@ -576,6 +575,7 @@ public class MasterHandler
 			Dummy.class,
 			RefuelAirShip.class,
 			NornilsPower.class,
+			ManaHealByLevel.class,
 		},
 		{
 			// User Command Handlers

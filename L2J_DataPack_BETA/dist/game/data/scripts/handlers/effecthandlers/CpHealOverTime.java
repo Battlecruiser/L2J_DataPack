@@ -67,10 +67,7 @@ public class CpHealOverTime extends L2Effect
 		}
 		
 		cp += calc();
-		if (cp > maxcp)
-		{
-			cp = maxcp;
-		}
+		cp = Math.min(cp, maxcp);
 		
 		getEffected().setCurrentCp(cp);
 		StatusUpdate sump = new StatusUpdate(getEffected());

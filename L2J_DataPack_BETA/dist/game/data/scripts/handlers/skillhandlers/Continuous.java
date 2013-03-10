@@ -49,12 +49,8 @@ public class Continuous implements ISkillHandler
 		L2SkillType.MDOT,
 		L2SkillType.POISON,
 		L2SkillType.BLEED,
-		L2SkillType.HOT,
-		L2SkillType.CPHOT,
-		L2SkillType.MPHOT,
 		L2SkillType.FEAR,
 		L2SkillType.CONT,
-		L2SkillType.UNDEAD_DEFENSE,
 		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION
 	};
@@ -115,18 +111,6 @@ public class Continuous implements ISkillHandler
 						continue;
 					}
 				}
-			}
-			
-			switch (skill.getSkillType())
-			{
-				case HOT:
-				case CPHOT:
-				case MPHOT:
-					if (activeChar.isInvul())
-					{
-						continue;
-					}
-					break;
 			}
 			
 			if (skill.isOffensive() || skill.isDebuff())

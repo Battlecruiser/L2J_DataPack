@@ -111,32 +111,23 @@ public class Heal extends L2Effect
 			}
 		}
 		
-		if (!getSkill().isStaticHeal())
+		if (!getSkill().isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
 			amount *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			// Healer proficiency (since CT1)
 			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!getSkill().isStatic())
-			{
-				amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
-			}
-			
+			amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
 			// Heal critic, since CT2.3 Gracia Final
-			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			if (getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
 			{
 				amount *= 3;
 			}
 		}
 		
-		amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
-		
-		// Prevent negative amounts
-		if (amount < 0)
-		{
-			amount = 0;
-		}
+		// Prevents overheal and negative amount
+		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
 		
 		target.setCurrentHp(amount + target.getCurrentHp());
 		StatusUpdate su = new StatusUpdate(target);

@@ -68,10 +68,7 @@ public class CpHealPercent extends L2Effect
 		amount = Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp());
 		
 		// Prevent negative amounts
-		if (amount < 0)
-		{
-			amount = 0;
-		}
+		amount = Math.max(amount, 0);
 		
 		// To prevent -value heals, set the value only if current Cp is less than max recoverable.
 		if (target.getCurrentCp() < target.getMaxRecoverableCp())
@@ -84,7 +81,6 @@ public class CpHealPercent extends L2Effect
 		target.sendPacket(sm);
 		su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
 		target.sendPacket(su);
-		
 		return true;
 	}
 	

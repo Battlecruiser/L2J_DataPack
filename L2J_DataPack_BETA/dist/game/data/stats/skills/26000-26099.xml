@@ -246,7 +246,6 @@
 	</skill>
 	<skill id="26024" levels="1" name="Temporary Healing Potion">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
@@ -301,7 +300,6 @@
 		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#amount"> 0 650 1100 1500 1900 2300 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isStaticHeal" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

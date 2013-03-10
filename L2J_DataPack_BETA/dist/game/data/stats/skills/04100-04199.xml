@@ -871,7 +871,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4148" levels="12" name="Poison">
@@ -1459,7 +1459,7 @@
 		<set name="affectRange" val="200" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4178" levels="12" name="BOSS Flame Strike">
