@@ -173,7 +173,7 @@ public class Valakas extends AbstractNpcAI
 				// Start timer to lock entry after 30 minutes
 				if (status == WAITING)
 				{
-					startQuestTimer("beginning", Config.VALAKAS_WAIT_TIME, valakas, null);
+					startQuestTimer("beginning", (Config.VALAKAS_WAIT_TIME * 60000), valakas, null);
 				}
 			}
 		}

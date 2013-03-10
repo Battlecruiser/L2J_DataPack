@@ -338,7 +338,7 @@ public class Antharas extends AbstractNpcAI
 				if (_monsterSpawnTask == null)
 				{
 					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, WAITING);
-					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), Config.ANTHARAS_WAIT_TIME);
+					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), (Config.ANTHARAS_WAIT_TIME * 60000));
 				}
 			}
 		}
