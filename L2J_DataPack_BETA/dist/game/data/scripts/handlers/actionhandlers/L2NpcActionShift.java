@@ -21,6 +21,7 @@ package handlers.actionhandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.handler.IActionHandler;
+import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
@@ -168,6 +169,16 @@ public class L2NpcActionShift implements IActionHandler
 				html.replace("%ai_type%", "");
 				html.replace("%ai_clan%", "");
 				html.replace("%ai_enemy_clan%", "");
+			}
+			
+			final String routeName = WalkingManager.getInstance().getRouteName((L2Npc) target);
+			if (!routeName.isEmpty())
+			{
+				html.replace("%route%", "<tr><td><table width=270 border=0><tr><td width=100><font color=LEVEL>Route:</font></td><td align=right width=170>" + routeName + "</td></tr></table></td></tr>");
+			}
+			else
+			{
+				html.replace("%route%", "");
 			}
 			
 			if (target instanceof L2MerchantInstance)

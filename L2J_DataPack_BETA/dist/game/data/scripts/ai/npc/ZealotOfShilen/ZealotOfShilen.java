@@ -42,15 +42,12 @@ public class ZealotOfShilen extends AbstractNpcAI
 		32629
 	};
 	
-	private static final L2Npc[] _guards = new L2Npc[4];
-	
 	private ZealotOfShilen(String name, String descr)
 	{
 		super(name, descr);
 		addSpawnId(ZEALOT);
 		addFirstTalkId(GUARDS);
 		
-		int i = 0;
 		for (int npcId : GUARDS)
 		{
 			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
@@ -59,7 +56,6 @@ public class ZealotOfShilen extends AbstractNpcAI
 				guard.setIsInvul(true);
 				((L2Attackable) guard).setCanReturnToSpawnPoint(false);
 				startQuestTimer("WATCHING", 10000, guard, null, true);
-				_guards[i++] = guard;
 			}
 		}
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(ZEALOT))
