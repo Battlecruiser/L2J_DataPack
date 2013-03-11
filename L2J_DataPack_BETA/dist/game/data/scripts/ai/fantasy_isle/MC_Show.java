@@ -319,8 +319,8 @@ public class MC_Show extends AbstractNpcAI
 			minDiff = 60 - (minDiff *= -1);
 		}
 		long diff;
-		hourDiff *= 60 * 60 * 1000;
-		minDiff *= 60 * 1000;
+		hourDiff *= 3600000;
+		minDiff *= 60000;
 		diff = hourDiff + minDiff;
 		if (Config.DEBUG)
 		{

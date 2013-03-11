@@ -923,7 +923,7 @@ public class Antharas extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.ANTHARAS_SPAWN_INTERVAL + getRandom(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM);
-			respawnTime *= 60 * 60 * 1000;
+			respawnTime *= 3600000;
 			
 			ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// also save the respawn time so that the info is maintained past reboots
