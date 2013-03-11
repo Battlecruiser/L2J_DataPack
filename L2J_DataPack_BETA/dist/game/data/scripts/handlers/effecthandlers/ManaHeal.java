@@ -65,6 +65,8 @@ public class ManaHeal extends L2Effect
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
 		
+		target.setCurrentMp(amount + target.getCurrentMp());
+		
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
 		{

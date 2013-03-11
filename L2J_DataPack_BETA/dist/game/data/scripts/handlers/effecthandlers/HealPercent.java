@@ -62,6 +62,8 @@ public class HealPercent extends L2Effect
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
 		
+		target.setCurrentHp(amount + target.getCurrentHp());
+		
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
 		{
