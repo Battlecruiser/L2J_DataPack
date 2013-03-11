@@ -331,7 +331,7 @@ public class QueenAnt extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(QUEEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.QUEEN_ANT_SPAWN_INTERVAL + getRandom(-Config.QUEEN_ANT_SPAWN_RANDOM, Config.QUEEN_ANT_SPAWN_RANDOM);
-			respawnTime *= 60 * 60 * 1000;
+			respawnTime *= 3600000;
 			startQuestTimer("queen_unlock", respawnTime, null, null);
 			cancelQuestTimer("action", npc, null);
 			cancelQuestTimer("heal", null, null);

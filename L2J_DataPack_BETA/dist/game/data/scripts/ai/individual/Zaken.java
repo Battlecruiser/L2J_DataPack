@@ -883,7 +883,7 @@ public class Zaken extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
 			// Calculate Min and Max respawn times randomly.
 			long respawnTime = Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM);
-			respawnTime *= 60 * 60 * 1000;
+			respawnTime *= 3600000;
 			startQuestTimer("zaken_unlock", respawnTime, null, null);
 			cancelQuestTimer("1001", npc, null);
 			cancelQuestTimer("1003", npc, null);

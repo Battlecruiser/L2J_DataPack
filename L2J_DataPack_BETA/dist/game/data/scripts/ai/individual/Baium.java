@@ -477,7 +477,7 @@ public class Baium extends AbstractNpcAI
 		addSpawn(TELEPORT_CUBIC, 115017, 15549, 10090, 0, false, 900000);
 		// Calculate Min and Max respawn times randomly.
 		long respawnTime = Config.BAIUM_SPAWN_INTERVAL + getRandom(-Config.BAIUM_SPAWN_RANDOM, Config.BAIUM_SPAWN_RANDOM);
-		respawnTime *= 60 * 60 * 1000;
+		respawnTime *= 3600000;
 		
 		GrandBossManager.getInstance().setBossStatus(LIVE_BAIUM, DEAD);
 		startQuestTimer("baium_unlock", respawnTime, null, null);
