@@ -57,12 +57,17 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.giveItems(FREYAS_SOUL_FRAGMENT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			
-			if (st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT) >= FRAGMENT_COUNT)
+			final long currentCount = st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT);
+			final long count = getRandom(1, 3);
+			if (count > (FRAGMENT_COUNT - currentCount))
 			{
+				st.giveItems(FREYAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
 				st.setCond(2, true);
+			}
+			else
+			{
+				st.giveItems(FREYAS_SOUL_FRAGMENT, count);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 	}
