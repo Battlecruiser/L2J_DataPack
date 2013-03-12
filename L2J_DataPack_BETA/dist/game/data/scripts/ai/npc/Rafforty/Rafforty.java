@@ -83,6 +83,6 @@ public class Rafforty extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Rafforty(Rafforty.class.getSimpleName(), "ai/npc/");
+		new Rafforty(Rafforty.class.getSimpleName(), "ai/npc");
 	}
 }

@@ -133,6 +133,6 @@ public class TeleportToFantasy extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TeleportToFantasy(TeleportToFantasy.class.getSimpleName(), "ai/npc/Teleports/");
+		new TeleportToFantasy(TeleportToFantasy.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

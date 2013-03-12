@@ -74,6 +74,6 @@ public class Survivor extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Survivor(Survivor.class.getSimpleName(), "ai/npc/Teleports/");
+		new Survivor(Survivor.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

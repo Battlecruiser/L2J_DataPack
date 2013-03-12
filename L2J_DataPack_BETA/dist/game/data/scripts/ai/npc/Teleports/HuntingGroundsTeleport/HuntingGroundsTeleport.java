@@ -49,7 +49,7 @@ public class HuntingGroundsTeleport extends AbstractNpcAI
 	
 	private HuntingGroundsTeleport()
 	{
-		super(HuntingGroundsTeleport.class.getSimpleName(), "ai/npc/Teleports/");
+		super(HuntingGroundsTeleport.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(PRIESTS);
 		addTalkId(PRIESTS);
 	}

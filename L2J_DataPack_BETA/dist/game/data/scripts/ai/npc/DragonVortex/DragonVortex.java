@@ -108,6 +108,6 @@ public class DragonVortex extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DragonVortex(DragonVortex.class.getSimpleName(), "ai/npc/");
+		new DragonVortex(DragonVortex.class.getSimpleName(), "ai/npc");
 	}
 }

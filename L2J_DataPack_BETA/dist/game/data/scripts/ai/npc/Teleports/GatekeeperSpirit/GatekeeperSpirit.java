@@ -38,7 +38,7 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	
 	private GatekeeperSpirit()
 	{
-		super(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports/");
+		super(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
 		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
 		addTalkId(GATEKEEPER_SPIRIT_ENTER);

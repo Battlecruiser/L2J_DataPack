@@ -81,6 +81,6 @@ public class TeleportWithCharm extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TeleportWithCharm(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports/");
+		new TeleportWithCharm(TeleportWithCharm.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

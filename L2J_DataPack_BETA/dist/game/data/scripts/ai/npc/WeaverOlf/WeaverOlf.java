@@ -242,6 +242,6 @@ public class WeaverOlf extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new WeaverOlf(WeaverOlf.class.getSimpleName(), "ai/npc/");
+		new WeaverOlf(WeaverOlf.class.getSimpleName(), "ai/npc");
 	}
 }

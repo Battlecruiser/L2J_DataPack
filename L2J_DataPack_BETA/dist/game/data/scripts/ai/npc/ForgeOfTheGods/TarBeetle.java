@@ -108,6 +108,6 @@ public class TarBeetle extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TarBeetle(TarBeetle.class.getSimpleName(), "ai/npc/");
+		new TarBeetle(TarBeetle.class.getSimpleName(), "ai/npc");
 	}
 }

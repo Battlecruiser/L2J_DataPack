@@ -263,6 +263,6 @@ public class GrandBossTeleporters extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new GrandBossTeleporters(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports/");
+		new GrandBossTeleporters(GrandBossTeleporters.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

@@ -242,6 +242,6 @@ public class ToIVortex extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new ToIVortex(ToIVortex.class.getSimpleName(), "ai/npc/Teleports/");
+		new ToIVortex(ToIVortex.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

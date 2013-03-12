@@ -124,6 +124,6 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TeleportToRaceTrack(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports/");
+		new TeleportToRaceTrack(TeleportToRaceTrack.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

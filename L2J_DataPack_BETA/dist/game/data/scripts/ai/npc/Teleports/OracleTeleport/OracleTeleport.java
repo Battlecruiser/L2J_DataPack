@@ -481,6 +481,6 @@ public class OracleTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new OracleTeleport(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports/");
+		new OracleTeleport(OracleTeleport.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }
