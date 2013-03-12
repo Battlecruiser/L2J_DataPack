@@ -44,7 +44,7 @@ public class ChangeFace extends L2Effect
 		}
 		
 		final L2PcInstance player = getEffector().getActingPlayer();
-		player.getAppearance().setFace(getSkill().getFaceId());
+		player.getAppearance().setFace((int) calc());
 		player.broadcastUserInfo();
 		return true;
 	}

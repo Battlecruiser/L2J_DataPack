@@ -44,7 +44,7 @@ public class ChangeHairStyle extends L2Effect
 		}
 		
 		final L2PcInstance player = getEffector().getActingPlayer();
-		player.getAppearance().setHairStyle(getSkill().getHairStyleId());
+		player.getAppearance().setHairStyle((int) calc());
 		player.broadcastUserInfo();
 		return true;
 	}

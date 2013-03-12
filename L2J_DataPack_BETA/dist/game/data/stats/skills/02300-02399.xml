@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2300" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hairStyleId" val="2" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -10,12 +9,11 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChangeHairStyle" noicon="1" val="0" />
+			<effect name="ChangeHairStyle" noicon="1" val="2" />
 		</for>
 	</skill>
 	<skill id="2301" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hairStyleId" val="3" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -23,12 +21,11 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChangeHairStyle" noicon="1" val="0" />
+			<effect name="ChangeHairStyle" noicon="1" val="3" />
 		</for>
 	</skill>
 	<skill id="2302" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hairStyleId" val="4" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -36,12 +33,11 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChangeHairStyle" noicon="1" val="0" />
+			<effect name="ChangeHairStyle" noicon="1" val="4" />
 		</for>
 	</skill>
 	<skill id="2303" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hairStyleId" val="5" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -49,7 +45,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChangeHairStyle" noicon="1" val="0" />
+			<effect name="ChangeHairStyle" noicon="1" val="5" />
 		</for>
 		<cond msgId="1518">
 			<player sex="1" />
@@ -57,7 +53,6 @@
 	</skill>
 	<skill id="2304" levels="1" name="Hair Style Change Potion">
 		<!-- Confirmed CT2.5 -->
-		<set name="hairStyleId" val="6" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -65,7 +60,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
-			<effect name="ChangeHairStyle" noicon="1" val="0" />
+			<effect name="ChangeHairStyle" noicon="1" val="6" />
 		</for>
 		<cond msgId="1518">
 			<player sex="1" />
