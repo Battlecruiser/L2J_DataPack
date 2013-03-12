@@ -44,7 +44,7 @@ public class ChangeHairColor extends L2Effect
 		}
 		
 		final L2PcInstance player = getEffector().getActingPlayer();
-		player.getAppearance().setHairColor(getSkill().getHairColorId());
+		player.getAppearance().setHairColor((int) calc());
 		player.broadcastUserInfo();
 		return true;
 	}
