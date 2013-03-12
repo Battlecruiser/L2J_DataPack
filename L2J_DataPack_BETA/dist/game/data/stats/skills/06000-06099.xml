@@ -307,8 +307,10 @@
 		<set name="mpInitialConsume" val="12" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="180000" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="6043" levels="1" name="Phoenix Flame Feather">
 		<!-- Confirmed CT2.5 -->
@@ -799,10 +801,11 @@
 		<set name="maxNegated" val="2" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="6095" levels="15" name="Panther Dark Claw">
 		<!-- Confirmed CT2.5 -->

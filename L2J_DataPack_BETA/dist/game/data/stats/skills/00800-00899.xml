@@ -62,14 +62,15 @@
 	<skill id="806" levels="1" name="Magic Obstacle">
 		<set name="mpConsume" val="49" />
 		<set name="magicLvl" val="83" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="100" />
 		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
 		<set name="maxNegated" val="5" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="807" levels="1" name="Over-hit">
 		<set name="abnormalLvl" val="99" />

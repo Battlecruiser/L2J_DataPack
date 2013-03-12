@@ -433,7 +433,6 @@
 	<skill id="4619" levels="1" name="NPC Dispel Sleep">
 		<set name="mpConsume" val="35" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="NEGATE" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -442,6 +441,9 @@
 		<set name="effectRange" val="1100" />
 		<set name="negateAbnormals" val="sleep,1" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4620" levels="12" name="Paralysis">
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
@@ -1573,25 +1575,24 @@
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="8000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4674" levels="12" name="NPC Dispel Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1600,15 +1601,16 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4675" levels="12" name="NPC Dispel Fighter Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1617,15 +1619,16 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4676" levels="12" name="NPC Dispel Mage Offensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1634,16 +1637,17 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4677" levels="12" name="NPC Dispel Fighter Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -1651,16 +1655,17 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4678" levels="12" name="NPC Dispel Mage Defensive Buff">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 12 20 27 35 45 55 67 69 73 75 77 78 </table>
 		<table name="#power"> 8 17 25 33 42 50 58 67 75 83 92 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -1668,6 +1673,9 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="-1" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4679" levels="1" name="Valakas">
 		<!-- Confirmed CT2.5 -->

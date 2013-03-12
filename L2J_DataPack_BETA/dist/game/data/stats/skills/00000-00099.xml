@@ -1332,7 +1332,7 @@
 	<skill id="60" levels="1" name="Fake Death">
 		<set name="mpConsume" val="200" />
 		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="FAKE_DEATH" />
+		<set name="skillType" val="CONT" />
 		<set name="operateType" val="T" />
 		<for>
 			<!-- retail value: 10MP/sec; stat update every 3 sec -->
@@ -1452,11 +1452,11 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Heal" noicon="1" val="1170" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant3for>
 		<enchant4for>
 			<effect name="Heal" noicon="1" val="1170" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant4for>
 	</skill>
 	<skill id="70" levels="53" name="Drain Health" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">

@@ -8,22 +8,25 @@
 	<skill id="7001" levels="1" name="Dispel Buff">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
 		<set name="maxNegated" val="20" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
 		<set name="magicLvl" val="99" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
 		<!-- Confirmed CT2.5 -->
@@ -35,8 +38,8 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" effectType="CANCEL" />
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" effectType="CANCEL_DEBUFF" />
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">

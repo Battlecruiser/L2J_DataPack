@@ -33,17 +33,18 @@
 		<table name="#aggroPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#power"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="negateAbnormals" val="attack_time_up;hit_down;pa_down" />
 		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
@@ -101,10 +102,8 @@
 		<table name="#aggroPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#power"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
 		<set name="target" val="TARGET_PARTY" />
 		<set name="affectRange" val="1000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -112,6 +111,9 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="negateAbnormals" val="sleep;root_magically;stun;paralyze;silence" />
 		<set name="aggroPoints" val="#aggroPoints" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+		</for>
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">
 		<!-- Confirmed CT2.5 -->

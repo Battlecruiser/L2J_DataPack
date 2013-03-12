@@ -388,13 +388,15 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="NEGATE" />
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="#aggro" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1013" levels="32" name="Recharge" enchantGroup1="2" enchantGroup2="2">
 		<table name="#magicLvl"> 28 30 33 35 38 40 42 44 46 48 50 52 54 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -490,8 +492,10 @@
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1020" levels="27" name="Vitalize" enchantGroup1="2" enchantGroup2="2">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -521,11 +525,11 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 		<enchant1for>
 			<effect name="Heal" noicon="1" val="#ench1amount" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant1for>
 	</skill>
 	<skill id="1027" levels="15" name="Group Heal">
@@ -1129,16 +1133,17 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="maxNegated" val="5" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="1059" levels="3" name="Empower" enchantGroup1="1" enchantGroup2="1">
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>

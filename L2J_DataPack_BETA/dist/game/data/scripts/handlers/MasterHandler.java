@@ -211,7 +211,6 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
-import handlers.skillhandlers.Cancel;
 import handlers.skillhandlers.ChainHeal;
 import handlers.skillhandlers.Charge;
 import handlers.skillhandlers.CombatPointHeal;
@@ -552,7 +551,6 @@ public class MasterHandler
 			StrSiegeAssault.class,
 			SummonFriend.class,
 			Disablers.class,
-			Cancel.class,
 			ChainHeal.class,
 			StealBuffs.class,
 			BallistaBomb.class,

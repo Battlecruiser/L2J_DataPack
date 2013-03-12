@@ -196,15 +196,16 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="5114" levels="12" name="Hold">
 		<!-- Lvl 1-12 - Temporarily Immobilized. -->
@@ -291,15 +292,16 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="90" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="300" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="5119" levels="1" name="Bleed">
 		<!-- CT2.5 retail confirmed -->

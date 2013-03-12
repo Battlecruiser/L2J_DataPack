@@ -281,11 +281,13 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="1410" levels="1" name="Salvation">
 		<!-- Confirmed CT2.5 -->
@@ -759,7 +761,6 @@
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
 		<set name="target" val="TARGET_CLAN" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1200000" />
@@ -775,6 +776,9 @@
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="1426" levels="1" name="Miracle">
 		<set name="aggroPoints" val="100" />
@@ -1640,7 +1644,7 @@
 			<target active_effect_id="1339" />
 		</cond>
 		<for>
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1452" levels="1" name="Count of Fire" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1714,7 +1718,7 @@
 			<target active_effect_id="1340" />
 		</cond>
 		<for>
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1454" levels="1" name="Diamond Dust" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1819,7 +1823,7 @@
 			<target active_effect_id="1341" />
 		</cond>
 		<for>
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1457" levels="1" name="Empowering Echo" enchantGroup1="5" enchantGroup2="5">
@@ -2299,8 +2303,10 @@
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1476" levels="3" name="Appetite for Destruction" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
@@ -2839,11 +2845,11 @@
 		</cond>
 		<for>
 			<effect name="HealPercent" noicon="1" val="#amount" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 		<enchant1for>
 			<effect name="HealPercent" noicon="1" val="#ench1amount" />
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</enchant1for>
 	</skill>
 	<skill id="1489" levels="1" name="Summoner Ability - Resist Attribute">

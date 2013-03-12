@@ -139,7 +139,7 @@
 		<table name="#effectname1"> Buff Buff Buff Buff Stun </table>
 		<table name="#effectname2"> Buff Buff Buff Buff Cancel </table>
 		<table name="#effectPower"> 0 0 0 0 20 </table>
-		<table name="#effectType"> BUFF BUFF BUFF BUFF CANCEL </table>
+		<table name="#effectType"> BUFF BUFF BUFF BUFF DUMMY </table>
 		<table name="#maxNegated"> 0 0 0 0 10 </table>
 		<table name="#traits"> NONE NONE NONE DERANGEMENT DERANGEMENT </table>
 		<set name="aggroPoints" val="#aggroPoints" />
@@ -564,7 +564,7 @@
 		<set name="maxNegated" val="20" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" effectType="CANCEL" />
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
 		</for>
 	</skill>
 	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">

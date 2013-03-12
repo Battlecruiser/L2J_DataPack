@@ -21,6 +21,7 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -41,12 +42,18 @@ public class TargetOne implements ITargetTypeHandler
 			case HEAL:
 			case HEAL_PERCENT:
 			case MANAHEAL_BY_LEVEL:
-			case NEGATE:
-			case CANCEL_DEBUFF:
 			case COMBATPOINTHEAL:
 			case DUMMY:
 				canTargetSelf = true;
 				break;
+			default:
+			{
+				if (skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE))
+				{
+					canTargetSelf = true;
+					break;
+				}
+			}
 		}
 		
 		// Check for null target or any other invalid target
