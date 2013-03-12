@@ -303,7 +303,7 @@ public class TerritoryManagers extends AbstractNpcAI
 	
 	public TerritoryManagers()
 	{
-		super(TerritoryManagers.class.getSimpleName(), "ai/npc/");
+		super(TerritoryManagers.class.getSimpleName(), "ai/npc");
 		
 		for (int i = 0; i < 9; i++)
 		{

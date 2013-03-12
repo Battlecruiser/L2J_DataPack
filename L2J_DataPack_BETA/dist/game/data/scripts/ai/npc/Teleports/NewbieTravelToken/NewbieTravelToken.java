@@ -90,6 +90,6 @@ public class NewbieTravelToken extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new NewbieTravelToken(NewbieTravelToken.class.getSimpleName(), "ai/npc/Teleports/");
+		new NewbieTravelToken(NewbieTravelToken.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

@@ -88,6 +88,6 @@ public class NoblesseTeleport extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new NoblesseTeleport(NoblesseTeleport.class.getSimpleName(), "ai/npc/Teleports/");
+		new NoblesseTeleport(NoblesseTeleport.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

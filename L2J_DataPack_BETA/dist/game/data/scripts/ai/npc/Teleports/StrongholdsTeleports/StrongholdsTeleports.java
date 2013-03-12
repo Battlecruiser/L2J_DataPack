@@ -53,6 +53,6 @@ public class StrongholdsTeleports extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new StrongholdsTeleports(StrongholdsTeleports.class.getSimpleName(), "ai/npc/Teleports/");
+		new StrongholdsTeleports(StrongholdsTeleports.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

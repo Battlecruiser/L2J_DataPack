@@ -45,7 +45,7 @@ public class MithrilMinesTeleporter extends AbstractNpcAI
 	
 	private MithrilMinesTeleporter()
 	{
-		super(MithrilMinesTeleporter.class.getSimpleName(), "ai/npc/Teleports/");
+		super(MithrilMinesTeleporter.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(TELEPORT_CRYSTAL);
 		addFirstTalkId(TELEPORT_CRYSTAL);
 		addTalkId(TELEPORT_CRYSTAL);

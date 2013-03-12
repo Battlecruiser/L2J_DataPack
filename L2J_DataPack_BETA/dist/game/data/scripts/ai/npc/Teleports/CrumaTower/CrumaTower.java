@@ -54,6 +54,6 @@ public class CrumaTower extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new CrumaTower(CrumaTower.class.getSimpleName(), "ai/npc/Teleports/");
+		new CrumaTower(CrumaTower.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

@@ -136,6 +136,6 @@ public class TeleportToUndergroundColiseum extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new TeleportToUndergroundColiseum(TeleportToUndergroundColiseum.class.getSimpleName(), "ai/npc/Teleports/");
+		new TeleportToUndergroundColiseum(TeleportToUndergroundColiseum.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

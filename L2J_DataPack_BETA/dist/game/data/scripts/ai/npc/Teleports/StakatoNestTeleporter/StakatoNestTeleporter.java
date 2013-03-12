@@ -84,6 +84,6 @@ public class StakatoNestTeleporter extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new StakatoNestTeleporter(StakatoNestTeleporter.class.getSimpleName(), "ai/npc/Teleports/");
+		new StakatoNestTeleporter(StakatoNestTeleporter.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

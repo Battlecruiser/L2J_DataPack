@@ -202,6 +202,6 @@ public class ForgeOfTheGods extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new ForgeOfTheGods(ForgeOfTheGods.class.getSimpleName(), "ai/npc/");
+		new ForgeOfTheGods(ForgeOfTheGods.class.getSimpleName(), "ai/npc");
 	}
 }

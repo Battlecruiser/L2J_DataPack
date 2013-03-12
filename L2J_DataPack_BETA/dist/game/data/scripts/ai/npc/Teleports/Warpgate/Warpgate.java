@@ -151,6 +151,6 @@ public class Warpgate extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Warpgate(Warpgate.class.getSimpleName(), "ai/npc/Teleports/");
+		new Warpgate(Warpgate.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

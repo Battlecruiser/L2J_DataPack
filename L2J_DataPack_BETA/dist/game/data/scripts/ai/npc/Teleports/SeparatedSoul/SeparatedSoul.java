@@ -105,6 +105,6 @@ public class SeparatedSoul extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SeparatedSoul(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports/");
+		new SeparatedSoul(SeparatedSoul.class.getSimpleName(), "ai/npc/Teleports");
 	}
 }

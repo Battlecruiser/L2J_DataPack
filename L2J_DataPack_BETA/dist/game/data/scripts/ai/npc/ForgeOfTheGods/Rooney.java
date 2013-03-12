@@ -125,6 +125,6 @@ public class Rooney extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Rooney(Rooney.class.getSimpleName(), "ai/npc/");
+		new Rooney(Rooney.class.getSimpleName(), "ai/npc");
 	}
 }
