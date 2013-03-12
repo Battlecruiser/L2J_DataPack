@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
@@ -46,17 +45,6 @@ public class Negate extends L2Effect
 	{
 		L2Skill skill = getSkill();
 		
-		for (int negateSkillId : skill.getNegateId())
-		{
-			if (negateSkillId != 0)
-			{
-				getEffected().stopSkillEffects(negateSkillId);
-			}
-		}
-		for (L2SkillType negateSkillType : skill.getNegateStats())
-		{
-			getEffected().stopSkillEffects(negateSkillType, skill.getNegateLvl());
-		}
 		if (skill.getNegateAbnormals() != null)
 		{
 			for (L2Effect effect : getEffected().getAllEffects())

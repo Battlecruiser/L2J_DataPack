@@ -717,11 +717,10 @@
 		<set name="effectRange" val="1400" />
 		<set name="operateType" val="A2" />
 		<set name="maxNegated" val="20" />
-		<set name="power" val="100" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="CANCEL" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="speed_down" effectPower="80" effectType="DEBUFF">
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -890,8 +889,10 @@
 		<set name="magicLvl" val="85" />
 		<set name="negateAbnormals" val="invincibility,9" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5481" levels="1" name="Transform Penalty">
 		<!-- You cannot be transformed while under this effect. -->

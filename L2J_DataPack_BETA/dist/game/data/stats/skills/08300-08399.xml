@@ -334,11 +334,12 @@
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="360000" />
 		<set name="affectRange" val="150" />
-		<set name="skillType" val="CANCEL" />
 		<set name="target" val="TARGET_AURA" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
 		<!-- Confirmed CT2.5 -->

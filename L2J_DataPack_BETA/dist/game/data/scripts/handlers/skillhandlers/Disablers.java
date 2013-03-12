@@ -23,9 +23,7 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2AttackableAI;
-import com.l2jserver.gameserver.datatables.ExperienceTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -42,7 +40,6 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.util.Rnd;
 
 /**
  * This Handles Disabler skills
@@ -61,10 +58,7 @@ public class Disablers implements ISkillHandler
 		L2SkillType.AGGREDUCE_CHAR,
 		L2SkillType.AGGREMOVE,
 		L2SkillType.MUTE,
-		L2SkillType.FAKE_DEATH,
 		L2SkillType.CONFUSE_MOB_ONLY,
-		L2SkillType.NEGATE,
-		L2SkillType.CANCEL_DEBUFF,
 		L2SkillType.PARALYZE,
 		L2SkillType.ERASE,
 		L2SkillType.BETRAY,
@@ -90,7 +84,7 @@ public class Disablers implements ISkillHandler
 				continue;
 			}
 			L2Character target = (L2Character) obj;
-			if (target.isDead() || ((target.isInvul() && (type != L2SkillType.NEGATE)) && !target.isParalyzed()))
+			if (target.isDead() || (target.isInvul() && !target.isParalyzed()))
 			{
 				continue;
 			}
@@ -112,12 +106,6 @@ public class Disablers implements ISkillHandler
 						sm.addSkillName(skill);
 						activeChar.sendPacket(sm);
 					}
-					break;
-				}
-				case FAKE_DEATH:
-				{
-					// stun/fakedeath is not mdef dependant, it depends on lvl difference, target CON and power of stun
-					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 					break;
 				}
 				case ROOT:
@@ -379,136 +367,8 @@ public class Disablers implements ISkillHandler
 					}
 					break;
 				}
-				case CANCEL_DEBUFF:
-				{
-					L2Effect[] effects = target.getAllEffects();
-					
-					if ((effects == null) || (effects.length == 0))
-					{
-						break;
-					}
-					
-					int count = (skill.getMaxNegatedEffects() > 0) ? 0 : -2;
-					for (L2Effect e : effects)
-					{
-						if ((e == null) || !e.getSkill().isDebuff() || !e.getSkill().canBeDispeled())
-						{
-							continue;
-						}
-						
-						e.exit();
-						
-						if (count > -1)
-						{
-							count++;
-							if (count >= skill.getMaxNegatedEffects())
-							{
-								break;
-							}
-						}
-					}
-					
-					break;
-				}
-				case NEGATE:
-				{
-					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
-					{
-						target = activeChar;
-					}
-					
-					if (skill.getNegateId().length != 0)
-					{
-						for (int i = 0; i < skill.getNegateId().length; i++)
-						{
-							if (skill.getNegateId()[i] != 0)
-							{
-								target.stopSkillEffects(skill.getNegateId()[i]);
-							}
-						}
-					}
-					else if (skill.getNegateAbnormals() != null)
-					{
-						for (L2Effect effect : target.getAllEffects())
-						{
-							if (effect == null)
-							{
-								continue;
-							}
-							
-							for (String negateAbnormalType : skill.getNegateAbnormals().keySet())
-							{
-								if (negateAbnormalType.equalsIgnoreCase(effect.getAbnormalType()) && (skill.getNegateAbnormals().get(negateAbnormalType) >= effect.getAbnormalLvl()))
-								{
-									effect.exit();
-								}
-							}
-						}
-					}
-					else
-					// all others negate type skills
-					{
-						int removedBuffs = (skill.getMaxNegatedEffects() > 0) ? 0 : -2;
-						
-						for (L2SkillType skillType : skill.getNegateStats())
-						{
-							if (removedBuffs > skill.getMaxNegatedEffects())
-							{
-								break;
-							}
-							
-							switch (skillType)
-							{
-								case BUFF:
-									int lvlmodifier = 52 + (skill.getMagicLevel() * 2);
-									if (skill.getMagicLevel() == 12)
-									{
-										lvlmodifier = (ExperienceTable.getInstance().getMaxLevel() - 1);
-									}
-									int landrate = 90;
-									if ((target.getLevel() - lvlmodifier) > 0)
-									{
-										landrate = 90 - (4 * (target.getLevel() - lvlmodifier));
-									}
-									
-									landrate = (int) activeChar.calcStat(Stats.CANCEL_VULN, landrate, target, null);
-									
-									if (Rnd.get(100) < landrate)
-									{
-										removedBuffs += negateEffect(target, L2SkillType.BUFF, -1, skill.getMaxNegatedEffects());
-									}
-									break;
-								case HEAL:
-									ISkillHandler Healhandler = SkillHandler.getInstance().getHandler(L2SkillType.HEAL);
-									if (Healhandler == null)
-									{
-										_log.severe("Couldn't find skill handler for HEAL.");
-										continue;
-									}
-									L2Character tgts[] = new L2Character[]
-									{
-										target
-									};
-									Healhandler.useSkill(activeChar, skill, tgts);
-									break;
-								default:
-									removedBuffs += negateEffect(target, skillType, skill.getNegateLvl(), skill.getMaxNegatedEffects());
-									break;
-							}// end switch
-						}// end for
-					}// end else
-					
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-					{
-						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					}
-				}// end case
-			}// end switch
-			
-			// Possibility of a lethal strike
-			Formulas.calcLethalHit(activeChar, target, skill);
-			
-		}// end for
+			}
+		}
 		
 		// self Effect :]
 		if (skill.hasSelfEffects())
@@ -523,100 +383,6 @@ public class Disablers implements ISkillHandler
 		}
 		
 		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
-	}
-	
-	/**
-	 * @param target
-	 * @param type
-	 * @param negateLvl
-	 * @param maxRemoved
-	 * @return
-	 */
-	private int negateEffect(L2Character target, L2SkillType type, int negateLvl, int maxRemoved)
-	{
-		return negateEffect(target, type, negateLvl, 0, maxRemoved);
-	}
-	
-	/**
-	 * @param target
-	 * @param type
-	 * @param negateLvl
-	 * @param skillId
-	 * @param maxRemoved
-	 * @return
-	 */
-	private int negateEffect(L2Character target, L2SkillType type, int negateLvl, int skillId, int maxRemoved)
-	{
-		L2Effect[] effects = target.getAllEffects();
-		int count = (maxRemoved <= 0) ? -2 : 0;
-		for (L2Effect e : effects)
-		{
-			if (negateLvl == -1) // if power is -1 the effect is always removed without power/lvl check ^^
-			{
-				if ((e.getSkill().getSkillType() == type) || ((e.getSkill().getEffectType() != null) && (e.getSkill().getEffectType() == type)))
-				{
-					if (skillId != 0)
-					{
-						if ((skillId == e.getSkill().getId()) && (count < maxRemoved))
-						{
-							e.exit();
-							if (count > -1)
-							{
-								count++;
-							}
-						}
-					}
-					else if (count < maxRemoved)
-					{
-						e.exit();
-						if (count > -1)
-						{
-							count++;
-						}
-					}
-				}
-			}
-			else
-			{
-				boolean cancel = false;
-				if ((e.getSkill().getEffectType() != null) && (e.getSkill().getEffectAbnormalLvl() >= 0))
-				{
-					if ((e.getSkill().getEffectType() == type) && (e.getSkill().getEffectAbnormalLvl() <= negateLvl))
-					{
-						cancel = true;
-					}
-				}
-				else if ((e.getSkill().getSkillType() == type) && (e.getSkill().getAbnormalLvl() <= negateLvl))
-				{
-					cancel = true;
-				}
-				
-				if (cancel)
-				{
-					if (skillId != 0)
-					{
-						if ((skillId == e.getSkill().getId()) && (count < maxRemoved))
-						{
-							e.exit();
-							if (count > -1)
-							{
-								count++;
-							}
-						}
-					}
-					else if (count < maxRemoved)
-					{
-						e.exit();
-						if (count > -1)
-						{
-							count++;
-						}
-					}
-				}
-			}
-		}
-		
-		return (maxRemoved <= 0) ? count + 2 : count;
 	}
 	
 	@Override

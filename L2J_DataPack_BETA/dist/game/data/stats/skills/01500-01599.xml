@@ -181,7 +181,7 @@
 		</cond>
 		<for>
 			<effect name="CpHeal" noicon="1" val="9000" />
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="40" effectType="CANCEL_DEBUFF" />
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="40" />
 			<effect name="HealPercent" noicon="1" val="100" />
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
@@ -271,11 +271,13 @@
 		<set name="mpInitialConsume" val="7" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<target races="Kamael" />
 		</cond>
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="1511" levels="8" name="Curse of Life Flow" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
@@ -398,7 +400,7 @@
 			<target active_effect_id="1512" />
 		</cond>
 		<for>
-			<effect name="Negate" noicon="1" val="0" effectType="NEGATE" />
+			<effect name="Negate" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1514" levels="1" name="Soul Barrier" enchantGroup1="1" enchantGroup2="1">

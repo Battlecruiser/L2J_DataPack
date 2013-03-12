@@ -595,8 +595,10 @@
 		<set name="magicLvl" val="99" />
 		<set name="negateAbnormals" val="watcher_gaze,1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4549" levels="1" name="Quest - Unsealed Altar">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -735,7 +737,6 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="negateAbnormals" val="spa_disease_a,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -752,7 +753,6 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="negateAbnormals" val="spa_disease_b,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
@@ -769,7 +769,6 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="negateAbnormals" val="spa_disease_c,10;spa_disease_d,10" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NEGATE" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />

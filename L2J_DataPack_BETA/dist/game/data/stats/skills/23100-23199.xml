@@ -667,13 +667,14 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CANCEL_DEBUFF" />
-		<set name="power" val="100" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="14400000" />
 		<cond msgId="2292">
 			<player agathionId="1574" />
 		</cond>
+		<for>
+			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+		</for>
 	</skill>
 	<skill id="23174" levels="1" name="Narrow Escape from Death">
 		<!-- Revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained, though the Blessing of Noblesse and the Amulet of Luck will both be lost. Cooldown of 12 hours. -->

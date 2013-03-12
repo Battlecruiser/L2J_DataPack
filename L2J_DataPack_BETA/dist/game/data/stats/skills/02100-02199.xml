@@ -797,12 +797,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="NEGATE" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="600" />
 		<set name="negateAbnormals" val="sleep,1" />
+		<for>
+			<effect name="Negate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2171" levels="1" name="Spellbook Paper">
 		<!-- Confirmed CT2.5 -->
