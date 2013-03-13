@@ -244,7 +244,6 @@ import handlers.skillhandlers.Spoil;
 import handlers.skillhandlers.StealBuffs;
 import handlers.skillhandlers.StrSiegeAssault;
 import handlers.skillhandlers.SummonFriend;
-import handlers.skillhandlers.Sweep;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
 import handlers.skillhandlers.TransformDispel;
@@ -547,7 +546,6 @@ public class MasterHandler
 			Resurrect.class,
 			ShiftTarget.class,
 			Spoil.class,
-			Sweep.class,
 			StrSiegeAssault.class,
 			SummonFriend.class,
 			Disablers.class,

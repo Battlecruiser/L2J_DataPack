@@ -1511,8 +1511,11 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="200" />
-		<set name="skillType" val="SWEEP" />
 		<set name="target" val="TARGET_AURA_CORPSE_MOB" />
+		<for>
+			<effect name="Sweeper" noicon="1" val="0" />
+			<effect name="ConsumeBody" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="445" levels="1" name="Mirage">
 		<!-- Confirmed CT2.5 -->
