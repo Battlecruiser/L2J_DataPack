@@ -2328,18 +2328,22 @@
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">
-		<!-- unconfirmed drain power -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 59 63 </table>
 		<table name="#mpConsume"> 54 58 </table>
-		<table name="#power"> 260 467 </table>
-		<set name="target" val="TARGET_CORPSE_MOB" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="100" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="DRAIN" />
-		<set name="operateType" val="A1" />
+		<table name="#drainHp"> 540 580 </table>
 		<set name="castRange" val="20" />
 		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="target" val="TARGET_CORPSE_MOB" />
+		<for>
+			<effect self="1" name="HpByLevel" noicon="1" val="#drainHp" />
+			<effect name="ConsumeBody" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="590" levels="1" name="Residence Body">
 		<!-- Confirmed CT2.5 -->

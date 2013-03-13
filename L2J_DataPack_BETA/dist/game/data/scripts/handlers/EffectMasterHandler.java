@@ -56,6 +56,7 @@ import handlers.effecthandlers.Debuff;
 import handlers.effecthandlers.Disarm;
 import handlers.effecthandlers.DispelBySlot;
 import handlers.effecthandlers.EnemyCharge;
+import handlers.effecthandlers.EnlargeAbnormalSlot;
 import handlers.effecthandlers.FakeDeath;
 import handlers.effecthandlers.Fear;
 import handlers.effecthandlers.Fusion;
@@ -158,6 +159,7 @@ public final class EffectMasterHandler
 		DispelBySlot.class,
 		Disarm.class,
 		EnemyCharge.class,
+		EnlargeAbnormalSlot.class,
 		FakeDeath.class,
 		Fear.class,
 		Fusion.class,

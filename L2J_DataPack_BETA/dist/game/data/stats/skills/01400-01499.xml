@@ -181,10 +181,15 @@
 		</cond>
 	</skill>
 	<skill id="1405" levels="4" name="Divine Inspiration">
-		<!-- Increases the number of buffs you can receive. -->
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="COREDONE" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 52 61 76 76 </table>
+		<table name="#slots"> 1 2 3 4 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="EnlargeAbnormalSlot" noicon="1" val="#slots" />
+		</for>
 	</skill>
 	<skill id="1406" levels="1" name="Summon Feline King" enchantGroup1="5">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
