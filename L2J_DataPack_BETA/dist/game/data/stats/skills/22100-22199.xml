@@ -12,7 +12,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="target" val="TARGET_CORPSE_MOB" />
 		<for>
 			<effect self="1" name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="br_event_buf6">
@@ -27,6 +26,7 @@
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
+			<effect name="ConsumeBody" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="22101" levels="1" name="Fortune of Love Box">
