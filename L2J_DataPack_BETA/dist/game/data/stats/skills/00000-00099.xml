@@ -1020,6 +1020,9 @@
 		<enchant1 name="reuseDelay" val="0" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="0" />
+		<cond>
+			<player canSweep="true" />
+		</cond>
 		<for>
 			<effect name="Sweeper" noicon="1" val="0" />
 			<effect name="ConsumeBody" noicon="1" val="0" />
@@ -1030,9 +1033,6 @@
 		<enchant1for>
 			<effect self="1" name="MpByLevel" noicon="1" val="#ench2DrainMp" />
 		</enchant1for>
-		<cond>
-			<player canSweep="true" />
-		</cond>
 	</skill>
 	<skill id="44" levels="3" name="Remedy">
 		<table name="#mpInitialConsume"> 7 9 11 </table>

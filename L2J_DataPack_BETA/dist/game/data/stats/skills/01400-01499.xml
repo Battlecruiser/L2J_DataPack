@@ -2264,11 +2264,13 @@
 		<set name="mpInitialConsume" val="6" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="CHANGEWEAPON" />
 		<set name="target" val="TARGET_SELF" />
 		<cond msgId="113" addName="1">
 			<using weaponChange="true" />
 		</cond>
+		<for>
+			<effect name="ConvertItem" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1474" levels="1" name="Abyssal Power" enchantGroup1="1">
 		<!-- Confirmed CT2.5 -->
