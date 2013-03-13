@@ -44,6 +44,7 @@ import handlers.effecthandlers.ClanGate;
 import handlers.effecthandlers.ConfuseMob;
 import handlers.effecthandlers.Confusion;
 import handlers.effecthandlers.ConsumeBody;
+import handlers.effecthandlers.ConvertItem;
 import handlers.effecthandlers.CpDamPercent;
 import handlers.effecthandlers.CpHeal;
 import handlers.effecthandlers.CpHealOverTime;
@@ -145,6 +146,7 @@ public final class EffectMasterHandler
 		ConfuseMob.class,
 		Confusion.class,
 		ConsumeBody.class,
+		ConvertItem.class,
 		CpHeal.class,
 		CpHealOverTime.class,
 		CpHealPercent.class,
