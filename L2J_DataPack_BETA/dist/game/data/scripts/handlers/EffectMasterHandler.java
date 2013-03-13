@@ -43,6 +43,7 @@ import handlers.effecthandlers.CharmOfLuck;
 import handlers.effecthandlers.ClanGate;
 import handlers.effecthandlers.ConfuseMob;
 import handlers.effecthandlers.Confusion;
+import handlers.effecthandlers.ConsumeBody;
 import handlers.effecthandlers.CpDamPercent;
 import handlers.effecthandlers.CpHeal;
 import handlers.effecthandlers.CpHealOverTime;
@@ -64,6 +65,7 @@ import handlers.effecthandlers.Heal;
 import handlers.effecthandlers.HealOverTime;
 import handlers.effecthandlers.HealPercent;
 import handlers.effecthandlers.Hide;
+import handlers.effecthandlers.HpByLevel;
 import handlers.effecthandlers.ImmobileBuff;
 import handlers.effecthandlers.ImmobilePetBuff;
 import handlers.effecthandlers.IncreaseCharges;
@@ -73,6 +75,7 @@ import handlers.effecthandlers.ManaHeal;
 import handlers.effecthandlers.ManaHealByLevel;
 import handlers.effecthandlers.ManaHealOverTime;
 import handlers.effecthandlers.ManaHealPercent;
+import handlers.effecthandlers.MpByLevel;
 import handlers.effecthandlers.MpConsumePerLevel;
 import handlers.effecthandlers.Mute;
 import handlers.effecthandlers.Negate;
@@ -101,6 +104,7 @@ import handlers.effecthandlers.Spoil;
 import handlers.effecthandlers.Stun;
 import handlers.effecthandlers.SummonAgathion;
 import handlers.effecthandlers.SummonPet;
+import handlers.effecthandlers.Sweeper;
 import handlers.effecthandlers.TargetMe;
 import handlers.effecthandlers.ThrowUp;
 import handlers.effecthandlers.TransferDamage;
@@ -140,6 +144,7 @@ public final class EffectMasterHandler
 		ClanGate.class,
 		ConfuseMob.class,
 		Confusion.class,
+		ConsumeBody.class,
 		CpHeal.class,
 		CpHealOverTime.class,
 		CpHealPercent.class,
@@ -161,6 +166,7 @@ public final class EffectMasterHandler
 		HealPercent.class,
 		Heal.class,
 		Hide.class,
+		HpByLevel.class,
 		ImmobileBuff.class,
 		IncreaseCharges.class,
 		ImmobilePetBuff.class,
@@ -170,6 +176,7 @@ public final class EffectMasterHandler
 		ManaHealByLevel.class,
 		ManaHealOverTime.class,
 		ManaHealPercent.class,
+		MpByLevel.class,
 		MpConsumePerLevel.class,
 		Mute.class,
 		Negate.class,
@@ -197,6 +204,7 @@ public final class EffectMasterHandler
 		Stun.class,
 		SummonAgathion.class,
 		SummonPet.class,
+		Sweeper.class,
 		TargetMe.class,
 		ThrowUp.class,
 		TransferDamage.class,

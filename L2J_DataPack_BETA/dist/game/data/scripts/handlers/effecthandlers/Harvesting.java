@@ -20,12 +20,12 @@ package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable.RewardItem;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -85,12 +85,12 @@ public class Harvesting extends L2Effect
 			{
 				if (calcSuccess(player, monster))
 				{
-					final RewardItem[] items = monster.takeHarvest();
+					final ItemHolder[] items = monster.takeHarvest();
 					if ((items != null) && (items.length > 0))
 					{
-						for (RewardItem reward : items)
+						for (ItemHolder reward : items)
 						{
-							cropId = reward.getItemId(); // always got 1 type of crop as reward
+							cropId = reward.getId(); // always got 1 type of crop as reward
 							if (player.isInParty())
 							{
 								player.getParty().distributeItem(player, reward, true, monster);
@@ -99,7 +99,7 @@ public class Harvesting extends L2Effect
 							{
 								if (iu != null)
 								{
-									iu.addItem(player.getInventory().addItem("Harvesting", reward.getItemId(), reward.getCount(), player, monster));
+									iu.addItem(player.getInventory().addItem("Harvesting", reward.getId(), reward.getCount(), player, monster));
 								}
 								send = true;
 								total += reward.getCount();

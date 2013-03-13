@@ -62,7 +62,7 @@ public class TargetCorpseMob implements ITargetTypeHandler
 			}
 			case DRAIN:
 			{
-				if (!((L2Attackable) target).checkCorpseTime(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
+				if (((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
 				{
 					return _emptyTargetList;
 				}

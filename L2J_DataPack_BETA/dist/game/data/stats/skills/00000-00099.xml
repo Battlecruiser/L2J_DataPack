@@ -1007,25 +1007,29 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1DrainHp"> 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 </table>
 		<table name="#ench2DrainMp"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="20" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="10" />
 		<set name="mpConsume" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="500" />
-		<set name="skillType" val="SWEEP" />
 		<set name="target" val="TARGET_CORPSE_MOB" />
-		<!-- Drain-specific: absorb from a mob's corpse -->
-		<enchant1 name="absorbAbs" val="#ench1DrainHp" />
-		<enchant1 name="absorbHp" val="true" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="reuseDelay" val="0" />
-		<enchant2 name="absorbAbs" val="#ench2DrainMp" />
-		<enchant2 name="absorbHp" val="false" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="reuseDelay" val="0" />
+		<for>
+			<effect name="Sweeper" noicon="1" val="0" />
+			<effect name="ConsumeBody" noicon="1" val="0" />
+		</for>
+		<enchant1for>
+			<effect self="1" name="HpByLevel" noicon="1" val="#ench1DrainHp" />
+		</enchant1for>
+		<enchant1for>
+			<effect self="1" name="MpByLevel" noicon="1" val="#ench2DrainMp" />
+		</enchant1for>
 		<cond>
 			<player canSweep="true" />
 		</cond>
