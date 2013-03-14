@@ -58,12 +58,12 @@ public class Shadai extends Quest
 	{
 		int[] coords = DAY_COORDS;
 		boolean mustRevalidate = false;
-		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNowNight())
+		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNight())
 		{
 			coords = NIGHT_COORDS;
 			mustRevalidate = true;
 		}
-		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNowNight())
+		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNight())
 		{
 			mustRevalidate = true;
 		}

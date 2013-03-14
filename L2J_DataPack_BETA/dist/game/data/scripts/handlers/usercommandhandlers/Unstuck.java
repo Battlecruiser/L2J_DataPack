@@ -59,7 +59,7 @@ public class Unstuck implements IUserCommandHandler
 		{
 			return false;
 		}
-		activeChar.forceIsCasting(GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
+		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		L2Skill escape = SkillTable.getInstance().getInfo(2099, 1); // 5 minutes escape
 		L2Skill GM_escape = SkillTable.getInstance().getInfo(2100, 1); // 1 second escape
