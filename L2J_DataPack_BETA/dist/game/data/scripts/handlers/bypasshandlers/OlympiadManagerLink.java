@@ -25,7 +25,7 @@ import java.util.logging.Level;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -243,7 +243,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				}
 				int buffGroup = Integer.parseInt(params[1]);
 				
-				int[] npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
+				NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
 				
 				if (npcBuffGroupInfo == null)
 				{
@@ -251,11 +251,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				int skillId = npcBuffGroupInfo[0];
-				int skillLevel = npcBuffGroupInfo[1];
-				
-				L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-				
+				L2Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 				target.setTarget(activeChar);
 				
 				if (activeChar.olyBuff > 0)
