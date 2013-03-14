@@ -858,7 +858,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red>");
+			activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red> <duration>");
 		}
 		if (packet != null)
 		{
