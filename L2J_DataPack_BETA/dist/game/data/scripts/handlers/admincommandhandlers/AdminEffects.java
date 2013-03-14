@@ -167,7 +167,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception ex)
 			{
-				activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red>");
+				activeChar.sendMessage("Usage: //atmosphere <signsky dawn|dusk>|<sky day|night|red> <duration>");
 			}
 		}
 		else if (command.equals("admin_play_sounds"))
