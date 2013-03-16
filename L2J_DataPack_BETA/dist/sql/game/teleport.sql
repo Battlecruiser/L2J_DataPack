@@ -593,18 +593,20 @@ INSERT INTO `teleport` VALUES
 ('Garden of Eva - 3rd Level - 1 Olympiad Token',10025,77868,250400,-9328,1,1,13722), -- retail
 ('Garden of Eva - 4th Level - 1 Olympiad Token',10026,78721,253309,-9840,1,1,13722), -- retail
 ('Garden of Eva - 5th Level - 1 Olympiad Token',10027,82951,252354,-10592,1,1,13722), -- retail
-('Ketra teleport - Goddard Castle Town',10028,147978,-55408,-2728,4900,0,57),
-('Ketra teleport - Rune Castle Town',10029,43849,-47877,-792,22000,0,57),
-('Ketra teleport - Aden Castle Town',10030,146705,25840,-2000,21000,0,57),
-('Ketra teleport - Wall of Argos',10031,164564,-48145,-3536,7000,0,57),
-('Ketra teleport - Hot Springs',10032,144880,-113468,-2560,6700,0,57),
-('Varka teleport - Goddard Castle Town',10033,147978,-55408,-2728,8000,0,57),
-('Varka teleport - Rune Castle Town',10034,43849,-47877,-792,12000,0,57),
-('Varka teleport - Aden Castle Town',10035,146705,25840,-2000,17000,0,57),
-('Varka teleport - Wall of Argos',10036,164564,-48145,-3536,11000,0,57),
-('Varka teleport - Hot Springs',10037,144880,-113468,-2560,14000,0,57),
+('Ketra teleport - Town of Goddard',10028,148024,-55281,-2728,2400,0,57),
+('Ketra teleport - Rune Township',10029,43835,-47749,-792,11000,0,57),
+('Ketra teleport - Town of Aden',10030,146783,25808,-2000,10000,0,57),
+('Ketra teleport - Wall of Argos',10031,165054,-47861,-3560,4200,0,57),
+('Ketra teleport - Hot Springs',10032,144880,-113468,-2560,5400,0,57),
+('Varka teleport - Town of Goddard',10033,148024,-47749,-2728,4000,0,57),
+('Varka teleport - Rune Township',10034,43835,-47877,-792,6400,0,57),
+('Varka teleport - Town of Aden',10035,146783,25808,-2000,8700,0,57),
+('Varka teleport - Wall of Argos',10036,165054,-47861,-3560,6800,0,57),
+('Varka teleport - Hot Springs',10037,144880,-113468,-2560,11000,0,57),
 ('Field of Silence Center - 1000 adena',10038,80987,182423,-3504,1,1,13722), -- retail
-('Field of Whispers Center - 1000 adena',10039,86147,218268,-3592,1,1,13722); -- retail
+('Field of Whispers Center - 1000 adena',10039,86147,218268,-3592,1,1,13722), -- retail
+('Ketra teleport - Town of Schuttgart',10040,87126,-143520,-1288,8900,0,57),
+('Varka teleport - Town of Schuttgart',10041,87126,-143520,-1288,9300,0,57);
 
 INSERT INTO `teleport` VALUES
 ('Gludio -> Kamael Village',12050,-117251,46771,360,12000,0,57),
