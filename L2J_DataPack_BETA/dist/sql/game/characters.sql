@@ -50,7 +50,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `lvl_joined_academy` TINYINT UNSIGNED NOT NULL DEFAULT 0,
   `apprentice` INT UNSIGNED NOT NULL DEFAULT 0,
   `sponsor` INT UNSIGNED NOT NULL DEFAULT 0,
-  `varka_ketra_ally` TINYINT NOT NULL DEFAULT 0,
   `clan_join_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `clan_create_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `death_penalty_level` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
