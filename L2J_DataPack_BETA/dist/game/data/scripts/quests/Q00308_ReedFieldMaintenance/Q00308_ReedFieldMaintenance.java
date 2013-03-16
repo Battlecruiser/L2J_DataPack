@@ -16,13 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00309_ForAGoodCause;
+package quests.Q00308_ReedFieldMaintenance;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
-import quests.Q00308_ReedFieldMaintenance.Q00308_ReedFieldMaintenance;
+import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
+import quests.Q00309_ForAGoodCause.Q00309_ForAGoodCause;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -33,30 +33,30 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * For A Good Cause (309)
- * @author nonom, Zoey76, Joxit
- * @version 2011/09/30 based on official server Naia
+ * Success/Failure Of Business (238)<br>
+ * Original Jython script by Bloodshed.
+ * @author Joxit
  */
-public class Q00309_ForAGoodCause extends Quest
+public class Q00308_ReedFieldMaintenance extends Quest
 {
 	// NPC
-	private static final int ATRA = 32647;
+	private static final int KATENSA = 32646;
 	// Mobs
-	private static final int CORRUPTED_MUCROKIAN = 22654;
-	private static final Map<Integer, Integer> MUCROKIANS = new HashMap<>();
+	private static final int AWAKENED_MUCROKIAN = 22655;
+	private static final Map<Integer, Integer> MUCROKIAN = new HashMap<>();
 	static
 	{
-		MUCROKIANS.put(22650, 218); // Mucrokian Fanatic
-		MUCROKIANS.put(22651, 258); // Mucrokian Ascetic
-		MUCROKIANS.put(22652, 248); // Mucrokian Savior
-		MUCROKIANS.put(22653, 290); // Mucrokian Preacher
-		MUCROKIANS.put(22654, 124); // Contaminated Mucrokian
-		MUCROKIANS.put(22655, 220); // Awakened Mucrokian
+		MUCROKIAN.put(22650, 218); // Mucrokian Fanatic
+		MUCROKIAN.put(22651, 258); // Mucrokian Ascetic
+		MUCROKIAN.put(22652, 248); // Mucrokian Savior
+		MUCROKIAN.put(22653, 290); // Mucrokian Preacher
+		MUCROKIAN.put(22654, 220); // Contaminated Mucrokian
+		MUCROKIAN.put(22655, 124); // Awakened Mucrokian
 	}
 	
 	// Items
-	private static final int MUCROKIAN_HIDE = 14873;
-	private static final int FALLEN_MUCROKIAN_HIDE = 14874;
+	private static final int MUCROKIAN_HIDE = 14871;
+	private static final int AWAKENED_MUCROKIAN_HIDE = 14872;
 	// Rewards
 	private static final int REC_DYNASTY_EARRINGS_70 = 9985;
 	private static final int REC_DYNASTY_NECKLACE_70 = 9986;
@@ -92,29 +92,29 @@ public class Q00309_ForAGoodCause extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 82;
 	
-	public Q00309_ForAGoodCause(int id, String name, String descr)
+	public Q00308_ReedFieldMaintenance(int questId, String name, String descr)
 	{
-		super(id, name, descr);
-		addStartNpc(ATRA);
-		addTalkId(ATRA);
-		addKillId(MUCROKIANS.keySet());
+		super(questId, name, descr);
+		addStartNpc(KATENSA);
+		addTalkId(KATENSA);
+		addKillId(MUCROKIAN.keySet());
 	}
 	
 	private boolean canGiveItem(QuestState st, int quanty)
 	{
 		long mucrokian = st.getQuestItemsCount(MUCROKIAN_HIDE);
-		long fallen = st.getQuestItemsCount(FALLEN_MUCROKIAN_HIDE);
-		if (fallen > 0)
+		long awakened = st.getQuestItemsCount(AWAKENED_MUCROKIAN_HIDE);
+		if (awakened > 0)
 		{
-			if (fallen >= (quanty / 2))
+			if (awakened >= (quanty / 2))
 			{
-				st.takeItems(FALLEN_MUCROKIAN_HIDE, (quanty / 2));
+				st.takeItems(AWAKENED_MUCROKIAN_HIDE, (quanty / 2));
 				return true;
 			}
-			else if (mucrokian >= (quanty - (fallen * 2)))
+			else if (mucrokian >= (quanty - (awakened * 2)))
 			{
-				st.takeItems(FALLEN_MUCROKIAN_HIDE, fallen);
-				st.takeItems(MUCROKIAN_HIDE, (quanty - (fallen * 2)));
+				st.takeItems(AWAKENED_MUCROKIAN_HIDE, awakened);
+				st.takeItems(MUCROKIAN_HIDE, (quanty - (awakened * 2)));
 				return true;
 			}
 		}
@@ -138,23 +138,22 @@ public class Q00309_ForAGoodCause extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32647-02.htm":
-			case "32647-03.htm":
-			case "32647-04.htm":
-			case "32647-08.html":
-			case "32647-10.html":
-			case "32647-12.html":
-			case "32647-13.html":
+			case "32646-02.htm":
+			case "32646-03.htm":
+			case "32646-06.html":
+			case "32646-07.html":
+			case "32646-08.html":
+			case "32646-10.html":
 				htmltext = event;
 				break;
-			case "32647-05.html":
+			case "32646-04.html":
 				st.startQuest();
 				player.sendPacket(new RadarControl(0, 2, 77325, 205773, -3432));
 				htmltext = event;
 				break;
 			case "claimreward":
-				final QuestState q239 = player.getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
-				htmltext = ((q239 != null) && q239.isCompleted()) ? "32647-11.html" : "32647-09.html";
+				final QuestState q238 = player.getQuestState(Q00238_SuccessFailureOfBusiness.class.getName());
+				htmltext = ((q238 != null) && q238.isCompleted()) ? "32646-09.html" : "32646-12.html";
 				break;
 			case "100":
 			case "120":
@@ -180,8 +179,7 @@ public class Q00309_ForAGoodCause extends Quest
 			case "216":
 				htmltext = onItemExchangeRequest(st, MOIRAI_RECIPES[getRandom(MOIRAI_RECIPES.length - 1)], Integer.parseInt(event));
 				break;
-			case "32647-14.html":
-			case "32647-07.html":
+			case "32646-11.html":
 				st.exitQuest(true, true);
 				htmltext = event;
 				break;
@@ -203,11 +201,11 @@ public class Q00309_ForAGoodCause extends Quest
 				st.giveItems(item, 1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			htmltext = "32646-16.htm";
+			htmltext = "32646-14.html";
 		}
 		else
 		{
-			htmltext = "32646-15.htm";
+			htmltext = "32646-13.html";
 		}
 		return htmltext;
 	}
@@ -219,13 +217,12 @@ public class Q00309_ForAGoodCause extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			float chance = (MUCROKIANS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			float chance = (MUCROKIAN.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				if (npc.getNpcId() == CORRUPTED_MUCROKIAN)
+				if (npc.getNpcId() == AWAKENED_MUCROKIAN)
 				{
-					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
-					st.rewardItems(FALLEN_MUCROKIAN_HIDE, 1);
+					st.giveItems(AWAKENED_MUCROKIAN_HIDE, 1);
 				}
 				else
 				{
@@ -247,24 +244,24 @@ public class Q00309_ForAGoodCause extends Quest
 			return htmltext;
 		}
 		
-		final QuestState q308 = talker.getQuestState(Q00308_ReedFieldMaintenance.class.getSimpleName());
-		if ((q308 != null) && q308.isStarted())
+		final QuestState q309 = talker.getQuestState(Q00309_ForAGoodCause.class.getSimpleName());
+		if ((q309 != null) && q309.isStarted())
 		{
-			htmltext = "32647-17.html";
+			htmltext = "32646-15.html";
 		}
 		else if (st.isStarted())
 		{
-			htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(FALLEN_MUCROKIAN_HIDE)) ? "32647-08.html" : "32647-06.html";
+			htmltext = (st.hasQuestItems(MUCROKIAN_HIDE) || st.hasQuestItems(AWAKENED_MUCROKIAN_HIDE)) ? "32646-06.html" : "32646-05.html";
 		}
 		else
 		{
-			htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32647-01.htm" : "32647-00.html";
+			htmltext = (talker.getLevel() >= MIN_LEVEL) ? "32646-01.htm" : "32646-00.html";
 		}
 		return htmltext;
 	}
 	
 	public static void main(String[] args)
 	{
-		new Q00309_ForAGoodCause(309, Q00309_ForAGoodCause.class.getSimpleName(), "For A Good Cause");
+		new Q00308_ReedFieldMaintenance(308, Q00308_ReedFieldMaintenance.class.getSimpleName(), "Reed Field Maintenance");
 	}
 }
