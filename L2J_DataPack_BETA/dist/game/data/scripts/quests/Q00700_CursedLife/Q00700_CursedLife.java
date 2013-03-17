@@ -85,6 +85,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 					htmltext = ((player.getLevel() < MIN_LVL) || (st == null) || (!st.isCompleted())) ? "32560-03.htm" : event;
+					break;
 				}
 				case "32560-04.htm":
 				case "32560-09.html":
