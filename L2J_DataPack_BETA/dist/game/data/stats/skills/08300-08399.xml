@@ -333,7 +333,9 @@
 		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="affectRange" val="150" />
 		<set name="target" val="TARGET_AURA" />
@@ -355,6 +357,7 @@
 		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="STEAL_BUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
@@ -662,6 +665,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="staticDamage" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
@@ -711,7 +715,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BEAST_RELEASE" />
 		<set name="operateType" val="A1" />
-		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -722,7 +725,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BEAST_ACCOMPANY" />
 		<set name="operateType" val="A1" />
-		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -733,7 +735,6 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BEAST_SKILL" />
 		<set name="operateType" val="A1" />
-		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />
@@ -847,7 +848,6 @@
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="BEAST_RELEASE_ALL" />
 		<set name="operateType" val="A1" />
-		<set name="neutral" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="reuseDelay" val="1000" />

@@ -13,6 +13,7 @@
 		<set name="power" val="3194" />
 		<set name="affectRange" val="350" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="6662" />
@@ -33,6 +34,7 @@
 		<set name="operateType" val="A2" />
 		<set name="affectRange" val="350" />
 		<set name="skillType" val="MDOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<!-- Level 1: 60MP * 5 during 10 seconds -->
@@ -74,6 +76,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6304" levels="1" name="Shock">
@@ -96,6 +99,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -116,6 +120,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6306" levels="1" name="Solina Strike">
@@ -139,6 +144,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -164,6 +170,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="180" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6308" levels="1" name="Opus of the Wave">
@@ -184,6 +191,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="270" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6309" levels="1" name="Pain of the Ascetic">
@@ -204,6 +212,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="180" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6310" levels="1" name="Loss of Quest">
@@ -222,6 +231,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -242,6 +252,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6312" levels="1" name="Launch Sacred Sword Energy">
@@ -260,6 +271,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="180" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6313" levels="1" name="Solina Bless">
@@ -306,6 +318,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="100" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="6315" levels="1" name="Sacred Strike">
@@ -323,6 +336,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6316" levels="1" name="Accomplish of Authority">
@@ -361,6 +375,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="180" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6318" levels="1" name="Divine Shield Protection">
@@ -424,6 +439,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="pd_down">
@@ -450,6 +466,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6322" levels="1" name="Divine Impact">
@@ -470,6 +487,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6323" levels="1" name="Divine Bolt">
@@ -484,6 +502,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="85" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6324" levels="1" name="Divine Strike">
@@ -502,6 +521,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="affectRange" val="270" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6325" levels="1" name="Divine Nova">
@@ -520,6 +540,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="affectRange" val="270" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6326" levels="1" name="Martyr's Happiness">
@@ -536,6 +557,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6327" levels="1" name="Sacred Worship">
@@ -553,6 +575,7 @@
 		<set name="power" val="11407" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6328" levels="1" name="Fighter Judgement">
@@ -573,6 +596,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="270" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6329" levels="1" name="Fighter Strike">
@@ -590,6 +614,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6330" levels="1" name="Salmon Porridge Attack">
@@ -622,6 +647,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="speed_down">
@@ -644,6 +670,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="speed_down">
@@ -671,11 +698,12 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
+			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -696,10 +724,11 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" effectType="STUN" />
+			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="6335" levels="1" name="Electric Rain 1">
@@ -715,6 +744,7 @@
 		<set name="power" val="120" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6336" levels="1" name="Electric Rain 2">
@@ -730,6 +760,7 @@
 		<set name="power" val="121" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6337" levels="1" name="Red Slash 1">
@@ -745,6 +776,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6338" levels="1" name="Red Slash 2">
@@ -760,6 +792,7 @@
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6339" levels="1" name="Sacred Hammer Attack">
@@ -782,11 +815,12 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" effectType="BLEED" />
+			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -807,11 +841,12 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<!-- FIXME: effectPower should be 0.05% but we use 1% for now -->
-			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="1" effectType="STUN" />
+			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
@@ -819,6 +854,7 @@
 		<set name="hitTime" val="500" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="reuseDelay" val="500" />
@@ -831,6 +867,7 @@
 	<skill id="6342" levels="1" name="Trap Over Steam">
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="power" val="4563" />
@@ -1057,6 +1094,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1081,6 +1119,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1105,6 +1144,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1128,6 +1168,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1146,6 +1187,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6385" levels="1" name="Bistakon Critical Claw">
@@ -1166,6 +1208,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1189,10 +1232,11 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6387" levels="1" name="Bistakon Earthquake">
@@ -1210,6 +1254,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -1225,6 +1270,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
@@ -1240,6 +1286,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="speed_down">
@@ -1262,6 +1309,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="casting_time_up">
@@ -1285,10 +1333,11 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="5" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="5" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
@@ -1308,6 +1357,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="3" abnormalType="attack_time_up">
@@ -1320,6 +1370,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -1333,6 +1384,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
@@ -1357,6 +1409,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1380,6 +1433,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1403,10 +1457,11 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
@@ -1425,6 +1480,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1437,6 +1493,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />

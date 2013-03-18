@@ -18,11 +18,12 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 52HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="260" abnormalVisualEffect="bleed" effectPower="90" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="260" abnormalVisualEffect="bleed" effectPower="90" abnormalLvl="10" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
@@ -42,6 +43,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -63,6 +65,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -113,6 +116,7 @@
 		<set name="power" val="2319" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5506" levels="1" name="Water Blossom">
@@ -127,6 +131,7 @@
 		<set name="power" val="2319" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5507" levels="1" name="Wind Blossom">
@@ -141,6 +146,7 @@
 		<set name="power" val="2319" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5508" levels="1" name="Earth Blossom">
@@ -155,6 +161,7 @@
 		<set name="power" val="2319" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5509" levels="1" name="Fire Power">
@@ -171,6 +178,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="800" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<for>
@@ -193,6 +201,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="800" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<for>
@@ -215,6 +224,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="800" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<for>
@@ -237,6 +247,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="800" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<for>
@@ -357,6 +368,7 @@
 		<set name="target" val="TARGET_AREA" />
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="85" />
 	</skill>
@@ -372,6 +384,7 @@
 		<set name="maxNegated" val="3" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
@@ -460,6 +473,7 @@
 		<set name="power" val="971" />
 		<set name="affectRange" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_PARTY_OTHER" />
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
@@ -492,6 +506,7 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="2" abnormalType="armor_unholy">
 				<sub order="0x40" stat="darkRes" val="#vuln" />
@@ -746,6 +761,7 @@
 		<set name="power" val="80" /> <!-- Base land rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -975,6 +991,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1002,6 +1019,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="47" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5568" levels="1" name="Frost Armor">
@@ -1019,6 +1037,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="3" abnormalType="speed_down">
@@ -1041,6 +1060,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="attack_time_up">
@@ -1219,6 +1239,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="916" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -1237,12 +1258,13 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" /> <!-- using 1 second due abnormal don't have abnormal time -->
+			<effect name="Stun" val="0" effectPower="100" abnormalLvl="1" abnormalType="stun" /> <!-- using 1 second due abnormal don't have abnormal time -->
 		</for>
 	</skill>
 	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
@@ -1257,6 +1279,7 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="100" />
 		<set name="affectRange" val="250" />
@@ -1271,6 +1294,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="power" val="40" /> <!-- Base land Rate -->
 		<set name="hitTime" val="1200" />
@@ -1465,6 +1489,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1486,6 +1511,7 @@
 		<set name="power" val="122" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="ManaDamOverTime" noicon="1" val="182" />
@@ -1525,6 +1551,7 @@
 		<set name="power" val="11" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 200HP * 1 during 5 seconds -->

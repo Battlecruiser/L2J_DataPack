@@ -28,9 +28,8 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * This is the Effect support for spoil.<br>
- * This was originally done by _drunk_
- * @author Ahmed
+ * Spoil effect.
+ * @author _drunk_, Ahmed, Zoey76
  */
 public class Spoil extends L2Effect
 {
@@ -48,43 +47,26 @@ public class Spoil extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		
-		if (!getEffector().isPlayer())
+		if (!getEffected().isMonster() || getEffected().isDead())
 		{
+			getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		
-		if (!getEffected().isMonster())
-		{
-			return false;
-		}
-		
-		L2MonsterInstance target = (L2MonsterInstance) getEffected();
-		
-		if (target == null)
-		{
-			return false;
-		}
-		
+		final L2MonsterInstance target = (L2MonsterInstance) getEffected();
 		if (target.isSpoil())
 		{
 			getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return false;
 		}
 		
-		boolean spoil = false;
-		if (target.isDead() == false)
+		if (Formulas.calcMagicSuccess(getEffector(), target, getSkill()))
 		{
-			spoil = Formulas.calcMagicSuccess(getEffector(), target, getSkill());
-			
-			if (spoil)
-			{
-				target.setSpoil(true);
-				target.setIsSpoiledBy(getEffector().getObjectId());
-				getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
-			}
-			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
+			target.setSpoil(true);
+			target.setIsSpoiledBy(getEffector().getObjectId());
+			getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 		}
+		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		return true;
 	}
 	

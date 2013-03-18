@@ -16,6 +16,7 @@
 		<!-- A dragon's powerful blow that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="3420" />
@@ -30,6 +31,7 @@
 		<!-- A dragon's powerful slash that attacks an enemy with 3420 Power added to P. Atk. Over-hit is possible. -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="magicLvl" val="85" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="3420" />
 		<set name="castRange" val="55" />

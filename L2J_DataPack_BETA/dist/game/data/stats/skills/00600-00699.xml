@@ -330,7 +330,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="67" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="78" />
 		<set name="reuseDelay" val="3000" />
@@ -433,6 +432,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
@@ -447,13 +447,13 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect count="3" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" effectType="FEAR" />
+			<effect count="3" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" />
 		</for>
 		<enchant3for>
-			<effect count="#ench3Time" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" effectType="FEAR" />
+			<effect count="#ench3Time" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="40" />
 		</enchant3for>
 		<enchant4for>
-			<effect count="3" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="#ench4Chance" effectType="FEAR" />
+			<effect count="3" name="Fear" val="0" abnormalLvl="1" abnormalType="turn_flee" effectPower="#ench4Chance" />
 		</enchant4for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">
@@ -481,7 +481,6 @@
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="affectRange" val="200" />
@@ -494,7 +493,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
 		<set name="target" val="TARGET_ONE" />
@@ -1341,6 +1339,7 @@
 		<set name="power" val="2904" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -1355,6 +1354,7 @@
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -1368,6 +1368,7 @@
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="affectRange" val="150" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
@@ -1428,6 +1429,7 @@
 		<set name="power" val="6752" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="AGGDAMAGE" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
@@ -1447,6 +1449,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="AGGDAMAGE" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="target_lock" />
@@ -1469,11 +1472,12 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
@@ -1492,11 +1496,12 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
@@ -1557,12 +1562,13 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" effectType="STUN" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" effectType="DEBUFF" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="687" levels="1" name="Divine Rogue Double Shot">
@@ -1577,6 +1583,7 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="6195" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -1597,11 +1604,12 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="67" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="67" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">
@@ -1619,6 +1627,7 @@
 		<set name="power" val="6969" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="690" levels="1" name="Divine Rogue Agility">
@@ -1676,6 +1685,7 @@
 		<set name="power" val="102" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect self="1" name="Buff" abnormalTime="3" val="0" abnormalLvl="0" abnormalType="ma_down">
@@ -1696,6 +1706,7 @@
 		<set name="power" val="128" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
@@ -1714,6 +1725,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="affectRange" val="100" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
@@ -1732,6 +1744,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="SLEEP" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="trait" val="SLEEP" />
 		<for>
@@ -1753,6 +1766,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="armor_unholy">

@@ -60,7 +60,6 @@
 		<set name="effectRange" val="300" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="target" val="TARGET_ONE" /> <!-- FIXME: This should be TARGET_OTHERS -->
@@ -81,12 +80,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
@@ -290,6 +291,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
@@ -361,6 +363,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SOULSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2040" levels="1" name="Scroll of Escape: Clan Hall">
@@ -445,6 +448,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2048" levels="1" name="Wolves' Food">
@@ -632,6 +636,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="SPIRITSHOT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
@@ -739,6 +744,7 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="CONFUSION" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="RandomizeHate" noicon="1" val="0" />
@@ -756,6 +762,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="70" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
@@ -1082,7 +1089,6 @@
 		<set name="mpConsume" val="26" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="hitTime" val="1200" />
-		<set name="neutral" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="300" />
@@ -1097,6 +1103,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1800" />
 		<set name="skillType" val="SOW" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="effectRange" val="400" />
 		<set name="castRange" val="40" />
@@ -1109,7 +1116,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="target" val="TARGET_CORPSE_MOB" />
