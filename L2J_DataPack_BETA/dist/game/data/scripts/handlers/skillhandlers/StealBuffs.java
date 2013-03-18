@@ -64,7 +64,7 @@ public class StealBuffs implements ISkillHandler
 			}
 			
 			Env env;
-			final List<L2Effect> toSteal = Formulas.calcCancel(activeChar, target, skill, skill.getPower());
+			final List<L2Effect> toSteal = Formulas.calcCancelStealEffects(activeChar, target, skill, skill.getPower());
 			
 			if (toSteal.size() == 0)
 			{

@@ -39,6 +39,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="target" val="TARGET_ONE" />
+		<set name="maxNegated" val="10" />
 		<for>
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
 		</for>
@@ -547,6 +548,7 @@
 		<set name="operateType" val="A1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="aggroPoints" val="624" />
+		<set name="maxNegated" val="10" />
 		<for>
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
 		</for>
@@ -974,6 +976,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="aggroPoints" val="624" />
+		<set name="maxNegated" val="10" />
 		<for>
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
 		</for>
