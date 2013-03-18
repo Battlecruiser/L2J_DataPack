@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="600" levels="1" name="Residence Guidance">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -12,7 +11,6 @@
 	</skill>
 	<skill id="601" levels="1" name="Residence Agility">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -22,7 +20,6 @@
 	</skill>
 	<skill id="602" levels="1" name="Residence Shield Block">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -32,7 +29,6 @@
 	</skill>
 	<skill id="603" levels="1" name="Residence Shield Defense">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -42,7 +38,6 @@
 	</skill>
 	<skill id="604" levels="1" name="Residence Resist Typhoon">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -53,7 +48,6 @@
 	</skill>
 	<skill id="605" levels="1" name="Residence Resist Lava">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -64,7 +58,6 @@
 	</skill>
 	<skill id="606" levels="1" name="Residence Fortitude">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -74,7 +67,6 @@
 	</skill>
 	<skill id="607" levels="1" name="Residence Freedom">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -84,7 +76,6 @@
 	</skill>
 	<skill id="608" levels="1" name="Residence Vigilance">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -94,7 +85,6 @@
 	</skill>
 	<skill id="609" levels="1" name="Residence Movement">
 		<!-- Confirmed CT2.5 -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -105,7 +95,6 @@
 	<skill id="610" levels="1" name="Residence Death Fortune">
 		<!-- Confirmed CT2.5 -->
 		<!-- TODO: Still missing info about other penalties than exp. loss -->
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="COREDONE" />
@@ -115,7 +104,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#rCrit"> 0 15 15 </table>
 		<table name="#cAtkAdd"> 0 0 100 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -129,7 +117,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 0 17.6 17.6 </table>
 		<table name="#sDef"> 1 1 1.06 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -143,7 +130,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#rEvas"> 0 2 2 </table>
 		<table name="#runSpd"> 0 0 3 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -156,7 +142,6 @@
 	<skill id="614" levels="3" name="Earth Squad">
 		<!-- Confirmed CT2.5 -->
 		<table name="#mDef"> 17 31.1 44 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -168,7 +153,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxMp"> 1 1.3 1.3 </table>
 		<table name="#MpConsumeRate"> 1 1 0.95 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
@@ -184,7 +168,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mAtk"> 7.17 19.32 19.32 </table>
 		<table name="#mCritRate"> 0 0 0.01 </table>
-		<set name="isClanSkill" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="target" val="TARGET_SELF" />
