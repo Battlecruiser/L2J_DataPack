@@ -130,6 +130,7 @@
 		<set name="reuseDelay" val="10500" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -155,6 +156,7 @@
 		<set name="reuseDelay" val="10500" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -183,6 +185,7 @@
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -201,6 +204,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
 		<for>
@@ -223,6 +227,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -239,6 +244,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="80" />
 		<set name="skillType" val="AGGDAMAGE" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="TargetMe" val="0" />
@@ -258,6 +264,7 @@
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -279,13 +286,14 @@
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="829" />
 		<set name="isDebuff" val="true" />
 		<set name="aggroPoints" val="100" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" />
 		</for>
 	</skill>
 	<skill id="5118" levels="1" name="Cancel Sailren Use">
@@ -297,6 +305,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="2500" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
 		<for>
@@ -314,6 +323,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -335,12 +345,13 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5121" levels="1" name="Production - Corpse Revival">
@@ -512,6 +523,7 @@
 		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
@@ -529,6 +541,7 @@
 		<set name="reuseDelay" val="17000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
@@ -550,6 +563,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -575,12 +589,13 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
@@ -601,6 +616,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
@@ -622,6 +638,7 @@
 		<set name="affectRange" val="200" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="327" abnormalVisualEffect="poison" abnormalLvl="3" abnormalType="attack_time_up">
@@ -644,6 +661,7 @@
 		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -662,6 +680,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
 	</skill>
 	<skill id="5143" levels="1" name="Sailren Use Blow">
@@ -675,6 +694,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -689,6 +709,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -703,6 +724,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="canBeReflected" val="false" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="multi_debuff">
@@ -996,6 +1018,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pvp_dmg_down">
@@ -1103,6 +1126,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="AGGREDUCE" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
@@ -1124,6 +1148,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="speed_down">
@@ -1149,6 +1174,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="attack_time_up">
@@ -1174,6 +1200,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1198,6 +1225,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1224,6 +1252,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
@@ -1250,6 +1279,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1276,6 +1306,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
@@ -1299,6 +1330,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1325,6 +1357,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1353,6 +1386,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1378,6 +1412,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1402,6 +1437,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1417,6 +1453,7 @@
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1488,6 +1525,7 @@
 		<set name="power" val="54" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5186" levels="2" name="Pet Haste">
@@ -1769,6 +1807,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1796,6 +1835,7 @@
 		<set name="hitTime" val="1200" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1823,6 +1863,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1851,6 +1892,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />

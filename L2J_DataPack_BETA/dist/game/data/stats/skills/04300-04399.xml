@@ -86,6 +86,7 @@
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="operateType" val="A1" />
@@ -107,6 +108,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -129,6 +131,7 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -185,6 +188,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="1500" />
@@ -205,6 +209,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -224,6 +229,7 @@
 		<set name="magicLvl" val="60" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -979,6 +985,7 @@
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1004,6 +1011,7 @@
 		<table name="#vuln"> 0 50 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1026,6 +1034,7 @@
 		<set name="power" val="100" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1249,6 +1258,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1316,10 +1326,11 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<for>
-			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" effectType="DEBUFF" />
+			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1335,6 +1346,7 @@
 		<set name="power" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="AGGDEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />

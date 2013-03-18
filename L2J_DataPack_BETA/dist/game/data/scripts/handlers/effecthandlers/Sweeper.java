@@ -59,7 +59,7 @@ public class Sweeper extends L2Effect
 			return false;
 		}
 		
-		if (player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
+		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
 		{
 			return false;
 		}
@@ -78,7 +78,7 @@ public class Sweeper extends L2Effect
 			}
 			else
 			{
-				player.addItem("Sweeper", item, player, true);
+				player.addItem("Sweeper", item, getEffected(), true);
 			}
 		}
 		return true;
@@ -93,6 +93,6 @@ public class Sweeper extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.SWEEPER;
+		return L2EffectType.NONE;
 	}
 }

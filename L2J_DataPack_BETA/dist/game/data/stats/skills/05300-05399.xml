@@ -13,6 +13,7 @@
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -37,12 +38,13 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
@@ -60,6 +62,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
@@ -68,7 +71,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -86,6 +89,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -94,7 +98,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -113,6 +117,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
@@ -122,7 +127,7 @@
 		<set name="effectRange" val="200" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
@@ -139,13 +144,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" effectType="POISON" abnormalLvl="8" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
@@ -163,6 +169,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -187,6 +194,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -195,7 +203,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5308" levels="9" name="Poison">
@@ -213,6 +221,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -220,7 +229,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -238,6 +247,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -246,7 +256,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="BLEED" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -261,6 +271,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -278,6 +289,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1000" />
@@ -296,6 +308,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -316,6 +329,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -334,6 +348,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="20" />
 		<set name="operateType" val="A1" />
@@ -350,6 +365,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -367,6 +383,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
@@ -387,6 +404,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -407,6 +425,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="affectRange" val="200" />
@@ -488,6 +507,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
@@ -508,6 +528,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="500" />
@@ -528,6 +549,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="affectRange" val="200" />
@@ -541,6 +563,7 @@
 		<set name="power" val="250" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -560,6 +583,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="4000" />
@@ -577,6 +601,7 @@
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -590,7 +615,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
@@ -602,6 +627,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -617,6 +643,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 		<set name="castRange" val="900" />
@@ -630,6 +657,7 @@
 		<set name="power" val="12777" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -653,6 +681,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
@@ -676,6 +705,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="effectRange" val="300" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -699,6 +729,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
@@ -736,6 +767,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
@@ -773,6 +805,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
@@ -795,6 +828,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -830,6 +864,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -853,6 +888,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="830" />
 		<set name="castRange" val="40" />
@@ -870,6 +906,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
 		<set name="castRange" val="900" />
@@ -885,6 +922,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -910,6 +948,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="830" />
@@ -920,7 +959,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
@@ -938,6 +977,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
@@ -946,7 +986,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -964,6 +1004,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -973,7 +1014,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" effectType="BLEED" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -989,6 +1030,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="830" />
@@ -999,7 +1041,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
@@ -1016,6 +1058,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="operateType" val="A2" />
@@ -1023,7 +1066,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" effectType="POISON" abnormalLvl="8" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
@@ -1039,6 +1082,7 @@
 		<set name="elementPower" val="20" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="1000" />
@@ -1048,7 +1092,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="60" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="60" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5368" levels="9" name="Stun">
@@ -1079,6 +1123,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -1086,7 +1131,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1114,6 +1159,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -1131,6 +1177,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1000" />
@@ -1156,6 +1203,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -1182,6 +1230,7 @@
 		<set name="power" val="#power" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
@@ -1218,6 +1267,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
@@ -1244,6 +1294,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="affectRange" val="200" />
@@ -1261,6 +1312,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
@@ -1315,6 +1367,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 		<set name="castRange" val="900" />
@@ -1335,6 +1388,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -1355,6 +1409,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="4000" />
@@ -1373,6 +1428,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="absorbPart" val="0.9" />
 		<set name="hitTime" val="4000" />
@@ -1392,6 +1448,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1408,6 +1465,7 @@
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1424,7 +1482,7 @@
 		<set name="affectRange" val="200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" effectType="POISON" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
@@ -1474,6 +1532,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="99" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="657" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="16" />
@@ -1497,6 +1556,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond>
 			<and>

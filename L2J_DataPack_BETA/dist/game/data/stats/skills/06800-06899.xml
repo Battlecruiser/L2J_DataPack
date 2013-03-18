@@ -443,6 +443,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6845" levels="1" name="Power Strike">
@@ -460,6 +461,7 @@
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6846" levels="1" name="Vampiric Claw">
@@ -478,6 +480,7 @@
 		<set name="power" val="300" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6847" levels="1" name="Self Heal">
@@ -507,6 +510,7 @@
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6850" levels="1" name="Self-destruction">
@@ -519,6 +523,7 @@
 		<set name="power" val="3000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6851" levels="1" name="Power Strike">
@@ -536,6 +541,7 @@
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6852" levels="1" name="Magic Strike">
@@ -554,6 +560,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6853" levels="1" name="Sleep">
@@ -574,6 +581,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Sleep" abnormalTime="6" val="0" abnormalLvl="1" abnormalType="sleep" />
@@ -597,6 +605,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Root" abnormalTime="8" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -616,6 +625,7 @@
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6856" levels="1" name="Heal">
@@ -639,6 +649,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6858" levels="1" name="Summon">
@@ -662,6 +673,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6860" levels="1" name="Power Strike">
@@ -679,6 +691,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6861" levels="1" name="Enhance">
@@ -718,6 +731,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -740,6 +754,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -768,6 +783,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -789,6 +805,7 @@
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6867" levels="1" name="Magic Strike">
@@ -805,6 +822,7 @@
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6868" levels="1" name="Summon">
@@ -827,6 +845,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6870" levels="1" name="Vampiric Claw">
@@ -845,6 +864,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6871" levels="1" name="Range Magic Attack">
@@ -863,6 +883,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="6872" levels="1" name="Self-destruction">
@@ -878,6 +899,7 @@
 		<set name="power" val="300" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6873" levels="2" name="Hex">
@@ -898,6 +920,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_down">
@@ -918,6 +941,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="6875" levels="2" name="Poison">
@@ -936,6 +960,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="8" name="DamOverTime" abnormalTime="1" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" />
@@ -956,6 +981,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6877" levels="1" name="Power Strike">
@@ -973,6 +999,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6878" levels="1" name="Paralysis">
@@ -993,6 +1020,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1014,6 +1042,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6880" levels="1" name="Silence">
@@ -1033,6 +1062,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1054,6 +1084,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6882" levels="1" name="Petrify">
@@ -1072,6 +1103,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
@@ -1144,6 +1176,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6888" levels="1" name="Fatal Shot">
@@ -1159,6 +1192,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6889" levels="1" name="Range Attack">
@@ -1174,6 +1208,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6890" levels="1" name="Bleed">
@@ -1195,6 +1230,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6892" levels="1" name="Power Shot">
@@ -1210,6 +1246,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6893" levels="1" name="Power Attack">
@@ -1225,6 +1262,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6894" levels="1" name="Power Shot">
@@ -1240,6 +1278,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6895" levels="1" name="Power Attack">
@@ -1255,6 +1294,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6896" levels="1" name="Power Shot">
@@ -1270,6 +1310,7 @@
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6897" levels="12" name="Shock">

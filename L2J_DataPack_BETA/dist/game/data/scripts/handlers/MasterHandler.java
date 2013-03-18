@@ -215,7 +215,6 @@ import handlers.skillhandlers.ChainHeal;
 import handlers.skillhandlers.Charge;
 import handlers.skillhandlers.CombatPointHeal;
 import handlers.skillhandlers.Continuous;
-import handlers.skillhandlers.CpDam;
 import handlers.skillhandlers.CpDamPercent;
 import handlers.skillhandlers.Craft;
 import handlers.skillhandlers.DeluxeKey;
@@ -240,7 +239,6 @@ import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Soul;
 import handlers.skillhandlers.Sow;
-import handlers.skillhandlers.Spoil;
 import handlers.skillhandlers.StealBuffs;
 import handlers.skillhandlers.StrSiegeAssault;
 import handlers.skillhandlers.SummonFriend;
@@ -534,7 +532,6 @@ public class MasterHandler
 			Blow.class,
 			Pdam.class,
 			Mdam.class,
-			CpDam.class,
 			CpDamPercent.class,
 			Manadam.class,
 			Heal.class,
@@ -545,7 +542,6 @@ public class MasterHandler
 			Detection.class,
 			Resurrect.class,
 			ShiftTarget.class,
-			Spoil.class,
 			StrSiegeAssault.class,
 			SummonFriend.class,
 			Disablers.class,

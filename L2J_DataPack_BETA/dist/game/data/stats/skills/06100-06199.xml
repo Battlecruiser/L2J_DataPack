@@ -220,6 +220,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -237,6 +238,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -414,6 +416,7 @@
 		<set name="mpConsume" val="57" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="90" /> 
 		<set name="reuseDelay" val="30000" />
@@ -490,6 +493,7 @@
 		<set name="abnormalType" val="silence" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="mpConsume" val="59" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -520,6 +524,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="900" val="0" abnormalLvl="1" abnormalType="multi_debuff">
@@ -543,6 +548,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="3" abnormalType="pd_down">
@@ -571,6 +577,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="signal_a">
@@ -599,6 +606,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -659,6 +667,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="public_slot" />
@@ -892,6 +901,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
 		<set name="fanRange" val="0,0,150,60" />

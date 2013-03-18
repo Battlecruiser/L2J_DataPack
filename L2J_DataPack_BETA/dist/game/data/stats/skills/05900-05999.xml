@@ -52,6 +52,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="skillType" val="DISARM" />
+		<set name="pvp" val="true" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -70,6 +71,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="#power" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A1" />
 		<set name="absorbPart" val="0.8" />
@@ -127,6 +129,7 @@
 		<set name="power" val="3000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -138,6 +141,7 @@
 		<set name="power" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
@@ -224,6 +228,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -245,6 +250,7 @@
 		<set name="power" val="150" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5921" levels="1" name="Inhale">
@@ -268,9 +274,10 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="bleed" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="multi_debuff_f">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="bleed" effectPower="80" abnormalLvl="1" abnormalType="multi_debuff_f">
 				<mul order="0x30" stat="pAtk" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
 				<mul order="0x30" stat="mAtk" val="0.95" />
@@ -298,9 +305,10 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="bleed" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="multi_debuff_g">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalVisualEffect="bleed" effectPower="80" abnormalLvl="1" abnormalType="multi_debuff_g">
 				<sub order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<mul order="0x30" stat="mDef" val="0.5" />
@@ -400,6 +408,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5933" levels="1" name="Dark Blade">
@@ -418,6 +427,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
@@ -443,6 +453,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5936" levels="1" name="Earth Ring">
@@ -460,6 +471,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5937" levels="1" name="Self Stun">
@@ -802,6 +814,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5976" levels="3" name="Dark Storm">
@@ -816,6 +829,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="5977" levels="3" name="Dark Strike">
@@ -1035,12 +1049,13 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="poison" effectPower="90" effectType="DEBUFF" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" abnormalLvl="8" abnormalType="oblivion" />
-			<effect name="Mute" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
-			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" effectPower="90" effectType="MUTE" />
+			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="poison" effectPower="90" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" abnormalLvl="8" abnormalType="oblivion" />
+			<effect name="Mute" abnormalTime="10" noicon="1" val="0" effectPower="90" />
+			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" effectPower="90" />
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">
@@ -1051,6 +1066,7 @@
 		<set name="effectRange" val="1400" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />

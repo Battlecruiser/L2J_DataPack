@@ -13,6 +13,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -32,6 +33,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -160,6 +162,7 @@
 		<set name="power" val="271" />
 		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="4018" levels="1" name="Decrease Speed">
@@ -178,9 +181,10 @@
 		<set name="power" val="542" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" effectType="DEBUFF" effectPower="70" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" effectPower="70" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -202,6 +206,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<!-- 30HP * 5 during 60 seconds -->
@@ -299,6 +304,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="mpConsume" val="28" />
 	</skill>
@@ -421,6 +427,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -439,6 +446,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
@@ -458,6 +466,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="3100" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -465,7 +474,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="coolTime" val="200" />
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" effectPower="60" effectType="DEBUFF" abnormalLvl="2" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" effectPower="60" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -487,6 +496,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -515,6 +525,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -542,6 +553,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -571,6 +583,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -594,6 +607,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -611,6 +625,7 @@
 		<set name="reuseDelay" val="17000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -631,6 +646,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<table name="#mpConsume"> 40 45 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -647,6 +663,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="60" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="mpConsume" val="40" />
 	</skill>
@@ -664,6 +681,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="mpConsume" val="60" />
 	</skill>
@@ -712,6 +730,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -741,6 +760,7 @@
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -777,6 +797,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4050" levels="16" name="Cubic DD">
@@ -790,6 +811,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4051" levels="20" name="Cubic Heal">
@@ -827,6 +849,7 @@
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- Retail Values CT2.5: 41 50 58 58 58 63 63 63 63 66 66 66 66 66 66HP * 3 Seconds -->
@@ -847,6 +870,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="pa_down">
@@ -868,6 +892,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="pd_down">
@@ -889,6 +914,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="attack_time_up">
@@ -970,10 +996,11 @@
 		<set name="power" val="916" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="120" val="0" effectPower="90" effectType="PARALYZE" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" abnormalTime="120" val="0" effectPower="90" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
@@ -991,6 +1018,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1031,6 +1059,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -1051,6 +1080,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1068,6 +1098,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1084,6 +1115,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -1103,6 +1135,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="3" abnormalType="attack_time_up">
@@ -1135,11 +1168,12 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="30" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="30" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1160,12 +1194,13 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1210,6 +1245,7 @@
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1235,6 +1271,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1262,6 +1299,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
@@ -1280,6 +1318,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
@@ -1295,6 +1334,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1337,6 +1377,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="50" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 20HP * 3 during 4200 seconds -->
@@ -1351,6 +1392,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -1393,6 +1435,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
@@ -1416,6 +1459,7 @@
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1607,6 +1651,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />

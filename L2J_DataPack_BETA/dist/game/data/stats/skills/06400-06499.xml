@@ -15,6 +15,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="casting_time_up">
@@ -27,6 +28,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -43,6 +45,7 @@
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="88" />
@@ -65,6 +68,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
@@ -88,6 +92,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
@@ -110,6 +115,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="56" />
@@ -132,6 +138,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -152,6 +159,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
@@ -176,6 +184,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
@@ -191,6 +200,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="9125" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
@@ -204,7 +214,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6411" levels="1" name="Reptilikon Summon">
@@ -219,6 +229,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -232,6 +243,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -248,6 +260,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="9125" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
@@ -260,7 +273,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6415" levels="1" name="Reptilikon Scratch">
@@ -268,6 +281,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="2000" />
@@ -282,6 +296,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -306,6 +321,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -333,6 +349,7 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="88" />
 		<set name="castRange" val="900" />
@@ -354,6 +371,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="82" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -365,6 +383,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="83" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -376,6 +395,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -387,6 +407,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1000" />
@@ -399,6 +420,7 @@
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="2738" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -410,7 +432,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6424" levels="1" name="Double Shot">
@@ -418,6 +440,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -455,6 +478,7 @@
 		<set name="power" val="120" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
@@ -483,6 +507,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -613,6 +638,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="5" name="DamOverTimePercent" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="multi_debuff">
@@ -637,6 +663,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="3" name="DamOverTimePercent" abnormalTime="5" val="0.05" abnormalLvl="10" abnormalType="multi_debuff">
@@ -655,6 +682,7 @@
 		<set name="abnormalType" val="poison" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="element" val="1" /> <!-- Water -->

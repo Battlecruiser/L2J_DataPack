@@ -18,6 +18,7 @@
 		<set name="abnormalType" val="fly_away" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
@@ -199,6 +200,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
@@ -220,6 +222,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="affectRange" val="300" />
@@ -244,6 +247,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
@@ -345,6 +349,7 @@
 		<set name="power" val="115" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_CLAN" />
 	</skill>
 	<skill id="5431" levels="1" name="Slow">
@@ -383,10 +388,11 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="GUST" />
 		<for>
-			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="90" abnormalLvl="1" abnormalType="stun" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
@@ -404,10 +410,11 @@
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="GUST" />
 		<for>
-			<effect name="Stun" val="0" effectPower="90" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="90" abnormalLvl="1" abnormalType="stun" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
@@ -499,6 +506,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
@@ -518,6 +526,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down">
@@ -546,11 +555,12 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" effectType="BLEED" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -597,6 +607,7 @@
 		<set name="power" val="99" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -610,6 +621,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
@@ -623,6 +635,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -641,6 +654,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect count="1" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -689,6 +703,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_SELF" />
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
@@ -778,6 +793,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5462" levels="1" name="Fire Attacks">
@@ -820,6 +836,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="affectRange" val="80" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="5469" levels="1" name="Raid Boss - Level 22">
@@ -992,6 +1009,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="17000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
@@ -1029,11 +1047,12 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 71HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="355" abnormalVisualEffect="bleed" effectPower="100" effectType="BLEED" abnormalLvl="10" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" abnormalTime="5" val="355" abnormalVisualEffect="bleed" effectPower="100" abnormalLvl="10" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
@@ -1050,6 +1069,7 @@
 		<set name="power" val="607" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="5497" levels="1" name="Horn of Rising Darkness">
@@ -1069,11 +1089,12 @@
 		<set name="power" val="2319" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 			<!-- 52HP * 1 during 9 seconds -->
-			<effect count="9" name="DamOverTime" noicon="1" val="52" effectPower="80" effectType="STUN" />
+			<effect count="9" name="DamOverTime" noicon="1" val="52" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">
@@ -1087,6 +1108,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="TargetMe" val="0" />
@@ -1106,6 +1128,7 @@
 		<set name="power" val="200" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 </list>

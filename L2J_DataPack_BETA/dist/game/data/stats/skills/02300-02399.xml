@@ -370,7 +370,6 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="UNLOCK_SPECIAL" />
@@ -882,7 +881,6 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="target" val="TARGET_ONE" />
@@ -894,7 +892,6 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="1" />
-		<set name="neutral" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="target" val="TARGET_ONE" />
@@ -905,6 +902,7 @@
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="400" />
@@ -1035,6 +1033,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="AGGREDUCE" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1051,6 +1050,7 @@
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="400" />
@@ -1532,6 +1532,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="HOLD" />
 		<for>

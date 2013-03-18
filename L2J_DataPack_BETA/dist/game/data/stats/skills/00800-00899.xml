@@ -67,6 +67,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="1500" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="maxNegated" val="5" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
@@ -102,13 +103,14 @@
 		<set name="coolTime" val="660" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" effectType="STUN" />
+			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="809" levels="1" name="Golem Tornado Swing">
@@ -122,6 +124,7 @@
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -222,6 +225,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<cond msgId="113" addName="1">
@@ -245,6 +249,7 @@
 		<set name="reuseDelay" val="11000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_AURA" />
 		<cond msgId="113" addName="1">
@@ -271,6 +276,7 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
@@ -295,6 +301,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="nextActionAttack" val="true" />
@@ -335,6 +342,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="INSTANT_JUMP" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="reuseDelay" val="75000" />
@@ -655,10 +663,11 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormalVisualEffect="bleed" effectType="BLEED" />
+			<effect count="7" name="ManaDamOverTime" abnormalTime="3" val="#mdot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" abnormalTime="20" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -807,6 +816,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="3480" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="844" levels="1" name="Outpost Construction">
@@ -1145,6 +1155,7 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="8" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
@@ -1162,6 +1173,7 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="8" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
@@ -1199,6 +1211,7 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="16" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="6000" />
@@ -1241,6 +1254,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
@@ -1280,6 +1294,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="1080" />
@@ -1308,6 +1323,7 @@
 		<set name="saveVs" val="STR" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="DISARM" />
+		<set name="pvp" val="true" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1325,6 +1341,7 @@
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="1" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="3000" />
@@ -1349,6 +1366,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1394,6 +1412,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="750" />
@@ -1414,6 +1433,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="750" />
@@ -1435,6 +1455,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1456,6 +1477,7 @@
 		<set name="flyType" val="CHARGE" />
 		<set name="operateType" val="DA1" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="2500" />
@@ -1478,9 +1500,10 @@
 		<set name="simultaneousCast" val="true" />
 		<set name="affectRange" val="100" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
-			<effect name="Stun" abnormalTime="2" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
+			<effect name="Stun" abnormalTime="2" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" special="airstun" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1501,12 +1524,13 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" special="airstun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" special="airstun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
@@ -1527,12 +1551,13 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="9" val="0" effectPower="80" effectType="ROOT" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
+			<effect name="Root" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="root_magically" special="airroot" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
@@ -1548,6 +1573,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1080" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
@@ -1564,6 +1590,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="1080" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
@@ -1580,6 +1607,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="500" />
 	</skill>
@@ -1596,6 +1624,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
@@ -1613,6 +1642,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
@@ -1630,6 +1660,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
@@ -1692,6 +1723,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
@@ -1709,6 +1741,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
@@ -1727,6 +1760,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1747,6 +1781,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />

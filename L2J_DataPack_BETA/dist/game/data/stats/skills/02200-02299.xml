@@ -611,6 +611,7 @@
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="DELUXE_KEY_UNLOCK" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -688,6 +689,7 @@
 		<set name="power" val="2320" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
@@ -697,7 +699,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Stun" abnormalTime="1" val="0" effectPower="100" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="1" val="0" effectPower="100" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="2235" levels="1" name="Anteroom Door Key">

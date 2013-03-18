@@ -121,6 +121,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="6000" />
@@ -147,6 +148,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="6000" />
@@ -219,6 +221,7 @@
 		<set name="magicLvl" val="84" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="2748" />
 		<set name="isDebuff" val="true" />
 		<set name="mpConsume" val="121" />
@@ -227,7 +230,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" abnormalTime="20" effectPower="98" effectType="STUN" abnormalLvl="1" abnormalType="stun">
+			<effect name="Stun" val="0" abnormalTime="20" effectPower="98" abnormalLvl="1" abnormalType="stun">
 				<mul order="0x30" stat="critDamEvas" val="1.5" />
 			</effect>
 		</for>
@@ -503,6 +506,7 @@
 		<set name="power" val="122" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6642" levels="1" name="Dash">
@@ -520,6 +524,7 @@
 		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
@@ -542,6 +547,7 @@
 		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="6644" levels="1" name="Ice Queen Freya">
@@ -680,6 +686,7 @@
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_SELF" />
 		<for>
 			<effect name="Paralyze" abnormalTime="#time2" val="0" special="freezing" abnormalLvl="#abnormalLvls" abnormalType="freezing" />
@@ -879,6 +886,7 @@
 		<set name="operateType" val="A1" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -912,6 +920,7 @@
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="83" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="120" />
 		<set name="mpConsume" val="82" />
 		<set name="castRange" val="900" />
@@ -1071,6 +1080,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="affectRange" val="350" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect count="36" name="DamOverTimePercent" abnormalTime="5" val="0.02" abnormalLvl="2" abnormalType="attack_time_down">
@@ -1146,6 +1156,7 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="affectRange" val="3000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" chanceType="ON_START" />
@@ -1166,6 +1177,7 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Paralyze" abnormalTime="15" val="0" special="freezing" abnormalLvl="3" abnormalType="freezing" />

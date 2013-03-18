@@ -762,6 +762,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="armor_water">
@@ -794,6 +795,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="armor_wind">
@@ -826,6 +828,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="armor_earth">
@@ -858,6 +861,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="armor_unholy">
@@ -890,6 +894,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="armor_holy">
@@ -974,6 +979,7 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4473" levels="12" name="Stun">
@@ -995,10 +1001,11 @@
 		<set name="reuseDelay" val="17000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4474" levels="5" name="Area Heal - Per">
@@ -1076,6 +1083,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
@@ -1091,6 +1099,7 @@
 		<set name="operateType" val="A1" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
@@ -1131,6 +1140,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="1800" val="0" abnormalLvl="4" abnormalType="md_down">
@@ -1154,6 +1164,7 @@
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="1800" val="0" abnormalLvl="4" abnormalType="pd_down">
@@ -1172,6 +1183,7 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="99" abnormalType="silence_all" />
@@ -1198,6 +1210,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1251,6 +1264,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_down">
@@ -1282,6 +1296,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="md_down">
@@ -1306,6 +1321,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -1322,6 +1338,7 @@
 		<set name="power" val="#power" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="4490" levels="12" name="NPC Holy Wall">
@@ -1345,6 +1362,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="4491" levels="12" name="Holy Weapon">
@@ -1366,9 +1384,10 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" effectPower="40" effectType="DEBUFF" abnormalLvl="1" abnormalType="holy_attack">
+			<effect name="Buff" abnormalTime="120" val="0" effectPower="40" abnormalLvl="1" abnormalType="holy_attack">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>
@@ -1392,9 +1411,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
-			<effect name="BigHead" abnormalTime="300" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="big_head" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" abnormalTime="300" val="0" effectPower="80" abnormalLvl="1" abnormalType="big_head" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
 	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
@@ -1436,6 +1456,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="4496" levels="12" name="Stun">
@@ -1455,10 +1476,11 @@
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="4497" levels="1" name="Treasure Chest - Level 21">

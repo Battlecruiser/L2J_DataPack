@@ -223,6 +223,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -250,6 +251,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="limit">
@@ -305,6 +307,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -342,6 +345,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -387,6 +391,7 @@
 		<set name="power" val="195" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -500,6 +505,7 @@
 		<set name="power" val="166" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -658,6 +664,7 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1524" levels="42" name="Surrender to the Holy">
@@ -682,6 +689,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="armor_holy">
@@ -715,6 +723,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="120" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="heal_effect_down">
@@ -769,6 +778,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="1529" levels="7" name="Soul Web" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -798,6 +808,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -835,6 +846,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
@@ -1073,6 +1085,7 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
@@ -1141,6 +1154,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1203,6 +1217,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="affectRange" val="400" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="1545" levels="1" name="Soul Sucking">
@@ -1223,6 +1238,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
@@ -1243,6 +1259,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="900" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_flee" />
@@ -1441,6 +1458,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="affectRange" val="100" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<for>
 			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
@@ -1460,6 +1478,7 @@
 		<set name="pvpPower" val="178" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
@@ -1531,6 +1550,7 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" activationChance="5" chanceType="ON_START" triggeredId="5571" />
@@ -1572,6 +1592,7 @@
 		<set name="power" val="11234" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">

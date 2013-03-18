@@ -706,6 +706,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -752,6 +753,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -800,6 +802,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="75" />
 		<set name="castRange" val="1000" />
@@ -842,6 +845,7 @@
 		<set name="power" val="4" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="pd_down">
@@ -873,6 +877,7 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="20" /> <!-- Base Land Rate -->
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect count="5" name="ConfuseMob" abnormalTime="4" val="0" />
@@ -925,6 +930,7 @@
 		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -961,6 +967,7 @@
 		<set name="power" val="10" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -997,6 +1004,7 @@
 		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1035,6 +1043,7 @@
 		<set name="power" val="5" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1100,6 +1109,7 @@
 		<set name="power" val="7" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="speed_down">

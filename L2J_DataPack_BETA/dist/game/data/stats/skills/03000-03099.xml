@@ -26,6 +26,7 @@
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -141,6 +142,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -187,6 +189,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -206,6 +209,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -223,6 +227,7 @@
 		<table name="#absorbPart"> 21 23 25 28 31 35 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -253,6 +258,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -451,6 +457,7 @@
 		<table name="#absorbPart"> 33 31 30 28 26 24 24 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -469,6 +476,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -491,6 +499,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -608,6 +617,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="8.39" />
 		<set name="operateType" val="A1" />
@@ -649,6 +659,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -667,6 +678,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -687,6 +699,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -707,6 +720,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -771,6 +785,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -785,6 +800,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -802,6 +818,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
@@ -822,6 +839,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="castRange" val="600" />
@@ -935,6 +953,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -997,6 +1016,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1018,6 +1038,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1065,6 +1086,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1086,6 +1108,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
@@ -1111,6 +1134,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="AGGDAMAGE" />
+		<set name="offensive" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
@@ -1143,6 +1167,7 @@
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_HIT" />
 		<set name="reuseDelay" val="30000" />
@@ -1273,6 +1298,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
@@ -1380,6 +1406,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="MANADAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
 		<set name="activationChance" val="#chance" />

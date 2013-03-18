@@ -46,7 +46,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="200" />
-		<set name="skillType" val="SPOIL" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_AREA" />
 		<enchant1 name="element" val="3" /> <!-- Earth -->
 		<enchant1 name="elementPower" val="20" />
@@ -521,6 +521,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="1000" />
 		<set name="skillType" val="FATAL" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -568,6 +569,7 @@
 		<set name="hitTime" val="1620" />
 		<set name="coolTime" val="1080" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -695,6 +697,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="CPDAMPERCENT" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -726,6 +729,7 @@
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="lethal1" val="5" /> <!-- Half-Kill -->
 		<set name="overHit" val="true" />
 		<set name="operateType" val="A3" />
@@ -1207,28 +1211,29 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="CPDAMPERCENT" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" effectPower="80" effectType="DEBUFF" abnormalLvl="1" abnormalType="touch_of_death">
+			<effect name="Debuff" abnormalTime="120" val="0" effectPower="80" abnormalLvl="1" abnormalType="touch_of_death">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="0.7" />
 			</effect>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
-			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" effectType="CPDAMPERCENT" />
+			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" />
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="120" val="0" effectPower="#ench2effectPower" effectType="DEBUFF" abnormalLvl="1" abnormalType="touch_of_death">
+			<effect name="Debuff" abnormalTime="120" val="0" effectPower="#ench2effectPower" abnormalLvl="1" abnormalType="touch_of_death">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="gainHp" val="0.7" />
 			</effect>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
-			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" effectType="CPDAMPERCENT" />
+			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" />
 		</enchant2for>
 	</skill>
 	<skill id="343" levels="1" name="Lethal Shot" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
@@ -1242,6 +1247,7 @@
 		<set name="power" val="7698" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1296,6 +1302,7 @@
 		<set name="power" val="5773" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="1.5" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DEATH" />
@@ -1334,6 +1341,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
@@ -1356,6 +1364,7 @@
 		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
@@ -1384,6 +1393,7 @@
 		<set name="target" val="TARGET_AURA" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
@@ -1418,6 +1428,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="SSBoost" val="2.0" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
@@ -1529,6 +1540,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
@@ -1588,6 +1600,7 @@
 		<set name="target" val="TARGET_ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
@@ -1635,6 +1648,7 @@
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -1648,12 +1662,12 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" effectPower="40" effectType="DEBUFF" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" effectPower="40" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="60" val="0" effectPower="#ench2effectPower" effectType="DEBUFF" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" abnormalTime="60" val="0" effectPower="#ench2effectPower" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant2for>
@@ -1868,6 +1882,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1983,6 +1998,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -2003,18 +2019,18 @@
 			<using kind="Pole" />
 		</cond>
 		<for>
-			<effect name="Stun" abnormalTime="8" val="0" effectPower="40" effectType="STUN" abnormalLvl="2" abnormalType="stun">
+			<effect name="Stun" abnormalTime="8" val="0" effectPower="40" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" />
 		</for>
 		<enchant3for>
-			<effect name="Stun" abnormalTime="8" val="0" effectPower="#ench3effectPower" effectType="STUN" abnormalLvl="2" abnormalType="stun">
+			<effect name="Stun" abnormalTime="8" val="0" effectPower="#ench3effectPower" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" effectType="DEBUFF" />
+			<effect name="RemoveTarget" noicon="1" val="0" effectPower="60" />
 		</enchant3for>
 	</skill>
 	<skill id="362" levels="1" name="Armor Crush" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -2033,6 +2049,7 @@
 		<set name="power" val="3077" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="1900" />
@@ -2056,13 +2073,13 @@
 			<using kind="Blunt,Big Blunt,Sword,Big Sword" />
 		</cond>
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="2" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="#ench3effectPower" effectType="STUN" abnormalLvl="2" abnormalType="stun">
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="#ench3effectPower" abnormalLvl="2" abnormalType="stun">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
@@ -2221,6 +2238,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2250,6 +2268,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="hitTime" val="1000" />
 		<set name="skillType" val="AGGDEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A3" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -2295,6 +2314,7 @@
 		<set name="reuseDelay" val="75000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="magicLvl" val="78" />
 		<set name="operateType" val="A3" />
 		<set name="castRange" val="900" />

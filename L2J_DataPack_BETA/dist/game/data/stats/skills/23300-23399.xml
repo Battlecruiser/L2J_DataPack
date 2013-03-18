@@ -10,6 +10,7 @@
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<!-- 300HP * 1 Sec during 10 seconds -->
@@ -166,6 +167,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -189,6 +191,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -212,6 +215,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -236,6 +240,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pd_down">
@@ -261,6 +266,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>

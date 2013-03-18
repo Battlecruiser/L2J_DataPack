@@ -18,10 +18,8 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -41,31 +39,20 @@ public class RandomizeHate extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.RANDOMIZE_HATE;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffected() == null) || (getEffected() == getEffector()))
-		{
-			return false;
-		}
-		
-		// Effect is for mobs only.
-		if (!getEffected().isL2Attackable())
+		if ((getEffected() == null) || (getEffected() == getEffector()) || !getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
 		L2Attackable effectedMob = (L2Attackable) getEffected();
-		
-		List<L2Character> targetList = new FastList<>();
-		
-		// Getting the possible targets
-		
-		Collection<L2Character> chars = getEffected().getKnownList().getKnownCharacters();
-		for (L2Character cha : chars)
+		final List<L2Character> targetList = new ArrayList<>();
+		for (L2Character cha : getEffected().getKnownList().getKnownCharacters())
 		{
 			if ((cha != null) && (cha != effectedMob) && (cha != getEffector()))
 			{
@@ -86,7 +73,6 @@ public class RandomizeHate extends L2Effect
 		
 		// Choosing randomly a new target
 		final L2Character target = targetList.get(Rnd.get(targetList.size()));
-		
 		final int hate = effectedMob.getHating(getEffector());
 		effectedMob.stopHating(getEffector());
 		effectedMob.addDamageHate(target, 0, hate);
