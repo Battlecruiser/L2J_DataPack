@@ -2281,24 +2281,26 @@
 		</enchant1for>
 	</skill>
 	<skill id="286" levels="3" name="Provoke">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 43 55 60 </table>
-		<table name="#mpConsume"> 57 75 89 </table>
-		<table name="#skillRadius"> 500 700 900 </table>
-		<table name="#vuln"> 1.1 1.15 1.2 </table>
+		<table name="#mpConsume"> 57 75 83 </table>
+		<table name="#affectRange"> 500 700 900 </table>
+		<table name="#poleWpnVuln"> 1.1 1.15 1.2 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="real_target" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="target" val="TARGET_AURA" />
-		<set name="affectRange" val="#skillRadius" />
-		<set name="reuseDelay" val="4000" />
+		<set name="affectRange" val="#affectRange" />
 		<set name="hitTime" val="1500" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="target" val="TARGET_AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="real_target">
-				<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
+				<mul order="0x30" stat="poleWpnVuln" val="#poleWpnVuln" />
 			</effect>
 		</for>
 	</skill>
