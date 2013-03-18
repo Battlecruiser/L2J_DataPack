@@ -282,6 +282,7 @@
 	<skill id="1409" levels="1" name="Cleanse">
 		<set name="itemConsumeId" val="8874" />
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="78" />
 		<set name="mpInitialConsume" val="12" />
 		<set name="mpConsume" val="46" />
 		<set name="target" val="TARGET_ONE" />
@@ -291,6 +292,7 @@
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="maxNegated" val="10" />
 		<for>
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
 		</for>
@@ -780,6 +782,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="70" />
 		<set name="mpConsume" val="70" />
+		<set name="maxNegated" val="10" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>

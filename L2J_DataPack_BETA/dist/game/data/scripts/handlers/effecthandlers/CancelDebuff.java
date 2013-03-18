@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.util.Rnd;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * @author UnAfraid
@@ -61,65 +61,40 @@ public class CancelDebuff extends L2Effect
 			return false;
 		}
 		
-		final int cancelLvl = skill.getMagicLevel();
-		int count = skill.getMaxNegatedEffects();
-		
-		L2Effect effect;
-		int lastCanceledSkillId = 0;
+		int count = 0;
 		final L2Effect[] effects = target.getAllEffects();
-		for (int i = effects.length; --i >= 0;)
+		
+		if ((effects == null) || (effects.length == 0))
 		{
-			effect = effects[i];
-			if (effect == null)
+			return false;
+		}
+		
+		for (L2Effect e : effects)
+		{
+			if ((e == null) || !e.getSkill().isDebuff() || !e.getSkill().canBeDispeled())
 			{
 				continue;
 			}
 			
-			if (!effect.getSkill().isDebuff() || !effect.getSkill().canBeDispeled())
-			{
-				effects[i] = null;
-				continue;
-			}
-			
-			if (effect.getSkill().getId() == lastCanceledSkillId)
-			{
-				effect.exit(); // this skill already canceled
-				continue;
-			}
-			
-			if (!calcCancelSuccess(effect, cancelLvl, (int) baseRate))
+			// TODO: Unhardcode Poison of Death skill
+			if (e.getSkill().getId() == 4082)
 			{
 				continue;
 			}
 			
-			lastCanceledSkillId = effect.getSkill().getId();
-			effect.exit();
-			count--;
+			if (!Formulas.calcCancelSuccess(e, skill.getMagicLevel(), (int) baseRate, skill))
+			{
+				continue;
+			}
 			
-			if (count == 0)
+			e.exit();
+			
+			count++;
+			if (count >= skill.getMaxNegatedEffects())
 			{
 				break;
 			}
 		}
-		
 		return true;
-	}
-	
-	private static boolean calcCancelSuccess(L2Effect effect, int cancelLvl, int baseRate)
-	{
-		int rate = 2 * (cancelLvl - effect.getSkill().getMagicLevel());
-		rate += (effect.getAbnormalTime() - effect.getTime()) / 1200;
-		rate += baseRate;
-		
-		if (rate < effect.getSkill().getMinChance())
-		{
-			rate = effect.getSkill().getMinChance();
-		}
-		else if (rate > effect.getSkill().getMaxChance())
-		{
-			rate = effect.getSkill().getMaxChance();
-		}
-		
-		return Rnd.get(100) < rate;
 	}
 }
