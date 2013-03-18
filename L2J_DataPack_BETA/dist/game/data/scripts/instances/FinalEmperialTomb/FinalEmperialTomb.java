@@ -1459,10 +1459,10 @@ public class FinalEmperialTomb extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof FETWorld)
 		{
-			FETWorld world = (FETWorld) tmpworld;
+			final FETWorld world = (FETWorld) tmpworld;
 			if ((npc.getNpcId() == SCARLET1) && (world.getStatus() == 3) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
 			{
 				controlStatus(world);
@@ -1471,16 +1471,19 @@ public class FinalEmperialTomb extends Quest
 			{
 				controlStatus(world);
 			}
-			// When Dewdrop of Destruction is used on Portraits they suicide.
-			if (Util.contains(PORTRAITS, npc.getNpcId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+			if (skill != null)
 			{
-				npc.doDie(attacker);
-			}
-			else if ((npc.getNpcId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
-			{
-				npc.setScriptValue(1);
-				npc.setTarget(null);
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				// When Dewdrop of Destruction is used on Portraits they suicide.
+				if (Util.contains(PORTRAITS, npc.getNpcId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+				{
+					npc.doDie(attacker);
+				}
+				else if ((npc.getNpcId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
+				{
+					npc.setScriptValue(1);
+					npc.setTarget(null);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				}
 			}
 		}
 		return null;
