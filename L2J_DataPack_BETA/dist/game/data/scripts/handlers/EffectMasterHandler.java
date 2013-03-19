@@ -72,6 +72,7 @@ import handlers.effecthandlers.ImmobileBuff;
 import handlers.effecthandlers.ImmobilePetBuff;
 import handlers.effecthandlers.IncreaseCharges;
 import handlers.effecthandlers.Invincible;
+import handlers.effecthandlers.Lucky;
 import handlers.effecthandlers.ManaDamOverTime;
 import handlers.effecthandlers.ManaHeal;
 import handlers.effecthandlers.ManaHealByLevel;
@@ -175,6 +176,7 @@ public final class EffectMasterHandler
 		IncreaseCharges.class,
 		ImmobilePetBuff.class,
 		Invincible.class,
+		Lucky.class,
 		ManaDamOverTime.class,
 		ManaHeal.class,
 		ManaHealByLevel.class,
