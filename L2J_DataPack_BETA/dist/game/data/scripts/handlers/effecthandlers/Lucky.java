@@ -24,12 +24,12 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Enlarge Abnormal Slot effect.
+ * Lucky effect.
  * @author Zoey76
  */
-public class EnlargeAbnormalSlot extends L2Effect
+public class Lucky extends L2Effect
 {
-	public EnlargeAbnormalSlot(Env env, EffectTemplate template)
+	public Lucky(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -49,6 +49,6 @@ public class EnlargeAbnormalSlot extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.ENLARGE_ABNORMAL_SLOT;
+		return L2EffectType.LUCKY;
 	}
 }
