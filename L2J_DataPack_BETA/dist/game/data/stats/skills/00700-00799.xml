@@ -194,6 +194,7 @@
 		</for>
 	</skill>
 	<skill id="708" levels="1" name="Divine Enchanter Mass Binding">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="hitTime" val="4000" />
@@ -641,6 +642,7 @@
 	</skill>
 	<skill id="730" levels="1" name="Gordon Press">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="80" />
@@ -921,6 +923,7 @@
 		<table name="#mpInitialConsume"> 17 18 19 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
 		<table name="#power"> 56 59 61 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -944,6 +947,7 @@
 		<table name="#mpInitialConsume"> 17 18 19 </table>
 		<table name="#mpConsume"> 68 70 73 </table>
 		<table name="#power"> 112 117 122 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1006,6 +1010,7 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#dmg"> 895 978 1059 </table>
 		<table name="#mpConsume"> 150 156 160 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1098,6 +1103,7 @@
 		<table name="#magicLvl"> 70 73 76 </table>
 		<table name="#dmg"> 1073 1173 1271 </table>
 		<table name="#mpConsume"> 71 74 77 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -1306,6 +1312,7 @@
 	</skill>
 	<skill id="762" levels="1" name="Insane Crusher">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="touch_of_death" />
 		<set name="baseCritRate" val="50" />
@@ -1345,6 +1352,7 @@
 	</skill>
 	<skill id="763" levels="1" name="Hell Scream">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="1000" />
@@ -1513,6 +1521,7 @@
 	</skill>
 	<skill id="771" levels="1" name="Flame Hawk">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
@@ -1539,6 +1548,7 @@
 	</skill>
 	<skill id="772" levels="1" name="Arrow Rain">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="1000" />
@@ -1564,6 +1574,7 @@
 	</skill>
 	<skill id="773" levels="1" name="Ghost Piercing">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
@@ -1590,6 +1601,7 @@
 	</skill>
 	<skill id="774" levels="1" name="Dread Pool">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="hitTime" val="1000" />
@@ -2009,6 +2021,7 @@
 	</skill>
 	<skill id="790" levels="1" name="Wild Shot">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
@@ -2033,6 +2046,7 @@
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="coolTime" val="720" />
@@ -2092,6 +2106,7 @@
 		<table name="#ench3Chance"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="600" />
@@ -2152,6 +2167,7 @@
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
 		<set name="hitTime" val="1500" />
@@ -2178,6 +2194,7 @@
 		</for>
 	</skill>
 	<skill id="795" levels="1" name="Divine Knight Brandish">
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,200,180" />
@@ -2195,6 +2212,7 @@
 		<set name="target" val="TARGET_FRONT_AREA" />
 	</skill>
 	<skill id="796" levels="1" name="Divine Knight Explosion Attack">
+		<set name="affectLimit" val="5-12" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="mpConsume" val="88" />
@@ -2208,6 +2226,7 @@
 		<set name="target" val="TARGET_AURA" />
 	</skill>
 	<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,250,60" />

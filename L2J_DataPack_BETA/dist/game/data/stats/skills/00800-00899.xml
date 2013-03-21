@@ -213,6 +213,7 @@
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="hitTime" val="1067" />
 		<set name="coolTime" val="733" />
@@ -237,6 +238,7 @@
 		<table name="#magicLvl"> 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 41 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 76 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="hitTime" val="1067" />
 		<set name="coolTime" val="733" />
@@ -1237,6 +1239,7 @@
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<table name="#power"> 68 78 78 79 80 81 81 82 </table>
 		<table name="#elementPower"> 20 25 30 35 40 45 50 55 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpInitialConsume" val="8" />
 		<set name="mpConsume" val="32" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1279,6 +1282,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 4878 6335 6468 6598 6723 6844 6960 7072 </table>
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="25" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="affectRange" val="400" />
@@ -1433,6 +1437,7 @@
 	<skill id="883" levels="7" name="Commander Mercenary Seal of Binding">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1478,6 +1483,7 @@
 	</skill>
 	<skill id="885" levels="1" name="Air Blink">
 		<!-- Aurabird Falcon and Owl -->
+		<set name="affectLimit" val="6-12" />
 		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
 		<set name="flyRadius" val="500" />
 		<set name="flyType" val="DUMMY" />
@@ -1742,6 +1748,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
@@ -1759,6 +1766,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
 		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="mpConsume" val="#mpConsume" />

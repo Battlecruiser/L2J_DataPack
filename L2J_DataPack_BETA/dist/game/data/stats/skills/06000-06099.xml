@@ -315,6 +315,7 @@
 	</skill>
 	<skill id="6043" levels="1" name="Phoenix Flame Feather">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="6-12" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
@@ -375,6 +376,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
 		<table name="#power"> 91 209 437 832 1442 2271 3251 3452 3652 3848 3944 4039 4132 4223 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 146 150 153 155 156 158 159 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -390,6 +392,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
 		<table name="#power"> 91 209 437 832 1442 2271 3251 3452 3652 3848 3944 4039 4132 4223 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 146 150 153 155 156 158 159 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -448,6 +451,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
 		<table name="#power"> 17 25 37 51 67 84 101 104 107 110 111 113 114 115 </table>
 		<table name="#mpConsume"> 19 31 42 56 72 88 104 106 109 111 112 114 115 116 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="fanRange" val="0,180,600,400" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />

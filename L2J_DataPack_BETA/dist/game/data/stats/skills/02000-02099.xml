@@ -732,6 +732,7 @@
 	</skill>
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="9-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

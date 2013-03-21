@@ -668,6 +668,7 @@
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5048" levels="12" name="Castle Burst Shot">
+		<set name="affectLimit" val="5-12" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="25000" />

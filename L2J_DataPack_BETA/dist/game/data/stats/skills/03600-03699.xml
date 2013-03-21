@@ -513,6 +513,7 @@
 		</for>
 	</skill>
 	<skill id="3630" levels="1" name="Void Burst">
+		<set name="affectLimit" val="6-12" />
 		<set name="target" val="TARGET_AURA" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -524,6 +525,7 @@
 		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="3631" levels="1" name="Void Flow">
+		<set name="affectLimit" val="6-12" />
 		<set name="target" val="TARGET_ONE" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />

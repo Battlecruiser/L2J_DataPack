@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" levels="1" name="Burst of Oblivion">
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="oblivion" />
 		<set name="fanRange" val="0,0,150,90" />
@@ -15,6 +16,7 @@
 	</skill>
 	<skill id="5901" levels="2" name="Mist of Oblivion">
 		<table name="#hitTime"> 2000 22940 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="oblivion" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -39,6 +41,7 @@
 		</for>
 	</skill>
 	<skill id="5903" levels="1" name="Burst of Misplace">
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
 		<set name="fanRange" val="0,0,600,90" />
@@ -67,6 +70,7 @@
 		<table name="#mpInitialConsume"> 37 38 39 </table>
 		<table name="#mpConsume"> 146 150 153 </table>
 		<table name="#hitTime"> 2000 22940 22940 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="#power" />
@@ -83,6 +87,7 @@
 		<set name="affectRange" val="300" />
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -103,6 +108,7 @@
 	</skill>
 	<skill id="5907" levels="2" name="Ritual of Entombment">
 		<table name="#hitTime"> 3000 34400 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -115,6 +121,7 @@
 	</skill>
 	<skill id="5908" levels="2" name="Ritual of Entombment">
 		<table name="#hitTime"> 3000 34400 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -256,6 +263,7 @@
 	<skill id="5921" levels="1" name="Inhale">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_f" />
 		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
@@ -290,6 +298,7 @@
 	<skill id="5922" levels="1" name="Exhale">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_g" />
 		<set name="castRange" val="600" />
@@ -343,6 +352,7 @@
 		</cond>
 	</skill>
 	<skill id="5926" levels="1" name="Breath Corruption">
+		<set name="affectLimit" val="5-15" />
 		<set name="fanRange" val="0,0,300,90" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -395,6 +405,7 @@
 	<skill id="5932" levels="1" name="Dark Blade">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -414,6 +425,7 @@
 	<skill id="5933" levels="1" name="Dark Blade">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -441,6 +453,7 @@
 	<skill id="5935" levels="1" name="Dark Ring">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -459,6 +472,7 @@
 	<skill id="5936" levels="1" name="Earth Ring">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -675,6 +689,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5961" levels="1" name="Barrier Thunder Storm">
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
@@ -718,6 +733,7 @@
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="5967" levels="2" name="Hate Aura">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="target" val="TARGET_NONE" />
@@ -821,6 +837,7 @@
 		<table name="#magicLvl"> 51 61 79 </table>
 		<table name="#mpConsume"> 50 61 75 </table>
 		<table name="#power"> 757 1182 4039 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -854,6 +871,7 @@
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="5980" levels="3" name="Seal Isolation">
+		<set name="affectLimit" val="10-10" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -1036,6 +1054,7 @@
 	<skill id="5993" levels="1" name="Command of Anger">
 		<!-- Confirmed CT2.5 -->
 		<!-- Ekimus Skills -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="oblivion" />
 		<set name="hitTime" val="2000" />
