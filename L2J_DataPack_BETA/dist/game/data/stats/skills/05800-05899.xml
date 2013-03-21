@@ -7,6 +7,7 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="5801" levels="1" name="Drake Breath">
+		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,45" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -16,6 +17,7 @@
 		<set name="reuseDelay" val="4000" />
 	</skill>
 	<skill id="5802" levels="1" name="Stun">
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="fanRange" val="0,0,400,60" />
@@ -83,6 +85,7 @@
 		<set name="hitTime" val="1700" />
 	</skill>
 	<skill id="5810" levels="1" name="Decrease Spd.">
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="fanRange" val="0,0,600,30" />
@@ -103,6 +106,7 @@
 		<set name="hitTime" val="1700" />
 	</skill>
 	<skill id="5812" levels="1" name="Fire Breath">
+		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_FRONT_AREA" />
@@ -203,6 +207,7 @@
 		<table name="#magicLvl"> 83 84 85 </table>
 		<table name="#power"> 60 61 61 </table>
 		<table name="#mpConsume"> 59 60 60 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="15" />
@@ -226,6 +231,7 @@
 		<table name="#power"> 55 56 58 59 60 61 </table>
 		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 56 58 58 59 60 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -315,6 +321,7 @@
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="magicLvl" val="85" />
@@ -335,6 +342,7 @@
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="85" />
@@ -355,6 +363,7 @@
 		</for>
 	</skill>
 	<skill id="5834" levels="1" name="Magic Barrier">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="md_up" />
 		<set name="magicLvl" val="85" />
@@ -392,6 +401,7 @@
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="magicLvl" val="85" />
@@ -439,6 +449,7 @@
 	<skill id="5839" levels="1" name="Breath">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
 		<set name="fanRange" val="0,0,1200,30" />
@@ -457,6 +468,7 @@
 	<skill id="5840" levels="1" name="Fire Breath">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- fire -->
@@ -477,6 +489,7 @@
 	<skill id="5841" levels="1" name="Multi Defense">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="instinct" />
 		<set name="aggroPoints" val="694" />
@@ -499,6 +512,7 @@
 	<skill id="5842" levels="1" name="Spinning Slasher">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectLimit" val="6-12" />
 		<set name="coolTime" val="733" />
 		<set name="hitTime" val="2120" />
 		<set name="magicLvl" val="85" />
@@ -514,6 +528,7 @@
 	<skill id="5843" levels="1" name="Terror">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="coolTime" val="500" />
@@ -572,6 +587,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks">
+		<set name="affectLimit" val="10-10" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -724,11 +740,13 @@
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5862" levels="1" name="Destruction of the Body">
+		<set name="affectLimit" val="10-10" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5863" levels="1" name="Destruction of the Soul">
+		<set name="affectLimit" val="10-10" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -767,6 +785,7 @@
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="fanRange" val="0,0,150,90" />
@@ -781,6 +800,7 @@
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -793,6 +813,7 @@
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -816,6 +837,7 @@
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="fanRange" val="0,0,150,90" />
@@ -828,6 +850,7 @@
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="target" val="TARGET_NONE" />
@@ -860,6 +883,8 @@
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<table name="#affectLimits"> 0-0 10-10 10-10 10-10 10-10 </table>
+		<set name="affectLimit" val="#affectLimits" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="deathworm" />
 		<set name="target" val="TARGET_NONE" />
@@ -1000,6 +1025,7 @@
 	<skill id="5884" levels="2" name="Weakened Sweep">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 2319 18664 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
@@ -1027,6 +1053,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: lvl 2 has wrong Id in client -->
 		<table name="#power"> 2319 18664 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
@@ -1051,6 +1078,7 @@
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="165" />
@@ -1075,6 +1103,7 @@
 		</for>
 	</skill>
 	<skill id="5887" levels="1" name="Howl from Beyond">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_c" />
 		<set name="target" val="TARGET_NONE" />
@@ -1087,6 +1116,7 @@
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
 		<table name="#mpConsume"> 82 83 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="fanRange" val="0,0,300,90" />
@@ -1121,6 +1151,7 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5890" levels="3" name="Tainted Mass Shackle">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="target" val="TARGET_NONE" />
@@ -1270,6 +1301,7 @@
 	<skill id="5898" levels="2" name="Blast of Anger">
 		<table name="#hitTime"> 2000 22940 </table>
 		<table name="#mpConsume"> 140 150 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1297,6 +1329,7 @@
 	</skill>
 	<skill id="5899" levels="2" name="Burst of Pain">
 		<table name="#hitTime"> 2000 22940 </table>
+		<set name="affectLimit" val="5-15" />
 		<set name="mpConsume" val="224" />
 		<set name="power" val="3000" />
 		<set name="target" val="TARGET_FRONT_AREA" />

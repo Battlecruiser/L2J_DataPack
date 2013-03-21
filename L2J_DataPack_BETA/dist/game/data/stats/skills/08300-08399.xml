@@ -327,6 +327,7 @@
 	</skill>
 	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="5-5" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
@@ -654,6 +655,7 @@
 	</skill>
 	<skill id="8357" levels="1" name="Einhasad's Strike">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="700" />
 		<set name="effectRange" val="400" />

@@ -420,6 +420,7 @@
 		<table name="#ench2mpInitialConsume"> 55 53 51 49 47 45 43 41 40 38 36 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 218 212 204 196 189 181 174 166 158 150 142 136 128 121 113 </table>
 		<table name="#ench3decreasePenalty"> 0.82 0.84 0.86 0.88 0.9 0.91 0.92 0.93 0.94 0.95 0.96 0.97 0.98 0.99 1.0 </table>
+		<set name="affectLimit" val="50-100" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="itemConsumeId" val="3031" />
@@ -495,6 +496,7 @@
 		<table name="#ench1Time"> 320 340 360 380 400 420 440 460 480 500 520 540 560 580 600 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 219 212 204 196 189 181 174 166 159 151 143 136 128 121 113 </table>
+		<set name="affectLimit" val="50-100" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="resist_debuff_dispel" />
 		<set name="mpInitialConsume" val="56" />
@@ -526,6 +528,7 @@
 		<table name="#ench1amount"> 810 820 830 840 850 860 870 880 890 900 910 920 930 940 950 </table>
 		<table name="#ench2mpInitialConsume"> 54 53 51 49 47 45 43 41 39 37 35 34 32 30 28 </table>
 		<table name="#ench2mpConsume"> 219 212 205 196 189 181 174 166 159 151 143 136 128 121 113 </table>
+		<set name="affectLimit" val="50-100" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="cp_up" />
 		<set name="mpInitialConsume" val="56" />
@@ -606,6 +609,7 @@
 		</for>
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
+		<set name="affectLimit" val="15-25" />
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -634,6 +638,7 @@
 		</for>
 	</skill>
 	<skill id="1420" levels="1" name="Cyclone">
+		<set name="affectLimit" val="15-25" />
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -662,6 +667,7 @@
 		</for>
 	</skill>
 	<skill id="1421" levels="1" name="Raging Waves">
+		<set name="affectLimit" val="15-25" />
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -715,6 +721,7 @@
 		</for>
 	</skill>
 	<skill id="1423" levels="1" name="Gehenna">
+		<set name="affectLimit" val="15-25" />
 		<set name="target" val="TARGET_GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
@@ -976,6 +983,7 @@
 		<table name="#mpInitialConsume"> 6 7 8 9 </table>
 		<table name="#power"> 16 18 20 23 </table>
 		<table name="#magicLvl"> 24 28 32 36 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1096,6 +1104,7 @@
 		<table name="#mpInitialConsume"> 11 11 12 12 12 13 13 13 14 14 15 15 15 15 16 16 16 16 17 17 17 17 17 18 18 18 </table>
 		<table name="#mpConsume"> 41 43 45 46 48 49 51 52 54 55 57 58 59 60 61 62 63 64 65 66 67 68 68 69 70 71 </table>
 		<table name="#power"> 42 43 45 47 49 50 53 54 56 57 59 60 61 62 63 65 66 67 68 69 70 72 73 74 75 76 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="40" />
@@ -1160,6 +1169,7 @@
 		<table name="#mpConsume"> 44 47 48 51 52 54 55 56 58 </table>
 		<table name="#mpInitialConsume"> 11 11 12 12 12 13 13 14 14 </table>
 		<table name="#power"> 82 85 89 92 96 99 102 105 108 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1547,6 +1557,7 @@
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1MpConsume"> 49 48 47 46 45 45 44 43 42 41 40 40 39 38 37 36 35 35 34 33 32 31 30 30 29 28 27 26 25 25 </table>
 		<table name="#ench2Radius"> 413 426 440 453 466 480 493 506 520 533 546 560 573 586 600 613 626 640 653 666 680 693 706 720 733 746 760 773 786 800 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="coolTime" val="200" />
@@ -1608,6 +1619,7 @@
 		<table name="#ench3Wind"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#ench4Duel"> 203 207 211 214 218 222 226 229 233 237 241 244 248 252 256 </table>
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="affectLimit" val="5-12" />
 		<!-- set name="affectLimit" = "5;12" / -->
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
@@ -1753,6 +1765,7 @@
 		<table name="#ench1Power"> 71 73 74 76 77 79 80 82 83 85 86 88 89 91 92 </table>
 		<table name="#ench2mpConsume"> 105 101 97 93 90 86 82 78 76 72 68 65 61 57 53 </table>
 		<table name="#ench3elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="79" />
@@ -2013,6 +2026,7 @@
 		<table name="#ench1Power"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench2MpConsume"> 84 81 78 75 72 69 66 63 61 58 55 52 49 46 43 </table>
 		<table name="#ench2MpInitialConsume"> 21 20 19 18 18 17 16 15 15 14 13 13 12 11 10  </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="normal_attack_block" />
 		<set name="hitTime" val="4000" />
@@ -2125,6 +2139,7 @@
 	</skill>
 	<skill id="1467" levels="1" name="Meteor">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="600" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -2150,6 +2165,7 @@
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
@@ -2179,6 +2195,7 @@
 		<table name="#ench2MpInitialConsume"> 16 15 15 14 14 13 13 12 12 11 10 10 9 9 8 </table>
 		<table name="#ench3ElementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#ench4Duel"> 228 232 236 241 245 249 253 258 262 266 270 275 279 283 288 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -2253,6 +2270,7 @@
 	<skill id="1471" levels="1" name="Death Beam">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -2991,6 +3009,7 @@
 		</for>
 	</skill>
 	<skill id="1495" levels="1" name="Vampiric Mist">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="ultimate_debuff" />
 		<set name="mpConsume" val="145" />

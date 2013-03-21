@@ -840,6 +840,7 @@
 		<table name="#mpConsume"> 19 20 20 21 22 23 25 26 27 28 28 29 32 33 34 </table>
 		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
@@ -2286,6 +2287,7 @@
 		<table name="#mpConsume"> 57 75 83 </table>
 		<table name="#affectRange"> 500 700 900 </table>
 		<table name="#poleWpnVuln"> 1.1 1.15 1.2 </table>
+		<set name="affectLimit" val="9-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="real_target" />
 		<set name="affectRange" val="#affectRange" />

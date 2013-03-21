@@ -117,6 +117,7 @@
 		<set name="reuseDelay" val="2000" />
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
+		<set name="affectLimit" val="5-12" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />

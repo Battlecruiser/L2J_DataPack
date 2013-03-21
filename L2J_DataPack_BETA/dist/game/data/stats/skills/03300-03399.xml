@@ -270,6 +270,7 @@
 		<set name="coolTime" val="133" />
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
+		<set name="affectLimit" val="6-12" />
 		<set name="fanRange" val="0,0,80,150" />
 		<set name="target" val="TARGET_FRONT_AREA" />
 		<set name="nextActionAttack" val="true" />
@@ -280,6 +281,7 @@
 		<set name="coolTime" val="720" />
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="target" val="TARGET_NONE" />

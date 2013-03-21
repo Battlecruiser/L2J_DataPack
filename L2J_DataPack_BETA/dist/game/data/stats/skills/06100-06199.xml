@@ -274,6 +274,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6130" levels="1" name="Curse of the Mutant Animal">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="target" val="TARGET_NONE" />
@@ -624,6 +625,7 @@
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="6166" levels="1" name="Hold">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

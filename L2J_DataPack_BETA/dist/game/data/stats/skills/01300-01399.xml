@@ -124,6 +124,7 @@
 		<table name="#ench2mpInitialConsume"> 47 46 46 45 45 45 44 44 43 43 42 42 41 41 40 40 40 39 39 38 38 37 37 36 36 36 35 35 34 34 </table>
 		<table name="#ench1amount"> 690 694 697 700 704 707 711 713 717 721 724 727 731 734 738 741 744 748 751 755 758 761 765 768 772 775 778 782 785 789 </table>
 		<table name="#aggro"> 689 722 743 763 780 </table>
+		<set name="affectLimit" val="50-50" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="target" val="TARGET_PARTY_CLAN" />
@@ -1230,6 +1231,7 @@
 		</enchant3for>
 	</skill>
 	<skill id="1344" levels="1" name="Mass Warrior Bane">
+		<set name="affectLimit" val="10-10" />
 		<set name="mpInitialConsume" val="25" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="77" />
@@ -1246,6 +1248,7 @@
 		</for>
 	</skill>
 	<skill id="1345" levels="1" name="Mass Mage Bane">
+		<set name="affectLimit" val="10-10" />
 		<set name="mpInitialConsume" val="27" />
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="78" />
@@ -1919,6 +1922,7 @@
 		<table name="#ench2Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 </table>
 		<table name="#ench2mpConsume"> 81 78 75 72 69 67 64 61 58 55 53 50 47 44 41 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 18 18 17 16 16 15 14 13 13 12 11 11 10 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalType" val="block_shield_up" />
 		<set name="hitTime" val="4000" />
@@ -1959,6 +1963,7 @@
 		<table name="#ench2Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 </table>
 		<table name="#ench2mpConsume"> 81 78 75 72 69 67 64 61 58 55 53 50 47 44 41 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 18 18 17 16 16 15 14 13 13 12 11 11 10 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalType" val="block_speed_up" />
 		<set name="hitTime" val="4000" />
@@ -2107,6 +2112,7 @@
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpConsume"> 216 209 201 194 186 179 171 164 156 149 141 134 126 119 112 </table>
 		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 28 </table>
+		<set name="affectLimit" val="50-50" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="improve_hit_defence_crt_rate_up" />
 		<set name="aggroPoints" val="666" />
@@ -2148,6 +2154,7 @@
 		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 </table>
 		<table name="#ench2mpConsume"> 216 209 201 194 186 179 171 164 156 149 141 134 126 119 112 </table>
 		<table name="#ench2mpInitialConsume"> 54 52 50 48 46 44 42 41 39 37 35 33 31 29 28 </table>
+		<set name="affectLimit" val="50-50" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="aggroPoints" val="666" />
@@ -2191,6 +2198,7 @@
 		<table name="#ench2Power"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 </table>
 		<table name="#ench2mpInitialConsume"> 20 20 19 18 18 17 16 15 15 14 13 13 12 11 10 </table>
 		<table name="#ench2mpConsume"> 82 78 77 74 70 68 65 62 58 57 54 50 48 45 42 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="ultimate_debuff" />
 		<set name="mpInitialConsume" val="22" />
@@ -2466,6 +2474,7 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 64 69 74 78 82 </table>
 		<table name="#mpInitialConsume"> 16 18 19 20 21 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="500" />
@@ -2506,6 +2515,7 @@
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
 		<table name="#power"> 33 36 39 41 44 </table>
 		<table name="#vuln"> 5 10 15 20 25 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="md_down" />
 		<set name="castRange" val="900" />
@@ -2572,6 +2582,7 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
 		<table name="#itemConsumeCount"> 2 2 2 3 3 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="armor_fire" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2620,6 +2631,7 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
 		<table name="#itemConsumeCount"> 2 2 2 3 3 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="armor_water" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2668,6 +2680,7 @@
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
 		<table name="#itemConsumeCount"> 2 2 2 3 3 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="armor_wind" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -3210,6 +3223,7 @@
 		<table name="#ench2MpConsume"> 150 148 146 143 142 140 137 136 133 132 130 127 126 123 121 120 117 116 113 111 110 107 105 103 101 98 97 95 93 91 </table>
 		<table name="#mpConsume"> 120 129 138 147 153 </table>
 		<table name="#power"> 62 67 72 77 81 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />

@@ -114,6 +114,7 @@
 		<table name="#magicLvl"> 43 55 64 </table>
 		<table name="#mpConsume"> 21 28 33 </table>
 		<table name="#power"> 1630 2089 2384 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
@@ -335,6 +336,7 @@
 		<table name="#power"> 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218 </table>
 		<table name="#magicLvl"> 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 </table>
 		<table name="#enchDuel"> 1239 1260 1281 1303 1324 1345 1366 1388 1409 1430 1451 1473 1494 1515 1537 1558 1579 1600 1622 1643 1664 1685 1707 1728 1749 1770 1792 1813 1834 1856 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="1000" />
@@ -921,6 +923,7 @@
 		<table name="#enchmpConsume"> 77 74 72 69 67 64 61 59 56 53 51 48 45 43 40 </table>
 		<table name="#ench3elementPower"> 3 6 10 13 16 20 23 26 30 33 36 40 43 46 46 </table>
 		<table name="#ench4Duel"> 6157 6253 6350 6446 6543 6639 6736 6832 6929 7025 7122 7218 7315 7411 7508 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
@@ -1156,6 +1159,7 @@
 	</skill>
 	<skill id="537" levels="1" name="Spoil Bomb">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="spoil_bomb" />
 		<set name="castRange" val="40" />
@@ -1233,6 +1237,7 @@
 	<skill id="540" levels="1" name="Wing Assault">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="600" />
@@ -1849,6 +1854,7 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#pAtkSpd"> 0.9 0.85 0.8 0.75 </table>
 		<table name="#runSpd"> 0.8 0.7 0.65 0.6 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1940,6 +1946,7 @@
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#power"> 625 703 784 867 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="skillType" val="CHARGEDAM" />
@@ -1985,6 +1992,7 @@
 		<table name="#mpInitialConsume"> 5 6 6 7 </table>
 		<table name="#mpConsume"> 18 21 23 26 </table>
 		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -2028,6 +2036,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 625 703 784 867 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="element" val="3" /> <!-- Earth -->
@@ -2113,6 +2122,7 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#power"> 875 984 1098 1213 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="PDAM" />
@@ -2138,6 +2148,7 @@
 		<table name="#power"> 625 703 784 867 </table>
 		<table name="#dot"> 81 81 93 93 </table>
 		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dot_attr" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2211,6 +2222,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#accCombat"> 6 7 8 9 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="hit_down" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -2237,6 +2249,7 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 875 984 1098 1213 </table>
 		<table name="#abnormalLvls"> 6 6 7 7 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="lvlBonusRate" val="1" />
@@ -2313,6 +2326,7 @@
 		<!-- CT2.2 retail confirmed -->
 		<table name="#mpConsume"> 54 58 </table>
 		<table name="#power"> 840 984 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="target" val="TARGET_AURA" />

@@ -460,6 +460,7 @@
 	</skill>
 	<skill id="629" levels="1" name="Rabbit Magic Eye">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="6-12" />
 		<set name="aggroPoints" val="1000" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1342,6 +1343,7 @@
 		<set name="target" val="TARGET_ONE" />
 	</skill>
 	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
+		<set name="affectLimit" val="6-12" />
 		<set name="hitTime" val="1067" />
 		<set name="coolTime" val="733" />
 		<set name="ignoreShld" val="true" />
@@ -1419,6 +1421,7 @@
 		</for>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="hitTime" val="1000" />
@@ -1464,6 +1467,7 @@
 		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="hitTime" val="1080" />
@@ -1696,6 +1700,7 @@
 		</cond>
 	</skill>
 	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="4" /> <!-- Holy -->
@@ -1712,6 +1717,7 @@
 		<set name="target" val="TARGET_AREA" />
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
+		<set name="affectLimit" val="9-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="sleep" />
 		<set name="castRange" val="500" />

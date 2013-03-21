@@ -5,6 +5,7 @@
 		<table name="#pvpPower"> 5280 5390 5498 5603 5704 5800 </table>
 		<table name="#pvePower"> 15838 16170 16494 16807 17110 17400 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="fanRange" val="0,0,200,900" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
@@ -63,6 +64,7 @@
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
@@ -81,6 +83,7 @@
 		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="poison" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -110,6 +113,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 4224 4312 4399 4482 4563 4640 </table>
 		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -134,6 +138,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="fanRange" val="0,0,900,100" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
@@ -172,6 +177,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
@@ -190,6 +196,7 @@
 		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#dot"> 200 225 250 275 300 325 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="poison" />
 		<set name="lvlBonusRate" val="1" />
@@ -222,6 +229,7 @@
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvpPower"> 4224 4312 4399 4482 4563 4640 </table>
 		<table name="#pvePower"> 12670 12936 13195 13446 13688 13920 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -248,6 +256,7 @@
 		<table name="#power"> 469 482 494 505 517 528 539 550 561 571 580 </table>
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#magicLvl"> 75 76 77 78 79 80 81 82 83 84 85 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -910,6 +919,7 @@
 	</skill>
 	<skill id="947" levels="1" name="Lucky Strike">
 		<!-- Confirmed CT2.5 -->
+		<set name="affectLimit" val="3-6" />
 		<set name="baseCritRate" val="5" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="100" />
@@ -1009,6 +1019,7 @@
 		<table name="#magicLvl"> 79 80 81 82 83 84 85 </table>
 		<table name="#mpConsume"> 71 71 72 72 73 74 74 </table>
 		<table name="#power"> 2067 2112 2156 2200 2241 2282 2320 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="600" />
@@ -1608,6 +1619,7 @@
 		<table name="#mpConsume"> 108 109 110 111 112 112 </table>
 		<table name="#magicLvl"> 80 81 82 83 84 85 </table>
 		<table name="#power"> 6752 7459 8170 8886 9606 10330 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1712,6 +1724,7 @@
 	<skill id="985" levels="1" name="Challenge for Fate">
 		<!-- High Five Skill -->
 		<!-- Totally Unconfirmed -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -1755,6 +1768,7 @@
 	</skill>
 	<skill id="987" levels="1" name="Multiple Shot">
 		<!-- High Five Skill -->
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="900" />
 		<set name="baseCritRate" val="15" /> <!-- FIXME: value unconfirmed -->
 		<set name="effectRange" val="1400" />
@@ -1939,6 +1953,7 @@
 	</skill>
 	<skill id="995" levels="1" name="Rush Impact">
 		<!-- High Five Skill -->
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="600" />

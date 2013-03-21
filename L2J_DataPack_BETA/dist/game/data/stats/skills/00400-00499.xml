@@ -265,6 +265,7 @@
 		<table name="#ench2Power"> 41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 40 43 46 59 51 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_physically" />
 		<set name="hitTime" val="3000" />
@@ -448,6 +449,7 @@
 		<table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
 		<table name="#power"> 229 262 284 308 332 357 382 407 432 457 </table>
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="all_speed_down" />
 		<set name="baseCritRate" val="10" />
@@ -481,6 +483,7 @@
 		<table name="#mpConsume"> 39 42 44 45 47 48 50 51 53 54 </table>
 		<table name="#power"> 825 941 1023 1107 1194 1283 1373 1464 1554 1644 </table>
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="all_attack_down" />
 		<set name="baseCritRate" val="10" />
@@ -1366,6 +1369,7 @@
 		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#ench1Power"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
 		<table name="#ench2Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="hitTime" val="2500" />
@@ -1516,6 +1520,7 @@
 	</skill>
 	<skill id="444" levels="1" name="Sweeper Festival">
 		<!-- High Five Skill -->
+		<set name="affectLimit" val="9-10" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="12" />
@@ -1714,6 +1719,7 @@
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#effectPower"> 40 50 60 70 80 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="coolTime" val="500" />
@@ -2624,6 +2630,7 @@
 		<table name="#magicLvl"> 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
+		<set name="affectLimit" val="5-12" />
 		<!-- <set name="castRange" val="40" /> -->
 		<set name="coolTime" val="720" />
 		<!-- <set name="effectRange" val="400" /> -->
@@ -2658,6 +2665,7 @@
 		<table name="#magicLvl"> 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
 		<table name="#effectRange"> 600 600 600 600 600 600 600 600 600 600 700 700 700 700 700 700 700 700 700 700 800 800 800 800 800 800 800 800 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="#effectRange" />
@@ -2839,6 +2847,7 @@
 		<table name="#mpConsume"> 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="coolTime" val="300" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />

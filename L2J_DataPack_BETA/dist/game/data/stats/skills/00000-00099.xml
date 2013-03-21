@@ -226,6 +226,7 @@
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#power"> 155 163 172 181 190 199 209 219 229 240 251 262 273 284 296 308 320 332 344 357 369 382 394 407 420 432 445 457 </table>
 		<table name="#enchDuel"> 465 473 481 489 497 505 513 521 529 537 545 553 561 569 577 585 593 601 609 617 625 633 641 649 657 665 673 681 689 696 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
@@ -300,6 +301,7 @@
 		<table name="#ench1Power"> 461 465 469 474 478 482 486 490 494 498 502 506 511 515 519 523 527 531 535 539 543 548 552 556 560 564 568 572 576 581 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchDuel"> 465 473 481 489 497 505 513 521 529 537 545 553 561 569 577 585 593 601 609 617 625 633 641 649 657 665 673 681 689 696 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="baseCritRate" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -495,6 +497,7 @@
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#power"> 129 137 145 153 162 171 181 190 200 211 222 233 244 256 268 280 293 305 318 332 345 359 373 387 402 416 431 445 460 475 489 504 519 533 </table>
 		<table name="#enchDuel"> 645 651 657 663 668 674 680 686 692 697 703 709 715 720 726 732 738 743 749 755 761 766 772 778 784 789 795 801 807 812 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -548,6 +551,7 @@
 		<table name="#power"> 4312 4427 4544 4661 4778 4895 5013 5131 5248 5365 5481 5597 5713 5827 5939 6051 6161 6271 6379 6483 6587 6688 6788 6884 6977 7069 7157 7243 7324 7403 7478 7550 7618 7682 7742 7798 7850 </table>
 		<table name="#ench1Power"> 7992 8086 8181 8276 8371 8466 8561 8655 8750 8845 8940 9035 9130 9224 9319 9414 9509 9604 9699 9793 9888 9983 10078 10173 10268 10362 10457 10552 10647 10742 </table>
 		<table name="#enchpDefAtk"> 0.95 0.94 0.94 0.93 0.93 0.92 0.92 0.91 0.91 0.9 0.9 0.89 0.89 0.88 0.88 0.87 0.87 0.86 0.86 0.85 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="target_lock" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -685,6 +689,7 @@
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#power"> 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
@@ -934,6 +939,7 @@
 		<table name="#ench1Power"> 538 542 547 552 557 562 566 571 576 581 586 590 595 600 605 610 614 619 624 629 634 638 643 648 653 658 663 667 672 677 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchDuel"> 540 547 554 561 567 574 581 588 595 602 609 615 622 629 636 643 650 656 663 670 677 684 691 698 704 711 718 725 732 739 </table>
+		<set name="affectLimit" val="5-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -986,6 +992,7 @@
 		<table name="#ench1Power"> 2763 2788 2813 2837 2862 2887 2911 2936 2961 2985 3010 3035 3059 3084 3109 3133 3158 3183 3207 3232 3257 3281 3306 3331 3355 3380 3405 3429 3454 3479 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchDuel"> 2787 2835 2883 2931 2979 3027 3075 3122 3170 3218 3266 3314 3362 3410 3458 3505 3553 3601 3649 3697 3745 3793 3840 3888 3936 3984 4032 4080 4128 4176 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="baseCritRate" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1134,6 +1141,7 @@
 		<table name="#ench1effPower"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#ench2MpConsume"> 105 103 101 99 98 96 94 92 91 89 87 85 84 82 80 78 76 75 73 71 69 68 66 64 62 61 59 57 55 54 </table>
 		<table name="#ench2Power"> 2100 2119 2138 2157 2175 2194 2213 2232 2250 2269 2288 2307 2325 2344 2363 2382 2401 2419 2438 2457 2476 2494 2513 2532 2551 2569 2588 2607 2626 2645 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="15" />
@@ -1795,6 +1803,7 @@
 		<table name="#mpConsume"> 38 42 50 </table>
 		<table name="#dot"> 114 132 144 </table>
 		<table name="#abnormalLvls"> 6 7 8 </table>
+		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2176,6 +2185,7 @@
 		<table name="#ench4ModifyCritical"> 1.1 1.11 1.12 1.12 1.13 1.14 1.14 1.15 1.16 1.16 1.17 1.18 1.18 1.19 1.2 1.2 1.21 1.22 1.22 1.23 1.24 1.24 1.25 1.26 1.26 1.27 1.28 1.28 1.29 1.3 </table>
 		<table name="#magicLvl"> 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 35 38 40 42 43 45 46 48 49 50 51 </table>
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="hitTime" val="1500" />

@@ -1269,6 +1269,7 @@
 		</for>
 	</skill>
 	<skill id="5582" levels="1" name="Divine Beast Fire Breath">
+		<set name="affectLimit" val="5-12" />
 		<set name="mpConsume" val="80" />
 		<set name="power" val="875" />
 		<set name="magicLvl" val="80" />
@@ -1287,6 +1288,7 @@
 		<set name="effectRange" val="400" />
 	</skill>
 	<skill id="5583" levels="1" name="Divine Beast Roar">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="mpConsume" val="80" />
@@ -1308,6 +1310,7 @@
 		</for>
 	</skill>
 	<skill id="5584" levels="1" name="Wolf Howl">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="target" val="TARGET_NONE" />
@@ -1319,6 +1322,7 @@
 		<set name="lvlBonusRate" val="2" />
 	</skill>
 	<skill id="5585" levels="1" name="Strider Roar">
+		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="target" val="TARGET_NONE" />

@@ -181,6 +181,7 @@
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7022" levels="1" name="Test - Find Hidden Door">
+		<set name="affectLimit" val="6-12" />
 		<set name="target" val="TARGET_SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -978,6 +979,7 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="7078" levels="1" name="Test - Blink">
+		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1009,6 +1011,7 @@
 		<set name="saveVs" val="CON" />
 	</skill>
 	<skill id="7081" levels="1" name="Effect Test - Land Shot">
+		<set name="affectLimit" val="5-12" />
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -1017,6 +1020,7 @@
 		<set name="coolTime" val="800" />
 	</skill>
 	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
+		<set name="affectLimit" val="5-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
@@ -1025,12 +1029,14 @@
 		<set name="hitTime" val="5000" />
 	</skill>
 	<skill id="7083" levels="1" name="Test - Trap Skill">
+		<set name="affectLimit" val="6-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="7084" levels="1" name="Test - Trap Skill">
+		<set name="affectLimit" val="6-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="target" val="TARGET_NONE" />
 		<set name="skillType" val="NOTDONE" />
