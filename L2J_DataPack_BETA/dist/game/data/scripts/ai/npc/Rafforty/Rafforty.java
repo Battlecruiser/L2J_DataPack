@@ -37,12 +37,6 @@ public class Rafforty extends AbstractNpcAI
 	private static final int BOTTLE = 16027;
 	
 	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		return "32020.html";
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
