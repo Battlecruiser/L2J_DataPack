@@ -111,30 +111,8 @@ public class Disablers implements ISkillHandler
 				case ROOT:
 				case DISARM:
 				case STUN:
-				{
-					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
-					{
-						target = activeChar;
-					}
-					
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-					{
-						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					}
-					else
-					{
-						if (activeChar.isPlayer())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-							sm.addCharName(target);
-							sm.addSkillName(skill);
-							activeChar.sendPacket(sm);
-						}
-					}
-					break;
-				}
 				case SLEEP:
-				case PARALYZE: // use same as root for now
+				case PARALYZE:
 				{
 					if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
 					{
