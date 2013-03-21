@@ -80,7 +80,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("DESPAWN"))
+		if ((npc != null) && event.equals("DESPAWN"))
 		{
 			npc.deleteMe();
 		}
@@ -101,6 +101,7 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]));
+		cancelQuestTimer("DESPAWN", npc, killer);
 		return null;
 	}
 	
