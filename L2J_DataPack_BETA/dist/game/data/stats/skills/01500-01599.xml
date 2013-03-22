@@ -1438,21 +1438,23 @@
 	<skill id="1553" levels="1" name="Chain Heal">
 		<!-- High Five Skill -->
 		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="300" />
 		<set name="aggroPoints" val="398" /> <!-- FIXME: value unconfirmed -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="4" />
 		<set name="itemConsumeId" val="3031" />
-		<!-- set name="maxTargets" val="10" / TODO: Require Support -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="156" />
 		<set name="mpInitialConsume" val="38" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
-		<set name="power" val="30" />
 		<set name="reuseDelay" val="5000" />
-		<set name="affectRange" val="900" />
-		<set name="skillType" val="CHAIN_HEAL" />
-		<set name="target" val="TARGET_ALLY" /> <!-- TODO: Appears to be only for TARGET_ALLY_MEMBER_AREA + (10 targets around him), not ALL ALLY MEMBERS -->
+		<set name="target" val="TARGET_AREA_FRIENDLY" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="30" />
+		</for>
 	</skill>
 	<skill id="1554" levels="1" name="Aura Blast">
 		<!-- High Five Skill -->

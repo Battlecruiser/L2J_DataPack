@@ -211,9 +211,7 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
-import handlers.skillhandlers.ChainHeal;
 import handlers.skillhandlers.Charge;
-import handlers.skillhandlers.CombatPointHeal;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.CpDamPercent;
 import handlers.skillhandlers.Craft;
@@ -250,6 +248,7 @@ import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.TargetAlly;
 import handlers.targethandlers.TargetArea;
 import handlers.targethandlers.TargetAreaCorpseMob;
+import handlers.targethandlers.TargetAreaFriendly;
 import handlers.targethandlers.TargetAreaSummon;
 import handlers.targethandlers.TargetAura;
 import handlers.targethandlers.TargetAuraCorpseMob;
@@ -532,12 +531,11 @@ public class MasterHandler
 			Blow.class,
 			Pdam.class,
 			Mdam.class,
+			Charge.class,
 			CpDamPercent.class,
 			Manadam.class,
 			Heal.class,
 			HealPercent.class,
-			CombatPointHeal.class,
-			Charge.class,
 			Continuous.class,
 			Detection.class,
 			Resurrect.class,
@@ -545,7 +543,6 @@ public class MasterHandler
 			StrSiegeAssault.class,
 			SummonFriend.class,
 			Disablers.class,
-			ChainHeal.class,
 			StealBuffs.class,
 			BallistaBomb.class,
 			TakeCastle.class,
@@ -606,6 +603,7 @@ public class MasterHandler
 			TargetAlly.class,
 			TargetArea.class,
 			TargetAreaCorpseMob.class,
+			TargetAreaFriendly.class,
 			TargetAreaSummon.class,
 			TargetAura.class,
 			TargetAuraCorpseMob.class,

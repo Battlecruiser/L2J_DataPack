@@ -51,8 +51,8 @@ public class CpHeal extends L2Effect
 		{
 			return false;
 		}
-		StatusUpdate su = new StatusUpdate(target);
 		
+		StatusUpdate su = new StatusUpdate(target);
 		double amount = calc();
 		
 		// Prevents overheal and negative amount

@@ -86,11 +86,7 @@ public class HandysBlockCheckerEvent extends Quest
 	
 	private boolean eventIsFull(int arena)
 	{
-		if (HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12)
-		{
-			return true;
-		}
-		return false;
+		return HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12;
 	}
 	
 	public HandysBlockCheckerEvent(int questId, String name, String descr)
