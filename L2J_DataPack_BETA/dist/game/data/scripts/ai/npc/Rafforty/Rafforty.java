@@ -67,7 +67,7 @@ public class Rafforty extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public Rafforty(String name, String descr)
+	private Rafforty(String name, String descr)
 	{
 		super(name, descr);
 		addStartNpc(RAFFORTY);

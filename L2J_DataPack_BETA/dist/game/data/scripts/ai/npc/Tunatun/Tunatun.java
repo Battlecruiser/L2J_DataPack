@@ -62,7 +62,7 @@ public class Tunatun extends AbstractNpcAI
 		return event;
 	}
 	
-	public Tunatun(String name, String descr)
+	private Tunatun(String name, String descr)
 	{
 		super(name, descr);
 		addStartNpc(TUNATUN);

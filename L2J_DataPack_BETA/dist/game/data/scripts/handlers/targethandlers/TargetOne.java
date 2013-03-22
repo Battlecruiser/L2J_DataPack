@@ -35,24 +35,20 @@ public class TargetOne implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		boolean canTargetSelf = skill.getId() == 1335; // TODO: Unhardcode Balance Life
+		boolean canTargetSelf = false;
 		switch (skill.getSkillType())
 		{
 			case BUFF:
 			case HEAL:
 			case HEAL_PERCENT:
 			case MANAHEAL_BY_LEVEL:
-			case COMBATPOINTHEAL:
 			case DUMMY:
 				canTargetSelf = true;
 				break;
 			default:
 			{
-				if (skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE))
-				{
-					canTargetSelf = true;
-					break;
-				}
+				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL);
+				break;
 			}
 		}
 		

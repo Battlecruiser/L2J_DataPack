@@ -43,7 +43,6 @@ public class Q00020_BringUpWithLove extends Quest
 		super(questId, name, descr);
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
-		addFirstTalkId(TUNATUN);
 	}
 	
 	@Override

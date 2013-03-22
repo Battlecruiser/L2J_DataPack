@@ -49,8 +49,7 @@ public class ForgeOfTheGods extends AbstractNpcAI
 		22646, // Ashuras of Destruction
 		22647, // Lavasillisk
 		22648, // Blazing Ifrit
-		22649
-	// Magma Drake
+		22649, // Magma Drake
 	};
 	
 	private static final int[] LAVASAURUSES =
@@ -59,8 +58,7 @@ public class ForgeOfTheGods extends AbstractNpcAI
 		18800, // Fledgling Lavasaurus
 		18801, // Adult Lavasaurus
 		18802, // Elderly Lavasaurus
-		18803
-	// Ancient Lavasaurus
+		18803, // Ancient Lavasaurus
 	};
 	
 	private static final int REFRESH = 15;

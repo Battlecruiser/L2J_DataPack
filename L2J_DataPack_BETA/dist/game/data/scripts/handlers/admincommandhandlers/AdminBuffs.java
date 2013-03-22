@@ -149,7 +149,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					}
 				}
 				
-				activeChar.sendMessage("All effects canceled within raidus " + radius);
+				activeChar.sendMessage("All effects canceled within radius " + radius);
 				return true;
 			}
 			catch (NumberFormatException e)

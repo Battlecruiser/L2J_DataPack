@@ -297,7 +297,6 @@ public class FinalEmperialTomb extends Quest
 	@SuppressWarnings("unused")
 	private void load()
 	{
-		
 		int spawnCount = 0;
 		try
 		{
