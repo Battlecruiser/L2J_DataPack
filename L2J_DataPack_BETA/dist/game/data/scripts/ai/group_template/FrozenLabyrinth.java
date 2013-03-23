@@ -46,7 +46,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		if ((skill != null) && !skill.isMagic())
+		if (npc.isScriptValue(0) && (skill != null) && !skill.isMagic())
 		{
 			int spawnId = LOST_BUFFALO;
 			if (npc.getNpcId() == PRONGHORN)
@@ -57,13 +57,14 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 			int diff = 0;
 			for (int i = 0; i < 6; i++)
 			{
-				int x = diff < 60 ? npc.getX() + diff : npc.getX();
-				int y = diff >= 60 ? npc.getY() + (diff - 40) : npc.getY();
+				final int x = diff < 60 ? npc.getX() + diff : npc.getX();
+				final int y = diff >= 60 ? npc.getY() + (diff - 40) : npc.getY();
 				
 				final L2Attackable monster = (L2Attackable) addSpawn(spawnId, x, y, npc.getZ(), npc.getHeading(), false, 0);
 				attackPlayer(monster, attacker);
 				diff += 20;
 			}
+			npc.setScriptValue(1);
 			npc.deleteMe();
 		}
 		return super.onAttack(npc, attacker, damage, isSummon, skill);
