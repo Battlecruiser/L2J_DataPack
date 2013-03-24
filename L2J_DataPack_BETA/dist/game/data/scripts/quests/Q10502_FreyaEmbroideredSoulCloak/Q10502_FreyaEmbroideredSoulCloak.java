@@ -59,7 +59,7 @@ public class Q10502_FreyaEmbroideredSoulCloak extends Quest
 		{
 			final long currentCount = st.getQuestItemsCount(FREYAS_SOUL_FRAGMENT);
 			final long count = getRandom(1, 3);
-			if (count > (FRAGMENT_COUNT - currentCount))
+			if (count >= (FRAGMENT_COUNT - currentCount))
 			{
 				st.giveItems(FREYAS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
 				st.setCond(2, true);

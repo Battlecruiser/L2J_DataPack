@@ -59,7 +59,7 @@ public class Q10501_ZakenEmbroideredSoulCloak extends Quest
 		{
 			final long currentCount = st.getQuestItemsCount(ZAKENS_SOUL_FRAGMENT);
 			final long count = getRandom(1, 3);
-			if (count > (FRAGMENT_COUNT - currentCount))
+			if (count >= (FRAGMENT_COUNT - currentCount))
 			{
 				st.giveItems(ZAKENS_SOUL_FRAGMENT, FRAGMENT_COUNT - currentCount);
 				st.setCond(2, true);
