@@ -1230,35 +1230,37 @@
 		</enchant3for>
 	</skill>
 	<skill id="1344" levels="1" name="Mass Warrior Bane">
+		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="10-10" />
-		<set name="mpInitialConsume" val="25" />
-		<set name="mpConsume" val="80" />
-		<set name="magicLvl" val="77" />
-		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
-		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
-		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="84" />
+		<set name="mpInitialConsume" val="21" />
+		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="1345" levels="1" name="Mass Mage Bane">
+		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="10-10" />
-		<set name="mpInitialConsume" val="27" />
-		<set name="mpConsume" val="80" />
-		<set name="magicLvl" val="78" />
-		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
-		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
-		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="85" />
+		<set name="mpInitialConsume" val="22" />
+		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="40" />
 		</for>
@@ -1462,33 +1464,37 @@
 		</enchant1for>
 	</skill>
 	<skill id="1350" levels="1" name="Warrior Bane">
-		<set name="mpInitialConsume" val="20" />
-		<set name="mpConsume" val="50" />
-		<set name="magicLvl" val="76" />
-		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
-		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="56" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="attack_time_down;speed_up;improve_speed_avoid_up;improve_vampiric_haste" />
+		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="3000" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="1351" levels="1" name="Mage Bane">
-		<set name="mpInitialConsume" val="20" />
-		<set name="mpConsume" val="50" />
-		<set name="magicLvl" val="77" />
-		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
-		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="4000" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="77" />
+		<set name="mpConsume" val="56" />
+		<set name="mpInitialConsume" val="14" />
+		<set name="negateAbnormals" val="ma_up;casting_time_down;improve_ma_md_up" />
+		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="3000" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="80" />
 		</for>
