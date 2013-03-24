@@ -22,8 +22,6 @@ import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import village_master.Clan.Clan;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ActionHandler;
 import com.l2jserver.gameserver.handler.ActionShiftHandler;
@@ -256,6 +254,7 @@ import handlers.targethandlers.Aura;
 import handlers.targethandlers.AuraCorpseMob;
 import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
+import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
 import handlers.targethandlers.CorpseAlly;
 import handlers.targethandlers.CorpseClan;
