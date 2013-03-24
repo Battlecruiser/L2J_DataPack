@@ -4,7 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x10" stat="CON" val="2" />
 		</for>
@@ -13,7 +13,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x10" stat="INT" val="2" />
 		</for>
@@ -22,7 +22,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x10" stat="WIT" val="2" />
 		</for>
@@ -31,7 +31,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x10" stat="MEN" val="2" />
 		</for>
@@ -40,7 +40,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="15" />
 		</for>
@@ -49,7 +49,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="15" />
 		</for>
@@ -58,7 +58,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="15" />
 		</for>
@@ -67,7 +67,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="15" />
 		</for>
@@ -76,7 +76,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x10" stat="STR" val="1" />
 			<add order="0x10" stat="DEX" val="1" />
@@ -94,7 +94,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="RECALL" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -103,7 +103,7 @@
 	</skill>
 	<skill id="8510" levels="1" name="Summon Friend">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
@@ -115,25 +115,25 @@
 	</skill>
 	<skill id="8511" levels="1" name="Blessing of Victory">
 		<!-- Increases Speed by 2%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8512" levels="1" name="National Representative Warrior's Tenacity">
 		<!-- "When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited National Representative Warrior's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8513" levels="1" name="National Representative Spell of Blessing">
 		<!-- "When used, you can obtain at random a Blessed Scroll of Escape or a B~S grade Blessed Weapon/Armor Strengthening Scroll. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8514" levels="1" name="National Representative Energy of Victory">
 		<!-- "When used, you can obtain at random one Nevit's Hourglass 1~4 hours and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -144,7 +144,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1576" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -156,7 +156,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1577" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -168,26 +168,26 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1578" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="8518" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8519" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8520" levels="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -198,7 +198,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16077" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -210,7 +210,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16078" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -222,26 +222,26 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16079" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="8524" levels="1" name="Hero's Holy Attack">
 		<!-- Divine attck is increased by 250. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8525" levels="1" name="Hero's Holy Attack">
 		<!-- Increases holy attack by 250. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8526" levels="1" name="Shiny Bracelet">
 		<!-- 3 Talisman can be equipped. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>

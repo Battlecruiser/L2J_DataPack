@@ -2009,7 +2009,7 @@ public class CrystalCaverns extends Quest
 				else if (!world.copys.isEmpty())
 				{
 					boolean notAOE = true;
-					if ((skill != null) && ((skill.getTargetType() == L2TargetType.TARGET_AREA) || (skill.getTargetType() == L2TargetType.TARGET_FRONT_AREA) || (skill.getTargetType() == L2TargetType.TARGET_BEHIND_AREA) || (skill.getTargetType() == L2TargetType.TARGET_AURA) || (skill.getTargetType() == L2TargetType.TARGET_FRONT_AURA) || (skill.getTargetType() == L2TargetType.TARGET_BEHIND_AURA)))
+					if ((skill != null) && ((skill.getTargetType() == L2TargetType.AREA) || (skill.getTargetType() == L2TargetType.FRONT_AREA) || (skill.getTargetType() == L2TargetType.BEHIND_AREA) || (skill.getTargetType() == L2TargetType.AURA) || (skill.getTargetType() == L2TargetType.FRONT_AURA) || (skill.getTargetType() == L2TargetType.BEHIND_AURA)))
 					{
 						notAOE = false;
 					}

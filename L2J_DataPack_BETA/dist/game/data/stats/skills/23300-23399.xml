@@ -11,7 +11,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<!-- 300HP * 1 Sec during 10 seconds -->
 			<effect count="10" name="DamOverTime" val="300" />
@@ -19,49 +19,49 @@
 	</skill>
 	<skill id="23301" levels="1" name="Dimensional Door A">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23302" levels="1" name="Dimensional Door B">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23303" levels="1" name="Move">
 		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23304" levels="1" name="Move">
 		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23305" levels="1" name="Zinenze Agathion - Yunbokhwan">
 		<!-- Restores all HP/MP/CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23306" levels="1" name="Zinenze Agathion Cute Trick">
 		<!-- Able to see the summoned Zinenze perform cute tricks. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23307" levels="1" name="Enze Agathion Cute Trick">
 		<!-- Able to see the summoned Enze perform cute tricks. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23308" levels="1" name="Totem's Energy - Body">
 		<!-- Increases HP Recovery Bonus by 30% and decreases damage from the topography by 80% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -74,7 +74,7 @@
 	</skill>
 	<skill id="23309" levels="1" name="Totem's Energy - Spirit">
 		<!-- Increases MP Recovery Bonus by 30% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -86,7 +86,7 @@
 	</skill>
 	<skill id="23310" levels="1" name="Totem's Energy - Courage">
 		<!-- Increases P. Def. by 15% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -98,7 +98,7 @@
 	</skill>
 	<skill id="23311" levels="1" name="Totem's Energy - Fortitude">
 		<!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -110,43 +110,43 @@
 	</skill>
 	<skill id="23312" levels="1" name="Fall of the Dragon">
 		<!-- Nevit's gift to honor those warriors who caused the evil dragon's fall. Increases Nevit's blessing by 3 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23313" levels="5" name="Action Prohibit Immunity">
 		<!-- Increases resistance to action-inhibiting attacks by 100%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23314" levels="5" name="Control Prohibit Immunity">
 		<!-- Increases resistance to control-inhibiting attacks by 100%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23315" levels="5" name="Paralysis Immunity Enhance">
 		<!-- Increases resistance to paralysis attacks by 100%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23316" levels="5" name="Petrification Immunity Enhance">
 		<!-- Increases resistance to petrification attacks by 100%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23317" levels="5" name="Fear Immunity Enhance">
 		<!-- Increases resistance to fear attacks by 100%. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23318" levels="1" name="Cat the Ranger Boots">
 		<!-- "Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's resistance to debuff attacks by 80%, resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Reuse delay 10 minutes." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -168,7 +168,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="3" name="DamOverTime" abnormalTime="6" val="170" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -192,7 +192,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="3" val="230" abnormalLvl="8" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -216,7 +216,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="FEAR" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="4" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
@@ -241,7 +241,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -267,7 +267,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun">
@@ -286,7 +286,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="raid_weapon">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
@@ -295,89 +295,89 @@
 		</for>
 	</skill>
 	<skill id="23325" levels="1" name="Enlarge - Luckpy">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23326" levels="1" name="Reduce - Luckpy">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23327" levels="1" name="Boss Test - Weaken">
 		<!-- A skill to test a boss mob - Weaken -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23328" levels="1" name="Boss Test - Strengthen">
 		<!-- A skill to test a boss mob - Strengthen -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="23329" levels="1" name="Lantern Agathion's Gift1">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23330" levels="1" name="Lantern Agathion's Gift2">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23331" levels="1" name="Lantern Agathion's Gift3">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23332" levels="1" name="Lantern Agathion's Gift4">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23333" levels="1" name="Agathion's New Year's Wish">
 		<!-- Description: Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23334" levels="1" name="Lantern Agathion Cute Trick">
 		<!-- Description: Able to see the summoned Lantern's perform cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23335" levels="1" name="Agathion's New Year's Wish">
 		<!-- Description: Vitality is maintained with the power of Juju Agathion. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23336" levels="1" name="Juju Agathion Cute Trick">
 		<!-- Description: Summoned Juju performs cute tricks. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23337" levels="1" name="Juju Agathion's Gift 1">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23338" levels="1" name="Juju Agathion's Gift 2">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23339" levels="1" name="Juju Agathion's Gift 3">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23340" levels="1" name="Juju Agathion's Gift 4">
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>

@@ -7,7 +7,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1501" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -19,7 +19,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1502" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -31,7 +31,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1503" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -43,7 +43,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1504" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -51,7 +51,7 @@
 	<skill id="21004" levels="1" name="Wind Walk">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -66,7 +66,7 @@
 	<skill id="21005" levels="1" name="Agility">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -80,7 +80,7 @@
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
@@ -93,7 +93,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="BigHead" abnormalTime="600" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
@@ -106,7 +106,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1505" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -118,7 +118,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1506" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -130,7 +130,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1507" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -140,7 +140,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
@@ -156,7 +156,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
@@ -172,7 +172,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A2" />
@@ -185,7 +185,7 @@
 	</skill>
 	<skill id="21014" levels="1" name="Scissors">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -197,7 +197,7 @@
 	</skill>
 	<skill id="21015" levels="1" name="Rock">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -208,7 +208,7 @@
 	</skill>
 	<skill id="21016" levels="1" name="Paper">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
@@ -218,7 +218,7 @@
 		</cond>
 	</skill>
 	<skill id="21017" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -228,7 +228,7 @@
 		</for>
 	</skill>
 	<skill id="21018" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -238,7 +238,7 @@
 		</for>
 	</skill>
 	<skill id="21019" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -248,7 +248,7 @@
 		</for>
 	</skill>
 	<skill id="21020" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -258,7 +258,7 @@
 		</for>
 	</skill>
 	<skill id="21021" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -268,7 +268,7 @@
 		</for>
 	</skill>
 	<skill id="21022" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -278,7 +278,7 @@
 		</for>
 	</skill>
 	<skill id="21023" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -288,7 +288,7 @@
 		</for>
 	</skill>
 	<skill id="21024" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -298,7 +298,7 @@
 		</for>
 	</skill>
 	<skill id="21025" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -308,7 +308,7 @@
 		</for>
 	</skill>
 	<skill id="21026" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -318,7 +318,7 @@
 		</for>
 	</skill>
 	<skill id="21027" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -329,7 +329,7 @@
 		</for>
 	</skill>
 	<skill id="21028" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -339,7 +339,7 @@
 		</for>
 	</skill>
 	<skill id="21029" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -349,7 +349,7 @@
 		</for>
 	</skill>
 	<skill id="21030" levels="1" name="Holiday Dream Weapon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
 		<for>
@@ -365,7 +365,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1508" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -377,7 +377,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1509" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -389,7 +389,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1510" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -401,7 +401,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1511" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -413,7 +413,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1512" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -425,7 +425,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1513" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -437,7 +437,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1514" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -449,7 +449,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1515" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -461,7 +461,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1516" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -473,7 +473,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1517" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -485,14 +485,14 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1518" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21042" levels="1" name="Baguette's Blessing">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
@@ -505,7 +505,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1519" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -517,7 +517,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1520" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -529,7 +529,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1521" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -541,7 +541,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1522" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -553,7 +553,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1523" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -565,7 +565,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1524" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -577,7 +577,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1525" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -589,7 +589,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1526" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -597,7 +597,7 @@
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -611,7 +611,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -622,7 +622,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -631,7 +631,7 @@
 	<skill id="21054" levels="1" name="Blessed Resurrection Ability">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
@@ -642,7 +642,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
@@ -653,7 +653,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
@@ -664,7 +664,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -676,7 +676,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -688,7 +688,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -700,7 +700,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -711,7 +711,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
@@ -722,7 +722,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -733,7 +733,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
@@ -744,7 +744,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -756,7 +756,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -768,7 +768,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="3000" />
 		<set name="operateType" val="A2" />
@@ -783,7 +783,7 @@
 	<skill id="21067" levels="1" name="Blessed Escape Ability">
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
@@ -799,7 +799,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -811,7 +811,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
@@ -822,7 +822,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -833,7 +833,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
@@ -844,7 +844,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -855,7 +855,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -867,7 +867,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -879,7 +879,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -891,7 +891,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -903,7 +903,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
@@ -914,7 +914,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -925,7 +925,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
@@ -936,7 +936,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -947,7 +947,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -959,7 +959,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -971,7 +971,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -983,7 +983,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="3000" />
 		<set name="operateType" val="A2" />
@@ -1002,7 +1002,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1527" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -1012,7 +1012,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1023,7 +1023,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1032,7 +1032,7 @@
 	<skill id="21088" levels="1" name="Summon Friend">
 		<!-- Summons your friend. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
@@ -1048,7 +1048,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dance_of_shadow" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1059,7 +1059,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="resurrection_special" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
@@ -1073,30 +1073,30 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1528" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21093" levels="1" name="Theme - Hero">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21094" levels="1" name="Theme - Theme Park">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21095" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
@@ -1107,7 +1107,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1116,7 +1116,7 @@
 	<skill id="21097" levels="1" name="Summon Friend">
 		<!-- Summons your friend. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
@@ -1132,7 +1132,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1142,7 +1142,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />

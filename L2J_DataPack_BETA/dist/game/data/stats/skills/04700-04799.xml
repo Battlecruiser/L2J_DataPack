@@ -11,7 +11,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_queen_of_cat" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
@@ -33,7 +33,7 @@
 		<table name="#aggroPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#power"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2000" />
@@ -56,7 +56,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -81,7 +81,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="buff_unicorn_seraphim" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
@@ -102,7 +102,7 @@
 		<table name="#aggroPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#power"> 40 45 50 55 60 65 70 75 80 85 90 95 100 </table> <!-- Base Land Rate -->
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="8000" />
@@ -143,7 +143,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="debuff_nightshade">
 				<mul order="0x30" stat="mDef" val="#mpDef" />
@@ -175,7 +175,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="200" />
@@ -208,7 +208,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="HEAL" />
 		<!-- NOTE: skill description mention party members, but is client typo, it could affect any single target -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#heal" />
 		</for>
@@ -221,7 +221,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -246,7 +246,7 @@
 		<set name="blowChance" val="20" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
 		<set name="condition" val="16" /> <!-- Crit -->
@@ -267,7 +267,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -291,7 +291,7 @@
 		<set name="abnormalType" val="ultimate_buff" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1100" />
 		<set name="coolTime" val="400" />
@@ -314,7 +314,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="hitTime" val="1500" />
@@ -331,7 +331,7 @@
 		<table name="#aggro"> 33 34 35 36 37 38 39 40 41 42 43 44 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="1000" />
 		<set name="reuseDelay" val="12000" />
@@ -344,19 +344,19 @@
 	</skill>
 	<skill id="4714" levels="1" name="Twilight Dragon">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4715" levels="1" name="Wind Dragon">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4716" levels="1" name="Star Dragon">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="35" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -366,7 +366,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="8000" />
@@ -383,7 +383,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="skillType" val="HEAL" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="8000" />
@@ -409,7 +409,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4720" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -426,7 +426,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4721" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -443,7 +443,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4722" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -460,7 +460,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4723" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -477,7 +477,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4724" levels="12" name="Stun">
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
@@ -487,7 +487,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -511,7 +511,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -535,7 +535,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -559,7 +559,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -583,7 +583,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -616,7 +616,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4730" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -635,7 +635,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4731" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -654,7 +654,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4732" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -673,7 +673,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4733" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -692,7 +692,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4734" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -708,7 +708,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="4735" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -724,7 +724,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="4736" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -740,7 +740,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="4737" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -756,7 +756,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="4738" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -772,7 +772,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="4739" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -789,7 +789,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4740" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -806,7 +806,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4741" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -823,7 +823,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4742" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -840,7 +840,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4743" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -857,7 +857,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4744" levels="12" name="Stun">
 		<table name="#power"> 56 151 417 1089 2816 5504 8522 10060 11622 13182 14784 16398 </table>
@@ -867,7 +867,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -891,7 +891,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -915,7 +915,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -939,7 +939,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -963,7 +963,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -996,7 +996,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4750" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1015,7 +1015,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4751" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1034,7 +1034,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4752" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1053,7 +1053,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4753" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1072,7 +1072,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4754" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1088,7 +1088,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4755" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1104,7 +1104,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4756" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1120,7 +1120,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4757" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1136,7 +1136,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4758" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1152,7 +1152,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4759" levels="12" name="Stun">
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
@@ -1162,7 +1162,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1185,7 +1185,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1208,7 +1208,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1231,7 +1231,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1254,7 +1254,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1283,7 +1283,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4765" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1299,7 +1299,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4766" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1315,7 +1315,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4767" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1331,7 +1331,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4768" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1347,7 +1347,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4769" levels="12" name="Stun">
 		<table name="#power"> 164 441 1218 3179 8223 16075 24892 29382 33944 38501 43180 47895 </table>
@@ -1357,7 +1357,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1380,7 +1380,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1403,7 +1403,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1426,7 +1426,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1449,7 +1449,7 @@
 		<set name="abnormalType" val="stun" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1478,7 +1478,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4775" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1494,7 +1494,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4776" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1510,7 +1510,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4777" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1526,7 +1526,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4778" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1542,7 +1542,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4779" levels="12" name="BOSS Heal">
 		<!-- Boss Skill -->
@@ -1558,7 +1558,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1577,7 +1577,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1596,7 +1596,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1615,7 +1615,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1634,7 +1634,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1657,7 +1657,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
@@ -1680,7 +1680,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
@@ -1703,7 +1703,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
@@ -1726,7 +1726,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
@@ -1749,7 +1749,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 		</for>
@@ -1757,7 +1757,7 @@
 	<skill id="4789" levels="10" name="NPC High Level">
 		<table name="#rEvas"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<table name="#mDef"> 1.03 1.06 1.09 1.12 1.15 1.18 1.21 1.24 1.27 1.3 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
@@ -1768,61 +1768,61 @@
 	</skill>
 	<skill id="4790" levels="1" name="Raid Boss - Level 23">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4791" levels="1" name="Raid Boss - Level 30">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4792" levels="1" name="Raid Boss - Level 42">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4793" levels="1" name="Raid Boss - Level 55">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4794" levels="1" name="Raid Boss - Level 50">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4795" levels="1" name="Raid Boss - Level 60">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4796" levels="1" name="Raid Boss - Level 25">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4797" levels="1" name="Raid Boss - Level 34">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4798" levels="1" name="Raid Boss - Level 34">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4799" levels="1" name="Raid Boss - Level 49">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 	</skill>

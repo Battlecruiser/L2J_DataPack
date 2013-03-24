@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7000" levels="1" name="NPC Default">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="7001" levels="1" name="Dispel Buff">
 		<set name="magicLvl" val="99" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="maxNegated" val="20" />
@@ -20,7 +20,7 @@
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
 		<set name="magicLvl" val="99" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -38,7 +38,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
 			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
@@ -47,7 +47,7 @@
 	<skill id="7004" levels="2" name="Dispel Petrification">
 		<!-- This skill only has one level, 2. -->
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="negateAbnormals" val="turn_stone,2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
@@ -64,7 +64,7 @@
 		<set name="magicLvl" val="74" />
 		<set name="mpInitialConsume" val="55" />
 		<set name="mpConsume" val="217" />
-		<set name="target" val="TARGET_CLAN_MEMBER" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="20000" />
@@ -85,7 +85,7 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="mpConsume" val="272" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="2500" />
 		<set name="operateType" val="A2" />
@@ -100,7 +100,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="dot_attr" />
 		<set name="mpConsume" val="153" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="4000" />
@@ -111,109 +111,109 @@
 		<set name="effectRange" val="900" />
 	</skill>
 	<skill id="7008" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7009" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7010" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7011" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7012" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7013" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="7022" levels="1" name="Test - Find Hidden Door">
 		<set name="affectLimit" val="6-12" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="7023" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7024" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7025" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7026" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7027" levels="1" name="not_used">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7028" levels="1" name="For Stationary NPCs">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -230,7 +230,7 @@
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="99" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -253,7 +253,7 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
@@ -270,7 +270,7 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
@@ -287,7 +287,7 @@
 		<set name="summonTotalLifeTime" val="1200000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTimeLostActive" val="1000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="itemConsumeCount" val="8" />
 		<set name="reuseDelay" val="4000" />
 		<set name="hitTime" val="4000" />
@@ -298,42 +298,42 @@
 		<set name="npcId" val="20241" />
 	</skill>
 	<skill id="7033" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7034" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7035" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7036" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7037" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7038" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7039" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7040" levels="1" name="not_used">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -349,7 +349,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
@@ -368,7 +368,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -387,7 +387,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -406,7 +406,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -425,7 +425,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="6" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
@@ -444,7 +444,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="6" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
@@ -463,7 +463,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
@@ -482,7 +482,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -501,7 +501,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="decrease_weight_penalty">
 				<add order="0x40" stat="weightPenalty" val="9000" />
@@ -520,7 +520,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -539,7 +539,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -558,7 +558,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
@@ -577,7 +577,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
@@ -596,7 +596,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -615,7 +615,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -634,7 +634,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="1.16" />
@@ -659,7 +659,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.1" />
@@ -677,7 +677,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pa_pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -696,7 +696,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="magic_critical_up">
 				<add order="0x40" stat="mCritRate" val="2" />
@@ -714,7 +714,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="cheap_magic">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
@@ -738,7 +738,7 @@
 		<set name="mpInitialConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<add order="0x40" stat="mCritRate" val="2" />
@@ -769,7 +769,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
@@ -800,7 +800,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
@@ -830,7 +830,7 @@
 		<set name="mpConsume" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
@@ -850,7 +850,7 @@
 		</for>
 	</skill>
 	<skill id="7065" levels="1" name="Test - Charge">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="DA1" />
@@ -863,7 +863,7 @@
 	<skill id="7066" levels="1" name="Test Stun Charge">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="lvlBonusRate" val="1" />
@@ -879,7 +879,7 @@
 	<skill id="7067" levels="1" name="Test Range Charge">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="DA2" />
@@ -894,7 +894,7 @@
 	</skill>
 	<skill id="7068" levels="1" name="Test Steal Abnormal State">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -906,7 +906,7 @@
 	</skill>
 	<skill id="7069" levels="1" name="Test Abnormal State DD">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -917,33 +917,33 @@
 		</cond>
 	</skill>
 	<skill id="7070" levels="1" name="Test - Soul Eating Passive">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="7071" levels="1" name="Test - Soul Transfer">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="hitTime" val="900" />
 	</skill>
 	<skill id="7072" levels="1" name="Test - Basic Trap">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="7073" levels="1" name="Test - Find Trap">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="7074" levels="1" name="Test - Cancel Trap">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
@@ -951,7 +951,7 @@
 	</skill>
 	<skill id="7075" levels="1" name="Test - Distance DD">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="6000" />
@@ -960,7 +960,7 @@
 	<skill id="7076" levels="1" name="Test - Delay Debuff">
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
@@ -973,7 +973,7 @@
 	<skill id="7077" levels="1" name="Test - Delay Debuff - Call">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
@@ -983,7 +983,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
@@ -996,7 +996,7 @@
 	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="public_slot" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
@@ -1004,7 +1004,7 @@
 	<skill id="7080" levels="1" name="Test - General Attack Prohibited">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="public_slot" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2500" />
@@ -1012,7 +1012,7 @@
 	</skill>
 	<skill id="7081" levels="1" name="Effect Test - Land Shot">
 		<set name="affectLimit" val="5-12" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="25000" />
@@ -1022,7 +1022,7 @@
 	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
 		<set name="affectLimit" val="5-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
@@ -1031,32 +1031,32 @@
 	<skill id="7083" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="7084" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="CA1" />
 	</skill>
 	<skill id="7085" levels="1" name="Self-Destruct Explosion">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="7086" levels="1" name="Last Stand_test">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
@@ -1078,7 +1078,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -1106,7 +1106,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_ma_md_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -1134,7 +1134,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_hp_mp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
@@ -1162,7 +1162,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_crt_rate_dmg_up">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
@@ -1190,7 +1190,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_shield_rate_defence_up">
 				<mul order="0x30" stat="rShld" val="1.3" />
@@ -1218,7 +1218,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="improve_speed_avoid_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -1241,7 +1241,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pAtk" val="1.05">
@@ -1265,7 +1265,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="dwarf_attack_buff">
 				<mul order="0x30" stat="pDef" val="1.1">
@@ -1288,7 +1288,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="NoblesseBless" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="preserve_abnormal" />
 		</for>

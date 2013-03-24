@@ -19,7 +19,7 @@
 		<set name="power" val="#amount" />
 		<set name="reuseDelay" val="12000" />
 		<set name="skillType" val="MANAHEAL_BY_LEVEL" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
 		<!-- CT2.5 retail confirmed -->
@@ -34,7 +34,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -60,7 +60,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="50" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
@@ -86,7 +86,7 @@
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
@@ -105,12 +105,12 @@
 		<set name="hitTime" val="5800" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5205" levels="1" name="Boss Regeneration">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="99" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="operateType" val="A1" />
 		<for>
@@ -124,7 +124,7 @@
 		<set name="magicLvl" val="95" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="mpConsume" val="62" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="saveVs" val="MEN" />
 		<set name="reuseDelay" val="8000" />
@@ -152,7 +152,7 @@
 		<set name="mpConsume" val="62" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="reuseDelay" val="8000" />
@@ -174,7 +174,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -191,7 +191,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -208,7 +208,7 @@
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -226,7 +226,7 @@
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
@@ -242,7 +242,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -259,7 +259,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -276,7 +276,7 @@
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -293,7 +293,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -310,7 +310,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -327,7 +327,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -346,7 +346,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5219" levels="1" name="Stun of giant mutated animal">
 		<!-- CT2.5 retail confirmed -->
@@ -357,7 +357,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="power" val="50" />
 		<set name="mpConsume" val="43" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="6000" />
 		<set name="coolTime" val="2000" />
@@ -382,7 +382,7 @@
 		<set name="magicLvl" val="95" />
 		<set name="mpConsume" val="43" />
 		<set name="power" val="50" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
@@ -405,7 +405,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="CONT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="3" val="0">
 				<mul order="0x30" stat="bluntWpnVuln" val="1.7" />
@@ -426,7 +426,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="CONT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="3" val="0">
 				<mul order="0x30" stat="bowWpnVuln" val="1.7" />
@@ -439,7 +439,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="CONT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect count="0x7fffffff" name="ManaDamOverTime" abnormalTime="3" val="0">
 				<mul order="0x30" stat="mDef" val="0.3" />
@@ -458,7 +458,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="berserker">
 				<mul order="0x30" stat="pAtk" val="1.5" />
@@ -478,7 +478,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Invincible" abnormalTime="30" val="0" special="invincible" abnormalLvl="1" abnormalType="pd_up_special" />
 		</for>
@@ -494,7 +494,7 @@
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5227" levels="1" name="Ground Strike">
 		<!-- Confirmed CT2.5 -->
@@ -508,7 +508,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5228" levels="1" name="Jump Attack">
 		<!-- Confirmed CT2.5 -->
@@ -523,7 +523,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5229" levels="1" name="Strong Punch">
 		<!-- Confirmed CT2.5 -->
@@ -545,7 +545,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
@@ -568,7 +568,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
@@ -590,7 +590,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
@@ -612,7 +612,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
@@ -629,7 +629,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5234" levels="1" name="Weight Spin Attack - Mid">
 		<!-- Confirmed CT2.5 -->
@@ -642,7 +642,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5235" levels="1" name="Weight Spin Attack - Strong">
 		<!-- Confirmed CT2.5 -->
@@ -655,7 +655,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5236" levels="1" name="Speed Up">
 		<!-- Confirmed CT2.5 -->
@@ -668,7 +668,7 @@
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -686,7 +686,7 @@
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -698,7 +698,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="freezing" />
 		<set name="magicLvl" val="85" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
@@ -727,7 +727,7 @@
 		<set name="abnormalType" val="time_check" />
 		<set name="magicLvl" val="85" />
 		<table name="#Time"> 300 600 900 1200 1800 </table>
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="stayAfterDeath" val="true" />
@@ -745,7 +745,7 @@
 		<set name="mpConsume" val="221" />
 		<set name="power" val="6723" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="affectRange" val="600" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="CON" />
@@ -769,7 +769,7 @@
 		<set name="mpConsume" val="368" />
 		<set name="power" val="11205" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="CON" />
@@ -793,7 +793,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="power" val="80" />
 		<set name="hitTime" val="1200" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
@@ -810,7 +810,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="max_breath_up" />
 		<set name="magicLvl" val="85" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1200" />
 		<set name="saveVs" val="CON" />
@@ -822,7 +822,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pa_pd_up" />
 		<set name="magicLvl" val="85" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -838,7 +838,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="ma_md_up" />
 		<set name="magicLvl" val="85" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -858,7 +858,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="300" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -883,7 +883,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="300" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
@@ -909,7 +909,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="affectRange" val="300" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -931,7 +931,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -949,7 +949,7 @@
 		<set name="mpConsume" val="76" />
 		<set name="power" val="80" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="300" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1200" />
@@ -978,7 +978,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1800" />
@@ -1002,7 +1002,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="pvp" val="true" />
@@ -1042,7 +1042,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BLEED" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 
@@ -1064,7 +1064,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="2500" />
@@ -1087,7 +1087,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -1109,7 +1109,7 @@
 		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<for>
@@ -1123,7 +1123,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1138,7 +1138,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -1160,7 +1160,7 @@
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
@@ -1194,7 +1194,7 @@
 		<set name="saveVs" val="STR" />
 		<set name="skillType" val="DISARM" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm" />
 		</for>
@@ -1205,7 +1205,7 @@
 		<set name="abnormalType" val="transform" />
 		<set name="mpInitialConsume" val="11" />
 		<set name="mpConsume" val="44" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1500" />
@@ -1239,7 +1239,7 @@
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
 		<!-- CT2.5 retail confirmed -->
@@ -1260,7 +1260,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5264" levels="12" name="Death Mark">
 		<!-- CT2.5 retail confirmed -->
@@ -1284,7 +1284,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DOT" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="0" abnormalVisualEffect="deathmark" abnormalLvl="3" abnormalType="death_mark" />
 		</for>
@@ -1310,7 +1310,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5266" levels="12" name="Magical Backfire">
 		<!-- CT2.5 retail confirmed -->
@@ -1325,7 +1325,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1356,7 +1356,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5268" levels="17" name="Poison">
 		<!-- Confirmed CT2.5 -->
@@ -1373,7 +1373,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="POISON" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="6" name="DamOverTime" abnormalTime="5" val="#dmg" abnormalLvl="1" abnormalType="poison" abnormalVisualEffect="poison" effectPower="80" />
@@ -1394,7 +1394,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="all_speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1418,7 +1418,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="STUN" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -1442,7 +1442,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="#traits" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -1460,7 +1460,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TargetMe" val="0" effectPower="80" />
 		</for>
@@ -1473,7 +1473,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="PDAM" />
@@ -1490,7 +1490,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1506,7 +1506,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1522,7 +1522,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1540,7 +1540,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="PDAM" />
@@ -1559,7 +1559,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1576,7 +1576,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1594,7 +1594,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1614,7 +1614,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -1634,7 +1634,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1651,7 +1651,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1669,7 +1669,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1689,7 +1689,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -1709,7 +1709,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1726,7 +1726,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1744,7 +1744,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1764,7 +1764,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -1784,7 +1784,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1801,7 +1801,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1819,7 +1819,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1839,7 +1839,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
@@ -1859,7 +1859,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1876,7 +1876,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
@@ -1894,7 +1894,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
@@ -1914,7 +1914,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="PDAM" />
@@ -1933,7 +1933,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4500" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -1950,7 +1950,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="13066" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />

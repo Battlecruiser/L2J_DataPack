@@ -80,7 +80,7 @@ public class SignetMDam extends L2Effect
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
 		
-		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.TARGET_GROUND))
+		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.GROUND))
 		{
 			final Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
 			

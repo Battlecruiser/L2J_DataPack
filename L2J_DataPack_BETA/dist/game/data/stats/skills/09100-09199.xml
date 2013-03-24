@@ -10,7 +10,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -31,7 +31,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -52,7 +52,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -73,7 +73,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -94,7 +94,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -115,7 +115,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -136,7 +136,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -157,7 +157,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -178,7 +178,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -199,7 +199,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -220,7 +220,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -241,7 +241,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -262,7 +262,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -278,14 +278,14 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 	</skill>
 	<skill id="9114" levels="1" name="Nevit's Voice">
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="GIVE_RECO" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="1" />
@@ -298,7 +298,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -307,7 +307,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -316,7 +316,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -325,7 +325,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -334,7 +334,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -343,7 +343,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -352,7 +352,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -361,7 +361,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -370,7 +370,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -379,7 +379,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -388,7 +388,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -397,7 +397,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -406,7 +406,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -415,7 +415,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -424,7 +424,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -433,7 +433,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -442,7 +442,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -451,7 +451,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -460,7 +460,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -469,7 +469,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -478,7 +478,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -487,7 +487,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -496,7 +496,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -505,7 +505,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -514,7 +514,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -523,7 +523,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -532,7 +532,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -541,7 +541,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -550,7 +550,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -559,7 +559,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -568,7 +568,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -577,7 +577,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -586,7 +586,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -595,7 +595,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -604,14 +604,14 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vote" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="9150" levels="1" name="Freesia Bouquet - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -620,7 +620,7 @@
 	<skill id="9151" levels="1" name="Baby's Breath Bouquet - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -629,7 +629,7 @@
 	<skill id="9152" levels="1" name="Pink Lady - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -638,7 +638,7 @@
 	<skill id="9153" levels="1" name="June Bug - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -647,7 +647,7 @@
 	<skill id="9154" levels="1" name="Soft Cheese Cake - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -656,7 +656,7 @@
 	<skill id="9155" levels="1" name="Freshly-Baked Baguette - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -665,7 +665,7 @@
 	<skill id="9156" levels="1" name="Sweet Cream-filled Bread - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -674,7 +674,7 @@
 	<skill id="9157" levels="1" name="White Day Candy - Event">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1000" />
@@ -690,7 +690,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -705,7 +705,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -730,7 +730,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -755,7 +755,7 @@
 		<!-- Increase Physical Attack by 15%, Magical Attack by 20%, and Moving Speed by 10 for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="wp_change_event" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
@@ -774,7 +774,7 @@
 		<!-- Increase Physical Critical Attack Rate by 15, Magic Critical Attack Rate by 2, and Moving Speed by 10 for 10 minutes. Recovers 5% of the standard short-range physical damage inflicted on the enemy as HP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="wp_change_event" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
@@ -794,7 +794,7 @@
 		<!-- Increase Max. Attack Speed by 20%, Magic Speed by 20%, and Moving Speed by 20 for 10 minutes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="wp_change_event" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="1" />
@@ -819,7 +819,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -835,7 +835,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -844,50 +844,50 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
 	<skill id="9167" levels="1" name="Nevit's Hourglass - 1 hour(s)">
 		<!-- Increases Nevit's blessing by 1 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9168" levels="1" name="Nevit's Hourglass - 1.5 hour(s)">
 		<!-- Increases Nevit's blessing by 1.5 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9169" levels="1" name="Nevit's Hourglass - 2 hour(s)">
 		<!-- Increases Nevit's blessing by 2 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9170" levels="1" name="Nevit's Hourglass - 2.5 hour(s)">
 		<!-- Increases Nevit's blessing by 2.5 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9171" levels="1" name="Nevit's Hourglass - 3 hour(s)">
 		<!-- Increases Nevit's blessing by 3 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9172" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9173" levels="1" name="Nevit's Voice">
 		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -898,7 +898,7 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="GiveSp" noicon="1" val="500000" />
 		</for>
@@ -910,14 +910,14 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="GiveSp" noicon="1" val="1000000" />
 		</for>
 	</skill>
 	<skill id="9176" levels="1" name="Provided gift of cheers">
 		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -929,7 +929,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -942,14 +942,14 @@
 	</skill>
 	<skill id="9178" levels="1" name="Theodric's Box">
 		<!-- none -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9179" levels="1" name="Antharas's Blood Crystal">
 		<!-- none -->
 		<set name="affectLimit" val="50-50" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -961,32 +961,32 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="GiveSp" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9182" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9183" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
 		<!-- "For 4 hours, recovers vitality when Exp. is acquired through hunting." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="9184" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
 		<!-- "For 4 hours, recovers vitality when Exp. is acquired through hunting." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>

@@ -10,7 +10,7 @@
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="md_down" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -31,7 +31,7 @@
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="pa_down" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A2" />
@@ -44,7 +44,7 @@
 	</skill>
 	<skill id="5702" levels="2" name="Adiantum Round Fighter">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A1" />
@@ -53,7 +53,7 @@
 	<skill id="5703" levels="2" name="Adiantum Water Strike Deflect">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="armor_fire" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A3" />
@@ -61,7 +61,7 @@
 	</skill>
 	<skill id="5704" levels="1" name="Water Strike">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -69,7 +69,7 @@
 	</skill>
 	<skill id="5705" levels="1" name="Fire Trap">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -77,7 +77,7 @@
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A2" />
@@ -90,7 +90,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="PARALYZE" />
@@ -98,7 +98,7 @@
 	<skill id="5708" levels="2" name="Water Cannon">
 		<set name="affectLimit" val="5-15" />
 		<set name="power" val="160" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="fanRange" val="0,0,400,60" />
@@ -113,7 +113,7 @@
 	<skill id="5709" levels="2" name="Whirlpool">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="power" val="220" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1200" />
 		<set name="skillType" val="PDAM" />
@@ -125,7 +125,7 @@
 	<skill id="5710" levels="2" name="Triple Sword">
 		<set name="affectLimit" val="5-15" />
 		<set name="power" val="320" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="PDAM" />
@@ -141,7 +141,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="8000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -150,7 +150,7 @@
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="HEAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -165,13 +165,13 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="magical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5714" levels="1" name="Boom Up">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
@@ -194,7 +194,7 @@
 		<set name="affectRange" val="400" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<!-- 55HP * 5 During 30 seconds -->
 			<effect count="6" name="DamOverTime" abnormalTime="5" val="275" abnormalVisualEffect="bleed" effectPower="80" abnormalLvl="1" abnormalType="fire_dot">
@@ -207,7 +207,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="fanRange" val="0,0,1500,60" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A2" />
@@ -218,7 +218,7 @@
 	</skill>
 	<skill id="5717" levels="1" name="Fire Breath">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="operateType" val="A1" />
@@ -228,7 +228,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="5000" />
 		<set name="operateType" val="A2" />
@@ -238,7 +238,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -259,7 +259,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5721" levels="6" name="Blade Strike">
 		<!-- Confirmed CT2.5 -->
@@ -277,7 +277,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5722" levels="6" name="Hammer Assault">
 		<!-- Confirmed CT2.5 -->
@@ -295,7 +295,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5723" levels="6" name="Hammer Swing">
 		<!-- Confirmed CT2.5 -->
@@ -314,7 +314,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5724" levels="6" name="Broom Strike">
 		<!-- Confirmed CT2.5 -->
@@ -332,7 +332,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5725" levels="6" name="Broom Trusting">
 		<!-- Confirmed CT2.5 -->
@@ -350,7 +350,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5726" levels="6" name="Scissors Attack">
 		<!-- Confirmed CT2.5 -->
@@ -368,7 +368,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5727" levels="6" name="Scissors Strike">
 		<!-- Confirmed CT2.5 -->
@@ -386,7 +386,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5728" levels="6" name="Shobel Attack">
 		<!-- Confirmed CT2.5 -->
@@ -404,7 +404,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5729" levels="6" name="Shobel Whirlwind">
 		<!-- Confirmed CT2.5 -->
@@ -421,7 +421,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5730" levels="6" name="Made Fireball">
 		<!-- Confirmed CT2.5 -->
@@ -444,7 +444,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5731" levels="6" name="Incense of Death">
 		<!-- Confirmed CT2.5 -->
@@ -464,7 +464,7 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5732" levels="6" name="Flame Strike">
 		<!-- Confirmed CT2.5 -->
@@ -489,7 +489,7 @@
 		<set name="affectRange" val="500" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5733" levels="6" name="Fear of Steward">
 		<!-- Confirmed CT2.5 -->
@@ -516,7 +516,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="1" abnormalType="turn_flee" val="0" effectPower="20" />
@@ -543,7 +543,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5735" levels="6" name="Curse of Steward">
 		<!-- Confirmed CT2.5 -->
@@ -570,7 +570,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="5" abnormalLvl="1" abnormalType="sleep" val="0" effectPower="25" />
@@ -592,7 +592,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5737" levels="6" name="Power Stamp">
 		<!-- Confirmed CT2.5 -->
@@ -609,7 +609,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5738" levels="6" name="Power Roar">
 		<!-- Confirmed CT2.5 -->
@@ -626,7 +626,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5739" levels="1" name="Invincible">
 		<!-- Confirmed CT2.5 -->
@@ -639,7 +639,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
@@ -653,7 +653,7 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="5000" />
 			<effect name="HealPercent" noicon="1" val="100" />
@@ -669,25 +669,25 @@
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ManaHealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="5742" levels="5" name="Area Recharge - Per">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5743" levels="1" name="Area Full Recovery">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5744" levels="1" name="Invincible">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="invincibility" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
@@ -702,7 +702,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hpConsume" val="#hpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -725,7 +725,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -745,7 +745,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
@@ -765,7 +765,7 @@
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">
 		<set name="affectLimit" val="5-12" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="reuseDelay" val="20000" />
@@ -782,7 +782,7 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
@@ -801,7 +801,7 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
@@ -821,7 +821,7 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
@@ -841,7 +841,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hpConsume" val="#hpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
@@ -857,7 +857,7 @@
 	<skill id="5753" levels="1" name="Awakening">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="public_slot" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="99" />
@@ -869,28 +869,28 @@
 	</skill>
 	<skill id="5754" levels="1" name="Presentation - Adiantum Round Fighter">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1500" />
 	</skill>
 	<skill id="5755" levels="1" name="Presentation - Trap On">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="5756" levels="1" name="Presentation - Summon Follower">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
 	</skill>
 	<skill id="5757" levels="1" name="Presentation - Energy Ditch">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="CA5" />
@@ -898,13 +898,13 @@
 	</skill>
 	<skill id="5758" levels="1" name="Presentation - Large Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5759" levels="1" name="Presentation - The Rise of Latana">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="9700" />
@@ -913,7 +913,7 @@
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="seed_of_critical" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -930,19 +930,19 @@
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5762" levels="1" name="Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5763" levels="1" name="Wink">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
@@ -951,7 +951,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A2" />
@@ -967,7 +967,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="76" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="power" val="4472" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
@@ -981,7 +981,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="76" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="power" val="4472" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
@@ -995,7 +995,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="76" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="power" val="4472" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
@@ -1009,7 +1009,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="78" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="power" val="4472" />
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
@@ -1018,7 +1018,7 @@
 	</skill>
 	<skill id="5769" levels="12" name="not_used">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A1" />
@@ -1026,7 +1026,7 @@
 	</skill>
 	<skill id="5770" levels="12" name="not_used">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="operateType" val="A1" />
@@ -1039,7 +1039,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="magical_stance" />
 		</for>
@@ -1048,7 +1048,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="armor_fire" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A2" />
@@ -1058,7 +1058,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalType" val="armor_water" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A2" />
@@ -1068,7 +1068,7 @@
 		<!-- lvl1 restore 50%, lvl2 restore 100% of vitality -->
 		<!-- lvl1 used on pailaka 40, lvl2 used on pailaka 60/70 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1076,17 +1076,17 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5776" levels="1" name="Raid Boss">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5777" levels="1" name="Raid Boss">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -1094,19 +1094,19 @@
 		<!-- skill after ct2.3 not used -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="invincibility" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5779" levels="42" name="Transform Effect">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5780" levels="9" name="Agathion Collection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="6000" />
@@ -1121,82 +1121,82 @@
 		</cond>
 	</skill>
 	<skill id="5781" levels="1" name="Presentation - Lindvior Approach">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="17000" />
 	</skill>
 	<skill id="5782" levels="1" name="Presentation - Lindvior Gust">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="10000" />
 	</skill>
 	<skill id="5783" levels="1" name="Presentation - Lindvior Descent">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="15000" />
 	</skill>
 	<skill id="5784" levels="1" name="Presentation - Lindvior Dust">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
 	</skill>
 	<skill id="5785" levels="1" name="Presentation - Dimensional Door">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5786" levels="1" name="Presentation - Ekimus Separation">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="22000" />
 	</skill>
 	<skill id="5787" levels="1" name="Presentation - Ekimus Approach">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="11000" />
 	</skill>
 	<skill id="5788" levels="1" name="Presentation - Ekimus Blood Hail">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2100" />
 	</skill>
 	<skill id="5789" levels="1" name="Presentation - Ekimus Sneer">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="13000" />
 	</skill>
 	<skill id="5790" levels="1" name="Presentation - Ekimus Aftereffect">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5791" levels="1" name="Presentation - Magyun's Entrance">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4200" />
 	</skill>
 	<skill id="5792" levels="1" name="Presentation - Summon Banshee Queen Boomi">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5793" levels="1" name="Presentation - Summon Boomi">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
@@ -1207,7 +1207,7 @@
 		<set name="abnormalType" val="speed_down" />
 		<set name="fanRange" val="0,0,900,5" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
@@ -1219,7 +1219,7 @@
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
@@ -1234,7 +1234,7 @@
 		<set name="abnormalType" val="speed_down" />
 		<set name="fanRange" val="0,0,900,30" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="3000" />
 		<set name="operateType" val="A2" />
@@ -1246,7 +1246,7 @@
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,60" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -1254,7 +1254,7 @@
 	</skill>
 	<skill id="5798" levels="1" name="Fireball">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
@@ -1264,7 +1264,7 @@
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />

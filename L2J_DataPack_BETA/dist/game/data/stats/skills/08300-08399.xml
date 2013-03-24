@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" levels="1" name="Dynasty Sigil">
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.05" />
@@ -12,7 +12,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
@@ -29,7 +29,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
@@ -50,7 +50,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
@@ -66,7 +66,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
@@ -86,7 +86,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
@@ -103,7 +103,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
@@ -123,7 +123,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
 		</for>
@@ -141,7 +141,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1200" />
@@ -162,7 +162,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="800" />
@@ -172,7 +172,7 @@
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="magicDamVul" val="0.98" />
 			<sub order="0x40" stat="cancel" val="13" />
@@ -180,7 +180,7 @@
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="magicDamVul" val="0.98" />
 			<add order="0x40" stat="darkRes" val="2" />
@@ -190,7 +190,7 @@
 		<set name="magicLvl" val="80" />
 		<table name="#MpConsumeRate"> 0.96 0.92 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
@@ -203,61 +203,61 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16063" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="672" />
 		</for>
@@ -266,14 +266,14 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -284,7 +284,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16064" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -296,14 +296,14 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16065" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
@@ -320,7 +320,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16066" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -339,7 +339,7 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="affectRange" val="150" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
 		</for>
@@ -359,7 +359,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="STEAL_BUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<!-- Confirmed CT2.5 -->
@@ -374,7 +374,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="maxCp" val="1500" />
@@ -395,7 +395,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="pvpMagicalDef" val="1.75" />
@@ -416,7 +416,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
 				<add order="0x40" stat="earthRes" val="15" />
@@ -432,13 +432,13 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="weightPenalty" val="5000" />
@@ -450,7 +450,7 @@
 		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="regHp" val="#hp" />
 			<add order="0x40" stat="regHp" val="#hpsit">
@@ -464,7 +464,7 @@
 		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="regHp" val="#hp" />
 			<add order="0x40" stat="regHp" val="#hpsit">
@@ -478,7 +478,7 @@
 		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="regMp" val="#mp" />
 			<add order="0x40" stat="regMp" val="#mpsit">
@@ -491,7 +491,7 @@
 		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="regMp" val="#amount" />
 			<add order="0x40" stat="regMp" val="#amount">
@@ -504,7 +504,7 @@
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
 		</for>
@@ -514,7 +514,7 @@
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
@@ -525,7 +525,7 @@
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
@@ -536,7 +536,7 @@
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
 		</for>
@@ -546,7 +546,7 @@
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
@@ -557,7 +557,7 @@
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
 			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
@@ -566,7 +566,7 @@
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="stunProf" val="15" />
 			<sub order="0x40" stat="bleedVuln" val="15" />
@@ -576,7 +576,7 @@
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rootProf" val="15" />
 			<sub order="0x40" stat="poisonVuln" val="15" />
@@ -586,7 +586,7 @@
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="bleedProf" val="15" />
 			<sub order="0x40" stat="paralyzeVuln" val="15" />
@@ -596,7 +596,7 @@
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="paralyzeProf" val="15" />
 			<sub order="0x40" stat="rootVuln" val="15" />
@@ -606,7 +606,7 @@
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="derangementProf" val="15" />
 			<sub order="0x40" stat="stunVuln" val="15" />
@@ -616,7 +616,7 @@
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="sleepProf" val="15" />
 			<sub order="0x40" stat="stunVuln" val="15" />
@@ -626,7 +626,7 @@
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="stunProf" val="15" />
 			<sub order="0x40" stat="sleepVuln" val="15" />
@@ -636,7 +636,7 @@
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="poisonProf" val="15" />
 			<sub order="0x40" stat="rootVuln" val="15" />
@@ -646,7 +646,7 @@
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
 		<table name="#maxCp"> 1 1.05 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rootProf" val="15" />
 			<sub order="0x40" stat="derangementVuln" val="15" />
@@ -669,7 +669,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="staticDamage" val="true" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<!-- Confirmed CT2.5 -->
@@ -678,14 +678,14 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16070" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
@@ -699,7 +699,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1800" val="0" abnormalLvl="1" abnormalType="vp_keep" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -708,13 +708,13 @@
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BEAST_RELEASE" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
@@ -724,7 +724,7 @@
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BEAST_ACCOMPANY" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
@@ -734,7 +734,7 @@
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BEAST_SKILL" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
@@ -743,35 +743,35 @@
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -780,7 +780,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
@@ -790,7 +790,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -800,7 +800,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -810,7 +810,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -820,7 +820,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -830,7 +830,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -840,14 +840,14 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="signal_d" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BEAST_RELEASE_ALL" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
@@ -858,7 +858,7 @@
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
@@ -866,7 +866,7 @@
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
 		<table name="#waterRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
@@ -874,7 +874,7 @@
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
@@ -882,7 +882,7 @@
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
@@ -890,7 +890,7 @@
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
@@ -898,7 +898,7 @@
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
@@ -906,7 +906,7 @@
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
@@ -914,7 +914,7 @@
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
 		<table name="#windRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
 		</for>
@@ -922,7 +922,7 @@
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
@@ -930,7 +930,7 @@
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
 		<table name="#waterRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
@@ -938,7 +938,7 @@
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#holyRes" />
 		</for>
@@ -946,7 +946,7 @@
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
 		<table name="#windRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
 		</for>
@@ -954,7 +954,7 @@
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
@@ -962,7 +962,7 @@
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="#earthRes" />
 		</for>
@@ -970,7 +970,7 @@
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
 		<table name="#waterRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="waterRes" val="#waterRes" />
 		</for>
@@ -978,7 +978,7 @@
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
@@ -986,7 +986,7 @@
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="#fireRes" />
 		</for>
@@ -994,7 +994,7 @@
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
 		<table name="#windRes"> 26 30 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="windRes" val="#windRes" />
 		</for>
@@ -1003,7 +1003,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -1020,7 +1020,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -1037,7 +1037,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
