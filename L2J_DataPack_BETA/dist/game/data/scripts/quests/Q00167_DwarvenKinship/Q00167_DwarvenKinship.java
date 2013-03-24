@@ -59,9 +59,12 @@ public class Q00167_DwarvenKinship extends Quest
 			{
 				case "30210-02.html":
 				{
-					st.giveAdena(20000, true);
-					st.exitQuest(false, true);
-					htmltext = event;
+					if (st.isCond(2) && st.hasQuestItems(NORMANS_LETTER))
+					{
+						st.giveAdena(20000, true);
+						st.exitQuest(false, true);
+						htmltext = event;
+					}
 					break;
 				}
 				case "30255-02.html":
@@ -71,18 +74,24 @@ public class Q00167_DwarvenKinship extends Quest
 				}
 				case "30255-03.html":
 				{
-					st.takeItems(CARLONS_LETTER, -1);
-					st.giveItems(NORMANS_LETTER, 1);
-					st.giveAdena(2000, true);
-					st.setCond(2);
-					htmltext = event;
+					if (st.isCond(1) && st.hasQuestItems(CARLONS_LETTER))
+					{
+						st.takeItems(CARLONS_LETTER, -1);
+						st.giveItems(NORMANS_LETTER, 1);
+						st.giveAdena(2000, true);
+						st.setCond(2);
+						htmltext = event;
+					}
 					break;
 				}
 				case "30255-04.html":
 				{
-					st.giveAdena(15000, true);
-					st.exitQuest(false, true);
-					htmltext = event;
+					if (st.isCond(1) && st.hasQuestItems(CARLONS_LETTER))
+					{
+						st.giveAdena(15000, true);
+						st.exitQuest(false, true);
+						htmltext = event;
+					}
 					break;
 				}
 				case "30350-03.htm":

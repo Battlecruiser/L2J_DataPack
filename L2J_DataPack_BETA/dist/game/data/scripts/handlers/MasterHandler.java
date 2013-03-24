@@ -126,7 +126,6 @@ import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
 import handlers.bypasshandlers.ArenaBuff;
 import handlers.bypasshandlers.Augment;
-import handlers.bypasshandlers.BloodAlliance;
 import handlers.bypasshandlers.Buy;
 import handlers.bypasshandlers.BuyShadowItem;
 import handlers.bypasshandlers.ChatLink;
@@ -437,7 +436,6 @@ public class MasterHandler
 			// Bypass Handlers
 			Augment.class,
 			ArenaBuff.class,
-			BloodAlliance.class,
 			Buy.class,
 			BuyShadowItem.class,
 			ChatLink.class,
