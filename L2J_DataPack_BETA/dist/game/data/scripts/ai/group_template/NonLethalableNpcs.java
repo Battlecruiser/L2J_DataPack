@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  */
 public class NonLethalableNpcs extends AbstractNpcAI
 {
-	private static final int[] NPCS = new int[]
+	private static final int[] NPCS =
 	{
 		35062, // Headquarters
 	};
