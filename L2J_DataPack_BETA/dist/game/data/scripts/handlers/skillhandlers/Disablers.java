@@ -272,7 +272,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							if (skill.getTargetType() == L2TargetType.TARGET_UNDEAD)
+							if (skill.getTargetType() == L2TargetType.UNDEAD)
 							{
 								if (target.isUndead())
 								{

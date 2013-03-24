@@ -6,7 +6,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="sleep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
@@ -24,7 +24,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -42,7 +42,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -59,7 +59,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -78,7 +78,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -98,7 +98,7 @@
 		<set name="nextActionAttack" val="true" />
 		<table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -116,7 +116,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -134,7 +134,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="lvlBonusRate" val="1" />
@@ -152,7 +152,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="AGGDAMAGE" />
 		<set name="offensive" val="true" />
 		<set name="isDebuff" val="true" />
@@ -171,7 +171,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="AGGREDUCE" />
@@ -189,7 +189,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -203,7 +203,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
@@ -220,7 +220,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
@@ -237,7 +237,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -255,7 +255,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -273,7 +273,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="sleep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -291,7 +291,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlBonusRate" val="1" />
@@ -309,7 +309,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlBonusRate" val="1" />
@@ -326,7 +326,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A2" />
@@ -345,7 +345,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="reuseDelay" val="30000" />
@@ -365,7 +365,7 @@
 		<set name="nextActionAttack" val="true" />
 		<table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlBonusRate" val="1" />
@@ -383,7 +383,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlBonusRate" val="1" />
@@ -401,7 +401,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="30000" />
 		<set name="lvlBonusRate" val="1" />
@@ -422,7 +422,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -442,7 +442,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -463,7 +463,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -486,7 +486,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -506,7 +506,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="MANAHEAL_BY_LEVEL" />
@@ -528,7 +528,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -550,7 +550,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -570,7 +570,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A1" />
@@ -589,7 +589,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -611,7 +611,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -633,7 +633,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -654,7 +654,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="BUFF" />
@@ -677,7 +677,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -699,7 +699,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -721,7 +721,7 @@
 		<set name="power" val="80" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="hitTime" val="1500" />
@@ -749,7 +749,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -771,7 +771,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -793,7 +793,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -815,7 +815,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -837,7 +837,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -858,7 +858,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -886,7 +886,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<sub order="0x40" stat="fall" val="100" />
@@ -911,7 +911,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<sub order="0x40" stat="damageZoneVuln" val="#damageZoneVuln" />
@@ -923,7 +923,7 @@
 		<set name="magicLvl" val="40" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="88" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="20000" />
 		<set name="skillType" val="RECALL" />
@@ -939,7 +939,7 @@
 		<set name="magicLvl" val="56" />
 		<set name="mpInitialConsume" val="32" />
 		<set name="mpConsume" val="127" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="1500" />
 		<set name="skillType" val="RECALL" />
@@ -961,7 +961,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -980,7 +980,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="200" />
@@ -1004,7 +1004,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1500" />
@@ -1024,7 +1024,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="AGGREMOVE" />
@@ -1041,7 +1041,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="180000" />
 		<set name="hitTime" val="1200" />
 		<set name="skillType" val="AGGREDUCE_CHAR" />
@@ -1063,7 +1063,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="300000" />
@@ -1089,7 +1089,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="MANADAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -1107,7 +1107,7 @@
 		<set name="itemConsumeId" val="1661" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_UNLOCKABLE" />
+		<set name="targetType" val="UNLOCKABLE" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="UNLOCK" />
@@ -1119,7 +1119,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="8" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1127,7 +1127,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="24" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -1139,7 +1139,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="mpConsume" val="65" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
@@ -1159,7 +1159,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="2000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
@@ -1183,7 +1183,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="6000" />
 		<set name="skillType" val="RESURRECT" />
@@ -1203,7 +1203,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
@@ -1225,7 +1225,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
@@ -1247,7 +1247,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
@@ -1270,7 +1270,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
@@ -1291,7 +1291,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="6000" />
@@ -1313,7 +1313,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="6000" />
@@ -1335,7 +1335,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="6000" />
@@ -1359,7 +1359,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1379,7 +1379,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="6000" />
@@ -1401,7 +1401,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="reuseDelay" val="6000" />
@@ -1423,7 +1423,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1446,7 +1446,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1470,7 +1470,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1494,7 +1494,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1518,7 +1518,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1542,7 +1542,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1566,7 +1566,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1588,7 +1588,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1612,7 +1612,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1634,7 +1634,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1656,7 +1656,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1678,7 +1678,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1698,7 +1698,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1720,7 +1720,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1742,7 +1742,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="5000" />
 		<set name="skillType" val="MDAM" />
@@ -1763,7 +1763,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1789,7 +1789,7 @@
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1822,7 +1822,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="CON" />
@@ -1848,7 +1848,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -1874,7 +1874,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="SLEEP" />
 		<set name="pvp" val="true" />
@@ -1903,7 +1903,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="saveVs" val="MEN" />
@@ -1953,7 +1953,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="pvp" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
@@ -1969,7 +1969,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="isDebuff" val="true" />
@@ -1999,7 +1999,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="isDebuff" val="true" />
@@ -2030,7 +2030,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
@@ -2058,7 +2058,7 @@
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="isDebuff" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="hitTime" val="4000" />
@@ -2085,7 +2085,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="40" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
 		<set name="saveVs" val="MEN" />
@@ -2113,7 +2113,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="600000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />

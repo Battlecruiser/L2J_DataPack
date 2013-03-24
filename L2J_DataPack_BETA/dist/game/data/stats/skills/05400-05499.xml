@@ -10,13 +10,13 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5401" levels="1" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="fly_away" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="STUN" />
 		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
@@ -35,7 +35,7 @@
 	</skill>
 	<skill id="5402" levels="1" name="Presentation - Balor 2">
 		<!-- Balor - Magic Skill1 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="4000" />
@@ -43,7 +43,7 @@
 	</skill>
 	<skill id="5403" levels="1" name="Presentation - Balor 3">
 		<!-- Balor - Magic Skill2 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="4000" />
@@ -51,7 +51,7 @@
 	</skill>
 	<skill id="5404" levels="1" name="Presentation - Balor 4">
 		<!-- Balor - Instant Cast Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="castRange" val="600" />
@@ -61,7 +61,7 @@
 	</skill>
 	<skill id="5405" levels="1" name="Presentation - Demonic 1">
 		<!-- Demonic - General Long Range Magic Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="castRange" val="600" />
@@ -69,7 +69,7 @@
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5406" levels="1" name="Presentation - Demonic 2">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -79,14 +79,14 @@
 	</skill>
 	<skill id="5407" levels="1" name="Presentation - Crystalline Golem 1">
 		<!-- Crystaline-Instant Cast Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="2000" />
 	</skill>
 	<skill id="5408" levels="1" name="Presentation - Crystalline Golem 2">
 		<!-- Crystaline-General Long Range Magic Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -96,7 +96,7 @@
 	</skill>
 	<skill id="5409" levels="1" name="Presentation - Crystalline Golem 3">
 		<!-- Crystaline Golem -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -106,19 +106,19 @@
 	</skill>
 	<skill id="5410" levels="1" name="Presentation - Balor 10">
 		<!-- Balor Social. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="17000" />
 	</skill>
 	<skill id="5411" levels="1" name="Presentation - Balor 11">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="5412" levels="1" name="Presentation - Balor 12">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
 		<set name="operateType" val="A1" />
@@ -127,7 +127,7 @@
 	<skill id="5413" levels="1" name="Performing Agathion - Beast Farm">
 		<!-- TODO: Needs to be verified -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16026" />
@@ -136,7 +136,7 @@
 	<skill id="5414" levels="1" name="Performing Agathion - Rainbow Clan Hall">
 		<!-- TODO: Needs to be verified -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16027" />
@@ -145,7 +145,7 @@
 	<skill id="5415" levels="1" name="Performing Agathion - Castle">
 		<!-- TODO: Needs to be verified -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16028" />
@@ -154,33 +154,33 @@
 	<skill id="5416" levels="1" name="Dark Cloud Mansion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="public_slot" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5417" levels="1" name="Invincible">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="5418" levels="1" name="Invincible">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="5419" levels="1" name="Invincible Blow">
 		<!-- Crystaline Golem -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5420" levels="1" name="Invincible">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
@@ -198,7 +198,7 @@
 		<set name="elementPower" val="20" />
 		<set name="affectRange" val="300" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="DOT" />
 		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
@@ -220,7 +220,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="POISON" />
 		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
@@ -245,7 +245,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="affectRange" val="300" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="BLEED" />
 		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
@@ -267,7 +267,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="iron_shield_i">
 				<mul order="0x30" stat="sDef" val="1.3" />
@@ -283,7 +283,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="archer_special">
 				<mul order="0x30" stat="pReuse" val="0.85" />
@@ -301,7 +301,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="archer_special">
 				<mul order="0x30" stat="pAtkSpd" val="1.15">
@@ -320,7 +320,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="archer_special_i">
 				<add order="0x40" stat="runSpd" val="40" />
@@ -333,7 +333,7 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="49" />
 		</for>
@@ -350,13 +350,13 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 	</skill>
 	<skill id="5431" levels="1" name="Slow">
 		<!-- Condition causing target to temporarily decrease attack speed and casting speed. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="public_slot" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="8000" />
@@ -366,12 +366,12 @@
 		<set name="saveVs" val="MEN" />
 	</skill>
 	<skill id="5432" levels="2" name="Weapon Supply">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="T" />
 	</skill>
 	<skill id="5433" levels="1" name="Presentation - Gathering of Evil Power">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -389,7 +389,7 @@
 		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" abnormalLvl="1" abnormalType="stun" />
@@ -411,7 +411,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="Stun" val="0" effectPower="90" abnormalLvl="1" abnormalType="stun" />
@@ -422,7 +422,7 @@
 		<!-- Condition causing target to increase recovery rate of HP and MP. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="all_regen_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -431,7 +431,7 @@
 		<table name="#def"> 0.6 1 </table>
 		<table name="#avoid"> 50 0 </table>
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="0.95" />
 			<mul order="0x30" stat="mAtk" val="0.95" />
@@ -453,7 +453,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="affectRange" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -472,7 +472,7 @@
 		<set name="aggroPoints" val="100" />
 		<set name="affectRange" val="900" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2000" />
@@ -481,13 +481,13 @@
 		</for>
 	</skill>
 	<skill id="5440" levels="1" name="Presentation - Trap Activate">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="1" />
 		<set name="hitTime" val="3000" />
 	</skill>
 	<skill id="5441" levels="1" name="Presentation - Tears Mirror Image">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="1" />
 		<set name="hitTime" val="3000" />
@@ -508,7 +508,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5443" levels="4" name="Cry of the Wolf">
 		<table name="#magicLvl"> 55 60 65 70 </table>
@@ -528,7 +528,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
@@ -558,7 +558,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#val" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" effectPower="50" />
@@ -574,7 +574,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="90" val="0" abnormalLvl="1" abnormalType="pinch">
 				<mul order="0x30" stat="pAtk" val="1.08" />
@@ -589,7 +589,7 @@
 		</for>
 	</skill>
 	<skill id="5446" levels="45" name="Soul Expansion">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -609,7 +609,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="PARALYZE" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
@@ -623,7 +623,7 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
@@ -637,7 +637,7 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="STUN" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Stun" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
@@ -656,7 +656,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="BLEED" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect count="1" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
@@ -669,7 +669,7 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="all_speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -688,7 +688,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="t_crt_dmg_up">
 				<mul order="0x30" stat="critVuln" val="#critVuln" />
@@ -705,14 +705,14 @@
 		<set name="power" val="#power" />
 		<set name="skillType" val="MANADAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5454" levels="1" name="Shadow Bind">
 		<!-- Immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -721,7 +721,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -734,7 +734,7 @@
 		<set name="operateType" val="A2" />
 		<set name="maxNegated" val="20" />
 		<set name="saveVs" val="MEN" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="speed_down" effectPower="80" effectType="DEBUFF">
@@ -745,14 +745,14 @@
 	</skill>
 	<skill id="5457" levels="1" name="NPC Full Recover">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5458" levels="1" name="Performing Agathion - Fortress">
 		<!-- TODO: Needs to be verified -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<cond msgId="2292">
 			<player agathionId="16029" />
@@ -762,7 +762,7 @@
 		<!-- A temporary paralysis that prevents movement. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
@@ -773,7 +773,7 @@
 		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
@@ -795,30 +795,30 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5462" levels="1" name="Fire Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5463" levels="1" name="Water Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5464" levels="1" name="Wind Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5465" levels="1" name="Earth Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5466" levels="1" name="Holy Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5467" levels="1" name="Dark Attacks">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5468" levels="12" name="Castle Gunner Fire">
@@ -838,61 +838,61 @@
 		<set name="affectRange" val="80" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5469" levels="1" name="Raid Boss - Level 22">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5470" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5471" levels="1" name="Raid Boss - Level 82">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5472" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5473" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5474" levels="1" name="Raid Boss - Level 81">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5475" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5476" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5477" levels="1" name="Raid Boss - Level 86">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5478" levels="1" name="Raid Boss - Level 83">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5479" levels="1" name="Boss Petrification Resistance">
 		<!-- Resist against Petrification. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 		<set name="hitTime" val="4000" />
@@ -907,7 +907,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="negateAbnormals" val="invincibility,9" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
@@ -916,7 +916,7 @@
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform_hangover" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -924,12 +924,12 @@
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform_hangover" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5483" levels="1" name="Counter Aggression">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -937,7 +937,7 @@
 		<!-- Increases P. Def. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pd_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -945,7 +945,7 @@
 		<!-- Increases P. Def. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="md_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -953,12 +953,12 @@
 		<!-- Increases P. Atk. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pa_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5487" levels="1" name="Counter Delete Aggression">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -966,7 +966,7 @@
 		<!-- Increases critical attack power. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="critical_dmg_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -974,7 +974,7 @@
 		<!-- Increases critical attack rate. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="critical_prob_up" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -983,12 +983,12 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="fatal_poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5491" levels="1" name="Decrease Bow/Crossbow Atk. Spd.">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="0.5">
@@ -1011,11 +1011,11 @@
 		<set name="reuseDelay" val="17000" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="reuseDelay" val="1000" />
 		<set name="operateType" val="CA5" />
@@ -1029,7 +1029,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="86" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" />
 		</for>
@@ -1049,7 +1049,7 @@
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 71HP * 5 during 20 seconds -->
@@ -1071,7 +1071,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5497" levels="1" name="Horn of Rising Darkness">
 		<!-- Confirmed CT2.5 -->
@@ -1091,7 +1091,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 			<!-- 52HP * 1 during 9 seconds -->
@@ -1110,7 +1110,7 @@
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TargetMe" val="0" />
 		</for>
@@ -1130,6 +1130,6 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 </list>

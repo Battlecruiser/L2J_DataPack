@@ -60,7 +60,7 @@ public class Resurrect implements ISkillHandler
 				targetPlayer = target.getActingPlayer();
 				
 				// Check for same party or for same clan, if target is for clan.
-				if (skill.getTargetType() == L2TargetType.TARGET_CORPSE_CLAN)
+				if (skill.getTargetType() == L2TargetType.CORPSE_CLAN)
 				{
 					if ((player != null) && (player.getClanId() != targetPlayer.getClanId()))
 					{

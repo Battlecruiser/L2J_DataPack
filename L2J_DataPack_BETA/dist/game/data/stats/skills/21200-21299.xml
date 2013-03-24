@@ -5,7 +5,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
@@ -15,7 +15,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -27,7 +27,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1576" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -39,7 +39,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1577" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -51,7 +51,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1578" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -63,7 +63,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1579" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -75,7 +75,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1580" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -87,7 +87,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1581" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -99,7 +99,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1582" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -111,7 +111,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1583" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -123,14 +123,14 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1584" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21211" levels="1" name="Blessing of Victory">
 		<!-- Increases moving speed by 2% through the Blessing of Victory. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -141,7 +141,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1585" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -153,7 +153,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1586" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -165,7 +165,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1587" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -177,7 +177,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1588" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -189,7 +189,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1589" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -201,7 +201,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1590" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -213,7 +213,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1591" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -225,7 +225,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1592" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -237,7 +237,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1593" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -245,68 +245,68 @@
 	<skill id="21221" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 	</skill>
 	<skill id="21222" levels="1" name="Resist Elemental">
 		<!-- "For 1 hour, increases Resistance to Fire/Water/Wind/Earth by 20. Reuse delay is 4 hours." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21223" levels="1" name="Ultimate Defense">
 		<!-- "For 30 seconds, increases one's own P. Def. by 3636, M. Def. by 2727, and resistance to buff canceling attacks by 80%, and becomes unable to move. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21224" levels="1" name="Soul of an Adventurer of Immortality's Ability">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21225" levels="1" name="Soul of a Strong Warrior's Ability">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21226" levels="1" name="Soul of a Wise Magician's Ability">
 		<!-- "For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21227" levels="1" name="Ability of Prominent Adventure's Soul">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21228" levels="1" name="Soul of a Brave Warrior's Ability">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21229" levels="1" name="Blood Awakening">
 		<!-- "Combines general attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 4 hours." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21230" levels="1" name="Improved Magic">
 		<!-- "Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. Reuse delay is 4 hours." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21231" levels="1" name="Improved Critical Attack">
 		<!-- "Combines critical rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases critical rate by 30% and Critical Damage by 35%. Reuse delay is 4 hours." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -315,7 +315,7 @@
 		<!-- Steps onto the shiny lit platform. -->
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="20004" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -333,7 +333,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1594" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -345,7 +345,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1595" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -353,7 +353,7 @@
 	<skill id="21235" levels="1" name="7th Anniversary T-shirt: Speed">
 		<!-- High Five Skill -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="7" />
 		</for>
@@ -365,7 +365,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="72000000" />
 		<set name="skillType" val="RECALL" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -381,14 +381,14 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="72000000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Invincible" abnormalTime="7" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
 		</for>
 	</skill>
 	<skill id="21238" levels="1" name="Jet Bike">
 		<!-- Mounts a jet bike. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -399,7 +399,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1596" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -411,14 +411,14 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1597" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21241" levels="1" name="Magic Glasses">
 		<!-- Increases M. Def. by 70. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -429,7 +429,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="teleCoords" val="52195,218787,-3231" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -444,7 +444,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="teleCoords" val="102728,-126242,-2840" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -459,7 +459,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="TELEPORT" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="teleCoords" val="181378,-80915,-2731" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -474,20 +474,20 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1598" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21246" levels="1" name="Rudolph's Energy">
 		<!-- "For 10 minute(s), energy is replenished when Exp. is acquired through hunting. Reuse time is 30 minutes." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21247" levels="1" name="Gift from Santa Claus">
 		<!-- "Receives a gift from Santa Claus. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -498,7 +498,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1599" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -510,20 +510,20 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1600" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="21250" levels="1" name="Academy Circlet">
 		<!-- "Characters between levels 40 to 75, when worn this item decreases death EXP. Penalty by 50%." -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="21251" levels="1" name="Shiny Party Hat - Greater Body">
 		<!-- Increases Max HP by 35% for 20 minutes. -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
@@ -531,7 +531,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23319" />
 		</for>
@@ -540,7 +540,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23320" />
 		</for>
@@ -549,7 +549,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23321" />
 		</for>
@@ -558,7 +558,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23322" triggeredLevel="10" />
 		</for>
@@ -567,7 +567,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_HIT" triggeredId="23323" triggeredLevel="10" />
 		</for>
@@ -576,7 +576,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="3" chanceType="ON_ATTACKED" triggeredId="23324" />
 		</for>
@@ -586,7 +586,7 @@
 		<!-- Mounts a rocking horse. -->
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="20007" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -602,7 +602,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1604" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -611,37 +611,37 @@
 		<!-- Description: You can use to learn the number of received gifts and the number of remaining gifts. The gift provision time is reset every morning at 6:30. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21261" levels="1" name="Bad Bunny's Necklace">
 		<!-- Description: Its effects are MP+250, HP+500, CP+1035, increased P. Atk., increased M. Atk., wild magic effect, and increased Critical attack power. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21262" levels="1" name="Bad Bunny's Earring">
 		<!-- Description: Its effects are HP+250, Vampiric Rage effect, increased accuracy, decreased re-use time for magic skills, and decreased MP consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21263" levels="1" name="Bad Bunny's Ring">
 		<!-- Description: Its effects are increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21264" levels="1" name="Summon Friend">
 		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Shining Couple Ring and be a party member. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21265" levels="1" name="Summon Friend">
 		<!-- Description: Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21266" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- High Five Skill -->
@@ -650,7 +650,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="1605" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonAgathion" noicon="1" val="0" />
 		</for>
@@ -659,6 +659,6 @@
 		<!-- Description: Notifies the number of received gifts and remaining gifts when used. The gift supply time is initialized at 6:30 am every day. -->
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>

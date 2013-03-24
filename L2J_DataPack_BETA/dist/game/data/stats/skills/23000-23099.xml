@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23000" levels="1" name="Majo Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -11,7 +11,7 @@
 	</skill>
 	<skill id="23001" levels="1" name="Gold Majo Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -20,7 +20,7 @@
 	</skill>
 	<skill id="23002" levels="1" name="Black Majo Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -29,7 +29,7 @@
 	</skill>
 	<skill id="23003" levels="1" name="Plaipitak Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -42,7 +42,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -55,7 +55,7 @@
 	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
@@ -68,7 +68,7 @@
 	</skill>
 	<skill id="23006" levels="1" name="Black Majo Agathion Special Skill - Power of Blessed Return">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -88,7 +88,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -100,7 +100,7 @@
 	</skill>
 	<skill id="23008" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Return">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -117,7 +117,7 @@
 	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
@@ -130,7 +130,7 @@
 	</skill>
 	<skill id="23010" levels="1" name="Baby Panda Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -139,7 +139,7 @@
 	</skill>
 	<skill id="23011" levels="1" name="Bamboo Panda Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -148,7 +148,7 @@
 	</skill>
 	<skill id="23012" levels="1" name="Sexy Panda Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -161,7 +161,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -174,7 +174,7 @@
 	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
@@ -187,7 +187,7 @@
 	</skill>
 	<skill id="23015" levels="1" name="Sexy Panda Agathion Special Skill - Power of Blessed Return">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -205,7 +205,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -226,7 +226,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="br_event_buf1">
 				<mul order="0x30" stat="maxHp" val="1.4" />
@@ -249,7 +249,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="coolTime" val="500" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="br_event_buf1">
@@ -272,7 +272,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -285,7 +285,7 @@
 		</for>
 	</skill>
 	<skill id="23020" levels="1" name="Challenge the Turkey">
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -298,14 +298,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23022" levels="10" name="First Win">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="stayAfterDeath" val="true" />
@@ -316,7 +316,7 @@
 	</skill>
 	<skill id="23023" levels="1" name="Reset Consecutive Wins">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -325,7 +325,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -342,7 +342,7 @@
 	</skill>
 	<skill id="23025" levels="1" name="Charming Cupid Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -351,7 +351,7 @@
 	</skill>
 	<skill id="23026" levels="1" name="Naughty Cupid Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -360,7 +360,7 @@
 	</skill>
 	<skill id="23027" levels="1" name="White Maneki Neko Agathion Cute Trick I">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -369,7 +369,7 @@
 	</skill>
 	<skill id="23028" levels="1" name="Black Maneki Neko Agathion Cute Trick I">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -378,7 +378,7 @@
 	</skill>
 	<skill id="23029" levels="1" name="Brown Maneki Neko Agathion Cute Trick I">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -388,7 +388,7 @@
 	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
@@ -401,7 +401,7 @@
 	</skill>
 	<skill id="23031" levels="1" name="Black Maneki Neko Agathion Special Skill - Ability of Blessed Return">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -420,7 +420,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -437,7 +437,7 @@
 	</skill>
 	<skill id="23033" levels="1" name="One-Eyed Bat Drove Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -449,7 +449,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
@@ -469,7 +469,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -486,7 +486,7 @@
 	</skill>
 	<skill id="23036" levels="1" name="Pegasus Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -498,7 +498,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
@@ -515,7 +515,7 @@
 	</skill>
 	<skill id="23038" levels="1" name="Pegasus Agathion Special Skill - Blessed Return Ability">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -531,7 +531,7 @@
 	</skill>
 	<skill id="23039" levels="1" name="Yellow-Robed Tojigong Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -540,7 +540,7 @@
 	</skill>
 	<skill id="23040" levels="1" name="Blue-Robed Tojigong Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -549,7 +549,7 @@
 	</skill>
 	<skill id="23041" levels="1" name="Green-Robed Tojigong Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -561,7 +561,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="14400000" />
@@ -582,7 +582,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="3600000" />
@@ -602,7 +602,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="3600000" />
@@ -619,7 +619,7 @@
 	</skill>
 	<skill id="23045" levels="1" name="Bugbear Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -628,7 +628,7 @@
 	</skill>
 	<skill id="23046" levels="1" name="White Maneki Neko Agathion Cute Trick II">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -637,7 +637,7 @@
 	</skill>
 	<skill id="23047" levels="1" name="Black Maneki Neko Agathion Cute Trick II">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -646,7 +646,7 @@
 	</skill>
 	<skill id="23048" levels="1" name="Brown Maneki Neko Agathion Cute Trick II">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -655,7 +655,7 @@
 	</skill>
 	<skill id="23049" levels="1" name="Red Sumo Wrestler Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -664,7 +664,7 @@
 	</skill>
 	<skill id="23050" levels="1" name="Blue Sumo Wrestler Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -673,7 +673,7 @@
 	</skill>
 	<skill id="23051" levels="1" name="Great Sumo Match Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -682,7 +682,7 @@
 	</skill>
 	<skill id="23052" levels="1" name="Button-Eyed Bear Doll Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -691,7 +691,7 @@
 	</skill>
 	<skill id="23053" levels="1" name="God of Fortune Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -700,7 +700,7 @@
 	</skill>
 	<skill id="23054" levels="1" name="Dryad Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -709,7 +709,7 @@
 	</skill>
 	<skill id="23055" levels="1" name="Wonboso Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -718,7 +718,7 @@
 	</skill>
 	<skill id="23056" levels="1" name="Daewoonso Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -730,7 +730,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="3600000" />
@@ -749,7 +749,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="3600000" />
@@ -770,7 +770,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="trait" val="ETC" />
 		<cond msgId="2292">
@@ -782,7 +782,7 @@
 	</skill>
 	<skill id="23060" levels="1" name="Great Sumo Match Agathion Special Skill - Ability of Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<cond msgId="2292">
@@ -791,7 +791,7 @@
 	</skill>
 	<skill id="23061" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Return">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 		<set name="skillType" val="RECALL" />
 		<set name="operateType" val="A1" />
@@ -808,7 +808,7 @@
 	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="RESURRECT" />
 		<set name="operateType" val="A1" />
@@ -824,7 +824,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -844,7 +844,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A2" />
@@ -864,7 +864,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
@@ -888,7 +888,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
 				<player invSize="10" />
@@ -904,7 +904,7 @@
 	</skill>
 	<skill id="23067" levels="1" name="Pomona Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -916,7 +916,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="resist_derangement" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
@@ -937,7 +937,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -946,7 +946,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -955,7 +955,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -963,7 +963,7 @@
 		<!-- You are endowed with the spirit of Eva's Wrath for the next 70 seconds. This allows you to do damage to a Spirit of Fire. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf2" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -978,7 +978,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
@@ -987,20 +987,20 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="br_event_buf3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="23075" levels="1" name="Flame Shock">
 		<!-- Loses the target. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23076" levels="1" name="Weaver Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1012,7 +1012,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="br_event_buf5" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
@@ -1026,7 +1026,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="br_event_buf5" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
@@ -1037,7 +1037,7 @@
 	</skill>
 	<skill id="23079" levels="1" name="Chon-chon Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1049,7 +1049,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1059,7 +1059,7 @@
 	</skill>
 	<skill id="23081" levels="1" name="Tang-tang Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1071,7 +1071,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1081,7 +1081,7 @@
 	</skill>
 	<skill id="23083" levels="1" name="Dancing Kid Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1093,7 +1093,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1103,7 +1103,7 @@
 	</skill>
 	<skill id="23085" levels="1" name="Monkey King Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1115,7 +1115,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1125,7 +1125,7 @@
 	</skill>
 	<skill id="23087" levels="1" name="Utanka Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1137,7 +1137,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1147,7 +1147,7 @@
 	</skill>
 	<skill id="23089" levels="1" name="Bonus B Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<cond msgId="2292">
@@ -1159,7 +1159,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1172,58 +1172,58 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="23092" levels="1" name="Jack O'Lantern Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="23093" levels="1" name="Rotten Jack O'Lantern Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="23094" levels="1" name="Jack O'Lantern Card - Confirm Skill">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23095" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23096" levels="1" name="Halloween Defeat">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23097" levels="1" name="First Consecutive Win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23098" levels="1" name="2nd Consecutive Win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="23099" levels="1" name="Third Consecutive Win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>

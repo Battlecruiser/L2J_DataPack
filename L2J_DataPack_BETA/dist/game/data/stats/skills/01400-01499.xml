@@ -31,7 +31,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="FEAR" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="aggroPoints" val="#aggro" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -82,7 +82,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="HEAL" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -117,7 +117,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="affectRange" val="1000" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -142,7 +142,7 @@
 		</enchant4for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<set name="affectRange" val="-1" />
 		<set name="skillType" val="SUMMON_FRIEND" />
 		<set name="operateType" val="A1" />
@@ -161,7 +161,7 @@
 		</cond>
 	</skill>
 	<skill id="1404" levels="1" name="Word of Invitation">
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="-1" />
 		<set name="skillType" val="SUMMON_FRIEND" />
 		<set name="operateType" val="A1" />
@@ -187,7 +187,7 @@
 		<table name="#slots"> 1 2 3 4 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="EnlargeAbnormalSlot" noicon="1" val="#slots" abnormalTime="-1" />
 		</for>
@@ -215,7 +215,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
@@ -244,7 +244,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
@@ -273,7 +273,7 @@
 		<set name="summonTimeLostActive" val="1000" />
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
@@ -285,7 +285,7 @@
 		<set name="magicLvl" val="78" />
 		<set name="mpInitialConsume" val="12" />
 		<set name="mpConsume" val="46" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -315,7 +315,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhoenixBless" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="resurrection_special" />
 		</for>
@@ -332,7 +332,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<for>
 			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="abnormal_invincibility">
 				<set order="0x08" stat="debuffImmunity" val="1" />
@@ -350,7 +350,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="AbortCast" noicon="1" val="0" effectPower="50" />
 		</for>
@@ -365,7 +365,7 @@
 		<set name="itemConsumeCount" val="40" />
 		<set name="mpInitialConsume" val="57" />
 		<set name="mpConsume" val="230" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
@@ -427,7 +427,7 @@
 		<set name="itemConsumeCount" val="40" />
 		<set name="mpInitialConsume" val="57" />
 		<set name="mpConsume" val="227" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
+		<set name="targetType" val="PARTY_CLAN" />
 		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
@@ -501,7 +501,7 @@
 		<set name="abnormalType" val="resist_debuff_dispel" />
 		<set name="mpInitialConsume" val="56" />
 		<set name="mpConsume" val="228" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
+		<set name="targetType" val="PARTY_CLAN" />
 		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
@@ -535,7 +535,7 @@
 		<set name="mpConsume" val="228" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeCount" val="20" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
+		<set name="targetType" val="PARTY_CLAN" />
 		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="300000" />
 		<set name="hitTime" val="2500" />
@@ -579,7 +579,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -594,7 +594,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="mpConsume" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="600000" />
 		<set name="staticReuse" val="true" />
@@ -610,7 +610,7 @@
 	</skill>
 	<skill id="1419" levels="1" name="Volcano">
 		<set name="affectLimit" val="15-25" />
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
@@ -639,7 +639,7 @@
 	</skill>
 	<skill id="1420" levels="1" name="Cyclone">
 		<set name="affectLimit" val="15-25" />
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
@@ -668,7 +668,7 @@
 	</skill>
 	<skill id="1421" levels="1" name="Raging Waves">
 		<set name="affectLimit" val="15-25" />
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
@@ -696,7 +696,7 @@
 		</for>
 	</skill>
 	<skill id="1422" levels="1" name="Day of Doom">
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
@@ -722,7 +722,7 @@
 	</skill>
 	<skill id="1423" levels="1" name="Gehenna">
 		<set name="affectLimit" val="15-25" />
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="operateType" val="CA1" />
 		<set name="hitTime" val="15000" />
@@ -750,7 +750,7 @@
 		</for>
 	</skill>
 	<skill id="1424" levels="1" name="Anti-Summoning Field">
-		<set name="target" val="TARGET_GROUND" />
+		<set name="targetType" val="GROUND" />
 		<set name="skillType" val="SIGNET" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
@@ -776,7 +776,7 @@
 		</for>
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1200000" />
@@ -803,7 +803,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpConsume" val="72" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_CLAN" />
+		<set name="targetType" val="CLAN" />
 		<set name="affectRange" val="900" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5000" />
@@ -824,7 +824,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpInitialConsume" val="36" />
 		<set name="mpConsume" val="37" />
-		<set name="target" val="TARGET_PARTY_CLAN" />
+		<set name="targetType" val="PARTY_CLAN" />
 		<set name="affectRange" val="900" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="staticReuse" val="true" />
@@ -845,7 +845,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="mpConsume" val="73" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="staticReuse" val="true" />
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="5000" />
@@ -870,7 +870,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="affectRange" val="-1" />
 		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503" />
@@ -896,7 +896,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="force_meditation">
 				<mul order="0x30" stat="pDef" val="0.1" />
@@ -926,7 +926,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="1432" levels="2" name="Increase Power">
 		<!-- Confirmed CT2.5 -->
@@ -947,7 +947,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#rate" />
@@ -975,7 +975,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="1434" levels="4" name="Dark Explosion">
 		<!-- Confirmed CT2.5 -->
@@ -1000,7 +1000,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="1435" levels="10" name="Death Mark" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
@@ -1030,7 +1030,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DOT" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -1075,7 +1075,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1127,7 +1127,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1186,7 +1186,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1219,7 +1219,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">
 		<!-- Confirmed CT2.5 -->
@@ -1242,7 +1242,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="STEAL_BUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="1441" levels="3" name="Soul to Empower">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -1263,7 +1263,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
@@ -1296,7 +1296,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
@@ -1333,7 +1333,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
@@ -1370,7 +1370,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
@@ -1458,7 +1458,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -1505,7 +1505,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1540,7 +1540,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="MUTE" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1579,7 +1579,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1604,7 +1604,7 @@
 		<set name="operateType" val="A1" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="skillType" val="CHARGESOUL" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="2195">
 			<player souls="1" />
 		</cond>
@@ -1637,7 +1637,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1658,7 +1658,7 @@
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="79" />
 		<set name="power" val="195" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1697,7 +1697,7 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="87" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="affectRange" val="200" />
 		<set name="reuseDelay" val="75000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1734,7 +1734,7 @@
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="79" />
 		<set name="power" val="195" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1783,7 +1783,7 @@
 		<set name="affectRange" val="250" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -1807,7 +1807,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="109" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DOT" />
@@ -1843,7 +1843,7 @@
 		<set name="mpConsume" val="80" />
 		<set name="magicLvl" val="79" />
 		<set name="power" val="195" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2000" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -1875,7 +1875,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="ma_up_special" />
 		<set name="mpConsume" val="145" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="15000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1906,7 +1906,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="109" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="affectRange" val="200" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
@@ -1944,7 +1944,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="heal_power_up">
@@ -1965,7 +1965,7 @@
 		<set name="abnormalType" val="recharge_up" />
 		<set name="mpInitialConsume" val="38" />
 		<set name="mpConsume" val="142" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="150000" />
 		<set name="hitTime" val="3000" />
 		<set name="skillType" val="BUFF" />
@@ -1999,7 +1999,7 @@
 		<set name="abnormalType" val="t_crt_dmg_down" />
 		<set name="mpInitialConsume" val="39" />
 		<set name="mpConsume" val="250" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<set name="affectRange" val="1000" />
 		<set name="reuseDelay" val="5000" />
 		<set name="hitTime" val="2500" />
@@ -2043,7 +2043,7 @@
 		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="PHYSICAL_BLOCKADE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2062,7 +2062,7 @@
 		<set name="abnormalType" val="holy_attack" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -2082,7 +2082,7 @@
 		<set name="abnormalType" val="holy_attack" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -2102,7 +2102,7 @@
 		<set name="abnormalType" val="holy_attack" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -2122,7 +2122,7 @@
 		<set name="abnormalType" val="holy_attack" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="mpConsume" val="54" />
-		<set name="target" val="TARGET_PARTY_MEMBER" />
+		<set name="targetType" val="PARTY_MEMBER" />
 		<set name="reuseDelay" val="2000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -2156,7 +2156,7 @@
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<for>
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<!-- 117HP * 3 sec during 10 seconds -->
@@ -2180,7 +2180,7 @@
 		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<for>
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<!-- 117HP * 3 sec during 10 seconds -->
@@ -2212,7 +2212,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="5" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2243,7 +2243,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -2287,7 +2287,7 @@
 		<set name="affectRange" val="400" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="1472" levels="1" name="Soul Sucking">
 		<!-- Confirmed CT2.5 -->
@@ -2307,7 +2307,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="1473" levels="1" name="Change Weapon">
 		<!-- Confirmed CT2.5 -->
@@ -2319,7 +2319,7 @@
 		<set name="mpInitialConsume" val="6" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using weaponChange="true" />
 		</cond>
@@ -2333,7 +2333,7 @@
 		<table name="#ench1mAtk"> 1.101 1.103 1.105 1.106 1.108 1.11 1.111 1.113 1.115 1.116 1.118 1.12 1.121 1.123 1.125 1.126 1.128 1.13 1.131 1.133 1.135 1.136 1.138 1.14 1.141 1.143 1.145 1.146 1.148 1.15 </table>
 		<set name="magicLvl" val="43" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.1" />
@@ -2360,7 +2360,7 @@
 		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Negate" noicon="1" val="0" />
 		</for>
@@ -2391,7 +2391,7 @@
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
@@ -2437,7 +2437,7 @@
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2481,7 +2481,7 @@
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2527,7 +2527,7 @@
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2571,7 +2571,7 @@
 		<set name="affectRange" val="600" />
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
-		<set name="target" val="TARGET_PARTY" />
+		<set name="targetType" val="PARTY" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2618,7 +2618,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2658,7 +2658,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2699,7 +2699,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2739,7 +2739,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2781,7 +2781,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2821,7 +2821,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2860,7 +2860,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -2901,7 +2901,7 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="109">
 			<target active_effect_id="1487" />
@@ -2920,7 +2920,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="5" />
 			<add order="0x40" stat="earthRes" val="5" />
@@ -2933,7 +2933,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
 		</for>
@@ -2943,7 +2943,7 @@
 		<set name="excludedFromCheck" val="true" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
 		</for>
@@ -2961,7 +2961,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5567" abnormalLvl="1" abnormalType="elemental_armor">
 				<add order="0x40" stat="fireRes" val="60" />
@@ -2981,7 +2981,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" abnormalLvl="1" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5568" abnormalType="elemental_armor">
 				<add order="0x40" stat="waterRes" val="60" />
@@ -3001,7 +3001,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="1200" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5569" abnormalLvl="1" abnormalType="elemental_armor">
 				<add order="0x40" stat="windRes" val="60" />
@@ -3014,7 +3014,7 @@
 		<set name="abnormalType" val="ultimate_debuff" />
 		<set name="mpConsume" val="145" />
 		<set name="power" val="117" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="affectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -3048,7 +3048,7 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="73" />
-		<set name="target" val="TARGET_PET" />
+		<set name="targetType" val="PET" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -3063,7 +3063,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
 		</for>
@@ -3072,7 +3072,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5571" />
 		</for>
@@ -3093,7 +3093,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalTime="2400" val="0" abnormalLvl="1" abnormalType="improve_pa_pd_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
