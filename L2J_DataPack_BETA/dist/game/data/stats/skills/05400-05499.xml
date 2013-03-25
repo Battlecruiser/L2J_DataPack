@@ -737,7 +737,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="speed_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="speed_down" effectPower="80" >
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>

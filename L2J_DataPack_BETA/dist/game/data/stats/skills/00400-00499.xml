@@ -45,7 +45,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_down" effectPower="80" >
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -63,7 +63,7 @@
 			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="#ench2Power" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="#ench2Power" >
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="1.2" />
@@ -81,7 +81,7 @@
 			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="critical_prob_down" effectPower="80" >
 				<mul order="0x30" stat="cAtk" val="#ench3cAtk" />
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
@@ -147,7 +147,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_down" effectPower="80" >
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -165,7 +165,7 @@
 			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" >
 				<mul order="0x30" stat="cAtk" val="0.65" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="1.2" />
@@ -183,7 +183,7 @@
 			<effect name="TargetMe" abnormalTime="3" noicon="1" val="0" /> <!-- FIXME: abnormalTime unconfirmed -->
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="critical_dmg_down" effectPower="80" >
 				<basemul order="0x30" stat="rCrit" val="#ench3rCrit" />
 				<mul order="0x30" stat="cAtk" val="0.65" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
@@ -469,7 +469,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_speed_down" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_speed_down" effectPower="40" >
 				<mul order="0x30" stat="runSpd" val="#debuff" />
 				<mul order="0x30" stat="pAtkSpd" val="#debuff" />
 				<mul order="0x30" stat="mAtkSpd" val="#debuff" />
@@ -506,7 +506,7 @@
 			<using kind="Dual Sword" />
 		</cond>
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_attack_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="all_attack_down" effectPower="80" >
 				<mul order="0x30" stat="mAtk" val="#debuff" />
 				<mul order="0x30" stat="pAtk" val="#debuff" />
 			</effect>

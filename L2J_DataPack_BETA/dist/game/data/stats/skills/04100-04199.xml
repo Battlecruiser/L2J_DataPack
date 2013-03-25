@@ -1924,7 +1924,7 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="speed_down" effectPower="60" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="2" abnormalType="speed_down" effectPower="60" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>

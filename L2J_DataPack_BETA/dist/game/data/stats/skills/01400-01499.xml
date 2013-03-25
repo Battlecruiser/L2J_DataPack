@@ -1140,17 +1140,17 @@
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
-			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="#ench3Power" effectType="DEBUFF">
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="#ench3Power" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant3for>
 		<enchant5for>
-			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" effectType="DEBUFF">
+			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" >
 				<sub order="0x40" stat="darkRes" val="#ench5DarkhVuln" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -3031,7 +3031,7 @@
 		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="ultimate_debuff" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="ultimate_debuff" effectPower="80" >
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />

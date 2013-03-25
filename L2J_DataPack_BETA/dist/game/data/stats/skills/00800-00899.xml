@@ -1786,7 +1786,7 @@
 		<set name="operateType" val="A2" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff" effectPower="80" >
 				<mul order="0x30" stat="pDef" val="0.6" />
 				<mul order="0x30" stat="mDef" val="0.6" />
 				<mul order="0x30" stat="runSpd" val="0.6" />
