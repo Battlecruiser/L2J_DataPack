@@ -159,10 +159,7 @@ public class Q00152_ShardsOfGolem extends Quest
 						}
 						case State.COMPLETED:
 						{
-							if (npc.getNpcId() == HARRYS)
-							{
-								htmltext = getAlreadyCompletedMsg(player);
-							}
+							htmltext = getAlreadyCompletedMsg(player);
 							break;
 						}
 					}
