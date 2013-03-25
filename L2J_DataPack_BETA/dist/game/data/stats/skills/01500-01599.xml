@@ -360,14 +360,14 @@
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" abnormalTime="3" val="36" abnormalLvl="1" abnormalType="multi_debuff_soul" effectPower="80" effectType="MDOT">
+			<effect count="10" name="ManaDamOverTime" abnormalTime="3" val="36" abnormalLvl="1" abnormalType="multi_debuff_soul" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" abnormalTime="3" val="36" abnormalLvl="1" abnormalType="multi_debuff_soul" effectPower="#ench3effectPower" effectType="MDOT">
+			<effect count="10" name="ManaDamOverTime" abnormalTime="3" val="36" abnormalLvl="1" abnormalType="multi_debuff_soul" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />

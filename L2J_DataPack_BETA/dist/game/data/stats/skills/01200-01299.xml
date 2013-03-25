@@ -2020,7 +2020,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="80" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#vuln" />
 				<sub order="0x40" stat="fireRes" val="#vuln" />
@@ -2031,7 +2031,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench1Chance" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="#ench1Chance" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#ench1Vuln" />
 				<sub order="0x40" stat="fireRes" val="#ench1Vuln" />
@@ -2042,7 +2042,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="#ench2Time" val="0" abnormalLvl="3" abnormalType="md_down" effectPower="80" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="25" />
 				<sub order="0x40" stat="fireRes" val="25" />
@@ -2849,7 +2849,7 @@
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="heal_effect_down" effectPower="80" effectType="DEBUFF">
+			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="heal_effect_down" effectPower="80" >
 				<mul order="0x30" stat="gainHp" val="0.5" />
 			</effect>
 		</for>
