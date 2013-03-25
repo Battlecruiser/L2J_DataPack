@@ -26,9 +26,7 @@ import javolution.util.FastList;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 
@@ -42,62 +40,30 @@ public class Aura implements ITargetTypeHandler
 	{
 		List<L2Character> targetList = new FastList<>();
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		
-		final L2PcInstance sourcePlayer = activeChar.getActingPlayer();
-		
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		
-		if (skill.getSkillType() == L2SkillType.DUMMY)
+		for (L2Character obj : objs)
 		{
-			if (onlyFirst)
+			if (obj.isL2Attackable() || obj.isPlayable())
 			{
-				return new L2Character[]
-				{
-					activeChar
-				};
-			}
-			
-			targetList.add(activeChar);
-			for (L2Character obj : objs)
-			{
-				if (!((obj == activeChar) || (obj == sourcePlayer) || obj.isNpc() || obj.isL2Attackable()))
+				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 				{
 					continue;
+				}
+				
+				if (onlyFirst)
+				{
+					return new L2Character[]
+					{
+						obj
+					};
 				}
 				
 				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
 				{
 					break;
 				}
-				
 				targetList.add(obj);
-			}
-		}
-		else
-		{
-			for (L2Character obj : objs)
-			{
-				if (obj.isL2Attackable() || obj.isPlayable())
-				{
-					if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
-					{
-						continue;
-					}
-					
-					if (onlyFirst)
-					{
-						return new L2Character[]
-						{
-							obj
-						};
-					}
-					
-					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
-					{
-						break;
-					}
-					targetList.add(obj);
-				}
 			}
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
