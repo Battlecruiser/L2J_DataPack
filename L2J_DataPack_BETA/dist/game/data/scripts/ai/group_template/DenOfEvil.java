@@ -40,7 +40,6 @@ import com.l2jserver.gameserver.util.Util;
 public class DenOfEvil extends AbstractNpcAI
 {
 	// private static final int _buffer_id = 32656;
-	
 	protected static final int[] EYE_IDS =
 	{
 		18812,
@@ -97,9 +96,9 @@ public class DenOfEvil extends AbstractNpcAI
 		new Location(62905, -106109, -2384, 51288)
 	};
 	
-	private DenOfEvil(String name, String descr)
+	private DenOfEvil()
 	{
-		super(name, descr);
+		super(DenOfEvil.class.getSimpleName(), "ai/group_template");
 		registerMobs(EYE_IDS, QuestEventType.ON_KILL, QuestEventType.ON_SPAWN);
 		spawnEyes();
 	}
@@ -114,49 +113,43 @@ public class DenOfEvil extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(EYE_IDS, npc.getNpcId()))
+		npc.disableCoreAI(true);
+		npc.setIsImmobilized(true);
+		L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
+		if (zone == null)
 		{
-			npc.disableCoreAI(true);
-			npc.setIsImmobilized(true);
-			L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
-			if (zone == null)
-			{
-				_log.warning("NPC " + npc + " spawned outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
-				return null;
-			}
-			int skillId = getSkillIdByNpcId(npc.getNpcId());
-			int skillLevel = zone.getSkillLevel(skillId);
-			zone.addSkill(skillId, skillLevel + 1);
-			if (skillLevel == 3) // 3+1=4
-			{
-				ThreadPoolManager.getInstance().scheduleAi(new KashaDestruction(zone), 2 * 60 * 1000l);
-				zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.KASHA_EYE_PITCHES_TOSSES_EXPLODE));
-			}
-			else if (skillLevel == 2)
-			{
-				zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.I_CAN_FEEL_ENERGY_KASHA_EYE_GETTING_STRONGER_RAPIDLY));
-			}
+			_log.warning("NPC " + npc + " spawned outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
+			return null;
 		}
-		return null;
+		int skillId = getSkillIdByNpcId(npc.getNpcId());
+		int skillLevel = zone.getSkillLevel(skillId);
+		zone.addSkill(skillId, skillLevel + 1);
+		if (skillLevel == 3) // 3+1=4
+		{
+			ThreadPoolManager.getInstance().scheduleAi(new KashaDestruction(zone), 2 * 60 * 1000l);
+			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.KASHA_EYE_PITCHES_TOSSES_EXPLODE));
+		}
+		else if (skillLevel == 2)
+		{
+			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.I_CAN_FEEL_ENERGY_KASHA_EYE_GETTING_STRONGER_RAPIDLY));
+		}
+		return super.onSpawn(npc);
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (Util.contains(EYE_IDS, npc.getNpcId()))
+		ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
+		L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
+		if (zone == null)
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new RespawnNewEye(npc.getLocation()), 15000);
-			L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
-			if (zone == null)
-			{
-				_log.warning("NPC " + npc + " killed outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
-				return null;
-			}
-			int skillId = getSkillIdByNpcId(npc.getNpcId());
-			int skillLevel = zone.getSkillLevel(skillId);
-			zone.addSkill(skillId, skillLevel - 1);
+			_log.warning("NPC " + npc + " killed outside of L2EffectZone, check your zone coords! X:" + npc.getX() + " Y:" + npc.getY() + " Z:" + npc.getZ());
+			return null;
 		}
-		return null;
+		int skillId = getSkillIdByNpcId(npc.getNpcId());
+		int skillLevel = zone.getSkillLevel(skillId);
+		zone.addSkill(skillId, skillLevel - 1);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private void spawnEyes()
@@ -244,6 +237,6 @@ public class DenOfEvil extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new DenOfEvil(DenOfEvil.class.getSimpleName(), "ai");
+		new DenOfEvil();
 	}
 }

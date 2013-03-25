@@ -41,6 +41,13 @@ public class HandysBlockCheckerEvent extends Quest
 	private static final int A_MANAGER_3 = 32523;
 	private static final int A_MANAGER_4 = 32524;
 	
+	public HandysBlockCheckerEvent()
+	{
+		super(-1, HandysBlockCheckerEvent.class.getSimpleName(), "Handy's Block Checker Event");
+		addFirstTalkId(A_MANAGER_1, A_MANAGER_2, A_MANAGER_3, A_MANAGER_4);
+		HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
+	}
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -89,23 +96,16 @@ public class HandysBlockCheckerEvent extends Quest
 		return HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12;
 	}
 	
-	public HandysBlockCheckerEvent(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addFirstTalkId(A_MANAGER_1, A_MANAGER_2, A_MANAGER_3, A_MANAGER_4);
-	}
-	
 	public static void main(String[] args)
 	{
-		if (!Config.ENABLE_BLOCK_CHECKER_EVENT)
+		if (Config.ENABLE_BLOCK_CHECKER_EVENT)
 		{
-			_log.info("Handy's Block Checker Event is disabled");
+			new HandysBlockCheckerEvent();
+			_log.info("Handy's Block Checker Event is enabled");
 		}
 		else
 		{
-			new HandysBlockCheckerEvent(-1, HandysBlockCheckerEvent.class.getSimpleName(), "Handy's Block Checker Event");
-			HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
-			_log.info("Handy's Block Checker Event is enabled");
+			_log.info("Handy's Block Checker Event is disabled");
 		}
 	}
 }

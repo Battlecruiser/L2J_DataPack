@@ -31,24 +31,23 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.Rnd;
 
 /**
- * Fairy Trees AI
+ * Fairy Trees AI.
  * @author Charus
  */
 public class FairyTrees extends AbstractNpcAI
 {
+	// @formatter:off
 	private static final int[] MOBS =
 	{
-		27185,
-		27186,
-		27187,
-		27188
+		27185, 27186, 27187, 27188
 	};
+	// @formatter:on
 	
-	private FairyTrees(String name, String descr)
+	private FairyTrees()
 	{
-		super(name, descr);
+		super(FairyTrees.class.getSimpleName(), "ai/group_template");
 		registerMobs(MOBS, QuestEventType.ON_KILL);
-		addSpawnId(27189);
+		addSpawnId(27189); // TODO why is this here?
 	}
 	
 	@Override
@@ -79,6 +78,6 @@ public class FairyTrees extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new FairyTrees(FairyTrees.class.getSimpleName(), "ai");
+		new FairyTrees();
 	}
 }

@@ -61,76 +61,33 @@ public class EnergySeeds extends AbstractNpcAI
 	protected static Map<L2Npc, Integer> _spawnedNpcs = new FastMap<L2Npc, Integer>().shared();
 	
 	private static final int TEMPORARY_TELEPORTER = 32602;
+	// @formatter:off
 	private static final int[] SEED_IDS =
 	{
-		18678,
-		18679,
-		18680,
-		18681,
-		18682,
-		18683
+		18678, 18679, 18680, 18681, 18682, 18683
 	};
 	
 	private static final int[][] ANNIHILATION_SUPRISE_MOB_IDS =
 	{
-		{
-			22746,
-			22747,
-			22748,
-			22749
-		},
-		{
-			22754,
-			22755,
-			22756
-		},
-		{
-			22760,
-			22761,
-			22762
-		}
+		{ 22746, 22747, 22748, 22749 },
+		{ 22754, 22755, 22756 },
+		{ 22760, 22761, 22762 }
 	};
 	
 	private static int[] SEED_OF_DESTRUCTION_DOORS =
 	{
-		12240003,
-		12240004,
-		12240005,
-		12240006,
-		12240007,
-		12240008,
-		12240009,
-		12240010,
-		12240011,
-		12240012,
-		12240013,
-		12240014,
-		12240015,
-		12240016,
-		12240017,
-		12240018,
-		12240019,
-		12240020,
-		12240021,
-		12240022,
-		12240023,
-		12240024,
-		12240025,
-		12240026,
-		12240027,
-		12240028,
-		12240029,
-		12240030,
+		12240003, 12240004, 12240005, 12240006, 12240007, 12240008, 12240009,
+		12240010, 12240011, 12240012, 12240013, 12240014, 12240015, 12240016,
+		12240017, 12240018, 12240019, 12240020, 12240021, 12240022, 12240023,
+		12240024, 12240025, 12240026, 12240027, 12240028, 12240029, 12240030,
 		12240031
 	};
-	
-	private static final int SOD_ZONE = 60009;
 	private static final int[] SOD_EXIT_POINT =
 	{
-		-248717,
-		250260,
-		4337
+		-248717, 250260, 4337
 	};
+	// @formatter:off
+	private static final int SOD_ZONE = 60009;
 	
 	private enum GraciaSeeds
 	{
@@ -139,6 +96,17 @@ public class EnergySeeds extends AbstractNpcAI
 		ANNIHILATION_BISTAKON,
 		ANNIHILATION_REPTILIKON,
 		ANNIHILATION_COKRAKON
+	}
+	
+	private EnergySeeds()
+	{
+		super(EnergySeeds.class.getSimpleName(), "instances"); // ai/group_template?
+		registerMobs(SEED_IDS);
+		addFirstTalkId(SEED_IDS);
+		addFirstTalkId(TEMPORARY_TELEPORTER);
+		addEnterZoneId(SOD_ZONE);
+		addSpawnsToList();
+		startAI();
 	}
 	
 	protected boolean isSeedActive(GraciaSeeds seed)
@@ -806,17 +774,6 @@ public class EnergySeeds extends AbstractNpcAI
 				}
 			}, waitTime);
 		}
-	}
-	
-	private EnergySeeds()
-	{
-		super(EnergySeeds.class.getSimpleName(), "instances");
-		registerMobs(SEED_IDS);
-		addFirstTalkId(SEED_IDS);
-		addFirstTalkId(TEMPORARY_TELEPORTER);
-		addEnterZoneId(SOD_ZONE);
-		addSpawnsToList();
-		startAI();
 	}
 	
 	public static void main(String[] args)

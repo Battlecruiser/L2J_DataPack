@@ -44,16 +44,13 @@ public class Slaves extends AbstractNpcAI
 		22320,
 		22321
 	};
-	
 	private static final L2CharPosition MOVE_TO = new L2CharPosition(-25451, 252291, -3252, 3500);
-	
 	private static final int TRUST_REWARD = 10;
 	
-	private Slaves(String name, String descr)
+	private Slaves()
 	{
-		super(name, descr);
-		addSpawnId(MASTERS);
-		addKillId(MASTERS);
+		super(Slaves.class.getSimpleName(), "ai/group_template");
+		registerMobs(MASTERS, QuestEventType.ON_SPAWN, QuestEventType.ON_KILL);
 	}
 	
 	@Override
@@ -101,6 +98,6 @@ public class Slaves extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Slaves(Slaves.class.getSimpleName(), "ai");
+		new Slaves();
 	}
 }

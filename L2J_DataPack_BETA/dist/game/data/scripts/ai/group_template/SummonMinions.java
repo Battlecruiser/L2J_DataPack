@@ -46,7 +46,6 @@ public class SummonMinions extends AbstractNpcAI
 	private static Set<Integer> myTrackingSet = new FastSet<Integer>().shared(); // Used to track instances of npcs
 	private final FastMap<Integer, FastList<L2PcInstance>> _attackersList = new FastMap<Integer, FastList<L2PcInstance>>().shared();
 	private static final Map<Integer, List<Integer>> MINIONS = new HashMap<>();
-	
 	static
 	{
 		// Timak Orc Troop
@@ -86,7 +85,6 @@ public class SummonMinions extends AbstractNpcAI
 		// Tanta Lizardman Summoner
 		MINIONS.put(22774, Arrays.asList(22768, 22768));
 	}
-	
 	// Timak Orc Troop Messages
 	private static final NpcStringId[] ATTACK_LEADER_MSG =
 	{
@@ -96,9 +94,9 @@ public class SummonMinions extends AbstractNpcAI
 		NpcStringId.COME_OUT_YOU_CHILDREN_OF_DARKNESS
 	};
 	
-	private SummonMinions(String name, String descr)
+	private SummonMinions()
 	{
-		super(name, descr);
+		super(SummonMinions.class.getSimpleName(), "ai/group_template");
 		registerMobs(MINIONS.keySet(), QuestEventType.ON_ATTACK, QuestEventType.ON_KILL);
 	}
 	
@@ -120,7 +118,6 @@ public class SummonMinions extends AbstractNpcAI
 				case 22030: // mobs that summon minions only on certain hp
 				case 22032:
 				case 22038:
-				{
 					if (npc.getCurrentHp() < (npc.getMaxHp() / 2.0))
 					{
 						HasSpawned = 0;
@@ -136,7 +133,6 @@ public class SummonMinions extends AbstractNpcAI
 						}
 					}
 					break;
-				}
 				case 22257:
 				case 22258:
 				case 22259:
@@ -147,7 +143,6 @@ public class SummonMinions extends AbstractNpcAI
 				case 22264:
 				case 22265:
 				case 22266:
-				{
 					if (isSummon)
 					{
 						attacker = attacker.getSummon().getOwner();
@@ -193,9 +188,7 @@ public class SummonMinions extends AbstractNpcAI
 						}
 					}
 					break;
-				}
 				default: // mobs without special conditions
-				{
 					HasSpawned = 0;
 					if (npcId != 20767)
 					{
@@ -216,7 +209,6 @@ public class SummonMinions extends AbstractNpcAI
 						}
 					}
 					break;
-				}
 			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -238,6 +230,6 @@ public class SummonMinions extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SummonMinions(SummonMinions.class.getSimpleName(), "ai");
+		new SummonMinions();
 	}
 }

@@ -32,25 +32,19 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class StarStones extends AbstractNpcAI
 {
+	// @formatter:off
 	private static final int[] MOBS =
 	{
-		18684,
-		18685,
-		18686,
-		18687,
-		18688,
-		18689,
-		18690,
-		18691,
-		18692
+		18684, 18685, 18686, 18687, 18688, 18689, 18690, 18691, 18692
 	};
+	// @formatter:on
 	
-	private static final int RATE = 1;
+	private static final int COLLECTION_RATE = 1;
 	
-	private StarStones(String name, String descr)
+	private StarStones()
 	{
-		super(name, descr);
-		registerMobs(MOBS, QuestEventType.ON_SKILL_SEE);
+		super(StarStones.class.getSimpleName(), "ai/group_template");
+		addSkillSeeId(MOBS);
 	}
 	
 	@Override
@@ -87,12 +81,12 @@ public class StarStones extends AbstractNpcAI
 			if (getRandom(100) < 33)
 			{
 				caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
-				caster.addItem("StarStone", itemId, getRandom(RATE + 1, 2 * RATE), null, true);
+				caster.addItem("StarStone", itemId, getRandom(COLLECTION_RATE + 1, 2 * COLLECTION_RATE), null, true);
 			}
 			else if (((skill.getLevel() == 1) && (getRandom(100) < 15)) || ((skill.getLevel() == 2) && (getRandom(100) < 50)) || ((skill.getLevel() == 3) && (getRandom(100) < 75)))
 			{
 				caster.sendPacket(SystemMessageId.THE_COLLECTION_HAS_SUCCEEDED);
-				caster.addItem("StarStone", itemId, getRandom(1, RATE), null, true);
+				caster.addItem("StarStone", itemId, getRandom(1, COLLECTION_RATE), null, true);
 			}
 			else
 			{
@@ -105,6 +99,6 @@ public class StarStones extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new StarStones(StarStones.class.getSimpleName(), "ai");
+		new StarStones();
 	}
 }

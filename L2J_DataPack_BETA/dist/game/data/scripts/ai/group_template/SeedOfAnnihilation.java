@@ -79,9 +79,9 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		_teleportZones.put(60005, new Location(-179275, 186802, -10720));
 	}
 	
-	private SeedOfAnnihilation(String name, String descr)
+	private SeedOfAnnihilation()
 	{
-		super(name, descr);
+		super(SeedOfAnnihilation.class.getSimpleName(), "ai/group_template");
 		loadSeedRegionData();
 		for (int i : _teleportZones.keySet())
 		{
@@ -360,12 +360,6 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
-	{
-		return super.onKill(npc, killer, isSummon);
-	}
-	
-	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
 		if (_teleportZones.containsKey(zone.getId()))
@@ -396,6 +390,6 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new SeedOfAnnihilation(SeedOfAnnihilation.class.getSimpleName(), "ai");
+		new SeedOfAnnihilation();
 	}
 }

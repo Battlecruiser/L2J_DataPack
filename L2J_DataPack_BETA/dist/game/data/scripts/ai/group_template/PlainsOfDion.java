@@ -30,12 +30,12 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * AI for mobs in Plains of Dion (near Floran Village)
+ * AI for mobs in Plains of Dion (near Floran Village).
  * @author Gladicek
  */
 public final class PlainsOfDion extends AbstractNpcAI
 {
-	private static final int MONSTERS[] =
+	private static final int DELU_LIZARDMEN[] =
 	{
 		21104, // Delu Lizardman Supplier
 		21105, // Delu Lizardman Special Agent
@@ -58,10 +58,10 @@ public final class PlainsOfDion extends AbstractNpcAI
 		NpcStringId.WHAT_ARE_YOU_LOOKING_AT
 	};
 	
-	private PlainsOfDion(String name, String descr)
+	private PlainsOfDion()
 	{
-		super(name, descr);
-		addAttackId(MONSTERS);
+		super(PlainsOfDion.class.getSimpleName(), "ai/group_template");
+		addAttackId(DELU_LIZARDMEN);
 	}
 	
 	@Override
@@ -81,7 +81,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 			
 			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getFactionRange()))
 			{
-				if (obj.isMonster() && Util.contains(MONSTERS, ((L2MonsterInstance) obj).getNpcId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
+				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, ((L2MonsterInstance) obj).getNpcId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
 				{
 					final L2MonsterInstance monster = (L2MonsterInstance) obj;
 					attackPlayer(monster, player);
@@ -95,6 +95,6 @@ public final class PlainsOfDion extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PlainsOfDion(PlainsOfDion.class.getSimpleName(), "ai");
+		new PlainsOfDion();
 	}
 }

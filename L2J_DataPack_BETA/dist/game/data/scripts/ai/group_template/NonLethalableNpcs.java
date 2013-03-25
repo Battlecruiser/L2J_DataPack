@@ -29,22 +29,15 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
  */
 public class NonLethalableNpcs extends AbstractNpcAI
 {
-	private static final int[] NPCS =
-	{
-		35062, // Headquarters
-	};
+	private static final int HEADQUARTERS = 35062;
 	
-	public NonLethalableNpcs(String name, String descr)
+	public NonLethalableNpcs()
 	{
-		super(name, descr);
-		addSpawnId(NPCS);
-		
-		for (int npcId : NPCS)
+		super(NonLethalableNpcs.class.getSimpleName(), "ai/group_template");
+		addSpawnId(HEADQUARTERS);
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(HEADQUARTERS))
 		{
-			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-			{
-				onSpawn(spawn.getLastSpawn());
-			}
+			onSpawn(spawn.getLastSpawn());
 		}
 	}
 	
@@ -57,6 +50,6 @@ public class NonLethalableNpcs extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new NonLethalableNpcs(NonLethalableNpcs.class.getSimpleName(), "ai/group_template");
+		new NonLethalableNpcs();
 	}
 }

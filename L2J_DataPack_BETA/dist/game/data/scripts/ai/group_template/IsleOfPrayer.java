@@ -54,7 +54,7 @@ public class IsleOfPrayer extends AbstractNpcAI
 	
 	private IsleOfPrayer()
 	{
-		super(IsleOfPrayer.class.getSimpleName(), "ai");
+		super(IsleOfPrayer.class.getSimpleName(), "ai/group_template");
 		addKillId(MUDDY_CORAL);
 	}
 	

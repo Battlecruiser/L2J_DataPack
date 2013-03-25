@@ -30,22 +30,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class PavelArchaic extends AbstractNpcAI
 {
-	private static final int[] MOBS1 =
+	private PavelArchaic()
 	{
-		22801,
-		22804
-	};
-	
-	private static final int[] MOBS2 =
-	{
-		18917
-	};
-	
-	private PavelArchaic(String name, String descr)
-	{
-		super(name, descr);
-		registerMobs(MOBS1, QuestEventType.ON_KILL);
-		registerMobs(MOBS2, QuestEventType.ON_ATTACK);
+		super(PavelArchaic.class.getSimpleName(), "ai/group_template");
+		addKillId(22801, 22804);
+		addAttackId(18917);
 	}
 	
 	@Override
@@ -70,13 +59,13 @@ public class PavelArchaic extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		L2Attackable _golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
-		attackPlayer(_golem, killer);
+		L2Attackable golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
+		attackPlayer(golem, killer);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)
 	{
-		new PavelArchaic(PavelArchaic.class.getSimpleName(), "ai");
+		new PavelArchaic();
 	}
 }
