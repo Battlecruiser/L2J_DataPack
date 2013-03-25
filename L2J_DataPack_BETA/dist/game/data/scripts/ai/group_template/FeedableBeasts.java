@@ -48,90 +48,24 @@ public class FeedableBeasts extends AbstractNpcAI
 	private static final int CRYSTAL_SPICE = 6644;
 	private static final int SKILL_GOLDEN_SPICE = 2188;
 	private static final int SKILL_CRYSTAL_SPICE = 2189;
+	private static final int FOODSKILLDIFF = GOLDEN_SPICE - SKILL_GOLDEN_SPICE;
+	// @formatter:off
 	private static final int[] TAMED_BEASTS =
 	{
-		16013,
-		16014,
-		16015,
-		16016,
-		16017,
-		16018
+		16013, 16014, 16015, 16016, 16017, 16018
 	};
-	private static final int FOODSKILLDIFF = GOLDEN_SPICE - SKILL_GOLDEN_SPICE;
-	
 	// all mobs that can eat...
 	private static final int[] FEEDABLE_BEASTS =
 	{
-		21451,
-		21452,
-		21453,
-		21454,
-		21455,
-		21456,
-		21457,
-		21458,
-		21459,
-		21460,
-		21461,
-		21462,
-		21463,
-		21464,
-		21465,
-		21466,
-		21467,
-		21468,
-		21469,
-		21470,
-		21471,
-		21472,
-		21473,
-		21474,
-		21475,
-		21476,
-		21477,
-		21478,
-		21479,
-		21480,
-		21481,
-		21482,
-		21483,
-		21484,
-		21485,
-		21486,
-		21487,
-		21488,
-		21489,
-		21490,
-		21491,
-		21492,
-		21493,
-		21494,
-		21495,
-		21496,
-		21497,
-		21498,
-		21499,
-		21500,
-		21501,
-		21502,
-		21503,
-		21504,
-		21505,
-		21506,
-		21507,
-		21824,
-		21825,
-		21826,
-		21827,
-		21828,
-		21829,
-		16013,
-		16014,
-		16015,
-		16016,
-		16017,
-		16018
+		21451, 21452, 21453, 21454, 21455, 21456, 21457, 21458, 21459, 21460,
+		21461, 21462, 21463, 21464, 21465, 21466, 21467, 21468, 21469, 21470,
+		21471, 21472, 21473, 21474, 21475, 21476, 21477, 21478, 21479, 21480,
+		21481, 21482, 21483, 21484, 21485, 21486, 21487, 21488, 21489, 21490,
+		21491, 21492, 21493, 21494, 21495, 21496, 21497, 21498, 21499, 21500,
+		21501, 21502, 21503, 21504, 21505, 21506, 21507, 21824, 21825, 21826,
+		21827, 21828, 21829, 16013, 16014, 16015, 16016, 16017, 16018
 	};
+	// @formatter:on
 	
 	private static final Map<Integer, Integer> MAD_COW_POLYMORPH = new FastMap<>();
 	static
@@ -238,7 +172,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	
 	private FeedableBeasts()
 	{
-		super(FeedableBeasts.class.getSimpleName(), "ai");
+		super(FeedableBeasts.class.getSimpleName(), "ai/group_template");
 		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
 		
 		// TODO: no grendels?
@@ -577,7 +511,7 @@ public class FeedableBeasts extends AbstractNpcAI
 		int npcId = npc.getNpcId();
 		int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
-		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE)))
+		if ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}

@@ -37,23 +37,17 @@ public class Remnants extends AbstractNpcAI
 		18464,
 		18465
 	};
-	
-	private static final int HOLY_WATER = 2358;
+	private static final int SKILL_HOLY_WATER = 2358;
 	
 	// TODO: Find retail strings.
 	// private static final String MSG = "The holy water affects Remnants Ghost. You have freed his soul.";
 	// private static final String MSG_DEREK = "The holy water affects Derek. You have freed his soul.";
-	
-	/**
-	 * Do not override onKill for Derek here. Let's make global Hellbound manipulations in Engine where it is possible.
-	 * @param name
-	 * @param descr
-	 */
-	private Remnants(String name, String descr)
+	private Remnants()
 	{
-		super(name, descr);
+		super(Remnants.class.getSimpleName(), "ai/group_template");
 		addSpawnId(NPCS);
 		addSkillSeeId(NPCS);
+		// Do not override onKill for Derek here. Let's make global Hellbound manipulations in Engine where it is possible.
 	}
 	
 	@Override
@@ -66,7 +60,7 @@ public class Remnants extends AbstractNpcAI
 	@Override
 	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (skill.getId() == HOLY_WATER)
+		if (skill.getId() == SKILL_HOLY_WATER)
 		{
 			if (!npc.isDead())
 			{
@@ -95,6 +89,6 @@ public class Remnants extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Remnants(Remnants.class.getSimpleName(), "ai");
+		new Remnants();
 	}
 }

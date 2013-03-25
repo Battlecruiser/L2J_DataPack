@@ -29,32 +29,21 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class EvasGiftBoxes extends AbstractNpcAI
 {
+	// Monster
 	private static final int GIFTBOX = 32342;
-	
+	// Skill
 	private static final int KISSOFEVA = 1073;
-	
-	// index 0: without kiss of eva
-	// index 1: with kiss of eva
-	// chance,itemId,...
+	// @formatter:off
 	private static final int[][] CHANCES =
 	{
-		{
-			2,
-			9692,
-			1,
-			9693
-		},
-		{
-			100,
-			9692,
-			50,
-			9693
-		}
+		// chance,itemId,...
+		{ 2, 9692, 1, 9693 }, // without kiss of eva
+		{ 100, 9692, 50, 9693 } // with kiss of eva
 	};
-	
-	private EvasGiftBoxes(String name, String descr)
+	// @formatter:on
+	private EvasGiftBoxes()
 	{
-		super(name, descr);
+		super(EvasGiftBoxes.class.getSimpleName(), "ai/group_template");
 		addKillId(GIFTBOX);
 		addSpawnId(GIFTBOX);
 	}
@@ -89,6 +78,6 @@ public class EvasGiftBoxes extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new EvasGiftBoxes(EvasGiftBoxes.class.getSimpleName(), "ai");
+		new EvasGiftBoxes();
 	}
 }

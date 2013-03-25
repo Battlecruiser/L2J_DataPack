@@ -57,7 +57,6 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 		MOBSPAWNS.put(21533, Arrays.asList(21534, 100, 30, -1)); // Alliance of Splendor
 		MOBSPAWNS.put(21537, Arrays.asList(21538, 100, 30, -1)); // Fang of Splendor
 	}
-	
 	protected static final NpcStringId[][] MOBTEXTS =
 	{
 		new NpcStringId[]
@@ -80,9 +79,9 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 		}
 	};
 	
-	private PolymorphingOnAttack(String name, String descr)
+	private PolymorphingOnAttack()
 	{
-		super(name, descr);
+		super(PolymorphingOnAttack.class.getSimpleName(), "ai/group_template");
 		registerMobs(MOBSPAWNS.keySet(), QuestEventType.ON_ATTACK);
 	}
 	
@@ -116,6 +115,6 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PolymorphingOnAttack(PolymorphingOnAttack.class.getSimpleName(), "ai");
+		new PolymorphingOnAttack();
 	}
 }

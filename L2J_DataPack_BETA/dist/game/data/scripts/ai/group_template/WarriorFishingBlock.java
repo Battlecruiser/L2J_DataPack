@@ -69,9 +69,9 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	private static final int CHANCE_TO_SHOUT_ON_ATTACK = 33;
 	private static final int DESPAWN_TIME = 50000; // 50 seconds
 	
-	public WarriorFishingBlock(String name, String descr)
+	public WarriorFishingBlock()
 	{
-		super(name, descr);
+		super(WarriorFishingBlock.class.getSimpleName(), "ai/group_template");
 		addAttackId(MONSTERS);
 		addKillId(MONSTERS);
 		addSpawnId(MONSTERS);
@@ -133,6 +133,6 @@ public class WarriorFishingBlock extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new WarriorFishingBlock(WarriorFishingBlock.class.getSimpleName(), "ai/group_template");
+		new WarriorFishingBlock();
 	}
 }

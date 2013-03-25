@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 
 /**
- * Mithril Mines AI
+ * Mithril Mines AI.
  * @author malyelfik
  */
 public final class MithrilMines extends AbstractNpcAI
@@ -45,9 +45,9 @@ public final class MithrilMines extends AbstractNpcAI
 		22686, // Servitor of Darkness
 	};
 	
-	private MithrilMines(String name, String descr)
+	private MithrilMines()
 	{
-		super(name, descr);
+		super(MithrilMines.class.getSimpleName(), "ai/group_template");
 		addSpawnId(GRAVE_ROBBER_SUMMONER, GRAVE_ROBBER_MAGICIAN);
 		
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(GRAVE_ROBBER_SUMMONER))
@@ -75,6 +75,6 @@ public final class MithrilMines extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MithrilMines(MithrilMines.class.getSimpleName(), "ai/group_template");
+		new MithrilMines();
 	}
 }

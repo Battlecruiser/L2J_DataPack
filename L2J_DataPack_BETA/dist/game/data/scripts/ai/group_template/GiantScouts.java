@@ -40,16 +40,10 @@ import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
  */
 public class GiantScouts extends AbstractNpcAI
 {
-	private static final int[] SCOUTS =
+	private GiantScouts()
 	{
-		22668,
-		22669
-	};
-	
-	private GiantScouts(String name, String descr)
-	{
-		super(name, descr);
-		addAggroRangeEnterId(SCOUTS);
+		super(GiantScouts.class.getSimpleName(), "ai/group_template");
+		addAggroRangeEnterId(22668, 22669); // scouts
 	}
 	
 	@Override
@@ -95,6 +89,6 @@ public class GiantScouts extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new GiantScouts(GiantScouts.class.getSimpleName(), "ai");
+		new GiantScouts();
 	}
 }

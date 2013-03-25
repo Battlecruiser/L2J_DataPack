@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 /**
- * Plains of Lizardman AI
+ * Plains of Lizardmen AI.
  * @author Gnacik, malyelfik
  */
 public final class PlainsOfLizardman extends AbstractNpcAI
@@ -44,7 +44,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	private static final int TANTA_SCOUT = 22768;
 	private static final int TANTA_MAGICIAN = 22773;
 	private static final int TANTA_SUMMONER = 22774;
-	private static final int[] MOBS =
+	private static final int[] TANTA_LIZARDMEN =
 	{
 		22768, // Tanta Lizardman Scout
 		22769, // Tanta Lizardman Warrior
@@ -54,7 +54,6 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		22773, // Tanta Lizardman Magician
 		22774, // Tanta Lizardman Summoner
 	};
-	
 	// Skills
 	private static final SkillHolder STUN_EFFECT = new SkillHolder(6622, 1);
 	private static final SkillHolder DEMOTIVATION_HEX = new SkillHolder(6425, 1);
@@ -62,7 +61,6 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	private static final SkillHolder RAINBOW_FROG_SKILL = new SkillHolder(6429, 1);
 	private static final SkillHolder STICKY_MUSHROOM_SKILL = new SkillHolder(6428, 1);
 	private static final SkillHolder ENERGY_PLANT_SKILL = new SkillHolder(6430, 1);
-	
 	// Buffs
 	private static final SkillHolder[] BUFFS =
 	{
@@ -81,22 +79,19 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		new SkillHolder(6640, 1), // Energizing Aura
 		new SkillHolder(6674, 1), // Energy of Range Increment
 	};
-	
 	// Misc
+	// @formatter:off
 	private static final int[] BUFF_LIST =
 	{
-		6,
-		7,
-		8,
-		11,
-		13
+		6, 7, 8, 11, 13
 	};
+	// @formatter:on
 	
-	private PlainsOfLizardman(String name, String descr)
+	private PlainsOfLizardman()
 	{
-		super(name, descr);
+		super(PlainsOfLizardman.class.getSimpleName(), "ai/group_template");
 		addAttackId(FANTASY_MUSHROOM, RAINBOW_FROG, STICKY_MUSHROOM, ENERGY_PLANT, TANTA_SUMMONER);
-		addKillId(MOBS);
+		addKillId(TANTA_LIZARDMEN);
 	}
 	
 	@Override
@@ -246,6 +241,6 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PlainsOfLizardman(PlainsOfLizardman.class.getSimpleName(), "ai");
+		new PlainsOfLizardman();
 	}
 }

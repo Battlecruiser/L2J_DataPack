@@ -28,13 +28,12 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 
 /**
- * Manages spawn of NPC's, having several random spawn points.
+ * Manages spawn of NPCs having several random spawn points.
  * @author GKR
  */
 public class RandomSpawn extends AbstractNpcAI
 {
 	private static Map<Integer, Location[]> SPAWN_POINTS = new FastMap<>();
-	
 	static
 	{
 		// Keltas
@@ -80,10 +79,9 @@ public class RandomSpawn extends AbstractNpcAI
 		});
 	}
 	
-	public RandomSpawn(String name, String descr)
+	public RandomSpawn()
 	{
-		super(name, descr);
-		
+		super(RandomSpawn.class.getSimpleName(), "ai/group_template");
 		for (int npcId : SPAWN_POINTS.keySet())
 		{
 			addSpawnId(npcId);
@@ -127,6 +125,6 @@ public class RandomSpawn extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new RandomSpawn(RandomSpawn.class.getSimpleName(), "ai");
+		new RandomSpawn();
 	}
 }

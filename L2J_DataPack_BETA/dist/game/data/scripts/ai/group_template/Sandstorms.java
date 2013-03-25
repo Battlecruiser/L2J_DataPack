@@ -30,7 +30,11 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  */
 public class Sandstorms extends AbstractNpcAI
 {
-	private static final int SANDSTORM = 32350;
+	public Sandstorms()
+	{
+		super(Sandstorms.class.getSimpleName(), "ai/group_template");
+		addAggroRangeEnterId(32350); // Sandstorm
+	}
 	
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
@@ -40,14 +44,8 @@ public class Sandstorms extends AbstractNpcAI
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
-	public Sandstorms(String name, String descr)
-	{
-		super(name, descr);
-		addAggroRangeEnterId(SANDSTORM);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Sandstorms(Sandstorms.class.getSimpleName(), "ai");
+		new Sandstorms();
 	}
 }

@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
- * Frozen Labyrinth AI
+ * Frozen Labyrinth AI.
  * @author malyelfik
  */
 public final class FrozenLabyrinth extends AbstractNpcAI
@@ -37,9 +37,9 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	private static final int LOST_BUFFALO = 22093;
 	private static final int FROST_BUFFALO = 22094;
 	
-	private FrozenLabyrinth(String name, String descr)
+	private FrozenLabyrinth()
 	{
-		super(name, descr);
+		super(FrozenLabyrinth.class.getSimpleName(), "ai/group_template");
 		addAttackId(PRONGHORN, FROST_BUFFALO);
 	}
 	
@@ -72,6 +72,6 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new FrozenLabyrinth(FrozenLabyrinth.class.getSimpleName(), "ai/group_template");
+		new FrozenLabyrinth();
 	}
 }

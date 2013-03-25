@@ -75,9 +75,9 @@ public class Monastery extends AbstractNpcAI
 	
 	private static final SkillHolder DECREASE_SPEED = new SkillHolder(4589, 8);
 	
-	private Monastery(String name, String descr)
+	private Monastery()
 	{
-		super(name, descr);
+		super(Monastery.class.getSimpleName(), "ai/group_template");
 		addAggroRangeEnterId(SOLINA_CLAN);
 		addAggroRangeEnterId(CAPTAIN, KNIGHT);
 		addSpellFinishedId(SOLINA_CLAN);
@@ -100,29 +100,25 @@ public class Monastery extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		switch (event)
+		if (event.equals("training") && !npc.isInCombat() && (getRandom(100) < 25))
 		{
-			case "training":
-				if (!npc.isInCombat() && (getRandom(100) < 25))
+			for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(300))
+			{
+				if (character.isNpc() && (((L2Npc) character).getNpcId() == SCARECROW))
 				{
-					for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(300))
+					for (L2Skill skill : npc.getAllSkills())
 					{
-						if (!character.isPlayable() && (((L2Npc) character).getNpcId() == SCARECROW))
+						if (skill.isActive())
 						{
-							for (L2Skill skill : npc.getAllSkills())
-							{
-								if (skill.isActive())
-								{
-									npc.disableSkill(skill, 0);
-								}
-							}
-							npc.setRunning();
-							((L2Attackable) npc).addDamageHate(character, 0, 100);
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
-							break;
+							npc.disableSkill(skill, 0);
 						}
 					}
+					npc.setRunning();
+					((L2Attackable) npc).addDamageHate(character, 0, 100);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
+					break;
 				}
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -209,6 +205,6 @@ public class Monastery extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Monastery(Monastery.class.getSimpleName(), "ai/group_template");
+		new Monastery();
 	}
 }

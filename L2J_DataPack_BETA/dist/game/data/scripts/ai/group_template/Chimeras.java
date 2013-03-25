@@ -60,9 +60,9 @@ public class Chimeras extends AbstractNpcAI
 	private static final int LIFE_FORCE = 9681;
 	private static final int CONTAINED_LIFE_FORCE = 9682;
 	
-	private Chimeras(int questId, String name, String descr)
+	private Chimeras()
 	{
-		super(name, descr);
+		super(Chimeras.class.getSimpleName(), "ai/group_template");
 		addSkillSeeId(NPCS);
 		addSpawnId(CELTUS);
 		addSkillSeeId(CELTUS);
@@ -140,6 +140,6 @@ public class Chimeras extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new Chimeras(-1, Chimeras.class.getSimpleName(), "ai");
+		new Chimeras();
 	}
 }

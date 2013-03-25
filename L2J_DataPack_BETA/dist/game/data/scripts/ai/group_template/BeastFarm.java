@@ -115,7 +115,7 @@ public class BeastFarm extends AbstractNpcAI
 	
 	private BeastFarm()
 	{
-		super(BeastFarm.class.getSimpleName(), "ai");
+		super(BeastFarm.class.getSimpleName(), "ai/group_template");
 		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
 		
 		GrowthCapableMob temp;

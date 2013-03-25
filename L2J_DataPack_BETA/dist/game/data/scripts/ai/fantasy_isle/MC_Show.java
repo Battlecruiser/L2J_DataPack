@@ -178,8 +178,17 @@ public class MC_Show extends AbstractNpcAI
 	private static Map<String, ShoutInfo> talks = new FastMap<>();
 	private static Map<String, WalkInfo> walks = new FastMap<>();
 	
+	private MC_Show()
+	{
+		super(MC_Show.class.getSimpleName(), "ai/fantasy_isle");
+		addSpawnId(32433, 32431, 32432, 32442, 32443, 32444, 32445, 32446, 32424, 32425, 32426, 32427, 32428);
+		load();
+		scheduleTimer();
+	}
+	
 	private void load()
 	{
+		// TODO put this stuff in Routes.xml
 		talks.put("1", new ShoutInfo(MESSAGES[1], "2", 1000));
 		talks.put("2", new ShoutInfo(MESSAGES[2], "3", 6000));
 		talks.put("3", new ShoutInfo(MESSAGES[3], "4", 4000));
@@ -288,22 +297,9 @@ public class MC_Show extends AbstractNpcAI
 		walks.put("27", new WalkInfo(new L2CharPosition(-56702, -56340, -2008, 0), "29", 1800));
 	}
 	
-	private MC_Show(String name, String descr)
-	{
-		super(name, descr);
-		addSpawnId(32433, 32431, 32432, 32442, 32443, 32444, 32445, 32446, 32424, 32425, 32426, 32427, 32428);
-		load();
-		scheduleTimer();
-	}
-	
-	private int getGameTime()
-	{
-		return GameTimeController.getInstance().getGameTime();
-	}
-	
 	private void scheduleTimer()
 	{
-		int gameTime = getGameTime();
+		int gameTime = GameTimeController.getInstance().getGameTime();
 		int hours = (gameTime / 60) % 24;
 		int minutes = gameTime % 60;
 		int hourDiff, minDiff;
@@ -326,8 +322,9 @@ public class MC_Show extends AbstractNpcAI
 			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			_log.info("Fantasy Isle: MC show script starting at " + format.format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		}
+		// TODO startQuestTimer("Start", 14400000L, null, null, true);
+		// missing option to provide different initial delay
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new StartMCShow(), diff, 14400000L);
-		
 	}
 	
 	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
@@ -523,6 +520,6 @@ public class MC_Show extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new MC_Show(MC_Show.class.getSimpleName(), "ai");
+		new MC_Show();
 	}
 }

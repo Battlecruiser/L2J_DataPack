@@ -56,23 +56,18 @@ public class PrisonGuards extends AbstractNpcAI
 		"4th"
 	};
 	
-	private final static int silence = 4098;
-	private final static int pertification = 4578;
-	private final static int eventTimer = 5239;
+	private final static int SKILL_SILENCE = 4098;
+	private final static int SKILL_PERTIFICATION = 4578;
+	private final static int SKILL_EVENT_TIMER = 5239;
 	
 	private boolean _firstAttacked = false;
 	
 	private final Map<L2Npc, Integer> _guards = new FastMap<>();
 	
-	private PrisonGuards(String name, String descr)
+	private PrisonGuards()
 	{
-		super(name, descr);
-		int[] mob =
-		{
-			GUARD1,
-			GUARD2
-		};
-		registerMobs(mob);
+		super(PrisonGuards.class.getSimpleName(), "ai/group_template");
+		registerMobs(GUARD1, GUARD2);
 		
 		// place 1
 		_guards.put(addSpawn(GUARD2, 160704, 184704, -3704, 49152, false, 0), 0);
@@ -106,7 +101,7 @@ public class PrisonGuards extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("Respawn"))
+		if (event.equals("Respawn"))
 		{
 			L2Npc newGuard = addSpawn(npc.getNpcId(), npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false, 0);
 			newGuard.setIsNoRndWalk(true);
@@ -121,7 +116,7 @@ public class PrisonGuards extends AbstractNpcAI
 			_guards.remove(npc);
 			_guards.put(newGuard, place);
 		}
-		else if (event.equalsIgnoreCase("attackEnd") && (npc.getNpcId() == GUARD2))
+		else if (event.equals("attackEnd") && (npc.getNpcId() == GUARD2))
 		{
 			if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy()))
 			{
@@ -132,7 +127,7 @@ public class PrisonGuards extends AbstractNpcAI
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 		
-		return null;
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -142,11 +137,11 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		if (npc.getNpcId() == GUARD2)
 		{
-			if (_firstAttacked && (caster.getFirstEffect(eventTimer) == null))
+			if (_firstAttacked && (caster.getFirstEffect(SKILL_EVENT_TIMER) == null))
 			{
-				if (caster.getFirstEffect(silence) == null)
+				if (caster.getFirstEffect(SKILL_SILENCE) == null)
 				{
-					castDebuff(npc, caster, silence, isSummon, false, true);
+					castDebuff(npc, caster, SKILL_SILENCE, isSummon, false, true);
 				}
 			}
 		}
@@ -161,7 +156,7 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		if (npc.getNpcId() == GUARD2)
 		{
-			if (target.getFirstEffect(eventTimer) != null)
+			if (target.getFirstEffect(SKILL_EVENT_TIMER) != null)
 			{
 				cancelQuestTimer("attackEnd", null, null);
 				startQuestTimer("attackEnd", 180000, npc, null);
@@ -195,11 +190,11 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		_firstAttacked = true;
 		
-		if (attacker.getFirstEffect(eventTimer) == null)
+		if (attacker.getFirstEffect(SKILL_EVENT_TIMER) == null)
 		{
-			if (attacker.getFirstEffect(pertification) == null)
+			if (attacker.getFirstEffect(SKILL_PERTIFICATION) == null)
 			{
-				castDebuff(npc, attacker, pertification, isSummon, true, false);
+				castDebuff(npc, attacker, SKILL_PERTIFICATION, isSummon, true, false);
 			}
 			
 			npc.setTarget(null);
@@ -263,6 +258,6 @@ public class PrisonGuards extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new PrisonGuards(PrisonGuards.class.getSimpleName(), "ai");
+		new PrisonGuards();
 	}
 }

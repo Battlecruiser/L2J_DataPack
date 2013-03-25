@@ -138,9 +138,9 @@ public class VarkaKetra extends AbstractNpcAI
 		Q00616_MagicalPowerOfFirePart2.class.getSimpleName()
 	};
 	
-	private VarkaKetra(String name, String descr)
+	private VarkaKetra()
 	{
-		super(name, descr);
+		super(VarkaKetra.class.getSimpleName(), "ai/group_template");
 		addAggroRangeEnterId(KETRA);
 		addAggroRangeEnterId(VARKA);
 		addKillId(KETRA);
@@ -216,6 +216,6 @@ public class VarkaKetra extends AbstractNpcAI
 	
 	public static void main(String[] args)
 	{
-		new VarkaKetra(VarkaKetra.class.getSimpleName(), "ai/group_template");
+		new VarkaKetra();
 	}
 }
