@@ -2060,35 +2060,38 @@
 		<node X="131" Y="242444" />
 	</zone>
 	<!-- Stakato Nest Buff -->
-	<!-- zone name="22_16_stakato_mob_buff" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296" -->
-	<!-- stat name="skillIdLvl" val="6170-1;" / --> <!-- s_area_stakato_nest_fury -->
-	<!-- stat name="chance" val="100" / -->
-	<!-- stat name="unitTick" val="90" / -->
-	<!-- stat name="targetClass" val="L2Npc" / -->
-	<!-- stat name="default_enabled" val="false" / -->
-	<!-- stat name="reuse" val="60000" / --> <!-- Guess -->
-	<!-- node X="73945" Y="-57263" / -->
-	<!-- node X="90046" Y="-57259" / -->
-	<!-- node X="89999" Y="-41698" / -->
-	<!-- node X="73982" Y="-41655" / -->
-	<!-- /zone -->
-	<!-- zone name="22_16_stakato_mob_buff_display" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296" -->
-	<!-- stat name="skillIdLvl" val="6169-1;" / --> <!-- s_area_stakato_nest_fury_for_pc -->
-	<!-- stat name="chance" val="100" / -->
-	<!-- stat name="unitTick" val="90" / -->
-	<!-- stat name="default_enabled" val="false" / -->
-	<!-- stat name="reuse" val="60000" / --> <!-- Guess -->
-	<!-- node X="73945" Y="-57263" / -->
-	<!-- node X="90046" Y="-57259" / -->
-	<!-- node X="89999" Y="-41698" / -->
-	<!-- node X="73982" Y="-41655" / -->
-	<!-- /zone -->
-	<zone name="22_16_stakato_pc_buff" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
+	<zone name="22_16_stakato_mob_buff" id="200103" type="EffectZone" shape="NPoly"	minZ="-6368" maxZ="-3296">
+		<stat name="skillIdLvl" val="6170-1;" /> <!-- s_area_stakato_nest_fury -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="90" / -->
+		<stat name="targetClass" val="L2Npc" />
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
+		<node X="73945" Y="-57263" />
+		<node X="90046" Y="-57259" />
+		<node X="89999" Y="-41698" />
+		<node X="73982" Y="-41655" />
+	</zone>
+	<zone name="22_16_stakato_mob_buff_display" id="200104" type="EffectZone" shape="NPoly"  minZ="-6368" maxZ="-3296">
+		<stat name="skillIdLvl" val="6169-1;" /> <!-- s_area_stakato_nest_fury_for_pc -->
+		<stat name="chance" val="100" />
+		<!-- stat name="unitTick" val="90" / -->
+		<stat name="default_enabled" val="false" />
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
+		<node X="73945" Y="-57263" />
+		<node X="90046" Y="-57259" />
+		<node X="89999" Y="-41698" />
+		<node X="73982" Y="-41655" />
+	</zone>
+	<zone name="22_16_stakato_pc_buff" id="200105" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
 		<stat name="skillIdLvl" val="6171-1;" /> <!-- s_area_stakato_nest_replete_power -->
 		<stat name="chance" val="100" />
 		<!-- stat name="unitTick" val="90" / -->
 		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="60000" /> <!-- Guess -->
+		<stat name="reuse" val="3000" /> <!-- Guess -->
+		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
 		<node X="73945" Y="-57263" />
 		<node X="90046" Y="-57259" />
 		<node X="89999" Y="-41698" />

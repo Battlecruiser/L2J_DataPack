@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.bypasshandlers;
 
@@ -21,7 +25,7 @@ import java.util.logging.Level;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
+import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -48,8 +52,8 @@ public class OlympiadManagerLink implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"olympiaddesc", 
-		"olympiadnoble", 
+		"olympiaddesc",
+		"olympiadnoble",
 		"olybuff",
 		"olympiad"
 	};
@@ -68,13 +72,13 @@ public class OlympiadManagerLink implements IBypassHandler
 		
 		try
 		{
-			if (command.toLowerCase().startsWith(COMMANDS[0])) // desc
+			if (command.toLowerCase().startsWith("olympiaddesc"))
 			{
 				int val = Integer.parseInt(command.substring(13, 14));
 				String suffix = command.substring(14);
 				((L2OlympiadManagerInstance) target).showChatWindow(activeChar, val, suffix);
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[1])) // noble
+			else if (command.toLowerCase().startsWith("olympiadnoble"))
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				if (activeChar.isCursedWeaponEquipped())
@@ -222,7 +226,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						break;
 				}
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[2])) // buff
+			else if (command.toLowerCase().startsWith("olybuff"))
 			{
 				if (activeChar.olyBuff <= 0)
 				{
@@ -239,7 +243,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				}
 				int buffGroup = Integer.parseInt(params[1]);
 				
-				int[] npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
+				NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(((L2Npc) target).getNpcId(), buffGroup);
 				
 				if (npcBuffGroupInfo == null)
 				{
@@ -247,11 +251,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				int skillId = npcBuffGroupInfo[0];
-				int skillLevel = npcBuffGroupInfo[1];
-				
-				L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-				
+				L2Skill skill = npcBuffGroupInfo.getSkill().getSkill();
 				target.setTarget(activeChar);
 				
 				if (activeChar.olyBuff > 0)
@@ -261,7 +261,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						activeChar.olyBuff--;
 						target.broadcastPacket(new MagicSkillUse(target, activeChar, skill.getId(), skill.getLevel(), 0, 0));
 						skill.getEffects(activeChar, activeChar);
-						L2Summon summon = activeChar.getPet();
+						L2Summon summon = activeChar.getSummon();
 						if (summon != null)
 						{
 							target.broadcastPacket(new MagicSkillUse(target, summon, skill.getId(), skill.getLevel(), 0, 0));
@@ -281,10 +281,10 @@ public class OlympiadManagerLink implements IBypassHandler
 					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
-					target.deleteMe();
+					target.decayMe();
 				}
 			}
-			else if (command.toLowerCase().startsWith(COMMANDS[3])) // olympiad
+			else if (command.toLowerCase().startsWith("olympiad"))
 			{
 				int val = Integer.parseInt(command.substring(9, 10));
 				

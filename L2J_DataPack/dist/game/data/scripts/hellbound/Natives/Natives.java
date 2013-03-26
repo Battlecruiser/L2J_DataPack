@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package hellbound.Natives;
 
@@ -40,7 +44,8 @@ public class Natives extends Quest
 	
 	private static final int[] doors =
 	{
-		19250003, 19250004
+		19250003,
+		19250004
 	};
 	
 	@Override
@@ -92,7 +97,7 @@ public class Natives extends Quest
 				if (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 10)
 				{
 					qs.takeItems(MARK_OF_BETRAYAL, 10);
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
 					HellboundManager.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : doors)
@@ -130,7 +135,7 @@ public class Natives extends Quest
 		}
 		else if ((npc.getNpcId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
 			npc.doDie(null);
 		}
 		else if (npc.getNpcId() == INCASTLE)

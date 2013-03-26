@@ -942,7 +942,7 @@
 	</item>
 	<item id="17169" type="EtcItem" name="Olympiad Treasure Chest">
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="peel" />
+		<set name="default_action" val="capsule" />
 		<set name="material" val="fish" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -951,8 +951,8 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="6622,1,1,100" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9177-1" />
 	</item>
 	<item id="17170" type="Armor" name="Soccer Ball Afro Hair - White">
 		<!-- Description: Afro hair that has been dyed like a white soccer ball. Uses 2 hair accessory slots. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
@@ -1167,18 +1167,26 @@
 		</for>
 	</item>
 	<item id="17184" type="EtcItem" name="500,000 SP scroll">
-		<!-- Description: Scroll that replenishes 500,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9174-1" />
 	</item>
 	<item id="17185" type="EtcItem" name="1,000,000 SP scroll">
-		<!-- Description: Scroll that replenishes 1,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9175-1" />
 	</item>
 	<item id="17186" type="Armor" name="National Representative Warrior's Ring - 3-day limited period">
 		<!-- Description: National Representative Warrior's Ring. Limited time item available for 3 days. MP+ 21; Resistance to Hold +30%; a chance of Hold attack +30%; increases Accuracy and Critical Damage. Only one effect is applied even when two identical rings are worn. Cannot be exchanged or dropped. -->

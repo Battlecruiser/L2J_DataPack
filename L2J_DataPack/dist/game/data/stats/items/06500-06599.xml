@@ -490,7 +490,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2181-1" />
@@ -503,7 +503,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2182-1" />
@@ -516,7 +516,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="7" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2183-1" />
@@ -529,7 +529,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="25" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2184-1" />
@@ -542,7 +542,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="40" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2185-1" />
@@ -555,7 +555,7 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="3" />
 		<set name="price" val="50" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="FishShots" />
 		<set name="item_skill" val="2186-1" />
@@ -1225,8 +1225,8 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="20" />
-		<set name="oncast_skill" val="3577-1" />
+		<set name="onmagic_chance" val="20" />
+		<set name="onmagic_skill" val="3577-1" />
 		<set name="item_skill" val="3552-1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="274" />

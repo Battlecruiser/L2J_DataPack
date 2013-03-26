@@ -247,7 +247,7 @@ class Quest (JQuest) :
              st.playSound("ItemSound.quest_itemget")
      return
 
-QUEST = Quest(384,qn,"Warehouse Keeper�s Pastime") 
+QUEST = Quest(384,qn,"Warehouse Keeper's Pastime") 
 
 QUEST.addStartNpc(Cliff)
 QUEST.addTalkId(Cliff)

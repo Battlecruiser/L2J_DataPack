@@ -1,12 +1,12 @@
 -- This table holds data definitions for different herb dropping groups.
 -- These groups once they're bound with mobs in the npc table, define which mobs
 -- drop which herbs (with a certain chance to drop none, one or more of them).
--- 
+--
 -- If a mob appertain to group 0 (table default), it won't drop herbs at all.
 -- For any other group larger than zero, herbs will be drop same way as droplists works
 -- You can add any type of items here even not herbs, but players will auto loot it if
 -- AUTO_LOOT_HERBS config is true.
--- 
+--
 -- About categries:
 -- 0: is for Vitality herbs
 -- 1: is for Life herbs

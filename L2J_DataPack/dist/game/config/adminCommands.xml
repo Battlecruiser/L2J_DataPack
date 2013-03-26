@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/adminCommands.xsd">
+	<!-- ADMIN COND EXCEPTIONS -->
+	<admin command="admin_exceptions" accessLevel="7" />
+	<admin command="admin_set_exception" accessLevel="7" confirmDlg="true" />
+	
 	<!-- ADMIN ADMIN -->
 	<admin command="admin_admin" accessLevel="7" />
 	<admin command="admin_admin1" accessLevel="7" />
@@ -96,6 +100,8 @@
 	<!-- ADMIN CLAN -->
 	<admin command="admin_clan_info" accessLevel="7" />
 	<admin command="admin_clan_changeleader" accessLevel="7" confirmDlg="true" />
+	<admin command="admin_clan_show_pending" accessLevel="7" />
+	<admin command="admin_clan_force_pending" accessLevel="7" confirmDlg="true" />
 
 	<!-- ADMIN CREATE ITEM -->
 	<admin command="admin_itemcreate" accessLevel="7" />
@@ -468,6 +474,8 @@
 	<admin command="admin_quest_reload" accessLevel="7" />
 	<admin command="admin_script_load" accessLevel="7" />
 	<admin command="admin_script_unload" accessLevel="7" />
+	<admin command="admin_show_quests" accessLevel="7" />
+	<admin command="admin_quest_info" accessLevel="7" />
 
 	<!-- ADMIN REPAIR CHAR -->
 	<admin command="admin_restore" accessLevel="7" />

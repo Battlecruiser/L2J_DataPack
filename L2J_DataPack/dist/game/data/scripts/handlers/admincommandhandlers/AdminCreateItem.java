@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -22,12 +26,8 @@ import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 
-
 /**
- * This class handles following admin commands:
- * - itemcreate = show menu
- * - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
- *
+ * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
  * @version $Revision: 1.2.2.2.2.3 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminCreateItem implements IAdminCommandHandler
@@ -89,7 +89,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				{
 					String name = st.nextToken();
 					int idval = getCoinId(name);
-					if(idval > 0)
+					if (idval > 0)
 					{
 						String num = st.nextToken();
 						long numval = Long.parseLong(num);
@@ -119,7 +119,9 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				L2PcInstance target;
 				if (activeChar.getTarget() instanceof L2PcInstance)
+				{
 					target = (L2PcInstance) activeChar.getTarget();
+				}
 				else
 				{
 					activeChar.sendMessage("Invalid target.");
@@ -179,21 +181,21 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.sendMessage("This item doesn't exist.");
 				return false;
 			}
-			if (numval > 10 && !template.isStackable())
+			if ((numval > 10) && !template.isStackable())
 			{
 				activeChar.sendMessage("This item does not stack - Creation aborted.");
 				return false;
 			}
 			for (L2PcInstance onlinePlayer : L2World.getInstance().getAllPlayersArray())
 			{
-				if (activeChar != onlinePlayer && onlinePlayer.isOnline() && (onlinePlayer.getClient() != null && !onlinePlayer.getClient().isDetached()))
+				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
 					onlinePlayer.getInventory().addItem("Admin", idval, numval, onlinePlayer, activeChar);
-					onlinePlayer.sendMessage("Admin spawned "+numval+" "+template.getName()+" in your inventory.");
+					onlinePlayer.sendMessage("Admin spawned " + numval + " " + template.getName() + " in your inventory.");
 					counter++;
 				}
 			}
-			activeChar.sendMessage(counter +" players rewarded with " + template.getName());
+			activeChar.sendMessage(counter + " players rewarded with " + template.getName());
 		}
 		return true;
 	}
@@ -212,7 +214,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			activeChar.sendMessage("This item doesn't exist.");
 			return;
 		}
-		if (num > 10 && !template.isStackable())
+		if ((num > 10) && !template.isStackable())
 		{
 			activeChar.sendMessage("This item does not stack - Creation aborted.");
 			return;
@@ -221,30 +223,51 @@ public class AdminCreateItem implements IAdminCommandHandler
 		target.getInventory().addItem("Admin", id, num, activeChar, null);
 		
 		if (activeChar != target)
-			target.sendMessage("Admin spawned " + num + " "+template.getName()+" in your inventory.");
-		activeChar.sendMessage("You have spawned " + num + " "+template.getName()+"(" + id + ") in "+target.getName()+" inventory.");
+		{
+			target.sendMessage("Admin spawned " + num + " " + template.getName() + " in your inventory.");
+		}
+		activeChar.sendMessage("You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
 	}
 	
 	private int getCoinId(String name)
 	{
 		int id;
 		if (name.equalsIgnoreCase("adena"))
+		{
 			id = 57;
+		}
 		else if (name.equalsIgnoreCase("ancientadena"))
+		{
 			id = 5575;
+		}
 		else if (name.equalsIgnoreCase("festivaladena"))
+		{
 			id = 6673;
+		}
 		else if (name.equalsIgnoreCase("blueeva"))
+		{
 			id = 4355;
+		}
 		else if (name.equalsIgnoreCase("goldeinhasad"))
+		{
 			id = 4356;
+		}
 		else if (name.equalsIgnoreCase("silvershilen"))
+		{
 			id = 4357;
+		}
 		else if (name.equalsIgnoreCase("bloodypaagrio"))
+		{
 			id = 4358;
+		}
 		else if (name.equalsIgnoreCase("fantasyislecoin"))
+		{
 			id = 13067;
-		else id = 0;
+		}
+		else
+		{
+			id = 0;
+		}
 		
 		return id;
 	}

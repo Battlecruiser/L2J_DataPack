@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6400" levels="1" name="Cokrakon Dwindling Velocity">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_up" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2000" />
@@ -13,7 +15,8 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="casting_time_up">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -21,10 +24,11 @@
 		</for>
 	</skill>
 	<skill id="6401" levels="1" name="Cokrakon Wheeling Clow">
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -32,15 +36,18 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 	</skill>
 	<skill id="6402" levels="5" name="Torumba Poison Strike">
 		<table name="#dot"> 500 1100 2200 4400 8000 </table>
-		<table name="#abnormalLvl"> 11 12 13 14 15 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 11 12 13 14 15 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="poison" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
@@ -51,23 +58,26 @@
 		<set name="effectRange" val="2200" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect count="12" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6403" levels="1" name="Torumba Numbing Poison">
-		<set name="target" val="TARGET_AREA" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
+		<set name="targetType" val="AREA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="2" name="DamOverTime" effectPower="80" abnormalTime="5" val="290" abnormalLvl="3" abnormalType="speed_down" abnormalVisualEffect="poison">
@@ -76,17 +86,20 @@
 		</for>
 	</skill>
 	<skill id="6404" levels="1" name="Torumba Poison Swing">
-		<set name="target" val="TARGET_AURA" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" effectPower="80" abnormalLvl="3" abnormalType="speed_down">
@@ -95,17 +108,20 @@
 		</for>
 	</skill>
 	<skill id="6405" levels="1" name="Torumba Roar">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="casting_time_down" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpInitialConsume" val="14" />
 		<set name="mpConsume" val="56" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
 		<for>
 			<effect name="Debuff" abnormalTime="20" val="0" abnormalLvl="1" abnormalVisualEffect="mute" abnormalType="casting_time_down">
@@ -116,10 +132,13 @@
 		</for>
 	</skill>
 	<skill id="6406" levels="1" name="Torumba's Plague">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="99" />
+		<set name="abnormalType" val="silence_all" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -129,6 +148,8 @@
 	</skill>
 	<skill id="6407" levels="1" name="Torumba's Constraint">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="block_resurrection" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
 		<set name="isDebuff" val="true" />
@@ -138,14 +159,17 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="stayAfterDeath" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="BlockResurrection" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="block_resurrection" />
 		</for>
 	</skill>
 	<skill id="6408" levels="1" name="Soul Weakness">
-		<set name="target" val="TARGET_NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="block_transform" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" /> <!-- TODO: Needs Core Support for prevent player from begin transformed -->
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -156,23 +180,27 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="6409" levels="1" name="Reptilikon Earthquake">
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6410" levels="1" name="Reptilikon Rush">
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;100;60" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
+		<set name="fanRange" val="0,0,100,60" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="9125" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
@@ -180,27 +208,28 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
-		<set name="skillRadius" val="100" />
+		<set name="affectRange" val="100" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="5" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6411" levels="1" name="Reptilikon Summon">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6412" levels="1" name="Reptilikon Critical Blow">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -210,10 +239,11 @@
 		<set name="reuseDelay" val="1000" />
 	</skill>
 	<skill id="6413" levels="1" name="Reptilikon Missile">
-		<set name="target" val="TARGET_AREA" />
+		<set name="targetType" val="AREA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -221,13 +251,16 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6414" levels="1" name="Reptilikon Charge">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="9125" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="60" />
@@ -235,31 +268,35 @@
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="3" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6415" levels="1" name="Reptilikon Scratch">
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="85" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="13688" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillRadius" val="300" />
+		<set name="affectRange" val="300" />
 	</skill>
 	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;200;90" />
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="dot_mp" />
+		<set name="fanRange" val="0,0,200,90" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -270,18 +307,21 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
-		<set name="target" val="TARGET_AURA" />
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="dot_mp" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -292,21 +332,24 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="ManaDamOverTime" abnormalTime="5" val="20" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
-		<set name="target" val="TARGET_AURA" />
+		<set name="abnormalLvl" val="8" />
+		<set name="abnormalType" val="dot_mp" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="85" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="mpConsume" val="88" />
 		<set name="castRange" val="900" />
@@ -314,9 +357,9 @@
 		<set name="hitTime" val="2000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="1000" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="345" abnormalLvl="8" abnormalType="dot_mp" abnormalVisualEffect="poison" />
@@ -324,10 +367,11 @@
 		</for>
 	</skill>
 	<skill id="6419" levels="1" name="Light of Scout">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="82" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -335,10 +379,11 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="6420" levels="1" name="Lizard Strike">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="83" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -346,10 +391,11 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="6421" levels="1" name="Rage of Soldier">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="40" />
@@ -357,39 +403,44 @@
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="6422" levels="1" name="Resistance Explosion">
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="hitTime" val="1000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="6423" levels="1" name="Shock">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="2738" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="saveVs" val="CON" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="6424" levels="1" name="Double Shot">
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="magicLvl" val="84" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="power" val="6844" />
 		<set name="mpConsume" val="121" />
 		<set name="castRange" val="900" />
@@ -398,12 +449,20 @@
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6425" levels="1" name="Demotivation Hex">
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
+		<set name="magicLvl" val="84" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="SELF" />
+		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
+		<for>
+			<effect name="Buff" val="0" abnormalTime="10" abnormalLvl="3" abnormalType="pd_down">
+				<mul order="0x30" stat="pDef" val="0.1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6426" levels="1" name="Priest's Ire">
 		<!-- Confirmed CT2.5 -->
@@ -417,26 +476,30 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
 		<!-- Fantasy Mushroom Skill -->
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
+		<set name="magicLvl" val="84" />
+		<set name="targetType" val="SELF" />
+		<set name="affectRange" val="300" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="1000" />
 	</skill>
 	<skill id="6428" levels="1" name="Hold">
 		<!-- Confirmed CT2.5 -->
 		<!-- Sticky Mushroom Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
@@ -444,7 +507,8 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="root_magically">
@@ -455,8 +519,10 @@
 	</skill>
 	<skill id="6429" levels="1" name="Cozy Mucus">
 		<!-- Rainbow Frog -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_a" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
@@ -473,17 +539,18 @@
 	<skill id="6430" levels="1" name="Roar Hip Heal">
 		<!-- Energy Plant Skill -->
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="ONE" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<for>
-			<effect name="HealPercent" noicon="1" val="30" />
-		</for>
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="power" val="30" />
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="pa_up" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -500,7 +567,9 @@
 	</skill>
 	<skill id="6432" levels="1" name="Feral Focus">
 		<!-- Critical attack rate increases by 35 % for 5 minutes -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="critical_prob_up" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -517,7 +586,9 @@
 	</skill>
 	<skill id="6433" levels="1" name="Feral Guidance">
 		<!-- Accuracy increases by 7 for 5 minutes. -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="hit_up" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -534,7 +605,9 @@
 	</skill>
 	<skill id="6434" levels="1" name="Feral Haste">
 		<!-- Atk. Spd. increases by 38 % for 5 minutes. -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="attack_time_down" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="90000" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -552,21 +625,23 @@
 	<skill id="6435" levels="3" name="Curse of the Plains">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<table name="#dot"> 100 200 300 </table>
+		<table name="#dot"> 0.005 0.01 0.02 </table>
 		<table name="#rCrit"> 0.2 0.5 0.75 </table>
 		<table name="#cAtk"> 1.2 1.3 1.4 </table>
-		<table name="#abnormalLvl"> 7 8 9 </table>
+		<table name="#abnormalLvls"> 7 8 9 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
-			<!-- TODO: DOT should be by % and values per level are 0.005 0.01 0.02 -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormalLvl="#abnormalLvl" abnormalType="multi_debuff">
+			<effect count="5" name="DamOverTimePercent" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="multi_debuff">
 				<basemul order="0x30" stat="rCrit" val="#rCrit">
 					<using kind="Bow,Crossbow" />
 				</basemul>
@@ -579,17 +654,19 @@
 	<skill id="6436" levels="1" name="Curse of the Dark Abyss">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
-			<!-- TODO: DOT should be by % and value is 0.05 -->
-			<effect count="3" name="DamOverTime" abnormalTime="5" val="400" abnormalLvl="10" abnormalType="multi_debuff">
+			<effect count="3" name="DamOverTimePercent" abnormalTime="5" val="0.05" abnormalLvl="10" abnormalType="multi_debuff">
 				<basemul order="0x30" stat="rCrit" val="0.9">
 					<using kind="Bow,Crossbow" />
 				</basemul>
@@ -601,8 +678,11 @@
 	</skill>
 	<skill id="6437" levels="7" name="Area of Freezing Core">
 		<table name="#dot"> 30 60 90 150 250 350 500 </table>
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="poison" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="magicLvl" val="84" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="element" val="1" /> <!-- Water -->
@@ -610,48 +690,58 @@
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="15" name="DamOverTime" abnormalTime="5" val="#dot" abnormalLvl="10" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">
-		<set name="target" val="TARGET_NONE" />
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="poison" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6439" levels="1" name="Energy of Wisdom">
-		<set name="target" val="TARGET_NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6440" levels="1" name="Energy of Strong">
-		<set name="target" val="TARGET_NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6441" levels="1" name="Energy of Agile">
-		<set name="target" val="TARGET_NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6442" levels="1" name="Efficacy of Wisdom">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -662,9 +752,11 @@
 		</for>
 	</skill>
 	<skill id="6443" levels="1" name="Efficacy of Strength">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -676,9 +768,11 @@
 		</for>
 	</skill>
 	<skill id="6444" levels="1" name="Efficacy of Agility">
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="signal_e" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="trait" val="POISON" />
@@ -691,334 +785,336 @@
 	</skill>
 	<skill id="6445" levels="1" name="Presentation - Freya's Message 1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6446" levels="1" name="Presentation - Freya's Message 2">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6447" levels="1" name="Presentation - Freya's Message 3">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6448" levels="1" name="Presentation - Freya's Message 4">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6449" levels="1" name="Presentation - Freya's Message 5">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6450" levels="1" name="Presentation - Freya Nova">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6451" levels="1" name="Presentation - Freya Move">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6452" levels="1" name="Presentation - Freya Space Change">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6453" levels="1" name="Presentation - Freya Death">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6454" levels="1" name="Presentation - Freya Frustration">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6455" levels="1" name="Presentation - Freya Destroy">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6456" levels="1" name="Presentation - Freya Eternal Blizzard">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6457" levels="1" name="Presentation - Absorption of Sirr">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6458" levels="1" name="Presentation - Transform of Sirr">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6459" levels="1" name="Presentation - Kegor Super Buff">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6460" levels="1" name="Presentation - Jinia Super Buff">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6461" levels="1" name="Presentation - Kegor's Message 1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6462" levels="1" name="Presentation - Kegor's Message 1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6463" levels="1" name="Presentation - Transfer Achievement">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6464" levels="1" name="Three Siblings' Trickery">
 		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="6465" levels="1" name="Jack O'Lantern Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6466" levels="1" name="Rotten Jack O'Lantern Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6467" levels="1" name="Jack O'Lantern Card - Confirm Skill">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6468" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6469" levels="1" name="Halloween Defeat">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6470" levels="1" name="1 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6471" levels="1" name="2 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6472" levels="1" name="3 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6473" levels="1" name="4 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6474" levels="1" name="5 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6475" levels="1" name="6 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6476" levels="1" name="7 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6477" levels="1" name="8 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6478" levels="1" name="9 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6479" levels="1" name="10 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6480" levels="1" name="11 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6481" levels="1" name="12 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6482" levels="1" name="13 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6483" levels="1" name="14 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6484" levels="1" name="15 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6485" levels="1" name="16 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6486" levels="1" name="17 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6487" levels="1" name="18 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6488" levels="1" name="19 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6489" levels="1" name="20 win">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6490" levels="1" name="Jack's game - Gauge">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6491" levels="1" name="Jack's game - Target">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="6492" levels="28" name="NPC holy attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6493" levels="28" name="Jack's game - Target">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6494" levels="28" name="NPC holy attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6495" levels="28" name="NPC holy attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6496" levels="28" name="NPC holy attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6497" levels="28" name="NPC holy attack">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6498" levels="28" name="NPC holy shot">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />
 	</skill>
 	<skill id="6499" levels="28" name="NPC holy shot">
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="coolTime" val="500" />

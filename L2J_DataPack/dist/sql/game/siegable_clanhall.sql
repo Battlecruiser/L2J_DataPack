@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `siegable_clanhall` (
   `location` varchar(100) DEFAULT NULL,
   `nextSiege` bigint(20) DEFAULT NULL,
   `siegeLenght` int(10) DEFAULT NULL,
-  `schedule_config` varchar(20) DEFAULT NULL, 
+  `schedule_config` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`clanHallId`),
   KEY `ownerId` (`ownerId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

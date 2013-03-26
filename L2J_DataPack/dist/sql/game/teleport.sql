@@ -85,7 +85,6 @@ INSERT INTO `teleport` VALUES
 ('Heine -> Field of Silence',66,87691,162835,-3563,12000,0,57), -- retail
 ('Heine -> Field of Whispers',67,82192,226128,-3664,5900,0,57), -- retail
 ('Heine -> Entrance to Alligator Islands',68,115583,192261,-3488,2100,0,57),
-('Giran -> Dragon Valley',69,73024,118485,-3688,1800,0,57),
 ('Giran -> Heine',70,111455,219400,-3544,7600,0,57),
 ('Aden -> Coliseum',76,146440,46723,-3432,2000,0,57),
 ('Aden -> Blazing Swamp',81,155310,-16339,-3320,6800,0,57),
@@ -101,7 +100,7 @@ INSERT INTO `teleport` VALUES
 ('Orc Village -> Immortal Plateau,Southern Region',94,-4190,-80040,-2696,2000,0,57),
 ('Orc Village -> Frozen Waterfall',96,8652,-139941,-1144,1600,0,57),
 ('Orc Village -> Cave of Trials',471,9340,-112509,-2536,1500,0,57),
-('Oren -> Plains of Lizardmen',97,87252,85514,-3056,1900,0,57),
+('Oren -> Plains of Lizardmen',97,87252,85514,-3056,3900,0,57),
 ('Oren -> Sea of Spores',98,64328,26803,-3768,2500,0,57),
 ('Oren -> Outlaw Forest',1077,91539,-12204,-2440,5200,0,57),
 ('Hunters -> Northern Pathway of Enchanted Valley',99,104426,33746,-3800,3600,0,57),
@@ -292,7 +291,6 @@ INSERT INTO `teleport` VALUES
 ('Giran -> Rune',1057,43835,-47749,-792,59000,0,57),
 ('Giran -> Schuttgart',1058,87126,-143520,-1288,87000,0,57),
 ('Giran -> Aden',1059,146783,25808,-2008,13000,0,57),
-('Giran -> Antharas Lair',1060,131557,114509,-3712,7000,0,57),
 ('Giran -> Devil Isle',1061,43408,206881,-3752,5700,0,57),
 ('Giran -> Brekas Stronghold',1062,85546,131328,-3672,1000,0,57),
 ('Heine -> Oren',1063,82971,53207,-1488,50000,0,57),
@@ -303,11 +301,11 @@ INSERT INTO `teleport` VALUES
 ('Heine -> Gludio',1068,-12787,122779,-3112,47000,0,57),
 ('Heine -> Garden of Eva',1069,84413,234334,-3656,2400,0,57),
 ('Oren -> Rune',1070,43835,-47749,-792,10000,0,57),
-('Oren -> Goddard',1071,148024,-55281,-2728,12000,0,57),
-('Oren -> Heine',1072,111455,219400,-3544,16000,0,57),
-('Oren -> Dion',1073,15472,142880,-2688,11000,0,57),
-('Oren -> Schuttgart',1074,87126,-143520,-1288,19000,0,57),
-('Oren -> Gludio',1075,-12787,122779,-3112,11000,0,57),
+('Oren -> Goddard',1071,148024,-55281,-2728,37000,0,57),
+('Oren -> Heine',1072,111455,219400,-3544,50000,0,57),
+('Oren -> Dion',1073,15472,142880,-2688,33000,0,57),
+('Oren -> Schuttgart',1074,87126,-143520,-1288,59000,0,57),
+('Oren -> Gludio',1075,-12787,122779,-3112,35000,0,57),
 ('Aden -> Giran',1078,83551,147945,-3400,13000,0,57), -- retail
 ('Aden -> Heine',1079,111455,219400,-3546,59000,0,57), -- retail
 ('Aden -> Schuttgart',1080,87126,-143520,-1288,53000,0,57), -- retail
@@ -336,19 +334,19 @@ INSERT INTO `teleport` VALUES
 ('Rune -> Wild Beast Pastures',1103,53516,-82831,-2700,7200,0,57),
 ('Rune -> Valley of Saints',1104,65307,-71445,-3688,3800,0,57),
 ('Rune -> Monastery of Silence',1105,106414,-87799,-2920,14000,0,57),
-('Schuttgart -> Rune',1106,43835,-47749,-792,5300,0,57),
+('Schuttgart -> Rune',1106,43835,-47749,-792,10000,0,57),
 ('Schuttgart -> Goddard',1107,148024,-55281,-2728,10000,0,57),
-('Schuttgart -> Aden',1108,146783,25808,-2008,17000,0,57),
-('Schuttgart -> Oren',1109,82971,53207,-1488,19000,0,57),
-('Schuttgart -> Heine',1110,111455,219400,-3544,36000,0,57),
-('Schuttgart -> Giran',1111,83551,147945,-3400,29000,0,57),
-('Schuttgart -> Dion',1112,15472,142880,-2688,29000,0,57),
-('Schuttgart -> Gludio',1113,-12787,122779,-3112,28000,0,57),
+('Schuttgart -> Aden',1108,146783,25808,-2008,53000,0,57),
+('Schuttgart -> Oren',1109,82971,53207,-1488,59000,0,57),
+('Schuttgart -> Heine',1110,111455,219400,-3544,100000,0,57),
+('Schuttgart -> Giran',1111,83551,147945,-3400,87000,0,57),
+('Schuttgart -> Dion',1112,15472,142880,-2688,88000,0,57),
+('Schuttgart -> Gludio',1113,-12787,122779,-3112,85000,0,57),
 ('Schuttgart -> Orc Village',1114,-45158,-112583,-240,13000,0,57),
 ('Schuttgart -> Dwarven Village',1115,115120,-178224,-880,4400,0,57),
 ('Schuttgart -> Den of Evil',1116,68693,-110438,-1904,7500,0,57),
 ('Schuttgart -> Plunderous Plains',1117,111965,-154172,-1528,1600,0,57),
-('Schuttgart -> Ice Merchant Cabin',1118,113903,-108752,-856,3500,0,57),
+('Schuttgart -> Icemans Hut',1118,113903,-108752,-856,3500,0,57),
 ('Schuttgart -> Crypt of Disgrace',1119,47692,-115745,-3744,9600,0,57),
 ('Schuttgart -> Pavel Ruins',1120,91280,-117152,-3928,5300,0,57),
 ('Kamael Vilage -> The Town of Gludio',1139,-12672,122776,-3116,12000,0,57),
@@ -488,11 +486,6 @@ INSERT INTO `teleport` VALUES
 ('Hunters Valley - 1000 adena',9032,114306,86573,-3112,1000,1,57), -- retail
 ('The Giant\'s Cave Lower Layer - 1000 adena',9033,191754,56760,-7624,1000,1,57), -- retail
 ('Gorgon Flower Garden - 1000 adena',9040,113553,134813,-3540,1000,1,57), -- retail
-('Antharas\' Lair - 1st Level - 1000 adena',9041,147071,120156,-4520,1000,1,57), -- retail
-('Antharas\' Lair - 2nd Level - 1000 adena',9042,151835,112977,-5520,1000,1,57), -- retail
-('Antharas\' Lair -  Magic Force Field Bridge - 1000 adena',9043,146494,109285,-3448,1000,1,57), -- retail
-('The Heart of Antharas\' Lair - 1000 adena',9044,154396,121235,-3808,1000,1,57), -- retail
-('The Center of Dragon Valley - 1000 adena',9045,122824,110836,-3808,1000,1,57), -- retail
 ('Hardin\'s Private Academy - 1000 adena',9046,105918,109759,-3170,1000,1,57), -- retail
 ('The Center of the Forest of the Dead - 1000 adena',9050,54425,-41692,-3072,1000,1,57), -- retail
 ('The Center of the Valley of Saints - 1000 adena',9051,84092,-80084,-3504,1000,1,57), -- retail
@@ -558,11 +551,6 @@ INSERT INTO `teleport` VALUES
 ('Hunters Valley - 1 Olympiad Token',9932,114306,86573,-3112,1,1,13722), -- retail
 ('The Giant\'s Cave Lower Layer - 1 Olympiad Token',9933,191754,56760,-7624,1,1,13722), -- retail
 ('Gorgon Flower Garden - 1 Olympiad Token',9940,113553,134813,-3540,1,1,13722), -- retail
-('Antharas\' Lair - 1st Level - 1 Olympiad Token',9941,147071,120156,-4520,1,1,13722), -- retail
-('Antharas\' Lair - 2nd Level - 1 Olympiad Token',9942,151835,112977,-5520,1,1,13722), -- retail
-('Antharas Lair, Magic Force Field Bridge - 1 Olympiad Token',9943,146494,109285,-3448,1,1,13722), -- retail
-('The Heart of Antharas\' Lair - 1 Olympiad Token',9944,154396,121235,-3808,1,1,13722), -- retail
-('The Center of Dragon Valley - 1 Olympiad Token',9945,122824,110836,-3720,1,1,13722), -- retail
 ('Hardin\'s Private Academy - 1 Olympiad Token',9946,105918,109759,-3170,1,1,13722), -- retail
 ('The Center of the Forest of the Dead - 1 Olympiad Token',9950,54425,-41692,-3072,1,1,13722), -- retail
 ('The Center of the Valley of Saints - 1 Olympiad Token',9951,84092,-80084,-3504,1,1,13722), -- retail
@@ -605,18 +593,20 @@ INSERT INTO `teleport` VALUES
 ('Garden of Eva - 3rd Level - 1 Olympiad Token',10025,77868,250400,-9328,1,1,13722), -- retail
 ('Garden of Eva - 4th Level - 1 Olympiad Token',10026,78721,253309,-9840,1,1,13722), -- retail
 ('Garden of Eva - 5th Level - 1 Olympiad Token',10027,82951,252354,-10592,1,1,13722), -- retail
-('Ketra teleport - Goddard Castle Town',10028,147978,-55408,-2728,4900,0,57),
-('Ketra teleport - Rune Castle Town',10029,43849,-47877,-792,22000,0,57),
-('Ketra teleport - Aden Castle Town',10030,146705,25840,-2000,21000,0,57),
-('Ketra teleport - Wall of Argos',10031,164564,-48145,-3536,7000,0,57),
-('Ketra teleport - Hot Springs',10032,144880,-113468,-2560,6700,0,57),
-('Varka teleport - Goddard Castle Town',10033,147978,-55408,-2728,8000,0,57),
-('Varka teleport - Rune Castle Town',10034,43849,-47877,-792,12000,0,57),
-('Varka teleport - Aden Castle Town',10035,146705,25840,-2000,17000,0,57),
-('Varka teleport - Wall of Argos',10036,164564,-48145,-3536,11000,0,57),
-('Varka teleport - Hot Springs',10037,144880,-113468,-2560,14000,0,57),
+('Ketra teleport - Town of Goddard',10028,148024,-55281,-2728,2400,0,57),
+('Ketra teleport - Rune Township',10029,43835,-47749,-792,11000,0,57),
+('Ketra teleport - Town of Aden',10030,146783,25808,-2000,10000,0,57),
+('Ketra teleport - Wall of Argos',10031,165054,-47861,-3560,4200,0,57),
+('Ketra teleport - Hot Springs',10032,144880,-113468,-2560,5400,0,57),
+('Varka teleport - Town of Goddard',10033,148024,-47749,-2728,4000,0,57),
+('Varka teleport - Rune Township',10034,43835,-47877,-792,6400,0,57),
+('Varka teleport - Town of Aden',10035,146783,25808,-2000,8700,0,57),
+('Varka teleport - Wall of Argos',10036,165054,-47861,-3560,6800,0,57),
+('Varka teleport - Hot Springs',10037,144880,-113468,-2560,11000,0,57),
 ('Field of Silence Center - 1000 adena',10038,80987,182423,-3504,1,1,13722), -- retail
-('Field of Whispers Center - 1000 adena',10039,86147,218268,-3592,1,1,13722); -- retail
+('Field of Whispers Center - 1000 adena',10039,86147,218268,-3592,1,1,13722), -- retail
+('Ketra teleport - Town of Schuttgart',10040,87126,-143520,-1288,8900,0,57),
+('Varka teleport - Town of Schuttgart',10041,87126,-143520,-1288,9300,0,57);
 
 INSERT INTO `teleport` VALUES
 ('Gludio -> Kamael Village',12050,-117251,46771,360,12000,0,57),
@@ -628,8 +618,6 @@ INSERT INTO `teleport` VALUES
 ('Dwarven Village -> Kamael Village',12056,-117251,46771,360,32000,0,57),
 ('Soul Harbor -> Nornil\'s Garden',12057,-119534,87176,-12593,0,0,57),
 ('Nornil\'s Garden -> Soul Harbor',12058,-73494,53507,-3680,0,0,57),
-('Underground Coliseum -> Fantasy Isle',12059,-59224,-56837,-2032,0,0,57),
-('Fantasy Isle -> Underground Coliseum',12060,-81490,-49167,-10352,0,0,57),
 ('Fantasy Isle -> Krateis Cube',12108,-70293,-71029,-1416,0,0,57),
 ('Krateis Cube -> Fantasy Isle',12109,-59224,-56837,-2032,0,0,57),
 ('Gludio -> Airship dock',12118,-149406,255247,-80,0,0,57),
@@ -815,6 +803,18 @@ INSERT INTO `teleport` VALUES
 ('Seed of Infinity Dock',15006,-212843,209695,4280,150000,0,57), -- retail
 ('Seed of Destruction Dock',15007,-248535,250273,4336,150000,0,57), -- retail
 ('Seed of Annihilation Dock',15008,-175520,154505,2712,150000,0,57); -- retail
+
+-- High Five
+INSERT INTO `teleport` VALUES
+('Starting Village -> The Village of Gludin',16000,-80684,149770,-3040,18000,0,57),
+('Hunters -> Dragon Valley',16001,73024,118485,-3696,1800,0,57),
+('Hunters -> Antharas Lair',16002,131557,114509,-3712,7000,0,57),
+('Hunters -> Ivory Tower',16003,85391,16228,-3672,13000,0,57),
+('Hunters (Noble) -> The Heart of Antharas Lair',16004,154396,121235,-3808,1000,1,57),
+('Hunters (Noble) -> The Heart of Antharas Lair',16005,154396,121235,-3808,1,1,13722),
+('Gludio -> Isle of Souls Harbor',16006,-73983,51956,-3680,9300,0,57),
+('Aden -> Isle of Souls Harbor',16007,-73983,51956,-3680,22000,0,57),
+('Aden -> Ivory Tower',16008,85391,16228,-3672,6200,0,57);
 
 -- Fortress Teleports
 INSERT INTO `teleport` VALUES

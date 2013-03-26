@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS `territories` (
-  `territoryId` INT NOT NULL default 0,
-  `castleId` INT NOT NULL default 0,
-  `fortId` INT NOT NULL default 0,
+  `territoryId` INT NOT NULL DEFAULT 0,
+  `castleId` INT NOT NULL DEFAULT 0,
+  `fortId` INT NOT NULL DEFAULT 0,
   `ownedWardIds` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`territoryId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

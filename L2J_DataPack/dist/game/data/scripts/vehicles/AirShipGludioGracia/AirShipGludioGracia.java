@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package vehicles.AirShipGludioGracia;
 
@@ -36,7 +40,8 @@ public class AirShipGludioGracia extends Quest implements Runnable
 {
 	private static final int[] CONTROLLERS =
 	{
-		32607, 32609
+		32607,
+		32609
 	};
 	
 	private static final int GLUDIO_DOCK_ID = 10;
@@ -88,7 +93,12 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	
 	private static final VehiclePathPoint[] WARPGATE_TO_GLUDIO =
 	{
-		new VehiclePathPoint(-153414, 255385, 221), new VehiclePathPoint(-149548, 258172, 221), new VehiclePathPoint(-146884, 257097, 221), new VehiclePathPoint(-146672, 254239, 221), new VehiclePathPoint(-147855, 252712, 206), new VehiclePathPoint(-149378, 252552, 198)
+		new VehiclePathPoint(-153414, 255385, 221),
+		new VehiclePathPoint(-149548, 258172, 221),
+		new VehiclePathPoint(-146884, 257097, 221),
+		new VehiclePathPoint(-146672, 254239, 221),
+		new VehiclePathPoint(-147855, 252712, 206),
+		new VehiclePathPoint(-149378, 252552, 198)
 	};
 	
 	private final L2AirShipInstance _ship;
@@ -98,6 +108,66 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	private L2Npc _atcGludio = null;
 	private boolean _foundAtcGracia = false;
 	private L2Npc _atcGracia = null;
+	
+	public AirShipGludioGracia(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		
+		addStartNpc(CONTROLLERS);
+		addFirstTalkId(CONTROLLERS);
+		addTalkId(CONTROLLERS);
+		
+		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
+		_ship.setOustLoc(OUST_GLUDIO);
+		_ship.setInDock(GLUDIO_DOCK_ID);
+		_ship.registerEngine(this);
+		_ship.runEngine(60000);
+	}
+	
+	private final void broadcastInGludio(NpcStringId npcString)
+	{
+		if (!_foundAtcGludio)
+		{
+			_foundAtcGludio = true;
+			_atcGludio = findController();
+		}
+		if (_atcGludio != null)
+		{
+			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
+		}
+	}
+	
+	private final void broadcastInGracia(NpcStringId npcStringId)
+	{
+		if (!_foundAtcGracia)
+		{
+			_foundAtcGracia = true;
+			_atcGracia = findController();
+		}
+		if (_atcGracia != null)
+		{
+			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
+		}
+	}
+	
+	private final L2Npc findController()
+	{
+		// check objects around the ship
+		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
+		{
+			if (obj.isNpc())
+			{
+				for (int id : CONTROLLERS)
+				{
+					if (((L2Npc) obj).getNpcId() == id)
+					{
+						return (L2Npc) obj;
+					}
+				}
+			}
+		}
+		return null;
+	}
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -152,13 +222,15 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_HOLDING_A_FLAG);
 			return null;
 		}
-		else if (player.getPet() != null || player.isMounted())
+		else if (player.hasSummon() || player.isMounted())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_BOARD_AN_AIRSHIP_WHILE_A_PET_OR_A_SERVITOR_IS_SUMMONED);
 			return null;
 		}
 		else if (_ship.isInDock() && _ship.isInsideRadius(player, 600, true, false))
+		{
 			_ship.addPassenger(player);
+		}
 		
 		return null;
 	}
@@ -166,25 +238,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.getQuestState(getName()) == null)
-			newQuestState(player);
-		
 		return npc.getNpcId() + ".htm";
-	}
-	
-	public AirShipGludioGracia(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int id : CONTROLLERS)
-		{
-			addStartNpc(id);
-			addFirstTalkId(id);
-			addTalkId(id);
-		}
-		_ship = AirShipManager.getInstance().getNewAirShip(-149378, 252552, 198, 33837);
-		_ship.setOustLoc(OUST_GLUDIO);
-		_ship.registerEngine(this);
-		_ship.runEngine(60000);
 	}
 	
 	@Override
@@ -235,7 +289,9 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			}
 			_cycle++;
 			if (_cycle > 7)
+			{
 				_cycle = 0;
+			}
 		}
 		catch (Exception e)
 		{
@@ -243,43 +299,15 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 	}
 	
-	private final void broadcastInGludio(NpcStringId npcString)
+	@Override
+	public boolean unload(boolean removeFromList)
 	{
-		if (!_foundAtcGludio)
+		if (_ship != null)
 		{
-			_foundAtcGludio = true;
-			_atcGludio = findController();
+			_ship.oustPlayers();
+			_ship.deleteMe();
 		}
-		if (_atcGludio != null)
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.SHOUT, _atcGludio.getNpcId(), npcString));
-	}
-	
-	private final void broadcastInGracia(NpcStringId npcStringId)
-	{
-		if (!_foundAtcGracia)
-		{
-			_foundAtcGracia = true;
-			_atcGracia = findController();
-		}
-		if (_atcGracia != null)
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.SHOUT, _atcGracia.getNpcId(), npcStringId));
-	}
-	
-	private final L2Npc findController()
-	{
-		// check objects around the ship
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
-		{
-			if (obj instanceof L2Npc)
-			{
-				for (int id : CONTROLLERS)
-				{
-					if (((L2Npc) obj).getNpcId() == id)
-						return (L2Npc) obj;
-				}
-			}
-		}
-		return null;
+		return super.unload(removeFromList);
 	}
 	
 	public static void main(String[] args)

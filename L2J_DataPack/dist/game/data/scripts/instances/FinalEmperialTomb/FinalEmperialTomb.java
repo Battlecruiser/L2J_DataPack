@@ -1,23 +1,26 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package instances.FinalEmperialTomb;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
@@ -39,21 +42,22 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Territory;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -72,41 +76,41 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * TODO:<br>
+ * Final Emperial Tomb instance zone. TODO:<br>
  * Test when Frintezza song use 5008 effect skill.<br>
- * Maybe test more deeply halishas AI.<br>
- * Use correct Song names.<br>
- * Use proper zone spawn system.<br>
+ * Test deeply Scarlet van Halisha's AI.<br>
+ * Use proper zone spawn system.
  * @author Gigiikun
-*/
+ */
 public class FinalEmperialTomb extends Quest
 {
 	private class FETWorld extends InstanceWorld
 	{
-		public         Lock                 lock                         = new ReentrantLock();
-		public         List<L2Npc>          npcList                      = new FastList<>();
-		public         int                  darkChoirPlayerCount         = 0;
-		public         FrintezzaSong        OnSong                       = null;
-		public         ScheduledFuture<?>   songTask                     = null;
-		public         ScheduledFuture<?>   songEffectTask               = null;
-		public         boolean              isVideo                      = false;
-		public         L2Npc                frintezzaDummy               = null;
-		public         L2Npc                overheadDummy                = null;
-		public         L2Npc                portraitDummy1               = null;
-		public         L2Npc                portraitDummy3               = null;
-		public         L2Npc                scarletDummy                 = null;
-		public         L2GrandBossInstance  frintezza                    = null;
-		public         L2GrandBossInstance  activeScarlet                = null;
-		public         List<L2MonsterInstance>  demons                   = new FastList<>();
-		public         Map<L2MonsterInstance, Integer>  portraits        = new FastMap<>();
-		public         int                  scarlet_x                    = 0;
-		public         int                  scarlet_y                    = 0;
-		public         int                  scarlet_z                    = 0;
-		public         int                  scarlet_h                    = 0;
-		public         int                  scarlet_a                    = 0;
-
-		public FETWorld()
+		public Lock lock = new ReentrantLock();
+		public FastList<L2Npc> npcList = new FastList<>();
+		public int darkChoirPlayerCount = 0;
+		public FrintezzaSong OnSong = null;
+		public ScheduledFuture<?> songTask = null;
+		public ScheduledFuture<?> songEffectTask = null;
+		public boolean isVideo = false;
+		public L2Npc frintezzaDummy = null;
+		public L2Npc overheadDummy = null;
+		public L2Npc portraitDummy1 = null;
+		public L2Npc portraitDummy3 = null;
+		public L2Npc scarletDummy = null;
+		public L2GrandBossInstance frintezza = null;
+		public L2GrandBossInstance activeScarlet = null;
+		public List<L2MonsterInstance> demons = new FastList<>();
+		public Map<L2MonsterInstance, Integer> portraits = new FastMap<>();
+		public int scarlet_x = 0;
+		public int scarlet_y = 0;
+		public int scarlet_z = 0;
+		public int scarlet_h = 0;
+		public int scarlet_a = 0;
+		
+		protected FETWorld()
 		{
+			npcList.shared();
 		}
 	}
 	
@@ -139,72 +143,149 @@ public class FinalEmperialTomb extends Quest
 		}
 	}
 	
-	private static final String qn = "FinalEmperialTomb";
 	private static final int INSTANCEID = 136; // this is the client number
 	private static final int MIN_PLAYERS = 36;
 	private static final int MAX_PLAYERS = 45;
 	private static final boolean debug = false;
 	
-	private final TIntObjectHashMap<L2Territory> _spawnZoneList = new TIntObjectHashMap<>();
-	private final TIntObjectHashMap<List<FETSpawn>> _spawnList = new TIntObjectHashMap<>();
+	private final Map<Integer, L2Territory> _spawnZoneList = new HashMap<>();
+	private final Map<Integer, List<FETSpawn>> _spawnList = new HashMap<>();
 	private final List<Integer> _mustKillMobsId = new FastList<>();
 	
 	// Teleports
-	private static final int[] ENTER_TELEPORT = {-88015,-141153,-9168};
+	private static final Location ENTER_TELEPORT = new Location(-88015, -141153, -9168);
 	
-	//NPCs
+	// NPCs
 	private static final int GUIDE = 32011;
 	private static final int CUBE = 29061;
-	
-	//mobs
+	// Item
+	private static final int DEWDROP_OF_DESTRUCTION_ITEM_ID = 8556;
+	// mobs
 	private static final int SCARLET1 = 29046;
 	private static final int SCARLET2 = 29047;
 	private static final int FRINTEZZA = 29045;
-	private static final int[] PORTRAITS = { 29048, 29049 };
-	private static final int[] DEMONS = { 29050, 29051 };
+	private static final int[] PORTRAITS =
+	{
+		29048,
+		29049
+	};
+	private static final int[] DEMONS =
+	{
+		29050,
+		29051
+	};
 	private static final int HALL_ALARM = 18328;
+	private static final int HALL_KEEPER_CAPTAIN = 18329;
+	private static final int HALL_KEEPER_SUICIDAL_SOLDIER = 18333;
 	private static final int DARK_CHOIR_PLAYER = 18339;
-	private static final int[] AI_DISABLED_MOBS = { 18328 };
+	private static final int[] AI_DISABLED_MOBS =
+	{
+		18328
+	};
 	
 	private static final int FIRST_SCARLET_WEAPON = 8204;
 	private static final int SECOND_SCARLET_WEAPON = 7903;
-	protected static final SkillHolder INTRO_SKILL = new SkillHolder(5004,1);
-	private static final SkillHolder FIRST_MORPH_SKILL = new SkillHolder(5017,1);
+	protected static final SkillHolder INTRO_SKILL = new SkillHolder(5004, 1);
+	private static final SkillHolder FIRST_MORPH_SKILL = new SkillHolder(5017, 1);
 	
-	protected static final FrintezzaSong[] FRINTEZZASONGLIST = 
+	protected static final FrintezzaSong[] FRINTEZZASONGLIST =
 	{
-		new FrintezzaSong(new SkillHolder(5007,1), new SkillHolder(5008,1), NpcStringId.REQUIEM_OF_HATRED, 5),
-        new FrintezzaSong(new SkillHolder(5007,2), new SkillHolder(5008,2), NpcStringId.RONDO_OF_SOLITUDE, 50),
-        new FrintezzaSong(new SkillHolder(5007,3), new SkillHolder(5008,3), NpcStringId.FRENETIC_TOCCATA, 70),
-        new FrintezzaSong(new SkillHolder(5007,4), new SkillHolder(5008,4), NpcStringId.FUGUE_OF_JUBILATION, 90),
-        new FrintezzaSong(new SkillHolder(5007,5), new SkillHolder(5008,5), NpcStringId.HYPNOTIC_MAZURKA, 100),
+		new FrintezzaSong(new SkillHolder(5007, 1), new SkillHolder(5008, 1), NpcStringId.REQUIEM_OF_HATRED, 5),
+		new FrintezzaSong(new SkillHolder(5007, 2), new SkillHolder(5008, 2), NpcStringId.RONDO_OF_SOLITUDE, 50),
+		new FrintezzaSong(new SkillHolder(5007, 3), new SkillHolder(5008, 3), NpcStringId.FRENETIC_TOCCATA, 70),
+		new FrintezzaSong(new SkillHolder(5007, 4), new SkillHolder(5008, 4), NpcStringId.FUGUE_OF_JUBILATION, 90),
+		new FrintezzaSong(new SkillHolder(5007, 5), new SkillHolder(5008, 5), NpcStringId.HYPNOTIC_MAZURKA, 100),
 	};
-	
+	// Skills
+	private static final int DEWDROP_OF_DESTRUCTION_SKILL_ID = 2276;
+	private static final int SOUL_BREAKING_ARROW_SKILL_ID = 2234;
 	// Doors/Walls/Zones
-	protected static final int[] FIRST_ROOM_DOORS = 
-	{ 
-		17130051, 17130052, 17130053, 17130054, 17130055,
-		17130056, 17130057, 17130058
-	};
-	protected static final int[] SECOND_ROOM_DOORS = 
+	protected static final int[] FIRST_ROOM_DOORS =
 	{
-		17130061, 17130062, 17130063, 17130064, 17130065,
-		17130066, 17130067, 17130068, 17130069, 17130070
+		17130051,
+		17130052,
+		17130053,
+		17130054,
+		17130055,
+		17130056,
+		17130057,
+		17130058
+	};
+	protected static final int[] SECOND_ROOM_DOORS =
+	{
+		17130061,
+		17130062,
+		17130063,
+		17130064,
+		17130065,
+		17130066,
+		17130067,
+		17130068,
+		17130069,
+		17130070
 	};
 	
-	protected static final int[] FIRST_ROUTE_DOORS = { 17130042, 17130043 };
-	protected static final int[] SECOND_ROUTE_DOORS = { 17130045, 17130046 };
-	protected static final L2CharPosition MOVE_TO_CENTER = new L2CharPosition( -87904, -141296, -9168, 0 );
-
+	protected static final int[] FIRST_ROUTE_DOORS =
+	{
+		17130042,
+		17130043
+	};
+	protected static final int[] SECOND_ROUTE_DOORS =
+	{
+		17130045,
+		17130046
+	};
+	protected static final L2CharPosition MOVE_TO_CENTER = new L2CharPosition(-87904, -141296, -9168, 0);
+	
 	// spawns
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20000;
 	private static final int MAX_DEMONS = 24;
-	protected static final int[][] PORTRAIT_SPAWNS = 
+	protected static final int[][] PORTRAIT_SPAWNS =
 	{
-		{ 29048, -89381, -153981, -9168, 3368, -89378, -153968, -9168, 3368 },
-		{ 29048, -86234, -152467, -9168, 37656, -86261, -152492, -9168, 37656 },
-		{ 29049, -89342, -152479, -9168, -5152, -89311, -152491, -9168, -5152 },
-		{ 29049, -86189, -153968, -9168, 29456, -86217, -153956, -9168, 29456 }
+		{
+			29048,
+			-89381,
+			-153981,
+			-9168,
+			3368,
+			-89378,
+			-153968,
+			-9168,
+			3368
+		},
+		{
+			29048,
+			-86234,
+			-152467,
+			-9168,
+			37656,
+			-86261,
+			-152492,
+			-9168,
+			37656
+		},
+		{
+			29049,
+			-89342,
+			-152479,
+			-9168,
+			-5152,
+			-89311,
+			-152491,
+			-9168,
+			-5152
+		},
+		{
+			29049,
+			-86189,
+			-153968,
+			-9168,
+			29456,
+			-86217,
+			-153956,
+			-9168,
+			29456
+		}
 	};
 	
 	// Initialization at 6:30 am on Wednesday and Saturday
@@ -216,7 +297,6 @@ public class FinalEmperialTomb extends Quest
 	@SuppressWarnings("unused")
 	private void load()
 	{
-		
 		int spawnCount = 0;
 		try
 		{
@@ -233,7 +313,7 @@ public class FinalEmperialTomb extends Quest
 			
 			Document doc = factory.newDocumentBuilder().parse(file);
 			Node first = doc.getFirstChild();
-			if (first != null && "list".equalsIgnoreCase(first.getNodeName()))
+			if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))
 			{
 				for (Node n = first.getFirstChild(); n != null; n = n.getNextSibling())
 				{
@@ -259,8 +339,10 @@ public class FinalEmperialTomb extends Quest
 									continue;
 								}
 								int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
-								if (!_spawnList.contains(flag))
+								if (!_spawnList.containsKey(flag))
+								{
 									_spawnList.put(flag, new FastList<FETSpawn>());
+								}
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{
@@ -272,29 +354,49 @@ public class FinalEmperialTomb extends Quest
 										
 										att = attrs.getNamedItem("x");
 										if (att != null)
+										{
 											spw.x = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("y");
 										if (att != null)
+										{
 											spw.y = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("z");
 										if (att != null)
+										{
 											spw.z = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("heading");
 										if (att != null)
+										{
 											spw.h = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
+										{
 											spw.isNeededNextFlag = Boolean.parseBoolean(att.getNodeValue());
+										}
 										if (spw.isNeededNextFlag)
+										{
 											_mustKillMobsId.add(npcId);
+										}
 										_spawnList.get(flag).add(spw);
 										spawnCount++;
 									}
@@ -307,19 +409,31 @@ public class FinalEmperialTomb extends Quest
 										
 										att = attrs.getNamedItem("id");
 										if (att != null)
+										{
 											spw.zone = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("count");
 										if (att != null)
+										{
 											spw.count = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("mustKill");
 										if (att != null)
+										{
 											spw.isNeededNextFlag = Boolean.parseBoolean(att.getNodeValue());
+										}
 										if (spw.isNeededNextFlag)
+										{
 											_mustKillMobsId.add(npcId);
+										}
 										_spawnList.get(flag).add(spw);
 										spawnCount++;
 									}
@@ -365,14 +479,22 @@ public class FinalEmperialTomb extends Quest
 										int x, y;
 										att = attrs.getNamedItem("x");
 										if (att != null)
+										{
 											x = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										att = attrs.getNamedItem("y");
 										if (att != null)
+										{
 											y = Integer.parseInt(att.getNodeValue());
+										}
 										else
+										{
 											continue;
+										}
 										
 										ter.add(x, y, minz, maxz, 0);
 									}
@@ -396,25 +518,12 @@ public class FinalEmperialTomb extends Quest
 		}
 	}
 	
-	protected void openDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-			if (door.getDoorId() == doorId)
-				door.openMe();
-	}
-	
-	protected void closeDoor(int doorId, int instanceId)
-	{
-		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
-			if (door.getDoorId() == doorId)
-				if (door.getOpen())
-					door.closeMe();
-	}
-	
 	private boolean checkConditions(L2PcInstance player)
 	{
-		if (debug || player.isGM())
+		if (debug || player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
+		{
 			return true;
+		}
 		L2Party party = player.getParty();
 		if (party == null)
 		{
@@ -439,7 +548,7 @@ public class FinalEmperialTomb extends Quest
 			player.sendPacket(sm);
 			return false;
 		}
-		else if (channel.getMemberCount() < MIN_PLAYERS || channel.getMemberCount() > MAX_PLAYERS)
+		else if ((channel.getMemberCount() < MIN_PLAYERS) || (channel.getMemberCount() > MAX_PLAYERS))
 		{
 			player.sendPacket(SystemMessageId.PARTY_EXCEEDED_THE_LIMIT_CANT_ENTER);
 			return false;
@@ -472,18 +581,12 @@ public class FinalEmperialTomb extends Quest
 		return true;
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
-	{
-		player.setInstanceId(instanceId);
-		player.teleToLocation(coords[0], coords[1], coords[2]);
-	}
-	
-	protected int enterInstance(L2PcInstance player, String template, int[] coords)
+	protected int enterInstance(L2PcInstance player, String template, Location loc)
 	{
 		int instanceId = 0;
-		//check for existing instances for this player
+		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		//existing instance
+		// existing instance
 		if (world != null)
 		{
 			if (!(world instanceof FETWorld))
@@ -491,46 +594,55 @@ public class FinalEmperialTomb extends Quest
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, coords, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, loc, world.getInstanceId(), false);
+			return world.getInstanceId();
 		}
 		
-		//New instance
+		// New instance
 		if (!checkConditions(player))
+		{
 			return 0;
-		if (!player.isGM() && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
+		}
+		if (!player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS) && !player.destroyItemByItemId("QUEST", 8073, 1, player, true))
+		{
 			return 0;
+		}
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		//Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		//ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
+		// Instance ins = InstanceManager.getInstance().getInstance(instanceId);
+		// ins.setSpawnLoc(new int[]{player.getX(),player.getY(),player.getZ()});
 		world = new FETWorld();
-		world.instanceId = instanceId;
-		world.status = 0;
+		world.setTemplateId(INSTANCEID);
+		world.setInstanceId(instanceId);
+		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
 		controlStatus((FETWorld) world);
 		_log.info("Final Emperial Tomb started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		// teleport players
-		if (player.getParty() == null || player.getParty().getCommandChannel() == null)
+		if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 		{
-			world.allowed.add(player.getObjectId());
-			teleportPlayer(player, coords, instanceId);
+			player.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+			world.addAllowed(player.getObjectId());
+			teleportPlayer(player, loc, instanceId, false);
 		}
 		else
 		{
 			for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 			{
-				world.allowed.add(channelMember.getObjectId());
-				teleportPlayer(channelMember, coords, instanceId);
+				channelMember.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, channelMember.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+				world.addAllowed(channelMember.getObjectId());
+				teleportPlayer(channelMember, loc, instanceId, false);
 			}
 		}
 		return instanceId;
 	}
 	
-	protected synchronized boolean checkKillProgress(L2Npc mob, FETWorld world)
+	protected boolean checkKillProgress(L2Npc mob, FETWorld world)
 	{
 		if (world.npcList.contains(mob))
+		{
 			world.npcList.remove(mob);
-		return world.npcList.size() == 0;
+		}
+		return world.npcList.isEmpty();
 	}
 	
 	private void spawnFlaggedNPCs(FETWorld world, int flag)
@@ -545,17 +657,21 @@ public class FinalEmperialTomb extends Quest
 					{
 						for (int i = 0; i < spw.count; i++)
 						{
-							if (_spawnZoneList.contains(spw.zone))
+							if (_spawnZoneList.containsKey(spw.zone))
 							{
 								int[] point = _spawnZoneList.get(spw.zone).getRandomPoint();
 								spawn(world, spw.npcId, point[0], point[1], GeoData.getInstance().getSpawnHeight(point[0], point[1], point[2], point[3], null), getRandom(65535), spw.isNeededNextFlag);
 							}
 							else
+							{
 								_log.info("[Final Emperial Tomb] Missing zone: " + spw.zone);
+							}
 						}
 					}
 					else
+					{
 						spawn(world, spw.npcId, spw.x, spw.y, spw.z, spw.h, spw.isNeededNextFlag);
+					}
 				}
 			}
 			finally
@@ -572,30 +688,40 @@ public class FinalEmperialTomb extends Quest
 			try
 			{
 				if (debug)
-					_log.info("[Final Emperial Tomb] Starting " + world.status + ". status.");
+				{
+					_log.info("[Final Emperial Tomb] Starting " + world.getStatus() + ". status.");
+				}
 				world.npcList.clear();
-				switch (world.status)
+				switch (world.getStatus())
 				{
 					case 0:
 						spawnFlaggedNPCs(world, 0);
 						break;
 					case 1:
 						for (int doorId : FIRST_ROUTE_DOORS)
-							openDoor(doorId, world.instanceId);
-						spawnFlaggedNPCs(world, world.status);
+						{
+							openDoor(doorId, world.getInstanceId());
+						}
+						spawnFlaggedNPCs(world, world.getStatus());
 						break;
 					case 2:
 						for (int doorId : SECOND_ROUTE_DOORS)
-							openDoor(doorId, world.instanceId);
+						{
+							openDoor(doorId, world.getInstanceId());
+						}
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 0), 600000);
 						break;
 					case 3: // first morph
 						if (world.songEffectTask != null)
+						{
 							world.songEffectTask.cancel(false);
+						}
 						world.songEffectTask = null;
 						world.activeScarlet.setIsInvul(true);
 						if (world.activeScarlet.isCastingNow())
+						{
 							world.activeScarlet.abortCast();
+						}
 						setInstanceTimeRestrictions(world);
 						world.activeScarlet.doCast(FIRST_MORPH_SKILL.getSkill());
 						ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(world, 2), 1500);
@@ -604,7 +730,9 @@ public class FinalEmperialTomb extends Quest
 						world.isVideo = true;
 						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
 						if (world.songEffectTask != null)
+						{
 							world.songEffectTask.cancel(false);
+						}
 						world.songEffectTask = null;
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 23), 2000);
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 24), 2100);
@@ -613,26 +741,38 @@ public class FinalEmperialTomb extends Quest
 						world.isVideo = true;
 						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
 						if (world.songTask != null)
+						{
 							world.songTask.cancel(true);
+						}
 						if (world.songEffectTask != null)
+						{
 							world.songEffectTask.cancel(false);
+						}
 						world.songTask = null;
 						world.songEffectTask = null;
 						ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(world, 33), 500);
 						break;
 					case 6: // open doors
-						InstanceManager.getInstance().getInstance(world.instanceId).setDuration(300000);
+						InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(300000);
 						for (int doorId : FIRST_ROOM_DOORS)
-							openDoor(doorId, world.instanceId);
+						{
+							openDoor(doorId, world.getInstanceId());
+						}
 						for (int doorId : FIRST_ROUTE_DOORS)
-							openDoor(doorId, world.instanceId);
+						{
+							openDoor(doorId, world.getInstanceId());
+						}
 						for (int doorId : SECOND_ROUTE_DOORS)
-							openDoor(doorId, world.instanceId);
+						{
+							openDoor(doorId, world.getInstanceId());
+						}
 						for (int doorId : SECOND_ROOM_DOORS)
-							closeDoor(doorId, world.instanceId);
+						{
+							closeDoor(doorId, world.getInstanceId());
+						}
 						break;
 				}
-				world.status++;
+				world.incStatus();
 				return true;
 			}
 			finally
@@ -645,16 +785,24 @@ public class FinalEmperialTomb extends Quest
 	
 	protected void spawn(FETWorld world, int npcId, int x, int y, int z, int h, boolean addToKillTable)
 	{
-		L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.instanceId);
+		L2Npc npc = addSpawn(npcId, x, y, z, h, false, 0, false, world.getInstanceId());
 		if (addToKillTable)
+		{
 			world.npcList.add(npc);
+		}
 		npc.setIsNoRndWalk(true);
 		if (npc.isInstanceType(InstanceType.L2Attackable))
+		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
+		}
 		if (Util.contains(AI_DISABLED_MOBS, npcId))
+		{
 			npc.disableCoreAI(true);
+		}
 		if (npcId == DARK_CHOIR_PLAYER)
+		{
 			world.darkChoirPlayerCount++;
+		}
 	}
 	
 	private class DemonSpawnTask implements Runnable
@@ -669,21 +817,41 @@ public class FinalEmperialTomb extends Quest
 		@Override
 		public void run()
 		{
-			if (InstanceManager.getInstance().getWorld(_world.instanceId) != _world || _world.portraits.isEmpty())
+			if ((InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world) || _world.portraits.isEmpty())
 			{
 				if (debug)
+				{
 					_log.info("[Final Emperial Tomb] Instance is deleted or all Portraits is killed.");
+				}
 				return;
 			}
 			for (int i : _world.portraits.values())
 			{
 				if (_world.demons.size() > MAX_DEMONS)
+				{
 					break;
-				L2MonsterInstance demon = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.instanceId);
+				}
+				L2MonsterInstance demon = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.getInstanceId());
 				updateKnownList(_world, demon);
 				_world.demons.add(demon);
 			}
 			ThreadPoolManager.getInstance().scheduleGeneral(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
+		}
+	}
+	
+	private class SoulBreakingArrow implements Runnable
+	{
+		private final L2Npc _npc;
+		
+		protected SoulBreakingArrow(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
+		@Override
+		public void run()
+		{
+			_npc.setScriptValue(0);
 		}
 	}
 	
@@ -701,27 +869,38 @@ public class FinalEmperialTomb extends Quest
 		@Override
 		public void run()
 		{
-			if (InstanceManager.getInstance().getWorld(_world.instanceId) != _world)
+			if (InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world)
+			{
 				return;
+			}
 			switch (_status)
 			{
 				case 0: // new song play
 					if (_world.isVideo)
-						_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), 1000);
-					else if (_world.frintezza != null && !_world.frintezza.isDead())
 					{
-						int rnd = getRandom(100);
-						for (int i = 0; i < FRINTEZZASONGLIST.length; i++)
+						_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), 1000);
+					}
+					else if ((_world.frintezza != null) && !_world.frintezza.isDead())
+					{
+						if (_world.frintezza.getScriptValue() != 1)
 						{
-							if (rnd < FRINTEZZASONGLIST[i].chance)
+							int rnd = getRandom(100);
+							for (FrintezzaSong element : FRINTEZZASONGLIST)
 							{
-								_world.OnSong = FRINTEZZASONGLIST[i];
-								broadCastPacket(_world, new ExShowScreenMessage(FRINTEZZASONGLIST[i].songName, 2, 500));
-								broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, FRINTEZZASONGLIST[i].skill.getSkillId(), FRINTEZZASONGLIST[i].skill.getSkillLvl(), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime(), 0));
-								_world.songEffectTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 1), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime() - 10000);
-								_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), FRINTEZZASONGLIST[i].skill.getSkill().getHitTime());
-								break;
+								if (rnd < element.chance)
+								{
+									_world.OnSong = element;
+									broadCastPacket(_world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, element.songName, null));
+									broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, element.skill.getSkillId(), element.skill.getSkillLvl(), element.skill.getSkill().getHitTime(), 0));
+									_world.songEffectTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 1), element.skill.getSkill().getHitTime() - 10000);
+									_world.songTask = ThreadPoolManager.getInstance().scheduleGeneral(new SongTask(_world, 0), element.skill.getSkill().getHitTime());
+									break;
+								}
 							}
+						}
+						else
+						{
+							ThreadPoolManager.getInstance().scheduleGeneral(new SoulBreakingArrow(_world.frintezza), 35000);
 						}
 					}
 					break;
@@ -729,29 +908,39 @@ public class FinalEmperialTomb extends Quest
 					_world.songEffectTask = null;
 					L2Skill skill = _world.OnSong.effectSkill.getSkill();
 					if (skill == null)
+					{
 						return;
+					}
 					
-					if (_world.frintezza != null && !_world.frintezza.isDead() && _world.activeScarlet != null && !_world.activeScarlet.isDead())
+					if ((_world.frintezza != null) && !_world.frintezza.isDead() && (_world.activeScarlet != null) && !_world.activeScarlet.isDead())
 					{
 						List<L2Character> targetList = new FastList<>();
-						if (skill.getSkillType() == L2SkillType.STUN || skill.getSkillType() == L2SkillType.DEBUFF)
+						if ((skill.getSkillType() == L2SkillType.STUN) || (skill.getSkillType() == L2SkillType.DEBUFF))
 						{
-							for (int objId : _world.allowed)
+							for (int objId : _world.getAllowed())
 							{
 								L2PcInstance player = L2World.getInstance().getPlayer(objId);
-								if (player != null && player.isOnline() && player.getInstanceId() == _world.instanceId)
+								if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 								{
 									if (!player.isDead())
+									{
 										targetList.add(player);
-									if (player.getPet() != null && !player.getPet().isDead())
-										targetList.add(player.getPet());
+									}
+									if (player.hasSummon() && !player.getSummon().isDead())
+									{
+										targetList.add(player.getSummon());
+									}
 								}
 							}
 						}
 						else
+						{
 							targetList.add(_world.activeScarlet);
+						}
 						if (targetList.size() > 0)
+						{
 							_world.frintezza.doCast(skill, targetList.get(0), targetList.toArray(new L2Character[targetList.size()]));
+						}
 					}
 					break;
 				case 2: // finish morph
@@ -785,35 +974,43 @@ public class FinalEmperialTomb extends Quest
 					break;
 				case 1:
 					for (int doorId : FIRST_ROOM_DOORS)
-						closeDoor(doorId, _world.instanceId);
+					{
+						closeDoor(doorId, _world.getInstanceId());
+					}
 					for (int doorId : FIRST_ROUTE_DOORS)
-						closeDoor(doorId, _world.instanceId);
+					{
+						closeDoor(doorId, _world.getInstanceId());
+					}
 					for (int doorId : SECOND_ROOM_DOORS)
-						closeDoor(doorId, _world.instanceId);
+					{
+						closeDoor(doorId, _world.getInstanceId());
+					}
 					for (int doorId : SECOND_ROUTE_DOORS)
-						closeDoor(doorId, _world.instanceId);
-					addSpawn(29061, -87904, -141296, -9168, 0, false, 0, false, _world.instanceId);
+					{
+						closeDoor(doorId, _world.getInstanceId());
+					}
+					addSpawn(29061, -87904, -141296, -9168, 0, false, 0, false, _world.getInstanceId());
 					break;
 				case 2:
-					_world.frintezzaDummy = addSpawn(29052, -87784, -155083, -9087, 16048, false, 0, false, _world.instanceId);
+					_world.frintezzaDummy = addSpawn(29052, -87784, -155083, -9087, 16048, false, 0, false, _world.getInstanceId());
 					_world.frintezzaDummy.setIsInvul(true);
 					_world.frintezzaDummy.setIsImmobilized(true);
 					
-					_world.overheadDummy = addSpawn(29052, -87784, -153298, -9175, 16384, false, 0, false, _world.instanceId);
+					_world.overheadDummy = addSpawn(29052, -87784, -153298, -9175, 16384, false, 0, false, _world.getInstanceId());
 					_world.overheadDummy.setIsInvul(true);
 					_world.overheadDummy.setIsImmobilized(true);
 					_world.overheadDummy.setCollisionHeight(600);
 					broadCastPacket(_world, new NpcInfo(_world.overheadDummy, null));
 					
-					_world.portraitDummy1 = addSpawn(29052, -89566, -153168, -9165, 16048, false, 0, false, _world.instanceId);
+					_world.portraitDummy1 = addSpawn(29052, -89566, -153168, -9165, 16048, false, 0, false, _world.getInstanceId());
 					_world.portraitDummy1.setIsImmobilized(true);
 					_world.portraitDummy1.setIsInvul(true);
 					
-					_world.portraitDummy3 = addSpawn(29052, -86004, -153168, -9165, 16048, false, 0, false, _world.instanceId);
+					_world.portraitDummy3 = addSpawn(29052, -86004, -153168, -9165, 16048, false, 0, false, _world.getInstanceId());
 					_world.portraitDummy3.setIsImmobilized(true);
 					_world.portraitDummy3.setIsInvul(true);
 					
-					_world.scarletDummy = addSpawn(29053, -87784, -153298, -9175, 16384, false, 0, false, _world.instanceId);
+					_world.scarletDummy = addSpawn(29053, -87784, -153298, -9175, 16384, false, 0, false, _world.getInstanceId());
 					_world.scarletDummy.setIsInvul(true);
 					_world.scarletDummy.setIsImmobilized(true);
 					
@@ -825,15 +1022,15 @@ public class FinalEmperialTomb extends Quest
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy.getObjectId(), 0, 75, -89, 0, 100, 0, 0, 1, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy.getObjectId(), 300, 90, -10, 6500, 7000, 0, 0, 1, 0));
 					
-					_world.frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, _world.instanceId);
+					_world.frintezza = (L2GrandBossInstance) addSpawn(FRINTEZZA, -87780, -155086, -9080, 16384, false, 0, false, _world.getInstanceId());
 					_world.frintezza.setIsImmobilized(true);
 					_world.frintezza.setIsInvul(true);
 					_world.frintezza.disableAllSkills();
 					updateKnownList(_world, _world.frintezza);
 					
-					for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
+					for (int[] element : PORTRAIT_SPAWNS)
 					{
-						L2MonsterInstance demon = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0] + 2, PORTRAIT_SPAWNS[i][5], PORTRAIT_SPAWNS[i][6], PORTRAIT_SPAWNS[i][7], PORTRAIT_SPAWNS[i][8], false, 0, false, _world.instanceId);
+						L2MonsterInstance demon = (L2MonsterInstance) addSpawn(element[0] + 2, element[5], element[6], element[7], element[8], false, 0, false, _world.getInstanceId());
 						demon.setIsImmobilized(true);
 						demon.disableAllSkills();
 						updateKnownList(_world, demon);
@@ -915,7 +1112,7 @@ public class FinalEmperialTomb extends Quest
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 18), 5000);
 					break;
 				case 18:
-					_world.activeScarlet = (L2GrandBossInstance) addSpawn(29046, -87789, -153295, -9176, 16384, false, 0, false, _world.instanceId);
+					_world.activeScarlet = (L2GrandBossInstance) addSpawn(29046, -87789, -153295, -9176, 16384, false, 0, false, _world.getInstanceId());
 					_world.activeScarlet.setRHandId(FIRST_SCARLET_WEAPON);
 					_world.activeScarlet.setIsInvul(true);
 					_world.activeScarlet.setIsImmobilized(true);
@@ -937,7 +1134,7 @@ public class FinalEmperialTomb extends Quest
 				case 21:
 					for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
 					{
-						L2MonsterInstance portrait = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, _world.instanceId);
+						L2MonsterInstance portrait = (L2MonsterInstance) addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, _world.getInstanceId());
 						updateKnownList(_world, portrait);
 						_world.portraits.put(portrait, i);
 					}
@@ -996,9 +1193,13 @@ public class FinalEmperialTomb extends Quest
 					_world.scarlet_z = _world.activeScarlet.getZ();
 					_world.scarlet_h = _world.activeScarlet.getHeading();
 					if (_world.scarlet_h < 32768)
+					{
 						_world.scarlet_a = Math.abs(180 - (int) (_world.scarlet_h / 182.044444444));
+					}
 					else
+					{
 						_world.scarlet_a = Math.abs(540 - (int) (_world.scarlet_h / 182.044444444));
+					}
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet.getObjectId(), 250, _world.scarlet_a, 12, 0, 1000, 0, 0, 1, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet.getObjectId(), 250, _world.scarlet_a, 12, 0, 10000, 0, 0, 1, 0));
 					ThreadPoolManager.getInstance().scheduleGeneral(new IntroTask(_world, 28), 500);
@@ -1014,7 +1215,7 @@ public class FinalEmperialTomb extends Quest
 					_world.activeScarlet = null;
 					break;
 				case 30:
-					_world.activeScarlet = (L2GrandBossInstance) addSpawn(SCARLET2, _world.scarlet_x, _world.scarlet_y, _world.scarlet_z, _world.scarlet_h, false, 0, false, _world.instanceId);
+					_world.activeScarlet = (L2GrandBossInstance) addSpawn(SCARLET2, _world.scarlet_x, _world.scarlet_y, _world.scarlet_z, _world.scarlet_h, false, 0, false, _world.getInstanceId());
 					_world.activeScarlet.setIsInvul(true);
 					_world.activeScarlet.setIsImmobilized(true);
 					_world.activeScarlet.disableAllSkills();
@@ -1063,10 +1264,10 @@ public class FinalEmperialTomb extends Quest
 		
 		private void stopPc()
 		{
-			for (int objId : _world.allowed)
+			for (int objId : _world.getAllowed())
 			{
 				L2PcInstance player = L2World.getInstance().getPlayer(objId);
-				if (player != null && player.isOnline() && player.getInstanceId() == _world.instanceId)
+				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.abortAttack();
 					player.abortCast();
@@ -1081,10 +1282,10 @@ public class FinalEmperialTomb extends Quest
 		
 		private void startPc()
 		{
-			for (int objId : _world.allowed)
+			for (int objId : _world.getAllowed())
 			{
 				L2PcInstance player = L2World.getInstance().getPlayer(objId);
-				if (player != null && player.isOnline() && player.getInstanceId() == _world.instanceId)
+				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.enableAllSkills();
 					player.setIsImmobilized(false);
@@ -1094,15 +1295,19 @@ public class FinalEmperialTomb extends Quest
 		
 		private void sendPacketX(L2GameServerPacket packet1, L2GameServerPacket packet2, int x)
 		{
-			for (int objId : _world.allowed)
+			for (int objId : _world.getAllowed())
 			{
 				L2PcInstance player = L2World.getInstance().getPlayer(objId);
-				if (player != null && player.isOnline() && player.getInstanceId() == _world.instanceId)
+				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					if (player.getX() < x)
+					{
 						player.sendPacket(packet1);
+					}
 					else
+					{
 						player.sendPacket(packet2);
+					}
 				}
 			}
 		}
@@ -1122,14 +1327,18 @@ public class FinalEmperialTomb extends Quest
 		@Override
 		public void run()
 		{
-			if (InstanceManager.getInstance().getWorld(_world.instanceId) != _world)
+			if (InstanceManager.getInstance().getWorld(_world.getInstanceId()) != _world)
+			{
 				return;
+			}
 			switch (_status)
 			{
 				case 0:
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(_world, 1), 2000);
 					for (int doorId : FIRST_ROOM_DOORS)
-						openDoor(doorId, _world.instanceId);
+					{
+						openDoor(doorId, _world.getInstanceId());
+					}
 					break;
 				case 1:
 					addAggroToMobs();
@@ -1137,7 +1346,9 @@ public class FinalEmperialTomb extends Quest
 				case 2:
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(_world, 3), 100);
 					for (int doorId : SECOND_ROOM_DOORS)
-						openDoor(doorId, _world.instanceId);
+					{
+						openDoor(doorId, _world.getInstanceId());
+					}
 					break;
 				case 3:
 					addAggroToMobs();
@@ -1150,15 +1361,19 @@ public class FinalEmperialTomb extends Quest
 		
 		private void addAggroToMobs()
 		{
-			L2PcInstance target = L2World.getInstance().getPlayer(_world.allowed.get(getRandom(_world.allowed.size())));
-			if (target == null || target.getInstanceId() != _world.instanceId || target.isDead() || target.isFakeDeath())
-				for (int objId : _world.allowed)
+			L2PcInstance target = L2World.getInstance().getPlayer(_world.getAllowed().get(getRandom(_world.getAllowed().size())));
+			if ((target == null) || (target.getInstanceId() != _world.getInstanceId()) || target.isDead() || target.isFakeDeath())
+			{
+				for (int objId : _world.getAllowed())
 				{
 					target = L2World.getInstance().getPlayer(objId);
-					if (target != null && target.getInstanceId() == _world.instanceId && !target.isDead() && !target.isFakeDeath())
+					if ((target != null) && (target.getInstanceId() == _world.getInstanceId()) && !target.isDead() && !target.isFakeDeath())
+					{
 						break;
+					}
 					target = null;
 				}
+			}
 			for (L2Npc mob : _world.npcList)
 			{
 				mob.setRunning();
@@ -1168,7 +1383,9 @@ public class FinalEmperialTomb extends Quest
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 				else
+				{
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MOVE_TO_CENTER);
+				}
 			}
 		}
 	}
@@ -1180,62 +1397,92 @@ public class FinalEmperialTomb extends Quest
 		reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 		// if time is >= RESET_HOUR - roll to the next day
 		if (reenter.getTimeInMillis() <= System.currentTimeMillis())
+		{
 			reenter.add(Calendar.DAY_OF_MONTH, 1);
+		}
 		if (reenter.get(Calendar.DAY_OF_WEEK) <= RESET_DAY_1)
+		{
 			while (reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_1)
+			{
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
+			}
+		}
 		else
+		{
 			while (reenter.get(Calendar.DAY_OF_WEEK) != RESET_DAY_2)
+			{
 				reenter.add(Calendar.DAY_OF_MONTH, 1);
+			}
+		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 		sm.addInstanceName(INSTANCEID);
 		
 		// set instance reenter time for all allowed players
-		for (int objectId : world.allowed)
+		for (int objectId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
-			if (player != null && player.isOnline())
+			if ((player != null) && player.isOnline())
+			{
 				player.sendPacket(sm);
+			}
 		}
 	}
 	
 	protected void broadCastPacket(FETWorld world, L2GameServerPacket packet)
 	{
-		for (int objId : world.allowed)
+		for (int objId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objId);
-			if (player != null && player.isOnline() && player.getInstanceId() == world.instanceId)
+			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
+			{
 				player.sendPacket(packet);
+			}
 		}
 	}
 	
 	protected void updateKnownList(FETWorld world, L2Npc npc)
 	{
 		Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
-		for (int objId : world.allowed)
+		for (int objId : world.getAllowed())
 		{
 			L2PcInstance player = L2World.getInstance().getPlayer(objId);
-			if (player != null && player.isOnline() && player.getInstanceId() == world.instanceId)
+			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
+			{
 				npcKnownPlayers.put(player.getObjectId(), player);
+			}
 		}
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof FETWorld)
 		{
-			FETWorld world = (FETWorld) tmpworld;
-			if (npc.getNpcId() == SCARLET1 && world.status == 3 && npc.getCurrentHp() < npc.getMaxHp() * 0.80)
+			final FETWorld world = (FETWorld) tmpworld;
+			if ((npc.getNpcId() == SCARLET1) && (world.getStatus() == 3) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
 			{
 				controlStatus(world);
 			}
-			else if (npc.getNpcId() == SCARLET1 && world.status == 4 && npc.getCurrentHp() < npc.getMaxHp() * 0.20)
+			else if ((npc.getNpcId() == SCARLET1) && (world.getStatus() == 4) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
 			{
 				controlStatus(world);
+			}
+			if (skill != null)
+			{
+				// When Dewdrop of Destruction is used on Portraits they suicide.
+				if (Util.contains(PORTRAITS, npc.getNpcId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+				{
+					npc.doDie(attacker);
+				}
+				else if ((npc.getNpcId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
+				{
+					npc.setScriptValue(1);
+					npc.setTarget(null);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				}
 			}
 		}
 		return null;
@@ -1252,7 +1499,7 @@ public class FinalEmperialTomb extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		if (tmpworld instanceof FETWorld)
@@ -1262,7 +1509,9 @@ public class FinalEmperialTomb extends Quest
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 0), 2000);
 				if (debug)
+				{
 					_log.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
+				}
 			}
 			else if (npc.getNpcId() == DARK_CHOIR_PLAYER)
 			{
@@ -1271,17 +1520,29 @@ public class FinalEmperialTomb extends Quest
 				{
 					ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 2), 2000);
 					if (debug)
+					{
 						_log.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");
+					}
 				}
 			}
 			else if (npc.getNpcId() == SCARLET2)
 			{
 				controlStatus(world);
 			}
-			else if (world.status <= 2)
+			else if (world.getStatus() <= 2)
 			{
+				if (npc.getNpcId() == HALL_KEEPER_CAPTAIN)
+				{
+					if (getRandom(100) < 5)
+					{
+						((L2MonsterInstance) npc).dropItem(player, DEWDROP_OF_DESTRUCTION_ITEM_ID, 1);
+					}
+				}
+				
 				if (checkKillProgress(npc, world))
+				{
 					controlStatus(world);
+				}
 			}
 			else if (world.demons.contains(npc))
 			{
@@ -1299,9 +1560,11 @@ public class FinalEmperialTomb extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		int npcId = npc.getNpcId();
-		QuestState st = player.getQuestState(qn);
+		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		if (npcId == GUIDE)
 		{
 			enterInstance(player, "FinalEmperialTomb.xml", ENTER_TELEPORT);
@@ -1321,26 +1584,19 @@ public class FinalEmperialTomb extends Quest
 		super(questId, name, descr);
 		
 		load();
-		addStartNpc(GUIDE);
-		addTalkId(GUIDE);
-		addStartNpc(CUBE);
-		addTalkId(CUBE);
-		addKillId(HALL_ALARM);
-		addKillId(DARK_CHOIR_PLAYER);
-		addAttackId(SCARLET1);
-		addKillId(SCARLET2);
+		addAttackId(SCARLET1, FRINTEZZA);
+		addAttackId(PORTRAITS);
+		addStartNpc(GUIDE, CUBE);
+		addTalkId(GUIDE, CUBE);
+		addKillId(HALL_ALARM, HALL_KEEPER_CAPTAIN, DARK_CHOIR_PLAYER, SCARLET2);
 		addKillId(PORTRAITS);
 		addKillId(DEMONS);
-		for (int mobId : _mustKillMobsId)
-		{
-			addKillId(mobId);
-		}
-		addSpellFinishedId(18333);
+		addKillId(_mustKillMobsId);
+		addSpellFinishedId(HALL_KEEPER_SUICIDAL_SOLDIER);
 	}
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
-		new FinalEmperialTomb(-1, qn, "instances");
+		new FinalEmperialTomb(-1, FinalEmperialTomb.class.getSimpleName(), "instances");
 	}
 }

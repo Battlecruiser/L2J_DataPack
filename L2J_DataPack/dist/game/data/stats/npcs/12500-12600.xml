@@ -1,0 +1,213 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="12526" templateId="12526" clientName="Wind Strider" serverName="wind_strider" level="55" type="pet">
+		<agro_range>0</agro_range>
+		<clan_help_range>0</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="31" special="31" />
+		</collision>
+		<corpse_time>86400</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>70853089</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="80" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.25" skill_factor="-1" />
+		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>wind_strider</ai>
+			<ai_skill name="PhysicalSpecial" id="4710" level="1" /> <!-- Wild Stun -->
+			<ai_skill name="Buff" id="4711" level="1" /> <!-- Wild Defense -->
+		</npc_ai>
+		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+		<race>DRAGON</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4715" level="1" /> <!-- Wind Dragon -->
+		</skill_list>
+		<shots_count soul="2" spirit="2" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Pet</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="12527" templateId="12527" clientName="Star Strider" serverName="star_strider" level="55" type="pet">
+		<agro_range>0</agro_range>
+		<clan_help_range>0</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="31" special="31" />
+		</collision>
+		<corpse_time>86400</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>70853089</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="80" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.25" skill_factor="-1" />
+		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>star_strider</ai>
+			<ai_skill name="DDMagic" id="4712" level="1" /> <!-- Bright Burst -->
+			<ai_skill name="Heal" id="4713" level="1" /> <!-- Bright Heal -->
+		</npc_ai>
+		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+		<race>DRAGON</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4716" level="1" /> <!-- Star Dragon -->
+		</skill_list>
+		<shots_count soul="2" spirit="2" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Pet</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="12528" templateId="12528" clientName="Twilight Strider" serverName="twilight_strider" level="55" type="pet">
+		<agro_range>0</agro_range>
+		<clan_help_range>0</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="31" special="31" />
+		</collision>
+		<corpse_time>86400</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>70853089</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="80" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.25" skill_factor="-1" />
+		<base pAtk="388.11142" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="265.02979" pDef="223.6362" mDef="163.64727" accuracy="4.75" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>twilight_strider</ai>
+		</npc_ai>
+		<org hp="1673.05473" hp_regen="6.5" mp="889.8" mp_regen="2.4" />
+		<race>DRAGON</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4714" level="1" /> <!-- Twilight Dragon -->
+		</skill_list>
+		<shots_count soul="2" spirit="2" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Pet</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="12564" templateId="12564" clientName="Sin Eater" serverName="sin_eater" level="15" type="pet">
+		<agro_range>0</agro_range>
+		<clan_help_range>0</clan_help_range>
+		<collision>
+			<radius normal="10" special="10" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>86400</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>254330</exp>
+		<speed>
+			<run ground="125" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.34" skill_factor="-1" />
+		<base pAtk="29.61691" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="20.22451" pDef="73.55216" mDef="53.82228" accuracy="4.75" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="1" int="21" dex="30" wit="20" con="1" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sin_eater</ai>
+		</npc_ai>
+		<org hp="424.2" hp_regen="7.2513" mp="149.2" mp_regen="1.2" />
+		<race>FAIRY</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4121" level="1" /> <!-- Summoned Monster Magic Protection -->
+		</skill_list>
+		<shots_count soul="2" spirit="2" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Pet</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>

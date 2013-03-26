@@ -11,7 +11,9 @@
 									<xs:sequence minOccurs="1" maxOccurs="1">
 										<xs:element name="extra" minOccurs="0" maxOccurs="1">
 											<xs:complexType>
-												<xs:attribute name="enchant_level" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="augmentation_id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="augmentation_skill_id" type="xs:positiveInteger" use="required" />
+												<xs:attribute name="augmentation_skill_lvl" type="xs:positiveInteger" use="required" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

@@ -244,8 +244,8 @@ class Quest (JQuest) :
         st.giveItems(Mi_Drake_Eggs,4)
         st.giveItems(Bl_Wyrm_Eggs,3)
         st.set("Lutz","2")
-      st.addSpawn(27178,112268,112761,-2770,120000)
-      st.addSpawn(27178,112234,112705,-2770,120000)
+      st.addSpawn(27178,65170,109503,-3671,120000)
+      st.addSpawn(27178,65219,109463,-3676,120000)
 # Events Fritz
     elif event == "30761-03.htm":
       fritz = st.getInt("Fritz")
@@ -253,8 +253,8 @@ class Quest (JQuest) :
         htmltext = "30761-02.htm"
         st.giveItems(Bl_Wyrm_Eggs,3)
         st.set("Fritz","2")
-      st.addSpawn(27178,103841,116809,-3025,120000)
-      st.addSpawn(27178,103848,116910,-3020,120000)
+      st.addSpawn(27178,64728,115954,-3628,120000)
+      st.addSpawn(27178,64763,115871,-3631,120000)
 # Events Kusto
     elif event == "30512-03.htm":
       st.takeItems(Brooch,-1)

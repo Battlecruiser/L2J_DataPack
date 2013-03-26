@@ -2,21 +2,21 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5100" levels="1" name="Cancel Capture B">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5101" levels="1" name="Cancel Capture C">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
 	</skill>
 	<skill id="5102" levels="1" name="Cancel All Capture">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
@@ -29,65 +29,77 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
 		<!-- Not Used Anymore -->
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="physical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5105" levels="3" name="Spell Force">
 		<!-- Not Used Anymore -->
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="magical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="seizure_a" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvl" abnormalType="seizure_a">
+			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvls" abnormalType="seizure_a">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5107" levels="4" name="Capture B State">
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="seizure_b" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvl" abnormalType="seizure_b">
+			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvls" abnormalType="seizure_b">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5108" levels="4" name="Capture C State">
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="seizure_c" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvl" abnormalType="seizure_c">
+			<effect count="0x7fffffff" name="Fusion" abnormalTime="600" val="15" abnormalLvl="#abnormalLvls" abnormalType="seizure_c">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
@@ -102,7 +114,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5110" levels="1" name="Cannon Fodder">
 		<!-- Confirmed CT2.5 -->
@@ -116,12 +128,18 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="68" />
 		<set name="reuseDelay" val="10500" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
-		<set name="target" val="TARGET_AREA" />
-		<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+		<set name="offensive" val="true" />
+		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
-			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			<and>
+				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			</and>
+			<not>
+				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="5111" levels="1" name="Big Bang">
@@ -136,29 +154,38 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="68" />
 		<set name="reuseDelay" val="10500" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
-		<set name="target" val="TARGET_AREA" />
-		<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+		<set name="offensive" val="true" />
+		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
-			<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			<and>
+				<!-- FIXME: This condition is a hack fix, until support for retail target system is done -->
+				<target npcId="19210001,19210002,19210003,19210004,20160001,20160002,20160007,20160008,20160009,20220001,20220002,20220003,20220004,22130001,22130002,22130004,22130005,22190001,22190002,22190003,22190004,23220001,23220002,23220003,23220004,23250001,23250002,23250003,23250004,24160009,24160010,24160021,24160022,24180001,24180002,24180006,24180011" />
+			</and>
+			<not>
+				<player insideZoneId="51101, 51102, 51103, 51104, 51105, 51106, 51108, 51108, 51109" />
+			</not>
 		</cond>
 	</skill>
 	<skill id="5112" levels="12" name="Stun">
 		<!-- Lvl 1-12 - Temporarily Immobilized and in a state of shock. -->
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="50" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="200" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -172,30 +199,35 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="150" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="150" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="6000" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="5114" levels="12" name="Hold">
 		<!-- Lvl 1-12 - Temporarily Immobilized. -->
 		<table name="#mpConsume"> 7 10 14 18 23 28 33 35 37 38 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="power" val="80" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="200" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -212,7 +244,8 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="80" />
 		<set name="skillType" val="AGGDAMAGE" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TargetMe" val="0" />
 		</for>
@@ -221,15 +254,18 @@
 		<!-- Summon Attractive Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 62 66 70 74 76 78 80 81 82 83 84 85 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -237,76 +273,85 @@
 	</skill>
 	<skill id="5117" levels="1" name="Stun">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="84" />
 		<set name="magicLvl" val="90" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="300" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="800" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="829" />
 		<set name="isDebuff" val="true" />
 		<set name="aggroPoints" val="100" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" effectType="STUN" />
+			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="30" />
 		</for>
 	</skill>
 	<skill id="5118" levels="1" name="Cancel Sailren Use">
 		<!-- CT2.5 retail confirmed -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="90" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="300" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="300" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="2500" />
-		<set name="skillType" val="CANCEL" />
 		<set name="operateType" val="A1" />
+		<set name="pvp" val="true" />
 		<set name="maxNegated" val="5" />
 		<set name="aggroPoints" val="100" />
+		<for>
+			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+		</for>
 	</skill>
 	<skill id="5119" levels="1" name="Bleed">
 		<!-- CT2.5 retail confirmed -->
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="84" />
 		<set name="power" val="2487" />
-		<set name="target" val="TARGET_FRONT_AREA" />
-		<set name="skillScope" val="fan;80;150" />
-		<set name="skillRadius" val="80" />
+		<set name="targetType" val="FRONT_AREA" />
+		<set name="affectRange" val="80" />
 		<set name="reuseDelay" val="17000" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="fanRange" val="0,0,80,150" />
 		<set name="nextActionAttack" val="true" />
 		<set name="aggroPoints" val="351" />
 	</skill>
 	<skill id="5120" levels="1" name="Stun">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="magicLvl" val="80" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="5" />
 		<set name="power" val="703" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="40" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5121" levels="1" name="Production - Corpse Revival">
@@ -314,13 +359,15 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5122" levels="1" name="Sailren Use Might">
 		<!-- CT2.5 retail confirmed -->
+		<set name="abnormalLvl" val="99" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="38" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -331,9 +378,11 @@
 		</for>
 	</skill>
 	<skill id="5123" levels="1" name="Maximum Defense">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -347,14 +396,16 @@
 	<skill id="5124" levels="1" name="Anti-Music">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -364,9 +415,11 @@
 		</for>
 	</skill>
 	<skill id="5126" levels="1" name="Maximum Recovery">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -377,12 +430,14 @@
 		</for>
 	</skill>
 	<skill id="5127" levels="1" name="Recover Force">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="CONT" /> <!-- FIXME: This is not retail like -->
-		<set name="target" val="TARGET_AURA" /> <!-- FIXME: Aura Friendly ? -->
+		<set name="targetType" val="AURA" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="Buff" abnormalTime="7" val="0" abnormalLvl="1" abnormalType="combination">
 				<mul order="0x30" stat="pAtk" val="1.2" />
@@ -391,9 +446,11 @@
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -408,9 +465,11 @@
 		</for>
 	</skill>
 	<skill id="5129" levels="1" name="Smokescreen">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="combination" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A2" />
 		<for>
@@ -422,31 +481,31 @@
 	</skill>
 	<skill id="5130" levels="1" name="Volcano">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5131" levels="1" name="Tsunami">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5132" levels="1" name="Cyclone">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5133" levels="1" name="Gehenna">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5134" levels="1" name="Anti-Summoning Field">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="CONT" />
 		<set name="operateType" val="A1" />
 	</skill>
@@ -464,8 +523,9 @@
 		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="nextActionAttack" val="true" />
 	</skill>
 	<skill id="5136" levels="1" name="Spin Slash">
@@ -479,17 +539,20 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4132" />
 		<set name="reuseDelay" val="17000" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5137" levels="1" name="Hold of King">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Feline King Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="mpInitialConsume" val="64" />
 		<set name="mpConsume" val="258" />
@@ -498,9 +561,10 @@
 		<set name="hitTime" val="4000" />
 		<set name="reuseDelay" val="20000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="ROOT" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -509,13 +573,15 @@
 	<skill id="5138" levels="1" name="Whiplash">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="overHit" val="true" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="coolTime" val="720" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="214" />
 		<set name="operateType" val="A2" />
@@ -523,17 +589,19 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="nextActionAttack" val="true" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" effectType="STUN" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" abnormalTime="9" val="0" effectPower="60" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5139" levels="1" name="Tidal Wave">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Magnus the Unicorn Skill -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -547,17 +615,20 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="228" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5140" levels="1" name="Dark Curse">
 		<!-- CT2.5 retail confirmed -->
 		<!-- Summon Spectral Lord Skill -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="lvlDepend" val="1" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="overHit" val="true" />
 		<set name="mpInitialConsume" val="64" />
@@ -565,10 +636,11 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="60" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="POISON" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="327" abnormalVisualEffect="poison" abnormalLvl="3" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
@@ -590,8 +662,9 @@
 		<set name="power" val="8264" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5142" levels="1" name="Corpse Kaboom">
 		<!-- CT2.5 retail confirmed -->
@@ -606,9 +679,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="228" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillRadius" val="150" />
+		<set name="affectRange" val="150" />
 		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_AREA_CORPSE_MOB" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="AREA_CORPSE_MOB" />
 	</skill>
 	<skill id="5143" levels="1" name="Sailren Use Blow">
 		<!-- Confirmed CT2.5 -->
@@ -617,10 +691,11 @@
 		<set name="mpConsume" val="84" />
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="power" val="39544" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="660" />
 		<set name="skillType" val="BLOW" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -635,18 +710,22 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="skillType" val="DEBUFF" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5145" levels="1" name="Day of Doom">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="multi_debuff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="canBeReflected" val="false" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="multi_debuff">
@@ -666,30 +745,36 @@
 		</for>
 	</skill>
 	<skill id="5146" levels="10" name="Heal">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#amount"> 308 337 365 393 421 448 474 498 520 552 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="reuseDelay" val="30000" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="5147" levels="10" name="Blessed Body">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#maxHp"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="300000" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<add order="0x40" stat="maxHp" val="#maxHp" />
@@ -697,46 +782,57 @@
 		</for>
 	</skill>
 	<skill id="5148" levels="10" name="Prayer">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#gainHp"> 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<mul order="0x30" stat="gainHp" val="1.04" />
+				<mul order="0x30" stat="gainHp" val="#gainHp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5149" levels="10" name="Recharge">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#amount"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="6000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="5150" levels="10" name="Blessed Soul">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#maxMp"> 16 32 48 68 80 96 112 128 144 160 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<add order="0x40" stat="maxMp" val="#maxMp" />
@@ -744,96 +840,118 @@
 		</for>
 	</skill>
 	<skill id="5151" levels="10" name="Mana Gain">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="gainMp" val="1" />
+				<mul order="0x30" stat="gainMp" val="1.01" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5152" levels="10" name="Ritual">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#amount"> 264 289 313 337 361 384 406 427 446 473 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="5000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="5153" levels="10" name="Cheer">
-		<table name="#power"> 24 48 72 96 120 144 168 192 216 240 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#maxCp"> 24 48 72 96 120 144 168 192 216 240 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="maxCp" val="#power" />
+				<add order="0x40" stat="maxCp" val="#maxCp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5154" levels="10" name="Might">
-		<table name="#value"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pAtk"> 23.64 27.96 32.76 37.98 43.62 49.62 55.86 62.28 68.88 79.74 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="pAtk" val="#value" />
+				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5156" levels="10" name="Empower">
-		<table name="#value"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mAtk"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="mAtk" val="#value" />
+				<add order="0x40" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5157" levels="10" name="Duel Might">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="1500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -842,54 +960,67 @@
 		</for>
 	</skill>
 	<skill id="5158" levels="10" name="Shield">
-		<table name="#value"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pDef"> 30.2 33.72 37.4 41.28 45.32 49.52 53.88 58.32 62.88 70.6 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="pDef" val="#value" />
+				<add order="0x40" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5159" levels="10" name="Magic Barrier">
-		<table name="#value"> 37 40 44 48 52 56 61 68 70 77 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mDef"> 37 40 44 48 52 56 61 65 70 77 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="mDef" val="#value" />
+				<add order="0x40" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5160" levels="10" name="Duel Weakness">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="1500" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pvp_dmg_down" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1500" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pvp_dmg_down">
 				<mul order="0x30" stat="pvpPhysDmg" val="0.95" />
@@ -898,50 +1029,62 @@
 		</for>
 	</skill>
 	<skill id="5161" levels="10" name="Agility">
-		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#rEvas"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="rEvas" val="#rate" />
+				<add order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5162" levels="10" name="Guidance">
-		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#accCombat"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="accCombat" val="#rate" />
+				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5163" levels="10" name="Focus">
-		<table name="#rCrit"> 0.05 0.05 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#rCrit"> 0.05 0.05 0.05 0.1 0.1 0.1 0.15 0.15 0.15 0.2 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
@@ -949,54 +1092,65 @@
 		</for>
 	</skill>
 	<skill id="5164" levels="10" name="Wild Magic">
-		<table name="#rate"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mCritRate"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="300000" />
-		<set name="target" val="TARGET_SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="4000" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="mCritRate" val="#rate" />
+				<add order="0x40" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5165" levels="10" name="Charm">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="180000" />
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="skillType" val="AGGREDUCE" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1500" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="180000" />
+		<set name="skillType" val="AGGREDUCE" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5166" levels="10" name="Slow">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="30000" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1004,20 +1158,25 @@
 		</for>
 	</skill>
 	<skill id="5167" levels="10" name="Winter">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
@@ -1025,241 +1184,302 @@
 		</for>
 	</skill>
 	<skill id="5168" levels="10" name="Stun">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="reuseDelay" val="30000" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="STUN" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5169" levels="10" name="Hold">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="root_magically">
+				<sub order="0x40" stat="rootVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5170" levels="10" name="Sleep">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="SLEEP" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="sleep" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="SLEEP" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
-			<effect name="Sleep" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="sleep" />
+			<effect name="Sleep" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="sleep">
+				<sub order="0x40" stat="sleepVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5171" levels="10" name="Paralyze">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
 		</for>
 	</skill>
 	<skill id="5172" levels="10" name="Medusa">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_stone" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
+			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="turn_stone" />
 		</for>
 	</skill>
 	<skill id="5173" levels="10" name="Fear">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="FEAR" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="FEAR" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect count="5" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
 		</for>
 	</skill>
 	<skill id="5174" levels="10" name="Poison">
-		<table name="#dmg"> 123 123 150 150 150 174 174 174 189 189 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<table name="#dot"> 123 123 150 150 150 174 174 174 189 189 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="poison" abnormalVisualEffect="poison" />
+			<!-- 41 41 50 50 50 58 58 58 63 63HP * 3 during 30 seconds -->
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="poison" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
-		<table name="#dmg"> 132 132 162 162 162 186 186 186 201 201 </table>
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
+		<table name="#dot"> 132 132 162 162 162 186 186 186 201 201 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#abnormalLvl"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="CON" />
-		<set name="nextActionAttack" val="true" />
-		<set name="skillType" val="BLEED" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dmg" abnormalLvl="#abnormalLvl" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<!-- 44 44 54 54 54 62 62 62 67 67HP * 3 during 20 seconds -->
+			<effect count="7" name="DamOverTime" abnormalTime="3" val="#dot" abnormalLvl="#abnormalLvls" abnormalType="bleeding" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence" />
 		</for>
 	</skill>
 	<skill id="5177" levels="10" name="Doom">
+		<!-- Confirmed CT2.5 -->
+		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isTriggeredSkill" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="lvlDepend" val="1" />
-		<set name="reuseDelay" val="30000" />
-		<set name="target" val="TARGET_ONE" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="silence_all" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isTriggeredSkill" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="reuseDelay" val="30000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MUTE" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" />
+			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
 		</for>
 	</skill>
 	<skill id="5178" levels="1" name="NPC Burn">
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="38" />
 		<set name="power" val="116" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="200" />
+		<set name="targetType" val="AURA" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5179" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5180" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5181" levels="1" name="Raid Boss - Level 80">
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="5182" levels="1" name="Blessing of Protection">
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="pk_protect" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
@@ -1275,8 +1495,8 @@
 		<set name="flyType" val="THROW_UP" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="300" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="affectRange" val="300" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="ThrowUp" noicon="1" val="0" />
@@ -1287,11 +1507,12 @@
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
 		<set name="effectRange" val="1100" />
+		<set name="fanRange" val="0,0,1200,35" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="1200" />
-		<set name="target" val="TARGET_FRONT_AREA" />
+		<set name="affectRange" val="1200" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5185" levels="1" name="Production: Magic-type Guard">
 		<!-- Confirmed CT2.5 -->
@@ -1305,19 +1526,22 @@
 		<set name="power" val="54" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="MDAM" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="offensive" val="true" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5186" levels="2" name="Pet Haste">
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#mpConsume"> 16 19 </table>
 		<table name="#mpInitialConsume"> 4 5 </table>
 		<table name="#magicLvl"> 44 52 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 418 495 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1327,7 +1551,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -1338,10 +1562,12 @@
 		<table name="#mpConsume"> 11 16 22 27 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 </table>
 		<table name="#magicLvl"> 30 44 58 72 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
@@ -1352,7 +1578,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="#absorbDam" />
 			</effect>
 		</for>
@@ -1362,12 +1588,14 @@
 		<table name="#mpInitialConsume"> 3 5 6 </table>
 		<table name="#rate"> 1.1 1.15 1.2 </table>
 		<table name="#magicLvl"> 35 48 56 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 331 457 532 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="hp_regen_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1377,7 +1605,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="hp_regen_up">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="hp_regen_up">
 				<mul order="0x30" stat="regHp" val="#rate" />
 			</effect>
 		</for>
@@ -1386,13 +1614,15 @@
 		<table name="#mpConsume"> 16 18 19 21 24 27 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#magicLvl"> 44 48 52 56 64 72 </table>
 		<table name="#aggro"> 418 457 495 532 597 646 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1402,7 +1632,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -1411,12 +1641,14 @@
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 16 18 19 21 23 26 </table>
 		<table name="#mpInitialConsume"> 4 5 5 6 6 7 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
 		<table name="#magicLvl"> 44 48 52 56 62 70 </table>
 		<table name="#aggro"> 418 457 495 532 582 635 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="hitTime" val="4000" />
@@ -1427,7 +1659,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -1437,10 +1669,12 @@
 		<table name="#mpInitialConsume"> 4 5 6 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#accCombat"> 2 3 4 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="hit_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="hitTime" val="4000" />
@@ -1450,7 +1684,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -1459,13 +1693,15 @@
 		<table name="#mpConsume"> 8 11 </table>
 		<table name="#mpInitialConsume"> 2 3 </table>
 		<table name="#runSpd"> 20 33 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#aggro"> 204 285 </table>
 		<table name="#magicLvl"> 20 30 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1475,7 +1711,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -1485,12 +1721,14 @@
 		<table name="#mpInitialConsume"> 2 3 5 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#magicLvl"> 20 35 48 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 204 331 457 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1500,7 +1738,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -1510,12 +1748,14 @@
 		<table name="#magicLvl"> 25 44 52 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
 		<table name="#mpInitialConsume"> 3 4 5 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
 		<table name="#aggro"> 243 418 495 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
 		<set name="skillType" val="BUFF" />
@@ -1525,7 +1765,7 @@
 		<set name="effectRange" val="900" />
 		<set name="aggroPoints" val="#aggro" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="#abnormalLvls" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -1535,10 +1775,13 @@
 		<table name="#amount"> 58 92 148 219 299 380 450 477 500 525 542 550 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpInitialConsume"> 2 3 5 7 8 10 12 13 13 13 14 14 </table>
+		<table name="#abnormalLvls"> 1 1 2 2 4 6 7 7 7 7 7 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="life_force_others" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_OWNER_PET" />
+		<set name="targetType" val="OWNER_PET" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="5000" />
 		<set name="reuseDelay" val="10000" />
@@ -1553,16 +1796,19 @@
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1578,16 +1824,19 @@
 		<table name="#magicLvl"> 64 66 68 </table>
 		<table name="#mpConsume"> 24 25 26  </table>
 		<table name="#mpInitialConsume"> 6 7 7 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="lvlDepend" val="2" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="power" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1200" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1603,16 +1852,19 @@
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="7000" />
 		<set name="hitTime" val="4000" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -1628,17 +1880,20 @@
 		<table name="#mpConsume"> 48 49 51 </table>
 		<table name="#mpInitialConsume"> 12 13 13 </table>
 		<table name="#magicLvl"> 64 66 68 </table>
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="md_down" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="80" />
-		<set name="lvlDepend" val="2" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />

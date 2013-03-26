@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
@@ -33,7 +37,7 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Some parts taken from EffectWarp, which cannot be used for this case.
- * @author  Didldak
+ * @author Didldak
  */
 public class InstantJump implements ISkillHandler
 {
@@ -74,7 +78,9 @@ public class InstantJump implements ISkillHandler
 		ph += 180;
 		
 		if (ph > 360)
+		{
 			ph -= 360;
+		}
 		
 		ph = (Math.PI * ph) / 180;
 		
@@ -85,7 +91,9 @@ public class InstantJump implements ISkillHandler
 		Location loc = new Location(x, y, z);
 		
 		if (Config.GEODATA > 0)
+		{
 			loc = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
+		}
 		
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
@@ -102,9 +110,9 @@ public class InstantJump implements ISkillHandler
 				activeChar.stopSkillEffects(skill.getId());
 				skill.getEffects(target, activeChar);
 				
-				//SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-				//sm.addSkillName(skill);
-				//activeChar.sendPacket(sm);
+				// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
+				// sm.addSkillName(skill);
+				// activeChar.sendPacket(sm);
 			}
 			else
 			{

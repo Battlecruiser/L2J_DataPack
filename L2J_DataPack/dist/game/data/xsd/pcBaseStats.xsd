@@ -316,7 +316,8 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="direction" use="required">
+						<xs:attribute name="distance" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="horizontalDirection" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
 									<xs:minInclusive value="-180" />
@@ -324,9 +325,15 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="distance" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="verticalDirection" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="-180" />
+									<xs:maxInclusive value="180" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="width" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="unknown" type="xs:integer" use="required" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="baseRndDam" minOccurs="20" maxOccurs="20">

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.actionhandlers;
 
@@ -41,54 +45,57 @@ public class L2DoorInstanceAction implements IActionHandler
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
 			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
 			
-			StaticObject su = new StaticObject((L2DoorInstance)target, activeChar.isGM());
+			StaticObject su = new StaticObject((L2DoorInstance) target, activeChar.isGM());
 			activeChar.sendPacket(su);
 		}
 		else if (interact)
 		{
-			L2DoorInstance door = (L2DoorInstance)target;
-			//            MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
-			//            activeChar.sendPacket(my);
+			L2DoorInstance door = (L2DoorInstance) target;
+			// MyTargetSelected my = new MyTargetSelected(getObjectId(), activeChar.getLevel());
+			// activeChar.sendPacket(my);
 			if (target.isAutoAttackable(activeChar))
 			{
-				if (Math.abs(activeChar.getZ() - target.getZ()) < 400) // this max heigth difference might need some tweaking
+				if (Math.abs(activeChar.getZ() - target.getZ()) < 400)
+				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				}
 			}
-			else if (activeChar.getClan() != null
-					&& door.getClanHall() != null
-					&& activeChar.getClanId() == door.getClanHall().getOwnerId())
+			else if ((activeChar.getClan() != null) && (door.getClanHall() != null) && (activeChar.getClanId() == door.getClanHall().getOwnerId()))
 			{
 				if (!door.isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
-				else if(!door.getClanHall().isSiegableHall() ||
-					!((SiegableHall)door.getClanHall()).isInSiege())
+				else if (!door.getClanHall().isSiegableHall() || !((SiegableHall) door.getClanHall()).isInSiege())
 				{
 					activeChar.gatesRequest(door);
 					if (!door.getOpen())
+					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
+					}
 					else
+					{
 						activeChar.sendPacket(new ConfirmDlg(1141));
+					}
 				}
 			}
-			else if (activeChar.getClan() != null
-					&& ((L2DoorInstance)target).getFort() != null
-					&& activeChar.getClan() == ((L2DoorInstance)target).getFort().getOwnerClan()
-					&& ((L2DoorInstance)target).isOpenableBySkill()
-					&& !((L2DoorInstance)target).getFort().getSiege().getIsInProgress())
+			else if ((activeChar.getClan() != null) && (((L2DoorInstance) target).getFort() != null) && (activeChar.getClan() == ((L2DoorInstance) target).getFort().getOwnerClan()) && ((L2DoorInstance) target).isOpenableBySkill() && !((L2DoorInstance) target).getFort().getSiege().getIsInProgress())
 			{
-				if (!((L2Character)target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
+				if (!((L2Character) target).isInsideRadius(activeChar, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
 				else
 				{
-					activeChar.gatesRequest((L2DoorInstance)target);
-					if (!((L2DoorInstance)target).getOpen())
+					activeChar.gatesRequest((L2DoorInstance) target);
+					if (!((L2DoorInstance) target).getOpen())
+					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
+					}
 					else
+					{
 						activeChar.sendPacket(new ConfirmDlg(1141));
+					}
 				}
 			}
 		}

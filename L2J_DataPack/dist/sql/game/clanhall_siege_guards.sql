@@ -395,7 +395,7 @@ INSERT INTO `clanhall_siege_guards` VALUES
 -- (21,35372,anywhere - total 15,0,60,'false'), TODO: needs support for random spawn by zone.
 (21,35382,50343,111282,-1970,0,60,'false'),
 (21,35383,43129,108841,-1980,0,60,'false'),
-(21,35375,44525,108867,-2020,0,10800,'true'); 
+(21,35375,44525,108867,-2020,0,10800,'true');
 
 INSERT INTO `clanhall_siege_guards` VALUES
 -- Bandit Stronghold

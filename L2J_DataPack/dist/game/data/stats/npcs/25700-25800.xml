@@ -1,0 +1,1191 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25700" templateId="25700" clientName="Glakias" serverName="ice_knight_leader_hard" level="85" type="boss">
+		<additional_make_multi_list>
+			<category chance="5.9039">
+				<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+				<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+				<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+				<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+			</category>
+			<category chance="12.5787">
+				<item id="14160" min="1" max="1" chance="30.7692" /> <!-- Sealed Vesper Earring -->
+				<item id="14161" min="1" max="1" chance="23.0769" /> <!-- Sealed Vesper Necklace -->
+				<item id="14162" min="1" max="1" chance="46.1539" /> <!-- Sealed Vesper Ring -->
+			</category>
+			<category chance="94.3232">
+				<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>freya_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="28" special="28" />
+			<height normal="67.5" special="67.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="40" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="21748.0531096014" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3775.91585911807" pDef="2063.7429186" mDef="1089.14036" accuracy="5" evasion="4" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="250" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="250" wind="200" earth="200" holy="200" dark="200" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>ice_knight_leader_hard</ai>
+			<ai_skill name="Skill01_ID" id="6293" level="1" /> <!-- Power Strike -->
+			<ai_skill name="Skill02_ID" id="6295" level="1" /> <!-- Point Target -->
+			<ai_skill name="Skill03_ID" id="6297" level="1" /> <!-- Cylinder Throw -->
+			<ai_skill name="SelfRangeBuff" id="6294" level="1" /> <!-- Leader's Roar -->
+			<ai_skill name="Skill_Summon" id="6298" level="1" /> <!-- Summon Follower Knight -->
+		</npc_ai>
+		<org hp="15015056.3570862" hp_regen="1947.68743288799" mp="92340" mp_regen="500" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="6661" level="1" /> <!-- Level 85 Raid Boss -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25701" templateId="25701" clientName="Anais" serverName="n_divine_anais" level="84" type="boss">
+		<acquire exp="6653170" exp_rate="942.909637273743" sp="900068.585487594" rp="508" />
+		<additional_make_multi_list>
+			<category chance="24.8532">
+				<item id="14109" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="3.409" /> <!-- Sealed Vesper Shoes -->
+				<item id="15484" min="1" max="1" chance="79.546" /> <!-- High-level Angel Circlet -->
+			</category>
+			<category chance="6.9476">
+				<item id="13143" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Helmet -->
+				<item id="13144" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13145" min="1" max="1" chance="17.0732" /> <!-- Sealed Vesper Circlet -->
+				<item id="14111" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Shield -->
+				<item id="13887" min="1" max="1" chance="24.3902" /> <!-- Sealed Vesper Sigil -->
+			</category>
+			<category chance="50.0801">
+				<item id="959" min="1" max="1" chance="8.9552" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="89.5522" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="6577" min="1" max="1" chance="1.4926" /> <!-- Blessed Scroll: Enchant Weapon (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="24" special="24" />
+			<height normal="55" special="55" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="11094.68934" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1192.88500315956" pDef="1428.96384939" mDef="576.114" accuracy="5" evasion="-18" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="300" dark="0" />
+			<defend fire="220" water="220" wind="220" earth="220" holy="300" dark="180" unknown="220" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_divine_anais</ai>
+			<ai_skill name="Skill01_ID" id="6324" level="1" /> <!-- Divine Strike -->
+			<ai_skill name="Skill02_ID" id="6323" level="1" /> <!-- Divine Bolt -->
+			<ai_skill name="Skill03_ID" id="6325" level="1" /> <!-- Divine Nova -->
+		</npc_ai>
+		<org hp="937564.609209036" hp_regen="240.220217981479" mp="21812" mp_regen="500" />
+		<race>DIVINE</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6664" level="1" /> <!-- Level 84 Raid Boss -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="8214" /> <!-- Monster Only (Solina Priest Pole) -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="balanced" />
+		</custom>
+	</npc>
+	<npc id="25702" templateId="25702" clientName="Guard of the Grail" serverName="n_grail_protection" level="84" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="13" special="13" />
+			<height normal="22" special="22" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="140" underWater="0" flying="0" />
+			<walk ground="25" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.1" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="9" evasion="0" />
+		<base_attack type="BLUNT" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="220" dark="0" />
+			<defend fire="180" water="180" wind="180" earth="180" holy="220" dark="170" unknown="180" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_grail_protection</ai>
+			<ai_skill name="Skill01_ID" id="6326" level="1" /> <!-- Martyr's Happiness -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25703" templateId="25703" clientName="Gigantic Golem" serverName="chaos_gigantic_golem" level="76" type="boss">
+		<acquire exp="3429147" exp_rate="593.688851234384" sp="530149.185520586" rp="442" />
+		<additional_make_multi_list>
+			<category chance="0.9564">
+				<item id="6364" min="1" max="1" chance="50" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="50" /> <!-- Heaven's Divider -->
+			</category>
+			<category chance="1.4347">
+				<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
+				<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
+				<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
+			</category>
+			<category chance="43.7371">
+				<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="31" special="31" />
+			<height normal="51.8" special="51.8" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>931275828</exp>
+		<speed>
+			<run ground="190" underWater="0" flying="0" />
+			<walk ground="18" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="9037.418752" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="896.946049858317" pDef="971.35365" mDef="473.86" accuracy="9" evasion="-18" />
+		<base_attack type="BLUNT" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="100" holy="0" dark="0" />
+			<defend fire="90" water="90" wind="30" earth="150" holy="90" dark="90" unknown="85" />
+		</base_attribute>
+		<npc_ai>
+			<ai>chaos_gigantic_golem</ai>
+			<ai_param name="Privates" val="chaos_gigantic_golem_p:chaos_gigantic_golem_p:1:7min" />
+			<ai_param name="chaos_gigantic_golem_p:chaos_gigantic_golem_p:1:7min" />
+			<ai_param name="chaos_gigantic_golem_p:chaos_gigantic_golem_p:1:7min" />
+			<ai_param name="Privates2" val="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="golem_boom2_p:golem_boom2_p:1:6min" />
+			<ai_param name="Party_Type" val="2" />
+			<ai_param name="Party_Loyalty" val="2" />
+			<ai_param name="Skill01_Probablity" val="0" />
+			<ai_skill name="Skill01_ID" id="6263" level="1" /> <!-- EMP Shock -->
+			<ai_skill name="Skill02_ID" id="6608" level="10" /> <!-- Earth Shot -->
+		</npc_ai>
+		<org hp="402092.518544389" hp_regen="172.748301603872" mp="15408" mp_regen="300" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6663" level="1" /> <!-- Level 76 Raid Boss -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25704" templateId="25704" clientName="Gigantic Golem Subordinate" serverName="chaos_gigantic_golem_p" level="75" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="18" special="18" />
+			<height normal="41.5" special="41.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>804225364</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="53" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="2372.401605" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="907.281935" pDef="1277" mDef="467.22" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="100" holy="0" dark="0" />
+			<defend fire="90" water="90" wind="30" earth="120" holy="90" dark="90" unknown="85" />
+		</base_attribute>
+		<npc_ai>
+			<ai>chaos_gigantic_golem_p</ai>
+			<ai_param name="Party_Type" val="1" />
+			<ai_param name="Party_Loyalty" val="1" />
+			<ai_skill name="Skill01_ID" id="6602" level="10" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="4604.887488" hp_regen="62.39684944" mp="1507.8" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25705" templateId="25705" clientName="Gigantic Boom Golem" serverName="golem_boom2_p" level="74" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="6" special="6" />
+			<height normal="13" special="13" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>696381369</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="48" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="773.81598" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="528.41601" pDef="314.65987" mDef="230.25444" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_boom2_p</ai>
+			<ai_skill name="Skill01_ID" id="6265" level="1" /> <!-- Smoke -->
+			<ai_skill name="Skill02_ID" id="6264" level="1" /> <!-- Golem Boom -->
+		</npc_ai>
+		<org hp="2632.19636" hp_regen="8.5" mp="1475" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25706" templateId="25706" clientName="Lost Watcher" serverName="kamaloka_83_a_true" level="83" type="warrior">
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>abyss_clan</clan>
+		</clans>
+		<clan_help_range>1000</clan_help_range>
+		<collision>
+			<radius normal="27" special="27" />
+			<height normal="48.5" special="48.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="92" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="9288.76621110816" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6343.02319953908" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="150" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_a_true</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_param name="MoveArounding" val="0" />
+			<ai_param name="Skill02_Type" val="2" />
+			<ai_param name="Skill02_Probablity" val="500" />
+			<ai_param name="is_private" val="0" />
+			<ai_param name="silhouette" val="kamaloka_83_a_false" />
+			<ai_param name="ai_type" val="kamaloka_83_a_false" />
+			<ai_skill name="Skill01_ID" id="6693" level="9" /> <!-- Power Strike -->
+			<ai_skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</npc_ai>
+		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25707" templateId="25707" clientName="Lost Watcher" serverName="kamaloka_83_a_false" level="83" type="warrior">
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>abyss_clan</clan>
+		</clans>
+		<clan_help_range>1000</clan_help_range>
+		<collision>
+			<radius normal="27" special="27" />
+			<height normal="48.5" special="48.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="92" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="9288.76621110816" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6343.02319953908" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="150" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_a_false</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_param name="MoveArounding" val="0" />
+			<ai_param name="Skill02_Type" val="2" />
+			<ai_param name="Skill02_Probablity" val="500" />
+			<ai_skill name="Skill01_ID" id="6693" level="9" /> <!-- Power Strike -->
+			<ai_skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</npc_ai>
+		<org hp="56202.8420013809" hp_regen="190.897045965523" mp="1777.4" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25708" templateId="25708" clientName="Lost Beholder" serverName="kamaloka_83_b" level="83" type="warrior">
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>abyss_clan</clan>
+		</clans>
+		<clan_help_range>1000</clan_help_range>
+		<collision>
+			<radius normal="16" special="16" />
+			<height normal="27.2" special="27.2" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="64" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="9063.04944399325" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="6188.88790774729" pDef="566.178304" mDef="621.45708" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="150" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_b</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_param name="MoveArounding" val="0" />
+			<ai_param name="Skill02_Target" val="3" />
+			<ai_param name="Skill02_Type" val="3" />
+			<ai_param name="Skill02_AttackSplash" val="1" />
+			<ai_param name="Skill03_Type" val="2" />
+			<ai_skill name="Skill01_ID" id="6693" level="9" /> <!-- Power Strike -->
+			<ai_skill name="Skill02_ID" id="4613" level="9" /> <!-- Clan Heal -->
+			<ai_skill name="Skill03_ID" id="4098" level="10" /> <!-- Silence -->
+		</npc_ai>
+		<org hp="112316.37469612" hp_regen="190.745373183435" mp="1777.4" mp_regen="3" />
+		<race>UNDEAD</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25709" templateId="25709" clientName="Lost Warden" serverName="kamaloka_83_c_raid_boss" level="83" type="boss">
+		<acquire exp="1455513" exp_rate="211.280768519126" sp="201155.189158982" />
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="51.6" special="51.6" />
+			<height normal="57" special="57" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="10874.372072" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2209.19927785661" pDef="1061.58432" mDef="517.88" accuracy="5" evasion="-18" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="170" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="110" dark="170" unknown="120" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_c_raid_boss</ai>
+			<ai_skill name="PhysicalSpecial_a" id="6694" level="8" /> <!-- Power Strike -->
+			<ai_skill name="SelfRangePhysicalSpecial_a" id="6695" level="8" /> <!-- Whirlwind -->
+			<ai_skill name="SelfBuff_a" id="4173" level="8" /> <!-- Might -->
+			<ai_skill name="SelfRangeCancel_a" id="4177" level="8" /> <!-- Cancel -->
+		</npc_ai>
+		<org hp="618854.527530717" hp_regen="237.841799981663" mp="1777.4" mp_regen="20" />
+		<race>UNDEAD</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25710" templateId="25710" clientName="Lost Captain" serverName="kamaloka_83_d_boss" level="83" type="boss">
+		<acquire exp="16653943" exp_rate="2417.46890253176" sp="2116126" rp="1461.5545" />
+		<additional_make_multi_list>
+			<category chance="20.0027">
+				<item id="15766" min="1" max="1" chance="46.1565" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="30.7673" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="23.0762" /> <!-- Sealed Moirai Necklace -->
+			</category>
+			<category chance="1.4674">
+				<item id="10219" min="1" max="1" chance="100" /> <!-- Icarus Trident -->
+			</category>
+			<category chance="88.5397">
+				<item id="959" min="1" max="1" chance="16.6667" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="3" chance="83.3333" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="34.32" special="34.32" />
+			<height normal="62.4" special="62.4" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="73" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="10229.1336718125" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1682.35468775538" pDef="3184.75296" mDef="1553.64" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="250" />
+			<defend fire="200" water="200" wind="200" earth="200" holy="150" dark="250" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_d_boss</ai>
+			<ai_param name="Privates" val="kamaloka_83_d_fighter:kamaloka_83_d_fighter:1:150sec" />
+			<ai_param name="kamaloka_83_d_fighter:kamaloka_83_d_fighter:1:150sec" />
+			<ai_param name="kamaloka_83_d_healer:kamaloka_83_d_healer:1:150sec" />
+			<ai_param name="kamaloka_83_d_healer:kamaloka_83_d_healer:1:150sec" />
+			<ai_param name="PCCafe_Number" val="19" />
+			<ai_skill name="RangeDDMagic_a" id="4178" level="8" /> <!-- Flame Strike -->
+			<ai_skill name="Debuff1" id="5699" level="7" /> <!-- Decrease P. Def -->
+			<ai_skill name="Debuff2" id="5700" level="7" /> <!-- Magic Resistance Decrease -->
+			<ai_skill name="Debuff3" id="5701" level="7" /> <!-- Decrease P. Atk -->
+			<ai_item name="PCCafe_Reward" id="13002" /> <!-- Essence of Kamaloka -->
+		</npc_ai>
+		<org hp="280911.661939328" hp_regen="36.8918887774779" mp="17774" mp_regen="400" />
+		<race>UNDEAD</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25711" templateId="25711" clientName="Lost Guard" serverName="kamaloka_83_d_fighter" level="83" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="34" special="34" />
+			<height normal="34" special="34" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="200" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="3582.73437561952" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="2446.5431410217" pDef="530.79216" mDef="258.937040508719" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="200" />
+			<defend fire="170" water="170" wind="170" earth="170" holy="150" dark="200" unknown="170" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_d_fighter</ai>
+		</npc_ai>
+		<org hp="16110.4741695923" hp_regen="17.7763833411484" mp="1777.4" mp_regen="3" />
+		<race>UNDEAD</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25712" templateId="25712" clientName="Lost Assistant Guard" serverName="kamaloka_83_d_healer" level="83" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="19" special="19" />
+			<height normal="44" special="44" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="73" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="2388.48958374635" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="1631.02876068113" pDef="530.79216" mDef="258.937040508719" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="150" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>kamaloka_83_d_healer</ai>
+			<ai_skill name="SelfRangeBuff_a" id="4214" level="8" /> <!-- Reflect Damage -->
+			<ai_skill name="HealMagic_a" id="4780" level="8" /> <!-- Heal -->
+		</npc_ai>
+		<org hp="16110.4741695923" hp_regen="17.7763833411484" mp="1777.4" mp_regen="20" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
+			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
+			<skill id="4440" level="4" /> <!-- Greater Resist Paralysis -->
+			<skill id="4441" level="4" /> <!-- Greater Resist Mental Derangement -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25713" templateId="25713" clientName="Darnel" serverName="darnellss_re" level="84" type="boss">
+		<acquire exp="1789794" exp_rate="253.655564581566" sp="1050642.25840298" rp="197" />
+		<additional_make_multi_list>
+			<category chance="4.4997">
+				<item id="15694" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="17.0733" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="24.3901" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="24.39" /> <!-- Sealed Moirai Sigil -->
+			</category>
+			<category chance="0.4689">
+				<item id="10223" min="1" max="1" chance="100" /> <!-- Icarus Spitter -->
+			</category>
+			<category chance="51.8711">
+				<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="20" special="20" />
+			<height normal="40.5985" special="40.5985" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.58" skill_factor="-1" />
+		<base pAtk="5370.6622877502" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3746.43835324209" pDef="644.161014000002" mDef="345.953238849299" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="250" />
+			<defend fire="200" water="200" wind="200" earth="200" holy="150" dark="250" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>darnellss_re</ai>
+			<ai_param name="InzoneRestriction" val="1" />
+			<ai_skill name="SelfRangeDebuff_a" id="4182" level="9" /> <!-- Poison -->
+			<ai_skill name="debuff" id="4189" level="9" /> <!-- Paralysis -->
+		</npc_ai>
+		<org hp="1395831.13184129" hp_regen="159.893968662935" mp="18120" mp_regen="30" />
+		<race>DEMONIC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6658" level="1" /> <!-- Level 84 Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25714" templateId="25714" clientName="Kechi" serverName="granisko_re" level="84" type="boss">
+		<acquire exp="2662111" exp_rate="377.283241547732" sp="1460806.82522115" rp="126" />
+		<additional_make_multi_list>
+			<category chance="4.4268">
+				<item id="15703" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="16.6667" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="16.6665" /> <!-- Sealed Moirai Shoes -->
+			</category>
+			<category chance="0.3603">
+				<item id="10222" min="1" max="1" chance="50" /> <!-- Icarus Hall -->
+				<item id="10220" min="1" max="1" chance="50" /> <!-- Icarus Hammer -->
+			</category>
+			<category chance="39.8532">
+				<item id="959" min="1" max="1" chance="9.0909" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+				<item id="960" min="1" max="1" chance="90.9091" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>granisko_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="29" special="29" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="26" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.47" skill_factor="-1" />
+		<base pAtk="4613.33483436704" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3161.66316920124" pDef="644.161014" mDef="345.953044240155" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="250" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="250" water="150" wind="200" earth="200" holy="200" dark="200" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>granisko_re</ai>
+			<ai_param name="InzoneRestriction" val="1" />
+			<ai_skill name="selfbuff1" id="5418" level="1" /> <!-- Invincible -->
+		</npc_ai>
+		<org hp="344947.576547878" hp_regen="196.415209791805" mp="18120" mp_regen="30" />
+		<race>DEMONIC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6659" level="1" /> <!-- Level 84 Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25715" templateId="25715" clientName="Kechi's Subordinate" serverName="granisko_s_lower_re" level="84" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>granisko_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="15" special="15" />
+			<height normal="32.5" special="32.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="2181.24139515455" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="1494.87319472736" pDef="644.161014" mDef="628.492106633077" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="250" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="250" water="150" wind="200" earth="200" holy="200" dark="200" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>granisko_s_lower_re</ai>
+			<ai_param name="IsAggressive" val="0" />
+			<ai_param name="AttackRange" val="0" />
+			<ai_param name="Party_Type" val="1" />
+			<ai_param name="Party_Loyalty" val="2" />
+			<ai_skill name="selfbuff1" id="4099" level="2" /> <!-- Berserker Spirit -->
+			<ai_skill name="selfbuff1" id="4084" level="2" /> <!-- Resist Physical Attack -->
+		</npc_ai>
+		<org hp="19178.9661763889" hp_regen="196.571121475454" mp="1812" mp_regen="3" />
+		<race>DEMONIC</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25716" templateId="25716" clientName="Tears" serverName="tears_re" level="84" type="boss">
+		<acquire exp="2039317" exp_rate="289.018834468371" sp="1217980.07038271" rp="223.291907361045" />
+		<additional_make_multi_list>
+			<category chance="2.6424">
+				<item id="15698" min="1" max="1" chance="38.461" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15701" min="1" max="1" chance="61.539" /> <!-- Sealed Moirai Leather Legging -->
+			</category>
+			<category chance="0.4963">
+				<item id="10223" min="1" max="1" chance="100" /> <!-- Icarus Spitter -->
+			</category>
+			<category chance="19.4086">
+				<item id="6578" min="1" max="1" chance="28.5714" /> <!-- Blessed Scroll: Enchant Armor (S-Grade) -->
+				<item id="6570" min="1" max="1" chance="71.4286" /> <!-- Blessed Scroll: Enchant Armor (A-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="20" special="20" />
+			<height normal="27.5" special="27.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.45" skill_factor="-1" />
+		<base pAtk="5380.73978332843" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="3682.3307263833" pDef="644.161013999999" mDef="345.953432805874" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="57" int="76" dex="73" wit="70" con="57" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="250" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="250" wind="200" earth="200" holy="200" dark="200" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>tears_re</ai>
+			<ai_param name="InzoneRestriction" val="1" />
+			<ai_skill name="W_LongRangeDDMagic" id="5238" level="1" /> <!-- Freezing -->
+			<ai_skill name="selfbuff1" id="5420" level="1" /> <!-- Invincible -->
+			<ai_skill name="selfbuff2" id="2369" level="1" /> <!-- Water Dragon Scale -->
+		</npc_ai>
+		<org hp="1360985.8136379" hp_regen="154.089581103435" mp="18120" mp_regen="30" />
+		<race>ELEMENTAL</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6660" level="1" /> <!-- Level 84 Raid Boss -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<eqipment>
+			<rhand id="9638" /> <!-- Tears r1 -->
+			<lhand id="9638" /> <!-- Tears r1 -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2RaidBoss</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="25717" templateId="25717" clientName="Tears" serverName="tears_other_self_re" level="84" type="zzoldagu">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="20" special="20" />
+			<height normal="27.5" special="27.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.45" skill_factor="-1" />
+		<base pAtk="215.229591333137" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="147.293229055332" pDef="644.161013999999" mDef="345.953432805874" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="250" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="250" wind="200" earth="200" holy="200" dark="200" unknown="200" />
+		</base_attribute>
+		<npc_ai>
+			<ai>tears_other_self_re</ai>
+		</npc_ai>
+		<org hp="1360985.8136379" hp_regen="154.089581103435" mp="18120" mp_regen="30" />
+		<race>ELEMENTAL</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
+		</skill_list>
+		<eqipment>
+			<rhand id="9638" /> <!-- Tears r1 -->
+			<lhand id="9638" /> <!-- Tears r1 -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>

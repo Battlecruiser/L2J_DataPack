@@ -6,9 +6,19 @@
 				<xs:element name="route" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="target" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+									<xs:attribute name="spawnX" type="xs:integer" use="required" />
+									<xs:attribute name="spawnY" type="xs:integer" use="required" />
+									<xs:attribute name="spawnZ" type="xs:integer" use="required" />
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="point" minOccurs="1" maxOccurs="unbounded">
 								<xs:complexType>
-									<xs:attribute name="string" type="xs:normalizedString" use="required" />
+									<xs:attribute name="string" type="xs:normalizedString" />
+									<xs:attribute name="npcString" type="xs:token" />
+									<xs:attribute name="npcStringId" type="xs:integer" />
 									<xs:attribute name="X" type="xs:integer" use="required" />
 									<xs:attribute name="Y" type="xs:integer" use="required" />
 									<xs:attribute name="Z" type="xs:integer" use="required" />
@@ -17,7 +27,7 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+						<xs:attribute name="name" type="xs:normalizedString" use="required" />
 						<xs:attribute name="repeat" type="xs:boolean" use="required" />
 						<xs:attribute name="repeatStyle" use="required">
 							<xs:simpleType>

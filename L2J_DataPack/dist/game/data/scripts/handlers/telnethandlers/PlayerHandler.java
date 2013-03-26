@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.telnethandlers;
 
@@ -45,7 +49,7 @@ public class PlayerHandler implements ITelnetHandler
 	private final String[] _commands =
 	{
 		"kick",
-		"give", 
+		"give",
 		"enchant",
 		"jail",
 		"unjail"
@@ -168,20 +172,28 @@ public class PlayerHandler implements ITelnetHandler
 				}
 				
 				if (enchant > 65535)
+				{
 					enchant = 65535;
+				}
 				else if (enchant < 0)
+				{
 					enchant = 0;
+				}
 				
 				boolean success = false;
 				
-				if (player != null && itemType > 0)
+				if ((player != null) && (itemType > 0))
 				{
 					success = setEnchant(player, enchant, itemType);
 					if (success)
+					{
 						_print.println("Item enchanted successfully.");
+					}
 				}
 				else if (!success)
+				{
 					_print.println("Item failed to enchant.");
+				}
 			}
 			catch (Exception e)
 			{
@@ -230,15 +242,21 @@ public class PlayerHandler implements ITelnetHandler
 						statement.close();
 						
 						if (count == 0)
+						{
 							_print.println("Character not found!");
+						}
 						else
+						{
 							_print.println("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
+						}
 					}
 					catch (SQLException se)
 					{
 						_print.println("SQLException while jailing player");
 						if (Config.DEBUG)
+						{
 							se.printStackTrace();
+						}
 					}
 				}
 			}
@@ -249,7 +267,9 @@ public class PlayerHandler implements ITelnetHandler
 			catch (Exception e)
 			{
 				if (Config.DEBUG)
+				{
 					e.printStackTrace();
+				}
 			}
 		}
 		else if (command.startsWith("unjail"))
@@ -282,15 +302,21 @@ public class PlayerHandler implements ITelnetHandler
 						statement.close();
 						
 						if (count == 0)
+						{
 							_print.println("Character not found!");
+						}
 						else
+						{
 							_print.println("Character " + name + " set free.");
+						}
 					}
 					catch (SQLException se)
 					{
 						_print.println("SQLException while jailing player");
 						if (Config.DEBUG)
+						{
 							se.printStackTrace();
+						}
 					}
 				}
 			}
@@ -301,7 +327,9 @@ public class PlayerHandler implements ITelnetHandler
 			catch (Exception e)
 			{
 				if (Config.DEBUG)
+				{
 					e.printStackTrace();
+				}
 			}
 		}
 		return false;
@@ -315,7 +343,7 @@ public class PlayerHandler implements ITelnetHandler
 		
 		// only attempt to enchant if there is a weapon equipped
 		L2ItemInstance parmorInstance = activeChar.getInventory().getPaperdollItem(armorType);
-		if (parmorInstance != null && parmorInstance.getLocationSlot() == armorType)
+		if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == armorType))
 		{
 			itemInstance = parmorInstance;
 		}
@@ -323,8 +351,10 @@ public class PlayerHandler implements ITelnetHandler
 		{
 			// for bows/crossbows and double handed weapons
 			parmorInstance = activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-			if (parmorInstance != null && parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND)
+			if ((parmorInstance != null) && (parmorInstance.getLocationSlot() == Inventory.PAPERDOLL_RHAND))
+			{
 				itemInstance = parmorInstance;
+			}
 		}
 		
 		if (itemInstance != null)

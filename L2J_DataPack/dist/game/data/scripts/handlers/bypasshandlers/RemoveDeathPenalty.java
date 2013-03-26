@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.bypasshandlers;
 
@@ -30,15 +34,22 @@ public class RemoveDeathPenalty implements IBypassHandler
 		"remove_dp"
 	};
 	
-	private static final int[] pen_clear_price =
+	private static final int[] PEN_CLEAR_PRICE =
 	{
-		3600, 8640, 25200, 50400, 86400, 144000, 144000, 144000
+		3600,
+		8640,
+		25200,
+		50400,
+		86400,
+		144000,
+		144000,
+		144000
 	};
 	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc())
 		{
 			return false;
 		}
@@ -54,7 +65,7 @@ public class RemoveDeathPenalty implements IBypassHandler
 					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setFile(activeChar.getHtmlPrefix(), filename);
 					html.replace("%objectId%", String.valueOf(npc.getObjectId()));
-					html.replace("%dp_price%", String.valueOf(pen_clear_price[activeChar.getExpertiseLevel()]));
+					html.replace("%dp_price%", String.valueOf(PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()]));
 					activeChar.sendPacket(html);
 					break;
 				case 2:
@@ -63,9 +74,9 @@ public class RemoveDeathPenalty implements IBypassHandler
 					
 					if (activeChar.getDeathPenaltyBuffLevel() > 0)
 					{
-						if (activeChar.getAdena() >= pen_clear_price[activeChar.getExpertiseLevel()])
+						if (activeChar.getAdena() >= PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()])
 						{
-							if (!activeChar.reduceAdena("DeathPenality", pen_clear_price[activeChar.getExpertiseLevel()], npc, true))
+							if (!activeChar.reduceAdena("DeathPenality", PEN_CLEAR_PRICE[activeChar.getExpertiseLevel()], npc, true))
 							{
 								return false;
 							}

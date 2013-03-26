@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package transformations;
 
@@ -22,7 +26,17 @@ public class DivineHealer extends L2Transformation
 {
 	private static final int[] SKILLS =
 	{
-		648, 803, 1490, 698, 699, 700, 701, 702, 703, 5491, 619
+		648,
+		803,
+		1490,
+		698,
+		699,
+		700,
+		701,
+		702,
+		703,
+		5491,
+		619
 	};
 	
 	public DivineHealer()
@@ -40,28 +54,6 @@ public class DivineHealer extends L2Transformation
 		}
 		
 		transformedSkills();
-	}
-	
-	public void transformedSkills()
-	{
-		// Divine Healer Major Heal
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(698, 1), false);
-		// Divine Healer Battle Heal
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(699, 1), false);
-		// Divine Healer Group Heal
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(700, 1), false);
-		// Divine Healer Resurrection
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(701, 1), false);
-		// Divine Healer Cleanse
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(702, 1), false);
-		// Sacrifice Healer
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(703, 1), false);
-		// Decrease Bow/Crossbow Attack Speed
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
-		// Transform Dispel
-		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
-		
-		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	@Override
@@ -90,6 +82,28 @@ public class DivineHealer extends L2Transformation
 		getPlayer().removeSkill(SkillTable.getInstance().getInfo(619, 1), false);
 		
 		getPlayer().setTransformAllowedSkills(EMPTY_ARRAY);
+	}
+	
+	public void transformedSkills()
+	{
+		// Divine Healer Major Heal
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(698, 1), false);
+		// Divine Healer Battle Heal
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(699, 1), false);
+		// Divine Healer Group Heal
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(700, 1), false);
+		// Divine Healer Resurrection
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(701, 1), false);
+		// Divine Healer Cleanse
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(702, 1), false);
+		// Sacrifice Healer
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(703, 1), false);
+		// Decrease Bow/Crossbow Attack Speed
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(5491, 1), false);
+		// Transform Dispel
+		getPlayer().addSkill(SkillTable.getInstance().getInfo(619, 1), false);
+		
+		getPlayer().setTransformAllowedSkills(SKILLS);
 	}
 	
 	public static void main(String[] args)

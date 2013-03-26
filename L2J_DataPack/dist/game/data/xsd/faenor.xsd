@@ -6,7 +6,7 @@
 				<xs:element name="Droplist" maxOccurs="1" minOccurs="1">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="AllDrop" maxOccurs="1" minOccurs="1">
+							<xs:element name="AllDrop" maxOccurs="unbounded" minOccurs="1">
 								<xs:complexType>
 									<xs:attribute name="Items" type="xs:token" use="required" />
 									<xs:attribute name="Count" type="xs:token" use="required" />
@@ -40,7 +40,7 @@
 						<xs:attribute name="Type" type="xs:token" use="required" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="Npc" maxOccurs="1" minOccurs="1">
+				<xs:element name="Npc" maxOccurs="1" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence maxOccurs="1" minOccurs="1">
 							<xs:element name="Condition" maxOccurs="1" minOccurs="1">

@@ -1,55 +1,36 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
- */
-
-/**
- *
- * @author FBIagent
- *
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.itemhandlers;
 
-import java.util.Collection;
-import java.util.logging.Level;
-
-import com.l2jserver.gameserver.ThreadPoolManager;
-import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.SummonItemsData;
-import com.l2jserver.gameserver.handler.IItemHandler;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Spawn;
-import com.l2jserver.gameserver.model.L2SummonItem;
-import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.datatables.PetDataTable;
+import com.l2jserver.gameserver.model.L2PetData;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2XmassTreeInstance;
-import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.holders.PetItemHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
-import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jserver.gameserver.network.serverpackets.PetItemList;
-import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Broadcast;
+
 /**
- * UnAfraid: TODO: Rewrite me :D
+ * @author FBIagent, UnAfraid
  */
-public class SummonItems implements IItemHandler
+public class SummonItems extends ItemSkillsTemplate
 {
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
@@ -61,12 +42,15 @@ public class SummonItems implements IItemHandler
 		}
 		
 		if (!TvTEvent.onItemSummon(playable.getObjectId()))
+		{
 			return false;
+		}
 		
-		final L2PcInstance activeChar = (L2PcInstance) playable;
-		
-		if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items"))
+		final L2PcInstance activeChar = playable.getActingPlayer();
+		if (!activeChar.getFloodProtectors().getItemPetSummon().tryPerformAction("summon items") || (activeChar.getBlockCheckerArena() != -1) || activeChar.inObserverMode() || activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
+		{
 			return false;
+		}
 		
 		if (activeChar.isSitting())
 		{
@@ -74,23 +58,7 @@ public class SummonItems implements IItemHandler
 			return false;
 		}
 		
-		if (activeChar.getBlockCheckerArena() != -1)
-			return false;
-		
-		if (activeChar.inObserverMode())
-			return false;
-		
-		if (activeChar.isInOlympiadMode())
-		{
-			activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return false;
-		}
-		if (activeChar.isAllSkillsDisabled() || activeChar.isCastingNow())
-			return false;
-		
-		final L2SummonItem sitem = SummonItemsData.getInstance().getSummonItem(item.getItemId());
-		
-		if ((activeChar.getPet() != null || activeChar.isMounted()) && sitem.isPetSummon())
+		if (activeChar.hasSummon() || activeChar.isMounted())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			return false;
@@ -102,170 +70,13 @@ public class SummonItems implements IItemHandler
 			return false;
 		}
 		
-		final int npcId = sitem.getNpcId();
-		if (npcId == 0)
+		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getItemId());
+		if ((petData == null) || (petData.getNpcId() == -1))
+		{
 			return false;
-		
-		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(npcId);
-		if (npcTemplate == null)
-			return false;
-		
-		activeChar.stopMove(null, false);
-		
-		switch (sitem.getType())
-		{
-			case 0: // static summons (like Christmas tree)
-				try
-				{
-					Collection<L2Character> characters = activeChar.getKnownList().getKnownCharactersInRadius(1200);
-					for (L2Character ch : characters)
-					{
-						if (ch instanceof L2XmassTreeInstance && npcTemplate.isSpecialTree())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SUMMON_S1_AGAIN);
-							sm.addCharName(ch);
-							activeChar.sendPacket(sm);
-							return false;
-						}
-					}
-					
-					if (activeChar.destroyItem("Summon", item.getObjectId(), 1, null, false))
-					{
-						final L2Spawn spawn = new L2Spawn(npcTemplate);
-						spawn.setLocx(activeChar.getX());
-						spawn.setLocy(activeChar.getY());
-						spawn.setLocz(activeChar.getZ());
-						spawn.setInstanceId(activeChar.getInstanceId());
-						spawn.stopRespawn();
-						final L2Npc npc = spawn.spawnOne(true);
-						npc.setTitle(activeChar.getName());
-						npc.setIsRunning(false); // broadcast info
-						if (sitem.getDespawnDelay() > 0)
-							npc.scheduleDespawn(sitem.getDespawnDelay() * 1000L);
-					}
-				}
-				catch (Exception e)
-				{
-					activeChar.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
-				}
-				break;
-			case 1: // pet summons
-				final L2Object oldTarget = activeChar.getTarget();
-				activeChar.setTarget(activeChar);
-				Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, 2046, 1, 5000, 0));
-				activeChar.setTarget(oldTarget);
-				activeChar.sendPacket(new SetupGauge(0, 5000));
-				activeChar.sendPacket(SystemMessageId.SUMMON_A_PET);
-				activeChar.setIsCastingNow(true);
-				
-				ThreadPoolManager.getInstance().scheduleGeneral(new PetSummonFinalizer(activeChar, npcTemplate, item), 5000);
-				break;
-			case 2: // wyvern
-				activeChar.mount(sitem.getNpcId(), item.getObjectId(), true);
-				break;
-			case 3: // Great Wolf
-				activeChar.mount(sitem.getNpcId(), item.getObjectId(), false);
-				break;
-		}
-		return true;
-	}
-	
-	static class PetSummonFeedWait implements Runnable
-	{
-		private final L2PcInstance _activeChar;
-		private final L2PetInstance _petSummon;
-		
-		PetSummonFeedWait(L2PcInstance activeChar, L2PetInstance petSummon)
-		{
-			_activeChar = activeChar;
-			_petSummon = petSummon;
 		}
 		
-		@Override
-		public void run()
-		{
-			try
-			{
-				if (_petSummon.getCurrentFed() <= 0)
-					_petSummon.unSummon(_activeChar);
-				else
-					_petSummon.startFeed();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.SEVERE, "", e);
-			}
-		}
-	}
-	
-	// TODO: this should be inside skill handler
-	static class PetSummonFinalizer implements Runnable
-	{
-		private final L2PcInstance _activeChar;
-		private final L2ItemInstance _item;
-		private final L2NpcTemplate _npcTemplate;
-		
-		PetSummonFinalizer(L2PcInstance activeChar, L2NpcTemplate npcTemplate, L2ItemInstance item)
-		{
-			_activeChar = activeChar;
-			_npcTemplate = npcTemplate;
-			_item = item;
-		}
-		
-		@Override
-		public void run()
-		{
-			try
-			{
-				_activeChar.sendPacket(new MagicSkillLaunched(_activeChar, 2046, 1));
-				_activeChar.setIsCastingNow(false);
-				
-				// check for summon item validity
-				if (_item == null || _item.getOwnerId() != _activeChar.getObjectId() || _item.getLocation() != L2ItemInstance.ItemLocation.INVENTORY)
-					return;
-				
-				final L2PetInstance petSummon = L2PetInstance.spawnPet(_npcTemplate, _activeChar, _item);
-				if (petSummon == null)
-					return;
-				
-				petSummon.setShowSummonAnimation(true);
-				petSummon.setTitle(_activeChar.getName());
-				
-				if (!petSummon.isRespawned())
-				{
-					petSummon.setCurrentHp(petSummon.getMaxHp());
-					petSummon.setCurrentMp(petSummon.getMaxMp());
-					petSummon.getStat().setExp(petSummon.getExpForThisLevel());
-					petSummon.setCurrentFed(petSummon.getMaxFed());
-				}
-				
-				petSummon.setRunning();
-				
-				if (!petSummon.isRespawned())
-					petSummon.store();
-				
-				_activeChar.setPet(petSummon);
-				
-				// JIV remove - done on spawn
-				// L2World.getInstance().storeObject(petSummon);
-				petSummon.spawnMe(_activeChar.getX() + 50, _activeChar.getY() + 100, _activeChar.getZ());
-				petSummon.startFeed();
-				_item.setEnchantLevel(petSummon.getLevel());
-				
-				if (petSummon.getCurrentFed() <= 0)
-					ThreadPoolManager.getInstance().scheduleGeneral(new PetSummonFeedWait(_activeChar, petSummon), 60000);
-				else
-					petSummon.startFeed();
-				
-				petSummon.setFollowStatus(true);
-				
-				petSummon.sendPacket(new PetItemList(petSummon));
-				petSummon.broadcastStatusUpdate();
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.SEVERE, "", e);
-			}
-		}
+		activeChar.addScript(new PetItemHolder(item));
+		return super.useItem(playable, item, forceUse);
 	}
 }

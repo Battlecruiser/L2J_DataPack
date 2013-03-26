@@ -1,22 +1,24 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual;
 
-import java.util.logging.Logger;
-
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GameTimeController;
@@ -40,10 +42,8 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 /**
  * Zaken AI
  */
-public class Zaken extends L2AttackableAIScript
+public class Zaken extends AbstractNpcAI
 {
-	protected static final Logger log = Logger.getLogger(Zaken.class.getName());
-	
 	private int _1001 = 0; // used for first cancel of QuestTimer "1001"
 	private int _ai0 = 0; // used for zaken coords updater
 	private int _ai1 = 0; // used for X coord tracking for non-random teleporting in zaken's self teleport skill
@@ -81,6 +81,7 @@ public class Zaken extends L2AttackableAIScript
 		53950,
 		53930
 	};
+	
 	private static final int[] Ycoords =
 	{
 		219860,
@@ -99,6 +100,7 @@ public class Zaken extends L2AttackableAIScript
 		219860,
 		217760
 	};
+	
 	private static final int[] Zcoords =
 	{
 		-3488,
@@ -124,9 +126,9 @@ public class Zaken extends L2AttackableAIScript
 	
 	private static L2BossZone _Zone;
 	
-	public Zaken(int questId, String name, String descr)
+	private Zaken(String name, String descr)
 	{
-		super(questId, name, descr);
+		super(name, descr);
 		
 		// Zaken doors handling
 		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Runnable()
@@ -150,7 +152,7 @@ public class Zaken extends L2AttackableAIScript
 								}
 								catch (Throwable e)
 								{
-									log.warning("Cannot close door ID: 21240006 " + e);
+									_log.warning("Cannot close door ID: 21240006 " + e);
 								}
 							}
 						}, 300000L);
@@ -158,7 +160,7 @@ public class Zaken extends L2AttackableAIScript
 				}
 				catch (Throwable e)
 				{
-					log.warning("Cannot open door ID: 21240006 " + e);
+					_log.warning("Cannot open door ID: 21240006 " + e);
 				}
 			}
 		}, 2000L, 600000L);
@@ -171,6 +173,7 @@ public class Zaken extends L2AttackableAIScript
 			pirates_zombie_captain_b,
 			pirates_zombie_b
 		};
+		
 		registerMobs(mobs);
 		_Zone = GrandBossManager.getInstance().getZone(55312, 219168, -3223);
 		
@@ -212,7 +215,7 @@ public class Zaken extends L2AttackableAIScript
 	{
 		if (npc == null)
 		{
-			log.warning("Zaken AI failed to load, missing Zaken in grandboss_data.sql");
+			_log.warning("Zaken AI failed to load, missing Zaken in grandboss_data.sql");
 			return;
 		}
 		GrandBossManager.getInstance().addBoss(npc);
@@ -227,7 +230,7 @@ public class Zaken extends L2AttackableAIScript
 		_quest2 = 3;
 		if (_Zone == null)
 		{
-			log.warning("Zaken AI failed to load, missing zone for Zaken");
+			_log.warning("Zaken AI failed to load, missing zone for Zaken");
 			return;
 		}
 		if (_Zone.isInsideZone(npc))
@@ -628,11 +631,11 @@ public class Zaken extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		if ((caller == null) || (npc == null))
 		{
-			return super.onFactionCall(npc, caller, attacker, isPet);
+			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
 		int npcId = npc.getNpcId();
 		int callerId = caller.getNpcId();
@@ -649,7 +652,7 @@ public class Zaken extends L2AttackableAIScript
 				startQuestTimer("1002", 300, caller, null);
 			}
 		}
-		return super.onFactionCall(npc, caller, attacker, isPet);
+		return super.onFactionCall(npc, caller, attacker, isSummon);
 	}
 	
 	@Override
@@ -778,7 +781,7 @@ public class Zaken extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -803,7 +806,7 @@ public class Zaken extends L2AttackableAIScript
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));
 				}
 			}
-			L2Character originalAttacker = isPet ? attacker.getPet() : attacker;
+			L2Character originalAttacker = isSummon ? attacker.getSummon() : attacker;
 			int hate = (int) (((damage / npc.getMaxHp()) / 0.05) * 20000);
 			((L2Attackable) npc).addDamageHate(originalAttacker, 0, hate);
 			if (getRandom(10) < 1)
@@ -867,19 +870,20 @@ public class Zaken extends L2AttackableAIScript
 				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
-			// Respawn time is 60 Hours - 20 Random Hours
-			long respawnTime = (long) Config.Interval_Of_Zaken_Spawn - getRandom(Config.Random_Of_Zaken_Spawn);
+			// Calculate Min and Max respawn times randomly.
+			long respawnTime = Config.ZAKEN_SPAWN_INTERVAL + getRandom(-Config.ZAKEN_SPAWN_RANDOM, Config.ZAKEN_SPAWN_RANDOM);
+			respawnTime *= 3600000;
 			startQuestTimer("zaken_unlock", respawnTime, null, null);
 			cancelQuestTimer("1001", npc, null);
 			cancelQuestTimer("1003", npc, null);
@@ -895,11 +899,11 @@ public class Zaken extends L2AttackableAIScript
 				startQuestTimer("CreateOnePrivateEx", ((30 + getRandom(60)) * 1000), npc, null);
 			}
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
@@ -956,18 +960,18 @@ public class Zaken extends L2AttackableAIScript
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
 			if (_Zone.isInsideZone(npc))
 			{
-				L2Character target = isPet ? player.getPet() : player;
+				L2Character target = isSummon ? player.getSummon() : player;
 				((L2Attackable) npc).addDamageHate(target, 1, 200);
 			}
 			if ((player.getZ() > (npc.getZ() - 100)) && (player.getZ() < (npc.getZ() + 100)))
@@ -1045,7 +1049,7 @@ public class Zaken extends L2AttackableAIScript
 				}
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public int getTimeHour()
@@ -1055,7 +1059,6 @@ public class Zaken extends L2AttackableAIScript
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new Zaken(-1, "zaken", "ai");
+		new Zaken(Zaken.class.getSimpleName(), "ai");
 	}
 }

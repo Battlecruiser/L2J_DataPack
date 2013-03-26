@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -27,7 +31,7 @@ import com.l2jserver.gameserver.model.actor.stat.PcStat;
 public class AdminVitality implements IAdminCommandHandler
 {
 	
-	private static final String[]	ADMIN_COMMANDS	=
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_set_vitality",
 		"admin_set_vitality_level",
@@ -40,7 +44,9 @@ public class AdminVitality implements IAdminCommandHandler
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		if (activeChar == null)
+		{
 			return false;
+		}
 		
 		if (!Config.ENABLE_VITALITY)
 		{
@@ -71,7 +77,7 @@ public class AdminVitality implements IAdminCommandHandler
 				}
 				
 				target.setVitalityPoints(vitality, true);
-				target.sendMessage("Admin set your Vitality points to "  + vitality);
+				target.sendMessage("Admin set your Vitality points to " + vitality);
 			}
 			else if (cmd.equals("admin_set_vitality_level"))
 			{
@@ -84,17 +90,23 @@ public class AdminVitality implements IAdminCommandHandler
 					activeChar.sendMessage("Incorrect vitality level (0-4)");
 				}
 				
-				if (level >= 0 && level <= 4)
+				if ((level >= 0) && (level <= 4))
 				{
 					if (level == 0)
+					{
 						vitality = PcStat.MIN_VITALITY_POINTS;
+					}
 					else
-						vitality = PcStat.VITALITY_LEVELS[level-1];
+					{
+						vitality = PcStat.VITALITY_LEVELS[level - 1];
+					}
 					target.setVitalityPoints(vitality, true);
-					target.sendMessage("Admin set your Vitality level to "  + level);
+					target.sendMessage("Admin set your Vitality level to " + level);
 				}
 				else
+				{
 					activeChar.sendMessage("Incorrect vitality level (0-4)");
+				}
 			}
 			else if (cmd.equals("admin_full_vitality"))
 			{
@@ -111,8 +123,8 @@ public class AdminVitality implements IAdminCommandHandler
 				level = target.getVitalityLevel();
 				vitality = target.getVitalityPoints();
 				
-				activeChar.sendMessage("Player vitality level: "  + level);
-				activeChar.sendMessage("Player vitality points: "  + vitality);
+				activeChar.sendMessage("Player vitality level: " + level);
+				activeChar.sendMessage("Player vitality points: " + vitality);
 			}
 			return true;
 		}

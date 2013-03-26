@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
@@ -18,6 +22,7 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager.ArenaParticipantsHolder;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -37,14 +42,16 @@ public class Dummy implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		switch(skill.getId())
+		switch (skill.getId())
 		{
 			case 5852:
 			case 5853:
 			{
 				final L2Object obj = targets[0];
-				if(obj != null)
+				if (obj != null)
+				{
 					useBlockCheckerSkill(activeChar.getActingPlayer(), skill, obj);
+				}
 				break;
 			}
 			default:
@@ -60,7 +67,10 @@ public class Dummy implements ISkillHandler
 			}
 		}
 		
-		activeChar.spsUncharge(skill);
+		if (skill.useSpiritShot())
+		{
+			activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		}
 	}
 	
 	@Override
@@ -71,23 +81,32 @@ public class Dummy implements ISkillHandler
 	
 	private final void useBlockCheckerSkill(L2PcInstance activeChar, L2Skill skill, L2Object target)
 	{
-		if(!(target instanceof L2BlockInstance))
+		if (!(target instanceof L2BlockInstance))
+		{
 			return;
+		}
 		
-		L2BlockInstance block = (L2BlockInstance)target;
+		L2BlockInstance block = (L2BlockInstance) target;
 		
 		final int arena = activeChar.getBlockCheckerArena();
-		if(arena != -1)
+		if (arena != -1)
 		{
 			final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
-			if(holder == null) return;
+			if (holder == null)
+			{
+				return;
+			}
 			
 			final int team = holder.getPlayerTeam(activeChar);
 			final int color = block.getColorEffect();
-			if(team == 0 && color == 0x00)
+			if ((team == 0) && (color == 0x00))
+			{
 				block.changeColor(activeChar, holder, team);
-			else if(team == 1 && color == 0x53)
+			}
+			else if ((team == 1) && (color == 0x53))
+			{
 				block.changeColor(activeChar, holder, team);
+			}
 		}
 	}
 }

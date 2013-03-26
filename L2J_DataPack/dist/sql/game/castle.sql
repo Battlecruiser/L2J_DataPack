@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS `castle` (
-  `id` INT NOT NULL default 0,
+  `id` INT NOT NULL DEFAULT 0,
   `name` varchar(25) NOT NULL,
-  `taxPercent` INT NOT NULL default 15,
-  `treasury` BIGINT NOT NULL default 0,
+  `taxPercent` INT NOT NULL DEFAULT 15,
+  `treasury` BIGINT NOT NULL DEFAULT 0,
   `siegeDate` bigint(13) unsigned NOT NULL DEFAULT '0',
   `regTimeOver` enum('true','false') DEFAULT 'true' NOT NULL,
   `regTimeEnd` bigint(13) unsigned NOT NULL DEFAULT '0',
   `showNpcCrest` enum('true','false') DEFAULT 'false' NOT NULL,
-  `bloodAlliance` int(3) NOT NULL default 0,
+  `ticketBuyCount` smallint(3) NOT NULL DEFAULT 0,
   PRIMARY KEY (`name`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

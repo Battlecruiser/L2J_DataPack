@@ -1,20 +1,26 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.group_template;
 
 import java.util.Collection;
+
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -29,27 +35,28 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 
 /**
+ * Giant Scouts AI.
  * @author Gnacik
  */
-public class GiantScouts extends L2AttackableAIScript
+public class GiantScouts extends AbstractNpcAI
 {
-	final private static int _scouts[] = { 22668, 22669 };
-	
-	public GiantScouts(int questId, String name, String descr)
+	private GiantScouts()
 	{
-		super(questId, name, descr);
-		registerMobs(_scouts, QuestEventType.ON_AGGRO_RANGE_ENTER);
+		super(GiantScouts.class.getSimpleName(), "ai/group_template");
+		addAggroRangeEnterId(22668, 22669); // scouts
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2Character target = isPet ? player.getPet() : player;
+		L2Character target = isSummon ? player.getSummon() : player;
 		
-		if(GeoData.getInstance().canSeeTarget(npc, target))
+		if (GeoData.getInstance().canSeeTarget(npc, target))
 		{
-			if (!npc.isInCombat() && npc.getTarget() == null)
-				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
+			if (!npc.isInCombat() && (npc.getTarget() == null))
+			{
+				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getName(), NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED));
+			}
 			
 			npc.setTarget(target);
 			npc.setRunning();
@@ -58,14 +65,14 @@ public class GiantScouts extends L2AttackableAIScript
 			
 			// Notify clan
 			Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-			for(L2Object obj : objs)
+			for (L2Object obj : objs)
 			{
 				if (obj != null)
 				{
 					if (obj instanceof L2MonsterInstance)
 					{
 						L2MonsterInstance monster = (L2MonsterInstance) obj;
-						if (( npc.getClan() != null && monster.getClan() != null) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster))
+						if (((npc.getClan() != null) && (monster.getClan() != null)) && monster.getClan().equals(npc.getClan()) && GeoData.getInstance().canSeeTarget(npc, monster))
 						{
 							monster.setTarget(target);
 							monster.setRunning();
@@ -77,11 +84,11 @@ public class GiantScouts extends L2AttackableAIScript
 				}
 			}
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public static void main(String[] args)
 	{
-		new GiantScouts(-1, "GiantScouts", "ai");
+		new GiantScouts();
 	}
 }

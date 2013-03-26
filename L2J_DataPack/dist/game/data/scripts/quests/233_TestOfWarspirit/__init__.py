@@ -355,7 +355,7 @@ class Quest (JQuest) :
             st.set(var,str(isValue))
           if st.getQuestItemsCount(KIRUNAS_SKULL) and st.getInt(var)==9:
             st.set(var,"10")
-            st.playSound("ItemdSound.quest_middle")
+            st.playSound("ItemSound.quest_middle")
           else :
             st.playSound("ItemSound.quest_itemget")
       # Drop part for any other mobs

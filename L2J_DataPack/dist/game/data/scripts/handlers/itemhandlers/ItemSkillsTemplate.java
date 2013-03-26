@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.itemhandlers;
 
@@ -18,7 +22,6 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IItemHandler;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -29,16 +32,15 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Template for item skills handler.<br>
- * Only minimum of checks.
+ * Template for item skills handler.
+ * @author Zoey76
  */
 public class ItemSkillsTemplate implements IItemHandler
 {
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
 	{
-		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (!playable.isPet() && !playable.isPlayer())
+		if (!playable.isPlayer() && !playable.isPet())
 		{
 			return false;
 		}
@@ -52,18 +54,15 @@ public class ItemSkillsTemplate implements IItemHandler
 		// Pets can use items only when they are tradable.
 		if (playable.isPet() && !item.isTradeable())
 		{
-			activeChar.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
+			playable.sendPacket(SystemMessageId.ITEM_NOT_FOR_PETS);
 			return false;
 		}
 		
 		// Verify that item is not under reuse.
-		if (!checkReuse(activeChar, null, item))
+		if (!checkReuse(playable, null, item))
 		{
 			return false;
 		}
-		
-		int skillId;
-		int skillLvl;
 		
 		final SkillHolder[] skills = item.getEtcItem().getSkills();
 		if (skills == null)
@@ -72,6 +71,9 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
+		int skillId;
+		int skillLvl;
+		final L2PcInstance activeChar = playable.getActingPlayer();
 		for (SkillHolder skillInfo : skills)
 		{
 			if (skillInfo == null)
@@ -79,10 +81,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				continue;
 			}
 			
-			skillId = skillInfo.getSkillId();
-			skillLvl = skillInfo.getSkillLvl();
 			L2Skill itemSkill = skillInfo.getSkill();
-			
 			if (itemSkill != null)
 			{
 				if (!itemSkill.checkCondition(playable, playable.getTarget(), false))
@@ -96,7 +95,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				
 				// Verify that skill is not under reuse.
-				if (!checkReuse(activeChar, itemSkill, item))
+				if (!checkReuse(playable, itemSkill, item))
 				{
 					return false;
 				}
@@ -110,29 +109,31 @@ public class ItemSkillsTemplate implements IItemHandler
 				{
 					if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), playable, false))
 					{
-						activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+						playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 						return false;
 					}
 				}
 				
-				// send message to owner
+				// Send message to the master.
 				if (playable.isPet())
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PET_USES_S1);
-					sm.addString(itemSkill.getName());
-					activeChar.sendPacket(sm);
+					sm.addSkillName(itemSkill);
+					playable.sendPacket(sm);
 				}
 				else
 				{
+					skillId = skillInfo.getSkillId();
+					skillLvl = skillInfo.getSkillLvl();
+					// Short buff icon for healing potions.
 					switch (skillId)
 					{
-					// short buff icon for healing potions
 						case 2031:
 						case 2032:
 						case 2037:
 						case 26025:
 						case 26026:
-							final int buffId = activeChar._shortBuffTaskSkillId;
+							final int buffId = activeChar.getShortBuffTaskSkillId();
 							if ((skillId == 2037) || (skillId == 26025))
 							{
 								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
@@ -152,13 +153,13 @@ public class ItemSkillsTemplate implements IItemHandler
 					}
 				}
 				
-				if (item.isPotion() || item.isElixir() || itemSkill.isSimultaneousCast())
+				if (item.isPotion() || item.isElixir() || (item.getItemType() == L2EtcItemType.HERB) || itemSkill.isSimultaneousCast())
 				{
 					playable.doSimultaneousCast(itemSkill);
 					// Summons should be affected by herbs too, self time effect is handled at L2Effect constructor
-					if (!playable.isPet() && (item.getItemType() == L2EtcItemType.HERB) && (activeChar.getPet() != null) && (activeChar.getPet() instanceof L2ServitorInstance))
+					if (!playable.isSummon() && activeChar.hasSummon())
 					{
-						activeChar.getPet().doSimultaneousCast(itemSkill);
+						activeChar.getSummon().doSimultaneousCast(itemSkill);
 					}
 				}
 				else
@@ -174,7 +175,7 @@ public class ItemSkillsTemplate implements IItemHandler
 					{
 						if (!playable.destroyItem("Consume", item.getObjectId(), itemSkill.getItemConsume(), null, false))
 						{
-							activeChar.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
+							playable.sendPacket(SystemMessageId.NOT_ENOUGH_ITEMS);
 							return false;
 						}
 					}
@@ -182,7 +183,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				
 				if (itemSkill.getReuseDelay() > 0)
 				{
-					activeChar.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
+					playable.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
 				}
 			}
 		}
@@ -190,70 +191,65 @@ public class ItemSkillsTemplate implements IItemHandler
 	}
 	
 	/**
-	 * @param player the player using the item or skill
+	 * @param playable the character using the item or skill
 	 * @param skill the skill being used, can be null
 	 * @param item the item being used
 	 * @return {@code true} if the the item or skill to check is available, {@code false} otherwise
 	 */
-	private boolean checkReuse(L2PcInstance player, L2Skill skill, L2ItemInstance item)
+	private boolean checkReuse(L2Playable playable, L2Skill skill, L2ItemInstance item)
 	{
-		SystemMessage sm = null;
-		final long remainingTime = (skill != null) ? player.getSkillRemainingReuseTime(skill.getReuseHashCode()) : player.getItemRemainingReuseTime(item.getObjectId());
+		final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
 		final boolean isAvailable = remainingTime <= 0;
-		if (!isAvailable)
+		if (playable.isPlayer())
 		{
-			final int hours = (int) (remainingTime / 3600000L);
-			final int minutes = (int) (remainingTime % 3600000L) / 60000;
-			final int seconds = (int) ((remainingTime / 1000) % 60);
-			if (hours > 0)
+			if (!isAvailable)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isStatic())
+				final int hours = (int) (remainingTime / 3600000L);
+				final int minutes = (int) (remainingTime % 3600000L) / 60000;
+				final int seconds = (int) ((remainingTime / 1000) % 60);
+				SystemMessage sm = null;
+				if (hours > 0)
 				{
-					sm.addItemName(item);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_REUSE_S1);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
+					sm.addNumber(hours);
+					sm.addNumber(minutes);
+				}
+				else if (minutes > 0)
+				{
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
+					sm.addNumber(minutes);
 				}
 				else
 				{
-					sm.addSkillName(skill);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
+					if ((skill == null) || skill.isStatic())
+					{
+						sm.addItemName(item);
+					}
+					else
+					{
+						sm.addSkillName(skill);
+					}
 				}
-				sm.addNumber(hours);
-				sm.addNumber(minutes);
+				sm.addNumber(seconds);
+				playable.sendPacket(sm);
 			}
-			else if (minutes > 0)
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MINUTES_S3_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isStatic())
-				{
-					sm.addItemName(item);
-				}
-				else
-				{
-					sm.addSkillName(skill);
-				}
-				sm.addNumber(minutes);
-			}
-			else
-			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_SECONDS_REMAINING_FOR_REUSE_S1);
-				if ((skill == null) || skill.isStatic())
-				{
-					sm.addItemName(item);
-				}
-				else
-				{
-					sm.addSkillName(skill);
-				}
-			}
-			sm.addNumber(seconds);
-		}
-		else if (skill == null)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
-			sm.addItemName(item);
-		}
-		if (sm != null)
-		{
-			player.sendPacket(sm);
 		}
 		return isAvailable;
 	}

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -29,12 +33,9 @@ import com.l2jserver.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
-
 /**
  * This class handles commands for gm to forge packets
- *
  * @author Maktakien
- *
  */
 public class AdminPForge implements IAdminCommandHandler
 {
@@ -157,9 +158,13 @@ public class AdminPForge implements IAdminCommandHandler
 					}
 					
 					if (!client)
+					{
 						sp.addPart(format.getBytes()[i], val);
+					}
 					else
+					{
 						write(format.getBytes()[i], val, buf);
+					}
 				}
 				if (broadcast)
 				{
@@ -175,7 +180,9 @@ public class AdminPForge implements IAdminCommandHandler
 						{
 							p.setBuffers(buf, activeChar.getClient(), new NioNetStringBuffer(2000));
 							if (p.read())
+							{
 								ThreadPoolManager.getInstance().executePacket(p);
+							}
 						}
 					}
 				}
@@ -204,20 +211,19 @@ public class AdminPForge implements IAdminCommandHandler
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/pforge2.htm");
 		adminReply.replace("%format%", format);
 		
-		final StringBuilder replyMSG =
-			new StringBuilder(format.length() * 40);
+		final StringBuilder replyMSG = new StringBuilder(format.length() * 40);
 		
 		for (int i = 0; i < format.length(); i++)
-			StringUtil.append(replyMSG,
-					String.valueOf(format.charAt(i)),
-					" : <edit var=\"v",
-					String.valueOf(i),
-			"\" width=100><br1>");
+		{
+			StringUtil.append(replyMSG, String.valueOf(format.charAt(i)), " : <edit var=\"v", String.valueOf(i), "\" width=100><br1>");
+		}
 		adminReply.replace("%valueditors%", replyMSG.toString());
 		replyMSG.setLength(0);
 		
 		for (int i = 0; i < format.length(); i++)
+		{
 			replyMSG.append(" $v" + i);
+		}
 		adminReply.replace("%send%", replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
@@ -231,30 +237,29 @@ public class AdminPForge implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	
 	private boolean write(byte b, String string, ByteBuffer buf)
 	{
-		if((b == 'C')||(b == 'c'))
+		if ((b == 'C') || (b == 'c'))
 		{
 			buf.put(Byte.decode(string));
 			return true;
 		}
-		else if((b == 'D')||(b == 'd'))
+		else if ((b == 'D') || (b == 'd'))
 		{
 			buf.putInt(Integer.decode(string));
 			return true;
 		}
-		else if((b == 'H')||(b == 'h'))
+		else if ((b == 'H') || (b == 'h'))
 		{
 			buf.putShort(Short.decode(string));
 			return true;
 		}
-		else if((b == 'F')||(b == 'f'))
+		else if ((b == 'F') || (b == 'f'))
 		{
 			buf.putDouble(Double.parseDouble(string));
 			return true;
 		}
-		else if((b == 'S')||(b == 's'))
+		else if ((b == 'S') || (b == 's'))
 		{
 			final int len = string.length();
 			for (int i = 0; i < len; i++)
@@ -264,7 +269,7 @@ public class AdminPForge implements IAdminCommandHandler
 			buf.putChar('\000');
 			return true;
 		}
-		else if((b == 'B')||(b == 'b')||(b == 'X')||(b == 'x'))
+		else if ((b == 'B') || (b == 'b') || (b == 'X') || (b == 'x'))
 		{
 			buf.put(new BigInteger(string).toByteArray());
 			return true;

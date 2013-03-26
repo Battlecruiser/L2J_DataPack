@@ -1,22 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.group_template;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javolution.util.FastMap;
+import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -29,7 +37,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
@@ -37,10 +44,11 @@ import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Growth-capable mobs: Polymorphing upon successful feeding.
- * @author Fulminus Updated to Freya by Gigiikun
+ * Growth-capable mobs: Polymorphing upon successful feeding.<br>
+ * Updated to Freya.
+ * @author Fulminus, Gigiikun
  */
-public class BeastFarm extends L2AttackableAIScript
+public class BeastFarm extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 15474;
 	private static final int CRYSTAL_SPICE = 15475;
@@ -52,78 +60,62 @@ public class BeastFarm extends L2AttackableAIScript
 	private static final int SKILL_SGRADE_CRYSTAL_SPICE = 9054;
 	private static final int[] TAMED_BEASTS =
 	{
-		18869, 18870, 18871, 18872
+		18869,
+		18870,
+		18871,
+		18872
 	};
 	private static final int TAME_CHANCE = 20;
 	protected static final int[] SPECIAL_SPICE_CHANCES =
 	{
-		33, 75
+		33,
+		75
 	};
 	
 	// all mobs that can eat...
 	private static final int[] FEEDABLE_BEASTS =
 	{
-		18873, 18874, 18875, 18876, 18877, 18878, 18879, 18880, 18881, 18882, 18883, 18884, 18885, 18886, 18887, 18888, 18889, 18890, 18891, 18892, 18893, 18894, 18895, 18896, 18897, 18898, 18899, 18900
+		// Kookaburras
+		18873,
+		18874,
+		18875,
+		18876,
+		18877,
+		18878,
+		18879,
+		// Cougars
+		18880,
+		18881,
+		18882,
+		18883,
+		18884,
+		18885,
+		18886,
+		// Buffalos
+		18887,
+		18888,
+		18889,
+		18890,
+		18891,
+		18892,
+		18893,
+		// Grendels
+		18894,
+		18895,
+		18896,
+		18897,
+		18898,
+		18899,
+		18900
 	};
 	
 	private static Map<Integer, Integer> _FeedInfo = new FastMap<>();
 	private static Map<Integer, GrowthCapableMob> _GrowthCapableMobs = new FastMap<>();
-	private static Map<String, SkillHolder[]> _TamedBeastsData = new FastMap<>();
+	private static List<TamedBeast> TAMED_BEAST_DATA = new ArrayList<>();
 	
-	// all mobs that grow by eating
-	private static class GrowthCapableMob
+	private BeastFarm()
 	{
-		private final int _chance;
-		private final int _growthLevel;
-		private final int _tameNpcId;
-		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
-		
-		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
-		{
-			_chance = chance;
-			_growthLevel = growthLevel;
-			_tameNpcId = tameNpcId;
-		}
-		
-		public void addNpcIdForSkillId(int skillId, int npcId)
-		{
-			_skillSuccessNpcIdList.put(skillId, npcId);
-		}
-		
-		public int getGrowthLevel()
-		{
-			return _growthLevel;
-		}
-		
-		public int getLeveledNpcId(int skillId)
-		{
-			if (!_skillSuccessNpcIdList.containsKey(skillId))
-				return -1;
-			else if (skillId == SKILL_BLESSED_GOLDEN_SPICE || skillId == SKILL_BLESSED_CRYSTAL_SPICE || skillId == SKILL_SGRADE_GOLDEN_SPICE || skillId == SKILL_SGRADE_CRYSTAL_SPICE)
-			{
-				if (getRandom(100) < SPECIAL_SPICE_CHANCES[0])
-				{
-					if (getRandom(100) < SPECIAL_SPICE_CHANCES[1])
-						return _skillSuccessNpcIdList.get(skillId);
-					else if (skillId == SKILL_BLESSED_GOLDEN_SPICE || skillId == SKILL_SGRADE_GOLDEN_SPICE)
-						return _skillSuccessNpcIdList.get(SKILL_GOLDEN_SPICE);
-					else
-						return _skillSuccessNpcIdList.get(SKILL_CRYSTAL_SPICE);
-				}
-				return -1;
-			}
-			else if (_growthLevel == 2 && getRandom(100) < TAME_CHANCE)
-				return _tameNpcId;
-			else if (getRandom(100) < _chance)
-				return _skillSuccessNpcIdList.get(skillId);
-			else
-				return -1;
-		}
-	}
-	
-	public BeastFarm(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
+		super(BeastFarm.class.getSimpleName(), "ai/group_template");
 		registerMobs(FEEDABLE_BEASTS, QuestEventType.ON_KILL, QuestEventType.ON_SKILL_SEE);
 		
 		GrowthCapableMob temp;
@@ -233,34 +225,12 @@ public class BeastFarm extends L2AttackableAIScript
 		_GrowthCapableMobs.put(18898, temp);
 		
 		// Tamed beasts data
-		SkillHolder[] stemp = new SkillHolder[2];
-		stemp[0] = new SkillHolder(6432, 1);
-		stemp[1] = new SkillHolder(6668, 1);
-		_TamedBeastsData.put("%name% of Focus", stemp);
-		
-		stemp = new SkillHolder[2];
-		stemp[0] = new SkillHolder(6433, 1);
-		stemp[1] = new SkillHolder(6670, 1);
-		_TamedBeastsData.put("%name% of Guiding", stemp);
-		
-		stemp = new SkillHolder[2];
-		stemp[0] = new SkillHolder(6434, 1);
-		stemp[1] = new SkillHolder(6667, 1);
-		_TamedBeastsData.put("%name% of Swifth", stemp);
-		
-		stemp = new SkillHolder[1];
-		stemp[0] = new SkillHolder(6671, 1);
-		_TamedBeastsData.put("Berserker %name%", stemp);
-		
-		stemp = new SkillHolder[2];
-		stemp[0] = new SkillHolder(6669, 1);
-		stemp[1] = new SkillHolder(6672, 1);
-		_TamedBeastsData.put("%name% of Protect", stemp);
-		
-		stemp = new SkillHolder[2];
-		stemp[0] = new SkillHolder(6431, 1);
-		stemp[1] = new SkillHolder(6666, 1);
-		_TamedBeastsData.put("%name% of Vigor", stemp);
+		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Focus", new SkillHolder(6432, 1), new SkillHolder(6668, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Guiding", new SkillHolder(6433, 1), new SkillHolder(6670, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Swifth", new SkillHolder(6434, 1), new SkillHolder(6667, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeast("Berserker %name%", new SkillHolder(6671, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Protect", new SkillHolder(6669, 1), new SkillHolder(6672, 1)));
+		TAMED_BEAST_DATA.add(new TamedBeast("%name% of Vigor", new SkillHolder(6431, 1), new SkillHolder(6666, 1)));
 	}
 	
 	public void spawnNext(L2Npc npc, L2PcInstance player, int nextNpcId, int food)
@@ -269,7 +239,9 @@ public class BeastFarm extends L2AttackableAIScript
 		if (_FeedInfo.containsKey(npc.getObjectId()))
 		{
 			if (_FeedInfo.get(npc.getObjectId()) == player.getObjectId())
+			{
 				_FeedInfo.remove(npc.getObjectId());
+			}
 		}
 		// despawn the old mob
 		// TODO: same code? FIXED?
@@ -286,8 +258,8 @@ public class BeastFarm extends L2AttackableAIScript
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(nextNpcId);
 			L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(IdFactory.getInstance().getNextId(), template, player, food, npc.getX(), npc.getY(), npc.getZ(), true);
 			
-			String name = _TamedBeastsData.keySet().toArray(new String[_TamedBeastsData.keySet().size()])[getRandom(_TamedBeastsData.size())];
-			SkillHolder[] skillList = _TamedBeastsData.get(name);
+			TamedBeast beast = TAMED_BEAST_DATA.get(getRandom(TAMED_BEAST_DATA.size()));
+			String name = beast.getName();
 			switch (nextNpcId)
 			{
 				case 18869:
@@ -305,18 +277,15 @@ public class BeastFarm extends L2AttackableAIScript
 			}
 			nextNpc.setName(name);
 			nextNpc.broadcastPacket(new AbstractNpcInfo.NpcInfo(nextNpc, player));
-			for (SkillHolder sh : skillList)
-				nextNpc.addBeastSkill(SkillTable.getInstance().getInfo(sh.getSkillId(), sh.getSkillLvl()));
 			nextNpc.setRunning();
 			
-			QuestState st = player.getQuestState("20_BringUpWithLove");
-			if (st != null && st.getInt("cond") == 1 && !st.hasQuestItems(7185) && getRandom(10) == 1)
+			SkillTable st = SkillTable.getInstance();
+			for (SkillHolder sh : beast.getSkills())
 			{
-				// if player has quest 20 going, give quest item
-				// it's easier to hardcode it in here than to try and repeat this stuff in the quest
-				st.giveItems(7185, 1);
-				st.set("cond", "2");
+				nextNpc.addBeastSkill(st.getInfo(sh.getSkillId(), sh.getSkillLvl()));
 			}
+			
+			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
 		}
 		else
 		{
@@ -340,21 +309,21 @@ public class BeastFarm extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
 		if (!Util.contains(targets, npc))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
 		int npcId = npc.getNpcId();
 		int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
-		if (!Util.contains(FEEDABLE_BEASTS, npcId) || (skillId != SKILL_GOLDEN_SPICE && skillId != SKILL_CRYSTAL_SPICE && skillId != SKILL_BLESSED_GOLDEN_SPICE && skillId != SKILL_BLESSED_CRYSTAL_SPICE && skillId != SKILL_SGRADE_GOLDEN_SPICE && skillId != SKILL_SGRADE_CRYSTAL_SPICE))
+		if (!Util.contains(FEEDABLE_BEASTS, npcId) || ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE) && (skillId != SKILL_BLESSED_GOLDEN_SPICE) && (skillId != SKILL_BLESSED_CRYSTAL_SPICE) && (skillId != SKILL_SGRADE_GOLDEN_SPICE) && (skillId != SKILL_SGRADE_CRYSTAL_SPICE)))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		// first gather some values on local variables
@@ -367,9 +336,9 @@ public class BeastFarm extends L2AttackableAIScript
 		
 		// prevent exploit which allows 2 players to simultaneously raise the same 0-growth beast
 		// If the mob is at 0th level (when it still listens to all feeders) lock it to the first feeder!
-		if (growthLevel == 0 && _FeedInfo.containsKey(objectId))
+		if ((growthLevel == 0) && _FeedInfo.containsKey(objectId))
 		{
-			return super.onSkillSee(npc, caster, skill, targets, isPet);
+			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		
 		_FeedInfo.put(objectId, caster.getObjectId());
@@ -378,11 +347,11 @@ public class BeastFarm extends L2AttackableAIScript
 		npc.broadcastSocialAction(2);
 		
 		int food = 0;
-		if (skillId == SKILL_GOLDEN_SPICE || skillId == SKILL_BLESSED_GOLDEN_SPICE)
+		if ((skillId == SKILL_GOLDEN_SPICE) || (skillId == SKILL_BLESSED_GOLDEN_SPICE))
 		{
 			food = GOLDEN_SPICE;
 		}
-		else if (skillId == SKILL_CRYSTAL_SPICE || skillId == SKILL_BLESSED_CRYSTAL_SPICE)
+		else if ((skillId == SKILL_CRYSTAL_SPICE) || (skillId == SKILL_BLESSED_CRYSTAL_SPICE))
 		{
 			food = CRYSTAL_SPICE;
 		}
@@ -401,13 +370,13 @@ public class BeastFarm extends L2AttackableAIScript
 					((L2Attackable) npc).addDamageHate(caster, 0, 1);
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, caster);
 				}
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			else if (growthLevel > 0 && _FeedInfo.get(objectId) != caster.getObjectId())
+			else if ((growthLevel > 0) && (_FeedInfo.get(objectId) != caster.getObjectId()))
 			{
 				// check if this is the same player as the one who raised it from growth 0.
 				// if no, then do not allow a chance to raise the pet (food gets consumed but has no effect).
-				return super.onSkillSee(npc, caster, skill, targets, isPet);
+				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
 			spawnNext(npc, caster, newNpcId, food);
 		}
@@ -416,23 +385,109 @@ public class BeastFarm extends L2AttackableAIScript
 			caster.sendMessage("The beast spit out the feed instead of eating it.");
 			((L2Attackable) npc).dropItem(caster, food, 1);
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		// remove the feedinfo of the mob that got killed, if any
 		if (_FeedInfo.containsKey(npc.getObjectId()))
 		{
 			_FeedInfo.remove(npc.getObjectId());
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	// all mobs that grow by eating
+	private static class GrowthCapableMob
+	{
+		private final int _chance;
+		private final int _growthLevel;
+		private final int _tameNpcId;
+		private final Map<Integer, Integer> _skillSuccessNpcIdList = new FastMap<>();
+		
+		public GrowthCapableMob(int chance, int growthLevel, int tameNpcId)
+		{
+			_chance = chance;
+			_growthLevel = growthLevel;
+			_tameNpcId = tameNpcId;
+		}
+		
+		public void addNpcIdForSkillId(int skillId, int npcId)
+		{
+			_skillSuccessNpcIdList.put(skillId, npcId);
+		}
+		
+		public int getGrowthLevel()
+		{
+			return _growthLevel;
+		}
+		
+		public int getLeveledNpcId(int skillId)
+		{
+			if (!_skillSuccessNpcIdList.containsKey(skillId))
+			{
+				return -1;
+			}
+			else if ((skillId == SKILL_BLESSED_GOLDEN_SPICE) || (skillId == SKILL_BLESSED_CRYSTAL_SPICE) || (skillId == SKILL_SGRADE_GOLDEN_SPICE) || (skillId == SKILL_SGRADE_CRYSTAL_SPICE))
+			{
+				if (getRandom(100) < SPECIAL_SPICE_CHANCES[0])
+				{
+					if (getRandom(100) < SPECIAL_SPICE_CHANCES[1])
+					{
+						return _skillSuccessNpcIdList.get(skillId);
+					}
+					else if ((skillId == SKILL_BLESSED_GOLDEN_SPICE) || (skillId == SKILL_SGRADE_GOLDEN_SPICE))
+					{
+						return _skillSuccessNpcIdList.get(SKILL_GOLDEN_SPICE);
+					}
+					else
+					{
+						return _skillSuccessNpcIdList.get(SKILL_CRYSTAL_SPICE);
+					}
+				}
+				return -1;
+			}
+			else if ((_growthLevel == 2) && (getRandom(100) < TAME_CHANCE))
+			{
+				return _tameNpcId;
+			}
+			else if (getRandom(100) < _chance)
+			{
+				return _skillSuccessNpcIdList.get(skillId);
+			}
+			else
+			{
+				return -1;
+			}
+		}
+	}
+	
+	private static class TamedBeast
+	{
+		private final String name;
+		private final SkillHolder[] sh;
+		
+		public TamedBeast(String beastName, SkillHolder... holders)
+		{
+			name = beastName;
+			sh = holders;
+		}
+		
+		public String getName()
+		{
+			return name;
+		}
+		
+		public SkillHolder[] getSkills()
+		{
+			return sh;
+		}
 	}
 	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the ai)
-		new BeastFarm(-1, "beast_farm", "ai");
+		new BeastFarm();
 	}
 }

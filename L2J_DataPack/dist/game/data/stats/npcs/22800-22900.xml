@@ -1,0 +1,1301 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="22800" templateId="22800" clientName="Divinity Magus" serverName="n_divine_magician" level="84" type="warrior">
+		<acquire exp="349400" exp_rate="49.5181253401361" sp="35497" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="11913" max="24348" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="6.6277">
+				<item id="13143" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Helmet -->
+				<item id="13144" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Leather Helmet -->
+				<item id="13145" min="1" max="1" chance="0.0417" /> <!-- Sealed Vesper Circlet -->
+				<item id="14111" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Shield -->
+				<item id="13887" min="1" max="1" chance="0.0596" /> <!-- Sealed Vesper Sigil -->
+				<item id="15660" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Helmet Piece -->
+				<item id="15661" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Leather Helmet Piece -->
+				<item id="15662" min="1" max="1" chance="16.7489" /> <!-- Sealed Vesper Circlet Piece -->
+				<item id="15669" min="1" max="1" chance="24.7544" /> <!-- Sealed Vesper Verteidiger Piece -->
+				<item id="15691" min="1" max="1" chance="24.7546" /> <!-- Sealed Vesper Sigil Piece -->
+			</category>
+			<category chance="36.0183">
+				<item id="1879" min="1" max="3" chance="43.0384" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="43.0384" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="4.0507" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="2.7182" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="2.2455" /> <!-- Adamantine -->
+				<item id="14166" min="1" max="1" chance="2.495" /> <!-- Life Stone - Level 84 -->
+				<item id="14167" min="1" max="1" chance="0.623" /> <!-- Mid-Grade Life Stone - Level 84 -->
+				<item id="14168" min="1" max="1" chance="0.0623" /> <!-- High-Grade Life Stone - Level 84 -->
+				<item id="15792" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
+				<item id="15793" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
+				<item id="15794" min="1" max="1" chance="0.2951" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
+				<item id="15808" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
+				<item id="15807" min="1" max="1" chance="0.4216" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
+			</category>
+			<category chance="7">
+				<item id="15690" min="1" max="1" chance="15" /> <!-- Secret Key -->
+				<item id="15540" min="1" max="1" chance="15" /> <!-- Unlit Torchlight -->
+				<item id="8056" min="1" max="1" chance="70" /> <!-- Key of Splendor Room -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>n_divine_clan</clan>
+		</clans>
+		<clan_help_range>500</clan_help_range>
+		<collision>
+			<radius normal="18" special="18" />
+			<height normal="44" special="44" />
+		</collision>
+		<corpse_make_list>
+			<item id="15660" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Helmet Piece -->
+			<item id="15661" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Leather Helmet Piece -->
+			<item id="15662" min="1" max="1" chance="6.7556" /> <!-- Sealed Vesper Circlet Piece -->
+			<item id="15669" min="1" max="1" chance="9.9846" /> <!-- Sealed Vesper Verteidiger Piece -->
+			<item id="15691" min="1" max="1" chance="9.9846" /> <!-- Sealed Vesper Sigil Piece -->
+			<item id="15792" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Helmet (60%) -->
+			<item id="15793" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Leather Helmet (60%) -->
+			<item id="15794" min="1" max="1" chance="0.8416" /> <!-- Recipe - Sealed Vesper Circlet (60%) -->
+			<item id="15808" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Shield (60%) -->
+			<item id="15807" min="1" max="1" chance="1.2022" /> <!-- Recipe - Sealed Vesper Sigil (60%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="16">
+				<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="50" /> <!-- Greater Herb of Mana -->
+			</category>
+		</ex_item_drop_list>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="150" underWater="0" flying="0" />
+			<walk ground="40" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="5837.38675800657" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="3986.17843618672" pDef="572.587568" mDef="628.492104" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="220" dark="0" />
+			<defend fire="170" water="170" wind="170" earth="170" holy="180" dark="120" unknown="170" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_divine_magician</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6321" level="1" /> <!-- Divine Flash -->
+			<ai_skill name="Skill02_ID" id="6322" level="1" /> <!-- Divine Impact -->
+			<ai_skill name="Skill03_ID" id="6320" level="1" /> <!-- Summon Sacred Magic Force -->
+		</npc_ai>
+		<org hp="32744.8265190398" hp_regen="110.577296732991" mp="1812" mp_regen="3" />
+		<race>DIVINE</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="3" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4285" level="4" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="4" /> <!-- Resist Hold Attacks -->
+			<skill id="5601" level="3" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="mage" />
+		</custom>
+	</npc>
+	<npc id="22801" templateId="22801" clientName="Cruel Pincer Golem" serverName="golem_cannon1_p" level="72" type="warrior">
+		<acquire exp="10109" exp_rate="1.95" sp="1027" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1294" max="2643" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0004">
+				<item id="6364" min="1" max="1" chance="50" /> <!-- Forgotten Blade -->
+				<item id="6372" min="1" max="1" chance="50" /> <!-- Heaven's Divider -->
+			</category>
+			<category chance="8.45">
+				<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23.5" special="23.5" />
+			<height normal="34.7" special="34.7" />
+		</collision>
+		<corpse_make_list>
+			<item id="5162" min="1" max="1" chance="0.0858" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+			<item id="6701" min="1" max="1" chance="1.0276" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+			<item id="6702" min="1" max="1" chance="1.3228" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+			<item id="9630" min="1" max="1" chance="1.0158" /> <!-- Orichalcum -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="130" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_cannon1_p</ai>
+			<ai_param name="Privates01_sil" val="golem_cannon2_p" />
+			<ai_param name="Privates01_ai" val="golem_cannon2_p" />
+			<ai_param name="Privates02_sil" val="golem_cannon3_p" />
+			<ai_param name="Privates02_ai" val="golem_cannon3_p" />
+			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22802" templateId="22802" clientName="Cruel Pincer Golem" serverName="golem_cannon2_p" level="72" type="warrior">
+		<acquire exp="7216" exp_rate="1.392" sp="733" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="894" max="1826" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0003">
+				<item id="6366" min="1" max="1" chance="25" /> <!-- Imperial Staff -->
+				<item id="6369" min="1" max="1" chance="25" /> <!-- Dragon Hunter Axe -->
+				<item id="6365" min="1" max="1" chance="25" /> <!-- Basalt Battlehammer -->
+				<item id="6579" min="1" max="1" chance="25" /> <!-- Arcana Mace -->
+			</category>
+			<category chance="1.8131">
+				<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23.5" special="23.5" />
+			<height normal="34.7" special="34.7" />
+		</collision>
+		<corpse_make_list>
+			<item id="6688" min="1" max="1" chance="0.3844" /> <!-- Forgotten Blade Edge -->
+			<item id="6696" min="1" max="1" chance="0.3905" /> <!-- Heavens Divider Edge -->
+			<item id="6711" min="1" max="1" chance="0.8811" /> <!-- Sealed Major Arcana Robe Part -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="130" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_cannon2_p</ai>
+			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22803" templateId="22803" clientName="Cruel Pincer Golem" serverName="golem_cannon3_p" level="72" type="warrior">
+		<acquire exp="9269" exp_rate="1.788" sp="941" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1178" max="2406" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0004">
+				<item id="6371" min="1" max="1" chance="100" /> <!-- Demon Splinter -->
+			</category>
+			<category chance="2.3884">
+				<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23.5" special="23.5" />
+			<height normal="34.7" special="34.7" />
+		</collision>
+		<corpse_make_list>
+			<item id="6694" min="1" max="1" chance="0.3866" /> <!-- Saint Spear Blade -->
+			<item id="5272" min="1" max="1" chance="0.0781" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+			<item id="6691" min="1" max="1" chance="0.3798" /> <!-- Angel Slayer Blade -->
+			<item id="959" min="1" max="1" chance="0.007" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="130" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_cannon3_p</ai>
+			<ai_skill name="Skill01_ID" id="6598" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22804" templateId="22804" clientName="Horrifying Jackhammer Golem" serverName="golem_prop1_p" level="73" type="warrior">
+		<acquire exp="10392" exp_rate="1.95" sp="1069" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1336" max="2721" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0005">
+				<item id="7575" min="1" max="1" chance="100" /> <!-- Draconic Bow -->
+			</category>
+			<category chance="6.9698">
+				<item id="1895" min="1" max="1" chance="80.3123" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.6219" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.6849" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.3698" /> <!-- Asofe -->
+				<item id="959" min="1" max="1" chance="0.0111" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="32.8" special="32.8" />
+		</collision>
+		<corpse_make_list>
+			<item id="5277" min="1" max="1" chance="0.1179" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+			<item id="6689" min="1" max="1" chance="0.5626" /> <!-- Basalt Battlehammer Head -->
+			<item id="6690" min="1" max="1" chance="0.5745" /> <!-- Imperial Staff Head -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>606322775</exp>
+		<speed>
+			<run ground="190" underWater="0" flying="0" />
+			<walk ground="72" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_prop1_p</ai>
+			<ai_param name="Privates01_sil" val="golem_prop2_p" />
+			<ai_param name="Privates01_ai" val="golem_prop2_p" />
+			<ai_param name="Privates02_sil" val="golem_prop3_p" />
+			<ai_param name="Privates02_ai" val="golem_prop3_p" />
+			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="2" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22805" templateId="22805" clientName="Horrifying Jackhammer Golem" serverName="golem_prop2_p" level="73" type="warrior">
+		<acquire exp="7418" exp_rate="1.392" sp="763" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="924" max="1880" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0003">
+				<item id="6367" min="1" max="1" chance="100" /> <!-- Angel Slayer -->
+			</category>
+			<category chance="1.4958">
+				<item id="1894" min="1" max="1" chance="31.7565" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="30.1686" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="7.8701" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="30.1686" /> <!-- Thons -->
+				<item id="959" min="1" max="1" chance="0.0362" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="32.8" special="32.8" />
+		</collision>
+		<corpse_make_list>
+			<item id="6695" min="1" max="1" chance="0.3888" /> <!-- Demon Splinter Blade -->
+			<item id="7579" min="1" max="1" chance="0.4009" /> <!-- Draconic Bow Shaft -->
+			<item id="5282" min="1" max="1" chance="0.0815" /> <!-- Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>606322775</exp>
+		<speed>
+			<run ground="190" underWater="0" flying="0" />
+			<walk ground="72" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_prop2_p</ai>
+			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22806" templateId="22806" clientName="Horrifying Jackhammer Golem" serverName="golem_prop3_p" level="73" type="warrior">
+		<acquire exp="9528" exp_rate="1.788" sp="980" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1217" max="2477" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0004">
+				<item id="6370" min="1" max="1" chance="100" /> <!-- Saint Spear -->
+			</category>
+			<category chance="1.9705">
+				<item id="1894" min="1" max="1" chance="31.7565" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="30.1686" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="7.8701" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="30.1686" /> <!-- Thons -->
+				<item id="959" min="1" max="1" chance="0.0362" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="32.8" special="32.8" />
+		</collision>
+		<corpse_make_list>
+			<item id="5529" min="1" max="1" chance="0.4969" /> <!-- Dragon Slayer Edge -->
+			<item id="1808" min="1" max="1" chance="0.0805" /> <!-- Recipe: Soulshot (S-Grade) -->
+			<item id="5533" min="1" max="1" chance="0.4968" /> <!-- Elysian Head -->
+			<item id="959" min="1" max="1" chance="0.0072" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>606322775</exp>
+		<speed>
+			<run ground="190" underWater="0" flying="0" />
+			<walk ground="72" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_prop3_p</ai>
+			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
+		</npc_ai>
+		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22807" templateId="22807" clientName="Scout-type Golem No. 28" serverName="golem_carrier_p" level="72" type="warrior">
+		<acquire exp="9904" exp_rate="1.9104" sp="1006" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1266" max="2585" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0019">
+				<item id="6674" min="1" max="1" chance="38.4612" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6675" min="1" max="1" chance="61.5388" /> <!-- Sealed Imperial Crusader Gaiters -->
+			</category>
+			<category chance="8.2647">
+				<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="20" special="20" />
+			<height normal="23" special="23" />
+		</collision>
+		<corpse_make_list>
+			<item id="6703" min="1" max="1" chance="3.5837" /> <!-- Sealed Imperial Crusader Gauntlets Design -->
+			<item id="6704" min="1" max="1" chance="3.5837" /> <!-- Sealed Imperial Crusader Boots Design -->
+			<item id="5277" min="1" max="1" chance="0.1119" /> <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="190" underWater="0" flying="0" />
+			<walk ground="72" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_carrier_p</ai>
+			<ai_skill name="Skill01_ID" id="6610" level="9" /> <!-- Earth Magic -->
+			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22808" templateId="22808" clientName="Scout-type Golem No. 2" serverName="golem_mechanic_p" level="72" type="warrior">
+		<acquire exp="5922" exp_rate="1.1424" sp="601" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="716" max="1461" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0007">
+				<item id="6680" min="1" max="1" chance="100" /> <!-- Sealed Draconic Leather Armor -->
+			</category>
+			<category chance="1.4505">
+				<item id="1894" min="1" max="1" chance="31.768" /> <!-- Crafted Leather -->
+				<item id="4039" min="1" max="1" chance="30.1796" /> <!-- Mold Glue -->
+				<item id="4041" min="1" max="1" chance="7.8729" /> <!-- Mold Hardener -->
+				<item id="4044" min="1" max="1" chance="30.1795" /> <!-- Thons -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>golem_p_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="5" special="5" />
+			<height normal="19" special="19" />
+		</collision>
+		<corpse_make_list>
+			<item id="3036" min="1" max="1" chance="0.0632" /> <!-- Recipe: Spiritshot S -->
+			<item id="959" min="1" max="1" chance="0.0057" /> <!-- Scroll: Enchant Weapon (S-Grade) -->
+			<item id="3957" min="1" max="1" chance="0.0632" /> <!-- Recipe: Blessed Spiritshot S -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="170" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.72" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_mechanic_p</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6597" level="9" /> <!-- Earth Attack -->
+			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22809" templateId="22809" clientName="Guard Golem" serverName="golem_guardian_p" level="73" type="warrior">
+		<acquire exp="20937" exp_rate="3.9288" sp="2066" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="2675" max="5446" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0025">
+				<item id="6684" min="1" max="1" chance="100" /> <!-- Sealed Major Arcana Robe -->
+			</category>
+			<category chance="12.5163">
+				<item id="1895" min="1" max="1" chance="89.5037" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="6.2653" /> <!-- Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="2.457" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="1.6488" /> <!-- Orichalcum -->
+				<item id="960" min="1" max="1" chance="0.1252" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>golem_p_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="16" special="16" />
+			<height normal="37.2" special="37.2" />
+		</collision>
+		<corpse_make_list>
+			<item id="6688" min="1" max="1" chance="1.1477" /> <!-- Forgotten Blade Edge -->
+			<item id="960" min="1" max="1" chance="0.2124" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			<item id="1894" min="1" max="1" chance="18.63" /> <!-- Crafted Leather -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>606322775</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_guardian_p</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
+			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
+		</npc_ai>
+		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22810" templateId="22810" clientName="Micro Scout Golem" serverName="golem_micro_p" level="72" type="warrior">
+		<acquire exp="17331" exp_rate="3.3432" sp="1676" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="2171" max="4432" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0106">
+				<item id="6725" min="1" max="1" chance="46.1563" /> <!-- Sealed Tateossian Ring -->
+				<item id="6726" min="1" max="1" chance="23.0728" /> <!-- Sealed Tateossian Necklace -->
+			</category>
+			<category chance="12.7014">
+				<item id="1895" min="1" max="1" chance="89.616" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="6.2731" /> <!-- Mold Lubricant -->
+				<item id="9628" min="1" max="1" chance="2.46" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="1.6509" /> <!-- Orichalcum -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>golem_p_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="43.5" special="43.5" />
+		</collision>
+		<corpse_make_list>
+			<item id="6708" min="1" max="1" chance="6.1449" /> <!-- Sealed Draconic Leather Gloves Fabric -->
+			<item id="6709" min="1" max="1" chance="6.1449" /> <!-- Sealed Draconic Leather Boots Design -->
+			<item id="5157" min="1" max="1" chance="0.1918" /> <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.43" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_micro_p</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6599" level="9" /> <!-- Earth Attack -->
+			<ai_skill name="Skill02_ID" id="4156" level="7" /> <!-- Beam Cannon -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22811" templateId="22811" clientName="Great Chaos Golem" serverName="golem_steel_p" level="73" type="warrior">
+		<acquire exp="30036" exp_rate="5.6364" sp="2962" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="3802" max="7740" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0174">
+				<item id="6676" min="1" max="1" chance="16.6667" /> <!-- Sealed Imperial Crusader Gauntlet -->
+				<item id="6681" min="1" max="1" chance="16.6667" /> <!-- Sealed Draconic Leather Glove -->
+				<item id="6685" min="1" max="1" chance="16.6667" /> <!-- Sealed Major Arcana Glove -->
+				<item id="6677" min="1" max="1" chance="16.6667" /> <!-- Sealed Imperial Crusader Boots -->
+				<item id="6682" min="1" max="1" chance="16.6667" /> <!-- Sealed Draconic Leather Boots -->
+				<item id="6686" min="1" max="1" chance="16.6665" /> <!-- Sealed Major Arcana Boots -->
+			</category>
+			<category chance="19.8457">
+				<item id="1895" min="1" max="1" chance="80.2311" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.6162" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.6801" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.3603" /> <!-- Asofe -->
+				<item id="960" min="1" max="1" chance="0.1123" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>golem_p_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="35" special="35" />
+			<height normal="46.3765" special="46.3765" />
+		</collision>
+		<corpse_make_list>
+			<item id="6712" min="1" max="1" chance="10.7447" /> <!-- Sealed Major Arcana Gloves fabric -->
+			<item id="5162" min="1" max="1" chance="0.3354" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+			<item id="6713" min="1" max="1" chance="10.7447" /> <!-- Sealed Major Arcana Boots Design -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>606322775</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="752.73928" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="514.02335" pDef="310.02959" mDef="226.8662" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_steel_p</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6262" level="1" /> <!-- EMP Power -->
+		</npc_ai>
+		<org hp="2586.66898" hp_regen="8.5" mp="1442.4" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="22812" templateId="22812" clientName="Boom Golem" serverName="golem_boom1_p" level="72" type="warrior">
+		<acquire exp="17281" exp_rate="3.3336" sp="1671" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="2164" max="4418" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.0071">
+				<item id="6679" min="1" max="1" chance="18.5838" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="18.5838" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6687" min="1" max="1" chance="18.5838" /> <!-- Sealed Major Arcana Circlet -->
+				<item id="6678" min="1" max="1" chance="26.5491" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="13885" min="1" max="1" chance="17.6995" /> <!-- Sealed Arcana Sigil -->
+			</category>
+			<category chance="14.1263">
+				<item id="1895" min="1" max="1" chance="80.3213" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.6225" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.6854" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.3708" /> <!-- Asofe -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>golem_p_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="6" special="6" />
+			<height normal="13" special="13" />
+		</collision>
+		<corpse_make_list>
+			<item id="6706" min="1" max="1" chance="10.4685" /> <!-- Sealed Imperial Crusader Helmet Pattern -->
+			<item id="6710" min="1" max="1" chance="10.4685" /> <!-- Sealed Draconic Leather Helmet Pattern -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="48" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_boom1_p</ai>
+			<ai_skill name="Skill01_ID" id="6264" level="1" /> <!-- Golem Boom -->
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>

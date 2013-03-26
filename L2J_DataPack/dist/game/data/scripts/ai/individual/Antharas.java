@@ -1,28 +1,31 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual;
 
-import gnu.trove.map.hash.TIntObjectHashMap;
-
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Logger;
 
 import javolution.util.FastList;
-import ai.group_template.L2AttackableAIScript;
+import javolution.util.FastMap;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
@@ -53,10 +56,8 @@ import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
  * This class ... control for sequence of fight against Antharas.
  * @author L2J_JP SANDMAN
  */
-public class Antharas extends L2AttackableAIScript
+public class Antharas extends AbstractNpcAI
 {
-	protected static final Logger log = Logger.getLogger(Antharas.class.getName());
-	
 	// config
 	private static final int FWA_ACTIVITYTIMEOFANTHARAS = 120;
 	// private static final int FWA_APPTIMEOFANTHARAS = 1800000;
@@ -66,7 +67,6 @@ public class Antharas extends L2AttackableAIScript
 	private static final boolean FWA_DOSERVEREARTHQUAKE = true;
 	private static final int FWA_LIMITOFWEAK = 45;
 	private static final int FWA_LIMITOFNORMAL = 63;
-	
 	private static final int FWA_MAXMOBS = 10; // this includes Antharas itself
 	private static final int FWA_INTERVALOFMOBSWEAK = 180000;
 	private static final int FWA_INTERVALOFMOBSNORMAL = 150000;
@@ -87,20 +87,16 @@ public class Antharas extends L2AttackableAIScript
 	
 	protected List<L2Spawn> _teleportCubeSpawn = new FastList<>();
 	protected List<L2Npc> _teleportCube = new FastList<>();
-	
 	// Spawn data of monsters.
-	protected TIntObjectHashMap<L2Spawn> _monsterSpawn = new TIntObjectHashMap<>();
-	
+	protected Map<Integer, L2Spawn> _monsterSpawn = new FastMap<>();
 	// Instance of monsters.
 	protected List<L2Npc> _monsters = new FastList<>();
 	protected L2GrandBossInstance _antharas = null;
-	
-	// monstersId
-	private static final int ANTHARASOLDID = 29019;
-	private static final int ANTHARASWEAKID = 29066;
-	private static final int ANTHARASNORMALID = 29067;
-	private static final int ANTHARASSTRONGID = 29068;
-	
+	// Antharas Ids
+	private static final int ANTHARAS_OLD_ID = 29019;
+	private static final int ANTHARAS_WEAK_ID = 29066;
+	private static final int ANTHARAS_NORMAL_ID = 29067;
+	private static final int ANTHARAS_STRONG_ID = 29068;
 	// Tasks.
 	protected ScheduledFuture<?> _cubeSpawnTask = null;
 	protected ScheduledFuture<?> _monsterSpawnTask = null;
@@ -111,7 +107,6 @@ public class Antharas extends L2AttackableAIScript
 	protected ScheduledFuture<?> _selfDestructionTask = null;
 	protected ScheduledFuture<?> _moveAtRandomTask = null;
 	protected ScheduledFuture<?> _movieTask = null;
-	
 	// Antharas Status Tracking :
 	private static final byte DORMANT = 0; // Antharas is spawned and no one has entered yet. Entry is unlocked
 	private static final byte WAITING = 1; // Antharas is spawend and someone has entered, triggering a 30 minute window for additional people to enter
@@ -123,32 +118,10 @@ public class Antharas extends L2AttackableAIScript
 	
 	protected static L2BossZone _Zone;
 	
-	public static void main(String[] args)
+	private Antharas(String name, String descr)
 	{
-		// now call the constructor (starts up the ai)
-		new Antharas(-1, "antharas", "ai");
-	}
-	
-	// Boss: Antharas
-	public Antharas(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		int[] mob =
-		{
-			ANTHARASOLDID,
-			ANTHARASWEAKID,
-			ANTHARASNORMALID,
-			ANTHARASSTRONGID,
-			29069,
-			29070,
-			29071,
-			29072,
-			29073,
-			29074,
-			29075,
-			29076
-		};
-		this.registerMobs(mob);
+		super(name, descr);
+		registerMobs(ANTHARAS_OLD_ID, ANTHARAS_WEAK_ID, ANTHARAS_NORMAL_ID, ANTHARAS_STRONG_ID, 29069, 29070, 29071, 29072, 29073, 29074, 29075, 29076);
 		init();
 	}
 	
@@ -163,7 +136,7 @@ public class Antharas extends L2AttackableAIScript
 			L2Spawn tempSpawn;
 			
 			// Old Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASOLDID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_OLD_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -175,7 +148,7 @@ public class Antharas extends L2AttackableAIScript
 			_monsterSpawn.put(29019, tempSpawn);
 			
 			// Weak Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASWEAKID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_WEAK_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -187,7 +160,7 @@ public class Antharas extends L2AttackableAIScript
 			_monsterSpawn.put(29066, tempSpawn);
 			
 			// Normal Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASNORMALID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_NORMAL_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -199,7 +172,7 @@ public class Antharas extends L2AttackableAIScript
 			_monsterSpawn.put(29067, tempSpawn);
 			
 			// Strong Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARASSTRONGID);
+			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_STRONG_ID);
 			tempSpawn = new L2Spawn(template1);
 			tempSpawn.setLocx(181323);
 			tempSpawn.setLocy(114850);
@@ -212,7 +185,7 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			log.warning(e.getMessage());
+			_log.warning(e.getMessage());
 		}
 		
 		// Setting spawn data of teleport cube.
@@ -236,18 +209,18 @@ public class Antharas extends L2AttackableAIScript
 		}
 		catch (Exception e)
 		{
-			log.warning(e.getMessage());
+			_log.warning(e.getMessage());
 		}
-		int status = GrandBossManager.getInstance().getBossStatus(ANTHARASOLDID);
+		int status = GrandBossManager.getInstance().getBossStatus(ANTHARAS_OLD_ID);
 		if (FWA_OLDANTHARAS || (status == WAITING))
 		{
-			StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARASOLDID);
+			StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS_OLD_ID);
 			Long respawnTime = info.getLong("respawn_time");
 			if ((status == DEAD) && (respawnTime <= System.currentTimeMillis()))
 			{
 				// the time has already expired while the server was offline. Immediately spawn antharas in his cave.
 				// also, the status needs to be changed to DORMANT
-				GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+				GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, DORMANT);
 				status = DORMANT;
 			}
 			else if (status == FIGHTING)
@@ -258,7 +231,7 @@ public class Antharas extends L2AttackableAIScript
 				int heading = info.getInteger("heading");
 				int hp = info.getInteger("currentHP");
 				int mp = info.getInteger("currentMP");
-				_antharas = (L2GrandBossInstance) addSpawn(ANTHARASOLDID, loc_x, loc_y, loc_z, heading, false, 0);
+				_antharas = (L2GrandBossInstance) addSpawn(ANTHARAS_OLD_ID, loc_x, loc_y, loc_z, heading, false, 0);
 				GrandBossManager.getInstance().addBoss(_antharas);
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
@@ -267,7 +240,7 @@ public class Antharas extends L2AttackableAIScript
 			}
 			else if (status == DEAD)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(ANTHARASOLDID), respawnTime - System.currentTimeMillis());
+				ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(ANTHARAS_OLD_ID), respawnTime - System.currentTimeMillis());
 			}
 			else
 			{
@@ -276,23 +249,23 @@ public class Antharas extends L2AttackableAIScript
 		}
 		else
 		{
-			int statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARASWEAKID);
-			int statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARASNORMALID);
-			int statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARASSTRONGID);
+			int statusWeak = GrandBossManager.getInstance().getBossStatus(ANTHARAS_WEAK_ID);
+			int statusNormal = GrandBossManager.getInstance().getBossStatus(ANTHARAS_NORMAL_ID);
+			int statusStrong = GrandBossManager.getInstance().getBossStatus(ANTHARAS_STRONG_ID);
 			int antharasId = 0;
 			if ((statusWeak == FIGHTING) || (statusWeak == DEAD))
 			{
-				antharasId = ANTHARASWEAKID;
+				antharasId = ANTHARAS_WEAK_ID;
 				status = statusWeak;
 			}
 			else if ((statusNormal == FIGHTING) || (statusNormal == DEAD))
 			{
-				antharasId = ANTHARASNORMALID;
+				antharasId = ANTHARAS_NORMAL_ID;
 				status = statusNormal;
 			}
 			else if ((statusStrong == FIGHTING) || (statusStrong == DEAD))
 			{
-				antharasId = ANTHARASSTRONGID;
+				antharasId = ANTHARAS_STRONG_ID;
 				status = statusStrong;
 			}
 			if ((antharasId != 0) && (status == FIGHTING))
@@ -364,8 +337,8 @@ public class Antharas extends L2AttackableAIScript
 			{
 				if (_monsterSpawnTask == null)
 				{
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, WAITING);
-					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), Config.Antharas_Wait_Time);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, WAITING);
+					_monsterSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new AntharasSpawn(1), (Config.ANTHARAS_WAIT_TIME * 60000));
 				}
 			}
 		}
@@ -390,10 +363,10 @@ public class Antharas extends L2AttackableAIScript
 		// that invaded the lair.
 		switch (antharasId)
 		{
-			case ANTHARASWEAKID:
+			case ANTHARAS_WEAK_ID:
 				intervalOfMobs = FWA_INTERVALOFMOBSWEAK;
 				break;
-			case ANTHARASNORMALID:
+			case ANTHARAS_NORMAL_ID:
 				intervalOfMobs = FWA_INTERVALOFMOBSNORMAL;
 				break;
 			default:
@@ -454,7 +427,7 @@ public class Antharas extends L2AttackableAIScript
 					_monsters.add(_antharas);
 					_antharas.setIsImmobilized(true);
 					
-					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, DORMANT);
+					GrandBossManager.getInstance().setBossStatus(ANTHARAS_OLD_ID, DORMANT);
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
 					_LastAction = System.currentTimeMillis();
 					// Start repeating timer to check for inactivity
@@ -641,13 +614,13 @@ public class Antharas extends L2AttackableAIScript
 			}
 			catch (Exception e)
 			{
-				log.warning(e.getMessage());
+				_log.warning(e.getMessage());
 			}
 		}
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isPet)
+	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		switch (npc.getNpcId())
 		{
@@ -664,7 +637,7 @@ public class Antharas extends L2AttackableAIScript
 				}
 				break;
 		}
-		return super.onAggroRangeEnter(npc, player, isPet);
+		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	// Do self destruction.
@@ -903,7 +876,7 @@ public class Antharas extends L2AttackableAIScript
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
@@ -937,19 +910,21 @@ public class Antharas extends L2AttackableAIScript
 			
 			npc.doCast(skill);
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
-			// Respawn time is 264 Hours - 72 Random Hours
-			long respawnTime = (long) Config.Interval_Of_Antharas_Spawn - getRandom(Config.Random_Of_Antharas_Spawn);
+			// Calculate Min and Max respawn times randomly.
+			long respawnTime = Config.ANTHARAS_SPAWN_INTERVAL + getRandom(-Config.ANTHARAS_SPAWN_RANDOM, Config.ANTHARAS_SPAWN_RANDOM);
+			respawnTime *= 3600000;
+			
 			ThreadPoolManager.getInstance().scheduleGeneral(new UnlockAntharas(npc.getNpcId()), respawnTime);
 			// also save the respawn time so that the info is maintained past reboots
 			StatsSet info = GrandBossManager.getInstance().getStatsSet(npc.getNpcId());
@@ -973,6 +948,11 @@ public class Antharas extends L2AttackableAIScript
 		{
 			_monsters.remove(npc);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	public static void main(String[] args)
+	{
+		new Antharas(Antharas.class.getSimpleName(), "ai");
 	}
 }

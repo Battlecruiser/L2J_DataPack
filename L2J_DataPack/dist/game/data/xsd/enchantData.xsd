@@ -6,6 +6,12 @@
 				<xs:element name="enchant" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence minOccurs="1" maxOccurs="1">
+							<xs:element name="step" maxOccurs="unbounded" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute type="xs:byte" name="level" use="required" />
+									<xs:attribute type="xs:double" name="successRate" use="required" />
+								</xs:complexType>
+							</xs:element>
 							<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="id" type="xs:positiveInteger" use="required" />

@@ -1,24 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.Q10290_LandDragonConqueror;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.interfaces.IL2Procedure;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * Land Dragon Conqueror (10290)
@@ -26,48 +32,105 @@ import com.l2jserver.gameserver.model.quest.State;
  */
 public class Q10290_LandDragonConqueror extends Quest
 {
-	private static final String qn = "10290_LandDragonConqueror";
-	// NPC
-	private static final int Theodoric = 30755;
-	// Old, Weak, Normal, Strong
-	private static final int[] Antharas =
+	public class RewardCheck implements IL2Procedure<L2PcInstance>
 	{
-		29019,
-		29066,
-		29067,
+		private final L2Npc _npc;
+		
+		public RewardCheck(L2Npc npc)
+		{
+			_npc = npc;
+		}
+		
+		@Override
+		public boolean execute(L2PcInstance member)
+		{
+			if (Util.checkIfInRange(8000, _npc, member, false))
+			{
+				QuestState st = member.getQuestState(getName());
+				
+				if ((st != null) && st.isCond(1) && st.hasQuestItems(SHABBY_NECKLACE))
+				{
+					st.takeItems(SHABBY_NECKLACE, -1);
+					st.giveItems(MIRACLE_NECKLACE, 1);
+					st.setCond(2, true);
+				}
+			}
+			return true;
+		}
+	}
+	
+	// NPC
+	private static final int THEODRIC = 30755;
+	
+	private static final int[] ANTHARAS =
+	{
+		29019, // Old
+		29066, // Weak
+		29067, // Normal
 		29068
+	// Strong
 	};
-	// Item
-	private static final int PortalStone = 3865;
-	private static final int ShabbyNecklace = 15522;
-	private static final int MiracleNecklace = 15523;
-	private static final int AntharaSlayerCirclet = 8568;
+	// Items
+	private static final int PORTAL_STONE = 3865;
+	private static final int SHABBY_NECKLACE = 15522;
+	private static final int MIRACLE_NECKLACE = 15523;
+	
+	private static final int ANTHARAS_SLAYER_CIRCLET = 8568;
+	
+	public Q10290_LandDragonConqueror(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		addStartNpc(THEODRIC);
+		addTalkId(THEODRIC);
+		addKillId(ANTHARAS);
+		registerQuestItems(MIRACLE_NECKLACE, SHABBY_NECKLACE);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return htmltext;
+			return getNoQuestMsg(player);
 		}
 		
-		if (event.equalsIgnoreCase("30755-07.htm"))
+		if (event.equals("30755-05.htm"))
 		{
-			st.setState(State.STARTED);
-			st.set("cond", "1");
-			st.giveItems(ShabbyNecklace, 1);
-			st.playSound("ItemSound.quest_accept");
+			st.startQuest();
+			st.giveItems(SHABBY_NECKLACE, 1);
 		}
-		return htmltext;
+		
+		return event;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		if (!player.isInParty())
+		{
+			return super.onKill(npc, player, isSummon);
+		}
+		
+		// rewards go only to command channel, not to a single party or player (retail Freya AI)
+		if (player.getParty().isInCommandChannel())
+		{
+			player.getParty().getCommandChannel().forEachMember(new RewardCheck(npc));
+		}
+		else
+		{
+			player.getParty().forEachMember(new RewardCheck(npc));
+		}
+		
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
+		
 		if (st == null)
 		{
 			return htmltext;
@@ -79,48 +142,41 @@ public class Q10290_LandDragonConqueror extends Quest
 			{
 				if (player.getLevel() < 83)
 				{
-					htmltext = "30755-02.htm";
-				}
-				else if (st.hasQuestItems(PortalStone))
-				{
-					htmltext = "30755-01.htm";
+					htmltext = "30755-00.htm";
 				}
 				else
 				{
-					htmltext = "30755-04.htm";
+					htmltext = st.hasQuestItems(PORTAL_STONE) ? "30755-02.htm" : "30755-01.htm";
 				}
 				break;
 			}
 			case State.STARTED:
 			{
-				final int cond = st.getInt("cond");
-				if (cond == 1)
+				if (st.isCond(1))
 				{
-					if (st.hasQuestItems(ShabbyNecklace))
+					if (st.hasQuestItems(SHABBY_NECKLACE))
 					{
-						htmltext = "30755-08.htm";
+						htmltext = "30755-06.html";
 					}
 					else
 					{
-						st.giveItems(ShabbyNecklace, 1);
-						htmltext = "30755-09.htm";
+						st.giveItems(SHABBY_NECKLACE, 1);
+						htmltext = "30755-07.html";
 					}
 				}
-				else if (cond == 2)
+				else if ((st.isCond(2)) && st.hasQuestItems(MIRACLE_NECKLACE))
 				{
-					st.takeItems(MiracleNecklace, 1);
+					htmltext = "30755-08.html";
 					st.giveAdena(131236, true);
 					st.addExpAndSp(702557, 76334);
-					st.giveItems(AntharaSlayerCirclet, 1);
-					st.playSound("ItemSound.quest_finish");
-					st.exitQuest(false);
-					htmltext = "30755-10.htm";
+					st.giveItems(ANTHARAS_SLAYER_CIRCLET, 1);
+					st.exitQuest(false, true);
 				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = "30755-03.htm";
+				htmltext = "30755-09.html";
 				break;
 			}
 		}
@@ -128,52 +184,8 @@ public class Q10290_LandDragonConqueror extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (player.getParty() != null)
-		{
-			for (L2PcInstance partyMember : player.getParty().getMembers())
-			{
-				rewardPlayer(partyMember);
-			}
-		}
-		else
-		{
-			rewardPlayer(player);
-		}
-		return null;
-	}
-	
-	private void rewardPlayer(L2PcInstance player)
-	{
-		final QuestState st = player.getQuestState(qn);
-		if ((st != null) && (st.getInt("cond") == 1))
-		{
-			st.takeItems(ShabbyNecklace, 1);
-			st.giveItems(MiracleNecklace, 1);
-			st.playSound("ItemSound.quest_middle");
-			st.set("cond", "2");
-		}
-	}
-	
-	public Q10290_LandDragonConqueror(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		
-		addStartNpc(Theodoric);
-		addTalkId(Theodoric);
-		addKillId(Antharas);
-		
-		questItemIds = new int[]
-		{
-			MiracleNecklace,
-			ShabbyNecklace
-		};
-	}
-	
 	public static void main(String[] args)
 	{
-		new Q10290_LandDragonConqueror(10290, qn, "Land Dragon Conqueror");
+		new Q10290_LandDragonConqueror(10290, Q10290_LandDragonConqueror.class.getSimpleName(), "Land Dragon Conqueror");
 	}
 }

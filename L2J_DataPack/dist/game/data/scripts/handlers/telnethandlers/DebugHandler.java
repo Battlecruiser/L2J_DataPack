@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.telnethandlers;
 
@@ -64,7 +68,7 @@ public class DebugHandler implements ITelnetHandler
 	@Override
 	public boolean useCommand(String command, PrintWriter _print, Socket _cSocket, int _uptime)
 	{
-		if (command.startsWith("debug") && command.length() > 6)
+		if (command.startsWith("debug") && (command.length() > 6))
 		{
 			StringTokenizer st = new StringTokenizer(command.substring(6));
 			// TODO: Rewrite to use ARM.
@@ -99,7 +103,9 @@ public class DebugHandler implements ITelnetHandler
 					{
 						String b = st.nextToken();
 						if (!b.isEmpty())
+						{
 							sp.addPart("C".getBytes()[0], "0x" + b);
+						}
 					}
 					
 					targetPlayer.sendPacket(sp);
@@ -252,7 +258,7 @@ public class DebugHandler implements ITelnetHandler
 					sb.append('\n');
 					ThreadMXBean mbean = ManagementFactory.getThreadMXBean();
 					long[] ids = findDeadlockedThreads(mbean);
-					if (ids != null && ids.length > 0)
+					if ((ids != null) && (ids.length > 0))
 					{
 						Thread[] threads = new Thread[ids.length];
 						for (int i = 0; i < threads.length; i++)
@@ -378,16 +384,27 @@ public class DebugHandler implements ITelnetHandler
 		for (L2Object obj : objs)
 		{
 			if (obj == null)
+			{
 				continue;
+			}
 			if (obj instanceof L2Character)
+			{
 				if (((L2Character) obj).hasAI())
+				{
 					AICount++;
+				}
+			}
 			if (obj instanceof L2ItemInstance)
+			{
 				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				{
 					itemVoidCount++;
+				}
 				else
+				{
 					itemCount++;
-			
+				}
+			}
 			else if (obj instanceof L2MonsterInstance)
 			{
 				monsterCount++;
@@ -398,19 +415,29 @@ public class DebugHandler implements ITelnetHandler
 				}
 			}
 			else if (obj instanceof L2Npc)
+			{
 				npcCount++;
+			}
 			else if (obj instanceof L2PcInstance)
 			{
 				pcCount++;
-				if (((L2PcInstance) obj).getClient() != null && ((L2PcInstance) obj).getClient().isDetached())
+				if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached())
+				{
 					detachedCount++;
+				}
 			}
 			else if (obj instanceof L2Summon)
+			{
 				summonCount++;
+			}
 			else if (obj instanceof L2DoorInstance)
+			{
 				doorCount++;
+			}
 			else if (obj instanceof L2Character)
+			{
 				charCount++;
+			}
 		}
 		StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");

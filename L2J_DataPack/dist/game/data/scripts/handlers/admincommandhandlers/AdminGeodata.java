@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -20,7 +24,7 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * @author  -Nemesiss-
+ * @author -Nemesiss-
  */
 public class AdminGeodata implements IAdminCommandHandler
 {
@@ -46,7 +50,9 @@ public class AdminGeodata implements IAdminCommandHandler
 		}
 		
 		if (command.equals("admin_geo_z"))
+		{
 			activeChar.sendMessage("GeoEngine: Geo_Z = " + GeoData.getInstance().getHeight(activeChar.getX(), activeChar.getY(), activeChar.getZ()) + " Loc_Z = " + activeChar.getZ());
+		}
 		else if (command.equals("admin_geo_type"))
 		{
 			short type = GeoData.getInstance().getType(activeChar.getX(), activeChar.getY());
@@ -59,13 +65,21 @@ public class AdminGeodata implements IAdminCommandHandler
 			String result = "";
 			short nswe = GeoData.getInstance().getNSWE(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			if ((nswe & 8) == 0)
+			{
 				result += " N";
+			}
 			if ((nswe & 4) == 0)
+			{
 				result += " S";
+			}
 			if ((nswe & 2) == 0)
+			{
 				result += " W";
+			}
 			if ((nswe & 1) == 0)
+			{
 				result += " E";
+			}
 			activeChar.sendMessage("GeoEngine: Geo_NSWE -> " + nswe + "->" + result);
 		}
 		else if (command.equals("admin_geo_los"))
@@ -73,13 +87,19 @@ public class AdminGeodata implements IAdminCommandHandler
 			if (activeChar.getTarget() != null)
 			{
 				if (GeoData.getInstance().canSeeTargetDebug(activeChar, activeChar.getTarget()))
+				{
 					activeChar.sendMessage("GeoEngine: Can See Target");
+				}
 				else
+				{
 					activeChar.sendMessage("GeoEngine: Can't See Target");
+				}
 				
 			}
 			else
+			{
 				activeChar.sendMessage("None Target!");
+			}
 		}
 		else if (command.equals("admin_geo_position"))
 		{
@@ -91,7 +111,9 @@ public class AdminGeodata implements IAdminCommandHandler
 		{
 			String[] v = command.substring(15).split(" ");
 			if (v.length != 2)
+			{
 				activeChar.sendMessage("Usage: //admin_geo_load <regionX> <regionY>");
+			}
 			else
 			{
 				try
@@ -102,9 +124,13 @@ public class AdminGeodata implements IAdminCommandHandler
 					boolean result = GeoData.loadGeodataFile(rx, ry);
 					
 					if (result)
+					{
 						activeChar.sendMessage("GeoEngine: File for region [" + rx + "," + ry + "] loaded succesfuly");
+					}
 					else
+					{
 						activeChar.sendMessage("GeoEngine: File for region [" + rx + "," + ry + "] couldn't be loaded");
+					}
 				}
 				catch (Exception e)
 				{
@@ -116,7 +142,9 @@ public class AdminGeodata implements IAdminCommandHandler
 		{
 			String[] v = command.substring(17).split(" ");
 			if (v.length != 2)
+			{
 				activeChar.sendMessage("Usage: //admin_geo_unload <regionX> <regionY>");
+			}
 			else
 			{
 				try

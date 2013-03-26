@@ -1,34 +1,41 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package instances.Pailaka;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Pailaka (Forgotten Temple) instance zone.
+ */
 public class PailakaSongOfIceAndFire extends Quest
 {
 	private static final String qn = "128_PailakaSongOfIceAndFire";
@@ -236,15 +243,15 @@ public class PailakaSongOfIceAndFire extends Quest
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (world.templateId != INSTANCE_ID)
+			if (world.getTemplateId() != INSTANCE_ID)
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return;
 			}
-			Instance inst = InstanceManager.getInstance().getInstance(world.instanceId);
+			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			if (inst != null)
 			{
-				teleportPlayer(player, TELEPORT, world.instanceId);
+				teleportPlayer(player, TELEPORT, world.getInstanceId());
 			}
 			return;
 		}
@@ -252,11 +259,11 @@ public class PailakaSongOfIceAndFire extends Quest
 		final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaSongOfIceAndFire.xml");
 		
 		world = new InstanceWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCE_ID;
+		world.setInstanceId(instanceId);
+		world.setTemplateId(INSTANCE_ID);
 		InstanceManager.getInstance().addWorld(world);
 		
-		world.allowed.add(player.getObjectId());
+		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, TELEPORT, instanceId);
 		
 	}
@@ -270,76 +277,64 @@ public class PailakaSongOfIceAndFire extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		final int cond = st.getInt("cond");
-		if (event.equalsIgnoreCase("enter"))
+		switch (event)
 		{
-			enterInstance(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("32497-03.htm"))
-		{
-			if (cond == 0)
-			{
-				st.set("cond", "1");
-				st.setState(State.STARTED);
-				st.playSound("ItemSound.quest_accept");
-			}
-		}
-		else if (event.equalsIgnoreCase("32500-06.htm"))
-		{
-			if (cond == 1)
-			{
-				st.set("cond", "2");
-				st.playSound("ItemSound.quest_itemget");
-				st.giveItems(SWORD, 1);
-				st.giveItems(BOOK1, 1);
-			}
-		}
-		else if (event.equalsIgnoreCase("32507-04.htm"))
-		{
-			if (cond == 3)
-			{
-				st.set("cond", "4");
-				st.playSound("ItemSound.quest_middle");
-				st.takeItems(SWORD, -1);
-				st.takeItems(WATER_ESSENCE, -1);
-				st.takeItems(BOOK2, -1);
-				st.giveItems(BOOK3, 1);
-				st.giveItems(ENH_SWORD1, 1);
-			}
-		}
-		else if (event.equalsIgnoreCase("32507-08.htm"))
-		{
-			if (cond == 6)
-			{
-				st.set("cond", "7");
-				st.playSound("ItemSound.quest_itemget");
-				st.takeItems(ENH_SWORD1, -1);
-				st.takeItems(BOOK5, -1);
-				st.takeItems(FIRE_ESSENCE, -1);
-				st.giveItems(ENH_SWORD2, 1);
-				st.giveItems(BOOK6, 1);
-			}
-		}
-		else if (event.equalsIgnoreCase("32510-02.htm"))
-		{
-			st.unset("cond");
-			st.playSound("ItemSound.quest_finish");
-			st.exitQuest(false);
-			
-			Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
-			inst.setDuration(EXIT_TIME * 60000);
-			inst.setEmptyDestroyTime(0);
-			
-			if (inst.containsPlayer(player.getObjectId()))
-			{
-				player.setVitalityPoints(20000, true);
-				st.addExpAndSp(810000, 50000);
-				for (int id : REWARDS)
+			case "enter":
+				enterInstance(player);
+				return null;
+			case "32497-03.htm":
+				if (!st.isStarted())
 				{
-					st.giveItems(id, 1);
+					st.startQuest();
 				}
-			}
+				break;
+			case "32500-06.htm":
+				if (st.isCond(1))
+				{
+					st.setCond(2, true);
+					giveItems(player, SWORD, 1);
+					giveItems(player, BOOK1, 1);
+				}
+				break;
+			case "32507-04.htm":
+				if (st.isCond(3))
+				{
+					st.setCond(4, true);
+					takeItems(player, SWORD, -1);
+					takeItems(player, WATER_ESSENCE, -1);
+					takeItems(player, BOOK2, -1);
+					giveItems(player, BOOK3, 1);
+					giveItems(player, ENH_SWORD1, 1);
+				}
+				break;
+			case "32507-08.htm":
+				if (st.isCond(6))
+				{
+					st.setCond(7, true);
+					takeItems(player, ENH_SWORD1, -1);
+					takeItems(player, BOOK5, -1);
+					takeItems(player, FIRE_ESSENCE, -1);
+					giveItems(player, ENH_SWORD2, 1);
+					giveItems(player, BOOK6, 1);
+				}
+				break;
+			case "32510-02.htm":
+				st.exitQuest(false, true);
+				
+				Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
+				inst.setDuration(EXIT_TIME * 60000);
+				inst.setEmptyDestroyTime(0);
+				
+				if (inst.containsPlayer(player.getObjectId()))
+				{
+					player.setVitalityPoints(20000, true);
+					addExpAndSp(player, 810000, 50000);
+					for (int id : REWARDS)
+					{
+						giveItems(player, id, 1);
+					}
+				}
+				break;
 		}
 		return event;
 	}
@@ -359,7 +354,6 @@ public class PailakaSongOfIceAndFire extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		final int cond = st.getInt("cond");
 		switch (npc.getNpcId())
 		{
 			case ADLER1:
@@ -376,7 +370,7 @@ public class PailakaSongOfIceAndFire extends Quest
 						}
 						return "32497-01.htm";
 					case State.STARTED:
-						if (cond > 1)
+						if (st.getCond() > 1)
 						{
 							return "32497-00.htm";
 						}
@@ -387,13 +381,13 @@ public class PailakaSongOfIceAndFire extends Quest
 						return "32497-01.htm";
 				}
 			case SINAI:
-				if (cond > 1)
+				if (st.getCond() > 1)
 				{
 					return "32500-00.htm";
 				}
 				return "32500-01.htm";
 			case INSPECTOR:
-				switch (st.getInt("cond"))
+				switch (st.getCond())
 				{
 					case 1:
 						return "32507-01.htm";
@@ -410,11 +404,11 @@ public class PailakaSongOfIceAndFire extends Quest
 						return "32507-09.htm";
 				}
 			case ADLER2:
-				if (st.getState() == State.COMPLETED)
+				if (st.isCompleted())
 				{
 					return "32510-00.htm";
 				}
-				else if (cond == 9)
+				else if (st.isCond(9))
 				{
 					return "32510-01.htm";
 				}
@@ -423,91 +417,89 @@ public class PailakaSongOfIceAndFire extends Quest
 	}
 	
 	@Override
-	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		if (!npc.isDead())
 		{
 			npc.doDie(attacker);
 		}
 		
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		QuestState st = player.getQuestState(qn);
-		if ((st == null) || (st.getState() != State.STARTED))
+		if ((st != null) && !st.isStarted())
 		{
-			return null;
+			final int cond = st.getCond();
+			switch (npc.getNpcId())
+			{
+				case HILLAS:
+					if (cond == 2)
+					{
+						st.setCond(3);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						takeItems(player, BOOK1, -1);
+						giveItems(player, BOOK2, 1);
+						giveItems(player, WATER_ESSENCE, 1);
+					}
+					addSpawn(PAPION, -53903, 181484, -4555, 30456, false, 0, false, npc.getInstanceId());
+					break;
+				case PAPION:
+					if (cond == 4)
+					{
+						st.setCond(5);
+						takeItems(player, BOOK3, -1);
+						giveItems(player, BOOK4, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					addSpawn(KINSUS, -61415, 181418, -4818, 63852, false, 0, false, npc.getInstanceId());
+					break;
+				case KINSUS:
+					if (cond == 5)
+					{
+						st.setCond(6);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						takeItems(player, BOOK4, -1);
+						giveItems(player, BOOK5, 1);
+						giveItems(player, FIRE_ESSENCE, 1);
+					}
+					addSpawn(GARGOS, -61354, 183624, -4821, 63613, false, 0, false, npc.getInstanceId());
+					break;
+				case GARGOS:
+					if (cond == 7)
+					{
+						st.setCond(8);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+						takeItems(player, BOOK6, -1);
+						giveItems(player, BOOK7, 1);
+					}
+					addSpawn(ADIANTUM, -53297, 185027, -4617, 1512, false, 0, false, npc.getInstanceId());
+					break;
+				case ADIANTUM:
+					if (cond == 8)
+					{
+						st.setCond(9);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						takeItems(player, BOOK7, -1);
+						addSpawn(ADLER2, -53297, 185027, -4617, 33486, false, 0, false, npc.getInstanceId());
+					}
+					break;
+				case BOTTLE:
+				case BRAZIER:
+				case BLOOM:
+					dropItem(npc, player);
+					break;
+				default:
+					// hardcoded herb drops
+					dropHerb(npc, player, HP_HERBS_DROPLIST);
+					dropHerb(npc, player, MP_HERBS_DROPLIST);
+					break;
+			}
 		}
-		
-		final int cond = st.getInt("cond");
-		switch (npc.getNpcId())
-		{
-			case HILLAS:
-				if (cond == 2)
-				{
-					st.set("cond", "3");
-					st.playSound("ItemSound.quest_itemget");
-					st.takeItems(BOOK1, -1);
-					st.giveItems(BOOK2, 1);
-					st.giveItems(WATER_ESSENCE, 1);
-				}
-				addSpawn(PAPION, -53903, 181484, -4555, 30456, false, 0, false, npc.getInstanceId());
-				break;
-			case PAPION:
-				if (cond == 4)
-				{
-					st.takeItems(BOOK3, -1);
-					st.giveItems(BOOK4, 1);
-					st.set("cond", "5");
-					st.playSound("ItemSound.quest_itemget");
-				}
-				addSpawn(KINSUS, -61415, 181418, -4818, 63852, false, 0, false, npc.getInstanceId());
-				break;
-			case KINSUS:
-				if (cond == 5)
-				{
-					st.set("cond", "6");
-					st.playSound("ItemSound.quest_itemget");
-					st.takeItems(BOOK4, -1);
-					st.giveItems(BOOK5, 1);
-					st.giveItems(FIRE_ESSENCE, 1);
-				}
-				addSpawn(GARGOS, -61354, 183624, -4821, 63613, false, 0, false, npc.getInstanceId());
-				break;
-			case GARGOS:
-				if (cond == 7)
-				{
-					st.set("cond", "8");
-					st.playSound("ItemSound.quest_itemget");
-					st.takeItems(BOOK6, -1);
-					st.giveItems(BOOK7, 1);
-				}
-				addSpawn(ADIANTUM, -53297, 185027, -4617, 1512, false, 0, false, npc.getInstanceId());
-				break;
-			case ADIANTUM:
-				if (cond == 8)
-				{
-					st.set("cond", "9");
-					st.playSound("ItemSound.quest_middle");
-					st.takeItems(BOOK7, -1);
-					addSpawn(ADLER2, -53297, 185027, -4617, 33486, false, 0, false, npc.getInstanceId());
-				}
-				break;
-			case BOTTLE:
-			case BRAZIER:
-			case BLOOM:
-				dropItem(npc, player);
-				break;
-			default:
-				// hardcoded herb drops
-				dropHerb(npc, player, HP_HERBS_DROPLIST);
-				dropHerb(npc, player, MP_HERBS_DROPLIST);
-				break;
-		}
-		return super.onKill(npc, player, isPet);
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
@@ -516,9 +508,9 @@ public class PailakaSongOfIceAndFire extends Quest
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
-			if ((world != null) && (world.templateId == INSTANCE_ID))
+			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character, world.instanceId), 1000);
+				ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(character, world.getInstanceId()), 1000);
 			}
 		}
 		return super.onExitZone(character, zone);
@@ -549,27 +541,23 @@ public class PailakaSongOfIceAndFire extends Quest
 		}
 	}
 	
-	public PailakaSongOfIceAndFire(int questId, String name, String descr)
+	public PailakaSongOfIceAndFire()
 	{
-		super(questId, name, descr);
+		super(128, qn, "Pailaka - Song of Ice and Fire");
 		addStartNpc(ADLER1);
 		for (int npcId : NPCS)
 		{
 			addFirstTalkId(npcId);
 			addTalkId(npcId);
 		}
-		addAttackId(BOTTLE);
-		addAttackId(BRAZIER);
-		for (int mobId : MONSTERS)
-		{
-			addKillId(mobId);
-		}
+		addAttackId(BOTTLE, BRAZIER);
+		addKillId(MONSTERS);
 		addExitZoneId(ZONE);
-		questItemIds = ITEMS;
+		registerQuestItems(ITEMS);
 	}
 	
 	public static void main(String[] args)
 	{
-		new PailakaSongOfIceAndFire(128, qn, "Pailaka - Song of Ice and Fire");
+		new PailakaSongOfIceAndFire();
 	}
 }

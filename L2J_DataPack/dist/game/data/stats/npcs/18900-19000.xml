@@ -1,0 +1,2289 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="18900" templateId="18900" clientName="Full Grown Grendel" serverName="alpine_grendel_4a" level="84" type="warrior">
+		<acquire exp="83904" exp_rate="11.891124" sp="7596" />
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="34" special="34" />
+			<height normal="32.5" special="32.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="40" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alpine_grendel_4a</ai>
+			<ai_param name="my_type" val="4" />
+			<ai_param name="my_grade" val="4" />
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6556" level="17" /> <!-- Water Attack -->
+			<ai_skill name="Buff" id="4028" level="2" /> <!-- Might -->
+			<ai_skill name="DeBuff" id="4592" level="10" /> <!-- Decrease P. Def. -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>ANIMAL</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2FeedableBeast</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18901" templateId="18901" clientName="Kookaburra" serverName="alpine_kukaburo_gold" level="83" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="21" special="21" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="110" underWater="0" flying="0" />
+			<walk ground="13" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.5" skill_factor="-1" />
+		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="150" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="90" water="170" wind="130" earth="130" holy="130" dark="130" unknown="140" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alpine_kukaburo_gold</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6556" level="16" /> <!-- Water Attack -->
+			<ai_skill name="Buff" id="4074" level="1" /> <!-- Haste -->
+			<ai_skill name="Skill_Display" id="6234" level="1" /> <!-- Presentation - Adena Firework -->
+		</npc_ai>
+		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18902" templateId="18902" clientName="Cougar" serverName="alpine_cougar_gold" level="83" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="13" special="13" />
+			<height normal="21" special="21" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="110" underWater="0" flying="0" />
+			<walk ground="28" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="150" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="90" water="170" wind="130" earth="130" holy="130" dark="130" unknown="140" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alpine_cougar_gold</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6556" level="16" /> <!-- Water Attack -->
+			<ai_skill name="Buff" id="4074" level="1" /> <!-- Haste -->
+			<ai_skill name="Skill_Display" id="6234" level="1" /> <!-- Presentation - Adena Firework -->
+		</npc_ai>
+		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18903" templateId="18903" clientName="Buffalo" serverName="alpine_buffalo_gold" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="16" special="16" />
+			<height normal="22" special="22" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="110" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alpine_buffalo_gold</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6556" level="17" /> <!-- Water Attack -->
+			<ai_skill name="Buff" id="4028" level="2" /> <!-- Might -->
+			<ai_skill name="Skill_Display" id="6234" level="1" /> <!-- Presentation - Adena Firework -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18904" templateId="18904" clientName="Grendel" serverName="alpine_grendel_gold" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="17" special="17" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="40" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alpine_grendel_gold</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6556" level="17" /> <!-- Water Attack -->
+			<ai_skill name="Buff" id="4028" level="2" /> <!-- Might -->
+			<ai_skill name="Skill_Display" id="6234" level="1" /> <!-- Presentation - Adena Firework -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>ANIMAL</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18905" templateId="18905" clientName="Farm Ravager" serverName="farm_plunderer_crazy" level="84" type="warrior">
+		<acquire exp="243976" exp_rate="34.5771475" sp="2243" />
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="29" special="29" />
+			<height normal="37" special="37" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>farm_plunderer_crazy</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6559" level="17" /> <!-- Water Attack -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18906" templateId="18906" clientName="Farm Bandit" serverName="farm_plunderer" level="84" type="warrior">
+		<acquire exp="17662" exp_rate="2.503116" sp="1884" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="686" max="1402" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.6239">
+				<item id="15703" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gauntlet -->
+				<item id="15704" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Gloves -->
+				<item id="15706" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.0442" /> <!-- Sealed Moirai Shoes -->
+				<item id="15654" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gauntlet Piece -->
+				<item id="15655" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15657" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="16.6224" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="16.6228" /> <!-- Sealed Moirai Shoes Piece -->
+			</category>
+			<category chance="4.8105">
+				<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
+				<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="29" special="29" />
+			<height normal="37" special="37" />
+		</collision>
+		<corpse_make_list>
+			<item id="15654" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gauntlet Piece -->
+			<item id="15655" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Leather Gloves Piece -->
+			<item id="15656" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Gloves Piece -->
+			<item id="15657" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Boots Piece -->
+			<item id="15658" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Leather Boots Piece -->
+			<item id="15659" min="1" max="1" chance="0.5826" /> <!-- Sealed Moirai Shoes Piece -->
+			<item id="9630" min="1" max="1" chance="0.3434" /> <!-- Orichalcum -->
+			<item id="15784" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Gauntlet (60%) -->
+			<item id="15785" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Leather Gloves (60%) -->
+			<item id="15786" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Gloves (60%) -->
+			<item id="15787" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Boots (60%) -->
+			<item id="15788" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Leather Boots (60%) -->
+			<item id="15789" min="1" max="1" chance="0.0775" /> <!-- Recipe - Sealed Moirai Shoes (60%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="180" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>farm_plunderer</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6559" level="16" /> <!-- Water Attack -->
+			<ai_skill name="SelfBuff" id="4028" level="3" /> <!-- Might -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18907" templateId="18907" clientName="Beast Devourer" serverName="farm_invader" level="84" type="warrior">
+		<acquire exp="18652" exp_rate="2.643354" sp="1990" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="725" max="1481" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.5768">
+				<item id="15694" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Helmet -->
+				<item id="15695" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Leather Helmet -->
+				<item id="15696" min="1" max="1" chance="0.0404" /> <!-- Sealed Moirai Circlet -->
+				<item id="15710" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Shield -->
+				<item id="15709" min="1" max="1" chance="0.0578" /> <!-- Sealed Moirai Sigil -->
+				<item id="15645" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Helmet Piece -->
+				<item id="15646" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Leather Helmet Piece -->
+				<item id="15647" min="1" max="1" chance="15.1498" /> <!-- Sealed Moirai Circlet Piece -->
+				<item id="15693" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Shield Piece -->
+				<item id="15692" min="1" max="1" chance="27.1569" /> <!-- Sealed Moirai Sigil Piece -->
+			</category>
+			<category chance="5.0813">
+				<item id="1879" min="1" max="1" chance="60.3191" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="30.1595" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="2.8385" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="1.9048" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="1.5735" /> <!-- Adamantine -->
+				<item id="10483" min="1" max="1" chance="2.5133" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.6283" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.063" /> <!-- High-Grade Life Stone - Level 82 -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="27" special="27" />
+			<height normal="31" special="31" />
+		</collision>
+		<corpse_make_list>
+			<item id="15645" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Helmet Piece -->
+			<item id="15646" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Leather Helmet Piece -->
+			<item id="15647" min="1" max="1" chance="0.5317" /> <!-- Sealed Moirai Circlet Piece -->
+			<item id="15693" min="1" max="1" chance="0.9532" /> <!-- Sealed Moirai Shield Piece -->
+			<item id="15692" min="1" max="1" chance="0.9532" /> <!-- Sealed Moirai Sigil Piece -->
+			<item id="15775" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Helmet (60%) -->
+			<item id="15776" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Leather Helmet(60%) -->
+			<item id="15777" min="1" max="1" chance="0.071" /> <!-- Recipe - Sealed Moirai Circlet (60%) -->
+			<item id="15791" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Shield (60%) -->
+			<item id="15790" min="1" max="1" chance="0.1014" /> <!-- Recipe - Sealed Moirai Sigil (60%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="150" underWater="0" flying="0" />
+			<walk ground="60" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="10" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="FIST" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>farm_invader</ai>
+			<ai_param name="IsAggressive" val="1" />
+			<ai_skill name="Skill01_ID" id="6566" level="17" /> <!-- Water Shot -->
+			<ai_skill name="SelfBuff" id="4074" level="2" /> <!-- Haste -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18908" templateId="18908" clientName="Sel Mahum Chef" serverName="ol_cooker" level="83" type="warrior">
+		<acquire exp="17548" exp_rate="2.54720775" sp="1759" />
+		<additional_make_multi_list>
+			<category chance="25">
+				<item id="15492" min="1" max="2" chance="100" /> <!-- Sel Mahum Salmon Porridge -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="35" special="35" />
+			<height normal="32.5" special="32.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="40" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="150" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="170" water="90" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>ol_cooker</ai>
+			<ai_skill name="Skill01_ID" id="6330" level="1" /> <!-- Salmon Porridge Attack -->
+		</npc_ai>
+		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+		<race>HUMANOID</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5663" level="5" /> <!-- Resistance to Ancient Sword -->
+			<skill id="4458" level="1" /> <!-- Spear Weapon Weak Point -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18909" templateId="18909" clientName="Solina Knights" serverName="n_solina_warrior" level="83" type="warrior">
+		<acquire exp="29810" exp_rate="4.327153125" sp="3060" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1170" max="2361" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="0.9041">
+				<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
+			</category>
+			<category chance="4.7329">
+				<item id="1879" min="1" max="1" chance="59.2169" /> <!-- Cokes -->
+				<item id="1885" min="1" max="1" chance="29.6085" /> <!-- High-Grade Suede -->
+				<item id="9628" min="1" max="1" chance="2.7867" /> <!-- Leonard -->
+				<item id="9630" min="1" max="1" chance="1.87" /> <!-- Orichalcum -->
+				<item id="9629" min="1" max="1" chance="1.5448" /> <!-- Adamantine -->
+				<item id="9573" min="1" max="1" chance="2.4674" /> <!-- Life Stone - Level 80 -->
+				<item id="9574" min="1" max="1" chance="0.6168" /> <!-- Mid-Grade Life Stone - Level 80 -->
+				<item id="9575" min="1" max="1" chance="0.0617" /> <!-- High-Grade Life Stone - Level 80 -->
+				<item id="15801" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
+				<item id="15802" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
+				<item id="15803" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
+				<item id="15804" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
+				<item id="15805" min="1" max="1" chance="0.3045" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
+				<item id="15806" min="1" max="1" chance="0.3047" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>n_solina_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="28.4" special="28.4" />
+		</collision>
+		<corpse_make_list>
+			<item id="15667" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gauntlet Piece -->
+			<item id="15671" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Leather Gloves Piece -->
+			<item id="15674" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Gloves Piece -->
+			<item id="15668" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Boots Piece -->
+			<item id="15672" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Leather Boots Piece -->
+			<item id="15675" min="1" max="1" chance="0.8451" /> <!-- Sealed Vesper Shoes Piece -->
+			<item id="9630" min="1" max="1" chance="0.5805" /> <!-- Orichalcum -->
+			<item id="15801" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
+			<item id="15802" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
+			<item id="15803" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
+			<item id="15804" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
+			<item id="15805" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
+			<item id="15806" min="1" max="1" chance="0.0945" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="150" underWater="0" flying="0" />
+			<walk ground="53" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="170" dark="0" />
+			<defend fire="200" water="200" wind="200" earth="150" holy="160" dark="40" unknown="120" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_solina_warrior</ai>
+			<ai_skill name="PhysicalSpecial" id="6311" level="1" /> <!-- Solina Thrust -->
+		</npc_ai>
+		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+		<race>DIVINE</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<eqipment>
+			<rhand id="8211" /> <!-- Monster Only (Monk Warrior Sword) -->
+			<lhand id="8210" /> <!-- Monster Only (Monk Warrior Shield) -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="true" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="monastery_scarecrow" enemyRange="400" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18910" templateId="18910" clientName="Solina Knight Captain" serverName="n_solina_knight" level="83" type="warrior">
+		<acquire exp="44216" exp_rate="6.4183951875" sp="4545" />
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="1730" max="3492" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="1.3371">
+				<item id="14109" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gauntlet -->
+				<item id="14113" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Gloves -->
+				<item id="14110" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.0372" /> <!-- Sealed Vesper Shoes -->
+				<item id="15667" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gauntlet Piece -->
+				<item id="15671" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15668" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="16.6295" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="16.6293" /> <!-- Sealed Vesper Shoes Piece -->
+			</category>
+			<category chance="18.1342">
+				<item id="1895" min="1" max="1" chance="78.3705" /> <!-- Metallic Fiber -->
+				<item id="4040" min="1" max="1" chance="5.4859" /> <!-- Mold Lubricant -->
+				<item id="4042" min="1" max="1" chance="4.5716" /> <!-- Enria -->
+				<item id="4043" min="1" max="1" chance="9.1432" /> <!-- Asofe -->
+				<item id="10483" min="1" max="1" chance="1.9048" /> <!-- Life Stone - Level 82 -->
+				<item id="10484" min="1" max="1" chance="0.4762" /> <!-- Mid-Grade Life Stone - Level 82 -->
+				<item id="10485" min="1" max="1" chance="0.0478" /> <!-- High-Grade Life Stone - Level 82 -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clans>
+			<clan>n_solina_clan</clan>
+		</clans>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="14" special="14" />
+			<height normal="31.5" special="31.5" />
+		</collision>
+		<corpse_make_list>
+			<item id="15667" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gauntlet Piece -->
+			<item id="15671" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Leather Gloves Piece -->
+			<item id="15674" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Gloves Piece -->
+			<item id="15668" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Boots Piece -->
+			<item id="15672" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Leather Boots Piece -->
+			<item id="15675" min="1" max="1" chance="1.3541" /> <!-- Sealed Vesper Shoes Piece -->
+			<item id="15801" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Gauntlet (60%) -->
+			<item id="15802" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Leather Gloves (60%) -->
+			<item id="15803" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Gloves (60%) -->
+			<item id="15804" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Boots (60%) -->
+			<item id="15805" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Leather Boots (60%) -->
+			<item id="15806" min="1" max="1" chance="0.1515" /> <!-- Recipe - Sealed Vesper Shoes (60%) -->
+		</corpse_make_list>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>0</ex_crt_effect>
+		<exp>11844000000</exp>
+		<speed>
+			<run ground="66" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1099.42361669366" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="750.763809564873" pDef="353.86144" mDef="258.94045" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="170" dark="0" />
+			<defend fire="200" water="200" wind="200" earth="150" holy="160" dark="40" unknown="120" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_solina_knight</ai>
+			<ai_skill name="PhysicalSpecial" id="6312" level="1" /> <!-- Launch Sacred Sword Energy -->
+			<ai_skill name="Buff" id="6313" level="1" /> <!-- Solina Bless -->
+		</npc_ai>
+		<org hp="3835.59060587002" hp_regen="8.5" mp="1777.4" mp_regen="3" />
+		<race>DIVINE</race>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="4" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4276" level="5" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18911" templateId="18911" clientName="Abbey Treasure Chest" serverName="n_monastery_treasure" level="84" type="warrior">
+		<additional_make_multi_list>
+			<category chance="100">
+				<item id="730" min="1" max="1" chance="60" /> <!-- Scroll: Enchant Armor (A-Grade) -->
+				<item id="960" min="1" max="1" chance="40" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="17" special="17" />
+			<height normal="13" special="13" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_treasure</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18912" templateId="18912" clientName="Scarecrow" serverName="n_monastery_puppet" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="27" special="27" />
+			<height normal="37.5" special="37.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_puppet</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="dummy_clan" enemyRange="400" dodge="0" aiType="corpse" />
+		</custom>
+	</npc>
+	<npc id="18913" templateId="18913" clientName="Furnace" serverName="n_monastery_game_burner" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="18" special="18" />
+			<height normal="30" special="30" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_game_burner</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18914" templateId="18914" clientName="Furnace" serverName="n_monastery_level_burner" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="18" special="18" />
+			<height normal="30" special="30" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_level_burner</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18915" templateId="18915" clientName="Divine Furnace" serverName="n_monastery_anais_burner" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="18" special="18" />
+			<height normal="30" special="30" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_anais_burner</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18916" templateId="18916" clientName="" serverName="n_monastery_questcheck" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_questcheck</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18917" templateId="18917" clientName="Pavel Safety Device" serverName="golem_giga_p" level="72" type="warrior">
+		<additional_make_multi_list>
+			<category chance="70">
+				<item id="57" min="361" max="738" chance="100" /> <!-- Adena -->
+			</category>
+			<category chance="1.0607">
+				<item id="9546" min="1" max="1" chance="16.6667" /> <!-- Fire Stone -->
+				<item id="9547" min="1" max="1" chance="16.6667" /> <!-- Water Stone -->
+				<item id="9548" min="1" max="1" chance="16.6667" /> <!-- Earth Stone -->
+				<item id="9549" min="1" max="1" chance="16.6667" /> <!-- Wind Stone -->
+				<item id="9550" min="1" max="1" chance="16.6667" /> <!-- Dark Stone -->
+				<item id="9551" min="1" max="1" chance="16.6665" /> <!-- Holy Stone -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="12" special="12" />
+			<height normal="22.5" special="22.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<ex_item_drop_list>
+			<category chance="42">
+				<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+				<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+			</category>
+			<category chance="11">
+				<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="52" /> <!-- Greater Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
+			</category>
+			<category chance="25">
+				<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+				<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+				<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+				<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+				<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+			</category>
+			<category chance="10">
+				<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+				<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+			</category>
+			<category chance="1">
+				<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+				<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+				<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+			</category>
+			<category chance="11">
+				<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+				<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+				<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+			</category>
+		</ex_item_drop_list>
+		<exp>532694979</exp>
+		<speed>
+			<run ground="250" underWater="0" flying="0" />
+			<walk ground="250" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.64" skill_factor="-1" />
+		<base pAtk="731.52506" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="499.53679" pDef="305.35947" mDef="223.44881" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>golem_giga_p</ai>
+			<ai_param name="Privates01_sil" val="golem_cannon1_p" />
+			<ai_param name="Privates01_ai" val="golem_cannon1_p" />
+			<ai_param name="Privates02_sil" val="golem_prop1_p" />
+			<ai_param name="Privates02_ai" val="golem_prop1_p" />
+		</npc_ai>
+		<org hp="2540.15331" hp_regen="8.5" mp="1410" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>0.25</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Monster</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18918" templateId="18918" clientName="" serverName="invisible_monster" level="85" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1188.87259499001" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="811.84586495282" pDef="361.78814" mDef="264.74086" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>invisible_monster</ai>
+		</npc_ai>
+		<org hp="4234.06312688557" hp_regen="8.5" mp="1846.8" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18919" templateId="18919" clientName="" serverName="invisible_npc" level="85" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1188.87259499001" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="811.84586495282" pDef="361.78814" mDef="264.74086" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>invisible_npc</ai>
+		</npc_ai>
+		<org hp="4234.06312688557" hp_regen="8.5" mp="1846.8" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="true" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18920" templateId="18920" clientName="" serverName="gem_warter_cannon" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="150" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="90" water="170" wind="130" earth="130" holy="130" dark="130" unknown="140" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_warter_cannon</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18921" templateId="18921" clientName="Square Base " serverName="gem_warter_cannon_base" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="23" special="23" />
+			<height normal="37" special="37" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="150" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="90" water="170" wind="130" earth="130" holy="130" dark="130" unknown="140" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_warter_cannon_base</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18922" templateId="18922" clientName="Door Golem" serverName="gem_key_golem_a" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="15" special="15" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="80" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="150" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="90" water="170" wind="130" earth="130" holy="130" dark="130" unknown="140" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_key_golem_a</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18923" templateId="18923" clientName="Door Golem" serverName="gem_key_golem_b" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="15" special="15" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="80" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_key_golem_b</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18924" templateId="18924" clientName="Door Golem" serverName="gem_key_golem" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="15" special="15" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="80" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.48" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_key_golem</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>BEAST</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18925" templateId="18925" clientName="Trap" serverName="gem_trap_boomer" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="30" special="30" />
+			<height normal="13" special="13" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="170" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="100" water="180" wind="140" earth="140" holy="140" dark="140" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gem_trap_boomer</ai>
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>ETC</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5463" level="1" /> <!-- Water Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18926" templateId="18926" clientName="Mercenary Archer" serverName="guard_defeatdun_3" level="85" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="10" special="10" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="30" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1188.87259499001" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="811.84586495282" pDef="361.78814" mDef="264.74086" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>guard_defeatdun_3</ai>
+			<ai_skill name="Skill01_ID" id="4032" level="9" /> <!-- Power Strike -->
+		</npc_ai>
+		<org hp="4234.06312688557" hp_regen="8.5" mp="1846.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18927" templateId="18927" clientName="Fire" serverName="xel_campfire" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="29" special="29" />
+			<height normal="30.5" special="30.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>xel_campfire</ai>
+			<ai_skill name="Skill01_ID" id="6331" level="1" /> <!-- Camp Fire Tired -->
+			<ai_skill name="Skill02_ID" id="6332" level="1" /> <!-- Camp Fire Full -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18928" templateId="18928" clientName="Annihilation Furnace" serverName="annihilation_pot" level="85" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="63" special="63" />
+			<height normal="33.5" special="33.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1188.87259499001" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="811.84586495282" pDef="361.78814" mDef="264.74086" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>annihilation_pot</ai>
+		</npc_ai>
+		<org hp="4234.06312688557" hp_regen="8.5" mp="1846.8" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2TerrainObject</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18929" templateId="18929" clientName="Ward of the Grail" serverName="n_grail_protection1" level="84" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="13" special="13" />
+			<height normal="22" special="22" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="140" underWater="0" flying="0" />
+			<walk ground="25" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.1" skill_factor="-1" />
+		<base pAtk="1144.73130112535" randDmg="50" crit="1" atkSpd="253" reuseDelay="0" mAtk="781.703083407155" pDef="357.86723" mDef="261.87171" accuracy="9" evasion="0" />
+		<base_attack type="BLUNT" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="220" dark="0" />
+			<defend fire="180" water="180" wind="180" earth="180" holy="220" dark="170" unknown="180" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_grail_protection1</ai>
+			<ai_skill name="Skill01_ID" id="6326" level="1" /> <!-- Martyr's Happiness -->
+		</npc_ai>
+		<org hp="4039.04270539801" hp_regen="8.5" mp="1812" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18930" templateId="18930" clientName="" serverName="freya_controller" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>freya_controller</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18931" templateId="18931" clientName="" serverName="ice_elemental_controller" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>ice_elemental_controller</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18932" templateId="18932" clientName="" serverName="ice_castle_controller" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.46" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>ice_castle_controller</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18933" templateId="18933" clientName="Fire Feed" serverName="xel_campfire_dinner" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="29" special="29" />
+			<height normal="30.5" special="30.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>xel_campfire_dinner</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18934" templateId="18934" clientName="Abbey Treasure Chest" serverName="n_monastery_m_treasure" level="84" type="warrior">
+		<additional_make_multi_list>
+			<category chance="100">
+				<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+			</category>
+		</additional_make_multi_list>
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="17" special="17" />
+			<height normal="13" special="13" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>15472800000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>n_monastery_m_treasure</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="true" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18935" templateId="18935" clientName="Divine Sword Protection" serverName="bless_of_sword" level="85" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>19827360000</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="1188.87259499001" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="811.84586495282" pDef="361.78814" mDef="264.74086" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>bless_of_sword</ai>
+		</npc_ai>
+		<org hp="4234.06312688557" hp_regen="8.5" mp="1846.8" mp_regen="3" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="18936" templateId="18936" clientName="" serverName="reed_herb_sower" level="1" type="warrior">
+		<agro_range>300</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="0.1" special="0.1" />
+			<height normal="0.1" special="0.1" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>0</exp>
+		<speed>
+			<run ground="1" underWater="0" flying="0" />
+			<walk ground="1" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="8.47458" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="5.78704" pDef="44.44444" mDef="32.52252" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="20" water="20" wind="20" earth="20" holy="20" dark="20" unknown="0" />
+		</base_attribute>
+		<npc_ai>
+			<ai>reed_herb_sower</ai>
+		</npc_ai>
+		<org hp="39.74519" hp_regen="2" mp="40" mp_regen="0.9" />
+		<race>CONSTRUCT</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="false" noSleepMode="false" targetable="false" undying="true" unique="false" unsowing="false" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>

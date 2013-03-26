@@ -11,6 +11,7 @@
 <td><button value="Edit" action="bypass -h admin_edit_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Skills" action="bypass -h admin_show_skilllist_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Drop" action="bypass -h admin_show_droplist %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Quests" action="bypass -h admin_show_quests %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td>%butt%</td>
 </tr>
 </table>
@@ -25,7 +26,7 @@
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Collision Radius:</font></td><td align=right width=170>%collision_radius%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Collision Height:</font></td><td align=right width=170>%collision_height%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Distance:</font></td><td align=right width=170>2D: %loc2d%, 3D: %loc3d%, You: %dist%</td></tr></table></td></tr>
-<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Respawn:</font></td><td align=right width=170>%resp% sec</td></tr></table></td></tr>
+<tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">Respawn:</font></td><td align=right width=170>%resp%</td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">Aggro:</font></td><td align=right width=170><font color=999999>%aggro%</font></td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">HP:</font></td><td align=right width=170><font color=FF4040>%hp%/%hpmax%</font></td></tr></table></td></tr>
 <tr><td><table width=270 border=0><tr><td width=100><font color="LEVEL">MP:</font></td><td align=right width=170><font color=6161FF>%mp%/%mpmax%</font></td></tr></table></td></tr>
@@ -34,6 +35,7 @@
 %ai_type%
 %ai_clan%
 %ai_enemy_clan%
+%route%
 </table><br>
 
 <font color="LEVEL">Combat</font><br1>

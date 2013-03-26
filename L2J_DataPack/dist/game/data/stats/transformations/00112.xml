@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/transformations.xsd">
+	<transform id="112" type="PURE_STAT" can_swim="0" normal_attackable="0">
+		<Male>
+			<collision radius="5" height="12.3" />
+			<moving walk="26" run="115" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
+			<skills>
+				<skill id="960" level="1" /> <!-- Race Running -->
+				<skill id="5437" level="1" /> <!-- Dissonance -->
+			</skills>
+			<actions>1 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098</actions>
+			<base_attack_type>sword</base_attack_type>
+			<base_attack_range>20</base_attack_range>
+			<base_random_damage>10</base_random_damage>
+			<base_attack_speed>300</base_attack_speed>
+			<base_critical_prob>5</base_critical_prob>
+			<base_physical_attack>5</base_physical_attack>
+			<base_magical_attack>5</base_magical_attack>
+			<items>
+				<item id="57" allowed="true" /> <!-- Adena -->
+			</items>
+			<basic_stat str="40" int="21" con="43" dex="30" wit="11" men="25" />
+			<base_defend chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
+			<base_magic_defend rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
+			<levels>
+				<level val="1" bonus="0.9" hp_regen="2.0" mp_regen="0.9" cp_regen="2.0" str="-70" int="-45" con="-54" dex="-15" wit="-60" men="1" hp="80.8" mp="30.3" cp="40.4" />
+				<level val="2" bonus="0.91" hp_regen="2.05" mp_regen="0.9" cp_regen="2.0" str="-69" int="-44" con="-53" dex="-14" wit="-58" men="2" hp="92.7483" mp="35.8146" cp="46.37415" />
+				<level val="3" bonus="0.92" hp_regen="2.1" mp_regen="0.9" cp_regen="2.0" str="-68" int="-43" con="-52" dex="-14" wit="-56" men="3" hp="104.8279" mp="41.3898" cp="52.41395" />
+				<level val="4" bonus="0.93" hp_regen="2.15" mp_regen="0.9" cp_regen="2.0" str="-66" int="-42" con="-50" dex="-13" wit="-54" men="4" hp="117.0388" mp="47.0256" cp="58.5194" />
+				<level val="5" bonus="0.94" hp_regen="2.2" mp_regen="0.9" cp_regen="2.0" str="-65" int="-41" con="-49" dex="-12" wit="-52" men="5" hp="129.381" mp="52.722" cp="64.6905" />
+				<level val="6" bonus="0.95" hp_regen="2.25" mp_regen="0.9" cp_regen="2.0" str="-64" int="-39" con="-47" dex="-11" wit="-49" men="6" hp="143.259" mp="59.058" cp="71.6295" />
+				<level val="7" bonus="0.96" hp_regen="2.3" mp_regen="0.9" cp_regen="2.0" str="-63" int="-38" con="-46" dex="-10" wit="-47" men="7" hp="155.9886" mp="64.9332" cp="77.9943" />
+				<level val="8" bonus="0.97" hp_regen="2.35" mp_regen="0.9" cp_regen="2.0" str="-61" int="-37" con="-44" dex="-10" wit="-44" men="8" hp="168.8508" mp="70.8696" cp="84.4254" />
+				<level val="9" bonus="0.98" hp_regen="2.4" mp_regen="0.9" cp_regen="2.0" str="-60" int="-36" con="-42" dex="-9" wit="-42" men="9" hp="181.8456" mp="76.8672" cp="90.9228" />
+				<level val="10" bonus="0.99" hp_regen="2.45" mp_regen="0.9" cp_regen="2.0" str="-58" int="-35" con="-41" dex="-8" wit="-39" men="11" hp="194.973" mp="82.926" cp="97.4865" />
+				<level val="11" bonus="1.0" hp_regen="2.5" mp_regen="1.2" cp_regen="2.5" str="-57" int="-33" con="-39" dex="-7" wit="-36" men="12" hp="210.2745" mp="89.919" cp="105.13725" />
+				<level val="12" bonus="1.01" hp_regen="2.6" mp_regen="1.2" cp_regen="2.5" str="-55" int="-32" con="-37" dex="-6" wit="-32" men="13" hp="223.7984" mp="96.1608" cp="111.8992" />
+				<level val="13" bonus="1.02" hp_regen="2.7" mp_regen="1.2" cp_regen="2.5" str="-54" int="-31" con="-35" dex="-6" wit="-29" men="14" hp="237.4562" mp="102.4644" cp="118.7281" />
+				<level val="14" bonus="1.03" hp_regen="2.8" mp_regen="1.2" cp_regen="2.5" str="-52" int="-29" con="-33" dex="-5" wit="-25" men="15" hp="251.2479" mp="108.8298" cp="125.62395" />
+				<level val="15" bonus="1.04" hp_regen="2.9" mp_regen="1.2" cp_regen="2.5" str="-50" int="-28" con="-31" dex="-4" wit="-22" men="16" hp="265.1735" mp="115.257" cp="132.58675" />
+				<level val="16" bonus="1.05" hp_regen="3.0" mp_regen="1.2" cp_regen="2.5" str="-49" int="-26" con="-29" dex="-3" wit="-18" men="17" hp="281.944" mp="122.928" cp="140.972" />
+				<level val="17" bonus="1.06" hp_regen="3.1" mp_regen="1.2" cp_regen="2.5" str="-47" int="-25" con="-27" dex="-2" wit="-14" men="19" hp="296.2752" mp="129.5424" cp="148.1376" />
+				<level val="18" bonus="1.07" hp_regen="3.2" mp_regen="1.2" cp_regen="2.5" str="-45" int="-23" con="-25" dex="-1" wit="-9" men="20" hp="310.7416" mp="136.2192" cp="155.3708" />
+				<level val="19" bonus="1.08" hp_regen="3.3" mp_regen="1.2" cp_regen="2.5" str="-43" int="-22" con="-23" dex="0" wit="-5" men="21" hp="325.3432" mp="142.9584" cp="162.6716" />
+				<level val="20" bonus="1.09" hp_regen="3.4" mp_regen="1.2" cp_regen="2.5" str="-41" int="-20" con="-20" dex="1" wit="0" men="22" hp="340.08" mp="149.76" cp="170.04" />
+				<level val="21" bonus="1.1" hp_regen="3.5" mp_regen="1.5" cp_regen="3.5" str="-39" int="-19" con="-18" dex="1" wit="5" men="23" hp="374.535" mp="161.595" cp="187.2675" />
+				<level val="22" bonus="1.11" hp_regen="3.6" mp_regen="1.5" cp_regen="3.5" str="-37" int="-17" con="-15" dex="2" wit="10" men="25" hp="406.0035" mp="172.0845" cp="203.00175" />
+				<level val="23" bonus="1.12" hp_regen="3.7" mp_regen="1.5" cp_regen="3.5" str="-34" int="-15" con="-13" dex="3" wit="16" men="26" hp="437.7555" mp="182.6685" cp="218.87775" />
+				<level val="24" bonus="1.13" hp_regen="3.8" mp_regen="1.5" cp_regen="3.5" str="-32" int="-14" con="-10" dex="4" wit="22" men="27" hp="469.791" mp="193.347" cp="234.8955" />
+				<level val="25" bonus="1.14" hp_regen="3.9" mp_regen="1.5" cp_regen="3.5" str="-29" int="-12" con="-7" dex="5" wit="28" men="28" hp="502.11" mp="204.12" cp="251.055" />
+				<level val="26" bonus="1.15" hp_regen="4.0" mp_regen="1.5" cp_regen="3.5" str="-27" int="-10" con="-5" dex="6" wit="34" men="30" hp="539.805" mp="217.035" cp="269.9025" />
+				<level val="27" bonus="1.16" hp_regen="4.1" mp_regen="1.5" cp_regen="3.5" str="-24" int="-8" con="-2" dex="7" wit="41" men="31" hp="573.0042" mp="228.1014" cp="286.5021" />
+				<level val="28" bonus="1.17" hp_regen="4.2" mp_regen="1.5" cp_regen="3.5" str="-22" int="-6" con="1" dex="8" wit="48" men="32" hp="606.4896" mp="239.2632" cp="303.2448" />
+				<level val="29" bonus="1.18" hp_regen="4.3" mp_regen="1.5" cp_regen="3.5" str="-19" int="-5" con="4" dex="9" wit="55" men="34" hp="640.2612" mp="250.5204" cp="320.1306" />
+				<level val="30" bonus="1.19" hp_regen="4.4" mp_regen="1.5" cp_regen="3.5" str="-16" int="-3" con="7" dex="10" wit="63" men="35" hp="674.319" mp="261.873" cp="337.1595" />
+				<level val="31" bonus="1.2" hp_regen="4.5" mp_regen="1.8" cp_regen="4.5" str="-13" int="-1" con="10" dex="11" wit="71" men="36" hp="715.3485" mp="275.8995" cp="357.67426" />
+				<level val="32" bonus="1.21" hp_regen="4.6" mp_regen="1.8" cp_regen="4.5" str="-10" int="1" con="14" dex="12" wit="80" men="38" hp="750.3054" mp="287.5518" cp="375.1527" />
+				<level val="33" bonus="1.22" hp_regen="4.7" mp_regen="1.8" cp_regen="4.5" str="-6" int="3" con="17" dex="13" wit="89" men="39" hp="785.5512" mp="299.3004" cp="392.7756" />
+				<level val="34" bonus="1.23" hp_regen="4.8" mp_regen="1.8" cp_regen="4.5" str="-3" int="5" con="21" dex="14" wit="98" men="40" hp="821.0859" mp="311.1453" cp="410.54294" />
+				<level val="35" bonus="1.24" hp_regen="4.9" mp_regen="1.8" cp_regen="4.5" str="1" int="7" con="24" dex="15" wit="108" men="42" hp="856.9095" mp="323.0865" cp="428.45474" />
+				<level val="36" bonus="1.25" hp_regen="5.0" mp_regen="1.8" cp_regen="4.5" str="4" int="10" con="28" dex="16" wit="118" men="43" hp="901.368" mp="338.256" cp="450.684" />
+				<level val="37" bonus="1.26" hp_regen="5.1" mp_regen="1.8" cp_regen="4.5" str="8" int="12" con="32" dex="17" wit="129" men="45" hp="938.1096" mp="350.5032" cp="469.0548" />
+				<level val="38" bonus="1.27" hp_regen="5.2" mp_regen="1.8" cp_regen="4.5" str="12" int="14" con="36" dex="18" wit="141" men="46" hp="975.1428" mp="362.8476" cp="487.5714" />
+				<level val="39" bonus="1.28" hp_regen="5.3" mp_regen="1.8" cp_regen="4.5" str="16" int="16" con="40" dex="19" wit="153" men="48" hp="1012.4676" mp="375.2892" cp="506.2338" />
+				<level val="40" bonus="1.29" hp_regen="5.4" mp_regen="1.8" cp_regen="4.5" str="20" int="19" con="44" dex="20" wit="165" men="49" hp="1050.084" mp="387.828" cp="525.042" />
+				<level val="41" bonus="1.3" hp_regen="5.5" mp_regen="2.1" cp_regen="5.5" str="24" int="21" con="48" dex="21" wit="179" men="50" hp="1110.819" mp="412.674" cp="555.4095" />
+				<level val="42" bonus="1.31" hp_regen="5.6" mp_regen="2.1" cp_regen="5.5" str="29" int="23" con="53" dex="22" wit="193" men="52" hp="1162.2234" mp="434.0925" cp="581.1117" />
+				<level val="43" bonus="1.32" hp_regen="5.7" mp_regen="2.1" cp_regen="5.5" str="33" int="26" con="58" dex="24" wit="207" men="53" hp="1214.0201" mp="455.6745" cp="607.0101" />
+				<level val="44" bonus="1.33" hp_regen="5.8" mp_regen="2.1" cp_regen="5.5" str="38" int="28" con="62" dex="25" wit="223" men="55" hp="1266.2094" mp="477.42" cp="633.1047" />
+				<level val="45" bonus="1.34" hp_regen="5.9" mp_regen="2.1" cp_regen="5.5" str="43" int="31" con="67" dex="26" wit="239" men="57" hp="1318.791" mp="499.329" cp="659.3955" />
+				<level val="46" bonus="1.35" hp_regen="6.0" mp_regen="2.1" cp_regen="5.5" str="48" int="34" con="72" dex="27" wit="256" men="58" hp="1384.35" mp="526.185" cp="692.175" />
+				<level val="47" bonus="1.36" hp_regen="6.1" mp_regen="2.1" cp_regen="5.5" str="54" int="36" con="77" dex="28" wit="273" men="60" hp="1438.206" mp="548.625" cp="719.103" />
+				<level val="48" bonus="1.37" hp_regen="6.2" mp_regen="2.1" cp_regen="5.5" str="59" int="39" con="83" dex="29" wit="292" men="61" hp="1492.458" mp="571.23" cp="746.229" />
+				<level val="49" bonus="1.38" hp_regen="6.3" mp_regen="2.1" cp_regen="5.5" str="65" int="42" con="88" dex="30" wit="312" men="63" hp="1547.106" mp="594.0" cp="773.553" />
+				<level val="50" bonus="1.39" hp_regen="6.4" mp_regen="2.1" cp_regen="5.5" str="71" int="45" con="94" dex="32" wit="332" men="65" hp="1616.715" mp="622.5435" cp="808.3575" />
+				<level val="51" bonus="1.4" hp_regen="6.5" mp_regen="2.4" cp_regen="6.5" str="77" int="47" con="100" dex="33" wit="354" men="66" hp="1672.659" mp="645.8535" cp="836.3295" />
+				<level val="52" bonus="1.41" hp_regen="6.6" mp_regen="2.4" cp_regen="6.5" str="83" int="50" con="106" dex="34" wit="376" men="68" hp="1729.0026" mp="669.33" cp="864.5013" />
+				<level val="53" bonus="1.42" hp_regen="6.7" mp_regen="2.4" cp_regen="6.5" str="90" int="53" con="112" dex="35" wit="400" men="70" hp="1785.7458" mp="692.973" cp="892.8729" />
+				<level val="54" bonus="1.43" hp_regen="6.8" mp_regen="2.4" cp_regen="6.5" str="97" int="57" con="118" dex="36" wit="425" men="71" hp="1826.286" mp="710.325" cp="913.143" />
+				<level val="55" bonus="1.44" hp_regen="6.9" mp_regen="2.4" cp_regen="6.5" str="104" int="60" con="125" dex="38" wit="452" men="73" hp="1883.31" mp="734.085" cp="941.655" />
+				<level val="56" bonus="1.45" hp_regen="7.0" mp_regen="2.4" cp_regen="6.5" str="111" int="63" con="131" dex="39" wit="479" men="75" hp="1923.087" mp="751.119" cp="961.5435" />
+				<level val="57" bonus="1.46" hp_regen="7.1" mp_regen="2.4" cp_regen="6.5" str="119" int="66" con="138" dex="40" wit="508" men="76" hp="1980.3774" mp="774.99" cp="990.1887" />
+				<level val="58" bonus="1.47" hp_regen="7.2" mp_regen="2.4" cp_regen="6.5" str="127" int="69" con="145" dex="41" wit="539" men="78" hp="2019.3624" mp="791.694" cp="1009.6812" />
+				<level val="59" bonus="1.48" hp_regen="7.3" mp_regen="2.4" cp_regen="6.5" str="135" int="73" con="153" dex="43" wit="570" men="80" hp="2057.6743" mp="808.1175" cp="1028.8372" />
+				<level val="60" bonus="1.49" hp_regen="7.4" mp_regen="2.4" cp_regen="6.5" str="143" int="76" con="160" dex="44" wit="604" men="82" hp="2075.535" mp="816.48" cp="1037.7675" />
+				<level val="61" bonus="1.5" hp_regen="7.5" mp_regen="2.7" cp_regen="7.5" str="152" int="80" con="168" dex="45" wit="639" men="84" hp="2091.621" mp="824.103" cp="1045.8105" />
+				<level val="62" bonus="1.51" hp_regen="7.6" mp_regen="2.7" cp_regen="7.5" str="161" int="83" con="176" dex="47" wit="676" men="85" hp="2105.9106" mp="830.9775" cp="1052.9553" />
+				<level val="63" bonus="1.52" hp_regen="7.7" mp_regen="2.7" cp_regen="7.5" str="171" int="87" con="184" dex="48" wit="715" men="87" hp="2139.78" mp="845.55" cp="1069.89" />
+				<level val="64" bonus="1.53" hp_regen="7.8" mp_regen="2.7" cp_regen="7.5" str="180" int="91" con="193" dex="49" wit="756" men="89" hp="2129.0142" mp="842.445" cp="1064.5071" />
+				<level val="65" bonus="1.54" hp_regen="7.9" mp_regen="2.7" cp_regen="7.5" str="191" int="95" con="202" dex="51" wit="799" men="91" hp="2137.785" mp="847.02" cp="1068.8925" />
+				<level val="66" bonus="1.55" hp_regen="8.0" mp_regen="2.7" cp_regen="7.5" str="201" int="99" con="211" dex="52" wit="843" men="93" hp="2144.673" mp="850.8105" cp="1072.3365" />
+				<level val="67" bonus="1.56" hp_regen="8.1" mp_regen="2.7" cp_regen="7.5" str="212" int="102" con="220" dex="53" wit="891" men="95" hp="2149.6565" mp="853.8075" cp="1074.8282" />
+				<level val="68" bonus="1.57" hp_regen="8.2" mp_regen="2.7" cp_regen="7.5" str="223" int="107" con="230" dex="55" wit="940" men="97" hp="2176.902" mp="865.62" cp="1088.451" />
+				<level val="69" bonus="1.58" hp_regen="8.3" mp_regen="2.7" cp_regen="7.5" str="235" int="111" con="240" dex="56" wit="992" men="99" hp="2178.5808" mp="867.24" cp="1089.2904" />
+				<level val="70" bonus="1.59" hp_regen="8.4" mp_regen="2.7" cp_regen="7.5" str="247" int="115" con="250" dex="57" wit="1047" men="101" hp="2178.294" mp="868.041" cp="1089.147" />
+				<level val="71" bonus="1.6" hp_regen="8.5" mp_regen="3.0" cp_regen="8.5" str="259" int="119" con="260" dex="59" wit="1104" men="103" hp="2176.02" mp="868.014" cp="1088.01" />
+				<level val="72" bonus="1.61" hp_regen="8.6" mp_regen="3.0" cp_regen="8.5" str="272" int="124" con="271" dex="60" wit="1164" men="105" hp="2171.7373" mp="867.15" cp="1085.8687" />
+				<level val="73" bonus="1.62" hp_regen="8.7" mp_regen="3.0" cp_regen="8.5" str="286" int="128" con="282" dex="62" wit="1227" men="107" hp="2165.424" mp="865.44" cp="1082.712" />
+				<level val="74" bonus="1.63" hp_regen="8.8" mp_regen="3.0" cp_regen="8.5" str="299" int="133" con="294" dex="63" wit="1294" men="109" hp="2184.7134" mp="873.9375" cp="1092.3567" />
+				<level val="75" bonus="1.64" hp_regen="8.9" mp_regen="3.0" cp_regen="8.5" str="314" int="137" con="306" dex="65" wit="1364" men="111" hp="2203.11" mp="882.063" cp="1101.555" />
+				<level val="76" bonus="1.65" hp_regen="9.0" mp_regen="3.0" cp_regen="8.5" str="329" int="142" con="318" dex="66" wit="1437" men="113" hp="2220.603" mp="889.812" cp="1110.3015" />
+				<level val="77" bonus="1.66" hp_regen="9.1" mp_regen="3.0" cp_regen="8.5" str="344" int="147" con="330" dex="68" wit="1514" men="115" hp="2237.1816" mp="897.18" cp="1118.5908" />
+				<level val="78" bonus="1.67" hp_regen="9.2" mp_regen="3.0" cp_regen="8.5" str="360" int="152" con="343" dex="69" wit="1594" men="117" hp="2252.835" mp="904.1625" cp="1126.4175" />
+				<level val="79" bonus="1.68" hp_regen="9.3" mp_regen="3.0" cp_regen="8.5" str="377" int="157" con="356" dex="71" wit="1679" men="120" hp="2267.5525" mp="910.755" cp="1133.7762" />
+				<level val="80" bonus="1.69" hp_regen="9.4" mp_regen="3.0" cp_regen="8.5" str="394" int="162" con="370" dex="72" wit="1768" men="122" hp="2281.323" mp="916.953" cp="1140.6615" />
+				<level val="81" bonus="1.7" hp_regen="9.5" mp_regen="3.0" cp_regen="8.5" str="412" int="167" con="384" dex="74" wit="1861" men="124" hp="2294.136" mp="922.752" cp="1147.068" />
+				<level val="82" bonus="1.71" hp_regen="9.6" mp_regen="3.0" cp_regen="8.5" str="430" int="173" con="399" dex="75" wit="1959" men="126" hp="2305.9807" mp="928.1475" cp="1152.9904" />
+				<level val="83" bonus="1.72" hp_regen="9.7" mp_regen="3.0" cp_regen="8.5" str="449" int="178" con="414" dex="77" wit="2062" men="129" hp="2316.846" mp="933.135" cp="1158.423" />
+				<level val="84" bonus="1.73" hp_regen="9.8" mp_regen="3.0" cp_regen="8.5" str="469" int="184" con="429" dex="78" wit="2170" men="131" hp="2326.7214" mp="937.71" cp="1163.3607" />
+				<level val="85" bonus="1.74" hp_regen="9.9" mp_regen="3.0" cp_regen="8.5" str="489" int="189" con="445" dex="80" wit="2284" men="133" hp="2335.596" mp="941.868" cp="1167.798" />
+				<level val="86" bonus="1.75" hp_regen="10.0" mp_regen="3.0" cp_regen="8.5" str="511" int="195" con="461" dex="82" wit="2403" men="135" hp="2343.459" mp="945.6045" cp="1171.7295" />
+				<level val="87" bonus="1.76" hp_regen="10.1" mp_regen="3.0" cp_regen="8.5" str="533" int="201" con="478" dex="83" wit="2528" men="138" hp="2350.2996" mp="948.915" cp="1175.1498" />
+				<level val="88" bonus="1.77" hp_regen="10.2" mp_regen="3.0" cp_regen="8.5" str="555" int="207" con="496" dex="85" wit="2660" men="140" hp="2356.107" mp="951.795" cp="1178.0535" />
+				<level val="89" bonus="1.78" hp_regen="10.3" mp_regen="3.0" cp_regen="8.5" str="579" int="213" con="513" dex="87" wit="2798" men="143" hp="2360.8704" mp="954.24" cp="1180.4352" />
+				<level val="90" bonus="1.79" hp_regen="10.4" mp_regen="3.0" cp_regen="8.5" str="603" int="219" con="532" dex="88" wit="2943" men="145" hp="2364.579" mp="956.2455" cp="1182.2896" />
+				<level val="91" bonus="1.8" hp_regen="10.5" mp_regen="3.0" cp_regen="8.5" str="629" int="226" con="551" dex="90" wit="3095" men="147" hp="2367.222" mp="957.807" cp="1183.611" />
+				<level val="92" bonus="1.81" hp_regen="10.6" mp_regen="3.0" cp_regen="8.5" str="655" int="232" con="570" dex="92" wit="3255" men="150" hp="2368.7886" mp="958.92" cp="1184.3943" />
+				<level val="93" bonus="1.82" hp_regen="10.7" mp_regen="3.0" cp_regen="8.5" str="682" int="239" con="590" dex="93" wit="3422" men="152" hp="2369.268" mp="959.58" cp="1184.634" />
+				<level val="94" bonus="1.83" hp_regen="10.8" mp_regen="3.0" cp_regen="8.5" str="710" int="246" con="611" dex="95" wit="3598" men="155" hp="2368.6494" mp="959.7825" cp="1184.3247" />
+				<level val="95" bonus="1.84" hp_regen="10.9" mp_regen="3.0" cp_regen="8.5" str="739" int="253" con="633" dex="97" wit="3783" men="158" hp="2366.922" mp="959.523" cp="1183.461" />
+				<level val="96" bonus="1.85" hp_regen="11.0" mp_regen="3.0" cp_regen="8.5" str="770" int="260" con="654" dex="99" wit="3977" men="160" hp="2364.075" mp="958.797" cp="1182.0375" />
+				<level val="97" bonus="1.86" hp_regen="11.1" mp_regen="3.0" cp_regen="8.5" str="801" int="267" con="677" dex="100" wit="4181" men="163" hp="2360.0977" mp="957.6" cp="1180.0488" />
+				<level val="98" bonus="1.87" hp_regen="11.2" mp_regen="3.0" cp_regen="8.5" str="833" int="274" con="700" dex="102" wit="4395" men="165" hp="2354.979" mp="955.9275" cp="1177.4895" />
+				<level val="99" bonus="1.88" hp_regen="11.3" mp_regen="3.0" cp_regen="8.5" str="867" int="282" con="724" dex="104" wit="4620" men="168" hp="2348.7085" mp="953.775" cp="1174.3542" />
+			</levels>
+		</Male>
+		<Female>
+			<collision radius="5" height="12.3" />
+			<moving walk="26" run="115" waterWalk="50" waterRun="50" flyWalk="0" flyRun="0" unknownWalk="0" unknownRun="0" />
+			<skills>
+				<skill id="960" level="1" /> <!-- Race Running -->
+				<skill id="5437" level="1" /> <!-- Dissonance -->
+			</skills>
+			<actions>1 3 4 5 6 7 8 9 11 15 16 17 18 19 21 22 23 32 36 39 40 41 42 43 44 45 46 47 48 50 52 53 54 55 56 57 63 64 65 70 1000 1001 1003 1004 1005 1006 1007 1008 1009 1010 1011 1012 1013 1014 1015 1016 1017 1018 1019 1020 1021 1022 1023 1024 1025 1026 1027 1028 1029 1030 1031 1032 1033 1034 1035 1036 1037 1038 1039 1040 1041 1042 1043 1044 1045 1046 1047 1048 1049 1050 1051 1052 1053 1054 1055 1056 1057 1058 1059 1060 1061 1062 1063 1064 1065 1066 1067 1068 1069 1070 1071 1072 1073 1074 1075 1076 1077 1078 1079 1080 1081 1082 1083 1084 1089 1090 1091 1092 1093 1094 1095 1096 1097 1098</actions>
+			<base_attack_type>sword</base_attack_type>
+			<base_attack_range>20</base_attack_range>
+			<base_random_damage>10</base_random_damage>
+			<base_attack_speed>300</base_attack_speed>
+			<base_critical_prob>5</base_critical_prob>
+			<base_physical_attack>5</base_physical_attack>
+			<base_magical_attack>5</base_magical_attack>
+			<items>
+				<item id="57" allowed="true" /> <!-- Adena -->
+			</items>
+			<basic_stat str="40" int="21" con="43" dex="30" wit="11" men="25" />
+			<base_defend chest="31" legs="18" head="12" feet="7" gloves="8" underwear="3" cloak="1" />
+			<base_magic_defend rear="9" lear="9" rfinger="5" lfinger="5" neck="13" />
+			<levels>
+				<level val="1" bonus="0.9" hp_regen="2.0" mp_regen="0.9" cp_regen="2.0" str="-70" int="-45" con="-54" dex="-15" wit="-60" men="1" hp="80.8" mp="30.3" cp="40.4" />
+				<level val="2" bonus="0.91" hp_regen="2.05" mp_regen="0.9" cp_regen="2.0" str="-69" int="-44" con="-53" dex="-14" wit="-58" men="2" hp="92.7483" mp="35.8146" cp="46.37415" />
+				<level val="3" bonus="0.92" hp_regen="2.1" mp_regen="0.9" cp_regen="2.0" str="-68" int="-43" con="-52" dex="-14" wit="-56" men="3" hp="104.8279" mp="41.3898" cp="52.41395" />
+				<level val="4" bonus="0.93" hp_regen="2.15" mp_regen="0.9" cp_regen="2.0" str="-66" int="-42" con="-50" dex="-13" wit="-54" men="4" hp="117.0388" mp="47.0256" cp="58.5194" />
+				<level val="5" bonus="0.94" hp_regen="2.2" mp_regen="0.9" cp_regen="2.0" str="-65" int="-41" con="-49" dex="-12" wit="-52" men="5" hp="129.381" mp="52.722" cp="64.6905" />
+				<level val="6" bonus="0.95" hp_regen="2.25" mp_regen="0.9" cp_regen="2.0" str="-64" int="-39" con="-47" dex="-11" wit="-49" men="6" hp="143.259" mp="59.058" cp="71.6295" />
+				<level val="7" bonus="0.96" hp_regen="2.3" mp_regen="0.9" cp_regen="2.0" str="-63" int="-38" con="-46" dex="-10" wit="-47" men="7" hp="155.9886" mp="64.9332" cp="77.9943" />
+				<level val="8" bonus="0.97" hp_regen="2.35" mp_regen="0.9" cp_regen="2.0" str="-61" int="-37" con="-44" dex="-10" wit="-44" men="8" hp="168.8508" mp="70.8696" cp="84.4254" />
+				<level val="9" bonus="0.98" hp_regen="2.4" mp_regen="0.9" cp_regen="2.0" str="-60" int="-36" con="-42" dex="-9" wit="-42" men="9" hp="181.8456" mp="76.8672" cp="90.9228" />
+				<level val="10" bonus="0.99" hp_regen="2.45" mp_regen="0.9" cp_regen="2.0" str="-58" int="-35" con="-41" dex="-8" wit="-39" men="11" hp="194.973" mp="82.926" cp="97.4865" />
+				<level val="11" bonus="1.0" hp_regen="2.5" mp_regen="1.2" cp_regen="2.5" str="-57" int="-33" con="-39" dex="-7" wit="-36" men="12" hp="210.2745" mp="89.919" cp="105.13725" />
+				<level val="12" bonus="1.01" hp_regen="2.6" mp_regen="1.2" cp_regen="2.5" str="-55" int="-32" con="-37" dex="-6" wit="-32" men="13" hp="223.7984" mp="96.1608" cp="111.8992" />
+				<level val="13" bonus="1.02" hp_regen="2.7" mp_regen="1.2" cp_regen="2.5" str="-54" int="-31" con="-35" dex="-6" wit="-29" men="14" hp="237.4562" mp="102.4644" cp="118.7281" />
+				<level val="14" bonus="1.03" hp_regen="2.8" mp_regen="1.2" cp_regen="2.5" str="-52" int="-29" con="-33" dex="-5" wit="-25" men="15" hp="251.2479" mp="108.8298" cp="125.62395" />
+				<level val="15" bonus="1.04" hp_regen="2.9" mp_regen="1.2" cp_regen="2.5" str="-50" int="-28" con="-31" dex="-4" wit="-22" men="16" hp="265.1735" mp="115.257" cp="132.58675" />
+				<level val="16" bonus="1.05" hp_regen="3.0" mp_regen="1.2" cp_regen="2.5" str="-49" int="-26" con="-29" dex="-3" wit="-18" men="17" hp="281.944" mp="122.928" cp="140.972" />
+				<level val="17" bonus="1.06" hp_regen="3.1" mp_regen="1.2" cp_regen="2.5" str="-47" int="-25" con="-27" dex="-2" wit="-14" men="19" hp="296.2752" mp="129.5424" cp="148.1376" />
+				<level val="18" bonus="1.07" hp_regen="3.2" mp_regen="1.2" cp_regen="2.5" str="-45" int="-23" con="-25" dex="-1" wit="-9" men="20" hp="310.7416" mp="136.2192" cp="155.3708" />
+				<level val="19" bonus="1.08" hp_regen="3.3" mp_regen="1.2" cp_regen="2.5" str="-43" int="-22" con="-23" dex="0" wit="-5" men="21" hp="325.3432" mp="142.9584" cp="162.6716" />
+				<level val="20" bonus="1.09" hp_regen="3.4" mp_regen="1.2" cp_regen="2.5" str="-41" int="-20" con="-20" dex="1" wit="0" men="22" hp="340.08" mp="149.76" cp="170.04" />
+				<level val="21" bonus="1.1" hp_regen="3.5" mp_regen="1.5" cp_regen="3.5" str="-39" int="-19" con="-18" dex="1" wit="5" men="23" hp="374.535" mp="161.595" cp="187.2675" />
+				<level val="22" bonus="1.11" hp_regen="3.6" mp_regen="1.5" cp_regen="3.5" str="-37" int="-17" con="-15" dex="2" wit="10" men="25" hp="406.0035" mp="172.0845" cp="203.00175" />
+				<level val="23" bonus="1.12" hp_regen="3.7" mp_regen="1.5" cp_regen="3.5" str="-34" int="-15" con="-13" dex="3" wit="16" men="26" hp="437.7555" mp="182.6685" cp="218.87775" />
+				<level val="24" bonus="1.13" hp_regen="3.8" mp_regen="1.5" cp_regen="3.5" str="-32" int="-14" con="-10" dex="4" wit="22" men="27" hp="469.791" mp="193.347" cp="234.8955" />
+				<level val="25" bonus="1.14" hp_regen="3.9" mp_regen="1.5" cp_regen="3.5" str="-29" int="-12" con="-7" dex="5" wit="28" men="28" hp="502.11" mp="204.12" cp="251.055" />
+				<level val="26" bonus="1.15" hp_regen="4.0" mp_regen="1.5" cp_regen="3.5" str="-27" int="-10" con="-5" dex="6" wit="34" men="30" hp="539.805" mp="217.035" cp="269.9025" />
+				<level val="27" bonus="1.16" hp_regen="4.1" mp_regen="1.5" cp_regen="3.5" str="-24" int="-8" con="-2" dex="7" wit="41" men="31" hp="573.0042" mp="228.1014" cp="286.5021" />
+				<level val="28" bonus="1.17" hp_regen="4.2" mp_regen="1.5" cp_regen="3.5" str="-22" int="-6" con="1" dex="8" wit="48" men="32" hp="606.4896" mp="239.2632" cp="303.2448" />
+				<level val="29" bonus="1.18" hp_regen="4.3" mp_regen="1.5" cp_regen="3.5" str="-19" int="-5" con="4" dex="9" wit="55" men="34" hp="640.2612" mp="250.5204" cp="320.1306" />
+				<level val="30" bonus="1.19" hp_regen="4.4" mp_regen="1.5" cp_regen="3.5" str="-16" int="-3" con="7" dex="10" wit="63" men="35" hp="674.319" mp="261.873" cp="337.1595" />
+				<level val="31" bonus="1.2" hp_regen="4.5" mp_regen="1.8" cp_regen="4.5" str="-13" int="-1" con="10" dex="11" wit="71" men="36" hp="715.3485" mp="275.8995" cp="357.67426" />
+				<level val="32" bonus="1.21" hp_regen="4.6" mp_regen="1.8" cp_regen="4.5" str="-10" int="1" con="14" dex="12" wit="80" men="38" hp="750.3054" mp="287.5518" cp="375.1527" />
+				<level val="33" bonus="1.22" hp_regen="4.7" mp_regen="1.8" cp_regen="4.5" str="-6" int="3" con="17" dex="13" wit="89" men="39" hp="785.5512" mp="299.3004" cp="392.7756" />
+				<level val="34" bonus="1.23" hp_regen="4.8" mp_regen="1.8" cp_regen="4.5" str="-3" int="5" con="21" dex="14" wit="98" men="40" hp="821.0859" mp="311.1453" cp="410.54294" />
+				<level val="35" bonus="1.24" hp_regen="4.9" mp_regen="1.8" cp_regen="4.5" str="1" int="7" con="24" dex="15" wit="108" men="42" hp="856.9095" mp="323.0865" cp="428.45474" />
+				<level val="36" bonus="1.25" hp_regen="5.0" mp_regen="1.8" cp_regen="4.5" str="4" int="10" con="28" dex="16" wit="118" men="43" hp="901.368" mp="338.256" cp="450.684" />
+				<level val="37" bonus="1.26" hp_regen="5.1" mp_regen="1.8" cp_regen="4.5" str="8" int="12" con="32" dex="17" wit="129" men="45" hp="938.1096" mp="350.5032" cp="469.0548" />
+				<level val="38" bonus="1.27" hp_regen="5.2" mp_regen="1.8" cp_regen="4.5" str="12" int="14" con="36" dex="18" wit="141" men="46" hp="975.1428" mp="362.8476" cp="487.5714" />
+				<level val="39" bonus="1.28" hp_regen="5.3" mp_regen="1.8" cp_regen="4.5" str="16" int="16" con="40" dex="19" wit="153" men="48" hp="1012.4676" mp="375.2892" cp="506.2338" />
+				<level val="40" bonus="1.29" hp_regen="5.4" mp_regen="1.8" cp_regen="4.5" str="20" int="19" con="44" dex="20" wit="165" men="49" hp="1050.084" mp="387.828" cp="525.042" />
+				<level val="41" bonus="1.3" hp_regen="5.5" mp_regen="2.1" cp_regen="5.5" str="24" int="21" con="48" dex="21" wit="179" men="50" hp="1110.819" mp="412.674" cp="555.4095" />
+				<level val="42" bonus="1.31" hp_regen="5.6" mp_regen="2.1" cp_regen="5.5" str="29" int="23" con="53" dex="22" wit="193" men="52" hp="1162.2234" mp="434.0925" cp="581.1117" />
+				<level val="43" bonus="1.32" hp_regen="5.7" mp_regen="2.1" cp_regen="5.5" str="33" int="26" con="58" dex="24" wit="207" men="53" hp="1214.0201" mp="455.6745" cp="607.0101" />
+				<level val="44" bonus="1.33" hp_regen="5.8" mp_regen="2.1" cp_regen="5.5" str="38" int="28" con="62" dex="25" wit="223" men="55" hp="1266.2094" mp="477.42" cp="633.1047" />
+				<level val="45" bonus="1.34" hp_regen="5.9" mp_regen="2.1" cp_regen="5.5" str="43" int="31" con="67" dex="26" wit="239" men="57" hp="1318.791" mp="499.329" cp="659.3955" />
+				<level val="46" bonus="1.35" hp_regen="6.0" mp_regen="2.1" cp_regen="5.5" str="48" int="34" con="72" dex="27" wit="256" men="58" hp="1384.35" mp="526.185" cp="692.175" />
+				<level val="47" bonus="1.36" hp_regen="6.1" mp_regen="2.1" cp_regen="5.5" str="54" int="36" con="77" dex="28" wit="273" men="60" hp="1438.206" mp="548.625" cp="719.103" />
+				<level val="48" bonus="1.37" hp_regen="6.2" mp_regen="2.1" cp_regen="5.5" str="59" int="39" con="83" dex="29" wit="292" men="61" hp="1492.458" mp="571.23" cp="746.229" />
+				<level val="49" bonus="1.38" hp_regen="6.3" mp_regen="2.1" cp_regen="5.5" str="65" int="42" con="88" dex="30" wit="312" men="63" hp="1547.106" mp="594.0" cp="773.553" />
+				<level val="50" bonus="1.39" hp_regen="6.4" mp_regen="2.1" cp_regen="5.5" str="71" int="45" con="94" dex="32" wit="332" men="65" hp="1616.715" mp="622.5435" cp="808.3575" />
+				<level val="51" bonus="1.4" hp_regen="6.5" mp_regen="2.4" cp_regen="6.5" str="77" int="47" con="100" dex="33" wit="354" men="66" hp="1672.659" mp="645.8535" cp="836.3295" />
+				<level val="52" bonus="1.41" hp_regen="6.6" mp_regen="2.4" cp_regen="6.5" str="83" int="50" con="106" dex="34" wit="376" men="68" hp="1729.0026" mp="669.33" cp="864.5013" />
+				<level val="53" bonus="1.42" hp_regen="6.7" mp_regen="2.4" cp_regen="6.5" str="90" int="53" con="112" dex="35" wit="400" men="70" hp="1785.7458" mp="692.973" cp="892.8729" />
+				<level val="54" bonus="1.43" hp_regen="6.8" mp_regen="2.4" cp_regen="6.5" str="97" int="57" con="118" dex="36" wit="425" men="71" hp="1826.286" mp="710.325" cp="913.143" />
+				<level val="55" bonus="1.44" hp_regen="6.9" mp_regen="2.4" cp_regen="6.5" str="104" int="60" con="125" dex="38" wit="452" men="73" hp="1883.31" mp="734.085" cp="941.655" />
+				<level val="56" bonus="1.45" hp_regen="7.0" mp_regen="2.4" cp_regen="6.5" str="111" int="63" con="131" dex="39" wit="479" men="75" hp="1923.087" mp="751.119" cp="961.5435" />
+				<level val="57" bonus="1.46" hp_regen="7.1" mp_regen="2.4" cp_regen="6.5" str="119" int="66" con="138" dex="40" wit="508" men="76" hp="1980.3774" mp="774.99" cp="990.1887" />
+				<level val="58" bonus="1.47" hp_regen="7.2" mp_regen="2.4" cp_regen="6.5" str="127" int="69" con="145" dex="41" wit="539" men="78" hp="2019.3624" mp="791.694" cp="1009.6812" />
+				<level val="59" bonus="1.48" hp_regen="7.3" mp_regen="2.4" cp_regen="6.5" str="135" int="73" con="153" dex="43" wit="570" men="80" hp="2057.6743" mp="808.1175" cp="1028.8372" />
+				<level val="60" bonus="1.49" hp_regen="7.4" mp_regen="2.4" cp_regen="6.5" str="143" int="76" con="160" dex="44" wit="604" men="82" hp="2075.535" mp="816.48" cp="1037.7675" />
+				<level val="61" bonus="1.5" hp_regen="7.5" mp_regen="2.7" cp_regen="7.5" str="152" int="80" con="168" dex="45" wit="639" men="84" hp="2091.621" mp="824.103" cp="1045.8105" />
+				<level val="62" bonus="1.51" hp_regen="7.6" mp_regen="2.7" cp_regen="7.5" str="161" int="83" con="176" dex="47" wit="676" men="85" hp="2105.9106" mp="830.9775" cp="1052.9553" />
+				<level val="63" bonus="1.52" hp_regen="7.7" mp_regen="2.7" cp_regen="7.5" str="171" int="87" con="184" dex="48" wit="715" men="87" hp="2139.78" mp="845.55" cp="1069.89" />
+				<level val="64" bonus="1.53" hp_regen="7.8" mp_regen="2.7" cp_regen="7.5" str="180" int="91" con="193" dex="49" wit="756" men="89" hp="2129.0142" mp="842.445" cp="1064.5071" />
+				<level val="65" bonus="1.54" hp_regen="7.9" mp_regen="2.7" cp_regen="7.5" str="191" int="95" con="202" dex="51" wit="799" men="91" hp="2137.785" mp="847.02" cp="1068.8925" />
+				<level val="66" bonus="1.55" hp_regen="8.0" mp_regen="2.7" cp_regen="7.5" str="201" int="99" con="211" dex="52" wit="843" men="93" hp="2144.673" mp="850.8105" cp="1072.3365" />
+				<level val="67" bonus="1.56" hp_regen="8.1" mp_regen="2.7" cp_regen="7.5" str="212" int="102" con="220" dex="53" wit="891" men="95" hp="2149.6565" mp="853.8075" cp="1074.8282" />
+				<level val="68" bonus="1.57" hp_regen="8.2" mp_regen="2.7" cp_regen="7.5" str="223" int="107" con="230" dex="55" wit="940" men="97" hp="2176.902" mp="865.62" cp="1088.451" />
+				<level val="69" bonus="1.58" hp_regen="8.3" mp_regen="2.7" cp_regen="7.5" str="235" int="111" con="240" dex="56" wit="992" men="99" hp="2178.5808" mp="867.24" cp="1089.2904" />
+				<level val="70" bonus="1.59" hp_regen="8.4" mp_regen="2.7" cp_regen="7.5" str="247" int="115" con="250" dex="57" wit="1047" men="101" hp="2178.294" mp="868.041" cp="1089.147" />
+				<level val="71" bonus="1.6" hp_regen="8.5" mp_regen="3.0" cp_regen="8.5" str="259" int="119" con="260" dex="59" wit="1104" men="103" hp="2176.02" mp="868.014" cp="1088.01" />
+				<level val="72" bonus="1.61" hp_regen="8.6" mp_regen="3.0" cp_regen="8.5" str="272" int="124" con="271" dex="60" wit="1164" men="105" hp="2171.7373" mp="867.15" cp="1085.8687" />
+				<level val="73" bonus="1.62" hp_regen="8.7" mp_regen="3.0" cp_regen="8.5" str="286" int="128" con="282" dex="62" wit="1227" men="107" hp="2165.424" mp="865.44" cp="1082.712" />
+				<level val="74" bonus="1.63" hp_regen="8.8" mp_regen="3.0" cp_regen="8.5" str="299" int="133" con="294" dex="63" wit="1294" men="109" hp="2184.7134" mp="873.9375" cp="1092.3567" />
+				<level val="75" bonus="1.64" hp_regen="8.9" mp_regen="3.0" cp_regen="8.5" str="314" int="137" con="306" dex="65" wit="1364" men="111" hp="2203.11" mp="882.063" cp="1101.555" />
+				<level val="76" bonus="1.65" hp_regen="9.0" mp_regen="3.0" cp_regen="8.5" str="329" int="142" con="318" dex="66" wit="1437" men="113" hp="2220.603" mp="889.812" cp="1110.3015" />
+				<level val="77" bonus="1.66" hp_regen="9.1" mp_regen="3.0" cp_regen="8.5" str="344" int="147" con="330" dex="68" wit="1514" men="115" hp="2237.1816" mp="897.18" cp="1118.5908" />
+				<level val="78" bonus="1.67" hp_regen="9.2" mp_regen="3.0" cp_regen="8.5" str="360" int="152" con="343" dex="69" wit="1594" men="117" hp="2252.835" mp="904.1625" cp="1126.4175" />
+				<level val="79" bonus="1.68" hp_regen="9.3" mp_regen="3.0" cp_regen="8.5" str="377" int="157" con="356" dex="71" wit="1679" men="120" hp="2267.5525" mp="910.755" cp="1133.7762" />
+				<level val="80" bonus="1.69" hp_regen="9.4" mp_regen="3.0" cp_regen="8.5" str="394" int="162" con="370" dex="72" wit="1768" men="122" hp="2281.323" mp="916.953" cp="1140.6615" />
+				<level val="81" bonus="1.7" hp_regen="9.5" mp_regen="3.0" cp_regen="8.5" str="412" int="167" con="384" dex="74" wit="1861" men="124" hp="2294.136" mp="922.752" cp="1147.068" />
+				<level val="82" bonus="1.71" hp_regen="9.6" mp_regen="3.0" cp_regen="8.5" str="430" int="173" con="399" dex="75" wit="1959" men="126" hp="2305.9807" mp="928.1475" cp="1152.9904" />
+				<level val="83" bonus="1.72" hp_regen="9.7" mp_regen="3.0" cp_regen="8.5" str="449" int="178" con="414" dex="77" wit="2062" men="129" hp="2316.846" mp="933.135" cp="1158.423" />
+				<level val="84" bonus="1.73" hp_regen="9.8" mp_regen="3.0" cp_regen="8.5" str="469" int="184" con="429" dex="78" wit="2170" men="131" hp="2326.7214" mp="937.71" cp="1163.3607" />
+				<level val="85" bonus="1.74" hp_regen="9.9" mp_regen="3.0" cp_regen="8.5" str="489" int="189" con="445" dex="80" wit="2284" men="133" hp="2335.596" mp="941.868" cp="1167.798" />
+				<level val="86" bonus="1.75" hp_regen="10.0" mp_regen="3.0" cp_regen="8.5" str="511" int="195" con="461" dex="82" wit="2403" men="135" hp="2343.459" mp="945.6045" cp="1171.7295" />
+				<level val="87" bonus="1.76" hp_regen="10.1" mp_regen="3.0" cp_regen="8.5" str="533" int="201" con="478" dex="83" wit="2528" men="138" hp="2350.2996" mp="948.915" cp="1175.1498" />
+				<level val="88" bonus="1.77" hp_regen="10.2" mp_regen="3.0" cp_regen="8.5" str="555" int="207" con="496" dex="85" wit="2660" men="140" hp="2356.107" mp="951.795" cp="1178.0535" />
+				<level val="89" bonus="1.78" hp_regen="10.3" mp_regen="3.0" cp_regen="8.5" str="579" int="213" con="513" dex="87" wit="2798" men="143" hp="2360.8704" mp="954.24" cp="1180.4352" />
+				<level val="90" bonus="1.79" hp_regen="10.4" mp_regen="3.0" cp_regen="8.5" str="603" int="219" con="532" dex="88" wit="2943" men="145" hp="2364.579" mp="956.2455" cp="1182.2896" />
+				<level val="91" bonus="1.8" hp_regen="10.5" mp_regen="3.0" cp_regen="8.5" str="629" int="226" con="551" dex="90" wit="3095" men="147" hp="2367.222" mp="957.807" cp="1183.611" />
+				<level val="92" bonus="1.81" hp_regen="10.6" mp_regen="3.0" cp_regen="8.5" str="655" int="232" con="570" dex="92" wit="3255" men="150" hp="2368.7886" mp="958.92" cp="1184.3943" />
+				<level val="93" bonus="1.82" hp_regen="10.7" mp_regen="3.0" cp_regen="8.5" str="682" int="239" con="590" dex="93" wit="3422" men="152" hp="2369.268" mp="959.58" cp="1184.634" />
+				<level val="94" bonus="1.83" hp_regen="10.8" mp_regen="3.0" cp_regen="8.5" str="710" int="246" con="611" dex="95" wit="3598" men="155" hp="2368.6494" mp="959.7825" cp="1184.3247" />
+				<level val="95" bonus="1.84" hp_regen="10.9" mp_regen="3.0" cp_regen="8.5" str="739" int="253" con="633" dex="97" wit="3783" men="158" hp="2366.922" mp="959.523" cp="1183.461" />
+				<level val="96" bonus="1.85" hp_regen="11.0" mp_regen="3.0" cp_regen="8.5" str="770" int="260" con="654" dex="99" wit="3977" men="160" hp="2364.075" mp="958.797" cp="1182.0375" />
+				<level val="97" bonus="1.86" hp_regen="11.1" mp_regen="3.0" cp_regen="8.5" str="801" int="267" con="677" dex="100" wit="4181" men="163" hp="2360.0977" mp="957.6" cp="1180.0488" />
+				<level val="98" bonus="1.87" hp_regen="11.2" mp_regen="3.0" cp_regen="8.5" str="833" int="274" con="700" dex="102" wit="4395" men="165" hp="2354.979" mp="955.9275" cp="1177.4895" />
+				<level val="99" bonus="1.88" hp_regen="11.3" mp_regen="3.0" cp_regen="8.5" str="867" int="282" con="724" dex="104" wit="4620" men="168" hp="2348.7085" mp="953.775" cp="1174.3542" />
+			</levels>
+		</Female>
+	</transform>
+</list>

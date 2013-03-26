@@ -277,12 +277,12 @@ class Quest (JQuest) :
      if npcId in [ 20036,20044 ] and st.getQuestItemsCount(BREATH_OF_WINDS_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
        if self.getRandom(100)<(st.getInt("id")*33) :
-         st.playSound("Itemsound.quest_before_battle")
+         st.playSound("ItemSound.quest_before_battle")
          st.addSpawn(27120,npc.getX(),npc.getY(),npc.getZ(),600000)
      elif npcId in [ 20013,20019 ] and st.getQuestItemsCount(SEED_OF_VERDURE_ID) == 0 :
        st.set("id",str(st.getInt("id")+1))
        if self.getRandom(100)<(st.getInt("id")*33) :
-         st.playSound("Itemsound.quest_before_battle")
+         st.playSound("ItemSound.quest_before_battle")
          st.addSpawn(27121,npc.getX(),npc.getY(),npc.getZ(),600000)
    elif cond == 14 :                                       # Condition 14 get 10 Parasite of lota
      parasite = st.getQuestItemsCount(PARASITE_OF_LOTA_ID)
@@ -291,9 +291,9 @@ class Quest (JQuest) :
          st.giveItems(PARASITE_OF_LOTA_ID,1)
          if parasite+1 == 10 :
            st.set("cond","15")
-           st.playSound("Itemsound.quest_middle")
+           st.playSound("ItemSound.quest_middle")
          else:
-           st.playSound("Itemsound.quest_itemget")
+           st.playSound("ItemSound.quest_itemget")
    elif cond in [ 2,6,19 ] and npcId in DROPLIST.keys() :
      required,item,maxqty=DROPLIST[npcId]
      count = st.getQuestItemsCount(item)
@@ -315,21 +315,21 @@ class Quest (JQuest) :
              # Check if player got all the items of condition 6 and set the condition to 7
              if st.getQuestItemsCount(BASILISK_PLASMA_ID) and st.getQuestItemsCount(HONEY_DEW_ID) and st.getQuestItemsCount(STAKATO_ICHOR_ID) :
                st.set("cond","7")
-               st.playSound("Itemsound.quest_middle")
+               st.playSound("ItemSound.quest_middle")
              else:
-               st.playSound("Itemsound.quest_itemget")
+               st.playSound("ItemSound.quest_itemget")
           elif npcId in [ 27120,27121 ] :             # Condition 2 kill the Luel of Zephy and Aktea of the Woods
             # Check if player got all the items of condition 2 and set the condition to 3
             if st.getQuestItemsCount(SEED_OF_VERDURE_ID) and st.getQuestItemsCount(BREATH_OF_WINDS_ID) :
               st.set("cond","3")
-              st.playSound("Itemsound.quest_middle")
+              st.playSound("ItemSound.quest_middle")
             else :
-              st.playSound("Itemsound.quest_itemget")
+              st.playSound("ItemSound.quest_itemget")
           elif npcId == 20213 :                              # Condition 19 Porta
             st.set("cond","20")
             st.playSound("ItemSound.quest_middle")
         else:
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(217,qn,"Testimony Of Trust")

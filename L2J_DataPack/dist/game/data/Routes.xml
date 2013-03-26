@@ -4,93 +4,1262 @@
 <!-- "cycle": NPC moves from first point to last point, then moves directly to the first point. -->
 <!-- "conveyor": NPC moves from first point to last point, then teleports directly to the first point. -->
 <!-- "random": NPC randomly moves between points. -->
+<!-- Documentation for Strings: -->
+<!-- npcString = to use String Variables from NpcStringId.java -->
+<!-- npcStringId = to use String IDs from client NpcString-e.dat -->
+<!-- string = to use any custom text, example: string="Hello World" -->
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/Routes.xsd">
 	<!-- Just test route - Giran town square -->
-	<route id="1" repeat="true" repeatStyle="cycle">
-		<point string="" X="80863" Y="148339" Z="-3469" delay="0" run="true" />
-		<point string="" X="80904" Y="147653" Z="-3469" delay="0" run="true" />
-		<point string="" X="83205" Y="147646" Z="-3469" delay="0" run="true" />
-		<point string="" X="82189" Y="148347" Z="-3467" delay="0" run="true" />
-		<point string="" X="81862" Y="148266" Z="-3467" delay="0" run="true" />
-		<point string="" X="81918" Y="148352" Z="-3467" delay="0" run="true" />
-		<point string="" X="81937" Y="149173" Z="-3469" delay="0" run="true" />
+	<route name="test_route" repeat="true" repeatStyle="cycle">
+		<point X="80863" Y="148339" Z="-3469" delay="0" run="true" />
+		<point X="80904" Y="147653" Z="-3469" delay="0" run="true" />
+		<point X="83205" Y="147646" Z="-3469" delay="0" run="true" />
+		<point X="82189" Y="148347" Z="-3467" delay="0" run="true" />
+		<point X="81862" Y="148266" Z="-3467" delay="0" run="true" />
+		<point X="81918" Y="148352" Z="-3467" delay="0" run="true" />
+		<point X="81937" Y="149173" Z="-3469" delay="0" run="true" />
 	</route>
 	<!-- Hellbound Town routes for Patrols -->
-	<!-- castletownguard01 -->
-	<route id="2" repeat="true" repeatStyle="random">
-		<point string="" X="14840" Y="251949" Z="-1992" delay="0" run="false" />
-		<point string="" X="14679" Y="253399" Z="-2016" delay="0" run="false" />
+	<route name="castletownguard01" repeat="true" repeatStyle="random">
+		<target id="22360" spawnX="14840" spawnY="251949" spawnZ="-2009" />	<!-- Town Patrolman -->
+		<point X="14840" Y="251949" Z="-1992" delay="0" run="false" />
+		<point X="14679" Y="253399" Z="-2016" delay="0" run="false" />
 	</route>
-	<!-- castletownguard02 -->
-	<route id="3" repeat="true" repeatStyle="random">
-		<point string="" X="16082" Y="251790" Z="-1992" delay="0" run="false" />
-		<point string="" X="16388" Y="252456" Z="-2000" delay="0" run="false" />
-		<point string="" X="16093" Y="254443" Z="-2064" delay="0" run="false" />
+	<route name="castletownguard02" repeat="true" repeatStyle="random">
+		<target id="22360" spawnX="16082" spawnY="251790" spawnZ="-2000" />	<!-- Town Patrolman -->
+		<point X="16082" Y="251790" Z="-1992" delay="0" run="false" />
+		<point X="16388" Y="252456" Z="-2000" delay="0" run="false" />
+		<point X="16093" Y="254443" Z="-2064" delay="0" run="false" />
 	</route>
-	<!-- castletownguard03 -->
-	<route id="4" repeat="true" repeatStyle="random">
-		<point string="" X="16524" Y="255244" Z="-2072" delay="0" run="false" />
-		<point string="" X="17211" Y="256290" Z="-2064" delay="0" run="false" />
-		<point string="" X="18805" Y="256302" Z="-2088" delay="0" run="false" />
+	<route name="castletownguard03" repeat="true" repeatStyle="random">
+		<target id="22360" spawnX="16524" spawnY="255244" spawnZ="-2080" />	<!-- Town Patrolman -->
+		<point X="16524" Y="255244" Z="-2072" delay="0" run="false" />
+		<point X="17211" Y="256290" Z="-2064" delay="0" run="false" />
+		<point X="18805" Y="256302" Z="-2088" delay="0" run="false" />
 	</route>
-	<!-- castletownguard04 -->
-	<route id="5" repeat="true" repeatStyle="random">
-		<point string="" X="17344" Y="251070" Z="-1952" delay="0" run="false" />
-		<point string="" X="18708" Y="250659" Z="-1992" delay="0" run="false" />
-		<point string="" X="19533" Y="250667" Z="-2016" delay="0" run="false" />
+	<route name="castletownguard04" repeat="true" repeatStyle="random">
+		<target id="22360" spawnX="17670" spawnY="252256" spawnZ="-2022" />	<!-- Town Patrolman -->
+		<point X="17344" Y="251070" Z="-1952" delay="0" run="false" />
+		<point X="18708" Y="250659" Z="-1992" delay="0" run="false" />
+		<point X="19533" Y="250667" Z="-2016" delay="0" run="false" />
 	</route>
 	<!-- Anomic Foundry routes for Lesser and Greater Evil -->
-	<!-- malign_conveyor_1_1 -->
-	<route id="6" repeat="true" repeatStyle="conveyor">
-		<point string="" X="27886" Y="248609" Z="-3208" delay="0" run="true" />
-		<point string="" X="28150" Y="247726" Z="-3272" delay="0" run="true" />
-		<point string="" X="27340" Y="246649" Z="-3680" delay="0" run="true" />
-		<point string="" X="27646" Y="245922" Z="-3672" delay="0" run="true" />
-		<!-- <point string="" X="28247" Y="245907" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
-		<point string="" X="28070" Y="245920" Z="-3698" delay="0" run="true" /> <!-- custom -->
-		<point string="" X="28491" Y="245926" Z="-3698" delay="0" run="true" /> <!-- custom -->
-		<point string="" X="29074" Y="245889" Z="-3672" delay="0" run="true" />
-		<point string="" X="29182" Y="244811" Z="-3688" delay="0" run="true" />
-		<point string="" X="28925" Y="244462" Z="-3698" delay="0" run="true" /> <!-- custom -->
-		<!-- <point string="" X="28770" Y="244248" Z="-2496" delay="0" run="true" /> --> <!-- retail -->
+	<route name="malign_conveyor_1_1" repeat="true" repeatStyle="conveyor">
+		<target id="22398" spawnX="27883" spawnY="248613" spawnZ="-3209" />	<!-- Lesser Evil -->
+		<point X="27886" Y="248609" Z="-3208" delay="0" run="true" />
+		<point X="28150" Y="247726" Z="-3272" delay="0" run="true" />
+		<point X="27340" Y="246649" Z="-3680" delay="0" run="true" />
+		<point X="27646" Y="245922" Z="-3672" delay="0" run="true" />
+		<!-- <point X="28247" Y="245907" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point X="28070" Y="245920" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<point X="28491" Y="245926" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<point X="29074" Y="245889" Z="-3672" delay="0" run="true" />
+		<point X="29182" Y="244811" Z="-3688" delay="0" run="true" />
+		<point X="28925" Y="244462" Z="-3698" delay="0" run="true" /> <!-- custom -->
+		<!-- <point X="28770" Y="244248" Z="-2496" delay="0" run="true" /> --> <!-- retail -->
 	</route>
-	<!-- malign_conveyor_1_2 -->
-	<route id="7" repeat="true" repeatStyle="conveyor">
-		<point string="" X="26144" Y="246444" Z="-3208" delay="0" run="true" />
-		<point string="" X="28063" Y="247940" Z="-3248" delay="0" run="true" />
-		<point string="" X="28276" Y="247756" Z="-3272" delay="0" run="true" />
-		<point string="" X="27344" Y="246649" Z="-3680" delay="0" run="true" />
-		<point string="" X="27652" Y="245914" Z="-3688" delay="0" run="true" />
-		<!-- <point string="" X="28255" Y="245912" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
-		<point string="" X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
+	<route name="malign_conveyor_1_2" repeat="true" repeatStyle="conveyor">
+		<target id="22398" spawnX="26142" spawnY="246442" spawnZ="-3216" />	<!-- Lesser Evil -->
+		<point X="26144" Y="246444" Z="-3208" delay="0" run="true" />
+		<point X="28063" Y="247940" Z="-3248" delay="0" run="true" />
+		<point X="28276" Y="247756" Z="-3272" delay="0" run="true" />
+		<point X="27344" Y="246649" Z="-3680" delay="0" run="true" />
+		<point X="27652" Y="245914" Z="-3688" delay="0" run="true" />
+		<!-- <point X="28255" Y="245912" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
-	<!-- malign_conveyor_1_3 -->
-	<route id="8" repeat="true" repeatStyle="conveyor">
-		<point string="" X="27336" Y="246216" Z="-3656" delay="0" run="true" />
-		<point string="" X="27645" Y="245921" Z="-3672" delay="0" run="true" />
-		<!-- <point string="" X="28245" Y="245904" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
-		<point string="" X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
+	<route name="malign_conveyor_1_3" repeat="true" repeatStyle="conveyor">
+		<target id="22398" spawnX="27335" spawnY="246217" spawnZ="-3668" />	<!-- Lesser Evil -->
+		<point X="27336" Y="246216" Z="-3656" delay="0" run="true" />
+		<point X="27645" Y="245921" Z="-3672" delay="0" run="true" />
+		<!-- <point X="28245" Y="245904" Z="-2552" delay="0" run="true" /> --> <!-- retail -->
+		<point X="28058" Y="245915" Z="-3701" delay="0" run="true" /> <!-- custom -->
 	</route>
-	<!-- malign_conveyor_1_4 -->
-	<route id="9" repeat="true" repeatStyle="conveyor">
-		<point string="" X="28476" Y="245914" Z="-3696" delay="0" run="true" />
-		<point string="" X="29058" Y="245894" Z="-3672" delay="0" run="true" />
-		<point string="" X="29433" Y="245216" Z="-3688" delay="0" run="true" />
-		<point string="" X="28942" Y="244492" Z="-3696" delay="0" run="true" />
+	<route name="malign_conveyor_1_4" repeat="true" repeatStyle="conveyor">
+		<target id="22398" spawnX="28486" spawnY="245913" spawnZ="-3698" />	<!-- Lesser Evil -->
+		<point X="28476" Y="245914" Z="-3696" delay="0" run="true" />
+		<point X="29058" Y="245894" Z="-3672" delay="0" run="true" />
+		<point X="29433" Y="245216" Z="-3688" delay="0" run="true" />
+		<point X="28942" Y="244492" Z="-3696" delay="0" run="true" />
 	</route>
-	<!-- malign_conveyor_2_1 -->
-	<route id="10" repeat="true" repeatStyle="conveyor">
-		<point string="" X="28771" Y="244251" Z="-2496" delay="0" run="true" />
-		<point string="" X="28495" Y="243839" Z="-3696" delay="0" run="true" />
-		<point string="" X="28727" Y="242939" Z="-3592" delay="0" run="true" />
-		<point string="" X="28188" Y="242512" Z="-3464" delay="0" run="true" />
-		<point string="" X="27248" Y="242797" Z="-3168" delay="0" run="true" />
-		<point string="" X="26850" Y="243834" Z="-2896" delay="0" run="true" />
-		<point string="" X="24636" Y="246593" Z="-1968" delay="0" run="true" />
-		<point string="" X="24519" Y="248586" Z="-1936" delay="0" run="true" />
-		<point string="" X="23094" Y="250031" Z="-1976" delay="0" run="true" />
-		<point string="" X="22673" Y="251605" Z="-1992" delay="0" run="true" />
-		<point string="" X="24560" Y="254414" Z="-1984" delay="0" run="true" />
-		<point string="" X="25392" Y="255459" Z="-1992" delay="0" run="true" />
+	<route name="malign_conveyor_2_1" repeat="true" repeatStyle="conveyor">
+		<target id="22399" spawnX="28684" spawnY="244118" spawnZ="-3700" />	<!-- Greater Evil -->
+		<point X="28771" Y="244251" Z="-2496" delay="0" run="true" />
+		<point X="28495" Y="243839" Z="-3696" delay="0" run="true" />
+		<point X="28727" Y="242939" Z="-3592" delay="0" run="true" />
+		<point X="28188" Y="242512" Z="-3464" delay="0" run="true" />
+		<point X="27248" Y="242797" Z="-3168" delay="0" run="true" />
+		<point X="26850" Y="243834" Z="-2896" delay="0" run="true" />
+		<point X="24636" Y="246593" Z="-1968" delay="0" run="true" />
+		<point X="24519" Y="248586" Z="-1936" delay="0" run="true" />
+		<point X="23094" Y="250031" Z="-1976" delay="0" run="true" />
+		<point X="22673" Y="251605" Z="-1992" delay="0" run="true" />
+		<point X="24560" Y="254414" Z="-1984" delay="0" run="true" />
+		<point X="25392" Y="255459" Z="-1992" delay="0" run="true" />
+	</route>
+	<!-- Antharas's Lair and Dragon Valley -->
+	<!-- Cycle runner dragons at center of antharas layer path 1 -->
+	<route name="antharas_layer_path_1" repeat="true" repeatStyle="cycle">
+		<target id="22848" spawnX="146738" spawnY="113015" spawnZ="-3725" />
+		<target id="22848" spawnX="146616" spawnY="112973" spawnZ="-3725" />
+		<target id="22848" spawnX="146301" spawnY="112849" spawnZ="-3725" />
+		<target id="22848" spawnX="146726" spawnY="112511" spawnZ="-3727" />
+		<target id="22848" spawnX="146773" spawnY="112827" spawnZ="-3725" />
+		<target id="22848" spawnX="145953" spawnY="112750" spawnZ="-3725" />
+		<target id="22848" spawnX="146538" spawnY="112709" spawnZ="-3725" />
+		<target id="22849" spawnX="145690" spawnY="112729" spawnZ="-3727" />
+		<target id="22849" spawnX="145817" spawnY="112579" spawnZ="-3725" />
+		<target id="22849" spawnX="146231" spawnY="112710" spawnZ="-3725" />
+		<target id="22849" spawnX="146616" spawnY="112973" spawnZ="-3725" />
+		<target id="22849" spawnX="147157" spawnY="112590" spawnZ="-3715" />
+		<target id="22849" spawnX="145788" spawnY="112866" spawnZ="-3727" />
+		<target id="22849" spawnX="146144" spawnY="112734" spawnZ="-3725" />
+		<target id="22849" spawnX="146765" spawnY="112305" spawnZ="-3725" />
+		<target id="22849" spawnX="146797" spawnY="112474" spawnZ="-3725" />
+		<target id="22849" spawnX="146992" spawnY="113055" spawnZ="-3725" />
+		<target id="22849" spawnX="145833" spawnY="112769" spawnZ="-3725" />
+		<target id="22849" spawnX="146402" spawnY="112499" spawnZ="-3725" />
+		<target id="22849" spawnX="146070" spawnY="112691" spawnZ="-3725" />
+		<target id="22849" spawnX="147164" spawnY="112855" spawnZ="-3725" />
+		<target id="22849" spawnX="145786" spawnY="112924" spawnZ="-3725" />
+		<target id="22849" spawnX="147103" spawnY="112724" spawnZ="-3705" />
+		<target id="22850" spawnX="146886" spawnY="112468" spawnZ="-3725" />
+		<target id="22850" spawnX="145999" spawnY="112712" spawnZ="-3725" />
+		<target id="22850" spawnX="146335" spawnY="112659" spawnZ="-3725" />
+		<target id="22850" spawnX="146806" spawnY="112947" spawnZ="-3727" />
+		<target id="22850" spawnX="147082" spawnY="112609" spawnZ="-3701" />
+		<target id="22850" spawnX="146706" spawnY="112835" spawnZ="-3725" />
+		<target id="22851" spawnX="146151" spawnY="112645" spawnZ="-3725" />
+		<target id="22851" spawnX="146883" spawnY="112753" spawnZ="-3725" />
+		<target id="22851" spawnX="146603" spawnY="112946" spawnZ="-3725" />
+		<target id="22851" spawnX="145959" spawnY="112794" spawnZ="-3725" />
+		<target id="22851" spawnX="146859" spawnY="112482" spawnZ="-3725" />
+		<target id="22857" spawnX="146113" spawnY="112674" spawnZ="-3720" />
+		<point X="146113" Y="112674" Z="-3725" delay="0" run="true" />
+		<point X="146634" Y="112759" Z="-3725" delay="0" run="true" />
+		<point X="147332" Y="112618" Z="-3725" delay="0" run="true" />
+		<point X="147820" Y="112655" Z="-3725" delay="0" run="true" />
+		<point X="148288" Y="112699" Z="-3725" delay="0" run="true" />
+		<point X="148740" Y="112875" Z="-3725" delay="0" run="true" />
+		<point X="149104" Y="113514" Z="-3725" delay="0" run="true" />
+		<point X="149236" Y="114026" Z="-3725" delay="0" run="true" />
+		<point X="149223" Y="114779" Z="-3725" delay="0" run="true" />
+		<point X="148894" Y="115438" Z="-3725" delay="0" run="true" />
+		<point X="148331" Y="115916" Z="-3725" delay="0" run="true" />
+		<point X="147622" Y="116163" Z="-3725" delay="0" run="true" />
+		<point X="146952" Y="116346" Z="-3725" delay="0" run="true" />
+		<point X="146345" Y="116140" Z="-3721" delay="0" run="true" />
+		<point X="145653" Y="115676" Z="-3725" delay="0" run="true" />
+		<point X="145106" Y="115136" Z="-3725" delay="0" run="true" />
+		<point X="145104" Y="114397" Z="-3725" delay="0" run="true" />
+		<point X="145083" Y="113773" Z="-3725" delay="0" run="true" />
+		<point X="145387" Y="113077" Z="-3725" delay="0" run="true" />
+		<point X="145711" Y="112843" Z="-3725" delay="0" run="true" />
+	</route>
+	<!-- Cycle runner dragons at center of antharas layer path 2 -->
+	<route name="antharas_layer_path_2" repeat="true" repeatStyle="cycle">
+		<target id="22848" spawnX="145983" spawnY="112794" spawnZ="-3725" />
+		<target id="22848" spawnX="146247" spawnY="112541" spawnZ="-3725" />
+		<target id="22848" spawnX="146438" spawnY="112525" spawnZ="-3725" />
+		<target id="22848" spawnX="146101" spawnY="112812" spawnZ="-3725" />
+		<target id="22848" spawnX="148611" spawnY="121436" spawnZ="-4864" />
+		<target id="22848" spawnX="147008" spawnY="112896" spawnZ="-3725" />
+		<target id="22848" spawnX="147259" spawnY="112937" spawnZ="-3725" />
+		<target id="22849" spawnX="145781" spawnY="112722" spawnZ="-3725" />
+		<target id="22849" spawnX="146131" spawnY="112819" spawnZ="-3725" />
+		<target id="22849" spawnX="146834" spawnY="112460" spawnZ="-3725" />
+		<target id="22849" spawnX="146430" spawnY="112775" spawnZ="-3725" />
+		<target id="22849" spawnX="146160" spawnY="112600" spawnZ="-3725" />
+		<target id="22849" spawnX="146836" spawnY="112395" spawnZ="-3725" />
+		<target id="22849" spawnX="146333" spawnY="112682" spawnZ="-3727" />
+		<target id="22849" spawnX="145852" spawnY="112757" spawnZ="-3725" />
+		<target id="22849" spawnX="146092" spawnY="112508" spawnZ="-3725" />
+		<target id="22849" spawnX="146723" spawnY="112599" spawnZ="-3725" />
+		<target id="22849" spawnX="146834" spawnY="112608" spawnZ="-3725" />
+		<target id="22849" spawnX="146466" spawnY="112825" spawnZ="-3725" />
+		<target id="22849" spawnX="146796" spawnY="112342" spawnZ="-3725" />
+		<target id="22849" spawnX="146887" spawnY="112458" spawnZ="-3725" />
+		<target id="22849" spawnX="146519" spawnY="112867" spawnZ="-3725" />
+		<target id="22849" spawnX="146743" spawnY="112884" spawnZ="-3725" />
+		<target id="22850" spawnX="146322" spawnY="112765" spawnZ="-3725" />
+		<target id="22850" spawnX="146062" spawnY="112882" spawnZ="-3725" />
+		<target id="22850" spawnX="146885" spawnY="112672" spawnZ="-3725" />
+		<target id="22850" spawnX="146741" spawnY="112446" spawnZ="-3725" />
+		<target id="22850" spawnX="148504" spawnY="121330" spawnZ="-4848" />
+		<target id="22850" spawnX="148553" spawnY="121424" spawnZ="-4864" />
+		<target id="22851" spawnX="146838" spawnY="112955" spawnZ="-3725" />
+		<target id="22851" spawnX="146439" spawnY="112836" spawnZ="-3725" />
+		<target id="22851" spawnX="149111" spawnY="119685" spawnZ="-4864" />
+		<target id="22851" spawnX="149155" spawnY="119791" spawnZ="-4864" />
+		<point X="145663" Y="112880" Z="-3725" delay="0" run="true" />
+		<point X="146119" Y="112677" Z="-3725" delay="0" run="true" />
+		<point X="146607" Y="112628" Z="-3725" delay="0" run="true" />
+		<point X="147323" Y="112403" Z="-3725" delay="0" run="true" />
+		<point X="147829" Y="112273" Z="-3725" delay="0" run="true" />
+		<point X="148592" Y="112210" Z="-3725" delay="0" run="true" />
+		<point X="148864" Y="112788" Z="-3725" delay="0" run="true" />
+		<point X="149054" Y="113411" Z="-3725" delay="0" run="true" />
+		<point X="149193" Y="114021" Z="-3725" delay="0" run="true" />
+		<point X="149199" Y="114819" Z="-3725" delay="0" run="true" />
+		<point X="148948" Y="115477" Z="-3725" delay="0" run="true" />
+		<point X="148324" Y="115937" Z="-3725" delay="0" run="true" />
+		<point X="147706" Y="116099" Z="-3725" delay="0" run="true" />
+		<point X="146939" Y="116255" Z="-3725" delay="0" run="true" />
+		<point X="146328" Y="116274" Z="-3725" delay="0" run="true" />
+		<point X="145676" Y="115748" Z="-3725" delay="0" run="true" />
+		<point X="145206" Y="115149" Z="-3725" delay="0" run="true" />
+		<point X="145105" Y="114461" Z="-3725" delay="0" run="true" />
+		<point X="145073" Y="113796" Z="-3725" delay="0" run="true" />
+		<point X="145372" Y="113245" Z="-3725" delay="0" run="true" />
+	</route>
+	<!-- Cycle runner dragons at center of antharas layer path 3 -->
+	<route name="antharas_layer_path_3" repeat="true" repeatStyle="cycle">
+		<target id="22848" spawnX="147107" spawnY="112966" spawnZ="-3725" />
+		<target id="22848" spawnX="146801" spawnY="112863" spawnZ="-3725" />
+		<target id="22848" spawnX="149261" spawnY="119685" spawnZ="-4864" />
+		<target id="22848" spawnX="151768" spawnY="115130" spawnZ="-5472" />
+		<target id="22848" spawnX="152029" spawnY="120592" spawnZ="-3808" />
+		<target id="22848" spawnX="152264" spawnY="119512" spawnZ="-3784" />
+		<target id="22848" spawnX="152698" spawnY="119086" spawnZ="-3792" />
+		<target id="22849" spawnX="146333" spawnY="112829" spawnZ="-3725" />
+		<target id="22849" spawnX="147142" spawnY="112831" spawnZ="-3725" />
+		<target id="22849" spawnX="146824" spawnY="112976" spawnZ="-3727" />
+		<target id="22849" spawnX="146342" spawnY="112656" spawnZ="-3725" />
+		<target id="22849" spawnX="147039" spawnY="112903" spawnZ="-3725" />
+		<target id="22849" spawnX="146205" spawnY="112494" spawnZ="-3725" />
+		<target id="22849" spawnX="149287" spawnY="119761" spawnZ="-4864" />
+		<target id="22849" spawnX="149331" spawnY="119655" spawnZ="-4864" />
+		<target id="22849" spawnX="151692" spawnY="115165" spawnZ="-5472" />
+		<target id="22849" spawnX="151918" spawnY="115130" spawnZ="-5464" />
+		<target id="22849" spawnX="151959" spawnY="120555" spawnZ="-3808" />
+		<target id="22849" spawnX="151980" spawnY="120515" spawnZ="-3808" />
+		<target id="22849" spawnX="152024" spawnY="120560" spawnZ="-3808" />
+		<target id="22849" spawnX="152264" spawnY="119512" spawnZ="-3784" />
+		<target id="22849" spawnX="152698" spawnY="119235" spawnZ="-3784" />
+		<target id="22849" spawnX="152760" spawnY="119216" spawnZ="-3784" />
+		<target id="22850" spawnX="148659" spawnY="121381" spawnZ="-4864" />
+		<target id="22850" spawnX="146660" spawnY="112757" spawnZ="-3725" />
+		<target id="22850" spawnX="152264" spawnY="119512" spawnZ="-3784" />
+		<target id="22850" spawnX="152605" spawnY="119152" spawnZ="-3792" />
+		<target id="22850" spawnX="152648" spawnY="119046" spawnZ="-3800" />
+		<target id="22851" spawnX="151768" spawnY="115279" spawnZ="-5472" />
+		<target id="22851" spawnX="151869" spawnY="115209" spawnZ="-5472" />
+		<target id="22851" spawnX="152016" spawnY="120566" spawnZ="-3808" />
+		<target id="22851" spawnX="152264" spawnY="119512" spawnZ="-3784" />
+		<point X="145602" Y="112763" Z="-3725" delay="0" run="true" />
+		<point X="146136" Y="112555" Z="-3725" delay="0" run="true" />
+		<point X="146573" Y="112475" Z="-3725" delay="0" run="true" />
+		<point X="147277" Y="112201" Z="-3725" delay="0" run="true" />
+		<point X="147888" Y="112035" Z="-3725" delay="0" run="true" />
+		<point X="148629" Y="112028" Z="-3725" delay="0" run="true" />
+		<point X="149092" Y="112613" Z="-3725" delay="0" run="true" />
+		<point X="149294" Y="113356" Z="-3725" delay="0" run="true" />
+		<point X="149387" Y="114003" Z="-3725" delay="0" run="true" />
+		<point X="149352" Y="114831" Z="-3725" delay="0" run="true" />
+		<point X="149073" Y="115565" Z="-3725" delay="0" run="true" />
+		<point X="148409" Y="116094" Z="-3725" delay="0" run="true" />
+		<point X="147777" Y="116253" Z="-3725" delay="0" run="true" />
+		<point X="146884" Y="116410" Z="-3725" delay="0" run="true" />
+		<point X="146266" Y="116378" Z="-3725" delay="0" run="true" />
+		<point X="145553" Y="115888" Z="-3725" delay="0" run="true" />
+		<point X="145085" Y="115225" Z="-3725" delay="0" run="true" />
+		<point X="144950" Y="114466" Z="-3725" delay="0" run="true" />
+		<point X="144967" Y="113785" Z="-3725" delay="0" run="true" />
+		<point X="145235" Y="113171" Z="-3725" delay="0" run="true" />
+	</route>
+	<!-- Tracker Howl -->
+	<route name="howl_01" repeat="true" repeatStyle="back">
+		<target id="22859" spawnX="86101" spawnY="107610" spawnZ="-3187" />
+		<point X="85322" Y="108058" Z="-3253" delay="0" run="true" />
+		<point X="81900" Y="109310" Z="-3128" delay="0" run="true" />
+		<point X="80917" Y="109419" Z="-3056" delay="0" run="true" />
+	</route>
+	<route name="howl_02" repeat="true" repeatStyle="back">
+		<target id="22859" spawnX="87129" spawnY="112224" spawnZ="-3264" />
+		<point X="86093" Y="112083" Z="-3107" delay="0" run="true" />
+		<point X="87807" Y="112301" Z="-3304" delay="0" run="true" />
+		<point X="89399" Y="112616" Z="-3115" delay="0" run="true" />
+	</route>
+	<route name="howl_03" repeat="true" repeatStyle="back">
+		<target id="22859" spawnX="85752" spawnY="119612" spawnZ="-2992" />
+		<point X="88157" Y="120566" Z="-3056" delay="0" run="true" />
+		<point X="87409" Y="120446" Z="-3056" delay="0" run="true" />
+		<point X="85980" Y="119904" Z="-2992" delay="0" run="true" />
+		<point X="84962" Y="118423" Z="-3032" delay="0" run="true" />
+		<point X="84089" Y="118048" Z="-2984" delay="0" run="true" />
+		<point X="82864" Y="117680" Z="-3032" delay="0" run="true" />
+	</route>
+	<!-- Mesmer Drake -->
+	<route name="mesmer_drake_01" repeat="true" repeatStyle="back">
+		<target id="22820" spawnX="80733" spawnY="109807" spawnZ="-3056" />
+		<point X="80896" Y="109746" Z="-3056" delay="0" run="true" />
+		<point X="86646" Y="108280" Z="-3136" delay="0" run="true" />
+	</route>
+	<route name="mesmer_drake_02" repeat="true" repeatStyle="back">
+		<target id="22820" spawnX="86980" spawnY="120934" spawnZ="-3040" />
+		<point X="88293" Y="119300" Z="-3056" delay="0" run="true" />
+		<point X="88038" Y="120205" Z="-3056" delay="0" run="true" />
+		<point X="86980" Y="120910" Z="-3040" delay="0" run="true" />
+		<point X="84562" Y="120451" Z="-2976" delay="0" run="true" />
+		<point X="83436" Y="119239" Z="-2984" delay="0" run="true" />
+	</route>
+	<route name="mesmer_drake_03" repeat="true" repeatStyle="back">
+		<target id="22820" spawnX="83346" spawnY="112987" spawnZ="-3048" />
+		<point X="85127" Y="111670" Z="-3168" delay="0" run="true" />
+		<point X="83587" Y="112855" Z="-3056" delay="0" run="true" />
+		<point X="82065" Y="113903" Z="-3155" delay="0" run="true" />
+	</route>
+	<!-- Dust Dragon Tracker -->
+	<route name="dust_dragon_tracker_01" repeat="true" repeatStyle="back">
+		<target id="22834" spawnX="89602" spawnY="108262" spawnZ="-3032" />
+		<point X="90646" Y="107968" Z="-3056" delay="0" run="true" />
+		<point X="89632" Y="108234" Z="-3032" delay="0" run="true" />
+		<point X="88634" Y="107866" Z="-3056" delay="0" run="true" />
+		<point X="88139" Y="106812" Z="-3160" delay="0" run="true" />
+	</route>
+	<route name="dust_dragon_tracker_02" repeat="true" repeatStyle="back">
+		<target id="22834" spawnX="94790" spawnY="107669" spawnZ="-3050" />
+		<point X="93889" Y="107662" Z="-3030" delay="0" run="true" />
+		<point X="91776" Y="107693" Z="-3061" delay="0" run="true" />
+		<point X="90142" Y="106656" Z="-3190" delay="0" run="true" />
+	</route>
+	<route name="dust_dragon_tracker_03" repeat="true" repeatStyle="back">
+		<target id="22834" spawnX="109329" spawnY="115546" spawnZ="-3112" />
+		<point X="108493" Y="117187" Z="-3056" delay="0" run="true" />
+		<point X="109107" Y="116739" Z="-3056" delay="0" run="true" />
+		<point X="109580" Y="113966" Z="-3040" delay="0" run="true" />
+		<point X="109514" Y="113270" Z="-3064" delay="0" run="true" />
+	</route>
+	<route name="dust_dragon_tracker_04" repeat="true" repeatStyle="back">
+		<target id="22834" spawnX="111281" spawnY="110266" spawnZ="-3043" />
+		<point X="111962" Y="111711" Z="-2760" delay="0" run="true" />
+		<point X="111828" Y="112545" Z="-2776" delay="0" run="true" />
+		<point X="112962" Y="113160" Z="-2839" delay="0" run="true" />
+		<point X="113644" Y="113171" Z="-3008" delay="0" run="true" />
+		<point X="114414" Y="112105" Z="-3104" delay="0" run="true" />
+		<point X="113963" Y="110748" Z="-3080" delay="0" run="true" />
+		<point X="114352" Y="110043" Z="-3008" delay="0" run="true" />
+	</route>
+	<route name="dust_dragon_tracker_05" repeat="true" repeatStyle="back">
+		<target id="22834" spawnX="119960" spawnY="109355" spawnZ="-2962" />
+		<point X="120152" Y="109087" Z="-2936" delay="0" run="true" />
+		<point X="118556" Y="109787" Z="-2952" delay="0" run="true" />
+		<point X="116791" Y="110044" Z="-3008" delay="0" run="true" />
+		<point X="115114" Y="109809" Z="-3024" delay="0" run="true" />
+		<point X="111735" Y="110191" Z="-3008" delay="0" run="true" />
+	</route>
+	<!-- Dragon Tracker of the Valley -->
+	<route name="dragon_tracker_01" repeat="true" repeatStyle="back">
+		<target id="22831" spawnX="113097" spawnY="110311" spawnZ="-3000" />
+		<point X="110591" Y="111250" Z="-3144" delay="0" run="true" />
+		<point X="111760" Y="110583" Z="-3032" delay="0" run="true" />
+		<point X="113311" Y="110284" Z="-3000" delay="0" run="true" />
+		<point X="115233" Y="110150" Z="-3032" delay="0" run="true" />
+		<point X="116432" Y="110344" Z="-2984" delay="0" run="true" />
+	</route>
+	<!-- Dragon Scout of the Valley -->
+	<route name="dragon_scout_01" repeat="true" repeatStyle="back">
+		<target id="22832" spawnX="122135" spawnY="108852" spawnZ="-2961" />
+		<point X="122159" Y="108862" Z="-2952" delay="0" run="true" />
+		<point X="121475" Y="109471" Z="-2912" delay="0" run="true" />
+		<point X="120869" Y="109733" Z="-3000" delay="0" run="true" />
+		<point X="119996" Y="110576" Z="-3056" delay="0" run="true" />
+		<point X="119489" Y="110677" Z="-3056" delay="0" run="true" />
+		<point X="118896" Y="110587" Z="-3000" delay="0" run="true" />
+		<point X="118132" Y="110786" Z="-3016" delay="0" run="true" />
+		<point X="116854" Y="110209" Z="-2992" delay="0" run="true" />
+	</route>
+	<route name="dragon_scout_02" repeat="true" repeatStyle="back">
+		<target id="22832" spawnX="113482" spawnY="115162" spawnZ="-3200" />
+		<point X="111754" Y="117413" Z="-3008" delay="0" run="true" />
+		<point X="111850" Y="116609" Z="-3024" delay="0" run="true" />
+		<point X="112105" Y="115698" Z="-3184" delay="0" run="true" />
+		<point X="115638" Y="114525" Z="-3096" delay="0" run="true" />
+	</route>
+	<!-- Sand Drake Tracker -->
+	<route name="sand_drake_tracker_01" repeat="true" repeatStyle="back">
+		<target id="22833" spawnX="123997" spawnY="108488" spawnZ="-2986" />
+		<point X="124404" Y="109398" Z="-3112" delay="0" run="true" />
+		<point X="122726" Y="108027" Z="-3000" delay="0" run="true" />
+		<point X="120859" Y="108421" Z="-2960" delay="0" run="true" />
+	</route>
+	<route name="sand_drake_tracker_02" repeat="true" repeatStyle="back">
+		<target id="22833" spawnX="114890" spawnY="115234" spawnZ="-3217" />
+		<point X="115708" Y="115130" Z="-3112" delay="0" run="true" />
+		<point X="113822" Y="115981" Z="-3224" delay="0" run="true" />
+		<point X="112598" Y="118103" Z="-3064" delay="0" run="true" />
+	</route>
+	<!-- Knoriks -->
+	<route name="knoriks_01" repeat="true" repeatStyle="back">
+		<target id="22857" spawnX="140633" spawnY="114472" spawnZ="-3725" />
+		<point X="140639" Y="114460" Z="-3729" delay="0" run="true" />
+		<point X="142095" Y="114336" Z="-3729" delay="0" run="true" />
+		<point X="142664" Y="113707" Z="-3720" delay="0" run="true" />
+		<point X="143831" Y="114596" Z="-3720" delay="0" run="true" />
+		<point X="144783" Y="114876" Z="-3720" delay="0" run="true" />
+		<point X="147197" Y="116761" Z="-3704" delay="0" run="true" />
+		<point X="148227" Y="117724" Z="-3712" delay="0" run="true" />
+	</route>
+	<route name="knoriks_02" repeat="true" repeatStyle="back">
+		<target id="22857" spawnX="143007" spawnY="108951" spawnZ="-3948" />
+		<point X="143007" Y="108951" Z="-3953" delay="0" run="true" />
+		<point X="141716" Y="109380" Z="-3953" delay="0" run="true" />
+		<point X="140653" Y="112072" Z="-3720" delay="0" run="true" />
+		<point X="141162" Y="113050" Z="-3729" delay="0" run="true" />
+		<point X="141877" Y="112263" Z="-3720" delay="0" run="true" />
+		<point X="142752" Y="111555" Z="-3953" delay="0" run="true" />
+		<point X="142114" Y="109445" Z="-3953" delay="0" run="true" />
+		<point X="140890" Y="109445" Z="-3953" delay="0" run="true" />
+	</route>
+	<route name="knoriks_03" repeat="true" repeatStyle="back">
+		<target id="22857" spawnX="147896" spawnY="110033" spawnZ="-3941" />
+		<point X="147895" Y="110043" Z="-3946" delay="0" run="true" />
+		<point X="145685" Y="109132" Z="-3953" delay="0" run="true" />
+		<point X="144924" Y="108192" Z="-3928" delay="0" run="true" />
+		<point X="144558" Y="107723" Z="-3953" delay="0" run="true" />
+	</route>
+	<route name="knoriks_04" repeat="true" repeatStyle="back">
+		<target id="22857" spawnX="142480" spawnY="119635" spawnZ="-3916" />
+		<point X="142480" Y="119635" Z="-3921" delay="0" run="true" />
+		<point X="142960" Y="117501" Z="-3921" delay="0" run="true" />
+		<point X="142026" Y="117331" Z="-3912" delay="0" run="true" />
+		<point X="141238" Y="117792" Z="-3912" delay="0" run="true" />
+		<point X="140220" Y="119893" Z="-3912" delay="0" run="true" />
+		<point X="140697" Y="120780" Z="-3896" delay="0" run="true" />
+		<point X="141939" Y="121539" Z="-3921" delay="0" run="true" />
+		<point X="143250" Y="121372" Z="-3921" delay="0" run="true" />
+		<point X="145334" Y="121799" Z="-3921" delay="0" run="true" />
+		<point X="146081" Y="121987" Z="-3921" delay="0" run="true" />
+		<point X="146278" Y="121463" Z="-3912" delay="0" run="true" />
+		<point X="145785" Y="120344" Z="-3912" delay="0" run="true" />
+	</route>
+	<route name="knoriks_05" repeat="true" repeatStyle="back">
+		<target id="22857" spawnX="152585" spawnY="110480" spawnZ="-5524" />
+		<point X="152585" Y="110480" Z="-5529" delay="0" run="true" />
+		<point X="153524" Y="110822" Z="-5529" delay="0" run="true" />
+		<point X="153325" Y="111607" Z="-5529" delay="0" run="true" />
+		<point X="150988" Y="111181" Z="-5520" delay="0" run="true" />
+		<point X="149511" Y="111160" Z="-5496" delay="0" run="true" />
+		<point X="149330" Y="110708" Z="-5448" delay="0" run="true" />
+		<point X="150386" Y="109580" Z="-5136" delay="0" run="true" />
+		<point X="152942" Y="109299" Z="-5161" delay="0" run="true" />
+		<point X="153303" Y="108403" Z="-5152" delay="0" run="true" />
+		<point X="152669" Y="107732" Z="-5120" delay="0" run="true" />
+		<point X="150735" Y="107365" Z="-4776" delay="0" run="true" />
+		<point X="149713" Y="108362" Z="-4536" delay="0" run="true" />
+		<point X="148849" Y="108131" Z="-4312" delay="0" run="true" />
+		<point X="147699" Y="107247" Z="-4056" delay="0" run="true" />
+		<point X="146847" Y="107845" Z="-3872" delay="0" run="true" />
+		<point X="146442" Y="109417" Z="-3432" delay="0" run="true" />
+	</route>
+	<route name="knoriks_06" repeat="true" repeatStyle="cycle">
+		<target id="22857" spawnX="146901" spawnY="116472" spawnZ="-3698" />
+		<point X="146901" Y="116472" Z="-3703" delay="0" run="true" />
+		<point X="148652" Y="115744" Z="-3721" delay="0" run="true" />
+		<point X="149213" Y="114571" Z="-3721" delay="0" run="true" />
+		<point X="148744" Y="112355" Z="-3721" delay="0" run="true" />
+		<point X="148104" Y="112099" Z="-3721" delay="0" run="true" />
+		<point X="145757" Y="112813" Z="-3721" delay="0" run="true" />
+		<point X="145688" Y="112943" Z="-3721" delay="0" run="true" />
+		<point X="144569" Y="114637" Z="-3711" delay="0" run="true" />
+		<point X="143071" Y="114050" Z="-3721" delay="0" run="true" />
+		<point X="142351" Y="113780" Z="-3721" delay="0" run="true" />
+		<point X="141899" Y="114565" Z="-3721" delay="0" run="true" />
+		<point X="140915" Y="114253" Z="-3708" delay="0" run="true" />
+		<point X="140743" Y="112383" Z="-3721" delay="0" run="true" />
+		<point X="140476" Y="111103" Z="-3945" delay="0" run="true" />
+		<point X="141182" Y="109756" Z="-3945" delay="0" run="true" />
+		<point X="142932" Y="108579" Z="-3945" delay="0" run="true" />
+		<point X="142620" Y="107144" Z="-3945" delay="0" run="true" />
+		<point X="144119" Y="107449" Z="-3945" delay="0" run="true" />
+		<point X="145247" Y="108941" Z="-3945" delay="0" run="true" />
+		<point X="147232" Y="109791" Z="-3948" delay="0" run="true" />
+		<point X="145501" Y="109010" Z="-3945" delay="0" run="true" />
+		<point X="143502" Y="107242" Z="-3945" delay="0" run="true" />
+		<point X="142311" Y="107213" Z="-3945" delay="0" run="true" />
+		<point X="140624" Y="107331" Z="-3945" delay="0" run="true" />
+		<point X="140784" Y="109603" Z="-3945" delay="0" run="true" />
+		<point X="140540" Y="111948" Z="-3721" delay="0" run="true" />
+		<point X="140845" Y="114262" Z="-3707" delay="0" run="true" />
+		<point X="142023" Y="114407" Z="-3721" delay="0" run="true" />
+		<point X="142449" Y="113612" Z="-3703" delay="0" run="true" />
+		<point X="145190" Y="115247" Z="-3721" delay="0" run="true" />
+	</route>
+	<!-- Sanctum of the Lords of Dawn -->
+	<route name="iz111_zone01_01" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-75650" spawnY="212107" spawnZ="-7322" />
+		<point X="-75373" Y="212107" Z="-7312" delay="0" run="false" />
+		<point X="-75650" Y="212107" Z="-7312" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone01_02" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-74854" spawnY="212107" spawnZ="-7322" />
+		<point X="-75046" Y="212107" Z="-7312" delay="0" run="false" />
+		<point X="-74854" Y="212107" Z="-7312" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone01_03" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-74534" spawnY="212108" spawnZ="-7321" />
+		<point X="-74255" Y="212108" Z="-7312" delay="0" run="false" />
+		<point X="-74532" Y="212108" Z="-7312" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone01_04" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-75200" spawnY="211178" spawnZ="-7322" />
+		<point X="-75200" Y="211465" Z="-7312" delay="0" run="false" />
+		<point X="-75200" Y="211178" Z="-7312" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone01_05" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-74701" spawnY="211460" spawnZ="-7321" />
+		<point X="-74701" Y="211172" Z="-7312" delay="0" run="false" />
+		<point X="-74701" Y="211460" Z="-7312" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone02_01" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-75190" spawnY="210176" spawnZ="-7418" />
+		<point X="-74750" Y="210174" Z="-7408" delay="0" run="false" />
+		<point X="-75190" Y="210175" Z="-7408" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone02_02" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-74743" spawnY="209820" spawnZ="-7418" />
+		<point X="-75168" Y="209820" Z="-7408" delay="0" run="false" />
+		<point X="-74743" Y="209820" Z="-7408" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_01" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-75559" spawnY="207860" spawnZ="-7515" />
+		<point X="-75559" Y="208813" Z="-7504" delay="0" run="false" />
+		<point X="-75559" Y="207860" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_02" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-74227" spawnY="208290" spawnZ="-7520" />
+		<point X="-74508" Y="208290" Z="-7504" delay="0" run="false" />
+		<point X="-74227" Y="208290" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_03" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-74522" spawnY="207063" spawnZ="-7520" />
+		<point X="-74206" Y="207064" Z="-7504" delay="0" run="false" />
+		<point X="-74522" Y="207063" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_04" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-74956" spawnY="206348" spawnZ="-7520" />
+		<point X="-74956" Y="206686" Z="-7504" delay="0" run="false" />
+		<point X="-74956" Y="206348" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_05" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-75402" spawnY="206939" spawnZ="-7520" />
+		<point X="-75693" Y="206939" Z="-7504" delay="0" run="false" />
+		<point X="-75402" Y="206939" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone03_06" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-74246" spawnY="206515" spawnZ="-7520" />
+		<point X="-75668" Y="206515" Z="-7504" delay="0" run="false" />
+		<point X="-74246" Y="206515" Z="-7504" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone04_01" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-76378" spawnY="207852" spawnZ="-7616" />
+		<point X="-76628" Y="207852" Z="-7600" delay="0" run="false" />
+		<point X="-76378" Y="207852" Z="-7600" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone04_02" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-76628" spawnY="208151" spawnZ="-7616" />
+		<point X="-76367" Y="208151" Z="-7600" delay="0" run="false" />
+		<point X="-76628" Y="208151" Z="-7600" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone04_03" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-76374" spawnY="208848" spawnZ="-7616" />
+		<point X="-76632" Y="208848" Z="-7600" delay="0" run="false" />
+		<point X="-76374" Y="208848" Z="-7600" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone04_04" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-76928" spawnY="209189" spawnZ="-7616" />
+		<point X="-76928" Y="209446" Z="-7600" delay="0" run="false" />
+		<point X="-76928" Y="209189" Z="-7600" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone04_05" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-77183" spawnY="209443" spawnZ="-7616" />
+		<point X="-77183" Y="209188" Z="-7600" delay="0" run="false" />
+		<point X="-77183" Y="209443" Z="-7600" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_01" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-78054" spawnY="208464" spawnZ="-7712" />
+		<point X="-77361" Y="208464" Z="-7696" delay="0" run="false" />
+		<point X="-78054" Y="208464" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_02" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-78521" spawnY="208035" spawnZ="-7712" />
+		<point X="-78065" Y="208036" Z="-7696" delay="0" run="false" />
+		<point X="-78521" Y="208035" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_03" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-76881" spawnY="208037" spawnZ="-7712" />
+		<point X="-77340" Y="208036" Z="-7696" delay="0" run="false" />
+		<point X="-76881" Y="208037" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_04" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-78335" spawnY="207793" spawnZ="-7712" />
+		<point X="-77060" Y="207793" Z="-7696" delay="0" run="false" />
+		<point X="-78335" Y="207793" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_05" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-77702" spawnY="207414" spawnZ="-7712" />
+		<point X="-77702" Y="208184" Z="-7696" delay="0" run="false" />
+		<point X="-77702" Y="207414" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone05_06" repeat="true" repeatStyle="back">
+		<target id="18835" spawnX="-77337" spawnY="207428" spawnZ="-7712" />
+		<point X="-77013" Y="207105" Z="-7696" delay="0" run="false" />
+		<point X="-77336" Y="207428" Z="-7696" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_01" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-78921" spawnY="206110" spawnZ="-7904" />
+		<point X="-78710" Y="206306" Z="-7872" delay="0" run="false" />
+		<point X="-78930" Y="206101" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_02" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-78855" spawnY="206443" spawnZ="-7896" />
+		<point X="-79066" Y="206237" Z="-7888" delay="0" run="false" />
+		<point X="-78855" Y="206443" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_03" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79357" spawnY="206713" spawnZ="-7904" />
+		<point X="-79357" Y="206330" Z="-7888" delay="0" run="false" />
+		<point X="-79357" Y="206713" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_04" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79665" spawnY="206257" spawnZ="-7896" />
+		<point X="-79858" Y="206454" Z="-7872" delay="0" run="false" />
+		<point X="-79656" Y="206246" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_05" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79999" spawnY="206302" spawnZ="-7904" />
+		<point X="-79787" Y="206104" Z="-7888" delay="0" run="false" />
+		<point X="-79999" Y="206302" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_06" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79781" spawnY="205602" spawnZ="-7904" />
+		<point X="-79991" Y="205392" Z="-7888" delay="0" run="false" />
+		<point X="-79781" Y="205602" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_07" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79849" spawnY="205260" spawnZ="-7904" />
+		<point X="-79641" Y="205466" Z="-7888" delay="0" run="false" />
+		<point X="-79849" Y="205260" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_08" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-79363" spawnY="205379" spawnZ="-7904" />
+		<point X="-79364" Y="204964" Z="-7888" delay="0" run="false" />
+		<point X="-79363" Y="205379" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_09" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-78870" spawnY="205253" spawnZ="-7904" />
+		<point X="-79085" Y="205454" Z="-7888" delay="0" run="false" />
+		<point X="-78870" Y="205253" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone06_10" repeat="true" repeatStyle="back">
+		<target id="18834" spawnX="-78928" spawnY="205585" spawnZ="-7904" />
+		<point X="-78731" Y="205386" Z="-7872" delay="0" run="false" />
+		<point X="-78942" Y="205599" Z="-7888" delay="0" run="false" />
+	</route>
+	<route name="iz111_zone07_01" repeat="true" repeatStyle="back">
+		<target id="27351" spawnX="-81938" spawnY="205856" spawnZ="-8000" />
+		<point X="-81125" Y="205855" Z="-7984" delay="0" run="false" />
+		<point X="-81938" Y="205856" Z="-7984" delay="0" run="false" />
+	</route>
+	<!-- Gludio Airship -->
+	<route name="gludio_airport1" repeat="true" repeatStyle="back">
+		<target id="32628" spawnX="-148777" spawnY="254544" spawnZ="-186" />
+		<point X="-149268" Y="254124" Z="-184" delay="0" run="false" />
+		<point X="-148700" Y="254399" Z="-184" delay="0" run="false" />
+		<point X="-148313" Y="254841" Z="-184" delay="0" run="false" />
+		<point X="-148256" Y="255338" Z="-184" delay="0" run="false" />
+	</route>
+	<route name="gludio_airport2" repeat="true" repeatStyle="back">
+		<target id="32628" spawnX="-148804" spawnY="254521" spawnZ="-187" />
+		<point X="-149239" Y="254100" Z="-184" delay="0" run="false" />
+		<point X="-148671" Y="254375" Z="-184" delay="0" run="false" />
+		<point X="-148284" Y="254817" Z="-184" delay="0" run="false" />
+		<point X="-148227" Y="255314" Z="-184" delay="0" run="false" />
+	</route>
+	<route name="gludio_airport3" repeat="true" repeatStyle="back">
+		<target id="32629" spawnX="-149929" spawnY="254543" spawnZ="-187" />
+		<point X="-149469" Y="254124" Z="-184" delay="0" run="false" />
+		<point X="-150054" Y="254373" Z="-184" delay="0" run="false" />
+		<point X="-150431" Y="254837" Z="-184" delay="0" run="false" />
+		<point X="-150473" Y="255335" Z="-184" delay="0" run="false" />
+	</route>
+	<route name="gludio_airport4" repeat="true" repeatStyle="back">
+		<target id="32629" spawnX="-149909" spawnY="254506" spawnZ="-187" />
+		<point X="-149499" Y="254101" Z="-184" delay="0" run="false" />
+		<point X="-150085" Y="254350" Z="-184" delay="0" run="false" />
+		<point X="-150462" Y="254813" Z="-184" delay="0" run="false" />
+		<point X="-150504" Y="255312" Z="-184" delay="0" run="false" />
+	</route>
+	<!-- Leandro -->
+	<route name="scribe_leandro" repeat="true" repeatStyle="back">
+		<target id="31357" spawnX="-82428" spawnY="245203" spawnZ="-3712" />
+		<point X="-82428" Y="245204" Z="-3712" delay="0" run="false" />
+		<point X="-82198" Y="245361" Z="-3712" delay="0" run="false" />
+		<point X="-82091" Y="245028" Z="-3720" delay="0" run="false" />
+		<point X="-82381" Y="244911" Z="-3720" delay="0" run="false" />
+		<point X="-82935" Y="244481" Z="-3728" delay="0" run="false" />
+		<point npcStringId="1010205" X="-83980" Y="242776" Z="-3728" delay="10" run="false" />
+		<point X="-85966" Y="241371" Z="-3728" delay="0" run="false" />
+		<point npcStringId="1010206" X="-86079" Y="240868" Z="-3720" delay="5" run="false" />
+		<point X="-86076" Y="240392" Z="-3712" delay="0" run="false" />
+		<point X="-86519" Y="240706" Z="-3704" delay="0" run="false" />
+		<point npcStringId="1010207" X="-86343" Y="241130" Z="-3728" delay="60" run="false" />
+	</route>
+	<!-- Remy -->
+	<route name="porter_remy" repeat="true" repeatStyle="cycle">
+		<target id="31356" spawnX="-81920" spawnY="243892" spawnZ="-3714" />
+		<point X="-81926" Y="243894" Z="-3712" delay="3" run="true" />
+		<point X="-82134" Y="243600" Z="-3728" delay="0" run="true" />
+		<point X="-83182" Y="243723" Z="-3728" delay="0" run="true" />
+		<point npcStringId="1010202" X="-84486" Y="243236" Z="-3728" delay="5" run="true" />
+		<point X="-85205" Y="243187" Z="-3728" delay="0" run="true" />
+		<point X="-86152" Y="242898" Z="-3728" delay="0" run="true" />
+		<point X="-86288" Y="242962" Z="-3720" delay="0" run="true" />
+		<point npcStringId="1010203" X="-86352" Y="243207" Z="-3720" delay="5" run="true" />
+		<point X="-86501" Y="242762" Z="-3720" delay="0" run="true" />
+		<point X="-86500" Y="242615" Z="-3728" delay="0" run="true" />
+		<point X="-86123" Y="241606" Z="-3728" delay="0" run="true" />
+		<point X="-85207" Y="240698" Z="-3728" delay="0" run="true" />
+		<point npcStringId="1010204" X="-84066" Y="241285" Z="-3728" delay="5" run="true" />
+		<point X="-83215" Y="241170" Z="-3728" delay="0" run="true" />
+		<point X="-82364" Y="242944" Z="-3720" delay="0" run="true" />
+		<point npcStringId="1010201" X="-81674" Y="243391" Z="-3712" delay="60" run="true" />
+		<point X="-81926" Y="243894" Z="-3712" delay="0" run="true" />
+	</route>
+	<!-- Yakand -->
+	<route name="flame_keeper_yakand" repeat="true" repeatStyle="cycle">
+		<target id="31365" spawnX="-48820" spawnY="-113748" spawnZ="-233" />
+		<point X="-48820" Y="-113748" Z="-232" delay="0" run="false" />
+		<point X="-47365" Y="-113618" Z="-224" delay="0" run="false" />
+		<point X="-45678" Y="-113635" Z="-240" delay="0" run="false" />
+		<point X="-45168" Y="-114038" Z="-224" delay="0" run="false" />
+		<point X="-44671" Y="-114185" Z="-240" delay="0" run="false" />
+		<point X="-44199" Y="-113763" Z="-240" delay="0" run="false" />
+		<point X="-44312" Y="-113201" Z="-240" delay="0" run="false" />
+		<point X="-44844" Y="-112958" Z="-240" delay="0" run="false" />
+		<point X="-45717" Y="-113564" Z="-240" delay="0" run="false" />
+		<point X="-47370" Y="-113588" Z="-224" delay="0" run="false" />
+		<point X="-48821" Y="-113496" Z="-232" delay="10" run="false" />
+		<point X="-48820" Y="-113748" Z="-232" delay="0" run="false" />
+	</route>
+	<!-- Rokar -->
+	<route name="flame_keeper_lokar" repeat="true" repeatStyle="back">
+		<target id="31364" spawnX="-46512" spawnY="-117696" spawnZ="-252" />
+		<point X="-46516" Y="-117700" Z="-240" delay="0" run="false" />
+		<point X="-45550" Y="-115420" Z="-240" delay="0" run="false" />
+		<point X="-44052" Y="-114575" Z="-240" delay="0" run="false" />
+		<point X="-44024" Y="-112688" Z="-240" delay="0" run="false" />
+		<point X="-45748" Y="-111665" Z="-240" delay="0" run="false" />
+		<point X="-46512" Y="-109390" Z="-208" delay="5" run="false" />
+	</route>
+	<!-- Kreed -->
+	<route name="tetrarch_exec_creed" repeat="true" repeatStyle="cycle">
+		<target id="31361" spawnX="23436" spawnY="11152" spawnZ="-3728" />
+		<point X="23436" Y="11164" Z="-3720" delay="0" run="true" />
+		<point X="20256" Y="11104" Z="-3720" delay="0" run="true" />
+		<point X="17330" Y="13579" Z="-3728" delay="0" run="true" />
+		<point npcStringId="1010214" X="17415" Y="13044" Z="-3736" delay="10" run="true" />
+		<point X="20153" Y="12880" Z="-3712" delay="0" run="true" />
+		<point X="21621" Y="13349" Z="-3624" delay="0" run="true" />
+		<point X="20686" Y="10432" Z="-3712" delay="0" run="true" />
+		<point X="22426" Y="10260" Z="-3648" delay="0" run="true" />
+		<point X="23436" Y="11164" Z="-3720" delay="0" run="true" />
+	</route>
+	<!-- Alhena -->
+	<route name="tetrarch_agent_alhena" repeat="true" repeatStyle="cycle">
+		<target id="31360" spawnX="10976" spawnY="14616" spawnZ="-4246" />
+		<point X="10968" Y="14620" Z="-4240" delay="0" run="false" />
+		<point X="11308" Y="15847" Z="-4584" delay="0" run="false" />
+		<point X="12119" Y="16441" Z="-4584" delay="0" run="false" />
+		<point npcStringId="1010212" X="15104" Y="15661" Z="-4376" delay="5" run="false" />
+		<point X="15265" Y="16288" Z="-4376" delay="0" run="false" />
+		<point X="12292" Y="16934" Z="-4584" delay="0" run="false" />
+		<point X="11777" Y="17669" Z="-4584" delay="0" run="false" />
+		<point X="11229" Y="17650" Z="-4568" delay="0" run="false" />
+		<point X="10641" Y="17282" Z="-4584" delay="0" run="false" />
+		<point npcStringId="1010213" X="7683" Y="18034" Z="-4376" delay="5" run="false" />
+		<point X="10551" Y="16775" Z="-4584" delay="0" run="false" />
+		<point X="11004" Y="15942" Z="-4584" delay="0" run="false" />
+		<point X="10827" Y="14757" Z="-4240" delay="0" run="false" />
+		<point X="10968" Y="14620" Z="-4240" delay="0" run="false" />
+	</route>
+	<!-- Kasiel -->
+	<route name="bard_casiel" repeat="true" repeatStyle="back">
+		<target id="31358" spawnX="43936" spawnY="51092" spawnZ="-2994" />
+		<point X="43932" Y="51096" Z="-2992" delay="0" run="false" />
+		<point X="43304" Y="50364" Z="-2992" delay="0" run="false" />
+		<point X="43041" Y="49312" Z="-2992" delay="0" run="false" />
+		<point X="43612" Y="48322" Z="-2992" delay="0" run="false" />
+		<point X="44009" Y="47645" Z="-2992" delay="0" run="false" />
+		<point npcStringId="1010210" X="45309" Y="47341" Z="-2992" delay="5" run="false" />
+		<point X="46726" Y="47762" Z="-2992" delay="0" run="false" />
+		<point X="47509" Y="49004" Z="-2992" delay="0" run="false" />
+		<point X="47443" Y="50456" Z="-2992" delay="0" run="false" />
+		<point npcStringId="1010211" X="47013" Y="51287" Z="-2992" delay="60" run="false" />
+	</route>
+	<!-- Jaradine -->
+	<route name="treekeeper_jaradine" repeat="true" repeatStyle="back">
+		<target id="31359" spawnX="44947" spawnY="50556" spawnZ="-3056" />
+		<point X="44964" Y="50568" Z="-3056" delay="0" run="false" />
+		<point X="44435" Y="50025" Z="-3056" delay="0" run="false" />
+		<point X="44455" Y="49078" Z="-3056" delay="0" run="false" />
+		<point npcStringId="1010208" X="45402" Y="48437" Z="-3056" delay="5" run="false" />
+		<point npcStringId="1010209" X="46104" Y="48788" Z="-3056" delay="5" run="false" />
+		<point X="46452" Y="49743" Z="-3056" delay="0" run="false" />
+		<point X="45730" Y="50590" Z="-3056" delay="60" run="false" />
+	</route>
+	<!-- Adolph, Edwin -->
+	<route name="running_boy" repeat="true" repeatStyle="back">
+		<target id="32070" spawnX="84460" spawnY="-144052" spawnZ="-1530" /> <!-- Adolph -->
+		<target id="32072" spawnX="84460" spawnY="-144052" spawnZ="-1530" /> <!-- Edwin -->
+		<point X="84416" Y="-144052" Z="-1528" delay="5" run="true" />
+		<point X="84460" Y="-142495" Z="-1536" delay="0" run="true" />
+		<point X="85242" Y="-140949" Z="-1536" delay="0" run="true" />
+		<point X="87362" Y="-140059" Z="-1536" delay="5" run="true" />
+		<point X="89350" Y="-140750" Z="-1536" delay="0" run="true" />
+		<point X="90607" Y="-143176" Z="-1536" delay="0" run="true" />
+		<point X="90267" Y="-143883" Z="-1536" delay="5" run="true" />
+	</route>
+	<!-- Rogin -->
+	<route name="messenger_rogin" repeat="true" repeatStyle="cycle">
+		<target id="31363" spawnX="115756" spawnY="-183472" spawnZ="-1477" />
+		<point X="115744" Y="-183424" Z="-1472" delay="60" run="true" />
+		<point X="115878" Y="-183267" Z="-1472" delay="0" run="true" />
+		<point X="116116" Y="-183090" Z="-1496" delay="0" run="true" />
+		<point npcStringId="1010215" X="116587" Y="-184306" Z="-1568" delay="10" run="true" />
+		<point X="116392" Y="-184090" Z="-1560" delay="0" run="true" />
+		<point X="117083" Y="-182538" Z="-1520" delay="0" run="true" />
+		<point npcStringId="1010216" X="117802" Y="-182541" Z="-1528" delay="10" run="true" />
+		<point npcStringId="1010217" X="116720" Y="-182479" Z="-1512" delay="10" run="true" />
+		<point X="115857" Y="-183287" Z="-1472" delay="0" run="true" />
+		<point X="115744" Y="-183424" Z="-1472" delay="0" run="true" />
+	</route>
+	<!-- Tate -->
+	<route name="porter_tate" repeat="true" repeatStyle="cycle">
+		<target id="31362" spawnX="115820" spawnY="-181568" spawnZ="-1338" />
+		<point X="115824" Y="-181564" Z="-1336" delay="20" run="false" />
+		<point npcStringId="1010218" X="116048" Y="-181575" Z="-1352" delay="0" run="false" />
+		<point X="116521" Y="-181476" Z="-1384" delay="0" run="false" />
+		<point X="116632" Y="-180022" Z="-1160" delay="0" run="false" />
+		<point X="115355" Y="-178617" Z="-928" delay="0" run="false" />
+		<point X="115763" Y="-177585" Z="-888" delay="0" run="false" />
+		<point npcStringId="1010219" X="115795" Y="-177361" Z="-880" delay="0" run="false" />
+		<point X="115877" Y="-177338" Z="-880" delay="15" run="false" />
+		<point X="115783" Y="-177493" Z="-880" delay="0" run="false" />
+		<point X="115112" Y="-179836" Z="-880" delay="0" run="false" />
+		<point X="115102" Y="-180026" Z="-872" delay="0" run="false" />
+		<point npcStringId="1010220" X="114876" Y="-180045" Z="-872" delay="30" run="false" />
+		<point X="114840" Y="-179694" Z="-872" delay="0" run="false" />
+		<point X="116322" Y="-179602" Z="-1088" delay="0" run="false" />
+		<point X="116792" Y="-180386" Z="-1200" delay="0" run="false" />
+		<point X="116319" Y="-181573" Z="-1384" delay="0" run="false" />
+		<point X="115824" Y="-181564" Z="-1336" delay="0" run="false" />
+	</route>
+	<!-- Gordon -->
+	<route name="gordon" repeat="true" repeatStyle="cycle">
+		<target id="29095" spawnX="147408" spawnY="-43552" spawnZ="-2328" />
+		<point X="147408" Y="-43552" Z="-2296" delay="0" run="false" />
+		<point X="147927" Y="-43264" Z="-2296" delay="0" run="false" />
+		<point X="148668" Y="-43435" Z="-2312" delay="0" run="false" />
+		<point X="149308" Y="-43910" Z="-2464" delay="0" run="false" />
+		<point X="150447" Y="-44190" Z="-2608" delay="0" run="false" />
+		<point X="151346" Y="-44070" Z="-2736" delay="4" run="false" />
+		<point X="152074" Y="-43362" Z="-2816" delay="0" run="false" />
+		<point X="152721" Y="-42632" Z="-2824" delay="0" run="false" />
+		<point X="153326" Y="-41826" Z="-2936" delay="0" run="false" />
+		<point X="153733" Y="-41173" Z="-3000" delay="0" run="false" />
+		<point X="154295" Y="-40347" Z="-3112" delay="4" run="false" />
+		<point X="154700" Y="-39687" Z="-3200" delay="0" run="false" />
+		<point X="155474" Y="-39961" Z="-3272" delay="0" run="false" />
+		<point X="155882" Y="-40436" Z="-3296" delay="0" run="false" />
+		<point X="156629" Y="-41452" Z="-3472" delay="0" run="false" />
+		<point X="156846" Y="-42484" Z="-3600" delay="4" run="false" />
+		<point X="156786" Y="-44059" Z="-3760" delay="0" run="false" />
+		<point X="157820" Y="-45121" Z="-3544" delay="0" run="false" />
+		<point X="158808" Y="-45454" Z="-3464" delay="0" run="false" />
+		<point X="159675" Y="-46178" Z="-3544" delay="0" run="false" />
+		<point X="160320" Y="-46947" Z="-3648" delay="4" run="false" />
+		<point X="159841" Y="-47765" Z="-3656" delay="0" run="false" />
+		<point X="158963" Y="-48596" Z="-3648" delay="0" run="false" />
+		<point X="159399" Y="-49889" Z="-3632" delay="0" run="false" />
+		<point X="159433" Y="-51854" Z="-3392" delay="0" run="false" />
+		<point X="159280" Y="-53297" Z="-3240" delay="4" run="false" />
+		<point X="159946" Y="-54651" Z="-3080" delay="0" run="false" />
+		<point X="160696" Y="-55985" Z="-2856" delay="0" run="false" />
+		<point X="160991" Y="-57416" Z="-2704" delay="0" run="false" />
+		<point X="160936" Y="-58715" Z="-2616" delay="0" run="false" />
+		<point X="160371" Y="-59892" Z="-2640" delay="4" run="false" />
+		<point X="158884" Y="-60114" Z="-2672" delay="0" run="false" />
+		<point X="157476" Y="-59727" Z="-2648" delay="0" run="false" />
+		<point X="155709" Y="-59670" Z="-2616" delay="0" run="false" />
+		<point X="155076" Y="-59988" Z="-2640" delay="0" run="false" />
+		<point X="154278" Y="-60389" Z="-2688" delay="4" run="false" />
+		<point X="153611" Y="-61611" Z="-2816" delay="0" run="false" />
+		<point X="153553" Y="-62292" Z="-2832" delay="0" run="false" />
+		<point X="153104" Y="-63694" Z="-2968" delay="0" run="false" />
+		<point X="151460" Y="-64204" Z="-3144" delay="0" run="false" />
+		<point X="149179" Y="-64630" Z="-3280" delay="4" run="false" />
+		<point X="147461" Y="-64792" Z="-3432" delay="0" run="false" />
+		<point X="145659" Y="-64514" Z="-3360" delay="0" run="false" />
+		<point X="144096" Y="-64402" Z="-3392" delay="0" run="false" />
+		<point X="141323" Y="-62083" Z="-3144" delay="0" run="false" />
+		<point X="140157" Y="-61442" Z="-3064" delay="4" run="false" />
+		<point X="138438" Y="-61664" Z="-3040" delay="0" run="false" />
+		<point X="138168" Y="-61294" Z="-3000" delay="0" run="false" />
+		<point X="138402" Y="-60920" Z="-3056" delay="0" run="false" />
+		<point X="138656" Y="-59869" Z="-3280" delay="0" run="false" />
+		<point X="138910" Y="-58621" Z="-3440" delay="4" run="false" />
+		<point X="138096" Y="-57667" Z="-3504" delay="0" run="false" />
+		<point X="138096" Y="-56967" Z="-3504" delay="0" run="false" />
+		<point X="138878" Y="-56655" Z="-3456" delay="0" run="false" />
+		<point X="139660" Y="-56120" Z="-3288" delay="0" run="false" />
+		<point X="139101" Y="-54466" Z="-3216" delay="4" run="false" />
+		<point X="139848" Y="-52589" Z="-2832" delay="0" run="false" />
+		<point X="139222" Y="-51369" Z="-2688" delay="0" run="false" />
+		<point X="139705" Y="-50039" Z="-2496" delay="0" run="false" />
+		<point X="139959" Y="-48987" Z="-2256" delay="0" run="false" />
+		<point X="140283" Y="-47506" Z="-2208" delay="4" run="false" />
+		<point X="140162" Y="-46243" Z="-2336" delay="0" run="false" />
+		<point X="142508" Y="-45584" Z="-2416" delay="0" run="false" />
+		<point X="143183" Y="-44563" Z="-2392" delay="0" run="false" />
+		<point X="144382" Y="-43528" Z="-2344" delay="0" run="false" />
+		<point X="145382" Y="-43318" Z="-2296" delay="4" run="false" />
+		<point X="147265" Y="-43588" Z="-2296" delay="0" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Shanty Fortress -->
+	<route name="gludio_fort_a_ordery" repeat="true" repeatStyle="cycle">
+		<target id="35659" spawnX="-58672" spawnY="154703" spawnZ="-2688" />
+		<point X="-58672" Y="154703" Z="-2688" delay="30" run="false" />
+		<point X="-57522" Y="156523" Z="-2576" delay="15" run="false" />
+		<point X="-55226" Y="157117" Z="-2064" delay="0" run="false" />
+		<point X="-57528" Y="156515" Z="-2576" delay="0" run="false" />
+		<point X="-58660" Y="154706" Z="-2688" delay="0" run="false" />
+		<point X="-60174" Y="156182" Z="-2832" delay="0" run="false" />
+		<point X="-61834" Y="157703" Z="-3264" delay="0" run="false" />
+		<point X="-62761" Y="159101" Z="-3584" delay="0" run="false" />
+		<point X="-63472" Y="159672" Z="-3680" delay="0" run="false" />
+		<point X="-64072" Y="160631" Z="-3760" delay="0" run="false" />
+		<point X="-64387" Y="161877" Z="-3792" delay="0" run="false" />
+		<point X="-63842" Y="163092" Z="-3840" delay="15" run="false" />
+		<point X="-64397" Y="161831" Z="-3792" delay="0" run="false" />
+		<point X="-64055" Y="160587" Z="-3760" delay="0" run="false" />
+		<point X="-63461" Y="159656" Z="-3680" delay="0" run="false" />
+		<point X="-62744" Y="159095" Z="-3584" delay="0" run="false" />
+		<point X="-61831" Y="157693" Z="-3256" delay="0" run="false" />
+		<point X="-60152" Y="156167" Z="-2824" delay="0" run="false" />
+		<point X="-58652" Y="154707" Z="-2688" delay="0" run="false" />
+		<point X="-58672" Y="154703" Z="-2688" delay="0" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Southern Fortress -->
+	<route name="gludio_fort_b_ordery" repeat="true" repeatStyle="cycle">
+		<target id="35690" spawnX="-28169" spawnY="216864" spawnZ="-3544" />
+		<point X="-28169" Y="216864" Z="-3544" delay="30" run="false" />
+		<point X="-29028" Y="215089" Z="-3672" delay="0" run="false" />
+		<point X="-30888" Y="213455" Z="-3656" delay="0" run="false" />
+		<point X="-31937" Y="211656" Z="-3656" delay="0" run="false" />
+		<point X="-30880" Y="211006" Z="-3552" delay="0" run="false" />
+		<point X="-27690" Y="210004" Z="-3272" delay="0" run="false" />
+		<point X="-25784" Y="210108" Z="-3272" delay="0" run="false" />
+		<point X="-21682" Y="211459" Z="-3272" delay="0" run="false" />
+		<point X="-18430" Y="212927" Z="-3704" delay="0" run="false" />
+		<point X="-16247" Y="212795" Z="-3664" delay="0" run="false" />
+		<point X="-16868" Y="214267" Z="-3648" delay="0" run="false" />
+		<point X="-17263" Y="215887" Z="-3552" delay="0" run="false" />
+		<point X="-18352" Y="216841" Z="-3504" delay="60" run="false" />
+		<point X="-17263" Y="215887" Z="-3552" delay="0" run="false" />
+		<point X="-16868" Y="214267" Z="-3648" delay="0" run="false" />
+		<point X="-16247" Y="212795" Z="-3664" delay="0" run="false" />
+		<point X="-18430" Y="212927" Z="-3704" delay="0" run="false" />
+		<point X="-21682" Y="211459" Z="-3272" delay="0" run="false" />
+		<point X="-25784" Y="210108" Z="-3272" delay="0" run="false" />
+		<point X="-27690" Y="210004" Z="-3272" delay="0" run="false" />
+		<point X="-30880" Y="211006" Z="-3552" delay="0" run="false" />
+		<point X="-31937" Y="211656" Z="-3656" delay="0" run="false" />
+		<point X="-30888" Y="213455" Z="-3656" delay="0" run="false" />
+		<point X="-29028" Y="215089" Z="-3672" delay="0" run="false" />
+		<point X="-28169" Y="216864" Z="-3544" delay="30" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Hive Fortress -->
+	<route name="dion_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35728" spawnX="19408" spawnY="189422" spawnZ="-3136" />
+		<point X="19408" Y="189422" Z="-3136" delay="30" run="false" />
+		<point X="20039" Y="187700" Z="-3416" delay="0" run="false" />
+		<point X="19016" Y="185813" Z="-3552" delay="30" run="false" />
+		<point X="17959" Y="181955" Z="-3680" delay="0" run="false" />
+		<point X="16440" Y="181635" Z="-3616" delay="30" run="false" />
+		<point X="15679" Y="182540" Z="-3608" delay="0" run="false" />
+		<point X="15310" Y="182791" Z="-3568" delay="0" run="false" />
+		<point X="15242" Y="184507" Z="-3112" delay="30" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Valley Fortress -->
+	<route name="giran_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35759" spawnX="123383" spawnY="121093" spawnZ="-2864" />
+		<point X="123383" Y="121093" Z="-2864" delay="30" run="false" />
+		<point X="122670" Y="120890" Z="-3088" delay="0" run="false" />
+		<point X="124617" Y="119069" Z="-3088" delay="0" run="false" />
+		<point X="126177" Y="118273" Z="-3080" delay="0" run="false" />
+		<point X="125979" Y="119528" Z="-2728" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Ivory Tower Fortress -->
+	<route name="oren_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35797" spawnX="75280" spawnY="1387" spawnZ="-3268" />
+		<point X="74725" Y="1671" Z="-3128" delay="30" run="false" />
+		<point X="76651" Y="1505" Z="-3552" delay="0" run="false" />
+		<point X="79421" Y="4977" Z="-3080" delay="0" run="false" />
+		<point X="77357" Y="7197" Z="-3208" delay="30" run="false" />
+		<point X="76287" Y="9164" Z="-3568" delay="0" run="false" />
+		<point X="72447" Y="8196" Z="-3264" delay="0" run="false" />
+		<point X="71780" Y="7467" Z="-3160" delay="0" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Narsell Fortress -->
+	<route name="aden_fort_a_ordery" repeat="true" repeatStyle="back">
+		<target id="35828" spawnX="159377" spawnY="52403" spawnZ="-3312" />
+		<point X="159377" Y="52403" Z="-3312" delay="30" run="false" />
+		<point X="161177" Y="54083" Z="-3560" delay="0" run="false" />
+		<point X="162152" Y="54365" Z="-3632" delay="0" run="false" />
+		<point X="162703" Y="55840" Z="-3696" delay="0" run="false" />
+		<point X="162370" Y="58534" Z="-3504" delay="0" run="false" />
+		<point X="160099" Y="60034" Z="-3224" delay="0" run="false" />
+		<point X="158048" Y="62696" Z="-3464" delay="0" run="false" />
+		<point X="157220" Y="63450" Z="-3520" delay="0" run="false" />
+		<point X="155076" Y="63731" Z="-3544" delay="0" run="false" />
+		<point X="153893" Y="64441" Z="-3656" delay="0" run="false" />
+		<point X="153085" Y="62948" Z="-3680" delay="0" run="false" />
+		<point X="150866" Y="58737" Z="-3432" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Bayou Fortress -->
+	<route name="aden_fort_b_ordery" repeat="true" repeatStyle="back">
+		<target id="35859" spawnX="190423" spawnY="43540" spawnZ="-3656" />
+		<point X="190423" Y="43540" Z="-3656" delay="30" run="false" />
+		<point X="189579" Y="45949" Z="-4240" delay="0" run="false" />
+		<point X="187058" Y="43551" Z="-4808" delay="0" run="false" />
+		<point X="185916" Y="41869" Z="-4512" delay="30" run="false" />
+		<point X="185292" Y="39403" Z="-4200" delay="0" run="false" />
+		<point X="185167" Y="38401" Z="-4200" delay="0" run="false" />
+		<point X="184984" Y="36863" Z="-4152" delay="0" run="false" />
+		<point X="184377" Y="36425" Z="-4080" delay="0" run="false" />
+		<point X="185314" Y="35866" Z="-3936" delay="0" run="false" />
+		<point X="185781" Y="35955" Z="-3832" delay="0" run="false" />
+		<point X="186686" Y="35667" Z="-3752" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - White Sands Fortress -->
+	<route name="inna_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35897" spawnX="114436" spawnY="202528" spawnZ="-3408" />
+		<point X="114436" Y="202528" Z="-3408" delay="30" run="false" />
+		<point X="113809" Y="200514" Z="-3720" delay="0" run="false" />
+		<point X="116035" Y="199822" Z="-3664" delay="0" run="false" />
+		<point X="117017" Y="199876" Z="-3632" delay="0" run="false" />
+		<point X="119959" Y="201032" Z="-3608" delay="0" run="false" />
+		<point X="121849" Y="200614" Z="-3384" delay="0" run="false" />
+		<point X="122868" Y="200874" Z="-3168" delay="0" run="false" />
+		<point X="123130" Y="202427" Z="-3128" delay="30" run="false" />
+		<point X="122427" Y="204162" Z="-3488" delay="0" run="false" />
+		<point X="122661" Y="204842" Z="-3576" delay="0" run="false" />
+		<point X="124051" Y="205402" Z="-3576" delay="0" run="false" />
+		<point X="124211" Y="206023" Z="-3504" delay="0" run="false" />
+		<point X="124948" Y="206778" Z="-3400" delay="0" run="false" />
+		<point X="124483" Y="207777" Z="-3200" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Borderland Fortress -->
+	<route name="godad_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35928" spawnX="161876" spawnY="-73407" spawnZ="-2984" />
+		<point X="161876" Y="-73407" Z="-2984" delay="30" run="false" />
+		<point X="161795" Y="-75288" Z="-3088" delay="0" run="false" />
+		<point X="159678" Y="-77671" Z="-3584" delay="0" run="false" />
+		<point X="158917" Y="-78117" Z="-3760" delay="0" run="false" />
+		<point X="158989" Y="-77130" Z="-3720" delay="0" run="false" />
+		<point X="158757" Y="-75951" Z="-3720" delay="0" run="false" />
+		<point X="158157" Y="-74161" Z="-3592" delay="30" run="false" />
+		<point X="157547" Y="-73326" Z="-3400" delay="0" run="false" />
+		<point X="153815" Y="-71497" Z="-3392" delay="0" run="false" />
+		<point X="153086" Y="-70701" Z="-3488" delay="0" run="false" />
+		<point X="152262" Y="-70352" Z="-3568" delay="0" run="false" />
+		<point X="155193" Y="-69617" Z="-3008" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Swamp Fortress -->
+	<route name="rune_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="35966" spawnX="71436" spawnY="-58182" spawnZ="-2904" />
+		<point X="71436" Y="-58182" Z="-2904" delay="30" run="false" />
+		<point X="71731" Y="-56949" Z="-3080" delay="0" run="false" />
+		<point X="72715" Y="-56729" Z="-3104" delay="0" run="false" />
+		<point X="73277" Y="-56055" Z="-3104" delay="30" run="false" />
+		<point X="73369" Y="-55636" Z="-3104" delay="0" run="false" />
+		<point X="74136" Y="-54646" Z="-3104" delay="0" run="false" />
+		<point X="73408" Y="-54422" Z="-3104" delay="0" run="false" />
+		<point X="72998" Y="-53404" Z="-3136" delay="0" run="false" />
+		<point X="71661" Y="-52937" Z="-3104" delay="0" run="false" />
+		<point X="71127" Y="-52304" Z="-3104" delay="0" run="false" />
+		<point X="70225" Y="-52304" Z="-3064" delay="0" run="false" />
+		<point X="69668" Y="-52780" Z="-3064" delay="0" run="false" />
+		<point X="68422" Y="-52407" Z="-3240" delay="0" run="false" />
+		<point X="67702" Y="-52940" Z="-3208" delay="0" run="false" />
+		<point X="67798" Y="-52940" Z="-3232" delay="0" run="false" />
+		<point X="66667" Y="-55841" Z="-2840" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Archaic Fortress -->
+	<route name="schutt_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36004" spawnX="105447" spawnY="-139845" spawnZ="-3120" />
+		<point X="105447" Y="-139845" Z="-3120" delay="30" run="false" />
+		<point X="104918" Y="-140382" Z="-3256" delay="0" run="false" />
+		<point X="105507" Y="-142515" Z="-3648" delay="0" run="false" />
+		<point X="106533" Y="-143107" Z="-3656" delay="0" run="false" />
+		<point X="106714" Y="-143825" Z="-3656" delay="0" run="false" />
+		<point X="107510" Y="-144024" Z="-3656" delay="0" run="false" />
+		<point X="108092" Y="-144888" Z="-3656" delay="30" run="false" />
+		<point X="109499" Y="-145168" Z="-3664" delay="0" run="false" />
+		<point X="110064" Y="-146169" Z="-3456" delay="0" run="false" />
+		<point X="110186" Y="-147427" Z="-3096" delay="0" run="false" />
+		<point X="112389" Y="-147779" Z="-3256" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Floran Fortress -->
+	<route name="glu_di_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36035" spawnX="14186" spawnY="149947" spawnZ="-3352" />
+		<point X="14186" Y="149947" Z="-3352" delay="20" run="false" />
+		<point X="16180" Y="150387" Z="-3216" delay="0" run="false" />
+		<point X="18387" Y="151874" Z="-3317" delay="0" run="false" />
+		<point X="18405" Y="154770" Z="-3616" delay="30" run="false" />
+		<point X="17655" Y="156863" Z="-3664" delay="0" run="false" />
+		<point X="12303" Y="153937" Z="-2680" delay="0" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Cloud Mountain -->
+	<route name="glu_ore_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36073" spawnX="-56032" spawnY="86017" spawnZ="-3259" />
+		<point X="-56032" Y="86017" Z="-3259" delay="30" run="false" />
+		<point X="-57329" Y="86006" Z="-3640" delay="0" run="false" />
+		<point X="-57470" Y="85306" Z="-3664" delay="0" run="false" />
+		<point X="-58892" Y="85159" Z="-3768" delay="30" run="false" />
+		<point X="-59030" Y="80150" Z="-3632" delay="0" run="false" />
+		<point X="-57642" Y="77591" Z="-3512" delay="20" run="false" />
+		<point X="-53971" Y="77664" Z="-3224" delay="40" run="false" />
+		<point X="-53271" Y="85126" Z="-3552" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Tanor Fortress -->
+	<route name="di_gi_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36111" spawnX="58314" spawnY="136319" spawnZ="-2000" />
+		<point X="58314" Y="136319" Z="-2000" delay="30" run="false" />
+		<point X="57078" Y="137124" Z="-2216" delay="0" run="false" />
+		<point X="54644" Y="137366" Z="-2600" delay="0" run="false" />
+		<point X="58696" Y="134202" Z="-3096" delay="30" run="false" />
+		<point X="60967" Y="134154" Z="-3416" delay="0" run="false" />
+		<point X="62813" Y="134744" Z="-3592" delay="0" run="false" />
+		<point X="65158" Y="135007" Z="-3728" delay="0" run="false" />
+		<point X="64278" Y="139384" Z="-3176" delay="30" run="false" />
+		<point X="63711" Y="140599" Z="-2720" delay="0" run="false" />
+		<point X="63187" Y="141192" Z="-2440" delay="0" run="false" />
+		<point X="62811" Y="142466" Z="-2064" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Dragonspine Fortress -->
+	<route name="di_ore_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36142" spawnX="9318" spawnY="92253" spawnZ="-3536" />
+		<point X="9318" Y="92253" Z="-3536" delay="30" run="false" />
+		<point X="9117" Y="91645" Z="-3656" delay="0" run="false" />
+		<point X="9240" Y="90149" Z="-3592" delay="0" run="false" />
+		<point X="11509" Y="90093" Z="-3720" delay="20" run="false" />
+		<point X="13269" Y="90004" Z="-3840" delay="20" run="false" />
+		<point X="14812" Y="89578" Z="-3832" delay="20" run="false" />
+		<point X="14450" Y="90636" Z="-3680" delay="0" run="false" />
+		<point X="14236" Y="91690" Z="-3656" delay="0" run="false" />
+		<point X="13636" Y="92359" Z="-3480" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Antharas Fortress -->
+	<route name="ore_gi_fort_ordery" repeat="true" repeatStyle="cycle">
+		<target id="36173" spawnX="74810" spawnY="90814" spawnZ="-3344" />
+		<point X="74810" Y="90814" Z="-3344" delay="30" run="false" />
+		<point X="75094" Y="92951" Z="-3104" delay="0" run="false" />
+		<point X="75486" Y="92906" Z="-3072" delay="0" run="false" />
+		<point X="75765" Y="91794" Z="-2912" delay="0" run="false" />
+		<point X="77116" Y="90455" Z="-2896" delay="0" run="false" />
+		<point X="77743" Y="89119" Z="-2896" delay="15" run="false" />
+		<point X="77118" Y="90457" Z="-2896" delay="0" run="false" />
+		<point X="75750" Y="91811" Z="-2912" delay="0" run="false" />
+		<point X="75479" Y="92904" Z="-3072" delay="0" run="false" />
+		<point X="75094" Y="92943" Z="-3104" delay="0" run="false" />
+		<point X="74809" Y="90794" Z="-3344" delay="0" run="false" />
+		<point X="76932" Y="88297" Z="-3296" delay="0" run="false" />
+		<point X="77882" Y="87441" Z="-3408" delay="0" run="false" />
+		<point X="78257" Y="85859" Z="-3632" delay="0" run="false" />
+		<point X="80994" Y="85866" Z="-3472" delay="0" run="false" />
+		<point X="82676" Y="87519" Z="-3360" delay="0" run="false" />
+		<point X="83778" Y="88414" Z="-3376" delay="0" run="false" />
+		<point X="83504" Y="90378" Z="-3120" delay="0" run="false" />
+		<point X="84431" Y="90379" Z="-3264" delay="0" run="false" />
+		<point X="85453" Y="90117" Z="-3312" delay="0" run="false" />
+		<point X="85605" Y="89708" Z="-3296" delay="0" run="false" />
+		<point X="84894" Y="88975" Z="-3344" delay="0" run="false" />
+		<point X="83735" Y="88382" Z="-3376" delay="0" run="false" />
+		<point X="82616" Y="87485" Z="-3360" delay="0" run="false" />
+		<point X="80971" Y="85855" Z="-3472" delay="0" run="false" />
+		<point X="78247" Y="85853" Z="-3632" delay="0" run="false" />
+		<point X="77868" Y="87463" Z="-3408" delay="0" run="false" />
+		<point X="76916" Y="88304" Z="-3280" delay="0" run="false" />
+		<point X="75494" Y="89865" Z="-3200" delay="0" run="false" />
+		<point X="74810" Y="90814" Z="-3344" delay="30" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Western Fortress -->
+	<route name="a_o_g_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36211" spawnX="114221" spawnY="-18762" spawnZ="-1768" />
+		<point X="114221" Y="-18762" Z="-1768" delay="30" run="false" />
+		<point X="115920" Y="-19177" Z="-2120" delay="0" run="false" />
+		<point X="117105" Y="-19759" Z="-2400" delay="0" run="false" />
+		<point X="118417" Y="-20135" Z="-2632" delay="30" run="false" />
+		<point X="118881" Y="-20011" Z="-2712" delay="0" run="false" />
+		<point X="117210" Y="-18329" Z="-1816" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Hunters Fortress -->
+	<route name="aden_gi_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36249" spawnX="121072" spawnY="93215" spawnZ="-2736" />
+		<point X="121072" Y="93215" Z="-2736" delay="30" run="false" />
+		<point X="122718" Y="92355" Z="-2320" delay="0" run="false" />
+		<point X="126171" Y="91910" Z="-2216" delay="0" run="false" />
+		<point X="126353" Y="90422" Z="-2296" delay="0" run="false" />
+		<point X="125796" Y="87720" Z="-2432" delay="0" run="false" />
+		<point X="124803" Y="85970" Z="-2464" delay="0" run="false" />
+		<point X="125036" Y="83836" Z="-2376" delay="30" run="false" />
+		<point X="128886" Y="83331" Z="-1416" delay="0" run="false" />
+		<point X="129697" Y="84969" Z="-1256" delay="0" run="false" />
+		<point X="126291" Y="86712" Z="-2240" delay="0" run="false" />
+		<point X="126599" Y="88950" Z="-2325" delay="0" run="false" />
+		<point X="126847" Y="90713" Z="-2264" delay="0" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Aaru Fortress -->
+	<route name="inna_gi_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36287" spawnX="71692" spawnY="188004" spawnZ="-2616" />
+		<point X="71692" Y="188004" Z="-2616" delay="30" run="false" />
+		<point X="69326" Y="187042" Z="-3008" delay="0" run="false" />
+		<point X="68627" Y="185540" Z="-2984" delay="0" run="false" />
+		<point X="69077" Y="184566" Z="-2976" delay="30" run="false" />
+		<point X="70642" Y="182573" Z="-2992" delay="0" run="false" />
+		<point X="73647" Y="181706" Z="-3160" delay="0" run="false" />
+		<point X="74283" Y="181756" Z="-3152" delay="0" run="false" />
+		<point X="73655" Y="182960" Z="-2736" delay="60" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Demon Fortress -->
+	<route name="ru_go_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36318" spawnX="104686" spawnY="-57581" spawnZ="-944" />
+		<point X="104150" Y="-57163" Z="-848" delay="30" run="false" />
+		<point X="106218" Y="-59401" Z="-1344" delay="0" run="false" />
+		<point X="106898" Y="-59553" Z="-1664" delay="30" run="false" />
+		<point X="107352" Y="-60168" Z="-2000" delay="0" run="false" />
+		<point X="107651" Y="-61177" Z="-2400" delay="0" run="false" />
+		<point X="109094" Y="-62678" Z="-3248" delay="0" run="false" />
+		<point X="108266" Y="-62657" Z="-3104" delay="0" run="false" />
+		<point X="105169" Y="-61226" Z="-2616" delay="0" run="false" />
+		<point X="102968" Y="-59982" Z="-2384" delay="0" run="false" />
+		<point X="100070" Y="-60173" Z="-2792" delay="0" run="false" />
+		<point X="98764" Y="-61095" Z="-2768" delay="0" run="false" />
+		<point X="94946" Y="-60039" Z="-2432" delay="0" run="false" />
+		<point X="96103" Y="-59078" Z="-1992" delay="0" run="false" />
+		<point X="96884" Y="-59043" Z="-1656" delay="0" run="false" />
+		<point X="97064" Y="-57884" Z="-1256" delay="30" run="false" />
+	</route>
+	<!-- Suspicious Merchant - Monastic Fortress -->
+	<route name="ru_sch_fort_ordery" repeat="true" repeatStyle="back">
+		<target id="36356" spawnX="69553" spawnY="-91746" spawnZ="-1488" />
+		<point X="69553" Y="-91746" Z="-1488" delay="30" run="false" />
+		<point X="70941" Y="-89751" Z="-2256" delay="0" run="false" />
+		<point X="71104" Y="-89094" Z="-2368" delay="0" run="false" />
+		<point X="73471" Y="-91462" Z="-2024" delay="30" run="false" />
+		<point X="74532" Y="-92202" Z="-1776" delay="0" run="false" />
+		<point X="74908" Y="-93152" Z="-1536" delay="60" run="false" />
 	</route>
 </routes>

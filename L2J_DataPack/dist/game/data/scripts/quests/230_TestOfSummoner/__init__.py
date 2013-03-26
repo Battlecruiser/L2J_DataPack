@@ -112,7 +112,7 @@ class Quest (JQuest) :
       JQuest.__init__(self,id,name,descr)
       self.questItemIds = range(3337,3390)
       # list to hold the player and pet instance of the player in the duel and an "isFoul" flag, indexed by npcId 
-      self.inProgressDuelMobs = {} # [player, player.getPet(), True/False]
+      self.inProgressDuelMobs = {} # [player, player.getSummon(), True/False]
 
    def onAdvEvent (self,event,npc, player) :
       htmltext = event
@@ -288,7 +288,7 @@ class Quest (JQuest) :
    def onDeath(self,killer,deadPerson,st) :               # if players summon dies, the crystal of defeat is given to the player and set stat to lose
       if not isinstance(killer, L2Attackable): return
       npcId = killer.getNpcId()
-##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getPet()) and npcId in DROPLIST_SUMMON.keys() :
+##      if (deadPerson == st.getPlayer() or deadPerson = st.getPlayer().getSummon()) and npcId in DROPLIST_SUMMON.keys() :
       if npcId in DROPLIST_SUMMON.keys() :
          st.getPlayer().removeNotifyQuestOfDeath(st)
          # var means the variable of the SummonerManager, the rest are all Crystalls wich mark the status
@@ -312,20 +312,20 @@ class Quest (JQuest) :
             # if not, mark this as a foul.
             if not isPet :
                self.inProgressDuelMobs[npcId][2] = True
-            elif player.getPet() != self.inProgressDuelMobs[npcId][1] :
+            elif player.getSummon() != self.inProgressDuelMobs[npcId][1] :
                self.inProgressDuelMobs[npcId][2] = True
          # if the npc had never before been attacked, check if it's time to mark a duel in progress
          elif not st : return
          elif st.getState() != State.STARTED : return
-         elif not isPet and st.getInt(var) == 2: self.inProgressDuelMobs[npcId] = [player, player.getPet(), True] # foul
+         elif not isPet and st.getInt(var) == 2: self.inProgressDuelMobs[npcId] = [player, player.getSummon(), True] # foul
          else :
             # var means the variable of the SummonerManager, the rest are all Crystalls which mark the status
             if st.getInt(var) == 2:
                st.set(var,"3")
                st.giveItems(progress,1)
                st.takeItems(start,1)
-               st.playSound("Itemsound.quest_itemget")
-               self.inProgressDuelMobs[npcId] = [player, player.getPet(), False] #mark the attack
+               st.playSound("ItemSound.quest_itemget")
+               self.inProgressDuelMobs[npcId] = [player, player.getSummon(), False] #mark the attack
       return
 
    def onKill(self,npc,player,isPet):
@@ -341,9 +341,9 @@ class Quest (JQuest) :
          if st.getInt(var) == value and count < 30 and random < chance:
             st.giveItems(item,1)
             if count == 29:
-               st.playSound("Itemsound.quest_middle")
+               st.playSound("ItemSound.quest_middle")
             else:
-               st.playSound("Itemsound.quest_itemget")
+               st.playSound("ItemSound.quest_itemget")
       # Part for npc summon death (duels part).  Some of this must run for all players.
       else :  # if npcId in DROPLIST_SUMMON.keys():
          var,start,progress,foul,defeat,victory = DROPLIST_SUMMON[npcId]
@@ -351,7 +351,7 @@ class Quest (JQuest) :
          # If the attacker is the pet of a player who is doing the quest, mark it as a valid hit.
          if not self.inProgressDuelMobs.has_key(npcId) and isPet and st :
             if st.getInt(var) == 2:
-               self.inProgressDuelMobs[npcId] = [player, player.getPet(), False]
+               self.inProgressDuelMobs[npcId] = [player, player.getSummon(), False]
 
          # if the killed mob is now in the progress list, there is work to be done...
          if self.inProgressDuelMobs.has_key(npcId) :
@@ -359,7 +359,7 @@ class Quest (JQuest) :
             # if not, mark this as a foul.
             if not isPet :
                self.inProgressDuelMobs[npcId][2] = True
-            elif player.getPet() != self.inProgressDuelMobs[npcId][1] :
+            elif player.getSummon() != self.inProgressDuelMobs[npcId][1] :
                self.inProgressDuelMobs[npcId][2] = True
 
             # if a foul has NOT occured, give the player the victory crystal
@@ -375,7 +375,7 @@ class Quest (JQuest) :
                   st.set(var,"6")
                   st.giveItems(victory,1)       # if he wons without cheating, set stat won and give victory crystal
                   st.getPlayer().removeNotifyQuestOfDeath(st)
-                  st.playSound("Itemsound.quest_middle")
+                  st.playSound("ItemSound.quest_middle")
             # if a foul has occured, find the player who had the duel in progress and give a foul crystal
             else :
                foulPlayer = self.inProgressDuelMobs[npcId][0]

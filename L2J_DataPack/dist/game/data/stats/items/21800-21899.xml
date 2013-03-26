@@ -893,98 +893,197 @@
 	<item id="21845" type="EtcItem" name="Mysterious Soulshot (No-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for none grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
+		<set name="price" val="7" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="2039-1" />
 	</item>
 	<item id="21846" type="EtcItem" name="Mysterious Soulshot (D-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for D-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
 		<set name="material" val="paper" />
+		<set name="price" val="22" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26060-1" />
 	</item>
 	<item id="21847" type="EtcItem" name="Mysterious Soulshot (C-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for C-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="c" />
 		<set name="material" val="paper" />
+		<set name="price" val="22" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26061-1" />
 	</item>
 	<item id="21848" type="EtcItem" name="Mysterious Soulshot (B-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for B-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="b" />
 		<set name="material" val="paper" />
+		<set name="price" val="14" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26062-1" />
 	</item>
 	<item id="21849" type="EtcItem" name="Mysterious Soulshot (A-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for A-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="a" />
 		<set name="material" val="paper" />
+		<set name="price" val="80" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26063-1" />
 	</item>
 	<item id="21850" type="EtcItem" name="Mysterious Soulshot (S-Grade)">
 		<!-- Description: Soulshot containing the light of Sprites; instantly inflicts a powerful attack on the enemy. It can be used for S-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
+		<set name="default_action" val="soulshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="paper" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="SoulShots" />
+		<set name="item_skill" val="26064-1" />
 	</item>
 	<item id="21851" type="EtcItem" name="Mysterious Blessed Spiritshot (No-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for none grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="35" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="2061-1" />
 	</item>
 	<item id="21852" type="EtcItem" name="Mysterious Blessed Spiritshot (D-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for D-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="d" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="28" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="26050-1" />
 	</item>
 	<item id="21853" type="EtcItem" name="Mysterious Blessed Spiritshot (C-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for C-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="c" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="245" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="26051-1" />
 	</item>
 	<item id="21854" type="EtcItem" name="Mysterious Blessed Spiritshot (B-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for B-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="b" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="290" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="26052-1" />
 	</item>
 	<item id="21855" type="EtcItem" name="Mysterious Blessed Spiritshot (A-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for A-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="a" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="350" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="26053-1" />
 	</item>
 	<item id="21856" type="EtcItem" name="Mysterious Blessed Spiritshot (S-Grade)">
 		<!-- Description: Spiritshot containing the light of Sprites; it instantly and greatly increases the power of magic. It can be used for S-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
+		<set name="default_action" val="spiritshot" />
+		<set name="immediate_effect" val="1" />
+		<set name="crystal_type" val="s" />
 		<set name="material" val="paper" />
+		<set name="weight" val="5" />
+		<set name="price" val="35" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="item_skill" val="26054-1" />
 	</item>
 	<item id="21857" type="EtcItem" name="Hero's Gold Chest - 90-day limited period">
 		<!-- Description: Hero's Gold Chest. Gift box containing 1 each of a Hero's Treasure Box, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
@@ -1136,7 +1235,12 @@
 		<!-- Description: Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange it for 100 Fame points. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="21875" type="EtcItem" name="Campfire Flint">
 		<!-- Description: You can use this item if you have gathered 30 tree branches to start a campfire. A campfire near a battlefield can help to raise HP, MP, and CP recovery rate. You can only make campfires when you are away from towns. You can only receive the recovery bonus while near the campfire. . Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->
@@ -1320,9 +1424,16 @@
 	<item id="21895" type="EtcItem" name="Scroll: Valakas Call">
 		<!-- Description: One-time use scroll that teleports you to Watcher of Valakas Klein in the Hall of Flames. -->
 		<set name="icon" val="BranchSys2.icon.call_of_fire_dragon" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22290-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21896" type="EtcItem" name="Jewel of Valakas">
 		<!-- Description: Mysterious jewel that teleports you to Watcher of Valakas Klein in the Hall of Flames. Re-use time is 60 minutes. -->
@@ -1330,13 +1441,26 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22291-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21897" type="EtcItem" name="Scroll: Antharas Call">
 		<!-- Description: One-time use scroll that teleports you to the entrance to Antharas's Lair. -->
 		<set name="icon" val="BranchSys2.icon.call_of_earth_dragon" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22292-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21898" type="EtcItem" name="Jewel of Antharas">
 		<!-- Description: Mysterious jewel that teleports you to the entrance to Antharas's Lair. Re-use time is 60 minutes. -->
@@ -1344,6 +1468,12 @@
 		<set name="material" val="paper" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22293-1" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="false" />
+		</cond>
 	</item>
 	<item id="21899" type="EtcItem" name="Totem of Body">
 		<!-- Description: Summons a totem that increases HP recovery speed by 30% and decreases damage from the topography by 80%. Totem duration is 30 minutes. Can only be used inside the lairs of Valakas and Antharas. Re-use time is 10 minutes. -->

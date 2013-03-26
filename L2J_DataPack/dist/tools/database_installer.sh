@@ -1,5 +1,22 @@
 #!/bin/bash
-############################################
+##########################################################################
+## Copyright (C) 2004-2013 L2J DataPack                                 ##
+##                                                                      ##
+## This file is part of L2J DataPack.                                   ##
+##                                                                      ##
+## L2J DataPack is free software: you can redistribute it and/or modify ##
+## it under the terms of the GNU General Public License as published by ##
+## the Free Software Foundation, either version 3 of the License, or    ##
+## (at your option) any later version.                                  ##
+##                                                                      ##
+## L2J DataPack is distributed in the hope that it will be useful,      ##
+## but WITHOUT ANY WARRANTY; without even the implied warranty of       ##
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU     ##
+## General Public License for more details.                             ##
+##                                                                      ##
+## You should have received a copy of the GNU General Public License    ##
+## along with this program. If not, see <http://www.gnu.org/licenses/>. ##
+##########################################################################
 ## WARNING!  WARNING!  WARNING!  WARNING! ##
 ##                                        ##
 ## DON'T USE NOTEPAD TO CHANGE THIS FILE  ##
@@ -508,13 +525,7 @@ finish
 
 finish(){
 clear
-echo "L2JDP Database Installer 2012"
-echo ""
-echo "(C) 2004-2012 L2J DataPack Team"
-echo "L2JDP Database Installer comes with ABSOLUTELY NO WARRANTY"
-echo "This is free software, and you are welcome to redistribute it"
-echo "under certain conditions; See the file gpl.txt for further"
-echo "details."
+echo "L2JDP Database Installer"
 echo ""
 echo "Thanks for using our software."
 echo "visit http://www.l2jdp.com for more info about"

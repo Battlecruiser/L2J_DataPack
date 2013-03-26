@@ -1,71 +1,49 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package events.GiftOfVitality;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.event.LongTimeEvent;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Retail Event : 'Gift of Vitality'
+ * Gift of Vitality event AI.
  * @author Gnacik
  */
-public class GiftOfVitality extends Quest
+public class GiftOfVitality extends LongTimeEvent
 {
 	// Reuse between buffs
-	private static final int _hours = 5;
+	private static final int HOURS = 5;
+	// NPC
+	private static final int JACK = 4306;
 	
-	private static final int _jack = 4306;
-	
-	private static final Location[] _spawns =
+	public GiftOfVitality(String name, String descr)
 	{
-		new Location(82766, 149438, -3464, 33865),
-		new Location(82286, 53291, -1488, 15250),
-		new Location(147060, 25943, -2008, 18774),
-		new Location(148096, -55466, -2728, 40541),
-		new Location(87116, -141332, -1336, 52193),
-		new Location(43521, -47542, -792, 31655),
-		new Location(17203, 144949, -3024, 18166),
-		new Location(111164, 221062, -3544, 2714),
-		new Location(-13869, 122063, -2984, 18270),
-		new Location(-83161, 150915, -3120, 17311),
-		new Location(45402, 48355, -3056, 49153),
-		new Location(115616, -177941, -896, 30708),
-		new Location(-44928, -113608, -192, 30212),
-		new Location(-84037, 243194, -3728, 8992),
-		new Location(-119690, 44583, 360, 29289),
-		new Location(12084, 16576, -4584, 57345)
-	};
-	
-	public GiftOfVitality(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addStartNpc(_jack);
-		addFirstTalkId(_jack);
-		addTalkId(_jack);
-		for (Location loc : _spawns)
-		{
-			addSpawn(_jack, loc, false, 0);
-		}
+		super(name, descr);
+		addStartNpc(JACK);
+		addFirstTalkId(JACK);
+		addTalkId(JACK);
 	}
 	
 	@Override
@@ -100,7 +78,7 @@ public class GiftOfVitality extends Quest
 				// Gift of Vitality
 				npc.doCast(SkillTable.getInstance().getInfo(23179, 1));
 				st.setState(State.STARTED);
-				st.set("reuse", String.valueOf(System.currentTimeMillis() + (_hours * 3600000)));
+				st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
 				htmltext = "4306-okvitality.htm";
 			}
 		}
@@ -139,13 +117,13 @@ public class GiftOfVitality extends Quest
 			{
 				htmltext = "4306-nolevel.htm";
 			}
-			else if ((player.getPet() == null) || !(player.getPet() instanceof L2ServitorInstance))
+			else if (!player.hasSummon() || !player.getSummon().isServitor())
 			{
 				htmltext = "4306-nosummon.htm";
 			}
 			else
 			{
-				npc.setTarget(player.getPet());
+				npc.setTarget(player.getSummon());
 				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
 				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
 				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier
@@ -175,6 +153,6 @@ public class GiftOfVitality extends Quest
 	
 	public static void main(String[] args)
 	{
-		new GiftOfVitality(-1, "GiftOfVitality", "events");
+		new GiftOfVitality(GiftOfVitality.class.getSimpleName(), "events");
 	}
 }

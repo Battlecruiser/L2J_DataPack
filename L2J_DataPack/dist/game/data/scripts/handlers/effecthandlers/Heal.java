@@ -1,19 +1,24 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -48,16 +53,18 @@ public class Heal extends L2Effect
 	{
 		L2Character target = getEffected();
 		L2Character activeChar = getEffector();
-		if (target == null || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor())
+		{
 			return false;
+		}
 		
 		double amount = calc();
 		double staticShotBonus = 0;
 		int mAtkMul = 1;
-		boolean sps = activeChar.isSpiritshotCharged(getSkill());
-		boolean bss = activeChar.isBlessedSpiritshotCharged(getSkill());
+		boolean sps = getSkill().isMagic() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = getSkill().isMagic() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		if ((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass()) || activeChar.isSummon())
+		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
 			staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
 			
@@ -67,7 +74,9 @@ public class Heal extends L2Effect
 				staticShotBonus *= 2.4; // static bonus for blessed spiritshots
 			}
 			else
+			{
 				mAtkMul = 2;
+			}
 		}
 		else if ((sps || bss) && activeChar.isNpc())
 		{
@@ -93,31 +102,32 @@ public class Heal extends L2Effect
 			}
 			// shot dynamic bonus
 			if (bss)
+			{
 				mAtkMul *= 4; // 16x/8x/4x s84/s80/other
+			}
 			else
+			{
 				mAtkMul += 1; // 5x/3x/1x s84/s80/other
+			}
 		}
 		
-		if (!getSkill().isStaticHeal())
+		if (!getSkill().isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
 			amount *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
 			// Healer proficiency (since CT1)
 			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
 			// Extra bonus (since CT1.5)
-			if (!getSkill().isStatic())
-				amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
-			
+			amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
 			// Heal critic, since CT2.3 Gracia Final
-			if (!getSkill().isStatic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			if (getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
+			{
 				amount *= 3;
+			}
 		}
 		
-		amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
-		
-		// Prevent negative amounts
-		if (amount < 0)
-			amount = 0;
+		// Prevents overheal and negative amount
+		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
 		
 		target.setCurrentHp(amount + target.getCurrentHp());
 		StatusUpdate su = new StatusUpdate(target);
@@ -133,7 +143,7 @@ public class Heal extends L2Effect
 			}
 			else
 			{
-				if (activeChar.isPlayer() && activeChar != target)
+				if (activeChar.isPlayer() && (activeChar != target))
 				{
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_RESTORED_BY_C1);
 					sm.addString(activeChar.getName());
@@ -148,7 +158,7 @@ public class Heal extends L2Effect
 				}
 			}
 		}
-		
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		return true;
 	}
 	

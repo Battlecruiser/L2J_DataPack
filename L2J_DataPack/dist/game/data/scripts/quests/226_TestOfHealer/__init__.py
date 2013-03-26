@@ -128,7 +128,7 @@ class Quest (JQuest) :
           st.addSpawn(27122)
           st.addSpawn(LETO_LEADER)
           st.set("cond","11")
-          st.playSound("Itemsound.quest_before_battle")
+          st.playSound("ItemSound.quest_before_battle")
     elif event == "30665_1" :
           htmltext = "30665-02.htm"
           st.takeItems(SECRET_LETTER1,1)
@@ -241,21 +241,21 @@ class Quest (JQuest) :
       st.addSpawn(LETO_ASSASSIN)
       st.addSpawn(LETO_ASSASSIN)
       st.addSpawn(LETO_ASSASSIN)
-      st.playSound("Itemsound.quest_before_battle")
+      st.playSound("ItemSound.quest_before_battle")
       st.set("cond","14")
      elif st.getInt("cond")==15 or st.getInt("cond")==16:
       htmltext = "30661-02.htm"
       st.addSpawn(LETO_SNIPER)
       st.addSpawn(LETO_SNIPER)
       st.addSpawn(LETO_SNIPER)
-      st.playSound("Itemsound.quest_before_battle")
+      st.playSound("ItemSound.quest_before_battle")
       st.set("cond","16")
      elif st.getInt("cond")==17 or st.getInt("cond")==18:
       htmltext = "30661-03.htm"
       st.addSpawn(LETO_WIZARD)
       st.addSpawn(LETO_WIZARD)
       st.addSpawn(LETO_LORD)
-      st.playSound("Itemsound.quest_before_battle")
+      st.playSound("ItemSound.quest_before_battle")
       st.set("cond","18")
      elif st.getInt("cond") == 19 :
       htmltext = "30661-04.htm"
@@ -285,7 +285,7 @@ class Quest (JQuest) :
        st.giveItems(item,1)
      if next_condition != 0:
        st.set("cond",next_condition)
-     st.playSound("Itemsound.quest_middle")
+     st.playSound("ItemSound.quest_middle")
    return
 
 QUEST       = Quest(226,qn,"Test Of Healer")

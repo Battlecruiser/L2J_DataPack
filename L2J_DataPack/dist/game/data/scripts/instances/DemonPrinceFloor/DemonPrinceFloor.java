@@ -1,48 +1,44 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package instances.DemonPrinceFloor;
 
 import java.util.Calendar;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.instancemanager.InstanceManager.InstanceWorld;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
+import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Demon Prince Floor instance zone.
  * @author GKR
  */
 public class DemonPrinceFloor extends Quest
 {
-	private class DPWorld extends InstanceWorld
-	{
-		public DPWorld()
-		{
-			super();
-		}
-	}
-	
-	private static final String qn = "DemonPrinceFloor";
 	private static final int INSTANCEID = 142; // this is the client number
 	private static final int RESET_HOUR = 6;
 	private static final int RESET_MIN = 30;
@@ -54,14 +50,8 @@ public class DemonPrinceFloor extends Quest
 	
 	private static final int SEAL_BREAKER_5 = 15515;
 	
-	private static final int[] ENTRY_POINT =
-	{
-		-22208, 277056, -8239
-	};
-	private static final int[] EXIT_POINT =
-	{
-		-19024, 277122, -8256
-	};
+	private static final Location ENTRY_POINT = new Location(-22208, 277056, -8239);
+	private static final Location EXIT_POINT = new Location(-19024, 277122, -8256);
 	
 	public DemonPrinceFloor(int questId, String name, String descr)
 	{
@@ -90,9 +80,9 @@ public class DemonPrinceFloor extends Quest
 		else if (npc.getNpcId() == CUBE)
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if ((world != null) && (world instanceof DPWorld))
+			if ((world != null) && (world.getInstanceId() == INSTANCEID))
 			{
-				world.allowed.remove(world.allowed.indexOf(player.getObjectId()));
+				world.removeAllowed(player.getObjectId());
 				teleportPlayer(player, EXIT_POINT, 0);
 			}
 		}
@@ -100,7 +90,7 @@ public class DemonPrinceFloor extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int instanceId = npc.getInstanceId();
 		if (instanceId > 0)
@@ -117,14 +107,14 @@ public class DemonPrinceFloor extends Quest
 			
 			inst.setEmptyDestroyTime(0);
 			
-			if ((world != null) && (world instanceof DPWorld))
+			if ((world != null) && (world.getInstanceId() == INSTANCEID))
 			{
 				setReenterTime(world);
 			}
 			
 			addSpawn(CUBE, -22144, 278744, -8239, 0, false, 0, false, instanceId);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	private String checkConditions(L2PcInstance player)
@@ -211,13 +201,13 @@ public class DemonPrinceFloor extends Quest
 		// existing instance
 		if (world != null)
 		{
-			if (!(world instanceof DPWorld))
+			if ((world.getInstanceId() != INSTANCEID))
 			{
 				player.sendPacket(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER);
 				return 0;
 			}
-			teleportPlayer(player, ENTRY_POINT, world.instanceId);
-			return world.instanceId;
+			teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
+			return world.getInstanceId();
 		}
 		
 		if (!checkTeleport(player))
@@ -226,10 +216,10 @@ public class DemonPrinceFloor extends Quest
 		}
 		
 		instanceId = InstanceManager.getInstance().createDynamicInstance(template);
-		world = new DPWorld();
-		world.instanceId = instanceId;
-		world.templateId = INSTANCEID;
-		world.status = 0;
+		world = new InstanceWorld();
+		world.setInstanceId(instanceId);
+		world.setTemplateId(INSTANCEID);
+		world.setStatus(0);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Tower of Infinitum - Demon Prince floor started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		
@@ -237,16 +227,15 @@ public class DemonPrinceFloor extends Quest
 		{
 			teleportPlayer(partyMember, ENTRY_POINT, instanceId);
 			partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-			world.allowed.add(partyMember.getObjectId());
+			world.addAllowed(partyMember.getObjectId());
 		}
 		return instanceId;
 	}
 	
 	public void setReenterTime(InstanceWorld world)
 	{
-		if (world instanceof DPWorld)
+		if (world.getInstanceId() == INSTANCEID)
 		{
-			
 			// Reenter time should be cleared every Wed and Sat at 6:30 AM, so we set next suitable
 			Calendar reenter;
 			Calendar now = Calendar.getInstance();
@@ -269,30 +258,22 @@ public class DemonPrinceFloor extends Quest
 			}
 			
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
-			sm.addInstanceName(world.templateId);
+			sm.addInstanceName(world.getTemplateId());
 			// set instance reenter time for all allowed players
-			for (int objectId : world.allowed)
+			for (int objectId : world.getAllowed())
 			{
 				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.templateId, reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
 					player.sendPacket(sm);
 				}
 			}
 		}
 	}
 	
-	private void teleportPlayer(L2PcInstance player, int[] tele, int instanceId)
-	{
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.setInstanceId(instanceId);
-		player.teleToLocation(tele[0], tele[1], tele[2], true);
-	}
-	
 	public static void main(String[] args)
 	{
-		// now call the constructor (starts up the)
-		new DemonPrinceFloor(-1, qn, "instances");
+		new DemonPrinceFloor(-1, DemonPrinceFloor.class.getSimpleName(), "instances");
 	}
 }

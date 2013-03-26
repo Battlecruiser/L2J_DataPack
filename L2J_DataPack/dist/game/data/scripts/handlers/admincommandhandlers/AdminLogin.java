@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -84,9 +88,9 @@ public class AdminLogin implements IAdminCommandHandler
 			if (tokens > 1)
 			{
 				st.nextToken();
-				String[] modes = new String[tokens-1];
+				String[] modes = new String[tokens - 1];
 				
-				for (int i = 0; i < tokens-1; i++)
+				for (int i = 0; i < (tokens - 1); i++)
 				{
 					modes[i] = st.nextToken().trim();
 				}
@@ -103,12 +107,12 @@ public class AdminLogin implements IAdminCommandHandler
 				{
 					Config.SERVER_LIST_TYPE = newType;
 					LoginServerThread.getInstance().sendServerType();
-					activeChar.sendMessage("Server Type changed to "+getServerTypeName(newType));
+					activeChar.sendMessage("Server Type changed to " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}
 				else
 				{
-					activeChar.sendMessage("Server Type is already "+getServerTypeName(newType));
+					activeChar.sendMessage("Server Type is already " + getServerTypeName(newType));
 					showMainPage(activeChar);
 				}
 			}
@@ -132,12 +136,12 @@ public class AdminLogin implements IAdminCommandHandler
 					{
 						Config.SERVER_LIST_TYPE = age;
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_AGE, age);
-						activeChar.sendMessage("Server Age changed to "+age);
+						activeChar.sendMessage("Server Age changed to " + age);
 						showMainPage(activeChar);
 					}
 					else
 					{
-						activeChar.sendMessage("Server Age is already "+age);
+						activeChar.sendMessage("Server Age is already " + age);
 						showMainPage(activeChar);
 					}
 				}
@@ -159,7 +163,7 @@ public class AdminLogin implements IAdminCommandHandler
 	}
 	
 	/**
-	 * @param activeChar 
+	 * @param activeChar
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
@@ -178,12 +182,14 @@ public class AdminLogin implements IAdminCommandHandler
 		String nameType = "";
 		for (int i = 0; i < 7; i++)
 		{
-			int currentType = serverType & (int)Math.pow(2, i);
+			int currentType = serverType & (int) Math.pow(2, i);
 			
 			if (currentType > 0)
 			{
-				if(!nameType.isEmpty())
-					nameType+="+";
+				if (!nameType.isEmpty())
+				{
+					nameType += "+";
+				}
 				
 				switch (currentType)
 				{

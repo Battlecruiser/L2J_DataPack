@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.fantasy_isle;
 
@@ -26,17 +30,23 @@ import com.l2jserver.gameserver.network.serverpackets.ExCubeGameRequestReady;
 import com.l2jserver.gameserver.network.serverpackets.ExCubeGameTeamList;
 
 /**
+ * Handys Block Checker Event AI.
  * @authors BiggBoss, Gigiikun
  */
 public class HandysBlockCheckerEvent extends Quest
 {
-	private static final String qn = "HandysBlockCheckerEvent";
-	
 	// Arena Managers
 	private static final int A_MANAGER_1 = 32521;
 	private static final int A_MANAGER_2 = 32522;
 	private static final int A_MANAGER_3 = 32523;
 	private static final int A_MANAGER_4 = 32524;
+	
+	public HandysBlockCheckerEvent()
+	{
+		super(-1, HandysBlockCheckerEvent.class.getSimpleName(), "Handy's Block Checker Event");
+		addFirstTalkId(A_MANAGER_1, A_MANAGER_2, A_MANAGER_3, A_MANAGER_4);
+		HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
+	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
@@ -83,30 +93,19 @@ public class HandysBlockCheckerEvent extends Quest
 	
 	private boolean eventIsFull(int arena)
 	{
-		if (HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12)
-		{
-			return true;
-		}
-		return false;
-	}
-	
-	public HandysBlockCheckerEvent(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		addFirstTalkId(A_MANAGER_1, A_MANAGER_2, A_MANAGER_3, A_MANAGER_4);
+		return HandysBlockCheckerManager.getInstance().getHolder(arena).getAllPlayers().size() == 12;
 	}
 	
 	public static void main(String[] args)
 	{
-		if (!Config.ENABLE_BLOCK_CHECKER_EVENT)
+		if (Config.ENABLE_BLOCK_CHECKER_EVENT)
 		{
-			_log.info("Handy's Block Checker Event is disabled");
+			new HandysBlockCheckerEvent();
+			_log.info("Handy's Block Checker Event is enabled");
 		}
 		else
 		{
-			new HandysBlockCheckerEvent(-1, qn, "Handy's Block Checker Event");
-			HandysBlockCheckerManager.getInstance().startUpParticipantsQueue();
-			_log.info("Handy's Block Checker Event is enabled");
+			_log.info("Handy's Block Checker Event is disabled");
 		}
 	}
 }

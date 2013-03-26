@@ -32,20 +32,20 @@
 										<xs:element name="socialClass" minOccurs="0" maxOccurs="1">
 											<xs:simpleType>
 												<xs:restriction base="xs:token">
-													<xs:enumeration value="Vagabond" />
-													<xs:enumeration value="Vassal" />
-													<xs:enumeration value="Apprentice" />
-													<xs:enumeration value="Heir" />
-													<xs:enumeration value="Knight" />
-													<xs:enumeration value="Elder" />
-													<xs:enumeration value="Baron" />
-													<xs:enumeration value="Viscount" />
-													<xs:enumeration value="Count" />
-													<xs:enumeration value="Marquis" />
-													<xs:enumeration value="Duke" />
-													<xs:enumeration value="GrandDuke" />
-													<xs:enumeration value="DistinguishedKing" />
-													<xs:enumeration value="Emperor" />
+													<xs:enumeration value="VAGABOND" />
+													<xs:enumeration value="VASSAL" />
+													<xs:enumeration value="APPRENTICE" />
+													<xs:enumeration value="HEIR" />
+													<xs:enumeration value="KNIGHT" />
+													<xs:enumeration value="ELDER" />
+													<xs:enumeration value="BARON" />
+													<xs:enumeration value="VISCOUNT" />
+													<xs:enumeration value="COUNT" />
+													<xs:enumeration value="MARQUIS" />
+													<xs:enumeration value="DUKE" />
+													<xs:enumeration value="GRAND_DUKE" />
+													<xs:enumeration value="DISTINGUISHED_KING" />
+													<xs:enumeration value="EMPEROR" />
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>

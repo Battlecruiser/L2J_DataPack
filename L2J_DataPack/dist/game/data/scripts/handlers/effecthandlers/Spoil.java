@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
 
@@ -24,9 +28,8 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * This is the Effect support for spoil.<br>
- * This was originally done by _drunk_
- * @author Ahmed
+ * Spoil effect.
+ * @author _drunk_, Ahmed, Zoey76
  */
 public class Spoil extends L2Effect
 {
@@ -44,40 +47,27 @@ public class Spoil extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		
-		if (!getEffector().isPlayer())
+		if (!getEffected().isMonster() || getEffected().isDead())
+		{
+			getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
+		}
 		
-		if (!getEffected().isMonster())
-			return false;
-		
-		L2MonsterInstance target = (L2MonsterInstance) getEffected();
-		
-		if (target == null)
-			return false;
-		
+		final L2MonsterInstance target = (L2MonsterInstance) getEffected();
 		if (target.isSpoil())
 		{
 			getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return false;
 		}
 		
-		// SPOIL SYSTEM by Lbaldi
-		boolean spoil = false;
-		if (target.isDead() == false)
+		if (Formulas.calcMagicSuccess(getEffector(), target, getSkill()))
 		{
-			spoil = Formulas.calcMagicSuccess(getEffector(), target, getSkill());
-			
-			if (spoil)
-			{
-				target.setSpoil(true);
-				target.setIsSpoiledBy(getEffector().getObjectId());
-				getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
-			}
-			target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
+			target.setSpoil(true);
+			target.setIsSpoiledBy(getEffector().getObjectId());
+			getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 		}
+		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		return true;
-		
 	}
 	
 	@Override

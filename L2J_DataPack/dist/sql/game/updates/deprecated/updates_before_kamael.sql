@@ -50,12 +50,12 @@ alter table `clan_data` add column `ally_crest_id` INT DEFAULT 0;
 
 -- 051205-[1768].sql
 -- Needed only if your character tables are needed to be preserved.
-ALTER TABLE `character_hennas` ADD `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`slot`,`class_index`);
-ALTER TABLE `character_quests` ADD `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_id`,`name`,`var`,`class_index`);
-ALTER TABLE `character_shortcuts` CHANGE `unknown` `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`slot`,`page`,`class_index`);
-ALTER TABLE `character_skills` ADD `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`skill_id`,`class_index`);
-ALTER TABLE `character_skills_save` ADD `class_index` int(1) NOT NULL default '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`skill_id`,`class_index`);
-ALTER TABLE `characters` ADD `base_class` int(2) NOT NULL default '0';
+ALTER TABLE `character_hennas` ADD `class_index` int(1) NOT NULL DEFAULT '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`slot`,`class_index`);
+ALTER TABLE `character_quests` ADD `class_index` int(1) NOT NULL DEFAULT '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_id`,`name`,`var`,`class_index`);
+ALTER TABLE `character_shortcuts` CHANGE `unknown` `class_index` int(1) NOT NULL DEFAULT '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`slot`,`page`,`class_index`);
+ALTER TABLE `character_skills` ADD `class_index` int(1) NOT NULL DEFAULT '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`skill_id`,`class_index`);
+ALTER TABLE `character_skills_save` ADD `class_index` int(1) NOT NULL DEFAULT '0', DROP PRIMARY KEY, ADD PRIMARY KEY (`char_obj_id`,`skill_id`,`class_index`);
+ALTER TABLE `characters` ADD `base_class` int(2) NOT NULL DEFAULT '0';
 
 -- 051205-[1769].sql
 -- UPDATE `characters` set `base_class` = `classid`;
@@ -178,7 +178,7 @@ DROP TABLE IF EXISTS
 `zone_npoly`;
 
 -- update17112007.sql
-ALTER TABLE `character_skills_save` ADD buff_index int(2) NOT NULL default 0;
+ALTER TABLE `character_skills_save` ADD buff_index int(2) NOT NULL DEFAULT 0;
 
 -- update20060522.sql
 ALTER TABLE `seven_signs_status` MODIFY COLUMN dawn_stone_score DECIMAL(20,0) NOT NULL DEFAULT 0,
@@ -214,13 +214,13 @@ ALTER TABLE `character_skills` CHANGE skill_name skill_name varchar(35);
 
 -- update20061230.sql
 -- *** DANGER *** - This update must DROP & CREATE the `clanhall` & `auction` tables due to structure changes
-ALTER TABLE `clan_data` ADD `auction_bid_at` INT NOT NULL default '0';
-ALTER TABLE `auction_bid` ADD `time_bid` decimal(20,0) NOT NULL default '0';
+ALTER TABLE `clan_data` ADD `auction_bid_at` INT NOT NULL DEFAULT '0';
+ALTER TABLE `auction_bid` ADD `time_bid` decimal(20,0) NOT NULL DEFAULT '0';
 ALTER TABLE `auction_bid` ADD `clan_name` varchar(50) NOT NULL after `bidderName`;
 
 -- setting zones
 DELETE FROM `zone` WHERE type = 'Clan Hall';
-ALTER TABLE `zone` ADD `z2` int(11) NOT NULL default '0' AFTER `z`;
+ALTER TABLE `zone` ADD `z2` int(11) NOT NULL DEFAULT '0' AFTER `z`;
 INSERT INTO `zone` VALUES
  (22, 'Clan Hall', 'Gludio 1', -16400, 123275, -15551, 123850, -3117,0, 1),
  (23, 'Clan Hall', 'Gludio 2', -15100, 125350, -14800, 125800, -3143,0, 1),
@@ -292,26 +292,26 @@ INSERT INTO `zone` (id, type, name, x1, y1, x2, y2, z, taxById) VALUES
 -- creating new tables and replacing old ones
 DROP TABLE IF EXISTS `clanhall_functions`;
 CREATE TABLE `clanhall_functions` (
-  `hall_id` int(2) NOT NULL default '0',
-  `type` int(1) NOT NULL default '0',
-  `lvl` int(3) NOT NULL default '0',
-  `lease` int(10) NOT NULL default '0',
-  `rate` decimal(20,0) NOT NULL default '0',
-  `endTime` decimal(20,0) NOT NULL default '0',
-  `inDebt` int(1) NOT NULL default '0',
+  `hall_id` int(2) NOT NULL DEFAULT '0',
+  `type` int(1) NOT NULL DEFAULT '0',
+  `lvl` int(3) NOT NULL DEFAULT '0',
+  `lease` int(10) NOT NULL DEFAULT '0',
+  `rate` decimal(20,0) NOT NULL DEFAULT '0',
+  `endTime` decimal(20,0) NOT NULL DEFAULT '0',
+  `inDebt` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`hall_id`,`type`)
 );
 
 DROP TABLE IF EXISTS `clanhall`;
 CREATE TABLE `clanhall` (
-  `id` int(11) NOT NULL default '0',
-  `name` varchar(40) NOT NULL default '',
-  `ownerId` int(11) NOT NULL default '0',
-  `lease` int(10) NOT NULL default '0',
+  `id` int(11) NOT NULL DEFAULT '0',
+  `name` varchar(40) NOT NULL DEFAULT '',
+  `ownerId` int(11) NOT NULL DEFAULT '0',
+  `lease` int(10) NOT NULL DEFAULT '0',
   `desc` text NOT NULL,
-  `location` varchar(15) NOT NULL default '',
-  `paidUntil` decimal(20,0) NOT NULL default '0',
-  `Grade` decimal(1,0) NOT NULL default '0',
+  `location` varchar(15) NOT NULL DEFAULT '',
+  `paidUntil` decimal(20,0) NOT NULL DEFAULT '0',
+  `Grade` decimal(1,0) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`id`,`name`),
   KEY `id` (`id`)
 );
@@ -364,18 +364,18 @@ INSERT INTO `clanhall` VALUES ('64', 'Fortress of the Dead', '0', '500000', '', 
 
 DROP TABLE IF EXISTS `auction`;
 CREATE TABLE `auction` (
-  id int(11) NOT NULL default '0',
-  sellerId int(11) NOT NULL default '0',
-  sellerName varchar(50) NOT NULL default 'NPC',
-  sellerClanName varchar(50) NOT NULL default '',
-  itemType varchar(25) NOT NULL default '',
-  itemId int(11) NOT NULL default '0',
-  itemObjectId int(11) NOT NULL default '0',
-  itemName varchar(40) NOT NULL default '',
-  itemQuantity int(11) NOT NULL default '0',
-  startingBid int(11) NOT NULL default '0',
-  currentBid int(11) NOT NULL default '0',
-  endDate decimal(20,0) NOT NULL default '0',
+  id int(11) NOT NULL DEFAULT '0',
+  sellerId int(11) NOT NULL DEFAULT '0',
+  sellerName varchar(50) NOT NULL DEFAULT 'NPC',
+  sellerClanName varchar(50) NOT NULL DEFAULT '',
+  itemType varchar(25) NOT NULL DEFAULT '',
+  itemId int(11) NOT NULL DEFAULT '0',
+  itemObjectId int(11) NOT NULL DEFAULT '0',
+  itemName varchar(40) NOT NULL DEFAULT '',
+  itemQuantity int(11) NOT NULL DEFAULT '0',
+  startingBid int(11) NOT NULL DEFAULT '0',
+  currentBid int(11) NOT NULL DEFAULT '0',
+  endDate decimal(20,0) NOT NULL DEFAULT '0',
   PRIMARY KEY  (`itemType`,`itemId`,`itemObjectId`),
   KEY `id` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -466,8 +466,8 @@ DROP TABLE `repair_character_quests`;
 
 -- update20070223.sql
 ALTER TABLE `raidboss_spawnlist` DROP respawn_delay;
-ALTER TABLE `raidboss_spawnlist` ADD respawn_min_delay INT( 11 ) NOT NULL default '43200' AFTER heading; -- 12 (36-24) hours
-ALTER TABLE `raidboss_spawnlist` ADD respawn_max_delay INT( 11 ) NOT NULL default '129600' AFTER respawn_min_delay; -- 36 hours
+ALTER TABLE `raidboss_spawnlist` ADD respawn_min_delay INT( 11 ) NOT NULL DEFAULT '43200' AFTER heading; -- 12 (36-24) hours
+ALTER TABLE `raidboss_spawnlist` ADD respawn_max_delay INT( 11 ) NOT NULL DEFAULT '129600' AFTER respawn_min_delay; -- 36 hours
 DELETE FROM `raidboss_spawnlist` WHERE boss_id IN (25328, 25339, 25342, 25346, 25349); -- remove Shadow of Halisha and Hellman spawns (possible exploits)-- update20070303.sql
 ALTER TABLE `clan_data`
 ADD `ally_penalty_expiry_time` DECIMAL( 20,0 ) NOT NULL DEFAULT '0',
@@ -484,12 +484,12 @@ DROP `deleteclan`;
 
 -- update20070511.sql
 ALTER TABLE `characters`
-ADD `expBeforeDeath` decimal(20,0) default 0 
+ADD `expBeforeDeath` decimal(20,0) DEFAULT 0 
 AFTER `exp`;
 
 -- update20070601.sql
 ALTER TABLE `accounts`
-ADD lastServer int(4) default '1'
+ADD lastServer int(4) DEFAULT '1'
 AFTER lastIP;
 
 -- update20070929-[dp3399].sql

@@ -74,13 +74,13 @@ DROPLIST={
 }
 def giveMiddle(st,itemid,step):
   st.giveItems(itemid,1)
-  st.playSound("Itemsound.quest_middle")
+  st.playSound("ItemSound.quest_middle")
   st.set("step",str(step+1))
   return
 
 def giveNormal(st,itemid):
   st.giveItems(itemid,1)
-  st.playSound("Itemsound.quest_itemget")
+  st.playSound("ItemSound.quest_itemget")
   return
 
 
@@ -244,7 +244,7 @@ class Quest (JQuest) :
      if ((st.getQuestItemsCount(itemid)-120)*5)> self.getRandom(100) :
       st.addSpawn(27090,npc,True,0)
       st.takeItems(itemid, st.getQuestItemsCount(itemid))
-      st.playSound("Itemsound.quest_before_battle")
+      st.playSound("ItemSound.quest_before_battle")
      else:
       giveNormal(st,itemid)
     elif dropcondition == 3 :

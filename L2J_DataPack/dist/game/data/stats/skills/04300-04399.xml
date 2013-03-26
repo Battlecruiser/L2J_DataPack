@@ -3,77 +3,77 @@
 	<skill id="4300" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Giant -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4301" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Bug -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4302" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Fairy -->
-		<set name="target" val="TARGET_NONE" />
+		<set name="targetType" val="NONE" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4303" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4304" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4305" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4306" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4307" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4308" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4309" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4310" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4311" levels="1" name="Feeble Type">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4312" levels="1" name="Heavy Armor">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4313" levels="1" name="Light Armor">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 	</skill>
 	<skill id="4314" levels="12" name="BOSS Holy Light Burst">
@@ -82,10 +82,11 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="200" />
+		<set name="targetType" val="AREA" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
 		<set name="skillType" val="MDAM" />
+		<set name="offensive" val="true" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="operateType" val="A1" />
@@ -97,14 +98,17 @@
 	<skill id="4315" levels="12" name="Hold">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="root_magically" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="300" />
+		<set name="targetType" val="AREA" />
+		<set name="affectRange" val="300" />
 		<set name="hitTime" val="2500" />
 		<set name="saveVs" val="MEN" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="ROOT" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -121,12 +125,13 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AREA" />
-		<set name="skillRadius" val="150" />
+		<set name="targetType" val="AREA" />
+		<set name="affectRange" val="150" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
 		<set name="skillType" val="DRAIN" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -137,15 +142,17 @@
 	<skill id="4317" levels="5" name="Increase Rage Might">
 		<!-- Freya retail confirmed -->
 		<table name="#pAtk"> 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="rage_might" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1800" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvl" abnormalType="rage_might">
+			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="#abnormalLvls" abnormalType="rage_might">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -153,8 +160,10 @@
 	</skill>
 	<skill id="4318" levels="1" name="Ultimate Buff">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ultimate_buff" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
@@ -172,11 +181,14 @@
 		<set name="mpConsume" val="50" />
 	</skill>
 	<skill id="4319" levels="1" name="Paralysis">
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="paralyze" />
 		<set name="magicLvl" val="60" />
 		<set name="power" val="30" /> <!-- Freya retail 0, no level depend, possibly done differently -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="skillType" val="PARALYZE" />
+		<set name="pvp" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="1500" />
@@ -191,10 +203,13 @@
 		<!-- Freya retail confirmed -->
 		<table name="#dot"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="POISON" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -202,16 +217,19 @@
 		<set name="effectRange" val="2000" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvl" abnormalType="Poison" />
+			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvls" abnormalType="Poison" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4321" levels="1" name="Decrease P. Def">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -228,8 +246,10 @@
 	<skill id="4322" levels="1" name="Wind Walk for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -244,8 +264,10 @@
 	<skill id="4323" levels="1" name="Shield for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -260,8 +282,10 @@
 	<skill id="4324" levels="1" name="Bless the Body for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="7" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -276,8 +300,10 @@
 	<skill id="4325" levels="1" name="Vampiric Rage for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="5" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -292,8 +318,10 @@
 	<skill id="4326" levels="1" name="Regeneration for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="hp_regen_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -308,8 +336,10 @@
 	<skill id="4327" levels="1" name="Haste for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -324,8 +354,10 @@
 	<skill id="4328" levels="1" name="Bless the Soul for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="7" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -340,8 +372,10 @@
 	<skill id="4329" levels="1" name="Acumen for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -356,8 +390,10 @@
 	<skill id="4330" levels="1" name="Concentration for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -372,8 +408,10 @@
 	<skill id="4331" levels="1" name="Empower for Beginners">
 		<!-- Freya retail confirmed -->
 		<!-- Newbie Guide Buff -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -387,7 +425,7 @@
 	</skill>
 	<skill id="4332" levels="1" name="Mental Aegis">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="100" />
@@ -398,7 +436,7 @@
 	<skill id="4333" levels="5" name="Resist Dark Attack">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="darkRes" val="#darkRes" />
@@ -410,15 +448,15 @@
 		<set name="effectRange" val="1500" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillRadius" val="2000" />
-		<set name="target" val="TARGET_AREA" />
+		<set name="affectRange" val="2000" />
+		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="CancelAll" noicon="1" val="0" effectType="CANCEL_ALL" />
+			<effect name="CancelAll" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4335" levels="1" name="Sacred Attack">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyPower" val="20" />
@@ -427,7 +465,7 @@
 	<skill id="4336" levels="5" name="Dark Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 11 25 43 67 100 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="darkRes" val="#darkRes" />
@@ -436,7 +474,7 @@
 	<skill id="4337" levels="5" name="Resist Sacred Attack">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="holyRes" val="#darkRes" />
@@ -451,29 +489,31 @@
 		<set name="magicLvl" val="18" />
 		<set name="skillType" val="SUMMON" />
 		<set name="operateType" val="A1" />
-		<set name="target" val="TARGET_SELF" />
-		<!-- Summon-specific -->
-		<set name="activationchance" val="0" /> <!-- FIXME: hard coded in core, unhardcode plz -->
-		<!-- set name="activationchance1" val="13" / TODO: this is chance when HP is at 90% or less -->
-		<!-- set name="activationchance2" val="33" / TODO: this is chance when HP is at 60% or less -->
-		<!-- set name="activationchance3" val="53" / TODO: this is chance when HP is at 30% or less -->
-		<set name="activationtime" val="13" /> <!-- Cubic Delay -->
+		<set name="targetType" val="SELF" />
+		<!-- Cubic-Specific -->
+		<set name="cubicDelay" val="13" />
+		<set name="cubicDuration" val="3600" />
+		<set name="cubicMaxCount" val="20" />
+		<set name="cubicSkillChance" val="0" /> <!-- FIXME: hardcoded in core, unhardcode plz -->
+		<!-- set name="cubicSkill1Chance" val="13" / TODO: this is chance when HP is at 90% or less -->
+		<!-- set name="cubicSkill2Chance" val="33" / TODO: this is chance when HP is at 60% or less -->
+		<!-- set name="cubicSkill3Chance" val="53" / TODO: this is chance when HP is at 30% or less -->
 		<set name="isCubic" val="true" />
-		<set name="maxcount" val="20" />
 		<set name="npcId" val="3" /> <!-- Cubic Id -->
-		<set name="summonTotalLifeTime" val="3600000" />
 	</skill>
 	<skill id="4339" levels="1" name="Mimir's Elixir">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 	</skill>
 	<skill id="4340" levels="1" name="Ultimate Buff, 2nd">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ultimate_buff" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
@@ -486,8 +526,10 @@
 	</skill>
 	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="ultimate_buff" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
@@ -503,16 +545,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#runSpd"> 20 33 </table>
 		<table name="#magicLvl"> 20 30 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="speed_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -523,16 +567,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#Weight"> 3000 6000 9000 </table>
 		<table name="#magicLvl"> 35 44 52 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="decrease_weight_penalty" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="decrease_weight_penalty">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="decrease_weight_penalty">
 				<add order="0x40" stat="weightPenalty" val="#Weight" />
 			</effect>
 		</for>
@@ -543,16 +589,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#magicLvl"> 7 25 44 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="pd_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#rate" />
 			</effect>
 		</for>
@@ -563,16 +611,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<table name="#magicLvl"> 7 20 40 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="pa_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#rate" />
 			</effect>
 		</for>
@@ -583,16 +633,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#vuln"> 20 30 40 50 </table> <!-- Freya retail has still old values (50 60 70 80) here, retail bug? -->
 		<table name="#magicLvl"> 25 40 48 56 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="resist_derangement" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_derangement">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="resist_derangement">
 				<sub stat="rootVuln" val="#vuln" order="0x40" />
 				<sub stat="sleepVuln" val="#vuln" order="0x40" />
 				<sub stat="derangementVuln" val="#vuln" order="0x40" />
@@ -605,16 +657,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 44 48 52 56 64 72 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_hp_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -625,16 +679,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 44 48 52 56 62 70 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_mp_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -645,16 +701,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#mDef"> 1.23 1.3 </table>
 		<table name="#magicLvl"> 44 52 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="md_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
@@ -665,16 +723,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#vuln"> 15 20 30 40 </table>
 		<table name="#magicLvl"> 40 52 64 72 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="resist_shock" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="resist_shock">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="resist_shock">
 				<sub stat="stunVuln" val="#vuln" order="0x40" />
 			</effect>
 		</for>
@@ -685,16 +745,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
 		<table name="#magicLvl"> 20 30 44 52 60 68 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="cancel_prob_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="cancel_prob_down">
 				<sub order="0x40" stat="cancel" val="#cancel" />
 			</effect>
 		</for>
@@ -712,16 +774,18 @@
 		<table name="#runSpd"> 5 8 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#magicLvl"> 35 52 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="berserker" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="berserker">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
@@ -739,16 +803,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
 		<table name="#magicLvl"> 40 48 56 62 66 70 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 5 6 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="shield_prob_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="shield_prob_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="shield_prob_up">
 				<mul order="0x30" stat="rShld" val="#rShld" />
 			</effect>
 		</for>
@@ -759,16 +825,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#absorbDam"> 6 7 8 9 </table>
 		<table name="#magicLvl"> 30 44 58 72 </table>
-		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="vampiric_attack" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="vampiric_attack">
 				<add stat="absorbDam" val="#absorbDam" order="0x40" />
 			</effect>
 		</for>
@@ -779,16 +847,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
 		<table name="#magicLvl"> 20 35 48 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="casting_time_down" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="casting_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -799,16 +869,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
 		<table name="#magicLvl"> 25 44 52 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ma_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ma_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -819,16 +891,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#magicLvl"> 44 52 </table>
-		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="attack_time_down" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="attack_time_down">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -839,16 +913,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="hit_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="hit_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -859,16 +935,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<table name="#magicLvl"> 25 44 52 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="critical_prob_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_prob_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_up">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -879,16 +957,18 @@
 		<!-- Freya retail confirmed -->
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
-		<table name="#abnormalLvl"> 1 2 3 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="critical_dmg_up">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -898,11 +978,14 @@
 	<skill id="4361" levels="2" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
 		<!-- Fighter -->
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#vuln"> 0 50 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ssq_town_curse" />
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
@@ -910,7 +993,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="Debuff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ssq_town_curse">
+			<effect name="Debuff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ssq_town_curse">
 				<sub order="0x40" stat="accCombat" val="12" />
 				<add order="0x40" stat="sleepVuln" val="#vuln" />
 				<add order="0x40" stat="rootVuln" val="#vuln" />
@@ -921,11 +1004,14 @@
 	<skill id="4362" levels="2" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
 		<!-- Mage -->
-		<table name="#abnormalLvl"> 1 2 </table>
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ssq_town_curse" />
 		<set name="power" val="100" />
 		<table name="#vuln"> 0 50 </table>
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -933,7 +1019,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="Debuff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ssq_town_curse">
+			<effect name="Debuff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ssq_town_curse">
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 				<add order="0x40" stat="sleepVuln" val="#vuln" />
 				<add order="0x40" stat="rootVuln" val="#vuln" />
@@ -943,9 +1029,12 @@
 	</skill>
 	<skill id="4363" levels="1" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="hit_down" />
 		<set name="power" val="100" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="DEBUFF" />
+		<set name="pvp" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -960,9 +1049,11 @@
 	<skill id="4364" levels="2" name="Blessing of Revelations">
 		<!-- Freya retail confirmed -->
 		<!-- Fighter -->
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#additionalVulns"> 0 25 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ssq_town_blessing" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -970,7 +1061,7 @@
 		<set name="effectRange" val="900" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ssq_town_blessing">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ssq_town_blessing">
 				<mul order="0x30" stat="weightLimit" val="1.25" />
 				<sub order="0x40" stat="poisonVuln" val="25" />
 				<sub order="0x40" stat="bleedVuln" val="25" />
@@ -983,9 +1074,11 @@
 	<skill id="4365" levels="2" name="Blessing of Revelations">
 		<!-- Mage -->
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvl"> 1 2 </table>
 		<table name="#additionalVulns"> 0 25 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="ssq_town_blessing" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -993,7 +1086,7 @@
 		<set name="effectRange" val="900" />
 		<set name="canBeDispeled" val="false" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvl" abnormalType="ssq_town_blessing">
+			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ssq_town_blessing">
 				<sub order="0x40" stat="cancel" val="25" />
 				<sub order="0x40" stat="rootVuln" val="25" />
 				<sub order="0x40" stat="derangementVuln" val="25" />
@@ -1004,7 +1097,9 @@
 	</skill>
 	<skill id="4366" levels="1" name="Blessing of Prophecy">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="decrease_weight_penalty" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1021,7 +1116,9 @@
 	</skill>
 	<skill id="4367" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1031,7 +1128,9 @@
 	</skill>
 	<skill id="4368" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1043,7 +1142,9 @@
 	</skill>
 	<skill id="4369" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1055,7 +1156,9 @@
 	</skill>
 	<skill id="4370" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1067,7 +1170,9 @@
 	</skill>
 	<skill id="4371" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1079,7 +1184,9 @@
 	</skill>
 	<skill id="4372" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1091,7 +1198,9 @@
 	</skill>
 	<skill id="4373" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1103,7 +1212,9 @@
 	</skill>
 	<skill id="4374" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1115,7 +1226,9 @@
 	</skill>
 	<skill id="4375" levels="1" name="Clan Hall Manager Buff">
 		<!-- Freya retail confirmed -->
-		<set name="target" val="TARGET_ONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="public_slot" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1129,7 +1242,7 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="3" /> <!-- pDef +200% -->
 		</for>
@@ -1140,11 +1253,12 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1154,8 +1268,10 @@
 	<skill id="4378" levels="12" name="Self Damage Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="dmg_shield" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="8000" />
 		<set name="hitTime" val="1800" />
 		<set name="skillType" val="BUFF" />
@@ -1171,7 +1287,7 @@
 	<skill id="4379" levels="5" name="Resist Pole Arm">
 		<!-- Freya retail confirmed -->
 		<table name="#poleVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="poleWpnVuln" val="#poleVuln" />
@@ -1185,8 +1301,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="COMBATPOINTHEAL" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="5000" />
 		</for>
@@ -1195,37 +1310,43 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" /> <!-- Just Boadcast -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4382" levels="12" name="Curse of Lake Ghost">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="big_head" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<for>
-			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" effectType="DEBUFF" />
+			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="1" abnormalType="big_head" effectPower="80" />
 		</for>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4383" levels="1" name="NPC Hate Stone">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="turn_stone" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="100" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 		<set name="skillType" val="AGGDEBUFF" />
-		<set name="target" val="TARGET_AURA" />
+		<set name="pvp" val="true" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Petrification" abnormalTime="10" val="0" abnormalLvl="2" abnormalType="turn_stone" />
 			<effect name="TargetMe" val="0" />
@@ -1233,8 +1354,10 @@
 	</skill>
 	<skill id="4384" levels="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="pd_down" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -1246,8 +1369,10 @@
 	</skill>
 	<skill id="4385" levels="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalType" val="attack_time_up" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -1259,8 +1384,10 @@
 	</skill>
 	<skill id="4386" levels="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="10" />
+		<set name="abnormalType" val="poison" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -1272,8 +1399,10 @@
 	</skill>
 	<skill id="4387" levels="1" name="Scapegoat's Grace">
 		<!-- Freya retail confirmed -->
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalType" val="heal_effect_down" />
 		<set name="magicLvl" val="80" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="600" />
@@ -1286,7 +1415,7 @@
 	<skill id="4388" levels="5" name="Resist Paralysis">
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="#power" />
@@ -1295,7 +1424,7 @@
 	<skill id="4389" levels="5" name="Resist Mental Derangement">
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="#power" />
@@ -1305,7 +1434,7 @@
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
 			<set order="0x08" stat="debuffImmunity" val="1" />
@@ -1314,8 +1443,10 @@
 	<skill id="4391" levels="2" name="Wind Walk">
 		<!-- Freya retail confirmed -->
 		<table name="#runSpd"> 20 33 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="speed_up" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1323,7 +1454,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="speed_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -1331,8 +1462,10 @@
 	<skill id="4392" levels="3" name="Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#rate"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 2 3 4 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="pd_up" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="100" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1340,7 +1473,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="pd_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="#rate" />
 			</effect>
 		</for>
@@ -1349,15 +1482,17 @@
 		<!-- Freya retail confirmed -->
 		<!-- by DrLecter -->
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<table name="#abnormalLvl"> 2 3 4 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="pa_up" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="pa_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -1365,15 +1500,17 @@
 	<skill id="4394" levels="6" name="Blessed Body">
 		<!-- Freya retail confirmed -->
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_hp_up" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_hp_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -1381,31 +1518,35 @@
 	<skill id="4395" levels="6" name="Blessed Soul">
 		<!-- Freya retail confirmed -->
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="max_mp_up" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="max_mp_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="4396" levels="2" name="Magic Barrier">
 		<!-- Freya retail confirmed -->
-		<table name="#abnormalLvl"> 3 4 </table>
 		<table name="#mDef"> 1.23 1.3 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="md_up" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="md_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
@@ -1421,15 +1562,17 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
 		<table name="#rEvas"> 2 4 </table>
-		<table name="#abnormalLvl"> 2 3 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="berserker" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="berserker">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="berserker">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
@@ -1444,15 +1587,17 @@
 	<skill id="4398" levels="6" name="Bless Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 6 7 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="shield_prob_up" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="shield_prob_up">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="shield_prob_up">
 				<mul order="0x30" stat="rShld" val="#rShld" />
 			</effect>
 		</for>
@@ -1461,15 +1606,17 @@
 		<!-- Freya retail confirmed -->
 		<!-- by DrLecter -->
 		<table name="#absorbDam"> 6 7 8 9 </table>
-		<table name="#abnormalLvl"> 2 3 4 5 </table>
-		<set name="target" val="TARGET_ONE" />
+		<table name="#abnormalLvls"> 2 3 4 5 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalType" val="vampiric_attack" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvl" abnormalType="vampiric_attack">
+			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="vampiric_attack">
 				<add stat="absorbDam" val="#absorbDam" order="0x40" />
 			</effect>
 		</for>

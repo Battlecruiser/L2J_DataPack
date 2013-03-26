@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
@@ -21,6 +25,7 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -49,6 +54,10 @@ public class Mdam implements ISkillHandler
 			return;
 		}
 		
+		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		boolean sps = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = skill.useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if (activeChar.isPlayer() && target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -64,35 +73,19 @@ public class Mdam implements ISkillHandler
 			final byte shld = Formulas.calcShldUse(activeChar, target, skill);
 			final byte reflect = Formulas.calcSkillReflect(target, skill);
 			
-			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill), mcrit);
+			int damage = skill.isStaticDamage() ? (int) skill.getPower() : (int) Formulas.calcMagicDam(activeChar, target, skill, shld, sps, bss, mcrit);
 			
-			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff() != 0)
+			// Curse of Divinity Formula (each buff increase +30%)
+			if (!skill.isStaticDamage() && skill.getDependOnTargetBuff())
 			{
-				damage += (int) (damage * target.getBuffCount() * skill.getDependOnTargetBuff());
+				damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
 			}
 			
-			if (!skill.isStaticDamage() && skill.getMaxSoulConsumeCount() > 0 && activeChar.isPlayer())
+			if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 			{
-				switch (activeChar.getActingPlayer().getSouls())
-				{
-					case 0:
-						break;
-					case 1:
-						damage *= 1.10;
-						break;
-					case 2:
-						damage *= 1.12;
-						break;
-					case 3:
-						damage *= 1.15;
-						break;
-					case 4:
-						damage *= 1.18;
-						break;
-					default:
-						damage *= 1.20;
-						break;
-				}
+				// Souls Formula (each soul increase +4%)
+				int chargedSouls = (activeChar.getActingPlayer().getSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getSouls() : skill.getMaxSoulConsumeCount();
+				damage *= 1 + (chargedSouls * 0.04);
 			}
 			
 			// Possibility of a lethal strike
@@ -134,9 +127,9 @@ public class Mdam implements ISkillHandler
 					{
 						// activate attacked effects, if any
 						target.stopSkillEffects(skill.getId());
-						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, false, activeChar.isSpiritshotCharged(skill), activeChar.isBlessedSpiritshotCharged(skill)))
+						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							skill.getEffects(activeChar, target, new Env(shld, activeChar.isSpiritshotCharged(skill), false, activeChar.isBlessedSpiritshotCharged(skill)));
+							skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
 						}
 						else
 						{
@@ -149,7 +142,7 @@ public class Mdam implements ISkillHandler
 				}
 				
 				// Logging damage
-				if (Config.LOG_GAME_DAMAGE && activeChar.isPlayable() && damage > Config.LOG_GAME_DAMAGE_THRESHOLD)
+				if (Config.LOG_GAME_DAMAGE && activeChar.isPlayable() && (damage > Config.LOG_GAME_DAMAGE_THRESHOLD))
 				{
 					LogRecord record = new LogRecord(Level.INFO, "");
 					record.setParameters(new Object[]
@@ -171,7 +164,7 @@ public class Mdam implements ISkillHandler
 		if (skill.hasSelfEffects())
 		{
 			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if (effect != null && effect.isSelfEffect())
+			if ((effect != null) && effect.isSelfEffect())
 			{
 				// Replace old effect with new one.
 				effect.exit();
@@ -179,12 +172,12 @@ public class Mdam implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		
 		if (skill.isSuicideAttack())
 		{
 			activeChar.doDie(activeChar);
 		}
-		
-		activeChar.spsUncharge(skill);
 	}
 	
 	@Override

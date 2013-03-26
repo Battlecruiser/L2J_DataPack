@@ -1,24 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package hellbound.TullyWorkshop;
 
-import gnu.trove.set.hash.TIntHashSet;
-
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 
 import javolution.util.FastList;
@@ -68,7 +72,8 @@ public class TullyWorkshop extends Quest
 	private static final int TIMETWISTER_GOLEM = 22392;
 	private static final int[] SIN_WARDENS =
 	{
-		22423, 22431
+		22423,
+		22431
 	};
 	private static final int SERVANT_FIRST = 22405;
 	private static final int SERVANT_LAST = 22410;
@@ -79,13 +84,18 @@ public class TullyWorkshop extends Quest
 	// Items
 	private static final int[] REWARDS =
 	{
-		10427, 10428, 10429, 10430, 10431
+		10427,
+		10428,
+		10429,
+		10430,
+		10431
 	};
 	
 	// 7 for 6th floor and 10 for 8th floor
 	private static final int[] DEATH_COUNTS =
 	{
-		7, 10
+		7,
+		10
 	};
 	
 	private static final byte STATE_OPEN = 0;
@@ -95,7 +105,10 @@ public class TullyWorkshop extends Quest
 	// Master Zelos - 22377, Zelos' Minions - 22378, 22379, Tully's Toy - 22383
 	private static final int[] TELEPORTING_MONSTERS =
 	{
-		22377, 22378, 22379, 22383
+		22377,
+		22378,
+		22379,
+		22383
 	};
 	
 	private static final Map<Integer, int[]> TULLY_DOORLIST = new FastMap<>();
@@ -113,9 +126,10 @@ public class TullyWorkshop extends Quest
 	
 	// NPC's, spawned after Tully's death are stored here
 	protected static List<L2Npc> postMortemSpawn = new FastList<>();
-	protected static TIntHashSet brokenContraptions = new TIntHashSet();
-	protected static TIntHashSet rewardedContraptions = new TIntHashSet();
-	protected static TIntHashSet talkedContraptions = new TIntHashSet();
+	// TODO: Zoey76: Not thread-safe, probably will lead to problems.
+	protected static Set<Integer> brokenContraptions = new HashSet<>();
+	protected static Set<Integer> rewardedContraptions = new HashSet<>();
+	protected static Set<Integer> talkedContraptions = new HashSet<>();
 	
 	private final List<L2MonsterInstance> spawnedFollowers = new FastList<>();
 	private final List<L2MonsterInstance> spawnedFollowerMinions = new FastList<>();
@@ -129,60 +143,131 @@ public class TullyWorkshop extends Quest
 	{
 		// Ingenious Contraption
 		{
-			32371, -12524, 273932, -9014, 49151, 0
+			32371,
+			-12524,
+			273932,
+			-9014,
+			49151,
+			0
 		},
 		// Ingenious Contraption
 		{
-			32371, -10831, 273890, -9040, 81895, 0
+			32371,
+			-10831,
+			273890,
+			-9040,
+			81895,
+			0
 		},
 		// Ingenious Contraption
 		{
-			32371, -10817, 273986, -9040, -16452, 0
+			32371,
+			-10817,
+			273986,
+			-9040,
+			-16452,
+			0
 		},
 		// Ingenious Contraption
 		{
-			32371, -13773, 275119, -9040, 8428, 49151, 0
+			32371,
+			-13773,
+			275119,
+			-9040,
+			8428,
+			49151,
+			0
 		},
 		// Ingenious Contraption
 		{
-			32371, -11547, 271772, -9040, -19124, 0
+			32371,
+			-11547,
+			271772,
+			-9040,
+			-19124,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
 			
-			22392, -10832, 273808, -9040, 0, 0
+			22392,
+			-10832,
+			273808,
+			-9040,
+			0,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
-			22392, -10816, 274096, -9040, 14964, 0
+			22392,
+			-10816,
+			274096,
+			-9040,
+			14964,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
-			22392, -13824, 275072, -9040, -24644, 0
+			22392,
+			-13824,
+			275072,
+			-9040,
+			-24644,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
-			22392, -11504, 271952, -9040, 9328, 0
+			22392,
+			-11504,
+			271952,
+			-9040,
+			9328,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
-			22392, -11680, 275353, -9040, 0, 0
+			22392,
+			-11680,
+			275353,
+			-9040,
+			0,
+			0
 		},
 		// Failed Experimental Timetwister Golem
 		{
-			22392, -12388, 271668, -9040, 0, 0
+			22392,
+			-12388,
+			271668,
+			-9040,
+			0,
+			0
 		},
 		// Old Dwarven Ghost
 		{
-			32370, -11984, 272928, -9040, 23644, 900000
+			32370,
+			-11984,
+			272928,
+			-9040,
+			23644,
+			900000
 		},
 		// Old Dwarven Ghost
 		{
-			32370, -14643, 274588, -9040, 49152, 0
+			32370,
+			-14643,
+			274588,
+			-9040,
+			49152,
+			0
 		},
 		// Spooky Tombstone
 		{
-			32344, -14756, 274788, -9040, -13868, 0
+			32344,
+			-14756,
+			274788,
+			-9040,
+			-13868,
+			0
 		}
 	};
 	
@@ -190,109 +275,249 @@ public class TullyWorkshop extends Quest
 	private static final int[][] SPAWNLIST_7TH_FLOOR =
 	{
 		{
-			25602, -12528, 279488, -11622, 16384
+			25602,
+			-12528,
+			279488,
+			-11622,
+			16384
 		},
 		{
-			25600, -12736, 279681, -11622, 0
+			25600,
+			-12736,
+			279681,
+			-11622,
+			0
 		},
 		{
-			25601, -12324, 279681, -11622, 32768
+			25601,
+			-12324,
+			279681,
+			-11622,
+			32768
 		},
 		{
-			25599, -12281, 281497, -11935, 49151
+			25599,
+			-12281,
+			281497,
+			-11935,
+			49151
 		},
 		{
-			25599, -11903, 281488, -11934, 49151
+			25599,
+			-11903,
+			281488,
+			-11934,
+			49151
 		},
 		{
-			25599, -11966, 277935, -11936, 16384
+			25599,
+			-11966,
+			277935,
+			-11936,
+			16384
 		},
 		{
-			25599, -12334, 277935, -11936, 16384
+			25599,
+			-12334,
+			277935,
+			-11936,
+			16384
 		},
 		{
-			25599, -12739, 277935, -11936, 16384
+			25599,
+			-12739,
+			277935,
+			-11936,
+			16384
 		},
 		{
-			25599, -13063, 277934, -11936, 16384
+			25599,
+			-13063,
+			277934,
+			-11936,
+			16384
 		},
 		{
-			25599, -13077, 281506, -11935, 49151
+			25599,
+			-13077,
+			281506,
+			-11935,
+			49151
 		},
 		{
-			25599, -12738, 281503, -11935, 49151
+			25599,
+			-12738,
+			281503,
+			-11935,
+			49151
 		},
 		{
-			25597, -11599, 281323, -11933, -23808
+			25597,
+			-11599,
+			281323,
+			-11933,
+			-23808
 		},
 		{
-			25597, -11381, 281114, -11934, -23808
+			25597,
+			-11381,
+			281114,
+			-11934,
+			-23808
 		},
 		{
-			25597, -11089, 280819, -11934, -23808
+			25597,
+			-11089,
+			280819,
+			-11934,
+			-23808
 		},
 		{
-			25597, -10818, 280556, -11934, -23808
+			25597,
+			-10818,
+			280556,
+			-11934,
+			-23808
 		},
 		{
-			25597, -10903, 278798, -11934, 25680
+			25597,
+			-10903,
+			278798,
+			-11934,
+			25680
 		},
 		{
-			25597, -11134, 278558, -11934, 25680
+			25597,
+			-11134,
+			278558,
+			-11934,
+			25680
 		},
 		{
-			25597, -11413, 278265, -11934, 25680
+			25597,
+			-11413,
+			278265,
+			-11934,
+			25680
 		},
 		{
-			25597, -11588, 278072, -11935, 25680
+			25597,
+			-11588,
+			278072,
+			-11935,
+			25680
 		},
 		{
-			25597, -13357, 278058, -11935, 9068
+			25597,
+			-13357,
+			278058,
+			-11935,
+			9068
 		},
 		{
-			25597, -13617, 278289, -11935, 9068
+			25597,
+			-13617,
+			278289,
+			-11935,
+			9068
 		},
 		{
-			25597, -13920, 278567, -11935, 9068
+			25597,
+			-13920,
+			278567,
+			-11935,
+			9068
 		},
 		{
-			25597, -14131, 278778, -11936, 9068
+			25597,
+			-14131,
+			278778,
+			-11936,
+			9068
 		},
 		{
-			25597, -14184, 280545, -11936, -7548
+			25597,
+			-14184,
+			280545,
+			-11936,
+			-7548
 		},
 		{
-			25597, -13946, 280792, -11936, -7548
+			25597,
+			-13946,
+			280792,
+			-11936,
+			-7548
 		},
 		{
-			25597, -13626, 281105, -11936, -7548
+			25597,
+			-13626,
+			281105,
+			-11936,
+			-7548
 		},
 		{
-			25597, -13386, 281360, -11935, -7548
+			25597,
+			-13386,
+			281360,
+			-11935,
+			-7548
 		},
 		{
-			25598, -10697, 280244, -11936, 32768
+			25598,
+			-10697,
+			280244,
+			-11936,
+			32768
 		},
 		{
-			25598, -10702, 279926, -11936, 32768
+			25598,
+			-10702,
+			279926,
+			-11936,
+			32768
 		},
 		{
-			25598, -10722, 279470, -11936, 32768
+			25598,
+			-10722,
+			279470,
+			-11936,
+			32768
 		},
 		{
-			25598, -10731, 279126, -11936, 32768
+			25598,
+			-10731,
+			279126,
+			-11936,
+			32768
 		},
 		{
-			25598, -14284, 279140, -11936, 0
+			25598,
+			-14284,
+			279140,
+			-11936,
+			0
 		},
 		{
-			25598, -14286, 279464, -11936, 0
+			25598,
+			-14286,
+			279464,
+			-11936,
+			0
 		},
 		{
-			25598, -14290, 279909, -11935, 0
+			25598,
+			-14290,
+			279909,
+			-11935,
+			0
 		},
 		{
-			25598, -14281, 280229, -11936, 0
+			25598,
+			-14281,
+			280229,
+			-11936,
+			0
 		}
 	};
 	
@@ -301,11 +526,17 @@ public class TullyWorkshop extends Quest
 	{
 		// 6th floor
 		{
-			200012, 200013, 200014, 200015
+			200012,
+			200013,
+			200014,
+			200015
 		},
 		// 8th floor
 		{
-			200016, 200017, 200018, 200019
+			200016,
+			200017,
+			200018,
+			200019
 		}
 	};
 	
@@ -313,35 +544,59 @@ public class TullyWorkshop extends Quest
 	{
 		// 6th floor room 1
 		{
-			-13312, 279172, -13599, -20300
+			-13312,
+			279172,
+			-13599,
+			-20300
 		},
 		// 6th floor room 2
 		{
-			-11696, 280208, -13599, 13244
+			-11696,
+			280208,
+			-13599,
+			13244
 		},
 		// 6th floor room 3
 		{
-			-13008, 280496, -13599, 27480
+			-13008,
+			280496,
+			-13599,
+			27480
 		},
 		// 6th floor room 4
 		{
-			-11984, 278880, -13599, -4472
+			-11984,
+			278880,
+			-13599,
+			-4472
 		},
 		// 8th floor room 1
 		{
-			-13312, 279172, -10492, -20300
+			-13312,
+			279172,
+			-10492,
+			-20300
 		},
 		// 8th floor room 2
 		{
-			-11696, 280208, -10492, 13244
+			-11696,
+			280208,
+			-10492,
+			13244
 		},
 		// 8th floor room 3
 		{
-			-13008, 280496, -10492, 27480
+			-13008,
+			280496,
+			-10492,
+			27480
 		},
 		// 8th floor room 4
 		{
-			-11984, 278880, -10492, -4472
+			-11984,
+			278880,
+			-10492,
+			-4472
 		}
 	};
 	
@@ -349,35 +604,59 @@ public class TullyWorkshop extends Quest
 	{
 		// 6th floor room 1
 		{
-			-13214, 278493, -13601, 0
+			-13214,
+			278493,
+			-13601,
+			0
 		},
 		// 6th floor room 2
 		{
-			-11727, 280711, -13601, 0
+			-11727,
+			280711,
+			-13601,
+			0
 		},
 		// 6th floor room 3
 		{
-			-13562, 280175, -13601, 0
+			-13562,
+			280175,
+			-13601,
+			0
 		},
 		// 6th floor room 4
 		{
-			-11514, 278592, -13601, 0
+			-11514,
+			278592,
+			-13601,
+			0
 		},
 		// 8th floor room 1
 		{
-			-13370, 278459, -10497, 0
+			-13370,
+			278459,
+			-10497,
+			0
 		},
 		// 8th floor room 2
 		{
-			-11984, 280894, -10497, 0
+			-11984,
+			280894,
+			-10497,
+			0
 		},
 		// 8th floor room 3
 		{
-			-14050, 280312, -10497, 0
+			-14050,
+			280312,
+			-10497,
+			0
 		},
 		// 8th floor room 4
 		{
-			-11559, 278725, -10495, 0
+			-11559,
+			278725,
+			-10495,
+			0
 		}
 	};
 	
@@ -385,15 +664,21 @@ public class TullyWorkshop extends Quest
 	{
 		// to 6th floor
 		{
-			-12176, 279696, -13596
+			-12176,
+			279696,
+			-13596
 		},
 		// to 8th floor
 		{
-			-12176, 279696, -10492
+			-12176,
+			279696,
+			-10492
 		},
 		// to roof
 		{
-			21935, 243923, 11088
+			21935,
+			243923,
+			11088
 		}
 	};
 	
@@ -401,7 +686,8 @@ public class TullyWorkshop extends Quest
 	{
 		TULLY_DOORLIST.put(18445, new int[]
 		{
-			19260001, 19260002
+			19260001,
+			19260002
 		});
 		TULLY_DOORLIST.put(18446, new int[]
 		{
@@ -409,15 +695,19 @@ public class TullyWorkshop extends Quest
 		});
 		TULLY_DOORLIST.put(18447, new int[]
 		{
-			19260003, 19260004, 19260005
+			19260003,
+			19260004,
+			19260005
 		});
 		TULLY_DOORLIST.put(18448, new int[]
 		{
-			19260006, 19260007
+			19260006,
+			19260007
 		});
 		TULLY_DOORLIST.put(18449, new int[]
 		{
-			19260007, 19260008
+			19260007,
+			19260008
 		});
 		TULLY_DOORLIST.put(18450, new int[]
 		{
@@ -425,19 +715,24 @@ public class TullyWorkshop extends Quest
 		});
 		TULLY_DOORLIST.put(18451, new int[]
 		{
-			19260011, 19260012
+			19260011,
+			19260012
 		});
 		TULLY_DOORLIST.put(18452, new int[]
 		{
-			19260009, 19260011
+			19260009,
+			19260011
 		});
 		TULLY_DOORLIST.put(18453, new int[]
 		{
-			19260014, 19260023, 19260013
+			19260014,
+			19260023,
+			19260013
 		});
 		TULLY_DOORLIST.put(18454, new int[]
 		{
-			19260015, 19260023
+			19260015,
+			19260023
 		});
 		TULLY_DOORLIST.put(18455, new int[]
 		{
@@ -445,11 +740,13 @@ public class TullyWorkshop extends Quest
 		});
 		TULLY_DOORLIST.put(18456, new int[]
 		{
-			19260017, 19260018
+			19260017,
+			19260018
 		});
 		TULLY_DOORLIST.put(18457, new int[]
 		{
-			19260021, 19260020
+			19260021,
+			19260020
 		});
 		TULLY_DOORLIST.put(18458, new int[]
 		{
@@ -476,37 +773,53 @@ public class TullyWorkshop extends Quest
 		TELE_COORDS.put(32753, new int[][]
 		{
 			{
-				-12700, 273340, -13600
+				-12700,
+				273340,
+				-13600
 			},
 			{
-				0, 0, 0
+				0,
+				0,
+				0
 			}
 		});
 		TELE_COORDS.put(32754, new int[][]
 		{
 			{
-				-13246, 275740, -11936
+				-13246,
+				275740,
+				-11936
 			},
 			{
-				-12894, 273900, -15296
+				-12894,
+				273900,
+				-15296
 			}
 		});
 		TELE_COORDS.put(32755, new int[][]
 		{
 			{
-				-12798, 273458, -10496
+				-12798,
+				273458,
+				-10496
 			},
 			{
-				-12718, 273490, -13600
+				-12718,
+				273490,
+				-13600
 			}
 		});
 		TELE_COORDS.put(32756, new int[][]
 		{
 			{
-				-13500, 275912, -9032
+				-13500,
+				275912,
+				-9032
 			},
 			{
-				-13246, 275740, -11936
+				-13246,
+				275740,
+				-11936
 			}
 		});
 	}
@@ -628,7 +941,7 @@ public class TullyWorkshop extends Quest
 		{
 			if (postMortemSpawn.indexOf(npc) == 11)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY));
 				npc.deleteMe();
 				return null;
 			}
@@ -699,7 +1012,11 @@ public class TullyWorkshop extends Quest
 			
 			boolean[] haveItems =
 			{
-				false, false, false, false, false
+				false,
+				false,
+				false,
+				false,
+				false
 			};
 			// For teleportation party should have all 5 medals
 			for (L2PcInstance pl : party.getMembers())
@@ -798,7 +1115,7 @@ public class TullyWorkshop extends Quest
 		
 		if (event.equalsIgnoreCase("repair_device"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.DE_ACTIVATE_THE_ALARM));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.DE_ACTIVATE_THE_ALARM));
 			brokenContraptions.remove(npc.getObjectId());
 		}
 		else if (event.equalsIgnoreCase("despawn_servant") && !npc.isDead())
@@ -1159,7 +1476,7 @@ public class TullyWorkshop extends Quest
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, L2Skill skill)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
 		final int npcId = npc.getNpcId();
 		if (Arrays.binarySearch(TELEPORTING_MONSTERS, npcId) >= 0)
@@ -1213,11 +1530,11 @@ public class TullyWorkshop extends Quest
 				victim.setCurrentHp(victim.getCurrentHp() + (victim.getMaxHp() * 0.03)); // FIXME: not retail, it should be done after spell is finished, but it cannot be tracked now
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet, skill);
+		return super.onAttack(npc, attacker, damage, isSummon, skill);
 	}
 	
 	@Override
-	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isPet)
+	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		if ((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH))
@@ -1241,11 +1558,11 @@ public class TullyWorkshop extends Quest
 				}
 			}
 		}
-		return super.onFactionCall(npc, caller, attacker, isPet);
+		return super.onFactionCall(npc, caller, attacker, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		int npcId = npc.getNpcId();
 		
@@ -1262,7 +1579,7 @@ public class TullyWorkshop extends Quest
 			
 			countdownTime = 600000;
 			_countdown = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CountdownTask(), 60000, 10000);
-			NpcSay ns = new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW);
+			NpcSay ns = new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW);
 			ns.addStringParameter(Integer.toString((countdownTime / 60000)));
 			postMortemSpawn.get(0).broadcastPacket(ns);
 		}
@@ -1270,25 +1587,25 @@ public class TullyWorkshop extends Quest
 		{
 			if (getRandom(1000) >= 700)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
 				if (countdownTime > 180000)
 				{
 					countdownTime = Math.max(countdownTime - 180000, 60000);
 					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getNpcId() == INGENIOUS_CONTRAPTION))
 					{
-						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED));
+						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED));
 					}
 				}
 			}
 			else
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL));
 				if ((countdownTime > 0) && (countdownTime <= 420000))
 				{
 					countdownTime += 180000;
 					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getNpcId() == INGENIOUS_CONTRAPTION))
 					{
-						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED));
+						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED));
 					}
 				}
 			}
@@ -1370,11 +1687,11 @@ public class TullyWorkshop extends Quest
 			
 			if (((npc.getNpcId() - 22404) == 3) || ((npc.getNpcId() - 22404) == 6))
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION));
 			}
 			else
 			{
-				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE);
+				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE);
 				ns.addStringParameter(killer.getName());
 				npc.broadcastPacket(ns);
 			}
@@ -1400,7 +1717,7 @@ public class TullyWorkshop extends Quest
 		{
 			addSpawn(DWARVEN_GHOST, npc.getX() + 30, npc.getY() - 30, npc.getZ(), 0, false, 900000, false);
 		}
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
@@ -1451,7 +1768,7 @@ public class TullyWorkshop extends Quest
 		}
 		else if ((npcId >= SERVANT_FIRST) && (npcId <= SERVANT_LAST) && (skillId == 5392))
 		{
-			final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE);
+			final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE);
 			ns.addStringParameter(player.getName());
 			npc.broadcastPacket(ns);
 			
@@ -1466,7 +1783,8 @@ public class TullyWorkshop extends Quest
 	{
 		int[] ret =
 		{
-			-1, -1
+			-1,
+			-1
 		};
 		if (npc != null)
 		{
@@ -1581,7 +1899,8 @@ public class TullyWorkshop extends Quest
 		DoorTable.getInstance().getDoor(20250004).openMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
-			20250006, 20250007
+			20250006,
+			20250007
 		}, STATE_OPEN), 2000);
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
@@ -1593,7 +1912,8 @@ public class TullyWorkshop extends Quest
 		}, STATE_CLOSE), 6000);
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
-			20250009, 20250008
+			20250009,
+			20250008
 		}, STATE_OPEN), 11000);
 	}
 	
@@ -1603,11 +1923,15 @@ public class TullyWorkshop extends Quest
 		DoorTable.getInstance().getDoor(20250008).closeMe();
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
-			20250777, 20250778
+			20250777,
+			20250778
 		}, STATE_OPEN), 1000);
 		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
 		{
-			20250005, 20250004, 20250006, 20250007
+			20250005,
+			20250004,
+			20250006,
+			20250007
 		}, STATE_CLOSE), 4000);
 	}
 	
@@ -1628,7 +1952,7 @@ public class TullyWorkshop extends Quest
 				{
 					if ((npc != null) && (npc.getNpcId() == INGENIOUS_CONTRAPTION))
 					{
-						NpcSay ns = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.S1_MINUTES_REMAINING);
+						NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_MINUTES_REMAINING);
 						ns.addStringParameter(Integer.toString((countdownTime / 60000)));
 						npc.broadcastPacket(ns);
 					}
@@ -1664,7 +1988,7 @@ public class TullyWorkshop extends Quest
 			{
 				if ((npc != null) && (npc.getNpcId() == INGENIOUS_CONTRAPTION))
 				{
-					final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.SHOUT, npc.getNpcId(), NpcStringId.S1_SECONDS_REMAINING);
+					final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_SECONDS_REMAINING);
 					ns.addStringParameter(Integer.toString((countdownTime / 1000)));
 					npc.broadcastPacket(ns);
 				}
