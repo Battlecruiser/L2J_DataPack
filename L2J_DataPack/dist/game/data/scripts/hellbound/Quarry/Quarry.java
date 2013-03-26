@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package hellbound.Quarry;
 
@@ -42,22 +46,28 @@ public class Quarry extends Quest
 	protected static final int[][] DROPLIST =
 	{
 		{
-			9628, 261
+			9628,
+			261
 		}, // Leonard
 		{
-			9630, 175
+			9630,
+			175
 		}, // Orichalcum
 		{
-			9629, 145
+			9629,
+			145
 		}, // Adamantine
 		{
-			1876, 6667
+			1876,
+			6667
 		}, // Mithril ore
 		{
-			1877, 1333
+			1877,
+			1333
 		}, // Adamantine nugget
 		{
-			1874, 2222
+			1874,
+			2222
 		}
 	// Oriharukon ore
 	};
@@ -80,7 +90,7 @@ public class Quarry extends Quest
 				}
 			}
 			
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
 			npc.doDie(npc);
 			return null;
 		}
@@ -129,10 +139,10 @@ public class Quarry extends Quest
 	
 	// Let's manage kill points in Engine
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		npc.setAutoAttackable(false);
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
@@ -150,7 +160,7 @@ public class Quarry extends Quest
 						ThreadPoolManager.getInstance().scheduleGeneral(new Decay(npc), 1000);
 						try
 						{
-							npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.ALL, npc.getNpcId(), NpcStringId.THANK_YOU_FOR_THE_RESCUE_ITS_A_SMALL_GIFT));
+							npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.THANK_YOU_FOR_THE_RESCUE_ITS_A_SMALL_GIFT));
 						}
 						catch (Exception e)
 						{

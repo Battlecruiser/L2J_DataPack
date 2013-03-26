@@ -1,22 +1,27 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.itemhandlers;
 
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IItemHandler;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -62,7 +67,7 @@ public class SoulShots implements IItemHandler
 			return false;
 		}
 		
-		boolean gradeCheck = item.isEtcItem() && item.getEtcItem().getDefaultAction() == L2ActionType.soulshot && weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus();
+		boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == L2ActionType.soulshot) && (weaponInst.getItem().getItemGradeSPlus() == item.getItem().getItemGradeSPlus());
 		
 		if (!gradeCheck)
 		{
@@ -77,14 +82,14 @@ public class SoulShots implements IItemHandler
 		try
 		{
 			// Check if Soul shot is already active
-			if (weaponInst.getChargedSoulshot() != L2ItemInstance.CHARGED_NONE)
+			if (activeChar.isChargedShot(ShotType.SOULSHOTS))
 			{
 				return false;
 			}
 			
 			// Consume Soul shots if player has enough of them
 			int SSCount = weaponItem.getSoulShotCount();
-			if (weaponItem.getReducedSoulShot() > 0 && Rnd.get(100) < weaponItem.getReducedSoulShotChance())
+			if ((weaponItem.getReducedSoulShot() > 0) && (Rnd.get(100) < weaponItem.getReducedSoulShotChance()))
 			{
 				SSCount = weaponItem.getReducedSoulShot();
 			}
@@ -98,7 +103,7 @@ public class SoulShots implements IItemHandler
 				return false;
 			}
 			// Charge soul shot
-			weaponInst.setChargedSoulshot(L2ItemInstance.CHARGED_SOULSHOT);
+			weaponInst.setChargedShot(ShotType.SOULSHOTS, true);
 		}
 		finally
 		{

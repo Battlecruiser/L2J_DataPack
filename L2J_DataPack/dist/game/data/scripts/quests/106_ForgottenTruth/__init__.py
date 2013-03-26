@@ -122,7 +122,7 @@ class Quest (JQuest) :
      if self.getRandom(100) < 20 :
        if st.getQuestItemsCount(ANCIENT_SCROLL) == 0 :
          st.giveItems(ANCIENT_SCROLL,1)
-         st.playSound("Itemsound.quest_itemget")
+         st.playSound("ItemSound.quest_itemget")
        elif st.getQuestItemsCount(ANCIENT_CLAY_TABLET) == 0 :
          st.giveItems(ANCIENT_CLAY_TABLET,1)
          st.playSound("ItemSound.quest_middle")

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual;
 
@@ -25,35 +29,21 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
 /**
- * DrChaos AI
+ * DrChaos' AI.
  * @author Kerberos
  */
 public class DrChaos extends Quest
 {
-	
-	private static final int DOCTER_CHAOS = 32033;
+	private static final int DR_CHAOS = 32033;
 	private static final int STRANGE_MACHINE = 32032;
 	private static final int CHAOS_GOLEM = 25703;
 	private static boolean _IsGolemSpawned;
 	
-	public DrChaos(int questId, String name, String descr)
+	private DrChaos(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addFirstTalkId(32033);
+		addFirstTalkId(DR_CHAOS);
 		_IsGolemSpawned = false;
-	}
-	
-	public L2Npc findTemplate(int npcId)
-	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-		{
-			if (spawn != null && spawn.getNpcid() == npcId)
-			{
-				return spawn.getLastSpawn();
-			}
-		}
-		return null;
 	}
 	
 	@Override
@@ -61,19 +51,30 @@ public class DrChaos extends Quest
 	{
 		if (event.equalsIgnoreCase("1"))
 		{
-			L2Npc machine_instance = findTemplate(STRANGE_MACHINE);
-			if (machine_instance != null)
+			L2Npc machine = null;
+			for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(STRANGE_MACHINE))
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine_instance);
-				machine_instance.broadcastPacket(new SpecialCamera(machine_instance.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
+				if (spawn != null)
+				{
+					machine = spawn.getLastSpawn();
+				}
+			}
+			if (machine != null)
+			{
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, machine);
+				machine.broadcastPacket(new SpecialCamera(machine.getObjectId(), 1, -200, 15, 10000, 20000, 0, 0, 1, 0));
 			}
 			else
+			{
 				// print "Dr Chaos AI: problem finding Strange Machine (npcid = "+STRANGE_MACHINE+"). Error: not spawned!"
 				startQuestTimer("2", 2000, npc, player);
+			}
 			startQuestTimer("3", 10000, npc, player);
 		}
 		else if (event.equalsIgnoreCase("2"))
+		{
 			npc.broadcastSocialAction(3);
+		}
 		else if (event.equalsIgnoreCase("3"))
 		{
 			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1, -150, 10, 3000, 20000, 0, 0, 1, 0));
@@ -97,14 +98,16 @@ public class DrChaos extends Quest
 			}
 		}
 		else if (event.equalsIgnoreCase("6"))
+		{
 			npc.broadcastPacket(new SpecialCamera(npc.getObjectId(), 30, -200, 20, 6000, 8000, 0, 0, 1, 0));
+		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == DOCTER_CHAOS)
+		if (npc.getNpcId() == DR_CHAOS)
 		{
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96323, -110914, -3328, 0));
 			this.startQuestTimer("1", 3000, npc, player);

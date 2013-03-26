@@ -5688,7 +5688,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3083100,62),
 (12751,-1,3083100,63),
 (12752,-1,3083100,64),
--- 
+--
 (176,-1,3083400,0),
 (310,-1,3083400,1),
 (177,-1,3083400,2),
@@ -6670,7 +6670,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3086900,62),
 (12751,-1,3086900,63),
 (12752,-1,3086900,64),
--- 
+--
 (3946,-1,3087900,0),
 (412,-1,3089000,0),
 (390,-1,3089000,1),
@@ -7405,82 +7405,6 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (4586,-1,3089301,117),
 (4587,-1,3089301,118),
 (4588,-1,3089301,119),
--- Galman (Dragon Valley's Grocer)
-(1835,-1,3104400,0), -- Soulshot: No Grade
-(2509,-1,3104400,1), -- Spiritshot: No Grade
-(1463,-1,3104400,2), -- Soulshot (D-Grade)
-(1464,-1,3104400,3), -- Soulshot (C-Grade)
-(3947,-1,3104400,4), -- Blessed Spiritshot: No Grade
-(3948,-1,3104400,5), -- Blessed Spiritshot (D-Grade)
-(3949,-1,3104400,6), -- Blessed Spiritshot (C-Grade)
-(5146,-1,3104400,7), -- Compressed Package of Blessed Spiritshots: No Grade
-(5140,-1,3104400,8), -- Compressed Package of Spiritshots: No Grade
-(5134,-1,3104400,9), -- Compressed Package of Soulshots: No Grade
-(5262,-1,3104400,10), -- Greater Compressed Package of Blessed Spiritshots (No-Grade)
-(5256,-1,3104400,11), -- Greater Compressed Package of Spiritshots (No-Grade)
-(5250,-1,3104400,12), -- Greater Compressed Package of Soulshots (No-Grade)
-(17,-1,3104400,13), -- Wooden Arrow
-(1341,-1,3104400,14), -- Bone Arrow
-(1342,-1,3104400,15), -- Steel Arrow
-(1343,-1,3104400,16), -- Silver Arrow
-(1344,-1,3104400,17), -- Mithril Arrow
-(1060,-1,3104400,18), -- Lesser Healing Potion
-(1061,-1,3104400,19), -- Greater Healing Potion
-(1831,-1,3104400,20), -- Antidote
-(1832,-1,3104400,21), -- Greater Antidote
-(1833,-1,3104400,22), -- Bandage
-(1834,-1,3104400,23), -- Emergency Dressing
-(734,-1,3104400,24), -- Haste Potion
-(735,-1,3104400,25), -- Alacrity Potion
-(6035,-1,3104400,26), -- Magic Haste Potion
-(6037,-1,3104400,27), -- Waking Scroll
-(736,-1,3104400,28), -- Scroll of Escape
-(737,-1,3104400,29), -- Scroll of Resurrection
-(1829,-1,3104400,30), -- Scroll of Escape: Clan Hall
-(1830,-1,3104400,31), -- Scroll of Escape: Castle
-(3031,-1,3104400,32), -- Spirit Ore
-(1785,-1,3104400,33), -- Soul Ore
-(5589,-1,3104400,34), -- Energy Stone
-(1661,-1,3104400,35), -- Thief Key
-(5192,-1,3104400,36), -- Rope of Magic (D-Grade)
-(5193,-1,3104400,37), -- Rope of Magic (C-Grade)
-(5194,-1,3104400,38), -- Rope of Magic (B-Grade)
-(5195,-1,3104400,39), -- Rope of Magic (A-Grade)
-(5196,-1,3104400,40), -- Rope of Magic (S-Grade)
-(2130,-1,3104400,41), -- Gemstone D
-(2131,-1,3104400,42), -- Gemstone C
-(2132,-1,3104400,43), -- Gemstone B
-(4679,-1,3104400,44), -- Bless of Eva
-(9633,-1,3104400,45), -- Bone Bolt
-(9634,-1,3104400,46), -- Steel Bolt
-(9635,-1,3104400,47), -- Silver Bolt
-(9636,-1,3104400,48), -- Mithril Bolt
-(8594,-1,3104400,49), -- Scroll: Recovery (No Grade)
-(8595,-1,3104400,50), -- Scroll: Recovery (Grade D)
-(8596,-1,3104400,51), -- Scroll: Recovery (Grade C)
-(8597,-1,3104400,52), -- Scroll: Recovery (Grade B)
-(8598,-1,3104400,53), -- Scroll: Recovery (Grade A)
-(8599,-1,3104400,54), -- Scroll: Recovery (Grade S)
-(8622,-1,3104400,55), -- Elixir of Life (No Grade)
-(8623,-1,3104400,56), -- Elixir of Life (D-Grade)
-(8624,-1,3104400,57), -- Elixir of Life (C-Grade)
-(8634,-1,3104400,58), -- Elixir of CP (No Grade)
-(8635,-1,3104400,59), -- Elixir of CP (D-Grade)
-(8636,-1,3104400,60), -- Elixir of CP (C-Grade)
-(8637,-1,3104400,61), -- Elixir of CP (B-Grade)
-(8638,-1,3104400,62), -- Elixir of CP (A-Grade)
-(8639,-1,3104400,63), -- Elixir of CP (S-Grade)
-(8615,-1,3104400,64), -- Summoning Crystal
-(8658,-1,3104400,65), -- Mysterious Solvent
-(8871,-1,3104400,66), -- Strategy Guide
-(10409,-1,3104400,67), -- A Bottle of Souls
-(4625,-1,3104400,68), -- Dice (Heart)
-(4626,-1,3104400,69), -- Dice (Spade)
-(4627,-1,3104400,70), -- Dice (Clover)
-(4628,-1,3104400,71), -- Dice (Diamond)
-(8872,-1,3104400,72), -- Flash Gunpowder
-(8629,-1,3104400,73), -- Elixir of Mental Strength (D-Grade)
-(21746,-1,3104400,74), -- Maestro's Key
 -- Kitzka (Dragon Valley's Grocer)
 (1835,-1,3104500,0), -- Soulshot: No Grade
 (2509,-1,3104500,1), -- Spiritshot: No Grade
@@ -7641,7 +7565,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3106700,80),
 (12751,-1,3106700,81),
 (12752,-1,3106700,82),
--- 
+--
 (2,-1,3125600,0),
 (218,-1,3125600,1),
 (272,-1,3125600,2),
@@ -8485,7 +8409,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3126500,80),
 (12751,-1,3126500,81),
 (12752,-1,3126500,82),
--- 
+--
 (3031,-1,3127400,0),
 (1785,-1,3127400,1),
 (5192,-1,3127400,2),
@@ -10214,7 +10138,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3130900,80),
 (12751,-1,3130900,81),
 (12752,-1,3130900,82),
--- 
+--
 (3038,-1,3131800,0),
 (3031,-1,3131900,0),
 (1785,-1,3131900,1),
@@ -12767,7 +12691,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12750,-1,3195400,80),
 (12751,-1,3195400,81),
 (12752,-1,3195400,82),
--- 
+--
 (3038,-1,3196200,0),
 (3031,-1,3196300,0),
 (1785,-1,3196300,1),
@@ -19701,7 +19625,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (948,-1,335586,37,1,4);
 
 -- Castles Item Creation
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,time) VALUES
 (6316,-1,351001,1,-1,0),
 (7015,-1,351001,2,-1,0),
 (6838,-1,351001,3,-1,0),
@@ -19833,7 +19757,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`,`count`,tim
 (5900,10000,7,18,1,3);
 
 -- GM SHOP START BUYLISTS (99xx range)--
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Forgotten Scrolls
 (10549,0,9901,1),
 (10550,0,9901,2),
@@ -19950,7 +19874,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14226,0,9901,113),
 (14227,0,9901,114);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Life Stones
 (8723,0,9902,1),
 (8724,0,9902,2),
@@ -20020,7 +19944,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12822,0,9902,62),
 (14008,0,9902,63);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Elemental Stones
 (9546,0,9903,1),
 (9547,0,9903,2),
@@ -20078,21 +20002,21 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (7916,0,9903,47),
 (7917,0,9903,48);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Giant Codex
 (6622,0,9904,1),
 (9625,0,9904,2),
 (9626,0,9904,3),
 (9627,0,9904,4);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Divine Inspiration Books
 (8618,0,9905,1),
 (8619,0,9905,2),
 (8620,0,9905,3),
 (8621,0,9905,4);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Transform Sealbooks
 (9648,0,9906,1),
 (9649,0,9906,2),
@@ -20122,7 +20046,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10305,0,9906,26),
 (10306,0,9906,27);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S84 Vesper Weapons
 (52,0,9907,0), -- Vesper Dual Sword
 (13457,0,9907,1), -- Vesper Cutter
@@ -20373,7 +20297,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (21585,0,9909,28), -- Festival Cloak - Pitch Black - Event
 (21590,0,9909,29); -- Festival Cloak - Pearl White - Event
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Belts
 (13894,0,9910,1),
 (13895,0,9910,2),
@@ -20470,7 +20394,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14960,0,9910,102),
 (14961,0,9910,103);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Magic Pins
 (13695,0,9911,1),
 (13696,0,9911,2),
@@ -20511,7 +20435,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13916,0,9911,37),
 (13917,0,9911,38);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Magic Pouches
 (13704,0,9912,1),
 (13705,0,9912,2),
@@ -20552,7 +20476,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13936,0,9912,37),
 (13937,0,9912,38);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Shirts
 (9577,0,9913,1),
 (9578,0,9913,2),
@@ -20596,7 +20520,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13391,0,9913,40),
 (13392,0,9913,41);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Bracelets
 (9589,0,9914,1), -- Iron Bracelet
 (9590,0,9914,2), -- Bronze Bracelet
@@ -20610,7 +20534,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20594,0,9914,10), -- Summon of Love Bracelet (event) 24 hours limited period
 (20628,0,9914,11); -- Summon of Love Bracelet 7 day limited period
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Talisman
 (9923,0,9915,1),
 (9922,0,9915,2),
@@ -20695,7 +20619,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9941,0,9915,81),
 (9934,0,9915,82);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Currency
 (57,0,9916,1),
 (5575,0,9916,2),
@@ -20709,7 +20633,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14720,0,9916,10),
 (14721,0,9916,11);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Boss Jewels
 (6656,0,9917,0), -- Earring of Antharas
 (6657,0,9917,1), -- Necklace of Valakas
@@ -20728,7 +20652,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (16025,0,9917,14), -- Freya Necklace
 (16026,0,9917,15); -- Blessed Freya Necklace
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Pets
 (3500,0,9918,1),
 (3501,0,9918,2),
@@ -20769,7 +20693,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (15488,0,9918,37),  -- Maguen
 (15489,0,9918,38);  -- Elite Maguen
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Castle Circlets
 (6834,0,9919,1),
 (6835,0,9919,2),
@@ -20799,7 +20723,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13487,0,9919,26),
 (13506,0,9919,27);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Hair Accessory
 (5808,0,9920,1),
 (6394,0,9920,2),
@@ -21031,13 +20955,13 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (22171,0,9920,228),
 (22172,0,9920,229);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Fly Transform Books
 (13552,0,9921,1),
 (13553,0,9921,2),
 (13554,0,9921,3);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Fishing Potions
 (8193,0,9922,1),
 (8194,0,9922,2),
@@ -21050,7 +20974,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8201,0,9922,9),
 (8202,0,9922,10);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Dynasty Weapons
 (9377,0,9923,1),
 (9378,0,9923,2),
@@ -21104,7 +21028,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10004,0,9923,53),
 (13882,0,9923,54);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Icarus Weapons
 (10215,0,9924,1),
 (10216,0,9924,2),
@@ -21157,7 +21081,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10469,0,9924,49),
 (13883,0,9924,50);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Monster Weapons
 (13061,0,9925,1),
 (13061,0,9925,2),
@@ -21237,7 +21161,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13845,0,9925,76), -- Attribute Master Yin\'s Sword
 (13881,0,9925,77); -- Attribute Master Yang\'s Sword
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Sigils
 (13885,0,9926,1),
 (10121,0,9926,2),
@@ -21259,7 +21183,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (15742,0,9926,18),
 (15759,0,9926,19);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Red SA Crystals
 (4629,0,9927,1),
 (4630,0,9927,2),
@@ -21319,7 +21243,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10161,0,9927,53),
 (10162,0,9927,54);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Potions
 (1060,0,9928,1),
 (1061,0,9928,2),
@@ -21370,7 +21294,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20393,0,9928,47),
 (20394,0,9928,48);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Elixirs
 (8634,0,9929,1),
 (8635,0,9929,2),
@@ -21416,7 +21340,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14717,0,9929,41),
 (14718,0,9929,42);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Recovery Scrolls
 (8594,0,9930,1),
 (8595,0,9930,2),
@@ -21477,7 +21401,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8519,0,9930,53),
 (8520,0,9930,54);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) D Enchant Scrolls
 (955,0,9931,1),
 (956,0,9931,2),
@@ -21536,7 +21460,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (22020,0,9931,51),
 (22021,0,9931,52);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Pet Gear
 (2505,0,9932,0),
 (3439,0,9932,1),
@@ -21622,7 +21546,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12751,0,9932,81),
 (12752,0,9932,82);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S80 Dynasty Recipes
 (9482,0,9933,1),
 (9483,0,9933,2),
@@ -21683,7 +21607,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10115,0,9933,57),
 (10116,0,9933,58);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S80 Dynasty Parts
 (9616,0,9934,1),
 (9617,0,9934,2),
@@ -21715,7 +21639,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9993,0,9934,28),
 (10114,0,9934,29);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S80 Icarus Recipes
 (10373,0,9935,1),
 (10374,0,9935,2),
@@ -21742,7 +21666,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10395,0,9935,23),
 (10396,0,9935,24);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S80 Icarus Parts
 (10397,0,9936,1),
 (10398,0,9936,2),
@@ -21756,7 +21680,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (10406,0,9936,10),
 (10407,0,9936,11);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Craft Materials
 (1864,0,9937,1),
 (1865,0,9937,2),
@@ -21810,7 +21734,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (9629,0,9937,50),
 (9630,0,9937,51);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Shots
 (1835,0,9938,1),
 (1463,0,9938,2),
@@ -21876,7 +21800,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (6646,0,9938,62),
 (6647,0,9938,63);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Crystals / Gemstones
 (1458,0,9939,1),
 (1459,0,9939,2),
@@ -21889,7 +21813,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (2133,0,9939,9),
 (2134,0,9939,10);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S Grade Parts
 (6688,0,9940,1),
 (6689,0,9940,2),
@@ -21920,7 +21844,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (6714,0,9940,27),
 (13099,0,9940,28);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) S Grade Recipes
 (6847,0,9941,1),
 (6848,0,9941,2),
@@ -21981,7 +21905,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13100,0,9941,57),
 (13101,0,9941,58);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) A Grade Recipes
 (5434,0,9942,1),
 (5435,0,9942,2),
@@ -22098,7 +22022,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8710,0,9942,113),
 (8711,0,9942,114);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) A Grade Parts
 (5529,0,9943,1),
 (5532,0,9943,2),
@@ -22159,7 +22083,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (8721,0,9943,57),
 (8722,0,9943,58);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Other Circlets
 (9391,0,9944,1),
 (9392,0,9944,2),
@@ -22192,7 +22116,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13511,0,9944,29),
 (13512,0,9944,30);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Buff Scrolls (event)
 (9146,0,9945,1),
 (9147,0,9945,2),
@@ -22218,7 +22142,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (22050,0,9945,22),
 (22051,0,9945,23);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) B Grade Recipes
 (4126,0,9946,1),
 (4127,0,9946,2),
@@ -22295,7 +22219,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (4198,0,9946,73),
 (4199,0,9946,74);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) B Grade Keymats
 (4049,0,9947,1),
 (4050,0,9947,2),
@@ -22371,7 +22295,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (4120,0,9947,72),
 (4121,0,9947,73);
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Dyes
 (4445,0,9948,1),
 (4446,0,9948,2),
@@ -24537,7 +24461,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (12893,0,9985,85), -- Cabrio\'s Hand - Cleverness - Mana Up
 (12894,0,9985,86); -- Cabrio\'s Hand - Cleverness - Magic Silence
 
-INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES 
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Hair Accessory Part 2
 (20666,0,9986,1), -- Valkyrie Hat
 (20667,0,9986,2), -- Valkyrie Hat
@@ -25412,7 +25336,7 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (11516,0,10003,2),
 (11515,0,10003,3),
 (11524,0,10003,4),
-(11525,0,10003,5), 
+(11525,0,10003,5),
 (11527,0,10003,6), -- Dynasty Heavy
 (11512,0,10003,7),
 (11513,0,10003,8),
@@ -25427,35 +25351,35 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Agathions
-(9605,0,10004,1), -- Agathion Seal Bracelet - Rainbow Clan Hall	
-(9606,0,10004,2), -- Agathion Seal Bracelet - Wild Beast Reserve	
-(9607,0,10004,3), -- Agathion Seal Bracelet - Gludio	
-(9608,0,10004,4), -- Agathion Seal Bracelet - Dion	
-(9609,0,10004,5), -- Agathion Seal Bracelet - Giran	
-(9610,0,10004,6), -- Agathion Seal Bracelet - Oren	
-(9611,0,10004,7), -- Agathion Seal Bracelet - Aden	
-(9612,0,10004,8), -- Agathion Seal Bracelet - Innadril	
-(9613,0,10004,9), -- Agathion Seal Bracelet - Goddard	
-(9614,0,10004,10), -- Agathion Seal Bracelet - Rune	
-(9615,0,10004,11), -- Agathion Seal Bracelet - Schuttgart	
-(9909,0,10004,12), -- Agathion Seal Bracelet	
-(10018,0,10004,13), -- Agathion Seal Bracelet - Fortress	
+(9605,0,10004,1), -- Agathion Seal Bracelet - Rainbow Clan Hall
+(9606,0,10004,2), -- Agathion Seal Bracelet - Wild Beast Reserve
+(9607,0,10004,3), -- Agathion Seal Bracelet - Gludio
+(9608,0,10004,4), -- Agathion Seal Bracelet - Dion
+(9609,0,10004,5), -- Agathion Seal Bracelet - Giran
+(9610,0,10004,6), -- Agathion Seal Bracelet - Oren
+(9611,0,10004,7), -- Agathion Seal Bracelet - Aden
+(9612,0,10004,8), -- Agathion Seal Bracelet - Innadril
+(9613,0,10004,9), -- Agathion Seal Bracelet - Goddard
+(9614,0,10004,10), -- Agathion Seal Bracelet - Rune
+(9615,0,10004,11), -- Agathion Seal Bracelet - Schuttgart
+(9909,0,10004,12), -- Agathion Seal Bracelet
+(10018,0,10004,13), -- Agathion Seal Bracelet - Fortress
 (10139,0,10004,14), -- Agathion Bracelet
 (10316,0,10004,15), -- Agathion Seal Bracelet - Little Angel Firecracker
 (10317,0,10004,16), -- Agathion Seal Bracelet - Little Angel Big Head
 (10318,0,10004,17), -- Agathion Seal Bracelet - Little Angel Escape
 (10319,0,10004,18), -- Agathion Seal Bracelet - Little Angel Resurrection
-(10320,0,10004,19), -- Agathion Seal Bracelet - Little Angel	
+(10320,0,10004,19), -- Agathion Seal Bracelet - Little Angel
 (10322,0,10004,20), -- Agathion Seal Bracelet - Little Devil Firecracker
 (10323,0,10004,21), -- Agathion Seal Bracelet - Little Devil Big Head
 (10324,0,10004,22), -- Agathion Seal Bracelet - Little Devil Escape
 (10325,0,10004,23), -- Agathion Seal Bracelet - Little Devil Resurrection
-(10326,0,10004,24), -- Agathion Seal Bracelet - Little Devil	
-(10606,0,10004,25), -- Agathion Seal Bracelet - Rudolph	
-(10659,0,10004,26), -- Agathion Summon Bracelet - Monkey	
-(10660,0,10004,27), -- Agathion Summon Bracelet - Griffin	
-(12779,0,10004,28), -- Agathion Seal Bracelet - Little Angel	
-(12780,0,10004,29), -- Agathion Seal Bracelet - Little Devil	
+(10326,0,10004,24), -- Agathion Seal Bracelet - Little Devil
+(10606,0,10004,25), -- Agathion Seal Bracelet - Rudolph
+(10659,0,10004,26), -- Agathion Summon Bracelet - Monkey
+(10660,0,10004,27), -- Agathion Summon Bracelet - Griffin
+(12779,0,10004,28), -- Agathion Seal Bracelet - Little Angel
+(12780,0,10004,29), -- Agathion Seal Bracelet - Little Devil
 (13023,0,10004,30), -- Agathion of Love 30-day limited period
 (13024,0,10004,31), -- Sudden Agathion 30-day limited period
 (13025,0,10004,32), -- Shiny Agathion 30-day limited period
@@ -25463,11 +25387,11 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (13254,0,10004,34), -- Agathion of Love 7-day Limited Period
 (13309,0,10004,35), -- Agathion of Love (Event) 30-day limited period
 (13340,0,10004,36), -- Agathion of Love (Event) 7-day Limited Period
-(13543,0,10004,37), -- Agathion Summon Bracelet - Collection	
-(13544,0,10004,38), -- Agathion Summon Bracelet - Boy Teddy Bear	
-(13545,0,10004,39), -- Agathion Summon Bracelet - Girl Teddy Bear	
-(13756,0,10004,40), -- Agathion Summon Bracelet - Knight	
-(14027,0,10004,41), -- Collection Agathion Summon Bracelet	
+(13543,0,10004,37), -- Agathion Summon Bracelet - Collection
+(13544,0,10004,38), -- Agathion Summon Bracelet - Boy Teddy Bear
+(13545,0,10004,39), -- Agathion Summon Bracelet - Girl Teddy Bear
+(13756,0,10004,40), -- Agathion Summon Bracelet - Knight
+(14027,0,10004,41), -- Collection Agathion Summon Bracelet
 (14059,0,10004,42), -- Teddy Boy Agathion Bracelet 30-day limited period
 (14060,0,10004,43), -- Teddy Girl Agathion Bracelet 30-day limited period
 (14072,0,10004,44), -- Teddy Boy Agathion Bracelet (event) 30-day limited period
@@ -25485,25 +25409,25 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (14101,0,10004,56), -- Sudden Agathion (Event) 7-day Limited Period
 (14102,0,10004,57), -- Shiny Agathion (Event) 7-day Limited Period
 (14103,0,10004,58), -- Sobbing Agathion (Event) 7-day Limited Period
-(14104,0,10004,59), -- Shadow Item - Collection Agathion Summon Bracelet	
-(14617,0,10004,60), -- Agathion Seal Bracelet - Rudolph	
-(14675,0,10004,61), -- Agathion Seal Bracelet - Saerom	
+(14104,0,10004,59), -- Shadow Item - Collection Agathion Summon Bracelet
+(14617,0,10004,60), -- Agathion Seal Bracelet - Rudolph
+(14675,0,10004,61), -- Agathion Seal Bracelet - Saerom
 (14775,0,10004,62), -- Agathion Seal Bracelet - Love 14 day limited period
 (14776,0,10004,63), -- Agathion Seal Bracelet - Juju 14 day limited period
 (15220,0,10004,64), -- Agathion Seal Bracelet - Oink Oink 10 day limited period
-(20006,0,10004,65), -- Agathion Seal Bracelet - Majo	
-(20007,0,10004,66), -- Agathion Seal Bracelet - Gold Majo	
-(20008,0,10004,67), -- Agathion Seal Bracelet - Black Majo	
+(20006,0,10004,65), -- Agathion Seal Bracelet - Majo
+(20007,0,10004,66), -- Agathion Seal Bracelet - Gold Majo
+(20008,0,10004,67), -- Agathion Seal Bracelet - Black Majo
 (20009,0,10004,68), -- Agathion Seal Bracelet - Majo Big Head 30 Day Expiration Period
 (20010,0,10004,69), -- Agathion Seal Bracelet - Gold Majo Resurrection 30 Day Expiration Period
 (20011,0,10004,70), -- Agathion Seal Bracelet - Black Majo Escape 30 Day Expiration Period
-(20012,0,10004,71), -- Agathion Seal Bracelet - Plaipitak	
+(20012,0,10004,71), -- Agathion Seal Bracelet - Plaipitak
 (20013,0,10004,72), -- Agathion Seal Bracelet - Plaipitak Big Head 30 Day Expiration Period
 (20014,0,10004,73), -- Agathion Seal Bracelet - Plaipitak Resurrection 30 Day Expiration Period
 (20015,0,10004,74), -- Agathion Seal Bracelet - Plaipitak Escape 30 Day Expiration Period
-(20063,0,10004,75), -- Agathion Seal Bracelet - Baby Panda	
-(20064,0,10004,76), -- Agathion Seal Bracelet - Bamboo Panda	
-(20065,0,10004,77), -- Agathion Seal Bracelet - Sexy Panda	
+(20063,0,10004,75), -- Agathion Seal Bracelet - Baby Panda
+(20064,0,10004,76), -- Agathion Seal Bracelet - Bamboo Panda
+(20065,0,10004,77), -- Agathion Seal Bracelet - Sexy Panda
 (20066,0,10004,78), -- Agathion Seal Bracelet - Baby Panda Big Head-15 Day Expiration Period
 (20067,0,10004,79), -- Agathion Seal Bracelet - Bamboo Panda Resurrection-15 Day Expiration Period
 (20068,0,10004,80), -- Agathion Seal Bracelet - Sexy Panda Escape-15 Day Expiration Period
@@ -25512,44 +25436,44 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20201,0,10004,83), -- Agathion of Love 7 Day Expiration Period
 (20202,0,10004,84), -- Agathion of Love 15 Day Expiration Period
 (20203,0,10004,85), -- Agathion of Love 30 Day Expiration Period
-(20212,0,10004,86), -- Agathion Seal Bracelet - Charming Cupid	
-(20213,0,10004,87), -- Agathion Seal Bracelet - Naughty Cupid	
-(20221,0,10004,88), -- Agathion Seal Bracelet - White Maneki Neko	
-(20222,0,10004,89), -- Agathion Seal Bracelet - Black Maneki Neko	
-(20223,0,10004,90), -- Agathion Seal Bracelet - Brown Maneki Neko	
+(20212,0,10004,86), -- Agathion Seal Bracelet - Charming Cupid
+(20213,0,10004,87), -- Agathion Seal Bracelet - Naughty Cupid
+(20221,0,10004,88), -- Agathion Seal Bracelet - White Maneki Neko
+(20222,0,10004,89), -- Agathion Seal Bracelet - Black Maneki Neko
+(20223,0,10004,90), -- Agathion Seal Bracelet - Brown Maneki Neko
 (20224,0,10004,91), -- Agathion Seal Bracelet - White Maneki Neko Resurrection - 7 Day Expiration Period
 (20225,0,10004,92), -- Agathion Seal Bracelet - Black Maneki Neko Escape - 7 Day Expiration Period
 (20226,0,10004,93), -- Agathion Seal Bracelet - Brown Maneki Neko Vitality - 7-day limited time
-(20230,0,10004,94), -- Agathion Seal Bracelet - One-Eyed Bat Drove	
+(20230,0,10004,94), -- Agathion Seal Bracelet - One-Eyed Bat Drove
 (20231,0,10004,95), -- Agathion Seal Bracelet - One-Eyed Bat Drove Resist Unholy - 7 Day Expiration Period
 (20232,0,10004,96), -- Agathion Seal Bracelet - One-Eyed Bat Drove Vitality - 7 Day Expiration Period
-(20236,0,10004,97), -- Agathion Seal Bracelet - Pegasus	
+(20236,0,10004,97), -- Agathion Seal Bracelet - Pegasus
 (20237,0,10004,98), -- Agathion Seal Bracelet - Pegasus Wind Walk - 7 Day Expiration Period
 (20238,0,10004,99), -- Agathion Seal Bracelet - Pegasus Escape - 7 Day Expiration Period
-(20245,0,10004,100), -- Agathion Seal Bracelet - Yellow-Robed Tojigong	
-(20246,0,10004,101), -- Agathion Seal Bracelet - Blue-Robed Tojigong	
-(20247,0,10004,102), -- Agathion Seal Bracelet - Green-Robed Tojigong	
+(20245,0,10004,100), -- Agathion Seal Bracelet - Yellow-Robed Tojigong
+(20246,0,10004,101), -- Agathion Seal Bracelet - Blue-Robed Tojigong
+(20247,0,10004,102), -- Agathion Seal Bracelet - Green-Robed Tojigong
 (20248,0,10004,103), -- Agathion Seal Bracelet - Yellow-Robed Tojigong Greater Heal - 7 Day Expiration Period
 (20249,0,10004,104), -- Agathion Seal Bracelet - Blue-Robed Tojigong Reflect Damage - 7 Day Expiration Period
 (20250,0,10004,105), -- Agathion Seal Bracelet - Green-Robed Tojigong Mana Regeneration - 7 Day Expiration Period
-(20252,0,10004,106), -- Agathion Seal Bracelet - Bugbear	
-(20253,0,10004,107), -- Agathion of Love (Event)	
-(20297,0,10004,108), -- Agathion Seal Bracelet - Red Sumo Wrestler	
+(20252,0,10004,106), -- Agathion Seal Bracelet - Bugbear
+(20253,0,10004,107), -- Agathion of Love (Event)
+(20297,0,10004,108), -- Agathion Seal Bracelet - Red Sumo Wrestler
 (20298,0,10004,109), -- Agathion Seal Bracelet - Red Sumo Wrestler Death Whisper - 7 Day Expiration Period
-(20299,0,10004,110), -- Agathion Seal Bracelet - Blue Sumo Wrestler	
+(20299,0,10004,110), -- Agathion Seal Bracelet - Blue Sumo Wrestler
 (20300,0,10004,111), -- Agathion Seal Bracelet - Blue Sumo Wrestler Wild Magic - 7 Day Expiration Period
-(20301,0,10004,112), -- Agathion Seal Bracelet - Great Sumo Match	
+(20301,0,10004,112), -- Agathion Seal Bracelet - Great Sumo Match
 (20302,0,10004,113), -- Agathion Seal Bracelet - Great Sumo Match Big Head / Firework - 7 Day Expiration Period
-(20303,0,10004,114), -- Agathion Seal Bracelet - Button-Eyed Bear Doll	
+(20303,0,10004,114), -- Agathion Seal Bracelet - Button-Eyed Bear Doll
 (20304,0,10004,115), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Escape - 7 Day Expiration Period
 (20305,0,10004,116), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Resurrection - 7 Day Expiration Period
 (20306,0,10004,117), -- Agathion Seal Bracelet - Button-Eyed Bear Doll Energy - 7 Day Expiration Period
-(20307,0,10004,118), -- Agathion Seal Bracelet - God of Fortune	
+(20307,0,10004,118), -- Agathion Seal Bracelet - God of Fortune
 (20308,0,10004,119), -- Agathion Seal Bracelet - God of Fortune Energy - 7 Day Expiration Period
-(20309,0,10004,120), -- Agathion Seal Bracelet - Dryad	
-(20310,0,10004,121), -- Agathion Seal Bracelet - Wonboso	
+(20309,0,10004,120), -- Agathion Seal Bracelet - Dryad
+(20310,0,10004,121), -- Agathion Seal Bracelet - Wonboso
 (20311,0,10004,122), -- Agathion Seal Bracelet - Wonboso Wind Walk - 7 Day Expiration Period
-(20312,0,10004,123), -- Agathion Seal Bracelet - Daewoonso	
+(20312,0,10004,123), -- Agathion Seal Bracelet - Daewoonso
 (20313,0,10004,124), -- Agathion Seal Bracelet - Daewoonso New Year\'s Gift - 7 Day Expiration Period
 (20405,0,10004,125), -- Agathion Seal Bracelet - Majo Big Head - 7 day limited period
 (20406,0,10004,126), -- Agathion Seal Bracelet - Gold Crown Majo Resurrection - 7 day limited period
@@ -25560,79 +25484,79 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20411,0,10004,131), -- Agathion Seal Bracelet - Baby Panda Big Head - 7 day limited period
 (20412,0,10004,132), -- Agathion Seal Bracelet - Bamboo Panda Resurrection - 7 day limited period
 (20413,0,10004,133), -- Agathion Seal Bracelet - Sexy Panda Escape - 7 day limited period
-(20495,0,10004,134), -- Agathion Seal Bracelet - Pomona	
+(20495,0,10004,134), -- Agathion Seal Bracelet - Pomona
 (20496,0,10004,135), -- Agathion Seal Bracelet - Pomona Mental Shield - 7 day limited period
-(20591,0,10004,136), -- Agathion Seal Bracelet - Weaver	
+(20591,0,10004,136), -- Agathion Seal Bracelet - Weaver
 (20592,0,10004,137), -- Agathion Seal Bracelet - Weaver Power of the Golden Calf - 24 hours limited period
 (20593,0,10004,138), -- Agathion Seal Bracelet - Weaver Power of the Golden Calf - 3 day limited period
 (20621,0,10004,139), -- Agathion Seal Bracelet - Female Weaver Flute Sound - 24 hours limited time
 (20622,0,10004,140), -- Agathion Seal Bracelet - Female Weaver Flute Sound - 3 day limited time
-(20654,0,10004,141), -- Agathion Seal Bracelet - Chon-chon	
+(20654,0,10004,141), -- Agathion Seal Bracelet - Chon-chon
 (20655,0,10004,142), -- Agathion Seal Bracelet - Chon-chon Great Warrior\'s Soul Power - 7 days limited time
-(20656,0,10004,143), -- Agathion Seal Bracelet - Tang-tang	
+(20656,0,10004,143), -- Agathion Seal Bracelet - Tang-tang
 (20657,0,10004,144), -- Agathion Seal Bracelet - Tang-tang Great Wizard\'s Soul Power - 7 days limited time
-(20660,0,10004,145), -- Agathion Seal Bracelet - Monkey King	
+(20660,0,10004,145), -- Agathion Seal Bracelet - Monkey King
 (20661,0,10004,146), -- Agathion Seal Bracelet - Monkey King Great Wizard\'s Soul Power - 7 days limited time
-(20662,0,10004,147), -- Agathion Seal Bracelet - Utanka Agathion	
+(20662,0,10004,147), -- Agathion Seal Bracelet - Utanka Agathion
 (20663,0,10004,148), -- Agathion Seal Bracelet - Utanka Agathion Great Warrior\'s Soul Power - 7 days limited time
-(20664,0,10004,149), -- Agathion Seal Bracelet - Bonus B Agathion	
+(20664,0,10004,149), -- Agathion Seal Bracelet - Bonus B Agathion
 (20665,0,10004,150), -- Agathion Seal Bracelet - Bonus B Agathion Great Adventurer\'s Soul Power - 7 days limited time
-(20726,0,10004,151), -- Agathion Seal Bracelet - Zombie	
+(20726,0,10004,151), -- Agathion Seal Bracelet - Zombie
 (20727,0,10004,152), -- Agathion Seal Bracelet - Zombie Escape from Death - 7 day limited period
-(20732,0,10004,153), -- Agathion Seal Bracelet - Baekyi Hwamae	
-(20733,0,10004,154), -- Agathion Seal Bracelet - Kwanwoo Hwamae	
+(20732,0,10004,153), -- Agathion Seal Bracelet - Baekyi Hwamae
+(20733,0,10004,154), -- Agathion Seal Bracelet - Kwanwoo Hwamae
 (20774,0,10004,155), -- Agathion Seal Bracelet - Guangong Aura of Fury - 7 day limited period
 (20775,0,10004,156), -- Agathion Seal Bracelet - Gwanseum Nyang Nyang Blessing of Mercy - 7 day limited period
 (20776,0,10004,157), -- Agathion Seal Bracelet - Blue Opera Sword of Recovery - 7 day limited period
 (20777,0,10004,158), -- Agathion Seal Bracelet - Blue Opera Sword of Lightning - 7 day limited period
 (20778,0,10004,159), -- Agathion Seal Bracelet - Red Opera Spear of Flames - 7 day limited period
-(20779,0,10004,160), -- Agathion Seal Bracelet - Opera	
+(20779,0,10004,160), -- Agathion Seal Bracelet - Opera
 (20780,0,10004,161), -- Agathion Seal Bracelet - Opera Sword of Life - 30 day limited period
 (20781,0,10004,162), -- Agathion Seal Bracelet - Miss Chipao Miss Chipao\'s Blessing - 7 day limited period
-(20782,0,10004,163), -- Agathion Seal Bracelet - Nepal Snow	
-(20783,0,10004,164), -- Agathion Seal Bracelet - Round Ball Snow	
-(20784,0,10004,165), -- Agathion Seal Bracelet - Ladder Snow	
+(20782,0,10004,163), -- Agathion Seal Bracelet - Nepal Snow
+(20783,0,10004,164), -- Agathion Seal Bracelet - Round Ball Snow
+(20784,0,10004,165), -- Agathion Seal Bracelet - Ladder Snow
 (20785,0,10004,166), -- Agathion Seal Bracelet - Nepal Snow Snow\'s Haste - 7 day limited period
 (20786,0,10004,167), -- Agathion Seal Bracelet - Round Ball Snow Snow\'s Acumen - 7 day limited period
 (20787,0,10004,168), -- Agathion Seal Bracelet - Ladder Snow Snow\'s Wind Walk - 7 day limited period
-(20818,0,10004,169), -- Agathion Seal Bracelet - Iken	
+(20818,0,10004,169), -- Agathion Seal Bracelet - Iken
 (20819,0,10004,170), -- Agathion Seal Bracelet - Iken Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20820,0,10004,171), -- Agathion Seal Bracelet - Lana	
+(20820,0,10004,171), -- Agathion Seal Bracelet - Lana
 (20821,0,10004,172), -- Agathion Seal Bracelet - Lana Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20822,0,10004,173), -- Agathion Seal Bracelet - Gnocian	
+(20822,0,10004,173), -- Agathion Seal Bracelet - Gnocian
 (20823,0,10004,174), -- Agathion Seal Bracelet - Gnocian Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20824,0,10004,175), -- Agathion Seal Bracelet - Orodriel	
+(20824,0,10004,175), -- Agathion Seal Bracelet - Orodriel
 (20825,0,10004,176), -- Agathion Seal Bracelet - Orodriel Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20826,0,10004,177), -- Agathion Seal Bracelet - Lakinos	
+(20826,0,10004,177), -- Agathion Seal Bracelet - Lakinos
 (20827,0,10004,178), -- Agathion Seal Bracelet - Lakinos Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20828,0,10004,179), -- Agathion Seal Bracelet - Mortia	
+(20828,0,10004,179), -- Agathion Seal Bracelet - Mortia
 (20829,0,10004,180), -- Agathion Seal Bracelet - Mortia Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20830,0,10004,181), -- Agathion Seal Bracelet - Hayance	
+(20830,0,10004,181), -- Agathion Seal Bracelet - Hayance
 (20831,0,10004,182), -- Agathion Seal Bracelet - Hayance Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20832,0,10004,183), -- Agathion Seal Bracelet - Meruril	
+(20832,0,10004,183), -- Agathion Seal Bracelet - Meruril
 (20833,0,10004,184), -- Agathion Seal Bracelet - Meruril Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20834,0,10004,185), -- Agathion Seal Bracelet - Taman ze Lapatui	
+(20834,0,10004,185), -- Agathion Seal Bracelet - Taman ze Lapatui
 (20835,0,10004,186), -- Agathion Seal Bracelet - Taman ze Lapatui Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20836,0,10004,187), -- Agathion Seal Bracelet - Kaurin	
+(20836,0,10004,187), -- Agathion Seal Bracelet - Kaurin
 (20837,0,10004,188), -- Agathion Seal Bracelet - Kaurin Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20838,0,10004,189), -- Agathion Seal Bracelet - Ahertbein	
+(20838,0,10004,189), -- Agathion Seal Bracelet - Ahertbein
 (20839,0,10004,190), -- Agathion Seal Bracelet - Ahertbein Prominent Outsider Adventurer\'s Ability - 7 day limited period
-(20840,0,10004,191), -- Agathion Seal Bracelet - Naonin	
+(20840,0,10004,191), -- Agathion Seal Bracelet - Naonin
 (20841,0,10004,192); -- Agathion Seal Bracelet - Naonin Prominent Outsider Adventurer\'s Ability - 7 day limited period
 
 INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 -- (GM-Shop) Mount Agathions
 (13022,0,10005,1), -- Light Purple-Maned Horse Mounting Bracelet 7 day limited period
 (13308,0,10005,2), -- Light Purple-Maned Horse Mounting Bracelet (Event) 7-day Limited Period
-(13546,0,10005,3), -- Steam Sledge Mounting Bracelet	
+(13546,0,10005,3), -- Steam Sledge Mounting Bracelet
 (13547,0,10005,4), -- Tawny-Maned Lion Mounting Bracelet
 (14053,0,10005,5), -- Gold-Maned Lion Mounting Bracelet 7-day Limited Period
 (14054,0,10005,6), -- Steam Beatle Mounting Bracelet 7-day Limited Period
 (14066,0,10005,7), -- Gold Maned Lion Mounting Bracelet (event) 7-day Limited Period
 (14067,0,10005,8), -- Steam Beatle Mounting Bracelet (event) 7-day Limited Period
-(20029,0,10005,9), -- Light Purple-Maned Horse Mounting Bracelet	
+(20029,0,10005,9), -- Light Purple-Maned Horse Mounting Bracelet
 (20030,0,10005,10), -- Light Purple-Maned Horse Mounting Bracelet 30 Day Expiration Period
-(20396,0,10005,11), -- Steam Beatle Mounting Bracelet	
+(20396,0,10005,11), -- Steam Beatle Mounting Bracelet
 (20448,0,10005,12), -- Light Purple Maned Horse Mounting Bracelet 7 day limited period
 (20449,0,10005,13), -- Steam Beatle Mounting Bracelet 7 day limited period
 (20535,0,10005,14), -- Steam Sledge Mounting Bracelet 30 day limited period
@@ -25665,6 +25589,71 @@ INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
 (20750,0,10006,21),	-- Shiny Spirit of Wrath Mask 7 day Pack
 (20751,0,10006,22),	-- Shiny Undecaying Corpse Mask 7Day Pack
 (20752,0,10006,23);	-- Shiny Planet X235 Alien Mask 7 day Pack
+
+INSERT INTO `merchant_buylists` (`item_id`,`price`,`shop_id`,`order`) VALUES
+-- (GM-Shop) Raid Boss Weapons
+(21919,0,10007,1),	-- Hellblade
+(21927,0,10007,2),	-- Hellblade - Lightning
+(21935,0,10007,3),	-- Butcher Blades
+(21937,0,10007,4),	-- Butcher Blades - Confusion
+(21939,0,10007,5),	-- Claw of Destruction
+(21947,0,10007,6),	-- Claw of Destruction - Landslide
+(21955,0,10007,7),	-- Blades of Delusion
+(21957,0,10007,8),	-- Blades of Delusion - Earth
+(21959,0,10007,9),	-- Blood Brother
+(21966,0,10007,10),	-- Blood Brother - Great Gale
+(21973,0,10007,11),	-- Mardil's Fan
+(21977,0,10007,12),	-- Mardil's Fan - Holy Spirit
+(21920,0,10007,13),	-- Hellblade - Haste
+(21921,0,10007,14),	-- Hellblade - Health
+(21922,0,10007,15),	-- Hellblade - Focus
+(21928,0,10007,16),	-- Hellblade - Lightning - Haste
+(21929,0,10007,17),	-- Hellblade - Lightning - Health
+(21930,0,10007,18),	-- Hellblade - Lightning - Focus
+(21940,0,10007,19),	-- Claw of Destruction - HP Drain
+(21941,0,10007,20),	-- Claw of Destruction - Health
+(21942,0,10007,21),	-- Claw of Destruction - HP Regeneration
+(21948,0,10007,22),	-- Claw of Destruction - Landslide - HP Drain
+(21949,0,10007,23),	-- Claw of Destruction - Landslide - Health
+(21950,0,10007,24),	-- Claw of Destruction - Landslide - HP Regeneration
+(21960,0,10007,25),	-- Blood Brother - Focus
+(21961,0,10007,26),	-- Blood Brother - Health
+(21962,0,10007,27),	-- Blood Brother - Light
+(21967,0,10007,28),	-- Blood Brother - Great Gale - Focus
+(21968,0,10007,29),	-- Blood Brother - Great Gale - Health
+(21969,0,10007,30),	-- Blood Brother - Great Gale - Light
+(21974,0,10007,31),	-- Mardil's Fan - M. Atk.
+(21975,0,10007,32),	-- Mardil's Fan - Magic Silence
+(21976,0,10007,33),	-- Mardil's Fan - Acumen
+(21978,0,10007,34),	-- Mardil's Fan - Holy Spirit - M. Atk.
+(21979,0,10007,35),	-- Mardil's Fan - Holy Spirit - Magic Silence
+(21980,0,10007,36),	-- Mardil's Fan - Holy Spirit - Acumen
+(21923,0,10007,37),	-- Hellblade {PvP}
+(21924,0,10007,38),	-- Hellblade {PvP} - Haste
+(21925,0,10007,39),	-- Hellblade {PvP} - Health
+(21926,0,10007,40),	-- Hellblade {PvP} - Focus
+(21931,0,10007,41),	-- Hellblade - Lightning {PvP}
+(21932,0,10007,42),	-- Hellblade - Lightning {PvP} - Haste
+(21933,0,10007,43),	-- Hellblade - Lightning {PvP} - Health
+(21934,0,10007,44),	-- Hellblade - Lightning {PvP} - Focus
+(21936,0,10007,45),	-- Butcher Blades {PvP}
+(21938,0,10007,46),	-- Butcher Blades - Confusion {PvP}
+(21943,0,10007,47),	-- Claw of Destruction {PvP}
+(21944,0,10007,48),	-- Claw of Destruction {PvP} - HP Drain
+(21945,0,10007,49),	-- Claw of Destruction {PvP} - Health
+(21946,0,10007,50),	-- Claw of Destruction {PvP} - HP Regeneration
+(21951,0,10007,51),	-- Claw of Destruction - Landslide {PvP}
+(21952,0,10007,52),	-- Claw of Destruction - Landslide {PvP} - HP Drain
+(21953,0,10007,53),	-- Claw of Destruction - Landslide {PvP} - Health
+(21954,0,10007,54),	-- Claw of Destruction - Landslide {PvP} - HP Regeneration
+(21956,0,10007,55),	-- Blades of Delusion {PvP}
+(21958,0,10007,56),	-- Blades of Delusion - Earth {PvP}
+(21963,0,10007,57),	-- Blood Brother {PvP} - Focus
+(21964,0,10007,58),	-- Blood Brother {PvP} - Health
+(21965,0,10007,59),	-- Blood Brother {PvP} - Light
+(21970,0,10007,60),	-- Blood Brother - Great Gale {PvP} - Focus
+(21971,0,10007,61),	-- Blood Brother - Great Gale {PvP} - Health
+(21972,0,10007,62);	-- Blood Brother - Great Gale {PvP} - Light
 -- GM SHOP END --
 
 -- Test Server Helpers Shops

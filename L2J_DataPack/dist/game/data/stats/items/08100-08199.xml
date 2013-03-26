@@ -350,8 +350,8 @@
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="8" />
-		<set name="oncast_skill" val="1164-7" />
+		<set name="onmagic_chance" val="8" />
+		<set name="onmagic_skill" val="1164-7" />
 		<for>
 			<set order="0x08" stat="pAtk" val="85" />
 			<set order="0x08" stat="mAtk" val="81" />
@@ -435,8 +435,8 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="10" />
-		<set name="oncast_skill" val="3078-4" />
+		<set name="onmagic_chance" val="10" />
+		<set name="onmagic_skill" val="3078-4" />
 		<for>
 			<set order="0x08" stat="pAtk" val="125" />
 			<set order="0x08" stat="mAtk" val="111" />
@@ -1115,8 +1115,8 @@
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="10" />
-		<set name="oncast_skill" val="1201-23" />
+		<set name="onmagic_chance" val="10" />
+		<set name="onmagic_skill" val="1201-23" />
 		<for>
 			<set order="0x08" stat="pAtk" val="125" />
 			<set order="0x08" stat="mAtk" val="111" />
@@ -1174,8 +1174,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="50" />
-		<set name="oncast_skill" val="1035-4" />
+		<set name="onmagic_chance" val="50" />
+		<set name="onmagic_skill" val="1035-4" />
 		<for>
 			<set order="0x08" stat="pAtk" val="140" />
 			<set order="0x08" stat="mAtk" val="122" />
@@ -1204,8 +1204,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="10" />
-		<set name="oncast_skill" val="1201-25" />
+		<set name="onmagic_chance" val="10" />
+		<set name="onmagic_skill" val="1201-25" />
 		<for>
 			<set order="0x08" stat="pAtk" val="140" />
 			<set order="0x08" stat="mAtk" val="122" />
@@ -1263,8 +1263,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="10" />
-		<set name="oncast_skill" val="3078-6" />
+		<set name="onmagic_chance" val="10" />
+		<set name="onmagic_skill" val="3078-6" />
 		<for>
 			<set order="0x08" stat="pAtk" val="155" />
 			<set order="0x08" stat="mAtk" val="132" />
@@ -1351,8 +1351,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="8" />
-		<set name="oncast_skill" val="1168-6" />
+		<set name="onmagic_chance" val="8" />
+		<set name="onmagic_skill" val="1168-6" />
 		<set name="item_skill" val="3552-1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="170" />
@@ -1469,8 +1469,8 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="oncast_chance" val="10" />
-		<set name="oncast_skill" val="3074-2" />
+		<set name="onmagic_chance" val="10" />
+		<set name="onmagic_skill" val="3074-2" />
 		<set name="item_skill" val="3552-1" />
 		<for>
 			<set order="0x08" stat="pAtk" val="186" />
@@ -1846,7 +1846,7 @@
 		<set name="default_action" val="skill_reduce" />
 		<set name="material" val="gold" />
 		<set name="weight" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

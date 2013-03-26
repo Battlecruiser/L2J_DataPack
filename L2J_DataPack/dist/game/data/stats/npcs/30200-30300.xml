@@ -1,0 +1,2066 @@
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="30200" templateId="30200" clientName="Stan" serverName="stan" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>stan</ai>
+			<ai_param name="fnHi" val="stan001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="92" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="275" /> <!-- Long Bow -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30201" templateId="30201" clientName="Pinaps" serverName="pinaps" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>pinaps</ai>
+			<ai_param name="fnHi" val="pinaps001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="92" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="275" /> <!-- Long Bow -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30207" templateId="30207" clientName="Arodin" serverName="trader_arodin" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="10" special="10" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_arodin</ai>
+			<ai_param name="fnHi" val="trader_arodin001.htm" />
+			<ai_param name="fnSell" val="trader_arodin002.htm" />
+			<ai_param name="fnBuy" val="trader_arodin003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_arodin005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_arodin006.htm" />
+			<ai_param name="fnNowSiege" val="trader_arodin007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30208" templateId="30208" clientName="Damion" serverName="trader_daeronees" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_daeronees</ai>
+			<ai_param name="fnHi" val="trader_daeronees001.htm" />
+			<ai_param name="fnSell" val="trader_daeronees002.htm" />
+			<ai_param name="fnBuy" val="trader_daeronees003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_daeronees005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_daeronees006.htm" />
+			<ai_param name="fnNowSiege" val="trader_daeronees007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30209" templateId="30209" clientName="Colleen" serverName="trader_cullinas" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="24.5" special="24.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_cullinas</ai>
+			<ai_param name="fnHi" val="trader_cullinas001.htm" />
+			<ai_param name="fnSell" val="trader_cullinas002.htm" />
+			<ai_param name="fnBuy" val="trader_cullinas003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_cullinas005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_cullinas006.htm" />
+			<ai_param name="fnNowSiege" val="trader_cullinas007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="90" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30210" templateId="30210" clientName="Norman" serverName="warehouse_keeper_norman" level="70" type="warehouse_keeper">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="17" special="17" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>warehouse_keeper_norman</ai>
+			<ai_param name="fnHi" val="warehouse_keeper_norman001.htm" />
+			<ai_param name="fnBye" val="warehouse_keeper_norman002.htm" />
+			<ai_param name="fnYouAreChaotic" val="warehouse_keeper_norman003.htm" />
+			<ai_param name="fnClassMismatch" val="warehouse_keeper_norman004.htm" />
+			<ai_param name="fnEmpty" val="warehouse_keeper_norman005.htm" />
+			<ai_param name="fnNowSiege" val="warehouse_keeper_norman006.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="150" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DWARF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Warehouse</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30216" templateId="30216" clientName="Wheeler" serverName="sentinel_wheelendel" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_wheelendel</ai>
+			<ai_param name="fnHi" val="sentinel_wheelendel001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="130" /> <!-- Elven Sword -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30217" templateId="30217" clientName="Berros" serverName="sentinel_berryos" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_berryos</ai>
+			<ai_param name="fnHi" val="sentinel_berryos001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="276" /> <!-- Elven Bow -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30218" templateId="30218" clientName="Kendell" serverName="sentinel_kendnell" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_kendnell</ai>
+			<ai_param name="fnHi" val="sentinel_kendnell001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="276" /> <!-- Elven Bow -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30219" templateId="30219" clientName="Veltress" serverName="sentinel_veltress" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_veltress</ai>
+			<ai_param name="fnHi" val="sentinel_veltress001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="130" /> <!-- Elven Sword -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30220" templateId="30220" clientName="Starden" serverName="sentinel_stardyen" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="10" crit="8" atkSpd="253" reuseDelay="1500" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="0" evasion="0" />
+		<base_attack type="BOW" range="1100" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="10" width="0" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_stardyen</ai>
+			<ai_param name="fnHi" val="sentinel_stardyen001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="276" /> <!-- Elven Bow -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30221" templateId="30221" clientName="Rayen" serverName="sentinel_rayjien" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_rayjien</ai>
+			<ai_param name="fnHi" val="sentinel_rayjien001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="130" /> <!-- Elven Sword -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30222" templateId="30222" clientName="Alshupes" serverName="moneylender_alshupes" level="70" type="citizen">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="6" special="6" />
+			<height normal="21" special="21" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>moneylender_alshupes</ai>
+			<ai_param name="fnHi" val="moneylender_alshupes001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="130" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30223" templateId="30223" clientName="Arujien" serverName="arujien" level="70" type="citizen">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="6" special="6" />
+			<height normal="21" special="21" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>arujien</ai>
+			<ai_param name="fnHi" val="arujien001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="130" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30224" templateId="30224" clientName="Rayla" serverName="sentry_knight_railra" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="7" special="7" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentry_knight_railra</ai>
+			<ai_param name="fnHi" val="sentry_knight_railra001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="120" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>DARKELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="79" /> <!-- Sword of Damascus -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30230" templateId="30230" clientName="Edroc" serverName="trader_edroc" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_edroc</ai>
+			<ai_param name="fnHi" val="trader_edroc001.htm" />
+			<ai_param name="fnSell" val="trader_edroc002.htm" />
+			<ai_param name="fnBuy" val="trader_edroc003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_edroc005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_edroc006.htm" />
+			<ai_param name="fnNowSiege" val="trader_edroc007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30231" templateId="30231" clientName="Garette" serverName="trader_garette" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_garette</ai>
+			<ai_param name="fnHi" val="trader_garette001.htm" />
+			<ai_param name="fnSell" val="trader_garette002.htm" />
+			<ai_param name="fnBuy" val="trader_garette003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_garette005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_garette006.htm" />
+			<ai_param name="fnNowSiege" val="trader_garette007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30232" templateId="30232" clientName="Sorint" serverName="warehouse_keeper_sorint" level="70" type="warehouse_keeper">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="17" special="17" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>warehouse_keeper_sorint</ai>
+			<ai_param name="fnHi" val="warehouse_keeper_sorint001.htm" />
+			<ai_param name="fnBye" val="warehouse_keeper_sorint002.htm" />
+			<ai_param name="fnYouAreChaotic" val="warehouse_keeper_sorint003.htm" />
+			<ai_param name="fnClassMismatch" val="warehouse_keeper_sorint004.htm" />
+			<ai_param name="fnEmpty" val="warehouse_keeper_sorint005.htm" />
+			<ai_param name="fnNowSiege" val="warehouse_keeper_sorint006.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="150" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DWARF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Warehouse</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30233" templateId="30233" clientName="Esmeralda" serverName="gatekeeper_esmeralda" level="70" type="teleporter">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gatekeeper_esmeralda</ai>
+			<ai_param name="fnHi" val="gatekeeper_esmeralda001.htm" />
+			<ai_param name="fnNobless" val="fornobless.htm" />
+			<ai_param name="fnNoNobless" val="fornonobless.htm" />
+			<ai_param name="fnNoNoblessItem" val="fornonoblessitem.htm" />
+			<ai_param name="fnYouAreChaotic" val="gatekeeper_esmeralda003.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="90" />
+			<ai_param name="IsGateKeeperForCoreTime" val="1" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Teleporter</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30253" templateId="30253" clientName="Simplon" serverName="trader_simplon" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="10" special="10" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_simplon</ai>
+			<ai_param name="fnHi" val="trader_simplon001.htm" />
+			<ai_param name="fnSell" val="trader_simplon002.htm" />
+			<ai_param name="fnBuy" val="trader_simplon003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_simplon005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_simplon006.htm" />
+			<ai_param name="fnNowSiege" val="trader_simplon007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30254" templateId="30254" clientName="Harmony" serverName="trader_harmony" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="7" special="7" />
+			<height normal="23" special="23" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_harmony</ai>
+			<ai_param name="fnHi" val="trader_harmony001.htm" />
+			<ai_param name="fnSell" val="trader_harmony002.htm" />
+			<ai_param name="fnBuy" val="trader_harmony003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_harmony005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_harmony006.htm" />
+			<ai_param name="fnNowSiege" val="trader_harmony007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="85" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30255" templateId="30255" clientName="Haprock" serverName="harprock" level="70" type="warehouse_keeper">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="17" special="17" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>harprock</ai>
+			<ai_param name="fnHi" val="harprock001.htm" />
+			<ai_param name="fnBye" val="harprock002.htm" />
+			<ai_param name="fnYouAreChaotic" val="harprock003.htm" />
+			<ai_param name="fnClassMismatch" val="harprock004.htm" />
+			<ai_param name="fnEmpty" val="harprock005.htm" />
+			<ai_param name="fnNowSiege" val="harprock006.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="150" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DWARF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Warehouse</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30256" templateId="30256" clientName="Bella" serverName="gatekeeper_belladonna" level="70" type="teleporter">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>gatekeeper_belladonna</ai>
+			<ai_param name="fnHi" val="gatekeeper_belladonna001.htm" />
+			<ai_param name="fnNobless" val="fornobless.htm" />
+			<ai_param name="fnNoNobless" val="fornonobless.htm" />
+			<ai_param name="fnNoNoblessItem" val="fornonoblessitem.htm" />
+			<ai_param name="fnYouAreChaotic" val="gatekeeper_belladonna003.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="90" />
+			<ai_param name="IsGateKeeperForCoreTime" val="1" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>FEMALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Teleporter</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30283" templateId="30283" clientName="Altran" serverName="blacksmith_alltran" level="70" type="blacksmith">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="7" special="7" />
+			<height normal="16.5" special="16.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>blacksmith_alltran</ai>
+			<ai_param name="fnHi" val="blacksmith_alltran001.htm" />
+			<ai_param name="fnClassMismatch" val="blacksmith_alltran003.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="93" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DWARF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="89" /> <!-- Big Hammer -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Npc</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30284" templateId="30284" clientName="Alberius" serverName="alberryus" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alberryus</ai>
+			<ai_param name="fnHi" val="alberryus001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="150" /> <!-- Elemental Sword -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30285" templateId="30285" clientName="Gartrandell" serverName="sentinel_gartrandell" level="80" type="guard">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>4200000000</exp>
+		<speed>
+			<run ground="160" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="970.537548504614" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="662.751329129412" pDef="341.375" mDef="249.80341" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>sentinel_gartrandell</ai>
+			<ai_param name="fnHi" val="sentinel_gartrandell001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="79" />
+		</npc_ai>
+		<org hp="3290.11306877694" hp_regen="8.5" mp="1674.8" mp_regen="3" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="130" /> <!-- Elven Sword -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="true" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="false" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Guard</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30288" templateId="30288" clientName="Rains" serverName="master_rains" level="70" type="guild_master">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23.5" special="23.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>master_rains</ai>
+			<ai_param name="fnHi" val="master_rains001.htm" />
+			<ai_param name="fnClassMismatch" val="master_rains002.htm" />
+			<ai_param name="fnClassList1" val="master_rains003h.htm" />
+			<ai_param name="fnClassList2" val="master_rains003e.htm" />
+			<ai_param name="fnYouAreSecondClass" val="master_rains004.htm" />
+			<ai_param name="fnYouAreThirdClass" val="master_rains005.htm" />
+			<ai_param name="fnLowLevelNoProof11" val="master_rains008ha.htm" />
+			<ai_param name="fnLowLevelNoProof12" val="master_rains008hb.htm" />
+			<ai_param name="fnLowLevelNoProof13" val="master_rains008hc.htm" />
+			<ai_param name="fnLowLevelNoProof21" val="master_rains008ea.htm" />
+			<ai_param name="fnLowLevelNoProof22" val="master_rains008eb.htm" />
+			<ai_param name="fnLowLevelNoProof23" val="master_rains008ec.htm" />
+			<ai_param name="fnLowLevel11" val="master_rains009ha.htm" />
+			<ai_param name="fnLowLevel12" val="master_rains009hb.htm" />
+			<ai_param name="fnLowLevel13" val="master_rains009hc.htm" />
+			<ai_param name="fnLowLevel21" val="master_rains009ea.htm" />
+			<ai_param name="fnLowLevel22" val="master_rains009eb.htm" />
+			<ai_param name="fnLowLevel23" val="master_rains009ec.htm" />
+			<ai_param name="fnNoProof11" val="master_rains010ha.htm" />
+			<ai_param name="fnNoProof12" val="master_rains010hb.htm" />
+			<ai_param name="fnNoProof13" val="master_rains010hc.htm" />
+			<ai_param name="fnNoProof21" val="master_rains010ea.htm" />
+			<ai_param name="fnNoProof22" val="master_rains010eb.htm" />
+			<ai_param name="fnNoProof23" val="master_rains010ec.htm" />
+			<ai_param name="fnAfterClassChange11" val="master_rains011ha.htm" />
+			<ai_param name="fnAfterClassChange12" val="master_rains011hb.htm" />
+			<ai_param name="fnAfterClassChange13" val="master_rains011hc.htm" />
+			<ai_param name="fnAfterClassChange21" val="master_rains011ea.htm" />
+			<ai_param name="fnAfterClassChange22" val="master_rains011eb.htm" />
+			<ai_param name="fnAfterClassChange23" val="master_rains011ec.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="63" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2VillageMasterFighter</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30289" templateId="30289" clientName="Raymond" serverName="bishop_raimund" level="70" type="guild_master">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="24" special="24" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>bishop_raimund</ai>
+			<ai_param name="fnHi" val="bishop_raimund001.htm" />
+			<ai_param name="fnClassMismatch" val="bishop_raimund002.htm" />
+			<ai_param name="fnClassList1" val="bishop_raimund003h.htm" />
+			<ai_param name="fnClassList2" val="bishop_raimund003e.htm" />
+			<ai_param name="fnYouAreSecondClass" val="bishop_raimund004.htm" />
+			<ai_param name="fnYouAreThirdClass" val="bishop_raimund005.htm" />
+			<ai_param name="fnLowLevelNoProof11" val="bishop_raimund008ha.htm" />
+			<ai_param name="fnLowLevelNoProof12" val="bishop_raimund008hb.htm" />
+			<ai_param name="fnLowLevelNoProof13" val="bishop_raimund008hc.htm" />
+			<ai_param name="fnLowLevelNoProof21" val="bishop_raimund008ea.htm" />
+			<ai_param name="fnLowLevelNoProof22" val="bishop_raimund008eb.htm" />
+			<ai_param name="fnLowLevelNoProof23" val="bishop_raimund008ec.htm" />
+			<ai_param name="fnLowLevel11" val="bishop_raimund009ha.htm" />
+			<ai_param name="fnLowLevel12" val="bishop_raimund009hb.htm" />
+			<ai_param name="fnLowLevel13" val="bishop_raimund009hc.htm" />
+			<ai_param name="fnLowLevel21" val="bishop_raimund009ea.htm" />
+			<ai_param name="fnLowLevel22" val="bishop_raimund009eb.htm" />
+			<ai_param name="fnLowLevel23" val="bishop_raimund009ec.htm" />
+			<ai_param name="fnNoProof11" val="bishop_raimund010ha.htm" />
+			<ai_param name="fnNoProof12" val="bishop_raimund010hb.htm" />
+			<ai_param name="fnNoProof13" val="bishop_raimund010hc.htm" />
+			<ai_param name="fnNoProof21" val="bishop_raimund010ea.htm" />
+			<ai_param name="fnNoProof22" val="bishop_raimund010eb.htm" />
+			<ai_param name="fnNoProof23" val="bishop_raimund010ec.htm" />
+			<ai_param name="fnAfterClassChange11" val="bishop_raimund011ha.htm" />
+			<ai_param name="fnAfterClassChange12" val="bishop_raimund011hb.htm" />
+			<ai_param name="fnAfterClassChange13" val="bishop_raimund011hc.htm" />
+			<ai_param name="fnAfterClassChange21" val="bishop_raimund011ea.htm" />
+			<ai_param name="fnAfterClassChange22" val="bishop_raimund011eb.htm" />
+			<ai_param name="fnAfterClassChange23" val="bishop_raimund011ec.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="135" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2VillageMasterPriest</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30290" templateId="30290" clientName="Xenos" serverName="master_xenos" level="70" type="guild_master">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23" special="23" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>master_xenos</ai>
+			<ai_param name="fnHi" val="master_xenos001.htm" />
+			<ai_param name="fnClassMismatch" val="master_xenos002.htm" />
+			<ai_param name="fnClassList1" val="master_xenos003f.htm" />
+			<ai_param name="fnClassList2" val="master_xenos003m.htm" />
+			<ai_param name="fnYouAreSecondClass" val="master_xenos004.htm" />
+			<ai_param name="fnYouAreThirdClass" val="master_xenos005.htm" />
+			<ai_param name="fnLowLevelNoProof11" val="master_xenos008fa.htm" />
+			<ai_param name="fnLowLevelNoProof12" val="master_xenos008fb.htm" />
+			<ai_param name="fnLowLevelNoProof13" val="master_xenos008fc.htm" />
+			<ai_param name="fnLowLevelNoProof21" val="master_xenos008ma.htm" />
+			<ai_param name="fnLowLevelNoProof22" val="master_xenos008mb.htm" />
+			<ai_param name="fnLowLevelNoProof23" val="master_xenos008mc.htm" />
+			<ai_param name="fnLowLevel11" val="master_xenos009fa.htm" />
+			<ai_param name="fnLowLevel12" val="master_xenos009fb.htm" />
+			<ai_param name="fnLowLevel13" val="master_xenos009fc.htm" />
+			<ai_param name="fnLowLevel21" val="master_xenos009ma.htm" />
+			<ai_param name="fnLowLevel22" val="master_xenos009mb.htm" />
+			<ai_param name="fnLowLevel23" val="master_xenos009mc.htm" />
+			<ai_param name="fnNoProof11" val="master_xenos010fa.htm" />
+			<ai_param name="fnNoProof12" val="master_xenos010fb.htm" />
+			<ai_param name="fnNoProof13" val="master_xenos010fc.htm" />
+			<ai_param name="fnNoProof21" val="master_xenos010ma.htm" />
+			<ai_param name="fnNoProof22" val="master_xenos010mb.htm" />
+			<ai_param name="fnNoProof23" val="master_xenos010mc.htm" />
+			<ai_param name="fnAfterClassChange11" val="master_xenos011fa.htm" />
+			<ai_param name="fnAfterClassChange12" val="master_xenos011fb.htm" />
+			<ai_param name="fnAfterClassChange13" val="master_xenos011fc.htm" />
+			<ai_param name="fnAfterClassChange21" val="master_xenos011ma.htm" />
+			<ai_param name="fnAfterClassChange22" val="master_xenos011mb.htm" />
+			<ai_param name="fnAfterClassChange23" val="master_xenos011mc.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="103" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DARKELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2VillageMasterDElf</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30291" templateId="30291" clientName="Alex" serverName="alankell" level="70" type="citizen">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23" special="23" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>alankell</ai>
+			<ai_param name="fnHi" val="alankell001.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="130" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="68" /> <!-- Falchion -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Trainer</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30293" templateId="30293" clientName="Manuel" serverName="father_manuell" level="70" type="guild_coach">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="7" special="7" />
+			<height normal="22.2" special="22.2" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>father_manuell</ai>
+			<ai_param name="fnHi" val="father_manuell001.htm" />
+			<ai_param name="fnClassMismatch" val="father_manuell003.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="187" />
+			<ai_param name="token_num" val="1" />
+			<ai_item name="skill_sharing_item" id="15308" /> <!-- Holy Pomander - Eva's Saint -->
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>ELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2TrainerHealers</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="mage" />
+		</custom>
+	</npc>
+	<npc id="30294" templateId="30294" clientName="Varan" serverName="trader_varanket" level="70" type="merchant">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="25" special="25" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>trader_varanket</ai>
+			<ai_param name="fnHi" val="trader_varanket001.htm" />
+			<ai_param name="fnSell" val="trader_varanket002.htm" />
+			<ai_param name="fnBuy" val="trader_varanket003.htm" />
+			<ai_param name="fnUnableItemSell" val="trader_varanket005.htm" />
+			<ai_param name="fnYouAreChaotic" val="trader_varanket006.htm" />
+			<ai_param name="fnNowSiege" val="trader_varanket007.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="110" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>HUMAN</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Merchant</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30297" templateId="30297" clientName="Tobias" serverName="master_tobias" level="70" type="guild_master">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="8" special="8" />
+			<height normal="23" special="23" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>master_tobias</ai>
+			<ai_param name="fnHi" val="master_tobias001.htm" />
+			<ai_param name="fnClassMismatch" val="master_tobias002.htm" />
+			<ai_param name="fnClassList1" val="master_tobias003f.htm" />
+			<ai_param name="fnClassList2" val="master_tobias003m.htm" />
+			<ai_param name="fnYouAreSecondClass" val="master_tobias004.htm" />
+			<ai_param name="fnYouAreThirdClass" val="master_tobias005.htm" />
+			<ai_param name="fnLowLevelNoProof11" val="master_tobias008fa.htm" />
+			<ai_param name="fnLowLevelNoProof12" val="master_tobias008fb.htm" />
+			<ai_param name="fnLowLevelNoProof13" val="master_tobias008fc.htm" />
+			<ai_param name="fnLowLevelNoProof21" val="master_tobias008ma.htm" />
+			<ai_param name="fnLowLevelNoProof22" val="master_tobias008mb.htm" />
+			<ai_param name="fnLowLevelNoProof23" val="master_tobias008mc.htm" />
+			<ai_param name="fnLowLevel11" val="master_tobias009fa.htm" />
+			<ai_param name="fnLowLevel12" val="master_tobias009fb.htm" />
+			<ai_param name="fnLowLevel13" val="master_tobias009fc.htm" />
+			<ai_param name="fnLowLevel21" val="master_tobias009ma.htm" />
+			<ai_param name="fnLowLevel22" val="master_tobias009mb.htm" />
+			<ai_param name="fnLowLevel23" val="master_tobias009mc.htm" />
+			<ai_param name="fnNoProof11" val="master_tobias010fa.htm" />
+			<ai_param name="fnNoProof12" val="master_tobias010fb.htm" />
+			<ai_param name="fnNoProof13" val="master_tobias010fc.htm" />
+			<ai_param name="fnNoProof21" val="master_tobias010ma.htm" />
+			<ai_param name="fnNoProof22" val="master_tobias010mb.htm" />
+			<ai_param name="fnNoProof23" val="master_tobias010mc.htm" />
+			<ai_param name="fnAfterClassChange11" val="master_tobias011fa.htm" />
+			<ai_param name="fnAfterClassChange12" val="master_tobias011fb.htm" />
+			<ai_param name="fnAfterClassChange13" val="master_tobias011fc.htm" />
+			<ai_param name="fnAfterClassChange21" val="master_tobias011ma.htm" />
+			<ai_param name="fnAfterClassChange22" val="master_tobias011mb.htm" />
+			<ai_param name="fnAfterClassChange23" val="master_tobias011mc.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="103" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DARKELF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2VillageMasterDElf</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+	<npc id="30298" templateId="30298" clientName="Pinter" serverName="blacksmith_pinter" level="70" type="blacksmith">
+		<agro_range>1000</agro_range>
+		<clan_help_range>300</clan_help_range>
+		<collision>
+			<radius normal="7" special="7" />
+			<height normal="16.5" special="16.5" />
+		</collision>
+		<corpse_time>7</corpse_time>
+		<ex_crt_effect>1</ex_crt_effect>
+		<exp>429634523</exp>
+		<speed>
+			<run ground="120" underWater="0" flying="0" />
+			<walk ground="50" underWater="0" flying="0" />
+		</speed>
+		<hit_time factor="0.6" skill_factor="-1" />
+		<base pAtk="688.86373" randDmg="30" crit="4" atkSpd="253" reuseDelay="0" mAtk="470.40463" pDef="295.91597" mDef="216.53847" accuracy="5" evasion="0" />
+		<base_attack type="SWORD" range="40" />
+		<base_stats str="43" int="21" dex="30" wit="20" con="43" />
+		<base_damage_range unknown="0" direction="0" distance="80" width="120" />
+		<base_attribute>
+			<attack fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			<defend fire="150" water="150" wind="150" earth="150" holy="150" dark="150" unknown="150" />
+		</base_attribute>
+		<npc_ai>
+			<ai>blacksmith_pinter</ai>
+			<ai_param name="fnHi" val="blacksmith_pinter001.htm" />
+			<ai_param name="fnClassMismatch" val="blacksmith_pinter003.htm" />
+			<ai_param name="MoveAroundSocial" val="0" />
+			<ai_param name="MoveAroundSocial1" val="93" />
+		</npc_ai>
+		<org hp="2444.46819" hp_regen="7.5" mp="1345.8" mp_regen="2.7" />
+		<race>DWARF</race>
+		<s_npc_prop_hp_rate>1</s_npc_prop_hp_rate>
+		<safe_height>100</safe_height>
+		<sex>MALE</sex>
+		<shield defence="0" rate="0" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<eqipment>
+			<rhand id="89" /> <!-- Big Hammer -->
+		</eqipment>
+		<shots_count soul="0" spirit="0" />
+		<status canBeAttacked="false" canMove="true" eventFlag="false" hasSummoner="false" flying="false" passableDoor="false" showName="true" noSleepMode="false" targetable="true" undying="true" unique="false" unsowing="true" privateRespawnLog="false" />
+		<custom>
+			<type>L2Trainer</type>
+			<ai minSkillChance="7" maxSkillChance="15" primarySkillId="0" minRangeSkill="0" minRangeChance="0" maxRangeSkill="0" maxRangeChance="0" spsChance="0" ssChance="0" isChaos="0" enemyClan="" enemyRange="0" dodge="0" aiType="fighter" />
+		</custom>
+	</npc>
+</list>

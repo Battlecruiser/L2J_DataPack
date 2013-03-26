@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -25,14 +29,12 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class handles following admin commands: - invul = turns invulnerability
- * on/off
- *
+ * This class handles following admin commands: - invul = turns invulnerability on/off
  * @version $Revision: 1.1.6.4 $ $Date: 2007/07/31 10:06:00 $
  */
 public class AdminMonsterRace implements IAdminCommandHandler
 {
-	//private static Logger _log = Logger.getLogger(AdminMonsterRace.class.getName());
+	// private static Logger _log = Logger.getLogger(AdminMonsterRace.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -60,28 +62,27 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	private void handleSendPacket(L2PcInstance activeChar)
 	{
 		/*
-		 * -1 0 to initialize the race
-		 * 0 15322 to start race
-		 * 13765 -1 in middle of race
-		 * -1 0 to end the race
-		 *
-		 * 8003 to 8027
+		 * -1 0 to initialize the race 0 15322 to start race 13765 -1 in middle of race -1 0 to end the race 8003 to 8027
 		 */
 		
 		int[][] codes =
 		{
-				{
-					-1, 0
-				},
-				{
-					0, 15322
-				},
-				{
-					13765, -1
-				},
-				{
-					-1, 0
-				}
+			{
+				-1,
+				0
+			},
+			{
+				0,
+				15322
+			},
+			{
+				13765,
+				-1
+			},
+			{
+				-1,
+				0
+			}
 		};
 		MonsterRace race = MonsterRace.getInstance();
 		
@@ -118,8 +119,8 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	class RunRace implements Runnable
 	{
 		
-		private int[][] codes;
-		private L2PcInstance activeChar;
+		private final int[][] codes;
+		private final L2PcInstance activeChar;
 		
 		public RunRace(int[][] pCodes, L2PcInstance pActiveChar)
 		{
@@ -130,20 +131,12 @@ public class AdminMonsterRace implements IAdminCommandHandler
 		@Override
 		public void run()
 		{
-			//int[][] speeds1 = MonsterRace.getInstance().getSpeeds();
-			//MonsterRace.getInstance().newSpeeds();
-			//int[][] speeds2 = MonsterRace.getInstance().getSpeeds();
+			// int[][] speeds1 = MonsterRace.getInstance().getSpeeds();
+			// MonsterRace.getInstance().newSpeeds();
+			// int[][] speeds2 = MonsterRace.getInstance().getSpeeds();
 			/*
-			 int[] speed = new int[8];
-			 for (int i=0; i<8; i++)
-			 {
-			 for (int j=0; j<20; j++)
-			 {
-			 //_log.info("Adding "+speeds1[i][j] +" and "+ speeds2[i][j]);
-			 speed[i] += (speeds1[i][j]*1);// + (speeds2[i][j]*1);
-			 }
-			 _log.info("Total speed for "+(i+1)+" = "+speed[i]);
-			 }*/
+			 * int[] speed = new int[8]; for (int i=0; i<8; i++) { for (int j=0; j<20; j++) { //_log.info("Adding "+speeds1[i][j] +" and "+ speeds2[i][j]); speed[i] += (speeds1[i][j]*1);// + (speeds2[i][j]*1); } _log.info("Total speed for "+(i+1)+" = "+speed[i]); }
+			 */
 			
 			MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			activeChar.sendPacket(spk);
@@ -154,7 +147,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 	
 	private static class RunEnd implements Runnable
 	{
-		private L2PcInstance activeChar;
+		private final L2PcInstance activeChar;
 		
 		public RunEnd(L2PcInstance pActiveChar)
 		{

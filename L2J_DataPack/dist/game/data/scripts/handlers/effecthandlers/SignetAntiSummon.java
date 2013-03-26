@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
 
@@ -53,16 +57,20 @@ public class SignetAntiSummon extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() == getTotalCount() - 1)
+		if (getCount() == (getTotalCount() - 1))
+		{
 			return true; // do nothing first time
+		}
 		int mpConsume = getSkill().getMpConsume();
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if (cha == null)
+			{
 				continue;
+			}
 			
 			if (cha.isPlayable())
 			{
@@ -70,11 +78,15 @@ public class SignetAntiSummon extends L2Effect
 				{
 					L2PcInstance owner = null;
 					if (cha.isSummon())
+					{
 						owner = ((L2Summon) cha).getOwner();
+					}
 					else
+					{
 						owner = cha.getActingPlayer();
+					}
 					
-					if (owner != null && owner.getPet() != null)
+					if ((owner != null) && owner.hasSummon())
 					{
 						if (mpConsume > getEffector().getCurrentMp())
 						{
@@ -83,7 +95,7 @@ public class SignetAntiSummon extends L2Effect
 						}
 						
 						getEffector().reduceCurrentMp(mpConsume);
-						owner.getPet().unSummon(owner);
+						owner.getSummon().unSummon(owner);
 						owner.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 					}
 				}
@@ -96,6 +108,8 @@ public class SignetAntiSummon extends L2Effect
 	public void onExit()
 	{
 		if (_actor != null)
+		{
 			_actor.deleteMe();
+		}
 	}
 }

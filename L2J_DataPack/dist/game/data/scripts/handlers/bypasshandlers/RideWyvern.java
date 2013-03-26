@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.bypasshandlers;
 
@@ -21,6 +25,7 @@ import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2WyvernManagerInstance;
+import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.util.Util;
 
 public class RideWyvern implements IBypassHandler
@@ -32,7 +37,14 @@ public class RideWyvern implements IBypassHandler
 	
 	private static final int[] STRIDERS =
 	{
-		12526, 12527, 12528, 16038, 16039, 16040, 16068, 13197
+		12526,
+		12527,
+		12528,
+		16038,
+		16039,
+		16040,
+		16068,
+		13197
 	};
 	
 	@Override
@@ -61,28 +73,28 @@ public class RideWyvern implements IBypassHandler
 			return false;
 		}
 		
-		if (activeChar.getPet() == null)
+		if (!activeChar.hasSummon())
 		{
 			if (activeChar.isMounted())
 			{
-				activeChar.sendMessage("You already have a pet.");
+				activeChar.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
 			}
 			else
 			{
 				activeChar.sendMessage("Summon your Strider first.");
 			}
 		}
-		else if (Util.contains(STRIDERS, activeChar.getPet().getNpcId()))
+		else if (Util.contains(STRIDERS, activeChar.getSummon().getNpcId()))
 		{
 			if ((activeChar.getInventory().getItemByItemId(1460) != null) && (activeChar.getInventory().getItemByItemId(1460).getCount() >= 25))
 			{
-				if (activeChar.getPet().getLevel() < 55)
+				if (activeChar.getSummon().getLevel() < 55)
 				{
 					activeChar.sendMessage("Your Strider Has not reached the required level.");
 				}
 				else
 				{
-					activeChar.getPet().unSummon(activeChar);
+					activeChar.getSummon().unSummon(activeChar);
 					if (activeChar.mount(12621, 0, true))
 					{
 						activeChar.getInventory().destroyItemByItemId("Wyvern", 1460, 25, activeChar, npc);

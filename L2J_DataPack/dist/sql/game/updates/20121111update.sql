@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00193_SevenSignsDyingMessage' WHERE name='193_SevenSignDyingMessage';

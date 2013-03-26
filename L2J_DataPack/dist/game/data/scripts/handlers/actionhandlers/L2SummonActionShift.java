@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.actionhandlers;
 
@@ -41,11 +45,13 @@ public class L2SummonActionShift implements IActionHandler
 			}
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2PcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character)target));
+			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 			
 			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_summon_info");
 			if (ach != null)
+			{
 				ach.useAdminCommand("admin_summon_info", activeChar);
+			}
 		}
 		return true;
 	}

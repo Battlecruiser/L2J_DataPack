@@ -222,7 +222,7 @@ class Quest (JQuest) :
        htmltext = Quest.getAlreadyCompletedMsg(player)
     elif npcId == Stones :
        if state == State.CREATED :
-          Pavel = player.getQuestState("114_ResurrectionOfAnOldManager")
+          Pavel = player.getQuestState("Q00114_ResurrectionOfAnOldManager")
           if Pavel :
               if player.getLevel() >= 49 and Pavel.getState() == State.COMPLETED :
                  htmltext = "32046-01.htm"

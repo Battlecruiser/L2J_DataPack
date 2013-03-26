@@ -279,46 +279,100 @@
 		<!-- Description: Document that proves participation in the Olympiad Match 3. Take this document to the Olympiad Operator to receive the minimum reward. -->
 		<set name="icon" val="icon.mercenary_certification_i00" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17239" type="EtcItem" name="Olympiad Match 5 Participation Certificate">
 		<!-- Description: Document that proves participation in the Olympiad Match 5. Take this document to the Olympiad Operator to receive an incomplete reward. -->
 		<set name="icon" val="icon.mercenary_certification_i01" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17240" type="EtcItem" name="Olympiad Match 10 Participation Certificate">
 		<!-- Description: Document that proves participation in the Olympiad Match 10. Take this document to the Olympiad Operator to receive a whole reward. -->
 		<set name="icon" val="icon.mercenary_certification_i02" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17241" type="EtcItem" name="Olympiad Team Event Certificate">
 		<!-- Description: Certificate that proves participation in the Olympiad team event 5 matches. Take the certificate to the Olympiad Operator. If you take it with the class-free and class battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17242" type="EtcItem" name="Olympiad Class-Free Battle Certificate">
 		<!-- Description: Certificate that proves participation in the Olympiad class-free battle 5 matches. Take the certificate to the Olympiad Operator. If you take it with the team event and class battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i03" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17243" type="EtcItem" name="Olympiad Class Battle Certificate">
 		<!-- Description: Certificate that proves participation in the Olympiad class battle 5 matches. Take the certificate to the Olympiad Operator. If you take it with the team event and class-free battle certificates, you can expect a greater reward. -->
 		<set name="icon" val="icon.scroll_of_verification_i00" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17244" type="EtcItem" name="Olympiad 2 Consecutive Wins Confirmation">
 		<!-- Description: Document needed to confirm 2 consecutive wins in the Olympiad. Take this confirmation to the Olympiad Operator to receive the minimum reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i01" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17245" type="EtcItem" name="Olympiad 5 Consecutive Wins Confirmation">
 		<!-- Description: Document needed to confirm 5 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive an incomplete reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i02" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17246" type="EtcItem" name="Olympiad 10 Consecutive Wins Confirmation">
 		<!-- Description: Document needed to confirm 10 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive a whole reward. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i03" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17247" type="EtcItem" name="Party Vitality Herb">
 		<!-- Description: Herb that brings Vitality to stage 4 for 10 minutes upon use. Effect works for all party members. -->
@@ -334,7 +388,11 @@
 		<!-- Description: Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="material" val="paper" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17250" type="EtcItem" name="Large Baby Dragon">
 		<!-- Description: Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
@@ -515,18 +573,26 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="17276" type="EtcItem" name="5,000,000 SP scroll">
-		<!-- Description: Scroll that replenishes 5,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9180-1" />
 	</item>
 	<item id="17277" type="EtcItem" name="100,000,000 SP scroll">
-		<!-- Description: Scroll that replenishes 100,000,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scroll" />
 		<set name="material" val="paper" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="9180-2" />
 	</item>
 	<item id="17278" type="EtcItem" name="Strider Pet Exchange Pack">
 		<!-- Description: Dimensional item pack. Wrapped pack containing a Strider pet exchange coupon. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. -->

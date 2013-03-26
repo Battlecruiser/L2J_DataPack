@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -18,11 +22,13 @@
  */
 package handlers.effecthandlers;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -58,22 +64,25 @@ public class SignetMDam extends L2Effect
 	{
 		L2NpcTemplate template;
 		if (getSkill() instanceof L2SkillSignetCasttime)
-			template = NpcTable.getInstance().getTemplate(((L2SkillSignetCasttime) getSkill())._effectNpcId);
+		{
+			template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
+		}
 		else
+		{
 			return false;
+		}
 		
-		L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
+		final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
 		effectPoint.setCurrentHp(effectPoint.getMaxHp());
 		effectPoint.setCurrentMp(effectPoint.getMaxMp());
-		//L2World.getInstance().storeObject(effectPoint);
 		
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
 		
-		if (getEffector().isPlayer() && getSkill().getTargetType() == L2TargetType.TARGET_GROUND)
+		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.GROUND))
 		{
-			Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
+			final Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
 			
 			if (wordPosition != null)
 			{
@@ -93,73 +102,85 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() >= getTotalCount() - 2)
+		if (getCount() >= (getTotalCount() - 2))
+		{
 			return true; // do nothing first 2 times
+		}
 		int mpConsume = getSkill().getMpConsume();
 		
-		L2PcInstance caster = getEffector().getActingPlayer();
+		final L2PcInstance activeChar = getEffector().getActingPlayer();
 		
-		boolean sps = caster.isSpiritshotCharged(getSkill());
-		boolean bss = caster.isBlessedSpiritshotCharged(getSkill());
+		activeChar.rechargeShots(getSkill().useSoulShot(), getSkill().useSpiritShot());
 		
-		FastList<L2Character> targets = new FastList<>();
+		boolean sps = getSkill().useSpiritShot() && getEffector().isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = getSkill().useSpiritShot() && getEffector().isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getSkillRadius()))
+		List<L2Character> targets = new ArrayList<>();
+		
+		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
-			if (cha == null || cha == caster)
+			if ((cha == null) || (cha == activeChar))
+			{
 				continue;
+			}
 			
 			if (cha.isL2Attackable() || cha.isPlayable())
 			{
 				if (cha.isAlikeDead())
-					continue;
-				
-				if (mpConsume > caster.getCurrentMp())
 				{
-					caster.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+					continue;
+				}
+				
+				if (mpConsume > activeChar.getCurrentMp())
+				{
+					activeChar.sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 					return false;
 				}
 				
-				caster.reduceCurrentMp(mpConsume);
+				activeChar.reduceCurrentMp(mpConsume);
 				if (cha.isPlayable())
 				{
-					if (caster.canAttackCharacter(cha))
+					if (activeChar.canAttackCharacter(cha))
 					{
 						targets.add(cha);
-						caster.updatePvPStatus(cha);
+						activeChar.updatePvPStatus(cha);
 					}
 				}
 				else
+				{
 					targets.add(cha);
+				}
 			}
 		}
 		
 		if (!targets.isEmpty())
 		{
-			caster.broadcastPacket(new MagicSkillLaunched(caster, getSkill().getId(), getSkill().getLevel(), targets.toArray(new L2Character[targets.size()])));
+			activeChar.broadcastPacket(new MagicSkillLaunched(activeChar, getSkill().getId(), getSkill().getLevel(), targets.toArray(new L2Character[targets.size()])));
 			for (L2Character target : targets)
 			{
-				boolean mcrit = Formulas.calcMCrit(caster.getMCriticalHit(target, getSkill()));
-				byte shld = Formulas.calcShldUse(caster, target, getSkill());
-				int mdam = (int) Formulas.calcMagicDam(caster, target, getSkill(), shld, sps, bss, mcrit);
+				final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
+				final byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
+				final int mdam = (int) Formulas.calcMagicDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
 				
 				if (target.isSummon())
+				{
 					target.broadcastStatusUpdate();
+				}
 				
 				if (mdam > 0)
 				{
-					if (!target.isRaid()
-							&& Formulas.calcAtkBreak(target, mdam))
+					if (!target.isRaid() && Formulas.calcAtkBreak(target, mdam))
 					{
 						target.breakAttack();
 						target.breakCast();
 					}
-					caster.sendDamageMessage(target, mdam, mcrit, false, false);
-					target.reduceCurrentHp(mdam, caster, getSkill());
+					activeChar.sendDamageMessage(target, mdam, mcrit, false, false);
+					target.reduceCurrentHp(mdam, activeChar, getSkill());
 				}
-				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
+				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
 			}
 		}
+		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		return true;
 	}
 	
@@ -167,6 +188,8 @@ public class SignetMDam extends L2Effect
 	public void onExit()
 	{
 		if (_actor != null)
+		{
 			_actor.deleteMe();
+		}
 	}
 }

@@ -1,1 +1,1 @@
-ALTER TABLE `characters` ADD `createTime` DECIMAL(20,0) NOT NULL default '0' AFTER `vitality_points`;
+ALTER TABLE `characters` ADD `createTime` DECIMAL(20,0) NOT NULL DEFAULT '0' AFTER `vitality_points`;

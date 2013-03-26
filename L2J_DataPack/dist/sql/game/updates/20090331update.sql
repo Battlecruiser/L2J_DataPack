@@ -1,1 +1,1 @@
-ALTER TABLE `characters` ADD `fame` MEDIUMINT UNSIGNED NOT NULL default 0 AFTER `karma`;
+ALTER TABLE `characters` ADD `fame` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0 AFTER `karma`;

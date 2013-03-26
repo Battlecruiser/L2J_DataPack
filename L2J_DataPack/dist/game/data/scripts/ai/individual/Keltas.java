@@ -1,29 +1,33 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual;
 
 import java.util.List;
 
 import javolution.util.FastList;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -32,15 +36,15 @@ import com.l2jserver.gameserver.network.serverpackets.NpcSay;
  * Manages Darion's Enforcer's and Darion's Executioner spawn/despawn
  * @author GKR
  */
-public class Keltas extends Quest
+public class Keltas extends AbstractNpcAI
 {
 	private static final int KELTAS = 22341;
 	private static final int ENFORCER = 22342;
 	private static final int EXECUTIONER = 22343;
 	
-	private L2MonsterInstance spawnedKeltas = null;
+	private L2MonsterInstance _spawnedKeltas = null;
 	
-	private final List<L2Spawn> spawnedMonsters;
+	private final List<L2Spawn> _spawnedMonsters;
 	
 	private static final Location[] ENFORCER_SPAWN_POINTS =
 	{
@@ -101,6 +105,16 @@ public class Keltas extends Quest
 		new Location(-28492, 250704, -3523)
 	};
 	
+	public Keltas(String name, String descr)
+	{
+		super(name, descr);
+		
+		addKillId(KELTAS);
+		addSpawnId(KELTAS);
+		
+		_spawnedMonsters = new FastList<>();
+	}
+	
 	private void spawnMinions()
 	{
 		for (Location loc : ENFORCER_SPAWN_POINTS)
@@ -109,7 +123,7 @@ public class Keltas extends Quest
 			minion.getSpawn().setRespawnDelay(60);
 			minion.getSpawn().setAmount(1);
 			minion.getSpawn().startRespawn();
-			spawnedMonsters.add(minion.getSpawn());
+			_spawnedMonsters.add(minion.getSpawn());
 		}
 		
 		for (Location loc : EXECUTIONER_SPAWN_POINTS)
@@ -118,18 +132,18 @@ public class Keltas extends Quest
 			minion.getSpawn().setRespawnDelay(80);
 			minion.getSpawn().setAmount(1);
 			minion.getSpawn().startRespawn();
-			spawnedMonsters.add(minion.getSpawn());
+			_spawnedMonsters.add(minion.getSpawn());
 		}
 	}
 	
 	private void despawnMinions()
 	{
-		if ((spawnedMonsters == null) || spawnedMonsters.isEmpty())
+		if ((_spawnedMonsters == null) || _spawnedMonsters.isEmpty())
 		{
 			return;
 		}
 		
-		for (L2Spawn spawn : spawnedMonsters)
+		for (L2Spawn spawn : _spawnedMonsters)
 		{
 			spawn.stopRespawn();
 			L2Npc minion = spawn.getLastSpawn();
@@ -138,7 +152,7 @@ public class Keltas extends Quest
 				minion.deleteMe();
 			}
 		}
-		spawnedMonsters.clear();
+		_spawnedMonsters.clear();
 	}
 	
 	@Override
@@ -146,11 +160,11 @@ public class Keltas extends Quest
 	{
 		if (event.equalsIgnoreCase("despawn"))
 		{
-			if ((spawnedKeltas != null) && !spawnedKeltas.isDead())
+			if ((_spawnedKeltas != null) && !_spawnedKeltas.isDead())
 			{
-				spawnedKeltas.broadcastPacket(new NpcSay(spawnedKeltas.getObjectId(), Say2.SHOUT, spawnedKeltas.getNpcId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
-				spawnedKeltas.deleteMe();
-				spawnedKeltas.getSpawn().decreaseCount(spawnedKeltas);
+				_spawnedKeltas.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getNpcId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
+				_spawnedKeltas.deleteMe();
+				_spawnedKeltas.getSpawn().decreaseCount(_spawnedKeltas);
 				despawnMinions();
 			}
 		}
@@ -158,12 +172,12 @@ public class Keltas extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		cancelQuestTimers("despawn");
 		despawnMinions();
 		
-		return super.onKill(npc, killer, isPet);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
@@ -171,26 +185,16 @@ public class Keltas extends Quest
 	{
 		if (!npc.isTeleporting())
 		{
-			spawnedKeltas = (L2MonsterInstance) npc;
-			npc.broadcastPacket(new NpcSay(spawnedKeltas.getObjectId(), Say2.SHOUT, spawnedKeltas.getNpcId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
+			_spawnedKeltas = (L2MonsterInstance) npc;
+			npc.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getNpcId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
 			spawnMinions();
 			startQuestTimer("despawn", 1800000, null, null);
 		}
 		return super.onSpawn(npc);
 	}
 	
-	public Keltas(int id, String name, String descr)
-	{
-		super(id, name, descr);
-		
-		addKillId(KELTAS);
-		addSpawnId(KELTAS);
-		
-		spawnedMonsters = new FastList<>();
-	}
-	
 	public static void main(String[] args)
 	{
-		new Keltas(-1, "keltas", "ai");
+		new Keltas(Keltas.class.getSimpleName(), "ai");
 	}
 }

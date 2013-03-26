@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package custom.IOPRace;
 
@@ -21,6 +25,10 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
+/**
+ * IOP Race AI.
+ * @author Gigiikun, Charus
+ */
 public class IOPRace extends Quest
 {
 	final private static int RIGNOS = 32349;
@@ -42,14 +50,22 @@ public class IOPRace extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		
 		if (player.getLevel() < 78)
+		{
 			return "32349-notavailable.htm";
+		}
 		else if ((_player != -1) && (_player == player.getObjectId()) && (st.getQuestItemsCount(STAMP) == 4))
+		{
 			return "32349-return.htm";
+		}
 		else if (_player != -1)
+		{
 			return "32349-notavailable.htm";
+		}
 		
 		npc.showChatWindow(player);
 		return null;
@@ -60,14 +76,18 @@ public class IOPRace extends Quest
 	{
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
+		{
 			st = newQuestState(player);
+		}
 		
 		if (_player == -1)
 		{
 			// clean old data
 			player.stopSkillEffects(5239);
-			if (player.getPet() != null)
-				player.getPet().stopSkillEffects(5239);
+			if (player.hasSummon())
+			{
+				player.getSummon().stopSkillEffects(5239);
+			}
 			
 			st.takeItems(STAMP, -1);
 			st.set("1st", "0");
@@ -79,8 +99,10 @@ public class IOPRace extends Quest
 			if (skill != null)
 			{
 				skill.getEffects(npc, player);
-				if (player.getPet() != null)
-					skill.getEffects(npc, player.getPet());
+				if (player.hasSummon())
+				{
+					skill.getEffects(npc, player.getSummon());
+				}
 			}
 			
 			startQuestTimer("timer", 1800000, null, null); // 30 min

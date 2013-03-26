@@ -1,3 +1,21 @@
+/*
+ * Copyright (C) 2004-2013 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 package village_master.FirstClassTransferTalk;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -7,9 +25,7 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * This script manages the dialogs of the headmasters of all newbie villages.
- * None of them provide actual class transfers, they only talk about it.
- * Everything is 100% retail-like including htmls.
+ * This script manages the dialogs of the headmasters of all newbie villages. None of them provide actual class transfers, they only talk about it. Everything is 100% retail-like including htmls.
  * @author jurchiks
  */
 public class FirstClassTransferTalk extends Quest
@@ -31,6 +47,33 @@ public class FirstClassTransferTalk extends Quest
 	private static final int PRANA = 32153; // Kamael Village Human Guild High Priest
 	private static final int ALDENIA = 32154; // Kamael Village Human Guild Grand Master
 	
+	public FirstClassTransferTalk(int questId, String name, String descr)
+	{
+		super(questId, name, descr);
+		for (int npc : new int[]
+		{
+			BITZ,
+			BIOTIN,
+			ASTERIOS,
+			THIFIELL,
+			KAKAI,
+			REED,
+			BRONK,
+			HOFFA,
+			FISLER,
+			MOKA,
+			DEVON,
+			RIVIAN,
+			TOOK,
+			PRANA,
+			ALDENIA
+		})
+		{
+			addStartNpc(npc);
+			addTalkId(npc);
+		}
+	}
+	
 	@Override
 	public String onEvent(String event, QuestState st)
 	{
@@ -46,75 +89,127 @@ public class FirstClassTransferTalk extends Quest
 			case BITZ:
 			case ALDENIA:
 			{
-				if (player.getRace() != Race.Human || player.getClassId().isMage())
+				if ((player.getRace() != Race.Human) || player.getClassId().isMage())
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case BIOTIN:
 			case PRANA:
 			{
-				if (player.getRace() != Race.Human || !player.getClassId().isMage())
+				if ((player.getRace() != Race.Human) || !player.getClassId().isMage())
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					htmltext += "mystic.html";
-				else if (player.getClassId().level() == 1) // higher classes
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case ASTERIOS:
 			case RIVIAN:
 			{
 				if (player.getRace() != Race.Elf)
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					if (player.getClassId().isMage())
+					{
 						htmltext += "mystic.html";
+					}
 					else
+					{
 						htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+					}
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case THIFIELL:
 			case DEVON:
 			{
 				if (player.getRace() != Race.DarkElf)
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					if (player.getClassId().isMage())
+					{
 						htmltext += "mystic.html";
+					}
 					else
+					{
 						htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+					}
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case KAKAI:
 			case TOOK:
 			{
 				if (player.getRace() != Race.Orc)
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					if (player.getClassId().isMage())
+					{
 						htmltext += "mystic.html";
+					}
 					else
+					{
 						htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+					}
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case REED:
@@ -122,13 +217,21 @@ public class FirstClassTransferTalk extends Quest
 			case FISLER: // there are 2 warehouse chiefs in kamael village
 			{
 				if (player.getRace() != Race.Dwarf)
+				{
 					htmltext += "no.html";
+				}
 				else if (player.getClassId().level() == 0)
+				{
 					htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 			case BRONK:
@@ -136,28 +239,21 @@ public class FirstClassTransferTalk extends Quest
 			{
 				// no race restriction for blacksmiths (as weird as it may sound...)
 				if (player.getClassId().level() == 0)
+				{
 					htmltext += "fighter.html";
-				else if (player.getClassId().level() == 1) // higher classes
+				}
+				else if (player.getClassId().level() == 1)
+				{
 					htmltext += "transfer_1.html";
+				}
 				else
+				{
 					htmltext += "transfer_2.html";
+				}
 				break;
 			}
 		}
 		return htmltext;
-	}
-	
-	public FirstClassTransferTalk(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npc : new int[]
-		{
-			BITZ, BIOTIN, ASTERIOS, THIFIELL, KAKAI, REED, BRONK, HOFFA, FISLER, MOKA, DEVON, RIVIAN, TOOK, PRANA, ALDENIA
-		})
-		{
-			addStartNpc(npc);
-			addTalkId(npc);
-		}
 	}
 	
 	public static void main(String[] args)

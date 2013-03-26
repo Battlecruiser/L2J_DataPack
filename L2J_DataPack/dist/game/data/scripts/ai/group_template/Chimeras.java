@@ -1,18 +1,24 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.group_template;
+
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
@@ -24,14 +30,18 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
+ * Chimeras AI.
  * @author DS
  */
-public class Chimeras extends L2AttackableAIScript
+public class Chimeras extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCS =
 	{
-		22349, 22350, 22351, 22352
+		22349,
+		22350,
+		22351,
+		22352
 	};
 	private static final int CELTUS = 22353;
 	
@@ -50,6 +60,14 @@ public class Chimeras extends L2AttackableAIScript
 	private static final int LIFE_FORCE = 9681;
 	private static final int CONTAINED_LIFE_FORCE = 9682;
 	
+	private Chimeras()
+	{
+		super(Chimeras.class.getSimpleName(), "ai/group_template");
+		addSkillSeeId(NPCS);
+		addSpawnId(CELTUS);
+		addSkillSeeId(CELTUS);
+	}
+	
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
@@ -66,7 +84,7 @@ public class Chimeras extends L2AttackableAIScript
 	}
 	
 	@Override
-	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
+	public final String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
 		if ((skill.getId() == BOTTLE) && !npc.isDead())
 		{
@@ -99,7 +117,7 @@ public class Chimeras extends L2AttackableAIScript
 				}
 			}
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	private static class Teleport implements Runnable
@@ -120,20 +138,8 @@ public class Chimeras extends L2AttackableAIScript
 		}
 	}
 	
-	public Chimeras(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		for (int npcId : NPCS)
-		{
-			addSkillSeeId(npcId);
-		}
-		
-		addSpawnId(CELTUS);
-		addSkillSeeId(CELTUS);
-	}
-	
 	public static void main(String[] args)
 	{
-		new Chimeras(-1, "Chimeras", "ai");
+		new Chimeras();
 	}
 }

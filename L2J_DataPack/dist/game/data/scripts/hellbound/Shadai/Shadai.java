@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package hellbound.Shadai;
 
@@ -28,11 +32,15 @@ public class Shadai extends Quest
 	
 	private static final int[] DAY_COORDS =
 	{
-		16882, 238952, 9776
+		16882,
+		238952,
+		9776
 	};
 	private static final int[] NIGHT_COORDS =
 	{
-		9064, 253037, -1928
+		9064,
+		253037,
+		-1928
 	};
 	
 	@Override
@@ -50,12 +58,12 @@ public class Shadai extends Quest
 	{
 		int[] coords = DAY_COORDS;
 		boolean mustRevalidate = false;
-		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNowNight())
+		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNight())
 		{
 			coords = NIGHT_COORDS;
 			mustRevalidate = true;
 		}
-		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNowNight())
+		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNight())
 		{
 			mustRevalidate = true;
 		}

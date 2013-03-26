@@ -227,14 +227,14 @@ class Quest (JQuest) :
    if progress == progress_drop and count < maxcount :
         st.giveItems(item,1)
         if count == maxcount-1 :
-          st.playSound("Itemsound.quest_middle")
+          st.playSound("ItemSound.quest_middle")
           itemcount=0
           for id in [WEIRD_BEES_NEEDLE,MARSH_SPIDERS_WEB,BLOOD_OF_LEECH]:
            itemcount+=st.getQuestItemsCount(id)
           if npcId==27133 or itemcount>29:          
             st.set("progress",str(progress+1))
         else:
-          st.playSound("Itemsound.quest_itemget")
+          st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(231,qn,"Test Of Maestro")

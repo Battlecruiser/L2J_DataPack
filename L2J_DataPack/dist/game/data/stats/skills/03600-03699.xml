@@ -5,7 +5,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 80 </table>
 		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78.33 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
@@ -24,7 +24,7 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			<add order="0x40" stat="atkCountMax" val="4" />
@@ -37,7 +37,7 @@
 		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 75 84 </table>
 		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<for>
@@ -65,7 +65,7 @@
 		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
 		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
 		<set name="magicLvl" val="78" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="minPledgeClass" val="2" />
 		<for>
@@ -97,7 +97,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="15" />
 			<sub order="0x40" stat="poisonVuln" val="25" />
@@ -119,7 +119,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.05" />
 			<mul order="0x30" stat="pAtk" val="1.05" />
@@ -129,7 +129,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.05" />
 			<mul order="0x30" stat="cAtk" val="1.05" />
@@ -139,7 +139,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.05" />
 			<mul order="0x30" stat="mAtkSpd" val="1.05" />
@@ -152,7 +152,7 @@
 		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -170,7 +170,7 @@
 		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -181,14 +181,14 @@
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5607" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
-	<skill id="3610" levels="2" name="Apella Robe Set">
+	<skill id="3610" levels="3" name="Apella Robe Set">
 		<!-- Confirmed CT2.5 -->
 		<table name="#maxCP"> 1035 1116 1116 </table>
 		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
 		<table name="#triggeredLevel"> 1 2 2 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="#maxCP" />
 			<mul order="0x30" stat="regCp" val="1.4" />
@@ -203,7 +203,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="25">
 				<using kind="Heavy" />
@@ -220,7 +220,7 @@
 	</skill>
 	<skill id="3612" levels="1" name="Enchant Light Armor (Grade D)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2">
@@ -233,7 +233,7 @@
 	</skill>
 	<skill id="3613" levels="1" name="Enchant Robe (Grade D)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="16">
@@ -246,7 +246,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="38">
 				<using kind="Heavy" />
@@ -263,7 +263,7 @@
 	</skill>
 	<skill id="3615" levels="1" name="Enchant Light Armor (Grade C)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2">
@@ -276,7 +276,7 @@
 	</skill>
 	<skill id="3616" levels="1" name="Enchant Robe (Grade C)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="24">
@@ -289,7 +289,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="44">
 				<using kind="Heavy" />
@@ -306,7 +306,7 @@
 	</skill>
 	<skill id="3618" levels="1" name="Enchant Light Armor (Grade B)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2">
@@ -319,7 +319,7 @@
 	</skill>
 	<skill id="3619" levels="1" name="Enchant Robe (Grade B)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="28">
@@ -332,7 +332,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="50">
 				<using kind="Heavy" />
@@ -349,7 +349,7 @@
 	</skill>
 	<skill id="3621" levels="1" name="Enchant Light Armor (Grade A)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2">
@@ -362,7 +362,7 @@
 	</skill>
 	<skill id="3622" levels="1" name="Enchant Robe (Grade A)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="32">
@@ -375,7 +375,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="pDef" val="59">
 				<using kind="Heavy" />
@@ -392,7 +392,7 @@
 	</skill>
 	<skill id="3624" levels="1" name="Enchant Light Armor (Grade S)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="2">
@@ -405,7 +405,7 @@
 	</skill>
 	<skill id="3625" levels="1" name="Enchant Robe (Grade S)">
 		<set name="magicLvl" val="1" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="pDef" val="38">
@@ -419,7 +419,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
 		<set name="triggeredId" val="5106" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="25000" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
@@ -437,7 +437,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
 		<set name="triggeredId" val="5107" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="25000" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
@@ -455,7 +455,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="77" />
 		<set name="triggeredId" val="5108" />
-		<set name="target" val="TARGET_ONE" />
+		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="25000" />
 		<set name="skillType" val="FUSION" />
 		<set name="operateType" val="CA5" />
@@ -485,7 +485,7 @@
 		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
 		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
 		<set name="magicLvl" val="78" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<set name="minPledgeClass" val="2" />
 		<for>
@@ -513,18 +513,22 @@
 		</for>
 	</skill>
 	<skill id="3630" levels="1" name="Void Burst">
-		<set name="target" val="TARGET_AURA" />
+		<set name="affectLimit" val="6-12" />
+		<set name="targetType" val="AURA" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="140" />
 		<set name="power" val="11500" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillRadius" val="200" />
+		<set name="affectRange" val="200" />
 	</skill>
 	<skill id="3631" levels="1" name="Void Flow">
-		<set name="target" val="TARGET_ONE" />
+		<set name="affectLimit" val="6-12" />
+		<set name="targetType" val="ONE" />
 		<set name="skillType" val="PDAM" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="140" />
 		<set name="power" val="15000" />
@@ -535,7 +539,9 @@
 	</skill>
 	<skill id="3632" levels="1" name="Clan Gate">
 		<!-- CT2.5 retail confirmed -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
+		<set name="targetType" val="SELF" />
 		<set name="skillType" val="BUFF" />
 		<set name="magicLvl" val="60" />
 		<set name="hitTime" val="10000" />
@@ -543,6 +549,11 @@
 		<set name="operateType" val="A2" />
 		<cond msgId="1509">
 			<player olympiad="false" />
+		</cond>
+		<cond msgId="113" addName="1">
+			<not>
+				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+			</not>
 		</cond>
 		<for>
 			<effect name="ClanGate" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item" />
@@ -552,8 +563,10 @@
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#vuln"> 80 100 </table>
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="abnormal_item" />
 		<set name="magicLvl" val="60" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
@@ -567,7 +580,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="cAtkAdd" val="504" /> <!-- P.Atk. +504 on a critical hit -->
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
@@ -585,7 +598,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
@@ -599,7 +612,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
@@ -613,7 +626,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
@@ -627,7 +640,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
@@ -640,7 +653,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
@@ -653,7 +666,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
@@ -667,7 +680,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="5.3" /> <!-- Accuracy +5.3 -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
@@ -681,7 +694,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
@@ -694,7 +707,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
@@ -708,7 +721,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.066" /> <!-- Atk. Spd. +6.6% -->
 			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- P. Atk. +2.66% -->
@@ -722,7 +735,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
@@ -736,7 +749,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
@@ -750,7 +763,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
@@ -764,7 +777,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mAtk" val="1.066" /> <!-- M. Atk. +6.6% -->
@@ -778,7 +791,7 @@
 		<!-- Boss Jewel Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.12" />
 			<sub order="0x40" stat="derangementVuln" val="10" />
@@ -793,7 +806,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5681" />
 		</for>
@@ -802,7 +815,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5682" />
 		</for>
@@ -811,7 +824,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5683" />
 		</for>
@@ -820,7 +833,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5684" />
 		</for>
@@ -829,7 +842,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5685" />
 		</for>
@@ -838,7 +851,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5686" />
 		</for>
@@ -847,7 +860,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5687" />
 		</for>
@@ -856,7 +869,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_HIT" triggeredId="5688" />
 		</for>
@@ -865,7 +878,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="40" chanceType="ON_ATTACKED_HIT" triggeredId="5689" />
 		</for>
@@ -874,7 +887,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5690" />
 		</for>
@@ -883,7 +896,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
 		</for>
@@ -892,7 +905,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" activationSkills="1401" chanceType="ON_CAST" triggeredId="5692" />
 		</for>
@@ -901,7 +914,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
 		</for>
@@ -910,13 +923,15 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
 		</for>
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
 		<!-- Confirmed CT2.5 -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -926,7 +941,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="maxCp" val="1.3" />
@@ -935,6 +950,9 @@
 	</skill>
 	<skill id="3665" levels="2" name="Red Talisman - CP Regeneration">
 		<!-- Confirmed CT2.5 -->
+		<!-- This skill only has one level, 2. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -944,7 +962,7 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
 		<set name="skillType" val="BUFF" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
 				<mul order="0x30" stat="regCp" val="1.3" />
@@ -955,7 +973,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="2" activationMinDamage="20" chanceType="ON_ATTACKED_HIT" triggeredId="5695" />
 		</for>
@@ -964,13 +982,13 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="transDam" val="10" />
 		</for>
 	</skill>
 	<skill id="3668" levels="1" name="Zubei's Leather Gaiters">
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="1.47" />
@@ -980,14 +998,14 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="9.55" />
 		</for>
 	</skill>
 	<skill id="3670" levels="1" name="Zubei's Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="0.59" />
@@ -995,7 +1013,7 @@
 	</skill>
 	<skill id="3671" levels="1" name="Zubei's Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="rEvas" val="0.59" />
@@ -1003,7 +1021,7 @@
 	</skill>
 	<skill id="3672" levels="1" name="Zubei's Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
@@ -1012,7 +1030,7 @@
 	</skill>
 	<skill id="3673" levels="1" name="Zubei's Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
@@ -1021,7 +1039,7 @@
 	</skill>
 	<skill id="3674" levels="1" name="Zubei's Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
@@ -1030,7 +1048,7 @@
 	</skill>
 	<skill id="3675" levels="1" name="Zubei's Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
@@ -1041,7 +1059,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="294" />
 			<mul order="0x30" stat="pDef" val="1.0724" />
@@ -1051,14 +1069,14 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.15" />
 		</for>
 	</skill>
 	<skill id="3678" levels="1" name="Stockings of Zubei">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0208" />
@@ -1066,7 +1084,7 @@
 	</skill>
 	<skill id="3679" levels="1" name="Zubei's Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0083" />
@@ -1074,7 +1092,7 @@
 	</skill>
 	<skill id="3680" levels="1" name="Zubei's Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0083" />
@@ -1082,7 +1100,7 @@
 	</skill>
 	<skill id="3681" levels="1" name="Zubei's Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
@@ -1090,7 +1108,7 @@
 	</skill>
 	<skill id="3682" levels="1" name="Avadon Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="49" />
@@ -1098,7 +1116,7 @@
 	</skill>
 	<skill id="3683" levels="1" name="Avadon Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="49" />
@@ -1106,7 +1124,7 @@
 	</skill>
 	<skill id="3684" levels="1" name="Avadon Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="73" />
@@ -1114,7 +1132,7 @@
 	</skill>
 	<skill id="3685" levels="1" name="Avadon Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="122" />
@@ -1124,14 +1142,14 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="833" />
 		</for>
 	</skill>
 	<skill id="3687" levels="1" name="Avadon Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.01" />
@@ -1139,7 +1157,7 @@
 	</skill>
 	<skill id="3688" levels="1" name="Avadon Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0125" />
@@ -1148,7 +1166,7 @@
 	</skill>
 	<skill id="3689" levels="1" name="Avadon Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0083" />
@@ -1159,7 +1177,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="weightPenalty" val="11038" />
 			<mul order="0x30" stat="mDef" val="1.1708" />
@@ -1167,7 +1185,7 @@
 	</skill>
 	<skill id="3691" levels="1" name="Avadon Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0083" />
@@ -1176,7 +1194,7 @@
 	</skill>
 	<skill id="3692" levels="1" name="Avadon Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
@@ -1184,7 +1202,7 @@
 	</skill>
 	<skill id="3693" levels="1" name="Avadon Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
@@ -1194,7 +1212,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			<mul order="0x30" stat="mDef" val="1.1708" />
@@ -1202,7 +1220,7 @@
 	</skill>
 	<skill id="3695" levels="1" name="Avadon Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
@@ -1210,7 +1228,7 @@
 	</skill>
 	<skill id="3696" levels="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="53" />
@@ -1219,7 +1237,7 @@
 	</skill>
 	<skill id="3697" levels="1" name="Doom Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="53" />
@@ -1230,7 +1248,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="breath" val="383" />
 			<add order="0x40" stat="maxHp" val="1093" />
@@ -1238,7 +1256,7 @@
 	</skill>
 	<skill id="3699" levels="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="target" val="TARGET_SELF" />
+		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
 		<for>
 			<add order="0x40" stat="maxHp" val="80" />

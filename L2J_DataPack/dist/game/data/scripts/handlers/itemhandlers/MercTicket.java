@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.itemhandlers;
 
@@ -27,16 +31,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 public class MercTicket implements IItemHandler
 {
 	/**
-	 * handler for using mercenary tickets.  Things to do:
-	 * 1) Check constraints:
-	 * 1.a) Tickets may only be used in a castle
-	 * 1.b) Only specific tickets may be used in each castle (different tickets for each castle)
-	 * 1.c) only the owner of that castle may use them
-	 * 1.d) tickets cannot be used during siege
-	 * 1.e) Check if max number of tickets has been reached
-	 * 1.f) Check if max number of tickets from this ticket's TYPE has been reached
-	 * 2) If allowed, call the MercTicketManager to add the item and spawn in the world
-	 * 3) Remove the item from the person's inventory
+	 * handler for using mercenary tickets. Things to do: 1) Check constraints: 1.a) Tickets may only be used in a castle 1.b) Only specific tickets may be used in each castle (different tickets for each castle) 1.c) only the owner of that castle may use them 1.d) tickets cannot be used during siege
+	 * 1.e) Check if max number of tickets has been reached 1.f) Check if max number of tickets from this ticket's TYPE has been reached 2) If allowed, call the MercTicketManager to add the item and spawn in the world 3) Remove the item from the person's inventory
 	 */
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
@@ -52,9 +48,11 @@ public class MercTicket implements IItemHandler
 		Castle castle = CastleManager.getInstance().getCastle(activeChar);
 		int castleId = -1;
 		if (castle != null)
+		{
 			castleId = castle.getCastleId();
+		}
 		
-		//add check that certain tickets can only be placed in certain castles
+		// add check that certain tickets can only be placed in certain castles
 		if (MercTicketManager.getInstance().getTicketCastleId(itemId) != castleId)
 		{
 			activeChar.sendPacket(SystemMessageId.MERCENARIES_CANNOT_BE_POSITIONED_HERE);
@@ -71,21 +69,21 @@ public class MercTicket implements IItemHandler
 			return false;
 		}
 		
-		//Checking Seven Signs Quest Period
+		// Checking Seven Signs Quest Period
 		if (SevenSigns.getInstance().getCurrentPeriod() != SevenSigns.PERIOD_SEAL_VALIDATION)
 		{
-			//_log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
+			// _log.warning("Someone has tried to spawn a guardian during Quest Event Period of The Seven Signs.");
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
-		//Checking the Seal of Strife status
+		// Checking the Seal of Strife status
 		switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
 		{
 			case SevenSigns.CABAL_NULL:
 			{
 				if (SevenSigns.getInstance().checkIsDawnPostingTicket(itemId))
 				{
-					//_log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
+					// _log.warning("Someone has tried to spawn a Dawn Mercenary though the Seal of Strife is not controlled by anyone.");
 					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 					return false;
 				}
@@ -95,7 +93,7 @@ public class MercTicket implements IItemHandler
 			{
 				if (!SevenSigns.getInstance().checkIsRookiePostingTicket(itemId))
 				{
-					//_log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
+					// _log.warning("Someone has tried to spawn a non-Rookie Mercenary though the Seal of Strife is controlled by Revolutionaries of Dusk.");
 					activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 					return false;
 				}
@@ -107,7 +105,7 @@ public class MercTicket implements IItemHandler
 			}
 		}
 		
-		if(MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
+		if (MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
@@ -123,7 +121,7 @@ public class MercTicket implements IItemHandler
 			return false;
 		}
 		
-		MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar, null);
+		MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
 		activeChar.sendPacket(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION);
 		return true;

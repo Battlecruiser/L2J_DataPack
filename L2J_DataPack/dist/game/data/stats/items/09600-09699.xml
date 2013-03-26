@@ -58,9 +58,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5414-1;3269-1;3267-1" />
-		<set name="equip_condition" val="{{ec_agit;1};{ec_agit_num;{62}}}" />
 		<cond msgId="1518">
-			<player clanHall="65" />
+			<player clanHall="62" />
 		</cond>
 	</item>
 	<item id="9606" type="Armor" name="Agathion Seal Bracelet - Wild Beast Reserve">
@@ -76,7 +75,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="unequip_skill" val="3267-1" />
 		<set name="item_skill" val="5413-1;3270-1;3267-1" />
-		<set name="equip_condition" val="{{ec_agit;1};{ec_agit_num;{63}}}" />
 		<cond msgId="1518">
 			<player clanHall="63" />
 		</cond>
@@ -402,7 +400,7 @@
 		<set name="material" val="bone" />
 		<set name="weight" val="5" />
 		<set name="price" val="3" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9634" type="EtcItem" name="Steel Bolt">
@@ -415,7 +413,7 @@
 		<set name="material" val="fine_steel" />
 		<set name="weight" val="4" />
 		<set name="price" val="5" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9635" type="EtcItem" name="Silver Bolt">
@@ -428,7 +426,7 @@
 		<set name="material" val="silver" />
 		<set name="weight" val="4" />
 		<set name="price" val="7" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9636" type="EtcItem" name="Mithril Bolt">
@@ -441,7 +439,7 @@
 		<set name="material" val="mithril" />
 		<set name="weight" val="3" />
 		<set name="price" val="8" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9637" type="EtcItem" name="Shining Bolt">
@@ -454,7 +452,7 @@
 		<set name="material" val="adamantaite" />
 		<set name="weight" val="3" />
 		<set name="price" val="10" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9638" type="Weapon" name="Tears r1">
@@ -1002,7 +1000,7 @@
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="bronze" />
 		<set name="weight" val="70" />
-		<set name="enchant_enabled" val="1" />
+		<!-- <set name="enchant_enabled" val="1" /> NOTE: Retail typo. -->
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

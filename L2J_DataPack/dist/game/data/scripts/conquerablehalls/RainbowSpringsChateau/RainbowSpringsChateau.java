@@ -1,20 +1,22 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package conquerablehalls.RainbowSpringsChateau;
-
-import gnu.trove.map.hash.TIntLongHashMap;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -92,7 +94,7 @@ public class RainbowSpringsChateau extends Quest
 				{
 					long counter = 0;
 					L2Clan clan = null;
-					for (int clanId : _warDecreesCount.keys())
+					for (int clanId : _warDecreesCount.keySet())
 					{
 						L2Clan actingClan = ClanTable.getInstance().getClan(clanId);
 						if ((actingClan == null) || (actingClan.getDissolvingExpiryTime() > 0))
@@ -108,7 +110,7 @@ public class RainbowSpringsChateau extends Quest
 							clan = actingClan;
 						}
 					}
-					if ((clan != null) && _acceptedClans.size() < 4)
+					if ((clan != null) && (_acceptedClans.size() < 4))
 					{
 						_acceptedClans.add(clan);
 						L2PcInstance leader = clan.getLeader().getPlayerInstance();
@@ -282,7 +284,7 @@ public class RainbowSpringsChateau extends Quest
 		SkillTable.getInstance().getInfo(0, 1)
 	};
 	
-	protected static TIntLongHashMap _warDecreesCount = new TIntLongHashMap();
+	protected static Map<Integer, Long> _warDecreesCount = new HashMap<>();
 	protected static List<L2Clan> _acceptedClans = new ArrayList<>(4);
 	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<>();
 	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<>();
@@ -448,7 +450,7 @@ public class RainbowSpringsChateau extends Quest
 					case "unregister":
 						if (_rainbow.isRegistering())
 						{
-							if (_warDecreesCount.contains(clan.getClanId()))
+							if (_warDecreesCount.containsKey(clan.getClanId()))
 							{
 								player.addItem("Rainbow Spring unregister", WAR_DECREES, _warDecreesCount.get(clan.getClanId()) / 2, npc, true);
 								_warDecreesCount.remove(clan.getClanId());
@@ -616,7 +618,7 @@ public class RainbowSpringsChateau extends Quest
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		if (!_rainbow.isInSiege())
 		{
@@ -721,9 +723,9 @@ public class RainbowSpringsChateau extends Quest
 			if (pc != null)
 			{
 				pc.stopAllEffects();
-				if (pc.getPet() != null)
+				if (pc.hasSummon())
 				{
-					pc.getPet().unSummon(pc);
+					pc.getSummon().unSummon(pc);
 				}
 				pc.teleToLocation(ARENAS[arena][0], ARENAS[arena][1], ARENAS[arena][2]);
 			}
@@ -838,7 +840,7 @@ public class RainbowSpringsChateau extends Quest
 		else
 		{
 			_usedTextPassages.put(message, new ArrayList<L2Clan>());
-			int shout = Say2.SHOUT;
+			int shout = Say2.NPC_SHOUT;
 			int objId = npc.getObjectId();
 			NpcSay say = new NpcSay(objId, shout, npc.getNpcId(), message);
 			npc.broadcastPacket(say);

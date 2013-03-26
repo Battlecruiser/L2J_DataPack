@@ -1,1 +1,1 @@
-DELETE FROM `raidboss_spawnlist` WHERE `boss_id` = 25687;
+DELETE FROM `raidboss_spawnlist` WHERE `boss_id`=25687;

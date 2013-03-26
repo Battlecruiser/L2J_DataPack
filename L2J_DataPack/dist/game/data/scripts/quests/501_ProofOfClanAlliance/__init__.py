@@ -79,7 +79,7 @@ class Quest (JQuest) :
 
  def __init__(self,id,name,descr) :
      JQuest.__init__(self,id,name,descr)
-     self.questItemIds = [HERB_OF_VANOR, HERB_OF_HARIT, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA, SYMBOL_OF_LOYALTY, ANTIDOTE_RECIPE, VOUCHER_OF_FAITH, POTION_OF_RECOVERY, ANTIDOTE_RECIPE]
+     self.questItemIds = [HERB_OF_VANOR, HERB_OF_HARIT, HERB_OF_OEL_MAHUM, BLOOD_OF_EVA, SYMBOL_OF_LOYALTY, ANTIDOTE_RECIPE, VOUCHER_OF_FAITH, POTION_OF_RECOVERY]
      self.athrea = self.chests = 0
 
  def onAdvEvent (self,event,npc,player) :

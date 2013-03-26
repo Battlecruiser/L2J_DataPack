@@ -29,7 +29,7 @@ TYRANT_KINGPIN = 20193
 TRISALIM_TARANTULA = 20561
 
 def findPetLvl (player, itemid) :
-    pet = player.getPet()
+    pet = player.getSummon()
     if pet:
         if pet.getNpcId() == 12564 :
             level = pet.getStat().getLevel()
@@ -85,7 +85,7 @@ class Quest (JQuest) :
         plevel = findPetLvl(player,PENITENTS_MANACLES)
         level = player.getLevel()
         olevel = st.getInt("level")
-        pet = player.getPet()
+        pet = player.getSummon()
         if pet:
             if pet.getNpcId() == 12564 :
                 htmltext = "30981-16.htm"
@@ -102,7 +102,7 @@ class Quest (JQuest) :
                 st.takeItems(PENITENTS_MANACLES,1)
                 htmltext = "30981-15.htm"
                 player.setPkKills(0)
-                st.playSound("ItemSound.quest_finished")
+                st.playSound("ItemSound.quest_finish")
                 st.exitQuest(1)
             else :
                 st.giveItems(PENITENTS_MANACLES2,1)
@@ -115,7 +115,7 @@ class Quest (JQuest) :
       htmltext = "30981-19.htm"
     elif event == "Quit" :
         htmltext = "30981-20.htm"
-        st.playSound("ItemSound.quest_finished")
+        st.playSound("ItemSound.quest_finish")
         st.takeItems(SCAVENGER_WERERAT_SKULL,-1)
         st.takeItems(TUREK_WARHOUND_TAIL,-1)
         st.takeItems(TYRANT_KINGPIN_HEART,-1)

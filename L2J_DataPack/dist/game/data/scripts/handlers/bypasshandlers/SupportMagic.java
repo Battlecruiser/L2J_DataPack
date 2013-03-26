@@ -1,179 +1,174 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.bypasshandlers;
 
-import com.l2jserver.gameserver.datatables.HelperBuffTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IBypassHandler;
-import com.l2jserver.gameserver.model.L2HelperBuff;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 public class SupportMagic implements IBypassHandler
 {
 	private static final String[] COMMANDS =
 	{
-		"supportmagicservitor", 
+		"supportmagicservitor",
 		"supportmagic"
 	};
+	
+	// Buffs
+	private static final SkillHolder HASTE_1 = new SkillHolder(4327, 1);
+	private static final SkillHolder HASTE_2 = new SkillHolder(5632, 1);
+	private static final SkillHolder CUBIC = new SkillHolder(4338, 1);
+	private static final SkillHolder[] FIGHTER_BUFFS =
+	{
+		new SkillHolder(4322, 1), // Wind Walk
+		new SkillHolder(4323, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4324, 1), // Bless the Body
+		new SkillHolder(4325, 1), // Vampiric Rage
+		new SkillHolder(4326, 1), // Regeneration
+	};
+	private static final SkillHolder[] MAGE_BUFFS =
+	{
+		new SkillHolder(4322, 1), // Wind Walk
+		new SkillHolder(4323, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4328, 1), // Bless the Soul
+		new SkillHolder(4329, 1), // Acumen
+		new SkillHolder(4330, 1), // Concentration
+		new SkillHolder(4331, 1), // Empower
+	};
+	private static final SkillHolder[] SUMMON_BUFFS =
+	{
+		new SkillHolder(4322, 1), // Wind Walk
+		new SkillHolder(4323, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(4324, 1), // Bless the Body
+		new SkillHolder(4325, 1), // Vampiric Rage
+		new SkillHolder(4326, 1), // Regeneration
+		new SkillHolder(4328, 1), // Bless the Soul
+		new SkillHolder(4329, 1), // Acumen
+		new SkillHolder(4330, 1), // Concentration
+		new SkillHolder(4331, 1), // Empower
+	};
+	
+	// Levels
+	private static final int LOWEST_LEVEL = 6;
+	private static final int HIGHEST_LEVEL = 75;
+	private static final int CUBIC_LOWEST = 16;
+	private static final int CUBIC_HIGHEST = 34;
+	private static final int HASTE_LEVEL_2 = 40;
 	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
 		{
 			return false;
 		}
 		
-		boolean result = false;
-		if (command.toLowerCase().startsWith(COMMANDS[0]))
+		if (command.equalsIgnoreCase(COMMANDS[0]))
 		{
-			result = makeSupportMagic(activeChar, (L2Npc) target, true);
+			makeSupportMagic(activeChar, (L2Npc) target, true);
 		}
-		else if (command.toLowerCase().startsWith(COMMANDS[1]))
+		else if (command.equalsIgnoreCase(COMMANDS[1]))
 		{
-			result = makeSupportMagic(activeChar, (L2Npc) target, false);
+			makeSupportMagic(activeChar, (L2Npc) target, false);
 		}
-		
-		return result;
+		return true;
 	}
 	
-	/**
-	 * Add Newbie helper buffs to L2Player according to its level.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Get the range level in wich player must be to obtain buff</li> <li>If player level is out of range, display a message and return</li> <li>According to player level cast buff</li><BR>
-	 * <BR>
-	 * <FONT COLOR=#FF0000><B> Newbie Helper Buff list is define in sql table helper_buff_list</B></FONT><BR>
-	 * <BR>
-	 * @param player The L2PcInstance that talk with the L2NpcInstance
-	 * @param npc 
-	 * @param isSummon 
-	 * @return 
-	 */
-	public static boolean makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
+	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
-		if (player == null)
+		final int level = player.getLevel();
+		if (isSummon && (!player.hasSummon() || !player.getSummon().isServitor()))
 		{
-			return false;
+			npc.showChatWindow(player, "data/html/default/SupportMagicNoSummon.htm");
+			return;
 		}
-		
-		// Prevent a cursed weapon weilder of being buffed
-		if (player.isCursedWeaponEquipped())
+		else if (level > HIGHEST_LEVEL)
 		{
-			return false;
+			npc.showChatWindow(player, "data/html/default/SupportMagicHighLevel.htm");
+			return;
 		}
-		
-		int player_level = player.getLevel();
-		int lowestLevel = 0;
-		int highestLevel = 0;
+		else if (level < LOWEST_LEVEL)
+		{
+			npc.showChatWindow(player, "data/html/default/SupportMagicLowLevel.htm");
+			return;
+		}
+		else if (player.getClassId().level() == 3)
+		{
+			player.sendMessage("Only adventurers who have not completed their 3rd class transfer may receive these buffs."); // Custom message
+			return;
+		}
 		
 		if (isSummon)
 		{
-			if ((player.getPet() == null) || !(player.getPet() instanceof L2ServitorInstance))
+			npc.setTarget(player.getSummon());
+			for (SkillHolder skill : SUMMON_BUFFS)
 			{
-				String content = "<html><body>Only servitors can receive this Support Magic. If you do not have a servitor, you cannot access these spells.</body></html>";
-				npc.insertObjectIdAndShowChatWindow(player, content);
-				return true;
+				npc.doCast(skill.getSkill());
 			}
-			npc.setTarget(player.getPet());
-		}
-		else
-		{
-			// Select the player
-			npc.setTarget(player);
-		}
-		
-		if (isSummon)
-		{
-			lowestLevel = HelperBuffTable.getInstance().getServitorLowestLevel();
-			highestLevel = HelperBuffTable.getInstance().getServitorHighestLevel();
-		}
-		else
-		{
-			// Calculate the min and max level between which the player must be to obtain buff
-			if (player.isMageClass())
+			
+			if (level >= HASTE_LEVEL_2)
 			{
-				lowestLevel = HelperBuffTable.getInstance().getMagicClassLowestLevel();
-				highestLevel = HelperBuffTable.getInstance().getMagicClassHighestLevel();
+				npc.doCast(HASTE_2.getSkill());
 			}
 			else
 			{
-				lowestLevel = HelperBuffTable.getInstance().getPhysicClassLowestLevel();
-				highestLevel = HelperBuffTable.getInstance().getPhysicClassHighestLevel();
-			}
-		}
-		// If the player is too high level, display a message and return
-		if (player_level > highestLevel)
-		{
-			String content = "<html><body>Newbie Guide:<br>Only a <font color=\"LEVEL\">novice character of level " + highestLevel + " or less</font> can receive my support magic.<br>Your novice character is the first one that you created and raised in this world.</body></html>";
-			npc.insertObjectIdAndShowChatWindow(player, content);
-			return true;
-		}
-		
-		// If the player is too low level, display a message and return
-		if (player_level < lowestLevel)
-		{
-			String content = "<html><body>Come back here when you have reached level " + lowestLevel + ". I will give you support magic then.</body></html>";
-			npc.insertObjectIdAndShowChatWindow(player, content);
-			return true;
-		}
-		
-		L2Skill skill = null;
-		if (isSummon)
-		{
-			for (L2HelperBuff helperBuffItem : HelperBuffTable.getInstance().getHelperBuffTable())
-			{
-				if (helperBuffItem.isForSummon())
-				{
-					skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
-					if (skill != null)
-					{
-						npc.doCast(skill);
-					}
-				}
+				npc.doCast(HASTE_1.getSkill());
 			}
 		}
 		else
 		{
-			// Go through the Helper Buff list define in sql table helper_buff_list and cast skill
-			for (L2HelperBuff helperBuffItem : HelperBuffTable.getInstance().getHelperBuffTable())
+			npc.setTarget(player);
+			if (player.isMageClass() && (player.getClassId() != ClassId.overlord) && (player.getClassId() != ClassId.warcryer))
 			{
-				if (helperBuffItem.isMagicClassBuff() == player.isMageClass())
+				for (SkillHolder skill : MAGE_BUFFS)
 				{
-					if ((player_level >= helperBuffItem.getLowerLevel()) && (player_level <= helperBuffItem.getUpperLevel()))
-					{
-						skill = SkillTable.getInstance().getInfo(helperBuffItem.getSkillID(), helperBuffItem.getSkillLevel());
-						if (skill.getSkillType() == L2SkillType.SUMMON)
-						{
-							player.doSimultaneousCast(skill);
-						}
-						else
-						{
-							npc.doCast(skill);
-						}
-					}
+					npc.doCast(skill.getSkill());
 				}
 			}
+			else
+			{
+				for (SkillHolder skill : FIGHTER_BUFFS)
+				{
+					npc.doCast(skill.getSkill());
+				}
+				
+				if (level >= HASTE_LEVEL_2)
+				{
+					npc.doCast(HASTE_2.getSkill());
+				}
+				else
+				{
+					npc.doCast(HASTE_1.getSkill());
+				}
+			}
+			
+			if ((level >= CUBIC_LOWEST) && (level <= CUBIC_HIGHEST))
+			{
+				player.doSimultaneousCast(CUBIC.getSkill());
+			}
 		}
-		return true;
 	}
 	
 	@Override

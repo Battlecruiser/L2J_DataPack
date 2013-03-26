@@ -1,27 +1,31 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.actor.L2Attackable.RewardItem;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
@@ -81,12 +85,12 @@ public class Harvesting extends L2Effect
 			{
 				if (calcSuccess(player, monster))
 				{
-					final RewardItem[] items = monster.takeHarvest();
+					final ItemHolder[] items = monster.takeHarvest();
 					if ((items != null) && (items.length > 0))
 					{
-						for (RewardItem reward : items)
+						for (ItemHolder reward : items)
 						{
-							cropId = reward.getItemId(); // always got 1 type of crop as reward
+							cropId = reward.getId(); // always got 1 type of crop as reward
 							if (player.isInParty())
 							{
 								player.getParty().distributeItem(player, reward, true, monster);
@@ -95,7 +99,7 @@ public class Harvesting extends L2Effect
 							{
 								if (iu != null)
 								{
-									iu.addItem(player.getInventory().addItem("Harvesting", reward.getItemId(), reward.getCount(), player, monster));
+									iu.addItem(player.getInventory().addItem("Harvesting", reward.getId(), reward.getCount(), player, monster));
 								}
 								send = true;
 								total += reward.getCount();

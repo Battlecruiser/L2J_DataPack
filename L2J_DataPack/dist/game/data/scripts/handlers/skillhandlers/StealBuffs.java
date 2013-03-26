@@ -1,26 +1,30 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -39,15 +43,8 @@ public class StealBuffs implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		if (activeChar.isNpc())
-		{
-			((L2Npc) activeChar)._spiritshotcharged = false;
-		}
-		
 		L2Character target;
 		L2Effect effect;
-		
-		int count = skill.getMaxNegatedEffects();
 		for (L2Object obj : targets)
 		{
 			if (!(obj instanceof L2Character))
@@ -67,81 +64,7 @@ public class StealBuffs implements ISkillHandler
 			}
 			
 			Env env;
-			int lastSkillId = 0;
-			final L2Effect[] effects = target.getAllEffects();
-			final ArrayList<L2Effect> toSteal = new ArrayList<>(count);
-			
-			for (int i = effects.length; --i >= 0;) // reverse order
-			{
-				effect = effects[i];
-				if (effect == null)
-				{
-					continue;
-				}
-				
-				if (!effect.canBeStolen()) // remove effect if can't be stolen
-				{
-					effects[i] = null;
-					continue;
-				}
-				
-				// if eff time is smaller than 5 sec, will not be stolen, just to save CPU,
-				// avoid synchronization(?) problems and NPEs
-				if ((effect.getAbnormalTime() - effect.getTime()) < 5)
-				{
-					effects[i] = null;
-					continue;
-				}
-				
-				// first pass - only dances/songs
-				if (!effect.getSkill().isDance())
-				{
-					continue;
-				}
-				
-				if (effect.getSkill().getId() != lastSkillId)
-				{
-					lastSkillId = effect.getSkill().getId();
-					count--;
-				}
-				
-				toSteal.add(effect);
-				if (count == 0)
-				{
-					break;
-				}
-			}
-			
-			if (count > 0) // second pass
-			{
-				lastSkillId = 0;
-				for (int i = effects.length; --i >= 0;)
-				{
-					effect = effects[i];
-					if (effect == null)
-					{
-						continue;
-					}
-					
-					// second pass - all except dances/songs
-					if (effect.getSkill().isDance())
-					{
-						continue;
-					}
-					
-					if (effect.getSkill().getId() != lastSkillId)
-					{
-						lastSkillId = effect.getSkill().getId();
-						count--;
-					}
-					
-					toSteal.add(effect);
-					if (count == 0)
-					{
-						break;
-					}
-				}
-			}
+			final List<L2Effect> toSteal = Formulas.calcCancelStealEffects(activeChar, target, skill, skill.getPower());
 			
 			if (toSteal.size() == 0)
 			{
@@ -176,9 +99,6 @@ public class StealBuffs implements ISkillHandler
 					_log.log(Level.WARNING, "Cannot steal effect: " + eff + " Stealer: " + activeChar + " Stolen: " + target, e);
 				}
 			}
-			
-			// Possibility of a lethal strike
-			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		
 		if (skill.hasSelfEffects())
@@ -193,7 +113,7 @@ public class StealBuffs implements ISkillHandler
 			skill.getEffectsSelf(activeChar);
 		}
 		
-		activeChar.spsUncharge(skill);
+		activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}
 	
 	@Override

@@ -1,18 +1,24 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package custom.Nottingale;
+
+import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -21,14 +27,16 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 /**
- * @authors Kerberos (python), Nyaran (java)
+ * Nottingale AI.<br>
+ * Original Jython script by Kerberos.
+ * @author Nyaran
  */
 public class Nottingale extends Quest
 {
 	private static final String qn = "Nottingale";
-
+	
 	private static final int NPC = 32627;
-
+	
 	public Nottingale(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -36,13 +44,13 @@ public class Nottingale extends Quest
 		addFirstTalkId(NPC);
 		addTalkId(NPC);
 	}
-
+	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState qs = player.getQuestState("10273_GoodDayToFly");
-		if (qs == null || !qs.isCompleted())
+		QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+		if ((qs == null) || !qs.isCompleted())
 		{
 			player.sendPacket(new RadarControl(2, 2, 0, 0, 0));
 			player.sendPacket(new RadarControl(0, 2, -184545, 243120, 1581));
@@ -80,18 +88,20 @@ public class Nottingale extends Quest
 		}
 		return htmltext;
 	}
-
+	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
-			st = this.newQuestState(player);
+		{
+			st = newQuestState(player);
+		}
 		player.setLastQuestNpcObject(npc.getObjectId());
 		npc.showChatWindow(player);
 		return null;
 	}
-
+	
 	public static void main(String[] args)
 	{
 		new Nottingale(-1, qn, "custom");

@@ -290,10 +290,10 @@
 		<node X="147500" Y="-44300" />
 		<node X="145000" Y="-45000" />
 		<node X="144000" Y="-48000" />
-		<node X="144000" Y="-52200" />
-		<node X="151000" Y="-52200" />
-		<node X="151000" Y="-53200" />
-		<node X="144000" Y="-53200" />
+		<node X="144000" Y="-52200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="151000" Y="-52200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="151000" Y="-53200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+		<node X="144000" Y="-53200" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
 		<!-- owner_restart_point_list -->
 		<spawn X="147408" Y="-46448" Z="-963" />
 		<spawn X="147520" Y="-46432" Z="-963" />

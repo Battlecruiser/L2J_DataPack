@@ -1,79 +1,71 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (C) 2004-2013 L2J DataPack
+ * 
+ * This file is part of L2J DataPack.
+ * 
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.group_template;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
+import ai.npc.AbstractNpcAI;
+
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.util.Util;
 
 /**
+ * Pavel Archaic AI.
  * @author Gnacik
  */
-public class PavelArchaic extends L2AttackableAIScript
+public class PavelArchaic extends AbstractNpcAI
 {
-	private static final int[] _mobs1 = { 22801, 22804 };
-	private static final int[] _mobs2 = { 18917 };
+	private PavelArchaic()
+	{
+		super(PavelArchaic.class.getSimpleName(), "ai/group_template");
+		addKillId(22801, 22804);
+		addAttackId(18917);
+	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet)
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if (!npc.isDead() && Util.contains(_mobs2, npc.getNpcId()))
+		if (!npc.isDead())
 		{
 			npc.doDie(attacker);
 			
 			if (getRandom(100) < 40)
 			{
-				L2Attackable _golem1 = (L2Attackable) addSpawn(22801, npc.getLocation(), false, 0);
-				attackPlayer(_golem1, attacker);
+				L2Attackable golem1 = (L2Attackable) addSpawn(22801, npc.getLocation(), false, 0);
+				attackPlayer(golem1, attacker);
 				
-				L2Attackable _golem2 = (L2Attackable) addSpawn(22804, npc.getLocation(), false, 0);
-				attackPlayer(_golem2, attacker);
+				L2Attackable golem2 = (L2Attackable) addSpawn(22804, npc.getLocation(), false, 0);
+				attackPlayer(golem2, attacker);
 			}
 		}
-		return super.onAttack(npc, attacker, damage, isPet);
+		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (Util.contains(_mobs1, npc.getNpcId()))
-		{
-			L2Attackable _golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
-			attackPlayer(_golem, killer);
-		}
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	private void attackPlayer(L2Attackable npc, L2PcInstance player)
-	{
-		npc.setIsRunning(true);
-		npc.addDamageHate(player, 0, 999);
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-	}
-	
-	public PavelArchaic(int questId, String name, String descr)
-	{
-		super(questId, name, descr);
-		registerMobs(_mobs1, QuestEventType.ON_KILL);
-		registerMobs(_mobs2, QuestEventType.ON_ATTACK);
+		L2Attackable golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
+		attackPlayer(golem, killer);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)
 	{
-		new PavelArchaic(-1, "PavelArchaic", "ai");
+		new PavelArchaic();
 	}
 }

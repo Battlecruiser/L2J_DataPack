@@ -45,8 +45,8 @@
 	</zone>
 	<zone name="godad_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3397" maxZ="5100">
 		<stat name="castleId" val="7" />
-		<node X="143023" Y="-53210" />
-		<node X="151893" Y="-53210" />
+		<node X="143023" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+		<node X="151893" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
 		<node X="151949" Y="-39107" />
 		<node X="145899" Y="-39107" />
 		<node X="141457" Y="-44407" />

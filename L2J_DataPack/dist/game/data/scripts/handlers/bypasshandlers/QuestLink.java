@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.bypasshandlers;
 
@@ -31,6 +35,7 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
@@ -43,7 +48,7 @@ public class QuestLink implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!(target instanceof L2Npc))
+		if (!target.isNpc())
 		{
 			return false;
 		}
@@ -64,17 +69,13 @@ public class QuestLink implements IBypassHandler
 		{
 			showQuestWindow(activeChar, (L2Npc) target, quest);
 		}
-		
 		return true;
 	}
 	
 	/**
-	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li><BR>
-	 * <BR>
+	 * Open a choose quest window on client with all quests available of the L2NpcInstance.<br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
 	 * @param player The L2PcInstance that talk with the L2NpcInstance
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
@@ -97,7 +98,7 @@ public class QuestLink implements IBypassHandler
 			{
 				state = q.isCustomQuest() ? "" : "01";
 			}
-			else if (qs.isStarted() && (qs.getInt("cond") > 0))
+			else if (qs.isStarted())
 			{
 				state = q.isCustomQuest() ? " (In Progress)" : "02";
 			}
@@ -132,16 +133,16 @@ public class QuestLink implements IBypassHandler
 	}
 	
 	/**
-	 * Open a quest window on client with the text of the L2NpcInstance.<BR>
-	 * <BR>
-	 * <B><U> Actions</U> :</B><BR>
-	 * <BR>
-	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li> <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li> <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the
-	 * client wait another packet</li><BR>
-	 * <BR>
-	 * @param player the L2PcInstance that talk with the {@code npc}.
-	 * @param npc the L2NpcInstance that chats with the {@code player}.
-	 * @param questId the Id of the quest to display the message.
+	 * Open a quest window on client with the text of the L2NpcInstance.<br>
+	 * <b><u>Actions</u>:</b><br>
+	 * <ul>
+	 * <li>Get the text of the quest state in the folder data/scripts/quests/questId/stateId.htm</li>
+	 * <li>Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance</li>
+	 * <li>Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet</li>
+	 * </ul>
+	 * @param player the L2PcInstance that talk with the {@code npc}
+	 * @param npc the L2NpcInstance that chats with the {@code player}
+	 * @param questId the Id of the quest to display the message
 	 */
 	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
 	{
@@ -154,7 +155,7 @@ public class QuestLink implements IBypassHandler
 		
 		if (q != null)
 		{
-			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder80(true)))
+			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
 			{
 				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
 				return;
@@ -164,9 +165,12 @@ public class QuestLink implements IBypassHandler
 			{
 				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000))
 				{
-					if (player.getAllActiveQuests().length > 40) // if too many ongoing quests, don't show window and send message
+					// Too many ongoing quests.
+					if (player.getAllActiveQuests().length > 40)
 					{
-						player.sendPacket(SystemMessageId.TOO_MANY_QUESTS);
+						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+						html.setFile(player.getHtmlPrefix(), "data/html/fullquest.html");
+						player.sendPacket(html);
 						return;
 					}
 				}
@@ -193,7 +197,7 @@ public class QuestLink implements IBypassHandler
 		
 		if (qs != null)
 		{
-			// If the quest is alreday started, no need to show a window
+			// If the quest is already started, no need to show a window
 			if (!qs.getQuest().notifyTalk(npc, qs))
 			{
 				return;

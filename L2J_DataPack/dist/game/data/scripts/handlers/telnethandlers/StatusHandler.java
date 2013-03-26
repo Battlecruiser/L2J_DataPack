@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.telnethandlers;
 
@@ -85,12 +89,12 @@ public class StatusHandler implements ITelnetHandler
 			
 			_print.println("+----");// ...
 			_print.println("| Allowed Memory:" + df2.format(max));
-			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format(allocated / max * 100));
-			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format(nonAllocated / max * 100));
+			_print.println("|    |= Allocated Memory:" + df2.format(allocated) + df.format((allocated / max) * 100));
+			_print.println("|    |= Non-Allocated Memory:" + df2.format(nonAllocated) + df.format((nonAllocated / max) * 100));
 			_print.println("| Allocated Memory:" + df2.format(allocated));
-			_print.println("|    |= Used Memory:" + df2.format(used) + df.format(used / max * 100));
-			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format(cached / max * 100));
-			_print.println("| Useable Memory:" + df2.format(useable) + df.format(useable / max * 100)); // ...
+			_print.println("|    |= Used Memory:" + df2.format(used) + df.format((used / max) * 100));
+			_print.println("|    |= Unused (cached) Memory:" + df2.format(cached) + df.format((cached / max) * 100));
+			_print.println("| Useable Memory:" + df2.format(useable) + df.format((useable / max) * 100)); // ...
 			_print.println("+----");
 		}
 		else if (command.equals("gmlist"))
@@ -105,7 +109,9 @@ public class StatusHandler implements ITelnetHandler
 			}
 			_print.println("There are currently " + igm + " GM(s) online...");
 			if (!gmList.isEmpty())
+			{
 				_print.println(gmList);
+			}
 		}
 		return false;
 	}
@@ -135,16 +141,27 @@ public class StatusHandler implements ITelnetHandler
 		for (L2Object obj : objs)
 		{
 			if (obj == null)
+			{
 				continue;
+			}
 			if (obj instanceof L2Character)
+			{
 				if (((L2Character) obj).hasAI())
+				{
 					AICount++;
+				}
+			}
 			if (obj instanceof L2ItemInstance)
+			{
 				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				{
 					itemVoidCount++;
+				}
 				else
+				{
 					itemCount++;
-			
+				}
+			}
 			else if (obj instanceof L2MonsterInstance)
 			{
 				monsterCount++;
@@ -155,19 +172,29 @@ public class StatusHandler implements ITelnetHandler
 				}
 			}
 			else if (obj instanceof L2Npc)
+			{
 				npcCount++;
+			}
 			else if (obj instanceof L2PcInstance)
 			{
 				pcCount++;
-				if (((L2PcInstance) obj).getClient() != null && ((L2PcInstance) obj).getClient().isDetached())
+				if ((((L2PcInstance) obj).getClient() != null) && ((L2PcInstance) obj).getClient().isDetached())
+				{
 					detachedCount++;
+				}
 			}
 			else if (obj instanceof L2Summon)
+			{
 				summonCount++;
+			}
 			else if (obj instanceof L2DoorInstance)
+			{
 				doorCount++;
+			}
 			else if (obj instanceof L2Character)
+			{
 				charCount++;
+			}
 		}
 		StringBuilder sb = new StringBuilder();
 		sb.append("Server Status: ");

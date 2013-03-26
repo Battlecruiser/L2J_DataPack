@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
@@ -42,9 +46,11 @@ public class Unlock implements ISkillHandler
 		L2Object[] targetList = skill.getTargetList(activeChar);
 		
 		if (targetList == null)
+		{
 			return;
+		}
 		
-		for (L2Object target: targets)
+		for (L2Object target : targets)
 		{
 			if (target.isDoor())
 			{
@@ -60,15 +66,13 @@ public class Unlock implements ISkillHandler
 						activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
-					for (L2DoorInstance instanceDoor : inst.getDoors())
+					final L2DoorInstance instanceDoor = inst.getDoor(door.getDoorId());
+					if (instanceDoor != null)
 					{
-						if (instanceDoor.getDoorId() == door.getDoorId())
-						{
-							// Door found
-							door = instanceDoor;
-							break;
-						}
+						// Door found
+						door = instanceDoor;
 					}
+					
 					// Checking instance again
 					if (activeChar.getInstanceId() != door.getInstanceId())
 					{
@@ -77,8 +81,7 @@ public class Unlock implements ISkillHandler
 					}
 				}
 				
-				if ((!door.isOpenableBySkill() && skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)
-						|| door.getFort() != null)
+				if ((!door.isOpenableBySkill() && (skill.getSkillType() != L2SkillType.UNLOCK_SPECIAL)) || (door.getFort() != null))
 				{
 					activeChar.sendPacket(SystemMessageId.UNABLE_TO_UNLOCK_DOOR);
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -86,14 +89,18 @@ public class Unlock implements ISkillHandler
 				}
 				
 				if (doorUnlock(skill) && (!door.getOpen()))
+				{
 					door.openMe();
+				}
 				else
+				{
 					activeChar.sendPacket(SystemMessageId.FAILED_TO_UNLOCK_DOOR);
+				}
 			}
 			else if (target instanceof L2ChestInstance)
 			{
 				L2ChestInstance chest = (L2ChestInstance) target;
-				if ((chest.getCurrentHp() <= 0) || chest.isInteracted() || activeChar.getInstanceId() != chest.getInstanceId())
+				if ((chest.getCurrentHp() <= 0) || chest.isInteracted() || (activeChar.getInstanceId() != chest.getInstanceId()))
 				{
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -113,7 +120,9 @@ public class Unlock implements ISkillHandler
 					chest.addDamageHate(activeChar, 0, 1);
 					chest.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
 					if (chestTrap(chest))
+					{
 						chest.chestTrap(activeChar);
+					}
 				}
 			}
 		}
@@ -122,7 +131,9 @@ public class Unlock implements ISkillHandler
 	private static final boolean doorUnlock(L2Skill skill)
 	{
 		if (skill.getSkillType() == L2SkillType.UNLOCK_SPECIAL)
+		{
 			return Rnd.get(100) < skill.getPower();
+		}
 		
 		switch (skill.getLevel())
 		{
@@ -145,32 +156,42 @@ public class Unlock implements ISkillHandler
 		if (chest.getLevel() > 60)
 		{
 			if (skill.getLevel() < 10)
+			{
 				return false;
+			}
 			
-			chance = (skill.getLevel() - 10) * 5 + 30;
+			chance = ((skill.getLevel() - 10) * 5) + 30;
 		}
 		else if (chest.getLevel() > 40)
 		{
 			if (skill.getLevel() < 6)
+			{
 				return false;
+			}
 			
-			chance = (skill.getLevel() - 6) * 5 + 10;
+			chance = ((skill.getLevel() - 6) * 5) + 10;
 		}
 		else if (chest.getLevel() > 30)
 		{
 			if (skill.getLevel() < 3)
+			{
 				return false;
+			}
 			if (skill.getLevel() > 12)
+			{
 				return true;
+			}
 			
-			chance = (skill.getLevel() - 3) * 5 + 30;
+			chance = ((skill.getLevel() - 3) * 5) + 30;
 		}
 		else
 		{
 			if (skill.getLevel() > 10)
+			{
 				return true;
+			}
 			
-			chance = skill.getLevel() * 5 + 35;
+			chance = (skill.getLevel() * 5) + 35;
 		}
 		
 		chance = Math.min(chance, 50);
@@ -180,11 +201,17 @@ public class Unlock implements ISkillHandler
 	private static final boolean chestTrap(L2Character chest)
 	{
 		if (chest.getLevel() > 60)
+		{
 			return Rnd.get(100) < 80;
+		}
 		if (chest.getLevel() > 40)
+		{
 			return Rnd.get(100) < 50;
+		}
 		if (chest.getLevel() > 30)
+		{
 			return Rnd.get(100) < 30;
+		}
 		return Rnd.get(100) < 10;
 	}
 	

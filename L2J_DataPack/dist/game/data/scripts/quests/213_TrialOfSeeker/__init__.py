@@ -49,13 +49,13 @@ class Quest (JQuest) :
       st.takeItems(DUFNERS_LETTER_ID,1)
       st.giveItems(TERYS_ORDER1_ID,1)
       st.set("cond","2")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30064-06.htm" :
       st.takeItems(MYSTERIOUS_RUNESTONE_ID,1)
       st.takeItems(TERYS_ORDER1_ID,1)
       st.giveItems(TERYS_ORDER2_ID,1)
       st.set("cond","4")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30064-10.htm" :
       st.takeItems(OL_MAHUM_RUNESTONE_ID,1)
       st.takeItems(TUREK_RUNESTONE_ID,1)
@@ -65,7 +65,7 @@ class Quest (JQuest) :
       st.giveItems(TERYS_LETTER_ID,1)
       st.giveItems(TERYS_BOX_ID,1)
       st.set("cond","6")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30064-18.htm" :
       if st.getPlayer().getLevel()<35 :
         htmltext = "30064-17.htm"
@@ -86,25 +86,25 @@ class Quest (JQuest) :
       st.takeItems(VIKTORS_LETTER_ID,st.getQuestItemsCount(VIKTORS_LETTER_ID))
       st.giveItems(VIKTORS_REQUEST_ID,1)
       st.set("cond","9")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30684-15.htm" :
       st.takeItems(VIKTORS_REQUEST_ID,1)
       st.takeItems(MEDUSAS_SCALES_ID,st.getQuestItemsCount(MEDUSAS_SCALES_ID))
       st.giveItems(SILENS_RUNESTONE_ID,1)
       st.giveItems(ANALYSIS_REQUEST_ID,1)
       st.set("cond","11")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30715-02.htm" :
       st.takeItems(SILENS_RUNESTONE_ID,1)
       st.takeItems(ANALYSIS_REQUEST_ID,1)
       st.giveItems(MARINAS_LETTER_ID,1)
       st.set("cond","12")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     elif event == "30715-05.htm" :
       st.takeItems(EXPERIMENT_TOOLS_ID,1)
       st.giveItems(ANALYSIS_RESULT_ID,1)
       st.set("cond","14")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
     return htmltext
 
 
@@ -160,7 +160,7 @@ class Quest (JQuest) :
         st.giveItems(LIST_OF_HOST_ID,1)
         st.takeItems(TERYS_ORDER3_ID,1)
         st.set("cond","16")
-        st.playSound("Itemsound.quest_middle")
+        st.playSound("ItemSound.quest_middle")
    elif npcId == 30064 and cond == 1 :
       htmltext = "30064-01.htm"
    elif npcId == 30064 and cond == 2 :
@@ -178,7 +178,7 @@ class Quest (JQuest) :
       st.takeItems(VIKTORS_LETTER_ID,1)
       st.giveItems(HAWKEYES_LETTER_ID,1)
       st.set("cond","8")
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30064 and cond == 8 :
       htmltext = "30064-13.htm"
    elif npcId == 30064 and (cond>8 and cond<14) :
@@ -196,7 +196,7 @@ class Quest (JQuest) :
       st.takeItems(ABYSS_RUNESTONE4_ID,1)
       st.giveItems(TERYS_REPORT_ID,1)
       st.set("id","18") #should be cond
-      st.playSound("Itemsound.quest_middle")
+      st.playSound("ItemSound.quest_middle")
    elif npcId == 30064 and cond == 17 and st.getInt("id") == 18 :
       htmltext = "30064-24.htm"
    elif npcId == 30684 and cond == 6 :
@@ -242,7 +242,7 @@ class Quest (JQuest) :
       if self.getRandom(100) < chance :
         st.giveItems(item,1)
         if count+1 == maxqty :
-           st.playSound("Itemsound.quest_middle")
+           st.playSound("ItemSound.quest_middle")
            if cond == 4:
               if st.getQuestItemsCount(OL_MAHUM_RUNESTONE_ID)+st.getQuestItemsCount(TUREK_RUNESTONE_ID)+st.getQuestItemsCount(ANT_RUNESTONE_ID)+st.getQuestItemsCount(TURAK_BUGBEAR_RUNESTONE_ID)==4 :
                  st.set("cond",str(cond+1))
@@ -254,7 +254,7 @@ class Quest (JQuest) :
            else:
              st.set("cond",str(cond+1))
         else :
-           st.playSound("Itemsound.quest_itemget")
+           st.playSound("ItemSound.quest_itemget")
    return
 
 QUEST       = Quest(213,qn,"Trial Of Seeker")

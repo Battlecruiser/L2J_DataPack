@@ -1,42 +1,46 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package ai.individual;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
-import ai.group_template.L2AttackableAIScript;
+import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Dilios AI
  * @author JIV, Sephiroth, Apocalipce
  */
-public class GeneralDilios extends L2AttackableAIScript
+public class GeneralDilios extends AbstractNpcAI
 {
-	private static final int generalId = 32549;
-	private static final int guardId = 32619;
+	private static final int GENERAL_ID = 32549;
+	private static final int GUARD_ID = 32619;
 	
 	private L2Npc _general;
-	private final List<L2Npc> _guards = new ArrayList<>();
+	private final Set<L2Spawn> _guards;
 	
 	private static final NpcStringId[] diliosText =
 	{
@@ -50,23 +54,17 @@ public class GeneralDilios extends L2AttackableAIScript
 	// NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_EKIMUS_IS_ABOUT_TO_BE_REVIVED_BY_THE_RESURRECTED_UNDEAD_IN_SEED_OF_INFINITY_SEND_ALL_REINFORCEMENTS_TO_THE_HEART_AND_THE_HALL_OF_SUFFERING
 	};
 	
-	public GeneralDilios(int questId, String name, String descr)
+	private GeneralDilios(String name, String descr)
 	{
-		super(questId, name, descr);
-		findNpcs();
-		if (_general == null || _guards.isEmpty())
-			throw new NullPointerException("Cannot find npcs!");
+		super(name, descr);
+		_general = SpawnTable.getInstance().getFirstSpawn(GENERAL_ID).getLastSpawn();
+		_guards = SpawnTable.getInstance().getSpawns(GUARD_ID);
+		if ((_general == null) || _guards.isEmpty())
+		{
+			_log.warning(GeneralDilios.class.getSimpleName() + ": Cannot find NPCs!");
+			return;
+		}
 		startQuestTimer("command_0", 60000, null, null);
-	}
-	
-	public void findNpcs()
-	{
-		for (L2Spawn spawn : SpawnTable.getInstance().getSpawnTable())
-			if (spawn != null)
-				if (spawn.getNpcid() == generalId)
-					_general = spawn.getLastSpawn();
-				else if (spawn.getNpcid() == guardId)
-					_guards.add(spawn.getLastSpawn());
 	}
 	
 	@Override
@@ -77,31 +75,33 @@ public class GeneralDilios extends L2AttackableAIScript
 			int value = Integer.parseInt(event.substring(8));
 			if (value < 6)
 			{
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), 0, generalId, NpcStringId.STABBING_THREE_TIMES));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_ALL, GENERAL_ID, NpcStringId.STABBING_THREE_TIMES));
 				startQuestTimer("guard_animation_0", 3400, null, null);
 			}
 			else
 			{
 				value = -1;
-				_general.broadcastPacket(new NpcSay(_general.getObjectId(), 1, generalId, diliosText[getRandom(diliosText.length)]));
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), Say2.NPC_SHOUT, GENERAL_ID, diliosText[getRandom(diliosText.length)]));
 			}
 			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}
 		else if (event.startsWith("guard_animation_"))
 		{
 			int value = Integer.parseInt(event.substring(16));
-			for (L2Npc guard : _guards)
+			for (L2Spawn guard : _guards)
 			{
-				guard.broadcastSocialAction(4);
+				guard.getLastSpawn().broadcastSocialAction(4);
 			}
 			if (value < 2)
+			{
 				startQuestTimer("guard_animation_" + (value + 1), 1500, null, null);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	public static void main(String[] args)
 	{
-		new GeneralDilios(-1, "GeneralDilios", "ai");
+		new GeneralDilios(GeneralDilios.class.getSimpleName(), "ai");
 	}
 }

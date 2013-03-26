@@ -11,14 +11,7 @@ CREATE TABLE `random_spawn` (
   PRIMARY KEY (`groupId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `random_spawn` VALUES 
--- (2,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (3,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (4,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (5,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (6,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (7,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
--- (8,31092,1,-1,60,0,'false','false'), -- Black Marketeer of Mammon
+INSERT INTO `random_spawn` VALUES
 (11,31113,1,-1,-1,-1,'true','true'), -- Merchant of Mammon
 (12,31126,1,-1,-1,-1,'true','true'), -- Blacksmith of Mammon
 (13,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
@@ -120,7 +113,6 @@ INSERT INTO `random_spawn` VALUES
 (109,31171,1,-1,60,0,'false','false'), -- Crest of Dawn
 (110,25283,1,-1,86400,0,'false','false'), -- Lilith (80)
 (111,25286,1,-1,86400,0,'false','false'), -- Anakim (80)
-(112,27316,1,1800000,14400000,1800000,'false','false'), -- Fallen Chieftain Vegus
 (113,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
 (114,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
 (115,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
@@ -141,10 +133,9 @@ INSERT INTO `random_spawn` VALUES
 (130,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
 (131,31093,1,-1,60,0,'false','false'), -- Preacher of Doom
 (132,31094,1,-1,60,0,'false','false'), -- Orator of Revelations
-(133,32014,1,-1,1800000,1800000,'false','true'), -- Ivan (Runaway Youth quest)
-(134,32013,1,-1,1800000,1800000,'false','true'), -- Suki (Wild Maiden quest)
-(135,32049,1,-1,1200000,1200000,'false','true'), -- Rooney (Blacksmith of wind Rooney)
-(136,32012,1,-1,1800000,1800000,'false','true'), -- Tantan (Aged ExAdventurer quest)
+(133,32014,1,-1,3600000,0,'false','true'), -- Ivan (Runaway Youth quest)
+(134,32013,1,-1,3600000,0,'false','true'), -- Suki (Wild Maiden quest)
+(136,32012,1,-1,3600000,0,'false','true'), -- Tantan (Aged ExAdventurer quest)
 (137,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
 (138,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)
 (139,32335,1,-1,120000,120000,'false','true'), -- Marksman (Guards on kamael island)

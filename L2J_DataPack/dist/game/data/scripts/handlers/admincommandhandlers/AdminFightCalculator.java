@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -29,11 +33,8 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
-
 /**
- * This class handles following admin commands:
- * - gm = turns gm mode on/off
- *
+ * This class handles following admin commands: - gm = turns gm mode on/off
  * @version $Revision: 1.1.2.1 $ $Date: 2005/03/15 21:32:48 $
  */
 public class AdminFightCalculator implements IAdminCommandHandler
@@ -45,18 +46,24 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		"admin_fcs",
 	};
 	
-	//TODO: remove from gm list etc etc
+	// TODO: remove from gm list etc etc
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		try
 		{
 			if (command.startsWith("admin_fight_calculator_show"))
+			{
 				handleShow(command.substring("admin_fight_calculator_show".length()), activeChar);
+			}
 			else if (command.startsWith("admin_fcs"))
+			{
 				handleShow(command.substring("admin_fcs".length()), activeChar);
+			}
 			else if (command.startsWith("admin_fight_calculator"))
+			{
 				handleStart(command.substring("admin_fight_calculator".length()), activeChar);
+			}
 		}
 		catch (StringIndexOutOfBoundsException e)
 		{
@@ -104,110 +111,52 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		
 		L2NpcTemplate npc1 = null;
 		if (mid1 != 0)
+		{
 			npc1 = NpcTable.getInstance().getTemplate(mid1);
+		}
 		L2NpcTemplate npc2 = null;
 		if (mid2 != 0)
+		{
 			npc2 = NpcTable.getInstance().getTemplate(mid2);
+		}
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
 		final String replyMSG;
 		
-		if (npc1 != null && npc2 != null) {
-			replyMSG = StringUtil.concat(
-					"<html><title>Selected mobs to fight</title>" +
-					"<body>" +
-					"<table>" +
-					"<tr><td>First</td><td>Second</td></tr>" +
-					"<tr><td>level ",
-					String.valueOf(lvl1),
-					"</td><td>level ",
-					String.valueOf(lvl2),
-					"</td></tr>" +
-					"<tr><td>id ",
-					String.valueOf(npc1.getNpcId()),
-					"</td><td>id ",
-					String.valueOf(npc2.getNpcId()),
-					"</td></tr>" +
-					"<tr><td>",
-					npc1.getName(),
-					"</td><td>",
-					npc2.getName(),
-					"</td></tr>" +
-					"</table>" +
-					"<center><br><br><br>" +
-					"<button value=\"OK\" action=\"bypass -h admin_fight_calculator_show ",
-					String.valueOf(npc1.getNpcId()),
-					" ",
-					String.valueOf(npc2.getNpcId()),
-					"\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-					"</center>" +
-					"</body></html>"
-			);
-		} else if (lvl1 != 0 && npc1 == null) {
+		if ((npc1 != null) && (npc2 != null))
+		{
+			replyMSG = StringUtil.concat("<html><title>Selected mobs to fight</title>" + "<body>" + "<table>" + "<tr><td>First</td><td>Second</td></tr>" + "<tr><td>level ", String.valueOf(lvl1), "</td><td>level ", String.valueOf(lvl2), "</td></tr>" + "<tr><td>id ", String.valueOf(npc1.getNpcId()), "</td><td>id ", String.valueOf(npc2.getNpcId()), "</td></tr>" + "<tr><td>", npc1.getName(), "</td><td>", npc2.getName(), "</td></tr>" + "</table>" + "<center><br><br><br>" + "<button value=\"OK\" action=\"bypass -h admin_fight_calculator_show ", String.valueOf(npc1.getNpcId()), " ", String.valueOf(npc2.getNpcId()), "\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "</center>" + "</body></html>");
+		}
+		else if ((lvl1 != 0) && (npc1 == null))
+		{
 			final List<L2NpcTemplate> npcs = NpcTable.getInstance().getAllOfLevel(lvl1);
-			final StringBuilder sb = StringUtil.startAppend(
-					50 + npcs.size() * 200,
-					"<html><title>Select first mob to fight</title>" +
-					"<body><table>"
-			);
+			final StringBuilder sb = StringUtil.startAppend(50 + (npcs.size() * 200), "<html><title>Select first mob to fight</title>" + "<body><table>");
 			
-			for (L2NpcTemplate n : npcs) {
-				StringUtil.append(sb,
-						"<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 ",
-						String.valueOf(lvl1),
-						" lvl2 ",
-						String.valueOf(lvl2),
-						" mid1 ",
-						String.valueOf(n.getNpcId()),
-						" mid2 ",
-						String.valueOf(mid2),
-						"\">",
-						n.getName(),
-						"</a></td></tr>"
-				);
+			for (L2NpcTemplate n : npcs)
+			{
+				StringUtil.append(sb, "<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 ", String.valueOf(lvl1), " lvl2 ", String.valueOf(lvl2), " mid1 ", String.valueOf(n.getNpcId()), " mid2 ", String.valueOf(mid2), "\">", n.getName(), "</a></td></tr>");
 			}
 			
 			sb.append("</table></body></html>");
 			replyMSG = sb.toString();
-		} else if (lvl2 != 0 && npc2 == null) {
+		}
+		else if ((lvl2 != 0) && (npc2 == null))
+		{
 			final List<L2NpcTemplate> npcs = NpcTable.getInstance().getAllOfLevel(lvl2);
-			final StringBuilder sb = StringUtil.startAppend(
-					50 + npcs.size() * 200,
-					"<html><title>Select second mob to fight</title>" +
-					"<body><table>"
-			);
+			final StringBuilder sb = StringUtil.startAppend(50 + (npcs.size() * 200), "<html><title>Select second mob to fight</title>" + "<body><table>");
 			
-			for (L2NpcTemplate n : npcs) {
-				StringUtil.append(sb,
-						"<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 ",
-						String.valueOf(lvl1),
-						" lvl2 ",
-						String.valueOf(lvl2),
-						" mid1 ",
-						String.valueOf(mid1),
-						" mid2 ",
-						String.valueOf(n.getNpcId()),
-						"\">",
-						n.getName(),
-						"</a></td></tr>"
-				);
+			for (L2NpcTemplate n : npcs)
+			{
+				StringUtil.append(sb, "<tr><td><a action=\"bypass -h admin_fight_calculator lvl1 ", String.valueOf(lvl1), " lvl2 ", String.valueOf(lvl2), " mid1 ", String.valueOf(mid1), " mid2 ", String.valueOf(n.getNpcId()), "\">", n.getName(), "</a></td></tr>");
 			}
 			
 			sb.append("</table></body></html>");
 			replyMSG = sb.toString();
-		} else {
-			replyMSG =
-				"<html><title>Select mobs to fight</title>" +
-				"<body>" +
-				"<table>" +
-				"<tr><td>First</td><td>Second</td></tr>" +
-				"<tr><td><edit var=\"lvl1\" width=80></td><td><edit var=\"lvl2\" width=80></td></tr>" +
-				"</table>" +
-				"<center><br><br><br>" +
-				"<button value=\"OK\" action=\"bypass -h admin_fight_calculator lvl1 $lvl1 lvl2 $lvl2\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-				"</center>" +
-				"</body></html>";
+		}
+		else
+		{
+			replyMSG = "<html><title>Select mobs to fight</title>" + "<body>" + "<table>" + "<tr><td>First</td><td>Second</td></tr>" + "<tr><td><edit var=\"lvl1\" width=80></td><td><edit var=\"lvl2\" width=80></td></tr>" + "</table>" + "<center><br><br><br>" + "<button value=\"OK\" action=\"bypass -h admin_fight_calculator lvl1 $lvl1 lvl2 $lvl2\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "</center>" + "</body></html>";
 		}
 		
 		adminReply.setHtml(replyMSG);
@@ -266,13 +215,19 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		{
 			boolean _miss1 = Formulas.calcHitMiss(npc1, npc2);
 			if (_miss1)
+			{
 				miss1++;
+			}
 			byte _shld1 = Formulas.calcShldUse(npc1, npc2, null, false);
 			if (_shld1 > 0)
+			{
 				shld1++;
+			}
 			boolean _crit1 = Formulas.calcCrit(npc1.getCriticalHit(npc2, null), false, npc2);
 			if (_crit1)
+			{
 				crit1++;
+			}
 			
 			double _patk1 = npc1.getPAtk(npc2);
 			_patk1 += npc1.getRandomDamageMultiplier();
@@ -294,13 +249,19 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		{
 			boolean _miss2 = Formulas.calcHitMiss(npc2, npc1);
 			if (_miss2)
+			{
 				miss2++;
+			}
 			byte _shld2 = Formulas.calcShldUse(npc2, npc1, null, false);
 			if (_shld2 > 0)
+			{
 				shld2++;
+			}
 			boolean _crit2 = Formulas.calcCrit(npc2.getCriticalHit(npc1, null), false, npc1);
 			if (_crit2)
+			{
 				crit2++;
+			}
 			
 			double _patk2 = npc2.getPAtk(npc1);
 			_patk2 *= npc2.getRandomDamageMultiplier();
@@ -336,119 +297,56 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		int tdmg2 = (int) (sAtk2 * dmg2);
 		// HP restored per 100 seconds
 		double maxHp1 = npc1.getMaxHp();
-		int hp1 = (int) (Formulas.calcHpRegen(npc1) * 100000 / Formulas.getRegeneratePeriod(npc1));
+		int hp1 = (int) ((Formulas.calcHpRegen(npc1) * 100000) / Formulas.getRegeneratePeriod(npc1));
 		
 		double maxHp2 = npc2.getMaxHp();
-		int hp2 = (int) (Formulas.calcHpRegen(npc2) * 100000 / Formulas.getRegeneratePeriod(npc2));
+		int hp2 = (int) ((Formulas.calcHpRegen(npc2) * 100000) / Formulas.getRegeneratePeriod(npc2));
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		final StringBuilder replyMSG = StringUtil.startAppend(1000,
-				"<html><title>Selected mobs to fight</title>" +
-				"<body>" +
-				"<table>"
-		);
+		final StringBuilder replyMSG = StringUtil.startAppend(1000, "<html><title>Selected mobs to fight</title>" + "<body>" + "<table>");
 		
-		if (params.length() == 0) {
+		if (params.length() == 0)
+		{
 			replyMSG.append("<tr><td width=140>Parameter</td><td width=70>me</td><td width=70>target</td></tr>");
-		} else {
-			StringUtil.append(replyMSG,
-					"<tr><td width=140>Parameter</td><td width=70>",
-					((L2NpcTemplate) npc1.getTemplate()).getName(),
-					"</td><td width=70>",
-					((L2NpcTemplate) npc2.getTemplate()).getName(),
-			"</td></tr>");
+		}
+		else
+		{
+			StringUtil.append(replyMSG, "<tr><td width=140>Parameter</td><td width=70>", ((L2NpcTemplate) npc1.getTemplate()).getName(), "</td><td width=70>", ((L2NpcTemplate) npc2.getTemplate()).getName(), "</td></tr>");
 		}
 		
-		StringUtil.append(replyMSG,
-				"<tr><td>miss</td><td>",
-				String.valueOf(miss1),
-				"%</td><td>",
-				String.valueOf(miss2),
-				"%</td></tr>" +
-				"<tr><td>shld</td><td>",
-				String.valueOf(shld2),
-				"%</td><td>",
-				String.valueOf(shld1),
-				"%</td></tr>" +
-				"<tr><td>crit</td><td>",
-				String.valueOf(crit1),
-				"%</td><td>",
-				String.valueOf(crit2),
-				"%</td></tr>" +
-				"<tr><td>pAtk / pDef</td><td>",
-				String.valueOf((int) patk1),
-				" / ",
-				String.valueOf((int) pdef1),
-				"</td><td>",
-				String.valueOf((int) patk2),
-				" / ",
-				String.valueOf((int) pdef2),
-				"</td></tr>" +
-				"<tr><td>made hits</td><td>",
-				String.valueOf(sAtk1),
-				"</td><td>",
-				String.valueOf(sAtk2),
-				"</td></tr>" +
-				"<tr><td>dmg per hit</td><td>",
-				String.valueOf((int) dmg1),
-				"</td><td>",
-				String.valueOf((int) dmg2),
-				"</td></tr>" +
-				"<tr><td>got dmg</td><td>",
-				String.valueOf(tdmg2),
-				"</td><td>",
-				String.valueOf(tdmg1),
-				"</td></tr>" +
-				"<tr><td>got regen</td><td>",
-				String.valueOf(hp1),
-				"</td><td>",
-				String.valueOf(hp2),
-				"</td></tr>" +
-				"<tr><td>had HP</td><td>",
-				String.valueOf((int) maxHp1),
-				"</td><td>",
-				String.valueOf((int) maxHp2),
-				"</td></tr>" +
-		"<tr><td>die</td>");
+		StringUtil.append(replyMSG, "<tr><td>miss</td><td>", String.valueOf(miss1), "%</td><td>", String.valueOf(miss2), "%</td></tr>" + "<tr><td>shld</td><td>", String.valueOf(shld2), "%</td><td>", String.valueOf(shld1), "%</td></tr>" + "<tr><td>crit</td><td>", String.valueOf(crit1), "%</td><td>", String.valueOf(crit2), "%</td></tr>" + "<tr><td>pAtk / pDef</td><td>", String.valueOf((int) patk1), " / ", String.valueOf((int) pdef1), "</td><td>", String.valueOf((int) patk2), " / ", String.valueOf((int) pdef2), "</td></tr>" + "<tr><td>made hits</td><td>", String.valueOf(sAtk1), "</td><td>", String.valueOf(sAtk2), "</td></tr>" + "<tr><td>dmg per hit</td><td>", String.valueOf((int) dmg1), "</td><td>", String.valueOf((int) dmg2), "</td></tr>" + "<tr><td>got dmg</td><td>", String.valueOf(tdmg2), "</td><td>", String.valueOf(tdmg1), "</td></tr>" + "<tr><td>got regen</td><td>", String.valueOf(hp1), "</td><td>", String.valueOf(hp2), "</td></tr>" + "<tr><td>had HP</td><td>", String.valueOf((int) maxHp1), "</td><td>", String.valueOf((int) maxHp2), "</td></tr>" + "<tr><td>die</td>");
 		
-		if (tdmg2 - hp1 > 1) {
-			StringUtil.append(replyMSG,
-					"<td>",
-					String.valueOf((int) (100 * maxHp1 / (tdmg2 - hp1))),
-			" sec</td>");
-		} else {
+		if ((tdmg2 - hp1) > 1)
+		{
+			StringUtil.append(replyMSG, "<td>", String.valueOf((int) ((100 * maxHp1) / (tdmg2 - hp1))), " sec</td>");
+		}
+		else
+		{
 			replyMSG.append("<td>never</td>");
 		}
 		
-		if (tdmg1 - hp2 > 1) {
-			StringUtil.append(replyMSG,
-					"<td>",
-					String.valueOf((int) (100 * maxHp2 / (tdmg1 - hp2))),
-			" sec</td>");
-		} else {
+		if ((tdmg1 - hp2) > 1)
+		{
+			StringUtil.append(replyMSG, "<td>", String.valueOf((int) ((100 * maxHp2) / (tdmg1 - hp2))), " sec</td>");
+		}
+		else
+		{
 			replyMSG.append("<td>never</td>");
 		}
 		
-		replyMSG.append(
-				"</tr>" +
-				"</table>" +
-		"<center><br>");
+		replyMSG.append("</tr>" + "</table>" + "<center><br>");
 		
-		if (params.length() == 0) {
+		if (params.length() == 0)
+		{
 			replyMSG.append("<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-		} else {
-			StringUtil.append(replyMSG,
-					"<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show ",
-					String.valueOf(((L2NpcTemplate) npc1.getTemplate()).getNpcId()),
-					" ",
-					String.valueOf(((L2NpcTemplate) npc2.getTemplate()).getNpcId()),
-			"\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+		}
+		else
+		{
+			StringUtil.append(replyMSG, "<button value=\"Retry\" action=\"bypass -h admin_fight_calculator_show ", String.valueOf(((L2NpcTemplate) npc1.getTemplate()).getNpcId()), " ", String.valueOf(((L2NpcTemplate) npc2.getTemplate()).getNpcId()), "\"  width=100 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
 		}
 		
-		replyMSG.append(
-				"</center>" +
-		"</body></html>");
+		replyMSG.append("</center>" + "</body></html>");
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 		

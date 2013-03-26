@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.actionhandlers;
 
@@ -29,20 +33,26 @@ public class L2ItemInstanceAction implements IActionHandler
 	{
 		// this causes the validate position handler to do the pickup if the location is reached.
 		// mercenary tickets can only be picked up by the castle owner.
-		final int castleId = MercTicketManager.getInstance().getTicketCastleId(((L2ItemInstance)target).getItemId());
+		final int castleId = MercTicketManager.getInstance().getTicketCastleId(((L2ItemInstance) target).getItemId());
 		
-		if (castleId > 0 &&  (!activeChar.isCastleLord(castleId) || activeChar.isInParty()))
+		if ((castleId > 0) && (!activeChar.isCastleLord(castleId) || activeChar.isInParty()))
 		{
-			if (activeChar.isInParty())    //do not allow owner who is in party to pick tickets up
+			if (activeChar.isInParty())
+			{
 				activeChar.sendMessage("You cannot pickup mercenaries while in a party.");
+			}
 			else
+			{
 				activeChar.sendMessage("Only the castle lord can pickup mercenaries.");
+			}
 			
 			activeChar.setTarget(target);
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
-		else if (!activeChar.isFlying()) // cannot pickup
+		else if (!activeChar.isFlying())
+		{
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, target);
+		}
 		
 		return true;
 	}

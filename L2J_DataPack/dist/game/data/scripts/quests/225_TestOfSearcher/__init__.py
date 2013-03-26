@@ -266,7 +266,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(MAKELS_MAP) ==1 and st.getQuestItemsCount(SOLTS_MAP) ==1 :
            st.set("cond",str(cond+1))
        else:
-        st.playSound("Itemsound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
      elif npcId==20551:
       if st.getQuestItemsCount(SOLTS_MAP) ==0:
        st.giveItems(itemid,1)
@@ -277,7 +277,7 @@ class Quest (JQuest) :
         if st.getQuestItemsCount(MAKELS_MAP) ==1 and st.getQuestItemsCount(SOLTS_MAP) ==1 :
            st.set("cond",str(cond+1))
        else:
-        st.playSound("Itemsound.quest_itemget")
+        st.playSound("ItemSound.quest_itemget")
     else:     
      st.giveItems(itemid,1)
      if count==maxcount-1:
@@ -286,7 +286,7 @@ class Quest (JQuest) :
       if npcId == 27093:
          st.giveItems(STRANGE_MAP,1)
      else:
-      st.playSound("Itemsound.quest_itemget")
+      st.playSound("ItemSound.quest_itemget")
    if npcId==20781 and random<30 and count<maxcount:
      st.addSpawn(27094,npc.getX(),npc.getY(),npc.getZ(),npc.getHeading(),True,300000)
    return

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -24,17 +28,15 @@ import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * This class handles following admin commands:
- * - server_shutdown [sec] = shows menu or shuts down server in sec seconds
- *
+ * This class handles following admin commands: - server_shutdown [sec] = shows menu or shuts down server in sec seconds
  * @version $Revision: 1.5.2.1.2.4 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminShutdown implements IAdminCommandHandler
 {
-	//private static Logger _log = Logger.getLogger(AdminShutdown.class.getName());
+	// private static Logger _log = Logger.getLogger(AdminShutdown.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -50,8 +52,16 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(command.substring(22));
-				serverShutdown(activeChar, val, false);
+				final String val = command.substring(22);
+				if (Util.isDigit(val))
+				{
+					serverShutdown(activeChar, Integer.valueOf(val), false);
+				}
+				else
+				{
+					activeChar.sendMessage("Usage: //server_shutdown <seconds>");
+					sendHtmlForm(activeChar);
+				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -62,8 +72,16 @@ public class AdminShutdown implements IAdminCommandHandler
 		{
 			try
 			{
-				int val = Integer.parseInt(command.substring(21));
-				serverShutdown(activeChar, val, true);
+				final String val = command.substring(21);
+				if (Util.isDigit(val))
+				{
+					serverShutdown(activeChar, Integer.parseInt(val), true);
+				}
+				else
+				{
+					activeChar.sendMessage("Usage: //server_restart <seconds>");
+					sendHtmlForm(activeChar);
+				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{

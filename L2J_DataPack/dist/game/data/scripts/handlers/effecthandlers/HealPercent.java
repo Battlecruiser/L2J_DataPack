@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.effecthandlers;
 
@@ -32,7 +36,6 @@ public class HealPercent extends L2Effect
 	{
 		super(env, template);
 	}
-
 	
 	@Override
 	public L2EffectType getEffectType()
@@ -44,28 +47,22 @@ public class HealPercent extends L2Effect
 	public boolean onStart()
 	{
 		L2Character target = getEffected();
-		if (target == null || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor())
+		{
 			return false;
+		}
 		
 		StatusUpdate su = new StatusUpdate(target);
 		double amount = 0;
 		double power = calc();
 		boolean full = (power == 100.0);
 		
-		if (full)
-			amount = target.getMaxHp();
-		else
-			amount = target.getMaxHp() * power / 100.0;
+		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
 		
-		amount = Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp());
+		// Prevents overheal and negative amount
+		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
 		
-		// Prevent negative amounts
-		if (amount < 0)
-			amount = 0;
-		
-		// To prevent -value heals, set the value only if current hp is less than max recoverable.
-		if (target.getCurrentHp() < target.getMaxRecoverableHp())
-			target.setCurrentHp(amount + target.getCurrentHp());
+		target.setCurrentHp(amount + target.getCurrentHp());
 		
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
@@ -74,13 +71,14 @@ public class HealPercent extends L2Effect
 			sm.addCharName(getEffector());
 		}
 		else
+		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
+		}
 		
-		sm.addNumber((int)amount);
+		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
 		target.sendPacket(su);
-		
 		return true;
 	}
 	

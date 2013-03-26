@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -22,7 +26,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * This class handles commands for GMs to respond to petitions.
- *
  * @author Tempy
  */
 public class AdminPetition implements IAdminCommandHandler
@@ -51,9 +54,13 @@ public class AdminPetition implements IAdminCommandHandler
 		}
 		
 		if (command.equals("admin_view_petitions"))
+		{
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
+		}
 		else if (command.startsWith("admin_view_petition"))
+		{
 			PetitionManager.getInstance().viewPetition(activeChar, petitionId);
+		}
 		else if (command.startsWith("admin_accept_petition"))
 		{
 			if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
@@ -69,12 +76,16 @@ public class AdminPetition implements IAdminCommandHandler
 			}
 			
 			if (!PetitionManager.getInstance().acceptPetition(activeChar, petitionId))
+			{
 				activeChar.sendPacket(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION);
+			}
 		}
 		else if (command.startsWith("admin_reject_petition"))
 		{
 			if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
+			{
 				activeChar.sendPacket(SystemMessageId.FAILED_CANCEL_PETITION_TRY_LATER);
+			}
 			PetitionManager.getInstance().sendPendingPetitionList(activeChar);
 		}
 		else if (command.equals("admin_reset_petitions"))
@@ -92,7 +103,7 @@ public class AdminPetition implements IAdminCommandHandler
 			try
 			{
 				L2Object targetChar = activeChar.getTarget();
-				if (targetChar == null || !(targetChar instanceof L2PcInstance))
+				if ((targetChar == null) || !(targetChar instanceof L2PcInstance))
 				{
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 					return false;

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.admincommandhandlers;
 
@@ -43,15 +47,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
- * This class handles following admin commands:
- * - show_moves
- * - show_teleport
- * - teleport_to_character
- * - move_to
- * - teleport_character
- *
- * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $
- * con.close() change and small typo fix by Zoey76 24/02/2011
+ * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
+ * @version $Revision: 1.3.2.6.2.4 $ $Date: 2005/04/11 10:06:06 $ con.close() change and small typo fix by Zoey76 24/02/2011
  */
 public class AdminTeleport implements IAdminCommandHandler
 {
@@ -92,6 +89,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		if (command.equals("admin_instant_move"))
 		{
+			activeChar.sendMessage("Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(1);
 		}
 		if (command.equals("admin_teleto r"))
@@ -140,7 +138,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				if (Config.DEBUG)
+				{
 					_log.info("admin_walk: " + e);
+				}
 			}
 		}
 		else if (command.startsWith("admin_move_to"))
@@ -152,7 +152,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				//Case of empty or missing coordinates
+				// Case of empty or missing coordinates
 				AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 			}
 			catch (NumberFormatException nfe)
@@ -171,9 +171,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				//Case of empty coordinates
+				// Case of empty coordinates
 				activeChar.sendMessage("Wrong or no Coordinates given.");
-				showTeleportCharWindow(activeChar); //back to character teleport
+				showTeleportCharWindow(activeChar); // back to character teleport
 			}
 		}
 		else if (command.startsWith("admin_teleportto "))
@@ -201,9 +201,13 @@ public class AdminTeleport implements IAdminCommandHandler
 				String targetName = param[1];
 				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				if (player != null)
+				{
 					teleportCharacter(player, activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar);
+				}
 				else
+				{
 					changeCharacterPosition(activeChar, targetName);
+				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -223,19 +227,33 @@ public class AdminTeleport implements IAdminCommandHandler
 				StringTokenizer st = new StringTokenizer(val);
 				String dir = st.nextToken();
 				if (st.hasMoreTokens())
+				{
 					intVal = Integer.parseInt(st.nextToken());
+				}
 				if (dir.equals("east"))
+				{
 					x += intVal;
+				}
 				else if (dir.equals("west"))
+				{
 					x -= intVal;
+				}
 				else if (dir.equals("north"))
+				{
 					y -= intVal;
+				}
 				else if (dir.equals("south"))
+				{
 					y += intVal;
+				}
 				else if (dir.equals("up"))
+				{
 					z += intVal;
+				}
 				else if (dir.equals("down"))
+				{
 					z -= intVal;
+				}
 				activeChar.teleToLocation(x, y, z, false);
 				showTeleportWindow(activeChar);
 			}
@@ -292,7 +310,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void teleportHome(L2PcInstance player)
 	{
 		String regionName;
-		switch(player.getRace())
+		switch (player.getRace())
 		{
 			case Elf:
 				regionName = "elf_town";
@@ -362,30 +380,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		
-		final String replyMSG = StringUtil.concat(
-				"<html><title>Teleport Character</title>" +
-				"<body>" +
-				"The character you will teleport is ",
-				player.getName(),
-				"." +
-				"<br>" +
-				"Co-ordinate x" +
-				"<edit var=\"char_cord_x\" width=110>" +
-				"Co-ordinate y" +
-				"<edit var=\"char_cord_y\" width=110>" +
-				"Co-ordinate z" +
-				"<edit var=\"char_cord_z\" width=110>" +
-				"<button value=\"Teleport\" action=\"bypass -h admin_teleport_character $char_cord_x $char_cord_y $char_cord_z\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-				"<button value=\"Teleport near you\" action=\"bypass -h admin_teleport_character ",
-				String.valueOf(activeChar.getX()),
-				" ",
-				String.valueOf(activeChar.getY()),
-				" ",
-				String.valueOf(activeChar.getZ()),
-				"\" width=115 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" +
-				"<center><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center>" +
-				"</body></html>"
-		);
+		final String replyMSG = StringUtil.concat("<html><title>Teleport Character</title>" + "<body>" + "The character you will teleport is ", player.getName(), "." + "<br>" + "Co-ordinate x" + "<edit var=\"char_cord_x\" width=110>" + "Co-ordinate y" + "<edit var=\"char_cord_y\" width=110>" + "Co-ordinate z" + "<edit var=\"char_cord_z\" width=110>" + "<button value=\"Teleport\" action=\"bypass -h admin_teleport_character $char_cord_x $char_cord_y $char_cord_z\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "<button value=\"Teleport near you\" action=\"bypass -h admin_teleport_character ", String.valueOf(activeChar.getX()), " ", String.valueOf(activeChar.getY()), " ", String.valueOf(activeChar.getZ()), "\" width=115 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">" + "<center><button value=\"Back\" action=\"bypass -h admin_current_player\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center>" + "</body></html>");
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
 	}
@@ -432,7 +427,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * @param x
 	 * @param y
 	 * @param z
-	 * @param activeChar 
+	 * @param activeChar
 	 */
 	private void teleportCharacter(L2PcInstance player, int x, int y, int z, L2PcInstance activeChar)
 	{
@@ -446,7 +441,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else
 			{
 				// Set player to same instance as GM teleporting.
-				if ((activeChar != null) && activeChar.getInstanceId() >= 0)
+				if ((activeChar != null) && (activeChar.getInstanceId() >= 0))
 				{
 					player.setInstanceId(activeChar.getInstanceId());
 					activeChar.sendMessage("You have recalled " + player.getName());
@@ -517,9 +512,13 @@ public class AdminTeleport implements IAdminCommandHandler
 			int count = statement.getUpdateCount();
 			statement.close();
 			if (count == 0)
+			{
 				activeChar.sendMessage("Character not found or position unaltered.");
+			}
 			else
+			{
 				activeChar.sendMessage("Player's [" + name + "] position is now set to (" + x + "," + y + "," + z + ").");
+			}
 		}
 		catch (SQLException se)
 		{
@@ -530,7 +529,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	private void recallNPC(L2PcInstance activeChar)
 	{
 		L2Object obj = activeChar.getTarget();
-		if (obj instanceof L2Npc && !((L2Npc)obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
+		if ((obj instanceof L2Npc) && !((L2Npc) obj).isMinion() && !(obj instanceof L2RaidBossInstance) && !(obj instanceof L2GrandBossInstance))
 		{
 			L2Npc target = (L2Npc) obj;
 			
@@ -558,11 +557,13 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			try
 			{
-				//L2MonsterInstance mob = new L2MonsterInstance(monsterTemplate, template1);
+				// L2MonsterInstance mob = new L2MonsterInstance(monsterTemplate, template1);
 				
 				spawn = new L2Spawn(template1);
 				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
+				{
 					spawn.setCustom(true);
+				}
 				spawn.setLocx(activeChar.getX());
 				spawn.setLocy(activeChar.getY());
 				spawn.setLocz(activeChar.getZ());
@@ -570,9 +571,13 @@ public class AdminTeleport implements IAdminCommandHandler
 				spawn.setHeading(activeChar.getHeading());
 				spawn.setRespawnDelay(respawnTime);
 				if (activeChar.getInstanceId() >= 0)
+				{
 					spawn.setInstanceId(activeChar.getInstanceId());
+				}
 				else
+				{
 					spawn.setInstanceId(0);
+				}
 				SpawnTable.getInstance().addNewSpawn(spawn, true);
 				spawn.init();
 				
@@ -608,7 +613,9 @@ public class AdminTeleport implements IAdminCommandHandler
 				L2NpcTemplate template = NpcTable.getInstance().getTemplate(target.getNpcId());
 				L2Spawn spawnDat = new L2Spawn(template);
 				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
+				{
 					spawn.setCustom(true);
+				}
 				spawnDat.setLocx(activeChar.getX());
 				spawnDat.setLocy(activeChar.getY());
 				spawnDat.setLocz(activeChar.getZ());

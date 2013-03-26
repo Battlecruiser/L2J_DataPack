@@ -1,21 +1,28 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package quests.TerritoryWarScripts;
 
 import java.util.Calendar;
 import java.util.StringTokenizer;
+
+import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
+import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
 
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
@@ -35,6 +42,10 @@ import com.l2jserver.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.L2FastMap;
 
+/**
+ * Territory War quests superclass.
+ * @author Gigiikun
+ */
 public class TerritoryWarSuperClass extends Quest
 {
 	private static L2FastMap<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new L2FastMap<>();
@@ -56,171 +67,61 @@ public class TerritoryWarSuperClass extends Quest
 	public int RANDOM_MIN;
 	public int RANDOM_MAX;
 	
-	// Used to register NPCs "For the Sake of the Territory ..." quests
-	public void registerKillIds()
+	public TerritoryWarSuperClass(int questId, String name, String descr)
 	{
-		addKillId(CATAPULT_ID);
-		for (int mobid : LEADER_IDS)
+		super(questId, name, descr);
+		
+		if (questId < 0)
 		{
-			addKillId(mobid);
-		}
-		for (int mobid : GUARD_IDS)
-		{
-			addKillId(mobid);
-		}
-	}
-	
-	// Used to register NPCs "Protect the ..." quests
-	public void registerAttackIds()
-	{
-		for (int mobid : NPC_IDS)
-		{
-			addAttackId(mobid);
-		}
-	}
-	
-	@Override
-	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet)
-	{
-		if (Util.contains(targets, npc))
-		{
-			if (skill.getId() == 845)
+			// Outpost and Ward handled by the Super Class script
+			addSkillSeeId(36590);
+			
+			// Calculate next TW date
+			Calendar startTWDate = Calendar.getInstance();
+			if (loadGlobalQuestVar("nextTWStartDate").equalsIgnoreCase(""))
 			{
-				if (TerritoryWarManager.getInstance().getHQForClan(caster.getClan()) != npc)
+				startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+				startTWDate.set(Calendar.HOUR_OF_DAY, 20);
+				startTWDate.set(Calendar.MINUTE, 0);
+				startTWDate.set(Calendar.SECOND, 0);
+				if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
+					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
 				}
-				npc.deleteMe();
-				TerritoryWarManager.getInstance().setHQForClan(caster.getClan(), null);
+				if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
+				{
+					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
+				}
+				saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
 			}
-			else if (skill.getId() == 847)
+			else
 			{
-				if (TerritoryWarManager.getInstance().getHQForTerritory(caster.getSiegeSide()) != npc)
+				startTWDate.setTimeInMillis(Long.parseLong(loadGlobalQuestVar("nextTWStartDate")));
+				if ((startTWDate.getTimeInMillis() < System.currentTimeMillis()) && SevenSigns.getInstance().isSealValidationPeriod() && (SevenSigns.getInstance().getMilliToPeriodChange() > 172800000))
 				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
-				}
-				TerritoryWard ward = TerritoryWarManager.getInstance().getTerritoryWard(caster);
-				if (ward == null)
-				{
-					return super.onSkillSee(npc, caster, skill, targets, isPet);
-				}
-				if ((caster.getSiegeSide() - 80) == ward.getOwnerCastleId())
-				{
-					for (TerritoryNPCSpawn wardSpawn : TerritoryWarManager.getInstance().getTerritory(ward.getOwnerCastleId()).getOwnedWard())
+					startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+					startTWDate.set(Calendar.HOUR_OF_DAY, 20);
+					startTWDate.set(Calendar.MINUTE, 0);
+					startTWDate.set(Calendar.SECOND, 0);
+					if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
 					{
-						if (wardSpawn.getNpcId() == ward.getTerritoryId())
-						{
-							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
-							ward.unSpawnMe();
-							ward.setNpc(wardSpawn.getNpc());
-						}
+						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
 					}
-				}
-				else
-				{
-					ward.unSpawnMe();
-					ward.setNpc(TerritoryWarManager.getInstance().addTerritoryWard(ward.getTerritoryId(), caster.getSiegeSide() - 80, ward.getOwnerCastleId(), true));
-					ward.setOwnerCastleId(caster.getSiegeSide() - 80);
-					TerritoryWarManager.getInstance().getTerritory(caster.getSiegeSide() - 80).getQuestDone()[1]++;
+					if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
+					{
+						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
+					}
+					saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
 				}
 			}
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
+			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
 		}
-		return super.onSkillSee(npc, caster, skill, targets, isPet);
 	}
 	
 	public int getTerritoryIdForThisNPCId(int npcid)
 	{
 		return 0;
-	}
-	
-	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isPet)
-	{
-		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getNpcId()))
-		{
-			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
-			if ((territoryId >= 81) && (territoryId <= 89))
-			{
-				for (L2PcInstance pl : L2World.getInstance().getAllPlayersArray())
-				{
-					if (pl.getSiegeSide() == territoryId)
-					{
-						QuestState st = pl.getQuestState(getName());
-						if (st == null)
-						{
-							st = newQuestState(pl);
-						}
-						if (!st.isStarted())
-						{
-							st.setCond(1);
-							st.setState(State.STARTED, false);
-						}
-					}
-				}
-			}
-		}
-		return super.onAttack(npc, player, damage, isPet);
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
-	{
-		TerritoryWarManager manager = TerritoryWarManager.getInstance();
-		if (npc.getNpcId() == CATAPULT_ID)
-		{
-			manager.territoryCatapultDestroyed(TERRITORY_ID - 80);
-			manager.giveTWPoint(killer, TERRITORY_ID, 4);
-			manager.announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
-			handleBecomeMercenaryQuest(killer, true);
-		}
-		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
-		{
-			manager.giveTWPoint(killer, TERRITORY_ID, 3);
-		}
-		
-		if ((killer.getSiegeSide() != TERRITORY_ID) && (TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80) != null))
-		{
-			manager.getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
-		}
-		return super.onKill(npc, killer, isPet);
-	}
-	
-	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if ((npc != null) || (player != null))
-		{
-			return null;
-		}
-		StringTokenizer st = new StringTokenizer(event, " ");
-		event = st.nextToken(); // Get actual command
-		if (event.equalsIgnoreCase("setNextTWDate"))
-		{
-			Calendar startTWDate = Calendar.getInstance();
-			startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-			startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-			startTWDate.set(Calendar.MINUTE, 0);
-			startTWDate.set(Calendar.SECOND, 0);
-			if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
-			{
-				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-			}
-			if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-			{
-				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-			}
-			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
-		}
-		else if (event.equalsIgnoreCase("setTWDate") && st.hasMoreTokens())
-		{
-			Calendar startTWDate = Calendar.getInstance();
-			startTWDate.setTimeInMillis(Long.parseLong(st.nextToken()));
-			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-		}
-		return null;
 	}
 	
 	private void handleKillTheQuest(L2PcInstance player)
@@ -296,90 +197,71 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	private void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		QuestState _state = player.getQuestState("147_PathtoBecominganEliteMercenary");
-		if ((_state != null) && (_state.getState() == State.STARTED))
+		if ((npc != null) || (player != null))
 		{
-			int _cond = _state.getInt("cond");
-			if (catapult)
+			return null;
+		}
+		StringTokenizer st = new StringTokenizer(event, " ");
+		event = st.nextToken(); // Get actual command
+		if (event.equalsIgnoreCase("setNextTWDate"))
+		{
+			Calendar startTWDate = Calendar.getInstance();
+			startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
+			startTWDate.set(Calendar.HOUR_OF_DAY, 20);
+			startTWDate.set(Calendar.MINUTE, 0);
+			startTWDate.set(Calendar.SECOND, 0);
+			if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
 			{
-				if (_cond == 2)
-				{
-					_state.setCond(4);
-				}
-				else if (_cond == 1)
-				{
-					_state.setCond(3);
-				}
+				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
 			}
-			else
+			if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
 			{
-				if ((_cond == 1) || (_cond == 3))
+				startTWDate.add(Calendar.DAY_OF_MONTH, 7);
+			}
+			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
+			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
+		}
+		else if (event.equalsIgnoreCase("setTWDate") && st.hasMoreTokens())
+		{
+			Calendar startTWDate = Calendar.getInstance();
+			startTWDate.setTimeInMillis(Long.parseLong(st.nextToken()));
+			saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
+			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
+		}
+		return null;
+	}
+	
+	@Override
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
+	{
+		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getNpcId()))
+		{
+			int territoryId = getTerritoryIdForThisNPCId(npc.getNpcId());
+			if ((territoryId >= 81) && (territoryId <= 89))
+			{
+				for (L2PcInstance pl : L2World.getInstance().getAllPlayersArray())
 				{
-					// Get
-					int _kills = _state.getInt("kills");
-					// Increase
-					_kills++;
-					// Save
-					_state.set("kills", String.valueOf(_kills));
-					// Check
-					if (_kills >= 10)
+					if (pl.getSiegeSide() == territoryId)
 					{
-						if (_cond == 1)
+						QuestState st = pl.getQuestState(getName());
+						if (st == null)
 						{
-							_state.setCond(2);
+							st = newQuestState(pl);
 						}
-						else if (_cond == 3)
+						if (!st.isStarted())
 						{
-							_state.setCond(4);
+							st.setCond(1);
+							st.setState(State.STARTED, false);
 						}
 					}
 				}
 			}
 		}
-	}
-	
-	private void handleStepsForHonor(L2PcInstance player)
-	{
-		int kills = 0;
-		int cond = 0;
-		// Additional Handle for Quest
-		QuestState _sfh = player.getQuestState("176_StepsForHonor");
-		if ((_sfh != null) && (_sfh.getState() == State.STARTED))
-		{
-			cond = _sfh.getInt("cond");
-			if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 7))
-			{
-				// Get kills
-				kills = _sfh.getInt("kills");
-				// Increase
-				kills++;
-				// Save
-				_sfh.set("kills", String.valueOf(kills));
-				// Check
-				if ((cond == 1) && (kills >= 9))
-				{
-					_sfh.setCond(2);
-					_sfh.set("kills", "0");
-				}
-				else if ((cond == 3) && (kills >= 18))
-				{
-					_sfh.setCond(4);
-					_sfh.set("kills", "0");
-				}
-				else if ((cond == 5) && (kills >= 27))
-				{
-					_sfh.setCond(6);
-					_sfh.set("kills", "0");
-				}
-				else if ((cond == 7) && (kills >= 36))
-				{
-					_sfh.setCond(8);
-					_sfh.unset("kills");
-				}
-			}
-		}
+		return super.onAttack(npc, player, damage, isSummon);
 	}
 	
 	@Override
@@ -458,6 +340,92 @@ public class TerritoryWarSuperClass extends Quest
 	}
 	
 	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		TerritoryWarManager manager = TerritoryWarManager.getInstance();
+		if (npc.getNpcId() == CATAPULT_ID)
+		{
+			manager.territoryCatapultDestroyed(TERRITORY_ID - 80);
+			manager.giveTWPoint(killer, TERRITORY_ID, 4);
+			manager.announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
+			handleBecomeMercenaryQuest(killer, true);
+		}
+		else if (Util.contains(LEADER_IDS, npc.getNpcId()))
+		{
+			manager.giveTWPoint(killer, TERRITORY_ID, 3);
+		}
+		
+		if ((killer.getSiegeSide() != TERRITORY_ID) && (TerritoryWarManager.getInstance().getTerritory(killer.getSiegeSide() - 80) != null))
+		{
+			manager.getTerritory(killer.getSiegeSide() - 80).getQuestDone()[0]++;
+		}
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
+	{
+		if (Util.contains(targets, npc))
+		{
+			if (skill.getId() == 845)
+			{
+				if (TerritoryWarManager.getInstance().getHQForClan(caster.getClan()) != npc)
+				{
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
+				}
+				npc.deleteMe();
+				TerritoryWarManager.getInstance().setHQForClan(caster.getClan(), null);
+			}
+			else if (skill.getId() == 847)
+			{
+				if (TerritoryWarManager.getInstance().getHQForTerritory(caster.getSiegeSide()) != npc)
+				{
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
+				}
+				TerritoryWard ward = TerritoryWarManager.getInstance().getTerritoryWard(caster);
+				if (ward == null)
+				{
+					return super.onSkillSee(npc, caster, skill, targets, isSummon);
+				}
+				if ((caster.getSiegeSide() - 80) == ward.getOwnerCastleId())
+				{
+					for (TerritoryNPCSpawn wardSpawn : TerritoryWarManager.getInstance().getTerritory(ward.getOwnerCastleId()).getOwnedWard())
+					{
+						if (wardSpawn.getNpcId() == ward.getTerritoryId())
+						{
+							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
+							ward.unSpawnMe();
+							ward.setNpc(wardSpawn.getNpc());
+						}
+					}
+				}
+				else
+				{
+					ward.unSpawnMe();
+					ward.setNpc(TerritoryWarManager.getInstance().addTerritoryWard(ward.getTerritoryId(), caster.getSiegeSide() - 80, ward.getOwnerCastleId(), true));
+					ward.setOwnerCastleId(caster.getSiegeSide() - 80);
+					TerritoryWarManager.getInstance().getTerritory(caster.getSiegeSide() - 80).getQuestDone()[1]++;
+				}
+			}
+		}
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
+	}
+	
+	// Used to register NPCs "For the Sake of the Territory ..." quests
+	public void registerKillIds()
+	{
+		addKillId(CATAPULT_ID);
+		for (int mobid : LEADER_IDS)
+		{
+			addKillId(mobid);
+		}
+		for (int mobid : GUARD_IDS)
+		{
+			addKillId(mobid);
+		}
+	}
+	
+	@Override
 	public void setOnEnterWorld(boolean val)
 	{
 		super.setOnEnterWorld(val);
@@ -501,12 +469,14 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
+					st.setState(State.COMPLETED, false);
 					st.exitQuest(false);
 					for (Quest q : _protectTheScripts.values())
 					{
 						st = player.getQuestState(q.getName());
 						if (st != null)
 						{
+							st.setState(State.COMPLETED, false);
 							st.exitQuest(false);
 						}
 					}
@@ -525,55 +495,105 @@ public class TerritoryWarSuperClass extends Quest
 		}
 	}
 	
-	public TerritoryWarSuperClass(int questId, String name, String descr)
+	private static void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
 	{
-		super(questId, name, descr);
-		
-		if (questId < 0)
+		int enemyCount = 10, catapultCount = 1;
+		QuestState st = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
+		if ((st != null) && st.isCompleted())
 		{
-			// Outpost and Ward handled by the Super Class script
-			addSkillSeeId(36590);
-			
-			// Calculate next TW date
-			Calendar startTWDate = Calendar.getInstance();
-			if (loadGlobalQuestVar("nextTWStartDate").equalsIgnoreCase(""))
+			st = player.getQuestState(Q00148_PathtoBecominganExaltedMercenary.class.getSimpleName());
+			enemyCount = 30;
+			catapultCount = 2;
+		}
+		
+		if ((st != null) && st.isStarted())
+		{
+			if (catapult)
 			{
-				startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-				startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-				startTWDate.set(Calendar.MINUTE, 0);
-				startTWDate.set(Calendar.SECOND, 0);
-				if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
+				if (st.isCond(1) || st.isCond(2))
 				{
-					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
+					int count = st.getInt("catapult");
+					count++;
+					st.set("catapult", String.valueOf(count));
+					if (count >= catapultCount)
+					{
+						if (st.isCond(1))
+						{
+							st.setCond(3);
+						}
+						else
+						{
+							st.setCond(4);
+						}
+					}
 				}
-				if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-				{
-					startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-				}
-				saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
 			}
 			else
 			{
-				startTWDate.setTimeInMillis(Long.parseLong(loadGlobalQuestVar("nextTWStartDate")));
-				if ((startTWDate.getTimeInMillis() < System.currentTimeMillis()) && SevenSigns.getInstance().isSealValidationPeriod() && (SevenSigns.getInstance().getMilliToPeriodChange() > 172800000))
+				if (st.isCond(1) || st.isCond(3))
 				{
-					startTWDate.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY);
-					startTWDate.set(Calendar.HOUR_OF_DAY, 20);
-					startTWDate.set(Calendar.MINUTE, 0);
-					startTWDate.set(Calendar.SECOND, 0);
-					if (startTWDate.getTimeInMillis() < System.currentTimeMillis())
+					// Get
+					int _kills = st.getInt("kills");
+					// Increase
+					_kills++;
+					// Save
+					st.set("kills", String.valueOf(_kills));
+					// Check
+					if (_kills >= enemyCount)
 					{
-						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
+						if (st.isCond(1))
+						{
+							st.setCond(2);
+						}
+						else
+						{
+							st.setCond(4);
+						}
 					}
-					if (!SevenSigns.getInstance().isDateInSealValidPeriod(startTWDate))
-					{
-						startTWDate.add(Calendar.DAY_OF_MONTH, 7);
-					}
-					saveGlobalQuestVar("nextTWStartDate", String.valueOf(startTWDate.getTimeInMillis()));
 				}
 			}
-			TerritoryWarManager.getInstance().setTWStartTimeInMillis(startTWDate.getTimeInMillis());
-			_log.info("Next TerritoryWarTime: " + startTWDate.getTime());
+		}
+	}
+	
+	private static void handleStepsForHonor(L2PcInstance player)
+	{
+		int kills = 0;
+		int cond = 0;
+		// Additional Handle for Quest
+		QuestState _sfh = player.getQuestState("176_StepsForHonor");
+		if ((_sfh != null) && _sfh.isStarted())
+		{
+			cond = _sfh.getCond();
+			if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 7))
+			{
+				// Get kills
+				kills = _sfh.getInt("kills");
+				// Increase
+				kills++;
+				// Save
+				_sfh.set("kills", String.valueOf(kills));
+				// Check
+				if ((cond == 1) && (kills >= 9))
+				{
+					_sfh.setCond(2);
+					_sfh.set("kills", "0");
+				}
+				else if ((cond == 3) && (kills >= 18))
+				{
+					_sfh.setCond(4);
+					_sfh.set("kills", "0");
+				}
+				else if ((cond == 5) && (kills >= 27))
+				{
+					_sfh.setCond(6);
+					_sfh.set("kills", "0");
+				}
+				else if ((cond == 7) && (kills >= 36))
+				{
+					_sfh.setCond(8);
+					_sfh.unset("kills");
+				}
+			}
 		}
 	}
 	

@@ -1,16 +1,20 @@
 /*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later
- * version.
+ * Copyright (C) 2004-2013 L2J DataPack
  * 
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
+ * This file is part of L2J DataPack.
  * 
- * You should have received a copy of the GNU General Public License along with
- * this program. If not, see <http://www.gnu.org/licenses/>.
+ * L2J DataPack is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J DataPack is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package handlers.skillhandlers;
 
@@ -31,10 +35,6 @@ public class HealPercent implements ISkillHandler
 	{
 		L2SkillType.HEAL_PERCENT,
 		L2SkillType.MANAHEAL_PERCENT,
-		L2SkillType.CPHEAL_PERCENT,
-		L2SkillType.HPMPHEAL_PERCENT,
-		L2SkillType.HPMPCPHEAL_PERCENT,
-		L2SkillType.HPCPHEAL_PERCENT
 	};
 	
 	@Override
@@ -48,32 +48,16 @@ public class HealPercent implements ISkillHandler
 			handler.useSkill(activeChar, skill, targets);
 		}
 		
-		boolean cp = false;
 		boolean hp = false;
 		boolean mp = false;
 		switch (skill.getSkillType())
 		{
-			case CPHEAL_PERCENT:
-				cp = true;
-				break;
 			case HEAL_PERCENT:
 				hp = true;
 				break;
 			case MANAHEAL_PERCENT:
 				mp = true;
 				break;
-			case HPMPHEAL_PERCENT:
-				mp = true;
-				hp = true;
-				break;
-			case HPMPCPHEAL_PERCENT:
-				cp = true;
-				hp = true;
-				mp = true;
-				break;
-			case HPCPHEAL_PERCENT:
-				hp = true;
-				cp = true;
 		}
 		
 		StatusUpdate su = null;
@@ -82,6 +66,12 @@ public class HealPercent implements ISkillHandler
 		boolean full = skill.getPower() == 100.0;
 		for (L2Character target : (L2Character[]) targets)
 		{
+			// if skill power is "0 or less" don't show heal system message.
+			if (skill.getPower() <= 0)
+			{
+				continue;
+			}
+			
 			// 1505 - sublime self sacrifice
 			if ((target.isDead() || target.isInvul()) && (skill.getId() != 1505))
 			{
@@ -105,39 +95,6 @@ public class HealPercent implements ISkillHandler
 			if (hp && (target.isDoor() || (target instanceof L2SiegeFlagInstance)))
 			{
 				continue;
-			}
-			
-			// Only players have CP
-			if (cp && target.isPlayer())
-			{
-				if (full)
-				{
-					amount = target.getMaxCp();
-				}
-				else
-				{
-					amount = (target.getMaxCp() * skill.getPower()) / 100.0;
-				}
-				
-				amount = Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp());
-				
-				// Prevent negative amounts
-				if (amount < 0)
-				{
-					amount = 0;
-				}
-				
-				// To prevent -value heals, set the value only if current cp is less than max recoverable.
-				if (target.getCurrentCp() < target.getMaxRecoverableCp())
-				{
-					target.setCurrentCp(amount + target.getCurrentCp());
-				}
-				
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
-				sm.addNumber((int) amount);
-				target.sendPacket(sm);
-				su = new StatusUpdate(target);
-				su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
 			}
 			
 			if (hp)
