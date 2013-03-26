@@ -427,9 +427,9 @@
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#enchantMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<table name="#ench1lethal2"> 50 50 51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 </table>
+		<table name="#ench1LethalStrikeRate"> 50 50 51 51 51 52 52 52 53 53 53 54 54 54 55 55 55 56 56 56 57 57 57 58 58 58 59 59 59 60 </table>
 		<table name="#ench2mpConsume"> 111 109 107 105 103 101 99 97 95 93 91 89 87 85 83 81 79 77 75 73 71 69 67 65 63 61 59 57 55 53 </table>
-		<table name="#lethal2"> 30 35 40 45 50 </table>
+		<table name="#lethalStrikeRate"> 30 35 40 45 50 </table>
 		<table name="#magicLvl"> 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 100 103 106 109 112 </table>
 		<set name="castRange" val="900" />
@@ -437,7 +437,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="10113" />
-		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
+		<set name="lethalStrikeRate" val="#lethalStrikeRate" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -448,7 +448,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant1 name="lethal2" val="#ench1lethal2" /> <!-- Lethal Strike -->
+		<enchant1 name="lethalStrikeRate" val="#ench1LethalStrikeRate" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<cond msgId="113" addName="1">
@@ -2202,7 +2202,7 @@
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<set name="blowChance" val="20" />
 		<set name="condition" val="16" /> <!-- Crit -->
-		<set name="lethal1" val="10" /> <!-- Half-Kill -->
+		<set name="halfKillRate" val="10" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="skillType" val="BLOW" />

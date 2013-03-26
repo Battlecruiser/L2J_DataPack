@@ -1118,13 +1118,12 @@
 	</skill>
 	<skill id="5257" levels="2" name="Death">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#lethal2"> 99 5 </table>
+		<table name="#lethalStrikeRate"> 99 5 </table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="lethal2" val="#lethal2" /> <!-- Lethal Strike -->
+		<set name="lethalStrikeRate" val="#lethalStrikeRate" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A1" />
 	</skill>
 	<skill id="5258" levels="12" name="Mana Burn">

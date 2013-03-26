@@ -732,7 +732,7 @@
 		<set name="coolTime" val="720" />
 		<set name="skillType" val="BLOW" />
 		<set name="offensive" val="true" />
-		<set name="lethal1" val="5" /> <!-- Half-Kill -->
+		<set name="halfKillRate" val="5" />
 		<set name="overHit" val="true" />
 		<set name="operateType" val="A3" />
 		<set name="castRange" val="40" />
@@ -1257,7 +1257,7 @@
 		<set name="overHit" val="true" />
 		<set name="baseCritRate" val="15" />
 		<set name="SSBoost" val="2.0" />
-		<set name="lethal1" val="10" /> <!-- Half-Kill -->
+		<set name="halfKillRate" val="10" />
 		<set name="hitTime" val="4000" />
 		<set name="trait" val="DEATH" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
@@ -1295,7 +1295,7 @@
 		<set name="condition" val="16" /> <!-- Crit -->
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1800" />
-		<set name="lethal1" val="15" /> <!-- Half-Kill -->
+		<set name="halfKillRate" val="15" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="77" />
 		<set name="nextActionAttack" val="true" />
