@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Adry_85
@@ -72,10 +71,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (target != null)
 		{
-			int[] affectLimit = skill.getAffectLimit();
-			// calculate maximum affect limit between min and max values
-			int randomMax = Rnd.get(affectLimit[0], affectLimit[1]);
-			int curTargets = 0;
+			int maxTargets = skill.getAffectLimit();
 			final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 			
 			// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
@@ -88,13 +84,12 @@ public class AreaFriendly implements ITargetTypeHandler
 					continue;
 				}
 				
-				targetList.add(obj);
-				
-				curTargets++;
-				if (curTargets >= randomMax)
+				if (targetList.size() >= maxTargets)
 				{
 					break;
 				}
+				
+				targetList.add(obj);
 			}
 		}
 		
@@ -122,20 +117,14 @@ public class AreaFriendly implements ITargetTypeHandler
 			return false;
 		}
 		
-		if ((activeChar.getActingPlayer().getClan() != null) && (target.getActingPlayer().getClan() != null))
+		if ((target.isPlayer() && (target.getClanId() != 0)) && (activeChar.getClanId() != target.getClanId()))
 		{
-			if (activeChar.getActingPlayer().getClanId() != target.getActingPlayer().getClanId())
-			{
-				return false;
-			}
+			return false;
 		}
 		
-		if ((activeChar.getActingPlayer().getAllyId() != 0) && (target.getActingPlayer().getAllyId() != 0))
+		if ((target.isPlayer() && (target.getAllyId() != 0)) && (activeChar.getAllyId() != target.getAllyId()))
 		{
-			if (activeChar.getActingPlayer().getAllyId() != target.getActingPlayer().getAllyId())
-			{
-				return false;
-			}
+			return false;
 		}
 		
 		if ((target != activeChar) && (target.getActingPlayer() != null) && (target.getActingPlayer().getPvpFlag() > 0))

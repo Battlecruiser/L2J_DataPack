@@ -44,7 +44,6 @@ public class OwnerPet implements ITargetTypeHandler
 				};
 			}
 		}
-		
 		return _emptyTargetList;
 	}
 	

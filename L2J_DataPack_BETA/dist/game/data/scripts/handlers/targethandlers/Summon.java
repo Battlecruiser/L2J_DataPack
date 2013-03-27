@@ -40,7 +40,6 @@ public class Summon implements ITargetTypeHandler
 				target
 			};
 		}
-		
 		return _emptyTargetList;
 	}
 	
