@@ -3,47 +3,47 @@
 	<skill id="22000" levels="1" name="Spicy Kimchee">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22001" levels="1" name="Spicy Kimchee">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22002" levels="1" name="Spicy Kimchee">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22003" levels="1" name="Sweet-and-Sour White Kimchee">
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22004" levels="1" name="Energy Ginseng">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf2" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -56,8 +56,8 @@
 	</skill>
 	<skill id="22005" levels="1" name="Energy Red Ginseng">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="power" val="600" />
 		<set name="reuseDelay" val="2000" />
@@ -78,8 +78,8 @@
 		<table name="#extractableItems">
 			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -98,8 +98,8 @@
 		<table name="#extractableItems">
 			20083,1,20;20086,1,20;20089,1,20;20084,1,10;20087,1,10;20090,1,10;20085,1,3.33;20088,1,3.33;20091,1,3.33
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -118,8 +118,8 @@
 		<table name="#extractableItems">
 			20094,1,20;20095,1,80
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -138,8 +138,8 @@
 		<table name="#extractableItems">
 			20098,1,20;20099,1,80
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -158,8 +158,8 @@
 		<table name="#extractableItems">
 			20103,1,20104,1,20105,1,20106,1,100
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -178,8 +178,8 @@
 		<table name="#extractableItems">
 			10606,1,10;5561,1,90
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -196,12 +196,12 @@
 	<skill id="22013" levels="1" name="Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="4000" />
 		<cond msgId="113" addName="1">
 			<player class_id_restriction="0,1,2,3,4,5,6,18,19,20,21,31,32,33,34,44,45,46,53,54,55,56,57,88,89,90,91,99,100,106,107,113,117,118" />
 		</cond>
@@ -223,12 +223,12 @@
 	<skill id="22014" levels="1" name="Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="4000" />
 		<cond msgId="113" addName="1">
 			<player class_id_restriction="7,8,9,22,23,24,35,36,37,47,48,92,93,101,102,108,109,114,123,124,125,126,127,128,129,130,131,132,133,134,135,136" />
 		</cond>
@@ -250,12 +250,12 @@
 	<skill id="22015" levels="1" name="Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="4000" />
 		<cond msgId="113" addName="1">
 			<player class_id_restriction="15,16,17,29,30,42,43,97,98,105,112" />
 		</cond>
@@ -276,12 +276,12 @@
 	<skill id="22016" levels="1" name="Holiday Festival">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="br_event_buf1" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="4000" />
 		<cond msgId="113" addName="1">
 			<player class_id_restriction="10,11,12,13,14,25,26,27,28,38,39,40,41,49,50,51,52,94,95,96,103,104,110,111,115,116" />
 		</cond>
@@ -305,8 +305,8 @@
 		<table name="#extractableItems">
 			20107,1,99.99948;20108,1,0.00051
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -325,8 +325,8 @@
 		<table name="#extractableItems">
 			20108,1,100
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -342,29 +342,29 @@
 	</skill>
 	<skill id="22019" levels="1" name="Extra Entrance Pass - Kamaloka (Hall of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22020" levels="1" name="Extra Entrance Pass - Near Kamaloka">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22021" levels="1" name="Extra Entrance Pass - Kamaloka (Labyrinth of the Abyss)">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22022" levels="1" name="Premium Valentine Decoration">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20107,1,99.99948;20108,1,0.00051
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -383,8 +383,8 @@
 		<table name="#extractableItems">
 			10134,1,9;10138,1,9;1539,4,41;1540,3,16;20196,1,25
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -403,8 +403,8 @@
 		<table name="#extractableItems">
 			948,2,14;952,3,19;1538,1,11;3936,1,6;20200,1,20;20197,1,30
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -423,8 +423,8 @@
 		<table name="#extractableItems">
 			947,2,14;951,3,39;20201,1,17;20198,1,30
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -443,8 +443,8 @@
 		<table name="#extractableItems">
 			959,1,14;729,2,26;20202,1,35;20203,1,25
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -463,8 +463,8 @@
 		<table name="#extractableItems">
 			6659,1,0.00661;6660,1,0.1;20208,1,8;20206,1,11;20207,1,18;20204,1,62.893
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -490,12 +490,12 @@
 	<skill id="22029" levels="1" name="Baguette Herb">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -508,12 +508,12 @@
 	<skill id="22030" levels="1" name="Cream Puff Herb">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -526,12 +526,12 @@
 	<skill id="22031" levels="1" name="Cheesecake Herb">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf1" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="100" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
 		</cond>
@@ -546,8 +546,8 @@
 		<table name="#extractableItems">
 			20255,1,8.34;20256,1,8.34;20257,1,8.34;20258,1,8.34;20259,1,8.34;20260,1,8.34;20261,1,8.34;20262,1,8.34;20263,1,8.34;20264,1,8.34;20265,1,8.34;20270,1,8.26
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -566,8 +566,8 @@
 		<table name="#extractableItems">
 			20268,1,33;20269,1,33;20267,1,34
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -584,8 +584,8 @@
 	<skill id="22034" levels="1" name="Birthday Cake">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -599,9 +599,9 @@
 		<!-- Birthday Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="vp_up" />
+		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
-		<set name="affectRange" val="200" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -612,24 +612,24 @@
 	</skill>
 	<skill id="22036" levels="1" name="Beast Soulshot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SOULSHOT" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="SOULSHOT" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22037" levels="1" name="Beast Spiritshot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SPIRITSHOT" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPIRITSHOT" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22038" levels="1" name="Blessed Beast Spiritshot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SPIRITSHOT" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPIRITSHOT" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22039" levels="2" name="Rune of Experience Points">
 		<!-- Confirmed CT2.5 -->
@@ -664,9 +664,9 @@
 	<skill id="22042" levels="1" name="High Grade Potion of Will">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="200" />
 		</for>
@@ -674,8 +674,8 @@
 	<skill id="22043" levels="6" name="Secret medicine of Will">
 		<!-- Confirmed CT2.5 -->
 		<!-- Level 1 doesn't exist in client. -->
-		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<table name="#amount"> 0 800 1500 2000 2500 3000 </table>
+		<table name="#levelRange"> 0;0 20;39 40;51 52;60 61;75 76;85 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -707,11 +707,11 @@
 	<skill id="22045" levels="1" name="Omen Beast Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="1" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -723,11 +723,11 @@
 	<skill id="22046" levels="1" name="Death Blader Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="2" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -739,11 +739,11 @@
 	<skill id="22047" levels="1" name="Grail Apostle Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="203" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -755,11 +755,11 @@
 	<skill id="22048" levels="1" name="Unicorn Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="206" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -771,11 +771,11 @@
 	<skill id="22049" levels="1" name="Lilim Knight Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="209" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -787,11 +787,11 @@
 	<skill id="22050" levels="1" name="Golem Guardian Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="212" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -803,11 +803,11 @@
 	<skill id="22051" levels="1" name="Inferno Drake Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="215" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -819,11 +819,11 @@
 	<skill id="22052" levels="1" name="Dragon Bomber Transformation Scroll">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="transform" />
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="218" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -834,13 +834,13 @@
 	</skill>
 	<skill id="22053" levels="19" name="Escape">
 		<table name="#teleCoords"> -84318,244579,-3730 46934,51467,-2977 9745,15606,-4574 -44836,-112524,-235 115113,-178212,-901 -80826,149775,-3043 -12678,122776,-3116 15670,142983,-2705 17836,170178,-3507 83400,147943,-3404 105918,109759,-3207 111409,219364,-3545 82956,53162,-1495 85348,16142,-3699 116819,76994,-2714 146331,25762,-2018 147928,-55273,-2734 43799,-47727,-798 87331,-142842,-1317 </table>
+		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="20000" />
-		<set name="skillType" val="TELEPORT" />
-		<set name="teleCoords" val="#teleCoords" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="TELEPORT" />
+		<set name="targetType" val="SELF" />
+		<set name="teleCoords" val="#teleCoords" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503" />
@@ -852,10 +852,10 @@
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
@@ -865,20 +865,20 @@
 	<skill id="22055" levels="1" name="Potion of Energy Replenishing">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="GIVE_VITALITY" />
-		<set name="power" val="5000" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="5000" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="GIVE_VITALITY" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22056" levels="1" name="Wind Walk">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="33" />
@@ -889,9 +889,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
@@ -902,9 +902,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.15" />
@@ -915,9 +915,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -928,9 +928,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="critical_dmg_up">
 				<mul order="0x30" stat="cAtk" val="1.35" />
@@ -941,9 +941,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="hit_up">
 				<add order="0x40" stat="accCombat" val="4" />
@@ -955,9 +955,9 @@
 		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="ma_up">
 				<mul order="0x30" stat="mAtk" val="1.75" />
@@ -968,9 +968,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="casting_time_down">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
@@ -981,9 +981,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="vampiric_attack">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
@@ -994,9 +994,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
 				<mul order="0x30" stat="maxHp" val="1.35" />
@@ -1007,9 +1007,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="berserker">
 				<mul order="0x30" stat="pDef" val="0.92" />
@@ -1027,9 +1027,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="md_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.3" />
@@ -1040,9 +1040,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_mp_up">
 				<mul order="0x30" stat="maxMp" val="1.35" />
@@ -1053,9 +1053,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="cheap_magic" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="cheap_magic">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
@@ -1068,9 +1068,9 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="magic_critical_up">
 				<add order="0x40" stat="mCritRate" val="2" />
@@ -1082,8 +1082,8 @@
 		<table name="#extractableItems">
 			22009,2,27;20517,1,15;22015,1,0.78299;20519,1,0.27056;22019,1,0.00775;20521,1,0.0027;20545,8,3.75;20546,10,7.5;20547,10,4.5;8751,1,9.75;8752,1,8.125;9575,1,6.77083;8761,1,1.95;8762,1,1.625;9576,1,1.35416;22024,15,12.5
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1102,8 +1102,8 @@
 		<table name="#extractableItems">
 			22013,2,26.25;20518,1,14.58333;22017,1,0.69599;20520,1,0.24049;22021,1,0.00638;20522,1,0.0022;20545,8,3.95833;20546,10,7.91666;20547,10,4.75;8751,1,9.58333;8752,1,7.98611;9575,1,6.65509;8761,1,1.91666;8762,1,1.59722;9576,1,1.33101;22024,15,13.19444
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1119,173 +1119,173 @@
 	</skill>
 	<skill id="22073" levels="1" name="Weapon Enchant Scroll - S Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22074" levels="1" name="Armor Enchant Scroll - S Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22075" levels="1" name="Ancient Weapon Enchant Crystal - S grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22076" levels="1" name="Ancient Armor Enchant Crystal - S grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22077" levels="1" name="Divine Weapon Enchant Crystal - S grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_WEAPON" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_WEAPON" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22078" levels="1" name="Divine Armor Enchant Crystal - S grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="ENCHANT_ARMOR" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22079" levels="1" name="Resist Aqua">
 		<!-- Increases resistance to water type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_water" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22080" levels="1" name="Resist Wind">
 		<!-- Increases resistance to wind type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_wind" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22081" levels="1" name="Resist Fire">
 		<!-- Increases resistance to fire type attacks by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_fire" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22082" levels="1" name="Resist Holy">
 		<!-- Increases resistance to divinity type attacks by 23% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_holy" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22083" levels="1" name="Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 23% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="armor_unholy" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22084" levels="1" name="Mental Shield">
 		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="resist_derangement" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22085" levels="1" name="Focus">
 		<!-- Increases Critical attack rate by 30 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="critical_prob_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22086" levels="1" name="Concentration">
 		<!-- Decreases magic cancel damage by 36 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="cancel_prob_down" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22087" levels="1" name="Blessing Shield">
 		<!-- Increases Shield defense rate by 15 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="shield_prob_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22088" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="avoid_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22089" levels="1" name="Regeneration">
 		<!-- Increases HP Regeneration by 20% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="hp_regen_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22090" levels="1" name="Advanced Block">
 		<!-- Increases Shield P. Def. by 40% for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalType" val="shield_defence_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22091" levels="1" name="Eva's Rune">
 		<!-- With the power of Eva, increases max HP by 10%, and decreases skill reuse time by 20%. Reflects partial damage received back to the emeny. Excludes damage caused by skills and long-range attack. -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22092" levels="1" name="Scroll Master 1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#extractableItems">
 			20365,1,20;20364,1,20;20366,1,20;20367,1,20;20368,1,20
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1304,8 +1304,8 @@
 		<table name="#extractableItems">
 			20554,1,15;20392,1,15;20393,1,35;20394,1,35
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1324,8 +1324,8 @@
 		<table name="#extractableItems">
 			20581,1,70;20548,1,30
 		</table>
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -1340,58 +1340,58 @@
 		</for>
 	</skill>
 	<skill id="22095" levels="1" name="Summon Spirit of Fire">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1500" />
-		<set name="npcId" val="8" />
 		<set name="despawnDelay" val="60000" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isSummonSpawn" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="npcId" val="8" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPAWN" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22096" levels="1" name="Summon Reckless Spirit of Fire">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="itemConsumeCount" val="1" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="SPAWN" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1500" />
-		<set name="npcId" val="9" />
 		<set name="despawnDelay" val="60000" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isSummonSpawn" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="npcId" val="9" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="SPAWN" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22097" levels="1" name="Girl's Gift of Gratitude">
 		<!-- Thank you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf5" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22098" levels="1" name="Boy's Gift of Gratitude">
 		<!-- Thank you gift for helping the boy. For 2 minutes, increases Max HP by 40%, Max MP by 40%, Max CP by 40%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 20, and M. Atk. by 45%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf5" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22099" levels="1" name="Soul Silver Foil">
 		<!-- When using a monster's corpse, comforts the monster's soul to borrow the monster's power temporarily. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="br_event_buf6" />
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="1500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>

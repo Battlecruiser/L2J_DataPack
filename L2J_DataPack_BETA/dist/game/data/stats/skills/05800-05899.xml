@@ -1,361 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5800" levels="1" name="Self-Destruction">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5801" levels="1" name="Drake Breath">
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,45" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3300" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5802" levels="1" name="Stun">
-		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
+		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,400,60" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1500" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5803" levels="3" name="Green Chili">
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5804" levels="3" name="Fireball">
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5805" levels="1" name="Air Assault">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="200" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="200" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5806" levels="1" name="High Wave Beam">
+		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="2000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5807" levels="1" name="Self-destruction">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5808" levels="1" name="Burst Flame">
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5809" levels="1" name="Dark Blood">
+		<set name="hitTime" val="1700" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="1700" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5810" levels="1" name="Decrease Spd.">
-		<set name="affectLimit" val="5-12" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
+		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,30" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5811" levels="1" name="Sonic Bomb">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="1700" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="1700" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5812" levels="1" name="Fire Breath">
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,600,60" />
+		<set name="hitTime" val="2400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="2400" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5813" levels="1" name="Sand Ball">
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5814" levels="3" name="Self-Destruction">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5815" levels="1" name="Presentation - Mercenary Troops Shout">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2300" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5816" levels="1" name="Presentation - Female Priest Transformation">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="7700" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5817" levels="1" name="Presentation - Dragon Shout">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="3000" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5818" levels="1" name="Presentation - Repentance">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2430" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5819" levels="1" name="Presentation - Victory">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5930" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5820" levels="1" name="Presentation - Removal">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="7000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5821" levels="1" name="Presentation - Female Priest Exit">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5330" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5822" levels="1" name="Drake Bait">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="3000" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5823" levels="1" name="Presentation - District1 Boss Defeat">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5824" levels="1" name="Presentation - District1 Boss Arise">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="5825" levels="1" name="Presentation - Algraia Exit">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="5330" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5826" levels="3" name="Fire Breath">
 		<table name="#magicLvl"> 83 84 85 </table>
-		<table name="#power"> 60 61 61 </table>
 		<table name="#mpConsume"> 59 60 60 </table>
+		<table name="#power"> 60 61 61 </table>
 		<set name="affectLimit" val="5-15" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="15" />
+		<set name="affectRange" val="600" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="fanRange" val="0,0,600,120" />
-		<set name="power" val="#power" />
+		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="MDAM" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="15" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="2500" />
-		<set name="castRange" val="600" />
-		<set name="effectRange" val="1100" />
-		<set name="affectRange" val="600" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5827" levels="6" name="Fireball">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
-		<table name="#power"> 55 56 58 59 60 61 </table>
-		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 56 58 58 59 60 </table>
+		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
+		<table name="#power"> 55 56 58 59 60 61 </table>
 		<set name="affectLimit" val="10-10" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="1500" />
+		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="affectRange" val="150" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
-		<table name="#power"> 55 56 58 59 60 61 </table>
-		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 56 58 58 59 60 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1000" />
+		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
+		<table name="#power"> 55 56 58 59 60 61 </table>
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
-		<table name="#power"> 55 56 58 59 60 61 </table>
-		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
 		<table name="#mpConsume"> 55 56 58 58 59 60 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1000" />
+		<table name="#mpInitialConsume"> 14 14 15 15 15 15 </table>
+		<table name="#power"> 55 56 58 59 60 61 </table>
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
-	</skill>
-	<skill id="5830" levels="1" name="Polearm Thrust">
-		<set name="magicLvl" val="85" />
-		<set name="power" val="4640" />
-		<set name="mpConsume" val="165" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="2000" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5830" levels="1" name="Polearm Thrust">
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1800" />
-	</skill>
-	<skill id="5831" levels="1" name="Polearm Swing">
 		<set name="magicLvl" val="85" />
-		<set name="power" val="4640" />
 		<set name="mpConsume" val="165" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="4640" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1800" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5831" levels="1" name="Polearm Swing">
 		<set name="affectRange" val="150" />
+		<set name="hitTime" val="1800" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="165" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="4640" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="70" effectPower="80" abnormalLvl="1" abnormalType="bleeding" />
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="lock" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="600" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="affectRange" val="600" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="AGGDAMAGE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TargetMe" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="lock" />
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="pd_up" />
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="mpInitialConsume" val="9" />
-		<set name="mpConsume" val="36" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="2000" />
-		<set name="aggroPoints" val="100" />
+		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="600" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="36" />
+		<set name="mpInitialConsume" val="9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.15" />
@@ -363,20 +363,20 @@
 		</for>
 	</skill>
 	<skill id="5834" levels="1" name="Magic Barrier">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="md_up" />
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="mpInitialConsume" val="9" />
-		<set name="mpConsume" val="36" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="2000" />
-		<set name="aggroPoints" val="100" />
+		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="600" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="36" />
+		<set name="mpInitialConsume" val="9" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="md_up">
 				<mul order="0x30" stat="mDef" val="1.33" />
@@ -384,72 +384,73 @@
 		</for>
 	</skill>
 	<skill id="5835" levels="1" name="Major Heal">
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpConsume" val="104" />
-		<set name="mpInitialConsume" val="26" />
-		<set name="targetType" val="CLAN_MEMBER" />
-		<set name="skillType" val="HEAL_PERCENT" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="3000" />
-		<set name="hitTime" val="2000" />
+		<set name="aggroPoints" val="867" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="aggroPoints" val="867" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="104" />
+		<set name="mpInitialConsume" val="26" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="HealPercent" noicon="1" val="10" />
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalType" val="life_force_others" />
-		<set name="magicLvl" val="85" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpConsume" val="207" />
-		<set name="mpInitialConsume" val="52" />
-		<set name="reuseDelay" val="8000" />
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="6000" />
+		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="600" />
 		<set name="aggroPoints" val="694" />
+		<set name="hitTime" val="6000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="207" />
+		<set name="mpInitialConsume" val="52" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect count="15" name="HealOverTime" val="270" abnormalLvl="5" abnormalType="life_force_others" />
 			<effect name="HealPercent" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin">
-		<set name="magicLvl" val="85" />
-		<set name="power" val="4640" />
-		<set name="mpConsume" val="165" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
-		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1800" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="165" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1800" />
+		<set name="power" val="4640" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5838" levels="1" name="Throwing Javelin">
-		<set name="magicLvl" val="85" />
-		<set name="power" val="4640" />
-		<set name="mpConsume" val="165" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1500" />
-		<set name="reuseDelay" val="2000" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1800" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="165" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1800" />
+		<set name="power" val="4640" />
+		<set name="reuseDelay" val="2000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5839" levels="1" name="Breath">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
 		<set name="affectLimit" val="5-15" />
+		<set name="affectRange" val="1200" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
 		<set name="fanRange" val="0,0,1200,30" />
@@ -457,18 +458,18 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="183" />
 		<set name="reuseDelay" val="2000" />
-		<set name="affectRange" val="1200" />
 		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5840" levels="1" name="Fire Breath">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
 		<set name="affectLimit" val="5-15" />
+		<set name="affectRange" val="1200" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="0" /> <!-- fire -->
@@ -478,20 +479,20 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="60" />
 		<set name="mpInitialConsume" val="15" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="244" />
 		<set name="reuseDelay" val="2000" />
-		<set name="affectRange" val="1200" />
 		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5841" levels="1" name="Multi Defense">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="instinct" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="694" />
 		<set name="hitTime" val="2120" />
 		<set name="magicLvl" val="85" />
@@ -499,7 +500,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
@@ -513,24 +513,25 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
 		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="400" />
 		<set name="coolTime" val="733" />
 		<set name="hitTime" val="2120" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="149" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="17400" />
 		<set name="reuseDelay" val="2000" />
-		<set name="affectRange" val="400" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5843" levels="1" name="Terror">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="turn_flee" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="26720" />
 		<set name="isDebuff" val="true" />
@@ -539,11 +540,10 @@
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="affectRange" val="1000" />
 		<set name="skillType" val="FEAR" />
-		<set name="pvp" val="true" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -553,6 +553,7 @@
 	<skill id="5844" levels="1" name="Thunder Storm">
 		<!-- Confirmed CT2.5 -->
 		<!-- Tiat Skills -->
+		<set name="affectRange" val="300" />
 		<set name="coolTime" val="2000" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -560,61 +561,60 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="239" />
 		<set name="mpInitialConsume" val="60" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="834" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5846" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
-		<set name="hitTime" val="1000" />
-		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5847" levels="1" name="Flip Nearby Blocks">
 		<set name="affectLimit" val="10-10" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5848" levels="1" name="Block Trigger Slow">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5849" levels="1" name="Decrease Speed">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="magicLvl" val="80" />
-		<set name="power" val="80" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -622,25 +622,25 @@
 		</for>
 	</skill>
 	<skill id="5850" levels="1" name="Block Trigger Stun">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5851" levels="1" name="Shock">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="magicLvl" val="80" />
-		<set name="power" val="80" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" />
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
@@ -649,269 +649,271 @@
 	</skill>
 	<skill id="5852" levels="1" name="Flip Block">
 		<!-- CT2.5 retail confirmed -->
-		<set name="targetType" val="ONE" />
-		<set name="magicLvl" val="80" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5853" levels="1" name="Flip Block">
 		<!-- CT2.5 retail confirmed -->
-		<set name="targetType" val="ONE" />
-		<set name="magicLvl" val="80" />
-		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="2000" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="80" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="2000" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5854" levels="1" name="Decrease Speed">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5855" levels="1" name="Shock">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="fanRange" val="0,0,300,90" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5856" levels="1" name="Transform Tow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5857" levels="1" name="Transform Lure Tow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5858" levels="1" name="Transform Heavy Tow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5859" levels="1" name="Transform Wing Tow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5860" levels="1" name="Wrath of Valakas">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5861" levels="1" name="Authority of Valakas">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="silence" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
 	</skill>
 	<skill id="5862" levels="1" name="Destruction of the Body">
 		<set name="affectLimit" val="10-10" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5863" levels="1" name="Destruction of the Soul">
 		<set name="affectLimit" val="10-10" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5864" levels="1" name="Decrease Valakas Defense">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="pd_down" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5865" levels="1" name="Wide-bodied Valakas">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="berserker" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5866" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5867" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
+		<set name="affectLimit" val="5-15" />
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5868" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
+		<set name="affectLimit" val="10-10" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5869" levels="10" name="Soul Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
+		<set name="affectLimit" val="10-10" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5870" levels="10" name="Flash Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5871" levels="10" name="Flash Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
+		<set name="affectLimit" val="5-15" />
 		<set name="fanRange" val="0,0,150,90" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5872" levels="10" name="Flash Worm">
 		<table name="#abnormalLvls"> 8 8 8 9 9 9 9 10 10 10 </table>
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="affectLimit" val="10-10" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5873" levels="5" name="Death Worm">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="deathworm" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5874" levels="5" name="Death Worm">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="deathworm" />
 		<set name="fanRange" val="0,0,150,90" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="5875" levels="5" name="Death Worm">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#affectLimits"> 0-0 10-10 10-10 10-10 10-10 </table>
-		<set name="affectLimit" val="#affectLimits" />
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="deathworm" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="affectLimit" val="#affectLimits" />
+		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5876" levels="1" name="Begrudged Haunting">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="death_clack" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5877" levels="4" name="Chant of Worm Waking">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5878" levels="1" name="Cruel Puncture">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="casting_time_up" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
@@ -919,13 +921,11 @@
 		<set name="mpConsume" val="83" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="250" abnormalLvl="3" abnormalType="casting_time_up">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -935,20 +935,20 @@
 	<skill id="5879" levels="1" name="Cruel Expunge">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="165" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="1000" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="isDebuff" val="true" />
-		<set name="skillType" val="BLEED" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="1000" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="165" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -957,44 +957,44 @@
 	<skill id="5880" levels="2" name="Vicious Mutilation">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5881" levels="2" name="Vicious Mutilation">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
-		<set name="lvlBonusRate" val="1" />
 		<set name="hitTime" val="1000" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5882" levels="2" name="Weakened Pommel">
 		<table name="#mpConsume"> 79 82 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="power" val="873" />
-		<set name="targetType" val="ONE" />
 		<set name="affectRange" val="150" />
-		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1000" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="873" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="30" abnormalLvl="1" abnormalType="stun" />
@@ -1003,20 +1003,20 @@
 	<skill id="5883" levels="1" name="Meggling Injury">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="magicLvl" val="80" />
-		<set name="mpConsume" val="165" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="skillType" val="BLEED" />
-		<set name="pvp" val="true" />
-		<set name="reuseDelay" val="1000" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="165" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="105" abnormalLvl="9" abnormalType="bleeding" abnormalVisualEffect="bleed" />
@@ -1025,9 +1025,10 @@
 	<skill id="5884" levels="2" name="Weakened Sweep">
 		<!-- Confirmed CT2.5 -->
 		<table name="#power"> 2319 18664 </table>
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
+		<set name="affectLimit" val="5-15" />
+		<set name="affectRange" val="300" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
 		<set name="fanRange" val="0,0,300,90" />
@@ -1036,13 +1037,12 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="STR" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
@@ -1053,9 +1053,10 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: lvl 2 has wrong Id in client -->
 		<table name="#power"> 2319 18664 </table>
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
+		<set name="affectLimit" val="5-15" />
+		<set name="affectRange" val="300" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,300,90" />
@@ -1064,13 +1065,12 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1078,23 +1078,23 @@
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="mpConsume" val="165" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DEBUFF" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="165" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1103,37 +1103,37 @@
 		</for>
 	</skill>
 	<skill id="5887" levels="1" name="Howl from Beyond">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_c" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
+		<set name="affectLimit" val="10-10" />
 		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="1000" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5888" levels="2" name="Earth Shaker">
 		<table name="#mpConsume"> 82 83 </table>
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="fanRange" val="0,0,300,90" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="hitTime" val="1000" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="affectLimit" val="5-15" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="1000" />
+		<set name="fanRange" val="0,0,300,90" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
-		<set name="skillType" val="DEBUFF" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
-		<set name="targetType" val="FRONT_AREA" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="RemoveTarget" noicon="1" val="9" abnormalLvl="1" abnormalType="stun" />
@@ -1142,80 +1142,80 @@
 	<skill id="5889" levels="3" name="Tainted Shackle">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="lock" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="1000" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5890" levels="3" name="Tainted Mass Shackle">
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="lock" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
+		<set name="affectLimit" val="10-10" />
 		<set name="hitTime" val="1000" />
-		<set name="reuseDelay" val="1000" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5891" levels="1" name="Threatening Bellow">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5892" levels="2" name="Cunning Coercion">
 		<table name="#hitTime"> 1000 11470 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="mpConsume" val="70" />
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Bluff" val="9" abnormalLvl="1" abnormalType="stun" />
 		</for>
 	</skill>
 	<skill id="5893" levels="1" name="Ritual of Cannibalism">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="hitTime" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5894" levels="1" name="Mark of Despair">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_a" />
-		<set name="mpConsume" val="145" />
-		<set name="hitTime" val="2000" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="145" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="multi_debuff_a">
@@ -1236,20 +1236,20 @@
 	<skill id="5895" levels="1" name="Mark of Cowardice">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="multi_debuff_b" />
-		<set name="mpConsume" val="150" />
-		<set name="hitTime" val="2000" />
-		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="magicLvl" val="80" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="500" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="80" />
+		<set name="mpConsume" val="150" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="multi_debuff_b">
@@ -1266,29 +1266,29 @@
 		<table name="#hitTime"> 2000 22940 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="ma_up" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A3" />
 		<set name="hitTime" val="#hitTime" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A3" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5897" levels="1" name="Spike of Anger">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="mpConsume" val="70" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="81" />
+		<set name="mpConsume" val="70" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="5" />
@@ -1301,23 +1301,23 @@
 	<skill id="5898" levels="2" name="Blast of Anger">
 		<table name="#hitTime"> 2000 22940 </table>
 		<table name="#mpConsume"> 140 150 </table>
-		<set name="affectLimit" val="10-10" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="85" />
-		<set name="operateType" val="A2" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="targetType" val="ONE" />
 		<set name="hitTime" val="#hitTime" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="speed_down">
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1330,16 +1330,16 @@
 	<skill id="5899" levels="2" name="Burst of Pain">
 		<table name="#hitTime"> 2000 22940 </table>
 		<set name="affectLimit" val="5-15" />
-		<set name="mpConsume" val="224" />
-		<set name="power" val="3000" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="mpConsume" val="224" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="3000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 </list>

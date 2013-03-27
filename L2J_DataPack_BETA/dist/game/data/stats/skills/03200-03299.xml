@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
-		<table name="#mpInitialConsume"> 11 13 14 </table>
-		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="mReuse" val="0.85" />
@@ -22,20 +22,20 @@
 		</for>
 	</skill>
 	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
-		<table name="#mpInitialConsume"> 11 13 14 </table>
-		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="pReuse" val="0.85" />
@@ -43,20 +43,20 @@
 		</for>
 	</skill>
 	<skill id="3202" levels="3" name="Item Skill: Refresh">
-		<table name="#mpInitialConsume"> 11 13 14 </table>
-		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="abnormal_item" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="600000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<mul order="0x30" stat="mReuse" val="0.85" />
@@ -68,10 +68,10 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpConsume" val="10" />
 		<set name="magicLvl" val="1" />
-		<set name="reuseDelay" val="1800000" />
+		<set name="mpConsume" val="10" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
@@ -80,22 +80,22 @@
 		</for>
 	</skill>
 	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
-		<table name="#mpInitialConsume"> 5 6 7 </table>
-		<table name="#mpConsume"> 20 24 28 </table>
-		<table name="#reflectDam"> 10 15 20 </table>
-		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#mpConsume"> 20 24 28 </table>
+		<table name="#mpInitialConsume"> 5 6 7 </table>
+		<table name="#reflectDam"> 10 15 20 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="abnormal_item" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="6000" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="abnormal_item">
 				<add order="0x40" stat="reflectDam" val="#reflectDam" />
@@ -103,20 +103,20 @@
 		</for>
 	</skill>
 	<skill id="3205" levels="2" name="Item Skill: Party Recall">
-		<table name="#mpInitialConsume"> 43 61 </table>
-		<table name="#mpConsume"> 171 244 </table>
 		<table name="#hitTime"> 20000 3500 </table>
 		<table name="#magicLvl"> 48 56 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="PARTY" />
+		<table name="#mpConsume"> 171 244 </table>
+		<table name="#mpInitialConsume"> 43 61 </table>
 		<set name="affectRange" val="1000" />
-		<set name="reuseDelay" val="3600000" />
 		<set name="hitTime" val="#hitTime" />
-		<set name="skillType" val="RECALL" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="RECALL" />
+		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -127,9 +127,9 @@
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="12000" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="12000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3207" levels="10" name="Item Skill: Heal">
 		<!-- Confirmed CT2.5 -->
@@ -578,8 +578,8 @@
 	</skill>
 	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#bonusHp"> 10 11 12 13 14 16 17 18 19 20 </table>
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -680,8 +680,8 @@
 	</skill>
 	<skill id="3256" levels="3" name="Item Skill: Spell Clarity">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -691,8 +691,8 @@
 	</skill>
 	<skill id="3257" levels="3" name="Item Skill: Music Clarity">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#DanceMpConsumeRate"> 0.96 0.93 0.9 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -702,9 +702,9 @@
 	</skill>
 	<skill id="3258" levels="3" name="Item Skill: Clarity">
 		<!-- Confirmed CT2.5 -->
+		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#PhysicalMpConsumeRate"> 0.9 0.85 0.8 </table>
-		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -727,18 +727,18 @@
 	</skill>
 	<skill id="3260" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="staticDamage" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
@@ -747,12 +747,12 @@
 	</skill>
 	<skill id="3261" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A1" />
@@ -761,18 +761,18 @@
 	</skill>
 	<skill id="3262" levels="1" name="Pardon">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="3200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="1" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="40000" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="staticDamage" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
@@ -781,29 +781,29 @@
 	</skill>
 	<skill id="3263" levels="1" name="Blessed Resurrection">
 		<!-- Allows the use of Blessed Resurrection. -->
-		<set name="magicLvl" val="76" />
-		<set name="mpInitialConsume" val="17" />
-		<set name="mpConsume" val="65" />
-		<set name="power" val="100" />
-		<set name="targetType" val="CORPSE_PLAYER" />
-		<set name="reuseDelay" val="1800000" />
-		<set name="hitTime" val="3000" />
-		<set name="skillType" val="RESURRECT" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="76" />
+		<set name="mpConsume" val="65" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="targetType" val="CORPSE_PLAYER" />
 	</skill>
 	<skill id="3264" levels="1" name="Blessed Escape">
 		<!-- Allows the use of Blessed Escape. -->
-		<set name="mpInitialConsume" val="31" />
+		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="mpConsume" val="122" />
-		<set name="targetType" val="SELF" />
+		<set name="mpInitialConsume" val="31" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="RECALL" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="200" />
+		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -816,8 +816,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -826,13 +826,13 @@
 	</skill>
 	<skill id="3266" levels="1" name="Large Fireworks Ability">
 		<!-- Allows the use of Large Fireworks. -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="mpInitialConsume" val="5" />
-		<set name="mpConsume" val="19" />
-		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
-		<set name="reuseDelay" val="300000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="mpConsume" val="19" />
+		<set name="mpInitialConsume" val="5" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3267" levels="1" name="Dismiss Agathion">
 		<!-- Confirmed CT2.5 -->
