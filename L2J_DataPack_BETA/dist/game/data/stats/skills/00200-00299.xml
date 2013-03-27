@@ -1336,17 +1336,17 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
+		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
+		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Blunt,Big Blunt" />
@@ -1385,21 +1385,21 @@
 		<set name="skillType" val="CHARGEDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="element" val="1" /> <!-- Water -->
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
+		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
@@ -1485,23 +1485,23 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="power" val="#ench2Power" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="power" val="#ench2Power" />
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="power" val="#ench2Power" />
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="power" val="#ench2Power" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="power" val="#ench2Power" />
@@ -1526,10 +1526,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_earth">
@@ -1558,10 +1558,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_life">
@@ -1590,10 +1590,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_water">
@@ -1622,10 +1622,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_warding">
@@ -1683,10 +1683,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_hunter">
@@ -1715,10 +1715,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="song_of_invocation">
@@ -1747,10 +1747,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1782,10 +1782,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1817,10 +1817,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1852,10 +1852,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1887,10 +1887,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1922,10 +1922,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1960,10 +1960,10 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="aggroPoints" val="655" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -2088,12 +2088,12 @@
 		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="power" val="#ench1Power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
+		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
@@ -2212,8 +2212,8 @@
 		<!-- Summon-specific -->
 		<set name="expPenalty" val="0.15" /> <!-- 15 percent of acquired Exp will also be consumed. -->
 		<set name="npcId" val="#npcIds" />
-		<enchant1 name="npcId" val="#enchantNpcIds" />
 		<enchant1 name="expPenalty" val="#ench1expPenalty" />
+		<enchant1 name="npcId" val="#enchantNpcIds" />
 	</skill>
 	<skill id="284" levels="40" name="Hurricane Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -2246,18 +2246,18 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -2396,8 +2396,8 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpConsume_Init" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="absorbPart" val="#ench3absorbPart" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 	</skill>
 	<skill id="290" levels="14" name="Final Frenzy" enchantGroup1="1">
 		<table name="#final"> 32.9 39.4 46.6 54.6 63.3 72.7 79.3 86.1 93.1 100.2 107.5 114.8 122.1 129.3 </table>

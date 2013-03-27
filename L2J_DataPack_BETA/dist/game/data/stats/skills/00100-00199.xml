@@ -229,8 +229,8 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" effectPower="60" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -518,8 +518,8 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="skillType" val="PDAM" />
 		<enchant3 name="power" val="#ench3Attack" />
+		<enchant3 name="skillType" val="PDAM" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="pa_down">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -682,9 +682,9 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="skillType" val="PDAM" />
-		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="power" val="#ench3Attack" />
+		<enchant3 name="skillType" val="PDAM" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="3" abnormalType="pd_down">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -1257,18 +1257,18 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>

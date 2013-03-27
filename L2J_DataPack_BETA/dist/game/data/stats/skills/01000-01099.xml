@@ -426,8 +426,8 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<cond msgId="113" addName="1">
 			<not>
 				<target active_skill_id="1013" /> <!-- Cannot be used to classes that has Recharge skill -->
@@ -582,13 +582,13 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1power" />
+		<enchant2 name="elementPower" val="#ench2ElementPower" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2power" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant2 name="elementPower" val="#ench2ElementPower" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="power" val="#ench2power" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
@@ -885,11 +885,11 @@
 		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="skillType" val="MDAM" />
-		<enchant3 name="power" val="#ench3Attack" />
-		<enchant3 name="elementPower" val="20" />
 		<enchant3 name="element" val="4" /> <!-- Holy -->
+		<enchant3 name="elementPower" val="20" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="power" val="#ench3Attack" />
+		<enchant3 name="skillType" val="MDAM" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
@@ -1360,11 +1360,11 @@
 		<set name="skillType" val="SLEEP" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
-		<enchant1 name="power" val="#ench1power" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="power" val="#ench1power" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
 		</for>
