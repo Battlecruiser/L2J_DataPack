@@ -18,6 +18,8 @@
  */
 package quests.Q10283_RequestOfIceMerchant;
 
+import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
+
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -134,7 +136,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						QuestState _prev = player.getQuestState("115_TheOtherSideOfTruth");
+						QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 						htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "32020-01.htm" : "32020-00.htm";
 						break;
 					case State.STARTED:
