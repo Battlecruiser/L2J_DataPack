@@ -39,8 +39,8 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>
@@ -141,8 +141,8 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword" />
 		</cond>
@@ -321,15 +321,15 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1Cost" />
+		<enchant2 name="lethalStrikeRate" val="#ench2LethalStrikeRate" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
-		<enchant2 name="lethalStrikeRate" val="#ench2LethalStrikeRate" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="skillType" val="PDAM" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
@@ -548,18 +548,18 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -1669,15 +1669,15 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1Cost" />
+		<enchant2 name="lethalStrikeRate" val="#ench2LethalStrikeRate" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
-		<enchant2 name="lethalStrikeRate" val="#ench2LethalStrikeRate" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="skillType" val="PDAM" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="5" /> <!-- Dark -->
 		<enchant4 name="elementPower" val="#ench4DarkAttack" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="144">
 			<target race_id="8" /> <!-- Angels -->
 		</cond>
@@ -2651,8 +2651,8 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant2 name="power" val="#ench2Power" />
 	</skill>
 	<skill id="493" levels="28" name="Storm Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
@@ -2688,20 +2688,20 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -2748,18 +2748,18 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#ench7Duel" />
 		<cond msgId="113" addName="1">
@@ -2867,20 +2867,20 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -2918,20 +2918,20 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="elementPower" val="#enchElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="elementPower" val="#enchElementPower" />
+		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
+		<enchant6 name="elementPower" val="#enchElementPower" />
+		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant7 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -2968,8 +2968,8 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
 			<and>

@@ -33,18 +33,18 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="lethalStrikeRate" val="#ench1LethalStrikeRate" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant1 name="lethalStrikeRate" val="#ench1LethalStrikeRate" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<enchant3 name="skillType" val="MDAM" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
@@ -216,10 +216,10 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="npcId" val="#ench1npcId" />
 	</skill>
 	<skill id="1407" levels="1" name="Summon Magnus the Unicorn" enchantGroup1="5">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -245,10 +245,10 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="npcId" val="#ench1npcId" />
 	</skill>
 	<skill id="1408" levels="1" name="Summon Spectral Lord" enchantGroup1="5">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -274,10 +274,10 @@
 		<set name="summonTimeLostIdle" val="500" />
 		<set name="summonTotalLifeTime" val="3600000" />
 		<set name="targetType" val="SELF" />
-		<enchant1 name="npcId" val="#ench1npcId" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="116" />
 		<enchant1 name="mpInitialConsume" val="29" />
+		<enchant1 name="npcId" val="#ench1npcId" />
 	</skill>
 	<skill id="1409" levels="1" name="Cleanse">
 		<set name="castRange" val="600" />
@@ -372,8 +372,8 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxMp" val="1.15" />
@@ -435,8 +435,8 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="multi_buff">
 				<mul order="0x30" stat="maxCp" val="1.2" />
@@ -509,8 +509,8 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="resist_debuff_dispel">
 				<sub order="0x40" stat="cancelVuln" val="30" />
@@ -542,8 +542,8 @@
 		<set name="reuseDelay" val="300000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY_CLAN" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="2" abnormalType="cp_up">
 				<add order="0x40" stat="maxCp" val="800" />
@@ -1082,8 +1082,8 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3ElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
@@ -1132,12 +1132,12 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="power" val="#ench2Power" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
+		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
+		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Debuff" val="0" abnormalTime="5" abnormalLvl="1" abnormalType="speed_down" effectPower="40" >
@@ -1193,8 +1193,8 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3ElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
@@ -1584,8 +1584,8 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpConsume" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="flyRadius" val="#ench2Radius" />
+		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Stun" abnormalTime="2" val="0" effectPower="99" abnormalLvl="1" abnormalType="stun" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
@@ -1643,8 +1643,8 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2Cost" />
 		<enchant2 name="mpInitialConsume" val="#ench2Cost" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3Wind" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
@@ -1673,10 +1673,10 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="109">
 			<target active_effect_id="1339" />
 		</cond>
@@ -1712,10 +1712,10 @@
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
 			<effect count="10" name="DamOverTime" val="173" abnormalLvl="1" abnormalType="fire_dot" />
@@ -1749,10 +1749,10 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="109">
 			<target active_effect_id="1340" />
 		</cond>
@@ -1788,8 +1788,8 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<effect name="Debuff" abnormalTime="15" val="0" effectPower="80" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.6" />
@@ -1823,8 +1823,8 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
 			<effect count="10" name="DamOverTime" val="173" abnormalLvl="1" abnormalType="water_dot" />
@@ -1858,10 +1858,10 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<cond msgId="109">
 			<target active_effect_id="1341" />
 		</cond>
@@ -1923,8 +1923,8 @@
 		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3elementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
 			<effect count="10" name="DamOverTime" val="173" abnormalLvl="1" abnormalType="wind_dot" />
@@ -1973,8 +1973,8 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<cond msgId="113" addName="1">
 			<not>
 				<target class_id_restriction="29, 30, 105, 42, 43, 112" />
@@ -2007,8 +2007,8 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
-		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
+		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="t_crt_dmg_down">
 				<mul order="0x30" stat="critVuln" val="0.7" />
@@ -2218,8 +2218,8 @@
 		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant3 name="elementPower" val="#ench3ElementPower" />
+		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 	</skill>
