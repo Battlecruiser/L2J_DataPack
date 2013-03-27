@@ -169,7 +169,7 @@ class Quest (JQuest) :
 
    elif npcId == INNOCENTIN :
        if state == State.CREATED :
-           st2 = player.getQuestState("21_HiddenTruth")
+           st2 = player.getQuestState("Q00021_HiddenTruth")
            if st2 :
                if st2.getState() == 'State.COMPLETED' :
                    htmltext = "31328-00.htm"
