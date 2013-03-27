@@ -40,7 +40,6 @@ public class Pet implements ITargetTypeHandler
 				target
 			};
 		}
-		
 		return _emptyTargetList;
 	}
 	

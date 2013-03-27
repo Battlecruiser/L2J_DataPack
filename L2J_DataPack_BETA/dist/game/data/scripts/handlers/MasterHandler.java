@@ -244,7 +244,6 @@ import handlers.skillhandlers.TakeFort;
 import handlers.skillhandlers.TransformDispel;
 import handlers.skillhandlers.Trap;
 import handlers.skillhandlers.Unlock;
-import handlers.targethandlers.Ally;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
 import handlers.targethandlers.AreaFriendly;
@@ -255,7 +254,6 @@ import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
 import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
-import handlers.targethandlers.CorpseAlly;
 import handlers.targethandlers.CorpseClan;
 import handlers.targethandlers.CorpseMob;
 import handlers.targethandlers.CorpsePet;
@@ -598,7 +596,6 @@ public class MasterHandler
 		},
 		{
 			// Target Handlers
-			Ally.class,
 			Area.class,
 			AreaCorpseMob.class,
 			AreaFriendly.class,
@@ -609,7 +606,6 @@ public class MasterHandler
 			BehindAura.class,
 			Clan.class,
 			ClanMember.class,
-			CorpseAlly.class,
 			CorpseClan.class,
 			CorpseMob.class,
 			CorpsePet.class,

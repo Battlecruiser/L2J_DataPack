@@ -18,10 +18,9 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Clan;
@@ -43,7 +42,8 @@ public class Clan implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
+		
 		if (activeChar.isPlayable())
 		{
 			final L2PcInstance player = activeChar.getActingPlayer();
@@ -132,11 +132,6 @@ public class Clan implements ITargetTypeHandler
 						};
 					}
 					
-					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
-					{
-						break;
-					}
-					
 					targetList.add(obj);
 				}
 			}
@@ -156,7 +151,7 @@ public class Clan implements ITargetTypeHandler
 			targetList.add(activeChar);
 			
 			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-			
+			int maxTargets = skill.getAffectLimit();
 			for (L2Object newTarget : objs)
 			{
 				if (newTarget.isNpc() && npc.getFactionId().equals(((L2Npc) newTarget).getFactionId()))
@@ -166,7 +161,7 @@ public class Clan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+					if (targetList.size() >= maxTargets)
 					{
 						break;
 					}

@@ -18,9 +18,8 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -37,7 +36,7 @@ public class Party implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
 			return new L2Character[]
@@ -68,17 +67,13 @@ public class Party implements ITargetTypeHandler
 		
 		if (activeChar.isInParty())
 		{
+			int maxTargets = skill.getAffectLimit();
 			// Get a list of Party Members
 			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
 			{
 				if ((partyMember == null) || (partyMember == player))
 				{
 					continue;
-				}
-				
-				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
-				{
-					break;
 				}
 				
 				if (L2Skill.addCharacter(activeChar, partyMember, radius, false))
@@ -89,6 +84,11 @@ public class Party implements ITargetTypeHandler
 				if (L2Skill.addSummon(activeChar, partyMember, radius, false))
 				{
 					targetList.add(partyMember.getSummon());
+				}
+				
+				if (targetList.size() >= maxTargets)
+				{
+					break;
 				}
 			}
 		}
