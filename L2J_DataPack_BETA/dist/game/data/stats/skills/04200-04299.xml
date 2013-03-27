@@ -2,22 +2,22 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" levels="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
-		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="attack_time_up" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2500" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_up">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
@@ -31,17 +31,17 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="sleep" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="SLEEP" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="SLEEP" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="sleep" />
@@ -54,17 +54,17 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="root_magically" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2500" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="ROOT" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
@@ -74,22 +74,22 @@
 	</skill>
 	<skill id="4203" levels="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
-		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
+		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="50" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="#abnormalLvls" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
@@ -100,22 +100,22 @@
 	</skill>
 	<skill id="4204" levels="12" name="Bleed">
 		<!-- Freya retail confirmed -->
+		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#damage"> 57 84 114 147 180 207 235 235 234 234 237 237 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="BLEED" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="7" name="DamOverTime" abnormalTime="3" val="#damage" abnormalVisualEffect="bleed" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
@@ -128,17 +128,17 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="40" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2500" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
-		<set name="pvp" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="40" />
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PARALYZE" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="paralyze" />
@@ -148,22 +148,22 @@
 	</skill>
 	<skill id="4206" levels="12" name="Decrease MP">
 		<!-- Freya retail confirmed -->
-		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
-		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
+		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="dot_mp" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2500" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="90" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="10" name="ManaDamOverTime" abnormalTime="3" val="#maxMp" abnormalLvl="#abnormalLvls" abnormalType="dot_mp" />
 		</for>
@@ -172,37 +172,37 @@
 	</skill>
 	<skill id="4207" levels="12" name="BOSS Power Shot">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="4500" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
+		<set name="hitTime" val="4500" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4208" levels="12" name="Stun">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="4500" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="4500" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
@@ -214,38 +214,38 @@
 		<!-- Freya retail confirmed -->
 		<table name="#amount"> 2516 3150 4708 7611 11465 14839 17138 18081 19008 19977 13303 13157 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<set name="aggroPoints" val="100" />
-		<table name="#mpConsume"> 21 34 50 67 86 104 119 125 129 131 131 132 </table>
+		<set name="hitTime" val="2000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="HEAL" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
 	</skill>
 	<skill id="4210" levels="12" name="Life Chant">
 		<!-- Freya retail confirmed -->
+		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<table name="#hot"> 180 228 337 544 819 1060 1225 1292 1358 1427 951 940 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="life_force_others" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
 			<effect name="HealPercent" noicon="1" val="3" />
@@ -258,13 +258,13 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalType" val="pa_up" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="CLAN" />
 		<set name="affectRange" val="400" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="pa_up">
 				<mul order="0x30" stat="pAtk" val="1.5" />
@@ -278,13 +278,13 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalType" val="pd_up" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="CLAN" />
 		<set name="affectRange" val="400" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="pd_up">
 				<mul order="0x30" stat="pDef" val="1.5" />
@@ -298,13 +298,13 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalType" val="attack_time_down" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="CLAN" />
 		<set name="affectRange" val="400" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="attack_time_down">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
@@ -318,13 +318,13 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalType" val="dmg_shield" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="CLAN" />
 		<set name="affectRange" val="400" />
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="1500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="99" abnormalType="dmg_shield">
 				<add order="0x40" stat="reflectDam" val="20" />
@@ -337,15 +337,15 @@
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalType" val="silence_all" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MUTE" />
-		<set name="pvp" val="true" />
+		<set name="canBeDispeled" val="false" />
+		<set name="castRange" val="1500" />
+		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" />
-		<set name="castRange" val="1500" />
-		<set name="effectRange" val="2000" />
-		<set name="canBeDispeled" val="false" />
+		<set name="pvp" val="true" />
+		<set name="skillType" val="MUTE" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Mute" abnormalTime="3600" val="0" abnormalLvl="99" abnormalType="silence_all" />
 			<effect name="PhysicalMute" abnormalTime="3600" noicon="1" val="0" abnormalLvl="99" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="99" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
@@ -367,19 +367,20 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<!-- Teleport PC Area Animation -->
+		<set name="affectRange" val="300" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="100" />
 		<set name="effectRange" val="1300" />
 		<set name="hitTime" val="2900" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
-		<set name="affectRange" val="300" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4218" levels="1" name="Absorb HP MP">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<set name="absorbPart" val="0.4" />
+		<set name="affectRange" val="100" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
 		<set name="effectRange" val="1100" />
@@ -387,11 +388,10 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="60" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="57" />
-		<set name="affectRange" val="100" />
 		<set name="skillType" val="DRAIN" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="ManaDamOverTime" noicon="1" val="274" />
@@ -410,9 +410,9 @@
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="95" />
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="ROOT" />
-		<set name="pvp" val="true" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -427,23 +427,23 @@
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="2100" />
 		<set name="magicLvl" val="60" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="9390" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4221" levels="1" name="Deadly Dual-Sword Weapon: Range Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
+		<set name="affectRange" val="100" />
 		<set name="coolTime" val="1500" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="60" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="5164" />
-		<set name="affectRange" val="100" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4222" levels="1" name="Instant Move">
@@ -521,37 +521,37 @@
 	</skill>
 	<skill id="4228" levels="12" name="Double Dagger Attack">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="17000" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
+		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4229" levels="12" name="NPC Double Wind Fist">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="17000" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
+		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
-		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="17000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4230" levels="1" name="Wild Cannon">
 		<!-- Confirmed CT2.5 -->
@@ -560,56 +560,56 @@
 		<set name="effectRange" val="3000" />
 		<set name="hitTime" val="10000" />
 		<set name="magicLvl" val="70" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="1330120" />
 		<set name="reuseDelay" val="10500" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4231" levels="12" name="NPC Spit Attack">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="4000" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4232" levels="12" name="NPC AE Strike">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
+		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<set name="affectRange" val="20" />
-		<set name="reuseDelay" val="6000" />
-		<set name="hitTime" val="1000" />
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
-		<set name="skillType" val="PDAM" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4233" levels="1" name="Vampiric Attack">
 		<!-- Freya retail confirmed -->
 		<!-- Summon Shadow Skill -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="absorbDam" val="15" />
 		</for>
@@ -617,18 +617,18 @@
 	<skill id="4234" levels="12" name="BOSS Power Throw">
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
+		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
 		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
-		<table name="#mpConsume"> 32 45 63 83 106 129 150 158 164 168 170 173 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4235" levels="1" name="none">
 		<!-- Freya retail confirmed -->
@@ -643,21 +643,21 @@
 		<!-- Gustav Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="heal_effect_down" />
-		<set name="magicLvl" val="70" />
-		<set name="power" val="51" />
-		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="75000" />
-		<set name="hitTime" val="4000" />
-		<set name="isDebuff" val="true" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="70" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="51" />
+		<set name="reuseDelay" val="75000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" effectPower="90" abnormalLvl="1" abnormalType="heal_effect_down">
 				<mul order="0x30" stat="gainHp" val="0.5" />
@@ -669,22 +669,22 @@
 		<!-- Mikhail Skill -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="fanRange" val="0,0,200,180" />
-		<set name="magicLvl" val="70" />
-		<set name="power" val="72" />
-		<set name="targetType" val="FRONT_AREA" />
 		<set name="affectRange" val="200" />
-		<set name="reuseDelay" val="75000" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="4000" />
-		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="element" val="1" /> <!-- Water -->
-		<set name="elementPower" val="20" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="fanRange" val="0,0,200,180" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="70" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="72" />
+		<set name="reuseDelay" val="75000" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" effectPower="90" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -696,15 +696,15 @@
 		<!-- Dietrich Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="reuse_delay_up" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="reuseDelay" val="75000" />
-		<set name="affectRange" val="200" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="75000" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="reuse_delay_up">
@@ -771,39 +771,39 @@
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalType" val="poison" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="70" />
-		<set name="power" val="100" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="POISON" />
-		<set name="pvp" val="true" />
-		<set name="isDebuff" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" />
+		<set name="pvp" val="true" />
+		<set name="skillType" val="POISON" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="1200" name="DamOverTime" abnormalTime="3" val="294" abnormalVisualEffect="poison" abnormalLvl="9" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="4244" levels="12" name="NPC Wild Sweep">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="fanRange" val="0,0,80,150" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="FRONT_AREA" />
+		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
+		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<set name="affectRange" val="80" />
-		<set name="reuseDelay" val="6000" />
-		<set name="hitTime" val="1000" />
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
-		<set name="skillType" val="PDAM" />
+		<set name="effectRange" val="200" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="4245" levels="1" name="Mimic of Wrath">
 		<!-- Freya retail confirmed -->
@@ -833,65 +833,65 @@
 	</skill>
 	<skill id="4247" levels="12" name="NPC Windstrike - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4248" levels="12" name="NPC HP Drain - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
+		<set name="absorbPart" val="0.2" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<set name="absorbPart" val="0.2" />
-		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4249" levels="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
+		<table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
+		<set name="castRange" val="1000" />
+		<set name="coolTime" val="200" />
+		<set name="effectRange" val="1500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
-		<set name="isDebuff" val="true" />
 		<set name="hitTime" val="1500" />
-		<set name="saveVs" val="MEN" />
-		<set name="coolTime" val="200" />
-		<set name="skillType" val="MDAM" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="castRange" val="1000" />
-		<set name="effectRange" val="1500" />
+		<set name="power" val="#power" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="60" val="0" effectPower="60" abnormalLvl="2" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.8" />
@@ -902,141 +902,141 @@
 	</skill>
 	<skill id="4250" levels="12" name="NPC Twister - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
+		<set name="castRange" val="1000" />
+		<set name="effectRange" val="1500" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
-		<set name="castRange" val="1000" />
-		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4251" levels="12" name="NPC Curve Beam Cannon - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4252" levels="12" name="NPC Flame - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="AREA" />
+		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<set name="affectRange" val="200" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4253" levels="12" name="NPC Blaze - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4254" levels="12" name="NPC Prominence - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4255" levels="12" name="NPC Straight Beam Cannon - Slow">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="hitTime" val="2000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4256" levels="1" name="100% Stun Resistance.">
 		<!-- Freya retail confirmed -->
 		<set name="magicLvl" val="1" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="100" />
 		</for>
 	</skill>
 	<skill id="4257" levels="12" name="NPC Hydroblast - Magic">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="AREA" />
+		<table name="#mpConsume"> 9 15 20 27 34 42 49 53 55 57 58 59 </table>
+		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
 		<set name="affectRange" val="200" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
-		<set name="castRange" val="500" />
-		<set name="effectRange" val="1000" />
-		<table name="#mpConsume"> 9 15 20 27 34 42 49 53 55 57 58 59 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4258" levels="1" name="Anti Strider Slow">
 		<!-- Freya retail confirmed -->
@@ -1046,12 +1046,12 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="2000" />
 		<set name="hitTime" val="500" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
-		<set name="isDebuff" val="true" />
 		<set name="power" val="100" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="1200" val="0" abnormalLvl="99" abnormalType="speed_down">
@@ -1061,28 +1061,28 @@
 	</skill>
 	<skill id="4259" levels="12" name="Toxic Smoke">
 		<!-- Freya retail confirmed -->
-		<table name="#dot"> 54 72 96 123 150 174 189 189 198 198 204 204 </table>
-		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<set name="affectLimit" val="5-12" />
+		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
+		<table name="#dot"> 54 72 96 123 150 174 189 189 198 198 204 204 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalType" val="poison" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="power" val="35" /> <!-- Base Land Rate -->
-		<set name="targetType" val="AREA" />
+		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
-		<set name="reuseDelay" val="8000" />
-		<set name="isDebuff" val="true" />
-		<set name="hitTime" val="2000" />
-		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
-		<set name="pvp" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="#cast" />
 		<set name="effectRange" val="1000" />
+		<set name="hitTime" val="2000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="35" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
+		<set name="reuseDelay" val="8000" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="POISON" />
+		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="10" name="DamOverTime" abnormalTime="3" val="#dot" abnormalVisualEffect="poison" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -1094,45 +1094,45 @@
 		<!-- Freya retail confirmed -->
 		<table name="#cast"> 600 750 750 900 900 900 900 900 900 900 900 900 </table>
 		<table name="#effect"> 1100 1250 1250 1400 1400 1400 1400 1400 1400 1400 1400 1400 </table>
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="DRAIN" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
+		<set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage -->
 		<set name="castRange" val="#cast" />
 		<set name="effectRange" val="#effect" />
-		<set name="absorbPart" val="0.2" /><!-- absorbs 20% of damage -->
-		<table name="#mpConsume"> 17 28 38 49 63 78 92 97 102 105 108 109 </table>
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="DRAIN" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4261" levels="12" name="Mega Storm Strike">
 		<!-- Freya retail confirmed -->
 		<table name="#cast"> 600 750 750 900 900 900 900 900 900 900 900 900 </table>
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="4000" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="A1" />
+		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<set name="castRange" val="#cast" />
 		<set name="effectRange" val="1100" />
-		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 75 77 78 </table>
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4262" levels="2" name="Holiday Wind Walk">
 		<!-- Freya retail confirmed -->
@@ -1234,36 +1234,36 @@
 	</skill>
 	<skill id="4267" levels="1" name="Grade Penalty">
 		<!-- Freya retail confirmed -->
-		<set name="power" val="0" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
 		<set name="operateType" val="P" />
+		<set name="power" val="0" />
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4268" levels="1" name="Danger Area">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4269" levels="1" name="Block All Chat">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4270" levels="4" name="Weight Penalty">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill SHOULD BE Only For Description In The Client - probably hardcoded on retail -->
 		<table name="#rate"> 0.5 0.5 0.5 0.5 </table>
 		<table name="#rateSpd"> 1 0.5 0.5 0 </table>
-		<set name="power" val="0" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
 		<set name="operateType" val="P" />
+		<set name="power" val="0" />
+		<set name="pvp" val="true" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regHp" val="#rate" />
 			<mul order="0x30" stat="regMp" val="#rate" />
@@ -1272,13 +1272,13 @@
 	</skill>
 	<skill id="4271" levels="8" name="Increase Force">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4272" levels="1" name="Greater Resist Archery Attack">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="0.3" />
 			<mul order="0x30" stat="crossbowWpnVuln" val="0.3" />
@@ -1287,8 +1287,8 @@
 	<skill id="4273" levels="5" name="Resist Dagger">
 		<!-- Freya retail confirmed -->
 		<table name="#daggerVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="daggerWpnVuln" val="#daggerVuln" />
 			<mul order="0x30" stat="dualDaggerWpnVuln" val="#daggerVuln" />
@@ -1298,8 +1298,8 @@
 	<skill id="4274" levels="5" name="Blunt Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#bluntVuln"> 1.11 1.25 1.43 1.67 2 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="bluntWpnVuln" val="#bluntVuln" />
 			<mul order="0x30" stat="bigBluntWpnVuln" val="#bluntVuln" />
@@ -1307,14 +1307,14 @@
 	</skill>
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4276" levels="5" name="Archery Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#bowVuln"> 1.11 1.25 1.43 1.67 2 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="bowWpnVuln" val="#bowVuln" />
 			<mul order="0x30" stat="crossbowWpnVuln" val="#bowVuln" />
@@ -1323,43 +1323,43 @@
 	<skill id="4277" levels="5" name="Resist Poison">
 		<!-- Freya retail confirmed -->
 		<table name="#poisonVuln"> 10 20 30 40 50 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
 		</for>
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkPower" val="20" />
 		</for>
 	</skill>
 	<skill id="4279" levels="5" name="Fire Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4280" levels="5" name="Water Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4281" levels="5" name="Wind Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4282" levels="5" name="Earth Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4283" levels="1" name="Greater Resist Magic Attack">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="2" />
 		</for>
@@ -1367,8 +1367,8 @@
 	<skill id="4284" levels="5" name="Resist Bleeding">
 		<!-- Freya retail confirmed -->
 		<table name="#bleedVuln"> 10 20 30 40 50 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
 		</for>
@@ -1376,16 +1376,16 @@
 	<skill id="4285" levels="5" name="Resist Sleep">
 		<!-- Freya retail confirmed -->
 		<table name="#sleepVuln"> 10 20 30 40 50 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
 		</for>
 	</skill>
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="sleepVuln" val="95" />
 		</for>
@@ -1393,35 +1393,35 @@
 	<skill id="4287" levels="5" name="Resist Hold">
 		<!-- Freya retail confirmed -->
 		<table name="#rootVuln"> 10 20 30 40 50 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="#rootVuln" />
 		</for>
 	</skill>
 	<skill id="4288" levels="1" name="Greater Resist Hold">
 		<!-- Freya retail confirmed -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="95" />
 		</for>
 	</skill>
 	<skill id="4289" levels="1" name="Wyvern Breath">
 		<!-- Freya retail confirmed -->
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="60" />
-		<set name="power" val="379" />
-		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="200" />
-		<set name="hitTime" val="3600" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="6000" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3600" />
+		<set name="magicLvl" val="60" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="379" />
+		<set name="reuseDelay" val="6000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 		<cond msg="You can only use Wyvern Breath when flying"> <!-- This skill really have condition ? -->
 			<player flying="true" />
 		</cond>
@@ -1432,71 +1432,71 @@
 	<skill id="4290" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Undead -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4291" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Construct -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4292" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Beast -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4293" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Animal -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4294" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Plant -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4295" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Humanoid -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4296" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Spirit -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4297" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Divine -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4298" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Demonic -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4299" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Dragon -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>
