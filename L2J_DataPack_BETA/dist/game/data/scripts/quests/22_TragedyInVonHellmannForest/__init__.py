@@ -45,7 +45,7 @@ class Quest (JQuest) :
    if not st: return
    htmltext = event 
    if event == "31334-02.htm" :
-       st2 = player.getQuestState("21_HiddenTruth")
+       st2 = player.getQuestState("Q00021_HiddenTruth")
        if st2 :
            if not (st2.getState() == State.COMPLETED and player.getLevel() >= 63) :
                htmltext = "31334-03.htm"
