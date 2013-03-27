@@ -507,4 +507,167 @@
 		<!-- Passive: Item drop rate increases by 50%. -->
 		<passive_skill id="8417" level="5" /> <!-- Necklace Ability - Drop Rate Up -->
 	</option>
+	<!-- TODO: Confirm those! -->
+	<option id="24965" name="high_five">
+		<!-- Increase M. Def. by 8. -->
+		<for>
+			<add order="0x40" stat="mDef" val="8" />
+		</for>
+	</option>
+	<option id="24966" name="high_five">
+		<!-- Increase M. Def. by 9. -->
+		<for>
+			<add order="0x40" stat="mDef" val="9" />
+		</for>
+	</option>
+	<option id="24967" name="high_five">
+		<!-- Increase M. Def. by 10. -->
+		<for>
+			<add order="0x40" stat="mDef" val="10" />
+		</for>
+	</option>
+	<option id="24968" name="high_five">
+		<!-- Increase M. Def. by 11. -->
+		<for>
+			<add order="0x40" stat="mDef" val="11" />
+		</for>
+	</option>
+	<option id="24969" name="high_five">
+		<!-- Increase M. Def. by 12. -->
+		<for>
+			<add order="0x40" stat="mDef" val="12" />
+		</for>
+	</option>
+	<option id="24970" name="high_five">
+		<!-- Increase M. Def. by 13 and Speed by 7. -->
+		<for>
+			<add order="0x40" stat="mDef" val="13" />
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
+	</option>
+	<option id="24971" name="high_five">
+		<!-- Increase M. Def. by 14 and Speed by 7. -->
+		<for>
+			<add order="0x40" stat="mDef" val="14" />
+			<add order="0x40" stat="runSpd" val="7" />
+		</for>
+	</option>
+	<option id="24972" name="high_five">
+		<!-- Increase M. Def. by 15 and Speed by 7,Increases physical skill damage by 93. Decreases MP Consumption by 3%. -->
+		<for>
+			<add order="0x40" stat="mDef" val="15" />
+			<add order="0x40" stat="runSpd" val="7" />
+			<add order="0x40" stat="physicalSkillPower" val="93" />
+			<mul order="0x30" stat="MpConsume" val="0.97" />
+		</for>
+	</option>
+	<option id="24973" name="high_five">
+		<!-- Increase M. Def. by 16 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%,Increases Critical Damage by 41.3 and Magical Critical Rate by 2. -->
+		<for>
+			<add order="0x40" stat="mDef" val="16" />
+			<add order="0x40" stat="runSpd" val="7" />
+			<add order="0x40" stat="physicalSkillPower" val="93" />
+			<mul order="0x30" stat="MpConsume" val="0.97" />
+			<add order="0x40" stat="cAtkAdd" val="41" />
+			<add order="0x40" stat="mCritRate" val="2" />
+		</for>
+	</option>
+	<option id="24974" name="high_five">
+		<!-- Increase M. Def. by 17 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%,Increases Critical Damage by 41.3 and Magical Critical Rate by 2. -->
+		<for>
+			<add order="0x40" stat="mDef" val="17" />
+			<add order="0x40" stat="runSpd" val="7" />
+			<add order="0x40" stat="physicalSkillPower" val="93" />
+			<mul order="0x30" stat="MpConsume" val="0.97" />
+			<add order="0x40" stat="cAtkAdd" val="41" />
+			<add order="0x40" stat="mCritRate" val="2" />
+		</for>
+	</option>
+	<option id="24975" name="high_five">
+		<!-- CON + 1. -->
+		<for>
+			<add order="0x10" stat="CON" val="1" />
+		</for>
+	</option>
+	<option id="24976" name="high_five">
+		<!-- CON + 1 and MEN +1 -->
+		<for>
+			<add order="0x10" stat="CON" val="1" />
+			<add order="0x10" stat="MEN" val="1" />
+		</for>
+	</option>
+	<option id="24977" name="high_five">
+		<!-- INT +1, STR +1, CON +1, MEN +1 -->
+		<for>
+			<add order="0x10" stat="INT" val="1" />
+			<add order="0x10" stat="STR" val="1" />
+			<add order="0x10" stat="CON" val="1" />
+			<add order="0x10" stat="MEN" val="1" />
+		</for>
+	</option>
+	<option id="24978" name="high_five">
+		<!-- INT +1, STR +1, CON +1, MEN +1 -->
+		<for>
+			<add order="0x10" stat="INT" val="1" />
+			<add order="0x10" stat="STR" val="1" />
+			<add order="0x10" stat="CON" val="1" />
+			<add order="0x10" stat="MEN" val="1" />
+		</for>
+	</option>
+	<option id="24979" name="high_five">
+		<!-- STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1 -->
+		<for>
+			<add order="0x10" stat="STR" val="1" />
+			<add order="0x10" stat="DEX" val="1" />
+			<add order="0x10" stat="CON" val="1" />
+			<add order="0x10" stat="INT" val="1" />
+			<add order="0x10" stat="WIT" val="1" />
+			<add order="0x10" stat="MEN" val="1" />
+		</for>
+	</option>
+	<option id="24980" name="high_five">
+		<!-- STR +1, DEX +1, CON +2, INT +1, WIT +1, MEN +2 -->
+		<for>
+			<add order="0x10" stat="STR" val="1" />
+			<add order="0x10" stat="DEX" val="1" />
+			<add order="0x10" stat="CON" val="2" />
+			<add order="0x10" stat="INT" val="1" />
+			<add order="0x10" stat="WIT" val="1" />
+			<add order="0x10" stat="MEN" val="2" />
+		</for>
+	</option>
+	<option id="24981" name="high_five">
+		<!-- Passive Skill: Moving speed increases by 7. -->
+		<passive_skill id="21235" level="1" /> <!-- Olf's T-shirt: Speed -->
+	</option>
+	<option id="24982" name="high_five">
+		<!-- Active Skil: Blessed Escape ability can be used. Can be used every 20 hour(s). -->
+		<active_skill id="21236" level="1" /> <!-- Olf's T-shirt: Blessed Escape -->
+	</option>
+	<option id="24983" name="high_five">
+		<!-- Active Skil: Temporarily becomes invincible for 7 seconds. Can be used every 20 hour(s). -->
+		<active_skill id="21237" level="1" /> <!-- Olf's T-shirt: Blessed Invincibility -->
+	</option>
+	<option id="24984" name="high_five">
+		<!-- Increases M. Def by 18 and Speed by 7, Increases physical skill damage by 93. Decreases MP Consumption by 3%, Increases Critical Damage by 41.3, and Magical Critical Rate by 2. -->
+		<for>
+			<add order="0x40" stat="mDef" val="18" />
+			<add order="0x40" stat="runSpd" val="7" />
+			<add order="0x40" stat="physicalSkillPower" val="93" />
+			<mul order="0x30" stat="MpConsume" val="0.97" />
+			<add order="0x40" stat="cAtkAdd" val="41" />
+			<add order="0x40" stat="mCritRate" val="2" />
+		</for>
+	</option>
+	<option id="24985" name="high_five">
+		<!-- STR +2, DEX +1, CON +2, INT +2, WIT +1, MEN +2 -->
+		<for>
+			<add order="0x10" stat="STR" val="2" />
+			<add order="0x10" stat="DEX" val="1" />
+			<add order="0x10" stat="CON" val="2" />
+			<add order="0x10" stat="INT" val="2" />
+			<add order="0x10" stat="WIT" val="1" />
+			<add order="0x10" stat="MEN" val="2" />
+		</for>
+	</option>
 </list>
