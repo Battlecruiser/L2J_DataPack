@@ -50,6 +50,7 @@
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -65,6 +66,7 @@
 	</skill>
 	<skill id="21005" levels="1" name="Agility">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -86,6 +88,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
+		<set name="abnormalTime" val="600" />
 	    <!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalType" val="big_head" />
@@ -138,6 +141,7 @@
 	<skill id="21011" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -154,6 +158,7 @@
 	<skill id="21012" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -170,6 +175,7 @@
 	<skill id="21013" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -596,6 +602,7 @@
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -609,6 +616,7 @@
 	<skill id="21052" levels="1" name="Bless the Body">
 		<!-- Increases Max HP by 25% for 30 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -620,6 +628,7 @@
 	<skill id="21053" levels="1" name="Bless the Soul">
 		<!-- Increases Max MP by 25% for 30 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -640,6 +649,7 @@
 	<skill id="21055" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -651,6 +661,7 @@
 	<skill id="21056" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -662,6 +673,7 @@
 	<skill id="21057" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -674,6 +686,7 @@
 	<skill id="21058" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -686,6 +699,7 @@
 	<skill id="21059" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -698,6 +712,7 @@
 	<skill id="21060" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -709,6 +724,7 @@
 	<skill id="21061" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -720,6 +736,7 @@
 	<skill id="21062" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -731,6 +748,7 @@
 	<skill id="21063" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -742,6 +760,7 @@
 	<skill id="21064" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -754,6 +773,7 @@
 	<skill id="21065" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -766,6 +786,7 @@
 	<skill id="21066" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -797,6 +818,7 @@
 	<skill id="21068" levels="1" name="Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -809,6 +831,7 @@
 	<skill id="21069" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -820,6 +843,7 @@
 	<skill id="21070" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -831,6 +855,7 @@
 	<skill id="21071" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -842,6 +867,7 @@
 	<skill id="21072" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -853,6 +879,7 @@
 	<skill id="21073" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -865,6 +892,7 @@
 	<skill id="21074" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -877,6 +905,7 @@
 	<skill id="21075" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -889,6 +918,7 @@
 	<skill id="21076" levels="1" name="Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -901,6 +931,7 @@
 	<skill id="21077" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -912,6 +943,7 @@
 	<skill id="21078" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -923,6 +955,7 @@
 	<skill id="21079" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -934,6 +967,7 @@
 	<skill id="21080" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -945,6 +979,7 @@
 	<skill id="21081" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -957,6 +992,7 @@
 	<skill id="21082" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -969,6 +1005,7 @@
 	<skill id="21083" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -981,6 +1018,7 @@
 	<skill id="21084" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1010,6 +1048,7 @@
 	<skill id="21086" levels="1" name="Blessing of Love">
 		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1021,6 +1060,7 @@
 	<skill id="21087" levels="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="berserker" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1046,6 +1086,7 @@
 	<skill id="21089" levels="1" name="Dance of Shadows">
 		<!-- Receives the soul's help, and for 2 minutes, decreases one's own moving speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_shadow" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1057,6 +1098,7 @@
 	<skill id="21090" levels="1" name="Soul of Phoenix">
 		<!-- Receives the soul's help, and revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="resurrection_special" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1105,6 +1147,7 @@
 	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
 		<!-- For 30 minutes, increases critical rate by 30% and critical power by 35%. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1130,6 +1173,7 @@
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -1140,6 +1184,7 @@
 	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For five minutes, the Great Spirit increases Atk.Spd. by 20%, damage by 10% and P.Def. by 20%. You recover HP equal to 5% of the melee damage. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />

@@ -20,6 +20,7 @@
 	</skill>
 	<skill id="6803" levels="1" name="Arena Haste">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -34,6 +35,7 @@
 	</skill>
 	<skill id="6804" levels="1" name="Arena Wind Walk">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -48,6 +50,7 @@
 	</skill>
 	<skill id="6805" levels="1" name="Arena Empower">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -62,6 +65,7 @@
 	</skill>
 	<skill id="6806" levels="1" name="Arena Acumen">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -76,6 +80,7 @@
 	</skill>
 	<skill id="6807" levels="1" name="Arena Concentration">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -90,6 +95,7 @@
 	</skill>
 	<skill id="6808" levels="1" name="Arena Might">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -104,6 +110,7 @@
 	</skill>
 	<skill id="6809" levels="1" name="Arena Guidance">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -118,6 +125,7 @@
 	</skill>
 	<skill id="6810" levels="1" name="Arena Focus">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -132,6 +140,7 @@
 	</skill>
 	<skill id="6811" levels="1" name="Arena Death Whisper">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -146,6 +155,7 @@
 	</skill>
 	<skill id="6812" levels="1" name="Arena Berserker Spirit">
 		<!-- Arena Skill -->
+		<set name="abnormalTime" val="300" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -231,6 +241,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -259,6 +270,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="hitTime" val="1800" />
 		<set name="magicLvl" val="85" />
@@ -275,6 +287,7 @@
 	</skill>
 	<skill id="6821" levels="1" name="P. Def. Decrease">
 		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
+		<set name="abnormalTime" val="15" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -299,6 +312,7 @@
 	</skill>
 	<skill id="6825" levels="2" name="Bleed">
 		<!-- "For 8 seconds, inflicts bleed and decreases 120 HP every second." -->
+		<set name="abnormalTime" val="10" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -311,12 +325,14 @@
 	</skill>
 	<skill id="6827" levels="1" name="Petrify">
 		<!-- "Inflicted with petrification, the body is rigid like stone for 30 seconds." -->
+		<set name="abnormalTime" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6828" levels="1" name="Dust Storm">
 		<!-- "For 30 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%." -->
+		<set name="abnormalTime" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -329,6 +345,7 @@
 	</skill>
 	<skill id="6830" levels="1" name="Bleed">
 		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
+		<set name="abnormalTime" val="5" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -365,6 +382,7 @@
 	</skill>
 	<skill id="6836" levels="1" name="Silence">
 		<!-- Magic skills are blocked. -->
+		<set name="abnormalTime" val="20" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -389,6 +407,7 @@
 	</skill>
 	<skill id="6840" levels="1" name="Paralysis">
 		<!-- Temporarily inflicted with paralysis and cannot move. -->
+		<set name="abnormalTime" val="20" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -406,6 +425,7 @@
 		<table name="#pAtk"> 1.12 1 </table>
 		<table name="#pAtkSpd"> 1.15 1.4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="affectRange" val="600" />
 		<set name="hitTime" val="3000" />
@@ -568,6 +588,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="sleep" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -592,6 +613,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -699,6 +721,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="affectRange" val="600" />
 		<set name="hitTime" val="2000" />
@@ -720,6 +743,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="400" />
@@ -743,6 +767,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -909,6 +934,7 @@
 		<table name="#abnormalLvls"> 3 4 </table>
 		<table name="#pDef"> 0.77 0.67 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -950,6 +976,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<table name="#dmg"> 120 140 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
@@ -1007,6 +1034,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -1050,6 +1078,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="silence" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
@@ -1118,6 +1147,7 @@
 	</skill>
 	<skill id="6884" levels="1" name="Morale Boost">
 		<!-- none -->
+		<set name="abnormalTime" val="60" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1131,6 +1161,7 @@
 		<table name="#pmAtkSpd"> 1 1 1.15 </table>
 		<table name="#rCrit"> 0.1 0.3 0.5 </table>
 		<table name="#Vuln"> 50 80 90 </table>
+		<set name="abnormalTime" val="60" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />

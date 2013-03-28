@@ -33,6 +33,7 @@
 	<skill id="2103" levels="1" name="Mystery Potion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -549,6 +550,7 @@
 	<skill id="2139" levels="1" name="Special Tree Recovery Bonus">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -765,6 +767,7 @@
 	<skill id="2168" levels="6" name="Raid Blessing">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="reduce_drop_penalty" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -782,6 +785,7 @@
 		<table name="#abnormalLvls"> 2 3 </table>
 		<table name="#mAtkSpd"> 1.23 1.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />

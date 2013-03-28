@@ -102,6 +102,7 @@
 	</skill>
 	<skill id="23210" levels="85" name="Aura Flare">
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="ma_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A3" />
@@ -127,6 +128,7 @@
 	<skill id="23213" levels="2" name="Berserker Spirit">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -169,6 +171,7 @@
 	<skill id="23217" levels="1" name="Granny Tiger Agathion Special Skill - Fundamentals">
 		<!-- For 1 minute(s), 50% of the standard short-range physical damage inflicted on the enemy is recovered as HP. Reuse delay is 1 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -185,6 +188,7 @@
 	<skill id="23219" levels="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
 		<!-- For 5 minutes, increases Atk. Spd. by 30% and all attribute defense by 10. Reuse delay is 1 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -201,6 +205,7 @@
 	<skill id="23221" levels="1" name="Cheerleader Orodriel Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -217,6 +222,7 @@
 	<skill id="23223" levels="1" name="Cheerleader Lana Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -233,6 +239,7 @@
 	<skill id="23225" levels="1" name="Cheerleader Naonin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -249,6 +256,7 @@
 	<skill id="23227" levels="1" name="Cheerleader Mortia Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -265,6 +273,7 @@
 	<skill id="23229" levels="1" name="Cheerleader Kaurin Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -281,6 +290,7 @@
 	<skill id="23231" levels="1" name="Cheerleader Meruril Agathion Special Skill - Joy of Cheering">
 		<!-- For 20 minutes, increases Casting Spd. by 10% and Atk. Spd. by 10%. Decreases MP consumption for skill use by 30%. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -297,6 +307,7 @@
 	<skill id="23233" levels="1" name="Handy Agathion Special Skill - Halloween's Blessing">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="br_event_buf1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />

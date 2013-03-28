@@ -102,6 +102,7 @@
 	</skill>
 	<skill id="6020" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -112,6 +113,7 @@
 	</skill>
 	<skill id="6021" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -122,6 +124,7 @@
 	</skill>
 	<skill id="6022" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -132,6 +135,7 @@
 	</skill>
 	<skill id="6023" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -142,6 +146,7 @@
 	</skill>
 	<skill id="6024" levels="1" name="Weight Aerial Cleft">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="40" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -190,6 +195,7 @@
 	</skill>
 	<skill id="6033" levels="1" name="Treasure Seeker's Betrayal">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="stigma_a" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -198,6 +204,7 @@
 	<skill id="6034" levels="1" name="Freeze">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -215,6 +222,7 @@
 	</skill>
 	<skill id="6035" levels="1" name="Red Team Transformation">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -230,6 +238,7 @@
 	</skill>
 	<skill id="6036" levels="1" name="Blue Team Transformation">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -250,6 +259,7 @@
 	</skill>
 	<skill id="6038" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -258,6 +268,7 @@
 	</skill>
 	<skill id="6039" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -266,6 +277,7 @@
 	</skill>
 	<skill id="6040" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -413,6 +425,7 @@
 		<table name="#magicLvl"> 50 70 75 80 </table>
 		<table name="#mpConsume"> 45 65 69 72 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
@@ -489,6 +502,7 @@
 		<table name="#mpConsume"> 74 104 109 116 </table>
 		<table name="#mpInitialConsume"> 18 26 28 29 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
@@ -518,6 +532,7 @@
 	</skill>
 	<skill id="6055" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -526,6 +541,7 @@
 	</skill>
 	<skill id="6056" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -534,6 +550,7 @@
 	</skill>
 	<skill id="6057" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -542,6 +559,7 @@
 	</skill>
 	<skill id="6058" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="bot_penalty" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -551,6 +569,7 @@
 	<skill id="6059" levels="1" name="Counter Critical">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="counter_critical_trigger" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
@@ -568,6 +587,7 @@
 	</skill>
 	<skill id="6060" levels="1" name="Great Fury">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="attack_time_down_special" />
 		<set name="affectRange" val="1000" />
 		<set name="isTriggeredSkill" val="true" />
@@ -733,6 +753,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Lightning Strike effect -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="aggroPoints" val="1" />
 		<set name="isDebuff" val="true" />
@@ -753,6 +774,7 @@
 	<skill id="6091" levels="1" name="Anchor">
 		<!-- Anchor effect -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -771,6 +793,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Lightning Shock effect -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -790,6 +813,7 @@
 	<skill id="6093" levels="1" name="Panther Hide">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="hide" />
 		<set name="aggroPoints" val="679" />
 		<set name="magicLvl" val="78" />
@@ -829,6 +853,7 @@
 		<table name="#magicLvl"> 42 51 60 64 68 72 76 78 79 80 81 82 83 84 85 </table>
 		<table name="#power"> 469 758 1136 1327 1525 1727 1925 2020 2067 2112 2156 2200 2241 2282 2320 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="armor_unholy" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />

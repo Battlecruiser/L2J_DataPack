@@ -85,6 +85,7 @@
 	</skill>
 	<skill id="6913" levels="1" name="Challenge of Faith">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="15" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -137,6 +138,7 @@
 	<skill id="6920" levels="1" name="Collector's Fortune">
 		<!-- High Five Skill -->
 		<!-- Triggered Skill for Collector's Experience -->
+		<set name="abnormalTime" val="10" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -155,6 +157,7 @@
 	</skill>
 	<skill id="6921" levels="1" name="Penetration Attack">
 		<!-- P. Def. is decreased momentarily. -->
+		<set name="abnormalTime" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />

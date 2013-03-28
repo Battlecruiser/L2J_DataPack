@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6400" levels="1" name="Cokrakon Dwindling Velocity">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="casting_time_up" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -42,6 +43,7 @@
 		<table name="#abnormalLvls"> 11 12 13 14 15 </table>
 		<table name="#dot"> 500 1100 2200 4400 8000 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
@@ -63,6 +65,7 @@
 	</skill>
 	<skill id="6403" levels="1" name="Torumba Numbing Poison">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="60" />
@@ -87,6 +90,7 @@
 	</skill>
 	<skill id="6404" levels="1" name="Torumba Poison Swing">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1500" />
@@ -109,6 +113,7 @@
 	</skill>
 	<skill id="6405" levels="1" name="Torumba Roar">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -133,6 +138,7 @@
 	</skill>
 	<skill id="6406" levels="1" name="Torumba's Plague">
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
@@ -149,6 +155,7 @@
 	<skill id="6407" levels="1" name="Torumba's Constraint">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="block_resurrection" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
@@ -168,6 +175,7 @@
 	</skill>
 	<skill id="6408" levels="1" name="Soul Weakness">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="block_transform" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="600" />
@@ -194,6 +202,7 @@
 	</skill>
 	<skill id="6410" levels="1" name="Reptilikon Rush">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="60" />
@@ -255,6 +264,7 @@
 	</skill>
 	<skill id="6414" levels="1" name="Reptilikon Charge">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
@@ -291,6 +301,7 @@
 	</skill>
 	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
@@ -317,6 +328,7 @@
 	</skill>
 	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
@@ -342,6 +354,7 @@
 	</skill>
 	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
@@ -415,6 +428,7 @@
 	</skill>
 	<skill id="6423" levels="1" name="Shock">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
@@ -450,6 +464,7 @@
 	</skill>
 	<skill id="6425" levels="1" name="Demotivation Hex">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -494,6 +509,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Sticky Mushroom Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -520,6 +536,7 @@
 	<skill id="6429" levels="1" name="Cozy Mucus">
 		<!-- Rainbow Frog -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="signal_a" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="500" />
@@ -549,6 +566,7 @@
 	<skill id="6431" levels="1" name="Feral Might">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
@@ -568,6 +586,7 @@
 	<skill id="6432" levels="1" name="Feral Focus">
 		<!-- Critical attack rate increases by 35 % for 5 minutes -->
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
@@ -587,6 +606,7 @@
 	<skill id="6433" levels="1" name="Feral Guidance">
 		<!-- Accuracy increases by 7 for 5 minutes. -->
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="aggroPoints" val="989" />
 		<set name="castRange" val="400" />
@@ -606,6 +626,7 @@
 	<skill id="6434" levels="1" name="Feral Haste">
 		<!-- Atk. Spd. increases by 38 % for 5 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
@@ -630,6 +651,7 @@
 		<table name="#dot"> 0.005 0.01 0.02 </table>
 		<table name="#rCrit"> 0.2 0.5 0.75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -655,6 +677,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -679,6 +702,7 @@
 	<skill id="6437" levels="7" name="Area of Freezing Core">
 		<table name="#dot"> 30 60 90 150 250 350 500 </table>
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="poison" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -698,6 +722,7 @@
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="poison" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -708,6 +733,7 @@
 	</skill>
 	<skill id="6439" levels="1" name="Energy of Wisdom">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -718,6 +744,7 @@
 	</skill>
 	<skill id="6440" levels="1" name="Energy of Strong">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -728,6 +755,7 @@
 	</skill>
 	<skill id="6441" levels="1" name="Energy of Agile">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -738,6 +766,7 @@
 	</skill>
 	<skill id="6442" levels="1" name="Efficacy of Wisdom">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -753,6 +782,7 @@
 	</skill>
 	<skill id="6443" levels="1" name="Efficacy of Strength">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -769,6 +799,7 @@
 	</skill>
 	<skill id="6444" levels="1" name="Efficacy of Agility">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_e" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -900,6 +931,7 @@
 	<skill id="6464" levels="1" name="Three Siblings' Trickery">
 		<!-- By the three sibling's trickery, Max HP/MP/CP are increased by 40% for 10 seconds. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />

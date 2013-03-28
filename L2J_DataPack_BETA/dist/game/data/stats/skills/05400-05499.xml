@@ -15,6 +15,7 @@
 	<skill id="5401" levels="1" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="fly_away" />
 		<set name="affectRange" val="300" />
 		<set name="flyRadius" val="300" />
@@ -153,6 +154,7 @@
 	</skill>
 	<skill id="5416" levels="1" name="Dark Cloud Mansion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -190,6 +192,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mAtk"> 9.16 15.36 27.82 41.49 61.66 84.61 111.26 126.31 142.73 160.7 180.46 201.65 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="fire_dot" />
 		<set name="affectRange" val="300" />
 		<set name="element" val="0" /> <!-- Fire -->
@@ -216,6 +219,7 @@
 		<table name="#dot"> 40 105 285 455 665 895 1115 1255 1445 1590 1620 1770 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="affectRange" val="300" />
 		<set name="isDebuff" val="true" />
@@ -240,6 +244,7 @@
 		<table name="#dot"> 75 105 215 275 445 515 700 840 870 1160 1325 1475 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="affectRange" val="300" />
 		<set name="isDebuff" val="true" />
@@ -261,6 +266,7 @@
 	<skill id="5425" levels="1" name="Iron Shield">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="iron_shield_i" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
@@ -277,6 +283,7 @@
 	<skill id="5426" levels="1" name="Counter Chance">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="archer_special" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
@@ -294,6 +301,7 @@
 	<skill id="5427" levels="1" name="Counter Rapid Shot">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="archer_special" />
 		<set name="affectRange" val="1000" />
 		<set name="isTriggeredSkill" val="true" />
@@ -313,6 +321,7 @@
 	<skill id="5428" levels="1" name="Counter Dash">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="archer_special_i" />
 		<set name="affectRange" val="1000" />
 		<set name="isTriggeredSkill" val="true" />
@@ -355,6 +364,7 @@
 	<skill id="5431" levels="1" name="Slow">
 		<!-- Condition causing target to temporarily decrease attack speed and casting speed. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="2000" />
 		<set name="lvlBonusRate" val="2" />
@@ -378,6 +388,7 @@
 	<skill id="5434" levels="1" name="Gust">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="720" />
@@ -399,6 +410,7 @@
 	<skill id="5435" levels="1" name="Gust">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="720" />
@@ -421,6 +433,7 @@
 	<skill id="5436" levels="1" name="Increase Recovery Rate">
 		<!-- Condition causing target to increase recovery rate of HP and MP. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="all_regen_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -514,6 +527,7 @@
 		<table name="#magicLvl"> 55 60 65 70 </table>
 		<table name="#mpConsume"> 55 61 66 71 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -541,6 +555,7 @@
 		<table name="#power"> 917 1084 </table>
 		<table name="#val"> 325 335 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -566,6 +581,7 @@
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="pinch" />
 		<set name="aggroPoints" val="303" />
 		<set name="hitTime" val="1500" />
@@ -598,6 +614,7 @@
 		<!-- Imbue Dark Seed effect -->
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -631,6 +648,7 @@
 	<skill id="5449" levels="1" name="Weak Constitution">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="stun" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="operateType" val="A2" />
@@ -648,6 +666,7 @@
 		<table name="#dot"> 1090 1330 1330 1535 1535 1675 1675 </table>
 		<table name="#magicLvl"> 46 52 58 62 66 70 74 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -664,6 +683,7 @@
 	<skill id="5451" levels="1" name="Enervation">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="all_speed_down" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
@@ -683,6 +703,7 @@
 		<table name="#critVuln"> 1.4 1.5 1.6 </table>
 		<table name="#magicLvl"> 66 70 74 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="t_crt_dmg_up" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -710,6 +731,7 @@
 	<skill id="5454" levels="1" name="Shadow Bind">
 		<!-- Immobilized. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -719,6 +741,7 @@
 	<skill id="5455" levels="1" name="Voice Bind">
 		<!-- Silenced. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="25" />
 		<set name="abnormalType" val="silence" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -727,6 +750,7 @@
 	</skill>
 	<skill id="5456" levels="1" name="Stubborn Resistance">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -761,6 +785,7 @@
 	<skill id="5459" levels="1" name="Paralysis">
 		<!-- A temporary paralysis that prevents movement. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -772,6 +797,7 @@
 	<skill id="5460" levels="1" name="Fear">
 		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -915,6 +941,7 @@
 	<skill id="5481" levels="1" name="Transform Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform_hangover" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -923,6 +950,7 @@
 	<skill id="5482" levels="1" name="Transform Penalty">
 		<!-- You cannot be transformed while under this effect. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="480" />
 		<set name="abnormalType" val="transform_hangover" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -936,6 +964,7 @@
 	<skill id="5484" levels="1" name="Endurance Defense Up">
 		<!-- Increases P. Def. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -944,6 +973,7 @@
 	<skill id="5485" levels="1" name="Endurance Defense Up">
 		<!-- Increases P. Def. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="md_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -952,6 +982,7 @@
 	<skill id="5486" levels="1" name="Endurance Offense Up">
 		<!-- Increases P. Atk. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -965,6 +996,7 @@
 	<skill id="5488" levels="1" name="Counter Critical Power Up">
 		<!-- Increases critical attack power. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -973,6 +1005,7 @@
 	<skill id="5489" levels="1" name="Counter Critical Rate Up">
 		<!-- Increases critical attack rate. Effect 1. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -981,6 +1014,7 @@
 	<skill id="5490" levels="1" name="Weakened Life">
 		<!-- You have been infected by a fatal poison. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="fatal_poison" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1038,6 +1072,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Beleth Skills -->
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3000" />
@@ -1077,6 +1112,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Beleth Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />

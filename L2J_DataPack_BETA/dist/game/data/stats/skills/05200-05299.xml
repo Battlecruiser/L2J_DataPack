@@ -30,6 +30,7 @@
 		<table name="#mpConsume"> 16 21 31 38 44 51 </table>
 		<table name="#mpInitialConsume"> 4 6 8 10 11 13 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -54,6 +55,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
@@ -80,6 +82,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 7 10 14 19 25 31 36 38 40 42 42 43 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
@@ -120,6 +123,7 @@
 	<skill id="5206" levels="1" name="Decrease Speed">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -146,6 +150,7 @@
 	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -172,6 +177,7 @@
 	<skill id="5208" levels="1" name="Event Wind walk">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -189,6 +195,7 @@
 	<skill id="5209" levels="1" name="Event Shield">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -206,6 +213,7 @@
 	<skill id="5210" levels="1" name="Event Bless the body">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -223,6 +231,7 @@
 	<skill id="5211" levels="1" name="Event Vampiric rage">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -240,6 +249,7 @@
 	<skill id="5212" levels="1" name="Event Regeneration">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -257,6 +267,7 @@
 	<skill id="5213" levels="1" name="Event Haste">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -274,6 +285,7 @@
 	<skill id="5214" levels="1" name="Event Bless the soul">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -291,6 +303,7 @@
 	<skill id="5215" levels="1" name="Event Acumen">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -308,6 +321,7 @@
 	<skill id="5216" levels="1" name="Event Concentration">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -325,6 +339,7 @@
 	<skill id="5217" levels="1" name="Event Empower">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -351,6 +366,7 @@
 	<skill id="5219" levels="1" name="Stun of giant mutated animal">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -377,6 +393,7 @@
 	<skill id="5220" levels="1" name="Fear of giant mutated animal">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -450,6 +467,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="berserker" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="3000" />
@@ -470,6 +488,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_up_special" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="3500" />
@@ -529,6 +548,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Baylor Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="600" />
@@ -556,6 +576,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="5000" />
@@ -578,6 +599,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="3000" />
@@ -600,6 +622,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="2000" />
@@ -661,6 +684,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1000" />
@@ -679,6 +703,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Tully Skills -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1000" />
@@ -696,6 +721,7 @@
 	<skill id="5238" levels="1" name="Freezing">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="freezing" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="40" />
@@ -723,8 +749,10 @@
 	</skill>
 	<skill id="5239" levels="5" name="Event Timer">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#abnormalTimes"> 300 600 900 1200 1800 </table>
 		<table name="#Time"> 300 600 900 1200 1800 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="#abnormalTimes" />
 		<set name="abnormalType" val="time_check" />
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="1200" />
@@ -740,6 +768,7 @@
 	<skill id="5240" levels="1" name="Stun">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="40" />
@@ -764,6 +793,7 @@
 	<skill id="5241" levels="1" name="Stun">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -787,6 +817,7 @@
 	<skill id="5242" levels="1" name="Sickness">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="max_breath_up" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -808,6 +839,7 @@
 	<skill id="5243" levels="1" name="Blind">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="max_breath_up" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -820,6 +852,7 @@
 	</skill>
 	<skill id="5244" levels="1" name="Physical Up">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="pa_pd_up" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -836,6 +869,7 @@
 	</skill>
 	<skill id="5245" levels="1" name="Magical Up">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ma_md_up" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -878,6 +912,7 @@
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="dark_seed" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -944,6 +979,7 @@
 	<skill id="5250" levels="1" name="Stun">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -973,6 +1009,7 @@
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 157 161 163 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -998,6 +1035,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1026,6 +1064,7 @@
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
@@ -1059,6 +1098,7 @@
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -1097,6 +1137,7 @@
 	<skill id="5256" levels="1" name="Announcement of Death">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="death_clack" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="800" />
@@ -1152,6 +1193,7 @@
 		<table name="#mpConsume"> 10 16 21 28 36 44 52 55 58 60 61 62 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 11 13 14 15 15 16 16 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
@@ -1180,6 +1222,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1201,6 +1244,7 @@
 	<skill id="5261" levels="1" name="Zombie">
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="1500" />
 		<set name="mpConsume" val="44" />
@@ -1267,6 +1311,7 @@
 		<table name="#mpConsume"> 14 23 32 42 54 66 78 83 87 90 92 93 </table>
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="death_mark" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1318,6 +1363,7 @@
 		<table name="#mpInitialConsume"> 4 6 8 11 14 17 20 21 22 23 23 24 </table>
 		<table name="#val"> 1 1.5 1.5 7 7 7 7 7 7 7 7 7 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="mp_cost_up" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1362,6 +1408,7 @@
 		<table name="#dmg"> 90 110 130 130 130 140 275 275 275 275 285 285 285 285 285 285 285 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
@@ -1382,6 +1429,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="all_speed_down" />
 		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
@@ -1406,6 +1454,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectRange" val="200" />
 		<set name="isDebuff" val="true" />
@@ -1429,6 +1478,7 @@
 		<table name="#magicLvl"> 40 46 52 58 62 66 70 74 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<table name="#traits"> NONE HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD HOLD </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />

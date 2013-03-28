@@ -114,6 +114,7 @@
 		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
@@ -141,6 +142,7 @@
 		<table name="#mpConsume"> 109 121 131 142 151 159 165 </table>
 		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="500" />
@@ -166,6 +168,7 @@
 		<table name="#mAtk"> 5 10 15 20 25 30 35 </table>
 		<table name="#pAtk"> 100 150 200 250 300 350 400 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
@@ -192,6 +195,7 @@
 		<table name="#mAtk"> 15 20 25 30 35 40 45 </table>
 		<table name="#pAtk"> 200 250 300 350 400 450 500 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
@@ -217,6 +221,7 @@
 	<skill id="6622" levels="1" name="Shock">
 		<!-- Momentarily causes shock, which stuns the enemy for 20 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -244,6 +249,7 @@
 	<skill id="6624" levels="1" name="Shock">
 		<!-- Momentarily causes shock, which stuns the enemy for 9 seconds. In addition, your chance of being critically attacked is increased by 50%. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="stun" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -324,6 +330,7 @@
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -341,6 +348,7 @@
 	</skill>
 	<skill id="6632" levels="1" name="Energy of Enchant">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -350,6 +358,7 @@
 	</skill>
 	<skill id="6633" levels="1" name="Energy of Attack Speed">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -367,6 +376,7 @@
 	</skill>
 	<skill id="6634" levels="1" name="Energy of Casting Speed">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -376,6 +386,7 @@
 	</skill>
 	<skill id="6635" levels="1" name="Energy of Crt Rate">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -393,6 +404,7 @@
 	</skill>
 	<skill id="6636" levels="1" name="Energy of Moving Speed">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -411,6 +423,7 @@
 	<skill id="6637" levels="1" name="Vampiric Aura">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -434,6 +447,7 @@
 	</skill>
 	<skill id="6638" levels="1" name="Aura of Mystery">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="big_head" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -458,6 +472,7 @@
 	</skill>
 	<skill id="6639" levels="1" name="Bane of Auras - Damage">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -475,6 +490,7 @@
 	</skill>
 	<skill id="6640" levels="1" name="Energizing Aura">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -559,6 +575,7 @@
 	</skill>
 	<skill id="6645" levels="1" name="Cooker Invincibility On">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="pd_up_special" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -582,6 +599,7 @@
 	</skill>
 	<skill id="6649" levels="1" name="Treykan Transformation">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -602,6 +620,7 @@
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -609,6 +628,7 @@
 	</skill>
 	<skill id="6651" levels="1" name="Dopagen's Alienation">
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -669,12 +689,14 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6274, 6275, 6299, 6300) -->
 		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#abnormalTimes"> 7 15 </table>
 		<table name="#count"> 7 3 </table>
 		<table name="#dot"> 115 575 </table>
 		<table name="#power"> 70 -1 </table>
 		<table name="#time"> 1 5 </table>
 		<table name="#time2"> 7 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="#abnormalTimes" />
 		<set name="abnormalType" val="freezing" />
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />
@@ -714,6 +736,7 @@
 	<skill id="6666" levels="1" name="Feral Shield">
 		<!-- Increases P. Def. by 18% by 5 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="593" />
 		<set name="castRange" val="400" />
@@ -733,6 +756,7 @@
 	<skill id="6667" levels="1" name="Feral Wind Walk">
 		<!-- Increases Moving Spd. by 33 for 5 minutes. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
@@ -752,6 +776,7 @@
 	<skill id="6668" levels="1" name="Feral Death Whisper">
 		<!-- Increases critical attack power by 35% for 5 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
@@ -771,6 +796,7 @@
 	<skill id="6669" levels="1" name="Feral Body Bless">
 		<!-- Increases Max HP by 35% for 5 minutes. -->
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -790,6 +816,7 @@
 	<skill id="6670" levels="1" name="Feral Vampiric Rage">
 		<!-- For 5 minutes, 9% of the standard short-range physical damage inflicted on the enemy is converted to HP for you. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -809,6 +836,7 @@
 	<skill id="6671" levels="1" name="Feral Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, Evasion by 4 and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Moving Spd. by 8 for 5 minutes. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="berserker" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -835,6 +863,7 @@
 	<skill id="6672" levels="1" name="Feral Bless Shield">
 		<!-- Increases Shield defense rate by 5% for 30 minutes. -->
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="shield_prob_up" />
 		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
@@ -860,6 +889,7 @@
 	<skill id="6674" levels="1" name="Energy of Range Increment">
 		<!-- Bow/Crossbow range is temporarily increased by 50. -->
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="signal_b" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2000" />
@@ -898,6 +928,7 @@
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -939,6 +970,7 @@
 	<skill id="6681" levels="1" name="Maguen Speed Walk">
 		<!-- Moving Spd. increases by 40 for 20 minutes. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
@@ -961,6 +993,7 @@
 	<skill id="6682" levels="1" name="Elite Maguen Speed Walk">
 		<!-- Moving Spd. increases by 45 for 20 minutes. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="100" />
@@ -1052,6 +1085,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: Description says pAtk but is client typo, this increase skill pAtk -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="patience" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1069,6 +1103,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="180" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="affectRange" val="350" />
 		<set name="aggroPoints" val="100" />
@@ -1096,6 +1131,7 @@
 	</skill>
 	<skill id="6690" levels="1" name="Hold">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="coolTime" val="2000" />
 		<set name="operateType" val="A2" />
@@ -1166,6 +1202,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="freezing" />
 		<set name="aggroPoints" val="100" />
 		<set name="isDebuff" val="true" />

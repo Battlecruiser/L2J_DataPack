@@ -379,6 +379,7 @@
 		<table name="#ench2Power"> 1229 1240 1251 1262 1273 1284 1295 1306 1317 1328 1339 1350 1361 1372 1383 1394 1405 1415 1426 1437 1448 1459 1470 1481 1492 1503 1514 1525 1536 1547 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -519,6 +520,7 @@
 		<table name="#mpConsume"> 11 19 </table>
 		<table name="#mpInitialConsume"> 3 5 </table>
 		<table name="#runSpd"> 22 33 </table>
+		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2MpConsume"> 17 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 12 11 11 11 11 10 10 9 8 8 8 7 7 </table>
 		<table name="#ench2MpConsume_Init"> 5 5 5 5 5 5 5 5 5 5 4 4 4 4 4 4 4 4 4 4 3 3 3 3 3 3 3 3 3 3 </table>
@@ -526,6 +528,7 @@
 		<table name="#ench4Vuln"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.83 0.82 0.81 0.8 0.79 0.78 0.77 0.76 0.75 0.74 0.73 0.72 0.71 0.7 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="4000" />
@@ -537,6 +540,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -1310,6 +1314,7 @@
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
@@ -1511,10 +1516,12 @@
 		</cond>
 	</skill>
 	<skill id="264" levels="1" name="Song of Earth" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_earth" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="523" />
@@ -1526,6 +1533,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1543,10 +1551,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="265" levels="1" name="Song of Life" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_life" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="495" />
@@ -1558,6 +1568,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1575,10 +1586,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="266" levels="1" name="Song of Water" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_water" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="549" />
@@ -1590,6 +1603,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1607,10 +1621,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="267" levels="1" name="Song of Warding" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_warding" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="379" />
@@ -1622,6 +1638,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1639,9 +1656,11 @@
 		</enchant1for>
 	</skill>
 	<skill id="268" levels="1" name="Song of Wind" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_wind" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="438" />
@@ -1653,6 +1672,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant2 name="aggroPoints" val="655" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
@@ -1668,10 +1688,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="269" levels="1" name="Song of Hunter" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_hunter" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="467" />
@@ -1683,6 +1705,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1700,10 +1723,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="270" levels="1" name="Song of Invocation" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="song_of_invocation" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="408" />
@@ -1715,6 +1740,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1732,10 +1758,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="271" levels="1" name="Dance of the Warrior" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_warrior" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="523" />
@@ -1747,6 +1775,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1767,10 +1796,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="272" levels="1" name="Dance of Inspiration" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_inspiration" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="438" />
@@ -1782,6 +1813,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1802,10 +1834,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="273" levels="1" name="Dance of the Mystic" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_mystic" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="467" />
@@ -1817,6 +1851,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1837,10 +1872,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="274" levels="1" name="Dance of Fire" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_fire" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="379" />
@@ -1852,6 +1889,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1872,10 +1910,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="275" levels="1" name="Dance of Fury" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_fury" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="549" />
@@ -1887,6 +1927,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1907,10 +1948,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="276" levels="1" name="Dance of Concentration" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_concentration" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="495" />
@@ -1922,6 +1965,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -1944,10 +1988,12 @@
 		</enchant1for>
 	</skill>
 	<skill id="277" levels="1" name="Dance of Light" enchantGroup1="1" enchantGroup2="1">
+		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_light" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="408" />
@@ -1960,6 +2006,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
+		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="aggroPoints" val="655" />
@@ -2022,6 +2069,7 @@
 		<table name="#ench3Chance"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -2111,6 +2159,7 @@
 		<table name="#ench34pmDef"> 0.99 0.99 0.99 0.98 0.98 0.98 0.97 0.97 0.97 0.96 0.96 0.96 0.96 0.95 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
@@ -2161,6 +2210,7 @@
 	</skill>
 	<skill id="282" levels="1" name="Puma Spirit Totem">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="possession" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="40" />
@@ -2288,6 +2338,7 @@
 		<table name="#mpConsume"> 57 75 83 </table>
 		<table name="#poleWpnVuln"> 1.1 1.15 1.2 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="real_target" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="#affectRange" />
@@ -2313,6 +2364,7 @@
 		<table name="#mpConsume"> 16 22 29 </table>
 		<table name="#vuln"> 40 60 80 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="resist_spiritless" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
@@ -2446,6 +2498,7 @@
 	</skill>
 	<skill id="292" levels="1" name="Bison Spirit Totem">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="possession" />
 		<set name="aggroPoints" val="624" />
 		<set name="hitTime" val="2000" />
@@ -2552,6 +2605,7 @@
 		<table name="#ench1pAtkSpd"> 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 1.131 1.132 1.133 1.134 1.135 1.136 1.137 1.138 1.139 1.14 1.141 1.142 1.143 1.144 1.145 1.146 1.147 1.148 1.149 1.15 </table>
 		<table name="#ench2pvpDmg"> 1.11 1.11 1.12 1.12 1.13 1.13 1.14 1.14 1.15 1.15 1.16 1.16 1.17 1.17 1.18 1.18 1.18 1.19 1.19 1.2 1.2 1.21 1.21 1.22 1.22 1.23 1.23 1.24 1.24 1.25 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="duelist_spirit" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
@@ -2592,6 +2646,7 @@
 	<skill id="298" levels="1" name="Rabbit Spirit Totem">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="possession" />
 		<set name="aggroPoints" val="582" />
 		<set name="hitTime" val="2000" />

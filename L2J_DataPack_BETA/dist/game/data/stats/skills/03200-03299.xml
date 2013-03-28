@@ -5,6 +5,7 @@
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -26,6 +27,7 @@
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -47,6 +49,7 @@
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -66,6 +69,7 @@
 	</skill>
 	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -86,6 +90,7 @@
 		<table name="#mpInitialConsume"> 5 6 7 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="abnormal_item" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -812,6 +817,7 @@
 	</skill>
 	<skill id="3265" levels="1" name="Mysterious Ability">
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -884,6 +890,7 @@
 	<skill id="3271" levels="1" name="Blue Talisman of Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -904,6 +911,7 @@
 	<skill id="3272" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -940,6 +948,7 @@
 	<skill id="3274" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -960,6 +969,7 @@
 	<skill id="3275" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -980,6 +990,7 @@
 	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1000,6 +1011,7 @@
 	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1020,6 +1032,7 @@
 	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1040,6 +1053,7 @@
 	<skill id="3279" levels="1" name="Red Talisman of Meditation">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1063,6 +1077,7 @@
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1083,6 +1098,7 @@
 	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1105,6 +1121,7 @@
 	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1127,6 +1144,7 @@
 	<skill id="3283" levels="1" name="Blue Talisman of Healing">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -1147,6 +1165,7 @@
 	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
@@ -1168,6 +1187,7 @@
 	<skill id="3285" levels="1" name="Blue Talisman of Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />

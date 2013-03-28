@@ -32,6 +32,7 @@
 	</skill>
 	<skill id="6705" levels="1" name="Stun">
 		<!-- Temporarily in shock and unable to move. -->
+		<set name="abnormalTime" val="9" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -77,18 +78,21 @@
 	</skill>
 	<skill id="6710" levels="1" name="Etis Haste">
 		<!-- Atk. Spd. increases by 10%. -->
+		<set name="abnormalTime" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6711" levels="3" name="Etis Power Up">
 		<!-- none -->
+		<set name="abnormalTime" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6714" levels="1" name="Wind Walk of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -104,6 +108,7 @@
 	</skill>
 	<skill id="6715" levels="1" name="Haste of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -119,6 +124,7 @@
 	</skill>
 	<skill id="6716" levels="1" name="Might of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -134,6 +140,7 @@
 	</skill>
 	<skill id="6717" levels="1" name="Berserker Spirit of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -156,6 +163,7 @@
 	</skill>
 	<skill id="6718" levels="1" name="Death Whisper of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -171,6 +179,7 @@
 	</skill>
 	<skill id="6719" levels="1" name="Guidance of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -186,6 +195,7 @@
 	</skill>
 	<skill id="6720" levels="1" name="Focus of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -201,6 +211,7 @@
 	</skill>
 	<skill id="6721" levels="1" name="Empower of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -216,6 +227,7 @@
 	</skill>
 	<skill id="6722" levels="1" name="Acumen of Elcadia">
 		<!-- Increases Casting Spd. by 30% for 10 minutes. -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -231,6 +243,7 @@
 	</skill>
 	<skill id="6723" levels="1" name="Concentration of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="1200" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -246,6 +259,7 @@
 	</skill>
 	<skill id="6724" levels="1" name="Greater Heal of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="15" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -260,6 +274,7 @@
 	</skill>
 	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="15" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1000" />
@@ -285,6 +300,7 @@
 	</skill>
 	<skill id="6727" levels="1" name="Vampiric Rage of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="1200" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -313,6 +329,7 @@
 	</skill>
 	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalTime" val="600" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -443,6 +460,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
@@ -494,6 +512,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
@@ -560,6 +579,7 @@
 	<skill id="6752" levels="1" name="Revival">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="158" />
@@ -593,6 +613,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="1500" />
@@ -652,6 +673,7 @@
 		<set name="hitTime" val="1500"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -675,6 +697,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -734,6 +757,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -830,6 +854,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
@@ -855,6 +880,7 @@
 		<set name="hitTime" val="2500"/>
 		<set name="targetType" val="ONE"/>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -928,6 +954,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -950,6 +977,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="stun" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
@@ -990,6 +1018,7 @@
 	<skill id="6776" levels="1" name="Paralysis">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
+		<set name="abnormalTime" val="10" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2500" />
@@ -1017,6 +1046,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="affectRange" val="300" />
 		<set name="hitTime" val="1500" />

@@ -60,6 +60,7 @@
 	<skill id="7005" levels="4" name="Greater Chant of Vampire">
 		<!-- This skill only has one level, 4. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -83,6 +84,7 @@
 		<!-- TODO: Needs to be done -->
 		<!-- This skill only has one level, 13. -->
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
@@ -98,6 +100,7 @@
 		<!-- Needs to be done -->
 		<!-- This skill only has one level, 4. -->
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="dot_attr" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -226,6 +229,7 @@
 		<table name="#reuse"> 0.01 0.01 0.01 1 </table>
 		<table name="#runSpd"> 2 3 3 1 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="1" />
 		<set name="operateType" val="A2" />
@@ -340,6 +344,7 @@
 	<skill id="7041" levels="1" name="Master's Blessing - Focus">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -359,6 +364,7 @@
 	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
@@ -378,6 +384,7 @@
 	<skill id="7043" levels="1" name="Master's Blessing - Haste">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -397,6 +404,7 @@
 	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
@@ -416,6 +424,7 @@
 	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -435,6 +444,7 @@
 	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
@@ -454,6 +464,7 @@
 	<skill id="7047" levels="1" name="Master's Blessing - Agility">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -473,6 +484,7 @@
 	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="aggroPoints" val="457" />
 		<set name="castRange" val="400" />
@@ -492,6 +504,7 @@
 	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="decrease_weight_penalty" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -511,6 +524,7 @@
 	<skill id="7050" levels="1" name="Master's Blessing - Might">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
@@ -530,6 +544,7 @@
 	<skill id="7051" levels="1" name="Master's Blessing - Shield">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />
@@ -549,6 +564,7 @@
 	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -568,6 +584,7 @@
 	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
@@ -587,6 +604,7 @@
 	<skill id="7054" levels="1" name="Master's Blessing - Empower">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -606,6 +624,7 @@
 	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
@@ -625,6 +644,7 @@
 	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="berserker" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -651,6 +671,7 @@
 	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pa_pd_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -669,6 +690,7 @@
 	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pa_pd_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -687,6 +709,7 @@
 	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="magic_critical_up" />
 		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
@@ -706,6 +729,7 @@
 	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="cheap_magic" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -727,6 +751,7 @@
 		<!-- GM Skill -->
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -760,6 +785,7 @@
 	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -791,6 +817,7 @@
 	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -821,6 +848,7 @@
 	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
@@ -862,6 +890,7 @@
 	</skill>
 	<skill id="7066" levels="1" name="Test Stun Charge">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
@@ -878,6 +907,7 @@
 	</skill>
 	<skill id="7067" levels="1" name="Test Range Charge">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
@@ -959,6 +989,7 @@
 	</skill>
 	<skill id="7076" levels="1" name="Test - Delay Debuff">
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="coolTime" val="720" />
 		<set name="hitTime" val="1080" />
@@ -972,6 +1003,7 @@
 	</skill>
 	<skill id="7077" levels="1" name="Test - Delay Debuff - Call">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="stun" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -980,6 +1012,7 @@
 	</skill>
 	<skill id="7078" levels="1" name="Test - Blink">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="200" />
@@ -995,6 +1028,7 @@
 	</skill>
 	<skill id="7079" levels="1" name="Test - Party Damage Absorb">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="2500" />
 		<set name="operateType" val="A2" />
@@ -1003,6 +1037,7 @@
 	</skill>
 	<skill id="7080" levels="1" name="Test - General Attack Prohibited">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="40" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="2500" />
 		<set name="operateType" val="A2" />
@@ -1065,6 +1100,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_pa_pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1093,6 +1129,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_ma_md_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1121,6 +1158,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_hp_mp_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1149,6 +1187,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1177,6 +1216,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_shield_rate_defence_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1205,6 +1245,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="improve_speed_avoid_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
@@ -1232,6 +1273,7 @@
 	<skill id="7094" levels="1" name="Master's Blessing - Sharpen Edge">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
@@ -1256,6 +1298,7 @@
 	<skill id="7095" levels="1" name="Master's Blessing - Face Harden">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
@@ -1277,6 +1320,7 @@
 	<skill id="7096" levels="1" name="Master's Blessing - Blessing of Noblesse">
 		<!-- GM Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="preserve_abnormal" />
 		<set name="aggroPoints" val="1" />
 		<set name="canBeDispeled" val="false" />

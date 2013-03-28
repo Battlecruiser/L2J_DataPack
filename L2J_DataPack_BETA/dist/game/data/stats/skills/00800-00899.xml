@@ -75,6 +75,7 @@
 	</skill>
 	<skill id="807" levels="1" name="Over-hit">
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="83" />
@@ -91,6 +92,7 @@
 	</skill>
 	<skill id="808" levels="1" name="Golem Punch">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
@@ -130,6 +132,7 @@
 	</skill>
 	<skill id="810" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -150,6 +153,7 @@
 	</skill>
 	<skill id="811" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -170,6 +174,7 @@
 	</skill>
 	<skill id="812" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -190,6 +195,7 @@
 	</skill>
 	<skill id="813" levels="1" name="Vanguard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="21600" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -384,6 +390,7 @@
 		<table name="#pAtk"> 1.08 1.12 1.15 </table>
 		<table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="40" />
@@ -412,6 +419,7 @@
 		<table name="#mpConsume"> 35 44 44 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="40" />
@@ -435,6 +443,7 @@
 	<skill id="825" levels="1" name="Sharp Edge">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
 		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
@@ -461,6 +470,7 @@
 	<skill id="826" levels="1" name="Spike">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
 		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
@@ -485,6 +495,7 @@
 	<skill id="827" levels="1" name="Restring">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_attack_buff" />
 		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="400" />
@@ -511,6 +522,7 @@
 	<skill id="828" levels="1" name="Case Harden">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
 		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
@@ -534,6 +546,7 @@
 	<skill id="829" levels="1" name="Hard Tanning">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
 		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
@@ -560,6 +573,7 @@
 	<skill id="830" levels="1" name="Embroider">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="dwarf_defence_buff" />
 		<set name="aggroPoints" val="438" />
 		<set name="castRange" val="400" />
@@ -627,6 +641,7 @@
 	</skill>
 	<skill id="834" levels="1" name="Blood Pact">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="blood_constract" />
 		<set name="affectRange" val="1000" />
 		<set name="hitTime" val="1500" />
@@ -648,6 +663,7 @@
 		<table name="#mdot"> 76 83 83 83 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 </table>
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="dark_seed" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -692,6 +708,7 @@
 	<skill id="837" levels="1" name="Painkiller">
 		<!-- CT2.2 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
@@ -721,6 +738,7 @@
 	</skill>
 	<skill id="840" levels="1" name="Final Flying Form">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="hpConsume" val="200" />
@@ -754,6 +772,7 @@
 	</skill>
 	<skill id="841" levels="1" name="Aura Bird - Falcon">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -782,6 +801,7 @@
 	</skill>
 	<skill id="842" levels="1" name="Aura Bird - Owl">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -962,6 +982,7 @@
 	</skill>
 	<skill id="857" levels="1" name="Human Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -977,6 +998,7 @@
 	</skill>
 	<skill id="858" levels="1" name="Elf Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -992,6 +1014,7 @@
 	</skill>
 	<skill id="859" levels="1" name="Dark Elf Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1007,6 +1030,7 @@
 	</skill>
 	<skill id="860" levels="1" name="Orc Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1022,6 +1046,7 @@
 	</skill>
 	<skill id="861" levels="1" name="Dwarf Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1037,6 +1062,7 @@
 	</skill>
 	<skill id="862" levels="1" name="Kamael Mercenary">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1052,6 +1078,7 @@
 	</skill>
 	<skill id="863" levels="1" name="Royal Guard Captain">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1067,6 +1094,7 @@
 	</skill>
 	<skill id="864" levels="1" name="Archer Captain">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1082,6 +1110,7 @@
 	</skill>
 	<skill id="865" levels="1" name="Magic Leader">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1097,6 +1126,7 @@
 	</skill>
 	<skill id="866" levels="1" name="Kamael Guard Captain">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1112,6 +1142,7 @@
 	</skill>
 	<skill id="867" levels="1" name="Knight of Dawn">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1127,6 +1158,7 @@
 	</skill>
 	<skill id="868" levels="1" name="Fortress Captain">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1179,6 +1211,7 @@
 	<skill id="871" levels="1" name="Might">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1217,6 +1250,7 @@
 	<skill id="873" levels="1" name="Rapid Shot">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_speed_up_bow" />
 		<set name="aggroPoints" val="549" />
 		<set name="hitTime" val="1500" />
@@ -1260,6 +1294,7 @@
 	<skill id="875" levels="1" name="Empower">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1304,6 +1339,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 70 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="disarm" />
 		<set name="castRange" val="40" />
 		<set name="castRange" val="40" />
@@ -1350,6 +1386,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1375,6 +1412,7 @@
 	<skill id="880" levels="1" name="Knight Captain Mercenary Ultimate Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_up_special" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
@@ -1438,6 +1476,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -1510,6 +1549,7 @@
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1500" />
@@ -1536,6 +1576,7 @@
 		<table name="#mpConsume"> 69 70 70 71 72 72 73 74 74 75 75 </table>
 		<table name="#power"> 110 111 112 114 115 116 117 119 120 121 122 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1800" />
@@ -1665,6 +1706,7 @@
 	<skill id="894" levels="1" name="Exhilarate">
 		<!-- Aurabird Falcon -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1686,6 +1728,7 @@
 	<skill id="895" levels="1" name="Exhilarate">
 		<!-- Aurabird Owl -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1767,6 +1810,7 @@
 		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>
 		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="multi_debuff" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />

@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2001" levels="1" name="Red Potion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -14,6 +15,7 @@
 	</skill>
 	<skill id="2002" levels="1" name="Healing Drug">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -92,6 +94,7 @@
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -106,6 +109,7 @@
 	</skill>
 	<skill id="2011" levels="1" name="Haste Potion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -120,6 +124,7 @@
 	</skill>
 	<skill id="2012" levels="1" name="Potion of Alacrity">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -259,6 +264,7 @@
 	</skill>
 	<skill id="2031" levels="1" name="Lesser Healing Potion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -274,6 +280,7 @@
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -296,6 +303,7 @@
 	</skill>
 	<skill id="2034" levels="1" name="Greater Haste Potion">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -310,6 +318,7 @@
 	</skill>
 	<skill id="2035" levels="1" name="Greater Swift Attack Potion">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -337,6 +346,7 @@
 	</skill>
 	<skill id="2037" levels="1" name="Greater Healing Potion">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="hp_recover" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -472,6 +482,7 @@
 	</skill>
 	<skill id="2050" levels="1" name="Scroll of Guidance">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -487,6 +498,7 @@
 	</skill>
 	<skill id="2051" levels="1" name="Scroll of Death Whisper">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -502,6 +514,7 @@
 	</skill>
 	<skill id="2052" levels="1" name="Scroll of Focus">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -517,6 +530,7 @@
 	</skill>
 	<skill id="2053" levels="1" name="Scroll of Greater Acumen">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -532,6 +546,7 @@
 	</skill>
 	<skill id="2054" levels="1" name="Scroll of Haste">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -547,6 +562,7 @@
 	</skill>
 	<skill id="2055" levels="1" name="Scroll of Agility">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -562,6 +578,7 @@
 	</skill>
 	<skill id="2056" levels="1" name="Scroll of Mystic Empower">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -577,6 +594,7 @@
 	</skill>
 	<skill id="2057" levels="1" name="Scroll of Might">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -592,6 +610,7 @@
 	</skill>
 	<skill id="2058" levels="1" name="Scroll of Wind Walk">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -607,6 +626,7 @@
 	</skill>
 	<skill id="2059" levels="1" name="Scroll of Shield">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -660,6 +680,7 @@
 	</skill>
 	<skill id="2064" levels="1" name="Scroll of Mana Regeneration">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="mp_regen_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -733,6 +754,7 @@
 	<skill id="2074" levels="1" name="Potion of Critical Escape">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
@@ -768,6 +790,7 @@
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="400" />
 		<set name="abnormalType" val="max_breath_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -784,6 +807,7 @@
 	<skill id="2077" levels="1" name="Potion of Revenge">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
