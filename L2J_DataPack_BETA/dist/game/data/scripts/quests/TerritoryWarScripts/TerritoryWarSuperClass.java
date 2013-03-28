@@ -23,6 +23,7 @@ import java.util.StringTokenizer;
 
 import quests.Q00147_PathtoBecominganEliteMercenary.Q00147_PathtoBecominganEliteMercenary;
 import quests.Q00148_PathtoBecominganExaltedMercenary.Q00148_PathtoBecominganExaltedMercenary;
+import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
 
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
@@ -560,7 +561,7 @@ public class TerritoryWarSuperClass extends Quest
 		int kills = 0;
 		int cond = 0;
 		// Additional Handle for Quest
-		QuestState _sfh = player.getQuestState("176_StepsForHonor");
+		final QuestState _sfh = player.getQuestState(Q00176_StepsForHonor.class.getSimpleName());
 		if ((_sfh != null) && _sfh.isStarted())
 		{
 			cond = _sfh.getCond();
