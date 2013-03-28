@@ -81,7 +81,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	
 	private void add(L2PcInstance activeChar, L2PcInstance playerInstance)
 	{
-		if (TvTEvent.isPlayerParticipant(playerInstance.getObjectId()))
+		if (playerInstance.isOnEvent())
 		{
 			activeChar.sendMessage("Player already participated in the event!");
 			return;

@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2OlympiadManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jserver.gameserver.model.olympiad.OlympiadGameTask;
@@ -79,9 +78,9 @@ public class OlympiadObservation implements IBypassHandler
 					return false;
 				}
 				
-				if (!TvTEvent.isInactive() && TvTEvent.isPlayerParticipant(activeChar.getObjectId()))
+				if (activeChar.isOnEvent())
 				{
-					activeChar.sendMessage("You can not observe games while registered for TvT");
+					activeChar.sendMessage("You can not observe games while registered on an event");
 					return false;
 				}
 				
