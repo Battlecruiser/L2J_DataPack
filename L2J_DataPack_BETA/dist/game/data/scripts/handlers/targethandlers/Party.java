@@ -48,7 +48,6 @@ public class Party implements ITargetTypeHandler
 		targetList.add(activeChar);
 		
 		final int radius = skill.getAffectRange();
-		
 		L2PcInstance player = activeChar.getActingPlayer();
 		if (activeChar.isSummon())
 		{
@@ -67,7 +66,6 @@ public class Party implements ITargetTypeHandler
 		
 		if (activeChar.isInParty())
 		{
-			int maxTargets = skill.getAffectLimit();
 			// Get a list of Party Members
 			for (L2PcInstance partyMember : activeChar.getParty().getMembers())
 			{
@@ -84,11 +82,6 @@ public class Party implements ITargetTypeHandler
 				if (L2Skill.addSummon(activeChar, partyMember, radius, false))
 				{
 					targetList.add(partyMember.getSummon());
-				}
-				
-				if (targetList.size() >= maxTargets)
-				{
-					break;
 				}
 			}
 		}
