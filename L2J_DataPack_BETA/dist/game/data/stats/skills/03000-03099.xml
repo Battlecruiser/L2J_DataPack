@@ -18,6 +18,7 @@
 	</skill>
 	<skill id="3005" levels="1" name="Bleed">
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -138,6 +139,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -185,6 +187,7 @@
 		<table name="#dot"> 384 384 570 570 570 768 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -205,6 +208,7 @@
 		<table name="#dot"> 129 129 192 192 195 264 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -254,6 +258,7 @@
 		<table name="#dot"> 573 573 873 873 873 1209 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -472,6 +477,7 @@
 		<table name="#dot"> 504 504 747 747 747 1008 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -495,6 +501,7 @@
 		<table name="#dot"> 951 951 1494 1494 1494 2013 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -655,6 +662,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -674,6 +682,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -695,6 +704,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -716,6 +726,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -814,6 +825,7 @@
 		<table name="#dot"> 1209 1209 1317 </table>
 		<table name="#magicLvl"> 64 67 70 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -835,6 +847,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -949,6 +962,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 70 80 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1012,6 +1026,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="silence" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1034,6 +1049,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1082,6 +1098,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="silence" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1104,6 +1121,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -1178,6 +1196,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1195,6 +1214,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1212,6 +1232,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="stun" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1230,6 +1251,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1248,6 +1270,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="sleep" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1266,6 +1289,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1284,6 +1308,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1308,6 +1333,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1327,6 +1353,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1346,6 +1373,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1365,6 +1393,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="silence" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1383,6 +1412,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
@@ -1416,6 +1446,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -1433,6 +1464,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -1450,6 +1482,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="stun" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
@@ -1468,6 +1501,7 @@
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />

@@ -90,6 +90,7 @@
 	</skill>
 	<skill id="4515" levels="1" name="Raid Curse">
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="1500" />
@@ -191,6 +192,7 @@
 	</skill>
 	<skill id="4522" levels="1" name="Eye of Assassin">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -210,6 +212,7 @@
 	</skill>
 	<skill id="4523" levels="1" name="Quest - BOSS Evasion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -226,6 +229,7 @@
 	</skill>
 	<skill id="4524" levels="1" name="Quest - BOSS Bluff">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -261,6 +265,7 @@
 	</skill>
 	<skill id="4527" levels="1" name="Quest - BOSS Inc HP to Summoned">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -279,6 +284,7 @@
 	</skill>
 	<skill id="4528" levels="1" name="Quest - BOSS Movement to Summoned">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
@@ -341,6 +347,7 @@
 	</skill>
 	<skill id="4533" levels="1" name="Dance of Resistance">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="dance_of_inspiration" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -361,6 +368,7 @@
 	</skill>
 	<skill id="4534" levels="1" name="Dance of Nihil">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="dance_of_fury" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -381,6 +389,7 @@
 	</skill>
 	<skill id="4535" levels="1" name="Dance of Weakness">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="dance_of_vampire" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -401,6 +410,7 @@
 	</skill>
 	<skill id="4536" levels="1" name="Song of Seduce">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="song_of_wind" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -421,6 +431,7 @@
 	</skill>
 	<skill id="4537" levels="1" name="Song of Sweet Whisper">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="song_of_water" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -441,6 +452,7 @@
 	</skill>
 	<skill id="4538" levels="1" name="Song of Temptation">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="song_of_vengeance" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -461,6 +473,7 @@
 	</skill>
 	<skill id="4539" levels="1" name="Curse of Vague">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -482,6 +495,7 @@
 	</skill>
 	<skill id="4540" levels="1" name="Curse of Weakness">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -503,6 +517,7 @@
 	</skill>
 	<skill id="4541" levels="1" name="Curse of Nihil">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -546,6 +561,7 @@
 		<table name="#pAtkSpd"> 0.9 0.8 0.6 </table>
 		<table name="#pDef"> 0.8 0.6 0.7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="76" />
@@ -584,6 +600,7 @@
 	<skill id="4547" levels="1" name="Gaze of Watcher">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="watcher_gaze" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
@@ -631,6 +648,7 @@
 		<table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#rCrit"> 30 50 80 100 50 0 0 0 0 0 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="spa_disease_a" />
 		<set name="aggroPoints" val="-100" />
 		<set name="castRange" val="600" />
@@ -657,6 +675,7 @@
 		<table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
 		<table name="#rEvas"> 0 3 3 3 5 5 5 8 8 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="spa_disease_b" />
 		<set name="aggroPoints" val="-100" />
 		<set name="castRange" val="600" />
@@ -683,6 +702,7 @@
 		<table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
 		<table name="#pAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="spa_disease_c" />
 		<set name="aggroPoints" val="-100" />
 		<set name="castRange" val="600" />
@@ -709,6 +729,7 @@
 		<table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="spa_disease_d" />
 		<set name="aggroPoints" val="-100" />
 		<set name="castRange" val="600" />
@@ -794,6 +815,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="big_head" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1103,6 +1125,7 @@
 		<table name="#mpInitialConsume"> 4 10 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -1128,6 +1151,7 @@
 		<table name="#mpInitialConsume"> 3 6 10 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -1153,6 +1177,7 @@
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="hit_down" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
@@ -1177,6 +1202,7 @@
 	</skill>
 	<skill id="4578" levels="1" name="Petrification">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="turn_stone" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1202,6 +1228,7 @@
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
@@ -1230,6 +1257,7 @@
 		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1255,6 +1283,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1281,6 +1310,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1307,6 +1337,7 @@
 		<table name="#mpConsume"> 36 59 82 111 143 176 206 220 231 239 244 247 </table>
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
@@ -1334,6 +1365,7 @@
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />
@@ -1368,6 +1400,7 @@
 		<table name="#pDef"> 0.95 0.95 0.92 </table>
 		<table name="#runSpd"> 5 5 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -1398,6 +1431,7 @@
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 77 78 83 </table>
 		<table name="#rEvas"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="avoid_down" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1427,6 +1461,7 @@
 		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pa_down" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
@@ -1462,6 +1497,7 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#runSpd"> 5 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -1492,6 +1528,7 @@
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
@@ -1520,6 +1557,7 @@
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
@@ -1547,6 +1585,7 @@
 		<table name="#mpConsume"> 35 58 79 105 135 165 194 207 217 224 229 233 </table>
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1300" />
@@ -1575,6 +1614,7 @@
 		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1604,6 +1644,7 @@
 		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1632,6 +1673,7 @@
 		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1300" />
@@ -1661,6 +1703,7 @@
 		<table name="#mpInitialConsume"> 6 11 20 </table>
 		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
@@ -1686,6 +1729,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 29 47 64 88 113 138 162 173 180 188 192 194 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1713,6 +1757,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 20 34 47 63 82 100 117 124 130 135 138 140 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="900" />
@@ -1739,6 +1784,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 20 34 47 63 82 100 117 124 130 135 138 140 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1300" />
@@ -1765,6 +1811,7 @@
 		<table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>
 		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="200" />

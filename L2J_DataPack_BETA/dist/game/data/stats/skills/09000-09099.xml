@@ -82,6 +82,7 @@
 	<skill id="9011" levels="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -91,6 +92,7 @@
 	<skill id="9012" levels="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -100,6 +102,7 @@
 	<skill id="9013" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 15% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -109,6 +112,7 @@
 	<skill id="9014" levels="1" name="Focus">
 		<!-- Increases critical attack likelihood by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -118,6 +122,7 @@
 	<skill id="9015" levels="1" name="Death Whisper">
 		<!-- Increases critical attack influence by 35% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -127,6 +132,7 @@
 	<skill id="9016" levels="1" name="Guidance">
 		<!-- Increases accuracy by 4 for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -136,6 +142,7 @@
 	<skill id="9017" levels="1" name="Blessed Shield">
 		<!-- Increases shield defense likelihood by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="shield_prob_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -145,6 +152,7 @@
 	<skill id="9018" levels="1" name="Blessed Body">
 		<!-- Increases maximum HP by 35% for 60 minutes. -->
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -154,6 +162,7 @@
 	<skill id="9019" levels="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -163,6 +172,7 @@
 	<skill id="9020" levels="1" name="Vampiric Rage">
 		<!-- Restores 9% of general physical damage inflicted by enemies as HP for 60 minutes. -->
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -172,6 +182,7 @@
 	<skill id="9021" levels="1" name="Berserker Spirit">
 		<!-- For 60 minutes, reduces party members' P. Def. by 8%, magic resistance by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="berserker" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -181,6 +192,7 @@
 	<skill id="9022" levels="1" name="Magic Barrier">
 		<!-- Increases magic resistance by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="md_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -190,6 +202,7 @@
 	<skill id="9023" levels="1" name="Blessed Soul">
 		<!-- Increases maximum MP by 35% for 60 minutes. -->
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -199,6 +212,7 @@
 	<skill id="9024" levels="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -208,6 +222,7 @@
 	<skill id="9025" levels="1" name="Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -217,6 +232,7 @@
 	<skill id="9026" levels="1" name="Clarity">
 		<!-- For 60 minutes, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Runestones. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="cheap_magic" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -294,6 +310,7 @@
 	</skill>
 	<skill id="9035" levels="1" name="Steamed Rice Cake">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -364,6 +381,7 @@
 	</skill>
 	<skill id="9041" levels="1" name="Sixth Anniversary Cake">
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="vp_up" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -643,6 +661,7 @@
 	<skill id="9057" levels="1" name="Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="skill_ignore" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
@@ -656,6 +675,7 @@
 	<skill id="9058" levels="1" name="Black Freezing Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="skill_ignore" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
@@ -768,6 +788,7 @@
 	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
 		<!-- Energy is maintained for 10 minutes. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -784,6 +805,7 @@
 	<skill id="9068" levels="2" name="Potion of Vitality Maintenance">
 		<!-- Energy is maintained for 30 minutes. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -875,6 +897,7 @@
 	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
 		<!-- Converts 9% of inflicted physical-damage to HP for 20 minutes. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="480" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -927,6 +950,7 @@
 	<skill id="9078" levels="1" name="Rainbow Springs Potion">
 		<!-- Increases the regen rate of HP/MP/CP by 30%. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="signal_a" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -937,6 +961,7 @@
 	<skill id="9079" levels="1" name="Santa's Buff Scroll">
 		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption for skill use by 5%. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -975,6 +1000,7 @@
 	<skill id="9082" levels="1" name="White Christmas Petition">
 		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -992,6 +1018,7 @@
 	<skill id="9084" levels="1" name="White Christmas Petition - event">
 		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="vp_keep" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />

@@ -6,6 +6,7 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="attack_time_up" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -30,6 +31,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="sleep" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -53,6 +55,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -78,6 +81,7 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -104,6 +108,7 @@
 		<table name="#damage"> 57 84 114 147 180 207 235 235 234 234 237 237 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -127,6 +132,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -152,6 +158,7 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="dot_mp" />
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
@@ -191,6 +198,7 @@
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -235,6 +243,7 @@
 		<table name="#hot"> 180 228 337 544 819 1060 1225 1292 1358 1427 951 940 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="700" />
@@ -257,6 +266,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="affectRange" val="400" />
 		<set name="aggroPoints" val="100" />
@@ -277,6 +287,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="affectRange" val="400" />
 		<set name="aggroPoints" val="100" />
@@ -297,6 +308,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="affectRange" val="400" />
 		<set name="aggroPoints" val="100" />
@@ -317,6 +329,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
 		<set name="affectRange" val="400" />
 		<set name="aggroPoints" val="100" />
@@ -336,6 +349,7 @@
 	<skill id="4215" levels="1" name="Raid Curse">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="1500" />
@@ -401,6 +415,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="root_magically" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="2000" />
@@ -460,6 +475,7 @@
 		<!-- Zaken skills -->
 		<!-- Change Texture for Night to Day Face -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="14400" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="coolTime" val="1900" />
 		<set name="hitTime" val="1100" />
@@ -476,6 +492,7 @@
 		<!-- Zaken skills -->
 		<!-- Change Texture for Day to Night Face -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="coolTime" val="1900" />
 		<set name="hitTime" val="1100" />
@@ -509,6 +526,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<set name="abnormalLvl" val="11" />
+		<set name="abnormalTime" val="14400" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -642,6 +660,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- Gustav Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="heal_effect_down" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
@@ -668,6 +687,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- Mikhail Skill -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="40" />
@@ -695,6 +715,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- Dietrich Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="reuse_delay_up" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="4000" />
@@ -717,6 +738,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="12" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="hp_regen_down" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -731,6 +753,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="13" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="hp_regen_down" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -745,6 +768,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="14" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="hp_regen_down" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -759,6 +783,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<set name="abnormalLvl" val="12" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -770,6 +795,7 @@
 	<skill id="4243" levels="1" name="Venomous Poison">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="9" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="poison" />
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2500" />
@@ -808,6 +834,7 @@
 	<skill id="4245" levels="1" name="Mimic of Wrath">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="public_slot" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -875,6 +902,7 @@
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="200" />
@@ -1042,6 +1070,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- AI driven skill in GrandBosses -->
 		<set name="abnormalLvl" val="99" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_down" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="2000" />
@@ -1066,6 +1095,7 @@
 		<table name="#dot"> 54 72 96 123 150 174 189 189 198 198 204 204 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
@@ -1138,6 +1168,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- This skill only has one level, 2. -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
@@ -1157,6 +1188,7 @@
 	<skill id="4263" levels="1" name="Holiday Haste">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />
@@ -1176,6 +1208,7 @@
 	<skill id="4264" levels="1" name="Holiday Empower">
 		<!-- Freya retail confirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="aggroPoints" val="243" />
 		<set name="castRange" val="400" />
@@ -1196,6 +1229,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- This skill only has one level, 3. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
@@ -1216,6 +1250,7 @@
 		<!-- Freya retail confirmed -->
 		<!-- This skill only has one level, 3. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />

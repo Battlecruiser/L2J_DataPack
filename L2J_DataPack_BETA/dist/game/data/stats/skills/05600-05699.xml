@@ -39,6 +39,7 @@
 	<skill id="5602" levels="1" name="Transform Sacrifice">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="transform_scrifice_p" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
@@ -58,6 +59,7 @@
 	<skill id="5603" levels="1" name="Dagger Mastery">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="weapon_mastery" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
@@ -75,6 +77,7 @@
 	<skill id="5604" levels="1" name="Blunt Mastery">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="weapon_mastery" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
@@ -95,6 +98,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#rCrit"> 0 30 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="apella" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -120,6 +124,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#pAtkSpd"> 1 1.025 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="apella" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -145,6 +150,7 @@
 		<table name="#magicLvl"> 64 67 </table>
 		<table name="#mAtk"> 1 1.0625 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="apella" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -189,6 +195,7 @@
 	<skill id="5613" levels="4" name="Vampiric Rage">
 		<!-- This skill only has one level, 4. -->
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -272,6 +279,7 @@
 	</skill>
 	<skill id="5623" levels="1" name="Weakened Magic Force">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -281,6 +289,7 @@
 	</skill>
 	<skill id="5624" levels="1" name="Soul Confinement">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -290,6 +299,7 @@
 	</skill>
 	<skill id="5625" levels="1" name="Soul Confinement">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -304,6 +314,7 @@
 	</skill>
 	<skill id="5627" levels="1" name="Adventurer's Wind Walk">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -320,6 +331,7 @@
 	</skill>
 	<skill id="5628" levels="1" name="Adventurer's Shield">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -336,6 +348,7 @@
 	</skill>
 	<skill id="5629" levels="1" name="Adventurer's Bless the Body">
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -352,6 +365,7 @@
 	</skill>
 	<skill id="5630" levels="1" name="Adventurer's Vampiric Rage">
 		<set name="abnormalLvl" val="5" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="vampiric_attack" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -368,6 +382,7 @@
 	</skill>
 	<skill id="5631" levels="1" name="Adventurer's Regeneration">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="hp_regen_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -384,6 +399,7 @@
 	</skill>
 	<skill id="5632" levels="1" name="Adventurer's Haste">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -400,6 +416,7 @@
 	</skill>
 	<skill id="5633" levels="1" name="Adventurer's Bless the Soul">
 		<set name="abnormalLvl" val="7" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -416,6 +433,7 @@
 	</skill>
 	<skill id="5634" levels="1" name="Adventurer's Acumen">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -432,6 +450,7 @@
 	</skill>
 	<skill id="5635" levels="1" name="Adventurer's Concentration">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -448,6 +467,7 @@
 	</skill>
 	<skill id="5636" levels="1" name="Adventurer's Empower">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -464,6 +484,7 @@
 	</skill>
 	<skill id="5637" levels="1" name="Adventurer's Magic Barrier">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="md_up" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -487,6 +508,7 @@
 		<table name="#mpConsume"> 38 41 48 53 </table>
 		<table name="#mpInitialConsume"> 10 11 12 14 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="max_hp_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -515,6 +537,7 @@
 		<table name="#mpConsume"> 38 41 46 52 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="max_mp_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -543,6 +566,7 @@
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="attack_time_down" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -564,6 +588,7 @@
 	</skill>
 	<skill id="5641" levels="1" name="not_used">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -574,6 +599,7 @@
 	<skill id="5642" levels="4" name="not_used">
 		<table name="#abnormalLvls"> 3 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="shield_prob_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -584,6 +610,7 @@
 	<skill id="5643" levels="1" name="Unicorn Seraphim - Acumen">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
@@ -605,6 +632,7 @@
 	</skill>
 	<skill id="5644" levels="1" name="not_used">
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="speed_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -615,6 +643,7 @@
 	<skill id="5645" levels="3" name="not_used">
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="resist_derangement" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -633,6 +662,7 @@
 		<table name="#mpConsume"> 46 52 </table>
 		<table name="#mpInitialConsume"> 12 13 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="#abnormalTypes" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -663,6 +693,7 @@
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<table name="#SpiritOre"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="cheap_magic" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -695,6 +726,7 @@
 		<table name="#mpConsume"> 31 38 </table>
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ma_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -717,6 +749,7 @@
 	<skill id="5649" levels="2" name="not_used">
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="avoid_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -727,6 +760,7 @@
 	<skill id="5650" levels="3" name="not_used">
 		<table name="#abnormalLvls"> 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="cancel_prob_down" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -736,6 +770,7 @@
 	</skill>
 	<skill id="5651" levels="1" name="not_used">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -753,6 +788,7 @@
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="critical_dmg_up" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
@@ -782,6 +818,7 @@
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<table name="#rCrit"> 0.25 0.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="critical_prob_up" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
@@ -811,6 +848,7 @@
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="hit_up" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
@@ -832,6 +870,7 @@
 	</skill>
 	<skill id="5655" levels="1" name="Transform Gatekeeper">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="transform" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -856,6 +895,7 @@
 		<table name="#pvePower"> 60 64 68 73 77 82 87 93 98 104 110 116 112 129 136 142 150 157 165 173 181 189 197 206 215 224 233 243 253 263 273 283 294 305 316 327 338 350 361 373 385 397 410 422 435 447 460 473 486 499 512 525 539 552 565 579 592 605 619 632 645 658 672 685 697 710 723 735 748 760 772 784 795 806 817 830 845 862 884 906 929 952 976 1001 1024 </table>
 		<table name="#pvpPower"> 38 40 43 46 49 52 55 58 62 65 69 73 77 81 85 89 94 98 103 108 113 118 124 129 135 140 146 152 158 164 171 177 184 191 197 204 212 219 226 233 241 248 256 264 272 280 288 296 304 312 320 329 337 345 354 362 370 379 387 395 403 412 420 428 436 444 452 460 468 475 483 490 497 504 511 519 528 539 552 566 581 595 610 626 640 </table>
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="ma_down" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -931,6 +971,7 @@
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#runSpd"> 5 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="berserker" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
@@ -961,6 +1002,7 @@
 		<table name="#val1"> 0.9 0.81 0.73 0.66 0.6 </table>
 		<table name="#val2"> 5 9 13 17 21 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="180" />
 		<set name="abnormalType" val="death_penalty" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
@@ -983,6 +1025,7 @@
 	</skill>
 	<skill id="5661" levels="1" name="Match Participation">
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="entry_for_game" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1017,6 +1060,7 @@
 	<skill id="5665" levels="1" name="Stun">
 		<!-- Masterwork Sword of Stun (3829) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1036,6 +1080,7 @@
 	<skill id="5666" levels="1" name="Stun">
 		<!-- Masterwork Rapier of Stun (3834) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1055,6 +1100,7 @@
 	<skill id="5667" levels="1" name="Stun">
 		<!-- Masterwork Dual-Blade of Stun (3839) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1074,6 +1120,7 @@
 	<skill id="5668" levels="1" name="Poison">
 		<!-- Masterwork Dagger of Poison (3861) -->
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="poison" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1093,6 +1140,7 @@
 	<skill id="5669" levels="1" name="Stun">
 		<!-- Masterwork Pole of Stun (3876) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1112,6 +1160,7 @@
 	<skill id="5670" levels="1" name="Stun">
 		<!-- Masterwork Fist of Stun (3882) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1131,6 +1180,7 @@
 	<skill id="5671" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-1) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1150,6 +1200,7 @@
 	<skill id="5672" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-2) -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1168,6 +1219,7 @@
 	</skill>
 	<skill id="5673" levels="1" name="Evasion Counter">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1189,6 +1241,7 @@
 	</skill>
 	<skill id="5674" levels="1" name="Evasion Chance">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="evasion_buff" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
@@ -1204,6 +1257,7 @@
 	</skill>
 	<skill id="5675" levels="1" name="Evasion Haste">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="evasion_buff" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
@@ -1252,6 +1306,7 @@
 	</skill>
 	<skill id="5679" levels="3" name="Oblivion Trap">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="mirage_trap" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
@@ -1319,6 +1374,7 @@
 	<skill id="5683" levels="1" name="PvP Weapon - Ignore Shield Defense">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_debuff" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1358,6 +1414,7 @@
 	<skill id="5685" levels="1" name="PvP Weapon - Casting">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_buff" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1376,6 +1433,7 @@
 	<skill id="5686" levels="1" name="PvP Weapon - Rapid Fire">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_buff" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
@@ -1395,6 +1453,7 @@
 	<skill id="5687" levels="1" name="PvP Weapon - Decrease Range">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_debuff" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1420,6 +1479,7 @@
 	<skill id="5688" levels="1" name="PvP Weapon - Decrease Resist">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_debuff" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1448,6 +1508,7 @@
 	<skill id="5689" levels="1" name="PvP Shield - Reflect Damage">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_buff" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
@@ -1467,6 +1528,7 @@
 	<skill id="5690" levels="1" name="PvP Armor - Damage Down">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_buff" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
@@ -1488,6 +1550,7 @@
 	<skill id="5691" levels="1" name="PvP Armor - Critical Down">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_buff" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
@@ -1522,6 +1585,7 @@
 	<skill id="5693" levels="1" name="PvP Armor - Speed Down">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="pvp_weapon_debuff" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1584,6 +1648,7 @@
 	</skill>
 	<skill id="5696" levels="1" name="Dizziness">
 		<set name="abnormalLvl" val="9" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="invincibility" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
@@ -1600,6 +1665,7 @@
 	<skill id="5697" levels="4" name="Seal">
 		<!-- Imbue Seed of Destruction effect -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="silence_all" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1640,6 +1706,7 @@
 		<!-- Lvl 6 - Kamaloka (Labyrinth of the Abyss) 78 -->
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />

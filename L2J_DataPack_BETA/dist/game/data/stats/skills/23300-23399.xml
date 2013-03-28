@@ -61,6 +61,7 @@
 	</skill>
 	<skill id="23308" levels="1" name="Totem's Energy - Body">
 		<!-- Increases HP Recovery Bonus by 30% and decreases damage from the topography by 80% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -74,6 +75,7 @@
 	</skill>
 	<skill id="23309" levels="1" name="Totem's Energy - Spirit">
 		<!-- Increases MP Recovery Bonus by 30% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -86,6 +88,7 @@
 	</skill>
 	<skill id="23310" levels="1" name="Totem's Energy - Courage">
 		<!-- Increases P. Def. by 15% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -98,6 +101,7 @@
 	</skill>
 	<skill id="23311" levels="1" name="Totem's Energy - Fortitude">
 		<!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
@@ -154,6 +158,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -178,6 +183,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -202,6 +208,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="turn_flee" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -227,6 +234,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -253,6 +261,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<!-- This skill only has one level, 10. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="pd_down" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
@@ -279,6 +288,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="raid_weapon" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
