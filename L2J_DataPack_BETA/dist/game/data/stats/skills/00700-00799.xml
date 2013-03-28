@@ -2104,8 +2104,8 @@
 		<table name="#ench2Cost"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
 		<table name="#ench3Chance"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
-		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
+		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="stun" />
 		<set name="affectLimit" val="5-12" />
@@ -2130,24 +2130,24 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2Cost" />
-		<enchant3 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="element" val="0" /> <!-- Fire -->
 		<enchant4 name="elementPower" val="#enchElementAttack" />
-		<enchant4 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant5 name="element" val="1" /> <!-- Water -->
 		<enchant5 name="elementPower" val="#enchElementAttack" />
-		<enchant5 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<enchant6 name="element" val="2" /> <!-- Wind -->
 		<enchant6 name="elementPower" val="#enchElementAttack" />
-		<enchant6 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant6 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="element" val="3" /> <!-- Earth -->
 		<enchant7 name="elementPower" val="#enchElementAttack" />
-		<enchant7 name="magicLvl" val="#enchantMagicLvl" />
-		<enchant8 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant7 name="magicLvl" val="#enchMagicLvl" />
+		<enchant8 name="magicLvl" val="#enchMagicLvl" />
 		<enchant8 name="pvpPower" val="#ench8Duel" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -2166,7 +2166,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
-		<table name="#enchantMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="disarm" />
 		<set name="affectLimit" val="6-12" />
@@ -2183,9 +2183,9 @@
 		<set name="saveVs" val="STR" />
 		<set name="skillType" val="DISARM" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="magicLvl" val="#enchantMagicLvl" />
+		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2Reuse" />
 		<for>
 			<effect name="Disarm" abnormalTime="5" val="0" abnormalVisualEffect="bleed" abnormalLvl="1" abnormalType="disarm">
