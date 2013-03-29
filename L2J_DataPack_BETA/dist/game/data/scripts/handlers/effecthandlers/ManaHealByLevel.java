@@ -48,13 +48,12 @@ public class ManaHealByLevel extends L2Effect
 	public boolean onStart()
 	{
 		L2Character target = getEffected();
-		if ((target == null) || target.isDead() || target.isDoor())
+		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return false;
 		}
 		
 		StatusUpdate su = new StatusUpdate(target);
-		
 		double amount = calc();
 		
 		// recharged mp influenced by difference between target level and skill level
@@ -125,7 +124,6 @@ public class ManaHealByLevel extends L2Effect
 		target.sendPacket(sm);
 		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
 		target.sendPacket(su);
-		
 		return true;
 	}
 	
