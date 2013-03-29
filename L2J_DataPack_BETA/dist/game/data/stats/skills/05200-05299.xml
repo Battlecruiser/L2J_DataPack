@@ -16,10 +16,11 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#amount" />
 		<set name="reuseDelay" val="12000" />
-		<set name="skillType" val="MANAHEAL_BY_LEVEL" />
 		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
 		<!-- CT2.5 retail confirmed -->

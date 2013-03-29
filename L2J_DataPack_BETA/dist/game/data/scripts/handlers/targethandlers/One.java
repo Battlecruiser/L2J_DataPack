@@ -40,14 +40,12 @@ public class One implements ITargetTypeHandler
 		{
 			case BUFF:
 			case HEAL:
-			case HEAL_PERCENT:
-			case MANAHEAL_BY_LEVEL:
 			case DUMMY:
 				canTargetSelf = true;
 				break;
 			default:
 			{
-				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL);
+				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL, L2EffectType.HEAL_PERCENT, L2EffectType.MANAHEAL_BY_LEVEL);
 				break;
 			}
 		}
