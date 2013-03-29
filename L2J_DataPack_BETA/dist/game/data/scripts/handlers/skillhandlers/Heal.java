@@ -141,15 +141,7 @@ public class Heal implements ISkillHandler
 				}
 			}
 			
-			switch (skill.getSkillType())
-			{
-				case HEAL_PERCENT:
-					hp = (target.getMaxHp() * power) / 100.0;
-					break;
-				default:
-					hp = power;
-					hp *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
-			}
+			hp = (power * target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null)) / 100;
 			
 			// Healer proficiency (since CT1)
 			hp *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
