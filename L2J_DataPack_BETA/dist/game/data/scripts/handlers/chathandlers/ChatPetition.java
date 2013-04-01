@@ -55,7 +55,7 @@ public class ChatPetition implements IChatHandler
 			return;
 		}
 		
-		PetitionManager.getInstance().sendActivePetitionMessage(activeChar, text);
+		PetitionManager.getInstance().sendActivePetitionMessage(activeChar, ChatTranslationTool.traslate(text));
 	}
 	
 	/**
