@@ -1,1 +1,2 @@
-ALTER TABLE `item_attributes` DROP COLUMN `augSkillId`, DROP COLUMN `augSkillLevel`;
+ALTER TABLE `item_attributes` DROP COLUMN `augSkillId`;
+ALTER TABLE `item_attributes` DROP COLUMN `augSkillLevel`;
