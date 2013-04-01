@@ -58,8 +58,8 @@ public class ChatHeroVoice implements IChatHandler
 				activeChar.sendMessage("Action failed. Heroes are only able to speak in the global channel once every 10 seconds.");
 				return;
 			}
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			
+			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
 			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))

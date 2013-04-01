@@ -63,7 +63,7 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
 		L2PcInstance receiver = null;
 		
 		receiver = L2World.getInstance().getPlayer(target);

@@ -55,7 +55,7 @@ public class ChatPartyMatchRoom implements IChatHandler
 					return;
 				}
 				
-				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+				CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
 				for (L2PcInstance _member : _room.getPartyMembers())
 				{
 					_member.sendPacket(cs);
