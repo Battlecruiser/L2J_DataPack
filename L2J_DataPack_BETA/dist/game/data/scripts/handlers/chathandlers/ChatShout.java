@@ -52,7 +52,7 @@ public class ChatShout implements IChatHandler
 			return;
 		}
 		
-		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
+		CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 		
 		L2PcInstance[] pls = L2World.getInstance().getAllPlayersArray();
 		
