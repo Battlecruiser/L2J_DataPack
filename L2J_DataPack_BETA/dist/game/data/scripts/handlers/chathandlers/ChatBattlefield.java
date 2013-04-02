@@ -52,7 +52,7 @@ public class ChatBattlefield implements IChatHandler
 				return;
 			}
 			
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
+			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
 			{
 				if (player.getSiegeSide() == activeChar.getSiegeSide())

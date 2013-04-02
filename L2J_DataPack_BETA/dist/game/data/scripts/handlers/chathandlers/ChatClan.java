@@ -50,7 +50,7 @@ public class ChatClan implements IChatHandler
 				return;
 			}
 			
-			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), ChatTranslationTool.traslate(text));
+			CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
 			activeChar.getClan().broadcastCSToOnlineMembers(cs, activeChar);
 		}
 	}
