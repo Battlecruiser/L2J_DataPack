@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3900" levels="2" name="Staff of Divine Power">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#bonusHp"> 33 43 </table>
+		<table name="#healEffect"> 33 43 </table>
 		<table name="#magicLvl"> 61 80 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bonusHp" val="#bonusHp" />
+			<add order="0x40" stat="healEffect" val="#healEffect" />
 		</for>
 	</skill>
 	<skill id="3901" levels="2" name="Staff of Mana Boost">

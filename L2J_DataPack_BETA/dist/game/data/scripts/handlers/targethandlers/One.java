@@ -39,13 +39,12 @@ public class One implements ITargetTypeHandler
 		switch (skill.getSkillType())
 		{
 			case BUFF:
-			case HEAL:
 			case DUMMY:
 				canTargetSelf = true;
 				break;
 			default:
 			{
-				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL, L2EffectType.HEAL_PERCENT, L2EffectType.MANAHEAL_BY_LEVEL);
+				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.HEAL_PERCENT, L2EffectType.MANAHEAL_BY_LEVEL);
 				break;
 			}
 		}

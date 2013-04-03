@@ -498,7 +498,7 @@
 		</for>
 	</skill>
 	<skill id="3126" levels="10" name="Item Skill: Prayer">
-		<table name="#gainHp"> 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 </table>
+		<table name="#healEffect"> 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -516,7 +516,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<mul order="0x30" stat="gainHp" val="#gainHp" />
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
 		</for>
 	</skill>
@@ -563,8 +563,8 @@
 		</for>
 	</skill>
 	<skill id="3129" levels="10" name="Item Skill: Mana Gain">
-		<table name="#gainMp"> 25 27 30 31 32 36 37 38 39 41 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#manaCharge"> 25 27 30 31 32 36 37 38 39 41 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
@@ -581,7 +581,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="gainMp" val="#gainMp" />
+				<add order="0x40" stat="manaCharge" val="#manaCharge" />
 			</effect>
 		</for>
 	</skill>
@@ -770,7 +770,7 @@
 		</for>
 	</skill>
 	<skill id="3138" levels="10" name="Item Skill: Heal Empower">
-		<table name="#bonusHp"> 44 49 53 57 61 64 68 72 75 79 </table>
+		<table name="#healEffect"> 44 49 53 57 61 64 68 72 75 79 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -788,7 +788,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="abnormal_item">
-				<add order="0x40" stat="bonusHp" val="#bonusHp" />
+				<add order="0x40" stat="healEffect" val="#healEffect" />
 			</effect>
 		</for>
 	</skill>

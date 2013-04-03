@@ -157,7 +157,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bonusHp" val="20" />
+			<add order="0x40" stat="healEffect" val="20" />
 			<mul order="0x30" stat="maxMp" val="#maxMp" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
@@ -350,10 +350,8 @@
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="magicLvl" val="46" />
-		<set name="num_souls" val="50" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="CHARGESOUL" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
@@ -362,9 +360,12 @@
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<cond msgId="2163">
 			<not>
-				<player souls="50" /> <!-- Max Amount of Souls -->
+				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
+		<for>
+			<effect name="FocusSouls" noicon="1" val="50" />
+		</for>
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
@@ -741,7 +742,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="gainMp" val="20" />
+			<add order="0x40" stat="manaCharge" val="20" />
 		</for>
 	</skill>
 	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
@@ -761,7 +762,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.06" />
+			<mul order="0x30" stat="healEffect" val="1.06" />
 		</for>
 	</skill>
 	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
@@ -1838,7 +1839,6 @@
 		<set name="mpConsume" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="946" />
@@ -1853,7 +1853,6 @@
 		<set name="mpConsume" val="189" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="826" />

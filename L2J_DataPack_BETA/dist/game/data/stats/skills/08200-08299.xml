@@ -57,7 +57,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="gainHp" val="1.03" /> <!-- Received Increased Heal +3% -->
+			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
 			<sub order="0x40" stat="stunVuln" val="13" /> <!-- Shock resistance is increased +13% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -196,7 +196,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="bonusHp" val="20" /> <!-- Increase amount of heal +20 -->
+			<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -338,7 +338,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
+			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
 			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -515,7 +515,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="bonusHp" val="22" /> <!-- Heal Capacity +22 -->
+			<add order="0x40" stat="healEffect" val="22" /> <!-- Heal Capacity +22 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />

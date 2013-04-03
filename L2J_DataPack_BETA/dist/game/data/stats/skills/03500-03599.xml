@@ -230,7 +230,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal +4% -->
+			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal +4% -->
 			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
 		</for>
 	</skill>
@@ -515,7 +515,7 @@
 			<add order="0x40" stat="stunProf" val="30" />
 			<sub order="0x40" stat="derangementVuln" val="30" />
 			<add order="0x40" stat="derangementProf" val="30" />
-			<mul order="0x30" stat="gainHp" val="1.1" />
+			<mul order="0x30" stat="healEffect" val="1.1" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
@@ -526,7 +526,7 @@
 		<!-- Boss Jewel Skill -->
 		<table name="#bonus"> 20 30 </table>
 		<table name="#darkRes"> 0 15 </table>
-		<table name="#hpGain"> 1.1 1.15 </table>
+		<table name="#healEffect"> 1.1 1.15 </table>
 		<table name="#magicLvl"> 75 80 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
@@ -538,7 +538,7 @@
 			<add order="0x40" stat="bleedProf" val="30" />
 			<add order="0x40" stat="stunProf" val="#bonus" />
 			<add order="0x40" stat="derangementProf" val="#bonus" />
-			<mul order="0x30" stat="gainHp" val="#hpGain" />
+			<mul order="0x30" stat="healEffect" val="#healEffect" />
 			<add order="0x40" stat="absorbDam" val="4" />
 			<add order="0x40" stat="darkRes" val="#darkRes" />
 		</for>
@@ -552,7 +552,7 @@
 		<for>
 			<sub order="0x40" stat="bleedVuln" val="20" />
 			<add order="0x40" stat="bleedProf" val="20" />
-			<mul order="0x30" stat="gainHp" val="1.06" />
+			<mul order="0x30" stat="healEffect" val="1.06" />
 		</for>
 	</skill>
 	<skill id="3561" levels="1" name="Ring of Baium">
@@ -1149,7 +1149,6 @@
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -1182,7 +1181,6 @@
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<not>

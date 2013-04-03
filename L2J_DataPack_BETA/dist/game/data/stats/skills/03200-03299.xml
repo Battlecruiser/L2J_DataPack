@@ -514,7 +514,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 		</for>
 	</skill>
 	<skill id="3239" levels="10" name="Item Skill: Mana Gain">
@@ -524,7 +524,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainMp" val="1.01" />
+			<add order="0x40" stat="manaCharge" val="1" />
 		</for>
 	</skill>
 	<skill id="3240" levels="10" name="Item Skill: Might">
@@ -583,13 +583,13 @@
 	</skill>
 	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
 		<!-- Confirmed CT2.5 -->
-		<table name="#bonusHp"> 10 11 12 13 14 16 17 18 19 20 </table>
+		<table name="#healEffect"> 10 11 12 13 14 16 17 18 19 20 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bonusHp" val="#bonusHp" />
+			<add order="0x40" stat="healEffect" val="#healEffect" />
 		</for>
 	</skill>
 	<skill id="3247" levels="10" name="Item Skill: Agility">
@@ -1158,7 +1158,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
-				<add order="0x40" stat="bonusHp" val="100" />
+				<add order="0x40" stat="healEffect" val="100" />
 			</effect>
 		</for>
 	</skill>

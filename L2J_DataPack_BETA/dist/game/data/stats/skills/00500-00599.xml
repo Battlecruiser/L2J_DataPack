@@ -89,21 +89,18 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#hpConsume"> 193 237 279 311 328 </table>
 		<table name="#magicLvl"> 40 49 58 66 72 </table>
-		<table name="#num_souls"> 1 2 3 4 5 </table>
-		<table name="#ench1num_souls"> 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 </table>
+		<table name="#souls"> 1 2 3 4 5 </table>
+		<table name="#ench1souls"> 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 </table>
 		<table name="#ench2hpConsume"> 323 318 312 307 301 296 290 285 279 274 268 263 257 252 247 241 236 230 225 219 214 208 203 197 192 186 181 175 170 165 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="aggroPoints" val="150" />
 		<set name="hitTime" val="900" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="num_souls" val="#num_souls" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="11000" />
-		<set name="skillType" val="CHARGESOUL" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="num_souls" val="#ench1num_souls" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="2163">
@@ -111,6 +108,12 @@
 				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
+		<for>
+			<effect name="FocusSouls" noicon="1" val="#souls" />
+		</for>
+		<enchant1for>
+			<effect name="FocusSouls" noicon="1" val="#ench1souls" />
+		</enchant1for>
 	</skill>
 	<skill id="503" levels="3" name="Scorn">
 		<!-- Confirmed CT2.5 -->
@@ -1956,7 +1959,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

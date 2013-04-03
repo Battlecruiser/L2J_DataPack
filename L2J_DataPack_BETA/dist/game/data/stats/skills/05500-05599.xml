@@ -731,7 +731,7 @@
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0" />
-				<mul order="0x30" stat="gainHp" val="1.1" />
+				<mul order="0x30" stat="healEffect" val="1.1" />
 			</effect>
 		</for>
 	</skill>
@@ -740,16 +740,17 @@
 		<table name="#magicLvl"> 20 40 58 70 </table>
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="num_souls" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="CHARGESOUL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2163">
 			<not>
 				<player souls="40" /> <!-- Max Amount of Souls -->
 			</not>
 		</cond>
+		<for>
+			<effect name="FocusSouls" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="5549" levels="1" name="Physical Short-range Weakness">
 		<set name="operateType" val="P" />
@@ -798,7 +799,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="gainHp" val="#power" />
+			<add order="0x40" stat="healEffect" val="#power" />
 		</for>
 	</skill>
 	<skill id="5553" levels="12" name="NPC HP Region">
@@ -938,7 +939,7 @@
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#activationChance"> 10 10 0 </table>
 		<table name="#elementRes"> 0 30 30 </table>
-		<table name="#gainHp"> 1 1 1.3 </table>
+		<table name="#healEffect"> 1 1 1.3 </table>
 		<table name="#triggeredLevel"> 2 3 0 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -954,7 +955,7 @@
 				<add order="0x40" stat="pDef" val="500" />
 				<add order="0x40" stat="fireRes" val="#elementRes" />
 				<add order="0x40" stat="darkRes" val="#elementRes" />
-				<mul order="0x30" stat="gainHp" val="#gainHp" />
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
 		</for>
 	</skill>
@@ -1130,7 +1131,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="SUMMON" />
 		<for>
 			<effect name="Heal" noicon="1" val="418" />
@@ -1501,10 +1501,12 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#amount" />
+		<set name="power" val="#amount" /> <!-- TODO: remove after BabyPet rework -->
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="5591" levels="8" name="Light Flow">
 		<!-- Confirmed CT2.5 -->
@@ -1516,7 +1518,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />

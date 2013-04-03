@@ -231,7 +231,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -519,7 +518,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="0" />
+			<mul order="0x30" stat="healEffect" val="0" />
 		</for>
 	</skill>
 	<skill id="4227" levels="1" name="Zaken Regeneration">
@@ -679,7 +678,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" effectPower="90" abnormalLvl="1" abnormalType="heal_effect_down">
-				<mul order="0x30" stat="gainHp" val="0.5" />
+				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 	</skill>

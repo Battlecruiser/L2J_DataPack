@@ -81,7 +81,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1638,9 +1637,7 @@
 		<set name="hpConsume" val="20" />
 		<set name="magicLvl" val="24" />
 		<set name="mpConsume" val="5" />
-		<set name="num_souls" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CHARGESOUL" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="2195">
@@ -1649,6 +1646,9 @@
 		<cond msgId="113" addName="1">
 			<target races="Kamael" />
 		</cond>
+		<for>
+			<effect name="FocusSouls" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="1450" levels="1" name="Chain Lightning" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Confirmed CT2.5 -->
@@ -1994,12 +1994,12 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="heal_power_up">
-				<add order="0x40" stat="bonusHp" val="1000" />
+				<add order="0x40" stat="healEffect" val="1000" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="heal_power_up">
-				<add order="0x40" stat="bonusHp" val="#ench1Power" />
+				<add order="0x40" stat="healEffect" val="#ench1Power" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -2031,12 +2031,12 @@
 		</cond>
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="recharge_up">
-				<mul order="0x30" stat="gainMp" val="1.85" />
+				<add order="0x40" stat="manaCharge" val="85" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1Time" val="0" abnormalLvl="1" abnormalType="recharge_up">
-				<mul order="0x30" stat="gainMp" val="1.85" />
+				<add order="0x40" stat="manaCharge" val="85" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -2998,7 +2998,6 @@
 		<set name="negateAbnormals" val="life_force_kamael,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="109">

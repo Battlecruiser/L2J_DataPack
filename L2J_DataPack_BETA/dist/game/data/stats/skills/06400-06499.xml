@@ -559,9 +559,10 @@
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="30" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="30" />
+		</for>
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">
 		<!-- P. Atk. increases by 19 % for 5 minutes -->

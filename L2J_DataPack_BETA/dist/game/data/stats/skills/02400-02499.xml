@@ -1683,9 +1683,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="num_souls" val="5" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CHARGESOUL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="FocusSouls" noicon="1" val="5" />
+		</for>
 	</skill>
 </list>

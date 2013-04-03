@@ -235,7 +235,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="7.5" />
 		</for>
 	</skill>
@@ -245,7 +245,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.12" />
+			<mul order="0x30" stat="healEffect" val="1.12" />
 			<add order="0x40" stat="paralyzeVuln" val="20" />
 		</for>
 	</skill>
@@ -254,7 +254,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.02" />
+			<mul order="0x30" stat="healEffect" val="1.02" />
 			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
 		</for>
 	</skill>
@@ -263,7 +263,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>
@@ -272,7 +272,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>

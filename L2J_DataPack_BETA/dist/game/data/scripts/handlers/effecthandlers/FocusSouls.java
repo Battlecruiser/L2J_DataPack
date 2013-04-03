@@ -18,22 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * @author UnAfraid
+ * Focus Souls effect.
+ * @author nBd, Adry_85
  */
-public class ManaHeal extends L2Effect
+public class FocusSouls extends L2Effect
 {
-	public ManaHeal(Env env, EffectTemplate template)
+	public FocusSouls(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -41,46 +40,34 @@ public class ManaHeal extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.MANAHEAL;
+		return L2EffectType.FOCUS_SOULS;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		L2Character target = getEffected();
-		if ((target == null) || target.isDead() || target.isDoor())
+		if (!getEffected().isPlayer() || getEffected().isAlikeDead())
 		{
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(target);
+		L2PcInstance target = getEffected().getActingPlayer();
+		final L2Skill soulmastery = target.getSkills().get(467);
 		
-		double amount = calc();
-		
-		if (!getSkill().isStatic())
+		if ((soulmastery != null))
 		{
-			amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
+			int amount = (int) calc();
+			if ((target.getChargedSouls() < soulmastery.getNumSouls()))
+			{
+				int count = ((target.getChargedSouls() + amount) <= soulmastery.getNumSouls()) ? amount : (soulmastery.getNumSouls() - target.getChargedSouls());
+				target.increaseSouls(count);
+			}
+			else
+			{
+				target.sendPacket(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
+				return false;
+			}
 		}
-		
-		// Prevents overheal and negative amount
-		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
-		
-		target.setCurrentMp(amount + target.getCurrentMp());
-		
-		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
-		}
-		else
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-		}
-		sm.addNumber((int) amount);
-		target.sendPacket(sm);
-		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
-		target.sendPacket(su);
 		return true;
 	}
 	

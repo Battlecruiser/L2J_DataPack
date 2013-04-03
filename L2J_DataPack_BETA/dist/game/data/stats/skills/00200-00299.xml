@@ -1433,7 +1433,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -2318,17 +2317,17 @@
 		</cond>
 	</skill>
 	<skill id="285" levels="27" name="Higher Mana Gain" enchantGroup1="1">
-		<table name="#gainMp"> 22 24 28 29 31 32 38 39 41 42 48 49 50 52 53 59 61 62 64 66 72 73 75 76 78 79 81 </table>
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 </table>
-		<table name="#ench1gainMp"> 82 83 84 85 85 86 87 88 89 89 90 91 92 93 94 94 95 96 97 98 99 100 101 101 102 103 104 105 106 107 </table>
+		<table name="#manaCharge"> 22 24 28 29 31 32 38 39 41 42 48 49 50 52 53 59 61 62 64 66 72 73 75 76 78 79 81 </table>
+		<table name="#ench1manaCharge"> 82 83 84 85 85 86 87 88 89 89 90 91 92 93 94 94 95 96 97 98 99 100 101 101 102 103 104 105 106 107 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="gainMp" val="#gainMp" />
+			<add order="0x40" stat="manaCharge" val="#manaCharge" />
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="gainMp" val="#ench1gainMp" />
+			<add order="0x40" stat="manaCharge" val="#ench1manaCharge" />
 		</enchant1for>
 	</skill>
 	<skill id="286" levels="3" name="Provoke">

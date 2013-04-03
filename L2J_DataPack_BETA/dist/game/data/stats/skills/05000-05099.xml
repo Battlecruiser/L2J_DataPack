@@ -138,7 +138,7 @@
 		<table name="#effectname1"> Buff Buff Buff Buff Stun </table>
 		<table name="#effectname2"> Buff Buff Buff Buff Cancel </table>
 		<table name="#effectPower"> 0 0 0 0 20 </table>
-		<table name="#gainHp"> 1 1 1 0.5 1 </table>
+		<table name="#healEffect"> 1 1 1 0.5 1 </table>
 		<table name="#healPercent"> 3 0 0 0 0 </table>
 		<table name="#isDebuff"> false false false true true </table>
 		<table name="#isMagic"> 1 0 0 1 1 </table>
@@ -168,7 +168,7 @@
 				<mul order="0x30" stat="pAtkSpd" val="#attackAndSpeed" />
 				<mul order="0x30" stat="mAtkSpd" val="#attackAndSpeed" />
 				<add order="0x40" stat="runSpd" val="#attackAndSpeed" />
-				<mul order="0x30" stat="gainHp" val="#gainHp" />
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
 			<effect name="#effectname2" noicon="1" val="0" effectPower="#effectPower" />
 			<effect name="HealPercent" noicon="1" val="#healPercent" />

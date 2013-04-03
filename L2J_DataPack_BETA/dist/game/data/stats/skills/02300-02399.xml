@@ -1358,7 +1358,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="1" abnormalType="heal_power_up">
-				<add order="0x40" stat="bonusHp" val="100" />
+				<add order="0x40" stat="healEffect" val="100" />
 			</effect>
 		</for>
 	</skill>

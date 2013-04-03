@@ -573,7 +573,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="heal_effect_down">
-				<mul order="0x30" stat="gainHp" val="0" />
+				<mul order="0x30" stat="healEffect" val="0" />
 			</effect>
 		</for>
 	</skill>

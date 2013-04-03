@@ -160,7 +160,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal" noicon="1" val="200" />
@@ -666,7 +665,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="CpHeal" noicon="1" val="5000" />
@@ -682,7 +680,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ManaHealPercent" noicon="1" val="100" />

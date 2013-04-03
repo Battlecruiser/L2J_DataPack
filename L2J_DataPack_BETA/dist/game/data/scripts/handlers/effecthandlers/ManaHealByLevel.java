@@ -58,7 +58,7 @@ public class ManaHealByLevel extends L2Effect
 		
 		// recharged mp influenced by difference between target level and skill level
 		// if target is within 5 levels or lower then skill level there's no penalty.
-		amount = target.calcStat(Stats.RECHARGE_MP_RATE, amount, null, null);
+		amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
 		if (target.getLevel() > getSkill().getMagicLevel())
 		{
 			int lvlDiff = target.getLevel() - getSkill().getMagicLevel();

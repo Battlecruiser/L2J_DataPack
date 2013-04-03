@@ -1207,7 +1207,7 @@
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
 				<sub order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="gainHp" val="1.3" />
+				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
 			<!-- 50HP * 5 during 120 seconds -->
 			<effect count="24" name="HealOverTime" abnormalTime="5" noicon="1" val="250" />
@@ -1217,7 +1217,7 @@
 			<effect name="Buff" abnormalTime="#ench2Time" val="0" abnormalLvl="1" abnormalType="touch_of_life">
 				<sub order="0x40" stat="cancelVuln" val="100" />
 				<sub order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="gainHp" val="1.3" />
+				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
 			<!-- 50HP * 1 during #ench2Time -->
 			<effect count="#ench2Time" name="HealOverTime" noicon="1" val="50" />
@@ -1255,7 +1255,7 @@
 			<effect name="Debuff" abnormalTime="120" val="0" effectPower="80" abnormalLvl="1" abnormalType="touch_of_death">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="gainHp" val="0.7" />
+				<mul order="0x30" stat="healEffect" val="0.7" />
 			</effect>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
 			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" />
@@ -1264,7 +1264,7 @@
 			<effect name="Debuff" abnormalTime="120" val="0" effectPower="#ench2effectPower" abnormalLvl="1" abnormalType="touch_of_death">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="gainHp" val="0.7" />
+				<mul order="0x30" stat="healEffect" val="0.7" />
 			</effect>
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
 			<effect name="CpDamPercent" noicon="1" val="0" effectPower="90" />
@@ -2709,7 +2709,7 @@
 				<add order="0x40" stat="accCombat" val="8" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
 				<set order="0x08" stat="debuffImmunity" val="1" />
-				<mul order="0x30" stat="gainHp" val="2" />
+				<mul order="0x30" stat="healEffect" val="2" />
 				<add order="0x40" stat="mAtk" val="500" />
 				<add order="0x40" stat="mAtkSpd" val="100" />
 				<sub order="0x40" stat="mDef" val="25" />

@@ -99,7 +99,7 @@ public class Pdam implements ISkillHandler
 			if (!skill.isStaticDamage() && (skill.getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 			{
 				// Souls Formula (each soul increase +4%)
-				int chargedSouls = (activeChar.getActingPlayer().getSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getSouls() : skill.getMaxSoulConsumeCount();
+				int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
 				damage *= 1 + (chargedSouls * 0.04);
 			}
 			if (crit)
@@ -219,17 +219,17 @@ public class Pdam implements ISkillHandler
 					L2Skill soulmastery = SkillTable.getInstance().getInfo(467, soulMasteryLevel);
 					if (soulmastery != null)
 					{
-						if (activeChar.getActingPlayer().getSouls() < soulmastery.getNumSouls())
+						if (activeChar.getActingPlayer().getChargedSouls() < soulmastery.getNumSouls())
 						{
 							int count = 0;
 							
-							if ((activeChar.getActingPlayer().getSouls() + skill.getNumSouls()) <= soulmastery.getNumSouls())
+							if ((activeChar.getActingPlayer().getChargedSouls() + skill.getNumSouls()) <= soulmastery.getNumSouls())
 							{
 								count = skill.getNumSouls();
 							}
 							else
 							{
-								count = soulmastery.getNumSouls() - activeChar.getActingPlayer().getSouls();
+								count = soulmastery.getNumSouls() - activeChar.getActingPlayer().getChargedSouls();
 							}
 							activeChar.getActingPlayer().increaseSouls(count);
 						}
