@@ -618,7 +618,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
+			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
 			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
@@ -741,7 +741,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="bonusHp" val="22" /> <!-- Heal Capacity +22 -->
+			<add order="0x40" stat="healEffect" val="22" /> <!-- Heal Capacity +22 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->

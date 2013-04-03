@@ -59,6 +59,7 @@ import handlers.effecthandlers.EnemyCharge;
 import handlers.effecthandlers.EnlargeAbnormalSlot;
 import handlers.effecthandlers.FakeDeath;
 import handlers.effecthandlers.Fear;
+import handlers.effecthandlers.FocusSouls;
 import handlers.effecthandlers.Fusion;
 import handlers.effecthandlers.GiveSp;
 import handlers.effecthandlers.Grow;
@@ -163,6 +164,7 @@ public final class EffectMasterHandler
 		EnlargeAbnormalSlot.class,
 		FakeDeath.class,
 		Fear.class,
+		FocusSouls.class,
 		Fusion.class,
 		GiveSp.class,
 		Grow.class,

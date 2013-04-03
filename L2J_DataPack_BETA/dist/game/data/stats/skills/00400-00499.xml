@@ -404,7 +404,7 @@
 					<using kind="Blunt,Big Blunt" />
 				</mul>
 				<sub order="0x40" stat="cancelVuln" val="40" />
-				<mul order="0x30" stat="gainHp" val="0.2" />
+				<mul order="0x30" stat="healEffect" val="0.2" />
 			</effect>
 		</for>
 		<enchant1for>
@@ -426,7 +426,7 @@
 					<using kind="Blunt,Big Blunt" />
 				</mul>
 				<sub order="0x40" stat="cancelVuln" val="40" />
-				<mul order="0x30" stat="gainHp" val="0.2" />
+				<mul order="0x30" stat="healEffect" val="0.2" />
 			</effect>
 		</enchant1for>
 		<enchant4for>
@@ -448,7 +448,7 @@
 					<using kind="Blunt,Big Blunt" />
 				</mul>
 				<sub order="0x40" stat="cancelVuln" val="40" />
-				<mul order="0x30" stat="gainHp" val="0.2" />
+				<mul order="0x30" stat="healEffect" val="0.2" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -973,7 +973,7 @@
 					<using kind="Blunt,Big Blunt,Dual Fist" />
 				</mul>
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.5" />
-				<mul order="0x30" stat="gainHp" val="0.5" />
+				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 		<enchant2for>
@@ -994,7 +994,7 @@
 					<using kind="Blunt,Big Blunt,Dual Fist" />
 				</mul>
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.5" />
-				<mul order="0x30" stat="gainHp" val="0.5" />
+				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</enchant2for>
 	</skill>
@@ -2004,7 +2004,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="0.95" />
+			<mul order="0x30" stat="healEffect" val="0.95" />
 			<mul order="0x30" stat="weightLimit" val="1.25" />
 		</for>
 	</skill>

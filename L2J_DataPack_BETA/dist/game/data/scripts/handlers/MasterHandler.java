@@ -210,7 +210,6 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
-import handlers.skillhandlers.Charge;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.CpDamPercent;
 import handlers.skillhandlers.Craft;
@@ -223,8 +222,6 @@ import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveVitality;
-import handlers.skillhandlers.Heal;
-import handlers.skillhandlers.HealPercent;
 import handlers.skillhandlers.InstantJump;
 import handlers.skillhandlers.Manadam;
 import handlers.skillhandlers.Mdam;
@@ -233,7 +230,6 @@ import handlers.skillhandlers.Pdam;
 import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
-import handlers.skillhandlers.Soul;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.StealBuffs;
 import handlers.skillhandlers.StrSiegeAssault;
@@ -523,42 +519,38 @@ public class MasterHandler
 		},
 		{
 			// Skill Handlers
-			Blow.class,
-			Pdam.class,
-			Mdam.class,
-			Charge.class,
-			CpDamPercent.class,
-			Manadam.class,
-			Heal.class,
-			HealPercent.class,
-			Continuous.class,
-			Detection.class,
-			Resurrect.class,
-			ShiftTarget.class,
-			StrSiegeAssault.class,
-			SummonFriend.class,
-			Disablers.class,
-			StealBuffs.class,
 			BallistaBomb.class,
-			TakeCastle.class,
-			TakeFort.class,
-			Unlock.class,
+			BeastSkills.class,
+			Blow.class,
+			Continuous.class,
+			CpDamPercent.class,
 			Craft.class,
+			DeluxeKey.class,
+			Detection.class,
+			Disablers.class,
+			Dummy.class,
 			Fishing.class,
 			FishingSkill.class,
-			BeastSkills.class,
-			DeluxeKey.class,
-			Sow.class,
-			Soul.class,
 			GetPlayer.class,
-			TransformDispel.class,
-			Trap.class,
 			GiveReco.class,
 			GiveVitality.class,
 			InstantJump.class,
-			Dummy.class,
-			RefuelAirShip.class,
+			Manadam.class,
+			Mdam.class,
 			NornilsPower.class,
+			Pdam.class,
+			RefuelAirShip.class,
+			Resurrect.class,
+			ShiftTarget.class,
+			Sow.class,
+			StealBuffs.class,
+			StrSiegeAssault.class,
+			SummonFriend.class,
+			TakeCastle.class,
+			TakeFort.class,
+			TransformDispel.class,
+			Trap.class,
+			Unlock.class,
 		},
 		{
 			// User Command Handlers

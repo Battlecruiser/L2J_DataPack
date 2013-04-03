@@ -184,7 +184,7 @@
 	<skill id="1307" levels="3" name="Prayer" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggro"> 611 635 655 </table>
-		<table name="#gainHp"> 1.08 1.1 1.12 </table>
+		<table name="#healEffect"> 1.08 1.1 1.12 </table>
 		<table name="#mpConsume"> 195 207 217 </table>
 		<table name="#mpInitialConsume"> 49 52 55 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -212,12 +212,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="heal_effect_up">
-				<mul order="0x30" stat="gainHp" val="#gainHp" />
+				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Buff" abnormalTime="#ench1time" val="0" abnormalLvl="3" abnormalType="heal_effect_up">
-				<mul order="0x30" stat="gainHp" val="1.12" />
+				<mul order="0x30" stat="healEffect" val="1.12" />
 			</effect>
 		</enchant1for>
 	</skill>
@@ -1474,7 +1474,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="PET" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -2365,7 +2364,7 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="heal_effect_down">
-				<mul order="0x30" stat="gainHp" val="0.5" />
+				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 	</skill>

@@ -178,7 +178,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<not>
@@ -754,7 +753,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect count="120" name="DamOverTime" val="#dot" abnormalLvl="1" abnormalType="heal_effect_down">
-				<mul order="0x30" stat="gainHp" val="0.5" />
+				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
 	</skill>
@@ -968,7 +967,7 @@
 		<for>
 			<effect name="Buff" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="final_secret">
 				<mul order="0x30" stat="mAtk" val="1.1" />
-				<mul order="0x30" stat="gainHp" val="1.4" />
+				<mul order="0x30" stat="healEffect" val="1.4" />
 				<mul order="0x30" stat="mAtkSpd" val="1.5" />
 				<basemul order="0x30" stat="mCritRate" val="0.5" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.1" />

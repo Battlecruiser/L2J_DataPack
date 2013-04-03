@@ -264,10 +264,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="15" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="15" />
+		</for>
 	</skill>
 	<skill id="6626" levels="2" name="Energy of Life's Power">
 		<!-- This skill only has one level, 2. -->
@@ -276,10 +277,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="25" />
+		</for>
 	</skill>
 	<skill id="6627" levels="3" name="Energy of Life's Highest Power">
 		<!-- This skill only has one level, 3. -->
@@ -288,10 +290,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="HEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="6628" levels="1" name="Energy of Mana">
 		<set name="castRange" val="2000" />
@@ -299,10 +302,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="11" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="11" />
+		</for>
 	</skill>
 	<skill id="6629" levels="2" name="Energy of Mana's Power">
 		<!-- This skill only has one level, 2. -->
@@ -311,10 +315,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="18" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="18" />
+		</for>
 	</skill>
 	<skill id="6630" levels="3" name="Energy of Mana's Highest Power">
 		<!-- This skill only has one level, 3. -->
@@ -323,10 +328,11 @@
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MANAHEAL_PERCENT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="ManaHealPercent" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="6631" levels="1" name="Energy of Power">
 		<set name="abnormalLvl" val="3" />

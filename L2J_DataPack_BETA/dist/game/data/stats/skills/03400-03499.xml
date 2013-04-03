@@ -542,7 +542,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
-				<add order="0x40" stat="bonusHp" val="1000" />
+				<add order="0x40" stat="healEffect" val="1000" />
 			</effect>
 		</for>
 	</skill>
@@ -1008,7 +1008,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bonusHp" val="8" />
+			<add order="0x40" stat="healEffect" val="8" />
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">

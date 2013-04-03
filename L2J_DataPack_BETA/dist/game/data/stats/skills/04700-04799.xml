@@ -214,7 +214,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="HEAL" />
 		<!-- NOTE: skill description mention party members, but is client typo, it could affect any single target -->
 		<set name="targetType" val="ONE" />
 		<for>
@@ -383,10 +382,12 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#amount" />
+		<set name="power" val="#amount" /> <!-- TODO: remove after BabyPet rework -->
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4718" levels="12" name="Greater Heal Trick">
 		<table name="#amount"> 62 113 184 272 371 471 558 592 617 634 640 640 </table>
@@ -400,10 +401,12 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#amount" />
+		<set name="power" val="#amount" /> <!-- TODO: remove after BabyPet rework -->
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Heal" noicon="1" val="#amount" />
+		</for>
 	</skill>
 	<skill id="4719" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -1588,7 +1591,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1607,7 +1609,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1626,7 +1627,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1645,7 +1645,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
@@ -1664,7 +1663,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="HEAL" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
