@@ -178,7 +178,7 @@ public class Q00021_HiddenTruth extends Quest
 				{
 					if (!st.isCond(5))
 					{
-						st.playSound(QuestSound.ITEMSOUND_ED_CHIMES);
+						st.playSound(QuestSound.AMDSOUND_ED_CHIMES);
 						st.setCond(5);
 						htmltext = event;
 					}
@@ -317,7 +317,7 @@ public class Q00021_HiddenTruth extends Quest
 						case 4:
 						{
 							st.setCond(5);
-							st.playSound(QuestSound.ITEMSOUND_ED_CHIMES);
+							st.playSound(QuestSound.AMDSOUND_ED_CHIMES);
 							htmltext = "31526-10.html";
 							break;
 						}
@@ -437,7 +437,7 @@ public class Q00021_HiddenTruth extends Quest
 	{
 		if (creature.isPlayer())
 		{
-			playSound((L2PcInstance) creature, QuestSound.ITEMSOUND_DD_HORROR_01);
+			playSound((L2PcInstance) creature, QuestSound.HORROR_01);
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}
