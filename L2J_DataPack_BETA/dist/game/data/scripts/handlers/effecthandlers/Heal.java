@@ -80,7 +80,10 @@ public class Heal extends L2Effect
 			// no static bonus
 			// grade dynamic bonus
 			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
-			mAtkMul = weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S84 ? 4 : weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S80 ? 2 : 1;
+			if (weaponInst != null)
+			{
+				mAtkMul = weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S84 ? 4 : weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S80 ? 2 : 1;
+			}
 			// shot dynamic bonus
 			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
 		}
