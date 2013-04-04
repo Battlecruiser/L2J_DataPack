@@ -132,7 +132,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 				if (st.isCond(4))
 				{
 					st.setCond(5, true);
-					st.playSound(QuestSound.AMBSOUND_T_WINGFLAP_04);
+					st.playSound(QuestSound.AMBSOUND_WINGFLAP);
 					htmltext = event;
 				}
 				break;
@@ -161,7 +161,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					{
 						st.setCond(11, true);
 						htmltext = "32020-26.html";
-						st.playSound(QuestSound.AMBSOUND_THUNDER_02);
+						st.playSound(QuestSound.AMBSOUND_THUNDER);
 					}
 				}
 				break;
@@ -181,7 +181,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 					{
 						st.setCond(11, true);
 						htmltext = "32020-28.html";
-						st.playSound(QuestSound.AMBSOUND_THUNDER_02);
+						st.playSound(QuestSound.AMBSOUND_THUNDER);
 					}
 				}
 				break;

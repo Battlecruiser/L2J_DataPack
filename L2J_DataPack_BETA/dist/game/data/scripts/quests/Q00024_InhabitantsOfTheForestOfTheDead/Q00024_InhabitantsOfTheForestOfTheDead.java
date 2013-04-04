@@ -88,7 +88,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				st.unset("var");
 				break;
 			case "31389-18.html":
-				st.playSound(QuestSound.INTERFACESOUND_CHARSTAT_OPEN_01);
+				st.playSound(QuestSound.INTERFACESOUND_CHARSTAT_OPEN);
 				break;
 			case "31389-19.html":
 				if (!st.hasQuestItems(BROKEN_SILVER_CROSS_OF_EINHASAD))
@@ -294,7 +294,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				{
 					if (st.isCond(1))
 					{
-						st.playSound(QuestSound.AMDSOUND_D_WIND_LOOT_02);
+						st.playSound(QuestSound.AMDSOUND_WIND_LOOT);
 						htmltext = "31531-01.html";
 					}
 					else if (st.isCond(2))
