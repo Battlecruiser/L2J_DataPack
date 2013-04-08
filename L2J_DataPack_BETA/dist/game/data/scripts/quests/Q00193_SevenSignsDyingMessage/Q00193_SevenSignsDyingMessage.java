@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * Seven Signs, Dying Message (193)
@@ -163,7 +162,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 					NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_THAT_STRANGER_MUST_BE_DEFEATED_HERE_IS_THE_ULTIMATE_HELP);
 					ns.addStringParameter(player.getName());
 					npc.broadcastPacket(ns);
-					startQuestTimer("heal", 30000 - Rnd.get(20000), npc, player);
+					startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 					L2MonsterInstance monster = (L2MonsterInstance) addSpawn(SHILENS_EVIL_THOUGHTS, 82425, 47232, -3216, 0, false, 0, false);
 					monster.broadcastPacket(new NpcSay(monster.getObjectId(), Say2.NPC_ALL, monster.getNpcId(), NpcStringId.YOU_ARE_NOT_THE_OWNER_OF_THAT_ITEM));
 					monster.setRunning();
@@ -186,7 +185,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 					npc.setTarget(player);
 					npc.doCast(NPC_HEAL.getSkill());
 				}
-				startQuestTimer("heal", 30000 - Rnd.get(20000), npc, player);
+				startQuestTimer("heal", 30000 - getRandom(20000), npc, player);
 				break;
 			}
 			case "30760-02.html":

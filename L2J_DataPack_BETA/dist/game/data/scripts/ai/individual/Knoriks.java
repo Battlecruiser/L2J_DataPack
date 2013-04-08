@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.util.Rnd;
 
 /**
  * Knoriks AI.
@@ -44,9 +43,9 @@ public class Knoriks extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((npc.isScriptValue(0)) && (Rnd.get(100) < 60))
+		if ((npc.isScriptValue(0)) && (getRandom(100) < 60))
 		{
-			if (Rnd.get(100) < 50)
+			if (getRandom(100) < 50)
 			{
 				npc.setScriptValue(1);
 			}

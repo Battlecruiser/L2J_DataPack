@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Wedding March (431)<br>
@@ -91,7 +90,7 @@ public class Q00431_WeddingMarch extends Quest
 		if (member != null)
 		{
 			final QuestState st = member.getQuestState(getName());
-			if (Rnd.nextBoolean())
+			if (getRandomBoolean())
 			{
 				st.giveItems(SILVER_CRYSTAL, 1);
 				if (st.getQuestItemsCount(SILVER_CRYSTAL) >= CRYSTAL_COUNT)

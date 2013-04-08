@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Not Strong Enough Alone (453)
@@ -312,7 +311,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					}
 					case 5:
 					{
-						st.giveItems(REWARD[Rnd.get(REWARD.length)][getRandom(REWARD[0].length)], 1);
+						st.giveItems(REWARD[getRandom(REWARD.length)][getRandom(REWARD[0].length)], 1);
 						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "32734-14.html";
 						break;

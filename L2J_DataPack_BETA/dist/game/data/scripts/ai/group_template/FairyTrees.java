@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Fairy Trees AI.
@@ -63,7 +62,7 @@ public class FairyTrees extends AbstractNpcAI
 				newNpc.setRunning();
 				newNpc.addDamageHate(originalKiller, 0, 999);
 				newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, originalKiller);
-				if (Rnd.nextBoolean())
+				if (getRandomBoolean())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
 					if ((skill != null) && (originalKiller != null))

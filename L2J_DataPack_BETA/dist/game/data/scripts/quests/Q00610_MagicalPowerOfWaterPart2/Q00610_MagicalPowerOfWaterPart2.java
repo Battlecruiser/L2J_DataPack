@@ -28,7 +28,6 @@ import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Magical Power of Water - Part 2 (610)
@@ -145,9 +144,9 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final long respawnMinDelay = 43200000l * (long) Config.RAID_MIN_RESPAWN_MULTIPLIER;
-		final long respawnMaxDelay = 129600000l * (long) Config.RAID_MAX_RESPAWN_MULTIPLIER;
-		final long respawnDelay = Rnd.get(respawnMinDelay, respawnMaxDelay);
+		final int respawnMinDelay = (int) (43200000 * Config.RAID_MIN_RESPAWN_MULTIPLIER);
+		final int respawnMaxDelay = (int) (129600000 * Config.RAID_MAX_RESPAWN_MULTIPLIER);
+		final int respawnDelay = getRandom(respawnMinDelay, respawnMaxDelay);
 		cancelQuestTimer("despawn_ashutar", npc, null);
 		saveGlobalQuestVar("Q00610_respawn", String.valueOf(System.currentTimeMillis() + respawnDelay));
 		startQuestTimer("spawn_npc", respawnDelay, null, null);

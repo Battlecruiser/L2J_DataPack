@@ -440,11 +440,8 @@ public class TerritoryWarSuperClass extends Quest
 				{
 					continue;
 				}
-				QuestState st = player.getQuestState(territoryQuest.getName());
-				if (st == null)
-				{
-					st = territoryQuest.newQuestState(player);
-				}
+				
+				QuestState st = player.hasQuestState(territoryQuest.getName()) ? player.getQuestState(territoryQuest.getName()) : territoryQuest.newQuestState(player);
 				if (val)
 				{
 					st.setState(State.STARTED, false);
