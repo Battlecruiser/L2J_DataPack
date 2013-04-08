@@ -39,7 +39,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
-import com.l2jserver.util.Rnd;
 
 /**
  * Queen Ant's AI
@@ -172,7 +171,7 @@ public class QueenAnt extends AbstractNpcAI
 					if ((nurse.getTarget() != _larva) || notCasting)
 					{
 						nurse.setTarget(_larva);
-						nurse.useMagic(Rnd.nextBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
+						nurse.useMagic(getRandomBoolean() ? HEAL1.getSkill() : HEAL2.getSkill());
 					}
 					continue;
 				}

@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Find Glittering Jewelry (35)
@@ -112,7 +111,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 		if (member != null)
 		{
 			final QuestState st = member.getQuestState(getName());
-			if (Rnd.nextBoolean())
+			if (getRandomBoolean())
 			{
 				st.giveItems(ROUGH_JEWEL, 1);
 				if (st.getQuestItemsCount(ROUGH_JEWEL) >= JEWEL_COUNT)

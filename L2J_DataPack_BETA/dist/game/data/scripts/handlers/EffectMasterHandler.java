@@ -258,7 +258,7 @@ public final class EffectMasterHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Failed loading effect handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
+				_log.log(Level.WARNING, "Failed loading effect handler: " + c.getSimpleName(), e);
 				continue;
 			}
 		}
