@@ -53,7 +53,6 @@ public class ManaHealByLevel extends L2Effect
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(target);
 		double amount = calc();
 		
 		// recharged mp influenced by difference between target level and skill level
@@ -107,9 +106,13 @@ public class ManaHealByLevel extends L2Effect
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
-		
-		target.setCurrentMp(amount + target.getCurrentMp());
-		
+		if (amount != 0)
+		{
+			target.setCurrentMp(amount + target.getCurrentMp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
+			target.sendPacket(su);
+		}
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
 		{
@@ -122,8 +125,6 @@ public class ManaHealByLevel extends L2Effect
 		}
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
-		target.sendPacket(su);
 		return true;
 	}
 	

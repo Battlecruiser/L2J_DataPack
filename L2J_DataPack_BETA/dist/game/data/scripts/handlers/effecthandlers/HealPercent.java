@@ -52,18 +52,20 @@ public class HealPercent extends L2Effect
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(target);
 		double amount = 0;
 		double power = calc();
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxHp() : (target.getMaxHp() * power) / 100.0;
-		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
-		
-		target.setCurrentHp(amount + target.getCurrentHp());
-		
+		if (amount != 0)
+		{
+			target.setCurrentHp(amount + target.getCurrentHp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
+			target.sendPacket(su);
+		}
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
 		{
@@ -74,11 +76,8 @@ public class HealPercent extends L2Effect
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 		}
-		
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-		target.sendPacket(su);
 		return true;
 	}
 	

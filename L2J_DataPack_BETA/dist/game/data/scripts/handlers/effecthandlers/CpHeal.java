@@ -52,19 +52,20 @@ public class CpHeal extends L2Effect
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(target);
 		double amount = calc();
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);
-		
-		target.setCurrentCp(amount + target.getCurrentCp());
-		
+		if (amount != 0)
+		{
+			target.setCurrentCp(amount + target.getCurrentCp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
+			target.sendPacket(su);
+		}
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
-		target.sendPacket(su);
 		return true;
 	}
 	

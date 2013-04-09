@@ -101,10 +101,13 @@ public class Heal extends L2Effect
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
-		target.setCurrentHp(amount + target.getCurrentHp());
-		StatusUpdate su = new StatusUpdate(target);
-		su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-		target.sendPacket(su);
+		if (amount != 0)
+		{
+			target.setCurrentHp(amount + target.getCurrentHp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
+			target.sendPacket(su);
+		}
 		
 		if (target.isPlayer())
 		{
