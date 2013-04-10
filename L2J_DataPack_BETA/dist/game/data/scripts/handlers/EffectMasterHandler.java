@@ -241,13 +241,13 @@ public final class EffectMasterHandler
 		
 		for (Class<?> c : _effects)
 		{
+			if (c == null)
+			{
+				continue; // Disabled handler
+			}
+			
 			try
 			{
-				if (c == null)
-				{
-					continue; // Disabled handler
-				}
-				
 				if (method == null)
 				{
 					method = loadInstance.getClass().getMethod("registerHandler", Class.class);

@@ -660,12 +660,13 @@ public class MasterHandler
 			
 			for (Class<?> c : _handlers[i])
 			{
+				if (c == null)
+				{
+					continue; // Disabled handler
+				}
+				
 				try
 				{
-					if (c == null)
-					{
-						continue; // Disabled handler
-					}
 					// Don't wtf some classes extending another like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
 					interfaces = c.getInterfaces().length > 0 ? // Standardly handler has implementation
 					c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
