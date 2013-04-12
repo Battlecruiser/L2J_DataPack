@@ -21,7 +21,6 @@ package handlers.targethandlers;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -31,26 +30,11 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class One implements ITargetTypeHandler
 {
-	
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		boolean canTargetSelf = false;
-		switch (skill.getSkillType())
-		{
-			case BUFF:
-			case DUMMY:
-				canTargetSelf = true;
-				break;
-			default:
-			{
-				canTargetSelf = skill.hasEffectType(L2EffectType.CANCEL_DEBUFF, L2EffectType.NEGATE, L2EffectType.CPHEAL, L2EffectType.HEAL, L2EffectType.HEAL_PERCENT, L2EffectType.MANAHEAL_BY_LEVEL);
-				break;
-			}
-		}
-		
 		// Check for null target or any other invalid target
-		if ((target == null) || target.isDead() || ((target == activeChar) && !canTargetSelf))
+		if ((target == null) || target.isDead() || ((target == activeChar) && (skill.isOffensive() || skill.isPVP())))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return _emptyTargetList;
