@@ -64,11 +64,7 @@ public final class MithrilMines extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		int[] minions = MAGICIAN_MINIONS;
-		if (npc.getNpcId() == GRAVE_ROBBER_SUMMONER)
-		{
-			minions = SUMMONER_MINIONS;
-		}
+		final int[] minions = (npc.getNpcId() == GRAVE_ROBBER_SUMMONER) ? SUMMONER_MINIONS : MAGICIAN_MINIONS;
 		addMinion((L2MonsterInstance) npc, minions[getRandom(minions.length)]);
 		return super.onSpawn(npc);
 	}
