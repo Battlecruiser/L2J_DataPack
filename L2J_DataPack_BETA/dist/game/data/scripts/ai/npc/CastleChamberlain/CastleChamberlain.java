@@ -54,7 +54,7 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Castle Chamberlain AI
+ * Castle Chamberlain AI.
  * @author malyelfik
  */
 public class CastleChamberlain extends AbstractNpcAI
