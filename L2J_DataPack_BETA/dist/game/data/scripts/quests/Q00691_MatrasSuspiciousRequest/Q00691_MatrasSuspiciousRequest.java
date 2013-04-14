@@ -39,9 +39,8 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	// Items
 	private static final int RED_GEM = 10372;
 	private static final int DYNASTY_SOUL_II = 10413;
-	
+	// Reward
 	private static final Map<Integer, Integer> REWARD_CHANCES = new HashMap<>();
-	
 	static
 	{
 		REWARD_CHANCES.put(22363, 890);
@@ -55,8 +54,10 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		REWARD_CHANCES.put(22371, 257);
 		REWARD_CHANCES.put(22372, 656);
 	}
+	// Misc
+	private static final int MIN_LEVEL = 76;
 	
-	public Q00691_MatrasSuspiciousRequest(int questId, String name, String descr)
+	private Q00691_MatrasSuspiciousRequest(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(MATRAS);
@@ -67,50 +68,58 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
-		if (event.equalsIgnoreCase("32245-04.htm"))
+		String htmltext = null;
+		switch (event)
 		{
-			if (player.getLevel() >= 76)
-			{
+			case "32245-02.htm":
+			case "32245-11.html":
+				htmltext = event;
+				break;
+			case "32245-04.htm":
 				st.startQuest();
-			}
-			else
-			{
-				htmltext = getNoQuestMsg(player);
-			}
-		}
-		else if (event.equalsIgnoreCase("take_reward"))
-		{
-			int gemsCount = st.getInt("submitted_gems");
-			if (gemsCount >= 744)
-			{
-				st.set("submitted_gems", Integer.toString(gemsCount - 744));
-				st.giveItems(DYNASTY_SOUL_II, 1);
-				htmltext = "32245-09.htm";
-			}
-			else
-			{
-				htmltext = getHtm(player.getHtmlPrefix(), "32245-06.htm").replace("%itemcount%", st.get("submitted_gems"));
-			}
-		}
-		else if (event.equalsIgnoreCase("32245-08.htm"))
-		{
-			int submittedCount = st.getInt("submitted_gems");
-			int broughtCount = (int) st.getQuestItemsCount(RED_GEM);
-			st.takeItems(RED_GEM, broughtCount);
-			st.set("submitted_gems", Integer.toString(submittedCount + broughtCount));
-			htmltext = getHtm(player.getHtmlPrefix(), "32245-08.htm").replace("%itemcount%", Integer.toString(submittedCount + broughtCount));
-		}
-		else if (event.equalsIgnoreCase("32245-12.htm"))
-		{
-			st.giveAdena((st.getInt("submitted_gems") * 10000), true);
-			st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			case "take_reward":
+				if (st.isStarted())
+				{
+					final int gemsCount = st.getInt("submitted_gems");
+					if (gemsCount >= 744)
+					{
+						st.set("submitted_gems", Integer.toString(gemsCount - 744));
+						st.giveItems(DYNASTY_SOUL_II, 1);
+						htmltext = "32245-09.html";
+					}
+					else
+					{
+						htmltext = getHtm(player.getHtmlPrefix(), "32245-10.html").replace("%itemcount%", st.get("submitted_gems"));
+					}
+				}
+				break;
+			case "32245-08.html":
+				if (st.isStarted())
+				{
+					final int submittedCount = st.getInt("submitted_gems");
+					final int broughtCount = (int) st.getQuestItemsCount(RED_GEM);
+					final int finalCount = submittedCount + broughtCount;
+					st.takeItems(RED_GEM, broughtCount);
+					st.set("submitted_gems", Integer.toString(finalCount));
+					htmltext = getHtm(player.getHtmlPrefix(), "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
+				}
+				break;
+			case "32245-12.html":
+				if (st.isStarted())
+				{
+					st.giveAdena((st.getInt("submitted_gems") * 10000), true);
+					st.exitQuest(true, true);
+					htmltext = event;
+				}
+				break;
 		}
 		return htmltext;
 	}
@@ -118,10 +127,10 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		L2PcInstance pl = getRandomPartyMember(player, 1);
+		final L2PcInstance pl = getRandomPartyMember(player, 1);
 		if (pl == null)
 		{
-			return null;
+			return super.onKill(npc, player, isSummon);
 		}
 		
 		final QuestState st = pl.getQuestState(getName());
@@ -133,45 +142,38 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 			st.giveItems(RED_GEM, numItems);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		return null;
+		return super.onKill(npc, player, isSummon);
 	}
 	
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = Quest.getNoQuestMsg(player);
-		QuestState st = player.getQuestState(getName());
-		
+		String htmltext = getNoQuestMsg(player);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.getState() == State.CREATED)
+		switch (st.getState())
 		{
-			if (player.getLevel() >= 76)
-			{
-				htmltext = "32245-01.htm";
-			}
-			else
-			{
-				htmltext = "32245-03.htm";
-			}
-		}
-		else if (st.getState() == State.STARTED)
-		{
-			if (st.hasQuestItems(RED_GEM))
-			{
-				htmltext = "32245-05.htm";
-			}
-			else if (!st.hasQuestItems(RED_GEM))
-			{
-				htmltext = "32245-06.htm";
-			}
-			else if (st.getInt("submitted_gems") > 0)
-			{
-				htmltext = getHtm(player.getHtmlPrefix(), "32245-06.htm").replace("%itemcount%", st.get("submitted_gems"));
-			}
+			case State.CREATED:
+				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32245-01.htm" : "32245-03.html";
+				break;
+			case State.STARTED:
+				if (st.hasQuestItems(RED_GEM))
+				{
+					htmltext = "32245-05.html";
+				}
+				else if (st.getInt("submitted_gems") > 0)
+				{
+					htmltext = getHtm(player.getHtmlPrefix(), "32245-07.html").replace("%itemcount%", st.get("submitted_gems"));
+				}
+				else
+				{
+					htmltext = "32245-06.html";
+				}
+				break;
 		}
 		return htmltext;
 	}
