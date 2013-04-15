@@ -18,8 +18,13 @@
  */
 package ai.npc.MercenaryCaptain;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.datatables.MultiSell;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.Territory;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
@@ -27,37 +32,56 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
-import com.l2jserver.gameserver.util.Util;
+import com.l2jserver.gameserver.network.serverpackets.ExShowDominionRegistry;
+import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * Mercenary Captain AI
+ * Mercenary Captain AI.
  * @author malyelfik
  */
 public class MercenaryCaptain extends AbstractNpcAI
 {
 	// NPCs
-	private static final int[] NPCS =
+	private static final Map<Integer, Integer> NPCS = new HashMap<>();
+	static
 	{
-		36481, // Mercenary Captain (Gludio)
-		36482, // Mercenary Captain (Dion)
-		36483, // Mercenary Captain (Giran)
-		36484, // Mercenary Captain (Oren)
-		36485, // Mercenary Captain (Aden)
-		36486, // Mercenary Captain (Innadril)
-		36487, // Mercenary Captain (Goddard)
-		36488, // Mercenary Captain (Rune)
-	};
+		NPCS.put(36481, 13757); // Mercenary Captain (Gludio)
+		NPCS.put(36482, 13758); // Mercenary Captain (Dion)
+		NPCS.put(36483, 13759); // Mercenary Captain (Giran)
+		NPCS.put(36484, 13760); // Mercenary Captain (Oren)
+		NPCS.put(36485, 13761); // Mercenary Captain (Aden)
+		NPCS.put(36486, 13762); // Mercenary Captain (Innadril)
+		NPCS.put(36487, 13763); // Mercenary Captain (Goddard)
+		NPCS.put(36488, 13764); // Mercenary Captain (Rune)
+		NPCS.put(36489, 13765); // Mercenary Captain (Schuttgart)
+	}
+	// Items
+	private static final int STRIDER_WIND = 4422;
+	private static final int STRIDER_STAR = 4423;
+	private static final int STRIDER_TWILIGHT = 4424;
+	private static final int GUARDIAN_STRIDER = 14819;
+	private static final int ELITE_MERCENARY_CERTIFICATE = 13767;
+	private static final int TOP_ELITE_MERCENARY_CERTIFICATE = 13768;
 	// Misc
 	private static final int DELAY = 3600000; // 1 hour
+	private static final int MIN_LEVEL = 40;
+	private static final int CLASS_LEVEL = 2;
 	
 	private MercenaryCaptain(String name, String descr)
 	{
 		super(name, descr);
+		for (int id : NPCS.keySet())
+		{
+			addStartNpc(id);
+			addFirstTalkId(id);
+			addTalkId(id);
+		}
+		
 		for (Territory terr : TerritoryWarManager.getInstance().getAllTerritories())
 		{
 			for (TerritoryNPCSpawn spawn : terr.getSpawnList())
 			{
-				if (Util.contains(NPCS, spawn.getNpcId()))
+				if (NPCS.keySet().contains(spawn.getNpcId()))
 				{
 					startQuestTimer("say", DELAY, spawn.getNpc(), null, true);
 				}
@@ -68,7 +92,104 @@ public class MercenaryCaptain extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("say") && !npc.isDecayed())
+		String htmltext = null;
+		if (player != null)
+		{
+			final StringTokenizer st = new StringTokenizer(event, " ");
+			switch (st.nextToken())
+			{
+				case "36481-02.html":
+				{
+					htmltext = event;
+					break;
+				}
+				case "36481-03.html":
+				{
+					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+					html.setHtml(getHtm(player.getHtmlPrefix(), "36481-03.html"));
+					html.replace("%strider%", String.valueOf(TerritoryWarManager.MINTWBADGEFORSTRIDERS));
+					html.replace("%gstrider%", String.valueOf(TerritoryWarManager.MINTWBADGEFORBIGSTRIDER));
+					player.sendPacket(html);
+					break;
+				}
+				case "territory":
+				{
+					player.sendPacket(new ExShowDominionRegistry(npc.getCastle().getCastleId(), player));
+					break;
+				}
+				case "strider":
+				{
+					final String type = st.nextToken();
+					final int price = (type.equals("3")) ? TerritoryWarManager.MINTWBADGEFORBIGSTRIDER : TerritoryWarManager.MINTWBADGEFORSTRIDERS;
+					final int badgeId = NPCS.get(npc.getNpcId());
+					if (getQuestItemsCount(player, badgeId) < price)
+					{
+						return "36481-07.html";
+					}
+					
+					final int striderId;
+					switch (type)
+					{
+						case "0":
+						{
+							striderId = STRIDER_WIND;
+							break;
+						}
+						case "1":
+						{
+							striderId = STRIDER_STAR;
+							break;
+						}
+						case "2":
+						{
+							striderId = STRIDER_TWILIGHT;
+							break;
+						}
+						case "3":
+						{
+							striderId = GUARDIAN_STRIDER;
+							break;
+						}
+						default:
+						{
+							_log.warning(MercenaryCaptain.class.getSimpleName() + ": Unknown strider type: " + type);
+							return null;
+						}
+					}
+					takeItems(player, badgeId, price);
+					giveItems(player, striderId, 1);
+					htmltext = "36481-09.html";
+					break;
+				}
+				case "elite":
+				{
+					if (!hasQuestItems(player, ELITE_MERCENARY_CERTIFICATE))
+					{
+						htmltext = "36481-10.html";
+					}
+					else
+					{
+						final int listId = 676 + npc.getCastle().getCastleId();
+						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+					}
+					break;
+				}
+				case "top-elite":
+				{
+					if (!hasQuestItems(player, TOP_ELITE_MERCENARY_CERTIFICATE))
+					{
+						htmltext = "36481-10.html";
+					}
+					else
+					{
+						final int listId = 685 + npc.getCastle().getCastleId();
+						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+					}
+					break;
+				}
+			}
+		}
+		else if (event.equalsIgnoreCase("say") && !npc.isDecayed())
 		{
 			if (TerritoryWarManager.getInstance().isTWInProgress())
 			{
@@ -83,7 +204,26 @@ public class MercenaryCaptain extends AbstractNpcAI
 				broadcastNpcSay(npc, Say2.NPC_SHOUT, NpcStringId.DO_YOU_WISH_TO_FIGHT_ARE_YOU_AFRAID_NO_MATTER_HOW_HARD_YOU_TRY_YOU_HAVE_NOWHERE_TO_RUN_BUT_IF_YOU_FACE_IT_HEAD_ON_OUR_MERCENARY_TROOP_WILL_HELP_YOU_OUT);
 			}
 		}
-		return null;
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final String htmltext;
+		if ((player.getLevel() < MIN_LEVEL) || (player.getClassId().level() < CLASS_LEVEL))
+		{
+			htmltext = "36481-08.html";
+		}
+		else if (npc.isMyLord(player))
+		{
+			htmltext = (npc.getCastle().getSiege().getIsInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-05.html" : "36481-04.html";
+		}
+		else
+		{
+			htmltext = (npc.getCastle().getSiege().getIsInProgress() || TerritoryWarManager.getInstance().isTWInProgress()) ? "36481-06.html" : npc.getNpcId() + "-01.html";
+		}
+		return htmltext;
 	}
 	
 	public static void main(String[] args)
