@@ -157,7 +157,6 @@ import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
 import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
-import handlers.bypasshandlers.TerritoryWar;
 import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
@@ -460,7 +459,6 @@ public class MasterHandler
 			SupportBlessing.class,
 			SupportMagic.class,
 			TerritoryStatus.class,
-			TerritoryWar.class,
 			VoiceCommand.class,
 			Wear.class,
 		},
