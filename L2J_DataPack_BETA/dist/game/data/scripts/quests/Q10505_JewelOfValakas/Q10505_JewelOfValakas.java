@@ -38,7 +38,7 @@ public class Q10505_JewelOfValakas extends Quest
 	// Items
 	private static final int EMPTY_CRYSTAL = 21906;
 	private static final int FILLED_CRYSTAL_VALAKAS_ENERGY = 21908;
-	private static final int JEWEL_OF_VALAKAS = 21898;
+	private static final int JEWEL_OF_VALAKAS = 21896;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
 	// Misc
 	private static final int MIN_LEVEL = 83;
