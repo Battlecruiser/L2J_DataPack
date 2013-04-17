@@ -1,0 +1,1 @@
+DELETE FROM castle_functions where type=5;
