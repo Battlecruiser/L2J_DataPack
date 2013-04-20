@@ -433,6 +433,7 @@ public class Valakas extends AbstractNpcAI
 		
 		// Launch death animation.
 		ZONE.broadcastPacket(new PlaySound(1, "B03_D", 0, 0, 0, 0, 0));
+		ZONE.broadcastPacket(new SpecialCamera(npc.getObjectId(), 1200, 20, -10, 0, 13000, 0, 0, 1, 0));
 		
 		startQuestTimer("die_1", 300, npc, null); // 300
 		startQuestTimer("die_2", 600, npc, null); // 300
