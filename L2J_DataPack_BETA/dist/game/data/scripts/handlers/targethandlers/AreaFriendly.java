@@ -49,25 +49,22 @@ public class AreaFriendly implements ITargetTypeHandler
 			return _emptyTargetList;
 		}
 		
-		if (skill.getCastRange() >= 0)
+		if (onlyFirst)
 		{
-			if (onlyFirst)
+			return new L2Character[]
 			{
-				return new L2Character[]
-				{
-					target
-				};
-			}
-			
-			if (activeChar.getActingPlayer().isInOlympiadMode())
-			{
-				return new L2Character[]
-				{
-					activeChar
-				};
-			}
-			targetList.add(target); // Add target to target list
+				target
+			};
 		}
+		
+		if (activeChar.getActingPlayer().isInOlympiadMode())
+		{
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
+		targetList.add(target); // Add target to target list
 		
 		if (target != null)
 		{
@@ -107,35 +104,31 @@ public class AreaFriendly implements ITargetTypeHandler
 			return false;
 		}
 		
-		if ((target == null) || target.isDead() || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
+		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
 		{
 			return false;
 		}
 		
-		if ((target.getActingPlayer() != null) && (target.getActingPlayer().inObserverMode() || target.getActingPlayer().isInOlympiadMode()))
+		if ((target.getActingPlayer() != null) && (target.getActingPlayer() != activeChar) && (target.getActingPlayer().inObserverMode() || target.getActingPlayer().isInOlympiadMode()))
 		{
 			return false;
 		}
 		
-		if (target.isPlayer())
+		if (target.isPlayable())
 		{
-			if ((target.getAllyId() != 0) && (activeChar.getAllyId() == target.getAllyId()))
-			{
-				return true;
-			}
-			
-			if ((target.getClanId() != 0) && (activeChar.getClanId() == target.getClanId()))
-			{
-				return true;
-			}
-			
 			if ((target != activeChar) && activeChar.isInParty() && target.isInParty())
 			{
-				if (activeChar.getParty().getLeader() == target.getParty().getLeader())
-				{
-					return true;
-				}
-				return false;
+				return (activeChar.getParty().getLeader() == target.getParty().getLeader());
+			}
+			
+			if ((activeChar.getClanId() != 0) && (target.getClanId() != 0))
+			{
+				return (activeChar.getClanId() == target.getClanId());
+			}
+			
+			if ((activeChar.getAllyId() != 0) && (target.getAllyId() != 0))
+			{
+				return (activeChar.getAllyId() == target.getAllyId());
 			}
 			
 			if ((target != activeChar) && (target.getActingPlayer().getPvpFlag() > 0))
