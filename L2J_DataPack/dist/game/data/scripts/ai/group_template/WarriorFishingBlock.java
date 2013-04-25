@@ -21,6 +21,7 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -113,12 +114,14 @@ public class WarriorFishingBlock extends AbstractNpcAI
 			return null;
 		}
 		
-		if ((npc.getTarget() == null) || !npc.getTarget().isPlayer())
+		final L2Object target = npc.getTarget();
+		if ((target == null) || !target.isPlayer())
 		{
 			npc.deleteMe();
+			return null;
 		}
 		
-		final L2PcInstance player = npc.getTarget().getActingPlayer();
+		final L2PcInstance player = target.getActingPlayer();
 		final NpcSay say = new NpcSay(npc, Say2.NPC_ALL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)]);
 		say.addStringParameter(player.getName());
 		npc.broadcastPacket(say);

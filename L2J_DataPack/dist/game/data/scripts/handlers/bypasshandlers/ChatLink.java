@@ -18,10 +18,14 @@
  */
 package handlers.bypasshandlers;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
 
 public class ChatLink implements IBypassHandler
 {
@@ -47,8 +51,17 @@ public class ChatLink implements IBypassHandler
 		{
 			
 		}
-		((L2Npc) target).showChatWindow(activeChar, val);
 		
+		final L2Npc npc = (L2Npc) target;
+		final List<Quest> firstTalk = npc.getTemplate().getEventQuests(QuestEventType.ON_FIRST_TALK);
+		if ((val == 0) && (firstTalk != null) && (firstTalk.size() == 1))
+		{
+			firstTalk.get(0).notifyFirstTalk(npc, activeChar);
+		}
+		else
+		{
+			npc.showChatWindow(activeChar, val);
+		}
 		return false;
 	}
 	

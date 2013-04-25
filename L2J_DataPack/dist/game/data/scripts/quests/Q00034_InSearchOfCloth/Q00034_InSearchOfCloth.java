@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * In Search of Cloth (34)
@@ -120,7 +119,7 @@ public class Q00034_InSearchOfCloth extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 4);
-		if ((member != null) && Rnd.nextBoolean())
+		if ((member != null) && getRandomBoolean())
 		{
 			final QuestState st = member.getQuestState(getName());
 			st.giveItems(SPINNERET, 1);

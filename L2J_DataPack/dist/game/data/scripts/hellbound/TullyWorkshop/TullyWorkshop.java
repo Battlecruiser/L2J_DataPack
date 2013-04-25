@@ -45,7 +45,6 @@ import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.model.zone.type.L2DamageZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -1072,7 +1071,7 @@ public class TullyWorkshop extends Quest
 		
 		if (event.equalsIgnoreCase("disable_zone"))
 		{
-			final L2DamageZone dmgZone = (L2DamageZone) ZoneManager.getInstance().getZoneById(200011);
+			final L2ZoneType dmgZone = ZoneManager.getInstance().getZoneById(200011);
 			if (dmgZone != null)
 			{
 				dmgZone.setEnabled(false);
@@ -1977,7 +1976,7 @@ public class TullyWorkshop extends Quest
 				brokenContraptions.clear();
 				rewardedContraptions.clear();
 				talkedContraptions.clear();
-				final L2DamageZone dmgZone = (L2DamageZone) ZoneManager.getInstance().getZoneById(200011);
+				final L2ZoneType dmgZone = ZoneManager.getInstance().getZoneById(200011);
 				if (dmgZone != null)
 				{
 					dmgZone.setEnabled(true);

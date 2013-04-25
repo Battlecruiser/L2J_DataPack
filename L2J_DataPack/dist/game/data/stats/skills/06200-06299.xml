@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6200" levels="1" name="NPC Transform Dispel">
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="TRANSFORMDISPEL" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="TRANSFORMDISPEL" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6201" levels="1" name="Transformation Condition - Frog">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="520" />
 		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
@@ -33,6 +34,7 @@
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="460" />
 		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
@@ -57,6 +59,7 @@
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="215" />
 		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
@@ -81,6 +84,7 @@
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
@@ -109,6 +113,7 @@
 		<table name="#mpConsume"> 68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105 </table>
 		<table name="#power"> 1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
 		<set name="abnormalLvl" val="6" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -119,13 +124,13 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
@@ -139,9 +144,11 @@
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
-		<set name="affectLimit" val="6-12" />
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="turn_flee" />
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="300" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -151,11 +158,10 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="FEAR" />
-		<set name="pvp" val="true" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -165,6 +171,7 @@
 	<skill id="6207" levels="1" name="Strider Dash">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="speed_up_special" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1000" />
@@ -183,15 +190,16 @@
 	<skill id="6208" levels="1" name="Blessed Guidance">
 		<!-- Blessed Guidance. For 10 seconds, increases accuracy by 2. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="hit_up" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6209" levels="4" name="Weapon Grade Penalty">
-		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
 		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
 		<table name="#magicFailureRate"> 2000 4000 6000 8000 </table> <!-- FIXME: values unconfirmed -->
+		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="stayAfterDeath" val="true" />
@@ -206,8 +214,8 @@
 		</for>
 	</skill>
 	<skill id="6213" levels="4" name="Armor Grade Penalty">
-		<table name="#rEvas"> 2.5 5 7.5 10 </table>
 		<table name="#amount"> 0.8333 0.6944 0.5787 0.4823 </table>
+		<table name="#rEvas"> 2.5 5 7.5 10 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="stayAfterDeath" val="true" />
@@ -220,122 +228,124 @@
 		</for>
 	</skill>
 	<skill id="6217" levels="1" name="Raid Boss - Level 81">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6218" levels="1" name="Raid Boss - Level 81">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6219" levels="1" name="Raid Boss - Level 81">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6220" levels="1" name="Raid Boss - Level 81">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6221" levels="1" name="Raid Boss - Level 82">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6222" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6223" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6224" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6225" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6226" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6227" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6228" levels="1" name="Raid Boss - Level 83">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6229" levels="1" name="Raid Boss - Level 84">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6230" levels="1" name="Raid Boss - Level 82">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6231" levels="1" name="Raid Boss - Level 82">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6232" levels="1" name="Raid Boss - Level 83">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6233" levels="1" name="Raid Boss - Level 83">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6234" levels="1" name="Presentation - Adena Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="6235" levels="1" name="Blessed Focus">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="signal_b" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6236" levels="1" name="Presentation - Party Recall">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6237" levels="1" name="Moving Speed Decrease">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="targetType" val="AURA" />
-		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
-		<set name="magicLvl" val="84" />
-		<set name="power" val="100" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="saveVs" val="MEN" />
 		<set name="affectRange" val="300" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="84" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="100" />
+		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" abnormalLvl="3" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.2" />
@@ -344,19 +354,20 @@
 	</skill>
 	<skill id="6238" levels="1" name="Moving Speed Decrease">
 		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="speed_down" />
-		<set name="magicLvl" val="84" />
-		<set name="targetType" val="AURA" />
-		<set name="operateType" val="A2" />
+		<set name="affectRange" val="200" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
-		<set name="affectRange" val="200" />
-		<set name="skillType" val="PDAM" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="84" />
 		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="18162" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlBonusRate" val="1" />
-		<set name="isDebuff" val="true" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff" abnormalTime="10" val="0" special="stakatoroot" effectPower="100" abnormalLvl="4" abnormalType="speed_down">
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -367,11 +378,11 @@
 	</skill>
 	<skill id="6239" levels="1" name="Proof of Space and Time">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="coolTime" val="1000" />
 		<set name="create_item_count" val="1" />
 		<set name="create_item_id" val="15352" />
 		<set name="hitTime" val="2700" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
@@ -388,289 +399,314 @@
 	<skill id="6240" levels="5" name="Heatstroke">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="86400" />
 		<set name="abnormalType" val="signal_d" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6241" levels="1" name="Heatstroke Prevention Effect - Gludio">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6242" levels="1" name="Heatstroke Prevention Effect - Dion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6243" levels="1" name="Heatstroke Prevention Effect - Giran">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6244" levels="1" name="Heatstroke Prevention Effect - Oren">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6245" levels="1" name="Heatstroke Prevention Effect - Aden">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6246" levels="1" name="Heatstroke Prevention Effect - Innadril">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6247" levels="1" name="Heatstroke Prevention Effect - Goddard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6248" levels="1" name="Heatstroke Prevention Effect - Rune">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6249" levels="1" name="Heatstroke Prevention Effect -Schuttgart">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6250" levels="1" name="Severe Heatstroke">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="signal_d" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6251" levels="1" name="Summon Humidity">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6252" levels="1" name="Humidity Attack">
-		<set name="staticDamage" val="true" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="staticDamage" val="true" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6254" levels="1" name="Heatstroke Prevention Effect - Dion">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6255" levels="1" name="Heatstroke Prevention Effect - Giran">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6256" levels="1" name="Heatstroke Prevention Effect - Oren">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6257" levels="1" name="Heatstroke Prevention Effect - Aden">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6258" levels="1" name="Heatstroke Prevention Effect - Innadril">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6259" levels="1" name="Heatstroke Prevention Effect - Goddard">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6260" levels="1" name="Heatstroke Prevention Effect - Rune">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6261" levels="1" name="Heatstroke Prevention Effect - Schuttgart">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="event_territory" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6262" levels="1" name="EMP Power">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="coolTime" val="500" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="coolTime" val="500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6263" levels="1" name="EMP Shock">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="stun" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="coolTime" val="500" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="coolTime" val="500" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6264" levels="1" name="Golem Boom">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="coolTime" val="500" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="coolTime" val="500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6265" levels="1" name="Smoke">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="coolTime" val="500" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="coolTime" val="500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6266" levels="1" name="Shock">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="stun" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6267" levels="1" name="Power Attack">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6268" levels="1" name="Power Attack">
 		<set name="fanRange" val="0,0,300,90" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="6269" levels="1" name="Poison Gas">
 		<set name="abnormalLvl" val="10" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="poison" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6270" levels="1" name="Grima Power Up">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6271" levels="5" name="Grima Power Up">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6272" levels="1" name="Underbug Defense Up">
 		<!-- Increase each of P. Def. and M. Def. by 30%. -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6273" levels="1" name="Underbug Self Blasting">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6274" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="10000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="165" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="38976" />
 		<set name="reuseDelay" val="10000" />
-		<set name="affectRange" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
@@ -679,18 +715,18 @@
 	<skill id="6275" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="7000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="166" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="45256" />
 		<set name="reuseDelay" val="10000" />
-		<set name="affectRange" val="3000" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
@@ -699,6 +735,7 @@
 	<skill id="6276" levels="1" name="Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
@@ -706,7 +743,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="affectRange" val="3000" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6277" levels="1" name="Summon Spirits">
@@ -724,6 +760,7 @@
 	<skill id="6278" levels="1" name="Ice Ball">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="250" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1100" />
@@ -732,33 +769,33 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="168" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="450" />
 		<set name="coolTime" val="500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="168" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="affectRange" val="450" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6280" levels="1" name="Death Clack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="death_clack" />
 		<set name="castRange" val="1500" />
 		<set name="coolTime" val="800" />
@@ -769,9 +806,9 @@
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="DEBUFF" />
-		<set name="pvp" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ChanceSkillTrigger" abnormalTime="10" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="6281" abnormalLvl="1" abnormalType="death_clack" />
@@ -780,20 +817,21 @@
 	<skill id="6281" levels="1" name="Cold Judgement">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6280) -->
+		<set name="affectRange" val="300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6282" levels="1" name="Reflect Magic">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="reflect_magic_dd" />
 		<set name="aggroPoints" val="204" />
 		<set name="magicLvl" val="85" />
@@ -818,16 +856,17 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6284" levels="1" name="Freya's Bless">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
@@ -848,6 +887,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="casting_time_down" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -865,6 +905,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
 		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pd_up" />
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="650" />
@@ -886,13 +927,13 @@
 	<skill id="6287" levels="1" name="Bless of Sword">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Kegor Skills -->
+		<set name="affectRange" val="1100" />
 		<set name="castRange" val="650" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="affectRange" val="1100" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="CpHealPercent" noicon="1" val="100" />
@@ -904,12 +945,13 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="signal_a" />
+		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -923,12 +965,13 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Kegor Skills -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="signal_b" />
+		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="affectRange" val="1000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -950,25 +993,25 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
+		<set name="affectRange" val="300" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="affectRange" val="300" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="6292" levels="1" name="Rush">
@@ -984,10 +1027,10 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="20" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
@@ -999,6 +1042,7 @@
 	<skill id="6293" levels="1" name="Power Strike">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
+		<set name="affectRange" val="250" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
@@ -1007,18 +1051,19 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="affectRange" val="250" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="pa_up" />
+		<set name="affectRange" val="500" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="34400" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1026,7 +1071,6 @@
 		<set name="mpConsume" val="66" />
 		<set name="mpInitialConsume" val="17" />
 		<set name="operateType" val="A2" />
-		<set name="affectRange" val="500" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
@@ -1058,10 +1102,10 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="20" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
@@ -1081,10 +1125,10 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
@@ -1102,17 +1146,17 @@
 	<skill id="6299" levels="1" name="Breath of Ice Palace - Ice Storm">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
+		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="1547" />
 		<set name="reuseDelay" val="15000" />
-		<set name="affectRange" val="200" />
 		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" chanceType="ON_START" />

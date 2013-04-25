@@ -621,7 +621,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 												temp.put(i, info);
 											}
 										}
-										else
+										else if (att2 != null)
 										{
 											StringTokenizer st = new StringTokenizer(att2.getNodeValue(), ",");
 											int tokenCount = st.countTokens();

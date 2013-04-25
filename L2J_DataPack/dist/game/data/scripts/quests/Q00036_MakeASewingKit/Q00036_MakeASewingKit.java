@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Make a Sewing Kit (36)
@@ -104,7 +103,7 @@ public class Q00036_MakeASewingKit extends Quest
 		if (member != null)
 		{
 			final QuestState st = member.getQuestState(getName());
-			if (Rnd.nextBoolean())
+			if (getRandomBoolean())
 			{
 				st.giveItems(ENCHANTED_IRON, 1);
 				if (st.getQuestItemsCount(ENCHANTED_IRON) >= IRON_COUNT)

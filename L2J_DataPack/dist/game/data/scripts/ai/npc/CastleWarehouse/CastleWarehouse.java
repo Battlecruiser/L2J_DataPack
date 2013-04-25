@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Castle Warehouse Keeper AI
+ * Castle Warehouse Keeper AI.
  * @author malyelfik
  */
 public class CastleWarehouse extends AbstractNpcAI

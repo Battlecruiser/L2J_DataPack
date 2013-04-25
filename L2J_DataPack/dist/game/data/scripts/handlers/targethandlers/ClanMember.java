@@ -18,10 +18,9 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -39,7 +38,7 @@ public class ClanMember implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		if (activeChar.isNpc())
 		{
 			// for buff purposes, returns friendly mobs nearby and mob itself

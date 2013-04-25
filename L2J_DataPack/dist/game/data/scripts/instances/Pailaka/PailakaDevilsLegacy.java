@@ -47,8 +47,6 @@ import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
  */
 public class PailakaDevilsLegacy extends Quest
 {
-	private static final String qn = "129_PailakaDevilsLegacy";
-	
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 67;
 	private static final int EXIT_TIME = 5;
@@ -65,13 +63,6 @@ public class PailakaDevilsLegacy extends Quest
 	private static final int SUPPORTER = 32501;
 	private static final int ADVENTURER1 = 32508;
 	private static final int ADVENTURER2 = 32511;
-	private static final int[] NPCS =
-	{
-		SURVIVOR,
-		SUPPORTER,
-		ADVENTURER1,
-		ADVENTURER2
-	};
 	
 	private static final int KAMS = 18629;
 	private static final int HIKORO = 18630;
@@ -277,7 +268,7 @@ public class PailakaDevilsLegacy extends Quest
 			onAttack(npc, player, 600, false);
 		}
 		
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -357,7 +348,7 @@ public class PailakaDevilsLegacy extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((npc.getNpcId() != ADVENTURER2) || (st == null) || !st.isCompleted())
 		{
 			return npc.getNpcId() + ".htm";
@@ -368,7 +359,7 @@ public class PailakaDevilsLegacy extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -519,7 +510,7 @@ public class PailakaDevilsLegacy extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isStarted())
 		{
 			switch (npc.getNpcId())
@@ -612,15 +603,12 @@ public class PailakaDevilsLegacy extends Quest
 		}
 	}
 	
-	public PailakaDevilsLegacy()
+	private PailakaDevilsLegacy()
 	{
-		super(129, qn, "Pailaka - Devil's Legacy");
+		super(129, "129_PailakaDevilsLegacy", "Pailaka - Devil's Legacy");
 		addStartNpc(SURVIVOR);
-		for (int npcId : NPCS)
-		{
-			addFirstTalkId(npcId);
-			addTalkId(npcId);
-		}
+		addFirstTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
+		addTalkId(SURVIVOR, SUPPORTER, ADVENTURER1, ADVENTURER2);
 		addAttackId(TREASURE_BOX, POWDER_KEG, LEMATAN);
 		addKillId(MONSTERS);
 		addEnterZoneId(ZONE);

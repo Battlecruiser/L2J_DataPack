@@ -3,7 +3,7 @@
 	<!-- ADMIN COND EXCEPTIONS -->
 	<admin command="admin_exceptions" accessLevel="7" />
 	<admin command="admin_set_exception" accessLevel="7" confirmDlg="true" />
-	
+
 	<!-- ADMIN ADMIN -->
 	<admin command="admin_admin" accessLevel="7" />
 	<admin command="admin_admin1" accessLevel="7" />
@@ -631,6 +631,10 @@
 	<admin command="admin_zone_reload" accessLevel="7" />
 	<admin command="admin_zone_visual" accessLevel="7" />
 	<admin command="admin_zone_visual_clear" accessLevel="7" />
+
+	<!-- ADMIN SCAN -->
+	<admin command="admin_scan" accessLevel="7" />
+	<admin command="admin_deleteNpcByObjectId" accessLevel="7" confirmDlg="true" />
 
 	<!-- VOICE COMMANDS -->
 	<admin command="banchat" accessLevel="7" />

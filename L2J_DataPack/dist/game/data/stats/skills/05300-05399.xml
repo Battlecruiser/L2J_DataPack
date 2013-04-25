@@ -2,46 +2,47 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5300" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 227 234 240 246 250 252 254 256 259 </table>
 		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
 		<set name="affectRange" val="150" />
-		<set name="hitTime" val="3200" />
-		<set name="coolTime" val="800" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="500" />
+		<set name="coolTime" val="800" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="3200" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5301" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
 		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
-		<set name="coolTime" val="660" />
-		<set name="targetType" val="ONE" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="nextActionAttack" val="true" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
@@ -49,26 +50,27 @@
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
-		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -76,26 +78,27 @@
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
-		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
@@ -104,27 +107,28 @@
 	<skill id="5304" levels="9" name="Paralysis">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="nextActionAttack" val="true" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
-		<set name="coolTime" val="660" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="MEN" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
@@ -132,23 +136,24 @@
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
@@ -157,24 +162,25 @@
 	<skill id="5306" levels="9" name="Paralysis">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1000" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="affectRange" val="150" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" effectPower="60" val="0" abnormalLvl="1" abnormalType="paralyze" />
@@ -183,24 +189,25 @@
 	<skill id="5307" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="isDebuff" val="true" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
@@ -208,25 +215,26 @@
 	</skill>
 	<skill id="5308" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
-		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -234,26 +242,27 @@
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
-		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 145 145 157 157 157 168 168 168 168 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="power" val="#power" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
@@ -261,358 +270,359 @@
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5311" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 83 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
-		<set name="power" val="#power" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 83 </table>
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5312" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
+		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="affectRange" val="40" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5313" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
-		<set name="affectRange" val="200" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5314" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
+		<set name="element" val="0" />
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="element" val="0" />
-		<set name="elementPower" val="20" />
 		<set name="operateType" val="A1" />
-		<set name="affectRange" val="200" />
-		<set name="hitTime" val="4000" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5315" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="affectRange" val="200" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
-		<set name="affectRange" val="200" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5316" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="power" val="#power" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
+		<set name="affectRange" val="40" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="1" /> <!-- Water -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
-		<set name="castRange" val="900" />
-		<set name="effectRange" val="1400" />
-		<set name="affectRange" val="40" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5317" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="power" val="#power" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
+		<set name="castRange" val="500" />
+		<set name="effectRange" val="1000" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="1" /> <!-- Water -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="castRange" val="500" />
-		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="4000" />
-		<set name="affectRange" val="200" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5318" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
-		<set name="affectRange" val="200" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5328" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
+		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="affectRange" val="40" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5329" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
-		<set name="affectRange" val="200" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5330" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
+		<set name="affectRange" val="200" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
-		<set name="affectRange" val="200" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5331" levels="9" name="NPC HP Drain">
-		<table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
 		<table name="#magicLvl"> 78 80 81 82 83 84 85 86 87 </table>
+		<table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
+		<set name="castRange" val="600" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="250" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
 		<set name="offensive" val="true" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="hitTime" val="4000" />
 		<set name="operateType" val="A1" />
-		<set name="castRange" val="600" />
+		<set name="power" val="250" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5332" levels="9" name="NPC MP Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 186 192 196 199 202 205 207 207 207 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 186 192 196 199 202 205 207 207 207 </table>
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MANADAM" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="hitTime" val="4000" />
-		<set name="effectRange" val="1100" />
-		<set name="castRange" val="600" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MANADAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5333" levels="9" name="Poison">
 		<!-- TODO: Need to be Checked in Retail -->
+		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
-		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="operateType" val="A2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpConsume" val="#mpInitialConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpInitialConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -620,343 +630,344 @@
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5335" levels="9" name="NPC(party) - Physical Single Long Range Attack">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4500" />
+		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="4500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5336" levels="9" name="NPC(party) - Physical Range Close Range Attack">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="12777" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="affectRange" val="150" />
+		<set name="power" val="12777" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5338" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5340" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="12777" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AURA" />
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
-		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="effectRange" val="300" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="12777" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5342" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5346" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5350" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5352" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="power" val="12777" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="affectRange" val="150" />
+		<set name="power" val="12777" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
 		<set name="coolTime" val="660" />
+		<set name="hitTime" val="830" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4500" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5356" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="power" val="12777" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="affectRange" val="150" />
+		<set name="power" val="12777" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5358" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="830" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="830" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="coolTime" val="660" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5359" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4500" />
+		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4500" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5360" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
-		<set name="power" val="12777" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="affectRange" val="150" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
+		<set name="power" val="12777" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="3200" />
 		<set name="coolTime" val="800" />
+		<set name="hitTime" val="3200" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5362" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="nextActionAttack" val="true" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
-		<set name="coolTime" val="660" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
@@ -964,26 +975,27 @@
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
-		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 286 286 314 314 314 338 338 338 338 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -991,27 +1003,28 @@
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
-		<table name="#dot"> 725 725 785 785 785 840 840 840 840 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 725 725 785 785 785 840 840 840 840 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="mpConsume" val="#mpConsume" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
+		<set name="hitTime" val="830" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="830" />
-		<set name="coolTime" val="660" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
-		<set name="isDebuff" val="true" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
@@ -1020,25 +1033,26 @@
 	<skill id="5365" levels="9" name="Paralysis">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="660" />
+		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A2" />
-		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="830" />
 		<set name="isDebuff" val="true" />
-		<set name="coolTime" val="660" />
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="200" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
@@ -1046,24 +1060,25 @@
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="8" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
+		<set name="hitTime" val="1000" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
 		<set name="offensive" val="true" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
 		<set name="operateType" val="A2" />
-		<set name="affectRange" val="150" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
@@ -1072,24 +1087,25 @@
 	<skill id="5367" levels="9" name="Paralysis">
 		<!-- A temporary paralysis which prevents movement. -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="paralyze" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="affectRange" val="150" />
+		<set name="coolTime" val="800" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="PDAM" />
+		<set name="hitTime" val="1000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="nextActionAttack" val="true" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="nextActionAttack" val="true" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="800" />
-		<set name="affectRange" val="150" />
-		<set name="isDebuff" val="true" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="60" abnormalLvl="1" abnormalType="paralyze" />
@@ -1098,37 +1114,39 @@
 	<skill id="5368" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
-		<set name="nextActionAttack" val="true" />
 		<set name="hitTime" val="4500" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="5369" levels="9" name="Poison">
 		<!-- Condition causing target to instantly decrease HP by poison. Effect 8-10. -->
-		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
-		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
-		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#dot"> 381 381 418 418 418 450 450 450 450 </table>
+		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
+		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
+		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="power" val="#power" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
@@ -1138,372 +1156,375 @@
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 8-10. -->
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="bleeding" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
 		<set name="hitTime" val="4500" />
-		<set name="saveVs" val="CON" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
 	</skill>
 	<skill id="5371" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="power" val="#power" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
+		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5372" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5374" levels="9" name="NPC(party) -Magic Range Long Range DD - Fire">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="0" /> <!-- Fire -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
+		<set name="element" val="0" /> <!-- Fire -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
-		<set name="affectRange" val="200" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5376" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire(Self-Destruction)">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
+		<set name="affectRange" val="200" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5380" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="element" val="2" /> <!-- Wind -->
-		<set name="elementPower" val="20" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
+		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="affectRange" val="40" />
+		<set name="element" val="2" /> <!-- Wind -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5382" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="affectRange" val="200" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
-		<set name="affectRange" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5383" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
+		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="affectRange" val="40" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5389" levels="9" name="NPC(party) -Magic Single Long Range DD - Dark">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="4000" />
+		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="affectRange" val="40" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5390" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AREA" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
+		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
-		<set name="affectRange" val="200" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5391" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="affectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
-		<set name="power" val="#power" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="AURA" />
-		<set name="skillType" val="MDAM" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="affectRange" val="200" />
-		<set name="hitTime" val="4000" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="5392" levels="9" name="NPC HP Drain">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="DRAIN" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="absorbPart" val="0.9" />
-		<set name="hitTime" val="4000" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="#power" />
+		<set name="skillType" val="DRAIN" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5393" levels="9" name="NPC MP Burn">
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#mpConsume"> 55 57 58 69 61 61 62 62 63 </table>
+		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 240 247 253 256 260 264 267 267 267 </table>
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="element" val="5" /> <!-- Dark -->
-		<set name="elementPower" val="20" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MANADAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="5" /> <!-- Dark -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="MANADAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5394" levels="9" name="Poison">
 		<!-- TODO: Need to be Checked in Retail -->
+		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
-		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<table name="#mpConsume"> 55 57 58 60 61 61 62 62 63 </table>
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
-		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
+		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="poison" />
-		<set name="targetType" val="ONE" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="lvlBonusRate" val="2" />
-		<set name="operateType" val="A2" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="element" val="1" /> <!-- Water -->
-		<set name="elementPower" val="20" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
+		<set name="element" val="1" /> <!-- Water -->
+		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A2" />
+		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="affectRange" val="200" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
 			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
+		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#magicLvl"> 20 40 70 </table>
-		<table name="#pAtk"> 1.5 2.0 3.0 </table>
-		<table name="#pAtkSpd"> 1.33 1.33 1.5 </table>
 		<table name="#mpConsume"> 23 42 78 </table>
 		<table name="#mpInitialConsume"> 6 11 20 </table>
-		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#pAtk"> 1.5 2.0 3.0 </table>
+		<table name="#pAtkSpd"> 1.33 1.33 1.5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="multi_buff" />
+		<set name="affectRange" val="900" />
+		<set name="aggroPoints" val="100" />
+		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="targetType" val="CLAN" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="8000" />
 		<set name="operateType" val="A2" />
-		<set name="hitTime" val="2000" />
-		<set name="aggroPoints" val="100" />
-		<set name="affectRange" val="900" />
+		<set name="reuseDelay" val="8000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Grow" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -1512,51 +1533,53 @@
 		</for>
 	</skill>
 	<skill id="5396" levels="1" name="NPC - Spell Stance">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="CA5" />
 		<set name="hitTime" val="15000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="CA5" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5397" levels="3" name="NPC - Spell Force">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="magical_stance" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5398" levels="1" name="NPC - Combination Force">
-		<set name="targetType" val="AREA" />
-		<set name="operateType" val="A1" />
-		<set name="magicLvl" val="99" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="power" val="657" />
-		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpInitialConsume" val="16" />
-		<set name="mpConsume" val="63" />
+		<set name="affectRange" val="300" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
-		<set name="hitTime" val="5000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
-		<set name="affectRange" val="300" />
+		<set name="hitTime" val="5000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="99" />
+		<set name="mpConsume" val="63" />
+		<set name="mpInitialConsume" val="16" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="657" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="5399" levels="1" name="Heat of Desert">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="hot_ground" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="power" val="10" /> <!-- Base Land Rate -->
-		<set name="skillType" val="DOT" />
 		<set name="pvp" val="true" />
+		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<and>

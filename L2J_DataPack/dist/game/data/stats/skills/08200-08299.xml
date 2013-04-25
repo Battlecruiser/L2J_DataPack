@@ -57,7 +57,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="gainHp" val="1.03" /> <!-- Received Increased Heal +3% -->
+			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
 			<sub order="0x40" stat="stunVuln" val="13" /> <!-- Shock resistance is increased +13% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -196,7 +196,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="bonusHp" val="20" /> <!-- Increase amount of heal +20 -->
+			<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -338,7 +338,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="gainHp" val="1.04" /> <!-- Heal Capacity +4% -->
+			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
 			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -515,7 +515,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="bonusHp" val="22" /> <!-- Heal Capacity +22 -->
+			<add order="0x40" stat="healEffect" val="22" /> <!-- Heal Capacity +22 -->
 			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
@@ -580,24 +580,24 @@
 	</skill>
 	<skill id="8233" levels="1" name="Zubei's Helmet">
 		<set name="magicLvl" val="58" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rEvas" val="0.88" />
 		</for>
 	</skill>
 	<skill id="8234" levels="1" name="Zubei's Helmet">
 		<set name="magicLvl" val="58" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0125" />
 		</for>
 	</skill>
 	<skill id="8235" levels="1" name="Nightmare Helm">
 		<set name="magicLvl" val="67" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0062" />
 			<sub order="0x40" stat="sleepVuln" val="17.5" />
@@ -606,8 +606,8 @@
 	</skill>
 	<skill id="8236" levels="1" name="Nightmare Helm">
 		<set name="magicLvl" val="67" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0062" />
 			<mul order="0x30" stat="mAtk" val="1.0062" />
@@ -616,101 +616,105 @@
 		</for>
 	</skill>
 	<skill id="8237" levels="1" name="Shalin Heal">
-		<set name="magicLvl" val="73" />
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="A1" />
+		<set name="aggroPoints" val="743" />
 		<set name="hitTime" val="5000" />
-		<set name="mpInitialConsume" val="16" />
-		<set name="mpConsume" val="61" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="73" />
+		<set name="mpConsume" val="61" />
+		<set name="mpInitialConsume" val="16" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="staticReuse" val="true" />
-		<set name="aggroPoints" val="743" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Heal" noicon="1" val="540" />
 		</for>
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">
-		<set name="magicLvl" val="73" />
-		<set name="mpConsume" val="74" />
-		<set name="power" val="1827" />
-		<set name="targetType" val="ONE" />
-		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="PDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="2500" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="73" />
+		<set name="mpConsume" val="74" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="1827" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="PDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="seed_of_critical" />
+		<set name="hitTime" val="2500" />
 		<set name="mpConsume" val="74" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="hitTime" val="2500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8240" levels="3" name="Obliteration Storm">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="stun" />
-		<set name="mpConsume" val="149" />
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="operateType" val="A2" />
-		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="2500" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="mpConsume" val="149" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
 		<set name="saveVs" val="CON" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="8241" levels="1" name="Critical Up">
 		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="critical_prob_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8242" levels="1" name="Ice Ball">
-		<set name="mpConsume" val="61" />
-		<set name="power" val="100" />
-		<set name="targetType" val="ONE" />
-		<set name="element" val="3" /> <!-- Earth -->
-		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="20000" />
-		<set name="hitTime" val="3100" />
-		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
-		<set name="operateType" val="A1" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-	</skill>
-	<skill id="8243" levels="1" name="Chill Strike">
-		<set name="mpConsume" val="61" />
-		<set name="power" val="100" />
-		<set name="targetType" val="ONE" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
-		<set name="reuseDelay" val="120000" />
-		<set name="hitTime" val="850" />
-		<set name="skillType" val="MDAM" />
+		<set name="hitTime" val="3100" />
+		<set name="mpConsume" val="61" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="8243" levels="1" name="Chill Strike">
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
+		<set name="element" val="3" /> <!-- Earth -->
+		<set name="elementPower" val="20" />
+		<set name="hitTime" val="850" />
+		<set name="mpConsume" val="61" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="120000" />
+		<set name="skillType" val="MDAM" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="319" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -735,11 +739,12 @@
 	</skill>
 	<skill id="8246" levels="1" name="Transform Pumpkin Ghost">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="108" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -751,9 +756,10 @@
 	<skill id="8247" levels="1" name="Mount Darkmane Pacer">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -766,29 +772,29 @@
 		</for>
 	</skill>
 	<skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="TRANSFORMDISPEL" />
-		<set name="operateType" val="A1" />
 		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="TRANSFORMDISPEL" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8249" levels="1" name="Cancel Critical Hit">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8250" levels="2" name="Summon Tigress">
-		<set name="mpConsume" val="117" />
-		<set name="summonTotalLifeTime" val="1200000" />
-		<set name="summonTimeLostIdle" val="500" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="targetType" val="SELF" />
-		<set name="reuseDelay" val="20000" />
 		<set name="hitTime" val="15000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="mpConsume" val="117" />
 		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="20000" />
+		<set name="skillType" val="SUMMON" />
+		<set name="summonTimeLostActive" val="1000" />
+		<set name="summonTimeLostIdle" val="500" />
+		<set name="summonTotalLifeTime" val="1200000" />
+		<set name="targetType" val="SELF" />
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 14916 14917 </table>
 		<set name="npcId" val="#npcIds" />
@@ -807,19 +813,21 @@
 	</skill>
 	<skill id="8252" levels="1" name="Test - Transform Mount1">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8253" levels="1" name="Test - Transform Mount2">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8254" levels="1" name="Release Seal on Agathion - Monkey">
 		<!-- Confirmed CT2.5 -->
@@ -908,9 +916,10 @@
 	<skill id="8261" levels="1" name="Steam Beatle Mount">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -925,9 +934,10 @@
 	<skill id="8262" levels="1" name="Tawny Maned Lion Mount">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -942,9 +952,10 @@
 	<skill id="8263" levels="1" name="Transform Snow King">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -959,9 +970,10 @@
 	<skill id="8264" levels="1" name="Transform Scarecrow Jack">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -976,9 +988,10 @@
 	<skill id="8265" levels="1" name="Transform Tin Golem">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -1057,22 +1070,24 @@
 		</for>
 	</skill>
 	<skill id="8276" levels="1" name="Shield Branding">
-		<set name="affectLimit" val="5-15" />
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="stun" />
+		<set name="affectLimit" val="5-15" />
 		<set name="fanRange" val="0,0,150,90" />
-		<set name="targetType" val="FRONT_AREA" />
-		<set name="skillType" val="NOTDONE" />
+		<set name="hitTime" val="100" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="hitTime" val="100" />
 		<set name="saveVs" val="CON" />
-		<set name="lvlBonusRate" val="1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="8277" levels="1" name="Transform Native">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1090,11 +1105,12 @@
 	</skill>
 	<skill id="8278" levels="1" name="Transform Guard of Dawn">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="transform" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="113" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -1105,33 +1121,35 @@
 	</skill>
 	<skill id="8279" levels="1" name="Blessing of Fire">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="holy_attack" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8280" levels="1" name="Blessing of Earth">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="holy_attack" />
+		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="hitTime" val="100" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8281" levels="1" name="Inventory Slot Add">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8282" levels="1" name="Cloak Slot Add">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8283" levels="1" name="Vesper Heavy Armor Set">
 		<!-- Confirmed CT2.5 -->
@@ -1222,11 +1240,11 @@
 	</skill>
 	<skill id="8289" levels="3" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 128.7 137.1 137.1 </table>
 		<table name="#magicLvl"> 84 85 86 </table>
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
+		<table name="#rCrit"> 128.7 137.1 137.1 </table>
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rCrit" val="#rCrit" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1236,23 +1254,23 @@
 	</skill>
 	<skill id="8290" levels="12" name="Add Belt Inventory Slot">
 		<table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="inventoryLimit" val="#inventoryLimit" />
 		</for>
 	</skill>
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
 		<table name="#weightPenalty"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="weightPenalty" val="#weightPenalty" />
 		</for>
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="rootVuln" val="30" /> <!-- Increases resistance to hold attacks by 30% -->
 			<add order="0x40" stat="rootProf" val="30" /> <!-- Increases hold attack bonus by 30% -->
@@ -1261,8 +1279,8 @@
 		</for>
 	</skill>
 	<skill id="8293" levels="1" name="Olympiad Warrior's Earring">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="stunVuln" val="20" /> <!-- Increases resistance to shock attack by 20% -->
 			<sub order="0x40" stat="derangementVuln" val="20" /> <!-- Increases resistance to mind attack by 20% -->
@@ -1272,8 +1290,8 @@
 		</for>
 	</skill>
 	<skill id="8294" levels="1" name="Olympiad Warrior's Necklace">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="paralyzeVuln" val="15" /> <!-- Increases resistance to paralysis attacks by 15% -->
 			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Increases resistance to shock attacks by 15% -->
@@ -1288,9 +1306,9 @@
 	</skill>
 	<skill id="8295" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="81" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rCrit" val="109.2" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1300,9 +1318,9 @@
 	</skill>
 	<skill id="8296" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="83" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rCrit" val="109.2" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1312,9 +1330,9 @@
 	</skill>
 	<skill id="8297" levels="1" name="Special Ability Haste">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1324,9 +1342,9 @@
 	</skill>
 	<skill id="8298" levels="1" name="Special Ability Focus">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rCrit" val="109.2" />
 			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
@@ -1335,8 +1353,8 @@
 		</for>
 	</skill>
 	<skill id="8299" levels="1" name="Arcana Sigil">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>

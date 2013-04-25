@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -55,8 +54,7 @@ public class GiveSp extends L2Effect
 			return false;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		player.addExpAndSp(0, (int) calc());
+		getEffector().getActingPlayer().addExpAndSp(0, (int) calc());
 		return true;
 	}
 }

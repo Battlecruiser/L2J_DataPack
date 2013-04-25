@@ -59,6 +59,7 @@ import handlers.effecthandlers.EnemyCharge;
 import handlers.effecthandlers.EnlargeAbnormalSlot;
 import handlers.effecthandlers.FakeDeath;
 import handlers.effecthandlers.Fear;
+import handlers.effecthandlers.FocusSouls;
 import handlers.effecthandlers.Fusion;
 import handlers.effecthandlers.GiveSp;
 import handlers.effecthandlers.Grow;
@@ -163,6 +164,7 @@ public final class EffectMasterHandler
 		EnlargeAbnormalSlot.class,
 		FakeDeath.class,
 		Fear.class,
+		FocusSouls.class,
 		Fusion.class,
 		GiveSp.class,
 		Grow.class,
@@ -239,13 +241,13 @@ public final class EffectMasterHandler
 		
 		for (Class<?> c : _effects)
 		{
+			if (c == null)
+			{
+				continue; // Disabled handler
+			}
+			
 			try
 			{
-				if (c == null)
-				{
-					continue; // Disabled handler
-				}
-				
 				if (method == null)
 				{
 					method = loadInstance.getClass().getMethod("registerHandler", Class.class);
@@ -256,7 +258,7 @@ public final class EffectMasterHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Failed loading effect handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
+				_log.log(Level.WARNING, "Failed loading effect handler: " + c.getSimpleName(), e);
 				continue;
 			}
 		}

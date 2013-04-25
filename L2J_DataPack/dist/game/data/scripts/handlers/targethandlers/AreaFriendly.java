@@ -33,7 +33,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.util.Rnd;
 
 /**
  * @author Adry_85
@@ -50,32 +49,26 @@ public class AreaFriendly implements ITargetTypeHandler
 			return _emptyTargetList;
 		}
 		
-		if (skill.getCastRange() >= 0)
+		if (onlyFirst)
 		{
-			if (onlyFirst)
+			return new L2Character[]
 			{
-				return new L2Character[]
-				{
-					target
-				};
-			}
-			
-			if (activeChar.getActingPlayer().isInOlympiadMode())
-			{
-				return new L2Character[]
-				{
-					activeChar
-				};
-			}
-			targetList.add(target); // Add target to target list
+				target
+			};
 		}
+		
+		if (activeChar.getActingPlayer().isInOlympiadMode())
+		{
+			return new L2Character[]
+			{
+				activeChar
+			};
+		}
+		targetList.add(target); // Add target to target list
 		
 		if (target != null)
 		{
-			int[] affectLimit = skill.getAffectLimit();
-			// calculate maximum affect limit between min and max values
-			int randomMax = Rnd.get(affectLimit[0], affectLimit[1]);
-			int curTargets = 0;
+			int maxTargets = skill.getAffectLimit();
 			final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 			
 			// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
@@ -88,13 +81,12 @@ public class AreaFriendly implements ITargetTypeHandler
 					continue;
 				}
 				
-				targetList.add(obj);
-				
-				curTargets++;
-				if (curTargets >= randomMax)
+				if (targetList.size() >= maxTargets)
 				{
 					break;
 				}
+				
+				targetList.add(obj);
 			}
 		}
 		
@@ -112,35 +104,37 @@ public class AreaFriendly implements ITargetTypeHandler
 			return false;
 		}
 		
-		if ((target == null) || target.isDead() || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
+		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
 		{
 			return false;
 		}
 		
-		if ((target.getActingPlayer() != null) && (target.getActingPlayer().inObserverMode() || target.getActingPlayer().isInOlympiadMode()))
+		if ((target.getActingPlayer() != null) && (target.getActingPlayer() != activeChar) && (target.getActingPlayer().inObserverMode() || target.getActingPlayer().isInOlympiadMode()))
 		{
 			return false;
 		}
 		
-		if ((activeChar.getActingPlayer().getClan() != null) && (target.getActingPlayer().getClan() != null))
+		if (target.isPlayable())
 		{
-			if (activeChar.getActingPlayer().getClanId() != target.getActingPlayer().getClanId())
+			if ((target != activeChar) && activeChar.isInParty() && target.isInParty())
+			{
+				return (activeChar.getParty().getLeader() == target.getParty().getLeader());
+			}
+			
+			if ((activeChar.getClanId() != 0) && (target.getClanId() != 0))
+			{
+				return (activeChar.getClanId() == target.getClanId());
+			}
+			
+			if ((activeChar.getAllyId() != 0) && (target.getAllyId() != 0))
+			{
+				return (activeChar.getAllyId() == target.getAllyId());
+			}
+			
+			if ((target != activeChar) && (target.getActingPlayer().getPvpFlag() > 0))
 			{
 				return false;
 			}
-		}
-		
-		if ((activeChar.getActingPlayer().getAllyId() != 0) && (target.getActingPlayer().getAllyId() != 0))
-		{
-			if (activeChar.getActingPlayer().getAllyId() != target.getActingPlayer().getAllyId())
-			{
-				return false;
-			}
-		}
-		
-		if ((target != activeChar) && (target.getActingPlayer() != null) && (target.getActingPlayer().getPvpFlag() > 0))
-		{
-			return false;
 		}
 		return true;
 	}

@@ -71,7 +71,7 @@ public class QueenShyeed extends AbstractNpcAI
 	{
 		broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.SHYEEDS_CRY_IS_STEADILY_DYING_DOWN);
 		startRespawn();
-		PC_BUFF_ZONE.setZoneEnabled(true);
+		PC_BUFF_ZONE.setEnabled(true);
 		return super.onKill(npc, killer, isSummon);
 	}
 	
@@ -93,9 +93,9 @@ public class QueenShyeed extends AbstractNpcAI
 		}
 		final L2Npc npc = addSpawn(SHYEED, SHYEED_LOC, false, 0);
 		startQuestTimer("despawn", 10800000, npc, null);
-		PC_BUFF_ZONE.setZoneEnabled(false);
-		MOB_BUFF_ZONE.setZoneEnabled(true);
-		MOB_BUFF_DISPLAY_ZONE.setZoneEnabled(true);
+		PC_BUFF_ZONE.setEnabled(false);
+		MOB_BUFF_ZONE.setEnabled(true);
+		MOB_BUFF_DISPLAY_ZONE.setEnabled(true);
 	}
 	
 	private void startRespawn()
@@ -103,8 +103,8 @@ public class QueenShyeed extends AbstractNpcAI
 		int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
 		saveGlobalQuestVar("Respawn", Long.toString(System.currentTimeMillis() + respawnTime));
 		startQuestTimer("respawn", respawnTime, null, null);
-		MOB_BUFF_ZONE.setZoneEnabled(false);
-		MOB_BUFF_DISPLAY_ZONE.setZoneEnabled(false);
+		MOB_BUFF_ZONE.setEnabled(false);
+		MOB_BUFF_DISPLAY_ZONE.setEnabled(false);
 	}
 	
 	public static void main(String[] args)

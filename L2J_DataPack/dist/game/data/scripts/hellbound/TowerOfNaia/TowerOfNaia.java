@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
-import com.l2jserver.gameserver.model.zone.type.L2EffectZone;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -1120,7 +1119,7 @@ public class TowerOfNaia extends Quest
 			_challengeState = STATE_SPORE_CHALLENGE_IN_PROGRESS;
 			markElpyRespawn();
 			DoorTable.getInstance().getDoor(18250025).closeMe();
-			((L2EffectZone) ZoneManager.getInstance().getZoneById(200100)).setZoneEnabled(true);
+			ZoneManager.getInstance().getZoneById(200100).setEnabled(true);
 			
 			for (int i = 0; i < 10; i++)
 			{
@@ -1219,9 +1218,9 @@ public class TowerOfNaia extends Quest
 		if ((npcId == MUTATED_ELPY) && !npc.isTeleporting())
 		{
 			DoorTable.getInstance().getDoor(18250025).openMe();
-			((L2EffectZone) ZoneManager.getInstance().getZoneById(200100)).setZoneEnabled(false);
-			((L2EffectZone) ZoneManager.getInstance().getZoneById(200101)).setZoneEnabled(true);
-			((L2EffectZone) ZoneManager.getInstance().getZoneById(200101)).setZoneEnabled(false);
+			ZoneManager.getInstance().getZoneById(200100).setEnabled(false);
+			ZoneManager.getInstance().getZoneById(200101).setEnabled(true);
+			ZoneManager.getInstance().getZoneById(200101).setEnabled(false);
 		}
 		else if (((npcId == SPORE_BASIC) || ((npcId >= SPORE_FIRE) && (npcId <= SPORE_EARTH))) && (_challengeState == STATE_SPORE_CHALLENGE_IN_PROGRESS))
 		{
@@ -1290,9 +1289,9 @@ public class TowerOfNaia extends Quest
 		_winIndex = -1;
 		_indexCount[0] = 0;
 		_indexCount[1] = 0;
-		((L2EffectZone) ZoneManager.getInstance().getZoneById(200100)).setZoneEnabled(false);
-		((L2EffectZone) ZoneManager.getInstance().getZoneById(200101)).setZoneEnabled(false);
-		((L2EffectZone) ZoneManager.getInstance().getZoneById(200101)).setZoneEnabled(true);
+		ZoneManager.getInstance().getZoneById(200100).setEnabled(false);
+		ZoneManager.getInstance().getZoneById(200101).setEnabled(false);
+		ZoneManager.getInstance().getZoneById(200101).setEnabled(true);
 		
 	}
 	

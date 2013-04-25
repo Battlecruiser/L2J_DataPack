@@ -208,8 +208,9 @@ public class Disablers implements ISkillHandler
 					{
 						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 					}
-					// TODO [Nemesiss] should this have 100% chance?
 					skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
+					// TODO: Remove this when lethal effect is done.
+					Formulas.calcLethalHit(activeChar, target, skill);
 					break;
 				}
 				case AGGREDUCE:
