@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.util.Rnd;
 
 /**
  * Birthday Party Song (432)<br>
@@ -87,7 +86,7 @@ public class Q00432_BirthdayPartySong extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		
-		if ((st != null) && st.isCond(1) && (Rnd.nextBoolean()))
+		if ((st != null) && st.isCond(1) && getRandomBoolean())
 		{
 			st.giveItems(RED_CRYSTAL, 1);
 			if (st.getQuestItemsCount(RED_CRYSTAL) == 50)

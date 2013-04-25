@@ -50,13 +50,14 @@
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="speed_up">
 				<add order="0x40" stat="runSpd" val="20" />
@@ -65,13 +66,14 @@
 	</skill>
 	<skill id="21005" levels="1" name="Agility">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="avoid_up">
 				<add order="0x40" stat="rEvas" val="4" />
@@ -80,12 +82,13 @@
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
+		<set name="abnormalTime" val="600" />
 	    <!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalType" val="big_head" />
@@ -138,13 +141,14 @@
 	<skill id="21011" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -154,13 +158,14 @@
 	<skill id="21012" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -170,13 +175,14 @@
 	<skill id="21013" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 20 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="vp_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="43200000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
@@ -184,43 +190,43 @@
 		</for>
 	</skill>
 	<skill id="21014" levels="1" name="Scissors">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="ONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
 		<set name="effectRange" val="500" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
 	</skill>
 	<skill id="21015" levels="1" name="Rock">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="ONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
 	</skill>
 	<skill id="21016" levels="1" name="Paper">
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="ONE" />
-		<set name="operateType" val="A1" />
-		<set name="hitTime" val="2000" />
-		<set name="coolTime" val="500" />
 		<set name="castRange" val="400" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="2000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13183" />
 		</cond>
 	</skill>
 	<skill id="21017" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -228,9 +234,9 @@
 		</for>
 	</skill>
 	<skill id="21018" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -238,9 +244,9 @@
 		</for>
 	</skill>
 	<skill id="21019" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="blowRate" val="1.25" />
@@ -248,9 +254,9 @@
 		</for>
 	</skill>
 	<skill id="21020" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -258,9 +264,9 @@
 		</for>
 	</skill>
 	<skill id="21021" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -268,9 +274,9 @@
 		</for>
 	</skill>
 	<skill id="21022" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="mAtkSpd" val="1.25" />
@@ -278,9 +284,9 @@
 		</for>
 	</skill>
 	<skill id="21023" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="mAtk" val="1.5" />
@@ -288,9 +294,9 @@
 		</for>
 	</skill>
 	<skill id="21024" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.8" />
@@ -298,9 +304,9 @@
 		</for>
 	</skill>
 	<skill id="21025" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="pAtkRange" val="1.25" />
@@ -308,9 +314,9 @@
 		</for>
 	</skill>
 	<skill id="21026" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="atkCountMax" val="10" />
@@ -318,9 +324,9 @@
 		</for>
 	</skill>
 	<skill id="21027" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<mul order="0x30" stat="pAtkSpd" val="1.25" />
@@ -329,9 +335,9 @@
 		</for>
 	</skill>
 	<skill id="21028" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -339,9 +345,9 @@
 		</for>
 	</skill>
 	<skill id="21029" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rCrit" val="100" />
@@ -349,9 +355,9 @@
 		</for>
 	</skill>
 	<skill id="21030" levels="1" name="Holiday Dream Weapon">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="maxCp" val="1.3" />
 			<add order="0x40" stat="rEvas" val="5" />
@@ -491,12 +497,12 @@
 		</for>
 	</skill>
 	<skill id="21042" levels="1" name="Baguette's Blessing">
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
 		<!-- Confirmed CT2.5 -->
@@ -596,11 +602,12 @@
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="transform" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="operateType" val="A2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="operateType" val="A2" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="110" />
 		<for>
 			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="transform" />
@@ -609,170 +616,184 @@
 	<skill id="21052" levels="1" name="Bless the Body">
 		<!-- Increases Max HP by 25% for 30 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="max_hp_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21053" levels="1" name="Bless the Soul">
 		<!-- Increases Max MP by 25% for 30 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="max_mp_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21054" levels="1" name="Blessed Resurrection Ability">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours -->
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21055" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21056" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21057" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21058" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21059" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21061" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21062" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21063" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21064" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21065" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21066" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vp_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="vp_up" abnormalVisualEffect="vitality">
@@ -782,12 +803,12 @@
 	</skill>
 	<skill id="21067" levels="1" name="Blessed Escape Ability">
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours -->
+		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="hitTime" val="200" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -797,197 +818,214 @@
 	<skill id="21068" levels="1" name="Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="armor_unholy" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21069" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21070" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21071" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21072" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21073" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21074" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21075" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
 		<!-- Increases resistance to darkness type attacks by 30 for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="armor_unholy" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21077" levels="1" name="Wind Walk">
 		<!-- Increases moving speed by 20 for 2 minutes. Reuse delay 18 minutes -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="speed_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1080000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21078" levels="1" name="Death Whisper">
 		<!-- Increases Critical attack power by 35% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21079" levels="1" name="Agility">
 		<!-- Increases evasion rate by 4 for 1 hour. Reuse Delay 24 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="avoid_up" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21080" levels="1" name="Wild Magic">
 		<!-- For 5 minutes, increases by 2% the occurrence rate of damage that is caused by damage magic. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="magic_critical_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21081" levels="1" name="Mana Regeneration">
 		<!-- Increases MP Regeneration by 3% for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="mp_regen_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21082" levels="1" name="Reflect">
 		<!-- For 5 minutes, returns 20% of the damage back to the enemy. Excludes skill and long-range attacks. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="dmg_shield" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21083" levels="1" name="Greater Heal">
 		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="life_force_others" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">
 		<!-- Recovers energy when acquiring Exp. for 5 minutes. Reuse Delay 1 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="vp_up" />
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="vp_up" abnormalVisualEffect="vitality">
@@ -1010,33 +1048,35 @@
 	<skill id="21086" levels="1" name="Blessing of Love">
 		<!-- Can feel the warm love of family. Protects the target with sacred power. Makes the target invincible for 10 seconds. Reuse Delay 4 hours -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="invincibility" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8 for 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="berserker" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="4000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21088" levels="1" name="Summon Friend">
 		<!-- Summons your friend. -->
+		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="10000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -1046,25 +1086,27 @@
 	<skill id="21089" levels="1" name="Dance of Shadows">
 		<!-- Receives the soul's help, and for 2 minutes, decreases one's own moving speed by 50% and invokes the ability not to receive the preemptive attack of monsters. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="dance_of_shadow" />
+		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="2500" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21090" levels="1" name="Soul of Phoenix">
 		<!-- Receives the soul's help, and revives from death with completely recovered status. Buff/de-buff doesn't disappear at death but is maintained. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="resurrection_special" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
+		<set name="skillType" val="NOTDONE" />
 		<set name="staticReuse" val="true" />
-		<set name="hitTime" val="4000" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
 		<!-- Confirmed CT2.5 -->
@@ -1079,48 +1121,49 @@
 		</for>
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21093" levels="1" name="Theme - Hero">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21094" levels="1" name="Theme - Theme Park">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21095" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21096" levels="1" name="Ability of Cool Watermelon">
 		<!-- For 30 minutes, increases critical rate by 30% and critical power by 35%. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="improve_crt_rate_dmg_up" />
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="hitTime" val="3000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21097" levels="1" name="Summon Friend">
 		<!-- Summons your friend. -->
+		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="hitTime" val="10000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
@@ -1130,21 +1173,23 @@
 	<skill id="21098" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21099" levels="1" name="Great Warrior's Soul Power: Strength">
 		<!-- For five minutes, the Great Spirit increases Atk.Spd. by 20%, damage by 10% and P.Def. by 20%. You recover HP equal to 5% of the melee damage. -->
 		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="multi_buff" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 </list>

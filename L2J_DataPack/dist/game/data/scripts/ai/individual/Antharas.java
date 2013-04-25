@@ -53,7 +53,7 @@ import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 
 /**
- * This class ... control for sequence of fight against Antharas.
+ * Antharas' AI.
  * @author L2J_JP SANDMAN
  */
 public class Antharas extends AbstractNpcAI
@@ -918,6 +918,7 @@ public class Antharas extends AbstractNpcAI
 	{
 		if ((npc.getNpcId() == 29019) || (npc.getNpcId() == 29066) || (npc.getNpcId() == 29067) || (npc.getNpcId() == 29068))
 		{
+			broadcastPacket(new SpecialCamera(_antharas.getObjectId(), 1200, 20, -10, 0, 13000, 0, 0, 1, 0));
 			npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 			_cubeSpawnTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubeSpawn(0), 10000);
 			GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);

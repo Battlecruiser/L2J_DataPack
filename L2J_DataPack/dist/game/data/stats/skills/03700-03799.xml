@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3700" levels="1" name="Doom Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -22,8 +22,8 @@
 	</skill>
 	<skill id="3702" levels="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -33,8 +33,8 @@
 	</skill>
 	<skill id="3703" levels="1" name="Doom Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -44,8 +44,8 @@
 	</skill>
 	<skill id="3704" levels="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="breath" val="50" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -55,8 +55,8 @@
 	</skill>
 	<skill id="3705" levels="1" name="Doom Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<add order="0x40" stat="breath" val="33" />
@@ -65,8 +65,8 @@
 	</skill>
 	<skill id="3706" levels="1" name="Doom Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<add order="0x40" stat="breath" val="33" />
@@ -86,8 +86,8 @@
 	</skill>
 	<skill id="3708" levels="1" name="Stockings of Doom">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="2.91" />
 			<add order="0x40" stat="breath" val="88" />
@@ -96,8 +96,8 @@
 	</skill>
 	<skill id="3709" levels="1" name="Doom Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<add order="0x40" stat="breath" val="50" />
@@ -116,8 +116,8 @@
 	</skill>
 	<skill id="3711" levels="1" name="Blue Wolf Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="2.91" />
 			<mul order="0x30" stat="regHp" val="1.0208" />
@@ -125,8 +125,8 @@
 	</skill>
 	<skill id="3712" levels="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<mul order="0x30" stat="regHp" val="1.0083" />
@@ -134,8 +134,8 @@
 	</skill>
 	<skill id="3713" levels="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<mul order="0x30" stat="regHp" val="1.0083" />
@@ -143,8 +143,8 @@
 	</skill>
 	<skill id="3714" levels="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<mul order="0x30" stat="regHp" val="1.0125" />
@@ -162,32 +162,32 @@
 	</skill>
 	<skill id="3716" levels="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0088" />
 		</for>
 	</skill>
 	<skill id="3717" levels="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0088" />
 		</for>
 	</skill>
 	<skill id="3718" levels="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0132" />
 		</for>
 	</skill>
 	<skill id="3719" levels="1" name="Blue Wolf Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="34" />
 			<mul order="0x30" stat="regMp" val="1.0083" />
@@ -195,8 +195,8 @@
 	</skill>
 	<skill id="3720" levels="1" name="Blue Wolf Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="34" />
 			<mul order="0x30" stat="regMp" val="1.0083" />
@@ -214,8 +214,8 @@
 	</skill>
 	<skill id="3722" levels="1" name="Blue Wolf Stockings">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="85" />
 			<mul order="0x30" stat="regMp" val="1.0208" />
@@ -223,8 +223,8 @@
 	</skill>
 	<skill id="3723" levels="1" name="Blue Wolf Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="51" />
 			<mul order="0x30" stat="regMp" val="1.0125" />
@@ -232,10 +232,10 @@
 	</skill>
 	<skill id="3724" levels="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="7.5" />
 		</for>
 	</skill>
@@ -245,41 +245,41 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.12" />
+			<mul order="0x30" stat="healEffect" val="1.12" />
 			<add order="0x40" stat="paralyzeVuln" val="20" />
 		</for>
 	</skill>
 	<skill id="3726" levels="1" name="Dark Crystal Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.02" />
+			<mul order="0x30" stat="healEffect" val="1.02" />
 			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
 		</for>
 	</skill>
 	<skill id="3727" levels="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3728" levels="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="gainHp" val="1.01" />
+			<mul order="0x30" stat="healEffect" val="1.01" />
 			<sub order="0x40" stat="paralyzeVuln" val="5" />
 		</for>
 	</skill>
 	<skill id="3729" levels="1" name="Dark Crystal Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
@@ -297,8 +297,8 @@
 	</skill>
 	<skill id="3731" levels="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -307,8 +307,8 @@
 	</skill>
 	<skill id="3732" levels="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -317,8 +317,8 @@
 	</skill>
 	<skill id="3733" levels="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -327,8 +327,8 @@
 	</skill>
 	<skill id="3734" levels="1" name="Dark Crystal Leggings">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0103" />
 			<mul order="0x30" stat="pAtk" val="1.0103" />
@@ -337,8 +337,8 @@
 	</skill>
 	<skill id="3735" levels="1" name="Dark Crystal Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -361,8 +361,8 @@
 	</skill>
 	<skill id="3737" levels="1" name="Dark Crystal Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -372,8 +372,8 @@
 	</skill>
 	<skill id="3738" levels="1" name="Dark Crystal Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.02" />
 			<add order="0x40" stat="runSpd" val="1.75" />
@@ -383,8 +383,8 @@
 	</skill>
 	<skill id="3739" levels="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
@@ -394,8 +394,8 @@
 	</skill>
 	<skill id="3740" levels="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
@@ -417,8 +417,8 @@
 	</skill>
 	<skill id="3742" levels="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
@@ -440,8 +440,8 @@
 	</skill>
 	<skill id="3744" levels="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
@@ -451,8 +451,8 @@
 	</skill>
 	<skill id="3745" levels="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
@@ -462,8 +462,8 @@
 	</skill>
 	<skill id="3746" levels="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0125" />
 			<add order="0x40" stat="maxMp" val="56" />
@@ -473,8 +473,8 @@
 	</skill>
 	<skill id="3747" levels="1" name="Tallum Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
 			<sub order="0x40" stat="poisonVuln" val="13.33" />
@@ -483,8 +483,8 @@
 	</skill>
 	<skill id="3748" levels="1" name="Tallum Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
 			<sub order="0x40" stat="poisonVuln" val="13.33" />
@@ -502,8 +502,8 @@
 	</skill>
 	<skill id="3750" levels="1" name="Tallum Stockings">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0333" />
 			<sub order="0x40" stat="poisonVuln" val="33.33" />
@@ -512,8 +512,8 @@
 	</skill>
 	<skill id="3751" levels="1" name="Tallum Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 			<sub order="0x40" stat="poisonVuln" val="20" />
@@ -522,8 +522,8 @@
 	</skill>
 	<skill id="3752" levels="1" name="Majestic Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="accCombat" val="0.31" />
@@ -532,8 +532,8 @@
 	</skill>
 	<skill id="3753" levels="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
@@ -553,8 +553,8 @@
 	</skill>
 	<skill id="3755" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
@@ -563,8 +563,8 @@
 	</skill>
 	<skill id="3756" levels="1" name="Majestic Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083">
 				<using kind="Bow,Crossbow" />
@@ -590,8 +590,8 @@
 	</skill>
 	<skill id="3758" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083">
 				<using kind="Bow,Crossbow" />
@@ -603,8 +603,8 @@
 	</skill>
 	<skill id="3759" levels="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125">
 				<using kind="Bow,Crossbow" />
@@ -616,8 +616,8 @@
 	</skill>
 	<skill id="3760" levels="1" name="Majestic Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
@@ -637,8 +637,8 @@
 	</skill>
 	<skill id="3762" levels="1" name="Majestic Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
@@ -647,8 +647,8 @@
 	</skill>
 	<skill id="3763" levels="1" name="Majestic Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="60" />
 			<mul order="0x30" stat="regMp" val="1.02" />
@@ -668,8 +668,8 @@
 	</skill>
 	<skill id="3765" levels="1" name="Gauntlet of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -678,8 +678,8 @@
 	</skill>
 	<skill id="3766" levels="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -688,8 +688,8 @@
 	</skill>
 	<skill id="3767" levels="1" name="Helm of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125" />
 			<sub order="0x40" stat="sleepVuln" val="17.5" />
@@ -710,8 +710,8 @@
 	</skill>
 	<skill id="3769" levels="1" name="Gauntlet of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -720,8 +720,8 @@
 	</skill>
 	<skill id="3770" levels="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<sub order="0x40" stat="sleepVuln" val="11.66" />
@@ -730,8 +730,8 @@
 	</skill>
 	<skill id="3771" levels="1" name="Gauntlet of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
@@ -753,8 +753,8 @@
 	</skill>
 	<skill id="3773" levels="1" name="Boots of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
@@ -764,16 +764,16 @@
 	</skill>
 	<skill id="3774" levels="1" name="Shield of Nightmare">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
 	</skill>
 	<skill id="3775" levels="1" name="Draconic Leather Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -783,8 +783,8 @@
 	</skill>
 	<skill id="3776" levels="1" name="Draconic Leather Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -806,8 +806,8 @@
 	</skill>
 	<skill id="3778" levels="1" name="Draconic Leather Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -817,8 +817,8 @@
 	</skill>
 	<skill id="3779" levels="1" name="Major Arcana Gloves">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -842,8 +842,8 @@
 	</skill>
 	<skill id="3781" levels="1" name="Major Arcana Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0041" />
 			<add order="0x40" stat="runSpd" val="1.16" />
@@ -854,8 +854,8 @@
 	</skill>
 	<skill id="3782" levels="1" name="Major Arcana Circlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0062" />
 			<add order="0x40" stat="runSpd" val="1.175" />
@@ -902,16 +902,16 @@
 	</skill>
 	<skill id="3786" levels="1" name="Imperial Crusader Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
 	</skill>
 	<skill id="3787" levels="1" name="Imperial Crusader Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="111" />
@@ -944,8 +944,8 @@
 	</skill>
 	<skill id="3790" levels="1" name="Dynasty Gaiters">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
 			<add order="0x40" stat="maxHp" val="205" />
@@ -954,8 +954,8 @@
 	</skill>
 	<skill id="3791" levels="1" name="Dynasty Gauntlet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="82" />
@@ -964,8 +964,8 @@
 	</skill>
 	<skill id="3792" levels="1" name="Dynasty Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="82" />
@@ -974,16 +974,16 @@
 	</skill>
 	<skill id="3793" levels="1" name="Dynasty Shield">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
 		</for>
 	</skill>
 	<skill id="3794" levels="1" name="Dynasty Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="123" />
@@ -1005,8 +1005,8 @@
 	</skill>
 	<skill id="3796" levels="1" name="Dynasty Leather Leggings">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.79" />
 			<add order="0x40" stat="rEvas" val="0.79" />
@@ -1017,8 +1017,8 @@
 	</skill>
 	<skill id="3797" levels="1" name="Dynasty Leather Boots">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.31" />
 			<add order="0x40" stat="rEvas" val="0.31" />
@@ -1029,8 +1029,8 @@
 	</skill>
 	<skill id="3798" levels="1" name="Dynasty Leather Helmet">
 		<!-- Confirmed CT2.5 -->
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="0.47" />
 			<add order="0x40" stat="rEvas" val="0.47" />

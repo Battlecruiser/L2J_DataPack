@@ -63,11 +63,7 @@ public class HealOverTime extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getEffected().isDead())
-		{
-			return false;
-		}
-		else if (getEffected().isDoor())
+		if (getEffected().isDead() || getEffected().isDoor())
 		{
 			return false;
 		}

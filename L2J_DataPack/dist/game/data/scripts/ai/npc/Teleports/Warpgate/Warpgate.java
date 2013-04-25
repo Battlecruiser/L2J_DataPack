@@ -22,6 +22,7 @@ import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
 import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.PcCondOverride;
@@ -56,6 +57,11 @@ public class Warpgate extends AbstractNpcAI
 		if (player.isFlying())
 		{
 			return false;
+		}
+		
+		if (Config.HELLBOUND_WITHOUT_QUEST)
+		{
+			return true;
 		}
 		
 		QuestState st;

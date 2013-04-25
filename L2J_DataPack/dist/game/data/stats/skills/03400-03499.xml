@@ -10,22 +10,22 @@
 		</for>
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="9" /> <!-- Fear Resistance +9 -->
 		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="4" /> <!-- Fear Resistance +4 -->
 		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="derangementVuln" val="6" /> <!-- Fear Resistance +6 -->
 		</for>
@@ -33,6 +33,7 @@
 	<skill id="3404" levels="1" name="Mystery Effect">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="big_head" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -67,13 +68,14 @@
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
 		<!-- Confirmed CT2.5 -->
+		<!-- set name="avoidAggro" val="100" / -->
 		<set name="abnormalLvl" val="0" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="stealth" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<!-- set name="avoidAggro" val="100" / -->
 		<set name="magicLvl" val="1" />
-		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -84,8 +86,8 @@
 	</skill>
 	<skill id="3408" levels="1" name="Blessed Ring of Escape">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="hitTime" val="200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
@@ -99,11 +101,11 @@
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
 		<!-- Confirmed CT2.5 -->
-		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="300000" />
@@ -112,6 +114,7 @@
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -129,9 +132,9 @@
 		</for>
 	</skill>
 	<skill id="3411" levels="1" name="Special Ability: Focus">
-		<set name="targetType" val="SELF" />
-		<set name="operateType" val="P" />
 		<set name="magicLvl" val="80" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="rCrit" val="109.2" />
 			<mul order="0x30" stat="maxHp" val="1.1" />
@@ -216,11 +219,12 @@
 	</skill>
 	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="transform" />
-		<set name="targetType" val="SELF" />
-		<set name="skillType" val="BUFF" />
-		<set name="reuseDelay" val="600000" />
 		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
 		<set name="transformId" val="104" />
 		<cond msgId="1509">
 			<player olympiad="false" />
@@ -230,9 +234,9 @@
 		</for>
 	</skill>
 	<skill id="3419" levels="1" name="Magic Immunity">
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="P" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3420" levels="1" name="Dynasty Leather Armor - Summoner">
 		<!-- Confirmed CT2.5 -->
@@ -250,15 +254,15 @@
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="targetType" val="NONE" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="operateType" val="A1" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3423" levels="1" name="Little Angel Agathion - Summon (or Release)">
 		<!-- Confirmed CT2.5 -->
@@ -326,6 +330,7 @@
 	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -360,6 +365,7 @@
 	<skill id="3430" levels="1" name="White Talisman - Darkness">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -380,6 +386,7 @@
 	<skill id="3431" levels="1" name="White Talisman - Storm">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -400,6 +407,7 @@
 	<skill id="3432" levels="1" name="White Talisman - Water">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -420,6 +428,7 @@
 	<skill id="3433" levels="1" name="White Talisman - Fire">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -440,6 +449,7 @@
 	<skill id="3434" levels="1" name="White Talisman - Earth">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -460,6 +470,7 @@
 	<skill id="3435" levels="1" name="White Talisman - Light">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -479,22 +490,23 @@
 	</skill>
 	<skill id="3436" levels="1" name="Blue Talisman - Self destruction">
 		<!-- Confirmed CT2.5 -->
-		<set name="affectLimit" val="6-12" />
 		<!-- set name="affectLimit = "6;12" / -->
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="200" />
 		<set name="hitTime" val="3000" />
 		<set name="hpConsume" val="800" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
-		<set name="affectRange" val="200" />
 		<set name="skillType" val="MDAM" />
-		<set name="offensive" val="true" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="3437" levels="1" name="Blue Talisman - Magic Explosive Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -516,6 +528,7 @@
 	<skill id="3438" levels="1" name="Blue Talisman - Great Healing">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
@@ -529,365 +542,365 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
-				<add order="0x40" stat="bonusHp" val="1000" />
+				<add order="0x40" stat="healEffect" val="1000" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="3439" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="118" />
 		</for>
 	</skill>
 	<skill id="3440" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="51" />
 		</for>
 	</skill>
 	<skill id="3441" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="354" />
 		</for>
 	</skill>
 	<skill id="3442" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="59" />
 			<add order="0x40" stat="maxMp" val="26" />
 		</for>
 	</skill>
 	<skill id="3443" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="59" />
 			<add order="0x40" stat="maxCp" val="117" />
 		</for>
 	</skill>
 	<skill id="3444" levels="1" name="Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="26" />
 			<add order="0x40" stat="maxCp" val="117" />
 		</for>
 	</skill>
 	<skill id="3445" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="147" />
 		</for>
 	</skill>
 	<skill id="3446" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="72" />
 		</for>
 	</skill>
 	<skill id="3447" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="441" />
 		</for>
 	</skill>
 	<skill id="3448" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="74" />
 			<add order="0x40" stat="maxMp" val="36" />
 		</for>
 	</skill>
 	<skill id="3449" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="74" />
 			<add order="0x40" stat="maxCp" val="222" />
 		</for>
 	</skill>
 	<skill id="3450" levels="1" name="Thin Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="36" />
 			<add order="0x40" stat="maxCp" val="222" />
 		</for>
 	</skill>
 	<skill id="3451" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="172" />
 		</for>
 	</skill>
 	<skill id="3452" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="85" />
 		</for>
 	</skill>
 	<skill id="3453" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="516" />
 		</for>
 	</skill>
 	<skill id="3454" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="86" />
 			<add order="0x40" stat="maxMp" val="43" />
 		</for>
 	</skill>
 	<skill id="3455" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="86" />
 			<add order="0x40" stat="maxCp" val="258" />
 		</for>
 	</skill>
 	<skill id="3456" levels="1" name="Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="43" />
 			<add order="0x40" stat="maxCp" val="258" />
 		</for>
 	</skill>
 	<skill id="3457" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="224" />
 		</for>
 	</skill>
 	<skill id="3458" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="111" />
 		</for>
 	</skill>
 	<skill id="3459" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="672" />
 		</for>
 	</skill>
 	<skill id="3460" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="112" />
 			<add order="0x40" stat="maxMp" val="56" />
 		</for>
 	</skill>
 	<skill id="3461" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="112" />
 			<add order="0x40" stat="maxCp" val="336" />
 		</for>
 	</skill>
 	<skill id="3462" levels="1" name="Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="56" />
 			<add order="0x40" stat="maxCp" val="336" />
 		</for>
 	</skill>
 	<skill id="3463" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="135" />
 		</for>
 	</skill>
 	<skill id="3464" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="66" />
 		</for>
 	</skill>
 	<skill id="3465" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="405" />
 		</for>
 	</skill>
 	<skill id="3466" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="68" />
 			<add order="0x40" stat="maxMp" val="33" />
 		</for>
 	</skill>
 	<skill id="3467" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="68" />
 			<add order="0x40" stat="maxCp" val="203" />
 		</for>
 	</skill>
 	<skill id="3468" levels="1" name="Striped Silk Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="33" />
 			<add order="0x40" stat="maxCp" val="203" />
 		</for>
 	</skill>
 	<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="160" />
 		</for>
 	</skill>
 	<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="78" />
 		</for>
 	</skill>
 	<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="480" />
 		</for>
 	</skill>
 	<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="80" />
 			<add order="0x40" stat="maxMp" val="39" />
 		</for>
 	</skill>
 	<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="80" />
 			<add order="0x40" stat="maxCp" val="240" />
 		</for>
 	</skill>
 	<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="39" />
 			<add order="0x40" stat="maxCp" val="240" />
 		</for>
 	</skill>
 	<skill id="3475" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="186" />
 		</for>
 	</skill>
 	<skill id="3476" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="92" />
 		</for>
 	</skill>
 	<skill id="3477" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="564" />
 		</for>
 	</skill>
 	<skill id="3478" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="93" />
 			<add order="0x40" stat="maxMp" val="46" />
 		</for>
 	</skill>
 	<skill id="3479" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="93" />
 			<add order="0x40" stat="maxCp" val="282" />
 		</for>
 	</skill>
 	<skill id="3480" levels="1" name="Striped Scale Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="46" />
 			<add order="0x40" stat="maxCp" val="282" />
 		</for>
 	</skill>
 	<skill id="3481" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="246" />
 		</for>
 	</skill>
 	<skill id="3482" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="122" />
 		</for>
 	</skill>
 	<skill id="3483" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxCp" val="744" />
 		</for>
 	</skill>
 	<skill id="3484" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="123" />
 			<add order="0x40" stat="maxMp" val="61" />
 		</for>
 	</skill>
 	<skill id="3485" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxHp" val="123" />
 			<add order="0x40" stat="maxCp" val="372" />
 		</for>
 	</skill>
 	<skill id="3486" levels="1" name="Striped Mithril Shirt">
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="maxMp" val="61" />
 			<add order="0x40" stat="maxCp" val="372" />
@@ -896,6 +909,7 @@
 	<skill id="3487" levels="1" name="Blue Talisman of Power">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -916,6 +930,7 @@
 	<skill id="3488" levels="1" name="Blue Talisman of Protection">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="talisman" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
@@ -993,7 +1008,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bonusHp" val="8" />
+			<add order="0x40" stat="healEffect" val="8" />
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
@@ -1024,8 +1039,8 @@
 	<skill id="3498" levels="1" name="Special Ability: Light">
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="46" />
-		<set name="targetType" val="SELF" />
 		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="weightLimit" val="1.2" />
 		</for>

@@ -18,9 +18,8 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -39,7 +38,7 @@ public class PartyNotMe implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		if (onlyFirst)
 		{
 			return new L2Character[]
@@ -80,11 +79,6 @@ public class PartyNotMe implements ITargetTypeHandler
 				}
 				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
 				{
-					if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
-					{
-						break;
-					}
-					
 					targetList.add(partyMember);
 					
 					if ((partyMember.getSummon() != null) && !partyMember.getSummon().isDead())

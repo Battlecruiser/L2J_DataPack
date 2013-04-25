@@ -53,20 +53,22 @@ public class ManaHeal extends L2Effect
 			return false;
 		}
 		
-		StatusUpdate su = new StatusUpdate(target);
-		
 		double amount = calc();
 		
 		if (!getSkill().isStatic())
 		{
-			amount = target.calcStat(Stats.RECHARGE_MP_RATE, amount, null, null);
+			amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
 		}
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableMp() - target.getCurrentMp()), 0);
-		
-		target.setCurrentMp(amount + target.getCurrentMp());
-		
+		if (amount != 0)
+		{
+			target.setCurrentMp(amount + target.getCurrentMp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
+			target.sendPacket(su);
+		}
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
 		{
@@ -79,8 +81,6 @@ public class ManaHeal extends L2Effect
 		}
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		su.addAttribute(StatusUpdate.CUR_MP, (int) target.getCurrentMp());
-		target.sendPacket(su);
 		return true;
 	}
 	

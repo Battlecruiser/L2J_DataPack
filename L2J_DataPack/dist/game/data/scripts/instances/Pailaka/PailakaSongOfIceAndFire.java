@@ -38,8 +38,6 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class PailakaSongOfIceAndFire extends Quest
 {
-	private static final String qn = "128_PailakaSongOfIceAndFire";
-	
 	private static final int MIN_LEVEL = 36;
 	private static final int MAX_LEVEL = 42;
 	private static final int EXIT_TIME = 5;
@@ -56,13 +54,6 @@ public class PailakaSongOfIceAndFire extends Quest
 	private static final int ADLER2 = 32510;
 	private static final int SINAI = 32500;
 	private static final int INSPECTOR = 32507;
-	private static final int[] NPCS =
-	{
-		ADLER1,
-		ADLER2,
-		SINAI,
-		INSPECTOR
-	};
 	
 	private static final int HILLAS = 18610;
 	private static final int PAPION = 18609;
@@ -271,7 +262,7 @@ public class PailakaSongOfIceAndFire extends Quest
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -348,7 +339,7 @@ public class PailakaSongOfIceAndFire extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(qn);
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return getNoQuestMsg(player);
@@ -430,14 +421,13 @@ public class PailakaSongOfIceAndFire extends Quest
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		QuestState st = player.getQuestState(qn);
-		if ((st != null) && !st.isStarted())
+		final QuestState st = player.getQuestState(getName());
+		if ((st != null) && st.isStarted())
 		{
-			final int cond = st.getCond();
 			switch (npc.getNpcId())
 			{
 				case HILLAS:
-					if (cond == 2)
+					if (st.isCond(2))
 					{
 						st.setCond(3);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -448,7 +438,7 @@ public class PailakaSongOfIceAndFire extends Quest
 					addSpawn(PAPION, -53903, 181484, -4555, 30456, false, 0, false, npc.getInstanceId());
 					break;
 				case PAPION:
-					if (cond == 4)
+					if (st.isCond(4))
 					{
 						st.setCond(5);
 						takeItems(player, BOOK3, -1);
@@ -458,7 +448,7 @@ public class PailakaSongOfIceAndFire extends Quest
 					addSpawn(KINSUS, -61415, 181418, -4818, 63852, false, 0, false, npc.getInstanceId());
 					break;
 				case KINSUS:
-					if (cond == 5)
+					if (st.isCond(5))
 					{
 						st.setCond(6);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -469,7 +459,7 @@ public class PailakaSongOfIceAndFire extends Quest
 					addSpawn(GARGOS, -61354, 183624, -4821, 63613, false, 0, false, npc.getInstanceId());
 					break;
 				case GARGOS:
-					if (cond == 7)
+					if (st.isCond(7))
 					{
 						st.setCond(8);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -479,7 +469,7 @@ public class PailakaSongOfIceAndFire extends Quest
 					addSpawn(ADIANTUM, -53297, 185027, -4617, 1512, false, 0, false, npc.getInstanceId());
 					break;
 				case ADIANTUM:
-					if (cond == 8)
+					if (st.isCond(8))
 					{
 						st.setCond(9);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
@@ -541,15 +531,12 @@ public class PailakaSongOfIceAndFire extends Quest
 		}
 	}
 	
-	public PailakaSongOfIceAndFire()
+	private PailakaSongOfIceAndFire()
 	{
-		super(128, qn, "Pailaka - Song of Ice and Fire");
+		super(128, "128_PailakaSongOfIceAndFire", "Pailaka - Song of Ice and Fire");
 		addStartNpc(ADLER1);
-		for (int npcId : NPCS)
-		{
-			addFirstTalkId(npcId);
-			addTalkId(npcId);
-		}
+		addFirstTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
+		addTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
 		addAttackId(BOTTLE, BRAZIER);
 		addKillId(MONSTERS);
 		addExitZoneId(ZONE);

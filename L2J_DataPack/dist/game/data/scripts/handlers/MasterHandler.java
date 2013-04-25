@@ -157,7 +157,6 @@ import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
 import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
-import handlers.bypasshandlers.TerritoryWar;
 import handlers.bypasshandlers.VoiceCommand;
 import handlers.bypasshandlers.Wear;
 import handlers.chathandlers.ChatAll;
@@ -210,7 +209,6 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Blow;
-import handlers.skillhandlers.Charge;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.CpDamPercent;
 import handlers.skillhandlers.Craft;
@@ -223,10 +221,7 @@ import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveVitality;
-import handlers.skillhandlers.Heal;
-import handlers.skillhandlers.HealPercent;
 import handlers.skillhandlers.InstantJump;
-import handlers.skillhandlers.ManaHealByLevel;
 import handlers.skillhandlers.Manadam;
 import handlers.skillhandlers.Mdam;
 import handlers.skillhandlers.NornilsPower;
@@ -234,7 +229,6 @@ import handlers.skillhandlers.Pdam;
 import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
-import handlers.skillhandlers.Soul;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.StealBuffs;
 import handlers.skillhandlers.StrSiegeAssault;
@@ -244,7 +238,6 @@ import handlers.skillhandlers.TakeFort;
 import handlers.skillhandlers.TransformDispel;
 import handlers.skillhandlers.Trap;
 import handlers.skillhandlers.Unlock;
-import handlers.targethandlers.Ally;
 import handlers.targethandlers.Area;
 import handlers.targethandlers.AreaCorpseMob;
 import handlers.targethandlers.AreaFriendly;
@@ -255,7 +248,6 @@ import handlers.targethandlers.BehindArea;
 import handlers.targethandlers.BehindAura;
 import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
-import handlers.targethandlers.CorpseAlly;
 import handlers.targethandlers.CorpseClan;
 import handlers.targethandlers.CorpseMob;
 import handlers.targethandlers.CorpsePet;
@@ -467,7 +459,6 @@ public class MasterHandler
 			SupportBlessing.class,
 			SupportMagic.class,
 			TerritoryStatus.class,
-			TerritoryWar.class,
 			VoiceCommand.class,
 			Wear.class,
 		},
@@ -526,43 +517,38 @@ public class MasterHandler
 		},
 		{
 			// Skill Handlers
-			Blow.class,
-			Pdam.class,
-			Mdam.class,
-			Charge.class,
-			CpDamPercent.class,
-			Manadam.class,
-			Heal.class,
-			HealPercent.class,
-			Continuous.class,
-			Detection.class,
-			Resurrect.class,
-			ShiftTarget.class,
-			StrSiegeAssault.class,
-			SummonFriend.class,
-			Disablers.class,
-			StealBuffs.class,
 			BallistaBomb.class,
-			TakeCastle.class,
-			TakeFort.class,
-			Unlock.class,
+			BeastSkills.class,
+			Blow.class,
+			Continuous.class,
+			CpDamPercent.class,
 			Craft.class,
+			DeluxeKey.class,
+			Detection.class,
+			Disablers.class,
+			Dummy.class,
 			Fishing.class,
 			FishingSkill.class,
-			BeastSkills.class,
-			DeluxeKey.class,
-			Sow.class,
-			Soul.class,
 			GetPlayer.class,
-			TransformDispel.class,
-			Trap.class,
 			GiveReco.class,
 			GiveVitality.class,
 			InstantJump.class,
-			Dummy.class,
-			RefuelAirShip.class,
+			Manadam.class,
+			Mdam.class,
 			NornilsPower.class,
-			ManaHealByLevel.class,
+			Pdam.class,
+			RefuelAirShip.class,
+			Resurrect.class,
+			ShiftTarget.class,
+			Sow.class,
+			StealBuffs.class,
+			StrSiegeAssault.class,
+			SummonFriend.class,
+			TakeCastle.class,
+			TakeFort.class,
+			TransformDispel.class,
+			Trap.class,
+			Unlock.class,
 		},
 		{
 			// User Command Handlers
@@ -598,7 +584,6 @@ public class MasterHandler
 		},
 		{
 			// Target Handlers
-			Ally.class,
 			Area.class,
 			AreaCorpseMob.class,
 			AreaFriendly.class,
@@ -609,7 +594,6 @@ public class MasterHandler
 			BehindAura.class,
 			Clan.class,
 			ClanMember.class,
-			CorpseAlly.class,
 			CorpseClan.class,
 			CorpseMob.class,
 			CorpsePet.class,
@@ -674,12 +658,13 @@ public class MasterHandler
 			
 			for (Class<?> c : _handlers[i])
 			{
+				if (c == null)
+				{
+					continue; // Disabled handler
+				}
+				
 				try
 				{
-					if (c == null)
-					{
-						continue; // Disabled handler
-					}
 					// Don't wtf some classes extending another like ItemHandler, Elixir, etc.. and we need to find where the hell is interface xD
 					interfaces = c.getInterfaces().length > 0 ? // Standardly handler has implementation
 					c.getInterfaces() : c.getSuperclass().getInterfaces().length > 0 ? // No? then it extends another handler like (ItemSkills->ItemSkillsTemplate)
@@ -696,7 +681,7 @@ public class MasterHandler
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Failed loading handler" + ((c == null) ? "!" : ":" + c.getSimpleName()), e);
+					_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
 					continue;
 				}
 			}

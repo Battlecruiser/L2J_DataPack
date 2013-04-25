@@ -30,7 +30,7 @@ import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 
 /**
- * Castle Teleporter AI
+ * Castle Teleporter AI.
  * @author malyelfik
  */
 public class CastleTeleporter extends AbstractNpcAI

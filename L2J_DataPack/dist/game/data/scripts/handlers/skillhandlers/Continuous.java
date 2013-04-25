@@ -191,7 +191,7 @@ public class Continuous implements ISkillHandler
 				activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 			}
 			
-			// Possibility of a lethal strike
+			// Possibility of a lethal strike (Banish Undead, Banish Seraph, Turn Undead)
 			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		

@@ -17,4 +17,5 @@ ALTER TABLE `custom_npcaidata` CHANGE `clan_range` `clanRange` smallint(4) unsig
 ALTER TABLE `custom_npcaidata` MODIFY `enemyRange` smallint(4) unsigned DEFAULT '0' AFTER `enemyClan`;
 ALTER TABLE `custom_npcaidata` MODIFY `dodge` tinyint(3) unsigned DEFAULT '0';
 ALTER TABLE `custom_npcaidata` CHANGE `ai_type` `aiType` varchar(8) NOT NULL DEFAULT 'fighter';
-ALTER TABLE `custom_npcaidata` DROP PRIMARY KEY, ADD PRIMARY KEY (`npcId`);
+ALTER TABLE `custom_npcaidata` DROP PRIMARY KEY; 
+ALTER TABLE `custom_npcaidata` ADD PRIMARY KEY (`npcId`);

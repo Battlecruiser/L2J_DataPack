@@ -18,9 +18,8 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
@@ -40,7 +39,7 @@ public class CorpseMob implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		final boolean isSummon = target.isServitor();
 		if (!(isSummon || target.isL2Attackable()) || !target.isDead())
 		{

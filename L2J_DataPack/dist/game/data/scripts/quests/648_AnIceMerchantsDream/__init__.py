@@ -73,7 +73,7 @@ class Quest (JQuest) :
              st.exitQuest(1)
        elif cond == 1:
           if silver or black :
-             st2 = player.getQuestState("115_TheOtherSideOfTruth")
+             st2 = player.getQuestState("Q00115_TheOtherSideOfTruth")
              htmltext = "32020-05.htm"
              if st2 :
                 if st2.getState() == State.COMPLETED :

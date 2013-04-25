@@ -18,10 +18,9 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -40,7 +39,7 @@ public class Area implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isL2Attackable() || target.isPlayable())))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
@@ -49,7 +48,6 @@ public class Area implements ITargetTypeHandler
 		
 		final L2Character origin;
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		final int radius = skill.getAffectRange();
 		
 		if (skill.getCastRange() >= 0)
 		{
@@ -74,6 +72,7 @@ public class Area implements ITargetTypeHandler
 			origin = activeChar;
 		}
 		
+		int maxTargets = skill.getAffectLimit();
 		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
 		for (L2Character obj : objs)
 		{
@@ -87,14 +86,14 @@ public class Area implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (Util.checkIfInRange(radius, origin, obj, true))
+			if (Util.checkIfInRange(skill.getAffectRange(), origin, obj, true))
 			{
 				if (!L2Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 				{
 					continue;
 				}
 				
-				if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+				if (targetList.size() >= maxTargets)
 				{
 					break;
 				}

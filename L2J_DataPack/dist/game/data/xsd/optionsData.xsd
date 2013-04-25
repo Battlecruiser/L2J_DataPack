@@ -8,13 +8,14 @@
 						<xs:sequence maxOccurs="1" minOccurs="1">
 							<xs:element name="for" minOccurs="0" maxOccurs="1">
 								<xs:complexType>
-									<xs:sequence maxOccurs="1" minOccurs="1">
-										<xs:element name="add" maxOccurs="unbounded" minOccurs="1">
+									<xs:sequence maxOccurs="unbounded" minOccurs="1">
+										<xs:element name="add" maxOccurs="unbounded" minOccurs="0">
 											<xs:complexType>
 												<xs:attribute name="order" use="required">
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
-															<xs:enumeration value="0x40" />
+															<xs:enumeration value="0x10" />
+															<xs:enumeration value="0x40"></xs:enumeration>
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
@@ -22,6 +23,7 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:token">
 															<xs:enumeration value="accCombat" />
+															<xs:enumeration value="cAtkAdd" />
 															<xs:enumeration value="CON" />
 															<xs:enumeration value="darkRes" />
 															<xs:enumeration value="DEX" />
@@ -33,15 +35,18 @@
 															<xs:enumeration value="maxCp" />
 															<xs:enumeration value="maxHp" />
 															<xs:enumeration value="maxMp" />
+															<xs:enumeration value="mCritRate" />
 															<xs:enumeration value="mDef" />
 															<xs:enumeration value="MEN" />
 															<xs:enumeration value="pAtk" />
 															<xs:enumeration value="pDef" />
+															<xs:enumeration value="physicalSkillPower" />
 															<xs:enumeration value="rCrit" />
 															<xs:enumeration value="regCp" />
 															<xs:enumeration value="regHp" />
 															<xs:enumeration value="regMp" />
 															<xs:enumeration value="rEvas" />
+															<xs:enumeration value="runSpd" />
 															<xs:enumeration value="STR" />
 															<xs:enumeration value="waterRes" />
 															<xs:enumeration value="windRes" />
@@ -50,6 +55,25 @@
 													</xs:simpleType>
 												</xs:attribute>
 												<xs:attribute type="xs:decimal" name="val" use="required" />
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="mul" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute name="order" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="0x30" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="stat" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="MpConsume" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="val" type="xs:decimal" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

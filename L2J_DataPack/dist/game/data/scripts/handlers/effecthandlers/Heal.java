@@ -67,16 +67,8 @@ public class Heal extends L2Effect
 		if (((sps || bss) && (activeChar.isPlayer() && activeChar.getActingPlayer().isMageClass())) || activeChar.isSummon())
 		{
 			staticShotBonus = getSkill().getMpConsume(); // static bonus for spiritshots
-			
-			if (bss)
-			{
-				mAtkMul = 4;
-				staticShotBonus *= 2.4; // static bonus for blessed spiritshots
-			}
-			else
-			{
-				mAtkMul = 2;
-			}
+			mAtkMul = bss ? 4 : 2;
+			staticShotBonus *= bss ? 2.4 : 1.0;
 		}
 		else if ((sps || bss) && activeChar.isNpc())
 		{
@@ -90,35 +82,16 @@ public class Heal extends L2Effect
 			final L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance();
 			if (weaponInst != null)
 			{
-				switch (weaponInst.getItem().getItemGrade())
-				{
-					case L2Item.CRYSTAL_S84:
-						mAtkMul = 4;
-						break;
-					case L2Item.CRYSTAL_S80:
-						mAtkMul = 2;
-						break;
-				}
+				mAtkMul = weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S84 ? 4 : weaponInst.getItem().getItemGrade() == L2Item.CRYSTAL_S80 ? 2 : 1;
 			}
 			// shot dynamic bonus
-			if (bss)
-			{
-				mAtkMul *= 4; // 16x/8x/4x s84/s80/other
-			}
-			else
-			{
-				mAtkMul += 1; // 5x/3x/1x s84/s80/other
-			}
+			mAtkMul = bss ? mAtkMul * 4 : mAtkMul + 1;
 		}
 		
 		if (!getSkill().isStatic())
 		{
 			amount += staticShotBonus + Math.sqrt(mAtkMul * activeChar.getMAtk(activeChar, null));
-			amount *= target.calcStat(Stats.HEAL_EFFECTIVNESS, 100, null, null) / 100;
-			// Healer proficiency (since CT1)
-			amount *= activeChar.calcStat(Stats.HEAL_PROFICIENCY, 100, null, null) / 100;
-			// Extra bonus (since CT1.5)
-			amount += target.calcStat(Stats.HEAL_STATIC_BONUS, 0, null, null);
+			amount = target.calcStat(Stats.HEAL_EFFECT, amount, null, null);
 			// Heal critic, since CT2.3 Gracia Final
 			if (getSkill().isMagic() && Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill())))
 			{
@@ -128,18 +101,19 @@ public class Heal extends L2Effect
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableHp() - target.getCurrentHp()), 0);
-		
-		target.setCurrentHp(amount + target.getCurrentHp());
-		StatusUpdate su = new StatusUpdate(target);
-		su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-		target.sendPacket(su);
+		if (amount != 0)
+		{
+			target.setCurrentHp(amount + target.getCurrentHp());
+			StatusUpdate su = new StatusUpdate(target);
+			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
+			target.sendPacket(su);
+		}
 		
 		if (target.isPlayer())
 		{
 			if (getSkill().getId() == 4051)
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REJUVENATING_HP);
-				target.sendPacket(sm);
+				target.sendPacket(SystemMessageId.REJUVENATING_HP);
 			}
 			else
 			{

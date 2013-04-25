@@ -18,10 +18,9 @@
  */
 package handlers.targethandlers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
@@ -39,7 +38,7 @@ public class AreaSummon implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new FastList<>();
+		List<L2Character> targetList = new ArrayList<>();
 		target = activeChar.getSummon();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
@@ -56,7 +55,7 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		final Collection<L2Character> objs = target.getKnownList().getKnownCharacters();
-		final int radius = skill.getAffectRange();
+		int maxTargets = skill.getAffectLimit();
 		
 		for (L2Character obj : objs)
 		{
@@ -65,7 +64,7 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if (!Util.checkIfInRange(radius, target, obj, true))
+			if (!Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
 			{
 				continue;
 			}
@@ -80,7 +79,7 @@ public class AreaSummon implements ITargetTypeHandler
 				continue;
 			}
 			
-			if ((skill.getMaxTargets() > -1) && (targetList.size() >= skill.getMaxTargets()))
+			if (targetList.size() >= maxTargets)
 			{
 				break;
 			}
