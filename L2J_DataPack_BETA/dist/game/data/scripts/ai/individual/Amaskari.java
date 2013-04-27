@@ -129,7 +129,7 @@ public class Amaskari extends AbstractNpcAI
 			{
 				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[1]));
 				final L2Effect e = master.getFirstEffect(BUFF_ID);
-				if ((e != null) && (e.getAbnormalLvl() == 3) && master.isInvul())
+				if ((e != null) && (e.getSkill().getAbnormalLvl() == 3) && master.isInvul())
 				{
 					master.setCurrentHp(master.getCurrentHp() + (master.getCurrentHp() / 5));
 				}
@@ -141,9 +141,9 @@ public class Amaskari extends AbstractNpcAI
 					{
 						master.doCast(BUFF[0].getSkill());
 					}
-					else if (e.getAbnormalLvl() < 3)
+					else if (e.getSkill().getAbnormalLvl() < 3)
 					{
-						master.doCast(BUFF[e.getAbnormalLvl()].getSkill());
+						master.doCast(BUFF[e.getSkill().getAbnormalLvl()].getSkill());
 					}
 					else
 					{

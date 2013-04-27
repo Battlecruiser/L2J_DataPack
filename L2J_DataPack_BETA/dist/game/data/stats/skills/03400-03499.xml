@@ -34,7 +34,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -48,7 +48,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalTime="1200" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" val="0" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
@@ -71,7 +71,7 @@
 		<!-- set name="avoidAggro" val="100" / -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="stealth" />
+		<set name="abnormalType" val="STEALTH" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -79,7 +79,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="0" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" val="0">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
@@ -115,7 +115,7 @@
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
@@ -126,7 +126,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="reflectDam" val="10" />
 			</effect>
 		</for>
@@ -220,17 +220,16 @@
 	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="104" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="104" />
 		</for>
 	</skill>
 	<skill id="3419" levels="1" name="Magic Immunity">
@@ -307,7 +306,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
+			<effect name="ChanceSkillTrigger" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
 		</for>
 	</skill>
 	<skill id="3427" levels="1" name="Special Ability: Infinity Rapier">
@@ -319,7 +318,7 @@
 			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
 			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
 			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
-			<effect name="ChanceSkillTrigger" abnormalTime="-1" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
+			<effect name="ChanceSkillTrigger" val="0" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
 			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
 			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
 			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
@@ -331,7 +330,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -343,7 +342,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pAtkSpd" val="1.1" />
 			</effect>
@@ -366,7 +365,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -378,7 +377,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="darkRes" val="50" />
 			</effect>
 		</for>
@@ -387,7 +386,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -399,7 +398,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="windRes" val="50" />
 			</effect>
 		</for>
@@ -408,7 +407,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -420,7 +419,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="waterRes" val="50" />
 			</effect>
 		</for>
@@ -429,7 +428,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -441,7 +440,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="fireRes" val="50" />
 			</effect>
 		</for>
@@ -450,7 +449,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -462,7 +461,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="earthRes" val="50" />
 			</effect>
 		</for>
@@ -471,7 +470,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -483,7 +482,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="holyRes" val="50" />
 			</effect>
 		</for>
@@ -507,7 +506,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -519,7 +518,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="mCritRate" val="4" />
 				<mul order="0x30" stat="mAtk" val="1.55" />
 			</effect>
@@ -529,7 +528,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -541,7 +540,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="healEffect" val="1000" />
 			</effect>
 		</for>
@@ -910,7 +909,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -922,7 +921,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="pAtk" val="9.4" />
 			</effect>
 		</for>
@@ -931,7 +930,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="talisman" />
+		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -943,7 +942,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="talisman">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="sDef" val="63" />
 			</effect>
 		</for>
@@ -1050,11 +1049,11 @@
 		<set name="aggroPoints" val="10" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="56" />
-		<set name="negateAbnormals" val="transform,9" />
+		<set name="negateAbnormals" val="TRANSFORM,9" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Negate" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
 </list>

@@ -4,7 +4,7 @@
 		<!-- For five minutes, the Great Spirit increases M.Atk. by 20%, M.Def. by 20% and casting speed by 20%. Decreases MP cost of skills by 5%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -12,7 +12,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -50,7 +50,7 @@
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -58,7 +58,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -70,7 +70,7 @@
 		<!-- For 30 seconds, awakens destruction instinct and increases P.Atk./Critical rate/Critical damage by 50%. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="instinct" />
+		<set name="abnormalType" val="INSTINCT" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -154,7 +154,7 @@
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -162,7 +162,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -174,7 +174,7 @@
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -182,7 +182,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -194,7 +194,7 @@
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -202,7 +202,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -214,7 +214,7 @@
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase resistance by 10% against debuff. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -222,7 +222,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -234,7 +234,7 @@
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -242,7 +242,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -254,7 +254,7 @@
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Reduce consumed MP for skill usage by 5%. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -262,7 +262,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -274,7 +274,7 @@
 		<!-- Increase max HP 20%, max MP 20%, Spd. 20% with help of a spirit for 5 minutes. Increase HP recovery bonus by 20%, MP recovery bonus by 20%. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -282,7 +282,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -295,7 +295,7 @@
 		<!-- Increase attack speed by 20%, P. Atk by 10%, P. Def. by 20% with help of a spirit for 5 minutes. Increase power of Critical Attack by 20%, Chance of Critical Attack by 20%. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -303,7 +303,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -316,7 +316,7 @@
 		<!-- Increase Casting Speed by 20%, Magic Power by 20%, Magic Def. by 20% with help of a spirit for 5 minutes. Increase power of Prominent Damage caused with damage magic by 20%, chance of Prominent Damage caused with damage magic by 2. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -324,7 +324,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.2" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -354,7 +354,7 @@
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -362,7 +362,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -375,7 +375,7 @@
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -383,7 +383,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -396,7 +396,7 @@
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -404,7 +404,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -417,7 +417,7 @@
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -425,7 +425,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -438,7 +438,7 @@
 		<!-- Increase max HP by 20%, max MP by 20%, physical Def. by 20%, magic Def. by 20% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -446,7 +446,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
@@ -459,7 +459,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 1 hour.Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -467,7 +467,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -480,7 +480,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 1 hour. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -488,7 +488,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<basemul order="0x30" stat="rCrit" val="0.1" />
@@ -501,7 +501,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 1 hour. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -509,7 +509,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.1" />
@@ -522,7 +522,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 1 hour. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -530,7 +530,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -545,7 +545,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, casting speed by 20% for 1 hour. Increases chance of prominent damage by Damage Magic by 2. Increase dark attack resistance by 20. Reuse Delay 2 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -553,7 +553,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -566,7 +566,7 @@
 		<!-- Decrease own speed by 30% and will not receive monster's preemptive attack for 2 minutes. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="stealth" />
+		<set name="abnormalType" val="STEALTH" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -574,7 +574,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth">
+			<effect name="SilentMove" abnormalVisualEffect="stealth" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -619,7 +619,7 @@
 		<!-- Increase max HP 40%, max MP 40%, max CP 40%, Physical Def. 30%, Magic Def. 30%, Spd. 30% of party members for 10 minutes. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="br_event_buf1" />
+		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -628,7 +628,7 @@
 		<set name="targetType" val="PARTY" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="br_event_buf1">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="maxCp" val="1.4" />
@@ -642,7 +642,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, attack speed by 20%, attack power by 10% for 10 minutes.Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -650,7 +650,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
@@ -663,7 +663,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, chance of critical by 10%, critical damage by 10% for 10 minutes. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -671,7 +671,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<basemul order="0x30" stat="rCrit" val="0.1" />
@@ -684,7 +684,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 10% for 10 minutes. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on the enemy. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -692,7 +692,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.1" />
@@ -705,7 +705,7 @@
 		<!-- Increase max HP by 40%, max MP by 40%, speed by 20% for 10 minutes. Reduce consumed MP for skill usage by 5%. Increase dark attack resistance by 20. Reuse Delay 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -713,7 +713,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="runSpd" val="1.2" />
@@ -728,7 +728,7 @@
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Resistance to Dark by 20. Reuse delay is 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -736,7 +736,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.4" />
 				<mul order="0x30" stat="maxMp" val="1.4" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -875,7 +875,7 @@
 		<!-- Increases Max HP by 25% for 20 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="max_hp_up" />
+		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -883,7 +883,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.25" />
 			</effect>
 		</for>
@@ -892,7 +892,7 @@
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse Delay 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="max_mp_up" />
+		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -900,7 +900,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="26" abnormalType="max_hp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxMp" val="1.25" />
 			</effect>
 		</for>
@@ -909,7 +909,7 @@
 		<!-- For 5 minutes, receives the soul's help to raise Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical attack power by 20% and Critical attack rate by 20%. Reuse delay is 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -917,7 +917,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />
 				<mul order="0x30" stat="pDef" val="1.3" />
@@ -930,7 +930,7 @@
 		<!-- For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Raises Prominent Damage power via damage magic by 20% and the chance of Prominent Damage occurring via damage magic by 2. Reuse delay is 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -938,7 +938,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="26" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtk" val="1.1" />
 				<mul order="0x30" stat="mDef" val="1.2" />
@@ -1093,21 +1093,20 @@
 	<skill id="21169" levels="1" name="Transform Kadomas">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="20000" />
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="20000" />
 		</for>
 	</skill>
 	<skill id="21170" levels="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Reuse delay is 1 hours. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="max_mp_up" />
+		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -1115,7 +1114,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="26" abnormalType="max_mp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxMp" val="1.25" />
 			</effect>
 		</for>
@@ -1124,25 +1123,24 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="20001" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="20001" />
 		</for>
 	</skill>
 	<skill id="21172" levels="1" name="Enhanced Authority - CON+1 STR+1">
 		<!-- Enhanced authority grants CON+1 / STR+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="br_event_buf10" />
+		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1153,7 +1151,7 @@
 		<!-- Enhanced authority grants WIT+1 / INT+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="br_event_buf10" />
+		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1164,7 +1162,7 @@
 		<!-- Enhanced authority grants WIT+1 / MEN+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="br_event_buf10" />
+		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1175,7 +1173,7 @@
 		<!-- Enhanced authority grants CON+1 / DEX+1 for 2 minutes. Consumes 240 energy. Reuse delay 3 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="br_event_buf10" />
+		<set name="abnormalType" val="BR_EVENT_BUF10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="180000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1270,7 +1268,7 @@
 		<!-- Physical/Magic P. Def is increased by 60% for 10 seconds. Consumed 500 energy. Cooldown takes 20 minutes. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pd_up_special" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1292,7 +1290,7 @@
 	<skill id="21192" levels="1" name="Silent Move">
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="stealth" />
+		<set name="abnormalType" val="STEALTH" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1301,7 +1299,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalTime="120" val="0" abnormalLvl="26" abnormalType="stealth" abnormalVisualEffect="stealth">
+			<effect name="SilentMove" val="0" abnormalVisualEffect="stealth">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
@@ -1310,7 +1308,7 @@
 		<!-- Increases Critical attack power by 35% for 10 minutes. Cooldown takes 1 hour. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1334,7 +1332,7 @@
 		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1348,7 +1346,7 @@
 		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers energy upon acquiring Exp. points. Reuse delay is 4 hours. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
@@ -1370,7 +1368,7 @@
 		<!-- Through the power of loyalty, raises party members' physical P. Def., M. Def. by 30%, physical P. Atk. by 20%, M. Atk. by 45%, and moving speed by 30 for 5 minutes. Reuse delay 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
@@ -1382,7 +1380,7 @@
 		<!-- Recovers all energy with the power of courage, and maintains the energy stage for 5 minutes. Reuse delay 30 minutes. When you use the skill, 1 Proof of a Warrior is consumed. -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vp_keep" />
+		<set name="abnormalType" val="VP_KEEP" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />

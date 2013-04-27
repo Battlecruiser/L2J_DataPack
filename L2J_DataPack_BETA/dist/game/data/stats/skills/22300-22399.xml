@@ -84,7 +84,7 @@
 		<set name="stayOnSubclassChange" val="false" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="14400" val="0" abnormalLvl="1" abnormalType="vp_up">
+			<effect name="Buff" val="0">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>

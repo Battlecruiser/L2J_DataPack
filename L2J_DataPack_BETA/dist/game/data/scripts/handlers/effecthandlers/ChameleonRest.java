@@ -55,12 +55,6 @@ public class ChameleonRest extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
-	{
-		super.onExit();
-	}
-	
-	@Override
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead())

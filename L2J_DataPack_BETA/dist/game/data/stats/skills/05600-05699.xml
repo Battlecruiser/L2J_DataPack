@@ -40,7 +40,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="transform_scrifice_p" />
+		<set name="abnormalType" val="TRANSFORM_SCRIFICE_P" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
@@ -50,7 +50,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="10" abnormalType="transform_scrifice_p">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="maxRecoverableHp" val="0.1" />
 			</effect>
 			<effect name="HealPercent" noicon="1" val="-99" />
@@ -60,7 +60,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="weapon_mastery" />
+		<set name="abnormalType" val="WEAPON_MASTERY" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
@@ -68,7 +68,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="weapon_mastery">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.4" />
 				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
@@ -78,7 +78,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="weapon_mastery" />
+		<set name="abnormalType" val="WEAPON_MASTERY" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
@@ -86,7 +86,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="weapon_mastery">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.4" />
 				<add order="0x40" stat="stunProf" val="20" />
 			</effect>
@@ -99,7 +99,7 @@
 		<table name="#rCrit"> 0 30 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="apella" />
+		<set name="abnormalType" val="APELLA" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -107,7 +107,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mDef" val="1.05"> <!-- magic defense power is increased by 5% -->
 					<using kind="Heavy" />
 				</mul>
@@ -125,7 +125,7 @@
 		<table name="#pAtkSpd"> 1 1.025 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="apella" />
+		<set name="abnormalType" val="APELLA" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -133,7 +133,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="rEvas" val="2"> <!-- evasion is increased by 2 -->
 					<using kind="Light" />
 				</add>
@@ -151,7 +151,7 @@
 		<table name="#mAtk"> 1 1.0625 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="apella" />
+		<set name="abnormalType" val="APELLA" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -159,7 +159,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="apella">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pDef" val="1.05"> <!-- defense power is increased by 5% -->
 					<using kind="Magic" />
 				</mul>
@@ -196,7 +196,7 @@
 		<!-- This skill only has one level, 4. -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="vampiric_attack" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -280,7 +280,7 @@
 	<skill id="5623" levels="1" name="Weakened Magic Force">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="pd_down" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -290,7 +290,7 @@
 	<skill id="5624" levels="1" name="Soul Confinement">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -300,7 +300,7 @@
 	<skill id="5625" levels="1" name="Soul Confinement">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -315,7 +315,7 @@
 	<skill id="5627" levels="1" name="Adventurer's Wind Walk">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="speed_up" />
+		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -324,7 +324,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="speed_up">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -332,7 +332,7 @@
 	<skill id="5628" levels="1" name="Adventurer's Shield">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="pd_up" />
+		<set name="abnormalType" val="PD_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -341,7 +341,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="pd_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -349,7 +349,7 @@
 	<skill id="5629" levels="1" name="Adventurer's Bless the Body">
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="max_hp_up" />
+		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -358,7 +358,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="7" abnormalType="max_hp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -366,7 +366,7 @@
 	<skill id="5630" levels="1" name="Adventurer's Vampiric Rage">
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="vampiric_attack" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -375,7 +375,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="5" abnormalType="vampiric_attack">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -383,7 +383,7 @@
 	<skill id="5631" levels="1" name="Adventurer's Regeneration">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="hp_regen_up" />
+		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -392,7 +392,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="hp_regen_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
 		</for>
@@ -400,7 +400,7 @@
 	<skill id="5632" levels="1" name="Adventurer's Haste">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="attack_time_down" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -409,7 +409,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="3" abnormalType="attack_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -417,7 +417,7 @@
 	<skill id="5633" levels="1" name="Adventurer's Bless the Soul">
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="max_mp_up" />
+		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -426,7 +426,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="7" abnormalType="max_mp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -434,7 +434,7 @@
 	<skill id="5634" levels="1" name="Adventurer's Acumen">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="casting_time_down" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -443,7 +443,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="casting_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -451,7 +451,7 @@
 	<skill id="5635" levels="1" name="Adventurer's Concentration">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="cancel_prob_down" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -460,7 +460,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="cancel_prob_down">
+			<effect name="Buff" val="0">
 				<sub order="0x40" stat="cancel" val="18" />
 			</effect>
 		</for>
@@ -468,7 +468,7 @@
 	<skill id="5636" levels="1" name="Adventurer's Empower">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -477,7 +477,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="2" abnormalType="ma_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtk" val="1.55" />
 			</effect>
 		</for>
@@ -485,7 +485,7 @@
 	<skill id="5637" levels="1" name="Adventurer's Magic Barrier">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="md_up" />
+		<set name="abnormalType" val="MD_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -494,7 +494,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="3600" val="0" abnormalLvl="4" abnormalType="md_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -509,7 +509,7 @@
 		<table name="#mpInitialConsume"> 10 11 12 14 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="max_hp_up" />
+		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -523,7 +523,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_hp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
@@ -538,7 +538,7 @@
 		<table name="#mpInitialConsume"> 10 11 12 13 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="max_mp_up" />
+		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -552,7 +552,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="max_mp_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
@@ -567,7 +567,7 @@
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="attack_time_down" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -581,7 +581,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="attack_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -589,7 +589,7 @@
 	<skill id="5641" levels="1" name="not_used">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="pd_up" />
+		<set name="abnormalType" val="PD_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -600,7 +600,7 @@
 		<table name="#abnormalLvls"> 3 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="shield_prob_up" />
+		<set name="abnormalType" val="SHIELD_PROB_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -611,7 +611,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="casting_time_down" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -625,7 +625,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="3" abnormalType="casting_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -633,7 +633,7 @@
 	<skill id="5644" levels="1" name="not_used">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="speed_up" />
+		<set name="abnormalType" val="SPEED_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -644,7 +644,7 @@
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="resist_derangement" />
+		<set name="abnormalType" val="RESIST_DERANGEMENT" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -655,7 +655,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- 3 lvl not_used, don't add it on skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#abnormalTypes"> magic_critical_up magic_critical_up hit_up </table>
+		<table name="#abnormalTypes"> MAGIC_CRITICAL_UP MAGIC_CRITICAL_UP HIT_UP </table>
 		<table name="#aggro"> 582 635 </table>
 		<table name="#magicLvl"> 64 72 </table>
 		<table name="#mCritRate"> 2 3 </table>
@@ -677,7 +677,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="magic_critical_up">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="mCritRate" val="#mCritRate" />
 			</effect>
 		</for>
@@ -694,7 +694,7 @@
 		<table name="#SpiritOre"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="cheap_magic" />
+		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -710,7 +710,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="cheap_magic">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
@@ -727,7 +727,7 @@
 		<table name="#mpInitialConsume"> 8 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -741,7 +741,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="ma_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -750,7 +750,7 @@
 		<table name="#abnormalLvls"> 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="avoid_up" />
+		<set name="abnormalType" val="AVOID_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -761,7 +761,7 @@
 		<table name="#abnormalLvls"> 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="cancel_prob_down" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -771,7 +771,7 @@
 	<skill id="5651" levels="1" name="not_used">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="pa_up" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -789,7 +789,7 @@
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="critical_dmg_up" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -803,7 +803,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_dmg_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
@@ -819,7 +819,7 @@
 		<table name="#rCrit"> 0.25 0.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="critical_prob_up" />
+		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -833,7 +833,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="critical_prob_up">
+			<effect name="Buff" val="0">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
@@ -849,7 +849,7 @@
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="hit_up" />
+		<set name="abnormalType" val="HIT_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -863,7 +863,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="hit_up">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
@@ -871,7 +871,7 @@
 	<skill id="5655" levels="1" name="Transform Gatekeeper">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="31" />
@@ -879,12 +879,11 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="319" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform">
+			<effect name="Transformation" val="319">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -896,7 +895,7 @@
 		<table name="#pvpPower"> 38 40 43 46 49 52 55 58 62 65 69 73 77 81 85 89 94 98 103 108 113 118 124 129 135 140 146 152 158 164 171 177 184 191 197 204 212 219 226 233 241 248 256 264 272 280 288 296 304 312 320 329 337 345 354 362 370 379 387 395 403 412 420 428 436 444 452 460 468 475 483 490 497 504 511 519 528 539 552 566 581 595 610 626 640 </table>
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="ma_down" />
+		<set name="abnormalType" val="MA_DOWN" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1000" />
@@ -912,7 +911,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect self="1" name="Debuff" abnormalTime="3" val="0" abnormalLvl="0" abnormalType="ma_down">
+			<effect self="1" name="Debuff" val="0">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
 		</for>
@@ -972,7 +971,7 @@
 		<table name="#runSpd"> 5 8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="berserker" />
+		<set name="abnormalType" val="BERSERKER" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -985,7 +984,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY_MEMBER" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="berserker">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="mDef" val="#mDef" />
@@ -1003,7 +1002,7 @@
 		<table name="#val2"> 5 9 13 17 21 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="180" />
-		<set name="abnormalType" val="death_penalty" />
+		<set name="abnormalType" val="DEATH_PENALTY" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" />
@@ -1013,7 +1012,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="180" val="0" abnormalLvl="1" abnormalType="death_penalty">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="#val1" />
 				<mul order="0x30" stat="mAtk" val="#val1" />
 				<mul order="0x30" stat="pAtkSpd" val="#val1" />
@@ -1026,7 +1025,7 @@
 	<skill id="5661" levels="1" name="Match Participation">
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="entry_for_game" />
+		<set name="abnormalType" val="ENTRY_FOR_GAME" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1061,7 +1060,7 @@
 		<!-- Masterwork Sword of Stun (3829) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1074,14 +1073,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5666" levels="1" name="Stun">
 		<!-- Masterwork Rapier of Stun (3834) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1094,14 +1093,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5667" levels="1" name="Stun">
 		<!-- Masterwork Dual-Blade of Stun (3839) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1114,14 +1113,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5668" levels="1" name="Poison">
 		<!-- Masterwork Dagger of Poison (3861) -->
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1134,14 +1133,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" abnormalTime="3" val="100" abnormalLvl="8" abnormalType="poison" abnormalVisualEffect="poison" />
+			<effect count="10" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5669" levels="1" name="Stun">
 		<!-- Masterwork Pole of Stun (3876) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1154,14 +1153,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5670" levels="1" name="Stun">
 		<!-- Masterwork Fist of Stun (3882) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1174,14 +1173,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5671" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-1) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1194,14 +1193,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5672" levels="1" name="Stun">
 		<!-- Masterwork Blunt of Stun (3885-2) -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1214,13 +1213,13 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5673" levels="1" name="Evasion Counter">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
@@ -1236,13 +1235,13 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5674" levels="1" name="Evasion Chance">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="evasion_buff" />
+		<set name="abnormalType" val="EVASION_BUFF" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A2" />
@@ -1250,7 +1249,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="evasion_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="blowRate" val="1.1" />
 			</effect>
 		</for>
@@ -1258,7 +1257,7 @@
 	<skill id="5675" levels="1" name="Evasion Haste">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="evasion_buff" />
+		<set name="abnormalType" val="EVASION_BUFF" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="74" />
 		<set name="operateType" val="A2" />
@@ -1266,7 +1265,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="evasion_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -1307,7 +1306,7 @@
 	<skill id="5679" levels="3" name="Oblivion Trap">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="mirage_trap" />
+		<set name="abnormalType" val="MIRAGE_TRAP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
 		<set name="isDebuff" val="true" />
@@ -1320,7 +1319,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="ChanceSkillTrigger" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="mirage_trap" triggeredId="5680" chanceType="ON_ATTACKED" activationChance="30" />
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="5680" chanceType="ON_ATTACKED" activationChance="30" />
 		</for>
 	</skill>
 	<skill id="5680" levels="1" name="Oblivion Trap">
@@ -1375,7 +1374,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_debuff" />
+		<set name="abnormalType" val="PVP_WEAPON_DEBUFF" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
@@ -1390,7 +1389,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_debuff">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="sDef" val="0" />
 			</effect>
 		</for>
@@ -1415,7 +1414,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_buff" />
+		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
@@ -1425,7 +1424,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -1434,7 +1433,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_buff" />
+		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1445,7 +1444,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -1454,7 +1453,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_debuff" />
+		<set name="abnormalType" val="PVP_WEAPON_DEBUFF" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
@@ -1469,7 +1468,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_debuff">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="pAtkRange" val="200">
 					<using kind="Bow,Crossbow" />
 				</sub>
@@ -1480,7 +1479,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_debuff" />
+		<set name="abnormalType" val="PVP_WEAPON_DEBUFF" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
@@ -1495,7 +1494,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_debuff">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="fireRes" val="30" />
 				<sub order="0x40" stat="waterRes" val="30" />
 				<sub order="0x40" stat="windRes" val="30" />
@@ -1509,7 +1508,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_buff" />
+		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1520,7 +1519,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_buff">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="reflectDam" val="50" />
 			</effect>
 		</for>
@@ -1529,7 +1528,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_buff" />
+		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1540,7 +1539,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pvpMagicalDef" val="1.3" />
 				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.3" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.3" />
@@ -1551,7 +1550,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_buff" />
+		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1562,7 +1561,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="critDamEvas" val="1.15" />
 				<mul order="0x30" stat="critVuln" val="0.85" />
 			</effect>
@@ -1585,7 +1584,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="pvp_weapon_debuff" />
+		<set name="abnormalType" val="PVP_WEAPON_DEBUFF" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="100" />
@@ -1600,7 +1599,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pvp_weapon_debuff">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1648,14 +1647,14 @@
 	<skill id="5696" levels="1" name="Dizziness">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="9" abnormalType="invincibility">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 			</effect>
@@ -1665,7 +1664,7 @@
 		<!-- Imbue Seed of Destruction effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="silence_all" />
+		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -1678,8 +1677,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="10" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
+			<effect name="Mute" val="0" />
+			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5698" levels="37" name="Bless the Blood">
@@ -1706,14 +1705,14 @@
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="pd_down" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="2700" val="0" abnormalLvl="9" abnormalType="pd_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pDef" val="0.34" />
 			</effect>
 		</for>

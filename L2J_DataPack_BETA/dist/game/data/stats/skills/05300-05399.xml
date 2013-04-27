@@ -27,7 +27,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -45,7 +45,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
@@ -57,7 +57,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -73,7 +73,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -85,7 +85,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -101,7 +101,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -111,7 +111,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -131,7 +131,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
@@ -142,7 +142,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="coolTime" val="800" />
 		<set name="hitTime" val="1000" />
 		<set name="lvlBonusRate" val="2" />
@@ -156,7 +156,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
@@ -166,7 +166,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -183,7 +183,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" effectPower="60" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" effectPower="60" val="0" />
 		</for>
 	</skill>
 	<skill id="5307" levels="9" name="Stun">
@@ -193,7 +193,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -210,7 +210,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5308" levels="9" name="Poison">
@@ -222,7 +222,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -237,7 +237,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -249,7 +249,7 @@
 		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -265,7 +265,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -608,7 +608,7 @@
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -625,7 +625,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#power" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
@@ -952,7 +952,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -970,7 +970,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="80" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
@@ -982,7 +982,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -998,7 +998,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -1010,7 +1010,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -1027,7 +1027,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="bleeding" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -1037,7 +1037,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
@@ -1055,7 +1055,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="80" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
@@ -1066,7 +1066,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="hitTime" val="1000" />
@@ -1081,7 +1081,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="60" abnormalLvl="8" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
@@ -1091,7 +1091,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1108,14 +1108,14 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="30" val="0" effectPower="60" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="5368" levels="9" name="Stun">
 		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="hitTime" val="4500" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="nextActionAttack" val="true" />
@@ -1134,7 +1134,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
@@ -1149,7 +1149,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#dot" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1157,7 +1157,7 @@
 		<table name="#abnormalLvls"> 8 8 9 9 9 10 10 10 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="hitTime" val="4500" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
@@ -1482,7 +1482,7 @@
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -1502,7 +1502,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" abnormalTime="5" val="#power" effectPower="80" abnormalLvl="#abnormalLvls" abnormalType="poison" />
+			<effect count="4" name="DamOverTime" val="#power" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
@@ -1514,7 +1514,7 @@
 		<table name="#pAtkSpd"> 1.33 1.33 1.5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="2000" />
@@ -1526,7 +1526,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Grow" abnormalTime="10" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
+			<effect name="Grow" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
@@ -1543,7 +1543,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="magical_stance" />
+		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1571,7 +1571,7 @@
 		<!-- Zone Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="hot_ground" />
+		<set name="abnormalType" val="HOT_GROUND" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1591,7 +1591,7 @@
 		</cond>
 		<for>
 			<!-- 75 HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="75" abnormalLvl="1" abnormalType="hot_ground" />
+			<effect count="5" name="DamOverTime" val="75" />
 		</for>
 	</skill>
 </list>

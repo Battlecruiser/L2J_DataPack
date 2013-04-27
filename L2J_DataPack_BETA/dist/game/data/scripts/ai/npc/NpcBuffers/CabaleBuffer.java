@@ -293,7 +293,7 @@ public class CabaleBuffer extends AbstractNpcAI
 	public int getAbnormalLvl(L2PcInstance player, int skillId)
 	{
 		final L2Effect effect = player.getFirstEffect(skillId);
-		return (effect != null) ? effect.getAbnormalLvl() : 0;
+		return (effect != null) ? effect.getSkill().getAbnormalLvl() : 0;
 	}
 	
 	public static void main(String[] args)

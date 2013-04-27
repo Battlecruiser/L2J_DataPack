@@ -39,7 +39,7 @@ public class Unlockable implements ITargetTypeHandler
 		List<L2Character> targetList = new ArrayList<>();
 		if ((target == null) || (!target.isDoor() && !(target instanceof L2ChestInstance)))
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (!onlyFirst)

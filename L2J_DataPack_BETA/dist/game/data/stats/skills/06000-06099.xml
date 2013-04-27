@@ -103,7 +103,7 @@
 	<skill id="6020" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -114,7 +114,7 @@
 	<skill id="6021" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -125,7 +125,7 @@
 	<skill id="6022" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -136,7 +136,7 @@
 	<skill id="6023" levels="1" name="Soul Retain">
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="ma_up" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -147,7 +147,7 @@
 	<skill id="6024" levels="1" name="Weight Aerial Cleft">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="40" />
-		<set name="abnormalType" val="public_slot" />
+		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -196,7 +196,7 @@
 	<skill id="6033" levels="1" name="Treasure Seeker's Betrayal">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="stigma_a" />
+		<set name="abnormalType" val="STIGMA_A" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -205,7 +205,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3500" />
@@ -215,41 +215,39 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Invincible" abnormalTime="10" noicon="1" val="0" abnormalLvl="1" abnormalType="invincibility" />
-			<effect name="Stun" abnormalTime="10" noicon="1" val="0" />
-			<effect name="ImmobileBuff" abnormalTime="10" noicon="1" val="0" />
+			<effect name="Invincible" noicon="1" val="0" />
+			<effect name="Stun" noicon="1" val="0" />
+			<effect name="ImmobileBuff" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6035" levels="1" name="Red Team Transformation">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="121" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="121" />
 		</for>
 	</skill>
 	<skill id="6036" levels="1" name="Blue Team Transformation">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="122" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="122" />
 		</for>
 	</skill>
 	<skill id="6037" levels="1" name="Soul Unleash">
@@ -260,7 +258,7 @@
 	<skill id="6038" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -269,7 +267,7 @@
 	<skill id="6039" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -278,7 +276,7 @@
 	<skill id="6040" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -426,7 +424,7 @@
 		<table name="#mpConsume"> 45 65 69 72 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
@@ -437,7 +435,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -503,7 +501,7 @@
 		<table name="#mpInitialConsume"> 18 26 28 29 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
@@ -516,7 +514,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="#abnormalLvls" abnormalType="multi_buff">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mAtk" val="#amount" />
@@ -533,7 +531,7 @@
 	<skill id="6055" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -542,7 +540,7 @@
 	<skill id="6056" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -551,7 +549,7 @@
 	<skill id="6057" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -560,7 +558,7 @@
 	<skill id="6058" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="bot_penalty" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -570,7 +568,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
-		<set name="abnormalType" val="counter_critical_trigger" />
+		<set name="abnormalType" val="COUNTER_CRITICAL_TRIGGER" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
@@ -578,7 +576,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="8" val="0" abnormalLvl="1" abnormalType="counter_critical_trigger">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="cAtk" val="2">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dagger,Dual Dagger,Dual Sword,Dual Fist,Pole,Ancient,Rapier" />
 				</mul>
@@ -588,7 +586,7 @@
 	<skill id="6060" levels="1" name="Great Fury">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
-		<set name="abnormalType" val="attack_time_down_special" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN_SPECIAL" />
 		<set name="affectRange" val="1000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
@@ -597,7 +595,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Buff" abnormalTime="8" val="0" abnormalLvl="1" abnormalType="attack_time_down_special">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
@@ -754,7 +752,7 @@
 		<!-- Lightning Strike effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="aggroPoints" val="1" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -768,14 +766,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="6091" levels="1" name="Anchor">
 		<!-- Anchor effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -786,7 +784,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
@@ -794,7 +792,7 @@
 		<!-- Lightning Shock effect -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -807,14 +805,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="5" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="hide" />
+		<set name="abnormalType" val="HIDE" />
 		<set name="aggroPoints" val="679" />
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="42" />
@@ -826,7 +824,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Hide" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="hide">
+			<effect name="Hide" val="0">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
 		</for>
@@ -854,7 +852,7 @@
 		<table name="#power"> 469 758 1136 1327 1525 1727 1925 2020 2067 2112 2156 2200 2241 2282 2320 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="armor_unholy" />
+		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -873,7 +871,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" effectPower="80" abnormalLvl="3" abnormalType="armor_unholy">
+			<effect name="Debuff" val="0" effectPower="80">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</for>

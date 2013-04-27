@@ -18,6 +18,8 @@
  */
 package handlers.effecthandlers;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -62,9 +64,9 @@ public class CancelDebuff extends L2Effect
 		}
 		
 		int count = 0;
-		final L2Effect[] effects = target.getAllEffects();
+		final List<L2Effect> effects = target.getAllEffects();
 		
-		if ((effects == null) || (effects.length == 0))
+		if ((effects == null) || (effects.size() == 0))
 		{
 			return false;
 		}

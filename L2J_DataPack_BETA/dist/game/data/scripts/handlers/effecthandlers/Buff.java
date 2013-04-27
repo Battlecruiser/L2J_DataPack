@@ -40,7 +40,7 @@ public class Buff extends L2Effect
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
+	public boolean canBeStolen()
 	{
 		return true;
 	}

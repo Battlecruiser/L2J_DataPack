@@ -42,7 +42,7 @@ public class Bluff extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.BLUFF; // test for bluff effect
+		return L2EffectType.NONE;
 	}
 	
 	@Override

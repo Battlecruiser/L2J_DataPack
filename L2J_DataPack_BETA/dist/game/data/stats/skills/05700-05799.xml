@@ -10,14 +10,14 @@
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="md_down" />
+		<set name="abnormalType" val="MD_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="2700" val="0" abnormalLvl="9" abnormalType="md_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mDef" val="0.34" />
 			</effect>
 		</for>
@@ -32,14 +32,14 @@
 		<!-- Lvl 7 - Kamaloka (Labyrinth of the Abyss) 81 -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="pa_down" />
+		<set name="abnormalType" val="PA_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="2700" val="0" abnormalLvl="9" abnormalType="pa_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="0.34" />
 			</effect>
 		</for>
@@ -55,7 +55,7 @@
 	<skill id="5703" levels="2" name="Adiantum Water Strike Deflect">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
-		<set name="abnormalType" val="armor_fire" />
+		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="hitTime" val="1000" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="6000" />
@@ -79,7 +79,7 @@
 	<skill id="5706" levels="1" name="Poison">
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -93,7 +93,7 @@
 	<skill id="5707" levels="1" name="Paralysis">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -143,7 +143,7 @@
 	<skill id="5711" levels="1" name="Power of Rage">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="pa_up" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -151,7 +151,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="pa_up" />
+			<effect name="Buff" val="0" />
 		</for>
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
@@ -169,7 +169,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="magical_stance" />
+		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -186,7 +186,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="fire_dot" />
+		<set name="abnormalType" val="FIRE_DOT" />
 		<set name="affectRange" val="400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -204,7 +204,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<!-- 55HP * 5 During 30 seconds -->
-			<effect count="6" name="DamOverTime" abnormalTime="5" val="275" abnormalVisualEffect="bleed" effectPower="80" abnormalLvl="1" abnormalType="fire_dot">
+			<effect count="6" name="DamOverTime" val="275" abnormalVisualEffect="bleed" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>
@@ -212,7 +212,7 @@
 	<skill id="5716" levels="1" name="Stun">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,1500,60" />
 		<set name="hitTime" val="3000" />
@@ -235,7 +235,7 @@
 	<skill id="5718" levels="1" name="Anger">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="pa_up" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -246,7 +246,7 @@
 	<skill id="5719" levels="1" name="Kamabion Susceptibility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="pd_down" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -510,7 +510,7 @@
 		<table name="#power"> 43 51 55 58 61 63 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectLimit" val="10-10" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -530,7 +530,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" abnormalTime="1" abnormalType="turn_flee" val="0" effectPower="20" />
+			<effect count="5" name="Fear" val="0" effectPower="20" />
 		</for>
 	</skill>
 	<skill id="5734" levels="6" name="Gust of Wind">
@@ -565,7 +565,7 @@
 		<table name="#power"> 43 51 55 58 61 63 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="sleep" />
+		<set name="abnormalType" val="SLEEP" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1100" />
@@ -585,7 +585,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
-			<effect name="Sleep" abnormalTime="5" abnormalLvl="1" abnormalType="sleep" val="0" effectPower="25" />
+			<effect name="Sleep" val="0" effectPower="25" />
 		</for>
 	</skill>
 	<skill id="5736" levels="6" name="Katar Trusting">
@@ -645,7 +645,7 @@
 		<!-- Kratei Cube Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -654,7 +654,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Invincible" abnormalTime="5" val="0" special="invincible" abnormalLvl="1" abnormalType="invincibility" />
+			<effect name="Invincible" val="0" special="invincible" />
 		</for>
 	</skill>
 	<skill id="5740" levels="1" name="Recovery Pet">
@@ -698,7 +698,7 @@
 	<skill id="5744" levels="1" name="Invincible">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
@@ -754,7 +754,7 @@
 		<table name="#power"> 60 136 281 530 910 1420 2012 2310 2588 2829 3018 3172 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
@@ -773,7 +773,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" effectPower="50" />
+			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">
@@ -870,7 +870,7 @@
 	<skill id="5753" levels="1" name="Awakening">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="public_slot" />
+		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="mpConsume" val="52" />
@@ -878,7 +878,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="public_slot" />
+			<effect name="Buff" val="0" />
 		</for>
 	</skill>
 	<skill id="5754" levels="1" name="Presentation - Adiantum Round Fighter">
@@ -927,7 +927,7 @@
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="seed_of_critical" />
+		<set name="abnormalType" val="SEED_OF_CRITICAL" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -950,7 +950,7 @@
 	<skill id="5762" levels="1" name="Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -966,7 +966,7 @@
 	<skill id="5764" levels="1" name="Terror of the Pumpkin Ghost">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="coolTime" val="1000" />
 		<set name="hitTime" val="2060" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1052,20 +1052,20 @@
 	<skill id="5771" levels="1" name="Buff Control">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="magical_stance" />
+		<set name="abnormalType" val="MAGICAL_STANCE" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="1" abnormalType="magical_stance" />
+			<effect name="Buff" val="0" />
 		</for>
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="armor_fire" />
+		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1076,7 +1076,7 @@
 	<skill id="5773" levels="1" name="Surrender to Water">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="armor_water" />
+		<set name="abnormalType" val="ARMOR_WATER" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1095,7 +1095,7 @@
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="multi_buff" />
+		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1115,7 +1115,7 @@
 		<!-- skill after ct2.3 not used -->
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="90" />
-		<set name="abnormalType" val="invincibility" />
+		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1226,7 +1226,7 @@
 	<skill id="5794" levels="1" name="Decrease Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,900,5" />
 		<set name="hitTime" val="2000" />
@@ -1241,7 +1241,7 @@
 	<skill id="5795" levels="1" name="Poison">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1255,7 +1255,7 @@
 	<skill id="5796" levels="1" name="Decrease Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectLimit" val="5-12" />
 		<set name="fanRange" val="0,0,900,30" />
 		<set name="hitTime" val="4000" />
@@ -1288,7 +1288,7 @@
 	<skill id="5799" levels="1" name="Bleed">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="hitTime" val="1800" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />

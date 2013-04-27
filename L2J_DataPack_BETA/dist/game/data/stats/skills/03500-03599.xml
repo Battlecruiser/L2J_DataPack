@@ -703,7 +703,7 @@
 		<table name="#magicLvl"> 75 84 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -715,7 +715,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
@@ -751,7 +751,7 @@
 		<table name="#magicLvl"> 75 84 84 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="isDebuff" val="true" />
@@ -764,7 +764,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -801,7 +801,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="root_magically" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="1500" />
 		<set name="isDebuff" val="true" />
@@ -816,7 +816,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="root_magically" />
+			<effect name="Root" val="0" />
 		</for>
 	</skill>
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
@@ -841,7 +841,7 @@
 		<!-- Infinity Blade/Rapier Skill -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="pd_down" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
@@ -852,7 +852,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="pd_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>
@@ -884,7 +884,7 @@
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="5" name="ConfuseMob" abnormalTime="4" val="0" />
+			<effect count="5" name="ConfuseMob" val="0" />
 		</for>
 	</skill>
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">
@@ -927,7 +927,7 @@
 		<!-- Infinity Crusher Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
@@ -939,7 +939,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
@@ -965,7 +965,7 @@
 		<!-- Infinity Wing Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="silence_physical" />
+		<set name="abnormalType" val="SILENCE_PHYSICAL" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
@@ -977,7 +977,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="PhysicalMute" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="silence_physical" />
+			<effect name="PhysicalMute" val="0" />
 		</for>
 	</skill>
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
@@ -1003,7 +1003,7 @@
 		<!-- Infinity Fang Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
@@ -1015,7 +1015,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
@@ -1043,7 +1043,7 @@
 		<!-- Infinity Stinger Skill -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="silence" />
+		<set name="abnormalType" val="SILENCE" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
@@ -1055,7 +1055,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="120" val="0" abnormalLvl="1" abnormalType="silence" />
+			<effect name="Mute" val="0" />
 		</for>
 	</skill>
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
@@ -1110,7 +1110,7 @@
 		<!-- Infinity Bow/Shooter Skill -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
@@ -1121,7 +1121,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="120" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>

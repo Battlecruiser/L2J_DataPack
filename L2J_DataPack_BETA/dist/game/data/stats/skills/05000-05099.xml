@@ -31,7 +31,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="vampiric_attack" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="76" />
@@ -41,7 +41,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="300" val="0" abnormalLvl="4" abnormalType="vampiric_attack">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -68,7 +68,7 @@
 		<!-- Frintezza Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="fly_away" />
+		<set name="abnormalType" val="FLY_AWAY" />
 		<set name="affectRange" val="300" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="180" />
@@ -84,8 +84,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="ThrowUp" noicon="1" val="0" abnormalLvl="1" abnormalType="fly_away" />
-			<effect name="Stun" abnormalTime="2" val="0" effectPower="100" />
+			<effect name="ThrowUp" noicon="1" val="0" />
+			<effect name="Stun" val="0" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
@@ -93,7 +93,7 @@
 		<!-- Frintezza Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -105,7 +105,7 @@
 		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Paralyze" abnormalTime="9" val="0" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="5006" levels="1" name="Frintezza's Melody">
@@ -132,7 +132,7 @@
 	<skill id="5008" levels="5" name="Frintezza's Songs">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
-		<table name="#abnormalType"> none none ultimate_buff heal_effect_down stun </table>
+		<table name="#abnormalTypes"> NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN </table>
 		<table name="#aggroPoints"> 100 100 100 0 0 </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
 		<table name="#effectname1"> Buff Buff Buff Buff Stun </table>
@@ -149,6 +149,7 @@
 		<table name="#skillType"> BUFF DUMMY BUFF DEBUFF STUN </table>
 		<table name="#time"> 0 0 5 5 5 </table>
 		<table name="#traits"> NONE NONE NONE DERANGEMENT DERANGEMENT </table>
+		<set name="abnormalType" val="#abnormalTypes" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="isDebuff" val="#isDebuff" />
 		<set name="isMagic" val="#isMagic" />
@@ -162,7 +163,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="#traits" />
 		<for>
-			<effect name="#effectname1" abnormalTime="#time" val="0" abnormalLvl="1" abnormalType="#abnormalType">
+			<effect name="#effectname1" val="0">
 				<mul order="0x30" stat="pAtk" val="#attackAndSpeed" />
 				<mul order="0x30" stat="mAtk" val="#attackAndSpeed" />
 				<mul order="0x30" stat="pAtkSpd" val="#attackAndSpeed" />
@@ -227,7 +228,7 @@
 		<!-- Frintezza Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
@@ -242,7 +243,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" abnormalVisualEffect="dancestun" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" abnormalVisualEffect="dancestun" />
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
@@ -315,7 +316,7 @@
 		<!-- Frintezza Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="paralyze" />
+		<set name="abnormalType" val="PARALYZE" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="1000" />
@@ -332,7 +333,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Paralyze" abnormalTime="20" val="0" abnormalVisualEffect="floatroot" abnormalLvl="1" abnormalType="paralyze" />
+			<effect name="Paralyze" val="0" abnormalVisualEffect="floatroot" />
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
@@ -340,7 +341,7 @@
 		<!-- Frintezza Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
-		<set name="abnormalType" val="big_body" />
+		<set name="abnormalType" val="BIG_BODY" />
 		<set name="aggroPoints" val="100" />
 		<set name="coolTime" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -350,7 +351,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Grow" abnormalTime="7200" val="0" abnormalLvl="1" abnormalType="big_body">
+			<effect name="Grow" val="0">
 				<mul order="0x30" stat="runSpd" val="1.22" />
 			</effect>
 			<effect name="HealPercent" noicon="1" val="20" />
@@ -392,7 +393,7 @@
 		<!-- Crumples to the ground because of unknown power. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="public_slot" />
+		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="hitTime" val="2000" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
@@ -403,7 +404,7 @@
 	<skill id="5021" levels="12" name="Inspiration of Einhasad">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="holy_attack" />
+		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="coolTime" val="800" />
 		<set name="hitTime" val="3200" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -418,7 +419,7 @@
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
@@ -429,7 +430,7 @@
 	<skill id="5023" levels="12" name="Hold">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="root_magically" />
+		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="operateType" val="A2" />
@@ -442,7 +443,7 @@
 		<table name="#abnormalLvls"> 1 2 2 3 3 3 3 3 3 3 3 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="attack_time_up" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -514,7 +515,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="casting_time_up" />
+		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
@@ -549,7 +550,7 @@
 		<table name="#mpInitialConsume"> 1 1 1 1 1 1 1 49 51 52 53 53 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="life_force_others" />
+		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="600" />
@@ -563,7 +564,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="15" name="HealOverTime" val="#hot" abnormalLvl="#abnormalLvls" abnormalType="life_force_others" />
+			<effect count="15" name="HealOverTime" val="#hot" />
 		</for>
 	</skill>
 	<skill id="5041" levels="1" name="Charm of Courage">
@@ -573,7 +574,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CharmOfCourage" abnormalTime="1200" noicon="1" val="0" />
+			<effect name="CharmOfCourage" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
@@ -625,7 +626,7 @@
 		<table name="#time"> 30 30 5 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="#abnormalTimes" />
-		<set name="abnormalType" val="pd_up_special" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -635,7 +636,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" abnormalTime="#time" val="0" abnormalVisualEffect="invulnerable" abnormalLvl="#abnormalLvls" abnormalType="pd_up_special">
+			<effect name="ImmobileBuff" val="0" abnormalVisualEffect="invulnerable">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -894,7 +895,7 @@
 	<skill id="5068" levels="12" name="Decrease Speed">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -907,7 +908,7 @@
 	<skill id="5069" levels="12" name="Decrease Atk. Spd.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="attack_time_up" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -920,7 +921,7 @@
 	<skill id="5070" levels="12" name="Decrease Casting Spd">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="casting_time_up" />
+		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -933,7 +934,7 @@
 	<skill id="5071" levels="12" name="Decrease P. Atk.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="pa_down" />
+		<set name="abnormalType" val="PA_DOWN" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -946,7 +947,7 @@
 	<skill id="5072" levels="12" name="Decrease M. Atk.">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ma_down" />
+		<set name="abnormalType" val="MA_DOWN" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -1025,7 +1026,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="attack_time_down" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="3000" />
@@ -1037,7 +1038,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="2" abnormalType="attack_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
@@ -1047,7 +1048,7 @@
 		<!-- CT2.5 retail confirmed -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="120" />
-		<set name="abnormalType" val="attack_time_down" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="affectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
@@ -1058,7 +1059,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" abnormalTime="120" val="0" abnormalLvl="2" abnormalType="attack_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
@@ -1069,7 +1070,7 @@
 		<table name="#power"> 1715 3540 7306 8602 </table>
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="silence_physical" />
+		<set name="abnormalType" val="SILENCE_PHYSICAL" />
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
@@ -1084,7 +1085,7 @@
 		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalMute" abnormalTime="30" val="0" abnormalLvl="0" abnormalType="silence_physical" />
+			<effect name="PhysicalMute" val="0" />
 		</for>
 	</skill>
 	<skill id="5082" levels="4" name="NPC Spinning, Slashing Trick">
@@ -1105,7 +1106,7 @@
 		<table name="#power"> 1715 3540 7305 8602 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="200" />
@@ -1122,14 +1123,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="9" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="50" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="10" />
 		</for>
 	</skill>
 	<skill id="5084" levels="4" name="NPC Blinding Blow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="speed_up_special" />
+		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="blowChance" val="15" />
 		<set name="castRange" val="40" />
 		<set name="condition" val="16" /> <!-- Crit -->
@@ -1145,7 +1146,7 @@
 		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect self="1" name="Buff" abnormalTime="15" val="0" abnormalLvl="1" abnormalType="speed_up_special">
+			<effect self="1" name="Buff" val="0">
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
 		</for>
@@ -1154,7 +1155,7 @@
 		<!-- Temporarily stunned and Immobilized. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="anesthesia" />
+		<set name="abnormalType" val="ANESTHESIA" />
 		<set name="hitTime" val="3300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1166,7 +1167,7 @@
 		<!-- Infected with poison and gradually losing HP. If HP falls to 0, death will ensue. -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="critical_poison" />
+		<set name="abnormalType" val="CRITICAL_POISON" />
 		<set name="hitTime" val="3300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1187,7 +1188,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
@@ -1233,7 +1234,7 @@
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2700" />
@@ -1250,7 +1251,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="7" name="Fear" abnormalTime="3" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="7" name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
@@ -1329,7 +1330,7 @@
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="seizure_penalty" />
+		<set name="abnormalType" val="SEIZURE_PENALTY" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />

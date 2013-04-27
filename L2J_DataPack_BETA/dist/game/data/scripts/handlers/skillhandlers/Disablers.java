@@ -18,6 +18,7 @@
  */
 package handlers.skillhandlers;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
@@ -146,7 +147,7 @@ public class Disablers implements ISkillHandler
 					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 					{
 						// stop same type effect if available
-						L2Effect[] effects = target.getAllEffects();
+						List<L2Effect> effects = target.getAllEffects();
 						for (L2Effect e : effects)
 						{
 							if ((e != null) && (e.getSkill() != null) && (e.getSkill().getSkillType() == type))
@@ -175,7 +176,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							L2Effect[] effects = target.getAllEffects();
+							List<L2Effect> effects = target.getAllEffects();
 							for (L2Effect e : effects)
 							{
 								if (e.getSkill().getSkillType() == type)

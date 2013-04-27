@@ -42,7 +42,7 @@ public class AreaSummon implements ITargetTypeHandler
 		target = activeChar.getSummon();
 		if ((target == null) || !target.isServitor() || target.isDead())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -89,7 +89,7 @@ public class AreaSummon implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);

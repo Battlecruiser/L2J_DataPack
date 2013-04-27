@@ -42,13 +42,18 @@ public class QuestItems implements IItemHandler
 		}
 		
 		L2PcInstance player = playable.getActingPlayer();
-		
 		if (!player.destroyItem("Item Handler - QuestItems", item, player, true))
 		{
 			return false;
 		}
 		
-		L2Item itm = item.getItem();
+		final L2Item itm = item.getItem();
+		if (itm.getQuestEvents() == null)
+		{
+			_log.warning(QuestItems.class.getSimpleName() + ": Null list for item handler QuestItems!");
+			return false;
+		}
+		
 		for (Quest quest : itm.getQuestEvents())
 		{
 			QuestState state = player.getQuestState(quest.getName());

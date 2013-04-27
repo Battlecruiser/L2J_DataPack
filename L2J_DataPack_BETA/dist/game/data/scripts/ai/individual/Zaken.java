@@ -18,6 +18,8 @@
  */
 package ai.individual;
 
+import java.util.List;
+
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -260,8 +262,8 @@ public class Zaken extends AbstractNpcAI
 			}
 			int sk_4223 = 0;
 			int sk_4227 = 0;
-			L2Effect[] effects = npc.getAllEffects();
-			if ((effects != null) && (effects.length != 0))
+			List<L2Effect> effects = npc.getAllEffects();
+			if ((effects != null) && (effects.size() != 0))
 			{
 				for (L2Effect e : effects)
 				{
@@ -789,8 +791,8 @@ public class Zaken extends AbstractNpcAI
 			if (attacker.getMountType() == 1)
 			{
 				int sk_4258 = 0;
-				L2Effect[] effects = attacker.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				List<L2Effect> effects = attacker.getAllEffects();
+				if ((effects != null) && (effects.size() != 0))
 				{
 					for (L2Effect e : effects)
 					{

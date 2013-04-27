@@ -32,6 +32,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.quest.QuestState;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -412,12 +413,12 @@ public class eventmodRace extends Event
 		
 		for (L2Effect e : player.getAllEffects())
 		{
-			if (e.getAbnormalType().equalsIgnoreCase("speed_up"))
+			if (e.getSkill().getAbnormalType() == AbnormalType.SPEED_UP)
 			{
 				e.exit();
 			}
-			if ((e.getSkill() != null) && ((e.getSkill().getId() == 268) || // Song of Wind
-			(e.getSkill().getId() == 298)))
+			// Song of Wind
+			if ((e.getSkill() != null) && ((e.getSkill().getId() == 268) || (e.getSkill().getId() == 298)))
 			{
 				e.exit();
 			}

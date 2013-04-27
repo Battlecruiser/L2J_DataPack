@@ -34,7 +34,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="big_head" />
+		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -48,7 +48,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="BigHead" abnormalTime="300" val="0" abnormalVisualEffect="bighead" abnormalLvl="0" abnormalType="big_head" />
+			<effect name="BigHead" val="0" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
 	<skill id="2104" levels="1" name="Greater Compressed Package of Soulshots: No-grade">
@@ -551,14 +551,14 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="99" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="hp_regen_up" />
+		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="99" abnormalType="hp_regen_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="regMp" val="1.2" />
 				<mul order="0x30" stat="regHp" val="1.4" />
 			</effect>
@@ -768,7 +768,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="reduce_drop_penalty" />
+		<set name="abnormalType" val="REDUCE_DROP_PENALTY" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -777,7 +777,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CharmOfLuck" abnormalTime="3600" val="0" abnormalLvl="#abnormalLvls" abnormalType="reduce_drop_penalty" />
+			<effect name="CharmOfLuck" val="0" />
 		</for>
 	</skill>
 	<skill id="2169" levels="2" name="Magic Haste Potion">
@@ -786,14 +786,14 @@
 		<table name="#mAtkSpd"> 1.23 1.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
-		<set name="abnormalType" val="casting_time_down" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="1200" val="0" abnormalLvl="#abnormalLvls" abnormalType="casting_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
@@ -804,11 +804,11 @@
 		<set name="effectRange" val="600" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="sleep,1" />
+		<set name="negateAbnormals" val="SLEEP,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Negate" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="2171" levels="1" name="Spellbook Paper">

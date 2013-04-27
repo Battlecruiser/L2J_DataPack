@@ -44,7 +44,7 @@ public class CorpseMob implements ITargetTypeHandler
 		if (!(isSummon || target.isL2Attackable()) || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		// Corpse mob only available for half time
@@ -54,7 +54,7 @@ public class CorpseMob implements ITargetTypeHandler
 			{
 				if (isSummon && (((L2ServitorInstance) target).getOwner() != null) && (((L2ServitorInstance) target).getOwner().getObjectId() == activeChar.getObjectId()))
 				{
-					return _emptyTargetList;
+					return EMPTY_TARGET_LIST;
 				}
 				
 				break;
@@ -63,7 +63,7 @@ public class CorpseMob implements ITargetTypeHandler
 			{
 				if (((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
 				{
-					return _emptyTargetList;
+					return EMPTY_TARGET_LIST;
 				}
 			}
 		}

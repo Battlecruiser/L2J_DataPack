@@ -33,7 +33,7 @@ public class AbortCast extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.ABORT_CAST;
+		return L2EffectType.NONE;
 	}
 	
 	@Override

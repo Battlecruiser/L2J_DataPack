@@ -136,17 +136,17 @@ public class ItemSkillsTemplate implements IItemHandler
 							final int buffId = activeChar.getShortBuffTaskSkillId();
 							if ((skillId == 2037) || (skillId == 26025))
 							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
 							}
 							else if (((skillId == 2032) || (skillId == 26026)) && (buffId != 2037) && (buffId != 26025))
 							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
 							}
 							else
 							{
 								if ((buffId != 2037) && (buffId != 26025) && (buffId != 2032) && (buffId != 26026))
 								{
-									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getBuffDuration() / 1000);
+									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
 								}
 							}
 							break;

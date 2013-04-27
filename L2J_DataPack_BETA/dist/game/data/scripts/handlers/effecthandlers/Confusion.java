@@ -18,10 +18,8 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
-
-import javolution.util.FastList;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
@@ -34,13 +32,11 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
 /**
- * Implementation of the Confusion Effect.<br>
- * Zoey76: TODO: Review onActionTime() method.
+ * Confusion effect implementation.
  * @author littlecrow
  */
 public class Confusion extends L2Effect
 {
-	
 	public Confusion(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -56,7 +52,6 @@ public class Confusion extends L2Effect
 	public boolean onStart()
 	{
 		getEffected().startConfused();
-		onActionTime();
 		return true;
 	}
 	
@@ -69,36 +64,25 @@ public class Confusion extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		List<L2Character> targetList = new FastList<>();
-		
+		final List<L2Character> targetList = new ArrayList<>();
 		// Getting the possible targets
-		
-		Collection<L2Object> objs = getEffected().getKnownList().getKnownObjects().values();
-		// synchronized (getEffected().getKnownList().getKnownObjects())
+		for (L2Object obj : getEffected().getKnownList().getKnownObjects().values())
 		{
-			for (L2Object obj : objs)
+			if ((obj instanceof L2Character) && (obj != getEffected()))
 			{
-				if ((obj instanceof L2Character) && (obj != getEffected()))
-				{
-					targetList.add((L2Character) obj);
-				}
+				targetList.add((L2Character) obj);
 			}
 		}
 		// if there is no target, exit function
-		if (targetList.isEmpty())
+		if (!targetList.isEmpty())
 		{
-			return true;
+			// Choosing randomly a new target
+			final L2Character target = targetList.get(Rnd.nextInt(targetList.size()));
+			// Attacking the target
+			getEffected().setTarget(target);
+			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
-		
-		// Choosing randomly a new target
-		int nextTargetIdx = Rnd.nextInt(targetList.size());
-		L2Object target = targetList.get(nextTargetIdx);
-		
-		// Attacking the target
-		getEffected().setTarget(target);
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-		
-		return true;
+		return false;
 	}
 	
 	@Override

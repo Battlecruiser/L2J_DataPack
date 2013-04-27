@@ -36,7 +36,7 @@ public class PartyMember implements ITargetTypeHandler
 		if (target == null)
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		if (!target.isDead())
 		{
@@ -48,7 +48,7 @@ public class PartyMember implements ITargetTypeHandler
 				};
 			}
 		}
-		return _emptyTargetList;
+		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override

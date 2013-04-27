@@ -37,14 +37,14 @@ public class FlagPole implements ITargetTypeHandler
 	{
 		if (!activeChar.isPlayer())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		final Fort fort = FortManager.getInstance().getFort(player);
 		if ((player.getClan() == null) || (fort == null) || !player.checkIfOkToCastFlagDisplay(fort, true, skill, activeChar.getTarget()))
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		return new L2Object[]

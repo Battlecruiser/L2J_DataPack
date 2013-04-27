@@ -37,7 +37,7 @@ public class One implements ITargetTypeHandler
 		if ((target == null) || target.isDead() || ((target == activeChar) && skill.isOffensive()))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		// If a target is found, return it in a table else send a system message TARGET_IS_INCORRECT

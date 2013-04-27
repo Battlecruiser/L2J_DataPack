@@ -51,7 +51,7 @@ public class CorpseClan implements ITargetTypeHandler
 			
 			if (player == null)
 			{
-				return _emptyTargetList;
+				return EMPTY_TARGET_LIST;
 			}
 			
 			if (player.isInOlympiadMode())

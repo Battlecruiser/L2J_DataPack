@@ -26,7 +26,7 @@
 		<table name="#mdot"> 300 150 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="force_meditation" />
+		<set name="abnormalType" val="FORCE_MEDITATION" />
 		<set name="affectRange" val="350" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -40,7 +40,7 @@
 		<for>
 			<!-- Level 1: 60MP * 5 during 10 seconds -->
 			<!-- Level 2: 30MP * 5 during 10 seconds -->
-			<effect count="2" name="ManaDamOverTime" abnormalTime="5" val="#mdot" abnormalLvl="#abnormalLvls" abnormalType="force_meditation" />
+			<effect count="2" name="ManaDamOverTime" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
@@ -48,7 +48,7 @@
 		<!-- Freya Skills (Triggered from 6662 and 6698) -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="pd_up" />
+		<set name="abnormalType" val="PD_UP" />
 		<set name="aggroPoints" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -57,7 +57,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="20" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pDef" val="1.15" />
 				<mul order="0x30" stat="mDef" val="1.15" />
 			</effect>
@@ -86,7 +86,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -106,7 +106,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6305" levels="1" name="Sacred Gnosis">
@@ -131,7 +131,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -153,7 +153,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 139HP * 3 during 10 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="3" val="417" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" />
+			<effect count="3" name="DamOverTime" val="417" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
@@ -283,7 +283,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="pd_up_special" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="affectRange" val="200" />
 		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
@@ -299,7 +299,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0" abnormalVisualEffect="stun" abnormalLvl="1" abnormalType="pd_up_special">
+			<effect name="Buff" val="0" abnormalVisualEffect="stun">
 				<mul order="0x30" stat="physicalSkillPower" val="2" />
 			</effect>
 		</for>
@@ -388,7 +388,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="pd_up" />
+		<set name="abnormalType" val="PD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="3000" />
@@ -401,7 +401,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="Buff" abnormalTime="3" val="0" abnormalLvl="3" abnormalType="pd_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pDef" val="1.1" />
 			</effect>
 		</for>
@@ -411,7 +411,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="md_up" />
+		<set name="abnormalType" val="MD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="3000" />
@@ -424,7 +424,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="Buff" abnormalTime="3" val="0" abnormalLvl="3" abnormalType="md_up">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mDef" val="1.1" />
 			</effect>
 		</for>
@@ -434,7 +434,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="pd_down" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -450,7 +450,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" abnormalTime="15" val="0" abnormalLvl="3" abnormalType="pd_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -644,7 +644,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -658,7 +658,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
 		</for>
@@ -668,7 +668,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="hitTime" val="1000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -682,7 +682,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Debuff" abnormalTime="300" val="0" abnormalLvl="3" abnormalType="speed_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 			</effect>
@@ -693,7 +693,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -713,7 +713,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" />
+			<effect count="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -721,7 +721,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -739,7 +739,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="40" />
+			<effect name="Stun" val="0" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="6335" levels="1" name="Electric Rain 1">
@@ -811,7 +811,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -832,7 +832,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" abnormalTime="1" val="200" abnormalVisualEffect="bleed" abnormalLvl="3" abnormalType="bleeding" effectPower="1" />
+			<effect count="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -840,7 +840,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -859,7 +859,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<!-- FIXME: effectPower should be 0.05% but we use 1% for now -->
-			<effect name="Stun" abnormalTime="4" val="0" abnormalLvl="1" abnormalType="stun" effectPower="1" />
+			<effect name="Stun" val="0" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
@@ -894,7 +894,7 @@
 		<table name="#pAtk"> 1.02 1.03 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="signal_b" />
+		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -908,7 +908,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
@@ -919,7 +919,7 @@
 		<table name="#runSpd"> 5 10 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="signal_b" />
+		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -933,7 +933,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
 				<mul order="0x30" stat="pAtkSpd" val="#pmAtkSpd" />
 				<add order="0x40" stat="runSpd" val="#runSpd" />
@@ -946,7 +946,7 @@
 		<table name="#rCrit"> 0.04 0.08 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="signal_b" />
+		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -961,7 +961,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="Buff" abnormalTime="600" val="0" abnormalLvl="1" abnormalType="signal_b">
+			<effect name="Buff" val="0">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
@@ -972,7 +972,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="soa_buff1" />
+		<set name="abnormalType" val="SOA_BUFF1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -983,7 +983,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="soa_buff2" />
+		<set name="abnormalType" val="SOA_BUFF2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -994,7 +994,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
-		<set name="abnormalType" val="soa_buff3" />
+		<set name="abnormalType" val="SOA_BUFF3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -1004,7 +1004,7 @@
 	<skill id="6370" levels="1" name="Thunderbolt">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="damage_amplify" />
+		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -1016,7 +1016,7 @@
 	<skill id="6371" levels="1" name="Invincibility">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="pd_up_special" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1026,7 +1026,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="signal_a" />
+		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -1036,7 +1036,7 @@
 	<skill id="6373" levels="1" name="Thunderbolt">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="damage_amplify" />
+		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
@@ -1063,7 +1063,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
-		<set name="abnormalType" val="max_hp_down" />
+		<set name="abnormalType" val="MAX_HP_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1073,7 +1073,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="attack_time_down" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -1083,7 +1083,7 @@
 	<skill id="6378" levels="1" name="Earth Shift">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="vibration" />
+		<set name="abnormalType" val="VIBRATION" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1093,7 +1093,7 @@
 		<!-- Profuse bleeding causes you to loss 93 HP per second for 15 seconds. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="coolTime" val="500" />
 		<set name="fanRange" val="0,0,150,120" />
 		<set name="lvlBonusRate" val="2" />
@@ -1108,7 +1108,7 @@
 	<skill id="6380" levels="1" name="Bistakon Roar">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="silence_all" />
+		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="affectRange" val="300" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="1500" />
@@ -1126,15 +1126,15 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
+			<effect name="Mute" val="0" />
+			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6381" levels="2" name="Bistakon Soul Beam">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="silence_all" />
+		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
@@ -1152,14 +1152,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="#abnormalLvls" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
+			<effect name="Mute" val="0" />
+			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6382" levels="1" name="Bistakon Rolling Claw">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="500" />
 		<set name="fanRange" val="0,0,200,0" />
@@ -1179,13 +1179,13 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
-		<set name="abnormalType" val="silence_all" />
+		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="1000" />
@@ -1203,8 +1203,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" abnormalTime="20" val="0" abnormalLvl="1" abnormalType="silence_all" />
-			<effect name="PhysicalMute" abnormalTime="20" noicon="1" val="0" abnormalLvl="1" abnormalType="silence_all_two" /> <!-- TODO: This abnormalLvl="1" and abnormalType="silence_all_two" is a TEMP FIX, should be removed when "abnormalType and abnormalLvl" works like main skill attributes and not effect attributes -->
+			<effect name="Mute" val="0" />
+			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6384" levels="2" name="Bistakon Deadly Blow">
@@ -1224,7 +1224,7 @@
 	<skill id="6385" levels="1" name="Bistakon Critical Claw">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="150" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="650" />
@@ -1245,13 +1245,13 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="500" />
@@ -1269,7 +1269,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="6387" levels="1" name="Bistakon Earthquake">
@@ -1309,7 +1309,7 @@
 	<skill id="6389" levels="1" name="Cokrakon Sonic Cage">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="speed_down" />
+		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="isDebuff" val="true" />
@@ -1323,7 +1323,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="speed_down">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -1331,7 +1331,7 @@
 	<skill id="6390" levels="1" name="Cokrakon Sonic Explosion">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="casting_time_up" />
+		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="affectRange" val="300" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="2000" />
@@ -1347,7 +1347,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" abnormalTime="30" val="0" abnormalLvl="1" abnormalType="casting_time_up">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
 			</effect>
 		</for>
@@ -1355,7 +1355,7 @@
 	<skill id="6391" levels="1" name="Cokrakon Sonic Slash">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="500" />
@@ -1373,14 +1373,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="5" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
 		<!-- Attack Speed is decreased by 50%. -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="attack_time_up" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="2000" />
@@ -1397,7 +1397,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" abnormalTime="5" val="0" abnormalLvl="3" abnormalType="attack_time_up">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 			</effect>
 		</for>
@@ -1432,7 +1432,7 @@
 	<skill id="6395" levels="1" name="Cokrakon Dreadful Clow">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
-		<set name="abnormalType" val="bleeding" />
+		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -1452,13 +1452,13 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" abnormalTime="3" val="279" abnormalLvl="3" abnormalType="bleeding" abnormalVisualEffect="bleed" />
+			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
@@ -1477,13 +1477,13 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="3" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="3" name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="400" />
@@ -1501,13 +1501,13 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" abnormalTime="3" val="0" effectPower="50" abnormalLvl="1" abnormalType="stun" />
+			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
-		<set name="abnormalType" val="turn_flee" />
+		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectRange" val="300" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="2000" />
@@ -1526,7 +1526,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="2" name="Fear" abnormalTime="2" val="0" abnormalLvl="1" abnormalType="turn_flee" />
+			<effect count="2" name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="6399" levels="1" name="Cokrakon Dreadful Piercing">

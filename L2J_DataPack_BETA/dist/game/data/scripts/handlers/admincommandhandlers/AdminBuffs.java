@@ -19,6 +19,7 @@
 package handlers.admincommandhandlers;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
@@ -81,7 +82,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					showBuffs(activeChar, player, page);
 					return true;
 				}
-				activeChar.sendMessage("The player " + playername + " is not online");
+				activeChar.sendMessage("The player " + playername + " is not online.");
 				return false;
 			}
 			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2Character))
@@ -228,7 +229,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	 * @param gmchar the player to switch the Game Master skills.
 	 * @param toAuraSkills if {@code true} it will remove "GM Aura" skills and add "GM regular" skills, vice versa if {@code false}.
 	 */
-	public void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
+	public static void switchSkills(L2PcInstance gmchar, boolean toAuraSkills)
 	{
 		final Collection<L2Skill> skills = toAuraSkills ? SkillTreesData.getInstance().getGMSkillTree().values() : SkillTreesData.getInstance().getGMAuraSkillTree().values();
 		for (L2Skill skill : skills)
@@ -244,32 +245,31 @@ public class AdminBuffs implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	public void showBuffs(L2PcInstance activeChar, L2Character target, int page)
+	public static void showBuffs(L2PcInstance activeChar, L2Character target, int page)
 	{
-		final L2Effect[] effects = target.getAllEffects();
-		
-		if ((page > ((effects.length / PAGE_LIMIT) + 1)) || (page < 1))
+		final List<L2Effect> effects = target.getAllEffects();
+		if ((page > ((effects.size() / PAGE_LIMIT) + 1)) || (page < 1))
 		{
 			return;
 		}
 		
-		int max = effects.length / PAGE_LIMIT;
-		if (effects.length > (PAGE_LIMIT * max))
+		int max = effects.size() / PAGE_LIMIT;
+		if (effects.size() > (PAGE_LIMIT * max))
 		{
 			max++;
 		}
 		
-		final StringBuilder html = StringUtil.startAppend(500 + (effects.length * 200), "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", target.getName(), "</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
-		
+		final StringBuilder html = StringUtil.startAppend(500 + (effects.size() * 200), "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", target.getName(), "</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td><td>In use</td></tr>");
 		int start = ((page - 1) * PAGE_LIMIT);
-		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.length);
-		
+		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
+		L2Skill skill;
 		for (int i = start; i < end; i++)
 		{
-			L2Effect e = effects[i];
+			L2Effect e = effects.get(i);
 			if (e != null)
 			{
-				StringUtil.append(html, "<tr><td>", e.getSkill().getName(), "</td><td>", e.getSkill().isToggle() ? "toggle" : (e.getAbnormalTime() - e.getTime()) + "s", "</td><td><button value=\"Remove\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(e.getSkill().getId()), "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+				skill = e.getSkill();
+				StringUtil.append(html, "<tr><td>", skill.getName(), "(", e.getClass().getSimpleName(), ")", "</td><td>", skill.isToggle() ? "toggle" : (e.getAbnormalTime() - e.getTime()) + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + e.isInUse() + "</td></tr>");
 			}
 		}
 		
@@ -309,7 +309,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeBuff(L2PcInstance activeChar, int objId, int skillId)
+	private static void removeBuff(L2PcInstance activeChar, int objId, int skillId)
 	{
 		L2Character target = null;
 		try
@@ -322,9 +322,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		if ((target != null) && (skillId > 0))
 		{
-			L2Effect[] effects = target.getAllEffects();
-			
-			for (L2Effect e : effects)
+			for (L2Effect e : target.getAllEffects())
 			{
 				if ((e != null) && (e.getSkill().getId() == skillId))
 				{
@@ -340,7 +338,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 	}
 	
-	private void removeAllBuffs(L2PcInstance activeChar, int objId)
+	private static void removeAllBuffs(L2PcInstance activeChar, int objId)
 	{
 		L2Character target = null;
 		try
