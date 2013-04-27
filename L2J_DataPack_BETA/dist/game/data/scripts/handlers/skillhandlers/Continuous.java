@@ -18,6 +18,8 @@
  */
 package handlers.skillhandlers;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
@@ -123,7 +125,7 @@ public class Continuous implements ISkillHandler
 			{
 				if (skill.isToggle())
 				{
-					L2Effect[] effects = target.getAllEffects();
+					List<L2Effect> effects = target.getAllEffects();
 					if (effects != null)
 					{
 						for (L2Effect e : effects)

@@ -43,7 +43,7 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		if (!target.isL2Attackable() || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -76,7 +76,7 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}

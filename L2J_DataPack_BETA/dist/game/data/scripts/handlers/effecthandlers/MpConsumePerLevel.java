@@ -47,7 +47,6 @@ public class MpConsumePerLevel extends L2Effect
 		
 		double base = calc();
 		double consume = ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime();
-		
 		if (consume > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);

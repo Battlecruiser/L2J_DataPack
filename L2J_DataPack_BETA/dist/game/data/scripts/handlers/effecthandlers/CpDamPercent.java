@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
 /**
+ * CP Damage Percent effect implementation.
  * @author Zoey76
  */
 public class CpDamPercent extends L2Effect
@@ -43,16 +44,14 @@ public class CpDamPercent extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getEffected().isDead())
+		if (!getEffected().isDead())
 		{
-			return false;
+			double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
+			getEffected().setCurrentCp(cp);
+			StatusUpdate sucp = new StatusUpdate(getEffected());
+			sucp.addAttribute(StatusUpdate.CUR_CP, (int) cp);
+			getEffected().sendPacket(sucp);
 		}
-		
-		double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
-		getEffected().setCurrentCp(cp);
-		StatusUpdate sucp = new StatusUpdate(getEffected());
-		sucp.addAttribute(StatusUpdate.CUR_CP, (int) cp);
-		getEffected().sendPacket(sucp);
 		return false;
 	}
 }

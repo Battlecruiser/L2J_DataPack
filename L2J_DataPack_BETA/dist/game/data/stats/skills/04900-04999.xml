@@ -550,7 +550,7 @@
 		<!-- Decreases Atk. Spd. and Casting Spd. Effect 5. -->
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="all_speed_down" />
+		<set name="abnormalType" val="ALL_SPEED_DOWN" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -559,7 +559,7 @@
 		<!-- Shocks and instantly Immobilizes. -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
-		<set name="abnormalType" val="stun" />
+		<set name="abnormalType" val="STUN" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
@@ -622,7 +622,7 @@
 		<!-- TODO: Needs to be done -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="180" />
-		<set name="abnormalType" val="hp_regen_up" />
+		<set name="abnormalType" val="HP_REGEN_UP" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>

@@ -141,7 +141,7 @@ public class CorpsePlayer implements ITargetTypeHandler
 			}
 		}
 		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-		return _emptyTargetList;
+		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override

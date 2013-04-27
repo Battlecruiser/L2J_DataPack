@@ -238,8 +238,8 @@ public class Valakas extends AbstractNpcAI
 				int lvl = 0;
 				
 				// Verify if "Valakas Regeneration" skill is active.
-				final L2Effect[] effects = npc.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				final List<L2Effect> effects = npc.getAllEffects();
+				if ((effects != null) && (effects.size() != 0))
 				{
 					for (L2Effect e : effects)
 					{

@@ -74,7 +74,7 @@ public class ClanMember implements ITargetTypeHandler
 		}
 		else
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}

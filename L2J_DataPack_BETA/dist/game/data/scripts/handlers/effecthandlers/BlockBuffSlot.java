@@ -21,54 +21,48 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * @author Gnat
+ * Block Buff Slot effect.
+ * @author Zoey76
  */
-public class Negate extends L2Effect
+public class BlockBuffSlot extends L2Effect
 {
-	public Negate(Env env, EffectTemplate template)
+	public BlockBuffSlot(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart()
 	{
-		return L2EffectType.NEGATE;
+		if ((getEffector() == null) || (getEffected() == null) || ((getSkill() == null) && !getSkill().getBlockBuffSlots().isEmpty()))
+		{
+			return false;
+		}
+		getEffected().addBlockedBuffSlots(getSkill().getBlockBuffSlots());
+		return true;
 	}
 	
 	@Override
-	public boolean onStart()
+	public void onExit()
 	{
-		L2Skill skill = getSkill();
-		
-		if (skill.getNegateAbnormals() != null)
+		if ((getEffected() != null) && (getSkill() != null) && !getSkill().getBlockBuffSlots().isEmpty())
 		{
-			for (L2Effect effect : getEffected().getAllEffects())
-			{
-				if (effect == null)
-				{
-					continue;
-				}
-				
-				for (String negateAbnormalType : skill.getNegateAbnormals().keySet())
-				{
-					if (negateAbnormalType.equalsIgnoreCase(effect.getAbnormalType()) && (skill.getNegateAbnormals().get(negateAbnormalType) >= effect.getAbnormalLvl()))
-					{
-						effect.exit();
-					}
-				}
-			}
+			getEffected().removeBlockedBuffSlots(getSkill().getBlockBuffSlots());
 		}
-		return true;
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
 		return false;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 }

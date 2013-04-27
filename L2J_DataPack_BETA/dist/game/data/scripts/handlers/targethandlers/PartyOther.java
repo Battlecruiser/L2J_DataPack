@@ -50,7 +50,7 @@ public class PartyOther implements ITargetTypeHandler
 									target
 								};
 							}
-							return _emptyTargetList;
+							return EMPTY_TARGET_LIST;
 						case 427:
 							if (target.getActingPlayer().isMageClass())
 							{
@@ -59,7 +59,7 @@ public class PartyOther implements ITargetTypeHandler
 									target
 								};
 							}
-							return _emptyTargetList;
+							return EMPTY_TARGET_LIST;
 					}
 				}
 				return new L2Character[]
@@ -67,10 +67,10 @@ public class PartyOther implements ITargetTypeHandler
 					target
 				};
 			}
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-		return _emptyTargetList;
+		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override

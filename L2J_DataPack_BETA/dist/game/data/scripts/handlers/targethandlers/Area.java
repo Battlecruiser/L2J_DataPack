@@ -43,7 +43,7 @@ public class Area implements ITargetTypeHandler
 		if ((target == null) || (((target == activeChar) || target.isAlikeDead()) && (skill.getCastRange() >= 0)) || (!(target.isL2Attackable() || target.isPlayable())))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		final L2Character origin;
@@ -53,7 +53,7 @@ public class Area implements ITargetTypeHandler
 		{
 			if (!L2Skill.checkForAreaOffensiveSkills(activeChar, target, skill, srcInArena))
 			{
-				return _emptyTargetList;
+				return EMPTY_TARGET_LIST;
 			}
 			
 			if (onlyFirst)
@@ -104,7 +104,7 @@ public class Area implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		return targetList.toArray(new L2Character[targetList.size()]);

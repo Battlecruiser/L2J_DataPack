@@ -3,7 +3,7 @@
 	<skill id="2900" levels="1" name="Ancient Herb - Slayer">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="signal_c" />
+		<set name="abnormalType" val="SIGNAL_C" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -13,13 +13,13 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="signal_c" />
+			<effect name="Buff" val="0" />
 		</for>
 	</skill>
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="pd_up_special" />
+		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -29,13 +29,13 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Invincible" abnormalTime="60" val="0" abnormalLvl="1" abnormalType="pd_up_special" />
+			<effect name="Invincible" val="0" />
 		</for>
 	</skill>
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="casting_time_down" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -45,7 +45,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="4" abnormalType="casting_time_down">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="1.7" />
 			</effect>
 		</for>
@@ -53,7 +53,7 @@
 	<skill id="2903" levels="1" name="Ancient Herb - Guide">
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
-		<set name="abnormalType" val="speed_up_special" />
+		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -63,7 +63,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" abnormalTime="60" val="0" abnormalLvl="4" abnormalType="speed_up_special">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="runSpd" val="250" />
 			</effect>
 		</for>
@@ -71,7 +71,7 @@
 	<skill id="2904" levels="1" name="Guardian Spirit's Divine Protection">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="public_slot" />
+		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -1702,7 +1702,7 @@
 	<skill id="2993" levels="1" name="Ancient herb - Deceiver">
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="3600" />
-		<set name="abnormalType" val="poison" />
+		<set name="abnormalType" val="POISON" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
@@ -1712,17 +1712,16 @@
 	<skill id="2994" levels="1" name="Disguised Half - Aqua Elf">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
-		<set name="abnormalType" val="transform" />
+		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="125" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="125" />
 		</for>
 	</skill>
 	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet - D grade">

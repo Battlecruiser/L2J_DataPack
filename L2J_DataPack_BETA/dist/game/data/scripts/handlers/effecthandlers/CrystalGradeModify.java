@@ -38,7 +38,7 @@ public class CrystalGradeModify extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.BUFF;
+		return L2EffectType.NONE;
 	}
 	
 	@Override

@@ -51,12 +51,11 @@
 	<skill id="6908" levels="1" name="Transform Master">
 		<!-- High Five Skill -->
 		<!-- Transforms into a game Master. -->
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
-		<set name="transformId" val="22" />
 		<for>
-			<effect name="Transformation" abnormalTime="3600" val="0" abnormalLvl="1" abnormalType="transform" />
+			<effect name="Transformation" val="22" />
 		</for>
 	</skill>
 	<skill id="6909" levels="1" name="Charming">
@@ -93,7 +92,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="15" val="0">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="pDef" val="360" />
 				<add order="0x40" stat="mDef" val="270" />
 			</effect>
@@ -146,7 +145,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="10" val="0" abnormalLvl="1" abnormalType="fortune">
+			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<basemul order="0x30" stat="rCrit" val="0.1" />
 				<mul order="0x30" stat="cAtk" val="1.1" />

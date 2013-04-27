@@ -84,7 +84,7 @@ public class StealBuffs implements ISkillHandler
 					if (effect != null)
 					{
 						effect.scheduleEffect();
-						if (effect.getShowIcon() && activeChar.isPlayer())
+						if (effect.isIconDisplay() && activeChar.isPlayer())
 						{
 							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(effect);

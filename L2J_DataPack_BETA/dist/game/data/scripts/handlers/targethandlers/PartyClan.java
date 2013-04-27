@@ -51,7 +51,7 @@ public class PartyClan implements ITargetTypeHandler
 		
 		if (player == null)
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		targetList.add(player);

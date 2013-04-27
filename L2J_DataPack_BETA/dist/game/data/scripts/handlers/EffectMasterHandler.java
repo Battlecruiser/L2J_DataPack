@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.handler.EffectHandler;
 import handlers.effecthandlers.AbortCast;
 import handlers.effecthandlers.Betray;
 import handlers.effecthandlers.BigHead;
+import handlers.effecthandlers.BlockBuffSlot;
 import handlers.effecthandlers.BlockResurrection;
 import handlers.effecthandlers.Bluff;
 import handlers.effecthandlers.Buff;
@@ -82,7 +83,6 @@ import handlers.effecthandlers.ManaHealPercent;
 import handlers.effecthandlers.MpByLevel;
 import handlers.effecthandlers.MpConsumePerLevel;
 import handlers.effecthandlers.Mute;
-import handlers.effecthandlers.Negate;
 import handlers.effecthandlers.NoblesseBless;
 import handlers.effecthandlers.Paralyze;
 import handlers.effecthandlers.Petrification;
@@ -132,6 +132,7 @@ public final class EffectMasterHandler
 		RebalanceHP.class,
 		Betray.class,
 		BigHead.class,
+		BlockBuffSlot.class,
 		BlockResurrection.class,
 		Bluff.class,
 		Buff.class,
@@ -187,7 +188,6 @@ public final class EffectMasterHandler
 		MpByLevel.class,
 		MpConsumePerLevel.class,
 		Mute.class,
-		Negate.class,
 		NoblesseBless.class,
 		Paralyze.class,
 		Petrification.class,

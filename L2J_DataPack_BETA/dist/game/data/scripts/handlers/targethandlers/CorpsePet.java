@@ -43,7 +43,7 @@ public class CorpsePet implements ITargetTypeHandler
 				};
 			}
 		}
-		return _emptyTargetList;
+		return EMPTY_TARGET_LIST;
 	}
 	
 	@Override

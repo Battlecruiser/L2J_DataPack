@@ -46,7 +46,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		if (!checkTarget(activeChar, target) && (skill.getCastRange() >= 0))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		
 		if (onlyFirst)
@@ -92,7 +92,7 @@ public class AreaFriendly implements ITargetTypeHandler
 		
 		if (targetList.isEmpty())
 		{
-			return _emptyTargetList;
+			return EMPTY_TARGET_LIST;
 		}
 		return targetList.toArray(new L2Character[targetList.size()]);
 	}

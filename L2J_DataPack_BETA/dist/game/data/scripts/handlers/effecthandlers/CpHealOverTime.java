@@ -38,7 +38,7 @@ public class CpHealOverTime extends L2Effect
 	}
 	
 	@Override
-	protected boolean effectCanBeStolen()
+	public boolean canBeStolen()
 	{
 		return true;
 	}
@@ -63,7 +63,7 @@ public class CpHealOverTime extends L2Effect
 		// Not needed to set the CP and send update packet if player is already at max CP
 		if (cp >= maxcp)
 		{
-			return true;
+			return false;
 		}
 		
 		cp += calc();
@@ -73,6 +73,6 @@ public class CpHealOverTime extends L2Effect
 		StatusUpdate sump = new StatusUpdate(getEffected());
 		sump.addAttribute(StatusUpdate.CUR_CP, (int) cp);
 		getEffected().sendPacket(sump);
-		return true;
+		return false;
 	}
 }

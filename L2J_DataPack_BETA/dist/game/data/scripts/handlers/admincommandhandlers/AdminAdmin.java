@@ -61,7 +61,6 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_admin5",
 		"admin_admin6",
 		"admin_admin7",
-		"admin_admin8",
 		"admin_gmliston",
 		"admin_gmlistoff",
 		"admin_silence",
@@ -411,18 +410,8 @@ public class AdminAdmin implements IAdminCommandHandler
 			case 7:
 				filename = "gm";
 				break;
-			case 8:
-				filename = "old";
-				break;
 			default:
-				if (Config.GM_ADMIN_MENU_STYLE.equals("modern"))
-				{
-					filename = "main";
-				}
-				else
-				{
-					filename = "classic";
-				}
+				filename = "main";
 				break;
 		}
 		AdminHelpPage.showHelpPage(activeChar, filename + "_menu.htm");

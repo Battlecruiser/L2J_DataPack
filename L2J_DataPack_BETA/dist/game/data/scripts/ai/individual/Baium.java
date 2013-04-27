@@ -429,8 +429,8 @@ public class Baium extends AbstractNpcAI
 			if (attacker.getMountType() == 1)
 			{
 				int sk_4258 = 0;
-				L2Effect[] effects = attacker.getAllEffects();
-				if ((effects != null) && (effects.length != 0))
+				List<L2Effect> effects = attacker.getAllEffects();
+				if ((effects != null) && (effects.size() != 0))
 				{
 					for (L2Effect e : effects)
 					{
