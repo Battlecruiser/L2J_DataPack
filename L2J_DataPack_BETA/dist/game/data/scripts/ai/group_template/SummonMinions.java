@@ -125,7 +125,7 @@ public class SummonMinions extends AbstractNpcAI
 						{
 							for (int val : MINIONS.get(npcId))
 							{
-								L2Attackable newNpc = (L2Attackable) this.addSpawn(val, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, 0);
+								L2Attackable newNpc = (L2Attackable) addSpawn(val, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, 0);
 								newNpc.setRunning();
 								newNpc.addDamageHate(attacker, 0, 999);
 								newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -181,7 +181,7 @@ public class SummonMinions extends AbstractNpcAI
 						HasSpawned = 0;
 						for (int val : MINIONS.get(npcId))
 						{
-							L2Attackable newNpc = (L2Attackable) this.addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
+							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -194,7 +194,7 @@ public class SummonMinions extends AbstractNpcAI
 					{
 						for (int val : MINIONS.get(npcId))
 						{
-							L2Attackable newNpc = (L2Attackable) this.addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
+							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -205,7 +205,7 @@ public class SummonMinions extends AbstractNpcAI
 						broadcastNpcSay(npc, Say2.NPC_ALL, ATTACK_LEADER_MSG[getRandom(ATTACK_LEADER_MSG.length)]);
 						for (int val : MINIONS.get(npcId))
 						{
-							this.addSpawn(val, (npc.getX() + getRandom(-100, 100)), (npc.getY() + getRandom(-100, 100)), npc.getZ(), 0, false, 0);
+							addSpawn(val, (npc.getX() + getRandom(-100, 100)), (npc.getY() + getRandom(-100, 100)), npc.getZ(), 0, false, 0);
 						}
 					}
 					break;
