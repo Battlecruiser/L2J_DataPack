@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.jython.QuestJython;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.util.Util;
 
@@ -44,7 +43,7 @@ import com.l2jserver.gameserver.util.Util;
  * Overarching Superclass for all mob AI.
  * @author Fulminus
  */
-public final class L2AttackableAIScript extends QuestJython
+public final class L2AttackableAIScript extends Quest
 {
 	private L2AttackableAIScript(int questId, String name, String descr)
 	{

@@ -10,7 +10,7 @@ from com.l2jserver import L2DatabaseFactory
 from com.l2jserver.gameserver.datatables import SkillTable
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network import SystemMessageId
 from com.l2jserver.gameserver.network.serverpackets import ItemList
 from com.l2jserver.gameserver.network.serverpackets import NpcSay
