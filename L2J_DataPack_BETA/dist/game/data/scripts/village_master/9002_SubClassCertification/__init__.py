@@ -1,4 +1,3 @@
-#
 # Created by Gigiikun on 2009.06.01.
 
 import sys
@@ -8,7 +7,7 @@ from com.l2jserver.gameserver.model.base         import ClassType
 from com.l2jserver.gameserver.model.base         import Race
 from com.l2jserver.gameserver.model.quest        import State
 from com.l2jserver.gameserver.model.quest        import QuestState
-from com.l2jserver.gameserver.model.quest.jython import QuestJython as JQuest
+from com.l2jserver.gameserver.model.quest import Quest as JQuest
 from com.l2jserver.gameserver.network            import SystemMessageId
 from com.l2jserver.gameserver.network.serverpackets import SystemMessage
 
