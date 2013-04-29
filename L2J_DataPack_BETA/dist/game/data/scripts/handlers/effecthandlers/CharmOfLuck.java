@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -26,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Charm Of Luck effect.
  * @author kerberos_20
  */
 public class CharmOfLuck extends L2Effect
@@ -36,21 +36,15 @@ public class CharmOfLuck extends L2Effect
 	}
 	
 	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.CHARM_OF_LUCK.getMask();
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CHARM_OF_LUCK;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		((L2Playable) getEffected()).stopCharmOfLuck(this);
 	}
 	
 	@Override
@@ -60,8 +54,8 @@ public class CharmOfLuck extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public boolean onStart()
 	{
-		return EffectFlag.CHARM_OF_LUCK.getMask();
+		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
 	}
 }

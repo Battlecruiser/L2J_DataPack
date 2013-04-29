@@ -33,6 +33,7 @@ import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -318,12 +319,12 @@ public class Disablers implements ISkillHandler
 							{
 								if (summon.isNoblesseBlessed())
 								{
-									summon.stopNoblesseBlessing(null);
+									summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
 								}
 							}
 							else if (summon.isNoblesseBlessed())
 							{
-								summon.stopNoblesseBlessing(null);
+								summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
 							}
 							else
 							{
