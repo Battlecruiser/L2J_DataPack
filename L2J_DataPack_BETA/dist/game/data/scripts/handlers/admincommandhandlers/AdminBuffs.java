@@ -269,7 +269,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (e != null)
 			{
 				skill = e.getSkill();
-				StringUtil.append(html, "<tr><td>", skill.getName(), "(", e.getClass().getSimpleName(), ")", "</td><td>", skill.isToggle() ? "toggle" : (e.getAbnormalTime() - e.getTime()) + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + e.isInUse() + "</td></tr>");
+				StringUtil.append(html, "<tr><td>", skill.getName(), "(", e.getClass().getSimpleName(), ")", "</td><td>", skill.isToggle() ? "toggle" : skill.isPassive() ? "passive" : (e.getAbnormalTime() - e.getTime()) + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td>" + e.isInUse() + "</td></tr>");
 			}
 		}
 		

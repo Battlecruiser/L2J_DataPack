@@ -151,7 +151,6 @@ import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.RemoveDeathPenalty;
 import handlers.bypasshandlers.RentPet;
-import handlers.bypasshandlers.RideWyvern;
 import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
 import handlers.bypasshandlers.SupportBlessing;
@@ -453,7 +452,6 @@ public class MasterHandler
 			ReleaseAttribute.class,
 			RemoveDeathPenalty.class,
 			RentPet.class,
-			RideWyvern.class,
 			Rift.class,
 			SkillList.class,
 			SupportBlessing.class,
