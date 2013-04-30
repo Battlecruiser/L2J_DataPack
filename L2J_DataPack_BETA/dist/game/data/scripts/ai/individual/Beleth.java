@@ -48,6 +48,7 @@ import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.network.serverpackets.CreatureSay;
 import com.l2jserver.gameserver.network.serverpackets.DoorStatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jserver.gameserver.network.serverpackets.PlaySound;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
@@ -196,6 +197,7 @@ public class Beleth extends AbstractNpcAI
 						CAMERA2 = spawn(29121, new Location(16323, 210741, -9357, 0, instanceId));
 						CAMERA3 = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
 						CAMERA4 = spawn(29123, new Location(16323, 214917, -9356, 0, instanceId));
+						ZONE.broadcastPacket(new PlaySound(1, "BS07_A", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 75, -25, 0, 2500, 0, 0, 1, 0));
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(2), 300);
@@ -335,6 +337,7 @@ public class Beleth extends AbstractNpcAI
 					case 27:
 						BELETH.doDie(null);
 						CAMERA = spawn(29122, new Location(16323, 213170, -9357, 0, instanceId));
+						CAMERA.broadcastPacket(new PlaySound(1, "BS07_D", 1, CAMERA.getObjectId(), CAMERA.getX(), CAMERA.getY(), CAMERA.getZ()));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 290, 25, 0, 10000, 0, 0, 1, 0));
 						ZONE.broadcastPacket(new SpecialCamera(CAMERA.getObjectId(), 400, 110, 25, 4000, 10000, 0, 0, 1, 0));
