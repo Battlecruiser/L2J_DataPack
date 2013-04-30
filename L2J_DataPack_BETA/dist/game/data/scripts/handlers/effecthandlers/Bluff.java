@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
 
 /**
- * Implementation of the Bluff Effect
+ * Bluff effect.
  * @author decad
  */
 public class Bluff extends L2Effect

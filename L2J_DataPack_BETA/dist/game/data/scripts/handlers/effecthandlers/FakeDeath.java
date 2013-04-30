@@ -23,8 +23,11 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.ChangeWaitType;
+import com.l2jserver.gameserver.network.serverpackets.Revive;
 
 /**
+ * Fake Death effect.
  * @author mkizub
  */
 public class FakeDeath extends L2Effect
@@ -50,7 +53,14 @@ public class FakeDeath extends L2Effect
 	@Override
 	public void onExit()
 	{
-		getEffected().stopFakeDeath(false);
+		if (getEffected().isPlayer())
+		{
+			getEffected().getActingPlayer().setIsFakeDeath(false);
+			getEffected().getActingPlayer().setRecentFakeDeath(true);
+		}
+		
+		getEffected().broadcastPacket(new ChangeWaitType(getEffected(), ChangeWaitType.WT_STOP_FAKEDEATH));
+		getEffected().broadcastPacket(new Revive(getEffected()));
 	}
 	
 	@Override

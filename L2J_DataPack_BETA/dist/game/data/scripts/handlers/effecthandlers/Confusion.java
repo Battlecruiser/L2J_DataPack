@@ -21,6 +21,7 @@ package handlers.effecthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -45,7 +46,7 @@ public class Confusion extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.CONFUSION;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -58,7 +59,10 @@ public class Confusion extends L2Effect
 	@Override
 	public void onExit()
 	{
-		getEffected().stopConfused(this);
+		if (!getEffected().isPlayer())
+		{
+			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
 	}
 	
 	@Override
@@ -68,7 +72,7 @@ public class Confusion extends L2Effect
 		// Getting the possible targets
 		for (L2Object obj : getEffected().getKnownList().getKnownObjects().values())
 		{
-			if ((obj instanceof L2Character) && (obj != getEffected()))
+			if (((getEffected().isMonster() && obj.isL2Attackable()) || (obj instanceof L2Character)) && (obj != getEffected()))
 			{
 				targetList.add((L2Character) obj);
 			}
