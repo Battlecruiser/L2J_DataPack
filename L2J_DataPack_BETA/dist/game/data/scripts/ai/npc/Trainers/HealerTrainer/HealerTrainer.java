@@ -148,7 +148,7 @@ public class HealerTrainer extends AbstractNpcAI
 	 * Display the Transfer Skill List to the player, if there is any skill available.
 	 * @param player the player
 	 */
-	public static void displayTransferSkillList(L2PcInstance player)
+	private static void displayTransferSkillList(L2PcInstance player)
 	{
 		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableTransferSkills(player);
 		final AcquireSkillList asl = new AcquireSkillList(AcquireSkillType.TRANSFER);
