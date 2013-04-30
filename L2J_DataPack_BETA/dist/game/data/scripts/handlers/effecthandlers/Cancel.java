@@ -19,7 +19,6 @@
 package handlers.effecthandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
@@ -29,12 +28,11 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
+ * Cancel effect.
  * @author DS
  */
 public class Cancel extends L2Effect
 {
-	protected static final Logger _log = Logger.getLogger(Cancel.class.getName());
-	
 	public Cancel(Env env, EffectTemplate template)
 	{
 		super(env, template);

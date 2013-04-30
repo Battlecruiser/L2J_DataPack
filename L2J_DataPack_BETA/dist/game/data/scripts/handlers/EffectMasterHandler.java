@@ -42,7 +42,6 @@ import handlers.effecthandlers.ChangeHairStyle;
 import handlers.effecthandlers.CharmOfCourage;
 import handlers.effecthandlers.CharmOfLuck;
 import handlers.effecthandlers.ClanGate;
-import handlers.effecthandlers.ConfuseMob;
 import handlers.effecthandlers.Confusion;
 import handlers.effecthandlers.ConsumeBody;
 import handlers.effecthandlers.ConvertItem;
@@ -147,7 +146,6 @@ public final class EffectMasterHandler
 		CharmOfCourage.class,
 		CharmOfLuck.class,
 		ClanGate.class,
-		ConfuseMob.class,
 		Confusion.class,
 		ConsumeBody.class,
 		ConvertItem.class,

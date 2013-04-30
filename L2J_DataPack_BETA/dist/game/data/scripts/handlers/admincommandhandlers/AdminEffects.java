@@ -224,7 +224,6 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
 					player.setIsParalyzed(false);
-					player.stopParalyze(false);
 				}
 			}
 			catch (Exception e)
@@ -290,7 +289,6 @@ public class AdminEffects implements IAdminCommandHandler
 						player.stopAbnormalEffect(AbnormalEffect.HOLD_2);
 					}
 					player.setIsParalyzed(false);
-					player.stopParalyze(false);
 				}
 			}
 			catch (Exception e)

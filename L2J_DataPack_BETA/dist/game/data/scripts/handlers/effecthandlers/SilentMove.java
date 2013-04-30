@@ -46,19 +46,6 @@ public class SilentMove extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		super.onStart();
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		super.onExit();
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SILENT_MOVE;
@@ -79,7 +66,6 @@ public class SilentMove extends L2Effect
 		}
 		
 		double manaDam = calc();
-		
 		if (manaDam > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
