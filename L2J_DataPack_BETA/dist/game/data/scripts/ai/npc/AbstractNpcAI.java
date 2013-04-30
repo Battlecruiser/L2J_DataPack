@@ -40,6 +40,11 @@ public abstract class AbstractNpcAI extends L2Script
 {
 	public Logger _log = Logger.getLogger(getClass().getSimpleName());
 	
+	public AbstractNpcAI(String name, String descr)
+	{
+		super(-1, name, descr);
+	}
+	
 	/**
 	 * Simple on first talk event handler.
 	 */
@@ -47,11 +52,6 @@ public abstract class AbstractNpcAI extends L2Script
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		return npc.getNpcId() + ".html";
-	}
-	
-	public AbstractNpcAI(String name, String descr)
-	{
-		super(-1, name, descr);
 	}
 	
 	/**
