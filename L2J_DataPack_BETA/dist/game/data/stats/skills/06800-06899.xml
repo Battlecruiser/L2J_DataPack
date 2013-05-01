@@ -230,10 +230,10 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="5000" /> <!-- FIXME: value unconfirmed -->
+			<effect name="HealPercent" noicon="1" val="100" />
 		</for>
 	</skill>
 	<skill id="6818" levels="1" name="Powerful Rage">
