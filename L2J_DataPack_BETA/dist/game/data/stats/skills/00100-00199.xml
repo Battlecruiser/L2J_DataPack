@@ -1188,7 +1188,7 @@
 			<add order="0x40" stat="regMp" val="#mp">
 				<player running="true" />
 			</add>
-			<sub order="0x40" stat="rootVuln" val="11" />
+			<add order="0x40" stat="rootVuln" val="11" />
 		</for>
 	</skill>
 	<skill id="172" levels="10" name="Create Item">
