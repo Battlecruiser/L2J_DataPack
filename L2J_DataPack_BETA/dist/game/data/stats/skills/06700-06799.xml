@@ -39,6 +39,9 @@
 	</skill>
 	<skill id="6706" levels="1" name="Piercing Attack">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="500" />
 		<set name="isTriggeredSkill" val="true" />
@@ -92,7 +95,9 @@
 	</skill>
 	<skill id="6714" levels="1" name="Wind Walk of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -108,7 +113,9 @@
 	</skill>
 	<skill id="6715" levels="1" name="Haste of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -124,7 +131,9 @@
 	</skill>
 	<skill id="6716" levels="1" name="Might of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -140,7 +149,9 @@
 	</skill>
 	<skill id="6717" levels="1" name="Berserker Spirit of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -163,7 +174,9 @@
 	</skill>
 	<skill id="6718" levels="1" name="Death Whisper of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -179,7 +192,9 @@
 	</skill>
 	<skill id="6719" levels="1" name="Guidance of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -195,7 +210,9 @@
 	</skill>
 	<skill id="6720" levels="1" name="Focus of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -211,7 +228,9 @@
 	</skill>
 	<skill id="6721" levels="1" name="Empower of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -226,8 +245,10 @@
 		</for>
 	</skill>
 	<skill id="6722" levels="1" name="Acumen of Elcadia">
-		<!-- Increases Casting Spd. by 30% for 10 minutes. -->
+		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -243,7 +264,9 @@
 	</skill>
 	<skill id="6723" levels="1" name="Concentration of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -259,7 +282,9 @@
 	</skill>
 	<skill id="6724" levels="1" name="Greater Heal of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -274,7 +299,9 @@
 	</skill>
 	<skill id="6725" levels="1" name="Bless the Blood of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="BLESS_THE_BLOOD" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1000" />
@@ -300,7 +327,9 @@
 	</skill>
 	<skill id="6727" levels="1" name="Vampiric Rage of Elcadia">
 		<!-- High Five Skill -->
-		<set name="abnormalTime" val="1200" />
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -329,7 +358,9 @@
 	</skill>
 	<skill id="6729" levels="1" name="Resist Holy of Elcadia">
 		<!-- High Five Skill -->
+		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
