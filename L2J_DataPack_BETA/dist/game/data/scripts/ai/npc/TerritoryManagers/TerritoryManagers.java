@@ -20,7 +20,7 @@ package ai.npc.TerritoryManagers;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
@@ -99,7 +99,7 @@ public class TerritoryManagers extends AbstractNpcAI
 				{
 					// If the player has at least one Territory Badges then show the multisell.
 					final int multiSellId = 364900001 + ((npcId - 36490) * 10000);
-					MultiSell.getInstance().separateAndSend(multiSellId, player, npc, false);
+					MultisellData.getInstance().separateAndSend(multiSellId, player, npc, false);
 				}
 				else
 				{

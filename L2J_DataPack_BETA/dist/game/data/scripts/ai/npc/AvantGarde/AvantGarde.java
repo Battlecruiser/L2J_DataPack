@@ -5,7 +5,7 @@ import java.util.List;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -111,7 +111,7 @@ public class AvantGarde extends AbstractNpcAI
 			{
 				if (RequestAcquireSkill.canTransform(player))
 				{
-					MultiSell.getInstance().separateAndSend(32323001, player, npc, false);
+					MultisellData.getInstance().separateAndSend(32323001, player, npc, false);
 				}
 				else
 				{

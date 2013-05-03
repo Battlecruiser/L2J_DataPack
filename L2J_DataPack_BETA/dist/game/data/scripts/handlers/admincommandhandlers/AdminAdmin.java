@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -227,7 +227,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				if (type.equals("multisell"))
 				{
-					MultiSell.getInstance().reload();
+					MultisellData.getInstance().load();
 					activeChar.sendMessage("All Multisells have been reloaded");
 				}
 				else if (type.startsWith("teleport"))

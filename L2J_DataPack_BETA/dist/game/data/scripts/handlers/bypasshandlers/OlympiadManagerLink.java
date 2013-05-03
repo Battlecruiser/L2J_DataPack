@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcBufferTable;
 import com.l2jserver.gameserver.datatables.NpcBufferTable.NpcBufferData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
@@ -190,10 +190,10 @@ public class OlympiadManagerLink implements IBypassHandler
 						}
 						break;
 					case 7: // Equipment Rewards
-						MultiSell.getInstance().separateAndSend(102, activeChar, (L2Npc) target, false);
+						MultisellData.getInstance().separateAndSend(102, activeChar, (L2Npc) target, false);
 						break;
 					case 8: // Misc. Rewards
-						MultiSell.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
+						MultisellData.getInstance().separateAndSend(103, activeChar, (L2Npc) target, false);
 						break;
 					case 9: // Your Grand Olympiad Score from the previous period is %points% point(s) | TODO: cleanup (not used anymore)
 						int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());

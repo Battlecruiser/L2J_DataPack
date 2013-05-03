@@ -27,7 +27,7 @@ import javax.script.ScriptException;
 
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
@@ -63,7 +63,7 @@ public class ReloadHandler implements ITelnetHandler
 				if (type.equals("multisell"))
 				{
 					_print.print("Reloading multisell... ");
-					MultiSell.getInstance().reload();
+					MultisellData.getInstance().load();
 					_print.println("done");
 				}
 				else if (type.equals("skill"))
