@@ -18,7 +18,7 @@
  */
 package custom.NewbieCoupons;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -135,7 +135,7 @@ public class NewbieCoupons extends Quest
 		{
 			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level == 0))
 			{
-				MultiSell.getInstance().separateAndSend(WEAPON_MULTISELL, player, npc, false);
+				MultisellData.getInstance().separateAndSend(WEAPON_MULTISELL, player, npc, false);
 				return null;
 			}
 			htmltext = "30598-7.htm"; // you're not eligible to use warehouse
@@ -144,7 +144,7 @@ public class NewbieCoupons extends Quest
 		{
 			if ((level >= 6) && (level <= 39) && (pkkills == 0) && (occupation_level > 0))
 			{
-				MultiSell.getInstance().separateAndSend(ACCESORIES_MULTISELL, player, npc, false);
+				MultisellData.getInstance().separateAndSend(ACCESORIES_MULTISELL, player, npc, false);
 				return null;
 			}
 			htmltext = "30598-8.htm"; // you're not eligible to use warehouse

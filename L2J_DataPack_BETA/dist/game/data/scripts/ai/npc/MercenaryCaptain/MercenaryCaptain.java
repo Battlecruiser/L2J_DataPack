@@ -24,7 +24,7 @@ import java.util.StringTokenizer;
 
 import ai.npc.AbstractNpcAI;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.Territory;
 import com.l2jserver.gameserver.instancemanager.TerritoryWarManager.TerritoryNPCSpawn;
@@ -170,7 +170,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 					else
 					{
 						final int listId = 676 + npc.getCastle().getCastleId();
-						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
 				}
@@ -183,7 +183,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 					else
 					{
 						final int listId = 685 + npc.getCastle().getCastleId();
-						MultiSell.getInstance().separateAndSend(listId, player, npc, false);
+						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
 				}

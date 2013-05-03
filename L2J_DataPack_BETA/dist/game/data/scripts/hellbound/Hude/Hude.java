@@ -18,7 +18,7 @@
  */
 package hellbound.Hude;
 
-import com.l2jserver.gameserver.datatables.MultiSell;
+import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -84,14 +84,14 @@ public class Hude extends Quest
 		{
 			if (qs.hasQuestItems(STANDART_CERT) || qs.hasQuestItems(PREMIUM_CERT))
 			{
-				MultiSell.getInstance().separateAndSend(322980001, player, npc, false);
+				MultisellData.getInstance().separateAndSend(322980001, player, npc, false);
 			}
 		}
 		else if ("multisell2".equalsIgnoreCase(event))
 		{
 			if (qs.hasQuestItems(PREMIUM_CERT))
 			{
-				MultiSell.getInstance().separateAndSend(322980002, player, npc, false);
+				MultisellData.getInstance().separateAndSend(322980002, player, npc, false);
 			}
 		}
 		return null;
