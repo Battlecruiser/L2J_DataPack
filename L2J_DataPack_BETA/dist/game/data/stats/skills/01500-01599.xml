@@ -1350,12 +1350,12 @@
 	</skill>
 	<skill id="1548" levels="3" name="Resist Earth" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- High Five Skill -->
+		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 243 379 418 </table> <!-- FIXME: value unconfirmed -->
 		<table name="#earthRes"> 10 15 20 </table>
 		<table name="#magicLvl"> 60 64 68 </table>
 		<table name="#mpConsume"> 20 28 31 </table>
 		<table name="#mpInitialConsume"> 5 7 8 </table>
-		<table name="#stackOrder"> 1 2 3 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2mpConsume"> 30 29 29 28 28 27 27 26 26 25 25 24 24 23 23 22 22 21 21 20 20 19 19 18 18 17 17 16 16 15 </table>
@@ -1364,7 +1364,9 @@
 		<table name="#ench3vuln"> 24 28 33 37 41 46 50 54 59 63 67 72 76 80 85 89 93 98 102 106 111 115 119 124 128 132 137 141 145 150 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchvuln"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="ARMOR_EARTH" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
@@ -1407,7 +1409,9 @@
 	<skill id="1549" levels="1" name="Chant of Elements">
 		<!-- High Five Skill -->
 		<!-- NOTE: skill desc says "increases the elemental attribute" but is client typo, it increase defense (see skill icon) -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="MD_UP_ATTR" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="624" /> <!-- FIXME: value unconfirmed -->
 		<set name="hitTime" val="2500" />
@@ -1666,13 +1670,15 @@
 	</skill>
 	<skill id="1561" levels="5" name="Battle Cry">
 		<!-- High Five Skill -->
+		<table name="#abnormalLvls"> 2 3 4 5 6 </table>
 		<table name="#aggroPoints"> 379 467 549 597 635 </table>
 		<table name="#amount"> 15 20 25 30 35 </table>
 		<table name="#magicLvl"> 40 49 58 64 70 </table>
 		<table name="#maxHp"> 1.15 1.2 1.25 1.3 1.35 </table>
 		<table name="#mpConsume"> 18 22 27 30 33 </table>
-		<table name="#stackOrder"> 2 3 4 5 6 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
+		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1690,6 +1696,7 @@
 	</skill>
 	<skill id="1562" levels="2" name="Chant of Berserker">
 		<!-- High Five Skill -->
+		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggro"> 331 495 </table>
 		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
@@ -1702,8 +1709,9 @@
 		<table name="#pDef"> 0.95 0.92 </table>
 		<table name="#rEvas"> 2 4 </table>
 		<table name="#runSpd"> 5 8 </table>
-		<table name="#stackOrder"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="BERSERKER" />
 		<set name="affectRange" val="1000" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="2500" />
@@ -1730,13 +1738,15 @@
 	</skill>
 	<skill id="1563" levels="2" name="Fury of Pa'agrio">
 		<!-- High Five Skill -->
+		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 457 532 </table>
 		<table name="#magicLvl"> 48 56 </table>
 		<table name="#mpConsume"> 138 164 </table>
 		<table name="#mpInitialConsume"> 34 40 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
-		<table name="#stackOrder"> 1 2 </table>
+		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="900" />
 		<set name="aggroPoints" val="#aggroPoints" />
