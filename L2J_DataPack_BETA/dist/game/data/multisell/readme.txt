@@ -7,8 +7,6 @@ of this directory a little bit.
 003.xml  -> Newbie exchange
 009.xml  -> Proof of Catching a Fish
 
-101.xml  -> Tickets for pet collars Exchange
-
 102.xml  -> Olympiad: Equipment Rewards
 103.xml  -> Olympiad: Misc. Rewards
 
@@ -166,34 +164,6 @@ of this directory a little bit.
 323470002.xml -> Shadai - Shoulder Ornament and Forgotten Scrolls
 323470003.xml -> Shadai - Enhance Armor
 323470004.xml -> Shadai - Remove Enhancement
-
-364810001.xml -> Mercenary Captain - Gludio 1
-364810002.xml -> Mercenary Captain - Gludio 2
-364810003.xml -> Mercenary Captain - Gludio 3
-364820001.xml -> Mercenary Captain - Dion 1
-364820002.xml -> Mercenary Captain - Dion 2
-364820003.xml -> Mercenary Captain - Dion 3
-364830001.xml -> Mercenary Captain - Giran 1
-364830002.xml -> Mercenary Captain - Giran 2
-364830003.xml -> Mercenary Captain - Giran 3
-364840001.xml -> Mercenary Captain - Oren 1
-364840002.xml -> Mercenary Captain - Oren 2
-364840003.xml -> Mercenary Captain - Oren 3
-364850001.xml -> Mercenary Captain - Aden 1
-364850002.xml -> Mercenary Captain - Aden 2
-364850003.xml -> Mercenary Captain - Aden 3
-364860001.xml -> Mercenary Captain - Innadril 1
-364860002.xml -> Mercenary Captain - Innadril 2
-364860003.xml -> Mercenary Captain - Innadril 3
-364870001.xml -> Mercenary Captain - Goddard 1
-364870002.xml -> Mercenary Captain - Goddard 2
-364870003.xml -> Mercenary Captain - Goddard 3
-364880001.xml -> Mercenary Captain - Rune 1
-364880002.xml -> Mercenary Captain - Rune 2
-364880003.xml -> Mercenary Captain - Rune 3
-364890001.xml -> Mercenary Captain - Schuttgart 1
-364890002.xml -> Mercenary Captain - Schuttgart 2
-364890003.xml -> Mercenary Captain - Schuttgart 3
 
 364900001.xml -> Territory Manager - Gludio
 364910001.xml -> Territory Manager - Dion
