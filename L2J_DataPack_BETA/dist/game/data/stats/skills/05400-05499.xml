@@ -208,7 +208,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="6" name="DamOverTime" val="#dot">
+			<effect ticks="6" name="DamOverTime" val="#dot">
 				<add order="0x40" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -234,7 +234,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="6" name="DamOverTime" val="#dot" abnormalVisualEffect="poison">
+			<effect ticks="6" name="DamOverTime" val="#dot" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -258,7 +258,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="6" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed">
+			<effect ticks="6" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -575,7 +575,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#val" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect ticks="4" name="DamOverTime" val="#val" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -676,7 +676,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="1" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="1" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
@@ -1087,7 +1087,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 71HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" val="355" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect ticks="4" name="DamOverTime" val="355" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
@@ -1130,7 +1130,7 @@
 		<for>
 			<effect name="Stun" val="0" effectPower="80" />
 			<!-- 52HP * 1 during 9 seconds -->
-			<effect count="9" name="DamOverTime" noicon="1" val="52" effectPower="80" />
+			<effect ticks="9" name="DamOverTime" noicon="1" val="52" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">

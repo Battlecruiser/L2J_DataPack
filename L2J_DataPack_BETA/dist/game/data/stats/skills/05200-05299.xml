@@ -930,7 +930,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1024,7 +1024,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1082,7 +1082,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 35 50 68 87 107 123 134 134 139 139 142 142 HP * 3 during 10 seconds -->
-			<effect count="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1111,7 +1111,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1325,7 +1325,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="10" name="Debuff" val="0" abnormalVisualEffect="deathmark" />
+			<effect ticks="10" name="Debuff" val="0" abnormalVisualEffect="deathmark" />
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
@@ -1417,7 +1417,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="6" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" effectPower="80" />
+			<effect ticks="6" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">

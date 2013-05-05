@@ -1239,7 +1239,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1320,7 +1320,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1740,7 +1740,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
@@ -1767,7 +1767,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
@@ -1794,7 +1794,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

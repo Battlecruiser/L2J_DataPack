@@ -191,7 +191,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="6814" levels="8" name="Focus Force">
@@ -210,7 +210,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="6815" levels="16" name="Deadly Poison">
@@ -759,7 +759,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="6" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
+			<effect ticks="6" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6863" levels="1" name="Poison">
@@ -783,7 +783,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="120" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="120" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6864" levels="1" name="Summon">
@@ -812,7 +812,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="8" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
+			<effect ticks="8" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6866" levels="1" name="Vampiric Claw">
@@ -990,7 +990,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="8" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect ticks="8" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6876" levels="1" name="Power Strike">

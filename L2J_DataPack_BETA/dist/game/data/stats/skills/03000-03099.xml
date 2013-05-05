@@ -31,7 +31,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="66" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="66" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3006" levels="1" name="Equip Set Items">
@@ -200,7 +200,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
@@ -221,7 +221,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
@@ -275,7 +275,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
@@ -492,7 +492,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
@@ -516,7 +516,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3042" levels="20" name="Special Ability: Critical Damage">
@@ -675,7 +675,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="222" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="222" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
@@ -695,7 +695,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="264" abnormalVisualEffect="bleed">
+			<effect ticks="7" name="DamOverTime" val="264" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -717,7 +717,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="768" abnormalVisualEffect="bleed">
+			<effect ticks="7" name="DamOverTime" val="768" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -739,7 +739,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="384" abnormalVisualEffect="bleed">
+			<effect ticks="7" name="DamOverTime" val="384" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -840,7 +840,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
@@ -862,7 +862,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="672" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="672" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3063" levels="2" name="Special Ability: Back Blow">

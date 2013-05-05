@@ -986,7 +986,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<!-- Retail Values CT2.3: 24MP * 3 sec -->
-			<effect count="10" name="ManaDamOverTime" val="72">
+			<effect ticks="10" name="ManaDamOverTime" val="72">
 				<add order="0x40" stat="cancelVuln" val="30" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.3" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="1.1" />
@@ -994,7 +994,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect count="#ench2Count" name="ManaDamOverTime" val="72">
+			<effect ticks="#ench2Count" name="ManaDamOverTime" val="72">
 				<add order="0x40" stat="cancelVuln" val="30" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.3" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="1.1" />
@@ -1041,7 +1041,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1049,7 +1049,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1096,7 +1096,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1104,7 +1104,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1151,7 +1151,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1159,7 +1159,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1205,13 +1205,13 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
@@ -1256,13 +1256,13 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect count="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>

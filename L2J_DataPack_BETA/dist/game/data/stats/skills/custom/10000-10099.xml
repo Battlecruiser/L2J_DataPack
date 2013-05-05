@@ -11,7 +11,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="3" name="ManaHealOverTime" val="1.5" />
+			<effect ticks="3" name="ManaHealOverTime" val="1.5" />
 		</for>
 	</skill>
 	<skill id="10001" levels="1" name="Mana Potion">

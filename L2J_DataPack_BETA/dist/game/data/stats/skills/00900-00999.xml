@@ -107,7 +107,7 @@
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -221,7 +221,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" >
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" >
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -428,7 +428,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="8" name="IncreaseCharges" noicon="1" val="8" />
+			<effect ticks="8" name="IncreaseCharges" noicon="1" val="8" />
 		</for>
 	</skill>
 	<skill id="919" levels="1" name="Maximum Focus Sonic">
@@ -450,7 +450,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="8" name="IncreaseCharges" noicon="1" val="8" />
+			<effect ticks="8" name="IncreaseCharges" noicon="1" val="8" />
 		</for>
 	</skill>
 	<skill id="920" levels="37" name="Power Crush">
@@ -619,7 +619,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="flame" effectPower="50" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="flame" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
@@ -1005,7 +1005,7 @@
 			<using kind="Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<effect count="15" name="DamOverTime" val="92" abnormalVisualEffect="flame" />
+			<effect ticks="15" name="DamOverTime" val="92" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
@@ -1113,7 +1113,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="156" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect ticks="7" name="DamOverTime" val="156" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">

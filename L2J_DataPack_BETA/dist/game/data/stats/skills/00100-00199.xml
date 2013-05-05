@@ -178,7 +178,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 41 50 58 63HP * 3 Sec -->
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="104" levels="1" name="Detect Plant Weakness">
@@ -844,7 +844,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- Retail Values CT2.3: 24 41 50 58 63HP * 3 Sec -->
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">

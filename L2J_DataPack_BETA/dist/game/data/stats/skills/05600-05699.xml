@@ -1133,7 +1133,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5669" levels="1" name="Stun">
@@ -1641,7 +1641,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="5" name="IncreaseCharges" noicon="1" val="1" />
+			<effect ticks="5" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="5696" levels="1" name="Dizziness">

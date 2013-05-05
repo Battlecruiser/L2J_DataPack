@@ -442,7 +442,7 @@
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect count="7" name="IncreaseCharges" noicon="1" val="1" />
+			<effect ticks="7" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
@@ -648,7 +648,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="10" name="DamOverTime" val="327" abnormalVisualEffect="poison">
+			<effect ticks="10" name="DamOverTime" val="327" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1393,7 +1393,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- 41 41 50 50 50 58 58 58 63 63HP * 3 during 30 seconds -->
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
@@ -1423,7 +1423,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 44 44 54 54 54 62 62 62 67 67HP * 3 during 20 seconds -->
-			<effect count="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">

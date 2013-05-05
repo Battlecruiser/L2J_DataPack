@@ -424,10 +424,10 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect ticks="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant3for>
-			<effect count="20" name="DamOverTime" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
+			<effect ticks="20" name="DamOverTime" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -878,7 +878,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 76 76 76 76 83 83 83 HP * 5 during 20 seconds -->
-			<effect count="4" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="4" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5447" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1795,7 +1795,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="2" name="DamOverTime" val="615" effectPower="50" abnormalVisualEffect="bleed" />
+			<effect ticks="2" name="DamOverTime" val="615" effectPower="50" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2010,7 +2010,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect self="1" count="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+			<effect self="1" ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="571" levels="4" name="Poison Dust">
@@ -2040,7 +2040,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="174" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="174" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
@@ -2198,7 +2198,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="3" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" effectPower="60" />
+			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2304,7 +2304,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="3" name="DamOverTime" val="369" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect ticks="3" name="DamOverTime" val="369" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
@@ -2412,7 +2412,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="5" name="DamOverTime" val="#dmg" />
+			<effect ticks="5" name="DamOverTime" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">

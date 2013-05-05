@@ -10,7 +10,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="3" name="HealOverTime" val="2" />
+			<effect ticks="3" name="HealOverTime" val="2" />
 		</for>
 	</skill>
 	<skill id="2002" levels="1" name="Healing Drug">
@@ -23,7 +23,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="4" name="HealOverTime" val="1.5" />
+			<effect ticks="4" name="HealOverTime" val="1.5" />
 		</for>
 	</skill>
 	<skill id="2003" levels="1" name="Squash Seed">
@@ -275,7 +275,7 @@
 		<for>
 			<!-- retail value: 8HP/sec; stat update every 2 sec -->
 			<!-- Verified by slyce - Interlude - 8th Aug 2007 -->
-			<effect count="7" name="HealOverTime" val="16" />
+			<effect ticks="7" name="HealOverTime" val="16" />
 		</for>
 	</skill>
 	<skill id="2032" levels="1" name="Healing potion">
@@ -291,7 +291,7 @@
 		<for>
 			<!-- retail value: 24HP/sec; stat update every 2 sec -->
 			<!-- Verified by slyce - Interlude - 8th Aug 2007 -->
-			<effect count="7" name="HealOverTime" val="48" />
+			<effect ticks="7" name="HealOverTime" val="48" />
 		</for>
 	</skill>
 	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
@@ -357,7 +357,7 @@
 		<for>
 			<!-- retail value: 50HP/sec; stat update every 2 sec -->
 			<!-- Verified by slyce - Interlude - 8th Aug 2007 -->
-			<effect count="7" name="HealOverTime" val="100" />
+			<effect ticks="7" name="HealOverTime" val="100" />
 		</for>
 	</skill>
 	<skill id="2038" levels="1" name="Quick Healing Potion">

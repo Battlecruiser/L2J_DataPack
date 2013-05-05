@@ -84,7 +84,7 @@
 		</enchant1for>
 		<enchant2for>
 			<!-- 118HP * 3 During 15 Sec -->
-			<effect count="5" name="DamOverTime" val="354" effectPower="#ench2Power" />
+			<effect ticks="5" name="DamOverTime" val="354" effectPower="#ench2Power" />
 			<effect name="Spoil" noicon="1" val="0" />
 		</enchant2for>
 		<enchant3for>
@@ -1203,7 +1203,7 @@
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
 			<!-- 50HP * 5 during 120 seconds -->
-			<effect count="24" name="HealOverTime" noicon="1" val="250" />
+			<effect ticks="24" name="HealOverTime" noicon="1" val="250" />
 			<effect name="HealPercent" noicon="1" val="50" />
 		</for>
 		<enchant2for>
@@ -1213,7 +1213,7 @@
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
 			<!-- 50HP * 1 during #ench2Time -->
-			<effect count="#ench2Time" name="HealOverTime" noicon="1" val="50" />
+			<effect ticks="#ench2Time" name="HealOverTime" noicon="1" val="50" />
 			<effect name="HealPercent" noicon="1" val="50" />
 		</enchant2for>
 	</skill>
@@ -1375,7 +1375,7 @@
 			<using kind="Dual Sword" />
 		</cond>
 		<for>
-			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
+			<effect self="1" ticks="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
@@ -1398,7 +1398,7 @@
 			<using kind="Dual Fist" />
 		</cond>
 		<for>
-			<effect self="1" count="8" name="IncreaseCharges" noicon="1" val="1" />
+			<effect self="1" ticks="8" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
