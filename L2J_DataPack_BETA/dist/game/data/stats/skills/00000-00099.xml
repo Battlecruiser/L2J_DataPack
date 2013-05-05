@@ -1383,7 +1383,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- retail value: 10MP/sec; stat update every 3 sec -->
-			<effect count="0x7fffffff" name="FakeDeath" val="30" />
+			<effect count="-1" name="FakeDeath" val="30" />
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">

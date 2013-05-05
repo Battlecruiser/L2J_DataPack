@@ -343,13 +343,13 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- 9MP * 5 during active time -->
-			<effect count="0x7fffffff" name="SilentMove" abnormalVisualEffect="stealth" val="45">
+			<effect count="-1" name="SilentMove" abnormalVisualEffect="stealth" val="45">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
 		<enchant1for>
 			<!-- 9MP * 5 during active time -->
-			<effect count="0x7fffffff" name="SilentMove" abnormalVisualEffect="stealth" val="45">
+			<effect count="-1" name="SilentMove" abnormalVisualEffect="stealth" val="45">
 				<mul order="0x30" stat="runSpd" val="#ench1Penalty" />
 			</effect>
 		</enchant1for>
@@ -363,7 +363,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- 12HP * 2 during active time -->
-			<effect count="0x7fffffff" name="DamOverTime" val="24">
+			<effect count="-1" name="DamOverTime" val="24">
 				<mul order="0x30" stat="pAtkSpd" val="1.25" />
 			</effect>
 		</for>
@@ -438,7 +438,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- retail value: 1MP/sec; stat update every 2 sec -->
-			<effect count="0x7fffffff" name="Relax" val="2">
+			<effect count="-1" name="Relax" val="2">
 				<add order="0x40" stat="regHp" val="5" />
 			</effect>
 		</for>
@@ -1177,12 +1177,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<add order="0x40" stat="accCombat" val="3" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="#ench1val">
+			<effect count="-1" name="MpConsumePerLevel" val="#ench1val">
 				<add order="0x40" stat="accCombat" val="3" />
 			</effect>
 		</enchant1for>
@@ -2400,19 +2400,19 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="1">
+			<effect count="-1" name="MpConsumePerLevel" val="1">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="1">
+			<effect count="-1" name="MpConsumePerLevel" val="1">
 				<add order="0x40" stat="pDef" val="#ench1pDef" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="#ench2val">
+			<effect count="-1" name="MpConsumePerLevel" val="#ench2val">
 				<add order="0x40" stat="pDef" val="256" />
 				<mul order="0x30" stat="rShld" val="1.5" />
 			</effect>
@@ -2591,7 +2591,7 @@
 		<for>
 			<!-- retail value: 2MP/sec; stat update every 3 sec -->
 			<!-- Verified by slyce - Interlude - 12th Aug 2007 -->
-			<effect count="0x7fffffff" name="ChameleonRest" abnormalVisualEffect="stealth" val="6" />
+			<effect count="-1" name="ChameleonRest" abnormalVisualEffect="stealth" val="6" />
 		</for>
 	</skill>
 	<skill id="297" levels="2" name="Duelist Spirit" enchantGroup1="1" enchantGroup2="1">

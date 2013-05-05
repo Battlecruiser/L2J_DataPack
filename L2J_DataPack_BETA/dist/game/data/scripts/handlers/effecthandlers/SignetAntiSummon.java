@@ -57,7 +57,7 @@ public class SignetAntiSummon extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() == (getTotalCount() - 1))
+		if (getTickCount() == (getTotalTickCount() - 1))
 		{
 			return true; // do nothing first time
 		}

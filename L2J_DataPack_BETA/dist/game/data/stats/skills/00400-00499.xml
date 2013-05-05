@@ -1048,21 +1048,21 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<add order="0x40" stat="accCombat" val="#ench1accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="#ench2mpConsume">
+			<effect count="-1" name="MpConsumePerLevel" val="#ench2mpConsume">
 				<add order="0x40" stat="accCombat" val="4">
 					<using kind="Pole" />
 				</add>
@@ -1106,19 +1106,19 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<sub order="0x40" stat="stunVuln" val="#stunVuln" />
 				<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<sub order="0x40" stat="stunVuln" val="#ench1stunVuln" />
 				<sub order="0x40" stat="sleepVuln" val="#ench1sleepVuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="#ench2mpConsume">
+			<effect count="-1" name="MpConsumePerLevel" val="#ench2mpConsume">
 				<sub order="0x40" stat="stunVuln" val="25" />
 				<sub order="0x40" stat="sleepVuln" val="40" />
 			</effect>
@@ -2304,7 +2304,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<add order="0x40" stat="vengeancePdam" val="3" />
 			</effect>
 		</for>
@@ -2405,7 +2405,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.4">
+			<effect count="-1" name="MpConsumePerLevel" val="0.4">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -2417,7 +2417,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<add order="0x40" stat="darkPower" val="10" />
 			</effect>
 		</for>
@@ -2431,7 +2431,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>

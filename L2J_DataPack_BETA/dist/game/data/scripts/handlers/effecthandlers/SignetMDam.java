@@ -102,7 +102,7 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getCount() >= (getTotalCount() - 2))
+		if (getTickCount() >= (getTotalTickCount() - 2))
 		{
 			return true; // do nothing first 2 times
 		}

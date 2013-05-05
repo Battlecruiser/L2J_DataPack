@@ -67,7 +67,7 @@ public class ChanceSkillTrigger extends L2Effect
 	public void onExit()
 	{
 		// trigger only if effect in use and successfully ticked to the end
-		if (isInUse() && (getCount() == 0))
+		if (isInUse() && (getTickCount() == 0))
 		{
 			getEffected().onExitChanceEffect(getSkill().getElement());
 		}

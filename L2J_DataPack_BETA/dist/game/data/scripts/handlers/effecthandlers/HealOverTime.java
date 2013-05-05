@@ -55,7 +55,7 @@ public class HealOverTime extends L2Effect
 	{
 		if (getEffected().isPlayer())
 		{
-			getEffected().sendPacket(new ExRegMax(calc(), getTotalCount() * getAbnormalTime(), getAbnormalTime()));
+			getEffected().sendPacket(new ExRegMax(calc(), getTickCount() * getAbnormalTime(), getAbnormalTime()));
 		}
 		return true;
 	}

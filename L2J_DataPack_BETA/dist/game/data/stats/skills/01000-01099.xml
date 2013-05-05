@@ -15,12 +15,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="#mdot">
+			<effect count="-1" name="ManaDamOverTime" val="#mdot">
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="20">
+			<effect count="-1" name="ManaDamOverTime" val="20">
 				<add order="0x40" stat="pAtk" val="#ench1patk" />
 			</effect>
 		</enchant1for>

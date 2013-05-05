@@ -54,7 +54,7 @@ public class IncreaseCharges extends L2Effect
 			return false;
 		}
 		
-		getEffected().getActingPlayer().increaseCharges((int) calc(), getCount());
+		getEffected().getActingPlayer().increaseCharges((int) calc(), getTickCount());
 		return true;
 	}
 	
