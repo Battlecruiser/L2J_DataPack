@@ -25,15 +25,15 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
- * Target Summon handler.
- * @author UnAfraid
+ * Target Servitor handler.
+ * @author Zoey76
  */
-public class Summon implements ITargetTypeHandler
+public class Servitor implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (activeChar.hasSummon())
+		if (activeChar.hasServitor())
 		{
 			return new L2Character[]
 			{
@@ -46,6 +46,6 @@ public class Summon implements ITargetTypeHandler
 	@Override
 	public Enum<L2TargetType> getTargetType()
 	{
-		return L2TargetType.SUMMON;
+		return L2TargetType.SERVITOR;
 	}
 }

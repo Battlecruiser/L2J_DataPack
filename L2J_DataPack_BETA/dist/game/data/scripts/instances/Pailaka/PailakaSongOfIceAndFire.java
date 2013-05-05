@@ -31,7 +31,11 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
+import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.clientpackets.Say2;
+import com.l2jserver.gameserver.network.serverpackets.NpcSay;
+import com.l2jserver.gameserver.util.Broadcast;
 
 /**
  * Pailaka (Forgotten Temple) instance zone.
@@ -186,6 +190,8 @@ public class PailakaSongOfIceAndFire extends Quest
 		13293,
 		13129
 	};
+	/** Flag for "see creature". */
+	private boolean _seenCreature = false;
 	
 	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
@@ -326,6 +332,11 @@ public class PailakaSongOfIceAndFire extends Quest
 					}
 				}
 				break;
+			case "GARGOS_LAUGH":
+			{
+				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getTemplate().getIdTemplate(), NpcStringId.OHHOHOH));
+				break;
+			}
 		}
 		return event;
 	}
@@ -506,6 +517,17 @@ public class PailakaSongOfIceAndFire extends Quest
 		return super.onExitZone(character, zone);
 	}
 	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (!_seenCreature && creature.isPlayer())
+		{
+			_seenCreature = true;
+			startQuestTimer("GARGOS_LAUGH", 1000, npc, creature.getActingPlayer());
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
+	}
+	
 	static final class Teleport implements Runnable
 	{
 		private final L2Character _char;
@@ -540,6 +562,7 @@ public class PailakaSongOfIceAndFire extends Quest
 		addAttackId(BOTTLE, BRAZIER);
 		addKillId(MONSTERS);
 		addExitZoneId(ZONE);
+		addSeeCreatureId(GARGOS);
 		registerQuestItems(ITEMS);
 	}
 	

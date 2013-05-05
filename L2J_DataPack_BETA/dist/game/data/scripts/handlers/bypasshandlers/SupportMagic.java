@@ -99,7 +99,7 @@ public class SupportMagic implements IBypassHandler
 	private static void makeSupportMagic(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final int level = player.getLevel();
-		if (isSummon && (!player.hasSummon() || !player.getSummon().isServitor()))
+		if (isSummon && !player.hasServitor())
 		{
 			npc.showChatWindow(player, "data/html/default/SupportMagicNoSummon.htm");
 			return;
