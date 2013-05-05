@@ -2414,10 +2414,9 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="magicLvl" val="36" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<add order="0x40" stat="darkPower" val="10" />
 			</effect>
 		</for>
@@ -2428,10 +2427,9 @@
 		<table name="#magicLvl"> 32 43 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>
