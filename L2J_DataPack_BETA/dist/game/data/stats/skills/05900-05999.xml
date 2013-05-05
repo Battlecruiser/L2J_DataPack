@@ -415,10 +415,9 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" val="0" />
+			<effect name="Invincible" abnormalTime="-1" val="0" />
 		</for>
 	</skill>
 	<skill id="5932" levels="1" name="Dark Blade">

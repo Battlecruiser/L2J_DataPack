@@ -11,12 +11,11 @@
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect count="-1" name="MpConsumePerLevel" val="0.4">
+			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
 				<add order="0x40" stat="accCombat" val="#amount2" />
@@ -25,7 +24,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="-1" name="MpConsumePerLevel" val="0.4">
+			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#ench1Power" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="#ench1Power2" />
@@ -34,7 +33,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect count="-1" name="MpConsumePerLevel" val="#ench2Cost">
+			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="#ench2Cost">
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="4" />

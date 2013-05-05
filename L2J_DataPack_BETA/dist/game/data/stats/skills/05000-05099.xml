@@ -1178,17 +1178,16 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="5087" levels="2" name="Berserk">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#pAtk"> 1.9 2.8 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<table name="#pDef"> 1 2.8 </table>
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pDef" val="#pDef" />

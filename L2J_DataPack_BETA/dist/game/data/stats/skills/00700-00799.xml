@@ -277,10 +277,9 @@
 	<skill id="711" levels="1" name="Divine Summoner Transfer Pain">
 		<set name="mpInitialConsume" val="72" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="MpConsumePerLevel" val="0.2">
+			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>
