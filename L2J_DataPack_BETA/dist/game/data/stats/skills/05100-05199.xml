@@ -1347,7 +1347,7 @@
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1357,7 +1357,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
@@ -1365,7 +1364,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="5174" levels="10" name="Poison">

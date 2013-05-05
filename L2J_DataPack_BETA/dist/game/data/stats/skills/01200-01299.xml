@@ -256,13 +256,12 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Confusion" val="0" />
+			<effect name="Confusion" abnormalTime="20" val="0" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="1216" levels="1" name="Self Heal">
@@ -2045,12 +2044,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.2">
 				<add order="0x40" stat="transDam" val="#power" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.2">
 				<add order="0x40" stat="transDam" val="#ench1power" />
 			</effect>
 		</enchant1for>
@@ -2386,7 +2385,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="1273" levels="13" name="Serenade of Eva">
@@ -2695,7 +2694,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- 5 6 6 7 8 8 8 8 9 9 9 10 10MP each second, consumed each 3 seconds -->
-			<effect name="ManaDamOverTime" tick="3" abnormalTime="-1" val="#mdot">
+			<effect name="ManaDamOverTime" ticks="3" abnormalTime="-1" val="#mdot">
 				<add order="0x40" stat="pDef" val="#def" />
 			</effect>
 		</for>

@@ -101,7 +101,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
@@ -405,7 +405,7 @@
 		<set name="magicLvl" val="95" />
 		<set name="mpConsume" val="43" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="50" />
+		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
@@ -413,7 +413,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="10" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
@@ -1210,7 +1210,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="5260" levels="12" name="Disarm">

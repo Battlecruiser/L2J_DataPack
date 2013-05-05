@@ -2016,7 +2016,7 @@
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -2028,7 +2028,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
@@ -2037,7 +2036,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="3195" levels="10" name="Item Skill: Poison">

@@ -1382,7 +1382,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<!-- 10MP each 3 seconds, consumed each 3 seconds -->
-			<effect name="FakeDeath" tick="3" abnormalTime="-1" val="30" />
+			<effect name="FakeDeath" ticks="3" abnormalTime="-1" val="30" />
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
@@ -1430,7 +1430,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="67" levels="7" name="Summon Life Cubic" enchantGroup1="2">
