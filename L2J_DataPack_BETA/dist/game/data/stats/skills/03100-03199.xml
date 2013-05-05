@@ -2067,7 +2067,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="3196" levels="10" name="Item Skill: Bleed">
@@ -2098,7 +2098,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#dmg" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#dmg" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="3197" levels="10" name="Item Skill: Silence">

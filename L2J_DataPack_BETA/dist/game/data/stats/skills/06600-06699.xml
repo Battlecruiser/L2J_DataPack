@@ -719,7 +719,7 @@
 			<effect name="Paralyze" val="0" special="freezing" />
 			<!-- Level 1: 115HP * 1 during 7 seconds -->
 			<!-- Level 2: 115HP * 5 during 15 seconds -->
-			<effect count="#count" name="DamOverTime" noicon="1" val="#dot" />
+			<effect ticks="#count" name="DamOverTime" noicon="1" val="#dot" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="6302" />
 		</for>
 	</skill>
@@ -1123,7 +1123,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect count="36" name="DamOverTimePercent" val="0.02">
+			<effect ticks="36" name="DamOverTimePercent" val="0.02">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 			</effect>
 		</for>
@@ -1224,9 +1224,9 @@
 		<for>
 			<effect name="Paralyze" val="0" special="freezing" />
 			<!-- 115HP * 5 during 15 seconds -->
-			<effect count="3" name="DamOverTime" noicon="1" val="575" />
+			<effect ticks="3" name="DamOverTime" noicon="1" val="575" />
 			<!-- 5MP * 5 during 15 seconds -->
-			<effect count="3" name="ManaDamOverTime" noicon="1" val="25" />
+			<effect ticks="3" name="ManaDamOverTime" noicon="1" val="25" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="6302" chanceType="ON_EXIT" />
 		</for>
 	</skill>

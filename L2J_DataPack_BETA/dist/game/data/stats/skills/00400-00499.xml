@@ -1510,9 +1510,9 @@
 				<mul order="0x30" stat="pDef" val="0.2" />
 			</effect>
 			<!-- 60HP * 3 during 60 seconds -->
-			<effect count="20" name="HealOverTime" noicon="1" val="180" />
+			<effect ticks="20" name="HealOverTime" noicon="1" val="180" />
 			<!-- 10MP * 3 during 60 seconds -->
-			<effect count="20" name="ManaHealOverTime" noicon="1" val="30" />
+			<effect ticks="20" name="ManaHealOverTime" noicon="1" val="30" />
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
@@ -1835,7 +1835,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
@@ -1860,7 +1860,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="6" name="SignetNoise" val="0" />
+			<effect ticks="6" name="SignetNoise" val="0" />
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
@@ -1883,7 +1883,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
@@ -1906,7 +1906,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
@@ -1929,7 +1929,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
@@ -1952,7 +1952,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
@@ -1975,7 +1975,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="24" name="Signet" val="0" />
+			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">
@@ -2885,13 +2885,13 @@
 			</and>
 		</cond>
 		<for>
-			<effect count="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect ticks="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant1for>
-			<effect count="20" name="DamOverTime" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect ticks="20" name="DamOverTime" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
 		</enchant1for>
 		<enchant2for>
-			<effect count="20" name="DamOverTime" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
+			<effect ticks="20" name="DamOverTime" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">

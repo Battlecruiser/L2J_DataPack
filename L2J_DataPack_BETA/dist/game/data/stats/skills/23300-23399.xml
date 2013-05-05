@@ -14,7 +14,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- 300HP * 1 Sec during 10 seconds -->
-			<effect count="10" name="DamOverTime" val="300" />
+			<effect ticks="10" name="DamOverTime" val="300" />
 		</for>
 	</skill>
 	<skill id="23301" levels="1" name="Dimensional Door A">
@@ -176,7 +176,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="3" name="DamOverTime" val="170" abnormalVisualEffect="bleed" />
+			<effect ticks="3" name="DamOverTime" val="170" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="23320" levels="1" name="Greedy Throat">
@@ -201,7 +201,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" val="230" abnormalVisualEffect="bleed" />
+			<effect ticks="4" name="DamOverTime" val="230" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="23321" levels="1" name="Draconic Evolver">

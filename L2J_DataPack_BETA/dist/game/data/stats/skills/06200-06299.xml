@@ -132,7 +132,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87HP * 3 during 20 seconds -->
-			<effect count="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="80" />
+			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">

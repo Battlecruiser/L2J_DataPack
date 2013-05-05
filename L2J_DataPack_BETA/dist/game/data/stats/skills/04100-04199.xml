@@ -117,7 +117,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="45" name="DamOverTime" val="#dmg" />
+			<effect ticks="45" name="DamOverTime" val="#dmg" />
 		</for>
 		<table name="#mpConsume"> 17 31 45 60 75 90 105 112 119 126 132 139 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -809,7 +809,7 @@
 		<set name="skillType" val="MDOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="20" name="ManaDamOverTime" val="#damage" />
+			<effect ticks="20" name="ManaDamOverTime" val="#damage" />
 		</for>
 	</skill>
 	<skill id="4141" levels="12" name="NPC Wind Fist">
@@ -949,7 +949,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<!-- 16 24 32 41 50 58 63 63 66 66 68 68HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4149" levels="12" name="Bleed">
@@ -973,7 +973,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 18 25 34 44 54 62 67 67 70 70 71 71HP * 1 during 5 seconds -->
-			<effect count="2" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="2" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4150" levels="12" name="Flame">
@@ -998,7 +998,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- 14 21 30 40 51 61 68 68 72 72 74 74HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect ticks="5" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4151" levels="12" name="NPC Windstrike - Magic">
@@ -1304,7 +1304,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- Retail Values CT2.5: 102 102 102 125 125 144 144 157 157 157 157 164 164 164 164 164 164HP * 1 Seconds -->
-			<effect count="15" name="DamOverTime" val="#dot" />
+			<effect ticks="15" name="DamOverTime" val="#dot" />
 		</for>
 	</skill>
 	<skill id="4166" levels="18" name="Stuns">
@@ -1657,7 +1657,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1805,7 +1805,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1852,7 +1852,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="10" name="ManaDamOverTime" val="#maxMp" />
+			<effect ticks="10" name="ManaDamOverTime" val="#maxMp" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -2020,7 +2020,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />

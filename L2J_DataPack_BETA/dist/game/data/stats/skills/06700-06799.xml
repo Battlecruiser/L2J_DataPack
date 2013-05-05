@@ -293,7 +293,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="15" name="HealOverTime" val="30" />
+			<effect ticks="15" name="HealOverTime" val="30" />
 			<effect name="Heal" noicon="1" val="450" />
 		</for>
 	</skill>
@@ -508,7 +508,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed">
+			<effect ticks="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed">
 				<sub order="0x40" stat="darkRes" val="60" />
 			</effect>
 		</for>
@@ -658,7 +658,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed" />
+			<effect ticks="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6755" levels="1" name="Death Strike">
@@ -1090,7 +1090,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed">
+			<effect ticks="20" name="DamOverTime" val="200" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 			<effect name="Petrification" noicon="1" val="0" />

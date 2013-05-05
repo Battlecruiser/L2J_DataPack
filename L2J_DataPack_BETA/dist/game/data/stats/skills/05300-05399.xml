@@ -73,7 +73,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -101,7 +101,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -156,7 +156,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="60" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
@@ -237,7 +237,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -265,7 +265,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -625,7 +625,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#power" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#power" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
@@ -998,7 +998,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -1027,7 +1027,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -1081,7 +1081,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="60" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
@@ -1149,7 +1149,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#dot" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#dot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1502,7 +1502,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="4" name="DamOverTime" val="#power" effectPower="80" />
+			<effect ticks="4" name="DamOverTime" val="#power" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
@@ -1591,7 +1591,7 @@
 		</cond>
 		<for>
 			<!-- 75 HP * 1 during 5 seconds -->
-			<effect count="5" name="DamOverTime" val="75" />
+			<effect ticks="5" name="DamOverTime" val="75" />
 		</for>
 	</skill>
 </list>

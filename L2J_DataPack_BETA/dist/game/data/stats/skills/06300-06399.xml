@@ -40,7 +40,7 @@
 		<for>
 			<!-- Level 1: 60MP * 5 during 10 seconds -->
 			<!-- Level 2: 30MP * 5 during 10 seconds -->
-			<effect count="2" name="ManaDamOverTime" val="#mdot" />
+			<effect ticks="2" name="ManaDamOverTime" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
@@ -153,7 +153,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 139HP * 3 during 10 seconds -->
-			<effect count="3" name="DamOverTime" val="417" abnormalVisualEffect="bleed" />
+			<effect ticks="3" name="DamOverTime" val="417" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
@@ -713,7 +713,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect ticks="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -832,7 +832,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- 200HP * 1 during 3 seconds -->
-			<effect count="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect ticks="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -1179,7 +1179,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
@@ -1245,7 +1245,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
@@ -1452,7 +1452,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect count="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">

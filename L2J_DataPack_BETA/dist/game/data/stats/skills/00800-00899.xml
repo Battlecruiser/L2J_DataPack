@@ -680,7 +680,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="ManaDamOverTime" val="#mdot" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="ManaDamOverTime" val="#mdot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5697" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>

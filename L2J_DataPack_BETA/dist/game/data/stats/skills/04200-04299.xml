@@ -123,7 +123,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect count="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -172,7 +172,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="10" name="ManaDamOverTime" val="#maxMp" />
+			<effect ticks="10" name="ManaDamOverTime" val="#maxMp" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -257,7 +257,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="15" name="HealOverTime" val="#hot" />
+			<effect ticks="15" name="HealOverTime" val="#hot" />
 			<effect name="HealPercent" noicon="1" val="3" />
 		</for>
 	</skill>
@@ -807,7 +807,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="1200" name="DamOverTime" val="294" abnormalVisualEffect="poison" />
+			<effect ticks="1200" name="DamOverTime" val="294" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4244" levels="12" name="NPC Wild Sweep">
@@ -1114,7 +1114,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume" />

@@ -647,7 +647,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect self="1" count="9" name="SignetMDam" val="0" />
+			<effect self="1" ticks="9" name="SignetMDam" val="0" />
 		</for>
 	</skill>
 	<skill id="1420" levels="1" name="Cyclone">
@@ -676,7 +676,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect self="1" count="9" name="SignetMDam" val="0" />
+			<effect self="1" ticks="9" name="SignetMDam" val="0" />
 		</for>
 	</skill>
 	<skill id="1421" levels="1" name="Raging Waves">
@@ -705,7 +705,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect self="1" count="9" name="SignetMDam" val="0" />
+			<effect self="1" ticks="9" name="SignetMDam" val="0" />
 		</for>
 	</skill>
 	<skill id="1422" levels="1" name="Day of Doom">
@@ -730,7 +730,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="5" name="Signet" val="0" />
+			<effect ticks="5" name="Signet" val="0" />
 		</for>
 	</skill>
 	<skill id="1423" levels="1" name="Gehenna">
@@ -759,7 +759,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect self="1" count="9" name="SignetMDam" val="0" />
+			<effect self="1" ticks="9" name="SignetMDam" val="0" />
 		</for>
 	</skill>
 	<skill id="1424" levels="1" name="Anti-Summoning Field">
@@ -785,7 +785,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect count="6" name="SignetAntiSummon" val="0" />
+			<effect ticks="6" name="SignetAntiSummon" val="0" />
 		</for>
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
@@ -917,7 +917,7 @@
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 			<!-- 27 30 34 37 42MP * 3 during 30 seconds -->
-			<effect count="10" name="ManaHealOverTime" noicon="1" val="#mhot" />
+			<effect ticks="10" name="ManaHealOverTime" noicon="1" val="#mhot" />
 		</for>
 	</skill>
 	<skill id="1431" levels="6" name="Fallen Arrow">
@@ -1052,13 +1052,13 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect count="6" name="DamOverTime" val="#dmg" abnormalVisualEffect="deathmark">
+			<effect ticks="6" name="DamOverTime" val="#dmg" abnormalVisualEffect="deathmark">
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="6" name="DamOverTime" val="#ench1dmg" abnormalVisualEffect="deathmark">
+			<effect ticks="6" name="DamOverTime" val="#ench1dmg" abnormalVisualEffect="deathmark">
 				<mul order="0x30" stat="pDef" val="0.77" />
 				<mul order="0x30" stat="mDef" val="0.77" />
 			</effect>
@@ -1758,10 +1758,10 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
-			<effect count="10" name="DamOverTime" val="173" />
+			<effect ticks="10" name="DamOverTime" val="173" />
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" val="#ench1Power" />
+			<effect ticks="10" name="DamOverTime" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1453" levels="1" name="Ice Vortex Crusher" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1869,10 +1869,10 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
-			<effect count="10" name="DamOverTime" val="173" />
+			<effect ticks="10" name="DamOverTime" val="173" />
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" val="#ench1Power" />
+			<effect ticks="10" name="DamOverTime" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1456" levels="1" name="Wind Vortex Slug" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -1973,10 +1973,10 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<!-- Retail Values CT2.3: 173HP * 1 Sec -->
-			<effect count="10" name="DamOverTime" val="173" />
+			<effect ticks="10" name="DamOverTime" val="173" />
 		</for>
 		<enchant1for>
-			<effect count="10" name="DamOverTime" val="#ench1Power" />
+			<effect ticks="10" name="DamOverTime" val="#ench1Power" />
 		</enchant1for>
 	</skill>
 	<skill id="1459" levels="1" name="Divine Power" enchantGroup1="5" enchantGroup2="5">
@@ -2219,7 +2219,7 @@
 		<for>
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<!-- 117HP * 3 sec during 10 seconds -->
-			<effect count="3" name="DamOverTime" val="351" effectPower="100" />
+			<effect ticks="3" name="DamOverTime" val="351" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
@@ -2244,7 +2244,7 @@
 		<for>
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<!-- 117HP * 3 sec during 10 seconds -->
-			<effect count="3" name="DamOverTime" val="351" effectPower="100" />
+			<effect ticks="3" name="DamOverTime" val="351" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -2657,13 +2657,13 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="reuseDelay" val="#ench3Reuse" />
 		<for>
-			<effect count="15" name="ManaHealOverTime" val="200" />
+			<effect ticks="15" name="ManaHealOverTime" val="200" />
 			<effect name="Paralyze" noicon="1" val="0">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect count="#ench2Time" name="ManaHealOverTime" val="200" />
+			<effect ticks="#ench2Time" name="ManaHealOverTime" val="200" />
 			<effect name="Paralyze" noicon="1" val="0">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
@@ -2970,13 +2970,13 @@
 			</not>
 		</cond>
 		<for>
-			<effect count="15" name="HealOverTime" val="#hot" />
+			<effect ticks="15" name="HealOverTime" val="#hot" />
 		</for>
 		<enchant1for>
-			<effect count="15" name="HealOverTime" val="#ench1Heal" />
+			<effect ticks="15" name="HealOverTime" val="#ench1Heal" />
 		</enchant1for>
 		<enchant2for>
-			<effect count="#ench2Count" name="HealOverTime" val="32" />
+			<effect ticks="#ench2Count" name="HealOverTime" val="32" />
 		</enchant2for>
 	</skill>
 	<skill id="1488" levels="3" name="Restoration Impact" enchantGroup1="1">

@@ -60,7 +60,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="12" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="12" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6403" levels="1" name="Torumba Numbing Poison">
@@ -83,7 +83,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect count="2" name="DamOverTime" effectPower="80" val="290" abnormalVisualEffect="poison">
+			<effect ticks="2" name="DamOverTime" effectPower="80" val="290" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -323,7 +323,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect count="4" name="ManaDamOverTime" val="20" abnormalVisualEffect="poison" />
+			<effect ticks="4" name="ManaDamOverTime" val="20" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6417" levels="1" name="Reptilikon Poison Shot">
@@ -349,7 +349,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="4" name="ManaDamOverTime" val="20" abnormalVisualEffect="poison" />
+			<effect ticks="4" name="ManaDamOverTime" val="20" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6418" levels="1" name="Reptilikon Fury Poison Bomb">
@@ -375,8 +375,8 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect count="4" name="DamOverTime" val="345" abnormalVisualEffect="poison" />
-			<effect count="4" name="ManaDamOverTime" noicon="1" val="20" />
+			<effect ticks="4" name="DamOverTime" val="345" abnormalVisualEffect="poison" />
+			<effect ticks="4" name="ManaDamOverTime" noicon="1" val="20" />
 		</for>
 	</skill>
 	<skill id="6419" levels="1" name="Light of Scout">
@@ -664,7 +664,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="5" name="DamOverTimePercent" val="#dot">
+			<effect ticks="5" name="DamOverTimePercent" val="#dot">
 				<basemul order="0x30" stat="rCrit" val="#rCrit">
 					<using kind="Bow,Crossbow" />
 				</basemul>
@@ -690,7 +690,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="3" name="DamOverTimePercent" val="0.05">
+			<effect ticks="3" name="DamOverTimePercent" val="0.05">
 				<basemul order="0x30" stat="rCrit" val="0.9">
 					<using kind="Bow,Crossbow" />
 				</basemul>
@@ -718,7 +718,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect count="15" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect ticks="15" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6438" levels="1" name="Penalty Area">
