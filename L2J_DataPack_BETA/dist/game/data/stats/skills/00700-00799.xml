@@ -280,7 +280,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="MpConsumePerLevel" val="0.2">
+			<effect count="-1" name="MpConsumePerLevel" val="0.2">
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>

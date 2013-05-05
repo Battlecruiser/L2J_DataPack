@@ -1372,7 +1372,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<add order="0x40" stat="holyPower" val="10" />
 			</effect>
 		</for>
@@ -1387,7 +1387,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>

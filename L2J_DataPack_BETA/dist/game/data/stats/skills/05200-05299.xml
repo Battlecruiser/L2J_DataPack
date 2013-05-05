@@ -424,7 +424,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<mul order="0x30" stat="bluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="bigBluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="daggerWpnVuln" val="1.7" />
@@ -445,7 +445,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<mul order="0x30" stat="bowWpnVuln" val="1.7" />
 			</effect>
 		</for>
@@ -458,7 +458,7 @@
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="0x7fffffff" name="ManaDamOverTime" val="0">
+			<effect count="-1" name="ManaDamOverTime" val="0">
 				<mul order="0x30" stat="mDef" val="0.3" />
 			</effect>
 		</for>
