@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
 /**
+ * Target Pet handler.
  * @author UnAfraid
  */
 public class Pet implements ITargetTypeHandler
@@ -32,12 +33,11 @@ public class Pet implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		target = activeChar.getSummon();
-		if ((target != null) && !target.isDead())
+		if (activeChar.hasPet())
 		{
 			return new L2Character[]
 			{
-				target
+				activeChar.getSummon()
 			};
 		}
 		return EMPTY_TARGET_LIST;

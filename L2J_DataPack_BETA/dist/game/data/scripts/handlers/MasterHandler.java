@@ -265,6 +265,7 @@ import handlers.targethandlers.PartyNotMe;
 import handlers.targethandlers.PartyOther;
 import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
+import handlers.targethandlers.Servitor;
 import handlers.targethandlers.Summon;
 import handlers.targethandlers.Unlockable;
 import handlers.telnethandlers.ChatsHandler;
@@ -609,6 +610,7 @@ public class MasterHandler
 			PartyOther.class,
 			Pet.class,
 			Self.class,
+			Servitor.class,
 			Summon.class,
 			Unlockable.class,
 		},

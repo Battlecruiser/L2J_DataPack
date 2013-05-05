@@ -117,7 +117,7 @@ public class GiftOfVitality extends LongTimeEvent
 			{
 				htmltext = "4306-nolevel.htm";
 			}
-			else if (!player.hasSummon() || !player.getSummon().isServitor())
+			else if (!player.hasServitor())
 			{
 				htmltext = "4306-nosummon.htm";
 			}

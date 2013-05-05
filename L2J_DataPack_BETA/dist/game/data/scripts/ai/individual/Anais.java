@@ -174,6 +174,7 @@ public final class Anais extends AbstractNpcAI
 	{
 		npc.doCast(DIVINE_NOVA.getSkill());
 		cancelQuestTimer("GUARD_ATTACK", npc, _nextTarget);
+		cancelQuestTimer("CHECK", npc, null);
 		if (_current != null)
 		{
 			_current.setDisplayEffect(2);
