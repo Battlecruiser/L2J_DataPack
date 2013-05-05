@@ -3,7 +3,7 @@
 	<skill id="1001" levels="10" name="Soul Cry" enchantGroup1="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 1 14 25 35 40 48 56 60 66 72 </table>
-		<table name="#mdot"> 0 0 5 10 10 10 15 15 20 20 </table>
+		<table name="#mdot"> 0 0 3 6 6 6 9 9 12 12 </table>
 		<table name="#mpInitialConsume"> 1 2 3 3 4 5 6 6 7 7 </table>
 		<table name="#pAtk"> 4.5 14 33.5 66.5 90.5 141.5 208.5 247 310 375.5 </table>
 		<table name="#ench1patk"> 418 421 424 427 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 475 478 481 484 487 490 493 496 499 502 505 </table>
@@ -11,16 +11,17 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="#mdot">
+			<!-- 0 0 1 2 2 2 3 3 4 4MP each second, consumed each 3 seconds -->
+			<effect name="ManaDamOverTime" tick="3" abnormalTime="-1" val="#mdot">
 				<add order="0x40" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="-1" name="ManaDamOverTime" val="20">
+			<!-- 4MP each second, consumed each 3 seconds -->
+			<effect name="ManaDamOverTime" tick="3" abnormalTime="-1" val="12">
 				<add order="0x40" stat="pAtk" val="#ench1patk" />
 			</effect>
 		</enchant1for>
