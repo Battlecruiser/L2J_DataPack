@@ -1469,7 +1469,7 @@
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
@@ -1477,7 +1477,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="3" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="6397" levels="1" name="Cokrakon Staggering Blow">
@@ -1518,7 +1518,7 @@
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="40" /> <!-- Base Land Rate -->
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
@@ -1526,7 +1526,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="2" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="6399" levels="1" name="Cokrakon Dreadful Piercing">

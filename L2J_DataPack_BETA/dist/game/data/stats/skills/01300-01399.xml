@@ -2497,7 +2497,7 @@
 		<set name="mpConsume" val="87" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="saveVs" val="MEN" />
@@ -2506,7 +2506,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="15" name="Fear" val="0">
+			<effect name="Fear" val="0">
 				<add order="0x40" stat="runSpd" val="66" />
 			</effect>
 		</for>
@@ -2572,7 +2572,7 @@
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="5" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
@@ -2600,7 +2600,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect count="5" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="1382" levels="5" name="Mass Gloom" enchantGroup1="1" enchantGroup2="1">

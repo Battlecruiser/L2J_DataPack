@@ -15,7 +15,7 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pAtkSpd" val="#amount" />
 				<add order="0x40" stat="accCombat" val="#amount2" />
@@ -24,7 +24,7 @@
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.4">
 				<mul order="0x30" stat="pAtk" val="#ench1Power" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="#ench1Power2" />
@@ -33,7 +33,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="#ench2Cost">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="#ench2Cost">
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<add order="0x40" stat="accCombat" val="4" />

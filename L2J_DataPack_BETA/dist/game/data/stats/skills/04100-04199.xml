@@ -196,7 +196,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Antharas Skills -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="600" />
@@ -216,7 +216,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="10" name="Fear" val="0" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="4109" levels="1" name="Curse of Antharas">

@@ -880,11 +880,11 @@
 		<set name="magicLvl" val="80" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="20" /> <!-- Base Land Rate -->
 		<set name="skillType" val="CONFUSE_MOB_ONLY" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="5" name="Confusion" val="0" />
+			<!-- FIXME: this should be "Distrust" effect -->
+			<effect name="Confusion" abnormalTime="20" val="0" effectPower="20" />
 		</for>
 	</skill>
 	<skill id="3582" levels="1" name="Special Ability: Infinity Cleaver">

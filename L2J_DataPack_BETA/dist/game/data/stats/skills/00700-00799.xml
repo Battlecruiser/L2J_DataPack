@@ -279,7 +279,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" tick="3" abnormalTime="-1" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.4">
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>
@@ -1041,7 +1041,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="5" name="Fear" val="0" effectPower="60" />
+			<effect name="Fear" val="0" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
@@ -1384,7 +1384,7 @@
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
@@ -1392,7 +1392,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="4" name="Fear" val="0">
+			<effect name="Fear" val="0">
 				<mul order="0x30" stat="mDef" val="0.7" />
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1643,7 +1643,7 @@
 		<set name="magicLvl" val="81" />
 		<set name="mpConsume" val="87" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="70" />
+		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
@@ -1651,7 +1651,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect count="4" name="Fear" val="0">
+			<effect name="Fear" val="0">
 				<mul order="0x30" stat="runSpd" val="0.67" />
 				<mul order="0x30" stat="pDef" val="0.67" />
 				<sub order="0x40" stat="rEvas" val="10" />
