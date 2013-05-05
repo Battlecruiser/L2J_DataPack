@@ -421,10 +421,9 @@
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="bluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="bigBluntWpnVuln" val="1.7" />
 				<mul order="0x30" stat="daggerWpnVuln" val="1.7" />
@@ -442,10 +441,9 @@
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="bowWpnVuln" val="1.7" />
 			</effect>
 		</for>
@@ -455,10 +453,9 @@
 		<!-- Baylor Skills -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="mDef" val="0.3" />
 			</effect>
 		</for>
@@ -1328,7 +1325,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect count="10" name="DamOverTime" val="0" abnormalVisualEffect="deathmark" />
+			<effect count="10" name="Debuff" val="0" abnormalVisualEffect="deathmark" />
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">

@@ -127,10 +127,9 @@
 	<skill id="4517" levels="1" name="Quest - BOSS Defend">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pDef" val="10" />
@@ -140,10 +139,9 @@
 	<skill id="4518" levels="1" name="Quest - BOSS Rampage">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="1.3" />
 				<mul order="0x30" stat="pAtk" val="1.3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
@@ -153,10 +151,9 @@
 	<skill id="4519" levels="1" name="Quest - BOSS Defend">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="bowWpnVuln" val="0.1" />
 			</effect>
@@ -165,10 +162,9 @@
 	<skill id="4520" levels="1" name="Quest - BOSS Rampage">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="bowWpnVuln" val="1.1" />
 			</effect>
@@ -243,10 +239,9 @@
 	<skill id="4525" levels="1" name="Quest - BOSS Defend">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="pDef" val="10" />
 				<mul order="0x30" stat="mDef" val="10" />
 				<sub order="0x40" stat="sleepVuln" val="70" />
@@ -335,10 +330,9 @@
 	<skill id="4532" levels="1" name="Quest - BOSS Reflect">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<add order="0x40" stat="reflectDam" val="100" />
 				<mul order="0x30" stat="mDef" val="10" />
 			</effect>
@@ -578,10 +572,9 @@
 	<skill id="4545" levels="1" name="Quest - BOSS Reflect">
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<add order="0x40" stat="reflectDam" val="100" />
 				<mul order="0x30" stat="pDef" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.7" />

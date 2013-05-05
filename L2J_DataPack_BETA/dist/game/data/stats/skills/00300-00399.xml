@@ -637,10 +637,9 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="cAtk" val="#cAtk">
 					<using kind="Pole" />
 				</mul>
@@ -658,16 +657,15 @@
 		<set name="magicLvl" val="46" />
 		<set name="mpInitialConsume" val="9" />
 		<set name="operateType" val="T" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="sDef" val="0.7" />
 				<set order="0x10" stat="shieldDefAngle" val="360" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect count="-1" name="ManaDamOverTime" val="0">
+			<effect name="Buff" abnormalTime="-1" val="0">
 				<mul order="0x30" stat="sDef" val="#ench1sDef" />
 				<set order="0x10" stat="shieldDefAngle" val="360" />
 			</effect>
