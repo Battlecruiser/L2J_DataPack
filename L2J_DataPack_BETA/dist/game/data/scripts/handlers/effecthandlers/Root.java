@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -43,14 +44,18 @@ public class Root extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().startRooted();
+		getEffected().stopMove(null);
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
 		return true;
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffected().stopRooting(false);
+		if (!getEffected().isPlayer())
+		{
+			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
 	}
 	
 	@Override

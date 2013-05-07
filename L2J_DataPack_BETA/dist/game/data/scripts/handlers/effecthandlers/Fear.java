@@ -20,6 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.Location;
@@ -35,7 +36,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Implementation of the Fear Effect
+ * Fear effect implementation.
  * @author littlecrow
  */
 public class Fear extends L2Effect
@@ -64,33 +65,28 @@ public class Fear extends L2Effect
 			return false;
 		}
 		
-		if (!getEffected().isAfraid())
+		if (getEffected().isAfraid())
 		{
-			if (getEffected().isCastingNow() && getEffected().canAbortCast())
-			{
-				getEffected().abortCast();
-			}
-			
-			if (getEffected().getX() > getEffector().getX())
-			{
-				_dX = 1;
-			}
-			if (getEffected().getY() > getEffector().getY())
-			{
-				_dY = 1;
-			}
-			
-			getEffected().startFear();
-			onActionTime();
-			return true;
+			return false;
 		}
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopFear(false);
+		
+		if (getEffected().isCastingNow() && getEffected().canAbortCast())
+		{
+			getEffected().abortCast();
+		}
+		
+		if (getEffected().getX() > getEffector().getX())
+		{
+			_dX = 1;
+		}
+		if (getEffected().getY() > getEffector().getY())
+		{
+			_dY = 1;
+		}
+		
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		onActionTime();
+		return true;
 	}
 	
 	@Override
@@ -104,6 +100,7 @@ public class Fear extends L2Effect
 		{
 			_dX = 1;
 		}
+		
 		if (getEffected().getY() > getEffector().getY())
 		{
 			_dY = 1;
@@ -125,7 +122,7 @@ public class Fear extends L2Effect
 		}
 		
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(posX, posY, posZ, 0));
-		return true;
+		return false;
 	}
 	
 	@Override

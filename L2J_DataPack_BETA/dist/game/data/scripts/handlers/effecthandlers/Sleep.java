@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -43,20 +44,25 @@ public class Sleep extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().startSleeping();
+		getEffected().abortAttack();
+		getEffected().abortCast();
+		getEffected().stopMove(null);
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_SLEEPING);
 		return true;
 	}
 	
 	@Override
 	public void onExit()
 	{
-		getEffected().stopSleeping(false);
+		if (!getEffected().isPlayer())
+		{
+			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		// just stop this effect
 		return false;
 	}
 	

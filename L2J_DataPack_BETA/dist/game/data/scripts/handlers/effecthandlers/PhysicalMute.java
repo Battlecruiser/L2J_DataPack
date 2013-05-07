@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -43,21 +44,14 @@ public class PhysicalMute extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().startPsychicalMuted();
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 		return true;
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		// Simply stop the effect
 		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopPsychicalMuted(false);
 	}
 	
 	@Override
