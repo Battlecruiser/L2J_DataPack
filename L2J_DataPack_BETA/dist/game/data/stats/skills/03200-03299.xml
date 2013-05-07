@@ -1070,8 +1070,7 @@
 			<effect name="Paralyze" val="0">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
-			<!-- 27MP * 3 during 30 seconds -->
-			<effect ticks="10" name="ManaHealOverTime" noicon="1" val="81" />
+			<effect name="ManaHealOverTime" noicon="1" ticks="3" val="27" />
 		</for>
 	</skill>
 	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">

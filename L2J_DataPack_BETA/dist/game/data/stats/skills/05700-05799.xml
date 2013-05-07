@@ -203,8 +203,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<!-- 55HP * 5 During 30 seconds -->
-			<effect ticks="6" name="DamOverTime" val="275" abnormalVisualEffect="bleed" effectPower="80">
+			<effect name="DamOverTime" ticks="3" val="55" abnormalVisualEffect="bleed" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>

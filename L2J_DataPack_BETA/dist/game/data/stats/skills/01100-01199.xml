@@ -28,8 +28,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- Retail Values CT2.3: 27 40HP * 1 Sec -->
-			<effect ticks="15" name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" ticks="1" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1101" levels="2" name="Blaze Quake">
@@ -60,14 +59,13 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<!-- Retail Values CT2.3: 58 79HP * 1 Sec -->
-			<effect ticks="15" name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" ticks="1" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1102" levels="6" name="Aura Sink">
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 </table>
 		<table name="#magicLvl"> 25 35 44 52 64 70 </table>
-		<table name="#mdot"> 24 30 39 48 60 66 </table>
+		<table name="#mdot"> 8 10 13 16 20 22 </table>
 		<table name="#mpConsume"> 27 36 47 55 71 78 </table>
 		<table name="#mpInitialConsume"> 7 9 12 15 18 20 </table>
 		<table name="#power"> 16 22 29 36 46 51 </table>
@@ -91,8 +89,7 @@
 		<set name="skillType" val="MANADAM" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- Retail Values CT2.3: 8 10 13 16 20 22MP * 3 Sec -->
-			<effect ticks="5" name="ManaDamOverTime" val="#mdot" effectPower="80" />
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantGroup1="1" enchantGroup2="1">
@@ -190,8 +187,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- Retail Values CT2.3: 58 79HP * 1 Sec -->
-			<effect ticks="15" name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" ticks="1" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1108" levels="4" name="Seal of Flame">
@@ -220,8 +216,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<!-- Retail Values CT2.3: 60 73 84 92HP * 1 Sec -->
-			<effect ticks="15" name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" ticks="1" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1111" levels="18" name="Summon Kat the Cat" enchantGroup1="1">
@@ -1010,11 +1005,11 @@
 	</skill>
 	<skill id="1167" levels="6" name="Poisonous Cloud" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 </table>
-		<table name="#dot"> 72 96 123 150 174 189 </table>
+		<table name="#dot"> 24 32 41 50 58 63 </table>
 		<table name="#magicLvl"> 25 35 48 56 64 74 </table>
 		<table name="#mpConsume"> 27 36 52 61 71 82 </table>
 		<table name="#mpInitialConsume"> 7 9 13 16 18 21 </table>
-		<table name="#ench1dot"> 192 195 195 198 201 201 204 207 207 210 210 213 216 216 219 222 222 225 228 228 231 231 234 237 237 240 243 243 246 249 </table>
+		<table name="#ench1dot"> 64 65 65 66 67 67 68 69 69 70 70 71 72 72 73 74 74 75 76 76 77 77 78 79 79 80 81 81 82 83 </table>
 		<table name="#ench2MpConsume"> 82 79 78 78 75 74 74 71 70 70 67 66 64 63 62 60 59 58 56 55 54 52 51 50 48 47 46 44 43 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 20 20 19 19 19 18 18 18 17 17 17 16 16 16 15 15 15 14 14 14 13 13 13 12 12 11 11 11 10 </table>
 		<table name="#ench3Power"> 36 38 39 41 42 44 45 47 48 50 51 53 54 56 57 59 60 62 63 65 66 68 69 71 72 74 75 77 78 80 </table>
@@ -1048,16 +1043,15 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Power" />
 		<for>
-			<!-- Retail Values CT2.3: 24 32 41 50 58 63HP * 3 Sec -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 		<enchant1for>
-			<effect ticks="10" name="DamOverTime" val="#ench1dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#ench1dot" abnormalVisualEffect="poison" />
 		</enchant1for>
 	</skill>
 	<skill id="1168" levels="7" name="Curse: Poison">
 		<table name="#abnormalLvls"> 1 3 4 5 6 7 8 </table>
-		<table name="#dot"> 63 72 93 123 150 174 189 </table>
+		<table name="#dot"> 11 24 32 41 50 58 63 </table>
 		<table name="#magicLvl"> 7 20 30 44 52 62 72 </table>
 		<table name="#mpConsume"> 8 16 21 31 38 46 53 </table>
 		<table name="#mpInitialConsume"> 2 4 6 8 10 12 14 </table>
@@ -1082,8 +1076,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<!-- Retail Values CT2.3: 21 24 32 41 50 58 63HP * 3 Sec -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="1169" levels="14" name="Curse Fear" enchantGroup1="2" enchantGroup2="2">
@@ -1464,8 +1457,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- Retail Values CT2.3: 102 125 144 157HP * 1 Sec -->
-			<effect ticks="15" name="DamOverTime" val="#dot" />
+			<effect name="DamOverTime" ticks="1" val="#dot" />
 		</for>
 	</skill>
 	<skill id="1184" levels="6" name="Ice Bolt">

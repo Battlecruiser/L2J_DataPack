@@ -152,7 +152,7 @@
 	</skill>
 	<skill id="103" levels="4" name="Corpse Plague">
 		<table name="#abnormalLvls"> 5 6 7 8 </table>
-		<table name="#dot"> 123 150 174 189 </table>
+		<table name="#dot"> 41 50 58 63 </table>
 		<table name="#magicLvl"> 46 58 62 70 </table>
 		<table name="#mpConsume"> 22 28 29 33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -177,8 +177,7 @@
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<set name="trait" val="POISON" />
 		<for>
-			<!-- Retail Values CT2.3: 41 50 58 63HP * 3 Sec -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="104" levels="1" name="Detect Plant Weakness">
@@ -818,7 +817,7 @@
 	</skill>
 	<skill id="129" levels="5" name="Poison">
 		<table name="#abnormalLvls"> 3 5 6 7 8 </table>
-		<table name="#dot"> 72 123 150 174 189 </table>
+		<table name="#dot"> 24 41 50 58 63 </table>
 		<table name="#magicLvl"> 20 49 58 66 74 </table>
 		<table name="#mpConsume"> 8 18 22 25 28 </table>
 		<table name="#mpInitialConsume"> 2 5 6 7 7 </table>
@@ -843,8 +842,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<!-- Retail Values CT2.3: 24 41 50 58 63HP * 3 Sec -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="130" levels="2" name="Thrill Fight" enchantGroup1="1">

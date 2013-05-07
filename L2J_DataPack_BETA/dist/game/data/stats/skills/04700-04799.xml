@@ -1671,7 +1671,7 @@
 	<skill id="4784" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<table name="#hot"> 118 202 322 473 667 833 919 958 974 968 951 940 </table>
+		<table name="#hot"> 167 210 315 507 784 1026 1195 1283 1358 1427 951 940 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1689,13 +1689,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 		</for>
 	</skill>
 	<skill id="4785" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<table name="#hot"> 99 171 272 400 563 703 776 809 826 833 832 827 </table>
+		<table name="#hot"> 141 177 266 428 662 866 1009 1083 1152 1229 832 827 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1713,13 +1713,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 		</for>
 	</skill>
 	<skill id="4786" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<table name="#hot"> 53 91 145 214 301 375 414 431 439 444 443 440 </table>
+		<table name="#hot"> 75 94 142 229 353 463 538 576 613 654 443 440 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1737,13 +1737,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 		</for>
 	</skill>
 	<skill id="4787" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<table name="#hot"> 50 86 136 200 282 352 388 405 413 417 416 414 </table>
+		<table name="#hot"> 71 89 133 215 331 434 505 542 576 615 416 414 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1761,13 +1761,13 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 		</for>
 	</skill>
 	<skill id="4788" levels="12" name="BOSS Chant of Life">
 		<!-- Boss Skill -->
 		<table name="#abnormalLvls"> 11 12 13 14 15 16 17 17 18 18 19 19 </table>
-		<table name="#hot"> 47 80 127 187 263 329 363 379 387 390 389 388 </table>
+		<table name="#hot"> 66 83 125 200 309 405 472 507 539 576 389 388 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 43 69 99 134 173 207 239 250 258 262 262 263 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1785,7 +1785,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 		</for>
 	</skill>
 	<skill id="4789" levels="10" name="NPC High Level">

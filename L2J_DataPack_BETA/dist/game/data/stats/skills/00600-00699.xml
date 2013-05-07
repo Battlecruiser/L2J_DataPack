@@ -1610,7 +1610,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="67" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="139" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="689" levels="1" name="Divine Rogue Deadly Blow">

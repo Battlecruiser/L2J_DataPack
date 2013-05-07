@@ -208,7 +208,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect ticks="6" name="DamOverTime" val="#dot">
+			<effect name="DamOverTime" ticks="3" val="#dot">
 				<add order="0x40" stat="mAtk" val="#mAtk" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -216,7 +216,7 @@
 	</skill>
 	<skill id="5423" levels="12" name="Poison">
 		<!-- Condition causing target to be poisoned. -->
-		<table name="#dot"> 40 105 285 455 665 895 1115 1255 1445 1590 1620 1770 </table>
+		<table name="#dot"> 8 21 57 91 133 179 223 251 289 318 324 354 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -234,14 +234,14 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="6" name="DamOverTime" val="#dot" abnormalVisualEffect="poison">
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="5424" levels="12" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 2-10. -->
-		<table name="#dot"> 75 105 215 275 445 515 700 840 870 1160 1325 1475 </table>
+		<table name="#dot"> 15 21 43 55 89 103 140 168 174 232 265 295 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -258,7 +258,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="6" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -552,7 +552,7 @@
 		<table name="#magicLvl"> 65 70 </table>
 		<table name="#mpConsume"> 66 71 </table>
 		<table name="#power"> 917 1084 </table>
-		<table name="#val"> 325 335 </table>
+		<table name="#dot"> 62 67 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
@@ -575,7 +575,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="4" name="DamOverTime" val="#val" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -662,7 +662,7 @@
 	<skill id="5450" levels="7" name="Thin Skin">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 4 5 5 6 7 8 8 </table>
-		<table name="#dot"> 1090 1330 1330 1535 1535 1675 1675 </table>
+		<table name="#dot"> 218 266 266 307 307 335 335 </table>
 		<table name="#magicLvl"> 46 52 58 62 66 70 74 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
@@ -676,7 +676,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect ticks="1" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5451" levels="1" name="Enervation">
@@ -1086,8 +1086,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 71HP * 5 during 20 seconds -->
-			<effect ticks="4" name="DamOverTime" val="355" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="71" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
@@ -1129,8 +1128,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Stun" val="0" effectPower="80" />
-			<!-- 52HP * 1 during 9 seconds -->
-			<effect ticks="9" name="DamOverTime" noicon="1" val="52" effectPower="80" />
+			<effect name="DamOverTime" noicon="1" ticks="3" val="52" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">

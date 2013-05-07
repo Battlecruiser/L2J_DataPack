@@ -1509,10 +1509,8 @@
 			<effect name="Paralyze" val="0">
 				<mul order="0x30" stat="pDef" val="0.2" />
 			</effect>
-			<!-- 60HP * 3 during 60 seconds -->
-			<effect ticks="20" name="HealOverTime" noicon="1" val="180" />
-			<!-- 10MP * 3 during 60 seconds -->
-			<effect ticks="20" name="ManaHealOverTime" noicon="1" val="30" />
+			<effect name="HealOverTime" noicon="1" ticks="3" val="60" />
+			<effect name="ManaHealOverTime" noicon="1" ticks="3" val="10" />
 		</for>
 	</skill>
 	<skill id="442" levels="1" name="Sonic Barrier">
@@ -1835,6 +1833,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -1860,6 +1859,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="6" name="SignetNoise" val="0" />
 		</for>
 	</skill>
@@ -1883,6 +1883,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -1906,6 +1907,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -1929,6 +1931,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -1952,6 +1955,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -1975,6 +1979,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="24" name="Signet" val="0" />
 		</for>
 	</skill>
@@ -2885,13 +2890,13 @@
 			</and>
 		</cond>
 		<for>
-			<effect ticks="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant1for>
-			<effect ticks="20" name="DamOverTime" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
 		</enchant1for>
 		<enchant2for>
-			<effect ticks="20" name="DamOverTime" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
+			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">

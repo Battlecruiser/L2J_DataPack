@@ -904,7 +904,7 @@
 	<skill id="5247" levels="12" name="Seed of Darkness">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 180 273 393 531 675 810 915 915 1002 1002 1080 1080 </table>
+		<table name="#dot"> 60 91 131 177 225 270 305 305 334 334 360 360 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<table name="#mpConsume"> 16 23 32 42 53 65 75 79 82 84 85 87 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -930,7 +930,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1001,7 +1001,7 @@
 	<skill id="5251" levels="12" name="Poison">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 96 141 189 246 300 345 378 378 396 396 405 405 </table>
+		<table name="#dot"> 32 47 63 82 100 115 126 126 132 132 132 135 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 157 161 163 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -1024,7 +1024,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="5" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1056,7 +1056,7 @@
 	<skill id="5253" levels="12" name="Bleed">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 105 150 204 261 321 369 402 402 417 417 426 426 </table>
+		<table name="#dot"> 35 50 68 87 107 123 134 134 139 139 142 142 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 13 20 28 38 50 61 71 76 80 83 84 85 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -1081,15 +1081,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 35 50 68 87 107 123 134 134 139 139 142 142 HP * 3 during 10 seconds -->
-			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="5254" levels="12" name="Invasion of Spirit">
 		<!-- CT2.5 retail confirmed -->
 		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
-		<table name="#dot"> 12 18 24 33 42 51 60 63 66 69 69 69 </table>
+		<table name="#dot"> 4 6 8 11 14 17 20 21 22 23 23 23 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
@@ -1111,7 +1110,7 @@
 		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
@@ -1325,7 +1324,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="10" name="Debuff" val="0" abnormalVisualEffect="deathmark" />
+			<effect name="Debuff" val="0" abnormalVisualEffect="deathmark" />
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
@@ -1400,7 +1399,7 @@
 	</skill>
 	<skill id="5268" levels="17" name="Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 90 110 130 130 130 140 275 275 275 275 285 285 285 285 285 285 285 </table>
+		<table name="#dmg"> 18 22 26 26 26 28 55 55 55 55 57 57 57 57 57 57 57 </table>
 		<table name="#magicLvl"> 49 55 60 64 68 72 76 77 78 79 80 81 82 83 84 85 86 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
@@ -1411,13 +1410,14 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
+		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="6" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5269" levels="17" name="Slow Trap">

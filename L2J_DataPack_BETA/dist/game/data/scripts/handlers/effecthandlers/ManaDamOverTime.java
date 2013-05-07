@@ -45,7 +45,7 @@ public class ManaDamOverTime extends L2Effect
 			return false;
 		}
 		
-		double manaDam = calc();
+		double manaDam = calc() * getTickCount();
 		
 		if (manaDam > getEffected().getCurrentMp())
 		{

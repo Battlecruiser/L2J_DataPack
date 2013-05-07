@@ -737,6 +737,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="2" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>

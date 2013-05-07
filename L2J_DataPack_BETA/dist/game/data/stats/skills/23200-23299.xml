@@ -1597,6 +1597,7 @@
 	</skill>
 	<skill id="23298" levels="1" name="Flame Hawk">
 		<!-- FIXME: Chance and Reuse values are unconfirmed -->
+		<set name="abnormalTime" val="10" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1608,12 +1609,12 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- 300HP * 1 Sec during 10 seconds -->
-			<effect ticks="10" name="DamOverTime" val="300" />
+			<effect name="DamOverTime" ticks="1" val="300" />
 		</for>
 	</skill>
 	<skill id="23299" levels="1" name="Arrow Rain">
 		<!-- FIXME: Chance and Reuse values are unconfirmed -->
+		<set name="abnormalTime" val="10" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1625,8 +1626,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- 300HP * 1 Sec during 10 seconds -->
-			<effect ticks="10" name="DamOverTime" val="300" />
+			<effect name="DamOverTime" ticks="1" val="300" />
 		</for>
 	</skill>
 </list>

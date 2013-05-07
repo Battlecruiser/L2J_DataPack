@@ -290,6 +290,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -1238,6 +1239,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -1381,8 +1383,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<!-- 10MP each 3 seconds, consumed each 3 seconds -->
-			<effect name="FakeDeath" ticks="3" abnormalTime="-1" val="30" />
+			<effect name="FakeDeath" ticks="3" abnormalTime="-1" val="10" />
 		</for>
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
@@ -1813,7 +1814,7 @@
 	</skill>
 	<skill id="84" levels="3" name="Poison Blade Dance" enchantGroup1="2" enchantGroup2="2">
 		<table name="#abnormalLvls"> 6 7 8 </table>
-		<table name="#dot"> 114 132 144 </table>
+		<table name="#dot"> 50 58 63 </table>
 		<table name="#magicLvl"> 55 60 72 </table>
 		<table name="#mpConsume"> 38 42 50 </table>
 		<table name="#ench1effectPower"> 36 38 40 42 44 46 47 49 51 53 55 57 58 60 62 64 66 68 69 71 73 75 77 79 80 82 84 86 88 90 </table>
@@ -1848,11 +1849,10 @@
 			<using kind="Dual Sword" />
 		</cond>
 		<for>
-			<!-- Retail Values CT2.3: 38 44 48HP * 3 sec -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" effectPower="35" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" effectPower="35" />
 		</for>
 		<enchant1for>
-			<effect ticks="10" name="DamOverTime" val="144" abnormalVisualEffect="poison" effectPower="#ench1effectPower" />
+			<effect name="DamOverTime" ticks="3" val="63" abnormalVisualEffect="poison" effectPower="#ench1effectPower" />
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">
@@ -2157,12 +2157,12 @@
 	</skill>
 	<skill id="96" levels="6" name="Bleed" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 3 4 5 6 7 8 </table>
-		<table name="#dot"> 75 102 132 156 186 201 </table>
+		<table name="#dot"> 25 34 44 54 62 67 </table>
 		<table name="#magicLvl"> 24 32 49 58 66 70 </table>
 		<table name="#mpConsume"> 28 37 60 73 83 89 </table>
 		<table name="#ench1MpConsume"> 88 86 85 83 82 80 79 77 76 74 73 71 70 68 67 65 64 62 61 59 58 56 55 53 52 50 49 47 46 44 </table>
 		<table name="#ench2Sap"> 24 49 74 99 124 148 173 198 223 248 273 297 322 347 372 397 422 446 471 496 521 546 570 595 620 645 670 695 719 744 </table>
-		<table name="#ench3dot"> 207 210 213 216 222 225 228 231 237 240 243 246 249 255 258 261 264 270 273 276 279 285 288 291 294 300 303 306 309 315 </table>
+		<table name="#ench3dot"> 69 70 71 72 74 75 76 77 79 80 81 82 83 85 86 87 88 90 91 92 93 95 96 97 98 100 101 102 103 105 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -2194,18 +2194,17 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<!-- Retail Values CT2.3: 25 34 44 52 62 67HP * 3 Sec -->
-			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant2for>
-			<effect ticks="7" name="DamOverTime" val="201" abnormalVisualEffect="bleed" effectPower="100">
+			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" effectPower="100">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect ticks="7" name="DamOverTime" val="#ench3dot" abnormalVisualEffect="bleed">
+			<effect name="DamOverTime" ticks="3" val="#ench3dot" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</enchant3for>

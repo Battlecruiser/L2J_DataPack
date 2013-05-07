@@ -954,7 +954,6 @@
 	<skill id="1338" levels="1" name="Arcane Chaos" enchantGroup1="6" enchantGroup2="6">
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
-		<table name="#ench2Count"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 </table>
 		<table name="#ench2mpConsume"> 56 55 54 54 52 51 50 50 48 47 46 46 44 43 43 </table>
 		<table name="#ench2mpInitialConsume"> 14 14 14 13 13 13 13 12 12 12 12 11 11 11 11 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -985,22 +984,13 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<!-- Retail Values CT2.3: 24MP * 3 sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="72">
+			<effect name="ManaDamOverTime" ticks="3" val="24">
 				<add order="0x40" stat="cancelVuln" val="30" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.3" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="1.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect ticks="#ench2Count" name="ManaDamOverTime" val="72">
-				<add order="0x40" stat="cancelVuln" val="30" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.3" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="1.1" />
-				<add order="0x40" stat="debuffVuln" val="30" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="1339" levels="1" name="Fire Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<table name="#ench1Power"> 147 147 148 148 148 149 149 149 150 150 151 151 151 152 152 </table>
@@ -1040,8 +1030,7 @@
 		<enchant4 name="elementPower" val="#ench4elementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1049,7 +1038,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1095,8 +1084,7 @@
 		<enchant4 name="elementPower" val="#ench4elementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1104,7 +1092,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1150,8 +1138,7 @@
 		<enchant4 name="elementPower" val="#ench4elementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1159,7 +1146,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1204,14 +1191,13 @@
 		<enchant4 name="elementPower" val="#ench4elementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
@@ -1255,14 +1241,13 @@
 		<enchant4 name="elementPower" val="#ench4elementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
@@ -2572,7 +2557,7 @@
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="10" />
+		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />

@@ -77,7 +77,7 @@ public class HealOverTime extends L2Effect
 			return true;
 		}
 		
-		hp += calc();
+		hp += calc() * getTickCount();
 		hp = Math.min(hp, maxhp);
 		
 		getEffected().setCurrentHp(hp);

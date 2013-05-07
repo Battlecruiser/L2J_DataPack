@@ -105,7 +105,7 @@
 	<skill id="4204" levels="12" name="Bleed">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#damage"> 57 84 114 147 180 207 235 235 234 234 237 237 </table>
+		<table name="#damage"> 19 28 38 49 60 69 75 75 78 78 79 79 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -123,7 +123,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -156,7 +156,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 2 2 2 2 3 4 5 6 7 8 8 </table>
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
-		<table name="#maxMp"> 6 6 6 6 6 12 15 21 24 30 36 36 </table>
+		<table name="#mdot"> 2 2 2 2 2 4 5 7 8 10 12 12 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DOT_MP" />
@@ -172,7 +172,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="10" name="ManaDamOverTime" val="#maxMp" />
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 		</for>
 		<table name="#mpConsume"> 17 29 39 53 67 83 97 103 108 112 115 116 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -257,7 +257,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="15" name="HealOverTime" val="#hot" />
+			<effect name="HealOverTime" ticks="1" val="#hot" />
 			<effect name="HealPercent" noicon="1" val="3" />
 		</for>
 	</skill>
@@ -807,7 +807,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="DamOverTime" val="294" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="98" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4244" levels="12" name="NPC Wild Sweep">
@@ -1091,7 +1091,7 @@
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
 		<table name="#cast"> 500 600 600 750 750 750 750 750 750 750 750 750 </table>
-		<table name="#dot"> 54 72 96 123 150 174 189 189 198 198 204 204 </table>
+		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
@@ -1114,7 +1114,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume" />

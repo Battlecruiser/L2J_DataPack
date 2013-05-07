@@ -206,7 +206,7 @@
 	<skill id="4320" levels="12" name="Poison">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 48 72 96 123 150 174 189 189 198 198 204 204 </table>
+		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
@@ -222,7 +222,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 		<table name="#mpConsume"> 13 20 27 35 45 55 65 69 73 83 77 78 </table>
 		<set name="mpConsume" val="#mpConsume" />
@@ -1167,7 +1167,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="27.78" />
+			<effect name="ManaHealOverTime" ticks="3" val="9.26" />
 		</for>
 	</skill>
 	<skill id="4368" levels="1" name="Clan Hall Manager Buff">
@@ -1180,7 +1180,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="55.56">
+			<effect name="ManaHealOverTime" ticks="3" val="18.52">
 				<add stat="maxMp" order="0x40" val="5000" />
 			</effect>
 		</for>
@@ -1195,7 +1195,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="83.34">
+			<effect name="ManaHealOverTime" ticks="3" val="27.78">
 				<add stat="maxMp" order="0x40" val="10000" />
 			</effect>
 		</for>
@@ -1210,7 +1210,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="183.33">
+			<effect name="ManaHealOverTime" ticks="3" val="61.11">
 				<add stat="maxMp" order="0x40" val="28000" />
 			</effect>
 		</for>
@@ -1225,7 +1225,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="350.1">
+			<effect name="ManaHealOverTime" ticks="3" val="116.7">
 				<add stat="maxMp" order="0x40" val="58000" />
 			</effect>
 		</for>
@@ -1240,7 +1240,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="600">
+			<effect name="ManaHealOverTime" ticks="3" val="200">
 				<add stat="maxMp" order="0x40" val="103000" />
 			</effect>
 		</for>
@@ -1255,7 +1255,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="616.8">
+			<effect name="ManaHealOverTime" ticks="3" val="205.6">
 				<add stat="maxMp" order="0x40" val="106000" />
 			</effect>
 		</for>
@@ -1270,7 +1270,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="866.7">
+			<effect name="ManaHealOverTime" ticks="3" val="288.9">
 				<add stat="maxMp" order="0x40" val="151000" />
 			</effect>
 		</for>
@@ -1285,7 +1285,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="1200" name="ManaHealOverTime" val="1116.6">
+			<effect name="ManaHealOverTime" ticks="3" val="372.2">
 				<add stat="maxMp" order="0x40" val="196000" />
 			</effect>
 		</for>

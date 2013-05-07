@@ -1215,7 +1215,7 @@
 	</skill>
 	<skill id="4579" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 25 40 56 76 99 121 142 151 159 165 168 170 </table>
 		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
@@ -1239,7 +1239,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1298,7 +1298,7 @@
 	</skill>
 	<skill id="4582" levels="12" name="Poison">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dmg"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
+		<table name="#dmg"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 24 39 54 73 94 116 136 144 152 158 161 163 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1320,7 +1320,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4583" levels="12" name="Decrease Speed">
@@ -1717,7 +1717,7 @@
 	</skill>
 	<skill id="4596" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 29 47 64 88 113 138 162 173 180 188 192 194 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1740,12 +1740,12 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4597" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 20 34 47 63 82 100 117 124 130 135 138 140 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1767,12 +1767,12 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4598" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#damage"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 20 34 47 63 82 100 117 124 130 135 138 140 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1794,7 +1794,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#damage" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4599" levels="12" name="Decrease Speed">

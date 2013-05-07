@@ -191,6 +191,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -210,6 +211,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -759,14 +761,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="6" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6863" levels="1" name="Poison">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="6" />
+		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
@@ -783,7 +785,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="120" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="120" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6864" levels="1" name="Summon">
@@ -796,6 +798,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="400" />
@@ -812,7 +815,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="8" name="DamOverTime" val="100" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="100" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6866" levels="1" name="Vampiric Claw">
@@ -990,7 +993,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="8" name="DamOverTime" val="#dmg" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="#dmg" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="6876" levels="1" name="Power Strike">

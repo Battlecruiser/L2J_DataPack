@@ -23,7 +23,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#mdot"> 300 150 </table>
+		<table name="#mdot"> 60 30 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
@@ -38,9 +38,7 @@
 		<set name="skillType" val="MDOT" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<!-- Level 1: 60MP * 5 during 10 seconds -->
-			<!-- Level 2: 30MP * 5 during 10 seconds -->
-			<effect ticks="2" name="ManaDamOverTime" val="#mdot" />
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="6302" levels="1" name="Cold Air">
@@ -152,8 +150,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 139HP * 3 during 10 seconds -->
-			<effect ticks="3" name="DamOverTime" val="417" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="139" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6307" levels="1" name="Opus of the Hand">
@@ -712,8 +709,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 200HP * 1 during 3 seconds -->
-			<effect ticks="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -831,8 +827,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 200HP * 1 during 3 seconds -->
-			<effect ticks="3" name="DamOverTime" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" effectPower="1" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -1178,8 +1173,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="93" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6383" levels="1" name="Bistakon Deadly Roar">
@@ -1244,8 +1238,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="95" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6386" levels="1" name="Bistakon Earth Rise">
@@ -1451,8 +1444,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- Retail Values CT2.5: 93HP * 3 Sec -->
-			<effect ticks="5" name="DamOverTime" val="279" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="93" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6396" levels="1" name="Cokrakon Panic">

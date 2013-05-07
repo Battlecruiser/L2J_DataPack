@@ -23,8 +23,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 52HP * 5 during 20 seconds -->
-			<effect ticks="4" name="DamOverTime" val="260" abnormalVisualEffect="bleed" effectPower="90" />
+			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" effectPower="90" />
 		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
@@ -1611,8 +1610,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- 200HP * 1 during 5 seconds -->
-			<effect ticks="5" name="DamOverTime" val="200" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5597" levels="1" name="Invalid Skill cancel">
