@@ -442,6 +442,7 @@
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
+			<!-- FIXME: remove ticks from here -->
 			<effect ticks="7" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -648,7 +649,7 @@
 		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="327" abnormalVisualEffect="poison">
+			<effect name="DamOverTime" ticks="3" val="109" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -1347,7 +1348,6 @@
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -1364,14 +1364,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" effectPower="40" />
+			<effect name="Fear" abnormalTime="20" val="0" effectPower="40" />
 		</for>
 	</skill>
 	<skill id="5174" levels="10" name="Poison">
 		<!-- Confirmed CT2.5 -->
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#dot"> 123 123 150 150 150 174 174 174 189 189 </table>
+		<table name="#dot"> 41 41 50 50 50 58 58 58 63 63 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
@@ -1392,15 +1392,14 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<!-- 41 41 50 50 50 58 58 58 63 63HP * 3 during 30 seconds -->
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="5175" levels="10" name="Bleed">
 		<!-- Confirmed CT2.5 -->
 		<!-- Augmentation Skill (Trigger) -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
-		<table name="#dot"> 132 132 162 162 162 186 186 186 201 201 </table>
+		<table name="#dot"> 44 44 54 54 54 62 62 62 67 67 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
@@ -1422,8 +1421,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 44 44 54 54 54 62 62 62 67 67HP * 3 during 20 seconds -->
-			<effect ticks="7" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5176" levels="10" name="Silence">

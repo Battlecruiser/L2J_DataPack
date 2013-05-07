@@ -238,8 +238,8 @@
 			<effect name="Root" val="0" abnormalVisualEffect="poison">
 				<sub order="0x40" stat="rootVuln" val="100" />
 			</effect>
-			<effect ticks="10" name="DamOverTime" noicon="1" val="90" />
-			<effect ticks="10" name="ManaDamOverTime" noicon="1" val="30" />
+			<effect name="DamOverTime" noicon="1" ticks="3" val="90" />
+			<effect name="ManaDamOverTime" noicon="1" ticks="3" val="30" />
 		</for>
 	</skill>
 	<skill id="1509" levels="1" name="Seal of Limit">
@@ -371,15 +371,14 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<!-- Retail Values CT2.3: 12MP * 3 Sec -->
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect ticks="10" name="ManaDamOverTime" val="36" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -749,7 +748,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="120" name="DamOverTime" val="#dot">
+			<effect name="DamOverTime" ticks="3" val="#dot">
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>

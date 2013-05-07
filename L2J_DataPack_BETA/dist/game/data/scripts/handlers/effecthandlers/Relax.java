@@ -78,7 +78,7 @@ public class Relax extends L2Effect
 			}
 		}
 		
-		double manaDam = calc();
+		double manaDam = calc() * getTickCount();
 		
 		if (manaDam > getEffected().getCurrentMp())
 		{

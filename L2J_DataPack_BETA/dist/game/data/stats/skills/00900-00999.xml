@@ -79,7 +79,6 @@
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="904" levels="6" name="Corpse Burst">
-		<table name="#dot"> 200 225 250 275 300 325 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
@@ -107,7 +106,7 @@
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -194,7 +193,6 @@
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="909" levels="6" name="Ice Focus">
-		<table name="#dot"> 200 225 250 275 300 325 </table>
 		<table name="#mpConsume"> 72 73 74 74 75 75 </table>
 		<table name="#pvePower"> 348 351 355 358 361 364 </table>
 		<table name="#pvpPower"> 116 117 119 120 121 122 </table>
@@ -221,7 +219,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" >
+			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison" >
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -428,6 +426,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="8" name="IncreaseCharges" noicon="1" val="8" />
 		</for>
 	</skill>
@@ -450,6 +449,7 @@
 			</not>
 		</cond>
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect ticks="8" name="IncreaseCharges" noicon="1" val="8" />
 		</for>
 	</skill>
@@ -619,7 +619,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Dual Sword,Dual Fist,Dagger,Dual Dagger,Pole,Ancient,Rapier" />
 		</cond>
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="flame" effectPower="50" />
+			<effect name="DamOverTime" ticks="1" val="#dot" abnormalVisualEffect="flame" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
@@ -1005,7 +1005,7 @@
 			<using kind="Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<effect ticks="15" name="DamOverTime" val="92" abnormalVisualEffect="flame" />
+			<effect name="DamOverTime" ticks="1" val="92" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="950" levels="7" name="Nail Attack">
@@ -1113,7 +1113,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="156" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" effectPower="100" />
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">

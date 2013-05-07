@@ -424,10 +424,10 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect ticks="20" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant3for>
-			<effect ticks="20" name="DamOverTime" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
+			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
 		</enchant3for>
 	</skill>
 	<skill id="510" levels="5" name="Deadly Roulette" enchantGroup1="2" enchantGroup2="2">
@@ -850,7 +850,7 @@
 	</skill>
 	<skill id="523" levels="7" name="Imbue Dark Seed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 380 380 380 380 415 415 415 </table>
+		<table name="#dot"> 76 76 76 76 83 83 83 </table>
 		<table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 62 64 66 68 70 72 74 </table>
 		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 </table>
@@ -877,8 +877,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<!-- 76 76 76 76 83 83 83 HP * 5 during 20 seconds -->
-			<effect ticks="4" name="DamOverTime" val="#dot" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5447" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
@@ -1795,7 +1794,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="2" name="DamOverTime" val="615" effectPower="50" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="123" effectPower="50" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2010,6 +2009,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<!-- FIXME: Remove ticks from here -->
 			<effect self="1" ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
 		</for>
 	</skill>
@@ -2040,7 +2040,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="174" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="58" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="572" levels="4" name="Double Slasher">
@@ -2173,7 +2173,7 @@
 	<skill id="578" levels="4" name="Blaze Quake">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 6 6 7 7 </table>
-		<table name="#dot"> 81 81 93 93 </table>
+		<table name="#dot"> 27 27 31 31 </table>
 		<table name="#magicLvl"> 60 63 66 69 </table>
 		<table name="#mpConsume"> 61 63 67 70 </table>
 		<table name="#power"> 625 703 784 867 </table>
@@ -2198,7 +2198,7 @@
 		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect ticks="3" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" effectPower="60" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" effectPower="60" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2304,7 +2304,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="3" name="DamOverTime" val="369" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">
@@ -2394,7 +2394,7 @@
 	</skill>
 	<skill id="588" levels="2" name="Curse of Darkness">
 		<!-- CT2.2 retail confirmed -->
-		<table name="#dmg"> 215 336 </table>
+		<table name="#dmg"> 88 101 </table>
 		<table name="#mpConsume"> 54 58 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -2412,7 +2412,7 @@
 		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="5" name="DamOverTime" val="#dmg" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" />
 		</for>
 	</skill>
 	<skill id="589" levels="2" name="Darkness Energy Drain">

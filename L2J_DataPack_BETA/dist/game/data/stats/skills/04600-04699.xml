@@ -181,7 +181,7 @@
 	</skill>
 	<skill id="4606" levels="12" name="Poison">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
+		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
 		<table name="#mpConsume"> 35 58 81 109 141 174 203 216 227 235 241 244 </table>
 		<table name="#power"> 46 106 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
@@ -204,7 +204,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" effectPower="35" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" effectPower="35" />
 		</for>
 	</skill>
 	<skill id="4607" levels="1" name="Magma Attack">
@@ -381,7 +381,7 @@
 	</skill>
 	<skill id="4615" levels="12" name="Bleed">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dmg"> 27 39 51 66 81 93 102 102 105 105 108 108 </table>
+		<table name="#dmg"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 19 30 42 57 74 91 106 114 119 124 126 128 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -404,7 +404,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect ticks="7" name="DamOverTime" val="#dmg" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="#dmg" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4616" levels="1" name="Fake Petrification">
@@ -1157,7 +1157,7 @@
 	</skill>
 	<skill id="4649" levels="12" name="Poison">
 		<table name="#abnormalLvls"> 2 3 4 5 6 7 8 8 9 9 10 10 </table>
-		<table name="#dot"> 36 54 72 93 114 132 144 144 150 150 153 153 </table>
+		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -1177,7 +1177,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect ticks="10" name="DamOverTime" val="#dot" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4650" levels="1" name="NPC AE - Dispel Hold">
@@ -1862,8 +1862,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<!-- 216HP * 5 during 10 seconds -->
-			<effect ticks="2" name="DamOverTime" val="1080" abnormalVisualEffect="flame" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
@@ -1891,8 +1890,7 @@
 		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<!-- 216HP * 5 during 10 seconds -->
-			<effect ticks="2" name="DamOverTime" val="1080" abnormalVisualEffect="flame" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">
@@ -2069,7 +2067,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="5" name="Debuff" val="0">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="0.55" />
 				<sub order="0x40" stat="accCombat" val="4" />
 				<sub order="0x40" stat="rEvas" val="4" />
@@ -2093,7 +2091,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="5" name="Debuff" val="0">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="0.2" />
 			</effect>
 		</for>
@@ -2111,7 +2109,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect ticks="5" name="Debuff" val="0">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.2" />
 				<mul order="0x30" stat="mDef" val="0.2" />
 			</effect>
