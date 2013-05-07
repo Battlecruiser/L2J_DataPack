@@ -52,7 +52,7 @@ public class Confusion extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().startConfused();
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		return true;
 	}
 	

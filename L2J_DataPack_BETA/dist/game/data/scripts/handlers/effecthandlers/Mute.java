@@ -18,6 +18,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -40,7 +41,8 @@ public class Mute extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		getEffected().startMuted();
+		getEffected().abortCast();
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 		return true;
 	}
 	
@@ -48,12 +50,6 @@ public class Mute extends L2Effect
 	public boolean onActionTime()
 	{
 		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopMuted(false);
 	}
 	
 	@Override

@@ -41,7 +41,7 @@ public class BlockBuffSlot extends L2Effect
 		{
 			return false;
 		}
-		getEffected().addBlockedBuffSlots(getSkill().getBlockBuffSlots());
+		getEffected().getEffectList().addBlockedBuffSlots(getSkill().getBlockBuffSlots());
 		return true;
 	}
 	
@@ -50,7 +50,7 @@ public class BlockBuffSlot extends L2Effect
 	{
 		if ((getEffected() != null) && (getSkill() != null) && !getSkill().getBlockBuffSlots().isEmpty())
 		{
-			getEffected().removeBlockedBuffSlots(getSkill().getBlockBuffSlots());
+			getEffected().getEffectList().removeBlockedBuffSlots(getSkill().getBlockBuffSlots());
 		}
 	}
 	
