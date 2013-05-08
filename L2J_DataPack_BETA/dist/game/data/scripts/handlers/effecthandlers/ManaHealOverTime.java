@@ -23,6 +23,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Mana Heal Over Time effect implementation.
+ */
 public class ManaHealOverTime extends L2Effect
 {
 	public ManaHealOverTime(Env env, EffectTemplate template)
@@ -30,7 +33,6 @@ public class ManaHealOverTime extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public ManaHealOverTime(Env env, L2Effect effect)
 	{
 		super(env, effect);

@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
+ * Charm Of Courage effect implementation.
  * @author nBd
  */
 public class CharmOfCourage extends L2Effect
@@ -36,20 +37,15 @@ public class CharmOfCourage extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.CHARMOFCOURAGE;
+		return EffectFlag.CHARM_OF_COURAGE.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
-			return true;
-		}
-		return false;
+		return L2EffectType.CHARMOFCOURAGE;
 	}
 	
 	@Override
@@ -62,14 +58,13 @@ public class CharmOfCourage extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
+		if (getEffected().isPlayer())
+		{
+			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
+			return true;
+		}
 		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.CHARM_OF_COURAGE.getMask();
 	}
 }

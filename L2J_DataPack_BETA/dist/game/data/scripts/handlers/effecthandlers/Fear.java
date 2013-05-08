@@ -52,41 +52,15 @@ public class Fear extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.FEAR;
+		return EffectFlag.FEAR.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if ((getEffected() instanceof L2NpcInstance) || (getEffected() instanceof L2DefenderInstance) || (getEffected() instanceof L2FortCommanderInstance) || (getEffected() instanceof L2SiegeFlagInstance) || (getEffected() instanceof L2SiegeSummonInstance))
-		{
-			return false;
-		}
-		
-		if (getEffected().isAfraid())
-		{
-			return false;
-		}
-		
-		if (getEffected().isCastingNow() && getEffected().canAbortCast())
-		{
-			getEffected().abortCast();
-		}
-		
-		if (getEffected().getX() > getEffector().getX())
-		{
-			_dX = 1;
-		}
-		if (getEffected().getY() > getEffector().getY())
-		{
-			_dY = 1;
-		}
-		
-		getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
-		onActionTime();
-		return true;
+		return L2EffectType.FEAR;
 	}
 	
 	@Override
@@ -126,8 +100,34 @@ public class Fear extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public boolean onStart()
 	{
-		return EffectFlag.FEAR.getMask();
+		if ((getEffected() instanceof L2NpcInstance) || (getEffected() instanceof L2DefenderInstance) || (getEffected() instanceof L2FortCommanderInstance) || (getEffected() instanceof L2SiegeFlagInstance) || (getEffected() instanceof L2SiegeSummonInstance))
+		{
+			return false;
+		}
+		
+		if (getEffected().isAfraid())
+		{
+			return false;
+		}
+		
+		if (getEffected().isCastingNow() && getEffected().canAbortCast())
+		{
+			getEffected().abortCast();
+		}
+		
+		if (getEffected().getX() > getEffector().getX())
+		{
+			_dX = 1;
+		}
+		if (getEffected().getY() > getEffector().getY())
+		{
+			_dY = 1;
+		}
+		
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
+		onActionTime();
+		return super.onStart();
 	}
 }

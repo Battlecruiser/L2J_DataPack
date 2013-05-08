@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Lucky effect.
+ * Lucky effect implementation.
  * @author Zoey76
  */
 public class Lucky extends L2Effect
@@ -35,9 +35,9 @@ public class Lucky extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
+		return L2EffectType.LUCKY;
 	}
 	
 	@Override
@@ -47,8 +47,8 @@ public class Lucky extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart()
 	{
-		return L2EffectType.LUCKY;
+		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
 	}
 }

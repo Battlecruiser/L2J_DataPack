@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Recovery effect implementation.
  * @author Kerberos
  */
 public class Recovery extends L2Effect
@@ -47,17 +48,6 @@ public class Recovery extends L2Effect
 			getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
 			return true;
 		}
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
 		return false;
 	}
 }

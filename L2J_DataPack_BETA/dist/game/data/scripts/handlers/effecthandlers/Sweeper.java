@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Sweeper effect.
+ * Sweeper effect implementation.
  * @author Zoey76
  */
 public class Sweeper extends L2Effect
@@ -37,6 +37,12 @@ public class Sweeper extends L2Effect
 	public Sweeper(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -82,17 +88,5 @@ public class Sweeper extends L2Effect
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
 	}
 }

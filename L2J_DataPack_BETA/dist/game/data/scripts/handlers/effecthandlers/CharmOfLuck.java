@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Charm Of Luck effect.
+ * Charm Of Luck effect implementation.
  * @author kerberos_20
  */
 public class CharmOfLuck extends L2Effect
@@ -45,12 +45,6 @@ public class CharmOfLuck extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CHARM_OF_LUCK;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override

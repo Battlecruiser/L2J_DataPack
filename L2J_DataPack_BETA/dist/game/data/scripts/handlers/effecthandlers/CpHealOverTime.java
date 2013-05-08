@@ -23,6 +23,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Cp Heal Over Time effect implementation.
+ */
 public class CpHealOverTime extends L2Effect
 {
 	public CpHealOverTime(Env env, EffectTemplate template)

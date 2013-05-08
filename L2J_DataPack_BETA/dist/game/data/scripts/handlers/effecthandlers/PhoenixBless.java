@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Phoenix Blessing effect.
+ * Phoenix Blessing effect implementation.
  * @author Faror
  */
 public class PhoenixBless extends L2Effect
@@ -45,12 +45,6 @@ public class PhoenixBless extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.PHOENIX_BLESSING;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override

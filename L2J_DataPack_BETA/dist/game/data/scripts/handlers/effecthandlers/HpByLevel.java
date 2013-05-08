@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Hp By Level effect.
+ * Hp By Level effect implementation..
  * @author Zoey76
  */
 public class HpByLevel extends L2Effect
@@ -34,6 +34,12 @@ public class HpByLevel extends L2Effect
 	public HpByLevel(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.BUFF;
 	}
 	
 	@Override
@@ -53,17 +59,5 @@ public class HpByLevel extends L2Effect
 		sm.addNumber(restored);
 		getEffector().sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 }

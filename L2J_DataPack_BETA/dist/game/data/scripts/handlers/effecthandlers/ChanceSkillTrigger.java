@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Chance Skill Trigger effect implementation.
+ */
 public class ChanceSkillTrigger extends L2Effect
 {
 	public ChanceSkillTrigger(Env env, EffectTemplate template)
@@ -49,11 +52,21 @@ public class ChanceSkillTrigger extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public ChanceCondition getTriggeredChanceCondition()
 	{
-		getEffected().addChanceTrigger(this);
-		getEffected().onStartChanceEffect(getSkill().getElement());
-		return super.onStart();
+		return getEffectTemplate().getChanceCondition();
+	}
+	
+	@Override
+	public int getTriggeredChanceId()
+	{
+		return getEffectTemplate().getTriggeredId();
+	}
+	
+	@Override
+	public int getTriggeredChanceLevel()
+	{
+		return getEffectTemplate().getTriggeredLevel();
 	}
 	
 	@Override
@@ -76,26 +89,16 @@ public class ChanceSkillTrigger extends L2Effect
 	}
 	
 	@Override
-	public int getTriggeredChanceId()
+	public boolean onStart()
 	{
-		return getEffectTemplate().getTriggeredId();
-	}
-	
-	@Override
-	public int getTriggeredChanceLevel()
-	{
-		return getEffectTemplate().getTriggeredLevel();
+		getEffected().addChanceTrigger(this);
+		getEffected().onStartChanceEffect(getSkill().getElement());
+		return super.onStart();
 	}
 	
 	@Override
 	public boolean triggersChanceSkill()
 	{
 		return getEffectTemplate().getTriggeredId() > 1;
-	}
-	
-	@Override
-	public ChanceCondition getTriggeredChanceCondition()
-	{
-		return getEffectTemplate().getChanceCondition();
 	}
 }

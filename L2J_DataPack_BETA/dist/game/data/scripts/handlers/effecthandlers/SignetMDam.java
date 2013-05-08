@@ -44,6 +44,9 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jserver.gameserver.util.Point3D;
 
+/**
+ * Signet MDam effect implementation.
+ */
 public class SignetMDam extends L2Effect
 {
 	private L2EffectPointInstance _actor;
@@ -57,46 +60,6 @@ public class SignetMDam extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SIGNET_GROUND;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		L2NpcTemplate template;
-		if (getSkill() instanceof L2SkillSignetCasttime)
-		{
-			template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
-		}
-		else
-		{
-			return false;
-		}
-		
-		final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
-		effectPoint.setCurrentHp(effectPoint.getMaxHp());
-		effectPoint.setCurrentMp(effectPoint.getMaxMp());
-		
-		int x = getEffector().getX();
-		int y = getEffector().getY();
-		int z = getEffector().getZ();
-		
-		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.GROUND))
-		{
-			final Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
-			
-			if (wordPosition != null)
-			{
-				x = wordPosition.getX();
-				y = wordPosition.getY();
-				z = wordPosition.getZ();
-			}
-		}
-		effectPoint.setIsInvul(true);
-		effectPoint.spawnMe(x, y, z);
-		
-		_actor = effectPoint;
-		return true;
-		
 	}
 	
 	@Override
@@ -191,5 +154,45 @@ public class SignetMDam extends L2Effect
 		{
 			_actor.deleteMe();
 		}
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		L2NpcTemplate template;
+		if (getSkill() instanceof L2SkillSignetCasttime)
+		{
+			template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
+		}
+		else
+		{
+			return false;
+		}
+		
+		final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
+		effectPoint.setCurrentHp(effectPoint.getMaxHp());
+		effectPoint.setCurrentMp(effectPoint.getMaxMp());
+		
+		int x = getEffector().getX();
+		int y = getEffector().getY();
+		int z = getEffector().getZ();
+		
+		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.GROUND))
+		{
+			final Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
+			
+			if (wordPosition != null)
+			{
+				x = wordPosition.getX();
+				y = wordPosition.getY();
+				z = wordPosition.getZ();
+			}
+		}
+		effectPoint.setIsInvul(true);
+		effectPoint.spawnMe(x, y, z);
+		
+		_actor = effectPoint;
+		return true;
+		
 	}
 }

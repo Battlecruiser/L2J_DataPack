@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
+ * Dam Over Time Percent effect implementation.
  * @author Adry_85
  */
 public class DamOverTimePercent extends L2Effect

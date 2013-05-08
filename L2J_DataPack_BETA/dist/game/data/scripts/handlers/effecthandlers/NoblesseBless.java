@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Noblesse Blessing effect.
+ * Noblesse Blessing effect implementation.
  * @author earendil
  */
 public class NoblesseBless extends L2Effect
@@ -56,12 +56,6 @@ public class NoblesseBless extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.NOBLESSE_BLESSING;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override

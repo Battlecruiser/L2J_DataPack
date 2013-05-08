@@ -51,9 +51,9 @@ public class FocusSouls extends L2Effect
 			return false;
 		}
 		
-		L2PcInstance target = getEffected().getActingPlayer();
+		final L2PcInstance target = getEffected().getActingPlayer();
 		final L2Skill soulMastery = target.getKnownSkill(L2Skill.SKILL_SOUL_MASTERY);
-		if ((soulMastery != null))
+		if (soulMastery != null)
 		{
 			int amount = (int) calc();
 			if ((target.getChargedSouls() < soulMastery.getNumSouls()))
@@ -68,11 +68,5 @@ public class FocusSouls extends L2Effect
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

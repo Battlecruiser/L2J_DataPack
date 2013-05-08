@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Disarm effect implementation.
  * @author nBd
  */
 public class Disarm extends L2Effect
@@ -32,6 +33,12 @@ public class Disarm extends L2Effect
 	public Disarm(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.DISARMED.getMask();
 	}
 	
 	@Override
@@ -51,22 +58,5 @@ public class Disarm extends L2Effect
 		getEffected().getActingPlayer().disarmWeapons();
 		return true;
 		
-	}
-	
-	@Override
-	public void onExit()
-	{
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.DISARMED.getMask();
 	}
 }

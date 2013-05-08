@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Immobile Pet Buff effect implementation.
  * @author demonia
  */
 public class ImmobilePetBuff extends L2Effect
@@ -43,6 +44,15 @@ public class ImmobilePetBuff extends L2Effect
 	}
 	
 	@Override
+	public void onExit()
+	{
+		if (_pet != null)
+		{
+			_pet.setIsImmobilized(false);
+		}
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		_pet = null;
@@ -53,22 +63,6 @@ public class ImmobilePetBuff extends L2Effect
 			_pet.setIsImmobilized(true);
 			return true;
 		}
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (_pet != null)
-		{
-			_pet.setIsImmobilized(false);
-		}
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		// just stop this effect
 		return false;
 	}
 }

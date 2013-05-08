@@ -26,6 +26,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Relax effect implementation.
+ */
 public class Relax extends L2Effect
 {
 	public Relax(Env env, EffectTemplate template)
@@ -34,23 +37,15 @@ public class Relax extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.RELAXING;
+		return EffectFlag.RELAXING.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().getActingPlayer().sitDown(false);
-		}
-		else
-		{
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
-		}
-		return super.onStart();
+		return L2EffectType.RELAXING;
 	}
 	
 	@Override
@@ -94,8 +89,16 @@ public class Relax extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public boolean onStart()
 	{
-		return EffectFlag.RELAXING.getMask();
+		if (getEffected().isPlayer())
+		{
+			getEffected().getActingPlayer().sitDown(false);
+		}
+		else
+		{
+			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
+		return super.onStart();
 	}
 }

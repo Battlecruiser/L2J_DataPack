@@ -26,6 +26,9 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Silent Move effect implementation.
+ */
 public class SilentMove extends L2Effect
 {
 	public SilentMove(Env env, EffectTemplate template)
@@ -33,7 +36,6 @@ public class SilentMove extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public SilentMove(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -43,6 +45,12 @@ public class SilentMove extends L2Effect
 	public boolean canBeStolen()
 	{
 		return true;
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.SILENT_MOVE.getMask();
 	}
 	
 	@Override
@@ -74,11 +82,5 @@ public class SilentMove extends L2Effect
 		
 		getEffected().reduceCurrentMp(manaDam);
 		return true;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.SILENT_MOVE.getMask();
 	}
 }

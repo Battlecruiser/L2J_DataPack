@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.util.Rnd;
 
 /**
- * Restoration Random effect.<br>
+ * Restoration Random effect implementation.<br>
  * This effect is present in item skills that "extract" new items upon usage.<br>
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76
@@ -44,6 +44,12 @@ public class RestorationRandom extends L2Effect
 	public RestorationRandom(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -107,17 +113,5 @@ public class RestorationRandom extends L2Effect
 			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), getEffector(), true);
 		}
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.RESTORATION_RANDOM;
 	}
 }

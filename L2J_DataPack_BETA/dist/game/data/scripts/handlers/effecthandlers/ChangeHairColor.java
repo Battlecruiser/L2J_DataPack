@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Change Hair Color effect.
+ * Change Hair Color effect implementation.
  * @author Zoey76
  */
 public class ChangeHairColor extends L2Effect
@@ -33,6 +33,12 @@ public class ChangeHairColor extends L2Effect
 	public ChangeHairColor(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -47,17 +53,5 @@ public class ChangeHairColor extends L2Effect
 		player.getAppearance().setHairColor((int) calc());
 		player.broadcastUserInfo();
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
 	}
 }

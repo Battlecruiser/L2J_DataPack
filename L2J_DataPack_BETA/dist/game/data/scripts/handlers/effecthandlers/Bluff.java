@@ -29,7 +29,7 @@ import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
 
 /**
- * Bluff effect.
+ * Bluff effect implementation.
  * @author decad
  */
 public class Bluff extends L2Effect
@@ -67,11 +67,5 @@ public class Bluff extends L2Effect
 		getEffected().broadcastPacket(new StopRotation(getEffected().getObjectId(), getEffector().getHeading(), 65535));
 		getEffected().setHeading(getEffector().getHeading());
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

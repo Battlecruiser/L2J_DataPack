@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Block Resurrection effect implementation.
  * @author UnAfraid
  */
 public class BlockResurrection extends L2Effect
@@ -35,20 +36,14 @@ public class BlockResurrection extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BLOCK_RESURRECTION;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.BLOCK_RESURRECTION.getMask();
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.BLOCK_RESURRECTION;
 	}
 }

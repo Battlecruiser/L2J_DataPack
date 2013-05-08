@@ -45,12 +45,6 @@ public class DispelBySlot extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public boolean onStart()
 	{
 		final L2Skill skill = getSkill();

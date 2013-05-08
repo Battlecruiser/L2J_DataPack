@@ -21,7 +21,6 @@ package handlers.effecthandlers;
 import java.util.List;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -29,12 +28,11 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Signet Noise effect implementation.
  * @author Forsaiken, Sami
  */
 public class SignetNoise extends L2Effect
 {
-	private L2EffectPointInstance _actor;
-	
 	public SignetNoise(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -47,13 +45,6 @@ public class SignetNoise extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		_actor = (L2EffectPointInstance) getEffected();
-		return true;
-	}
-	
-	@Override
 	public boolean onActionTime()
 	{
 		if (getTickCount() == (getTotalTickCount() - 1))
@@ -62,8 +53,7 @@ public class SignetNoise extends L2Effect
 		}
 		
 		L2PcInstance caster = getEffector().getActingPlayer();
-		
-		for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
+		for (L2Character target : getEffected().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if ((target == null) || (target == caster))
 			{
@@ -91,9 +81,15 @@ public class SignetNoise extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (_actor != null)
+		if (getEffected() != null)
 		{
-			_actor.deleteMe();
+			getEffected().deleteMe();
 		}
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		return true;
 	}
 }

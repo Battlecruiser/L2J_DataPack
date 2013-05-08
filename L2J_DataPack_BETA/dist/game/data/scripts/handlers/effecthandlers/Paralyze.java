@@ -27,6 +27,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Paralyze effect implementation.
+ */
 public class Paralyze extends L2Effect
 {
 	public Paralyze(Env env, EffectTemplate template)
@@ -34,7 +37,6 @@ public class Paralyze extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public Paralyze(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -47,18 +49,15 @@ public class Paralyze extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.PARALYZE;
+		return EffectFlag.PARALYZED.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_1);
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
-		getEffected().startParalyze();
-		return super.onStart();
+		return L2EffectType.PARALYZE;
 	}
 	
 	@Override
@@ -72,14 +71,11 @@ public class Paralyze extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.PARALYZED.getMask();
+		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_1);
+		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
+		getEffected().startParalyze();
+		return super.onStart();
 	}
 }

@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Mp Consume Per Level effect implementation.
+ */
 public class MpConsumePerLevel extends L2Effect
 {
 	public MpConsumePerLevel(Env env, EffectTemplate template)

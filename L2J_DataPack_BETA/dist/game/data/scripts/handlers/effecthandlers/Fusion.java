@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Fusion effect implementation.
  * @author Kerberos
  */
 public class Fusion extends L2Effect
@@ -40,9 +41,17 @@ public class Fusion extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void decreaseForce()
 	{
-		return true;
+		_effect--;
+		if (_effect < 1)
+		{
+			exit();
+		}
+		else
+		{
+			updateBuff();
+		}
 	}
 	
 	@Override
@@ -57,20 +66,6 @@ public class Fusion extends L2Effect
 		if (_effect < _maxEffect)
 		{
 			_effect++;
-			updateBuff();
-		}
-	}
-	
-	@Override
-	public void decreaseForce()
-	{
-		_effect--;
-		if (_effect < 1)
-		{
-			exit();
-		}
-		else
-		{
 			updateBuff();
 		}
 	}

@@ -27,13 +27,31 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Servitor Share effect.<br>
+ * Servitor Share effect implementation.<br>
  * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another. Partner's effect exit is executed in own thread, since there is no more queue to schedule the effects,<br>
  * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
  * @author UnAfraid, Zoey76
  */
 public class ServitorShare extends L2Effect
 {
+	private static final class ScheduledEffectExitTask implements Runnable
+	{
+		private final L2Character _effected;
+		private final int _skillId;
+		
+		public ScheduledEffectExitTask(L2Character effected, int skillId)
+		{
+			_effected = effected;
+			_skillId = skillId;
+		}
+		
+		@Override
+		public void run()
+		{
+			_effected.stopSkillEffects(_skillId);
+		}
+	}
+	
 	public ServitorShare(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -58,12 +76,6 @@ public class ServitorShare extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public void onExit()
 	{
 		final L2Character effected = getEffected().isPlayer() ? getEffected().getSummon() : getEffected().getActingPlayer();
@@ -72,23 +84,5 @@ public class ServitorShare extends L2Effect
 			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, getSkill().getId()), 100);
 		}
 		super.onExit();
-	}
-	
-	private static final class ScheduledEffectExitTask implements Runnable
-	{
-		private final L2Character _effected;
-		private final int _skillId;
-		
-		public ScheduledEffectExitTask(L2Character effected, int skillId)
-		{
-			_effected = effected;
-			_skillId = skillId;
-		}
-		
-		@Override
-		public void run()
-		{
-			_effected.stopSkillEffects(_skillId);
-		}
 	}
 }

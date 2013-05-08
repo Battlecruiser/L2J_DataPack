@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Remove Target effect implementation.
  * @author -Nemesiss-
  */
 public class RemoveTarget extends L2Effect
@@ -48,18 +49,5 @@ public class RemoveTarget extends L2Effect
 		getEffected().abortCast();
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
 		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		// nothing
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		// nothing
-		return false;
 	}
 }

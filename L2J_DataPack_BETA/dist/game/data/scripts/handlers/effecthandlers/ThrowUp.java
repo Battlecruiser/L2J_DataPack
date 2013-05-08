@@ -18,8 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.Location;
@@ -32,10 +30,11 @@ import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
+/**
+ * Throw Up effect implementation.
+ */
 public class ThrowUp extends L2Effect
 {
-	private static final Logger _log = Logger.getLogger(ThrowUp.class.getName());
-	
 	private int _x, _y, _z;
 	
 	public ThrowUp(Env env, EffectTemplate template)
@@ -44,9 +43,23 @@ public class ThrowUp extends L2Effect
 	}
 	
 	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.STUNNED.getMask();
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.THROW_UP;
+	}
+	
+	@Override
+	public void onExit()
+	{
+		getEffected().stopStunning(false);
+		getEffected().setXYZ(_x, _y, _z);
+		getEffected().broadcastPacket(new ValidateLocation(getEffected()));
 	}
 	
 	@Override
@@ -104,25 +117,5 @@ public class ThrowUp extends L2Effect
 		getEffected().startStunning();
 		getEffected().broadcastPacket(new FlyToLocation(getEffected(), _x, _y, _z, FlyType.THROW_UP));
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopStunning(false);
-		getEffected().setXYZ(_x, _y, _z);
-		getEffected().broadcastPacket(new ValidateLocation(getEffected()));
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.STUNNED.getMask();
 	}
 }

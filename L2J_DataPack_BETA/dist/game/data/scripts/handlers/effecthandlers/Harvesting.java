@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.util.Rnd;
 
 /**
- * Harvesting effect.
+ * Harvesting effect implementation.
  * @author l3x, Zoey76
  */
 public class Harvesting extends L2Effect
@@ -42,6 +42,44 @@ public class Harvesting extends L2Effect
 	public Harvesting(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	/**
+	 * @param activeChar
+	 * @param target
+	 * @return
+	 */
+	private boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
+	{
+		int basicSuccess = 100;
+		final int levelPlayer = activeChar.getLevel();
+		final int levelTarget = target.getLevel();
+		
+		int diff = (levelPlayer - levelTarget);
+		if (diff < 0)
+		{
+			diff = -diff;
+		}
+		
+		// apply penalty, target <=> player levels
+		// 5% penalty for each level
+		if (diff > 5)
+		{
+			basicSuccess -= (diff - 5) * 5;
+		}
+		
+		// success rate can't be less than 1%
+		if (basicSuccess < 1)
+		{
+			basicSuccess = 1;
+		}
+		return Rnd.nextInt(99) < basicSuccess;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -144,49 +182,5 @@ public class Harvesting extends L2Effect
 			}
 		}
 		return false;
-	}
-	
-	/**
-	 * @param activeChar
-	 * @param target
-	 * @return
-	 */
-	private boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
-	{
-		int basicSuccess = 100;
-		final int levelPlayer = activeChar.getLevel();
-		final int levelTarget = target.getLevel();
-		
-		int diff = (levelPlayer - levelTarget);
-		if (diff < 0)
-		{
-			diff = -diff;
-		}
-		
-		// apply penalty, target <=> player levels
-		// 5% penalty for each level
-		if (diff > 5)
-		{
-			basicSuccess -= (diff - 5) * 5;
-		}
-		
-		// success rate can't be less than 1%
-		if (basicSuccess < 1)
-		{
-			basicSuccess = 1;
-		}
-		return Rnd.nextInt(99) < basicSuccess;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.HARVESTING;
 	}
 }
