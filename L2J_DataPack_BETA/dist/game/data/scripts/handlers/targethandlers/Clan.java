@@ -161,7 +161,7 @@ public class Clan implements ITargetTypeHandler
 						continue;
 					}
 					
-					if (targetList.size() >= maxTargets)
+					if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 					{
 						break;
 					}
