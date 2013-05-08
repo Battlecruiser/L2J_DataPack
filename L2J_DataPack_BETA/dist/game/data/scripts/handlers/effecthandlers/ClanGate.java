@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Clan Gate effect implementation.
  * @author ZaKaX
  */
 public class ClanGate extends L2Effect
@@ -35,6 +36,18 @@ public class ClanGate extends L2Effect
 	public ClanGate(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.CLAN_GATE;
+	}
+	
+	@Override
+	public void onExit()
+	{
+		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
 	}
 	
 	@Override
@@ -50,25 +63,6 @@ public class ClanGate extends L2Effect
 				clan.broadcastToOtherOnlineMembers(msg, getEffected().getActingPlayer());
 			}
 		}
-		
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.CLAN_GATE;
 	}
 }

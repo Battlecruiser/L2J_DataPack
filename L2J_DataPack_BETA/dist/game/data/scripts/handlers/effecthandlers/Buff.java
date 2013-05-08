@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Buff effect implementation.
  * @author mkizub
  */
 public class Buff extends L2Effect
@@ -33,7 +34,6 @@ public class Buff extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public Buff(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -49,11 +49,5 @@ public class Buff extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BUFF;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

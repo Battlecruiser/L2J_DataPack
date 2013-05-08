@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Immobile Buff effect implementation.
  * @author mkizub
  */
 public class ImmobileBuff extends Buff
@@ -33,7 +34,6 @@ public class ImmobileBuff extends Buff
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public ImmobileBuff(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -46,13 +46,6 @@ public class ImmobileBuff extends Buff
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		getEffected().setIsImmobilized(true);
-		return super.onStart();
-	}
-	
-	@Override
 	public void onExit()
 	{
 		getEffected().setIsImmobilized(false);
@@ -60,9 +53,9 @@ public class ImmobileBuff extends Buff
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		// just stop this effect
-		return false;
+		getEffected().setIsImmobilized(true);
+		return super.onStart();
 	}
 }

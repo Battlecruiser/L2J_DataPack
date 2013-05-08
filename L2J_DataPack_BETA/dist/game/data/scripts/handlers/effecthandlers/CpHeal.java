@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Cp Heal effect implementaion.
  * @author UnAfraid
  */
 public class CpHeal extends L2Effect
@@ -63,11 +64,5 @@ public class CpHeal extends L2Effect
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

@@ -25,11 +25,20 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Mute effect implementation.
+ */
 public class Mute extends L2Effect
 {
 	public Mute(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.MUTED.getMask();
 	}
 	
 	@Override
@@ -44,17 +53,5 @@ public class Mute extends L2Effect
 		getEffected().abortCast();
 		getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.MUTED.getMask();
 	}
 }

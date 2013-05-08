@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Stun effect implementation.
  * @author mkizub
  */
 public class Stun extends L2Effect
@@ -35,16 +36,15 @@ public class Stun extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.STUN;
+		return EffectFlag.STUNNED.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		getEffected().startStunning();
-		return true;
+		return L2EffectType.STUN;
 	}
 	
 	@Override
@@ -54,14 +54,9 @@ public class Stun extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.STUNNED.getMask();
+		getEffected().startStunning();
+		return true;
 	}
 }

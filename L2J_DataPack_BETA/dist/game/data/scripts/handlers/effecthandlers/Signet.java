@@ -22,7 +22,6 @@ import javolution.util.FastList;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -35,12 +34,12 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 
 /**
+ * Signet effect implementation.
  * @author Forsaiken, Sami
  */
 public class Signet extends L2Effect
 {
 	private L2Skill _skill;
-	private L2EffectPointInstance _actor;
 	private boolean _srcInArena;
 	
 	public Signet(Env env, EffectTemplate template)
@@ -52,22 +51,6 @@ public class Signet extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SIGNET_EFFECT;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (getSkill() instanceof L2SkillSignet)
-		{
-			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
-		}
-		else if (getSkill() instanceof L2SkillSignetCasttime)
-		{
-			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
-		}
-		_actor = (L2EffectPointInstance) getEffected();
-		_srcInArena = (getEffector().isInsideZone(ZoneId.PVP) && !getEffector().isInsideZone(ZoneId.SIEGE));
-		return true;
 	}
 	
 	@Override
@@ -87,7 +70,7 @@ public class Signet extends L2Effect
 		
 		getEffector().reduceCurrentMp(mpConsume);
 		FastList<L2Character> targets = FastList.newInstance();
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
+		for (L2Character cha : getEffected().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if (cha == null)
 			{
@@ -100,7 +83,7 @@ public class Signet extends L2Effect
 			}
 			
 			// there doesn't seem to be a visible effect with MagicSkillLaunched packet...
-			_actor.broadcastPacket(new MagicSkillUse(_actor, cha, _skill.getId(), _skill.getLevel(), 0, 0));
+			getEffected().broadcastPacket(new MagicSkillUse(getEffected(), cha, _skill.getId(), _skill.getLevel(), 0, 0));
 			targets.add(cha);
 		}
 		
@@ -115,9 +98,24 @@ public class Signet extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if (_actor != null)
+		if (getEffected() != null)
 		{
-			_actor.deleteMe();
+			getEffected().deleteMe();
 		}
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		if (getSkill() instanceof L2SkillSignet)
+		{
+			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+		}
+		else if (getSkill() instanceof L2SkillSignetCasttime)
+		{
+			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+		}
+		_srcInArena = (getEffector().isInsideZone(ZoneId.PVP) && !getEffector().isInsideZone(ZoneId.SIEGE));
+		return true;
 	}
 }

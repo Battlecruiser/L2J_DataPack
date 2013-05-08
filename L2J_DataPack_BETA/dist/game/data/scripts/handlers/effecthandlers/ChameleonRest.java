@@ -27,6 +27,9 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Chameleon Rest effect implementation.
+ */
 public class ChameleonRest extends L2Effect
 {
 	public ChameleonRest(Env env, EffectTemplate template)
@@ -35,23 +38,15 @@ public class ChameleonRest extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.RELAXING;
+		return (EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask());
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().getActingPlayer().sitDown(false);
-		}
-		else
-		{
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
-		}
-		return super.onStart();
+		return L2EffectType.RELAXING;
 	}
 	
 	@Override
@@ -85,12 +80,20 @@ public class ChameleonRest extends L2Effect
 		}
 		
 		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		return false;
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public boolean onStart()
 	{
-		return (EffectFlag.SILENT_MOVE.getMask() | EffectFlag.RELAXING.getMask());
+		if (getEffected().isPlayer())
+		{
+			getEffected().getActingPlayer().sitDown(false);
+		}
+		else
+		{
+			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+		}
+		return super.onStart();
 	}
 }

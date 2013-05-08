@@ -44,25 +44,15 @@ public class Confusion extends L2Effect
 	}
 	
 	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.CONFUSED.getMask();
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (!getEffected().isPlayer())
-		{
-			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
-		}
 	}
 	
 	@Override
@@ -90,8 +80,18 @@ public class Confusion extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
+	public void onExit()
 	{
-		return EffectFlag.CONFUSED.getMask();
+		if (!getEffected().isPlayer())
+		{
+			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
+		return true;
 	}
 }

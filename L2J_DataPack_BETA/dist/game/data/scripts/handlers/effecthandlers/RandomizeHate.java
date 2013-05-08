@@ -29,6 +29,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
+/**
+ * Randomize Hate effect implementation.
+ */
 public class RandomizeHate extends L2Effect
 {
 	public RandomizeHate(Env env, EffectTemplate template)
@@ -78,11 +81,5 @@ public class RandomizeHate extends L2Effect
 		effectedMob.addDamageHate(target, 0, hate);
 		
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

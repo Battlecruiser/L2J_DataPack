@@ -26,6 +26,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Petrification effect implementation.
+ */
 public class Petrification extends L2Effect
 {
 	public Petrification(Env env, EffectTemplate template)
@@ -34,17 +37,15 @@ public class Petrification extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public int getEffectFlags()
 	{
-		return L2EffectType.PETRIFICATION;
+		return EffectFlag.PARALYZED.getMask() | EffectFlag.INVUL.getMask();
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_2);
-		getEffected().startParalyze();
-		return super.onStart();
+		return L2EffectType.PETRIFICATION;
 	}
 	
 	@Override
@@ -58,14 +59,10 @@ public class Petrification extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.PARALYZED.getMask() | EffectFlag.INVUL.getMask();
+		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_2);
+		getEffected().startParalyze();
+		return super.onStart();
 	}
 }

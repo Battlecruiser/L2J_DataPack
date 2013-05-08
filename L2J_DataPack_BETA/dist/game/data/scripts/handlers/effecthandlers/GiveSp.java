@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Give SP effect.
+ * Give SP effect implementation.
  * @author Adry_85
  */
 public class GiveSp extends L2Effect
@@ -32,12 +32,6 @@ public class GiveSp extends L2Effect
 	public GiveSp(Env env, EffectTemplate template)
 	{
 		super(env, template);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override

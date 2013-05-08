@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 
 /**
+ * Summon Pet effect implementation.
  * @author UnAfraid
  */
 public class SummonPet extends L2Effect
@@ -131,11 +132,5 @@ public class SummonPet extends L2Effect
 		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
 		pet.broadcastStatusUpdate();
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

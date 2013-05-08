@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Mana Heal effect implementation.
  * @author UnAfraid
  */
 public class ManaHeal extends L2Effect
@@ -78,11 +79,5 @@ public class ManaHeal extends L2Effect
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

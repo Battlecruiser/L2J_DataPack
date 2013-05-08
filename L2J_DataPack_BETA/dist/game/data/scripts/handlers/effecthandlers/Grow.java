@@ -25,6 +25,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Grow effect implementation.
+ */
 public class Grow extends L2Effect
 {
 	public Grow(Env env, EffectTemplate template)
@@ -36,6 +39,20 @@ public class Grow extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BUFF;
+	}
+	
+	@Override
+	public void onExit()
+	{
+		if (getEffected().isNpc())
+		{
+			L2Npc npc = (L2Npc) getEffected();
+			// TODO: Uncomment line when fix for mobs falling underground is found
+			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
+			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
+			
+			getEffected().stopAbnormalEffect(AbnormalEffect.GROW);
+		}
 	}
 	
 	@Override
@@ -52,25 +69,5 @@ public class Grow extends L2Effect
 			return true;
 		}
 		return false;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (getEffected().isNpc())
-		{
-			L2Npc npc = (L2Npc) getEffected();
-			// TODO: Uncomment line when fix for mobs falling underground is found
-			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
-			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
-			
-			getEffected().stopAbnormalEffect(AbnormalEffect.GROW);
-		}
 	}
 }

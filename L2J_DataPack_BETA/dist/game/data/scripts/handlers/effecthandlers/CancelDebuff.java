@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
 /**
+ * Cancel Debuff effect implementation.
  * @author UnAfraid
  */
 public class CancelDebuff extends L2Effect
@@ -48,12 +49,6 @@ public class CancelDebuff extends L2Effect
 	public boolean onStart()
 	{
 		return cancel(getEffector(), getEffected(), getSkill(), getEffectPower());
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	private static boolean cancel(L2Character caster, L2Character target, L2Skill skill, double baseRate)

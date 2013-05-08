@@ -46,12 +46,6 @@ public class EnergyAttack extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public boolean onStart()
 	{
 		L2Character target = getEffected();

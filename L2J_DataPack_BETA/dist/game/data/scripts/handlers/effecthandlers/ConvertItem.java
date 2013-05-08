@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Convert Item effect.
+ * Convert Item effect implementation.
  * @author Zoey76
  */
 public class ConvertItem extends L2Effect
@@ -40,6 +40,12 @@ public class ConvertItem extends L2Effect
 	public ConvertItem(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -162,17 +168,5 @@ public class ConvertItem extends L2Effect
 		
 		player.broadcastUserInfo();
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
 	}
 }

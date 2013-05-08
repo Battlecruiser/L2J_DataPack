@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
+/**
+ * Dam Over Time effect implementation.
+ */
 public class DamOverTime extends L2Effect
 {
 	public DamOverTime(Env env, EffectTemplate template)

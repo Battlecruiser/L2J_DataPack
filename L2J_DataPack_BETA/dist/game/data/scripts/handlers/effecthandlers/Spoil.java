@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Spoil effect.
+ * Spoil effect implementation.
  * @author _drunk_, Ahmed, Zoey76
  */
 public class Spoil extends L2Effect
@@ -68,11 +68,5 @@ public class Spoil extends L2Effect
 		}
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

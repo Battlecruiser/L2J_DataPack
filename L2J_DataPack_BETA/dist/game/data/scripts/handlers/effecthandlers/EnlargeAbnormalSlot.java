@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Enlarge Abnormal Slot effect.
+ * Enlarge Abnormal Slot effect implementation.
  * @author Zoey76
  */
 public class EnlargeAbnormalSlot extends L2Effect
@@ -35,20 +35,14 @@ public class EnlargeAbnormalSlot extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return true;
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.ENLARGE_ABNORMAL_SLOT;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
 	}
 }

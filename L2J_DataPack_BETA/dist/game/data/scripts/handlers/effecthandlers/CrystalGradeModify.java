@@ -42,18 +42,6 @@ public class CrystalGradeModify extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		final L2PcInstance player = getEffected().getActingPlayer();
-		if (player != null)
-		{
-			player.setExpertisePenaltyBonus((int) calc());
-			return true;
-		}
-		return false;
-	}
-	
-	@Override
 	public void onExit()
 	{
 		final L2PcInstance player = getEffected().getActingPlayer();
@@ -64,8 +52,14 @@ public class CrystalGradeModify extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
+		final L2PcInstance player = getEffected().getActingPlayer();
+		if (player != null)
+		{
+			player.setExpertisePenaltyBonus((int) calc());
+			return true;
+		}
 		return false;
 	}
 }

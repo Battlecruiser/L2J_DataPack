@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Betray effect implementation.
  * @author decad
  */
 public class Betray extends L2Effect
@@ -37,9 +38,21 @@ public class Betray extends L2Effect
 	}
 	
 	@Override
+	public int getEffectFlags()
+	{
+		return EffectFlag.BETRAYED.getMask();
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BETRAY;
+	}
+	
+	@Override
+	public void onExit()
+	{
+		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
 	@Override
@@ -52,23 +65,5 @@ public class Betray extends L2Effect
 			return true;
 		}
 		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.BETRAYED.getMask();
 	}
 }

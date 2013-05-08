@@ -23,6 +23,9 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
+/**
+ * Debuff effect implementation.
+ */
 public class Debuff extends L2Effect
 {
 	public Debuff(Env env, EffectTemplate template)
@@ -34,11 +37,5 @@ public class Debuff extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.DEBUFF;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Big Head effect implementation.
  * @author LBaldi
  */
 public class BigHead extends L2Effect
@@ -41,21 +42,15 @@ public class BigHead extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		getEffected().startAbnormalEffect(AbnormalEffect.BIG_HEAD);
-		return true;
-	}
-	
-	@Override
 	public void onExit()
 	{
 		getEffected().stopAbnormalEffect(AbnormalEffect.BIG_HEAD);
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		return false;
+		getEffected().startAbnormalEffect(AbnormalEffect.BIG_HEAD);
+		return true;
 	}
 }

@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Transformation effect.
+ * Transformation effect implementation.
  * @author nBd
  */
 public class Transformation extends L2Effect
@@ -37,7 +37,6 @@ public class Transformation extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public Transformation(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -47,6 +46,12 @@ public class Transformation extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.TRANSFORMATION;
+	}
+	
+	@Override
+	public void onExit()
+	{
+		getEffected().stopTransformation(false);
 	}
 	
 	@Override
@@ -94,17 +99,5 @@ public class Transformation extends L2Effect
 		
 		TransformationManager.getInstance().transformPlayer((int) calc(), trg);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopTransformation(false);
 	}
 }

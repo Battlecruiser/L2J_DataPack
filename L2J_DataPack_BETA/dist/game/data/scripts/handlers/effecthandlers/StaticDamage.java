@@ -41,12 +41,6 @@ public class StaticDamage extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public boolean onStart()
 	{
 		if (getEffector().isAlikeDead())

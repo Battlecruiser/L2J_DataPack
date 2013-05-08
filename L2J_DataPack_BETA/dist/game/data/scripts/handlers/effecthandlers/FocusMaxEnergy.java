@@ -42,12 +42,6 @@ public class FocusMaxEnergy extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public boolean onStart()
 	{
 		if (getEffected().isPlayer())

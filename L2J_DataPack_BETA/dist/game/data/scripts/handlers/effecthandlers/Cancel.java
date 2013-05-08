@@ -44,12 +44,6 @@ public class Cancel extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
 	public boolean onStart()
 	{
 		if (getEffected().isDead())

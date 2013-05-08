@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
+ * Transfer Damage effect implementation.
  * @author UnAfraid
  */
 public class TransferDamage extends L2Effect
@@ -46,16 +47,6 @@ public class TransferDamage extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected().isPlayable() && getEffector().isPlayer())
-		{
-			((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
-		}
-		return true;
-	}
-	
-	@Override
 	public void onExit()
 	{
 		if (getEffected().isPlayable() && getEffector().isPlayer())
@@ -65,8 +56,12 @@ public class TransferDamage extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart()
 	{
-		return false;
+		if (getEffected().isPlayable() && getEffector().isPlayer())
+		{
+			((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
+		}
+		return true;
 	}
 }

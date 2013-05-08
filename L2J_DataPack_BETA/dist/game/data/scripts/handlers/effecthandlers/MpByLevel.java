@@ -26,7 +26,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Mp By Level effect.
+ * Mp By Level effect implementation.
  * @author Zoey76
  */
 public class MpByLevel extends L2Effect
@@ -34,6 +34,12 @@ public class MpByLevel extends L2Effect
 	public MpByLevel(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.BUFF;
 	}
 	
 	@Override
@@ -53,17 +59,5 @@ public class MpByLevel extends L2Effect
 		sm.addNumber(restored);
 		getEffected().sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.BUFF;
 	}
 }

@@ -24,6 +24,9 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.ExRegMax;
 
+/**
+ * Heal Over Time effect implementation.
+ */
 public class HealOverTime extends L2Effect
 {
 	public HealOverTime(Env env, EffectTemplate template)
@@ -31,7 +34,6 @@ public class HealOverTime extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public HealOverTime(Env env, L2Effect effect)
 	{
 		super(env, effect);
@@ -63,13 +65,13 @@ public class HealOverTime extends L2Effect
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)
 		{
-			return true;
+			return false;
 		}
 		
 		hp += calc() * getTickCount();
 		hp = Math.min(hp, maxhp);
 		getEffected().setCurrentHp(hp);
-		return true;
+		return false;
 	}
 	
 	@Override

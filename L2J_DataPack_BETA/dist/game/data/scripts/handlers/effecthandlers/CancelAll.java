@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Removes all effects.
+ * Cancel All effect implementation.
  * @author UnAfraid
  */
 public class CancelAll extends L2Effect
@@ -44,12 +44,6 @@ public class CancelAll extends L2Effect
 	public boolean onStart()
 	{
 		getEffected().stopAllEffects();
-		return false;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
+		return true;
 	}
 }

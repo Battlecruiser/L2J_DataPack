@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Rebalance HP effect.
+ * Rebalance HP effect implementation.
  * @author Adry_85, earendil
  */
 public class RebalanceHP extends L2Effect
@@ -35,12 +35,6 @@ public class RebalanceHP extends L2Effect
 	public RebalanceHP(Env env, EffectTemplate template)
 	{
 		super(env, template);
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override
