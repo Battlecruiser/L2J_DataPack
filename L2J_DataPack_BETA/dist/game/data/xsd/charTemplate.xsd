@@ -1,0 +1,130 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="list">
+    <xs:complexType>
+      <xs:sequence minOccurs="1" maxOccurs="1">
+        <xs:element name="classId" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:nonNegativeInteger">
+							<xs:minInclusive value="0" />
+							<xs:maxInclusive value="136" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+        <xs:element name="staticData" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="baseINT" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseSTR" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseCON" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseMEN" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseDEX" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseWIT" minOccurs="1" maxOccurs="1" />
+              <xs:element name="creationPoints" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="node" maxOccurs="unbounded" minOccurs="1">
+                      <xs:complexType>
+                          <xs:attribute type="xs:int" name="x" use="required"/>
+                          <xs:attribute type="xs:int" name="y" use="required"/>
+                          <xs:attribute type="xs:int" name="z" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="basePAtk" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseCritRate" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:string" name="baseAtkType" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="basePAtkSpd" minOccurs="1" maxOccurs="1" />
+              <xs:element name="basePDef" minOccurs="1" maxOccurs="1" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="chest" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="legs" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="head" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="feet" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="gloves" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="underwear" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="cloak" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="baseMAtk" minOccurs="1" maxOccurs="1" />
+              <xs:element name="baseMDef" minOccurs="1" maxOccurs="1" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="rear" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="lear" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="rfinger" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="lfinger" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="neck" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="baseCanPenetrate" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseAtkRange" minOccurs="1" maxOccurs="1" />
+              <xs:element name="baseDamRange" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="verticalDirection" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="horizontalDirection" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="distance" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="width" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="baseRndDam" minOccurs="1" maxOccurs="1" />
+              <xs:element name="baseMoveSpd" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:integer" name="walk" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="run" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="slowSwim" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:integer" name="fastSwim" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="baseBreath" minOccurs="1" maxOccurs="1" />
+              <xs:element type="xs:integer" name="baseSafeFall" minOccurs="1" maxOccurs="1" />
+              <xs:element name="collisionMale" minOccurs="1" maxOccurs="1" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="radius" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="height" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="collisionFemale" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="radius" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="height" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lvlUpgainData" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="level" maxOccurs="85" minOccurs="85">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:float" name="hp" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="mp" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="cp" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="hpRegen" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="mpRegen" minOccurs="1" maxOccurs="1" />
+                    <xs:element type="xs:float" name="cpRegen" minOccurs="1" maxOccurs="1" />
+                  </xs:sequence>
+                  <xs:attribute type="xs:integer" name="val" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
