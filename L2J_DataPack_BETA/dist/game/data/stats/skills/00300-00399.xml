@@ -1380,7 +1380,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="FocusEnergy" noicon="1" val="8" />
+			<effect self="1" name="FocusEnergy" noicon="1" val="8" />
 		</for>
 	</skill>
 	<skill id="346" levels="1" name="Raging Force">
@@ -1403,7 +1403,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="FocusEnergy" noicon="1" val="8" />
+			<effect self="1" name="FocusEnergy" noicon="1" val="8" />
 		</for>
 	</skill>
 	<skill id="347" levels="1" name="Earthquake" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
