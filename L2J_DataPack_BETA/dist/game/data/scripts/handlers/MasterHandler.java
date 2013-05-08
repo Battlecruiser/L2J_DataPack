@@ -206,9 +206,7 @@ import handlers.itemhandlers.SummonItems;
 import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
-import handlers.skillhandlers.Blow;
 import handlers.skillhandlers.Continuous;
-import handlers.skillhandlers.CpDamPercent;
 import handlers.skillhandlers.Craft;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
@@ -220,16 +218,12 @@ import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.GiveVitality;
 import handlers.skillhandlers.InstantJump;
-import handlers.skillhandlers.Manadam;
-import handlers.skillhandlers.Mdam;
 import handlers.skillhandlers.NornilsPower;
-import handlers.skillhandlers.Pdam;
 import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.StealBuffs;
-import handlers.skillhandlers.StrSiegeAssault;
 import handlers.skillhandlers.SummonFriend;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
@@ -516,9 +510,7 @@ public class MasterHandler
 			// Skill Handlers
 			BallistaBomb.class,
 			BeastSkills.class,
-			Blow.class,
 			Continuous.class,
-			CpDamPercent.class,
 			Craft.class,
 			DeluxeKey.class,
 			Detection.class,
@@ -530,16 +522,12 @@ public class MasterHandler
 			GiveReco.class,
 			GiveVitality.class,
 			InstantJump.class,
-			Manadam.class,
-			Mdam.class,
 			NornilsPower.class,
-			Pdam.class,
 			RefuelAirShip.class,
 			Resurrect.class,
 			ShiftTarget.class,
 			Sow.class,
 			StealBuffs.class,
-			StrSiegeAssault.class,
 			SummonFriend.class,
 			TakeCastle.class,
 			TakeFort.class,

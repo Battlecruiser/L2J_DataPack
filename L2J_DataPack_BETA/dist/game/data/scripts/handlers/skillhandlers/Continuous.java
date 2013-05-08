@@ -86,7 +86,7 @@ public class Continuous implements ISkillHandler
 		{
 			byte shld = 0;
 			
-			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
+			if (Formulas.calcBuffDebuffReflection(target, skill))
 			{
 				target = activeChar;
 			}
@@ -192,9 +192,6 @@ public class Continuous implements ISkillHandler
 			{
 				activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 			}
-			
-			// Possibility of a lethal strike (Banish Undead, Banish Seraph, Turn Undead)
-			Formulas.calcLethalHit(activeChar, target, skill);
 		}
 		
 		// self Effect :]

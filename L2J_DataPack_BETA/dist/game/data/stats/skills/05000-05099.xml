@@ -10,12 +10,13 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="10000000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5001" levels="1" name="Alfred - Life Drain">
 		<!-- CT2.5 retail confirmed -->
-		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="2500" />
@@ -24,8 +25,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
 	</skill>
 	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
 		<!-- CT2.5 retail confirmed -->
@@ -60,8 +63,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5004" levels="1" name="Dimensional Stun">
 		<!-- Confirmed CT2.5 -->
@@ -80,10 +85,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="5964" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ThrowUp" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="100" />
 		</for>
@@ -188,8 +193,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="6400" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
 		<!-- Confirmed CT2.5 -->
@@ -205,8 +212,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="106" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
 		<!-- Confirmed CT2.5 -->
@@ -220,8 +229,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="364" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
 		<!-- Confirmed CT2.5 -->
@@ -249,7 +260,6 @@
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
-		<set name="absorbPart" val="0.8" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -259,8 +269,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="61" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
 		<!-- Confirmed CT2.5 -->
@@ -281,8 +293,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
 		<!-- Confirmed CT2.5 -->
@@ -305,11 +319,13 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<player insideZoneId="5015" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
 		<!-- Confirmed CT2.5 -->
@@ -371,13 +387,14 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5019" levels="1" name="Frintezza's Daemon Drain">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
-		<set name="absorbPart" val="0.8" />
 		<set name="affectRange" val="1000" />
 		<set name="coolTime" val="4000" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -386,8 +403,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="314" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
 		<!-- Crumples to the ground because of unknown power. -->
@@ -590,9 +609,9 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
 		</for>
 	</skill>
@@ -611,8 +630,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="7000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5044" levels="3" name="NPC Ultimate Defense">
 		<!-- CT2.5 retail confirmed -->
@@ -657,8 +678,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5046" levels="12" name="Castle Power Shot">
 		<table name="#magicLvl"> 14 24 34 44 54 64 74 79 84 89 94 99 </table>
@@ -673,8 +696,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="PDAM" />
-		<set name="targetType" val="ONE" />
+			<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5047" levels="12" name="Castle Spinning Slash">
 		<set name="hitTime" val="2000" />
@@ -724,8 +749,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5052" levels="12" name="Castle Long AE Fire">
 		<!-- CT2.5 retail confirmed -->
@@ -747,8 +774,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5053" levels="12" name="Castle DD Water">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -765,8 +794,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5054" levels="12" name="Castle Self AE Water">
 		<set name="hitTime" val="4000" />
@@ -801,8 +832,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5057" levels="12" name="Castle Self AE Wind">
 		<set name="hitTime" val="4000" />
@@ -875,8 +908,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5066" levels="12" name="Castle Self AE Unholy">
 		<set name="hitTime" val="4000" />
@@ -969,8 +1004,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
 		<set name="operateType" val="P" />
@@ -1082,9 +1119,9 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
 			<effect name="PhysicalMute" val="0" />
 		</for>
 	</skill>
@@ -1098,8 +1135,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="2112" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5083" levels="4" name="Stun">
 		<table name="#mpConsume"> 93 93 93 5 </table>
@@ -1119,10 +1158,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="10" />
 		</for>
@@ -1143,9 +1182,9 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="6335" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
 			<effect self="1" name="Buff" val="0">
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
@@ -1268,8 +1307,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1084" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5094" levels="1" name="Antharas Subordinate Suicide ">
 		<!-- Confirmed CT2.5 -->
@@ -1282,8 +1323,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5095" levels="1" name="Antharas Subordinate Melee Attack">
 		<!-- Confirmed CT2.5 -->
@@ -1295,8 +1338,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="30215" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5096" levels="1" name="Antharas Subordinate Remote Attack">
 		<!-- Confirmed CT2.5 -->
@@ -1308,8 +1353,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="88254" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5097" levels="1" name="Antharas Subordinate Suicide (Narrow Range)">
 		<!-- Confirmed CT2.5 -->
@@ -1322,8 +1369,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
 		<table name="#abnormalLvls"> 1 2 </table>

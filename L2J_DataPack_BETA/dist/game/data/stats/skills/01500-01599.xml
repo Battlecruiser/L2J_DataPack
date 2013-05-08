@@ -359,7 +359,6 @@
 		<set name="power" val="112" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -371,6 +370,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
@@ -378,6 +378,7 @@
 			</effect>
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
@@ -404,7 +405,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="195" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -418,6 +418,7 @@
 			<target active_effect_id="1512" />
 		</cond>
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -522,13 +523,15 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="166" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="pvpPower" val="#ench2Duel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
 		<!-- Confirmed CT2.5 -->
@@ -684,8 +687,10 @@
 		<set name="power" val="#power" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1524" levels="42" name="Surrender to the Holy">
 		<!-- Confirmed CT2.5 -->
@@ -801,8 +806,10 @@
 		<set name="power" val="#power" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1529" levels="7" name="Soul Web" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
@@ -876,13 +883,15 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="elementPower" val="#enchElementPower" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1531" levels="7" name="Bless the Blood" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
@@ -1264,8 +1273,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1545" levels="1" name="Soul Sucking">
 		<!-- Confirmed CT2.5 -->
@@ -1284,9 +1295,11 @@
 		<set name="operateType" val="CA1" />
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
 		<!-- Confirmed CT2.5 -->
@@ -1521,9 +1534,9 @@
 		<set name="power" val="199" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="141" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
 	</skill>
@@ -1541,9 +1554,9 @@
 		<set name="power" val="302" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="178" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect self="1" name="ManaHeal" noicon="1" val="10" /> <!-- FIXME: value unconfirmed -->
 		</for>
 	</skill>
@@ -1615,9 +1628,9 @@
 		<set name="power" val="#power" /> <!-- Inflicts additional non-attribute damage if the target is a monster -->
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" activationChance="5" chanceType="ON_START" triggeredId="5571" />
 		</for>
 	</skill>
@@ -1657,13 +1670,13 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="11234" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DEATH" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Dagger" />
 		</cond>
 		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
 			<effect name="Spoil" noicon="1" val="0" />
 		</for>
 	</skill>

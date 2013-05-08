@@ -993,8 +993,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4473" levels="12" name="Stun">
 		<!-- Confirmed CT2.5 -->
@@ -1016,10 +1018,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="17000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -1100,8 +1102,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4478" levels="1" name="Ice Fairy Aqua Splash">
 		<!-- Confirmed CT2.5 -->
@@ -1116,8 +1120,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="183" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4479" levels="1" name="Ice Fairy Resist Cold">
 		<!-- Confirmed CT2.5 -->
@@ -1362,8 +1368,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MANADAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttackMp" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4490" levels="12" name="NPC Holy Wall">
 		<!-- Confirmed CT2.5 -->
@@ -1386,8 +1394,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4491" levels="12" name="Holy Weapon">
 		<!-- Confirmed CT2.5 -->
@@ -1409,9 +1419,9 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="25000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Buff" val="0" effectPower="40">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
@@ -1437,9 +1447,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="BigHead" val="0" effectPower="80" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
@@ -1483,8 +1493,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4496" levels="12" name="Stun">
 		<!-- Confirmed CT2.5 -->
@@ -1504,10 +1516,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>

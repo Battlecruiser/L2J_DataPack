@@ -73,11 +73,13 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13270" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="9011" levels="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
@@ -1084,7 +1086,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9089" levels="1" name="Cupid's Major Cure">
@@ -1092,7 +1093,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9090" levels="1" name="Fighter's Will">

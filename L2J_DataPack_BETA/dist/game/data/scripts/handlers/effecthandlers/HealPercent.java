@@ -24,10 +24,10 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Heal Percent effect implementation.
  * @author UnAfraid
  */
 public class HealPercent extends L2Effect
@@ -41,6 +41,12 @@ public class HealPercent extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.HEAL_PERCENT;
+	}
+	
+	@Override
+	public boolean onActionTime()
+	{
+		return false;
 	}
 	
 	@Override
@@ -62,9 +68,6 @@ public class HealPercent extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentHp(amount + target.getCurrentHp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-			target.sendPacket(su);
 		}
 		SystemMessage sm;
 		if (getEffector().getObjectId() != target.getObjectId())
@@ -79,11 +82,5 @@ public class HealPercent extends L2Effect
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

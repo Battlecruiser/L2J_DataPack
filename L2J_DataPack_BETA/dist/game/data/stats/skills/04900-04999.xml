@@ -537,7 +537,6 @@
 	<skill id="4989" levels="1" name="Npc - Hot Spring Nectar">
 		<!-- TODO -->
 		<set name="operateType" val="A1" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4990" levels="1" name="Npc - Hot Spring Mineral">
@@ -576,8 +575,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="57742" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4994" levels="1" name="Venom - Sonic Storm">
 		<!-- Confirmed CT2.5 -->
@@ -592,8 +593,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="28871" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4995" levels="1" name="Venom - Teleport">
 		<!-- Confirmed CT2.5 -->

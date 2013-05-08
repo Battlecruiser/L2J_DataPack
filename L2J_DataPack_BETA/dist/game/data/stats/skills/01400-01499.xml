@@ -39,7 +39,6 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
-		<enchant3 name="skillType" val="MDAM" />
 		<enchant4 name="element" val="4" /> <!-- Holy -->
 		<enchant4 name="elementPower" val="#ench4HolyAttack" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
@@ -48,15 +47,20 @@
 		</cond>
 		<for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Lethal" noicon="1" val="0" />
 		</for>
 		<enchant1for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="#ench1Power" />
+			<effect name="Lethal" noicon="1" val="0" />
 		</enchant1for>
 		<enchant2for>
 			<effect name="Fear" abnormalTime="#ench2Time" val="0" effectPower="30" />
+			<effect name="Lethal" noicon="1" val="0" />
 		</enchant2for>
 		<enchant3for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="MagicalAttack" noicon="1" val="0" />
 		</enchant3for>
 	</skill>
 	<skill id="1401" levels="11" name="Major Heal" enchantGroup1="2" enchantGroup2="2">
@@ -590,15 +594,16 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower" />
 		</for>
 		<enchant2for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench2Chance" />
 		</enchant2for>
 	</skill>
@@ -944,9 +949,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1432" levels="2" name="Increase Power">
 		<!-- Confirmed CT2.5 -->
@@ -994,9 +1001,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1434" levels="4" name="Dark Explosion">
 		<!-- Confirmed CT2.5 -->
@@ -1019,9 +1028,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1435" levels="10" name="Death Mark" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
@@ -1095,7 +1106,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1109,6 +1119,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="30" />
 		</for>
 	</skill>
@@ -1148,7 +1159,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1163,11 +1173,13 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="#ench3Power" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -1207,7 +1219,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1220,6 +1231,9 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1439" levels="5" name="Curse of Divinity">
 		<!-- Confirmed CT2.5 -->
@@ -1241,8 +1255,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1440" levels="5" name="Steal Divinity">
 		<!-- Confirmed CT2.5 -->
@@ -1620,7 +1636,6 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
 		<set name="simultaneousCast" val="true" />
-		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
@@ -1630,6 +1645,7 @@
 		<enchant2 name="flyRadius" val="#ench2Radius" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="99" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
@@ -1679,7 +1695,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1691,6 +1706,9 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1451" levels="1" name="Fire Vortex Buster" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#ench1Power"> 198 198 199 199 200 201 201 202 202 203 203 204 204 205 206 </table>
@@ -1712,7 +1730,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="195" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1725,6 +1742,7 @@
 			<target active_effect_id="1339" />
 		</cond>
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1788,7 +1806,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="195" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1801,6 +1818,7 @@
 			<target active_effect_id="1340" />
 		</cond>
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1827,7 +1845,6 @@
 		<set name="power" val="70" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1836,6 +1853,7 @@
 		<enchant3 name="elementPower" val="#ench3elementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
@@ -1898,7 +1916,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="195" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1911,6 +1928,7 @@
 			<target active_effect_id="1341" />
 		</cond>
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -2098,7 +2116,6 @@
 		<set name="power" val="80" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PHYSICAL_BLOCKADE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2107,9 +2124,11 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="PhysicalAttackMute" val="0" effectPower="80" />
 		</for>
 		<enchant1for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="PhysicalAttackMute" val="0" effectPower="#ench1Power" />
 		</enchant1for>
 	</skill>
@@ -2216,9 +2235,9 @@
 		<set name="operateType" val="CA1" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<effect name="DamOverTime" ticks="3" val="117" effectPower="100" />
 		</for>
@@ -2240,9 +2259,9 @@
 		<set name="operateType" val="CA1" />
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
 			<effect name="DamOverTime" ticks="3" val="117" effectPower="100" />
 		</for>
@@ -2270,7 +2289,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="224" />
 		<set name="reuseDelay" val="45000" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2282,6 +2300,9 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1470" levels="1" name="Prahnah" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5" enchantGroup4="5">
 		<!-- Confirmed CT2.5 -->
@@ -2349,8 +2370,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="138" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1472" levels="1" name="Soul Sucking">
 		<!-- Confirmed CT2.5 -->
@@ -2368,9 +2391,11 @@
 		<set name="operateType" val="CA1" />
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1473" levels="1" name="Change Weapon">
 		<!-- Confirmed CT2.5 -->
@@ -3102,7 +3127,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ULTIMATE_DEBUFF" />
-		<set name="absorbPart" val="0.2" /> <!-- absorbs 20% of damage -->
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -3118,10 +3142,10 @@
 		<set name="power" val="117" />
 		<set name="reuseDelay" val="60000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="HpDrain" noicon="1" val="0.2" />
 			<effect name="Debuff" val="0" effectPower="80" >
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />

@@ -191,8 +191,7 @@
 			</not>
 		</cond>
 		<for>
-			<!-- FIXME: remove ticks from here -->
-			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+			<effect name="FocusEnergy" noicon="1" val="#maxCharges" />
 		</for>
 	</skill>
 	<skill id="6814" levels="8" name="Focus Force">
@@ -211,8 +210,7 @@
 			</not>
 		</cond>
 		<for>
-			<!-- FIXME: remove ticks from here -->
-			<effect ticks="#maxCharges" name="IncreaseCharges" noicon="1" val="1" />
+			<effect name="FocusEnergy" noicon="1" val="#maxCharges" />
 		</for>
 	</skill>
 	<skill id="6815" levels="16" name="Deadly Poison">
@@ -465,8 +463,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6845" levels="1" name="Power Strike">
 		<!-- High Five Skill -->
@@ -483,13 +483,14 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6846" levels="1" name="Vampiric Claw">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="absorbPart" val="1.0" />
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="1300" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -502,8 +503,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="6847" levels="1" name="Self Heal">
 		<!-- none -->
@@ -532,8 +535,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6850" levels="1" name="Self-destruction">
 		<!-- High Five Skill -->
@@ -545,8 +550,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6851" levels="1" name="Power Strike">
 		<!-- High Five Skill -->
@@ -563,8 +570,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6852" levels="1" name="Magic Strike">
 		<!-- High Five Skill -->
@@ -582,8 +591,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6853" levels="1" name="Sleep">
 		<!-- High Five Skill -->
@@ -649,8 +660,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6856" levels="1" name="Heal">
 		<!-- none -->
@@ -673,8 +686,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6858" levels="1" name="Summon">
 		<!-- none -->
@@ -697,8 +712,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6860" levels="1" name="Power Strike">
 		<!-- High Five Skill -->
@@ -715,8 +732,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6861" levels="1" name="Enhance">
 		<!-- High Five Skill -->
@@ -821,7 +840,6 @@
 	<skill id="6866" levels="1" name="Vampiric Claw">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="absorbPart" val="1.0" />
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="1300" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -833,8 +851,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="6867" levels="1" name="Magic Strike">
 		<!-- High Five Skill -->
@@ -850,8 +870,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6868" levels="1" name="Summon">
 		<!-- none -->
@@ -873,13 +895,14 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6870" levels="1" name="Vampiric Claw">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="absorbPart" val="1.0" />
 		<set name="castRange" val="800" />
 		<set name="effectRange" val="1300" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -892,8 +915,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="6871" levels="1" name="Range Magic Attack">
 		<!-- High Five Skill -->
@@ -911,8 +936,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6872" levels="1" name="Self-destruction">
 		<!-- High Five Skill -->
@@ -927,8 +954,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="300" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6873" levels="2" name="Hex">
 		<!-- High Five Skill -->
@@ -970,8 +999,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6875" levels="2" name="Poison">
 		<!-- High Five Skill -->
@@ -1011,8 +1042,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6877" levels="1" name="Power Strike">
 		<!-- High Five Skill -->
@@ -1029,8 +1062,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6878" levels="1" name="Paralysis">
 		<!-- High Five Skill -->
@@ -1061,7 +1096,6 @@
 	<skill id="6879" levels="1" name="Vampiric Claw">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="absorbPart" val="1.0" />
 		<set name="castRange" val="300" />
 		<set name="effectRange" val="600" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -1073,8 +1107,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="1" />
+		</for>
 	</skill>
 	<skill id="6880" levels="1" name="Silence">
 		<!-- High Five Skill -->
@@ -1116,8 +1152,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6882" levels="1" name="Petrify">
 		<!-- High Five Skill -->
@@ -1210,8 +1248,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6888" levels="1" name="Fatal Shot">
 		<!-- High Five Skill -->
@@ -1226,8 +1266,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6889" levels="1" name="Range Attack">
 		<!-- High Five Skill -->
@@ -1242,8 +1284,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6890" levels="1" name="Bleed">
 		<!-- "For 10 seconds, inflicts bleed and decreases 100 HP every second." -->
@@ -1264,8 +1308,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6892" levels="1" name="Power Shot">
 		<!-- High Five Skill -->
@@ -1280,8 +1326,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6893" levels="1" name="Power Attack">
 		<!-- High Five Skill -->
@@ -1296,8 +1344,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6894" levels="1" name="Power Shot">
 		<!-- High Five Skill -->
@@ -1312,8 +1362,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6895" levels="1" name="Power Attack">
 		<!-- High Five Skill -->
@@ -1328,8 +1380,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6896" levels="1" name="Power Shot">
 		<!-- High Five Skill -->
@@ -1344,8 +1398,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="15000" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6897" levels="12" name="Shock">
 		<!-- Temporarily in shock and unable to move. -->

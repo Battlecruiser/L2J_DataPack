@@ -20,7 +20,6 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -28,7 +27,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Cancel effect.
+ * Cancel effect implementation.
  * @author DS
  */
 public class Cancel extends L2Effect
@@ -45,25 +44,20 @@ public class Cancel extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		return cancel(getEffector(), getEffected(), this);
-	}
-	
-	@Override
 	public boolean onActionTime()
 	{
 		return false;
 	}
 	
-	private static boolean cancel(L2Character activeChar, L2Character target, L2Effect effect)
+	@Override
+	public boolean onStart()
 	{
-		if (target.isDead())
+		if (getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(activeChar, target, effect.getSkill(), effect.getEffectPower());
+		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), getEffectPower());
 		for (L2Effect eff : canceled)
 		{
 			eff.exit();

@@ -29,10 +29,10 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
+ * Heal effect implementation.
  * @author UnAfraid
  */
 public class Heal extends L2Effect
@@ -46,6 +46,12 @@ public class Heal extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.HEAL;
+	}
+	
+	@Override
+	public boolean onActionTime()
+	{
+		return false;
 	}
 	
 	@Override
@@ -104,9 +110,6 @@ public class Heal extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentHp(amount + target.getCurrentHp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) target.getCurrentHp());
-			target.sendPacket(su);
 		}
 		
 		if (target.isPlayer())
@@ -132,13 +135,6 @@ public class Heal extends L2Effect
 				}
 			}
 		}
-		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }

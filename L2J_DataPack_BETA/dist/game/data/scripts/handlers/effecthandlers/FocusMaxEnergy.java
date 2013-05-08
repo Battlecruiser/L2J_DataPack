@@ -21,38 +21,24 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Mp By Level effect.
- * @author Zoey76
+ * Focus Max Energy effect implementation.
+ * @author Adry_85
  */
-public class MpByLevel extends L2Effect
+public class FocusMaxEnergy extends L2Effect
 {
-	public MpByLevel(Env env, EffectTemplate template)
+	public FocusMaxEnergy(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if ((getEffector() == null) || (getEffected() == null))
-		{
-			return false;
-		}
-		// Calculation
-		final int abs = (int) calc();
-		final double absorb = ((getEffected().getCurrentMp() + abs) > getEffected().getMaxMp() ? getEffected().getMaxMp() : (getEffected().getCurrentMp() + abs));
-		final int restored = (int) (absorb - getEffected().getCurrentMp());
-		getEffected().setCurrentMp(absorb);
-		// System message
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-		sm.addNumber(restored);
-		getEffected().sendPacket(sm);
-		return true;
+		return L2EffectType.FOCUS_MAX_ENERGY;
 	}
 	
 	@Override
@@ -62,8 +48,20 @@ public class MpByLevel extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart()
 	{
-		return L2EffectType.BUFF;
+		if (getEffected().isPlayer())
+		{
+			final L2Skill sonicMastery = getEffected().getSkills().get(992);
+			final L2Skill focusMastery = getEffected().getSkills().get(993);
+			int maxCharge = (sonicMastery != null) ? sonicMastery.getLevel() : (focusMastery != null) ? focusMastery.getLevel() : 0;
+			if (maxCharge != 0)
+			{
+				int count = maxCharge - getEffected().getActingPlayer().getCharges();
+				getEffected().getActingPlayer().increaseCharges(count, maxCharge);
+				return true;
+			}
+		}
+		return false;
 	}
 }

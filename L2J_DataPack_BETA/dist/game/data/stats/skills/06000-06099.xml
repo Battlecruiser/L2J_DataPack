@@ -295,13 +295,13 @@
 		<set name="operateType" val="DA1" />
 		<set name="power" val="2372" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -338,8 +338,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="70" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6044" levels="1" name="Phoenix Flame Beak">
 		<!-- Confirmed CT2.5 -->
@@ -356,9 +358,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="2156" />
 		<set name="reuseDelay" val="13000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6045" levels="1" name="Presentation - Fortune Bug">
 		<set name="hitTime" val="2000" />
@@ -379,8 +383,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6047" levels="14" name="Whirlwind">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
@@ -395,8 +401,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6048" levels="14" name="Lance Smash">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
@@ -413,8 +421,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6049" levels="4" name="Battle Cry">
 		<!-- Confirmed CT2.5 -->
@@ -455,8 +465,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6051" levels="14" name="Energy Burst">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
@@ -472,8 +484,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6052" levels="14" name="Shockwave">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 72 74 76 77 78 79 80 </table>
@@ -489,8 +503,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6053" levels="4" name="Howl">
 		<!-- Confirmed CT2.5 -->
@@ -867,10 +883,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
@@ -892,8 +908,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6097" levels="1" name="Scissors">
 		<set name="hitTime" val="2000" />

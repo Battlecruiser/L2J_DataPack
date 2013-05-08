@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
 public class CpHealOverTime extends L2Effect
 {
@@ -68,11 +67,7 @@ public class CpHealOverTime extends L2Effect
 		
 		cp += calc() * getTickCount();
 		cp = Math.min(cp, maxcp);
-		
 		getEffected().setCurrentCp(cp);
-		StatusUpdate sump = new StatusUpdate(getEffected());
-		sump.addAttribute(StatusUpdate.CUR_CP, (int) cp);
-		getEffected().sendPacket(sump);
 		return false;
 	}
 }

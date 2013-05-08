@@ -22,37 +22,22 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Mp By Level effect.
- * @author Zoey76
+ * Focus Energy effect implementation.
+ * @author DS
  */
-public class MpByLevel extends L2Effect
+public class FocusEnergy extends L2Effect
 {
-	public MpByLevel(Env env, EffectTemplate template)
+	public FocusEnergy(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		if ((getEffector() == null) || (getEffected() == null))
-		{
-			return false;
-		}
-		// Calculation
-		final int abs = (int) calc();
-		final double absorb = ((getEffected().getCurrentMp() + abs) > getEffected().getMaxMp() ? getEffected().getMaxMp() : (getEffected().getCurrentMp() + abs));
-		final int restored = (int) (absorb - getEffected().getCurrentMp());
-		getEffected().setCurrentMp(absorb);
-		// System message
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
-		sm.addNumber(restored);
-		getEffected().sendPacket(sm);
-		return true;
+		return L2EffectType.FOCUS_ENERGY;
 	}
 	
 	@Override
@@ -62,8 +47,13 @@ public class MpByLevel extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart()
 	{
-		return L2EffectType.BUFF;
+		if (!getEffected().isPlayer())
+		{
+			return false;
+		}
+		getEffected().getActingPlayer().increaseCharges(1, (int) calc());
+		return true;
 	}
 }

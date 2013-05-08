@@ -28,10 +28,8 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 
@@ -41,7 +39,6 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class InstantJump implements ISkillHandler
 {
-	
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.INSTANT_JUMP
@@ -52,20 +49,8 @@ public class InstantJump implements ISkillHandler
 	{
 		L2Character target = (L2Character) targets[0];
 		
-		if (Formulas.calcPhysicalSkillEvasion(target, skill))
+		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, skill))
 		{
-			if (activeChar.isPlayer())
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DODGES_ATTACK);
-				sm.addString(target.getName());
-				activeChar.getActingPlayer().sendPacket(sm);
-			}
-			if (target.isPlayer())
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVOIDED_C1_ATTACK);
-				sm.addString(activeChar.getName());
-				target.getActingPlayer().sendPacket(sm);
-			}
 			return;
 		}
 		
@@ -105,14 +90,10 @@ public class InstantJump implements ISkillHandler
 		
 		if (skill.hasEffects())
 		{
-			if (Formulas.calcSkillReflect(target, skill) == Formulas.SKILL_REFLECT_SUCCEED)
+			if (Formulas.calcBuffDebuffReflection(target, skill))
 			{
 				activeChar.stopSkillEffects(skill.getId());
 				skill.getEffects(target, activeChar);
-				
-				// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-				// sm.addSkillName(skill);
-				// activeChar.sendPacket(sm);
 			}
 			else
 			{

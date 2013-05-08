@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -40,23 +39,19 @@ public class HpByLevel extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffector() == null) || (getEffected() == null))
+		if (getEffector() == null)
 		{
 			return false;
 		}
 		// Calculation
 		final int abs = (int) calc();
-		final double absorb = ((getEffected().getCurrentHp() + abs) > getEffected().getMaxHp() ? getEffected().getMaxHp() : (getEffected().getCurrentHp() + abs));
-		final int restored = (int) (absorb - getEffected().getCurrentHp());
-		getEffected().setCurrentHp(absorb);
-		// Status update
-		final StatusUpdate su = new StatusUpdate(getEffected());
-		su.addAttribute(StatusUpdate.CUR_HP, (int) absorb);
-		getEffected().sendPacket(su);
+		final double absorb = ((getEffector().getCurrentHp() + abs) > getEffector().getMaxHp() ? getEffector().getMaxHp() : (getEffector().getCurrentHp() + abs));
+		final int restored = (int) (absorb - getEffector().getCurrentHp());
+		getEffector().setCurrentHp(absorb);
 		// System message
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 		sm.addNumber(restored);
-		getEffected().sendPacket(sm);
+		getEffector().sendPacket(sm);
 		return true;
 	}
 	

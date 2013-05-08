@@ -741,14 +741,14 @@
 		<set name="mpConsume" val="1" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
 		</cond>
+		<for>
+			<effect name="StaticDamage" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="3261" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
@@ -775,14 +775,14 @@
 		<set name="mpConsume" val="1" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="200" />
 		<set name="reuseDelay" val="40000" />
-		<set name="skillType" val="PDAM" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13031,13032,13033,13034,13035,13120,13121,13122,13123,13124" />
 		</cond>
+		<for>
+			<effect name="StaticDamage" noicon="1" val="200" />
+		</for>
 	</skill>
 	<skill id="3263" levels="1" name="Blessed Resurrection">
 		<!-- Allows the use of Blessed Resurrection. -->

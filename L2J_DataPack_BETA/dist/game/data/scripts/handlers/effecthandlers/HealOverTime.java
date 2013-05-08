@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.ExRegMax;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
 public class HealOverTime extends L2Effect
 {
@@ -51,16 +50,6 @@ public class HealOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().sendPacket(new ExRegMax(calc(), getTickCount() * getAbnormalTime(), getAbnormalTime()));
-		}
-		return true;
-	}
-	
-	@Override
 	public boolean onActionTime()
 	{
 		if (getEffected().isDead() || getEffected().isDoor())
@@ -79,11 +68,17 @@ public class HealOverTime extends L2Effect
 		
 		hp += calc() * getTickCount();
 		hp = Math.min(hp, maxhp);
-		
 		getEffected().setCurrentHp(hp);
-		StatusUpdate suhp = new StatusUpdate(getEffected());
-		suhp.addAttribute(StatusUpdate.CUR_HP, (int) hp);
-		getEffected().sendPacket(suhp);
+		return true;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		if (getEffected().isPlayer())
+		{
+			getEffected().sendPacket(new ExRegMax(calc(), getTickCount() * getAbnormalTime(), getAbnormalTime()));
+		}
 		return true;
 	}
 }
