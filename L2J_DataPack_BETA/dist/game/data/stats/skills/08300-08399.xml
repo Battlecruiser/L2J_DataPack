@@ -672,11 +672,11 @@
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="10000" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="PDAM" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="StaticDamage" noicon="1" val="10000" />
+		</for>
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<!-- Confirmed CT2.5 -->

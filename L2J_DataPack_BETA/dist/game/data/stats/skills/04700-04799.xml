@@ -239,10 +239,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -262,8 +262,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4710" levels="12" name="Wild Stun">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -285,10 +287,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="12000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="15" />
 		</for>
 	</skill>
@@ -331,8 +333,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4713" levels="12" name="Bright Heal">
 		<table name="#aggro"> 33 34 35 36 37 38 39 40 41 42 43 44 </table>
@@ -422,8 +426,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4720" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -439,8 +445,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4721" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -456,8 +464,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4722" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -473,8 +483,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4723" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -490,8 +502,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4724" levels="12" name="Stun">
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
@@ -511,10 +525,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -536,10 +550,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -561,10 +575,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -586,10 +600,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -611,10 +625,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -634,8 +648,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4730" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -653,8 +669,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4731" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -672,8 +690,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4732" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -691,8 +711,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4733" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -710,8 +732,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4734" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -726,8 +750,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4735" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -742,8 +768,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4736" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -758,8 +786,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4737" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -774,8 +804,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4738" levels="12" name="BOSS Spinning Slash">
 		<!-- Boss Skill -->
@@ -790,8 +822,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4739" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -807,8 +841,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4740" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -824,8 +860,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4741" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -841,8 +879,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4742" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -858,8 +898,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4743" levels="12" name="BOSS Strike">
 		<!-- Boss Skill -->
@@ -875,8 +917,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4744" levels="12" name="Stun">
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
@@ -896,10 +940,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -921,10 +965,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -946,10 +990,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -971,10 +1015,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -996,10 +1040,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1019,8 +1063,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4750" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1038,8 +1084,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4751" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1057,8 +1105,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4752" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1076,8 +1126,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4753" levels="12" name="BOSS Mortal Blow">
 		<!-- Boss Skill -->
@@ -1095,8 +1147,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="BLOW" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="FatalBlow" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4754" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1111,8 +1165,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4755" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1127,8 +1183,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4756" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1143,8 +1201,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4757" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1159,8 +1219,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4758" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1175,8 +1237,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4759" levels="12" name="Stun">
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
@@ -1195,10 +1259,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1219,10 +1283,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1243,10 +1307,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1267,10 +1331,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1291,10 +1355,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1311,8 +1375,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4765" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1327,8 +1393,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4766" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1343,8 +1411,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4767" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1359,8 +1429,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4768" levels="12" name="BOSS Power Shot">
 		<!-- Boss Skill -->
@@ -1375,8 +1447,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4769" levels="12" name="Stun">
 		<table name="#magicLvl"> 14 24 34 44 54 64 75 79 84 89 94 99 </table>
@@ -1395,10 +1469,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1419,10 +1493,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1443,10 +1517,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1467,10 +1541,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1491,10 +1565,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1511,8 +1585,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4775" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1527,8 +1603,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4776" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1543,8 +1621,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4777" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1559,8 +1639,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4778" levels="12" name="BOSS Spear Attack">
 		<!-- Boss Skill -->
@@ -1575,8 +1657,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="4779" levels="12" name="BOSS Heal">
 		<!-- Boss Skill -->

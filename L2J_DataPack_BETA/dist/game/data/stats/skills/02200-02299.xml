@@ -692,7 +692,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="2320" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<cond msgId="113" addName="1">
@@ -702,6 +701,7 @@
 			</and>
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="100" />
 		</for>
 	</skill>

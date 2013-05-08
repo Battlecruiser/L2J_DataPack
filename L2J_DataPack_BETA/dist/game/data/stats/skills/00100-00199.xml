@@ -24,7 +24,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -34,6 +33,7 @@
 			<using kind="Blunt,Big Blunt" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -64,7 +64,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -78,20 +77,24 @@
 			<using kind="Bow" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</for>
 		<enchant1for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="#ench1effectPower" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</enchant1for>
 		<enchant3for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50">
 				<mul order="0x30" stat="pDef" val="#ench34pmDef" />
 			</effect>
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="40" />
 		</enchant3for>
 		<enchant4for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50">
 				<mul order="0x30" stat="mDef" val="#ench34pmDef" />
 			</effect>
@@ -228,7 +231,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -239,11 +241,13 @@
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="60">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="#ench3Power">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -541,7 +545,6 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
-		<enchant3 name="skillType" val="PDAM" />
 		<for>
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
@@ -556,6 +559,7 @@
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 		</enchant3for>
 	</skill>
 	<skill id="116" levels="14" name="Howl" enchantGroup1="1" enchantGroup2="1">
@@ -632,7 +636,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -640,6 +643,7 @@
 			<using kind="Dual Fist" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -714,7 +718,6 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
-		<enchant3 name="skillType" val="PDAM" />
 		<for>
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -729,6 +732,7 @@
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 		</enchant3for>
 	</skill>
 	<skill id="123" levels="3" name="Spirit Barrier" enchantGroup1="1" enchantGroup2="1">
@@ -1292,7 +1296,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1314,6 +1317,9 @@
 		<cond msgId="113" addName="1">
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="191" levels="6" name="Focus Mind" enchantGroup1="1">
 		<table name="#magicLvl"> 36 43 49 55 64 72 </table>

@@ -364,7 +364,6 @@
 		<table name="#magicLvl"> 65 70 75 80 </table>
 		<table name="#mpConsume"> 60 65 69 72 </table>
 		<table name="#power"> 121 133 145 160 </table>
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2000" />
@@ -379,8 +378,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.4" />
+		</for>
 	</skill>
 	<skill id="716" levels="4" name="Zaken Hold">
 		<!-- Confirmed CT2.5 -->
@@ -424,8 +425,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="718" levels="4" name="Zaken Dancing Sword">
 		<!-- Confirmed CT2.5 -->
@@ -442,8 +445,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="719" levels="1" name="Zaken Vampiric Rage">
 		<!-- Confirmed CT2.5 -->
@@ -486,8 +491,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="721" levels="2" name="Anakim Energy Attack">
 		<!-- Confirmed CT2.5 -->
@@ -507,8 +514,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="722" levels="2" name="Anakim Holy Beam">
 		<!-- Confirmed CT2.5 -->
@@ -528,8 +537,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="723" levels="1" name="Anakim Sunshine">
 		<!-- Confirmed CT2.5 -->
@@ -578,8 +589,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="726" levels="2" name="Venom Sonic Storm">
 		<!-- Confirmed CT2.5 -->
@@ -595,8 +608,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="727" levels="1" name="Venom Disillusion">
 		<!-- Confirmed CT2.5 -->
@@ -631,8 +646,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2957" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="729" levels="1" name="Gordon Sword Stab">
 		<!-- Confirmed CT2.5 -->
@@ -647,8 +664,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1774" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="730" levels="1" name="Gordon Press">
 		<!-- Confirmed CT2.5 -->
@@ -694,8 +713,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="162" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="732" levels="1" name="Ranku Stun Attack">
 		<!-- Confirmed CT2.5 -->
@@ -717,10 +738,10 @@
 		<set name="power" val="1479" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -737,8 +758,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2957" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="734" levels="1" name="Kechi Air Blade">
 		<!-- Confirmed CT2.5 -->
@@ -752,8 +775,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1812" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="735" levels="1" name="Devil Spinning Weapon">
 		<!-- Confirmed CT2.5 -->
@@ -769,8 +794,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="162" />
 		<set name="reuseDelay" val="11000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="736" levels="1" name="Devil Seed">
 		<!-- Confirmed CT2.5 -->
@@ -926,8 +953,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="743" levels="3" name="Vale Master Dark Explosion">
 		<!-- Confirmed CT2.5 -->
@@ -950,8 +979,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="744" levels="3" name="Vale Master Dark Flare">
 		<!-- Confirmed CT2.5 -->
@@ -973,8 +1004,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="745" levels="3" name="Vale Master Dark Cure">
 		<!-- Confirmed CT2.5 -->
@@ -1013,9 +1046,11 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="747" levels="3" name="Saber Tooth Tiger Fear">
 		<!-- Confirmed CT2.5 -->
@@ -1037,10 +1072,10 @@
 		<set name="power" val="#dmg" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Fear" val="0" effectPower="60" />
 		</for>
 	</skill>
@@ -1086,11 +1121,11 @@
 		<set name="power" val="#dmg" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
 		</for>
 	</skill>
@@ -1134,9 +1169,11 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#dmg" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="752" levels="3" name="Doll Blader Sting">
 		<!-- Confirmed CT2.5 -->
@@ -1160,10 +1197,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 	</skill>
@@ -1183,8 +1220,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="754" levels="1" name="Doll Blader Clairvoyance">
 		<!-- Confirmed CT2.5 -->
@@ -1352,7 +1391,6 @@
 		<set name="power" val="8409" />
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DEATH" />
@@ -1363,6 +1401,7 @@
 			</and>
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="60" >
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
@@ -1567,13 +1606,13 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="8049" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23298" />
 		</for>
 	</skill>
@@ -1593,13 +1632,13 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="7043" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23299" />
 		</for>
 	</skill>
@@ -1620,13 +1659,13 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="8452" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_START" triggeredId="23300" />
 		</for>
 	</skill>
@@ -1710,7 +1749,6 @@
 		<set name="power" val="4500" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="CHARGEDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
@@ -1720,6 +1758,7 @@
 			</and>
 		</cond>
 		<for>
+			<effect name="EnergyAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="1" val="80" effectPower="70" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
@@ -1738,12 +1777,14 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="7475" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Big Sword,Big Blunt" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="778" levels="1" name="Golem Armor">
 		<!-- Confirmed CT2.5 -->
@@ -2075,13 +2116,15 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="7475" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
 		</cond>
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -2102,12 +2145,12 @@
 		<set name="power" val="69" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6092" chanceType="ON_EXIT" effectPower="50">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -2167,7 +2210,6 @@
 		<set name="operateType" val="DA2" />
 		<set name="power" val="4040" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -2198,9 +2240,11 @@
 			</and>
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="60" />
 		</for>
 		<enchant3for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="#ench3Chance" />
 		</enchant3for>
 	</skill>
@@ -2250,9 +2294,11 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2322" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="796" levels="1" name="Divine Knight Explosion Attack">
 		<set name="affectLimit" val="5-12" />
@@ -2264,9 +2310,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1900" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="797" levels="1" name="Divine Rogue Piercing Attack">
 		<set name="affectLimit" val="5-12" />
@@ -2282,9 +2330,11 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2111" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="798" levels="1" name="Divine Warrior Assault Attack">
 		<set name="abnormalLvl" val="3" />
@@ -2303,11 +2353,11 @@
 		<set name="power" val="1689" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" effectPower="50" />
 		</for>
 	</skill>

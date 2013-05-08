@@ -26,6 +26,7 @@ import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
@@ -58,18 +59,34 @@ public class Dummy implements ISkillHandler
 			{
 				if (skill.hasEffects())
 				{
-					for (L2Character cha : (L2Character[]) targets)
+					for (L2Character target : (L2Character[]) targets)
 					{
-						skill.getEffects(activeChar, cha);
+						skill.getEffects(activeChar, target);
 					}
 				}
 				break;
 			}
 		}
 		
+		// Self Effect
+		if (skill.hasSelfEffects())
+		{
+			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
+			if ((effect != null) && effect.isSelfEffect())
+			{
+				// Replace old effect with new one.
+				effect.exit();
+			}
+			skill.getEffectsSelf(activeChar);
+		}
+		
 		if (skill.useSpiritShot())
 		{
 			activeChar.setChargedShot(activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
+		}
+		else
+		{
+			activeChar.setChargedShot(ShotType.SOULSHOTS, false);
 		}
 	}
 	

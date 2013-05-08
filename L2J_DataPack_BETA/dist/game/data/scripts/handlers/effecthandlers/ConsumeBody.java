@@ -36,6 +36,12 @@ public class ConsumeBody extends L2Effect
 	}
 	
 	@Override
+	public boolean onActionTime()
+	{
+		return false;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		if ((getEffector() == null) || (getEffected() == null) || !getEffected().isNpc())
@@ -44,12 +50,6 @@ public class ConsumeBody extends L2Effect
 		}
 		((L2Npc) getEffected()).endDecayTask();
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 	
 	@Override

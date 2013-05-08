@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Focus Souls effect.
+ * Focus Souls effect implementation.
  * @author nBd, Adry_85
  */
 public class FocusSouls extends L2Effect
@@ -52,14 +52,13 @@ public class FocusSouls extends L2Effect
 		}
 		
 		L2PcInstance target = getEffected().getActingPlayer();
-		final L2Skill soulmastery = target.getSkills().get(467);
-		
-		if ((soulmastery != null))
+		final L2Skill soulMastery = target.getKnownSkill(L2Skill.SKILL_SOUL_MASTERY);
+		if ((soulMastery != null))
 		{
 			int amount = (int) calc();
-			if ((target.getChargedSouls() < soulmastery.getNumSouls()))
+			if ((target.getChargedSouls() < soulMastery.getNumSouls()))
 			{
-				int count = ((target.getChargedSouls() + amount) <= soulmastery.getNumSouls()) ? amount : (soulmastery.getNumSouls() - target.getChargedSouls());
+				int count = ((target.getChargedSouls() + amount) <= soulMastery.getNumSouls()) ? amount : (soulMastery.getNumSouls() - target.getChargedSouls());
 				target.increaseSouls(count);
 			}
 			else

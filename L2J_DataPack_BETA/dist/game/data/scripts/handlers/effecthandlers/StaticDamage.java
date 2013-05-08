@@ -24,13 +24,12 @@ import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Effect will generate charges for L2PcInstance targets.<br>
- * Number of charges in "value", maximum number in "count" effect variables.
- * @author DS
+ * Static Damage effect implementation.
+ * @author Adry_85
  */
-public class IncreaseCharges extends L2Effect
+public class StaticDamage extends L2Effect
 {
-	public IncreaseCharges(Env env, EffectTemplate template)
+	public StaticDamage(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -38,29 +37,28 @@ public class IncreaseCharges extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.INCREASE_CHARGES;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (getEffected() == null)
-		{
-			return false;
-		}
-		
-		if (!getEffected().isPlayer())
-		{
-			return false;
-		}
-		
-		getEffected().getActingPlayer().increaseCharges((int) calc(), getTickCount());
-		return true;
+		return L2EffectType.STATIC_DAMAGE;
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		return false; // abort effect even if count > 1
+		return false;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		if (getEffector().isAlikeDead())
+		{
+			return false;
+		}
+		
+		getEffected().reduceCurrentHp(calc(), getEffector(), getSkill());
+		if (getEffector().isPlayer())
+		{
+			getEffector().sendDamageMessage(getEffected(), (int) calc(), false, false, false);
+		}
+		return true;
 	}
 }

@@ -22,11 +22,11 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * CP Damage Percent effect implementation.
- * @author Zoey76
+ * @author Zoey76, Adry_85
  */
 public class CpDamPercent extends L2Effect
 {
@@ -44,13 +44,38 @@ public class CpDamPercent extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (!getEffected().isDead())
+		return false;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		if (getEffected().isPlayer())
 		{
-			double cp = (getEffected().getCurrentCp() * (100 - getEffectPower())) / 100;
-			getEffected().setCurrentCp(cp);
-			StatusUpdate sucp = new StatusUpdate(getEffected());
-			sucp.addAttribute(StatusUpdate.CUR_CP, (int) cp);
-			getEffected().sendPacket(sucp);
+			if (getEffected().isPlayer() && getEffected().getActingPlayer().isFakeDeath())
+			{
+				getEffected().stopFakeDeath(true);
+			}
+			
+			int damage = (int) ((getEffected().getCurrentCp() * calc()) / 100);
+			// Manage attack or cast break of the target (calculating rate, sending message)
+			if (!getEffected().isRaid() && Formulas.calcAtkBreak(getEffected(), damage))
+			{
+				getEffected().breakAttack();
+				getEffected().breakCast();
+			}
+			
+			if (damage > 0)
+			{
+				getEffected().setCurrentCp(getEffected().getCurrentCp() - damage);
+				if (getEffected() != getEffector())
+				{
+					getEffector().sendDamageMessage(getEffected(), damage, false, false, false);
+				}
+			}
+			// Check if damage should be reflected
+			Formulas.isDamageReflected(getEffector(), getEffected(), getSkill());
+			return true;
 		}
 		return false;
 	}

@@ -27,7 +27,9 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -48,23 +50,19 @@ public class CorpseMob implements ITargetTypeHandler
 		}
 		
 		// Corpse mob only available for half time
-		switch (skill.getSkillType())
+		if (skill.getSkillType() == L2SkillType.SUMMON)
 		{
-			case SUMMON:
+			if (isSummon && (((L2ServitorInstance) target).getOwner() != null) && (((L2ServitorInstance) target).getOwner().getObjectId() == activeChar.getObjectId()))
 			{
-				if (isSummon && (((L2ServitorInstance) target).getOwner() != null) && (((L2ServitorInstance) target).getOwner().getObjectId() == activeChar.getObjectId()))
-				{
-					return EMPTY_TARGET_LIST;
-				}
-				
-				break;
+				return EMPTY_TARGET_LIST;
 			}
-			case DRAIN:
+		}
+		
+		if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+		{
+			if (((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
 			{
-				if (((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
-				{
-					return EMPTY_TARGET_LIST;
-				}
+				return EMPTY_TARGET_LIST;
 			}
 		}
 		

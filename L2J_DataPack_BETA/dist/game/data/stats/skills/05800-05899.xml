@@ -225,8 +225,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5827" levels="6" name="Fireball">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
@@ -248,8 +250,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
@@ -269,8 +273,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare">
 		<table name="#magicLvl"> 75 77 79 81 83 85 </table>
@@ -290,8 +296,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5830" levels="1" name="Polearm Thrust">
 		<set name="castRange" val="150" />
@@ -303,8 +311,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5831" levels="1" name="Polearm Swing">
 		<set name="affectRange" val="150" />
@@ -315,10 +325,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="70" effectPower="80" />
 		</for>
 	</skill>
@@ -435,8 +445,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5838" levels="1" name="Throwing Javelin">
 		<set name="castRange" val="900" />
@@ -448,8 +460,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="4640" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5839" levels="1" name="Breath">
 		<!-- Confirmed CT2.5 -->
@@ -467,8 +481,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="183" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5840" levels="1" name="Fire Breath">
 		<!-- Confirmed CT2.5 -->
@@ -488,8 +504,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="244" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5841" levels="1" name="Multi Defense">
 		<!-- Confirmed CT2.5 -->
@@ -528,8 +546,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="17400" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5843" levels="1" name="Terror">
 		<!-- Confirmed CT2.5 -->
@@ -571,8 +591,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="834" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
 		<set name="operateType" val="P" />
@@ -959,8 +981,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<!-- FIXME: this should be HpByLevel -->
-			<effect self="1" name="Heal" val="73" />
+			<effect name="HpByLevel" noicon="1" val="73" />
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
 			</effect>
@@ -1031,10 +1052,10 @@
 		<set name="power" val="873" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="30" />
 		</for>
 	</skill>
@@ -1082,10 +1103,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="STR" />
-		<set name="skillType" val="PDAM" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Disarm" val="0" effectPower="70" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
@@ -1111,10 +1132,10 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 		</for>
 	</skill>
@@ -1391,7 +1412,9 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 </list>

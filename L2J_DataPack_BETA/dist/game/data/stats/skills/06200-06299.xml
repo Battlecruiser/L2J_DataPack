@@ -126,11 +126,11 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="80" />
 		</for>
 	</skill>
@@ -361,9 +361,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="18162" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" special="stakatoroot" effectPower="100">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
@@ -502,7 +502,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />
-		<set name="staticDamage" val="true" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6253" levels="1" name="Heatstroke Prevention Effect - Gludio">
@@ -701,9 +700,9 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="38976" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
 		</for>
 	</skill>
@@ -721,9 +720,9 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="45256" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
 		</for>
 	</skill>
@@ -767,8 +766,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
 		<!-- Confirmed CT2.5 -->
@@ -783,8 +784,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6280" levels="1" name="Death Clack">
 		<!-- Confirmed CT2.5 -->
@@ -819,8 +822,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6282" levels="1" name="Reflect Magic">
 		<!-- Confirmed CT2.5 -->
@@ -854,8 +859,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="18560" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6284" levels="1" name="Freya's Bless">
 		<!-- Confirmed CT2.5 -->
@@ -991,8 +998,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
 		<!-- Confirmed CT2.5 -->
@@ -1006,8 +1015,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6292" levels="1" name="Rush">
 		<!-- Confirmed CT2.5 -->
@@ -1025,12 +1036,12 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1049,8 +1060,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
 		<!-- Confirmed CT2.5 -->
@@ -1100,12 +1113,12 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="DA1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="250" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1123,8 +1136,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="4563" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
 		<!-- Confirmed CT2.5 -->
@@ -1151,9 +1166,9 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1547" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" chanceType="ON_START" />
 		</for>
 	</skill>

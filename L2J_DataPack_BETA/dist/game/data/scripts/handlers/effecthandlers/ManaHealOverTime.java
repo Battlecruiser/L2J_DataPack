@@ -22,7 +22,6 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 
 public class ManaHealOverTime extends L2Effect
 {
@@ -68,11 +67,7 @@ public class ManaHealOverTime extends L2Effect
 		
 		mp += calc() * getTickCount();
 		mp = Math.min(mp, maxmp);
-		
 		getEffected().setCurrentMp(mp);
-		StatusUpdate sump = new StatusUpdate(getEffected());
-		sump.addAttribute(StatusUpdate.CUR_MP, (int) mp);
-		getEffected().sendPacket(sump);
 		return true;
 	}
 }

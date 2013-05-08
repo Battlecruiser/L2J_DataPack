@@ -640,8 +640,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1827" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="8239" levels="1" name="Critical Up">
 		<set name="abnormalLvl" val="1" />
@@ -690,8 +692,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="8243" levels="1" name="Chill Strike">
 		<set name="castRange" val="40" />
@@ -704,8 +708,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="120000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="8244" levels="1" name="Transform Gatekeeper">
 		<set name="abnormalLvl" val="1" />

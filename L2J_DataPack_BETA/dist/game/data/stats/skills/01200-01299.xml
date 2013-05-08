@@ -234,9 +234,9 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MANADAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="MagicalAttackMp" noicon="1" val="0" />
 			<effect name="ManaDamOverTime" ticks="3" val="#mdot" effectPower="60" />
 		</for>
 	</skill>
@@ -409,8 +409,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1222" levels="15" name="Curse Chaos" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </table>
@@ -777,7 +779,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1200" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -789,7 +790,11 @@
 		<enchant3 name="saveVs" val="MEN" />
 		<enchant4 name="elementPower" val="#ench4ElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40">
 				<sub order="0x40" stat="firePower" val="#ench3FirePowerVuln" />
 			</effect>
@@ -819,7 +824,6 @@
 		<set name="operateType" val="A3" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -828,6 +832,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect self="1" name="Buff" val="0">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
@@ -932,7 +937,6 @@
 		<table name="#ench3absorbPart"> 0.41 0.42 0.43 0.44 0.45 0.46 0.47 0.48 0.49 0.5 0.51 0.52 0.53 0.54 0.55 0.56 0.57 0.58 0.59 0.6 0.61 0.62 0.63 0.64 0.65 0.66 0.67 0.68 0.69 0.7 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="absorbPart" val="0.4" /> <!-- absorbs 40% of damage -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
@@ -946,17 +950,22 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="absorbPart" val="#ench3absorbPart" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.4" />
+		</for>
+		<enchant3for>
+			<effect name="HpDrain" noicon="1" val="#ench3absorbPart" />
+		</enchant3for>
 		<enchant4for>
+			<effect name="HpDrain" noicon="1" val="0.4" />
 			<effect self="1" name="Buff" val="0">
 				<add order="0x40" stat="darkPower" val="#enchElementPower" />
 			</effect>
@@ -989,7 +998,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1200" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1001,7 +1009,11 @@
 		<enchant3 name="saveVs" val="MEN" />
 		<enchant4 name="elementPower" val="#ench4ElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="60">
 				<sub order="0x40" stat="waterPower" val="#ench3WaterPowerVuln" />
 			</effect>
@@ -1039,7 +1051,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1051,11 +1062,13 @@
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="60">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="#ench3Power">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -1094,7 +1107,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1106,9 +1118,11 @@
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
 		</enchant3for>
 	</skill>
@@ -1198,7 +1212,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1200" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1206,7 +1219,11 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="saveVs" val="MEN" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40">
 				<sub order="0x40" stat="windPower" val="#ench3WindPowerVuln" />
 			</effect>
@@ -1376,7 +1393,6 @@
 		<table name="#ench2mpInitialConsume"> 34 34 34 33 33 32 32 31 31 30 30 29 29 28 28 27 27 26 26 26 25 25 24 24 23 23 22 22 21 21 </table>
 		<table name="#ench3absorbPart"> 0.8 0.81 0.82 0.82 0.83 0.84 0.84 0.85 0.86 0.86 0.87 0.88 0.88 0.89 0.9 0.9 0.91 0.92 0.92 0.93 0.94 0.94 0.95 0.96 0.96 0.97 0.98 0.98 0.99 1 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
@@ -1388,15 +1404,19 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
-		<enchant3 name="absorbPart" val="#ench3absorbPart" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
+		<enchant3for>
+			<effect name="HpDrain" noicon="1" val="#ench3absorbPart" />
+		</enchant3for>
 	</skill>
 	<skill id="1246" levels="12" name="Seal of Silence" enchantGroup1="1" enchantGroup2="1">
 		<table name="#magicLvl"> 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2079,7 +2099,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
@@ -2087,6 +2106,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#vuln" />
@@ -2098,6 +2118,7 @@
 			</effect>
 		</for>
 		<enchant1for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="#ench1Chance" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#ench1Vuln" />
@@ -2109,6 +2130,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80" >
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="25" />
@@ -2139,8 +2161,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1265" levels="14" name="Solar Flare" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2166,7 +2190,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2175,6 +2198,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1266" levels="3" name="Shadow Spark">
 		<table name="#magicLvl"> 25 30 35 </table>
@@ -2195,8 +2221,10 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1267" levels="14" name="Shadow Flare" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2222,7 +2250,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2231,6 +2258,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1268" levels="4" name="Vampiric Rage" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
@@ -2417,8 +2447,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1275" levels="14" name="Aura Bolt" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
@@ -2442,7 +2474,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2452,6 +2483,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1276" levels="14" name="Summon Kai the Cat" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 1 2 2 2 1 1 2 2 1 1 2 2 </table>
@@ -2813,7 +2847,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2822,6 +2855,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1289" levels="1" name="Inferno" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#ench1Power"> 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 </table>
@@ -2846,7 +2882,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2856,6 +2891,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="1" val="60" effectPower="80" />
 		</for>
 	</skill>
@@ -2884,7 +2920,6 @@
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="300000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2894,6 +2929,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
@@ -2922,7 +2958,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="150" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2932,6 +2967,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80" >
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
@@ -2955,7 +2991,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2964,6 +2999,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1293" levels="1" name="Elemental Symphony" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#ench1Power"> 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 </table>
@@ -2983,7 +3021,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2992,6 +3029,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1294" levels="1" name="Elemental Storm" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#ench1Power"> 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 </table>
@@ -3010,7 +3050,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -3019,6 +3058,9 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="pvpPower" val="#enchDuel" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1295" levels="9" name="Aqua Splash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
@@ -3046,7 +3088,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -3056,6 +3097,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1296" levels="9" name="Rain of Fire" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<table name="#magicLvl"> 58 60 62 64 66 68 70 72 74 </table>
@@ -3083,7 +3127,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -3093,6 +3136,9 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1297" levels="6" name="Clear Mind">
 		<!-- Confirmed CT2.5 -->

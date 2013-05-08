@@ -11,8 +11,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="47" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="PARTY" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5601" levels="12" name="Short-Range Physical Attack Resistance">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
@@ -908,9 +910,9 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect self="1" name="Debuff" val="0">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
@@ -932,8 +934,10 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5658" levels="85" name="Gatekeeper Flame Strike">
 		<table name="#magicLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
@@ -953,8 +957,10 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="7000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5659" levels="2" name="Gatekeeper Berserker Spirit">
 		<table name="#abnormalLvls"> 1 2 </table>
@@ -1406,9 +1412,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="PDAM" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5685" levels="1" name="PvP Weapon - Casting">
 		<!-- Confirmed CT2.5 -->
@@ -1641,8 +1649,7 @@
 			</not>
 		</cond>
 		<for>
-			<!-- FIXME: remove ticks from here -->
-			<effect ticks="5" name="IncreaseCharges" noicon="1" val="1" />
+			<effect name="FocusEnergy" noicon="1" val="5" />
 		</for>
 	</skill>
 	<skill id="5696" levels="1" name="Dizziness">

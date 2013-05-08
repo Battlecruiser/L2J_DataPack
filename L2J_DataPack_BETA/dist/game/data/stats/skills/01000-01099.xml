@@ -600,7 +600,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1power" />
@@ -614,6 +613,9 @@
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1031" levels="8" name="Disrupt Undead">
 		<table name="#magicLvl"> 17 20 23 25 28 30 33 35 </table>
@@ -633,11 +635,13 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1032" levels="3" name="Invigor" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
@@ -927,7 +931,6 @@
 		<enchant3 name="elementPower" val="20" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
-		<enchant3 name="skillType" val="MDAM" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
@@ -935,6 +938,7 @@
 			<effect name="Paralyze" val="0" />
 		</for>
 		<enchant3for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Paralyze" val="0" effectPower="40" />
 		</enchant3for>
 	</skill>
@@ -1929,7 +1933,6 @@
 		<table name="#mpConsume"> 22 32 40 46 54 63 </table>
 		<table name="#mpInitialConsume"> 5 8 10 12 14 16 </table>
 		<table name="#power"> 15 21 26 32 38 44 </table>
-		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
@@ -1941,8 +1944,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
 	</skill>
 	<skill id="1092" levels="19" name="Fear" enchantGroup1="1" enchantGroup2="1">
 		<table name="#magicLvl"> 14 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>

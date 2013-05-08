@@ -128,9 +128,9 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="30">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
@@ -156,9 +156,9 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="30">
 				<mul order="0x30" stat="runSpd" val="0.1" />
 			</effect>
@@ -231,10 +231,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="2748" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="98">
 				<mul order="0x30" stat="critDamEvas" val="1.5" />
 			</effect>
@@ -528,8 +528,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="122" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6642" levels="1" name="Dash">
 		<!-- Confirmed CT2.5 -->
@@ -546,12 +548,12 @@
 		<set name="operateType" val="DA1" />
 		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
 		</cond>
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -569,8 +571,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="2319" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6644" levels="1" name="Ice Queen Freya">
 		<!-- Confirmed CT2.5 -->
@@ -923,8 +927,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6677" levels="1" name="Hold">
 		<set name="abnormalLvl" val="1" />
@@ -958,8 +964,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="120" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="6680" levels="1" name="Faint Plus">
 		<set name="coolTime" val="500" />
@@ -1192,9 +1200,9 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="45257" />
 		<set name="reuseDelay" val="7000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6698" chanceType="ON_START" />
 		</for>
 	</skill>

@@ -73,7 +73,6 @@
 		<table name="#mpConsume"> 146 150 153 </table>
 		<table name="#mpInitialConsume"> 37 38 39 </table>
 		<table name="#power"> 112 117 120 </table>
-		<set name="absorbPart" val="0.8" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="900" />
@@ -86,8 +85,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
+		</for>
 	</skill>
 	<skill id="5905" levels="1" name="Confusing Nuph">
 		<set name="abnormalLvl" val="1" />
@@ -147,8 +148,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="3000" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" /> <!-- FIXME: value unconfirmed -->
+		</for>
 	</skill>
 	<skill id="5910" levels="1" name="Stronghold Attack">
 		<set name="castRange" val="300" />
@@ -159,8 +162,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" /> <!-- FIXME: value unconfirmed -->
+		</for>
 	</skill>
 	<skill id="5911" levels="1" name="Pestilence Cleanse">
 		<set name="operateType" val="P" />
@@ -269,8 +274,10 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="150" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5921" levels="1" name="Inhale">
 		<!-- Confirmed CT2.5 -->
@@ -278,7 +285,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_F" />
-		<set name="absorbPart" val="0.8" /> <!-- absorbs 80% of damage -->
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="600" />
@@ -295,9 +301,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="121" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DRAIN" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
+			<effect name="HpDrain" noicon="1" val="0.8" />
 			<effect name="Debuff" val="0" abnormalVisualEffect="bleed" effectPower="80">
 				<mul order="0x30" stat="pAtk" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
@@ -328,9 +334,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="121" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" abnormalVisualEffect="bleed" effectPower="80">
 				<sub order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
@@ -437,8 +443,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="9279" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5933" levels="1" name="Dark Blade">
 		<!-- Confirmed CT2.5 -->
@@ -457,8 +465,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="9279" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5934" levels="1" name="Meet the soul of darkness and fight against it.">
 		<set name="abnormalLvl" val="1" />
@@ -485,8 +495,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="9279" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5936" levels="1" name="Earth Ring">
 		<!-- Confirmed CT2.5 -->
@@ -504,8 +516,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="9279" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5937" levels="1" name="Self Stun">
 		<set name="abnormalLvl" val="1" />
@@ -869,8 +883,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5976" levels="3" name="Dark Storm">
 		<table name="#magicLvl"> 51 61 79 </table>
@@ -885,8 +901,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="PDAM" />
 		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="5977" levels="3" name="Dark Strike">
 		<set name="hitTime" val="1000" />
@@ -1116,10 +1134,10 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="171" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDAM" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" effectPower="90" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" />
 			<effect name="Mute" noicon="1" val="0" effectPower="90" />
 			<effect name="PhysicalMute" noicon="1" val="0" effectPower="90" />

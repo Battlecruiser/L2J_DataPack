@@ -24,7 +24,6 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -41,6 +40,12 @@ public class CpHealPercent extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CPHEAL_PERCENT;
+	}
+	
+	@Override
+	public boolean onActionTime()
+	{
+		return false;
 	}
 	
 	@Override
@@ -62,19 +67,10 @@ public class CpHealPercent extends L2Effect
 		if (amount != 0)
 		{
 			target.setCurrentCp(amount + target.getCurrentCp());
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_CP, (int) target.getCurrentCp());
-			target.sendPacket(su);
 		}
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		return false;
 	}
 }
