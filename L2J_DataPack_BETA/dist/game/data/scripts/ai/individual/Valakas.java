@@ -55,6 +55,8 @@ public class Valakas extends AbstractNpcAI
 	private static final int VALAKAS = 29028;
 	// Skills
 	private static final SkillHolder VALAKAS_LAVA_SKIN = new SkillHolder(4680, 1);
+	private static final int VALAKAS_REGENERATION = 4691;
+	
 	private static final SkillHolder[] VALAKAS_REGULAR_SKILLS =
 	{
 		new SkillHolder(4681, 1), // Valakas Trample
@@ -62,6 +64,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4683, 1), // Valakas Dragon Breath
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 	};
+	
 	private static final SkillHolder[] VALAKAS_LOWHP_SKILLS =
 	{
 		new SkillHolder(4681, 1), // Valakas Trample
@@ -70,6 +73,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 		new SkillHolder(4690, 1), // Valakas Meteor Storm
 	};
+	
 	private static final SkillHolder[] VALAKAS_AOE_SKILLS =
 	{
 		new SkillHolder(4683, 1), // Valakas Dragon Breath
@@ -80,6 +84,7 @@ public class Valakas extends AbstractNpcAI
 		new SkillHolder(4689, 1), // Valakas Fear TODO: has two levels only level one is used.
 		new SkillHolder(4690, 1), // Valakas Meteor Storm
 	};
+	
 	// Locations
 	private static final Location TELEPORT_CUBE_LOCATIONS[] =
 	{
@@ -235,45 +240,33 @@ public class Valakas extends AbstractNpcAI
 					}
 				}
 				
-				int lvl = 0;
-				
 				// Verify if "Valakas Regeneration" skill is active.
-				final List<L2Effect> effects = npc.getAllEffects();
-				if ((effects != null) && (effects.size() != 0))
-				{
-					for (L2Effect e : effects)
-					{
-						if (e.getSkill().getId() == 4629)
-						{
-							lvl = e.getSkill().getLevel();
-							break;
-						}
-					}
-				}
+				final L2Effect e = npc.getFirstEffect(VALAKAS_REGENERATION);
+				final int lvl = e != null ? e.getSkill().getLevel() : 0;
 				
 				// Current HPs are inferior to 25% ; apply lvl 4 of regen skill.
 				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (lvl != 4))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 4));
+					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 4));
 				}
 				// Current HPs are inferior to 50% ; apply lvl 3 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 2) / 4.0)) && (lvl != 3))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 3));
+					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 3));
 				}
 				// Current HPs are inferior to 75% ; apply lvl 2 of regen skill.
 				else if ((npc.getCurrentHp() < ((npc.getMaxHp() * 3) / 4.0)) && (lvl != 2))
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 2));
+					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 2));
 				}
 				// Apply lvl 1.
 				else if (lvl != 1)
 				{
 					npc.setTarget(npc);
-					npc.doCast(SkillTable.getInstance().getInfo(4691, 1));
+					npc.doCast(SkillTable.getInstance().getInfo(VALAKAS_REGENERATION, 1));
 				}
 			}
 			// Spawn cinematic, regen_task and choose of skill.
