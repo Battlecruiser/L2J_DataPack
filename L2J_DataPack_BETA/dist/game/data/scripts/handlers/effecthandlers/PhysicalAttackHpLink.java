@@ -88,7 +88,7 @@ public class PhysicalAttackHpLink extends L2Effect
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
 			target.reduceCurrentHp(damage, activeChar, getSkill());
 			// Check if damage should be reflected.
-			Formulas.isDamageReflected(activeChar, target, getSkill());
+			Formulas.calcDamageReflected(activeChar, target, getSkill(), crit);
 		}
 		else
 		{
