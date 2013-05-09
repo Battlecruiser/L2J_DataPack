@@ -72,15 +72,9 @@ public class Wear implements IBypassHandler
 	
 	private static final void showWearWindow(L2PcInstance player, int val)
 	{
-		player.tempInventoryDisable();
-		
-		if (Config.DEBUG)
-		{
-			_log.fine("Showing wearlist");
-		}
+		player.setInventoryBlockingStatus(true);
 		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
-		
 		if (list != null)
 		{
 			ShopPreviewList bl = new ShopPreviewList(list, player.getAdena(), player.getExpertiseLevel());

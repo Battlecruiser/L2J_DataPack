@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.SummonRequestHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -95,13 +96,16 @@ public class SummonFriend implements ISkillHandler
 					
 					if (!Util.checkIfInRange(0, activeChar, target, false))
 					{
-						if (!targetPlayer.teleportRequest(activePlayer, skill))
+						final SummonRequestHolder holder = activeChar.getScript(SummonRequestHolder.class);
+						if (holder != null)
 						{
 							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
 							sm.addString(target.getName());
 							activePlayer.sendPacket(sm);
 							continue;
 						}
+						
+						activeChar.addScript(new SummonRequestHolder(activePlayer, skill));
 						
 						if (skill.getId() == 1403) // Summon Friend
 						{
@@ -116,7 +120,7 @@ public class SummonFriend implements ISkillHandler
 						else
 						{
 							L2PcInstance.teleToTarget(targetPlayer, activePlayer, skill);
-							targetPlayer.teleportRequest(null, null);
+							targetPlayer.removeScript(SummonRequestHolder.class);
 						}
 					}
 				}

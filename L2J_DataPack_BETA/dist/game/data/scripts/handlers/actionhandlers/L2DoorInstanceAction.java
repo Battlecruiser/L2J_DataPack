@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jserver.gameserver.model.holders.DoorRequestHolder;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
@@ -68,7 +69,7 @@ public class L2DoorInstanceAction implements IActionHandler
 				}
 				else if (!door.getClanHall().isSiegableHall() || !((SiegableHall) door.getClanHall()).isInSiege())
 				{
-					activeChar.gatesRequest(door);
+					activeChar.addScript(new DoorRequestHolder(door));
 					if (!door.getOpen())
 					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
@@ -87,7 +88,7 @@ public class L2DoorInstanceAction implements IActionHandler
 				}
 				else
 				{
-					activeChar.gatesRequest((L2DoorInstance) target);
+					activeChar.addScript(new DoorRequestHolder((L2DoorInstance) target));
 					if (!((L2DoorInstance) target).getOpen())
 					{
 						activeChar.sendPacket(new ConfirmDlg(1140));
