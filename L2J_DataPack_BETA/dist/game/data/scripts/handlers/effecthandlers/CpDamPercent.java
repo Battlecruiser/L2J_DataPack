@@ -74,7 +74,7 @@ public class CpDamPercent extends L2Effect
 				}
 			}
 			// Check if damage should be reflected
-			Formulas.isDamageReflected(getEffector(), getEffected(), getSkill());
+			Formulas.calcDamageReflected(getEffector(), getEffected(), getSkill(), false);
 			return true;
 		}
 		return false;
