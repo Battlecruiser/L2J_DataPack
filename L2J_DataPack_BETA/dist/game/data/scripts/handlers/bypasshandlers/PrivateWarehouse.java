@@ -94,13 +94,7 @@ public class PrivateWarehouse implements IBypassHandler
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getWarehouse());
-				activeChar.tempInventoryDisable();
-				
-				if (Config.DEBUG)
-				{
-					_log.fine("Source: L2WarehouseInstance.java; Player: " + activeChar.getName() + "; Command: showDepositWindow; Message: Showing items to deposit.");
-				}
-				
+				activeChar.setInventoryBlockingStatus(true);
 				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
 				return true;
 			}

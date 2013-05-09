@@ -109,7 +109,7 @@ public class ClanWarehouse implements IBypassHandler
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
-				activeChar.tempInventoryDisable();
+				activeChar.setInventoryBlockingStatus(true);
 				
 				if (Config.DEBUG)
 				{
