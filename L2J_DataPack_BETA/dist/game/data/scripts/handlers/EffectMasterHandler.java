@@ -34,9 +34,9 @@ public final class EffectMasterHandler
 {
 	private static final Logger _log = Logger.getLogger(EffectMasterHandler.class.getName());
 	
-	private static final Class<?> _loadInstances = EffectHandler.class;
+	private static final Class<?> LOAD_INSTANCES = EffectHandler.class;
 	
-	private static final Class<?>[] _effects =
+	private static final Class<?>[] EFFECTS =
 	{
 		AbortCast.class,
 		RebalanceHP.class,
@@ -119,6 +119,7 @@ public final class EffectMasterHandler
 		Recovery.class,
 		Relax.class,
 		RemoveTarget.class,
+		Restoration.class,
 		RestorationRandom.class,
 		Root.class,
 		ServitorShare.class,
@@ -132,6 +133,7 @@ public final class EffectMasterHandler
 		StaticDamage.class,
 		Stun.class,
 		SummonAgathion.class,
+		SummonNpc.class,
 		SummonPet.class,
 		Sweeper.class,
 		TargetMe.class,
@@ -149,18 +151,18 @@ public final class EffectMasterHandler
 		
 		try
 		{
-			method = _loadInstances.getMethod("getInstance");
-			loadInstance = method.invoke(_loadInstances);
+			method = LOAD_INSTANCES.getMethod("getInstance");
+			loadInstance = method.invoke(LOAD_INSTANCES);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + _loadInstances.getSimpleName(), e);
+			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + LOAD_INSTANCES.getSimpleName(), e);
 			return;
 		}
 		
 		method = null; // Releasing variable for next method
 		
-		for (Class<?> c : _effects)
+		for (Class<?> c : EFFECTS)
 		{
 			if (c == null)
 			{

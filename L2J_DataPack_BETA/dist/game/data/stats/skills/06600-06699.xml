@@ -1059,15 +1059,12 @@
 	<skill id="6685" levels="1" name="Santa Claus's Gift">
 		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="17003" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -1075,6 +1072,11 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="17003" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6686" levels="1" name="Sacred Protector Cancel">
 		<!-- Confirmed CT2.5 -->

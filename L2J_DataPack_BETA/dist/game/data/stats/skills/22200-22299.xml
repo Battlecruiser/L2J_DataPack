@@ -307,16 +307,17 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22249" levels="1" name="Birthday Cake">
-		<!-- Confirmed CT2.5 -->
+		<!-- High Five Skill -->
 		<!-- Birthday Skill -->
-		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
-		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="139" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="SPAWN" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="139" npcCount="1" despawnDelay="1200000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22250" levels="1" name="Birthday Cake Effect">
 		<!-- Confirmed CT2.5 -->
@@ -639,44 +640,53 @@
 		</cond>
 	</skill>
 	<skill id="22294" levels="1" name="Totem of Body">
-		<set name="despawnDelay" val="1800000" /> <!-- TODO: Verify it -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="143" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="143" npcCount="1" despawnDelay="1800000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22295" levels="1" name="Totem of Spirit">
-		<set name="despawnDelay" val="1800000" /> <!-- TODO: Verify it -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="144" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="144" npcCount="1" despawnDelay="1800000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22296" levels="1" name="Totem of Bravery">
-		<set name="despawnDelay" val="1800000" /> <!-- TODO: Verify it -->
+		<set name="despawnDelay" val="1800000" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="145" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="145" npcCount="1" despawnDelay="1800000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22297" levels="1" name="Totem of Fortitude">
-		<set name="despawnDelay" val="1800000" /> <!-- TODO: Verify it -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="146" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="146" npcCount="1" despawnDelay="1800000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22298" levels="1" name="Refined Red Dragon Blood">
 		<!-- none -->

@@ -595,15 +595,16 @@
 	<skill id="22034" levels="1" name="Birthday Cake">
 		<!-- Confirmed CT2.5 -->
 		<!-- Birthday Skill -->
-		<set name="despawnDelay" val="1200000" /> <!-- FIXME: This should be controlled by AI -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="npcId" val="106" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="106" npcCount="1" despawnDelay="1200000" isSummonSpawn="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22035" levels="1" name="Birthday Cake Effect">
 		<!-- Confirmed CT2.5 -->
@@ -1380,26 +1381,34 @@
 		</for>
 	</skill>
 	<skill id="22095" levels="1" name="Summon Spirit of Fire">
-		<set name="despawnDelay" val="60000" />
-		<set name="hitTime" val="1500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="npcId" val="8" />
+		<set name="itemConsumeId" val="20586" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="8" npcCount="1" despawnDelay="60000" isSummonSpawn="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22096" levels="1" name="Summon Reckless Spirit of Fire">
-		<set name="despawnDelay" val="60000" />
-		<set name="hitTime" val="1500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="isSummonSpawn" val="true" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="npcId" val="9" />
+		<set name="itemConsumeId" val="20586" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SPAWN" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="9" npcCount="1" despawnDelay="60000" isSummonSpawn="true" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22097" levels="1" name="Girl's Gift of Gratitude">
 		<!-- Thank you gift for helping the girl. For 2 minutes, increases Max HP by 60%, Max MP by 60%, Max CP by 60%, physical P. Def. by 30%, M. Def. by 30%, moving speed by 30, and physical P. Atk. by 20%. Decreases MP consumption during skill use by 10%. -->
