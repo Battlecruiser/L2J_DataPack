@@ -149,11 +149,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2914" levels="3" name="Equipment Set 90 Day Pack">
+		<!-- Confirmed CT2.5 -->
+		<table name="#npcId"> 32702 32703 13284 </table>
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="#npcId" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
 		<set name="hitTime" val="20000" />

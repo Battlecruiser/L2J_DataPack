@@ -515,15 +515,12 @@
 	</skill>
 	<skill id="513" levels="1" name="Create Dark Seed">
 		<!-- Confirmed CT2.5 -->
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="10112" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2195">
@@ -535,6 +532,11 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="10112" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="514" levels="9" name="Fire Trap" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
@@ -925,11 +927,8 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="npcId" val="#npcId" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="DECOY" />
-		<set name="summonTotalLifeTime" val="20000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -937,7 +936,16 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="reuseDelay" val="#ench2reuseDelay" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="npcId" val="#ench3npcId" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="#npcId" npcCount="1" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="#ench3npcId" npcCount="1" />
+			</effect>
+		</enchant3for>
 	</skill>
 	<skill id="526" levels="1" name="Enuma Elish" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
 		<!-- Confirmed CT2.5 -->

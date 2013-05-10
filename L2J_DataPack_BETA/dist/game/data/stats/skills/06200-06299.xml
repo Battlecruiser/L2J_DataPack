@@ -374,15 +374,12 @@
 	<skill id="6239" levels="1" name="Proof of Space and Time">
 		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="15352" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -390,6 +387,11 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="15352" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6240" levels="5" name="Heatstroke">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
@@ -494,9 +496,16 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6251" levels="1" name="Summon Humidity">
+		<!-- Confirmed CT2.5 -->
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13270" npcCount="1" despawnDelay="7200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6252" levels="1" name="Humidity Attack">
 		<set name="operateType" val="A1" />

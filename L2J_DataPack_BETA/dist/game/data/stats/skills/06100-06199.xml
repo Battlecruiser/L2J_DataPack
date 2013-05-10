@@ -165,15 +165,12 @@
 	<skill id="6121" levels="1" name="Agathion's New Year's Gift 1">
 		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="14676" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -181,19 +178,21 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="14676" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6122" levels="1" name="Agathion's New Year's Gift 2">
 		<!-- Confirmed CT2.5 -->
 		<set name="coolTime" val="1000" />
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="14677" />
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -201,6 +200,11 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="14677" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6123" levels="1" name="Agathion's New Year's Wish">
 		<set name="abnormalLvl" val="2" />

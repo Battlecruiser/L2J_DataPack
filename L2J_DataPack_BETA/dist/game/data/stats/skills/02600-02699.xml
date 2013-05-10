@@ -142,13 +142,10 @@
 	</skill>
 	<skill id="2615" levels="1" name="Destroyed Darkness Fragment Powder">
 		<!-- Confirmed CT2.5 -->
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="13854" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -159,6 +156,11 @@
 		<cond msgId="113">
 			<player npcIdRadius="32529,300" />
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="13854" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2616" levels="1" name="Bond Sealant">
 		<set name="abnormalLvl" val="1" />
@@ -212,12 +214,20 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2622" levels="1" name="Summon Life-size Decoy">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="60" />
+		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="32544" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2623" levels="1" name="Alkaline Therapy">
 		<set name="abnormalLvl" val="1" />

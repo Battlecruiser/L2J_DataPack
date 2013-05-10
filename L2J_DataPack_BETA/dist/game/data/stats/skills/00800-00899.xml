@@ -603,19 +603,21 @@
 		</for>
 	</skill>
 	<skill id="831" levels="1" name="Summon Merchant Golem">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="15000" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="1458" />
+		<set name="magicLvl" val="52" />
 		<set name="mpConsume" val="122" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Summon-specific -->
-		<set name="npcId" val="13128" />
-		<set name="summonTimeLostActive" val="1000" />
-		<set name="summonTimeLostIdle" val="1000" />
-		<set name="summonTotalLifeTime" val="180000" /> <!-- FIXME: This don't have life time for spawn in retail, probably should dissapear when all items are sold -->
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13128" npcCount="1" despawnTime="180000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="832" levels="2" name="Fast Recovery">
 		<!-- Confirmed CT2.5 and Updated to H5 -->

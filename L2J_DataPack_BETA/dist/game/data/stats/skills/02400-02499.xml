@@ -326,12 +326,9 @@
 	</skill>
 	<skill id="2420" levels="1" name="White Seed of Evil Lump">
 		<!-- Confirmed CT2.5 -->
-		<set name="create_item_count" val="2" />
-		<set name="create_item_id" val="9597" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -339,15 +336,17 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="9597" itemCount="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2421" levels="1" name="Black Seed of Evil Lump">
 		<!-- Confirmed CT2.5 -->
-		<set name="create_item_count" val="2" />
-		<set name="create_item_id" val="9598" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -355,6 +354,11 @@
 				<player weight="80" />
 			</and>
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="9598" itemCount="2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2422" levels="1" name="1st Place Treasure Sack">
 		<!-- Confirmed CT2.5 -->
@@ -1663,19 +1667,21 @@
 	</skill>
 	<skill id="2498" levels="1" name="Bottle of Empty Soul">
 		<!-- Confirmed CT2.5 -->
-		<set name="create_item_count" val="1" />
-		<set name="create_item_id" val="10410" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CREATE_ITEM" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2195">
 			<player souls="5" />
 		</cond>
+		<for>
+			<effect name="Restoration" noicon="1" val="0">
+				<param itemId="10410" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2499" levels="1" name="Bottle of Full Soul">
 		<!-- Confirmed CT2.5 -->

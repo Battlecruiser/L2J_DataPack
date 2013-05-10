@@ -271,32 +271,68 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9029" levels="1" name="Watermelon Seed">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15366" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13271" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9030" levels="1" name="Honey Watermelon Seed">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15367" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13275" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9031" levels="1" name="Copied Watermelon Seed">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15368" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13271" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9032" levels="1" name="Copied Honey Watermelon Seed">
+		<!-- Confirmed CT2.5 -->
+		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15369" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13275" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9033" levels="1" name="Herdsman's Love Scroll">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1132,29 +1168,59 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9096" levels="1" name="Event - White Baby Tiger Scroll">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17062" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13286" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9097" levels="1" name="Event - White Baby King-Tiger Scroll">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17064" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13287" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9098" levels="1" name="Event - Sad White Baby Tiger Scroll">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17063" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13293" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9099" levels="1" name="Event - Sad White Baby King-Tiger Scroll">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17065" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonNpc" noicon="1" val="0">
+				<param npcId="13294" npcCount="1" />
+			</effect>
+		</for>
 	</skill>
 </list>

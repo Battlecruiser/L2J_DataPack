@@ -18,22 +18,27 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 
 /**
- * Summon Agathion effect implementation.
+ * Restoration effect implementation.
  * @author Zoey76
  */
-public class SummonAgathion extends L2Effect
+public class Restoration extends L2Effect
 {
-	public SummonAgathion(Env env, EffectTemplate template)
+	private final int _itemId;
+	private final int _itemCount;
+	
+	public Restoration(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_itemId = template.getParameters().getInteger("itemId", 0);
+		_itemCount = template.getParameters().getInteger("itemCount", 0);
 	}
 	
 	@Override
@@ -43,49 +48,29 @@ public class SummonAgathion extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		super.onExit();
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player != null)
-		{
-			player.setAgathionId(0);
-			player.broadcastUserInfo();
-		}
-	}
-	
-	@Override
 	public boolean onStart()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
+		if ((getEffected() == null) || !getEffected().isPlayable())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player.isInOlympiadMode())
+		if ((_itemId <= 0) || (_itemCount <= 0))
 		{
-			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
+			getEffected().sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
+			_log.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
 			return false;
 		}
 		
-		setAgathionId(player);
-		player.broadcastUserInfo();
+		if (getEffected().isPlayer())
+		{
+			getEffected().getActingPlayer().addItem("Skill", _itemId, _itemCount, getEffector(), true);
+		}
+		else if (getEffected().isPet())
+		{
+			getEffected().getInventory().addItem("Skill", _itemId, _itemCount, getEffected().getActingPlayer(), getEffector());
+			getEffected().getActingPlayer().sendPacket(new PetItemList(getEffected().getInventory().getItems()));
+		}
 		return true;
-	}
-	
-	/**
-	 * Set the player's agathion Id.
-	 * @param player the player to set the agathion Id
-	 */
-	protected void setAgathionId(L2PcInstance player)
-	{
-		player.setAgathionId((getSkill() == null) ? 0 : getSkill().getNpcId());
 	}
 }
