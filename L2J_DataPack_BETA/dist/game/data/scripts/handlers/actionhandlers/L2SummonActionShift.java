@@ -23,10 +23,7 @@ import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2SummonActionShift implements IActionHandler
 {
@@ -39,15 +36,9 @@ public class L2SummonActionShift implements IActionHandler
 			{
 				// Set the target of the L2PcInstance activeChar
 				activeChar.setTarget(target);
-				
-				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-				activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), 0));
 			}
 			
-			// Send a Server->Client packet ValidateLocation to correct the L2PcInstance position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
-			
-			IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_summon_info");
+			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_summon_info");
 			if (ach != null)
 			{
 				ach.useAdminCommand("admin_summon_info", activeChar);

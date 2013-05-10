@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2StaticObjectInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2StaticObjectInstanceAction implements IActionHandler
@@ -45,12 +44,9 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(staticObject);
-			activeChar.sendPacket(new MyTargetSelected(staticObject.getObjectId(), 0));
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new MyTargetSelected(staticObject.getObjectId(), 0));
-			
 			// Calculate the distance between the L2PcInstance and the L2NpcInstance
 			if (!activeChar.isInsideRadius(staticObject, L2Npc.INTERACTION_DISTANCE, false, false))
 			{

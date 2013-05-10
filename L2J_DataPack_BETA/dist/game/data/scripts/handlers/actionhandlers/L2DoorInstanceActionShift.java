@@ -23,7 +23,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.StaticObject;
 
@@ -35,11 +34,8 @@ public class L2DoorInstanceActionShift implements IActionHandler
 		if (activeChar.getAccessLevel().isGm())
 		{
 			activeChar.setTarget(target);
-			activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel()));
-			
 			L2DoorInstance door = (L2DoorInstance) target;
-			StaticObject su = new StaticObject(door, activeChar.isGM());
-			activeChar.sendPacket(su);
+			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
 			
 			NpcHtmlMessage html = new NpcHtmlMessage(0);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");

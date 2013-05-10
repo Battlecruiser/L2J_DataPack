@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 
 /**
  * Target Me effect implementation.
@@ -71,10 +70,6 @@ public class TargetMe extends L2Effect
 				{
 					// Target is different
 					getEffected().setTarget(getEffector());
-					if (getEffected().isPlayer())
-					{
-						getEffected().sendPacket(new MyTargetSelected(getEffector().getObjectId(), 0));
-					}
 				}
 			}
 			((L2Playable) getEffected()).setLockedTarget(getEffector());

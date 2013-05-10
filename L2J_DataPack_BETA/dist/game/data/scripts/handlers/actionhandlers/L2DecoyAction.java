@@ -21,10 +21,8 @@ package handlers.actionhandlers;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 
 public class L2DecoyAction implements IActionHandler
 {
@@ -39,7 +37,6 @@ public class L2DecoyAction implements IActionHandler
 		}
 		
 		activeChar.setTarget(target);
-		activeChar.sendPacket(new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel()));
 		return true;
 	}
 	
