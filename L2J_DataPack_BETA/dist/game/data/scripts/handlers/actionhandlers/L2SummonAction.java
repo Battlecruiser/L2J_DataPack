@@ -24,15 +24,11 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.handler.IActionHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
-import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jserver.gameserver.network.serverpackets.PetStatusShow;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
 public class L2SummonAction implements IActionHandler
 {
@@ -54,25 +50,10 @@ public class L2SummonAction implements IActionHandler
 		}
 		else if (activeChar.getTarget() != target)
 		{
-			if (Config.DEBUG)
-			{
-				_log.fine("new target selected:" + target.getObjectId());
-			}
-			
 			activeChar.setTarget(target);
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
-			MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel());
-			activeChar.sendPacket(my);
-			
-			// sends HP/MP status of the summon to other characters
-			StatusUpdate su = new StatusUpdate(target);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character) target).getCurrentHp());
-			su.addAttribute(StatusUpdate.MAX_HP, ((L2Character) target).getMaxHp());
-			activeChar.sendPacket(su);
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 			if (target.isAutoAttackable(activeChar))
 			{
 				if (Config.GEODATA > 0)

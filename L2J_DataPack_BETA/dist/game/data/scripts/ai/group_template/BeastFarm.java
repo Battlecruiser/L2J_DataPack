@@ -39,8 +39,6 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.serverpackets.AbstractNpcInfo;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -299,11 +297,6 @@ public class BeastFarm extends AbstractNpcAI
 			nextNpc.addDamageHate(player, 0, 99999);
 			nextNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 			
-			player.sendPacket(new MyTargetSelected(nextNpc.getObjectId(), player.getLevel() - nextNpc.getLevel()));
-			StatusUpdate su = new StatusUpdate(nextNpc);
-			su.addAttribute(StatusUpdate.CUR_HP, (int) nextNpc.getCurrentHp());
-			su.addAttribute(StatusUpdate.MAX_HP, nextNpc.getMaxHp());
-			player.sendPacket(su);
 			player.setTarget(nextNpc);
 		}
 	}

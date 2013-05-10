@@ -32,9 +32,6 @@ import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.Quest.QuestEventType;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
-import com.l2jserver.gameserver.network.serverpackets.MyTargetSelected;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.util.Rnd;
 
 public class L2NpcAction implements IActionHandler
@@ -77,28 +74,10 @@ public class L2NpcAction implements IActionHandler
 			if (target.isAutoAttackable(activeChar))
 			{
 				((L2Npc) target).getAI(); // wake up ai
-				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-				// The activeChar.getLevel() - getLevel() permit to display the correct color in the select window
-				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), activeChar.getLevel() - ((L2Character) target).getLevel());
-				activeChar.sendPacket(my);
-				// Send a Server->Client packet StatusUpdate of the L2Npc to the L2PcInstance to update its HP bar
-				StatusUpdate su = new StatusUpdate(target);
-				su.addAttribute(StatusUpdate.CUR_HP, (int) ((L2Character) target).getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, ((L2Character) target).getMaxHp());
-				activeChar.sendPacket(su);
 			}
-			else
-			{
-				// Send a Server->Client packet MyTargetSelected to the L2PcInstance activeChar
-				MyTargetSelected my = new MyTargetSelected(target.getObjectId(), 0);
-				activeChar.sendPacket(my);
-			}
-			// Send a Server->Client packet ValidateLocation to correct the L2Npc position and heading on the client
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 		}
 		else if (interact)
 		{
-			activeChar.sendPacket(new ValidateLocation((L2Character) target));
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !((L2Character) target).isAlikeDead())
 			{
