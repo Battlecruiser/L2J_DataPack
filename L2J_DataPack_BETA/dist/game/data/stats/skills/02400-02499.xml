@@ -708,12 +708,13 @@
 		</for>
 	</skill>
 	<skill id="2441" levels="1" name="Protection of Rune">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="755" />
+		<set name="itemConsumeId" val="10549" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -724,14 +725,20 @@
 				<player level="82" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="755" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2442" levels="1" name="Protection of Elemental">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="756" />
+		<set name="itemConsumeId" val="10550" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -742,14 +749,20 @@
 				<player level="82" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="756" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2443" levels="1" name="Protection of Alignment">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="757" />
+		<set name="itemConsumeId" val="10551" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -760,14 +773,20 @@
 				<player level="82" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="757" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2444" levels="1" name="Fighter's Will">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="758" />
+		<set name="itemConsumeId" val="10552" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -778,14 +797,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="758" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2445" levels="1" name="Archer's Will">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="759" />
+		<set name="itemConsumeId" val="10553" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -796,14 +821,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="759" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2446" levels="1" name="Anti-magic Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="760" />
+		<set name="itemConsumeId" val="10554" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -814,14 +845,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="760" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2447" levels="1" name="Seed of Revenge">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="761,762" />
+		<set name="itemConsumeId" val="10555" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -832,14 +869,23 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="761" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="762" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2448" levels="1" name="Hell Scream">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="763" />
+		<set name="itemConsumeId" val="10556" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -850,14 +896,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="763" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2449" levels="1" name="Song of Wind Storm">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="764" />
+		<set name="itemConsumeId" val="10557" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -868,15 +920,20 @@
 				<player level="76" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="764" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2450" levels="1" name="Dance of Blade Storm">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="765" />
-		<set name="magicLvl" val="76" />
+		<set name="itemConsumeId" val="10558" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -887,14 +944,20 @@
 				<player level="76" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="765" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2451" levels="1" name="Sixth Sense">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="766" />
+		<set name="itemConsumeId" val="10559" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -905,14 +968,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="766" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2452" levels="1" name="Expose Weak Point">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="767" />
+		<set name="itemConsumeId" val="10560" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -923,14 +992,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="767" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2453" levels="1" name="Exciting Adventure">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="768" />
+		<set name="itemConsumeId" val="10561" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -941,14 +1016,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="768" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2454" levels="1" name="Wind Riding">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="769" />
+		<set name="itemConsumeId" val="10562" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -959,14 +1040,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="769" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2455" levels="1" name="Ghost Walking">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="770" />
+		<set name="itemConsumeId" val="10563" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -977,14 +1064,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="770" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2456" levels="1" name="Flame Hawk">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="771" />
+		<set name="itemConsumeId" val="10564" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -995,14 +1088,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="771" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2457" levels="1" name="Arrow Rain">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="772" />
+		<set name="itemConsumeId" val="10565" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1013,14 +1112,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="772" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2458" levels="1" name="Ghost Piercing">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="773" />
+		<set name="itemConsumeId" val="10566" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1031,14 +1136,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="773" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2459" levels="1" name="Dread Pool">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="774" />
+		<set name="itemConsumeId" val="10567" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1049,14 +1160,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="774" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2460" levels="1" name="Weapon Blockade">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="775" />
+		<set name="itemConsumeId" val="10568" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1067,14 +1184,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="775" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2461" levels="1" name="Force of Destruction">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="776" />
+		<set name="itemConsumeId" val="10569" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1085,14 +1208,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="776" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2462" levels="1" name="Demolition Impact">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="777" />
+		<set name="itemConsumeId" val="10570" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1103,14 +1232,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="777" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2463" levels="1" name="Golem Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="778" />
+		<set name="itemConsumeId" val="10571" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1121,14 +1256,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="778" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2464" levels="1" name="Flame Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1492" />
+		<set name="itemConsumeId" val="10572" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1139,14 +1280,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1492" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2465" levels="1" name="Frost Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1493" />
+		<set name="itemConsumeId" val="10573" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1157,14 +1304,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1493" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2466" levels="1" name="Hurricane Armor">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1494" />
+		<set name="itemConsumeId" val="10574" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1175,14 +1328,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1494" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2467" levels="1" name="Vampiric Mist">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1495" />
+		<set name="itemConsumeId" val="10575" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1193,14 +1352,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1495" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2468" levels="1" name="Servitor Barrier">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1496" />
+		<set name="itemConsumeId" val="10576" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1211,14 +1376,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1496" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2469" levels="1" name="Excessive Loyalty">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1497" />
+		<set name="itemConsumeId" val="10577" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1229,14 +1400,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1497" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2470" levels="1" name="Mutual Response">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1498" />
+		<set name="itemConsumeId" val="10578" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1247,15 +1424,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1498" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2471" levels="1" name="Improve Combat">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1499" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10579" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1266,15 +1448,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1499" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2472" levels="1" name="Improve Magic">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1500" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10580" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1285,15 +1472,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1500" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2473" levels="1" name="Improve Condition">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1501" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10581" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1304,15 +1496,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1501" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2474" levels="1" name="Improve Critical">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1502" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10582" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1323,15 +1520,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1502" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2475" levels="1" name="Improve Shield Defense">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1503" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10583" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1342,15 +1544,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1503" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2476" levels="1" name="Improve Movement">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1504" />
-		<set name="magicLvl" val="70" />
+		<set name="itemConsumeId" val="10584" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1361,14 +1568,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1504" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2477" levels="1" name="Sublime Self-sacrifice">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1505" />
+		<set name="itemConsumeId" val="10585" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1379,14 +1592,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1505" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2478" levels="1" name="Blessing of Eva">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1506" />
+		<set name="itemConsumeId" val="10586" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1397,14 +1616,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1506" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2479" levels="1" name="Lord of Vampire">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1507" />
+		<set name="itemConsumeId" val="10587" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1415,14 +1640,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1507" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2480" levels="1" name="Throne Root">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1508" />
+		<set name="itemConsumeId" val="10588" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1433,14 +1664,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1508" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2481" levels="1" name="Seal of Limit">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1509" />
+		<set name="itemConsumeId" val="10589" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1451,14 +1688,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1509" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2482" levels="1" name="Spirit of Phoenix">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="784,785" />
+		<set name="itemConsumeId" val="10591" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1469,14 +1712,23 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="784" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="785" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2483" levels="1" name="Eva's Will">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="786,787" />
+		<set name="itemConsumeId" val="10592" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1487,14 +1739,23 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="786" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="787" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2484" levels="1" name="Pain of Shilen">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="788,789" />
+		<set name="itemConsumeId" val="10593" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1505,6 +1766,14 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="788" skillLvl="1" />
+			</effect>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="789" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2485" levels="1" name="Herb of Life">
 		<set name="hitTime" val="100" />
@@ -1540,12 +1809,13 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2488" levels="1" name="Wild Shot">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="790" />
+		<set name="itemConsumeId" val="10594" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1556,14 +1826,20 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="790" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2489" levels="1" name="Lightning Shock">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="791" />
+		<set name="itemConsumeId" val="10595" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -1574,6 +1850,11 @@
 				<player level="81" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="791" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
 		<!-- Confirmed CT2.5 -->
@@ -1599,71 +1880,92 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="663" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="663" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2492" levels="1" name="Transform Anakim">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="664" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="664" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2493" levels="1" name="Transform Venom">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="665" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="665" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2494" levels="1" name="Transform Gordon">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="666" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="666" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2495" levels="1" name="Transform Ranku">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="667" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="667" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2496" levels="1" name="Transform Kietch">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="668" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="668" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2497" levels="1" name="Transform Demon Prince">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="learnSkillId" val="669" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="669" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2498" levels="1" name="Bottle of Empty Soul">
 		<!-- Confirmed CT2.5 -->

@@ -123,6 +123,7 @@ public final class EffectMasterHandler
 		RestorationRandom.class,
 		Root.class,
 		ServitorShare.class,
+		SetSkill.class,
 		Signet.class,
 		SignetAntiSummon.class,
 		SignetMDam.class,
