@@ -75,12 +75,13 @@
 		</for>
 	</skill>
 	<skill id="2505" levels="1" name="Chant of Combat">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1517" />
+		<set name="itemConsumeId" val="10608" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -91,14 +92,20 @@
 				<player level="70" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1517" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2506" levels="1" name="Chant of Critical Attack">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1518" />
+		<set name="itemConsumeId" val="10609" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -109,14 +116,20 @@
 				<player level="72" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1518" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2507" levels="1" name="Chant of Blood Awakening">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="1519" />
+		<set name="itemConsumeId" val="10610" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -127,6 +140,11 @@
 				<player level="74" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="1519" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2508" levels="1" name="Squash Seed">
 		<!-- Confirmed CT2.5 -->
@@ -337,12 +355,13 @@
 		</cond>
 	</skill>
 	<skill id="2526" levels="1" name="Evasion Counter">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="818" />
+		<set name="itemConsumeId" val="12768" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -353,14 +372,20 @@
 				<player level="74" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="818" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2527" levels="1" name="Evasion Chance">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="819" />
+		<set name="itemConsumeId" val="12769" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -371,14 +396,20 @@
 				<player level="74" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="819" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2528" levels="1" name="Evasion Haste">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="820" />
+		<set name="itemConsumeId" val="12770" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -389,14 +420,20 @@
 				<player level="74" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="820" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2529" levels="1" name="Shadow Step">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="learnSkillId" val="821" />
+		<set name="itemConsumeId" val="12771" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="LEARN_SKILL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<and>
@@ -407,6 +444,11 @@
 				<player level="72" />
 			</and>
 		</cond>
+		<for>
+			<effect name="SetSkill" noicon="1" val="0">
+				<param skillId="821" skillLvl="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2530" levels="1" name="Recovery Item for Battlefield Use">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
