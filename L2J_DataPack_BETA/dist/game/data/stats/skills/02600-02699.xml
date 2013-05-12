@@ -538,16 +538,28 @@
 		</for>
 	</skill>
 	<skill id="2645" levels="1" name="Multi-Colored Honey Rice Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="13420" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="2646" levels="1" name="Honey Wheat Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="13421" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
 		<set name="hitTime" val="200" />

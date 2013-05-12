@@ -397,18 +397,30 @@
 		</for>
 	</skill>
 	<skill id="9038" levels="1" name="Steamed Rice Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15379" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="9039" levels="1" name="Steamed Rice Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15380" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="9040" levels="1" name="PC Cafe Points">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1035,11 +1047,17 @@
 		</for>
 	</skill>
 	<skill id="9081" levels="1" name="Christmas Cake">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="16403" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="9082" levels="1" name="White Christmas Petition">
 		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->
@@ -1053,11 +1071,17 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="9083" levels="1" name="Christmas Cake - event">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="16405" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="20000" />
+		</for>
 	</skill>
 	<skill id="9084" levels="1" name="White Christmas Petition - event">
 		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->

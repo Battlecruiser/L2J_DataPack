@@ -1146,12 +1146,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5774" levels="2" name="Pailaka Reward Energy Replenishing">
-		<!-- lvl1 restore 50%, lvl2 restore 100% of vitality -->
-		<!-- lvl1 used on pailaka 40, lvl2 used on pailaka 60/70 -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#value"> 10000 20000 </table>
+		<set name="aggroPoints" val="100" />
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1400" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="VitalityPointUp" noicon="1" val="#value" />
+		</for>
 	</skill>
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">
 		<set name="abnormalLvl" val="1" />

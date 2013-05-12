@@ -143,6 +143,7 @@ public final class EffectMasterHandler
 		TransferDamage.class,
 		Transformation.class,
 		UnsummonAgathion.class,
+		VitalityPointUp.class,
 		Warp.class,
 	};
 	
