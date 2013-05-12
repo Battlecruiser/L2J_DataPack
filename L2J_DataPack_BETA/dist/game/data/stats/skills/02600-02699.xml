@@ -153,8 +153,8 @@
 				<player weight="80" />
 			</and>
 		</cond>
-		<cond msgId="113">
-			<player npcIdRadius="32529,300" />
+		<cond msgId="113" addName="1">
+			<player npcIdRadius="32529,300,true" />
 		</cond>
 		<for>
 			<effect name="Restoration" noicon="1" val="0">

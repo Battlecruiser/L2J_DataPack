@@ -959,11 +959,19 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7072" levels="1" name="Test - Basic Trap">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="magicLvl" val="20" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="SummonTrap" noicon="1" val="0">
+				<param npcId="30048" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="7073" levels="1" name="Test - Find Trap">
 		<set name="hitTime" val="1000" />

@@ -21,7 +21,7 @@ package handlers.skillhandlers;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Trap;
+import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -60,8 +60,7 @@ public class Trap implements ISkillHandler
 						continue;
 					}
 					
-					final L2Trap trap = (L2Trap) target;
-					
+					final L2TrapInstance trap = (L2TrapInstance) target;
 					if (trap.getLevel() <= skill.getPower())
 					{
 						trap.setDetected(activeChar);
@@ -83,9 +82,8 @@ public class Trap implements ISkillHandler
 						continue;
 					}
 					
-					final L2Trap trap = (L2Trap) target;
-					
-					if (!trap.canSee(activeChar))
+					final L2TrapInstance trap = (L2TrapInstance) target;
+					if (!trap.canBeSeen(activeChar))
 					{
 						if (activeChar.isPlayer())
 						{
