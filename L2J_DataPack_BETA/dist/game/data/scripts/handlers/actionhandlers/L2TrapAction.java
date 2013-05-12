@@ -43,6 +43,6 @@ public class L2TrapAction implements IActionHandler
 	@Override
 	public InstanceType getInstanceType()
 	{
-		return InstanceType.L2Trap;
+		return InstanceType.L2TrapInstance;
 	}
 }

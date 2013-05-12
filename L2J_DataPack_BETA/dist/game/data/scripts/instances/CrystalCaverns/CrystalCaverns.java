@@ -38,10 +38,10 @@ import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.L2Trap;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -2910,7 +2910,7 @@ public class CrystalCaverns extends Quest
 	}
 	
 	@Override
-	public String onTrapAction(L2Trap trap, L2Character trigger, TrapAction action)
+	public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action)
 	{
 		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
 		if (tmpworld instanceof CCWorld)

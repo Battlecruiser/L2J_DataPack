@@ -697,20 +697,22 @@
 		</for>
 	</skill>
 	<skill id="836" levels="3" name="Oblivion Trap">
-		<!-- CT2.2 retail confirmed -->
-		<table name="#triggerSkillLvl"> 1 2 3 </table>
-		<set name="affectRange" val="350" />
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 64 68 72 </table>
+		<table name="#npcId"> 13125 13126 13127 </table>
 		<set name="hitTime" val="3000" />
-		<set name="mpConsume" val="50" />
-		<set name="npcId" val="13037" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="45000" />
-		<set name="skillType" val="SUMMON_TRAP" />
 		<set name="staticReuse" val="true" />
-		<set name="summonTotalLifeTime" val="30000" />
 		<set name="targetType" val="SELF" />
-		<set name="triggerSkillId" val="5679" />
-		<set name="triggerSkillLvl" val="#triggerSkillLvl" />
+		<for>
+			<effect name="SummonTrap" noicon="1" val="0">
+				<param npcId="#npcId" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="837" levels="1" name="Painkiller">
 		<!-- CT2.2 retail confirmed -->
