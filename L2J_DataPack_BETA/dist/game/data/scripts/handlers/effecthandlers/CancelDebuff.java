@@ -40,6 +40,12 @@ public class CancelDebuff extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return true;
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CANCEL_DEBUFF;

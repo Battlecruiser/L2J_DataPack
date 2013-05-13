@@ -39,6 +39,15 @@ public class FatalBlow extends L2Effect
 		super(env, template);
 	}
 	
+	/**
+	 * If is not evaded and blow lands.
+	 */
+	@Override
+	public boolean calcSuccess()
+	{
+		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill()) && Formulas.calcBlowSuccess(getEffector(), getEffected(), getSkill());
+	}
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
@@ -56,47 +65,38 @@ public class FatalBlow extends L2Effect
 			return false;
 		}
 		
-		// Check if skill is evaded
-		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, getSkill()))
+		boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
+		double damage = (int) Formulas.calcBlowDamage(activeChar, target, getSkill(), shld, ss);
+		if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
-			return false;
+			// Souls Formula (each soul increase +4%)
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
+			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
-		if (Formulas.calcBlowSuccess(activeChar, target, getSkill()))
+		// Crit rate base crit rate for skill, modified with STR bonus
+		if (Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
 		{
-			boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-			byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-			double damage = (int) Formulas.calcBlowDamage(activeChar, target, getSkill(), shld, ss);
-			if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
-			{
-				// Souls Formula (each soul increase +4%)
-				int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
-				damage *= 1 + (chargedSouls * 0.04);
-			}
-			
-			// Crit rate base crit rate for skill, modified with STR bonus
-			if (Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
-			{
-				damage *= 2;
-			}
-			
-			target.reduceCurrentHp(damage, activeChar, getSkill());
-			
-			// Check if damage should be reflected
-			Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
-			
-			// Manage attack or cast break of the target (calculating rate, sending message...)
-			if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
-			{
-				target.breakAttack();
-				target.breakCast();
-			}
-			
-			if (activeChar.isPlayer())
-			{
-				L2PcInstance activePlayer = activeChar.getActingPlayer();
-				activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
-			}
+			damage *= 2;
+		}
+		
+		target.reduceCurrentHp(damage, activeChar, getSkill());
+		
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
+		
+		// Manage attack or cast break of the target (calculating rate, sending message...)
+		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
+		{
+			target.breakAttack();
+			target.breakCast();
+		}
+		
+		if (activeChar.isPlayer())
+		{
+			L2PcInstance activePlayer = activeChar.getActingPlayer();
+			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		return true;
 	}

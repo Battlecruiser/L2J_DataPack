@@ -41,6 +41,12 @@ public class PhysicalAttack extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill());
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.PHYSICAL_ATTACK;
@@ -59,7 +65,7 @@ public class PhysicalAttack extends L2Effect
 		
 		if (((getSkill().getFlyRadius() > 0) || (getSkill().getFlyType() != null)) && activeChar.isMovementDisabled())
 		{
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addSkillName(getSkill());
 			activeChar.sendPacket(sm);
 			return false;
@@ -68,12 +74,6 @@ public class PhysicalAttack extends L2Effect
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
 		{
 			target.stopFakeDeath(true);
-		}
-		
-		// Check if skill is evaded
-		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, getSkill()))
-		{
-			return false;
 		}
 		
 		int damage = 0;

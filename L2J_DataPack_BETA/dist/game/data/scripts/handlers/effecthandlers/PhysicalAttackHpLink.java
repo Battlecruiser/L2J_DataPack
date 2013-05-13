@@ -41,6 +41,12 @@ public class PhysicalAttackHpLink extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill());
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.PHYSICAL_ATTACK_HP_LINK;
@@ -62,12 +68,6 @@ public class PhysicalAttackHpLink extends L2Effect
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addSkillName(getSkill());
 			activeChar.sendPacket(sm);
-			return false;
-		}
-		
-		// Check if skill is evaded.
-		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, getSkill()))
-		{
 			return false;
 		}
 		

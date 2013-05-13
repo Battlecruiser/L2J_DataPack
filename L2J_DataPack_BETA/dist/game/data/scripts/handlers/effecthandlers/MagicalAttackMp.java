@@ -40,6 +40,17 @@ public class MagicalAttackMp extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		if (getEffected().isInvul() || !Formulas.calcMagicAffected(getEffector(), getEffected(), getSkill()))
+		{
+			getEffector().sendPacket(SystemMessageId.MISSED_TARGET);
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.MAGICAL_ATTACK_MP;
@@ -56,40 +67,32 @@ public class MagicalAttackMp extends L2Effect
 			return false;
 		}
 		
-		boolean acted = Formulas.calcMagicAffected(activeChar, target, getSkill());
-		if (target.isInvul() || !acted)
+		boolean sps = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		final byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
+		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
+		double damage = Formulas.calcManaDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
+		double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
+		
+		if (damage > 0)
 		{
-			activeChar.sendPacket(SystemMessageId.MISSED_TARGET);
+			target.stopEffectsOnDamage(true);
+			target.setCurrentMp(target.getCurrentMp() - mp);
 		}
-		else
+		
+		if (target.isPlayer())
 		{
-			boolean sps = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-			boolean bss = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-			final byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-			final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
-			double damage = Formulas.calcManaDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
-			double mp = (damage > target.getCurrentMp() ? target.getCurrentMp() : damage);
-			
-			if (damage > 0)
-			{
-				target.stopEffectsOnDamage(true);
-				target.setCurrentMp(target.getCurrentMp() - mp);
-			}
-			
-			if (target.isPlayer())
-			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
-				sm.addCharName(activeChar);
-				sm.addNumber((int) mp);
-				target.sendPacket(sm);
-			}
-			
-			if (activeChar.isPlayer())
-			{
-				SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
-				sm2.addNumber((int) mp);
-				activeChar.sendPacket(sm2);
-			}
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_HAS_BEEN_DRAINED_BY_C1);
+			sm.addCharName(activeChar);
+			sm.addNumber((int) mp);
+			target.sendPacket(sm);
+		}
+		
+		if (activeChar.isPlayer())
+		{
+			SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENTS_MP_WAS_REDUCED_BY_S1);
+			sm2.addNumber((int) mp);
+			activeChar.sendPacket(sm2);
 		}
 		return true;
 	}
