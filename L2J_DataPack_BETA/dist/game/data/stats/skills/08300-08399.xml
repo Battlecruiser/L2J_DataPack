@@ -361,8 +361,10 @@
 		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="STEAL_BUFF" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="StealAbnormal" noicon="1" val="0"/>
+		</for>
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">
 		<!-- Confirmed CT2.5 -->

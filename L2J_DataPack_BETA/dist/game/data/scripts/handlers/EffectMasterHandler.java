@@ -132,6 +132,7 @@ public final class EffectMasterHandler
 		Sleep.class,
 		Spoil.class,
 		StaticDamage.class,
+		StealAbnormal.class,
 		Stun.class,
 		SummonAgathion.class,
 		SummonNpc.class,
