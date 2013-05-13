@@ -789,6 +789,7 @@
 	</skill>
 	<skill id="9161" levels="1" name="Vesper's Mighty Power">
 		<!-- Increase Physical Attack by 15%, Magical Attack by 20%, and Moving Speed by 10 for 10 minutes. -->
+		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
@@ -809,6 +810,7 @@
 	</skill>
 	<skill id="9162" levels="1" name="Vesper's Critical Attack Power">
 		<!-- Increase Physical Critical Attack Rate by 15, Magic Critical Attack Rate by 2, and Moving Speed by 10 for 10 minutes. Recovers 5% of the standard short-range physical damage inflicted on the enemy as HP. -->
+		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
@@ -830,6 +832,7 @@
 	</skill>
 	<skill id="9163" levels="1" name="Invincible Vesper">
 		<!-- Increase Max. Attack Speed by 20%, Magic Speed by 20%, and Moving Speed by 20 for 10 minutes. -->
+		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
