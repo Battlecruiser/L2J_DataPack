@@ -40,6 +40,12 @@ public class EnergyAttack extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill());
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.ENERGY_ATTACK;
@@ -51,12 +57,6 @@ public class EnergyAttack extends L2Effect
 		L2Character target = getEffected();
 		L2Character activeChar = getEffector();
 		if (activeChar.isAlikeDead())
-		{
-			return false;
-		}
-		
-		// Check if skill is evaded
-		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, getSkill()))
 		{
 			return false;
 		}

@@ -44,6 +44,12 @@ public class HealPercent extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return true;
+	}
+	
+	@Override
 	public boolean onActionTime()
 	{
 		return false;

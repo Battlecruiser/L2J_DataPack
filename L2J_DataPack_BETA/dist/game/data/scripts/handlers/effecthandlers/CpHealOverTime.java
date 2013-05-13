@@ -33,10 +33,15 @@ public class CpHealOverTime extends L2Effect
 		super(env, template);
 	}
 	
-	// Special constructor to steal this effect
 	public CpHealOverTime(Env env, L2Effect effect)
 	{
 		super(env, effect);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return true;
 	}
 	
 	@Override

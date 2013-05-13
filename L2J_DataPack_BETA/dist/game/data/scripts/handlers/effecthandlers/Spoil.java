@@ -39,6 +39,12 @@ public class Spoil extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return Formulas.calcMagicSuccess(getEffector(), getEffected(), getSkill());
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.SPOIL;
@@ -60,12 +66,9 @@ public class Spoil extends L2Effect
 			return false;
 		}
 		
-		if (Formulas.calcMagicSuccess(getEffector(), target, getSkill()))
-		{
-			target.setSpoil(true);
-			target.setIsSpoiledBy(getEffector().getObjectId());
-			getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
-		}
+		target.setSpoil(true);
+		target.setIsSpoiledBy(getEffector().getObjectId());
+		getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
 		return true;
 	}
