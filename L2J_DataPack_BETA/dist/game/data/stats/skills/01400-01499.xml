@@ -1280,8 +1280,10 @@
 		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="15000" />
-		<set name="skillType" val="STEAL_BUFF" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="StealAbnormal" noicon="1" val="0"/>
+		</for>
 	</skill>
 	<skill id="1441" levels="3" name="Soul to Empower">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
