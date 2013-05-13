@@ -952,6 +952,7 @@
 	</skill>
 	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
 		<!-- Converts 9% of inflicted physical-damage to HP for 20 minutes. -->
+		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="480" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
