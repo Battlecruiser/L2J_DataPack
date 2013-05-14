@@ -669,13 +669,13 @@ public class CastleChamberlain extends AbstractNpcAI
 						
 						switch (SevenSigns.getInstance().getCurrentPeriod())
 						{
-							case SevenSigns.PERIOD_SEAL_VALIDATION:
 							case SevenSigns.PERIOD_COMP_RECRUITING:
 								html.replace("%ss_event%", "1000509");
 								break;
 							case SevenSigns.PERIOD_COMPETITION:
 								html.replace("%ss_event%", "1000507");
 								break;
+							case SevenSigns.PERIOD_SEAL_VALIDATION:
 							case SevenSigns.PERIOD_COMP_RESULTS:
 								html.replace("%ss_event%", "1000508");
 								break;

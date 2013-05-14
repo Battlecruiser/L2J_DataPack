@@ -89,7 +89,7 @@ public class AdminShop implements IAdminCommandHandler
 		if (list != null)
 		{
 			activeChar.sendPacket(new BuyList(list, activeChar.getAdena(), 0));
-			activeChar.sendPacket(new ExBuySellList(activeChar, 0, false));
+			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
 		else
 		{
