@@ -952,7 +952,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1432" levels="2" name="Increase Power">
@@ -1004,7 +1004,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1434" levels="4" name="Dark Explosion">
@@ -1031,7 +1031,7 @@
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1435" levels="10" name="Death Mark" enchantGroup1="2" enchantGroup2="2">
@@ -1119,7 +1119,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" effectPower="30" />
 		</for>
 	</skill>
@@ -1173,18 +1173,19 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="#ench3Power" >
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant3for>
 		<enchant5for>
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="40" >
 				<sub order="0x40" stat="darkRes" val="#ench5DarkhVuln" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -1232,7 +1233,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1439" levels="5" name="Curse of Divinity">
@@ -1647,7 +1648,7 @@
 		<enchant2 name="flyRadius" val="#ench2Radius" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="99" />
 			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
@@ -1681,7 +1682,6 @@
 		<table name="#ench3Wind"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#ench4Duel"> 203 207 211 214 218 222 226 229 233 237 241 244 248 252 256 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<!-- set name="affectLimit" = "5;12" / -->
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
@@ -1709,7 +1709,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1451" levels="1" name="Fire Vortex Buster" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
@@ -2303,7 +2303,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1470" levels="1" name="Prahnah" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5" enchantGroup4="5">
@@ -2374,7 +2374,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1472" levels="1" name="Soul Sucking">

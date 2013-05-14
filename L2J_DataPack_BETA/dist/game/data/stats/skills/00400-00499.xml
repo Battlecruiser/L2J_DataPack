@@ -2350,7 +2350,7 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt,Ancient" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="477" levels="37" name="Dark Smash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -2391,7 +2391,7 @@
 			<using kind="Ancient" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="478" levels="15" name="Double Thrust">
@@ -2418,7 +2418,7 @@
 			<using kind="Rapier" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="479" levels="1" name="Hard March">
@@ -2625,7 +2625,7 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="489" levels="1" name="Shift Target">
@@ -2733,7 +2733,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="493" levels="28" name="Storm Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -2792,7 +2792,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="494" levels="37" name="Shoulder Charge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -2853,12 +2853,12 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="70" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 		<enchant2for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="#ench2Chance" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</enchant2for>
@@ -2915,15 +2915,15 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant1for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
 		</enchant1for>
 		<enchant2for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
 		</enchant2for>
 	</skill>
@@ -2975,7 +2975,7 @@
 			<using kind="Ancient" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="497" levels="16" name="Crushing Pain" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -3028,7 +3028,7 @@
 			<using kind="Ancient" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="498" levels="12" name="Contagion" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -3070,7 +3070,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="499" levels="3" name="Courage">

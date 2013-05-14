@@ -185,7 +185,7 @@
 			<using kind="Rapier" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="505" levels="28" name="Shining Edge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -239,7 +239,7 @@
 			<using kind="Rapier" />
 		</cond>
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
+			<effect name="SoulBlow" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="506" levels="4" name="Checkmate" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -286,7 +286,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="507" levels="37" name="Twin Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -336,7 +336,7 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="508" levels="31" name="Rising Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -387,7 +387,7 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="509" levels="34" name="Bleeding Shot" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -433,11 +433,11 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
 		</for>
 		<enchant3for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="DamOverTime" ticks="3" val="67" abnormalVisualEffect="bleed" effectPower="#ench3Power" />
 		</enchant3for>
 	</skill>
@@ -1055,7 +1055,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="527" levels="1" name="Iron Shield">
@@ -1350,7 +1350,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="540" levels="1" name="Wing Assault">
@@ -1375,7 +1375,7 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="541" levels="1" name="Transform Grail Apostle">

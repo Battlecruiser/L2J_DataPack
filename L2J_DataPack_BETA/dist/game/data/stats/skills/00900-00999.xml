@@ -1052,7 +1052,7 @@
 		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="951" levels="7" name="Wing Assault">
@@ -1080,7 +1080,7 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="952" levels="5" name="Collector's Experience">
@@ -1657,7 +1657,7 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="80" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>

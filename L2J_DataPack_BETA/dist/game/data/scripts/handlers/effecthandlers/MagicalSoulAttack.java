@@ -29,12 +29,12 @@ import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.util.Rnd;
 
 /**
- * Magical Attack effect implementation.
+ * Magical Soul Attack effect implementation.
  * @author Adry_85
  */
-public class MagicalAttack extends L2Effect
+public class MagicalSoulAttack extends L2Effect
 {
-	public MagicalAttack(Env env, EffectTemplate template)
+	public MagicalSoulAttack(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -57,8 +57,7 @@ public class MagicalAttack extends L2Effect
 		L2Character target = getEffected();
 		L2Character activeChar = getEffector();
 		
-		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (activeChar.isAlikeDead() || (getSkill().getId() == 4049))
+		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
@@ -73,6 +72,19 @@ public class MagicalAttack extends L2Effect
 		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
 		final byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
 		int damage = (int) Formulas.calcMagicDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
+		
+		// Curse of Divinity Formula (each buff increase +30%)
+		if (getSkill().getDependOnTargetBuff())
+		{
+			damage *= (((target.getBuffCount() * 0.3) + 1.3) / 4);
+		}
+		
+		if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		{
+			// Souls Formula (each soul increase +4%)
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
+			damage *= 1 + (chargedSouls * 0.04);
+		}
 		
 		if (damage > 0)
 		{
@@ -93,11 +105,6 @@ public class MagicalAttack extends L2Effect
 				target.reduceCurrentHp(damage, activeChar, getSkill());
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
-		}
-		
-		if (getSkill().isSuicideAttack())
-		{
-			activeChar.doDie(activeChar);
 		}
 		return true;
 	}

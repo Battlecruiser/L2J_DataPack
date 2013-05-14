@@ -30,12 +30,12 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Physical Attack effect implementation.
+ * Physical Soul Attack effect implementation.
  * @author Adry_85
  */
-public class PhysicalAttack extends L2Effect
+public class PhysicalSoulAttack extends L2Effect
 {
-	public PhysicalAttack(Env env, EffectTemplate template)
+	public PhysicalSoulAttack(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -88,6 +88,12 @@ public class PhysicalAttack extends L2Effect
 		
 		damage = (int) Formulas.calcPhysDam(activeChar, target, getSkill(), shld, false, ss);
 		
+		if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		{
+			// Souls Formula (each soul increase +4%)
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
+			damage *= 1 + (chargedSouls * 0.04);
+		}
 		if (crit)
 		{
 			damage *= 2;
