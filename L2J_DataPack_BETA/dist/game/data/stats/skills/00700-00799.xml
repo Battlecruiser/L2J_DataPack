@@ -2123,7 +2123,7 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="791" levels="1" name="Lightning Shock">
@@ -2150,7 +2150,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="ChanceSkillTrigger" val="0" triggeredId="6092" chanceType="ON_EXIT" effectPower="50">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
@@ -2240,11 +2240,11 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="60" />
 		</for>
 		<enchant3for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="#ench3Chance" />
 		</enchant3for>
 	</skill>

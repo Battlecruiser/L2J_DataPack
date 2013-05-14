@@ -370,7 +370,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
@@ -378,7 +378,7 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
@@ -418,7 +418,7 @@
 			<target active_effect_id="1512" />
 		</cond>
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 			<effect name="DispelBySlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -530,7 +530,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="pvpPower" val="#ench2Duel" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1517" levels="1" name="Chant of Combat">
@@ -1275,7 +1275,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalSoulAttack" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1545" levels="1" name="Soul Sucking">

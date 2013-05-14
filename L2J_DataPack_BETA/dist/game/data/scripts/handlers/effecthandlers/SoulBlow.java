@@ -29,12 +29,12 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Fatal Blow effect implementation.
+ * Soul Blow effect implementation.
  * @author Adry_85
  */
-public class FatalBlow extends L2Effect
+public class SoulBlow extends L2Effect
 {
-	public FatalBlow(Env env, EffectTemplate template)
+	public SoulBlow(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -68,6 +68,12 @@ public class FatalBlow extends L2Effect
 		boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
 		double damage = (int) Formulas.calcBlowDamage(activeChar, target, getSkill(), shld, ss);
+		if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		{
+			// Souls Formula (each soul increase +4%)
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
+			damage *= 1 + (chargedSouls * 0.04);
+		}
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
 		if (Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
