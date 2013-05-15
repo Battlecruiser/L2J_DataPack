@@ -19,7 +19,6 @@
 package handlers.skillhandlers;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
@@ -29,11 +28,7 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -51,23 +46,12 @@ public class Disablers implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
 	{
-		L2SkillType.STUN,
-		L2SkillType.ROOT,
-		L2SkillType.SLEEP,
-		L2SkillType.CONFUSION,
 		L2SkillType.AGGDAMAGE,
 		L2SkillType.AGGREDUCE,
 		L2SkillType.AGGREDUCE_CHAR,
 		L2SkillType.AGGREMOVE,
-		L2SkillType.MUTE,
 		L2SkillType.CONFUSE_MOB_ONLY,
-		L2SkillType.PARALYZE,
-		L2SkillType.ERASE,
-		L2SkillType.BETRAY,
-		L2SkillType.DISARM
 	};
-	
-	protected static final Logger _log = Logger.getLogger(L2Skill.class.getName());
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
@@ -95,81 +79,6 @@ public class Disablers implements ISkillHandler
 			
 			switch (type)
 			{
-				case BETRAY:
-				{
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-					{
-						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					}
-					else
-					{
-						SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-						sm.addCharName(target);
-						sm.addSkillName(skill);
-						activeChar.sendPacket(sm);
-					}
-					break;
-				}
-				case ROOT:
-				case DISARM:
-				case STUN:
-				case SLEEP:
-				case PARALYZE:
-				{
-					if (Formulas.calcBuffDebuffReflection(target, skill))
-					{
-						target = activeChar;
-					}
-					
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-					{
-						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					}
-					else
-					{
-						if (activeChar.isPlayer())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-							sm.addCharName(target);
-							sm.addSkillName(skill);
-							activeChar.sendPacket(sm);
-						}
-					}
-					break;
-				}
-				case CONFUSION:
-				case MUTE:
-				{
-					if (Formulas.calcBuffDebuffReflection(target, skill))
-					{
-						target = activeChar;
-					}
-					
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-					{
-						// stop same type effect if available
-						List<L2Effect> effects = target.getAllEffects();
-						for (L2Effect e : effects)
-						{
-							if ((e != null) && (e.getSkill() != null) && (e.getSkill().getSkillType() == type))
-							{
-								e.exit();
-							}
-						}
-						skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					}
-					else
-					{
-						if (activeChar.isPlayer())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-							sm.addCharName(target);
-							sm.addSkillName(skill);
-							activeChar.sendPacket(sm);
-						}
-					}
-					break;
-				}
 				case CONFUSE_MOB_ONLY:
 				{
 					// do nothing if not on mob
@@ -300,49 +209,6 @@ public class Disablers implements ISkillHandler
 					else
 					{
 						target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
-					}
-					break;
-				}
-				case ERASE:
-				{
-					// Doesn't affect siege golem or wild hog cannon
-					if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss) && !(target instanceof L2SiegeSummonInstance))
-					{
-						final L2PcInstance summonOwner = ((L2Summon) target).getOwner();
-						final L2Summon summon = summonOwner.getSummon();
-						if (summon != null)
-						{
-							// TODO: Retail confirmation for Soul of the Phoenix required.
-							if (summon.isPhoenixBlessed())
-							{
-								if (summon.isNoblesseBlessed())
-								{
-									summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
-								}
-							}
-							else if (summon.isNoblesseBlessed())
-							{
-								summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
-							}
-							else
-							{
-								summon.stopAllEffectsExceptThoseThatLastThroughDeath();
-							}
-							summon.abortAttack();
-							summon.abortCast();
-							summon.unSummon(summonOwner);
-							summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
-						}
-					}
-					else
-					{
-						if (activeChar.isPlayer())
-						{
-							SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-							sm.addCharName(target);
-							sm.addSkillName(skill);
-							activeChar.sendPacket(sm);
-						}
 					}
 					break;
 				}

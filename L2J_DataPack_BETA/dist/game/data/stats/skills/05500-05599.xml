@@ -44,7 +44,6 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -67,7 +66,6 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -792,7 +790,6 @@
 		<set name="power" val="80" /> <!-- Base land rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1557,7 +1554,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1621,7 +1617,6 @@
 		<set name="power" val="11" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed" />

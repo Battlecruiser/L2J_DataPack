@@ -724,7 +724,6 @@
 		<set name="power" val="#power" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Paralyze" val="0" special="freezing" />
@@ -1136,7 +1135,6 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
 			<effect name="DamOverTimePercent" ticks="3" val="0.02">
@@ -1235,7 +1233,6 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Paralyze" val="0" special="freezing" />

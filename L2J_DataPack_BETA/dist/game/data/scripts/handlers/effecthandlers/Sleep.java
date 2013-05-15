@@ -55,6 +55,7 @@ public class Sleep extends L2Effect
 		{
 			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
+		super.onExit();
 	}
 	
 	@Override
@@ -64,6 +65,6 @@ public class Sleep extends L2Effect
 		getEffected().abortCast();
 		getEffected().stopMove(null);
 		getEffected().getAI().notifyEvent(CtrlEvent.EVT_SLEEPING);
-		return true;
+		return super.onStart();
 	}
 }

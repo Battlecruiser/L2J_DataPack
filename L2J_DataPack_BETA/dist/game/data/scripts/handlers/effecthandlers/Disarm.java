@@ -57,6 +57,5 @@ public class Disarm extends L2Effect
 		
 		getEffected().getActingPlayer().disarmWeapons();
 		return true;
-		
 	}
 }

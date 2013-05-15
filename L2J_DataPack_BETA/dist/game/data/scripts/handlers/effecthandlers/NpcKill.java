@@ -18,50 +18,57 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectFlag;
+import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * Betray effect implementation.
- * @author decad
+ * Npc Kill effect implementation.
+ * @author Adry_85
  */
-public class Betray extends L2Effect
+public class NpcKill extends L2Effect
 {
-	public Betray(Env env, EffectTemplate template)
+	public NpcKill(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.BETRAYED.getMask();
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.DEBUFF;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		return L2EffectType.NONE;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if (getEffector().isPlayer() && getEffected().isSummon())
+		if ((getEffected() instanceof L2SiegeSummonInstance))
 		{
-			L2PcInstance targetOwner = getEffected().getActingPlayer();
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
+			return false;
+		}
+		
+		final L2PcInstance summonOwner = getEffected().getActingPlayer();
+		final L2Summon summon = getEffected().getSummon();
+		if (summon != null)
+		{
+			if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
+			{
+				summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
+			}
+			else
+			{
+				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
+			}
+			
+			summon.abortAttack();
+			summon.abortCast();
+			summon.unSummon(summonOwner);
+			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 			return true;
 		}
 		return false;

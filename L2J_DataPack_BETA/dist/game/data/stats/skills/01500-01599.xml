@@ -231,7 +231,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -319,7 +318,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
@@ -750,7 +748,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="4000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot">
@@ -1321,7 +1318,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="Fear" val="0" />

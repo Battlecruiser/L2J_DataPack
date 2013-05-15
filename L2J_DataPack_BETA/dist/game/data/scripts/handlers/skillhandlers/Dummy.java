@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
@@ -61,7 +62,14 @@ public class Dummy implements ISkillHandler
 				{
 					for (L2Character target : (L2Character[]) targets)
 					{
-						skill.getEffects(activeChar, target);
+						if (Formulas.calcBuffDebuffReflection(target, skill))
+						{
+							skill.getEffects(target, activeChar);
+						}
+						else
+						{
+							skill.getEffects(activeChar, target);
+						}
 					}
 				}
 				break;

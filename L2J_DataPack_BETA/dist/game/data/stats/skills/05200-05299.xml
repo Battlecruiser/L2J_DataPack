@@ -71,7 +71,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -97,7 +96,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -383,7 +381,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -409,7 +406,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -938,7 +934,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1007,7 +1002,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1036,7 +1030,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1062,7 +1055,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1093,7 +1085,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1123,7 +1114,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
@@ -1163,7 +1153,6 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="5257" />
@@ -1226,7 +1215,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1251,7 +1239,6 @@
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="STR" />
-		<set name="skillType" val="DISARM" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Disarm" val="0" abnormalVisualEffect="bleed" />
@@ -1346,7 +1333,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="9000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" val="0" abnormalVisualEffect="deathmark" />
@@ -1442,7 +1428,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -1489,7 +1474,6 @@
 		<set name="power" val="80" />
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1514,7 +1498,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="#traits" />
 		<for>

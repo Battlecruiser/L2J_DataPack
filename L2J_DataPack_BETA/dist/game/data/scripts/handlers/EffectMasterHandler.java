@@ -109,6 +109,7 @@ public final class EffectMasterHandler
 		MpConsumePerLevel.class,
 		Mute.class,
 		NoblesseBless.class,
+		NpcKill.class,
 		Paralyze.class,
 		Petrification.class,
 		PhoenixBless.class,

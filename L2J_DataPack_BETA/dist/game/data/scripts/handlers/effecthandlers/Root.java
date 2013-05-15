@@ -62,6 +62,6 @@ public class Root extends L2Effect
 	{
 		getEffected().stopMove(null);
 		getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
-		return true;
+		return super.onStart();
 	}
 }

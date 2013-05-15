@@ -506,7 +506,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -662,7 +661,6 @@
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -945,7 +943,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<for>
 			<effect name="Petrification" val="0" />
 		</for>
@@ -1088,7 +1085,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_EXIT" triggeredId="6779">
@@ -1114,7 +1110,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1155,7 +1150,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
