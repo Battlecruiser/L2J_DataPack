@@ -58,7 +58,6 @@
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -148,7 +147,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="MUTE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" val="0" />
@@ -330,7 +328,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="3" val="4" abnormalVisualEffect="poison" />
@@ -356,7 +353,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="3" val="4" abnormalVisualEffect="poison" />
@@ -382,7 +378,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" />
@@ -545,7 +540,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="ROOT" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -736,7 +730,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>

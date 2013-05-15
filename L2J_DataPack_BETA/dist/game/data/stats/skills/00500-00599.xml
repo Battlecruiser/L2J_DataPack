@@ -959,7 +959,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -2143,7 +2142,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="POISON" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -2532,7 +2530,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="11000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DOT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dmg" />

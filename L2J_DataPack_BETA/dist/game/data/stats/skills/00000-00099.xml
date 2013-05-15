@@ -66,10 +66,10 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="CONFUSION" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="Confusion" noicon="1" val="0" />
 			<effect name="RandomizeHate" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -427,10 +427,10 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="CONFUSION" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
+			<effect name="Confusion" noicon="1" val="0" />
 			<effect name="RandomizeHate" noicon="1" val="0" />
 			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
@@ -1462,7 +1462,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -2030,7 +2029,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2221,7 +2219,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BLEED" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />

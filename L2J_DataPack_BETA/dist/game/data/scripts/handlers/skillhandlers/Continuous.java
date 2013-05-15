@@ -47,11 +47,6 @@ public class Continuous implements ISkillHandler
 	{
 		L2SkillType.BUFF,
 		L2SkillType.DEBUFF,
-		L2SkillType.DOT,
-		L2SkillType.MDOT,
-		L2SkillType.POISON,
-		L2SkillType.BLEED,
-		L2SkillType.FEAR,
 		L2SkillType.CONT,
 		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION

@@ -52,6 +52,6 @@ public class Mute extends L2Effect
 	{
 		getEffected().abortCast();
 		getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
-		return true;
+		return super.onStart();
 	}
 }

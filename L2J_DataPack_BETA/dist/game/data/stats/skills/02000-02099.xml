@@ -765,9 +765,9 @@
 		<set name="operateType" val="A3" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="CONFUSION" />
 		<set name="targetType" val="AREA" />
 		<for>
+			<effect name="Confusion" noicon="1" val="0" />
 			<effect name="RandomizeHate" noicon="1" val="0" />
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />

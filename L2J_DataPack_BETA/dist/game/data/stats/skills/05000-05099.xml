@@ -107,7 +107,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Paralyze" val="0" />
@@ -151,7 +150,7 @@
 		<table name="#maxNegated"> 0 0 0 0 10 </table>
 		<table name="#power"> 0 0 0 10 10 </table>
 		<table name="#saveVs"> NULL NULL NULL MEN MEN </table>
-		<table name="#skillType"> BUFF DUMMY BUFF DEBUFF STUN </table>
+		<table name="#skillType"> BUFF DUMMY BUFF DEBUFF DUMMY </table>
 		<table name="#time"> 0 0 5 5 5 </table>
 		<table name="#traits"> NONE NONE NONE DERANGEMENT DERANGEMENT </table>
 		<set name="abnormalType" val="#abnormalTypes" />
@@ -250,7 +249,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="STUN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -345,7 +343,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1285,7 +1282,6 @@
 		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>

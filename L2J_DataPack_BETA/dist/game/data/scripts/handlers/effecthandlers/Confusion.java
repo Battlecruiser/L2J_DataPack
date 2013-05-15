@@ -52,7 +52,7 @@ public class Confusion extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.NONE;
+		return L2EffectType.CONFUSION;
 	}
 	
 	@Override
@@ -75,6 +75,7 @@ public class Confusion extends L2Effect
 			// Attacking the target
 			getEffected().setTarget(target);
 			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			return true;
 		}
 		return false;
 	}

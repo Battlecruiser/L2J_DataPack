@@ -240,7 +240,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -259,7 +258,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
-		<set name="skillType" val="PARALYZE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -540,7 +538,6 @@
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="MUTE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -860,10 +857,14 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6187" levels="1" name="Presentation - Lilith Battle">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6188" levels="1" name="Presentation - Lilith's Steward Battle1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -886,10 +887,14 @@
 		<set name="trait" val="HOLD" />
 	</skill>
 	<skill id="6191" levels="1" name="Presentation - Anakim Battle">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="700" />
+		<set name="effectRange" val="1200" />
+		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="6192" levels="1" name="Presentation - Anakim's Guardian Battle1">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

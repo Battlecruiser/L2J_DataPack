@@ -880,7 +880,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -975,7 +974,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MDOT" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2454,7 +2452,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="MUTE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -2490,7 +2487,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="900000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -2539,15 +2535,13 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BETRAY" />
 		<set name="targetType" val="ENEMY_SUMMON" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Betray" val="0" />
+			<effect name="Betray" val="0" effectPower="80" />
 		</for>
 	</skill>
 	<skill id="1381" levels="5" name="Mass Fear" enchantGroup1="1" enchantGroup2="1">
@@ -2579,7 +2573,6 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="75000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="FEAR" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -3150,9 +3143,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
+		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="1000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="SLEEP" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
@@ -3186,14 +3179,15 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="11000" />
-		<set name="skillType" val="ERASE" />
 		<set name="targetType" val="ENEMY_SUMMON" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
+		<for>
+			<effect name="NpcKill" val="0" effectPower="80" />
+		</for>
 	</skill>
 	<skill id="1396" levels="10" name="Magical Backfire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 -->
