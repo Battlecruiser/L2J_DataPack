@@ -73,7 +73,7 @@ public class SilentMove extends L2Effect
 			return false;
 		}
 		
-		double manaDam = calc() * getTickCount();
+		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
 		if (manaDam > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);

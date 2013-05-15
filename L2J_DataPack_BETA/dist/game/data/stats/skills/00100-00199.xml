@@ -1375,7 +1375,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="-1" val="0">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="holyPower" val="10" />
 			</effect>
 		</for>
@@ -1389,7 +1389,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="-1" val="0">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>

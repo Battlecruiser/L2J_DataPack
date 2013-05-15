@@ -65,21 +65,17 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getTickCount() >= (getTotalTickCount() - 2))
+		if (getTickCount() <= 2)
 		{
 			return true; // do nothing first 2 times
 		}
+		
 		int mpConsume = getSkill().getMpConsume();
-		
 		final L2PcInstance activeChar = getEffector().getActingPlayer();
-		
 		activeChar.rechargeShots(getSkill().useSoulShot(), getSkill().useSpiritShot());
-		
 		boolean sps = getSkill().useSpiritShot() && getEffector().isChargedShot(ShotType.SPIRITSHOTS);
 		boolean bss = getSkill().useSpiritShot() && getEffector().isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		
-		List<L2Character> targets = new ArrayList<>();
-		
+		final List<L2Character> targets = new ArrayList<>();
 		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if ((cha == null) || (cha == activeChar))

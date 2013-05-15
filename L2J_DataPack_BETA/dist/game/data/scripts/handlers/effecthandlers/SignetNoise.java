@@ -47,7 +47,7 @@ public class SignetNoise extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getTickCount() == (getTotalTickCount() - 1))
+		if (getTickCount() == 1)
 		{
 			return true; // do nothing first time
 		}

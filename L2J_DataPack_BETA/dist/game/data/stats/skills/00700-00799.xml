@@ -279,7 +279,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
 				<add order="0x40" stat="transDam" val="50" />
 			</effect>
 		</for>
