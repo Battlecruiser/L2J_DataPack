@@ -37,7 +37,7 @@ public class MpConsumePerLevel extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.MP_CONSUME_PER_LEVEL;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class MpConsumePerLevel extends L2Effect
 		}
 		
 		final double base = calc() * getEffectTemplate().getTotalTickCount();
-		double consume = ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime();
+		final double consume = (getAbnormalTime() > 0) ? ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime() : base;
 		if (consume > getEffected().getCurrentMp())
 		{
 			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
