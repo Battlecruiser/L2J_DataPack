@@ -48,7 +48,7 @@ public class DamOverTime extends L2Effect
 			return false;
 		}
 		
-		double damage = calc() * getTickCount();
+		double damage = calc() * getEffectTemplate().getTotalTickCount();
 		if (damage >= (getEffected().getCurrentHp() - 1))
 		{
 			if (getSkill().isToggle())
@@ -65,7 +65,6 @@ public class DamOverTime extends L2Effect
 				{
 					return true;
 				}
-				
 				damage = getEffected().getCurrentHp() - 1;
 			}
 		}

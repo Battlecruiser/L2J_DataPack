@@ -1056,21 +1056,21 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.5">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.5">
 				<add order="0x40" stat="accCombat" val="#accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.5">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.5">
 				<add order="0x40" stat="accCombat" val="#ench1accCombat">
 					<using kind="Pole" />
 				</add>
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="#ench2mpConsume">
+			<effect name="MpConsumePerLevel" ticks="3" val="#ench2mpConsume">
 				<add order="0x40" stat="accCombat" val="4">
 					<using kind="Pole" />
 				</add>
@@ -1113,19 +1113,19 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="1">
+			<effect name="MpConsumePerLevel" ticks="3" val="1">
 				<sub order="0x40" stat="stunVuln" val="#stunVuln" />
 				<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="1">
+			<effect name="MpConsumePerLevel" ticks="3" val="1">
 				<sub order="0x40" stat="stunVuln" val="#ench1stunVuln" />
 				<sub order="0x40" stat="sleepVuln" val="#ench1sleepVuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="#ench2mpConsume">
+			<effect name="MpConsumePerLevel" ticks="3" val="#ench2mpConsume">
 				<sub order="0x40" stat="stunVuln" val="25" />
 				<sub order="0x40" stat="sleepVuln" val="40" />
 			</effect>
@@ -2321,7 +2321,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
 				<add order="0x40" stat="vengeancePdam" val="3" />
 			</effect>
 		</for>
@@ -2427,7 +2427,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.4">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.4">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -2438,7 +2438,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="-1" val="0">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="darkPower" val="10" />
 			</effect>
 		</for>
@@ -2451,7 +2451,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" abnormalTime="-1" val="0">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="darkRes" val="#darkRes" />
 			</effect>
 		</for>

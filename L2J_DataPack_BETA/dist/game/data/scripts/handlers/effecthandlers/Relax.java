@@ -73,8 +73,7 @@ public class Relax extends L2Effect
 			}
 		}
 		
-		double manaDam = calc() * getTickCount();
-		
+		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
 		if (manaDam > getEffected().getCurrentMp())
 		{
 			if (getSkill().isToggle())

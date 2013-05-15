@@ -2057,12 +2057,12 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
 				<add order="0x40" stat="transDam" val="#power" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="MpConsumePerLevel" ticks="3" abnormalTime="-1" val="0.2">
+			<effect name="MpConsumePerLevel" ticks="3" val="0.2">
 				<add order="0x40" stat="transDam" val="#ench1power" />
 			</effect>
 		</enchant1for>
@@ -2720,12 +2720,12 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaDamOverTime" ticks="3" abnormalTime="-1" val="#mdot">
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot">
 				<add order="0x40" stat="pDef" val="#def" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ManaDamOverTime" ticks="3" abnormalTime="-1" val="10">
+			<effect name="ManaDamOverTime" ticks="3" val="10">
 				<add order="0x40" stat="pDef" val="#ench1def" />
 			</effect>
 		</enchant1for>
