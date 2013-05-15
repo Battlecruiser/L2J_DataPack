@@ -43,6 +43,12 @@ public class Transformation extends L2Effect
 	}
 	
 	@Override
+	public boolean canBeStolen()
+	{
+		return false;
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.TRANSFORMATION;
