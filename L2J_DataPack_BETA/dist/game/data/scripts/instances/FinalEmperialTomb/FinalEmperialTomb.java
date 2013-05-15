@@ -56,6 +56,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -915,7 +916,7 @@ public class FinalEmperialTomb extends Quest
 					if ((_world.frintezza != null) && !_world.frintezza.isDead() && (_world.activeScarlet != null) && !_world.activeScarlet.isDead())
 					{
 						List<L2Character> targetList = new FastList<>();
-						if ((skill.getSkillType() == L2SkillType.STUN) || (skill.getSkillType() == L2SkillType.DEBUFF))
+						if (skill.hasEffectType(L2EffectType.STUN) || (skill.getSkillType() == L2SkillType.DEBUFF))
 						{
 							for (int objId : _world.getAllowed())
 							{
