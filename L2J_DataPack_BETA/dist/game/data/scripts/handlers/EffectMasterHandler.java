@@ -52,6 +52,7 @@ public final class EffectMasterHandler
 		ChameleonRest.class,
 		ChanceSkillTrigger.class,
 		ChangeFace.class,
+		ChangeFishingMastery.class,
 		ChangeHairColor.class,
 		ChangeHairStyle.class,
 		CharmOfCourage.class,
