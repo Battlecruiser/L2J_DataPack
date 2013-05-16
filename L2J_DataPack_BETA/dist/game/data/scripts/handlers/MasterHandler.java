@@ -207,7 +207,6 @@ import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Continuous;
-import handlers.skillhandlers.Craft;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
 import handlers.skillhandlers.Disablers;
@@ -509,7 +508,6 @@ public class MasterHandler
 			BallistaBomb.class,
 			BeastSkills.class,
 			Continuous.class,
-			Craft.class,
 			DeluxeKey.class,
 			Detection.class,
 			Disablers.class,

@@ -110,6 +110,8 @@ public final class EffectMasterHandler
 		Mute.class,
 		NoblesseBless.class,
 		NpcKill.class,
+		OpenCommonRecipeBook.class,
+		OpenDwarfRecipeBook.class,
 		Paralyze.class,
 		Petrification.class,
 		PhoenixBless.class,

@@ -463,18 +463,24 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="1321" levels="1" name="Dwarven Craft">
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DWARVEN_CRAFT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="OpenDwarfRecipeBook" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1322" levels="1" name="Common Craft">
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="COMMON_CRAFT" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="OpenCommonRecipeBook" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1323" levels="1" name="Noblesse Blessing">
 		<!-- Confirmed CT2.5 -->
