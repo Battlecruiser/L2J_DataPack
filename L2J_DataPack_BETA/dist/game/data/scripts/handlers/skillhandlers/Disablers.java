@@ -18,8 +18,6 @@
  */
 package handlers.skillhandlers;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.ai.L2AttackableAI;
@@ -86,8 +84,7 @@ public class Disablers implements ISkillHandler
 					{
 						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
 						{
-							List<L2Effect> effects = target.getAllEffects();
-							for (L2Effect e : effects)
+							for (L2Effect e : target.getAllEffects())
 							{
 								if (e.getSkill().getSkillType() == type)
 								{

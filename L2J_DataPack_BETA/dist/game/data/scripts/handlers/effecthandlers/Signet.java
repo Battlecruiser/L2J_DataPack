@@ -18,7 +18,8 @@
  */
 package handlers.effecthandlers;
 
-import javolution.util.FastList;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -58,18 +59,18 @@ public class Signet extends L2Effect
 	{
 		if (_skill == null)
 		{
-			return true;
+			return false;
 		}
-		int mpConsume = _skill.getMpConsume();
 		
+		int mpConsume = _skill.getMpConsume();
 		if (mpConsume > getEffector().getCurrentMp())
 		{
 			getEffector().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
-		
 		getEffector().reduceCurrentMp(mpConsume);
-		FastList<L2Character> targets = FastList.newInstance();
+		
+		List<L2Character> targets = new ArrayList<>();
 		for (L2Character cha : getEffected().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
 			if (cha == null)
@@ -82,7 +83,6 @@ public class Signet extends L2Effect
 				continue;
 			}
 			
-			// there doesn't seem to be a visible effect with MagicSkillLaunched packet...
 			getEffected().broadcastPacket(new MagicSkillUse(getEffected(), cha, _skill.getId(), _skill.getLevel(), 0, 0));
 			targets.add(cha);
 		}
@@ -91,8 +91,7 @@ public class Signet extends L2Effect
 		{
 			getEffector().callSkill(_skill, targets.toArray(new L2Character[targets.size()]));
 		}
-		FastList.recycle(targets);
-		return true;
+		return false;
 	}
 	
 	@Override

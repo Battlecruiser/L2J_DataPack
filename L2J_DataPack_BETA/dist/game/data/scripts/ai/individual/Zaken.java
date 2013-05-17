@@ -18,8 +18,6 @@
  */
 package ai.individual;
 
-import java.util.List;
-
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.Config;
@@ -262,19 +260,15 @@ public class Zaken extends AbstractNpcAI
 			}
 			int sk_4223 = 0;
 			int sk_4227 = 0;
-			List<L2Effect> effects = npc.getAllEffects();
-			if ((effects != null) && (effects.size() != 0))
+			for (L2Effect e : npc.getAllEffects())
 			{
-				for (L2Effect e : effects)
+				if (e.getSkill().getId() == 4227)
 				{
-					if (e.getSkill().getId() == 4227)
-					{
-						sk_4227 = 1;
-					}
-					if (e.getSkill().getId() == 4223)
-					{
-						sk_4223 = 1;
-					}
+					sk_4227 = 1;
+				}
+				if (e.getSkill().getId() == 4223)
+				{
+					sk_4223 = 1;
 				}
 			}
 			if (getTimeHour() < 5)
@@ -791,15 +785,11 @@ public class Zaken extends AbstractNpcAI
 			if (attacker.getMountType() == 1)
 			{
 				int sk_4258 = 0;
-				List<L2Effect> effects = attacker.getAllEffects();
-				if ((effects != null) && (effects.size() != 0))
+				for (L2Effect e : attacker.getAllEffects())
 				{
-					for (L2Effect e : effects)
+					if (e.getSkill().getId() == 4258)
 					{
-						if (e.getSkill().getId() == 4258)
-						{
-							sk_4258 = 1;
-						}
+						sk_4258 = 1;
 					}
 				}
 				if (sk_4258 == 0)

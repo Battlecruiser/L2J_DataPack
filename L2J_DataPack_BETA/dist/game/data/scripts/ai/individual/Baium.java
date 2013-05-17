@@ -423,15 +423,11 @@ public class Baium extends AbstractNpcAI
 		if (attacker.getMountType() == 1)
 		{
 			boolean hasStriderDebuff = false;
-			List<L2Effect> effects = attacker.getAllEffects();
-			if ((effects != null) && (!effects.isEmpty()))
+			for (L2Effect e : attacker.getAllEffects())
 			{
-				for (L2Effect e : effects)
+				if (e.getSkill().getId() == HINDER_STRIDER.getSkillId())
 				{
-					if (e.getSkill().getId() == HINDER_STRIDER.getSkillId())
-					{
-						hasStriderDebuff = true;
-					}
+					hasStriderDebuff = true;
 				}
 			}
 			if (!hasStriderDebuff)
