@@ -64,7 +64,12 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		int mpConsume = getSkill().getMpConsume();
+		if (_actor == null)
+		{
+			return false;
+		}
+		
+		final int mpConsume = getSkill().getMpConsume();
 		final L2PcInstance activeChar = getEffector().getActingPlayer();
 		activeChar.rechargeShots(getSkill().useSoulShot(), getSkill().useSpiritShot());
 		boolean sps = getSkill().useSpiritShot() && getEffector().isChargedShot(ShotType.SPIRITSHOTS);
