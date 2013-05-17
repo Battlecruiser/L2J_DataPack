@@ -366,13 +366,20 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="72000000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21237" levels="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
 		<!-- High Five Skill -->
@@ -430,14 +437,20 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="52195,218787,-3231" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="52195" y="218787" z="-3231" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21243" levels="1" name="Freya's Call">
 		<!-- Can move to near Freya's Headquarters. Reuse delay 30 minutes. -->
@@ -445,14 +458,20 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="102728,-126242,-2840" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="102728" y="-126242" z="-2840" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21244" levels="1" name="Frintezza's Call">
 		<!-- Can move to near Frintezza's Headquarters. Reuse delay 30 minutes. -->
@@ -460,14 +479,20 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="181378,-80915,-2731" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="181378" y="-80915" z="-2731" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21245" levels="1" name="Release Seal on Agathion - Rudolph">
 		<!-- High Five Skill -->

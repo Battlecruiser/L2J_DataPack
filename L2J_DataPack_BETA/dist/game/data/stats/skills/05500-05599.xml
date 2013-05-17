@@ -632,16 +632,23 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16031" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5541" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="castRange" val="400" />
@@ -688,16 +695,23 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
 			<player agathionId="16032" />
 		</cond>
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5545" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="castRange" val="400" />

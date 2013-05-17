@@ -967,13 +967,20 @@
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3147" levels="1" name="Item Skill: Recall">
 		<set name="hitTime" val="1500" />
@@ -983,13 +990,20 @@
 		<set name="mpInitialConsume" val="32" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
 		<table name="#absorbDam"> 3 3 3 4 4 4 5 5 5 6 </table>

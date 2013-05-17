@@ -208,36 +208,54 @@
 	</skill>
 	<skill id="2213" levels="22" name="Escape - to X Town">
 		<!-- Confirmed CT2.5 -->
-		<table name="#teleCoords"> -84200,244566,-3728 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -80831,149808,-3040 -12728,122726,-3112 15633,142962,-2696 17860,170191,-3496 83378,147999,-3400 105760,113064,-3176 111388,219331,-3544 82916,53210,-1488 85289,16225,-3672 117052,76884,-2688 146818,25807,-2008 147922,-55316,-2728 43840,-47779,-792 87326,-143370,-1319 149800,-79999,-5568 107946,-52280,-2408 -118092,46955,342 </table>
+		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
+		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
+		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408 342 </table>
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="#teleCoords" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2214" levels="10" name="Scroll of Escape to Talking Island">
 		<!-- Confirmed CT2.5 -->
 		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
-		<table name="#teleCoords"> -84200,244566,-3728 46915,51441,-2976 9723,15576,-4568 -45208,-112502,-240 115158,-178170,-880 -118092,46955,342 0,0,0 0,0,0 0,0,0 83378,147999,-3400 </table>
+		<table name="#coordX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
+		<table name="#coordY"> 244566 51441 15576 -112502 -178170 46955 0 0 0 147999 </table>
+		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 342 0 0 0 -3400 </table>
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="#teleCoords" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="#coordX" y="#coordY" z="#coordZ" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2215" levels="4" name="Item - Quest Special Box">
 		<!-- Confirmed CT2.5 -->

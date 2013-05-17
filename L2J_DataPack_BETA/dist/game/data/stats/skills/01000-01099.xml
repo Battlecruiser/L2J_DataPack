@@ -1177,22 +1177,32 @@
 		</for>
 	</skill>
 	<skill id="1050" levels="2" name="Return">
+		<!-- Confirmed CT2.5 -->
 		<table name="#hitTime"> 20000 1500 </table>
+		<table name="#magicLvl"> 40 56 </table>
 		<table name="#mpConsume"> 84 122 </table>
 		<table name="#mpInitialConsume"> 21 31 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1056" levels="12" name="Cancellation">
 		<table name="#magicLvl"> 48 52 56 58 60 62 64 66 68 70 72 74 </table>

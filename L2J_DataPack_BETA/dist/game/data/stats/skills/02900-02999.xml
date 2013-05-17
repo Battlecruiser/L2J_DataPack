@@ -167,19 +167,27 @@
 		</for>
 	</skill>
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="89417,-44506,-2126" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="89417" y="-44506" z="-2136" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
 		<!-- Confirmed CT2.5 -->

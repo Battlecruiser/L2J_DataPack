@@ -18,20 +18,24 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Give SP effect implementation.
+ * Teleport effect implementation.
  * @author Adry_85
  */
-public class GiveSp extends L2Effect
+public class Teleport extends L2Effect
 {
-	public GiveSp(Env env, EffectTemplate template)
+	private final Location _loc;
+	
+	public Teleport(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_loc = new Location(template.getParameters().getInteger("x", 0), template.getParameters().getInteger("y", 0), template.getParameters().getInteger("z", 0));
 	}
 	
 	@Override
@@ -43,7 +47,7 @@ public class GiveSp extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.NONE;
+		return L2EffectType.TELEPORT;
 	}
 	
 	@Override
@@ -55,12 +59,7 @@ public class GiveSp extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
-		{
-			return false;
-		}
-		
-		getEffector().getActingPlayer().addExpAndSp(0, (int) calc());
+		getEffected().teleToLocation(_loc, true);
 		return true;
 	}
 }

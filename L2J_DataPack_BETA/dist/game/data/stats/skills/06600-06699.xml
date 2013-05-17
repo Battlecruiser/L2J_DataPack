@@ -1033,38 +1033,53 @@
 		</for>
 	</skill>
 	<skill id="6683" levels="1" name="Maguen Recall">
-		<set name="affectRange" val="100" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="OWNER_PET" />
-		<set name="teleCoords" val="-178244,153389,2472" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="-178244" y="153389" z="2472" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6684" levels="1" name="Maguen Recall">
-		<set name="affectRange" val="100" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
+		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="PARTY" />
-		<set name="teleCoords" val="-178244,153389,2472" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="-178244" y="153389" z="2472" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6685" levels="1" name="Santa Claus's Gift">
 		<!-- Confirmed CT2.5 -->

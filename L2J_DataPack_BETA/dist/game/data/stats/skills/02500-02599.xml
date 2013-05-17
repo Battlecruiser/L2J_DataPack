@@ -344,18 +344,26 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2525" levels="1" name="Scroll to move to Kamael Village">
+		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TELEPORT" />
 		<set name="targetType" val="SELF" />
-		<set name="teleCoords" val="-120050,44500,360" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Teleport" noicon="1" val="0">
+				<param x="-120050" y="44500" z="360" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2526" levels="1" name="Evasion Counter">
 		<!-- Confirmed CT2.5 -->
@@ -464,13 +472,20 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2532" levels="1" name="Pathfinder Supplies">
 		<!-- Confirmed CT2.5 -->
@@ -1529,26 +1544,40 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2595" levels="1" name="Gran Kain's Blessed Scroll of Escape">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="RECALL" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
-			<not>
-				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
-			</not>
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
 		</cond>
+		<for>
+			<effect name="Escape" noicon="1" val="0">
+				<param escapeType="Town" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="2596" levels="1" name="Gran Kain's Blessed Scroll of Resurrection">
 		<set name="castRange" val="400" />
