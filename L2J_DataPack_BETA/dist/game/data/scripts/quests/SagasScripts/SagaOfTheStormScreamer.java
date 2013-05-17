@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Storm Screamer (90)
  * @author Emperorc
  */
 public class SagaOfTheStormScreamer extends SagasSuperClass
 {
-	public static String qn1 = "90_SagaOfTheStormScreamer";
-	public static int qnu = 90;
-	public static String qna = "Saga of the Storm Screamer";
-	
 	public SagaOfTheStormScreamer()
 	{
-		super(qnu, qn1, qna);
+		super(90, "90_SagaOfTheStormScreamer", "Saga of the Storm Screamer");
 		NPC = new int[]
 		{
 			30175,
@@ -67,7 +65,6 @@ public class SagaOfTheStormScreamer extends SagasSuperClass
 			27239,
 			27256
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			110
@@ -76,23 +73,11 @@ public class SagaOfTheStormScreamer extends SagasSuperClass
 		{
 			0x28
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124376,
-			124355
-		};
-		Y = new int[]
-		{
-			-92823,
-			82127,
-			82155
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2796,
-			-2803
+			new Location(161719, -92823, -1893),
+			new Location(124376, 82127, -2796),
+			new Location(124355, 82155, -2803)
 		};
 		Text = new String[]
 		{

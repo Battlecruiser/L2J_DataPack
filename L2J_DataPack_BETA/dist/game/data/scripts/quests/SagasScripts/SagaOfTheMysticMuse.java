@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Mystic Muse (89)
  * @author Emperorc
  */
 public class SagaOfTheMysticMuse extends SagasSuperClass
 {
-	public static String qn1 = "89_SagaOfTheMysticMuse";
-	public static int qnu = 89;
-	public static String qna = "Saga of the Mystic Muse";
-	
 	public SagaOfTheMysticMuse()
 	{
-		super(qnu, qn1, qna);
+		super(89, "89_SagaOfTheMysticMuse", "Saga of the Mystic Muse");
 		NPC = new int[]
 		{
 			30174,
@@ -67,7 +65,6 @@ public class SagaOfTheMysticMuse extends SagasSuperClass
 			27238,
 			27255
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			103
@@ -76,23 +73,11 @@ public class SagaOfTheMysticMuse extends SagasSuperClass
 		{
 			0x1b
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			119518,
-			181227,
-			181215
-		};
-		Y = new int[]
-		{
-			-28658,
-			36703,
-			36676
-		};
-		Z = new int[]
-		{
-			-3811,
-			-4816,
-			-4812
+			new Location(119518, -28658, -3811),
+			new Location(181227, 36703, -4816),
+			new Location(181215, 36676, -4812)
 		};
 		Text = new String[]
 		{

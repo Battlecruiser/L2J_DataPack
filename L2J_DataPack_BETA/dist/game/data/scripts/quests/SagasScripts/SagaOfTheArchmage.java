@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Archmage (88)
  * @author Emperorc
  */
 public class SagaOfTheArchmage extends SagasSuperClass
 {
-	public static String qn1 = "88_SagaOfTheArchmage";
-	public static int qnu = 88;
-	public static String qna = "Saga of the Archmage";
-	
 	public SagaOfTheArchmage()
 	{
-		super(qnu, qn1, qna);
+		super(88, "88_SagaOfTheArchmage", "Saga of the Archmage");
 		NPC = new int[]
 		{
 			30176,
@@ -67,7 +65,6 @@ public class SagaOfTheArchmage extends SagasSuperClass
 			27237,
 			27254
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			94
@@ -76,23 +73,11 @@ public class SagaOfTheArchmage extends SagasSuperClass
 		{
 			0x0c
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			46066,
-			46087
-		};
-		Y = new int[]
-		{
-			-40640,
-			-36396,
-			-36372
-		};
-		Z = new int[]
-		{
-			-3042,
-			-1685,
-			-1685
+			new Location(191046, -40640, -3042),
+			new Location(46066, -36396, -1685),
+			new Location(46087, -36372, -1685)
 		};
 		Text = new String[]
 		{

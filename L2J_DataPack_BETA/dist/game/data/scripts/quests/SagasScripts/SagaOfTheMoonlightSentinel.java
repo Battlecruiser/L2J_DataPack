@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Moonlight Sentinel (83)
  * @author Emperorc
  */
 public class SagaOfTheMoonlightSentinel extends SagasSuperClass
 {
-	public static String qn1 = "83_SagaOfTheMoonlightSentinel";
-	public static int qnu = 83;
-	public static String qna = "Saga of the Moonlight Sentinel";
-	
 	public SagaOfTheMoonlightSentinel()
 	{
-		super(qnu, qn1, qna);
+		super(83, "83_SagaOfTheMoonlightSentinel", "Saga of the Moonlight Sentinel");
 		NPC = new int[]
 		{
 			30702,
@@ -67,7 +65,6 @@ public class SagaOfTheMoonlightSentinel extends SagasSuperClass
 			27232,
 			27306
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			102
@@ -76,23 +73,11 @@ public class SagaOfTheMoonlightSentinel extends SagasSuperClass
 		{
 			0x18
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			181227,
-			181215
-		};
-		Y = new int[]
-		{
-			-92823,
-			36703,
-			36676
-		};
-		Z = new int[]
-		{
-			-1893,
-			-4816,
-			-4812
+			new Location(161719, -92823, -1893),
+			new Location(181227, 36703, -4816),
+			new Location(181215, 36676, -4812)
 		};
 		Text = new String[]
 		{

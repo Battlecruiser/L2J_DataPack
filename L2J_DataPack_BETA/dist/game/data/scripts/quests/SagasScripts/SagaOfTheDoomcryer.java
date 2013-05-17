@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Doomcryer (78)
  * @author Emperorc
  */
 public class SagaOfTheDoomcryer extends SagasSuperClass
 {
-	public static String qn1 = "78_SagaOfTheDoomcryer";
-	public static int qnu = 78;
-	public static String qna = "Saga of the Doomcryer";
-	
 	public SagaOfTheDoomcryer()
 	{
-		super(qnu, qn1, qna);
+		super(78, "78_SagaOfTheDoomcryer", "Saga of the Doomcryer");
 		NPC = new int[]
 		{
 			31336,
@@ -67,7 +65,6 @@ public class SagaOfTheDoomcryer extends SagasSuperClass
 			27227,
 			27285
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			116
@@ -76,23 +73,11 @@ public class SagaOfTheDoomcryer extends SagasSuperClass
 		{
 			0x34
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			46087,
-			46066
-		};
-		Y = new int[]
-		{
-			-40640,
-			-36372,
-			-36396
-		};
-		Z = new int[]
-		{
-			-3042,
-			-1685,
-			-1685
+			new Location(191046, -40640, -3042),
+			new Location(46087, -36372, -1685),
+			new Location(46066, -36396, -1685)
 		};
 		Text = new String[]
 		{

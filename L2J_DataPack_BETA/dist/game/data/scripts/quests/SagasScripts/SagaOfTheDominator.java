@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Dominator (77)
  * @author Emperorc
  */
 public class SagaOfTheDominator extends SagasSuperClass
 {
-	public static String qn1 = "77_SagaOfTheDominator";
-	public static int qnu = 77;
-	public static String qna = "Saga of the Dominator";
-	
 	public SagaOfTheDominator()
 	{
-		super(qnu, qn1, qna);
+		super(77, "77_SagaOfTheDominator", "Saga of the Dominator");
 		NPC = new int[]
 		{
 			31336,
@@ -67,7 +65,6 @@ public class SagaOfTheDominator extends SagasSuperClass
 			27226,
 			27262
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			115
@@ -76,23 +73,11 @@ public class SagaOfTheDominator extends SagasSuperClass
 		{
 			0x33
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			47429,
-			47391
-		};
-		Y = new int[]
-		{
-			-74121,
-			-56923,
-			-56929
-		};
-		Z = new int[]
-		{
-			-2871,
-			-2383,
-			-2370
+			new Location(164650, -74121, -2871),
+			new Location(47429, -56923, -2383),
+			new Location(47391, -56929, -2370)
 		};
 		Text = new String[]
 		{

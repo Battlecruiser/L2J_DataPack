@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Fortune Seeker (99)
  * @author Emperorc
  */
 public class SagaOfTheFortuneSeeker extends SagasSuperClass
 {
-	public static String qn1 = "99_SagaOfTheFortuneSeeker";
-	public static int qnu = 99;
-	public static String qna = "Saga of the Fortune Seeker";
-	
 	public SagaOfTheFortuneSeeker()
 	{
-		super(qnu, qn1, qna);
+		super(99, "99_SagaOfTheFortuneSeeker", "Saga of the Fortune Seeker");
 		NPC = new int[]
 		{
 			31594,
@@ -67,7 +65,6 @@ public class SagaOfTheFortuneSeeker extends SagasSuperClass
 			27248,
 			27309
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			117
@@ -76,23 +73,11 @@ public class SagaOfTheFortuneSeeker extends SagasSuperClass
 		{
 			0x37
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			46066,
-			46087
-		};
-		Y = new int[]
-		{
-			-40640,
-			-36396,
-			-36372
-		};
-		Z = new int[]
-		{
-			-3042,
-			-1685,
-			-1685
+			new Location(191046, -40640, -3042),
+			new Location(46066, -36396, -1685),
+			new Location(46087, -36372, -1685)
 		};
 		Text = new String[]
 		{
