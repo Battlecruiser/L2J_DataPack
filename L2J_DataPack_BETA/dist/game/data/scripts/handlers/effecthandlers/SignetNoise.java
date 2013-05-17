@@ -18,8 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
@@ -47,11 +45,6 @@ public class SignetNoise extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getTickCount() == 1)
-		{
-			return true; // do nothing first time
-		}
-		
 		L2PcInstance caster = getEffector().getActingPlayer();
 		for (L2Character target : getEffected().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 		{
@@ -62,20 +55,16 @@ public class SignetNoise extends L2Effect
 			
 			if (caster.canAttackCharacter(target))
 			{
-				List<L2Effect> effects = target.getAllEffects();
-				if (effects != null)
+				for (L2Effect effect : target.getAllEffects())
 				{
-					for (L2Effect effect : effects)
+					if (effect.getSkill().isDance())
 					{
-						if (effect.getSkill().isDance())
-						{
-							effect.exit();
-						}
+						effect.exit();
 					}
 				}
 			}
 		}
-		return true;
+		return false;
 	}
 	
 	@Override

@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.l2skills.L2SkillSignetCasttime;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -65,11 +64,6 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		if (getTickCount() <= 2)
-		{
-			return true; // do nothing first 2 times
-		}
-		
 		int mpConsume = getSkill().getMpConsume();
 		final L2PcInstance activeChar = getEffector().getActingPlayer();
 		activeChar.rechargeShots(getSkill().useSoulShot(), getSkill().useSpiritShot());
@@ -140,7 +134,7 @@ public class SignetMDam extends L2Effect
 			}
 		}
 		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
-		return true;
+		return false;
 	}
 	
 	@Override
@@ -155,28 +149,16 @@ public class SignetMDam extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		L2NpcTemplate template;
-		if (getSkill() instanceof L2SkillSignetCasttime)
-		{
-			template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
-		}
-		else
-		{
-			return false;
-		}
-		
-		final L2EffectPointInstance effectPoint = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
-		effectPoint.setCurrentHp(effectPoint.getMaxHp());
-		effectPoint.setCurrentMp(effectPoint.getMaxMp());
-		
+		final L2NpcTemplate template = NpcTable.getInstance().getTemplate(getSkill().getNpcId());
+		_actor = new L2EffectPointInstance(IdFactory.getInstance().getNextId(), template, getEffector());
+		_actor.setCurrentHp(_actor.getMaxHp());
+		_actor.setCurrentMp(_actor.getMaxMp());
 		int x = getEffector().getX();
 		int y = getEffector().getY();
 		int z = getEffector().getZ();
-		
 		if (getEffector().isPlayer() && (getSkill().getTargetType() == L2TargetType.GROUND))
 		{
 			final Point3D wordPosition = getEffector().getActingPlayer().getCurrentSkillWorldPosition();
-			
 			if (wordPosition != null)
 			{
 				x = wordPosition.getX();
@@ -184,11 +166,8 @@ public class SignetMDam extends L2Effect
 				z = wordPosition.getZ();
 			}
 		}
-		effectPoint.setIsInvul(true);
-		effectPoint.spawnMe(x, y, z);
-		
-		_actor = effectPoint;
+		_actor.setIsInvul(true);
+		_actor.spawnMe(x, y, z);
 		return true;
-		
 	}
 }
