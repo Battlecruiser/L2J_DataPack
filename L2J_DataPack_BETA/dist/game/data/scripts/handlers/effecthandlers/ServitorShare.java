@@ -48,7 +48,7 @@ public class ServitorShare extends L2Effect
 		@Override
 		public void run()
 		{
-			_effected.stopSkillEffects(_skillId);
+			_effected.stopSkillEffects(false, _skillId);
 		}
 	}
 	

@@ -43,7 +43,7 @@ public class SilentMove extends L2Effect
 	@Override
 	public boolean canBeStolen()
 	{
-		return true;
+		return !getSkill().isToggle();
 	}
 	
 	@Override
@@ -55,7 +55,7 @@ public class SilentMove extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.SILENT_MOVE;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -74,6 +74,6 @@ public class SilentMove extends L2Effect
 		}
 		
 		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		return getSkill().isToggle();
 	}
 }

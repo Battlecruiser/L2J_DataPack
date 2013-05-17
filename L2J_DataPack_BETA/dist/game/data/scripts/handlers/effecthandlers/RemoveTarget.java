@@ -42,6 +42,12 @@ public class RemoveTarget extends L2Effect
 	}
 	
 	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		getEffected().setTarget(null);

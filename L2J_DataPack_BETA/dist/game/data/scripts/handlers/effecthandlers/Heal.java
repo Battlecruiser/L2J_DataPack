@@ -43,21 +43,21 @@ public class Heal extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.HEAL;
-	}
-	
-	@Override
 	public boolean calcSuccess()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public L2EffectType getEffectType()
 	{
-		return false;
+		return L2EffectType.HEAL;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override

@@ -55,6 +55,12 @@ public class ThrowUp extends L2Effect
 	}
 	
 	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
 	public void onExit()
 	{
 		getEffected().stopStunning(false);

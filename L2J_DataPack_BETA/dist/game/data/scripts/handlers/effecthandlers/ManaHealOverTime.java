@@ -70,6 +70,6 @@ public class ManaHealOverTime extends L2Effect
 		mp += calc() * getEffectTemplate().getTotalTickCount();
 		mp = Math.min(mp, maxmp);
 		getEffected().setCurrentMp(mp);
-		return true;
+		return getSkill().isToggle();
 	}
 }

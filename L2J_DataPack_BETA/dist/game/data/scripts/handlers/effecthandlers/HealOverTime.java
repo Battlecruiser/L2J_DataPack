@@ -77,7 +77,7 @@ public class HealOverTime extends L2Effect
 		hp += calc() * getEffectTemplate().getTotalTickCount();
 		hp = Math.min(hp, maxhp);
 		getEffected().setCurrentHp(hp);
-		return false;
+		return getSkill().isToggle();
 	}
 	
 	@Override
@@ -85,7 +85,7 @@ public class HealOverTime extends L2Effect
 	{
 		if (getEffected().isPlayer())
 		{
-			getEffected().sendPacket(new ExRegMax(calc(), getEffectTemplate().getTotalTickCount() * getAbnormalTime(), getAbnormalTime()));
+			getEffected().sendPacket(new ExRegMax(calc(), getAbnormalTime(), getAbnormalTime() / getEffectTemplate().getTotalTickCount()));
 		}
 		return true;
 	}

@@ -62,6 +62,12 @@ public class Warp extends L2Effect
 	}
 	
 	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		_actor = isSelfEffect() ? getEffector() : getEffected();

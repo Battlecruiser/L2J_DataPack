@@ -57,6 +57,6 @@ public class MpConsumePerLevel extends L2Effect
 		}
 		
 		getEffected().reduceCurrentMp(consume);
-		return true;
+		return getSkill().isToggle();
 	}
 }

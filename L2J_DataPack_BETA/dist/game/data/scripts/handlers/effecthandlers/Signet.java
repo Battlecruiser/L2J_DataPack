@@ -109,11 +109,11 @@ public class Signet extends L2Effect
 	{
 		if (getSkill() instanceof L2SkillSignet)
 		{
-			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getSkill().getLevel());
 		}
 		else if (getSkill() instanceof L2SkillSignetCasttime)
 		{
-			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getLevel());
+			_skill = SkillTable.getInstance().getInfo(getSkill().getEffectId(), getSkill().getLevel());
 		}
 		_srcInArena = (getEffector().isInsideZone(ZoneId.PVP) && !getEffector().isInsideZone(ZoneId.SIEGE));
 		return true;

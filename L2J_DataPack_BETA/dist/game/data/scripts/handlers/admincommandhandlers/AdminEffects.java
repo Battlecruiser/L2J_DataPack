@@ -45,7 +45,6 @@ import com.l2jserver.gameserver.network.serverpackets.SSQInfo;
 import com.l2jserver.gameserver.network.serverpackets.SocialAction;
 import com.l2jserver.gameserver.network.serverpackets.SunRise;
 import com.l2jserver.gameserver.network.serverpackets.SunSet;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Broadcast;
 
@@ -333,14 +332,8 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				int val = Integer.parseInt(st.nextToken());
 				boolean sendMessage = activeChar.getFirstEffect(7029) != null;
-				activeChar.stopSkillEffects(7029);
-				if ((val == 0) && sendMessage)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
-					sm.addSkillName(7029);
-					activeChar.sendPacket(sm);
-				}
-				else if ((val >= 1) && (val <= 4))
+				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
+				if ((val >= 1) && (val <= 4))
 				{
 					L2Skill gmSpeedSkill = SkillTable.getInstance().getInfo(7029, val);
 					activeChar.doSimultaneousCast(gmSpeedSkill);
