@@ -49,16 +49,13 @@ public class ManaDamOverTime extends L2Effect
 		}
 		
 		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
-		if (manaDam > getEffected().getCurrentMp())
+		if ((manaDam > getEffected().getCurrentMp()) && getSkill().isToggle())
 		{
-			if (getSkill().isToggle())
-			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
-				return false;
-			}
+			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			return false;
 		}
 		
 		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		return getSkill().isToggle();
 	}
 }

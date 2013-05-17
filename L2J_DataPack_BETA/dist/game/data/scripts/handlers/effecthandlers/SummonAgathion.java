@@ -43,9 +43,15 @@ public class SummonAgathion extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean isInstant()
 	{
 		return true;
+	}
+	
+	@Override
+	public boolean onActionTime()
+	{
+		return true; // TODO: Review.
 	}
 	
 	@Override

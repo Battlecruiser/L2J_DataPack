@@ -47,7 +47,13 @@ public class Spoil extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.SPOIL;
+		return L2EffectType.NONE;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override

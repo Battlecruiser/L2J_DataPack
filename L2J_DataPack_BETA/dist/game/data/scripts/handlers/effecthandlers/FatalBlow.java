@@ -39,9 +39,6 @@ public class FatalBlow extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * If is not evaded and blow lands.
-	 */
 	@Override
 	public boolean calcSuccess()
 	{
@@ -52,6 +49,12 @@ public class FatalBlow extends L2Effect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.FATAL_BLOW;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override

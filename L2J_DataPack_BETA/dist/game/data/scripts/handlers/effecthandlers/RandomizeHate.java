@@ -46,6 +46,12 @@ public class RandomizeHate extends L2Effect
 	}
 	
 	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		if ((getEffected() == null) || (getEffected() == getEffector()) || !getEffected().isL2Attackable())

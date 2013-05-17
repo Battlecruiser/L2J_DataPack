@@ -42,9 +42,9 @@ public class ConsumeBody extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean isInstant()
 	{
-		return false;
+		return true;
 	}
 	
 	@Override

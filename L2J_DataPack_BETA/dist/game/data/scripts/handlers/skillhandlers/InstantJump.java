@@ -92,13 +92,13 @@ public class InstantJump implements ISkillHandler
 		{
 			if (Formulas.calcBuffDebuffReflection(target, skill))
 			{
-				activeChar.stopSkillEffects(skill.getId());
+				activeChar.stopSkillEffects(false, skill.getId());
 				skill.getEffects(target, activeChar);
 			}
 			else
 			{
 				// activate attacked effects, if any
-				target.stopSkillEffects(skill.getId());
+				target.stopSkillEffects(false, skill.getId());
 				skill.getEffects(activeChar, target);
 			}
 		}

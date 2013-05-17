@@ -45,6 +45,12 @@ public class DispelBySlot extends L2Effect
 	}
 	
 	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
 		final L2Skill skill = getSkill();

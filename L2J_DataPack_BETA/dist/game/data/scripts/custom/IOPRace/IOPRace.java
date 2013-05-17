@@ -83,10 +83,10 @@ public class IOPRace extends Quest
 		if (_player == -1)
 		{
 			// clean old data
-			player.stopSkillEffects(5239);
+			player.stopSkillEffects(true, 5239);
 			if (player.hasSummon())
 			{
-				player.getSummon().stopSkillEffects(5239);
+				player.getSummon().stopSkillEffects(true, 5239);
 			}
 			
 			st.takeItems(STAMP, -1);
