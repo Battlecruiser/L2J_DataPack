@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00271_ProofOfValor' WHERE name='271_ProofOfValor';
