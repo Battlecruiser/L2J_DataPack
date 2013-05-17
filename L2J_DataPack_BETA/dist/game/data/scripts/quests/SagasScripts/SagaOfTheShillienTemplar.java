@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Shillien Templar (97)
  * @author Emperorc
  */
 public class SagaOfTheShillienTemplar extends SagasSuperClass
 {
-	public static String qn1 = "97_SagaOfTheShillienTemplar";
-	public static int qnu = 97;
-	public static String qna = "Saga of the Shillien Templar";
-	
 	public SagaOfTheShillienTemplar()
 	{
-		super(qnu, qn1, qna);
+		super(97, "97_SagaOfTheShillienTemplar", "Saga of the Shillien Templar");
 		NPC = new int[]
 		{
 			31580,
@@ -67,7 +65,6 @@ public class SagaOfTheShillienTemplar extends SagasSuperClass
 			27246,
 			27273
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			106
@@ -76,23 +73,11 @@ public class SagaOfTheShillienTemplar extends SagasSuperClass
 		{
 			0x21
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			161719,
-			124355,
-			124376
-		};
-		Y = new int[]
-		{
-			-92823,
-			82155,
-			82127
-		};
-		Z = new int[]
-		{
-			-1893,
-			-2803,
-			-2796
+			new Location(161719, -92823, -1893),
+			new Location(124355, 82155, -2803),
+			new Location(124376, 82127, -2796)
 		};
 		Text = new String[]
 		{

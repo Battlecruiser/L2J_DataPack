@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Soultaker (94)
  * @author Emperorc
  */
 public class SagaOfTheSoultaker extends SagasSuperClass
 {
-	public static String qn1 = "94_SagaOfTheSoultaker";
-	public static int qnu = 94;
-	public static String qna = "Saga of the Soultaker";
-	
 	public SagaOfTheSoultaker()
 	{
-		super(qnu, qn1, qna);
+		super(94, "94_SagaOfTheSoultaker", "Saga of the Soultaker");
 		NPC = new int[]
 		{
 			30832,
@@ -67,7 +65,6 @@ public class SagaOfTheSoultaker extends SagasSuperClass
 			27243,
 			27265
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			95
@@ -76,23 +73,11 @@ public class SagaOfTheSoultaker extends SagasSuperClass
 		{
 			0x0d
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			46066,
-			46087
-		};
-		Y = new int[]
-		{
-			-40640,
-			-36396,
-			-36372
-		};
-		Z = new int[]
-		{
-			-3042,
-			-1685,
-			-1685
+			new Location(191046, -40640, -3042),
+			new Location(46066, -36396, -1685),
+			new Location(46087, -36372, -1685)
 		};
 		Text = new String[]
 		{

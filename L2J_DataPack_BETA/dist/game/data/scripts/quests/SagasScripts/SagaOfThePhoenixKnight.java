@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Phoenix Knight (70)
  * @author Emperorc
  */
 public class SagaOfThePhoenixKnight extends SagasSuperClass
 {
-	public static String qn1 = "70_SagaOfThePhoenixKnight";
-	public static int qnu = 70;
-	public static String qna = "Saga of the Phoenix Knight";
-	
 	public SagaOfThePhoenixKnight()
 	{
-		super(qnu, qn1, qna);
+		super(70, "70_SagaOfThePhoenixKnight", "Saga of the Phoenix Knight");
 		NPC = new int[]
 		{
 			30849,
@@ -67,7 +65,6 @@ public class SagaOfThePhoenixKnight extends SagasSuperClass
 			27219,
 			27278
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			90
@@ -76,23 +73,11 @@ public class SagaOfThePhoenixKnight extends SagasSuperClass
 		{
 			0x05
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			191046,
-			46087,
-			46066
-		};
-		Y = new int[]
-		{
-			-40640,
-			-36372,
-			-36396
-		};
-		Z = new int[]
-		{
-			-3042,
-			-1685,
-			-1685
+			new Location(191046, -40640, -3042),
+			new Location(46087, -36372, -1685),
+			new Location(46066, -36396, -1685)
 		};
 		Text = new String[]
 		{

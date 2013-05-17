@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Titan (75)
  * @author Emperorc
  */
 public class SagaOfTheTitan extends SagasSuperClass
 {
-	public static String qn1 = "75_SagaOfTheTitan";
-	public static int qnu = 75;
-	public static String qna = "Saga of the Titan";
-	
 	public SagaOfTheTitan()
 	{
-		super(qnu, qn1, qna);
+		super(75, "75_SagaOfTheTitan", "Saga of the Titan");
 		NPC = new int[]
 		{
 			31327,
@@ -67,7 +65,6 @@ public class SagaOfTheTitan extends SagasSuperClass
 			27224,
 			27283
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			113
@@ -76,23 +73,11 @@ public class SagaOfTheTitan extends SagasSuperClass
 		{
 			0x2e
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			119518,
-			181215,
-			181227
-		};
-		Y = new int[]
-		{
-			-28658,
-			36676,
-			36703
-		};
-		Z = new int[]
-		{
-			-3811,
-			-4812,
-			-4816
+			new Location(119518, -28658, -3811),
+			new Location(181215, 36676, -4812),
+			new Location(181227, 36703, -4816)
 		};
 		Text = new String[]
 		{

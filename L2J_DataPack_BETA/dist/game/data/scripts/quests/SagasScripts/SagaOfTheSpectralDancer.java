@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Spectral Dancer (96)
  * @author Emperorc
  */
 public class SagaOfTheSpectralDancer extends SagasSuperClass
 {
-	public static String qn1 = "96_SagaOfTheSpectralDancer";
-	public static int qnu = 96;
-	public static String qna = "Saga of the Spectral Dancer";
-	
 	public SagaOfTheSpectralDancer()
 	{
-		super(qnu, qn1, qna);
+		super(96, "96_SagaOfTheSpectralDancer", "Saga of the Spectral Dancer");
 		NPC = new int[]
 		{
 			31582,
@@ -67,7 +65,6 @@ public class SagaOfTheSpectralDancer extends SagasSuperClass
 			27245,
 			27264
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			107
@@ -76,23 +73,11 @@ public class SagaOfTheSpectralDancer extends SagasSuperClass
 		{
 			0x22
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			47429,
-			47391
-		};
-		Y = new int[]
-		{
-			-74121,
-			-56923,
-			-56929
-		};
-		Z = new int[]
-		{
-			-2871,
-			-2383,
-			-2370
+			new Location(164650, -74121, -2871),
+			new Location(47429, -56923, -2383),
+			new Location(47391, -56929, -2370)
 		};
 		Text = new String[]
 		{

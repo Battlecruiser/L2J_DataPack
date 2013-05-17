@@ -18,19 +18,17 @@
  */
 package quests.SagasScripts;
 
+import com.l2jserver.gameserver.model.Location;
+
 /**
  * Saga of the Maestro (100)
  * @author Emperorc
  */
 public class SagaOfTheMaestro extends SagasSuperClass
 {
-	public static String qn1 = "100_SagaOfTheMaestro";
-	public static int qnu = 100;
-	public static String qna = "Saga of the Maestro";
-	
 	public SagaOfTheMaestro()
 	{
-		super(qnu, qn1, qna);
+		super(100, "100_SagaOfTheMaestro", "Saga of the Maestro");
 		NPC = new int[]
 		{
 			31592,
@@ -67,7 +65,6 @@ public class SagaOfTheMaestro extends SagasSuperClass
 			27249,
 			27308
 		};
-		qn = qn1;
 		classid = new int[]
 		{
 			118
@@ -76,23 +73,11 @@ public class SagaOfTheMaestro extends SagasSuperClass
 		{
 			0x39
 		};
-		X = new int[]
+		npcSpawnLocations = new Location[]
 		{
-			164650,
-			47429,
-			47391
-		};
-		Y = new int[]
-		{
-			-74121,
-			-56923,
-			-56929
-		};
-		Z = new int[]
-		{
-			-2871,
-			-2383,
-			-2370
+			new Location(164650, -74121, -2871),
+			new Location(47429, -56923, -2383),
+			new Location(47391, -56929, -2370)
 		};
 		Text = new String[]
 		{
