@@ -55,6 +55,7 @@ public class Root extends L2Effect
 		{
 			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
+		super.onExit();
 	}
 	
 	@Override
