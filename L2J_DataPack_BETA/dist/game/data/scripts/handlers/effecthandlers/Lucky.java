@@ -43,7 +43,7 @@ public class Lucky extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		return true;
+		return getSkill().isPassive();
 	}
 	
 	@Override
