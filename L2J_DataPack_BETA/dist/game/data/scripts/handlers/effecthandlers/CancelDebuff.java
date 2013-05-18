@@ -52,7 +52,7 @@ public class CancelDebuff extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		return cancel(getEffector(), getEffected(), getSkill(), getEffectPower());
+		return cancel(getEffector(), getEffected(), getSkill(), getEffectTemplate().getEffectPower());
 	}
 	
 	private static boolean cancel(L2Character caster, L2Character target, L2Skill skill, double baseRate)

@@ -57,7 +57,7 @@ public class Cancel extends L2Effect
 			return false;
 		}
 		
-		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), getEffectPower());
+		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), getEffectTemplate().getEffectPower());
 		for (L2Effect eff : canceled)
 		{
 			eff.exit();
