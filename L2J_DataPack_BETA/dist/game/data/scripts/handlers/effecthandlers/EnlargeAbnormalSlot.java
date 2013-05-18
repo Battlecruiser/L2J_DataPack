@@ -39,7 +39,11 @@ public class EnlargeAbnormalSlot extends L2Effect
 	{
 		return L2EffectType.ENLARGE_ABNORMAL_SLOT;
 	}
-	
+	@Override
+	public boolean onActionTime()
+	{
+		return getSkill().isPassive();
+	}
 	@Override
 	public boolean onStart()
 	{
