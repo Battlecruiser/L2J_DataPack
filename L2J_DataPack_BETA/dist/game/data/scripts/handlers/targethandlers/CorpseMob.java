@@ -18,15 +18,11 @@
  */
 package handlers.targethandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
@@ -34,43 +30,30 @@ import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
- * @author UnAfraid
+ * Corpse Mob target handler.
+ * @author UnAfraid, Zoey76
  */
 public class CorpseMob implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		final boolean isSummon = target.isServitor();
-		if (!(isSummon || target.isL2Attackable()) || !target.isDead())
+		if ((target == null) || !target.isL2Attackable() || !target.isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return EMPTY_TARGET_LIST;
 		}
 		
-		// Corpse mob only available for half time
-		if (skill.getSkillType() == L2SkillType.SUMMON)
+		if ((skill.getSkillType() == L2SkillType.SUMMON) && target.isServitor() && (target.getActingPlayer() != null) && (target.getActingPlayer().getObjectId() == activeChar.getObjectId()))
 		{
-			if (isSummon && (((L2ServitorInstance) target).getOwner() != null) && (((L2ServitorInstance) target).getOwner().getObjectId() == activeChar.getObjectId()))
-			{
-				return EMPTY_TARGET_LIST;
-			}
+			return EMPTY_TARGET_LIST;
 		}
 		
-		if (skill.hasEffectType(L2EffectType.HP_DRAIN))
+		if (skill.hasEffectType(L2EffectType.HP_DRAIN) && ((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
 		{
-			if (((L2Attackable) target).isOldCorpse(activeChar.getActingPlayer(), (Config.NPC_DECAY_TIME / 2), true))
-			{
-				return EMPTY_TARGET_LIST;
-			}
+			return EMPTY_TARGET_LIST;
 		}
 		
-		if (!onlyFirst)
-		{
-			targetList.add(target);
-			return targetList.toArray(new L2Object[targetList.size()]);
-		}
 		return new L2Character[]
 		{
 			target
