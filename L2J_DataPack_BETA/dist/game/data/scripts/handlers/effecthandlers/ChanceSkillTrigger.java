@@ -48,7 +48,7 @@ public class ChanceSkillTrigger extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.CHANCE_SKILL_TRIGGER;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -73,14 +73,14 @@ public class ChanceSkillTrigger extends L2Effect
 	public boolean onActionTime()
 	{
 		getEffected().onActionTimeChanceEffect(getSkill().getElement());
-		return false;
+		return getSkill().isPassive();
 	}
 	
 	@Override
 	public void onExit()
 	{
 		// trigger only if effect in use and successfully ticked to the end
-		if (isInUse() && (getTickCount() == getEffectTemplate().getTotalTickCount()))
+		if (isInUse() && (getTickCount() >= getEffectTemplate().getTotalTickCount()))
 		{
 			getEffected().onExitChanceEffect(getSkill().getElement());
 		}
