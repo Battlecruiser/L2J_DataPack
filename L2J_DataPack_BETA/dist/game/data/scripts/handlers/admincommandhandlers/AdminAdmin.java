@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
@@ -292,12 +293,17 @@ public class AdminAdmin implements IAdminCommandHandler
 					DoorTable.getInstance().load();
 					activeChar.sendMessage("All Doors have been reloaded");
 				}
+				else if (type.startsWith("walker"))
+				{
+					WalkingManager.getInstance().load();
+					activeChar.sendMessage("All Walkers have been reloaded");
+				}
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
 			catch (Exception e)
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests|door|walker>");
 				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}
