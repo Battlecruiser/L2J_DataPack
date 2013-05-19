@@ -219,7 +219,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("You need to specify a type to reload!");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests>");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|access|quests|walker>");
 				return false;
 			}
 			
@@ -303,7 +303,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|npcwalkers|access|quests|door|walker>");
+				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|access|quests|door|walker>");
 				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}
