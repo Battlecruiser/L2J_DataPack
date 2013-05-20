@@ -31,7 +31,6 @@ import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author BiTi, Sami, Zoey76
@@ -94,34 +93,30 @@ public class SummonFriend implements ISkillHandler
 						continue;
 					}
 					
-					if (!Util.checkIfInRange(0, activeChar, target, false))
+					final SummonRequestHolder holder = target.getScript(SummonRequestHolder.class);
+					if (holder != null)
 					{
-						final SummonRequestHolder holder = activeChar.getScript(SummonRequestHolder.class);
-						if (holder != null)
-						{
-							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
-							sm.addString(target.getName());
-							activePlayer.sendPacket(sm);
-							continue;
-						}
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_ALREADY_SUMMONED);
+						sm.addString(target.getName());
+						activePlayer.sendPacket(sm);
+						continue;
+					}
+					
+					if (skill.getId() == 1403) // Summon Friend
+					{
+						target.addScript(new SummonRequestHolder(activePlayer, skill));
 						
-						activeChar.addScript(new SummonRequestHolder(activePlayer, skill));
-						
-						if (skill.getId() == 1403) // Summon Friend
-						{
-							// Send message
-							final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-							confirm.addCharName(activeChar);
-							confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-							confirm.addTime(30000);
-							confirm.addRequesterId(activePlayer.getObjectId());
-							target.sendPacket(confirm);
-						}
-						else
-						{
-							L2PcInstance.teleToTarget(targetPlayer, activePlayer, skill);
-							targetPlayer.removeScript(SummonRequestHolder.class);
-						}
+						// Send message
+						final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
+						confirm.addCharName(activeChar);
+						confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+						confirm.addTime(30000);
+						confirm.addRequesterId(activePlayer.getObjectId());
+						target.sendPacket(confirm);
+					}
+					else
+					{
+						L2PcInstance.teleToTarget(targetPlayer, activePlayer, skill);
 					}
 				}
 			}
