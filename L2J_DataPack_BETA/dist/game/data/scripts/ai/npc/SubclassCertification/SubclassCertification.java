@@ -29,12 +29,10 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2VillageMasterInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Subclass certification
- * @author Bani, jurchiks
+ * @author xban1x, jurchiks
  */
 public class SubclassCertification extends AbstractNpcAI
 {
@@ -184,7 +182,7 @@ public class SubclassCertification extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
+		String htmltext = null;
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
@@ -194,6 +192,7 @@ public class SubclassCertification extends AbstractNpcAI
 		switch (event)
 		{
 			case "GetCertified":
+			{
 				if (!player.isSubClassActive())
 				{
 					htmltext = "NotSubclass.html";
@@ -210,38 +209,60 @@ public class SubclassCertification extends AbstractNpcAI
 				{
 					htmltext = "WrongVillageMaster.html";
 				}
-				
 				break;
+			}
 			case "Obtain65":
+			{
 				htmltext = replaceHtml(player, "EmergentAbility.html", true, null).replace("%level%", "65").replace("%skilltype%", "common skill").replace("%event%", "lvl65Emergent");
 				break;
+			}
 			case "Obtain70":
+			{
 				htmltext = replaceHtml(player, "EmergentAbility.html", true, null).replace("%level%", "70").replace("%skilltype%", "common skill").replace("%event%", "lvl70Emergent");
 				break;
+			}
 			case "Obtain75":
+			{
 				htmltext = replaceHtml(player, "ClassAbility.html", true, null);
 				break;
+			}
 			case "Obtain80":
+			{
 				htmltext = replaceHtml(player, "EmergentAbility.html", true, null).replace("%level%", "80").replace("%skilltype%", "transformation skill").replace("%event%", "lvl80Class");
 				break;
+			}
 			case "lvl65Emergent":
+			{
 				htmltext = doCertification(player, st, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 65);
 				break;
+			}
 			case "lvl70Emergent":
+			{
 				htmltext = doCertification(player, st, "EmergentAbility", CERTIFICATE_EMERGENT_ABILITY, 70);
 				break;
+			}
 			case "lvl75Master":
-				// TODO shouldn't this variable be "MasterAbility75"?
+			{
 				htmltext = doCertification(player, st, "ClassAbility", CERTIFICATE_MASTER_ABILITY, 75);
 				break;
+			}
 			case "lvl75Class":
+			{
 				htmltext = doCertification(player, st, "ClassAbility", ABILITY_CERTIFICATES.get(getClassIndex(player)), 75);
 				break;
+			}
 			case "lvl80Class":
+			{
 				htmltext = doCertification(player, st, "ClassAbility", TRANSFORMATION_SEALBOOKS.get(getClassIndex(player)), 80);
 				break;
-			default:
+			}
+			case "Main.html":
+			case "Explanation.html":
+			case "NotObtain.html":
+			{
+				htmltext = event;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -265,8 +286,6 @@ public class SubclassCertification extends AbstractNpcAI
 		Integer tmp = CLASSES.get(player.getClassId().getId());
 		if (tmp == null)
 		{
-			// TODO requires AbstractNpcAI variable _log to be static
-			// _log.warning(SubclassCertification.class.getSimpleName() + "#getClassIndex(" + player.getClassId().getId() + ") - class ID not found!");
 			return -1;
 		}
 		return tmp;
@@ -295,7 +314,6 @@ public class SubclassCertification extends AbstractNpcAI
 		{
 			giveItems(player, itemId, 1);
 			qs.saveGlobalQuestVar(tmp, String.valueOf(itemId));
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1).addItemName(itemId));
 			htmltext = "GetAbility.html";
 		}
 		return htmltext;
