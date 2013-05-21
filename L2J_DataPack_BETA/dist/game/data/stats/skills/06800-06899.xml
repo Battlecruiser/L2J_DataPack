@@ -19,8 +19,11 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6803" levels="1" name="Arena Haste">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -34,8 +37,11 @@
 		</for>
 	</skill>
 	<skill id="6804" levels="1" name="Arena Wind Walk">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -49,8 +55,11 @@
 		</for>
 	</skill>
 	<skill id="6805" levels="1" name="Arena Empower">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -64,8 +73,11 @@
 		</for>
 	</skill>
 	<skill id="6806" levels="1" name="Arena Acumen">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -79,8 +91,11 @@
 		</for>
 	</skill>
 	<skill id="6807" levels="1" name="Arena Concentration">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -94,8 +109,11 @@
 		</for>
 	</skill>
 	<skill id="6808" levels="1" name="Arena Might">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -109,8 +127,11 @@
 		</for>
 	</skill>
 	<skill id="6809" levels="1" name="Arena Guidance">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -124,8 +145,11 @@
 		</for>
 	</skill>
 	<skill id="6810" levels="1" name="Arena Focus">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
@@ -139,12 +163,15 @@
 		</for>
 	</skill>
 	<skill id="6811" levels="1" name="Arena Death Whisper">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -154,12 +181,15 @@
 		</for>
 	</skill>
 	<skill id="6812" levels="1" name="Arena Berserker Spirit">
+		<!-- High Five Skill -->
 		<!-- Arena Skill -->
+		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
+		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1154,6 +1184,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />

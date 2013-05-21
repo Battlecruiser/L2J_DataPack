@@ -970,17 +970,21 @@
 		</for>
 	</skill>
 	<skill id="141" levels="3" name="Weapon Mastery">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 5 10 15 </table>
 		<table name="#pAtk"> 2 3 4 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.085" />
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pAtk" val="1.085" />
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="142" levels="5" name="Armor Mastery">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 5 8 10 13 15 </table>
 		<table name="#pDef"> 9 11 12 13 14 </table>
 		<table name="#rEvas"> 0 0 0 3 3 </table>
@@ -988,18 +992,25 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef" />
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pDef" val="#pDef" />
+				<mul order="0x30" stat="regMp" val="1.1" />
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="143" levels="2" name="Cubic Mastery">
+		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 43 55 </table>
+		<table name="#cubicCount"> 2 3 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="COREDONE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CubicMastery" val="#cubicCount" />
+		</for>
 	</skill>
 	<skill id="144" levels="37" name="Dual Weapon Mastery" enchantGroup1="1" enchantGroup2="1">
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
@@ -1010,22 +1021,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Dual Sword" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Dual Sword" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Dual Sword" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Dual Sword" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Dual Sword" />
-			</add>
-			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
-				<using kind="Dual Sword" />
-			</mul>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Dual Sword" />
+				</add>
+				<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
+					<using kind="Dual Sword" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="146" levels="45" name="Anti Magic" enchantGroup1="1">

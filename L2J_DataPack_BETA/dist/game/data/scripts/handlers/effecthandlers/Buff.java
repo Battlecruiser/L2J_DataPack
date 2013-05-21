@@ -42,12 +42,18 @@ public class Buff extends L2Effect
 	@Override
 	public boolean canBeStolen()
 	{
-		return true;
+		return !getSkill().isPassive();
 	}
 	
 	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.BUFF;
+	}
+	
+	@Override
+	public boolean onActionTime()
+	{
+		return getSkill().isPassive();
 	}
 }

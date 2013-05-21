@@ -2047,18 +2047,18 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<set name="cubicDelay" val="20" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="15" />
-		<set name="cubicPower" val="#cubicPower" />
-		<set name="cubicSkillChance" val="20" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="4" /> <!-- Cubic Id -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#cubicPower" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#ench1Power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="279" levels="5" name="Lightning Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<!-- Confirmed CT2.5 -->

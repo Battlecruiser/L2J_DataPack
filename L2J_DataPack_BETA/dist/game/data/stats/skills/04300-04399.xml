@@ -504,18 +504,13 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="18" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="13" / TODO: this is chance when HP is at 90% or less -->
-		<!-- set name="cubicSkill2Chance" val="33" / TODO: this is chance when HP is at 60% or less -->
-		<!-- set name="cubicSkill3Chance" val="53" / TODO: this is chance when HP is at 30% or less -->
-		<set name="cubicDelay" val="13" />
-		<set name="cubicDuration" val="3600" />
-		<set name="cubicMaxCount" val="20" />
-		<set name="cubicSkillChance" val="0" /> <!-- FIXME: hardcoded in core, unhardcode plz -->
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="3" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
+				<param cubicSkill1Chance="13" cubicSkill2Chance="33" cubicSkill3Chance="53" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="4339" levels="1" name="Mimir's Elixir">
 		<!-- Freya retail confirmed -->
