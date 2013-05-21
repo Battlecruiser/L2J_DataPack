@@ -1814,19 +1814,13 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="25" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="25" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="50" / TODO: needs support -->
-		<set name="cubicDelay" val="10" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="50" />
-		<set name="cubicPower" val="2106" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="10" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="10" cubicDelay="10" cubicDuration="900" cubicMaxCount="50" cubicSkillChance="30" cubicPower="2106" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="780" levels="1" name="Summon Smart Cubic">
 		<!-- Shillien Templar's Smart Cubic -->
@@ -1839,19 +1833,13 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="40" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="15" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="45" / TODO: needs support -->
-		<set name="cubicDelay" val="10" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="50" />
-		<set name="cubicPower" val="2106" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="11" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="11" cubicDelay="10" cubicDuration="900" cubicMaxCount="50" cubicSkillChance="30" cubicPower="2106" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="781" levels="1" name="Summon Smart Cubic">
 		<!-- Arcana Lord's Smart Cubic -->
@@ -1864,19 +1852,13 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="20" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="30" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="50" / TODO: needs support -->
-		<set name="cubicDelay" val="13" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="50" />
-		<set name="cubicPower" val="2106" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="12" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="12" cubicDelay="10" cubicDuration="900" cubicMaxCount="50" cubicSkillChance="30" cubicPower="2106" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="782" levels="1" name="Summon Smart Cubic">
 		<!-- Elemental Master's Smart Cubic -->
@@ -1889,19 +1871,13 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="25" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="25" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="50" / TODO: needs support -->
-		<set name="cubicDelay" val="13" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="50" />
-		<set name="cubicPower" val="2106" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="13" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="13" cubicDelay="10" cubicDuration="900" cubicMaxCount="50" cubicSkillChance="30" cubicPower="2106" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="783" levels="1" name="Summon Smart Cubic">
 		<!-- Spectral Master's Smart Cubic -->
@@ -1914,19 +1890,13 @@
 		<set name="mpInitialConsume" val="14" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="30" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="20" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="50" / TODO: needs support -->
-		<set name="cubicDelay" val="13" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="50" />
-		<set name="cubicPower" val="2106" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="14" /> <!-- Cubic Id -->
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="14" cubicDelay="10" cubicDuration="900" cubicMaxCount="50" cubicSkillChance="30" cubicPower="2106" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="784" levels="1" name="Spirit of Phoenix">
 		<!-- Confirmed CT2.5 -->

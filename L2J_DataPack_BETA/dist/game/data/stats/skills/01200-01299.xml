@@ -2598,18 +2598,18 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<set name="cubicDelay" val="30" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="10" />
-		<set name="cubicPower" val="#cubicPower" />
-		<set name="cubicSkillChance" val="12" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="6" /> <!-- Cubic Id -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#cubicPower" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="6" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#ench1Power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1280" levels="9" name="Summon Aqua Cubic" enchantGroup1="2">
 		<!-- Confirmed CT2.5 -->
@@ -2629,18 +2629,18 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<set name="cubicDelay" val="30" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="10" />
-		<set name="cubicPower" val="#cubicPower" />
-		<set name="cubicSkillChance" val="30" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="7" /> <!-- Cubic Id -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#cubicPower" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="7" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="30" cubicPower="#ench1Power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1281" levels="9" name="Summon Spark Cubic" enchantGroup1="2">
 		<!-- Confirmed CT2.5 -->
@@ -2660,18 +2660,18 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<set name="cubicDelay" val="30" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="10" />
-		<set name="cubicPower" val="#cubicPower" />
-		<set name="cubicSkillChance" val="12" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="8" /> <!-- Cubic Id -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#cubicPower" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="8" cubicDelay="30" cubicDuration="900" cubicMaxCount="10" cubicSkillChance="12" cubicPower="#ench1Power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1282" levels="2" name="Pa'agrian Haste" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>

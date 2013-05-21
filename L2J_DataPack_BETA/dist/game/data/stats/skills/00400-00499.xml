@@ -1668,21 +1668,20 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SUMMON" />
 		<set name="targetType" val="SELF" />
-		<!-- Cubic-Specific -->
-		<!-- set name="cubicSkill1Chance" val="33" / TODO: needs support -->
-		<!-- set name="cubicSkill2Chance" val="33" / TODO: needs support -->
-		<!-- set name="cubicSkill3Chance" val="33" / TODO: needs support -->
-		<set name="cubicDelay" val="8" />
-		<set name="cubicDuration" val="900" />
-		<set name="cubicMaxCount" val="300" />
-		<set name="cubicPower" val="#cubicPower" />
-		<set name="cubicSkillChance" val="50" />
-		<set name="isCubic" val="true" />
-		<set name="npcId" val="9" /> <!-- Cubic Id -->
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant1 name="power" val="#ench1Power" />
+		<for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="9" cubicDelay="8" cubicDuration="900" cubicMaxCount="300" cubicSkillChance="50" cubicPower="#cubicPower" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="SummonCubic" noicon="1" val="0">
+				<param npcId="9" cubicDelay="8" cubicDuration="900" cubicMaxCount="300" cubicSkillChance="50" cubicPower="#ench1Power" />
+				<param cubicSkill1Chance="33" cubicSkill2Chance="33" cubicSkill3Chance="33" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="450" levels="10" name="Banish Seraph" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
