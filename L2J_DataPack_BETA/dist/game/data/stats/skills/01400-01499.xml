@@ -145,44 +145,60 @@
 		</enchant4for>
 	</skill>
 	<skill id="1403" levels="1" name="Summon Friend">
-		<set name="affectRange" val="-1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="467" />
 		<set name="castRange" val="-2" />
 		<set name="effectRange" val="-2" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="mpConsume" val="180" />
+		<set name="magicLvl" val="56" />
+		<set name="mpConsume" val="36" />
+		<set name="mpInitialConsume" val="144" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="targetConsumeCount" val="1" />
-		<set name="targetConsumeId" val="8615" />
 		<set name="targetType" val="PARTY_MEMBER" />
+		<cond>
+			<player callPc="true" />
+		</cond>
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
 			</not>
 		</cond>
+		<for>
+			<effect name="CallPc" noicon="1" val="0">
+				<param itemId="8615" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1404" levels="1" name="Word of Invitation">
-		<set name="affectRange" val="-1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="677" />
 		<set name="castRange" val="-2" />
 		<set name="effectRange" val="-2" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="3" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="mpConsume" val="320" />
+		<set name="magicLvl" val="66" />
+		<set name="mpConsume" val="64" />
+		<set name="mpInitialConsume" val="256" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="targetConsumeCount" val="1" />
-		<set name="targetConsumeId" val="8615" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="PARTY_MEMBER" />
+		<cond>
+			<player callPc="true" />
+		</cond>
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
 			</not>
 		</cond>
+		<for>
+			<effect name="CallPc" noicon="1" val="0">
+				<param itemId="8615" itemCount="1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="1405" levels="4" name="Divine Inspiration">
 		<!-- Confirmed CT2.5 -->
@@ -884,22 +900,30 @@
 		</for>
 	</skill>
 	<skill id="1429" levels="1" name="Gate Chant">
-		<set name="affectRange" val="-1" />
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="467" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="4" />
 		<set name="itemConsumeId" val="8615" />
-		<set name="mpConsume" val="284" />
+		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="57" />
+		<set name="mpInitialConsume" val="227" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="SUMMON_FRIEND" />
 		<set name="staticReuse" val="true" />
-		<set name="targetType" val="PARTY" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player callPc="true" />
+		</cond>
 		<cond msgId="113" addName="1">
 			<not>
 				<player insideZoneId="10501, 10502, 10503" />
 			</not>
 		</cond>
+		<for>
+			<effect name="CallParty" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="1430" levels="5" name="Invocation">
 		<!-- Confirmed CT2.5 -->

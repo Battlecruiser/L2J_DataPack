@@ -404,7 +404,7 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -465,7 +465,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -489,7 +489,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -513,7 +513,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -537,7 +537,7 @@
 		<set name="coolTime" val="500" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -581,7 +581,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -603,7 +603,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -619,9 +619,11 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
-		<set name="skillType" val="SUMMON_FRIEND" />
-		<set name="targetType" val="ONE" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CallParty" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="23250" levels="1" name="Kau Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
@@ -649,7 +651,7 @@
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -666,7 +668,7 @@
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -683,7 +685,7 @@
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -700,7 +702,7 @@
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -717,7 +719,7 @@
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -734,7 +736,7 @@
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -751,7 +753,7 @@
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -768,7 +770,7 @@
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -785,7 +787,7 @@
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -802,7 +804,7 @@
 		<set name="abnormalType" val="PA_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -819,7 +821,7 @@
 		<set name="abnormalType" val="PD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -836,7 +838,7 @@
 		<set name="abnormalType" val="MD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -853,7 +855,7 @@
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -870,7 +872,7 @@
 		<set name="abnormalType" val="MA_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -887,7 +889,7 @@
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -904,7 +906,7 @@
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -928,7 +930,7 @@
 		<set name="abnormalType" val="PA_PD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -945,7 +947,7 @@
 		<set name="abnormalType" val="PA_PD_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -962,7 +964,7 @@
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -979,7 +981,7 @@
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -999,7 +1001,7 @@
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="78" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1028,7 +1030,7 @@
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1057,7 +1059,7 @@
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1085,7 +1087,7 @@
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1283,7 +1285,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1306,7 +1308,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1326,7 +1328,7 @@
 		<set name="affectRange" val="200" />
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="4000" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1393,7 +1395,7 @@
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1452,7 +1454,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1475,7 +1477,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1498,7 +1500,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1521,7 +1523,7 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1544,7 +1546,7 @@
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="81" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1561,7 +1563,7 @@
 		<set name="abnormalType" val="MD_UP_ATTR" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1581,7 +1583,7 @@
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="500" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
+		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>

@@ -46,6 +46,8 @@ public final class EffectMasterHandler
 		BlockResurrection.class,
 		Bluff.class,
 		Buff.class,
+		CallParty.class,
+		CallPc.class,
 		Cancel.class,
 		CancelAll.class,
 		CancelDebuff.class,
