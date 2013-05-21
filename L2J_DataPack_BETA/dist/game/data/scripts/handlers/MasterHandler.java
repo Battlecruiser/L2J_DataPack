@@ -221,7 +221,6 @@ import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Sow;
-import handlers.skillhandlers.SummonFriend;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
 import handlers.skillhandlers.TransformDispel;
@@ -522,7 +521,6 @@ public class MasterHandler
 			Resurrect.class,
 			ShiftTarget.class,
 			Sow.class,
-			SummonFriend.class,
 			TakeCastle.class,
 			TakeFort.class,
 			TransformDispel.class,
