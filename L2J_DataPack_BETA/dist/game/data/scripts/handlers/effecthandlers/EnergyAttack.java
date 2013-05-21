@@ -75,13 +75,17 @@ public class EnergyAttack extends L2Effect
 			crit = Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
 		}
 		// damage calculation
-		double damage = Formulas.calcPhysDam(activeChar, target, getSkill(), shld, crit, ss);
+		double damage = Formulas.calcPhysDam(activeChar, target, getSkill(), shld, false, ss);
 		
 		double modifier = 0;
 		if (activeChar.isPlayer())
 		{
 			// Charges Formula (each charge increase +25%)
 			modifier = ((activeChar.getActingPlayer().getCharges() * 0.25) + 1);
+		}
+		if (crit)
+		{
+			damage *= 2;
 		}
 		
 		if (damage > 0)
