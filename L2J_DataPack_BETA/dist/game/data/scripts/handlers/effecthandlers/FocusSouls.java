@@ -40,7 +40,7 @@ public class FocusSouls extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.FOCUS_SOULS;
+		return L2EffectType.NONE;
 	}
 	
 	@Override

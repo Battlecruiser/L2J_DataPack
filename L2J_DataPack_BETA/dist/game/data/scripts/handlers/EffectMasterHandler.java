@@ -39,7 +39,6 @@ public final class EffectMasterHandler
 	private static final Class<?>[] EFFECTS =
 	{
 		AbortCast.class,
-		RebalanceHP.class,
 		Betray.class,
 		BigHead.class,
 		BlockBuffSlot.class,
@@ -126,6 +125,7 @@ public final class EffectMasterHandler
 		PhysicalSoulAttack.class,
 		ProtectionBlessing.class,
 		RandomizeHate.class,
+		RebalanceHP.class,
 		Recovery.class,
 		Relax.class,
 		RemoveTarget.class,
