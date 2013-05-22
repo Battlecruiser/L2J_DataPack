@@ -148,7 +148,6 @@ import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.QuestList;
 import handlers.bypasshandlers.ReceivePremium;
 import handlers.bypasshandlers.ReleaseAttribute;
-import handlers.bypasshandlers.RemoveDeathPenalty;
 import handlers.bypasshandlers.RentPet;
 import handlers.bypasshandlers.Rift;
 import handlers.bypasshandlers.SkillList;
@@ -439,7 +438,6 @@ public class MasterHandler
 			QuestList.class,
 			ReceivePremium.class,
 			ReleaseAttribute.class,
-			RemoveDeathPenalty.class,
 			RentPet.class,
 			Rift.class,
 			SkillList.class,
