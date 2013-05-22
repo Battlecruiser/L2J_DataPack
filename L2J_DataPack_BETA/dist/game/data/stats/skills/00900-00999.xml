@@ -233,7 +233,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison" >
+			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />

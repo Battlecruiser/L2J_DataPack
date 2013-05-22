@@ -2111,7 +2111,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#vuln" />
 				<sub order="0x40" stat="fireRes" val="#vuln" />
@@ -2123,7 +2123,7 @@
 		</for>
 		<enchant1for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench1Chance" >
+			<effect name="Debuff" val="0" effectPower="#ench1Chance">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#ench1Vuln" />
 				<sub order="0x40" stat="fireRes" val="#ench1Vuln" />
@@ -2135,7 +2135,7 @@
 		</enchant1for>
 		<enchant2for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="25" />
 				<sub order="0x40" stat="fireRes" val="25" />
@@ -2971,7 +2971,7 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>

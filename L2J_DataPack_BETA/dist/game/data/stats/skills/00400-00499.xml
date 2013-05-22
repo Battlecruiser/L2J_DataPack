@@ -46,7 +46,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -65,7 +65,7 @@
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench2Power" >
+			<effect name="Debuff" val="0" effectPower="#ench2Power">
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="1.2" />
@@ -84,7 +84,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="cAtk" val="#ench3cAtk" />
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
@@ -153,7 +153,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
@@ -172,7 +172,7 @@
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="cAtk" val="0.65" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
 				<mul order="0x30" stat="bigSwordWpnVuln" val="1.2" />
@@ -191,7 +191,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<basemul order="0x30" stat="rCrit" val="#ench3rCrit" />
 				<mul order="0x30" stat="cAtk" val="0.65" />
 				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
@@ -484,7 +484,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40" >
+			<effect name="Debuff" val="0" effectPower="40">
 				<mul order="0x30" stat="runSpd" val="#debuff" />
 				<mul order="0x30" stat="pAtkSpd" val="#debuff" />
 				<mul order="0x30" stat="mAtkSpd" val="#debuff" />
@@ -522,7 +522,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="mAtk" val="#debuff" />
 				<mul order="0x30" stat="pAtk" val="#debuff" />
 			</effect>

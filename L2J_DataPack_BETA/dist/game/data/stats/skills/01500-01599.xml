@@ -369,7 +369,7 @@
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -377,7 +377,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />

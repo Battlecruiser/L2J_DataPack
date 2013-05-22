@@ -1620,7 +1620,7 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
-	<set name="targetType" val="AREA" />
+		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
 		</for>
@@ -2026,7 +2026,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60" >
+			<effect name="Debuff" val="0" effectPower="60">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
