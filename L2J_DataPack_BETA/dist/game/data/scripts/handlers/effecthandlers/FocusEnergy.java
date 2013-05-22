@@ -43,7 +43,7 @@ public class FocusEnergy extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.FOCUS_ENERGY;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
