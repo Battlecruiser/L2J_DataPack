@@ -1034,7 +1034,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1043,7 +1043,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1089,7 +1089,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1098,7 +1098,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1144,7 +1144,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1153,7 +1153,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1198,14 +1198,14 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
@@ -1248,14 +1248,14 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower" >
+			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
@@ -2626,7 +2626,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40" >
+			<effect name="Debuff" val="0" effectPower="40">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#vuln" />
 				<sub order="0x40" stat="fireRes" val="#vuln" />
@@ -2638,7 +2638,7 @@
 		</for>
 		<enchant1for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench1Chance" >
+			<effect name="Debuff" val="0" effectPower="#ench1Chance">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="25" />
 				<sub order="0x40" stat="fireRes" val="25" />
@@ -2649,7 +2649,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Debuff" val="0" effectPower="#ench2Chance" >
+			<effect name="Debuff" val="0" effectPower="#ench2Chance">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#ench2Vuln" />
 				<sub order="0x40" stat="fireRes" val="#ench2Vuln" />

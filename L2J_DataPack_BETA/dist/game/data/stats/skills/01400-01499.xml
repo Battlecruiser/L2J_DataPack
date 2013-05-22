@@ -1196,19 +1196,19 @@
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40" >
+			<effect name="Debuff" val="0" effectPower="40">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench3Power" >
+			<effect name="Debuff" val="0" effectPower="#ench3Power">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</enchant3for>
 		<enchant5for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40" >
+			<effect name="Debuff" val="0" effectPower="40">
 				<sub order="0x40" stat="darkRes" val="#ench5DarkhVuln" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -1305,7 +1305,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="StealAbnormal" noicon="1" val="0"/>
+			<effect name="StealAbnormal" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="1441" levels="3" name="Soul to Empower">
@@ -2918,10 +2918,10 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison"  activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" />
+			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison"  activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" />
+			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="3" />
 		</enchant1for>
 	</skill>
 	<skill id="1486" levels="4" name="Mental Impoverish" enchantGroup1="1" enchantGroup2="1">
@@ -2962,10 +2962,10 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison"  activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" />
+			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" />
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison"  activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" />
+			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="4" />
 		</enchant1for>
 	</skill>
 	<skill id="1487" levels="8" name="Restoration" enchantGroup1="1" enchantGroup2="1">
@@ -3165,7 +3165,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Debuff" val="0" effectPower="80" >
+			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />

@@ -1398,7 +1398,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60" >
+			<effect name="Debuff" val="0" effectPower="60">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="0.7" />
