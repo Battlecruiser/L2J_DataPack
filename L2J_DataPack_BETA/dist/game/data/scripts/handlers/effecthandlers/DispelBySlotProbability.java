@@ -28,20 +28,23 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.util.Rnd;
 
 /**
- * Dispel By Slot effect implementation.
- * @author Gnacik, Zoey76, Adry_85
+ * Dispel By Slot Probability effect implementation.
+ * @author Adry_85
  */
-public class DispelBySlot extends L2Effect
+public class DispelBySlotProbability extends L2Effect
 {
 	private final String _dispel;
 	private final Map<AbnormalType, Byte> _dispelAbnormals;
+	private final int _rate;
 	
-	public DispelBySlot(Env env, EffectTemplate template)
+	public DispelBySlotProbability(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_dispel = template.getParameters().getString("dispel", null);
+		_rate = template.getParameters().getInteger("rate", 0);
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
 			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
@@ -49,7 +52,7 @@ public class DispelBySlot extends L2Effect
 			{
 				String[] ngt = ngtStack.split(",");
 				final AbnormalType type = AbnormalType.getAbnormalType(ngt[0]);
-				_dispelAbnormals.put(type, Byte.parseByte(ngt[1]));
+				_dispelAbnormals.put(type, Byte.MAX_VALUE);
 			}
 		}
 		else
@@ -91,9 +94,9 @@ public class DispelBySlot extends L2Effect
 				continue;
 			}
 			
-			for (Entry<AbnormalType, Byte> dispel : _dispelAbnormals.entrySet())
+			for (Entry<AbnormalType, Byte> negate : _dispelAbnormals.entrySet())
 			{
-				if ((effect.getSkill().getAbnormalType() == dispel.getKey()) && (dispel.getValue() >= effect.getSkill().getAbnormalLvl()))
+				if ((effect.getSkill().getAbnormalType() == negate.getKey()) && (Rnd.get(100) < _rate))
 				{
 					effect.exit();
 				}

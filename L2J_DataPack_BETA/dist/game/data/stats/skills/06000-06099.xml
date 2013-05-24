@@ -313,14 +313,15 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="81" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="47" />
 		<set name="mpInitialConsume" val="12" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="180000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6043" levels="1" name="Phoenix Flame Feather">
@@ -849,14 +850,15 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="maxNegated" val="2" />
 		<set name="mpConsume" val="42" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6095" levels="15" name="Panther Dark Claw">

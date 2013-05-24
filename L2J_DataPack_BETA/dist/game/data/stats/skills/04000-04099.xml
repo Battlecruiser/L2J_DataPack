@@ -1417,6 +1417,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="4200" />
 		<set name="abnormalType" val="FATAL_POISON" />
+		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -1636,7 +1637,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CancelAll" noicon="1" val="0" />
+			<effect name="DispelAll" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="4095" levels="1" name="Damage Shield">

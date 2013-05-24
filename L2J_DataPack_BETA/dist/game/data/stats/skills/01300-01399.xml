@@ -5,7 +5,7 @@
 		<table name="#magicLvl"> 40 48 60 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
-		<table name="#negateAbnormals"> POISON,3;BLEEDING,3 POISON,7;BLEEDING,7 POISON,9;BLEEDING,9 </table>
+		<table name="#dispelAbnormals"> POISON,3;BLEEDING,3 POISON,7;BLEEDING,7 POISON,9;BLEEDING,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -14,12 +14,13 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1301" levels="1" name="Servitor Blessing">
@@ -31,12 +32,13 @@
 		<set name="magicLvl" val="62" />
 		<set name="mpConsume" val="46" />
 		<set name="mpInitialConsume" val="12" />
-		<set name="negateAbnormals" val="ROOT_PHYSICALLY,1;ROOT_MAGICALLY,1;PARALYZE,1;ATTACK_TIME_UP,3;SPEED_DOWN,3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="SERVITOR" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="ROOT_PHYSICALLY,1;ROOT_MAGICALLY,1;PARALYZE,1;ATTACK_TIME_UP,3;SPEED_DOWN,3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1303" levels="2" name="Wild Magic" enchantGroup1="1" enchantGroup2="1">
@@ -1269,13 +1271,14 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="84" />
 		<set name="mpInitialConsume" val="21" />
-		<set name="negateAbnormals" val="ATTACK_TIME_DOWN;SPEED_UP;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="40" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="ATTACK_TIME_DOWN;SPEED_UP;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" rate="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1345" levels="1" name="Mass Mage Bane">
@@ -1287,13 +1290,14 @@
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="85" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="negateAbnormals" val="MA_UP;CASTING_TIME_DOWN;IMPROVE_MA_MD_UP" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="40" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="MA_UP;CASTING_TIME_DOWN;IMPROVE_MA_MD_UP" rate="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1346" levels="1" name="Warrior Servitor" enchantGroup1="5" enchantGroup2="5">
@@ -1515,13 +1519,14 @@
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="ATTACK_TIME_DOWN;SPEED_UP;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="80" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="ATTACK_TIME_DOWN;SPEED_UP;IMPROVE_SPEED_AVOID_UP;IMPROVE_VAMPIRIC_HASTE" rate="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1351" levels="1" name="Mage Bane">
@@ -1533,13 +1538,14 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="MA_UP;CASTING_TIME_DOWN;IMPROVE_MA_MD_UP" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="80" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="MA_UP;CASTING_TIME_DOWN;IMPROVE_MA_MD_UP" rate="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1352" levels="1" name="Elemental Protection" enchantGroup1="5" enchantGroup2="5">
@@ -1906,7 +1912,6 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="PD_UP;IMPROVE_PA_PD_UP" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -1924,14 +1929,18 @@
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="PD_UP;IMPROVE_PA_PD_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 		<enchant2for>
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="PD_UP;IMPROVE_PA_PD_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</enchant2for>
 	</skill>
@@ -1956,7 +1965,6 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="56" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -1974,14 +1982,18 @@
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 		<enchant2for>
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</enchant2for>
 	</skill>
@@ -2005,7 +2017,6 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="84" />
 		<set name="mpInitialConsume" val="21" />
-		<set name="negateAbnormals" val="IMPROVE_PA_PD_UP;PD_UP" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -2023,7 +2034,9 @@
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="IMPROVE_PA_PD_UP;PD_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -2047,7 +2060,6 @@
 		<set name="magicLvl" val="78" />
 		<set name="mpConsume" val="85" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="negateAbnormals" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -2065,7 +2077,9 @@
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -2203,7 +2217,6 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="224" />
 		<set name="mpInitialConsume" val="56" />
-		<set name="negateAbnormals" val="HIT_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="BUFF" />
@@ -2218,7 +2231,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="HIT_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 		<enchant1for>
@@ -2226,7 +2241,9 @@
 				<add order="0x40" stat="accCombat" val="4" />
 				<mul order="0x30" stat="critDamEvas" val="1.3" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="HIT_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</enchant1for>
 	</skill>
@@ -2249,7 +2266,6 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="224" />
 		<set name="mpInitialConsume" val="56" />
-		<set name="negateAbnormals" val="MA_UP,9;MD_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="skillType" val="BUFF" />
@@ -2264,7 +2280,9 @@
 				<mul order="0x30" stat="mAtk" val="1.75" />
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="MA_UP,9;MD_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 		<enchant1for>
@@ -2272,7 +2290,9 @@
 				<mul order="0x30" stat="mAtk" val="1.75" />
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="MA_UP,9;MD_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</enchant1for>
 	</skill>

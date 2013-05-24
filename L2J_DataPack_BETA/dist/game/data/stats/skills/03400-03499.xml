@@ -1057,11 +1057,12 @@
 		<set name="aggroPoints" val="10" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="56" />
-		<set name="negateAbnormals" val="TRANSFORM,9" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="TRANSFORM,9" />
+			</effect>
 		</for>
 	</skill>
 </list>

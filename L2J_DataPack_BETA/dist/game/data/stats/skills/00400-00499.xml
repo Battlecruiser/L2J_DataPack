@@ -1808,12 +1808,13 @@
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="60" />
 		<set name="mpConsume" val="60" />
-		<set name="negateAbnormals" val="ROOT_PHYSICALLY,3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="ROOT_PHYSICALLY,3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
@@ -1988,14 +1989,13 @@
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">
 		<table name="#chargeConsume"> 2 3 </table>
+		<table name="#dispelAbnormals"> ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 </table>
 		<table name="#magicLvl"> 60 66 </table>
 		<table name="#mpConsume"> 33 37 </table>
-		<table name="#negateAbnormals"> ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 </table>
 		<set name="chargeConsume" val="#chargeConsume" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="SELF" />
@@ -2003,7 +2003,9 @@
 			<player Charges="#chargeConsume" /> <!-- Level 2 3 Focused Force charge required. -->
 		</cond>
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="462" levels="1" name="Guilted Body">

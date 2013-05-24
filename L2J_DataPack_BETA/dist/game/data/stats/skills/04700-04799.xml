@@ -40,12 +40,13 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="negateAbnormals" val="ATTACK_TIME_UP;HIT_DOWN;PA_DOWN" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="ATTACK_TIME_UP;HIT_DOWN;PA_DOWN" rate="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4702" levels="13" name="Blessing of Seraphim">
@@ -113,12 +114,13 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="negateAbnormals" val="SLEEP;ROOT_MAGICALLY;STUN;PARALYZE;SILENCE" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="#power" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="SLEEP;ROOT_MAGICALLY;STUN;PARALYZE;SILENCE" rate="#power" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4705" levels="13" name="Curse of Shade">

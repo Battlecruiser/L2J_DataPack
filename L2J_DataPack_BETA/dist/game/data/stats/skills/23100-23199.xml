@@ -702,7 +702,6 @@
 		<!-- All Debuff is canceled with the power of Phoenix. Cooldown of 4 hours. -->
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="14400000" />
 		<set name="targetType" val="SELF" />
@@ -710,7 +709,9 @@
 			<player agathionId="1574" />
 		</cond>
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23174" levels="1" name="Narrow Escape from Death">

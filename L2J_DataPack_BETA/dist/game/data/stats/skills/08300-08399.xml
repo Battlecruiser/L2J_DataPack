@@ -335,7 +335,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="offensive" val="true" />
@@ -344,7 +343,9 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8332" levels="1" name="Blue Talisman - Buff Steal">
@@ -354,16 +355,16 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
-		<set name="maxNegated" val="3" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="StealAbnormal" noicon="1" val="0" />
+			<effect name="StealAbnormal" noicon="1" val="0">
+				<param slot="buff" rate="25" max="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8333" levels="1" name="Red Talisman - Territory Guard">

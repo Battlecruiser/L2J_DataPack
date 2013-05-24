@@ -106,14 +106,15 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="TURN_STONE,99" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1902">
 			<player levelRange="61;85" />
 		</cond>
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="TURN_STONE" rate="99" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2308" levels="36" name="Event Item">

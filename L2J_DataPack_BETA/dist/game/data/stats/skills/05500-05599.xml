@@ -400,7 +400,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
-		<set name="maxNegated" val="3" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -412,7 +411,9 @@
 				<!-- set order="0x08" stat="buffImmunity" val="1" / TODO: Needs Support -->
 				<sub order="0x40" stat="darkRes" val="50" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="100" max="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5524" levels="1" name="Chain Buff - Resistance to Bow and Magic attacks">
@@ -1289,11 +1290,12 @@
 		<set name="aggroPoints" val="408" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="80" />
-		<set name="maxNegated" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5580" levels="1" name="Divine Beast Bite">

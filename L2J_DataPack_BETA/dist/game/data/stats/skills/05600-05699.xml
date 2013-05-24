@@ -1357,14 +1357,15 @@
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
-		<set name="maxNegated" val="3" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5683" levels="1" name="PvP Weapon - Ignore Shield Defense">

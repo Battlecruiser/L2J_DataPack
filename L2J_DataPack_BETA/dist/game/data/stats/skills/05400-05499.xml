@@ -753,12 +753,13 @@
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="magicLvl" val="90" />
-		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="100" max="20" />
+			</effect>
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
@@ -933,11 +934,12 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="negateAbnormals" val="INVINCIBILITY,9" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="INVINCIBILITY,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5481" levels="1" name="Transform Penalty">

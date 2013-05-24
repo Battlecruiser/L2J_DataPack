@@ -687,12 +687,13 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="75" />
-		<set name="negateAbnormals" val="DRAGON_BREATH,1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="DRAGON_BREATH,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2234" levels="1" name="Soul Breaking Arrow">
@@ -1461,11 +1462,12 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="FISHING_MASTERY_DOWN,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="FISHING_MASTERY_DOWN,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">

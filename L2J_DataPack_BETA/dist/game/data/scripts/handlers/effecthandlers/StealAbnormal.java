@@ -34,9 +34,16 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  */
 public class StealAbnormal extends L2Effect
 {
+	private final String _slot;
+	private final int _rate;
+	private final int _max;
+	
 	public StealAbnormal(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_slot = template.getParameters().getString("slot", null);
+		_rate = template.getParameters().getInteger("rate", 0);
+		_max = template.getParameters().getInteger("max", 0);
 	}
 	
 	@Override
@@ -62,7 +69,7 @@ public class StealAbnormal extends L2Effect
 	{
 		if ((getEffected() != null) && getEffected().isPlayer() && (getEffector() != getEffected()))
 		{
-			final List<L2Effect> toSteal = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), getSkill().getPower());
+			final List<L2Effect> toSteal = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), _slot, _rate, _max);
 			if (toSteal.isEmpty())
 			{
 				return false;

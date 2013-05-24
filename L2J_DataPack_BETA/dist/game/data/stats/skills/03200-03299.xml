@@ -1233,12 +1233,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="BLEEDING,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
@@ -1249,12 +1250,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="ROOT_PHYSICALLY,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="ROOT_PHYSICALLY,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
@@ -1265,12 +1267,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="ROOT_MAGICALLY,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="ROOT_MAGICALLY,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3289" levels="1" name="Black Talisman - Escape">
@@ -1281,12 +1284,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3290" levels="1" name="Black Talisman of Rescue">
@@ -1297,12 +1301,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="SILENCE_PHYSICAL,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SILENCE_PHYSICAL,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
@@ -1313,12 +1318,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="SILENCE,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SILENCE,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
@@ -1329,12 +1335,13 @@
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
-		<set name="negateAbnormals" val="SILENCE_ALL,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SILENCE_ALL,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3293" levels="1" name="Yellow Talisman of Power">

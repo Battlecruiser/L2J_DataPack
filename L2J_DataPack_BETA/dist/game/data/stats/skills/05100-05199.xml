@@ -195,14 +195,15 @@
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5114" levels="12" name="Hold">
@@ -298,13 +299,14 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="90" />
-		<set name="maxNegated" val="5" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5119" levels="1" name="Bleed">

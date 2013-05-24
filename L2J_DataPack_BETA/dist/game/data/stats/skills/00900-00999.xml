@@ -335,7 +335,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="3" /> <!-- Dance Skill -->
 		<set name="magicLvl" val="81" />
-		<set name="maxNegated" val="3" />
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
@@ -346,7 +345,9 @@
 				<sub order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="1.3" />
 			</effect>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="80" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="80" max="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="915" levels="1" name="Dance of Berserker">
@@ -444,7 +445,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusEnergy" noicon="1" val="8" />
+			<effect name="FocusMaxEnergy" noicon="1" val="8" />
 		</for>
 	</skill>
 	<skill id="919" levels="1" name="Maximum Focus Sonic">
