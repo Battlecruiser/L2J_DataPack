@@ -18,20 +18,30 @@
  */
 package handlers.effecthandlers;
 
+import java.util.List;
+
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Cancel All effect implementation.
- * @author UnAfraid
+ * Dispel By Category effect implementation.
+ * @author DS, Adry_85
  */
-public class CancelAll extends L2Effect
+public class DispelByCategory extends L2Effect
 {
-	public CancelAll(Env env, EffectTemplate template)
+	private final String _slot;
+	private final int _rate;
+	private final int _max;
+	
+	public DispelByCategory(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_slot = template.getParameters().getString("slot", null);
+		_rate = template.getParameters().getInteger("rate", 0);
+		_max = template.getParameters().getInteger("max", 0);
 	}
 	
 	@Override
@@ -43,13 +53,22 @@ public class CancelAll extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.CANCEL_ALL;
+		return L2EffectType.DISPEL;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		getEffected().stopAllEffects();
+		if (getEffected().isDead())
+		{
+			return false;
+		}
+		
+		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), _slot, _rate, _max);
+		for (L2Effect eff : canceled)
+		{
+			eff.exit();
+		}
 		return true;
 	}
 }

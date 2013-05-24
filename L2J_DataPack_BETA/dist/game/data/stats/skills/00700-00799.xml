@@ -36,13 +36,14 @@
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="maxNegated" val="10" />
 		<set name="mpConsume" val="59" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="703" levels="1" name="Sacrifice Healer">
@@ -562,14 +563,15 @@
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
-		<set name="maxNegated" val="10" />
 		<set name="mpConsume" val="20" />
 		<set name="mpInitialConsume" val="5" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="725" levels="2" name="Venom Power Smash">
@@ -1016,14 +1018,15 @@
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="maxNegated" val="10" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="746" levels="3" name="Saber Tooth Tiger Bite">
@@ -1379,7 +1382,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="81" />
-		<set name="maxNegated" val="5" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
@@ -1403,7 +1405,9 @@
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="0.7" />
 			</effect>
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="5" />
+			</effect>
 			<effect name="CpDamPercent" noicon="1" val="90" />
 		</for>
 	</skill>

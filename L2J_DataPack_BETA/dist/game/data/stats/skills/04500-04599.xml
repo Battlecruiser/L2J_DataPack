@@ -615,11 +615,12 @@
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
-		<set name="negateAbnormals" val="WATCHER_GAZE,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="WATCHER_GAZE,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4549" levels="1" name="Quest - Unsealed Altar">
@@ -765,11 +766,12 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="SPA_DISEASE_A,10;SPA_DISEASE_D,10" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SPA_DISEASE_A,10;SPA_DISEASE_D,10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4557" levels="1" name="Dispel Hot Spring Disease B_D">
@@ -781,11 +783,12 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="SPA_DISEASE_B,10;SPA_DISEASE_D,10" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SPA_DISEASE_B,10;SPA_DISEASE_D,10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4558" levels="1" name="Dispel Hot Spring Disease C_D">
@@ -797,11 +800,12 @@
 		<set name="magicLvl" val="75" />
 		<set name="mpConsume" val="55" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="negateAbnormals" val="SPA_DISEASE_C,10;SPA_DISEASE_D,10" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SPA_DISEASE_C,10;SPA_DISEASE_D,10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4559" levels="1" name="Hot Spring Illusion">

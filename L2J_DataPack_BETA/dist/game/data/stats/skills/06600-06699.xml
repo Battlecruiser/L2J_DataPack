@@ -1109,11 +1109,12 @@
 		<set name="affectRange" val="200" />
 		<set name="aggroPoints" val="1" />
 		<set name="magicLvl" val="83" />
-		<set name="negateAbnormals" val="PA_UP,9;PD_UP,9" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="CLAN" /> <!-- FIXME: Aura Friendly ? -->
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="PA_UP,9;PD_UP,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6687" levels="1" name="Patience">

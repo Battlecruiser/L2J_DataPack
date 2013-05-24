@@ -972,12 +972,13 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="64" />
 		<set name="mpConsume" val="59" />
-		<set name="negateAbnormals" val="DARK_SEED,9" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="DARK_SEED,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="525" levels="6" name="Decoy" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">

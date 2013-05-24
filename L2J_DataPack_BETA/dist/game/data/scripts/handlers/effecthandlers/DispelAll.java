@@ -18,21 +18,18 @@
  */
 package handlers.effecthandlers;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Cancel effect implementation.
- * @author DS
+ * Dispel All effect implementation.
+ * @author UnAfraid
  */
-public class Cancel extends L2Effect
+public class DispelAll extends L2Effect
 {
-	public Cancel(Env env, EffectTemplate template)
+	public DispelAll(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -46,22 +43,13 @@ public class Cancel extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.CANCEL;
+		return L2EffectType.DISPEL;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected().isDead())
-		{
-			return false;
-		}
-		
-		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), getEffectTemplate().getEffectPower());
-		for (L2Effect eff : canceled)
-		{
-			eff.exit();
-		}
+		getEffected().stopAllEffects();
 		return true;
 	}
 }

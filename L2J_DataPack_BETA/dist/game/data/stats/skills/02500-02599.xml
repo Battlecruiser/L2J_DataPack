@@ -1404,22 +1404,24 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="POISON,9" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2579" levels="1" name="Cure Death Clock">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="DEATH_CLACK,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="DEATH_CLACK,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2580" levels="1" name="Vitality Replenishing Herb">

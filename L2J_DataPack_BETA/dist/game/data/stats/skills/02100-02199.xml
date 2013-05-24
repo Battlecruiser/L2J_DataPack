@@ -852,11 +852,12 @@
 		<set name="effectRange" val="600" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="SLEEP,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SLEEP,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2171" levels="1" name="Spellbook Paper">

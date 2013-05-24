@@ -648,22 +648,23 @@
 	</skill>
 	<skill id="21" levels="3" name="Poison Recovery">
 		<table name="#aggro"> 204 379 566 </table>
+		<table name="#dispelAbnormals"> POISON,3 POISON,7 POISON,9 </table>
 		<table name="#magicLvl"> 20 40 60 </table>
 		<table name="#mpConsume"> 16 28 44 </table>
 		<table name="#mpInitialConsume"> 4 7 11 </table>
-		<table name="#negateAbnormals"> POISON,3 POISON,7 POISON,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="22" levels="7" name="Summon Vampiric Cubic" enchantGroup1="2">
@@ -938,19 +939,20 @@
 	</skill>
 	<skill id="34" levels="3" name="Bandage">
 		<table name="#aggro"> 204 438 582 </table>
+		<table name="#dispelAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<table name="#magicLvl"> 20 46 62 </table>
 		<table name="#mpConsume"> 19 41 55 </table>
-		<table name="#negateAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="35" levels="28" name="Force Storm" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
@@ -1095,22 +1097,23 @@
 	</skill>
 	<skill id="44" levels="3" name="Remedy">
 		<table name="#aggro"> 379 467 582 </table>
+		<table name="#dispelAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<table name="#magicLvl"> 40 49 62 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
-		<table name="#negateAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="45" levels="9" name="Divine Heal">
@@ -1390,9 +1393,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="negateAbnormals" val="POISON,9" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="negateAbnormals" val="BLEEDING,9" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1401,11 +1402,15 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Heal" noicon="1" val="546" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,9" />
+			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Heal" noicon="1" val="546" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,9" />
+			</effect>
 		</enchant4for>
 	</skill>
 	<skill id="60" levels="1" name="Fake Death">
@@ -1418,22 +1423,23 @@
 	</skill>
 	<skill id="61" levels="3" name="Cure Bleeding">
 		<table name="#aggro"> 235 438 582 </table>
+		<table name="#dispelAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<table name="#magicLvl"> 24 46 62 </table>
 		<table name="#mpConsume"> 17 33 44 </table>
 		<table name="#mpInitialConsume"> 5 9 11 </table>
-		<table name="#negateAbnormals"> BLEEDING,3 BLEEDING,7 BLEEDING,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="negateAbnormals" val="#negateAbnormals" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="#dispelAbnormals" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="65" levels="13" name="Horror">
@@ -1512,10 +1518,8 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="hpConsume" val="#ench34HpConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="negateAbnormals" val="POISON,9" />
 		<enchant4 name="hpConsume" val="#ench34HpConsume" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="negateAbnormals" val="BLEEDING,9" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1524,11 +1528,15 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Heal" noicon="1" val="1170" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,9" />
+			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Heal" noicon="1" val="1170" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,9" />
+			</effect>
 		</enchant4for>
 	</skill>
 	<skill id="70" levels="53" name="Drain Health" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">

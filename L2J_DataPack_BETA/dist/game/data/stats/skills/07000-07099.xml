@@ -10,12 +10,13 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
-		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="100" max="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
@@ -23,11 +24,12 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
-		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
@@ -36,12 +38,15 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
-		<set name="maxNegated" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Cancel" noicon="1" val="0" effectPower="100" />
-			<effect name="CancelDebuff" noicon="1" val="0" effectPower="100" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="100" max="20" />
+			</effect>
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="debuff" rate="100" max="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">
@@ -49,12 +54,13 @@
 		<set name="aggroPoints" val="566" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
-		<set name="negateAbnormals" val="TURN_STONE,2" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="TURN_STONE,2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="7005" levels="4" name="Greater Chant of Vampire">
@@ -1119,7 +1125,6 @@
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="PA_UP,9;PD_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1129,7 +1134,9 @@
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="PA_UP,9;PD_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1148,7 +1155,6 @@
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="MA_UP,9;MD_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1158,7 +1164,9 @@
 				<mul order="0x30" stat="mAtk" val="1.75" />
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="MA_UP,9;MD_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1177,7 +1185,6 @@
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="MAX_HP_UP,9;MAX_MP_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1187,7 +1194,9 @@
 				<mul order="0x30" stat="maxHp" val="1.35" />
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1206,7 +1215,6 @@
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1216,7 +1224,9 @@
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1235,7 +1245,6 @@
 		<set name="magicLvl" val="70" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1245,7 +1254,9 @@
 				<mul order="0x30" stat="rShld" val="1.3" />
 				<mul order="0x30" stat="sDef" val="1.5" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -1264,7 +1275,6 @@
 		<set name="magicLvl" val="72" />
 		<set name="mpConsume" val="1" />
 		<set name="mpInitialConsume" val="1" />
-		<set name="negateAbnormals" val="SPEED_UP,9;AVOID_UP,9" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1274,7 +1284,9 @@
 				<add order="0x40" stat="runSpd" val="33" />
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="SPEED_UP,9;AVOID_UP,9" />
+			</effect>
 			<effect name="BlockBuffSlot" noicon="1" val="0" />
 		</for>
 	</skill>

@@ -439,41 +439,45 @@
 	<skill id="2042" levels="1" name="Antidote">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="POISON,3" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2043" levels="1" name="Greater Antidote">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="POISON,7" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2044" levels="1" name="Bandage">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="BLEEDING,3" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2045" levels="1" name="Emergency Dressing">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
-		<set name="negateAbnormals" val="BLEEDING,7" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2046" levels="2" name="Wolf's Necklace">
@@ -677,11 +681,12 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
-		<set name="negateAbnormals" val="FATAL_POISON,1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="FATAL_POISON,1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">

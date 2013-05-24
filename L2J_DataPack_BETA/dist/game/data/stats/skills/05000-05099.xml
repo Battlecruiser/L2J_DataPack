@@ -140,7 +140,6 @@
 		<table name="#aggroPoints"> 100 100 100 0 0 </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
 		<table name="#effectname1"> Buff Buff Buff Buff Stun </table>
-		<table name="#effectname2"> Buff Buff Buff Buff Cancel </table>
 		<table name="#effectPower"> 0 0 0 0 20 </table>
 		<table name="#healEffect"> 1 1 1 0.5 1 </table>
 		<table name="#healPercent"> 3 0 0 0 0 </table>
@@ -159,7 +158,6 @@
 		<set name="isMagic" val="#isMagic" />
 		<set name="lvlBonusRate" val="#lvlDepend" />
 		<set name="magicLvl" val="85" />
-		<set name="maxNegated" val="#maxNegated" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="MEN" />
@@ -175,7 +173,9 @@
 				<add order="0x40" stat="runSpd" val="#attackAndSpeed" />
 				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
-			<effect name="#effectname2" noicon="1" val="0" effectPower="#effectPower" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="#effectPower" max="#maxNegated" />
+			</effect>
 			<effect name="HealPercent" noicon="1" val="#healPercent" />
 		</for>
 	</skill>
@@ -601,7 +601,6 @@
 		<set name="affectRange" val="150" />
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="maxNegated" val="20" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -609,7 +608,9 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Cancel" noicon="1" val="0" effectPower="25" />
+			<effect name="DispelByCategory" noicon="1" val="0">
+				<param slot="buff" rate="25" max="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5043" levels="12" name="NPC Super Sonic Blaster">

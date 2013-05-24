@@ -1434,10 +1434,8 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="mpConsume" val="#ench34MpConsume" />
-		<enchant3 name="negateAbnormals" val="poison,9" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="mpConsume" val="#ench34MpConsume" />
-		<enchant4 name="negateAbnormals" val="bleeding,9" />
 		<for>
 			<effect name="Heal" noicon="1" val="#amount" />
 		</for>
@@ -1446,11 +1444,15 @@
 		</enchant1for>
 		<enchant3for>
 			<effect name="Heal" noicon="1" val="546" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="POISON,9" />
+			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Heal" noicon="1" val="546" />
-			<effect name="DispelBySlot" noicon="1" val="0" />
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="BLEEDING,9" />
+			</effect>
 		</enchant4for>
 	</skill>
 	<skill id="263" levels="37" name="Deadly Blow" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
