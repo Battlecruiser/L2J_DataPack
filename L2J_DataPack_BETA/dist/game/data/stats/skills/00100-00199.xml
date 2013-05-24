@@ -646,7 +646,6 @@
 		</for>
 	</skill>
 	<skill id="121" levels="6" name="Battle Roar" enchantGroup1="1" enchantGroup2="1">
-		<!-- @Calculation@ (#power / 100 ) * (100 * #maxHp) = ~#maxHp -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#aggro"> 268 379 467 549 597 635 </table>
 		<table name="#amount"> 10 15 20 25 30 35 </table>
