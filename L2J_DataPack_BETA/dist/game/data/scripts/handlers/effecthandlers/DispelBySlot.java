@@ -93,7 +93,12 @@ public class DispelBySlot extends L2Effect
 			
 			for (Entry<AbnormalType, Byte> dispel : _dispelAbnormals.entrySet())
 			{
-				if ((effect.getSkill().getAbnormalType() == dispel.getKey()) && (dispel.getValue() >= effect.getSkill().getAbnormalLvl()))
+				if ((effect.getSkill().getAbnormalType() == AbnormalType.TRANSFORM) && ((dispel.getValue() == getEffected().getActingPlayer().getTransformationId()) || (dispel.getValue() < 0)))
+				{
+					getEffected().stopTransformation(true);
+					continue;
+				}
+				else if ((effect.getSkill().getAbnormalType() == dispel.getKey()) && (dispel.getValue() >= effect.getSkill().getAbnormalLvl()))
 				{
 					effect.exit();
 				}

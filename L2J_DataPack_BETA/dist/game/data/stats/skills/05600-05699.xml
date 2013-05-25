@@ -881,6 +881,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>

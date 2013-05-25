@@ -728,6 +728,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="5857" levels="1" name="Transform Lure Tow">
 		<set name="abnormalLvl" val="1" />
@@ -737,6 +740,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="5858" levels="1" name="Transform Heavy Tow">
 		<set name="abnormalLvl" val="1" />
@@ -746,6 +752,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="5859" levels="1" name="Transform Wing Tow">
 		<set name="abnormalLvl" val="1" />
@@ -755,6 +764,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="5860" levels="1" name="Wrath of Valakas">
 		<set name="abnormalLvl" val="1" />

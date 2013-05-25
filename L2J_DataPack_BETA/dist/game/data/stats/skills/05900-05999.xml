@@ -957,6 +957,9 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="2721">
 			<player landingZone="true" />
 		</cond>
@@ -978,6 +981,9 @@
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="2721">
 			<player landingZone="true" />
 		</cond>
