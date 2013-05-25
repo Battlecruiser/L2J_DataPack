@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2VillageMasterInstance;
+import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
@@ -55,106 +56,106 @@ public class SubclassCertification extends AbstractNpcAI
 	// @formatter:on
 	private static final int CERTIFICATE_EMERGENT_ABILITY = 10280;
 	private static final int CERTIFICATE_MASTER_ABILITY = 10612;
-	private static final Map<Integer, Integer> CLASSES = new HashMap<>();
+	private static final Map<ClassId, Integer> CLASSES = new HashMap<>();
 	private static final Map<Integer, Integer> ABILITY_CERTIFICATES = new HashMap<>();
 	private static final Map<Integer, Integer> TRANSFORMATION_SEALBOOKS = new HashMap<>();
 	static
 	{
 		// Warrior classes
-		CLASSES.put(0x02, 0); // Gladiator (Human)
-		CLASSES.put(0x03, 0); // Warlord (Human)
-		CLASSES.put(0x2E, 0); // Destroyer (Orc)
-		CLASSES.put(0x30, 0); // Tyrant (Orc)
-		CLASSES.put(0x37, 0); // Bounty Hunter (Dwarf)
-		CLASSES.put(0x38, 0); // Artisan (Dwarf)
-		CLASSES.put(0x58, 0); // Duelist (Human)
-		CLASSES.put(0x59, 0); // Dreadnought (Human)
-		CLASSES.put(0x71, 0); // Titan (Orc)
-		CLASSES.put(0x72, 0); // Grand Khavatari (Orc)
-		CLASSES.put(0x75, 0); // Fortune Seeker (Dwarf)
-		CLASSES.put(0x76, 0); // Maestro (Dwarf)
-		CLASSES.put(0x7F, 0); // Berserker (Kamael)
-		CLASSES.put(0x80, 0); // Male Soulbreaker (Kamael)
-		CLASSES.put(0x81, 0); // Female Soulbreaker (Kamael)
-		CLASSES.put(0x83, 0); // Doombringer (Kamael)
-		CLASSES.put(0x84, 0); // Male Soulhound (Kamael)
-		CLASSES.put(0x85, 0); // Female Soulhound (Kamael)
+		CLASSES.put(ClassId.gladiator, 0);
+		CLASSES.put(ClassId.warlord, 0);
+		CLASSES.put(ClassId.destroyer, 0);
+		CLASSES.put(ClassId.tyrant, 0);
+		CLASSES.put(ClassId.bountyHunter, 0);
+		CLASSES.put(ClassId.artisan, 0);
+		CLASSES.put(ClassId.duelist, 0);
+		CLASSES.put(ClassId.dreadnought, 0);
+		CLASSES.put(ClassId.titan, 0);
+		CLASSES.put(ClassId.grandKhavatari, 0);
+		CLASSES.put(ClassId.fortuneSeeker, 0);
+		CLASSES.put(ClassId.maestro, 0);
+		CLASSES.put(ClassId.berserker, 0);
+		CLASSES.put(ClassId.maleSoulbreaker, 0);
+		CLASSES.put(ClassId.femaleSoulbreaker, 0);
+		CLASSES.put(ClassId.doombringer, 0);
+		CLASSES.put(ClassId.maleSoulhound, 0);
+		CLASSES.put(ClassId.femaleSoulhound, 0);
 		// Rogue classes
-		CLASSES.put(0x08, 1); // Treasure Hunter (Human)
-		CLASSES.put(0x09, 1); // Hawkeye (Human)
-		CLASSES.put(0x17, 1); // Plainswalker (Elf)
-		CLASSES.put(0x18, 1); // Silver Ranger (Elf)
-		CLASSES.put(0x24, 1); // Abyss Walker (Dark Elf)
-		CLASSES.put(0x25, 1); // Phantom Ranger (Dark Elf)
-		CLASSES.put(0x5C, 1); // Sagittarius (Human)
-		CLASSES.put(0x5D, 1); // Adventurer (Human)
-		CLASSES.put(0x65, 1); // Wind Rider (Elf)
-		CLASSES.put(0x66, 1); // Moonlight Sentinel (Elf)
-		CLASSES.put(0x6C, 1); // Ghost Hunter (Dark Elf)
-		CLASSES.put(0x6D, 1); // Ghost Sentinel (Dark Elf)
-		CLASSES.put(0x82, 1); // Arbalester (Kamael)
-		CLASSES.put(0x86, 1); // Trickster (Kamael)
+		CLASSES.put(ClassId.treasureHunter, 1);
+		CLASSES.put(ClassId.hawkeye, 1);
+		CLASSES.put(ClassId.plainsWalker, 1);
+		CLASSES.put(ClassId.silverRanger, 1);
+		CLASSES.put(ClassId.abyssWalker, 1);
+		CLASSES.put(ClassId.phantomRanger, 1);
+		CLASSES.put(ClassId.sagittarius, 1);
+		CLASSES.put(ClassId.adventurer, 1);
+		CLASSES.put(ClassId.windRider, 1);
+		CLASSES.put(ClassId.moonlightSentinel, 1);
+		CLASSES.put(ClassId.ghostHunter, 1);
+		CLASSES.put(ClassId.ghostSentinel, 1);
+		CLASSES.put(ClassId.arbalester, 1);
+		CLASSES.put(ClassId.trickster, 1);
 		// Knight classes
-		CLASSES.put(0x05, 2); // Paladin (Human)
-		CLASSES.put(0x06, 2); // Dark Avenger (Human)
-		CLASSES.put(0x14, 2); // Temple Knight (Elf)
-		CLASSES.put(0x21, 2); // Shillien Knight (Dark Elf)
-		CLASSES.put(0x5A, 2); // Phoenix Knight (Human)
-		CLASSES.put(0x5B, 2); // Hell Knight (Human)
-		CLASSES.put(0x63, 2); // Eva Templar (Elf)
-		CLASSES.put(0x6A, 2); // Shillien Templar (Dark Elf)
+		CLASSES.put(ClassId.paladin, 2);
+		CLASSES.put(ClassId.darkAvenger, 2);
+		CLASSES.put(ClassId.templeKnight, 2);
+		CLASSES.put(ClassId.shillienKnight, 2);
+		CLASSES.put(ClassId.phoenixKnight, 2);
+		CLASSES.put(ClassId.hellKnight, 2);
+		CLASSES.put(ClassId.evaTemplar, 2);
+		CLASSES.put(ClassId.shillienTemplar, 2);
 		// Summoner classes
-		CLASSES.put(0x0E, 3); // Warlock (Human)
-		CLASSES.put(0x1C, 3); // Elemental Summoner (Elf)
-		CLASSES.put(0x29, 3); // Phantom Summoner (Dark Elf)
-		CLASSES.put(0x60, 3); // Arcana Lord (Human)
-		CLASSES.put(0x68, 3); // Elemental Master (Elf)
-		CLASSES.put(0x6F, 3); // Spectral Master (Dark Elf)
+		CLASSES.put(ClassId.warlock, 3);
+		CLASSES.put(ClassId.elementalSummoner, 3);
+		CLASSES.put(ClassId.phantomSummoner, 3);
+		CLASSES.put(ClassId.arcanaLord, 3);
+		CLASSES.put(ClassId.elementalMaster, 3);
+		CLASSES.put(ClassId.spectralMaster, 3);
 		// Wizard classes
-		CLASSES.put(0x0C, 4); // Sorceror (Human)
-		CLASSES.put(0x0D, 4); // Necromancer (Human)
-		CLASSES.put(0x1B, 4); // Spellsinger (Elf)
-		CLASSES.put(0x28, 4); // Spellhowler (Dark Elf)
-		CLASSES.put(0x5E, 4); // Archmage (Human)
-		CLASSES.put(0x5F, 4); // Soultaker (Human)
-		CLASSES.put(0x67, 4); // Mystic Muse (Elf)
-		CLASSES.put(0x6E, 4); // Storm Screamer (Dark Elf)
+		CLASSES.put(ClassId.sorceror, 4);
+		CLASSES.put(ClassId.necromancer, 4);
+		CLASSES.put(ClassId.spellsinger, 4);
+		CLASSES.put(ClassId.spellhowler, 4);
+		CLASSES.put(ClassId.archmage, 4);
+		CLASSES.put(ClassId.soultaker, 4);
+		CLASSES.put(ClassId.mysticMuse, 4);
+		CLASSES.put(ClassId.stormScreamer, 4);
 		// Healer classes
-		CLASSES.put(0x10, 5); // Bishop (Human)
-		CLASSES.put(0x1E, 5); // Elder (Elf)
-		CLASSES.put(0x2B, 5); // Shillen Elder (Dark Elf)
-		CLASSES.put(0x61, 5); // Cardinal (Human)
-		CLASSES.put(0x69, 5); // Eva Saint (Elf)
-		CLASSES.put(0x70, 5); // Shillien Saint (Dark Elf)
+		CLASSES.put(ClassId.bishop, 5);
+		CLASSES.put(ClassId.elder, 5);
+		CLASSES.put(ClassId.shillenElder, 5);
+		CLASSES.put(ClassId.cardinal, 5);
+		CLASSES.put(ClassId.evaSaint, 5);
+		CLASSES.put(ClassId.shillienSaint, 5);
 		// Enchanter classes
-		CLASSES.put(0x11, 6); // Prophet (Human)
-		CLASSES.put(0x15, 6); // Sword Singer (Elf)
-		CLASSES.put(0x22, 6); // Bladedancer (Dark Elf)
-		CLASSES.put(0x33, 6); // Overlord (Orc)
-		CLASSES.put(0x34, 6); // Warcryer (Orc)
-		CLASSES.put(0x62, 6); // Hierophant (Human)
-		CLASSES.put(0x64, 6); // Sword Muse (Elf)
-		CLASSES.put(0x6B, 6); // Spectral Dancer (Dark Elf)
-		CLASSES.put(0x73, 6); // Dominator (orc)
-		CLASSES.put(0x74, 6); // Doomcryer (Orc)
-		CLASSES.put(0x87, 6); // Inspector (Kamael)
-		CLASSES.put(0x88, 6); // Judicator (Kamael)
+		CLASSES.put(ClassId.prophet, 6);
+		CLASSES.put(ClassId.swordSinger, 6);
+		CLASSES.put(ClassId.bladedancer, 6);
+		CLASSES.put(ClassId.overlord, 6);
+		CLASSES.put(ClassId.warcryer, 6);
+		CLASSES.put(ClassId.hierophant, 6);
+		CLASSES.put(ClassId.swordMuse, 6);
+		CLASSES.put(ClassId.spectralDancer, 6);
+		CLASSES.put(ClassId.dominator, 6);
+		CLASSES.put(ClassId.doomcryer, 6);
+		CLASSES.put(ClassId.inspector, 6);
+		CLASSES.put(ClassId.judicator, 6);
 		
 		ABILITY_CERTIFICATES.put(0, 10281); // Certificate - Warrior Ability
-		ABILITY_CERTIFICATES.put(1, 10282); // Certificate - Knight Ability
-		ABILITY_CERTIFICATES.put(2, 10283); // Certificate - Rogue Ability
-		ABILITY_CERTIFICATES.put(3, 10287); // Certificate - Wizard Ability
-		ABILITY_CERTIFICATES.put(4, 10284); // Certificate - Healer Ability
-		ABILITY_CERTIFICATES.put(5, 10286); // Certificate - Summoner Ability
+		ABILITY_CERTIFICATES.put(1, 10283); // Certificate - Rogue Ability
+		ABILITY_CERTIFICATES.put(2, 10282); // Certificate - Knight Ability
+		ABILITY_CERTIFICATES.put(3, 10286); // Certificate - Summoner Ability
+		ABILITY_CERTIFICATES.put(4, 10287); // Certificate - Wizard Ability
+		ABILITY_CERTIFICATES.put(5, 10284); // Certificate - Healer Ability
 		ABILITY_CERTIFICATES.put(6, 10285); // Certificate - Enchanter Ability
 		
 		TRANSFORMATION_SEALBOOKS.put(0, 10289); // Transformation Sealbook: Divine Warrior
-		TRANSFORMATION_SEALBOOKS.put(1, 10288); // Transformation Sealbook: Divine Knight
-		TRANSFORMATION_SEALBOOKS.put(2, 10290); // Transformation Sealbook: Divine Rogue
-		TRANSFORMATION_SEALBOOKS.put(3, 10293); // Transformation Sealbook: Divine Enchanter
+		TRANSFORMATION_SEALBOOKS.put(1, 10290); // Transformation Sealbook: Divine Rogue
+		TRANSFORMATION_SEALBOOKS.put(2, 10288); // Transformation Sealbook: Divine Knight
+		TRANSFORMATION_SEALBOOKS.put(3, 10294); // Transformation Sealbook: Divine Summoner
 		TRANSFORMATION_SEALBOOKS.put(4, 10292); // Transformation Sealbook: Divine Wizard
-		TRANSFORMATION_SEALBOOKS.put(5, 10294); // Transformation Sealbook: Divine Summoner
-		TRANSFORMATION_SEALBOOKS.put(6, 10291); // Transformation Sealbook: Divine Healer
+		TRANSFORMATION_SEALBOOKS.put(5, 10291); // Transformation Sealbook: Divine Healer
+		TRANSFORMATION_SEALBOOKS.put(6, 10293); // Transformation Sealbook: Divine Enchanter
 	}
 	
 	private static final int MIN_LVL = 65;
@@ -283,12 +284,12 @@ public class SubclassCertification extends AbstractNpcAI
 	
 	private static int getClassIndex(L2PcInstance player)
 	{
-		Integer tmp = CLASSES.get(player.getClassId().getId());
+		Integer tmp = CLASSES.get(player.getClassId());
 		if (tmp == null)
 		{
 			return -1;
 		}
-		return tmp;
+		return tmp.intValue();
 	}
 	
 	private String doCertification(L2PcInstance player, QuestState qs, String variable, Integer itemId, int level)
@@ -300,7 +301,7 @@ public class SubclassCertification extends AbstractNpcAI
 		
 		String htmltext;
 		String tmp = variable + level + "-" + player.getClassIndex();
-		String globalVariable = qs.getGlobalQuestVar(variable);
+		String globalVariable = qs.getGlobalQuestVar(tmp);
 		
 		if (!globalVariable.equals("") && !globalVariable.equals("0"))
 		{
