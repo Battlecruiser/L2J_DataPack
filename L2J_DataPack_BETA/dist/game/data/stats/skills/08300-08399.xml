@@ -445,6 +445,9 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
@@ -796,6 +799,9 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 	</skill>
 	<skill id="8372" levels="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and earth tolerance by 5. -->

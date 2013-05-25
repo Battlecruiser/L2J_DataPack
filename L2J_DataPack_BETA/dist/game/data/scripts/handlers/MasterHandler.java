@@ -222,7 +222,6 @@ import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
-import handlers.skillhandlers.TransformDispel;
 import handlers.skillhandlers.Trap;
 import handlers.skillhandlers.Unlock;
 import handlers.targethandlers.Area;
@@ -521,7 +520,6 @@ public class MasterHandler
 			Sow.class,
 			TakeCastle.class,
 			TakeFort.class,
-			TransformDispel.class,
 			Trap.class,
 			Unlock.class,
 		},

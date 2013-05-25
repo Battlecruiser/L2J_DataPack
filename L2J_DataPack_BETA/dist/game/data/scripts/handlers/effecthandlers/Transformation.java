@@ -19,12 +19,10 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.instancemanager.TransformationManager;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
-import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Transformation effect implementation.
@@ -67,43 +65,7 @@ public class Transformation extends L2Effect
 		{
 			return false;
 		}
-		
-		L2PcInstance trg = getEffected().getActingPlayer();
-		if (trg == null)
-		{
-			return false;
-		}
-		
-		if (trg.isAlikeDead() || trg.isCursedWeaponEquipped())
-		{
-			return false;
-		}
-		
-		if (trg.isSitting())
-		{
-			trg.sendPacket(SystemMessageId.CANNOT_TRANSFORM_WHILE_SITTING);
-			return false;
-		}
-		
-		if (trg.isTransformed() || trg.isInStance())
-		{
-			trg.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
-			return false;
-		}
-		
-		if (trg.isInWater())
-		{
-			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
-			return false;
-		}
-		
-		if (trg.isFlyingMounted() || trg.isMounted() || trg.isRidingStrider())
-		{
-			trg.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
-			return false;
-		}
-		
-		TransformationManager.getInstance().transformPlayer((int) calc(), trg);
+		TransformationManager.getInstance().transformPlayer((int) calc(), getEffected().getActingPlayer());
 		return true;
 	}
 }

@@ -626,6 +626,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="126">
 				<set order="0x08" stat="STR" val="40" />

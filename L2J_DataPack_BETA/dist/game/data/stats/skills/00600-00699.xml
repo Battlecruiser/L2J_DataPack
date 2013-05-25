@@ -187,6 +187,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -213,6 +216,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -233,8 +239,15 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="TRANSFORMDISPEL" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canUntransform="true" />
+		</cond>
+		<for>
+			<effect name="DispelBySlot" noicon="1" val="0">
+				<param dispel="TRANSFORM,-1" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="620" levels="1" name="Quiver of Bolts - Grade B">
 		<!-- Confirmed CT2.5 -->
@@ -845,6 +858,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="253">
 				<set order="0x08" stat="STR" val="40" />
@@ -870,6 +886,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="252">
 				<set order="0x08" stat="STR" val="40" />
@@ -895,6 +914,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="254">
 				<set order="0x08" stat="STR" val="40" />
@@ -920,6 +942,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="256">
 				<set order="0x08" stat="STR" val="22" />
@@ -945,6 +970,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="258">
 				<set order="0x08" stat="STR" val="22" />
@@ -970,6 +998,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="255">
 				<set order="0x08" stat="STR" val="22" />
@@ -995,6 +1026,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<for>
 			<effect name="Transformation" val="257">
 				<set order="0x08" stat="STR" val="22" />
@@ -1018,6 +1052,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1044,6 +1081,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1070,6 +1110,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1096,6 +1139,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1122,6 +1168,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1148,6 +1197,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1174,6 +1226,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1200,6 +1255,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1226,6 +1284,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1252,6 +1313,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1278,6 +1342,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
@@ -1304,6 +1371,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
+		<cond>
+			<player canTransform="true" />
+		</cond>
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
