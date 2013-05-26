@@ -727,13 +727,14 @@
 		</for>
 	</skill>
 	<skill id="837" levels="1" name="Painkiller">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="INVINCIBILITY" />
-		<set name="castRange" val="400" />
+		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="58" />
 		<set name="mpConsume" val="53" />
 		<set name="operateType" val="A2" />
 		<set name="removedOnAnyActionExceptMove" val="true" />

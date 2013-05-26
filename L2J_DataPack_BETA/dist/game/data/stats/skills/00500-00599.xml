@@ -2496,11 +2496,12 @@
 		</for>
 	</skill>
 	<skill id="584" levels="1" name="Power Claw">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="55" />
 		<set name="nextActionAttack" val="true" />
 		<set name="offensive" val="true" />
@@ -2515,12 +2516,13 @@
 		</for>
 	</skill>
 	<skill id="585" levels="1" name="Fast Moving">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
-		<set name="aggroPoints" val="438" />
+		<set name="aggroPoints" val="477" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
@@ -2528,18 +2530,20 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" val="0">
-				<mul order="0x30" stat="runSpd" val="1.45" />
+				<add order="0x40" stat="runSpd" val="66" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="586" levels="2" name="Rolling Attack">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 59 63 </table>
 		<table name="#mpConsume"> 54 58 </table>
 		<table name="#power"> 840 984 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="2500" />
 		<set name="ignoreShld" val="true" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -2552,12 +2556,14 @@
 		</for>
 	</skill>
 	<skill id="587" levels="2" name="Earth Storm">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
+		<table name="#magicLvl"> 59 63 </table>
 		<table name="#mpConsume"> 54 58 </table>
 		<table name="#power"> 1200 1406 </table>
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
 		<set name="offensive" val="true" />
@@ -2572,8 +2578,9 @@
 		</for>
 	</skill>
 	<skill id="588" levels="2" name="Curse of Darkness">
-		<!-- CT2.2 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<table name="#dmg"> 88 101 </table>
+		<table name="#magicLvl"> 59 63 </table>
 		<table name="#mpConsume"> 54 58 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
@@ -2581,7 +2588,9 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1200" />
+		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" />
