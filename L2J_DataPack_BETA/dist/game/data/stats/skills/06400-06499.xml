@@ -52,6 +52,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
 		<set name="operateType" val="A2" />
@@ -144,6 +145,7 @@
 		<set name="castRange" val="1500" />
 		<set name="effectRange" val="2000" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
@@ -797,6 +799,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BUFF" />
@@ -813,6 +816,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BUFF" />
@@ -830,6 +834,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="BUFF" />
@@ -981,6 +986,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />

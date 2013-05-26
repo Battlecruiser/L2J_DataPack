@@ -229,6 +229,7 @@
 		<set name="coolTime" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="NOTDONE" />
@@ -482,6 +483,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="57" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
@@ -567,6 +569,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
@@ -592,6 +595,7 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="pvp" val="true" />
@@ -617,6 +621,7 @@
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -632,6 +637,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -648,6 +654,7 @@
 		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -663,6 +670,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="SIGNAL_A" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -679,6 +687,7 @@
 		<set name="abnormalType" val="MAX_HP_DOWN" />
 		<set name="canBeDispeled" val="false" />
 		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
@@ -695,6 +704,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="11" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -990,6 +1000,7 @@
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="coolTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="72000000" />
 		<set name="skillType" val="NOTDONE" />
