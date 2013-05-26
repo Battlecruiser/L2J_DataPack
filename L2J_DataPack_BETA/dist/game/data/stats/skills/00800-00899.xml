@@ -108,7 +108,6 @@
 		<set name="power" val="11205" />
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="CON" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -127,7 +126,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="6199" />
 		<set name="reuseDelay" val="8000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
@@ -243,7 +241,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
 			<using kind="Big Sword,Big Blunt" />
@@ -270,7 +267,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="11000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -299,7 +295,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="Big Sword,Big Blunt" />
@@ -327,7 +322,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -1858,7 +1852,6 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="1000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
@@ -1878,7 +1871,6 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
@@ -1898,7 +1890,6 @@
 		<set name="power" val="#pvePower" />
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
@@ -1924,7 +1915,6 @@
 		<set name="pvpPower" val="#pvpPower" />
 		<set name="reuseDelay" val="2000" />
 		<set name="saveVs" val="MEN" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>

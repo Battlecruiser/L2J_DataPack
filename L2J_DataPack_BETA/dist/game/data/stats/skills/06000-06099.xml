@@ -301,7 +301,6 @@
 		<set name="operateType" val="DA1" />
 		<set name="power" val="2372" />
 		<set name="reuseDelay" val="30000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<target mindistance="200" />
@@ -365,7 +364,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="2156" />
 		<set name="reuseDelay" val="13000" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
@@ -888,7 +886,6 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="saveVs" val="MEN" />
-		<set name="SSBoost" val="2.0" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
