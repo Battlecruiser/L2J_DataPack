@@ -45,6 +45,7 @@
 	<skill id="1204" levels="2" name="Wind Walk" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 204 285 </table>
+		<table name="#magicLvl"> 20 30 </table>
 		<table name="#mpConsume"> 16 21 </table>
 		<table name="#mpInitialConsume"> 4 6 </table>
 		<table name="#runSpd"> 20 33 </table>
@@ -61,6 +62,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -589,14 +591,14 @@
 		</enchant3for>
 	</skill>
 	<skill id="1225" levels="18" name="Summon Mew the Cat" enchantGroup1="1">
-		<table name="#enchNpcId"> 14177 14178 14179 14180 14181 14182 14183 14184 14185 14186 14187 14188 14189 14190 14191 14192 14193 14194 14195 14196 14197 14198 14199 14200 14201 14202 14203 14204 14205 14206 </table>
-		<!-- H5 hitTime -->
-		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
+		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table> <!-- H5 hitTime -->
+		<table name="#magicLvl"> 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14159 14160 14161 14162 14163 14164 14165 14166 14167 14168 14169 14170 14171 14172 14173 14174 14175 14176 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#enchNpcId"> 14177 14178 14179 14180 14181 14182 14183 14184 14185 14186 14187 14188 14189 14190 14191 14192 14193 14194 14195 14196 14197 14198 14199 14200 14201 14202 14203 14204 14205 14206 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
@@ -604,6 +606,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeSteps" val="0" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -619,17 +622,17 @@
 		<enchant1 name="npcId" val="#enchNpcId" />
 	</skill>
 	<skill id="1226" levels="18" name="Summon Boxer the Unicorn" enchantGroup1="1">
-		<table name="#enchNpcId"> 14313 14314 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 14325 14326 14327 14328 14329 14330 14331 14332 14333 14334 14335 14336 14337 14338 14339 14340 14341 14342 </table>
-		<!-- H5 hitTime -->
-		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
+		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table> <!-- H5 hitTime -->
 		<table name="#itemConsumeCount"> 1 1 2 2 7 1 1 4 5 6 11 12 2 3 4 4 9 10 </table>
 		<table name="#itemConsumeCountOT"> 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 </table>
 		<table name="#itemConsumeSteps"> 0 0 0 0 0 14 14 14 14 14 14 14 14 14 14 14 14 14 </table>
+		<table name="#magicLvl"> 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14295 14296 14297 14298 14299 14300 14301 14302 14303 14304 14305 14306 14307 14308 14309 14310 14311 14312 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#enchNpcId"> 14313 14314 14315 14316 14317 14318 14319 14320 14321 14322 14323 14324 14325 14326 14327 14328 14329 14330 14331 14332 14333 14334 14335 14336 14337 14338 14339 14340 14341 14342 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
@@ -639,6 +642,7 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeSteps" val="#itemConsumeSteps" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -653,14 +657,14 @@
 		<enchant1 name="npcId" val="#enchNpcId" />
 	</skill>
 	<skill id="1227" levels="18" name="Summon Mirage the Unicorn" enchantGroup1="1">
-		<table name="#enchNpcId"> 14361 14362 14363 14364 14365 14366 14367 14368 14369 14370 14371 14372 14373 14374 14375 14376 14377 14378 14379 14380 14381 14382 14383 14384 14385 14386 14387 14388 14389 14390 </table>
-		<!-- H5 hitTime -->
-		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
+		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table> <!-- H5 hitTime -->
+		<table name="#magicLvl"> 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14343 14344 14345 14346 14347 14348 14349 14350 14351 14352 14353 14354 14355 14356 14357 14358 14359 14360 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#enchNpcId"> 14361 14362 14363 14364 14365 14366 14367 14368 14369 14370 14371 14372 14373 14374 14375 14376 14377 14378 14379 14380 14381 14382 14383 14384 14385 14386 14387 14388 14389 14390 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
@@ -668,6 +672,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeSteps" val="0" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -683,14 +688,14 @@
 		<enchant1 name="npcId" val="#enchNpcId" />
 	</skill>
 	<skill id="1228" levels="18" name="Summon Silhouette" enchantGroup1="1">
-		<table name="#enchNpcId"> 14545 14546 14547 14548 14549 14550 14551 14552 14553 14554 14555 14556 14557 14558 14559 14560 14561 14562 14563 14564 14565 14566 14567 14568 14569 14570 14571 14572 14573 14574 </table>
-		<!-- H5 hitTime -->
-		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table>
+		<table name="#hitTime"> 15000 15000 15000 15000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 6000 </table> <!-- H5 hitTime -->
+		<table name="#magicLvl"> 20 25 30 35 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 31 35 42 48 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 8 9 11 12 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14527 14528 14529 14530 14531 14532 14533 14534 14535 14536 14537 14538 14539 14540 14541 14542 14543 14544 </table>
 		<table name="#reuseDelay"> 5400000 5400000 5400000 5400000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 5000 </table>
 		<table name="#summonTotalLifeTime"> 1200000 1200000 1200000 1200000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 3600000 </table>
+		<table name="#enchNpcId"> 14545 14546 14547 14548 14549 14550 14551 14552 14553 14554 14555 14556 14557 14558 14559 14560 14561 14562 14563 14564 14565 14566 14567 14568 14569 14570 14571 14572 14573 14574 </table>
 		<set name="hitTime" val="#hitTime" />
 		<set name="inheritElementals" val="true" />
 		<set name="inheritPercent" val="1.00" />
@@ -698,6 +703,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeSteps" val="0" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -838,6 +844,7 @@
 	<skill id="1232" levels="3" name="Blazing Skin" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#reflectDam"> 10 15 20 </table>
@@ -856,6 +863,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1229,6 +1237,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -1244,6 +1253,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1270,6 +1280,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 28 35 41 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -1285,6 +1296,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1310,6 +1322,7 @@
 	<skill id="1243" levels="6" name="Bless Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#aggroPoints"> 379 457 532 582 611 635 </table>
+		<table name="#magicLvl"> 40 48 56 62 66 70 </table>
 		<table name="#mpConsume"> 28 35 41 46 49 52 </table>
 		<table name="#mpInitialConsume"> 7 9 11 12 13 13 </table>
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
@@ -1326,6 +1339,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1534,6 +1548,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 2 3 4 </table>
 		<table name="#aggroPoints"> 418 495 532 </table>
+		<table name="#magicLvl"> 44 52 56 </table>
 		<table name="#mpConsume"> 123 150 163 </table>
 		<table name="#mpInitialConsume"> 31 38 41 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -1549,6 +1564,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1574,6 +1590,7 @@
 	<skill id="1250" levels="3" name="Under the Protection of Pa'agrio" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 111 137 163 </table>
 		<table name="#mpInitialConsume"> 28 35 41 </table>
 		<table name="#rShld"> 1.3 1.4 1.5 </table>
@@ -1590,6 +1607,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1615,6 +1633,7 @@
 	<skill id="1251" levels="2" name="Chant of Fury" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 457 532 </table>
+		<table name="#magicLvl"> 48 56 </table>
 		<table name="#mpConsume"> 137 163 </table>
 		<table name="#mpInitialConsume"> 35 41 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
@@ -1630,6 +1649,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1655,6 +1675,7 @@
 	<skill id="1252" levels="3" name="Chant of Evasion" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 111 137 163 </table>
 		<table name="#mpInitialConsume"> 28 35 41 </table>
 		<table name="#rEvas"> 2 3 4 </table>
@@ -1670,6 +1691,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1696,6 +1718,7 @@
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 418 495 532 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
+		<table name="#magicLvl"> 44 52 56 </table>
 		<table name="#mpConsume"> 123 150 163 </table>
 		<table name="#mpInitialConsume"> 31 38 41 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -1710,6 +1733,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1734,6 +1758,7 @@
 	</skill>
 	<skill id="1254" levels="6" name="Mass Resurrection" enchantGroup1="2" enchantGroup2="2">
 		<table name="#aggroPoints"> 290 331 417 460 481 578 </table>
+		<table name="#magicLvl"> 40 44 52 56 58 68 </table>
 		<table name="#mpConsume"> 194 214 261 288 301 353 </table>
 		<table name="#mpInitialConsume"> 49 54 66 72 76 89 </table>
 		<table name="#power"> 0 20 30 40 50 55 </table>
@@ -1745,6 +1770,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
@@ -1790,6 +1816,7 @@
 		<table name="#aggroPoints"> 418 457 495 532 549 566 582 597 611 624 635 646 655 </table>
 		<table name="#amount"> 91 103 115 127 133 138 144 149 154 158 164 168 172 </table>
 		<table name="#hot"> 31 35 39 43 45 46 48 50 52 53 55 56 58 </table>
+		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 107 121 131 144 151 156 159 165 171 177 182 186 191 </table>
 		<table name="#mpInitialConsume"> 27 31 33 36 38 39 40 42 43 45 46 47 48 </table>
 		<table name="#ench1abnormalLvl"> 18 18 19 19 19 19 20 20 20 21 21 21 21 22 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 </table>
@@ -1805,6 +1832,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1827,6 +1855,7 @@
 	<skill id="1257" levels="3" name="Decrease Weight" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 331 418 495 </table>
+		<table name="#magicLvl"> 35 44 52 </table>
 		<table name="#mpConsume"> 12 16 19 </table>
 		<table name="#mpInitialConsume"> 3 4 5 </table>
 		<table name="#Weight"> 3000 6000 9000 </table>
@@ -1842,6 +1871,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1903,6 +1933,7 @@
 	<skill id="1259" levels="4" name="Resist Shock" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#aggroPoints"> 379 495 597 646 </table>
+		<table name="#magicLvl"> 40 52 64 72 </table>
 		<table name="#mpConsume"> 28 38 46 52 </table>
 		<table name="#mpInitialConsume"> 7 10 12 13 </table>
 		<table name="#stack"> 15 20 30 40 </table>
@@ -1921,6 +1952,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1949,6 +1981,7 @@
 	<skill id="1260" levels="3" name="The Tact of Pa'agrio" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 379 457 532 </table>
+		<table name="#magicLvl"> 40 48 56 </table>
 		<table name="#mpConsume"> 111 137 163 </table>
 		<table name="#mpInitialConsume"> 28 35 41 </table>
 		<table name="#rEvas"> 2 3 4 </table>
@@ -1965,6 +1998,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -1990,6 +2024,7 @@
 	<skill id="1261" levels="2" name="The Rage of Pa'agrio" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 418 495 </table>
+		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
@@ -2013,6 +2048,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -2270,6 +2306,7 @@
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
 		<table name="#aggroPoints"> 285 418 549 646 </table>
+		<table name="#magicLvl"> 30 44 58 72 </table>
 		<table name="#mpConsume"> 21 31 43 53 </table>
 		<table name="#mpInitialConsume"> 6 8 11 14 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
@@ -2285,6 +2322,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -2369,6 +2407,7 @@
 		<set name="aggroPoints" val="560" />
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="66" />
 		<set name="mpConsume" val="171" />
 		<set name="mpInitialConsume" val="43" />
 		<set name="operateType" val="A1" />
@@ -2493,6 +2532,7 @@
 	<skill id="1276" levels="14" name="Summon Kai the Cat" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 1 2 2 2 1 1 2 2 1 1 2 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 2 4 4 4 4 6 6 6 6 </table>
+		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14207 14208 14209 14210 14211 14212 14213 14214 14215 14216 14217 14218 14219 14220 </table>
@@ -2502,6 +2542,7 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
@@ -2523,6 +2564,7 @@
 	<skill id="1277" levels="14" name="Summon Merrow the Unicorn" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 1 2 2 2 1 1 2 2 1 1 2 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 2 4 4 4 4 6 6 6 6 </table>
+		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14391 14392 14393 14394 14395 14396 14397 14398 14399 14400 14401 14402 14403 14404 </table>
@@ -2532,6 +2574,7 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
@@ -2553,6 +2596,7 @@
 	<skill id="1278" levels="14" name="Summon Soulless" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 1 1 1 2 2 2 1 1 2 2 1 1 2 2 </table>
 		<table name="#itemConsumeCountOT"> 2 2 2 2 2 2 4 4 4 4 6 6 6 6 </table>
+		<table name="#magicLvl"> 40 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 56 62 69 75 82 85 88 92 95 98 101 104 106 109 </table>
 		<table name="#mpInitialConsume"> 14 16 18 19 21 22 22 23 24 25 26 26 27 28 </table>
 		<table name="#npcIds"> 14575 14576 14577 14578 14579 14580 14581 14582 14583 14584 14585 14586 14587 14588 </table>
@@ -2562,6 +2606,7 @@
 		<set name="itemConsumeId" val="3031" />
 		<set name="itemConsumeIdOT" val="3031" />
 		<set name="itemConsumeSteps" val="14" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="reuseDelay" val="5000" />
@@ -2676,6 +2721,7 @@
 	<skill id="1282" levels="2" name="Pa'agrian Haste" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 549 597 </table>
+		<table name="#magicLvl"> 58 64 </table>
 		<table name="#mpConsume"> 170 189 </table>
 		<table name="#mpInitialConsume"> 43 48 </table>
 		<table name="#runSpd"> 20 33 </table>
@@ -2692,6 +2738,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -2716,9 +2763,11 @@
 	</skill>
 	<skill id="1283" levels="13" name="Soul Guard" enchantGroup1="1">
 		<table name="#def"> 293.3 333.2 375.9 421.4 445.2 469.7 494.9 520.1 546 571.9 598.5 625.8 653.1 </table>
+		<table name="#magicLvl"> 44 48 52 56 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mdot"> 5 6 6 7 8 8 8 8 9 9 9 10 10 </table>
 		<table name="#mpInitialConsume"> 8 9 10 11 11 11 12 12 13 13 13 14 14 </table>
 		<table name="#ench1def"> 683.76 687.82 691.88 695.94 700 704.06 708.12 712.18 716.24 720.3 724.36 728.42 732.48 736.54 740.6 744.66 748.72 752.78 756.84 760.9 764.96 769.02 773.08 777.14 781.2 785.26 789.32 793.38 797.44 801.5 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
@@ -2736,6 +2785,7 @@
 	<skill id="1284" levels="3" name="Chant of Revenge" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#aggroPoints"> 582 624 655 </table>
+		<table name="#magicLvl"> 62 68 74 </table>
 		<table name="#mpConsume"> 183 201 217 </table>
 		<table name="#mpInitialConsume"> 46 51 55 </table>
 		<table name="#power"> 10 15 20 </table>
@@ -2751,6 +2801,7 @@
 		<set name="aggroPoints" val="#aggroPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
@@ -2781,6 +2832,7 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="66" />
 		<set name="mpConsume" val="200" />
 		<set name="mpInitialConsume" val="50" />
 		<set name="operateType" val="A2" />
@@ -2801,6 +2853,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="66" />
 		<set name="mpConsume" val="200" />
 		<set name="mpInitialConsume" val="50" />
 		<set name="operateType" val="A2" />
@@ -2821,6 +2874,7 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="66" />
 		<set name="mpConsume" val="200" />
 		<set name="mpInitialConsume" val="50" />
 		<set name="operateType" val="A2" />
@@ -3202,6 +3256,7 @@
 	<skill id="1299" levels="2" name="Servitor Empowerment" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggroPoints"> 495 635 </table>
+		<table name="#magicLvl"> 52 70 </table>
 		<table name="#mDef"> 1350 2700 </table>
 		<table name="#mpConsume"> 38 52 </table>
 		<table name="#mpInitialConsume"> 10 13 </table>
@@ -3221,6 +3276,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />

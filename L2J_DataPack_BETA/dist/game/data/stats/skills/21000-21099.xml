@@ -82,6 +82,7 @@
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="NOTDONE" />
@@ -195,6 +196,7 @@
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
@@ -206,6 +208,7 @@
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
@@ -217,6 +220,7 @@
 		<set name="coolTime" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
@@ -648,6 +652,7 @@
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -812,6 +817,7 @@
 		<!-- Can use the ability of Blessed Return. Reuse Delay 12 hours -->
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1092,6 +1098,7 @@
 		<!-- Summons your friend. -->
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1140,16 +1147,19 @@
 		</for>
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21093" levels="1" name="Theme - Hero">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21094" levels="1" name="Theme - Theme Park">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1158,6 +1168,7 @@
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1179,6 +1190,7 @@
 		<!-- Summons your friend. -->
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="NOTDONE" />

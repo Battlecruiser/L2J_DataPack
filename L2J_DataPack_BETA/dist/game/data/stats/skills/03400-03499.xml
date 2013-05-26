@@ -10,6 +10,7 @@
 		</for>
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -17,6 +18,7 @@
 		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -24,6 +26,7 @@
 		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -53,6 +56,7 @@
 	</skill>
 	<skill id="3405" levels="1" name="Large Firecracker Effect">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1200000" />
 		<set name="targetType" val="SELF" />
@@ -113,6 +117,7 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="300000" />
@@ -228,6 +233,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="skillType" val="BUFF" />
@@ -243,6 +249,7 @@
 		</for>
 	</skill>
 	<skill id="3419" levels="1" name="Magic Immunity">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -263,12 +270,14 @@
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="3422" levels="1" name="Wolf Dismount">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -557,6 +566,7 @@
 		</for>
 	</skill>
 	<skill id="3439" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -564,6 +574,7 @@
 		</for>
 	</skill>
 	<skill id="3440" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -571,6 +582,7 @@
 		</for>
 	</skill>
 	<skill id="3441" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -578,6 +590,7 @@
 		</for>
 	</skill>
 	<skill id="3442" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -586,6 +599,7 @@
 		</for>
 	</skill>
 	<skill id="3443" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -594,6 +608,7 @@
 		</for>
 	</skill>
 	<skill id="3444" levels="1" name="Silk Shirt">
+		<set name="magicLvl" val="49" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -602,6 +617,7 @@
 		</for>
 	</skill>
 	<skill id="3445" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -609,6 +625,7 @@
 		</for>
 	</skill>
 	<skill id="3446" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -616,6 +633,7 @@
 		</for>
 	</skill>
 	<skill id="3447" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -623,6 +641,7 @@
 		</for>
 	</skill>
 	<skill id="3448" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -631,6 +650,7 @@
 		</for>
 	</skill>
 	<skill id="3449" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -639,6 +659,7 @@
 		</for>
 	</skill>
 	<skill id="3450" levels="1" name="Thin Leather Shirt">
+		<set name="magicLvl" val="58" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -647,6 +668,7 @@
 		</for>
 	</skill>
 	<skill id="3451" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -654,6 +676,7 @@
 		</for>
 	</skill>
 	<skill id="3452" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -661,6 +684,7 @@
 		</for>
 	</skill>
 	<skill id="3453" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -668,6 +692,7 @@
 		</for>
 	</skill>
 	<skill id="3454" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -676,6 +701,7 @@
 		</for>
 	</skill>
 	<skill id="3455" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -684,6 +710,7 @@
 		</for>
 	</skill>
 	<skill id="3456" levels="1" name="Scale Shirt">
+		<set name="magicLvl" val="64" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -692,6 +719,7 @@
 		</for>
 	</skill>
 	<skill id="3457" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -699,6 +727,7 @@
 		</for>
 	</skill>
 	<skill id="3458" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -706,6 +735,7 @@
 		</for>
 	</skill>
 	<skill id="3459" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -713,6 +743,7 @@
 		</for>
 	</skill>
 	<skill id="3460" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -721,6 +752,7 @@
 		</for>
 	</skill>
 	<skill id="3461" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -729,6 +761,7 @@
 		</for>
 	</skill>
 	<skill id="3462" levels="1" name="Mithril Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -737,6 +770,7 @@
 		</for>
 	</skill>
 	<skill id="3463" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -744,6 +778,7 @@
 		</for>
 	</skill>
 	<skill id="3464" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -751,6 +786,7 @@
 		</for>
 	</skill>
 	<skill id="3465" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -758,6 +794,7 @@
 		</for>
 	</skill>
 	<skill id="3466" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -766,6 +803,7 @@
 		</for>
 	</skill>
 	<skill id="3467" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -774,6 +812,7 @@
 		</for>
 	</skill>
 	<skill id="3468" levels="1" name="Striped Silk Shirt">
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -782,6 +821,7 @@
 		</for>
 	</skill>
 	<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -789,6 +829,7 @@
 		</for>
 	</skill>
 	<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -796,6 +837,7 @@
 		</for>
 	</skill>
 	<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -803,6 +845,7 @@
 		</for>
 	</skill>
 	<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -811,6 +854,7 @@
 		</for>
 	</skill>
 	<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -819,6 +863,7 @@
 		</for>
 	</skill>
 	<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
+		<set name="magicLvl" val="61" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -827,6 +872,7 @@
 		</for>
 	</skill>
 	<skill id="3475" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -834,6 +880,7 @@
 		</for>
 	</skill>
 	<skill id="3476" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -841,6 +888,7 @@
 		</for>
 	</skill>
 	<skill id="3477" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -848,6 +896,7 @@
 		</for>
 	</skill>
 	<skill id="3478" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -856,6 +905,7 @@
 		</for>
 	</skill>
 	<skill id="3479" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -864,6 +914,7 @@
 		</for>
 	</skill>
 	<skill id="3480" levels="1" name="Striped Scale Shirt">
+		<set name="magicLvl" val="67" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -872,6 +923,7 @@
 		</for>
 	</skill>
 	<skill id="3481" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -879,6 +931,7 @@
 		</for>
 	</skill>
 	<skill id="3482" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -886,6 +939,7 @@
 		</for>
 	</skill>
 	<skill id="3483" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -893,6 +947,7 @@
 		</for>
 	</skill>
 	<skill id="3484" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -901,6 +956,7 @@
 		</for>
 	</skill>
 	<skill id="3485" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -909,6 +965,7 @@
 		</for>
 	</skill>
 	<skill id="3486" levels="1" name="Striped Mithril Shirt">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

@@ -271,24 +271,28 @@
 	</skill>
 	<skill id="5513" levels="1" name="Fire Taint">
 		<set name="hitTime" val="15000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5514" levels="1" name="Water Taint">
 		<set name="hitTime" val="15000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5515" levels="1" name="Wind Taint">
 		<set name="hitTime" val="15000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5516" levels="1" name="Earth Taint">
 		<set name="hitTime" val="15000" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -310,6 +314,7 @@
 		</for>
 	</skill>
 	<skill id="5518" levels="1" name="Last Stand">
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -503,6 +508,7 @@
 	</skill>
 	<skill id="5528" levels="1" name="Self-Destruct">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -540,11 +546,13 @@
 	</skill>
 	<skill id="5530" levels="12" name="Blood Storm">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 10 10 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="hitTime" val="1000" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
@@ -554,6 +562,7 @@
 	<skill id="5531" levels="1" name="Direction-Beleth Magic Skill 1">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -561,6 +570,7 @@
 	<skill id="5532" levels="1" name="Direction-Beleth Summon Skill 1">
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -568,18 +578,21 @@
 	<skill id="5533" levels="1" name="Direction-Beleth Self-Destruction Skill 1">
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5534" levels="1" name="Direction-Beleth Transformation Skill 1">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5535" levels="1" name="Little Angel Cuteness Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -588,6 +601,7 @@
 	</skill>
 	<skill id="5536" levels="1" name="Little Devil Cuteness Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -596,6 +610,7 @@
 	</skill>
 	<skill id="5537" levels="1" name="Rudolph Cuteness Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -604,6 +619,7 @@
 	</skill>
 	<skill id="5538" levels="1" name="Little Angel Agathion Special Skill - Firecrackers">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -616,6 +632,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
@@ -631,6 +648,7 @@
 	<skill id="5540" levels="1" name="Little Angel Agathion Special Skill - Power of Blessed Return">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="targetType" val="SELF" />
@@ -656,6 +674,7 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="259200000" />
@@ -667,6 +686,7 @@
 	</skill>
 	<skill id="5542" levels="1" name="Little Devil Agathion Special Skill - Firecrackers">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -679,6 +699,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
@@ -694,6 +715,7 @@
 	<skill id="5544" levels="1" name="Little Devil Agathion Special Skill - Power of Blessed Return">
 		<set name="hitTime" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="targetType" val="SELF" />
@@ -719,6 +741,7 @@
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="100" />
 		<set name="reuseDelay" val="259200000" />
@@ -730,6 +753,7 @@
 	</skill>
 	<skill id="5546" levels="1" name="Alert">
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -774,6 +798,7 @@
 		</for>
 	</skill>
 	<skill id="5549" levels="1" name="Physical Short-range Weakness">
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -883,6 +908,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PROTECTION" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="NOTDONE" />
@@ -894,6 +920,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PROTECTION" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="NOTDONE" />
@@ -925,6 +952,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="WILL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1058,6 +1086,7 @@
 	</skill>
 	<skill id="5566" levels="1" name="Post of Destruction">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1384,6 +1413,7 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="hitTime" val="1200" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
@@ -1397,6 +1427,7 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="hitTime" val="1200" />
 		<set name="lvlBonusRate" val="2" />
+		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
@@ -1601,6 +1632,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
@@ -1612,6 +1644,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
@@ -1647,6 +1680,7 @@
 		</for>
 	</skill>
 	<skill id="5598" levels="12" name="Flash Resistance">
+		<set name="magicLvl" val="10" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />

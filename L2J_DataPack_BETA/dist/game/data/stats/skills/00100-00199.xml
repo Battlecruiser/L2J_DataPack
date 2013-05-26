@@ -349,6 +349,7 @@
 	<skill id="110" levels="2" name="Ultimate Defense" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<table name="#abnormalLvls"> 1 2 </table>
 		<table name="#aggro"> 204 438 </table>
+		<table name="#magicLvl"> 20 46 </table>
 		<table name="#mDef"> 1620 3240 </table>
 		<table name="#mpConsume"> 10 21 </table>
 		<table name="#pDef"> 1800 3600 </table>
@@ -365,6 +366,7 @@
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />

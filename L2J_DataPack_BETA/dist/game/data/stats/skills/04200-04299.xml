@@ -635,6 +635,7 @@
 	<skill id="4233" levels="1" name="Vampiric Attack">
 		<!-- Freya retail confirmed -->
 		<!-- Summon Shadow Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1300,6 +1301,7 @@
 	</skill>
 	<skill id="4267" levels="1" name="Grade Penalty">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="power" val="0" />
 		<set name="pvp" val="true" />
@@ -1310,12 +1312,14 @@
 	<skill id="4268" levels="1" name="Danger Area">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4269" levels="1" name="Block All Chat">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill Is Only For Description In The Client -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -1324,6 +1328,7 @@
 		<!-- This Skill SHOULD BE Only For Description In The Client - probably hardcoded on retail -->
 		<table name="#rate"> 0.5 0.5 0.5 0.5 </table>
 		<table name="#rateSpd"> 1 0.5 0.5 0 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="power" val="0" />
 		<set name="pvp" val="true" />
@@ -1338,11 +1343,13 @@
 	</skill>
 	<skill id="4271" levels="8" name="Increase Force">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4272" levels="1" name="Greater Resist Archery Attack">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1353,6 +1360,7 @@
 	<skill id="4273" levels="5" name="Resist Dagger">
 		<!-- Freya retail confirmed -->
 		<table name="#daggerVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1364,6 +1372,7 @@
 	<skill id="4274" levels="5" name="Blunt Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#bluntVuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1373,12 +1382,14 @@
 	</skill>
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4276" levels="5" name="Archery Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#bowVuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1389,6 +1400,7 @@
 	<skill id="4277" levels="5" name="Resist Poison">
 		<!-- Freya retail confirmed -->
 		<table name="#poisonVuln"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1396,6 +1408,7 @@
 		</for>
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1404,26 +1417,31 @@
 	</skill>
 	<skill id="4279" levels="5" name="Fire Attack Weak Point">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4280" levels="5" name="Water Attack Weak Point">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4281" levels="5" name="Wind Attack Weak Point">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4282" levels="5" name="Earth Attack Weak Point">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4283" levels="1" name="Greater Resist Magic Attack">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1433,6 +1451,7 @@
 	<skill id="4284" levels="5" name="Resist Bleeding">
 		<!-- Freya retail confirmed -->
 		<table name="#bleedVuln"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1442,6 +1461,7 @@
 	<skill id="4285" levels="5" name="Resist Sleep">
 		<!-- Freya retail confirmed -->
 		<table name="#sleepVuln"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1450,6 +1470,7 @@
 	</skill>
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1459,6 +1480,7 @@
 	<skill id="4287" levels="5" name="Resist Hold">
 		<!-- Freya retail confirmed -->
 		<table name="#rootVuln"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1467,6 +1489,7 @@
 	</skill>
 	<skill id="4288" levels="1" name="Greater Resist Hold">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1498,6 +1521,7 @@
 	<skill id="4290" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Undead -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1505,6 +1529,7 @@
 	<skill id="4291" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Construct -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1512,6 +1537,7 @@
 	<skill id="4292" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Beast -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1519,6 +1545,7 @@
 	<skill id="4293" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Animal -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1526,6 +1553,7 @@
 	<skill id="4294" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Plant -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1533,6 +1561,7 @@
 	<skill id="4295" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Humanoid -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1540,6 +1569,7 @@
 	<skill id="4296" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Spirit -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1547,6 +1577,7 @@
 	<skill id="4297" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Divine -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1554,6 +1585,7 @@
 	<skill id="4298" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Demonic -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1561,6 +1593,7 @@
 	<skill id="4299" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Dragon -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
