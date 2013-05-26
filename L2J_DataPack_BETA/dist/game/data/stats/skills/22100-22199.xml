@@ -57,6 +57,7 @@
 		<set name="hitTime" val="2700" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="targetType" val="SELF" />
@@ -186,6 +187,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -206,6 +208,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -282,6 +285,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -302,6 +306,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -330,6 +335,7 @@
 	</skill>
 	<skill id="22117" levels="1" name="Flames Box Firework">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1000,6 +1006,7 @@
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1020,6 +1027,7 @@
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1041,6 +1049,7 @@
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="BUFF" />
@@ -1117,6 +1126,7 @@
 	<skill id="22165" levels="1" name="Energy Replenish">
 		<!-- 5000 Soul Avatar Energy is replenished. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1124,6 +1134,7 @@
 	<skill id="22166" levels="1" name="Energy Replenish">
 		<!-- 10000 Soul Avatar Energy is replenished. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1136,6 +1147,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -1151,6 +1163,7 @@
 	<skill id="22168" levels="1" name="Thirst Quencher">
 		<!-- Replenishes an Agathion's energy by 2500 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1163,6 +1176,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -1181,6 +1195,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1192,6 +1207,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1203,6 +1219,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1214,6 +1231,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1222,6 +1240,7 @@
 	<skill id="22174" levels="1" name="Yibein's Recovery Scroll">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1253,6 +1272,7 @@
 	</skill>
 	<skill id="22177" levels="1" name="Warrior's Breath">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1278,6 +1298,7 @@
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">

@@ -13,7 +13,9 @@
 	</skill>
 	<skill id="3901" levels="2" name="Staff of Mana Boost">
 		<!-- CT2.5 retail confirmed -->
+		<table name="#magicLvl"> 67 75 </table>
 		<table name="#maxMp"> 239 289 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

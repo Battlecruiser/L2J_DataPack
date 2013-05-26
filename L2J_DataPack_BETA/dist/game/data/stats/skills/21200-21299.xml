@@ -132,6 +132,7 @@
 	</skill>
 	<skill id="21211" levels="1" name="Blessing of Victory">
 		<!-- Increases moving speed by 2% through the Blessing of Victory. -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -247,6 +248,7 @@
 	<skill id="21221" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="43200000" />
 		<set name="skillType" val="NOTDONE" />

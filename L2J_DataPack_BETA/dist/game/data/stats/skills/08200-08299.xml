@@ -650,6 +650,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SEED_OF_CRITICAL" />
 		<set name="hitTime" val="2500" />
+		<set name="magicLvl" val="73" />
 		<set name="mpConsume" val="74" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -662,6 +663,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="hitTime" val="2500" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="73" />
 		<set name="mpConsume" val="149" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
@@ -676,6 +678,7 @@
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
@@ -687,6 +690,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3100" />
+		<set name="magicLvl" val="61" />
 		<set name="mpConsume" val="61" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -703,6 +707,7 @@
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="850" />
+		<set name="magicLvl" val="61" />
 		<set name="mpConsume" val="61" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -799,6 +804,7 @@
 	</skill>
 	<skill id="8249" levels="1" name="Cancel Critical Hit">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -806,6 +812,7 @@
 	<skill id="8250" levels="2" name="Summon Tigress">
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="63" />
 		<set name="mpConsume" val="117" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="20000" />
@@ -816,6 +823,7 @@
 		<set name="targetType" val="SELF" />
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 14916 14917 </table>
+		<set name="magicLvl" val="63" />
 		<set name="npcId" val="#npcIds" />
 	</skill>
 	<skill id="8251" levels="1" name="Collection Agathion Release Seal">
@@ -1112,6 +1120,7 @@
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="100" />
 		<set name="lvlBonusRate" val="1" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="CON" />
@@ -1145,6 +1154,7 @@
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -1164,6 +1174,7 @@
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="NOTDONE" />
@@ -1175,17 +1186,20 @@
 		<set name="abnormalType" val="HOLY_ATTACK" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="25" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8281" levels="1" name="Inventory Slot Add">
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8282" levels="1" name="Cloak Slot Add">
+		<set name="magicLvl" val="81" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1293,6 +1307,7 @@
 	</skill>
 	<skill id="8290" levels="12" name="Add Belt Inventory Slot">
 		<table name="#inventoryLimit"> 3 6 9 12 15 18 21 24 27 30 33 36 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1301,6 +1316,7 @@
 	</skill>
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
 		<table name="#weightPenalty"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1308,6 +1324,7 @@
 		</for>
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1318,6 +1335,7 @@
 		</for>
 	</skill>
 	<skill id="8293" levels="1" name="Olympiad Warrior's Earring">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1329,6 +1347,7 @@
 		</for>
 	</skill>
 	<skill id="8294" levels="1" name="Olympiad Warrior's Necklace">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1392,6 +1411,7 @@
 		</for>
 	</skill>
 	<skill id="8299" levels="1" name="Arcana Sigil">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />

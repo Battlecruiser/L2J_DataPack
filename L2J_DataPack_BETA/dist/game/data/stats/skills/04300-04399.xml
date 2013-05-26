@@ -3,6 +3,7 @@
 	<skill id="4300" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Giant -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -10,6 +11,7 @@
 	<skill id="4301" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Bug -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -17,62 +19,74 @@
 	<skill id="4302" levels="1" name="Race">
 		<!-- Freya retail confirmed -->
 		<!-- Race Fairy -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="4303" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4304" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4305" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4306" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4307" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4308" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4309" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4310" levels="1" name="Strong Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4311" levels="1" name="Feeble Type">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4312" levels="1" name="Heavy Armor">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4313" levels="1" name="Light Armor">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -441,6 +455,7 @@
 	</skill>
 	<skill id="4332" levels="1" name="Mental Aegis">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -452,6 +467,7 @@
 	<skill id="4333" levels="5" name="Resist Dark Attack">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -472,6 +488,7 @@
 	</skill>
 	<skill id="4335" levels="1" name="Sacred Attack">
 		<!-- Freya retail confirmed -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -481,6 +498,7 @@
 	<skill id="4336" levels="5" name="Dark Attack Weak Point">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 11 25 43 67 100 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -490,6 +508,7 @@
 	<skill id="4337" levels="5" name="Resist Sacred Attack">
 		<!-- Freya retail confirmed -->
 		<table name="#darkRes"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -516,6 +535,7 @@
 		<!-- Freya retail confirmed -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
+		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 	</skill>
@@ -1337,6 +1357,7 @@
 	<skill id="4379" levels="5" name="Resist Pole Arm">
 		<!-- Freya retail confirmed -->
 		<table name="#poleVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1471,6 +1492,7 @@
 	<skill id="4388" levels="5" name="Resist Paralysis">
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1480,6 +1502,7 @@
 	<skill id="4389" levels="5" name="Resist Mental Derangement">
 		<!-- Freya retail confirmed -->
 		<table name="#power"> 10 20 30 40 50 </table>
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1507,6 +1530,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1527,6 +1551,7 @@
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1547,6 +1572,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1566,6 +1592,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1585,6 +1612,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1604,6 +1632,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1631,6 +1660,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1657,6 +1687,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1677,6 +1708,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />

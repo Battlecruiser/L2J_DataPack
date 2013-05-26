@@ -3,6 +3,7 @@
 	<skill id="23200" levels="1" name="Ball Trapping Penalty Kick Agathion Special Skill - Soccer Ball of Cheers">
 		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
@@ -24,6 +25,7 @@
 	<skill id="23201" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -33,6 +35,7 @@
 	<skill id="23202" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -42,6 +45,7 @@
 	<skill id="23203" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -51,6 +55,7 @@
 	<skill id="23204" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -60,6 +65,7 @@
 	<skill id="23205" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -69,6 +75,7 @@
 	<skill id="23206" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -78,6 +85,7 @@
 	<skill id="23207" levels="1" name="Ball Trapping Gnocian Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -87,6 +95,7 @@
 	<skill id="23208" levels="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -96,6 +105,7 @@
 	<skill id="23209" levels="1" name="Penalty Kick Agathion Cute Trick">
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -107,6 +117,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MA_DOWN" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />
@@ -114,6 +125,7 @@
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="NOTDONE" />
@@ -122,6 +134,7 @@
 	<skill id="23212" levels="85" name="Flame Strike">
 		<set name="affectLimit" val="5-12" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="7000" />
 		<set name="skillType" val="NOTDONE" />
@@ -133,6 +146,7 @@
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
 		<set name="skillType" val="NOTDONE" />
@@ -166,6 +180,7 @@
 	</skill>
 	<skill id="23216" levels="1" name="Granny Tiger Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -183,6 +198,7 @@
 	</skill>
 	<skill id="23218" levels="1" name="Flower Fairy Spirit Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -200,6 +216,7 @@
 	</skill>
 	<skill id="23220" levels="1" name="Cheerleader Orodriel Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -217,6 +234,7 @@
 	</skill>
 	<skill id="23222" levels="1" name="Cheerleader Lana Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -234,6 +252,7 @@
 	</skill>
 	<skill id="23224" levels="1" name="Cheerleader Naonin Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -251,6 +270,7 @@
 	</skill>
 	<skill id="23226" levels="1" name="Cheerleader Mortia Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -268,6 +288,7 @@
 	</skill>
 	<skill id="23228" levels="1" name="Cheerleader Kaurin Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -285,6 +306,7 @@
 	</skill>
 	<skill id="23230" levels="1" name="Cheerleader Meruril Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -302,6 +324,7 @@
 	</skill>
 	<skill id="23232" levels="1" name="Handy Agathion Cute Trick">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />

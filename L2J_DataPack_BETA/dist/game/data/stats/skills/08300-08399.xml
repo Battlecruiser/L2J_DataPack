@@ -173,6 +173,7 @@
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -181,6 +182,7 @@
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -211,53 +213,63 @@
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="10" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="20" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -269,6 +281,7 @@
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="skillType" val="NOTDONE" />
@@ -276,6 +289,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -306,6 +320,7 @@
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="NOTDONE" />
@@ -451,6 +466,7 @@
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -578,6 +594,7 @@
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -588,6 +605,7 @@
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -598,6 +616,7 @@
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -608,6 +627,7 @@
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -618,6 +638,7 @@
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -628,6 +649,7 @@
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -638,6 +660,7 @@
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -648,6 +671,7 @@
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -658,6 +682,7 @@
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -698,6 +723,7 @@
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="15000" />
 		<set name="skillType" val="NOTDONE" />
@@ -722,6 +748,7 @@
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
+		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -731,6 +758,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="BEAST_RELEASE" />
@@ -741,6 +769,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="BEAST_ACCOMPANY" />
@@ -751,33 +780,39 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="BEAST_SKILL" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
@@ -785,6 +820,7 @@
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="NOTDONE" />
@@ -809,6 +845,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -820,6 +857,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -831,6 +869,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -842,6 +881,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -853,6 +893,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
 		<set name="skillType" val="NOTDONE" />
@@ -864,6 +905,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
 		<set name="skillType" val="NOTDONE" />
@@ -874,6 +916,7 @@
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="BEAST_RELEASE_ALL" />
@@ -881,6 +924,7 @@
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -889,6 +933,7 @@
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
 		<table name="#waterRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -897,6 +942,7 @@
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -905,6 +951,7 @@
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -913,6 +960,7 @@
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -921,6 +969,7 @@
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -929,6 +978,7 @@
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -937,6 +987,7 @@
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
 		<table name="#windRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -945,6 +996,7 @@
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -953,6 +1005,7 @@
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
 		<table name="#waterRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -961,6 +1014,7 @@
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -969,6 +1023,7 @@
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
 		<table name="#windRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -977,6 +1032,7 @@
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -985,6 +1041,7 @@
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -993,6 +1050,7 @@
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
 		<table name="#waterRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1001,6 +1059,7 @@
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1009,6 +1068,7 @@
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1017,6 +1077,7 @@
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
 		<table name="#windRes"> 26 30 </table>
+		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
