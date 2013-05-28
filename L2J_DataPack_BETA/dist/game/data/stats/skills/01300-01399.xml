@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1300" levels="3" name="Servitor Cure">
 		<table name="#aggro"> 379 457 566 </table>
+		<table name="#dispelAbnormals"> POISON,3;BLEEDING,3 POISON,7;BLEEDING,7 POISON,9;BLEEDING,9 </table>
 		<table name="#magicLvl"> 40 48 60 </table>
 		<table name="#mpConsume"> 28 35 44 </table>
 		<table name="#mpInitialConsume"> 7 9 11 </table>
-		<table name="#dispelAbnormals"> POISON,3;BLEEDING,3 POISON,7;BLEEDING,7 POISON,9;BLEEDING,9 </table>
 		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -3423,8 +3423,8 @@
 		</for>
 	</skill>
 	<skill id="1399" levels="5" name="Mana Storm" enchantGroup1="2" enchantGroup2="2">
-		<table name="#mpConsume"> 120 129 138 147 153 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
+		<table name="#mpConsume"> 120 129 138 147 153 </table>
 		<table name="#power"> 62 67 72 77 81 </table>
 		<table name="#ench1Power"> 81 81 82 82 82 83 83 83 84 84 84 85 85 85 86 86 86 87 87 87 88 88 88 89 89 89 89 90 90 90 91 </table>
 		<table name="#ench2MpConsume"> 150 148 146 143 142 140 137 136 133 132 130 127 126 123 121 120 117 116 113 111 110 107 105 103 101 98 97 95 93 91 </table>
