@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" levels="1" name="Dynasty Sigil">
+		<set name="icon" val="icon.dynasty_sigil_i01" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -10,6 +11,7 @@
 	</skill>
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -27,6 +29,7 @@
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -48,6 +51,7 @@
 	</skill>
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -64,6 +68,7 @@
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -84,6 +89,7 @@
 	</skill>
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -101,6 +107,7 @@
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -121,6 +128,7 @@
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.weapon_bbyong_hammer_a_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -135,6 +143,7 @@
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -157,6 +166,7 @@
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -173,6 +183,7 @@
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
+		<set name="icon" val="icon.arcana_sigil_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -182,6 +193,7 @@
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
+		<set name="icon" val="icon.dynasty_sigil_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -193,6 +205,7 @@
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
 		<table name="#magicLvl"> 80 84 </table>
 		<table name="#MpConsumeRate"> 0.96 0.92 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -204,6 +217,7 @@
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16063" />
@@ -214,54 +228,63 @@
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="30" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
+		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -270,6 +293,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8324" levels="1" name="Warrior's Shirt">
+		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -281,6 +305,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -290,6 +315,7 @@
 		<set name="trait" val="ETC" />
 	</skill>
 	<skill id="8326" levels="1" name="Wild Rose Pig Candy">
+		<set name="icon" val="icon.etc_pig_candy_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -298,6 +324,7 @@
 	<skill id="8327" levels="1" name="Release Seal on Agathion - Juju">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16064" />
@@ -310,6 +337,7 @@
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16065" />
@@ -320,6 +348,7 @@
 		</for>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -335,6 +364,7 @@
 	<skill id="8330" levels="1" name="Release Seal on Agathion - Dawn">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16066" />
@@ -349,6 +379,7 @@
 		<set name="affectLimit" val="5-5" />
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -369,6 +400,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -390,6 +422,7 @@
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -412,6 +445,7 @@
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -434,6 +468,7 @@
 		<set name="abnormalType" val="TALISMAN" />
 		<set name="aggroPoints" val="532" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="40" />
@@ -457,6 +492,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -468,6 +504,7 @@
 	</skill>
 	<skill id="8337" levels="1" name="Weight Up">
 		<!-- Increases the weight limit by 5000. -->
+		<set name="icon" val="icon.skill3238" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -479,6 +516,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.4 1 1.4 2 </table>
 		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -493,6 +531,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
 		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -507,6 +546,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
 		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -520,6 +560,7 @@
 	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -533,6 +574,7 @@
 	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -543,6 +585,7 @@
 	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -554,6 +597,7 @@
 	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -565,6 +609,7 @@
 	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -575,6 +620,7 @@
 	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -586,6 +632,7 @@
 	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
 		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
+		<set name="icon" val="icon.skill0332" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -595,7 +642,9 @@
 		</for>
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -606,7 +655,9 @@
 		</for>
 	</skill>
 	<skill id="8349" levels="2" name="Royal Guard Earring - Dion">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -617,7 +668,9 @@
 		</for>
 	</skill>
 	<skill id="8350" levels="2" name="Royal Guard Earring - Giran">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -628,7 +681,9 @@
 		</for>
 	</skill>
 	<skill id="8351" levels="2" name="Royal Guard Earring - Oren">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -639,7 +694,9 @@
 		</for>
 	</skill>
 	<skill id="8352" levels="2" name="Royal Guard Earring - Aden">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -650,7 +707,9 @@
 		</for>
 	</skill>
 	<skill id="8353" levels="2" name="Royal Guard Earring - Innadril">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -661,7 +720,9 @@
 		</for>
 	</skill>
 	<skill id="8354" levels="2" name="Royal Guard Earring - Goddard">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -672,7 +733,9 @@
 		</for>
 	</skill>
 	<skill id="8355" levels="2" name="Royal Guard Earring - Rune">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -683,7 +746,9 @@
 		</for>
 	</skill>
 	<skill id="8356" levels="2" name="Royal Guard Earring - Schuttgart">
+		<table name="#icons"> icon.accessary_inferno_earing_i00 icon.accessory_earring_of_domi_protection_i00 </table>
 		<table name="#maxCp"> 1 1.05 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -702,6 +767,7 @@
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,300,900" />
 		<set name="hitTime" val="1300" />
+		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -714,6 +780,7 @@
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.etc_summon_aga_agit_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="npcId" val="16070" />
@@ -724,6 +791,7 @@
 		</for>
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
+		<set name="icon" val="icon.skill5239" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -737,6 +805,7 @@
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="aggroPoints" val="100" />
+		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -751,6 +820,7 @@
 	</skill>
 	<skill id="8361" levels="1" name="Sixth Anniversary Party Earring">
 		<!-- Increases resistance to shock/mind attack by 20% and shock/mind attack bonus by 20%. Recovers 4% of the damage to the enemy as your HP. Excludes damage caused by skills and long-range attack. -->
+		<set name="icon" val="icon.event_six_party_earing_i00" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -760,6 +830,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill8362" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -771,6 +842,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill8363" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -782,6 +854,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill8364" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -790,30 +863,35 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
+		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8366" levels="1" name="Dynasty Jewel Leather Armor">
+		<set name="icon" val="icon.armor_t91_uw_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8367" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="icon" val="icon.armor_t91_uf_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8368" levels="1" name="Dynasty Jewel Leather Mail">
+		<set name="icon" val="icon.armor_t93_ue_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8369" levels="1" name="Halloween Pumpkin Card">
+		<set name="icon" val="icon.ev_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -822,6 +900,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8370" levels="1" name="Rotten Pumpkin Card">
+		<set name="icon" val="icon.ev_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -833,6 +912,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -848,6 +928,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_frankenstein_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -860,6 +941,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_scream_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -872,6 +954,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_doccabi_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -884,6 +967,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_mummy_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -896,6 +980,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_alien_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -908,6 +993,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="icon" val="icon.ev_golden_jack0_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -919,6 +1005,7 @@
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill8378" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -928,6 +1015,8 @@
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -936,7 +1025,9 @@
 		</for>
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 12 15 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -946,6 +1037,8 @@
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
 		<table name="#fireRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -955,6 +1048,8 @@
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
 		<table name="#earthRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -964,6 +1059,8 @@
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
 		<table name="#holyRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -973,6 +1070,8 @@
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
 		<table name="#holyRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -982,6 +1081,8 @@
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
 		<table name="#darkRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -990,7 +1091,9 @@
 		</for>
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
 		<table name="#windRes"> 12 15 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1000,6 +1103,8 @@
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
 		<table name="#darkRes"> 12 15 </table>
+		<table name="#icons"> icon.accessary_inferno_ring_i00 icon.accessory_ring_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1008,7 +1113,9 @@
 		</for>
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1018,6 +1125,8 @@
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
 		<table name="#holyRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1026,7 +1135,9 @@
 		</for>
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#windRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1036,6 +1147,8 @@
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
 		<table name="#darkRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1045,6 +1158,8 @@
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
 		<table name="#earthRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1053,7 +1168,9 @@
 		</for>
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#waterRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1063,6 +1180,8 @@
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
 		<table name="#fireRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1072,6 +1191,8 @@
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
 		<table name="#fireRes"> 26 30 </table>
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1080,7 +1201,9 @@
 		</for>
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
+		<table name="#icons"> icon.accessary_inferno_necklace_i00 icon.accessory_nectklace_of_domi_protection_i00 </table>
 		<table name="#windRes"> 26 30 </table>
+		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1090,6 +1213,7 @@
 	</skill>
 	<skill id="8397" levels="1" name="Moirai Armor Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1107,6 +1231,7 @@
 	</skill>
 	<skill id="8398" levels="1" name="Moirai Leather Armor Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1124,6 +1249,7 @@
 	</skill>
 	<skill id="8399" levels="1" name="Moirai Robe Set">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="82" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />

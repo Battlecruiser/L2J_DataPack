@@ -62,6 +62,7 @@
 		<!-- Increases HP Recovery Bonus by 30% and decreases damage from the topography by 80% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
+		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
@@ -76,6 +77,7 @@
 		<!-- Increases MP Recovery Bonus by 30% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
+		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
@@ -89,6 +91,7 @@
 		<!-- Increases P. Def. by 15% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
+		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
@@ -102,6 +105,7 @@
 		<!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
 		<set name="abnormalTime" val="7" />
 		<set name="affectRange" val="200" />
+		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
@@ -161,6 +165,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
+		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i00" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -185,6 +190,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
+		<set name="icon" val="BranchSys2.icon.br_wp_habus_knife_i00" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -209,6 +215,7 @@
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
+		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i00" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -234,6 +241,7 @@
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill0000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -261,6 +269,7 @@
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="80" />
 		<set name="effectRange" val="400" />
+		<set name="icon" val="icon.skill0000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -284,6 +293,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
+		<set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i00" />
 		<!-- set name="abnormalType" val="RAID_WEAPON" / --> <!-- FIXME: Value unconfirmed. -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
