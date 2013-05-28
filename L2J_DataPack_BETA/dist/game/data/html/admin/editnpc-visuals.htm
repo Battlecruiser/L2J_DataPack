@@ -1,0 +1,150 @@
+<html>
+<head>
+	<title>Edit NPC(%title_npc_id%, %title_npc_name%)</title>
+</head>
+<body>
+<table width=280 cellspacing=0 cellpadding=0>
+	<tr>
+		<td><button value="Stats" width=70 action="bypass -h admin_edit_npc stats %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="AI" width=70 action="bypass -h admin_edit_npc ai %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Elementals" width=70 action="bypass -h admin_edit_npc elementals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Visuals" width=70 action="bypass -h admin_edit_npc visuals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 cellpadding=0>
+	<tr>
+		<td width=45 align=left valign=bottom>Value :</td>
+		<td width=230 align=left><edit var="value" width=230></td>
+	</tr>
+</table>
+<br>
+<table width=280 height=20 cellspacing=0 background="L2UI_CT1.Button_DF_Calculator">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Property</td>
+		<td fixwidth=110 align=center>Value</td>
+		<td fixwidth=50></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Template ID</td>
+		<td fixwidth=110 align=center>%idTemplate%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% idTemplate $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Type</td>
+		<td fixwidth=110 align=center>%type%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% type $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Show Name</td>
+		<td fixwidth=110 align=center>%showName%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% showName $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=80>Name</td>
+		<td fixwidth=140 align=center>%name%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% name $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Server Side Name</td>
+		<td fixwidth=110 align=center>%serverSideName%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% serverSideName $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Title</td>
+		<td fixwidth=110 align=center>%title%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% title $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Server Side Title</td>
+		<td fixwidth=110 align=center>%serverSideTitle%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% serverSideTitle $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Targetable</td>
+		<td fixwidth=110 align=center>%targetable%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% targetable $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Right Hand Item</td>
+		<td fixwidth=110 align=center>%rhand%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% rhand $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Left Hand Item</td>
+		<td fixwidth=110 align=center>%lhand%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% lhand $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Enchant Value</td>
+		<td fixwidth=110 align=center>%enchant%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% enchant $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Collision Radius</td>
+		<td fixwidth=110 align=center>%collision_radius%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% collision_radius $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Collision Height</td>
+		<td fixwidth=110 align=center>%collision_height%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% collision_height $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Gender</td>
+		<td fixwidth=110 align=center>%sex%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% sex $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+<table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+	<tr>
+		<td fixwidth=5></td>
+		<td fixwidth=110>Drop Herb Group</td>
+		<td fixwidth=110 align=center>%dropHerbGroup%</td>
+		<td fixwidth=50><button action="bypass -h admin_save_npc visuals %npcId% dropHerbGroup $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+</body>
+</html>

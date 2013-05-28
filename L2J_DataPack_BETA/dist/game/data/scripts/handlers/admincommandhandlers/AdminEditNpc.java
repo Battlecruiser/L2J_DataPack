@@ -32,12 +32,12 @@ import java.util.logging.Logger;
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
 import com.l2jserver.gameserver.TradeController;
-import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MerchantPriceConfigTable.MerchantPriceConfig;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
+import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.L2DropCategory;
 import com.l2jserver.gameserver.model.L2DropData;
 import com.l2jserver.gameserver.model.L2Object;
@@ -56,7 +56,8 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
 /**
- * @author terry con.close() change by Zoey76 24/02/2011
+ * con.close() change by Zoey76 24/02/2011
+ * @author terry
  */
 public class AdminEditNpc implements IAdminCommandHandler
 {
@@ -115,16 +116,32 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_edit_npc "))
 		{
+			StringTokenizer st = new StringTokenizer(command, " ");
+			st.nextToken();
+			
+			if (st.countTokens() < 2)
+			{
+				activeChar.sendMessage("Wrong usage: //edit_npc <stats|ai|elementals|visuals> <npc_id>");
+				return true;
+			}
+			
+			String category = st.nextToken();
 			try
 			{
-				String[] commandSplit = command.split(" ");
-				int npcId = Integer.parseInt(commandSplit[1]);
+				int npcId = Integer.parseInt(st.nextToken());
 				L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
-				showNpcProperty(activeChar, npc);
+				if (npc != null)
+				{
+					showNpcProperty(activeChar, npc, category);
+				}
+				else
+				{
+					activeChar.sendMessage("NPC does not exist or not loaded.");
+				}
 			}
-			catch (Exception e)
+			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("Wrong usage: //edit_npc <npcId>");
+				activeChar.sendMessage("npc_id should be a number");
 			}
 		}
 		else if (command.startsWith("admin_show_droplist "))
@@ -705,65 +722,134 @@ public class AdminEditNpc implements IAdminCommandHandler
 		return ADMIN_COMMANDS;
 	}
 	
-	private void showNpcProperty(L2PcInstance activeChar, L2NpcTemplate npc)
+	private void showNpcProperty(L2PcInstance activeChar, L2NpcTemplate npc, String category)
 	{
-		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
-		String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/editnpc.htm");
-		
-		if (content != null)
+		if (category.equalsIgnoreCase("stats") || category.equalsIgnoreCase("ai") || category.equalsIgnoreCase("elementals") || category.equalsIgnoreCase("visuals"))
 		{
-			adminReply.setHtml(content);
-			adminReply.replace("%npcId%", String.valueOf(npc.getNpcId()));
-			adminReply.replace("%templateId%", String.valueOf(npc.getIdTemplate()));
-			adminReply.replace("%name%", npc.getName());
-			adminReply.replace("%serverSideName%", npc.isServerSideName() == true ? "1" : "0");
-			adminReply.replace("%title%", npc.getTitle());
-			adminReply.replace("%serverSideTitle%", npc.isServerSideTitle() == true ? "1" : "0");
-			adminReply.replace("%collisionRadius%", String.valueOf(npc.getfCollisionRadius()));
-			adminReply.replace("%collisionHeight%", String.valueOf(npc.getfCollisionHeight()));
-			adminReply.replace("%level%", String.valueOf(npc.getLevel()));
-			adminReply.replace("%sex%", String.valueOf(npc.getSex()));
-			adminReply.replace("%type%", String.valueOf(npc.getType()));
-			adminReply.replace("%attackRange%", String.valueOf(npc.getBaseAtkRange()));
-			adminReply.replace("%hp%", String.valueOf(npc.getBaseHpMax()));
-			adminReply.replace("%mp%", String.valueOf(npc.getBaseMpMax()));
-			adminReply.replace("%hpRegen%", String.valueOf(npc.getBaseHpReg()));
-			adminReply.replace("%mpRegen%", String.valueOf(npc.getBaseMpReg()));
-			adminReply.replace("%str%", String.valueOf(npc.getBaseSTR()));
-			adminReply.replace("%con%", String.valueOf(npc.getBaseCON()));
-			adminReply.replace("%dex%", String.valueOf(npc.getBaseDEX()));
-			adminReply.replace("%int%", String.valueOf(npc.getBaseINT()));
-			adminReply.replace("%wit%", String.valueOf(npc.getBaseWIT()));
-			adminReply.replace("%men%", String.valueOf(npc.getBaseMEN()));
-			adminReply.replace("%exp%", String.valueOf(npc.getRewardExp()));
-			adminReply.replace("%sp%", String.valueOf(npc.getRewardSp()));
-			adminReply.replace("%pAtk%", String.valueOf(npc.getBasePAtk()));
-			adminReply.replace("%pDef%", String.valueOf(npc.getBasePDef()));
-			adminReply.replace("%mAtk%", String.valueOf(npc.getBaseMAtk()));
-			adminReply.replace("%mDef%", String.valueOf(npc.getBaseMDef()));
-			adminReply.replace("%pAtkSpd%", String.valueOf(npc.getBasePAtkSpd()));
-			adminReply.replace("%aggro%", String.valueOf(npc.getAIDataStatic().getAggroRange()));
-			adminReply.replace("%mAtkSpd%", String.valueOf(npc.getBaseMAtkSpd()));
-			adminReply.replace("%rHand%", String.valueOf(npc.getRightHand()));
-			adminReply.replace("%lHand%", String.valueOf(npc.getLeftHand()));
-			adminReply.replace("%enchant%", String.valueOf(npc.getEnchantEffect()));
-			adminReply.replace("%walkSpd%", String.valueOf(npc.getBaseMoveSpd(MoveType.WALK)));
-			adminReply.replace("%runSpd%", String.valueOf(npc.getBaseMoveSpd(MoveType.RUN)));
-			adminReply.replace("%factionId%", npc.getAIDataStatic().getClan() == null ? "" : npc.getAIDataStatic().getClan());
-			adminReply.replace("%factionRange%", String.valueOf(npc.getAIDataStatic().getClanRange()));
+			NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
+			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-" + category.toLowerCase() + ".htm");
+			
+			html.replace("%npcId%", String.valueOf(npc.getNpcId()));
+			html.replace("%title_npc_id%", String.valueOf(npc.getNpcId()));
+			html.replace("%title_npc_name%", String.valueOf(npc.getName()));
+			switch (category.toLowerCase())
+			{
+				case "stats":
+				{
+					html.replace("%level%", String.valueOf(npc.getLevel()));
+					html.replace("%exp%", String.valueOf(npc.getRewardExp()));
+					html.replace("%sp%", String.valueOf(npc.getRewardSp()));
+					html.replace("%hp%", String.valueOf(npc.getBaseHpMax()));
+					html.replace("%mp%", String.valueOf(npc.getBaseMpMax()));
+					html.replace("%hpreg%", String.valueOf(npc.getBaseHpReg()));
+					html.replace("%mpreg%", String.valueOf(npc.getBaseMpReg()));
+					html.replace("%patk%", String.valueOf(npc.getBasePAtk()));
+					html.replace("%pdef%", String.valueOf(npc.getBasePDef()));
+					html.replace("%matk%", String.valueOf(npc.getBaseMAtk()));
+					html.replace("%mdef%", String.valueOf(npc.getBaseMDef()));
+					html.replace("%atkspd%", String.valueOf(npc.getBasePAtkSpd()));
+					html.replace("%matkspd%", String.valueOf(npc.getBaseMAtkSpd()));
+					html.replace("%str%", String.valueOf(npc.getBaseSTR()));
+					html.replace("%con%", String.valueOf(npc.getBaseCON()));
+					html.replace("%dex%", String.valueOf(npc.getBaseDEX()));
+					html.replace("%int%", String.valueOf(npc.getBaseINT()));
+					html.replace("%wit%", String.valueOf(npc.getBaseWIT()));
+					html.replace("%men%", String.valueOf(npc.getBaseMEN()));
+					html.replace("%critical%", String.valueOf(npc.getBaseCritRate()));
+					html.replace("%attackrange%", String.valueOf(npc.getBaseAtkRange()));
+					html.replace("%walkspd%", String.valueOf(npc.getBaseMoveSpd(MoveType.WALK)));
+					html.replace("%runspd%", String.valueOf(npc.getBaseMoveSpd(MoveType.RUN)));
+					break;
+				}
+				case "ai":
+				{
+					html.replace("%aggro%", String.valueOf(npc.getAIDataStatic().getAggroRange()));
+					html.replace("%clan%", String.valueOf(npc.getAIDataStatic().getClan()));
+					html.replace("%clanRange%", String.valueOf(npc.getAIDataStatic().getClanRange()));
+					html.replace("%enemyClan%", String.valueOf(npc.getAIDataStatic().getEnemyClan()));
+					html.replace("%enemyRange%", String.valueOf(npc.getAIDataStatic().getEnemyRange()));
+					html.replace("%dodge%", String.valueOf(npc.getAIDataStatic().getDodge()));
+					html.replace("%canMove%", String.valueOf(npc.getAIDataStatic().getCanMove()));
+					html.replace("%primarySkillId%", String.valueOf(npc.getAIDataStatic().getPrimarySkillId()));
+					html.replace("%minSkillChance%", String.valueOf(npc.getAIDataStatic().getMinSkillChance()));
+					html.replace("%maxSkillChance%", String.valueOf(npc.getAIDataStatic().getMaxSkillChance()));
+					html.replace("%minRangeSkill%", String.valueOf(npc.getAIDataStatic().getShortRangeSkill()));
+					html.replace("%minRangeChance%", String.valueOf(npc.getAIDataStatic().getShortRangeChance()));
+					html.replace("%maxRangeSkill%", String.valueOf(npc.getAIDataStatic().getLongRangeSkill()));
+					html.replace("%maxRangeChance%", String.valueOf(npc.getAIDataStatic().getLongRangeChance()));
+					html.replace("%soulShot%", String.valueOf(npc.getAIDataStatic().getSoulShot()));
+					html.replace("%ssChance%", String.valueOf(npc.getAIDataStatic().getSoulShotChance()));
+					html.replace("%spiritShot%", String.valueOf(npc.getAIDataStatic().getSpiritShot()));
+					html.replace("%spsChance%", String.valueOf(npc.getAIDataStatic().getSpiritShotChance()));
+					html.replace("%isChaos%", String.valueOf(npc.getAIDataStatic().getIsChaos()));
+					html.replace("%aiType%", String.valueOf(npc.getAIDataStatic().getAiType()));
+					break;
+				}
+				case "elementals":
+				{
+					int elements[] =
+					{
+						npc.getBaseFire(),
+						npc.getBaseWater(),
+						npc.getBaseWind(),
+						npc.getBaseEarth(),
+						npc.getBaseHoly(),
+						npc.getBaseDark()
+					};
+					byte attackAttribute = -1;
+					int max_element = 0;
+					for (byte i = 0; i < 6; i++)
+					{
+						if (elements[i] > max_element)
+						{
+							attackAttribute = i;
+							max_element = elements[i];
+						}
+					}
+					html.replace("%elemAtkType%", Elementals.getElementName(attackAttribute));
+					html.replace("%elemAtkValue%", String.valueOf(attackAttribute != -1 ? elements[attackAttribute] : 0));
+					html.replace("%fireDefValue%", String.valueOf(npc.getBaseFireRes()));
+					html.replace("%waterDefValue%", String.valueOf(npc.getBaseWaterRes()));
+					html.replace("%windDefValue%", String.valueOf(npc.getBaseWindRes()));
+					html.replace("%earthDefValue%", String.valueOf(npc.getBaseEarthRes()));
+					html.replace("%holyDefValue%", String.valueOf(npc.getBaseHolyRes()));
+					html.replace("%darkDefValue%", String.valueOf(npc.getBaseDarkRes()));
+					break;
+				}
+				case "visuals":
+				{
+					html.replace("%idTemplate%", String.valueOf(npc.getIdTemplate()));
+					html.replace("%type%", String.valueOf(npc.getType()));
+					html.replace("%showName%", String.valueOf(npc.getAIDataStatic().showName() ? 1 : 0));
+					html.replace("%name%", npc.getName());
+					html.replace("%serverSideName%", String.valueOf(npc.isServerSideName() ? 1 : 0));
+					html.replace("%title%", npc.getTitle());
+					html.replace("%serverSideTitle%", String.valueOf(npc.isServerSideTitle() ? 1 : 0));
+					html.replace("%targetable%", String.valueOf(npc.getAIDataStatic().isTargetable() ? 1 : 0));
+					html.replace("%rhand%", String.valueOf(npc.getRightHand()));
+					html.replace("%lhand%", String.valueOf(npc.getLeftHand()));
+					html.replace("%enchant%", String.valueOf(npc.getEnchantEffect()));
+					html.replace("%collision_radius%", String.valueOf(npc.getCollisionRadius()));
+					html.replace("%collision_height%", String.valueOf(npc.getCollisionHeight()));
+					html.replace("%sex%", String.valueOf(npc.getSex()));
+					html.replace("%dropHerbGroup%", String.valueOf(npc.getDropHerbGroup()));
+					break;
+				}
+			}
+			activeChar.sendPacket(html);
 		}
 		else
 		{
-			adminReply.setHtml("<html><head><body>File not found: data/html/admin/editnpc.htm</body></html>");
+			_log.warning(activeChar.getName() + " tried to see invalid category for showNpcProperty.");
 		}
-		activeChar.sendPacket(adminReply);
 	}
 	
 	private void saveNpcProperty(L2PcInstance activeChar, String command)
 	{
-		String[] commandSplit = command.split(" ");
+		StringTokenizer st = new StringTokenizer(command, " ");
+		st.nextToken();
 		
-		if (commandSplit.length < 4)
+		if (st.countTokens() < 3)
 		{
 			return;
 		}
@@ -771,169 +857,492 @@ public class AdminEditNpc implements IAdminCommandHandler
 		StatsSet newNpcData = new StatsSet();
 		try
 		{
-			newNpcData.set("npcId", commandSplit[1]);
+			String category = st.nextToken();
+			newNpcData.set("npcId", st.nextToken());
 			
-			String statToSet = commandSplit[2];
-			String value = commandSplit[3];
+			String statToSet = st.nextToken();
+			String value = st.hasMoreTokens() ? st.nextToken() : "";
 			
-			if (commandSplit.length > 4)
+			while (st.hasMoreTokens())
 			{
-				for (int i = 0; i < (commandSplit.length - 3); i++)
+				value += " " + st.nextToken();
+			}
+			
+			int npcId = newNpcData.getInteger("npcId");
+			L2NpcTemplate npc = NpcTable.getInstance().getTemplate(npcId);
+			if (npc != null)
+			{
+				switch (statToSet)
 				{
-					value += " " + commandSplit[i + 4];
+					case "serverSideName":
+					case "serverSideTitle":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue == 0) || (intValue == 1))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0 or 1.");
+							return;
+						}
+						break;
+					}
+					case "sex":
+					{
+						if (value.equalsIgnoreCase("male") || value.equalsIgnoreCase("female") || value.equalsIgnoreCase("etc"))
+						{
+							newNpcData.set(statToSet, value.toLowerCase());
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be male, female or etc.");
+							return;
+						}
+						break;
+					}
+					case "enchant":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 50))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-50.");
+							return;
+						}
+						break;
+					}
+					case "level":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 87))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-87.");
+							return;
+						}
+						break;
+					}
+					case "str":
+					case "con":
+					case "dex":
+					case "int":
+					case "wit":
+					case "men":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 99))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-99.");
+							return;
+						}
+						break;
+					}
+					case "critical":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 127))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-127.");
+							return;
+						}
+						break;
+					}
+					case "dropHerbGroup":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 127))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-127.");
+							return;
+						}
+						break;
+					}
+					case "atkspd":
+					case "matkspd":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 1000))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-1000.");
+							return;
+						}
+						break;
+					}
+					case "attackrange":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 2000))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-2000.");
+							return;
+						}
+						break;
+					}
+					case "rhand":
+					case "lhand":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 65535))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-65535.");
+							return;
+						}
+						break;
+					}
+					case "idTemplate":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 1) && (intValue <= 65535))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 1-65535.");
+							return;
+						}
+						break;
+					}
+					case "exp":
+					case "sp":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 2147483647))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-2147483647.");
+							return;
+						}
+						break;
+					}
+					case "collision_radius":
+					case "collision_height":
+					{
+						double doubleValue = Double.parseDouble(value);
+						if ((doubleValue >= -9999.99) && (doubleValue <= 9999.99))
+						{
+							newNpcData.set(statToSet, doubleValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be -9999.99-9999.99.");
+							return;
+						}
+						break;
+					}
+					case "walkspd":
+					case "runspd":
+					{
+						double doubleValue = Double.parseDouble(value);
+						if ((doubleValue >= 0) && (doubleValue <= 99999.99999))
+						{
+							newNpcData.set(statToSet, doubleValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-99999.99999.");
+							return;
+						}
+						break;
+					}
+					case "patk":
+					case "pdef":
+					case "matk":
+					case "mdef":
+					{
+						double doubleValue = Double.parseDouble(value);
+						if ((doubleValue >= 0) && (doubleValue <= 9999999.99999))
+						{
+							newNpcData.set(statToSet, doubleValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-9999999.99999.");
+							return;
+						}
+						break;
+					}
+					case "hp":
+					case "mp":
+					case "hpreg":
+					case "mpreg":
+					{
+						double doubleValue = Double.parseDouble(value);
+						if ((doubleValue >= 0) && (doubleValue <= 999999999999999.999999999999999))
+						{
+							newNpcData.set(statToSet, doubleValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-999999999999999.999999999999999.");
+							return;
+						}
+						break;
+					}
+					case "type":
+					{
+						if ((value.length() >= 1) && (value.length() <= 22))
+						{
+							Class.forName("com.l2jserver.gameserver.model.actor.instance." + value + "Instance");
+							newNpcData.set(statToSet, value);
+						}
+						else
+						{
+							activeChar.sendMessage("Length of " + statToSet + " must be 1-22.");
+							return;
+						}
+						break;
+					}
+					case "title":
+					{
+						if ((value.length() >= 0) && (value.length() <= 45))
+						{
+							newNpcData.set(statToSet, value);
+						}
+						else
+						{
+							activeChar.sendMessage("Length of " + statToSet + " must be 1-45.");
+							return;
+						}
+						break;
+					}
+					case "name":
+					{
+						if ((value.length() >= 0) && (value.length() <= 200))
+						{
+							newNpcData.set(statToSet, value);
+						}
+						else
+						{
+							activeChar.sendMessage("Length of " + statToSet + " must be 1-200.");
+							return;
+						}
+						break;
+					}
+					case "canMove":
+					case "targetable":
+					case "showName":
+					case "isChaos":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue == 0) || (intValue == 1))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0 or 1.");
+							return;
+						}
+						break;
+					}
+					case "dodge":
+					case "minSkillChance":
+					case "maxSkillChance":
+					case "minRangeChance":
+					case "maxRangeChance":
+					case "ssChance":
+					case "spsChance":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 100))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-100.");
+							return;
+						}
+						break;
+					}
+					case "aggro":
+					case "clanRange":
+					case "enemyRange":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 3000))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-3000.");
+							return;
+						}
+						break;
+					}
+					case "primarySkillId":
+					case "minRangeSkill":
+					case "maxRangeSkill":
+					case "soulShot":
+					case "spiritShot":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 65535))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-65535.");
+							return;
+						}
+						break;
+					}
+					case "clan":
+					case "enemyClan":
+					{
+						if (value.isEmpty())
+						{
+							newNpcData.set(statToSet, "null");
+						}
+						else if ((value.length() >= 1) && (value.length() <= 40))
+						{
+							
+							newNpcData.set(statToSet, value);
+						}
+						else
+						{
+							activeChar.sendMessage("Length of " + statToSet + " must be 1-40 or empty for null.");
+							return;
+						}
+						break;
+					}
+					case "aiType":
+					{
+						switch (value)
+						{
+							case "fighter":
+							case "archer":
+							case "mage":
+							case "healer":
+							case "balanced":
+							case "corpse":
+							{
+								newNpcData.set(statToSet, value);
+								break;
+							}
+							default:
+							{
+								activeChar.sendMessage("Value of " + statToSet + " must be fighter, archer, mage, healer, balanced, or corpse.");
+								return;
+							}
+						}
+						break;
+					}
+					case "elemAtkType":
+					{
+						switch (value)
+						{
+							case "fire":
+							{
+								newNpcData.set(statToSet, Elementals.FIRE);
+								break;
+							}
+							case "water":
+							{
+								newNpcData.set(statToSet, Elementals.WATER);
+								break;
+							}
+							case "earth":
+							{
+								newNpcData.set(statToSet, Elementals.EARTH);
+								break;
+							}
+							case "wind":
+							{
+								newNpcData.set(statToSet, Elementals.WIND);
+								break;
+							}
+							case "holy":
+							{
+								newNpcData.set(statToSet, Elementals.HOLY);
+								break;
+							}
+							case "dark":
+							{
+								newNpcData.set(statToSet, Elementals.DARK);
+								break;
+							}
+							default:
+							{
+								activeChar.sendMessage("Value of " + statToSet + " must be fire, water, earth, wind, holy or dark.");
+								return;
+							}
+						}
+						break;
+					}
+					case "elemAtkValue":
+					case "fireDefValue":
+					case "waterDefValue":
+					case "windDefValue":
+					case "earthDefValue":
+					case "holyDefValue":
+					case "darkDefValue":
+					{
+						int intValue = Integer.parseInt(value);
+						if ((intValue >= 0) && (intValue <= 3000))
+						{
+							newNpcData.set(statToSet, intValue);
+						}
+						else
+						{
+							activeChar.sendMessage("Value of " + statToSet + " must be 0-3000.");
+							return;
+						}
+						break;
+					}
+					default:
+					{
+						
+						activeChar.sendMessage("Unknown stat " + statToSet + " can't set.");
+						return;
+					}
 				}
+				NpcTable.getInstance().saveNpc(newNpcData);
+				NpcTable.getInstance().reloadNpc(npcId, true, true, true, false, false, false);
+				npc = NpcTable.getInstance().getTemplate(npcId);
+				showNpcProperty(activeChar, npc, category);
 			}
-			
-			if (statToSet.equals("templateId"))
+			else
 			{
-				newNpcData.set("idTemplate", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("name"))
-			{
-				newNpcData.set("name", value);
-			}
-			else if (statToSet.equals("serverSideName"))
-			{
-				newNpcData.set("serverSideName", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("title"))
-			{
-				newNpcData.set("title", value);
-			}
-			else if (statToSet.equals("serverSideTitle"))
-			{
-				newNpcData.set("serverSideTitle", Integer.parseInt(value) == 1 ? 1 : 0);
-			}
-			else if (statToSet.equals("collisionRadius"))
-			{
-				newNpcData.set("collision_radius", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("collisionHeight"))
-			{
-				newNpcData.set("collision_height", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("level"))
-			{
-				newNpcData.set("level", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("sex"))
-			{
-				int intValue = Integer.parseInt(value);
-				newNpcData.set("sex", intValue == 0 ? "male" : intValue == 1 ? "female" : "etc");
-			}
-			else if (statToSet.equals("type"))
-			{
-				Class.forName("com.l2jserver.gameserver.model.actor.instance." + value + "Instance");
-				newNpcData.set("type", value);
-			}
-			else if (statToSet.equals("attackRange"))
-			{
-				newNpcData.set("attackrange", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("hp"))
-			{
-				newNpcData.set("hp", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("mp"))
-			{
-				newNpcData.set("mp", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("hpRegen"))
-			{
-				newNpcData.set("hpreg", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("mpRegen"))
-			{
-				newNpcData.set("mpreg", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("str"))
-			{
-				newNpcData.set("str", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("con"))
-			{
-				newNpcData.set("con", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("dex"))
-			{
-				newNpcData.set("dex", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("int"))
-			{
-				newNpcData.set("int", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("wit"))
-			{
-				newNpcData.set("wit", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("men"))
-			{
-				newNpcData.set("men", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("exp"))
-			{
-				newNpcData.set("exp", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("sp"))
-			{
-				newNpcData.set("sp", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("pAtk"))
-			{
-				newNpcData.set("patk", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("pDef"))
-			{
-				newNpcData.set("pdef", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("mAtk"))
-			{
-				newNpcData.set("matk", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("mDef"))
-			{
-				newNpcData.set("mdef", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("pAtkSpd"))
-			{
-				newNpcData.set("atkspd", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("aggro"))
-			{
-				newNpcData.set("aggro", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("mAtkSpd"))
-			{
-				newNpcData.set("matkspd", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("rHand"))
-			{
-				newNpcData.set("rhand", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("lHand"))
-			{
-				newNpcData.set("lhand", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("armor"))
-			{
-				newNpcData.set("armor", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("enchant"))
-			{
-				newNpcData.set("enchant", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("runSpd"))
-			{
-				newNpcData.set("runspd", Integer.parseInt(value));
-			}
-			else if (statToSet.equals("isUndead"))
-			{
-				newNpcData.set("isUndead", Integer.parseInt(value) == 1 ? 1 : 0);
-			}
-			else if (statToSet.equals("absorbLevel"))
-			{
-				int intVal = Integer.parseInt(value);
-				newNpcData.set("absorb_level", intVal < 0 ? 0 : intVal > 16 ? 0 : intVal);
+				activeChar.sendMessage("NPC does not exist or not loaded.");
 			}
 		}
 		catch (Exception e)
@@ -941,13 +1350,6 @@ public class AdminEditNpc implements IAdminCommandHandler
 			activeChar.sendMessage("Could not save npc property!");
 			_log.warning("Error saving new npc value (" + command + "): " + e);
 		}
-		
-		NpcTable.getInstance().saveNpc(newNpcData);
-		
-		int npcId = newNpcData.getInteger("npcId");
-		
-		NpcTable.getInstance().reloadNpc(npcId);
-		showNpcProperty(activeChar, NpcTable.getInstance().getTemplate(npcId));
 	}
 	
 	private void showNpcDropList(L2PcInstance activeChar, int npcId, int page)

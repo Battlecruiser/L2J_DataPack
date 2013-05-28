@@ -32,12 +32,10 @@ import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
-import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -246,14 +244,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					Integer npcId = Integer.parseInt(st.nextToken());
 					if (npcId != null)
 					{
-						NpcTable.getInstance().reloadNpc(npcId);
-						for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(npcId))
-						{
-							if (spawn != null)
-							{
-								spawn.respawnNpc(spawn.getLastSpawn());
-							}
-						}
+						NpcTable.getInstance().reloadNpc(npcId, true, true, true, true, true, true);
 						activeChar.sendMessage("NPC " + npcId + " have been reloaded");
 					}
 				}
