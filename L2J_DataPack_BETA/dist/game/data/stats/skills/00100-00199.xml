@@ -13,6 +13,7 @@
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -53,6 +54,7 @@
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0101" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -117,6 +119,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0102" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -164,6 +167,7 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0103" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -186,6 +190,7 @@
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0104" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="21" />
 		<set name="operateType" val="A2" />
@@ -217,6 +222,7 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0105" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -259,6 +265,7 @@
 		<set name="castRange" val="500" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.skill0106" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -289,6 +296,7 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill0107" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -324,6 +332,7 @@
 		<set name="abnormalType" val="POSSESSION" />
 		<set name="aggroPoints" val="438" />
 		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill0109" />
 		<set name="magicLvl" val="46" />
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
@@ -366,6 +375,7 @@
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0110" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -423,6 +433,7 @@
 		<set name="abnormalType" val="AVOID_UP_SPECIAL" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill0111" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -465,6 +476,7 @@
 		<set name="abnormalType" val="PD_UP_BOW" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0112" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -498,6 +510,7 @@
 	<skill id="113" levels="2" name="Long Shot">
 		<table name="#dist"> 200 400 </table>
 		<table name="#magicLvl"> 20 40 </table>
+		<set name="icon" val="icon.skill0113" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -526,6 +539,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.skill0115" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -575,6 +589,7 @@
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.skill0116" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -603,6 +618,7 @@
 	</skill>
 	<skill id="118" levels="1" name="Magician's Movement">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0118" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -627,6 +643,7 @@
 		<set name="coolTime" val="296" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1600" />
+		<set name="icon" val="icon.skill0120" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -663,6 +680,7 @@
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0121" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -700,6 +718,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1200" />
+		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -751,6 +770,7 @@
 		<set name="abnormalType" val="MD_UP" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill0123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -792,6 +812,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0127" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -831,6 +852,7 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
+		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -862,6 +884,7 @@
 		<set name="abnormalType" val="THRILL_FIGHT" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0130" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -896,6 +919,7 @@
 		<set name="abnormalType" val="AB_HAWK_EYE" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0131" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -920,6 +944,7 @@
 	<skill id="134" levels="1" name="Toughness" enchantGroup1="1">
 		<table name="#ench1vuln"> 21 21 21 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 27 27 27 27 28 28 28 29 29 29 30 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0134" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -944,6 +969,7 @@
 		<table name="#rate"> 0.2 0.3 0.4 0.5 </table>
 		<table name="#ench1rate"> 0.5 0.5 0.51 0.51 0.51 0.52 0.52 0.52 0.53 0.53 0.53 0.54 0.54 0.54 0.55 0.55 0.55 0.56 0.56 0.56 0.57 0.57 0.57 0.58 0.58 0.58 0.59 0.59 0.59 0.6 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0137" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -971,6 +997,7 @@
 		<set name="abnormalType" val="PINCH" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0139" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -990,6 +1017,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 5 10 15 </table>
 		<table name="#pAtk"> 2 3 4 </table>
+		<set name="icon" val="icon.skill0141" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1005,6 +1033,7 @@
 		<table name="#magicLvl"> 5 8 10 13 15 </table>
 		<table name="#pDef"> 9 11 12 13 14 </table>
 		<table name="#rEvas"> 0 0 0 3 3 </table>
+		<set name="icon" val="icon.skill0142" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1022,6 +1051,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#cubicCount"> 2 3 </table>
 		<table name="#magicLvl"> 43 55 </table>
+		<set name="icon" val="icon.skill0143" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1035,6 +1065,7 @@
 		<table name="#ench1pAtk"> 137 138 139 140 141 142 143 144 145 146 147 148 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 </table>
 		<table name="#ench2pAtkSpd"> 1.011 1.012 1.014 1.015 1.016 1.018 1.019 1.020 1.022 1.023 1.024 1.026 1.027 1.028 1.030 1.031 1.032 1.034 1.035 1.036 1.038 1.039 1.040 1.042 1.043 1.044 1.046 1.047 1.048 1.050 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0144" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1071,6 +1102,7 @@
 		<table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<table name="#ench1mDef"> 113 114 115 115 116 117 117 118 119 119 120 121 121 122 123 123 124 125 125 126 127 127 128 129 129 130 131 131 132 133 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0146" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1094,6 +1126,7 @@
 		<table name="#mDef"> 22 24 26 28 29 31 32 33 36 37 39 42 43 45 48 50 51 53 55 57 59 61 62 64 67 69 71 73 75 77 79 82 84 86 89 91 94 96 98 101 103 106 109 111 114 116 119 122 124 127 130 </table>
 		<table name="#ench1mDef"> 131 132 133 133 134 135 135 136 137 137 138 139 139 140 141 141 142 143 143 144 145 145 146 147 147 148 149 149 150 151 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0147" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1115,6 +1148,7 @@
 		<table name="#hp"> 1.9 2.7 2.9 3.6 4.5 4.7 5.6 6.7 </table>
 		<table name="#magicLvl"> 24 32 40 46 52 58 64 72 </table>
 		<table name="#mp"> 1.9 2.1 2.2 2.5 2.7 2.8 3.1 3.5 </table>
+		<set name="icon" val="icon.skill0148" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1132,6 +1166,7 @@
 	<skill id="150" levels="3" name="Weight Limit">
 		<table name="#magicLvl"> 10 24 46 </table>
 		<table name="#rate"> 2 3 4 </table>
+		<set name="icon" val="icon.skill0150" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1148,6 +1183,7 @@
 		<table name="#sDef"> 1.3 1.4 1.5 1.6 </table>
 		<table name="#ench1sDef"> 55 60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180 185 190 195 200 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
+		<set name="icon" val="icon.skill0153" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1174,6 +1210,7 @@
 	</skill>
 	<skill id="163" levels="1" name="Spellcraft">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0163" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1190,6 +1227,7 @@
 	<skill id="164" levels="3" name="Quick Recycle">
 		<table name="#magicLvl"> 20 30 48 </table>
 		<table name="#reuse"> 0.9 0.85 0.8 </table>
+		<set name="icon" val="icon.skill0164" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1203,6 +1241,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- This Skill Is Only For Description In The Client -->
 		<table name="#magicLvl"> 15 24 36 43 49 </table>
+		<set name="icon" val="icon.skill0165" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1211,6 +1250,7 @@
 		<table name="#magicLvl"> 36 46 58 </table>
 		<table name="#rate"> 1.05 1.07 1.1 </table>
 		<table name="#ench1rate"> 1.101 1.102 1.103 1.104 1.105 1.106 1.107 1.108 1.109 1.11 1.111 1.112 1.113 1.114 1.115 1.116 1.117 1.118 1.119 1.12 1.121 1.122 1.123 1.124 1.125 1.126 1.127 1.128 1.129 1.13 </table>
+		<set name="icon" val="icon.skill0168" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1229,6 +1269,7 @@
 		<table name="#magicLvl"> 28 43 </table>
 		<table name="#spd"> 7 11 </table>
 		<table name="#ench1spd"> 12 12 12 12 12 12 12 12 12 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 </table>
+		<set name="icon" val="icon.skill0169" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1248,6 +1289,7 @@
 		<table name="#hp"> 2.5 3 3.5 4 4.5 5 5.5 6 </table>
 		<table name="#magicLvl"> 36 43 46 49 52 62 68 74 </table>
 		<table name="#mp"> 1.8 1.9 2 2.1 2.2 2.3 2.4 2.5 </table>
+		<set name="icon" val="icon.skill0171" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1265,6 +1307,7 @@
 	</skill>
 	<skill id="172" levels="10" name="Create Item">
 		<table name="#magicLvl"> 5 20 28 36 43 49 55 62 70 82 </table>
+		<set name="icon" val="icon.skill0172" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="COREDONE" />
@@ -1274,6 +1317,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#fall"> 60 100 </table>
 		<table name="#magicLvl"> 20 55 </table>
+		<set name="icon" val="icon.skill0173" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1298,6 +1342,7 @@
 		<set name="abnormalType" val="PINCH" />
 		<set name="aggroPoints" val="#aggro" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0176" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
@@ -1334,6 +1379,7 @@
 	<skill id="181" levels="1" name="Revival">
 		<set name="aggroPoints" val="181" />
 		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill0181" />
 		<set name="magicLvl" val="55" />
 		<set name="mpConsume" val="25" />
 		<set name="operateType" val="A1" />
@@ -1359,6 +1405,7 @@
 		<set name="coolTime" val="720" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
+		<set name="icon" val="icon.skill0190" />
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1396,6 +1443,7 @@
 		<table name="#magicLvl"> 36 43 49 55 64 72 </table>
 		<table name="#regMp"> 3.1 3.5 3.9 4.3 4.7 5.1 </table>
 		<table name="#ench1regMp"> 5.6 5.7 5.8 5.8 5.9 6 6.1 6.2 6.3 6.3 6.4 6.5 6.6 6.7 6.8 6.8 6.9 7 7.1 7.2 7.3 7.3 7.4 7.5 7.6 7.7 7.8 7.8 7.9 8 </table>
+		<set name="icon" val="icon.skill0191" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1414,6 +1462,7 @@
 		<table name="#crit"> 32 56 93 177 295 384 406 </table>
 		<table name="#magicLvl"> 24 32 40 52 64 72 74 </table>
 		<table name="#ench1crit"> 430 433 436 439 442 445 448 451 454 457 460 463 466 469 472 474 477 480 483 486 489 492 495 498 501 504 507 510 513 516 </table>
+		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1430,6 +1479,7 @@
 	</skill>
 	<skill id="194" levels="1" name="Lucky">
 		<!-- Confirmed CT2.5 -->
+		<set name="icon" val="icon.skill0194" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1440,6 +1490,7 @@
 	<skill id="195" levels="2" name="Breath Boost">
 		<table name="#breath"> 180 300 </table>
 		<table name="#magicLvl"> 20 55 </table>
+		<set name="icon" val="icon.skill0195" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -1451,6 +1502,7 @@
 	</skill>
 	<skill id="196" levels="1" name="Holy Blade">
 		<set name="element" val="4" /> <!-- Holy -->
+		<set name="icon" val="icon.skill0196" />
 		<set name="magicLvl" val="43" />
 		<set name="mpConsume" val="8" />
 		<set name="operateType" val="T" />
@@ -1465,6 +1517,7 @@
 		<table name="#darkRes"> 7 10 </table>
 		<table name="#magicLvl"> 40 46 </table>
 		<table name="#mpConsume"> 7 9 </table>
+		<set name="icon" val="icon.skill0197" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="T" />
@@ -1479,6 +1532,7 @@
 		<table name="#magicLvl"> 24 46 58 </table>
 		<table name="#rEvas"> 2 3 4 </table>
 		<table name="#ench1rEvas"> 5 5 5 5 5 5 5 5 5 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 8 </table>
+		<set name="icon" val="icon.skill0198" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
