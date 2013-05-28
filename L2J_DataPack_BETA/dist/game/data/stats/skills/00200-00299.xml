@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="205" levels="45" name="Sword/Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 54 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
+		<table name="#magicLvl"> 20 24 26 28 30 32 34 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#pAtk"> 4.5 7.3 8.9 10.7 12.8 15.1 17.7 20.5 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<table name="#triggeredId"> 0 0 0 0 0 0 0 0 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 5604 </table>
 		<table name="#ench1runSpd"> 1 2 2 3 4 4 5 6 6 7 7 8 9 9 10 11 11 12 13 13 14 14 15 16 16 17 18 18 19 20 </table>
@@ -23,45 +23,53 @@
 			<using kind="Sword,Big Sword,Blunt,Big Blunt" />
 		</cond>
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="#triggeredId"> -->
 			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt" /> -->
 			<!-- </effect> -->
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
-			<add order="0x40" stat="runSpd" val="#ench1runSpd">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+				<add order="0x40" stat="runSpd" val="#ench1runSpd">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
 			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt" /> -->
 			<!-- </effect> -->
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
-			<add order="0x40" stat="cAtkAdd" val="#ench2cAtkAdd">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+				<add order="0x40" stat="cAtkAdd" val="#ench2cAtkAdd">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
 			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt" /> -->
 			<!-- </effect> -->
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
-			<add order="0x40" stat="pAtkSpd" val="#ench3pAtkSpd">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+				<add order="0x40" stat="pAtkSpd" val="#ench3pAtkSpd">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="50" chanceType="ON_HIT" triggeredId="5604"> -->
 			<!-- <using kind="Sword,Big Sword,Blunt,Big Blunt" /> -->
@@ -77,22 +85,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Bow" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Bow" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Bow" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Bow" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="794.6">
-				<using kind="Bow" />
-			</add>
-			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
-				<using kind="Bow" />
-			</mul>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="794.6">
+					<using kind="Bow" />
+				</add>
+				<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
+					<using kind="Bow" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="209" levels="45" name="Dagger Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -118,42 +132,50 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="#triggeredId"> -->
 			<!-- <using kind="Dagger,Dual Dagger" /> -->
 			<!-- </effect> -->
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
 			<!-- <using kind="Dagger,Dual Dagger" /> -->
 			<!-- </effect> -->
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="112.8">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
-			<basemul order="0x30" stat="rCrit" val="#ench2rCrit">
-				<using kind="Dagger,Dual Dagger" />
-			</basemul>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="112.8">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+				<basemul order="0x30" stat="rCrit" val="#ench2rCrit">
+					<using kind="Dagger,Dual Dagger" />
+				</basemul>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
 			<!-- <using kind="Dagger,Dual Dagger" /> -->
 			<!-- </effect> -->
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pAtk" val="112.8">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
-			<mul order="0x30" stat="cAtk" val="#ench3cAtk">
-				<using kind="Dagger,Dual Dagger" />
-			</mul>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="112.8">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+				<mul order="0x30" stat="cAtk" val="#ench3cAtk">
+					<using kind="Dagger,Dual Dagger" />
+				</mul>
+			</effect>
 			<!-- TODO: Require support for effects using conditions -->
 			<!-- <effect name="ChanceSkillTrigger" val="0" activationChance="33" chanceType="ON_HIT" triggeredId="5603"> -->
 			<!-- <using kind="Dagger,Dual Dagger" /> -->
@@ -169,22 +191,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Dual Fist" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Dual Fist" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Dual Fist" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Dual Fist" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Dual Fist" />
-			</add>
-			<add order="0x40" stat="accCombat" val="#ench2Acc">
-				<using kind="Dual Fist" />
-			</add>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Dual Fist" />
+				</add>
+				<add order="0x40" stat="accCombat" val="#ench2Acc">
+					<using kind="Dual Fist" />
+				</add>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="211" levels="10" name="Boost HP" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
@@ -202,22 +230,32 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#hp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxHp" val="#hp" />
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="maxHp" val="#ench1hp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxHp" val="#ench1hp" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="maxHp" val="480" />
-			<add order="0x40" stat="maxCp" val="#ench2cp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxHp" val="480" />
+				<add order="0x40" stat="maxCp" val="#ench2cp" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="maxHp" val="480" />
-			<mul order="0x30" stat="regHp" val="#enchreg" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxHp" val="480" />
+				<mul order="0x30" stat="regHp" val="#enchreg" />
+			</effect>
 		</enchant3for>
 		<enchant4for>
-			<add order="0x40" stat="maxHp" val="480" />
-			<mul order="0x30" stat="regCp" val="#enchreg" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxHp" val="480" />
+				<mul order="0x30" stat="regCp" val="#enchreg" />
+			</effect>
 		</enchant4for>
 	</skill>
 	<skill id="212" levels="8" name="Fast HP Recovery" enchantGroup1="1">
@@ -228,10 +266,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#hp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="regHp" val="#hp" />
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="regHp" val="#ench1hp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="regHp" val="#ench1hp" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="213" levels="8" name="Boost Mana" enchantGroup1="1">
@@ -242,10 +284,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="#mp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxMp" val="#mp" />
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="maxMp" val="#ench1mp" />
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="maxMp" val="#ench1mp" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="214" levels="1" name="Mana Recovery">
@@ -253,9 +299,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Magic" />
-			</mul>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Magic" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="216" levels="45" name="Polearm Mastery" enchantGroup1="1" enchantGroup2="1">

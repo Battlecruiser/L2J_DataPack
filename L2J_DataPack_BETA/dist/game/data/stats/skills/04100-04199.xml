@@ -511,7 +511,7 @@
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
 		<!-- Freya retail confirmed -->
 		<table name="#derangementVuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
-		<set name="magicLvl" val="50" />
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1384,7 +1384,6 @@
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="-1" />
-		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" />
 		<set name="pvp" val="true" />

@@ -737,7 +737,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="-1" />
-		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="89" />
 		<set name="mpInitialConsume" val="23" />
 		<set name="offensive" val="true" />
@@ -761,7 +760,6 @@
 		<set name="canBeDispeled" val="false" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="-1" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="stayAfterDeath" val="true" />
@@ -1041,7 +1039,7 @@
 	</skill>
 	<skill id="5252" levels="12" name="Paralysis">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 75 90 95 </table>
+		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />

@@ -191,8 +191,9 @@
 		</for>
 	</skill>
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
+		<table name="#magicLvl"> 80 84 </table>
 		<table name="#MpConsumeRate"> 0.96 0.92 </table>
-		<set name="magicLvl" val="80" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>

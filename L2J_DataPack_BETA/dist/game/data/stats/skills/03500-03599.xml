@@ -482,7 +482,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#atkCountMax"> 0 4 0 4 </table>
 		<table name="#bonus"> 1.05 1.05 1.1 1.1 </table>
-		<table name="#magicLvl"> 64 64 74 74 </table>
+		<table name="#magicLvl"> 64 64 72 72 </table>
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -659,7 +659,6 @@
 		<table name="#magicLvl"> 75 80 84 </table>
 		<table name="#pAtkSpd"> 1.07 1.1 1.11 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -861,7 +860,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
-		<set name="magicLvl" val="75" />
+		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Activation chance is defined in SQL, not through power. -->
 		<set name="pvp" val="true" />
