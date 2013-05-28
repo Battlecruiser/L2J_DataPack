@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7000" levels="1" name="NPC Default">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
@@ -11,7 +10,6 @@
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="pvp" val="true" />
@@ -26,7 +24,6 @@
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -41,7 +38,6 @@
 		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -57,7 +53,6 @@
 	<skill id="7004" levels="2" name="Dispel Petrification">
 		<!-- This skill only has one level, 2. -->
 		<set name="aggroPoints" val="566" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
@@ -78,7 +73,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="217" />
@@ -103,7 +97,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="272" />
 		<set name="operateType" val="A2" />
@@ -119,7 +112,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="mpConsume" val="153" />
@@ -129,98 +121,84 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7008" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7009" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7010" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7011" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7012" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7013" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7014" levels="1" name="Test - Critical Damage Up">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7015" levels="1" name="Test - Critical Damage Down">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7016" levels="1" name="Test - Critical Damage Up">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7017" levels="1" name="Test - Critical Damage Down">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7018" levels="1" name="Test - Critical Rate Up">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7019" levels="1" name="Test - Critical Rate Down">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7020" levels="1" name="Test - Critical Rate Up">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7021" levels="1" name="Test - Critical Rate Down">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
@@ -229,49 +207,42 @@
 	<skill id="7022" levels="1" name="Test - Find Hidden Door">
 		<set name="affectLimit" val="6-12" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7023" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7024" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7025" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7026" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7027" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7028" levels="1" name="For Stationary NPCs">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -311,7 +282,6 @@
 	</skill>
 	<skill id="7030" levels="1" name="Summon King Bugbear">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
@@ -330,7 +300,6 @@
 	</skill>
 	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
@@ -349,7 +318,6 @@
 	</skill>
 	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="8" />
 		<set name="itemConsumeId" val="1458" />
@@ -367,56 +335,48 @@
 		<set name="npcId" val="20241" />
 	</skill>
 	<skill id="7033" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7034" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7035" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7036" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7037" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7038" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7039" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7040" levels="1" name="not_used">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -1008,7 +968,6 @@
 	<skill id="7065" levels="1" name="Test - Charge">
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA1" />
@@ -1024,7 +983,6 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1043,7 +1001,6 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1059,7 +1016,6 @@
 	<skill id="7068" levels="1" name="Test Steal Abnormal State">
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1073,7 +1029,6 @@
 	<skill id="7069" levels="1" name="Test Abnormal State DD">
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
@@ -1085,7 +1040,6 @@
 		</cond>
 	</skill>
 	<skill id="7070" levels="1" name="Test - Soul Eating Passive">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -1093,7 +1047,6 @@
 	</skill>
 	<skill id="7071" levels="1" name="Test - Soul Transfer">
 		<set name="hitTime" val="900" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -1103,7 +1056,6 @@
 	<skill id="7072" levels="1" name="Test - Basic Trap">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="20" />
 		<set name="mpConsume" val="40" />
 		<set name="mpInitialConsume" val="10" />
@@ -1118,7 +1070,6 @@
 	</skill>
 	<skill id="7073" levels="1" name="Test - Find Trap">
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
@@ -1127,7 +1078,6 @@
 	</skill>
 	<skill id="7074" levels="1" name="Test - Cancel Trap">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
@@ -1136,7 +1086,6 @@
 	</skill>
 	<skill id="7075" levels="1" name="Test - Distance DD">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="17" />
 		<set name="operateType" val="A1" />
@@ -1150,7 +1099,6 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="coolTime" val="720" />
 		<set name="hitTime" val="1080" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="70" />
 		<set name="nextActionAttack" val="true" />
@@ -1164,7 +1112,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1178,7 +1125,6 @@
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="300" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="75" />
@@ -1194,7 +1140,6 @@
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
@@ -1205,7 +1150,6 @@
 		<set name="abnormalTime" val="40" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="saveVs" val="CON" />
@@ -1216,7 +1160,6 @@
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="800" />
 		<set name="hitTime" val="3200" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="25000" />
@@ -1226,7 +1169,6 @@
 	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
 		<set name="affectLimit" val="5-12" />
 		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -1236,7 +1178,6 @@
 	</skill>
 	<skill id="7083" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="38" />
 		<set name="operateType" val="A1" />
@@ -1245,7 +1186,6 @@
 	</skill>
 	<skill id="7084" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="38" />
 		<set name="operateType" val="CA1" />
@@ -1254,7 +1194,6 @@
 	</skill>
 	<skill id="7085" levels="1" name="Self-Destruct Explosion">
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1262,7 +1201,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7086" levels="1" name="Last Stand_test">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
@@ -1270,7 +1208,6 @@
 	</skill>
 	<skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />

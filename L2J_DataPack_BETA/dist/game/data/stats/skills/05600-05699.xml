@@ -5,7 +5,6 @@
 		<!-- set name="castRange" val="900" / -->
 		<!-- set name="effectRange" val="1400" / -->
 		<set name="affectRange" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="81" />
@@ -108,7 +107,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="APELLA" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -135,7 +133,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="APELLA" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -162,7 +159,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="APELLA" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
@@ -180,7 +176,6 @@
 		</for>
 	</skill>
 	<skill id="5609" levels="1" name="Sound 1">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -188,7 +183,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5610" levels="1" name="Sound 2">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -196,7 +190,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5611" levels="1" name="Sound 3">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -204,7 +197,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5612" levels="1" name="Sound 4">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -259,7 +251,6 @@
 	</skill>
 	<skill id="5619" levels="1" name="Presentation - Super Giant Mutated Animal Union">
 		<set name="hitTime" val="5800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
@@ -293,7 +284,6 @@
 		<table name="#amount"> 6 10 13 18 23 28 33 35 36 38 39 39 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
 		<set name="aggroPoints" val="100" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
@@ -303,7 +293,6 @@
 		</for>
 	</skill>
 	<skill id="5622" levels="7" name="Double Skill Attack">
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -1378,7 +1367,6 @@
 	</skill>
 	<skill id="5676" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="A1" />
@@ -1390,7 +1378,6 @@
 	</skill>
 	<skill id="5677" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
@@ -1402,7 +1389,6 @@
 	</skill>
 	<skill id="5678" levels="1" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="64" />
 		<set name="operateType" val="A1" />
@@ -1436,7 +1422,6 @@
 	<skill id="5680" levels="1" name="Oblivion Trap">
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
@@ -1759,7 +1744,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="aggroPoints" val="1" />
 		<set name="hitTime" val="100" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />

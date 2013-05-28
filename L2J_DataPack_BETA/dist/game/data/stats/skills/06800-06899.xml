@@ -2,14 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6800" levels="1" name="Presentation - Yellow Portal Ray">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6801" levels="1" name="Presentation - Yellow-Green Portal Ray">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -223,7 +221,6 @@
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
 		<set name="aggroPoints" val="200" /> <!-- FIXME: value unconfirmed -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -243,7 +240,6 @@
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
 		<set name="aggroPoints" val="150" /> <!-- FIXME: value unconfirmed -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -274,7 +270,6 @@
 		<!-- Arena Skill -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -289,7 +284,6 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="75" />
@@ -319,7 +313,6 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="hitTime" val="1800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="30" />
 		<set name="operateType" val="A2" />
@@ -354,7 +347,6 @@
 	</skill>
 	<skill id="6824" levels="1" name="Piercing Storm">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -369,7 +361,6 @@
 	</skill>
 	<skill id="6826" levels="1" name="Critical Strike">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -407,7 +398,6 @@
 	</skill>
 	<skill id="6831" levels="1" name="Blood Burst">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -420,14 +410,12 @@
 	</skill>
 	<skill id="6833" levels="1" name="Power Strike">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6834" levels="1" name="Range Magic Attack">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -448,7 +436,6 @@
 	</skill>
 	<skill id="6837" levels="1" name="Range Magic Attack">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -461,7 +448,6 @@
 	</skill>
 	<skill id="6839" levels="2" name="Power Attack">
 		<!-- none -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -522,7 +508,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -542,7 +527,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -611,7 +595,6 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="81" />
 		<set name="offensive" val="true" />
@@ -631,7 +614,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -652,7 +634,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
@@ -724,7 +705,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
@@ -751,7 +731,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -778,7 +757,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -799,7 +777,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -919,7 +896,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
@@ -939,7 +915,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
@@ -965,7 +940,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="85" />
@@ -985,7 +959,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
@@ -1007,7 +980,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="122" />
@@ -1027,7 +999,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
@@ -1074,7 +1045,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
@@ -1118,7 +1088,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1139,7 +1108,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1185,7 +1153,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
@@ -1231,7 +1198,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="89" />
 		<set name="offensive" val="true" />
@@ -1274,7 +1240,6 @@
 	<skill id="6884" levels="1" name="Morale Boost">
 		<!-- none -->
 		<set name="abnormalTime" val="60" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1330,7 +1295,6 @@
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1349,7 +1313,6 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1392,7 +1355,6 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1411,7 +1373,6 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1430,7 +1391,6 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1449,7 +1409,6 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1468,7 +1427,6 @@
 		<set name="castRange" val="200" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />
@@ -1487,7 +1445,6 @@
 		<set name="castRange" val="2000" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="80" />
 		<set name="offensive" val="true" />

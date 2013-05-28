@@ -10,7 +10,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -31,7 +30,6 @@
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -86,7 +84,6 @@
 		<set name="abnormalType" val="AVOID_UP_SPECIAL" />
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
@@ -138,7 +135,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -281,7 +277,6 @@
 		<set name="elementPower" val="180" />
 		<set name="fanRange" val="0,0,1200,300" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -330,7 +325,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2200" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -350,7 +344,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2200" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="85" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -368,7 +361,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="65" />
 		<set name="mpConsume" val="90" />
@@ -386,7 +378,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="5000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="65" />
 		<set name="mpConsume" val="105" />
@@ -532,7 +523,6 @@
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
 		<!-- Freya retail confirmed -->
 		<table name="#derangementVuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
@@ -559,7 +549,6 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -581,7 +570,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -599,7 +587,6 @@
 		<set name="abnormalLvl" val="11" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="HP_REGEN_DOWN" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -636,7 +623,6 @@
 		<set name="coolTime" val="1000" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -654,7 +640,6 @@
 		<set name="coolTime" val="1700" />
 		<set name="fanRange" val="0,0,600,100" />
 		<set name="hitTime" val="2300" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -670,7 +655,6 @@
 		<set name="affectRange" val="250" />
 		<set name="coolTime" val="2500" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -688,7 +672,6 @@
 		<set name="coolTime" val="4000" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="6000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -727,7 +710,6 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="150" />
 		<set name="hitTime" val="3000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -743,7 +725,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -756,7 +737,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="20000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -767,7 +747,6 @@
 		<!-- Baium Skills -->
 		<set name="aggroPoints" val="100" />
 		<set name="hitTime" val="100" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
@@ -781,7 +760,6 @@
 		<set name="castRange" val="1000" />
 		<set name="effectRange" val="2000" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="75" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -803,7 +781,6 @@
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -827,7 +804,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -848,7 +824,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="6000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
@@ -891,7 +866,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -908,7 +882,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1100" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -924,7 +897,6 @@
 		<table name="#power"> 2 4 8 15 23 35 48 63 63 63 </table>
 		<set name="affectRange" val="350" />
 		<set name="hitTime" val="500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -944,7 +916,6 @@
 		<set name="coolTime" val="800" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
@@ -1006,7 +977,6 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 </table>
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
@@ -1094,7 +1064,6 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1117,7 +1086,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1172,7 +1140,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1194,7 +1161,6 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1214,7 +1180,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1237,7 +1202,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1260,7 +1224,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1280,7 +1243,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1300,7 +1262,6 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -1318,7 +1279,6 @@
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="GET_PLAYER" />
@@ -1355,7 +1315,6 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="DMG_SHIELD" />
 		<set name="hitTime" val="1800" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
@@ -1473,7 +1432,6 @@
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -1523,7 +1481,6 @@
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -1542,7 +1499,6 @@
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="660" />
 		<set name="hitTime" val="830" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -1588,7 +1544,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1611,7 +1566,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1634,7 +1588,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1657,7 +1610,6 @@
 		<set name="castRange" val="700" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
@@ -1676,7 +1628,6 @@
 		<table name="#mpConsume"> 15 22 29 39 49 59 68 72 75 76 77 79 </table>
 		<set name="affectRange" val="200" />
 		<set name="hitTime" val="1500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
@@ -1696,7 +1647,6 @@
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3300" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -1716,7 +1666,6 @@
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -1766,7 +1715,6 @@
 		<set name="coolTime" val="660" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -2012,7 +1960,6 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -2033,7 +1980,6 @@
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -2052,7 +1998,6 @@
 		<set name="castRange" val="750" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -2071,7 +2016,6 @@
 		<set name="castRange" val="150" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
@@ -2092,7 +2036,6 @@
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
