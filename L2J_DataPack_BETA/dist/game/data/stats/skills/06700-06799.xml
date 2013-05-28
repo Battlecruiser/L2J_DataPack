@@ -709,13 +709,12 @@
 	<skill id="6757" levels="1" name="Slow">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="hitTime" val="1500" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="1500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -725,6 +724,7 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
+		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" val="0">
@@ -926,13 +926,12 @@
 	<skill id="6769" levels="1" name="Petrify">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<set name="hitTime" val="2500" />
-		<set name="targetType" val="ONE" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
+		<set name="hitTime" val="2500" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -943,6 +942,7 @@
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="saveVs" val="MEN" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" val="0" />
 		</for>
