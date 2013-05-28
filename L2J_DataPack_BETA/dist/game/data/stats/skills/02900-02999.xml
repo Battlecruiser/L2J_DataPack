@@ -84,7 +84,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -94,7 +93,6 @@
 	</skill>
 	<skill id="2905" levels="1" name="Growth Accelerator">
 		<set name="hitTime" val="4000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -109,7 +107,6 @@
 		</cond>
 	</skill>
 	<skill id="2906" levels="1" name="Incubation Accelerator">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -119,7 +116,6 @@
 	</skill>
 	<skill id="2907" levels="5" name="Battlefield Use Secret Medicine of Life">
 		<!-- This skill only has one level, 5. -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
@@ -128,7 +124,6 @@
 	</skill>
 	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind">
 		<!-- This skill only has one level, 5. -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
@@ -137,7 +132,6 @@
 	</skill>
 	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will">
 		<!-- This skill only has one level, 5. -->
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
@@ -145,7 +139,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2910" levels="1" name="Skull Key of Pain">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -153,7 +146,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2911" levels="1" name="Skull Key of Erosion">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -161,7 +153,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2912" levels="1" name="Skull Key of the Heart">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -169,7 +160,6 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2913" levels="1" name="Soul Extraction">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -195,7 +185,6 @@
 	<skill id="2915" levels="1" name="Clear Five-Colored Crystal">
 		<!-- Confirmed CT2.5 -->
 		<set name="hitTime" val="20000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -219,7 +208,6 @@
 	<skill id="2916" levels="1" name="Feed for Enriched Enhanced Pets">
 		<!-- Confirmed CT2.5 -->
 		<set name="feed" val="11000" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -232,7 +220,6 @@
 			9575,1,2.77;10485,1,2.31;10577,1,3.2;14209,1,3.2;14208,1,3.2;14212,1,3.2;960,1,6.4;9625,1,3.2;9626,1,2.13;959,1,0.64;10373,1,1.54;10374,1,1.54;10375,1,1.54;10376,1,1.54;10377,1,1.54;10378,1,1.54;10379,1,1.54;10380,1,1.54;10381,1,1.54
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -254,7 +241,6 @@
 			9575,1,2.36;10485,1,1.96;10577,1,2.72;14209,1,2.72;14208,1,2.72;14212,1,2.72;960,1,5.44;9625,1,2.72;9626,1,1.81;959,1,0.54;10373,1,1.31;10374,1,1.31;10375,1,1.31;10376,1,1.31;10377,1,1.31;10378,1,1.31;10379,1,1.31;10380,1,1.31;10381,1,1.31
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -276,7 +262,6 @@
 			5942,1,40.0;5943,1,40.0;14836,1,4.0;14837,1,4.0;14838,1,4.0;14839,1,4.0;14840,1,4.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -298,7 +283,6 @@
 			5942,1,40.0;5943,1,40.0;14842,1,4.0;14843,1,4.0;14844,1,4.0;14845,1,4.0;14846,1,4.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -320,7 +304,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -342,7 +325,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -364,7 +346,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -386,7 +367,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -408,7 +388,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -430,7 +409,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -452,7 +430,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -474,7 +451,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -496,7 +472,6 @@
 			13898,1,30.0;13899,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -518,7 +493,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -540,7 +514,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -562,7 +535,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -584,7 +556,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -606,7 +577,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -628,7 +598,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -650,7 +619,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -672,7 +640,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -694,7 +661,6 @@
 			13918,1,30.0;13919,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -716,7 +682,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -738,7 +703,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -760,7 +724,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -782,7 +745,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -804,7 +766,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -826,7 +787,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -848,7 +808,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -870,7 +829,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -892,7 +850,6 @@
 			13894,1,30.0;13895,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -914,7 +871,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -936,7 +892,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -958,7 +913,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -980,7 +934,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1002,7 +955,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1024,7 +976,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1046,7 +997,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1068,7 +1018,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1090,7 +1039,6 @@
 			13900,1,30.0;13901,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1112,7 +1060,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1134,7 +1081,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1156,7 +1102,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1178,7 +1123,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1200,7 +1144,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1222,7 +1165,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1244,7 +1186,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1266,7 +1207,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1288,7 +1228,6 @@
 			13920,1,30.0;13921,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1310,7 +1249,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1332,7 +1270,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1354,7 +1291,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1376,7 +1312,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1398,7 +1333,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1420,7 +1354,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1442,7 +1375,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1464,7 +1396,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1486,7 +1417,6 @@
 			13896,1,30.0;13897,1,15.0
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1508,7 +1438,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1530,7 +1459,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1552,7 +1480,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1574,7 +1501,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1596,7 +1522,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1618,7 +1543,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1640,7 +1564,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1662,7 +1585,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1684,7 +1606,6 @@
 			14902,1,21.0;14903,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1706,7 +1627,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1728,7 +1648,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1750,7 +1669,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1772,7 +1690,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1794,7 +1711,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1816,7 +1732,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1838,7 +1753,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1860,7 +1774,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1882,7 +1795,6 @@
 			14904,1,21.0;14905,1,10.5
 		</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1931,7 +1843,6 @@
 		</for>
 	</skill>
 	<skill id="2995" levels="1" name="PC room private weapon strengthening order sheet - D grade">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1939,7 +1850,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2996" levels="1" name="PC room private weapon strengthening order sheet - C grade">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1947,7 +1857,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2997" levels="1" name="PC room private weapon strengthening order sheet - B grade">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1955,7 +1864,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2998" levels="1" name="PC room private weapon strengthening order sheet - A grade">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1963,7 +1871,6 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2999" levels="1" name="PC room private weapon strengthening order sheet - S grade">
-		<set name="icon" val="icon.skill0000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
