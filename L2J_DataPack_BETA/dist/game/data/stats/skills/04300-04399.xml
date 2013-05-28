@@ -546,6 +546,7 @@
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="60" />
+		<set name="mpConsume" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -554,7 +555,6 @@
 				<mul order="0x30" stat="pAtk" val="5" />
 			</effect>
 		</for>
-		<set name="mpConsume" val="50" />
 	</skill>
 	<skill id="4341" levels="1" name="Ultimate Buff, 3rd">
 		<!-- Freya retail confirmed -->
@@ -563,6 +563,7 @@
 		<set name="abnormalType" val="ULTIMATE_BUFF" />
 		<set name="aggroPoints" val="100" />
 		<set name="magicLvl" val="60" />
+		<set name="mpConsume" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
@@ -572,12 +573,11 @@
 				<mul order="0x30" stat="mDef" val="5" />
 			</effect>
 		</for>
-		<set name="mpConsume" val="50" />
 	</skill>
 	<skill id="4342" levels="2" name="Clan Hall: Wind Walk">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#magicLvl"> 20 30 </table>
+		<table name="#mpConsume"> 50 100 </table>
 		<table name="#runSpd"> 20 33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -585,7 +585,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -594,13 +595,11 @@
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 50 100 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4343" levels="3" name="Clan Hall: Decrease Weight">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 35 44 52 </table>
+		<table name="#mpConsume"> 50 0 100 </table>
 		<table name="#Weight"> 3000 6000 9000 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -608,7 +607,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -617,8 +617,6 @@
 				<add order="0x40" stat="weightPenalty" val="#Weight" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 50 0 100 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4344" levels="3" name="Clan Hall: Shield">
 		<!-- Freya retail confirmed -->
@@ -646,7 +644,7 @@
 	<skill id="4345" levels="3" name="Clan Hall: Might">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 7 20 40 </table>
+		<table name="#mpConsume"> 50 0 100 </table>
 		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -654,7 +652,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -663,21 +662,20 @@
 				<mul order="0x30" stat="pAtk" val="#rate" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 50 0 100 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4346" levels="4" name="Clan Hall: Mental Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<table name="#magicLvl"> 25 40 48 56 </table>
-		<table name="#vuln"> 20 30 40 50 </table> <!-- Freya retail has still old values (50 60 70 80) here, retail bug? -->
+		<table name="#mpConsume"> 50 0 0 100 </table>
+		<table name="#vuln"> 20 30 40 50 </table> <!-- TODO: Freya retail has still old values (50 60 70 80) here, retail bug? -->
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -688,21 +686,20 @@
 				<sub stat="derangementVuln" val="#vuln" order="0x40" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 50 0 0 100 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4347" levels="6" name="Clan Hall: Blessed Body">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#magicLvl"> 44 48 52 56 64 72 </table>
 		<table name="#maxHp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -711,21 +708,20 @@
 				<mul order="0x30" stat="maxHp" val="#maxHp" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4348" levels="6" name="Clan Hall: Blessed Soul">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#magicLvl"> 44 48 52 56 62 70 </table>
 		<table name="#maxMp"> 1.1 1.15 1.2 1.25 1.3 1.35 </table>
+		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -734,14 +730,12 @@
 				<mul order="0x30" stat="maxMp" val="#maxMp" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 0 150 0 0 0 300 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4349" levels="2" name="Clan Hall: Magic Barrier">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 2 3 </table>
-		<table name="#magicLvl"> 44 52 </table>
 		<table name="#mDef"> 1.23 1.3 </table>
+		<table name="#mpConsume"> 150 300 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MD_UP" />
@@ -749,6 +743,7 @@
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -757,13 +752,11 @@
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 150 300 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4350" levels="4" name="Clan Hall: Resist Shock">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<table name="#magicLvl"> 40 52 64 72 </table>
+		<table name="#mpConsume"> 150 0 0 300 </table>
 		<table name="#vuln"> 15 20 30 40 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -771,7 +764,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -780,14 +774,12 @@
 				<sub stat="stunVuln" val="#vuln" order="0x40" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 150 0 0 300 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4351" levels="6" name="Clan Hall: Concentration">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
 		<table name="#cancel"> 18 25 36 42 48 53 </table>
-		<table name="#magicLvl"> 20 30 44 52 60 68 </table>
+		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
@@ -795,6 +787,7 @@
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -803,16 +796,14 @@
 				<sub order="0x40" stat="cancel" val="#cancel" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4352" levels="2" name="Clan Hall: Berserker Spirit">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#magicLvl"> 35 52 </table>
 		<table name="#mAtk"> 1.1 1.16 </table>
 		<table name="#mAtkSpd"> 1.05 1.08 </table>
 		<table name="#mDef"> 0.9 0.84 </table>
+		<table name="#mpConsume"> 200 400 </table>
 		<table name="#pAtk"> 1.05 1.08 </table>
 		<table name="#pAtkSpd"> 1.05 1.08 </table>
 		<table name="#pDef"> 0.95 0.92 </table>
@@ -824,7 +815,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -840,13 +832,11 @@
 				<sub order="0x40" stat="rEvas" val="#rEvas" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 200 400 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4353" levels="6" name="Clan Hall: Bless Shield">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 </table>
-		<table name="#magicLvl"> 40 48 56 62 66 70 </table>
+		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
 		<table name="#rShld"> 1.05 1.1 1.15 1.2 1.25 1.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -854,7 +844,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -863,21 +854,20 @@
 				<mul order="0x30" stat="rShld" val="#rShld" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 0 200 0 0 0 400 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4354" levels="4" name="Clan Hall: Vampiric Rage">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
 		<table name="#absorbDam"> 6 7 8 9 </table>
-		<table name="#magicLvl"> 30 44 58 72 </table>
+		<table name="#mpConsume"> 200 0 0 400 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -886,21 +876,20 @@
 				<add stat="absorbDam" val="#absorbDam" order="0x40" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 200 0 0 400 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4355" levels="3" name="Clan Hall: Acumen">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 20 35 48 </table>
 		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
+		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -909,21 +898,20 @@
 				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4356" levels="3" name="Clan Hall: Empower">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 25 44 52 </table>
 		<table name="#mAtk"> 1.55 1.65 1.75 </table>
+		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -932,13 +920,11 @@
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4357" levels="2" name="Clan Hall: Haste">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#magicLvl"> 44 52 </table>
+		<table name="#mpConsume"> 300 600 </table>
 		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -946,7 +932,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -955,21 +942,20 @@
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 300 600 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4358" levels="3" name="Clan Hall: Guidance">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#accCombat"> 2 3 4 </table>
-		<table name="#magicLvl"> 40 48 56 </table>
+		<table name="#mpConsume"> 200 0 400 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -978,13 +964,11 @@
 				<add order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 200 0 400 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4359" levels="3" name="Clan Hall: Focus">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#magicLvl"> 25 44 52 </table>
+		<table name="#mpConsume"> 300 0 600 </table>
 		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
@@ -992,7 +976,8 @@
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1001,21 +986,20 @@
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4360" levels="3" name="Clan Hall: Death Whisper">
 		<!-- Freya retail confirmed -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.25 1.3 1.35 </table>
-		<table name="#magicLvl"> 40 48 56 </table>
+		<table name="#mpConsume"> 300 0 600 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="magicLvl" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
@@ -1024,8 +1008,6 @@
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 		</for>
-		<table name="#mpConsume"> 300 0 600 </table>
-		<set name="mpConsume" val="#mpConsume" />
 	</skill>
 	<skill id="4361" levels="2" name="Curse of Destruction">
 		<!-- Freya retail confirmed -->
