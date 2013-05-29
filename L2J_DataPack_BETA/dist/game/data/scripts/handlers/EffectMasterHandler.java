@@ -39,6 +39,7 @@ public final class EffectMasterHandler
 	private static final Class<?>[] EFFECTS =
 	{
 		AbortCast.class,
+		Backstab.class,
 		Betray.class,
 		BigHead.class,
 		BlockBuffSlot.class,
