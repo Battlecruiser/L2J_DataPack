@@ -162,9 +162,12 @@
 		<set name="mpInitialConsume" val="144" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="150000" />
-		<set name="targetType" val="PARTY_MEMBER" />
+		<set name="targetType" val="ONE" />
 		<cond>
-			<player callPc="true" />
+			<and>
+				<target myPartyExceptMe="true" />
+				<player callPc="true" />
+			</and>
 		</cond>
 		<cond msgId="113" addName="1">
 			<not>
@@ -192,9 +195,12 @@
 		<set name="mpInitialConsume" val="256" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="900000" />
-		<set name="targetType" val="PARTY_MEMBER" />
+		<set name="targetType" val="ONE" />
 		<cond>
-			<player callPc="true" />
+			<and>
+				<target myPartyExceptMe="true" />
+				<player callPc="true" />
+			</and>
 		</cond>
 		<cond msgId="113" addName="1">
 			<not>

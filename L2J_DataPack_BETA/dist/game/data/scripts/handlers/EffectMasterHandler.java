@@ -153,6 +153,7 @@ public final class EffectMasterHandler
 		Sweeper.class,
 		TargetMe.class,
 		Teleport.class,
+		TeleportToTarget.class,
 		ThrowUp.class,
 		TransferDamage.class,
 		Transformation.class,

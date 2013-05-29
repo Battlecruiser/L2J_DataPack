@@ -214,7 +214,6 @@ import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
-import handlers.skillhandlers.InstantJump;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
@@ -512,7 +511,6 @@ public class MasterHandler
 			FishingSkill.class,
 			GetPlayer.class,
 			GiveReco.class,
-			InstantJump.class,
 			NornilsPower.class,
 			RefuelAirShip.class,
 			Resurrect.class,

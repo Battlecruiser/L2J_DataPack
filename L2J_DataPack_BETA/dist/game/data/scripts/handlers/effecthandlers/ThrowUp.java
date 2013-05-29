@@ -51,7 +51,7 @@ public class ThrowUp extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.THROW_UP;
+		return L2EffectType.NONE;
 	}
 	
 	@Override

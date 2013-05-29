@@ -58,7 +58,7 @@ public class Warp extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.WARP;
+		return L2EffectType.NONE;
 	}
 	
 	@Override

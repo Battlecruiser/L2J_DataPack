@@ -16,63 +16,76 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.skillhandlers;
+package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.handler.ISkillHandler;
-import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
-import com.l2jserver.gameserver.model.stats.Formulas;
+import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Some parts taken from EffectWarp, which cannot be used for this case.
- * @author Didldak
+ * Teleport To Target effect implementation.
+ * @author Didldak, Adry_85
  */
-public class InstantJump implements ISkillHandler
+public class TeleportToTarget extends L2Effect
 {
-	private static final L2SkillType[] SKILL_IDS =
+	public TeleportToTarget(Env env, EffectTemplate template)
 	{
-		L2SkillType.INSTANT_JUMP
-	};
+		super(env, template);
+	}
 	
 	@Override
-	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
+	public boolean calcSuccess()
 	{
-		L2Character target = (L2Character) targets[0];
-		
-		if (Formulas.calcPhysicalSkillEvasion(activeChar, target, skill))
+		return true;
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.TELEPORT_TO_TARGET;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		L2Character activeChar = getEffector();
+		L2Character target = getEffected();
+		if (getEffected() == null)
 		{
-			return;
+			return false;
 		}
 		
 		int x = 0, y = 0, z = 0;
-		
 		int px = target.getX();
 		int py = target.getY();
 		double ph = Util.convertHeadingToDegree(target.getHeading());
 		
 		ph += 180;
-		
 		if (ph > 360)
 		{
 			ph -= 360;
 		}
 		
 		ph = (Math.PI * ph) / 180;
-		
 		x = (int) (px + (25 * Math.cos(ph)));
 		y = (int) (py + (25 * Math.sin(ph)));
 		z = target.getZ();
-		
 		Location loc = new Location(x, y, z);
 		
 		if (Config.GEODATA > 0)
@@ -84,30 +97,8 @@ public class InstantJump implements ISkillHandler
 		activeChar.broadcastPacket(new FlyToLocation(activeChar, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));
 		activeChar.abortAttack();
 		activeChar.abortCast();
-		
 		activeChar.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
-		
-		if (skill.hasEffects())
-		{
-			if (Formulas.calcBuffDebuffReflection(target, skill))
-			{
-				activeChar.stopSkillEffects(false, skill.getId());
-				skill.getEffects(target, activeChar);
-			}
-			else
-			{
-				// activate attacked effects, if any
-				target.stopSkillEffects(false, skill.getId());
-				skill.getEffects(activeChar, target);
-			}
-		}
-		
-	}
-	
-	@Override
-	public L2SkillType[] getSkillIds()
-	{
-		return SKILL_IDS;
+		return true;
 	}
 }

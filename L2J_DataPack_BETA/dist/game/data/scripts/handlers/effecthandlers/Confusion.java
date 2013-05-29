@@ -52,7 +52,7 @@ public class Confusion extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.CONFUSION;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
