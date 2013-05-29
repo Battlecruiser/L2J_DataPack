@@ -1681,9 +1681,9 @@
 		<set name="magicLvl" val="40" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="INSTANT_JUMP" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="TeleportToTarget" noicon="1" val="0" />
 			<effect name="TargetMe" val="0" />
 		</for>
 	</skill>

@@ -383,6 +383,7 @@
 		</for>
 	</skill>
 	<skill id="821" levels="1" name="Shadow Step">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectRange" val="1100" />
@@ -393,9 +394,9 @@
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="INSTANT_JUMP" />
 		<set name="targetType" val="ONE" />
 		<for>
+			<effect name="TeleportToTarget" noicon="1" val="0" />
 			<effect name="RemoveTarget" effectPower="100" noicon="1" val="0" />
 		</for>
 	</skill>
