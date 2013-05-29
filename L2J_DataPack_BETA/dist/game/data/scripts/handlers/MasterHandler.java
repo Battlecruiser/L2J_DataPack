@@ -191,7 +191,6 @@ import handlers.itemhandlers.ManaPotion;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
-import handlers.itemhandlers.PaganKeys;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
@@ -471,7 +470,6 @@ public class MasterHandler
 			BeastSpiritShot.class,
 			Bypass.class,
 			Calculator.class,
-			PaganKeys.class,
 			Maps.class,
 			NicknameColor.class,
 			Recipes.class,
