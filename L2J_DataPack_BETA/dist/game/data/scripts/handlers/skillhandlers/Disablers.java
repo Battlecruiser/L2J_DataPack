@@ -48,7 +48,6 @@ public class Disablers implements ISkillHandler
 		L2SkillType.AGGREDUCE,
 		L2SkillType.AGGREDUCE_CHAR,
 		L2SkillType.AGGREMOVE,
-		L2SkillType.CONFUSE_MOB_ONLY,
 	};
 	
 	@Override
@@ -77,39 +76,6 @@ public class Disablers implements ISkillHandler
 			
 			switch (type)
 			{
-				case CONFUSE_MOB_ONLY:
-				{
-					// do nothing if not on mob
-					if (target.isL2Attackable())
-					{
-						if (Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss))
-						{
-							for (L2Effect e : target.getAllEffects())
-							{
-								if (e.getSkill().getSkillType() == type)
-								{
-									e.exit();
-								}
-							}
-							skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-						}
-						else
-						{
-							if (activeChar.isPlayer())
-							{
-								SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_YOUR_S2);
-								sm.addCharName(target);
-								sm.addSkillName(skill);
-								activeChar.sendPacket(sm);
-							}
-						}
-					}
-					else
-					{
-						activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-					}
-					break;
-				}
 				case AGGDAMAGE:
 				{
 					if (target.isL2Attackable())

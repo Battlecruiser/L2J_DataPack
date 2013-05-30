@@ -1160,27 +1160,29 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="2188" levels="1" name="Golden Spice">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6643" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BEAST_FEED" />
+		<set name="reuseDelay" val="500" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="2189" levels="1" name="Crystal Spice">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="6644" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BEAST_FEED" />
+		<set name="reuseDelay" val="500" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="2190" levels="9" name="Item - Green Fish">
