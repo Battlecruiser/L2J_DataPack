@@ -203,7 +203,6 @@ import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
 import handlers.itemhandlers.TeleportBookmark;
 import handlers.skillhandlers.BallistaBomb;
-import handlers.skillhandlers.BeastSkills;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
@@ -499,7 +498,6 @@ public class MasterHandler
 		{
 			// Skill Handlers
 			BallistaBomb.class,
-			BeastSkills.class,
 			Continuous.class,
 			DeluxeKey.class,
 			Detection.class,

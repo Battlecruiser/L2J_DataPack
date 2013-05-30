@@ -826,40 +826,35 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8362" levels="1" name="Beast Training - Release">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="900" />
+		<set name="effectRange" val="1200" />
 		<set name="icon" val="icon.skill8362" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_RELEASE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="8363" levels="1" name="Beast Training - Accompany">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill8363" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_ACCOMPANY" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8364" levels="1" name="Beast Training - Use Special Ability">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill8364" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_SKILL" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8365" levels="1" name="Dynasty Tunic">
 		<set name="icon" val="icon.armor_t93_ue_i00" />
@@ -1001,16 +996,14 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="8378" levels="1" name="Beast Training - Release All">
-		<set name="castRange" val="40" />
-		<set name="effectRange" val="400" />
-		<set name="hitTime" val="500" />
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="1000" />
 		<set name="icon" val="icon.skill8378" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BEAST_RELEASE_ALL" />
-		<set name="targetType" val="SELF" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="8379" levels="2" name="Royal Guard Ring - Gludio">
 		<table name="#earthRes"> 12 15 </table>
