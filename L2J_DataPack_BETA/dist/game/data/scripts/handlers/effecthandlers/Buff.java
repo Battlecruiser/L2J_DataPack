@@ -54,6 +54,6 @@ public class Buff extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		return getSkill().isPassive();
+		return getSkill().isPassive() || getSkill().isToggle();
 	}
 }
