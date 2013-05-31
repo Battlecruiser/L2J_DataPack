@@ -148,9 +148,9 @@ public class SubclassCertification extends AbstractNpcAI
 		ABILITY_CERTIFICATES.put(1, 10283); // Certificate - Rogue Ability
 		ABILITY_CERTIFICATES.put(2, 10282); // Certificate - Knight Ability
 		ABILITY_CERTIFICATES.put(3, 10286); // Certificate - Summoner Ability
-		ABILITY_CERTIFICATES.put(4, 10287); // Certificate - Wizard Ability
-		ABILITY_CERTIFICATES.put(5, 10284); // Certificate - Healer Ability
-		ABILITY_CERTIFICATES.put(6, 10285); // Certificate - Enchanter Ability
+		ABILITY_CERTIFICATES.put(4, 10284); // Certificate - Wizard Ability
+		ABILITY_CERTIFICATES.put(5, 10285); // Certificate - Healer Ability
+		ABILITY_CERTIFICATES.put(6, 10287); // Certificate - Enchanter Ability
 		
 		TRANSFORMATION_SEALBOOKS.put(0, 10289); // Transformation Sealbook: Divine Warrior
 		TRANSFORMATION_SEALBOOKS.put(1, 10290); // Transformation Sealbook: Divine Rogue
