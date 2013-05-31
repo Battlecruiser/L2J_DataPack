@@ -28,8 +28,11 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2VillageMasterInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Subclass certification
@@ -273,7 +276,7 @@ public class SubclassCertification extends AbstractNpcAI
 		String htmltext = getHtm(player.getHtmlPrefix(), htmlFile);
 		if (replaceClass)
 		{
-			htmltext = htmltext.replace("%class%", String.valueOf(ClassListData.getInstance().getClass(player.getActiveClass()).getEscapedClientCode()));
+			htmltext = htmltext.replace("%class%", String.valueOf(ClassListData.getInstance().getClass(player.getActiveClass()).getClientCode()));
 		}
 		if (levelToReplace != null)
 		{
@@ -313,8 +316,18 @@ public class SubclassCertification extends AbstractNpcAI
 		}
 		else
 		{
-			giveItems(player, itemId, 1);
-			qs.saveGlobalQuestVar(tmp, String.valueOf(itemId));
+			// Add items to player's inventory
+			final L2ItemInstance item = player.getInventory().addItem("Quest", itemId, 1, player, player.getTarget());
+			if (item == null)
+			{
+				return null;
+			}
+			
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.EARNED_ITEM_S1);
+			smsg.addItemName(item);
+			player.sendPacket(smsg);
+			
+			qs.saveGlobalQuestVar(tmp, String.valueOf(item.getObjectId()));
 			htmltext = "GetAbility.html";
 		}
 		return htmltext;
