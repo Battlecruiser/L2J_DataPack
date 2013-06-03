@@ -5,10 +5,10 @@
 <body>
 <table width=280 cellspacing=0 cellpadding=0>
 	<tr>
-		<td><button value="Stats" width=70 action="bypass -h admin_edit_npc stats %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td><button value="AI" width=70 action="bypass -h admin_edit_npc ai %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td><button value="Elementals" width=70 action="bypass -h admin_edit_npc elementals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-		<td><button value="Visuals" width=70 action="bypass -h admin_edit_npc visuals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Stats" width=70 action="bypass admin_edit_npc stats %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="AI" width=70 action="bypass admin_edit_npc ai %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Elementals" width=70 action="bypass admin_edit_npc elementals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td><button value="Visuals" width=70 action="bypass admin_edit_npc visuals %npcId%" height=18 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 cellpadding=0>
@@ -31,7 +31,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Attack Type</td>
 		<td fixwidth=110 align=center>%elemAtkType%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% elemAtkType $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% elemAtkType $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -39,7 +39,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Attack Value</td>
 		<td fixwidth=110 align=center>%elemAtkValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% elemAtkValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% elemAtkValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -47,7 +47,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Fire Defence</td>
 		<td fixwidth=110 align=center>%fireDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% fireDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% fireDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -55,7 +55,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Water Defence</td>
 		<td fixwidth=110 align=center>%waterDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% waterDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% waterDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -63,7 +63,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Wind Defence</td>
 		<td fixwidth=110 align=center>%windDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% windDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% windDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -71,7 +71,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Earth Defence</td>
 		<td fixwidth=110 align=center>%earthDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% earthDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% earthDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -79,7 +79,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Holy Defence</td>
 		<td fixwidth=110 align=center>%holyDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% holyDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% holyDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 <table width=275 cellspacing=0 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
@@ -87,7 +87,7 @@
 		<td fixwidth=5></td>
 		<td fixwidth=110>Dark Defence</td>
 		<td fixwidth=110 align=center>%darkDefValue%</td>
-		<td fixwidth=50><button action="bypass -h admin_save_npc elementals %npcId% darkDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+		<td fixwidth=50><button action="bypass admin_save_npc elementals %npcId% darkDefValue $value" value="Set" width=50 height=19 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 	</tr>
 </table>
 </body>

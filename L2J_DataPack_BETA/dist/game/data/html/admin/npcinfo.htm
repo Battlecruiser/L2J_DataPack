@@ -5,17 +5,16 @@
 <td><button value="Kill" action="bypass -h admin_kill" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Delete" action="bypass -h admin_delete" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><button value="Recall" action="bypass -h admin_recall_npc" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Buffs" action="bypass -h admin_getbuffs" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Buffs" action="bypass admin_getbuffs" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 <tr>
-<td><button value="Edit" action="bypass -h admin_edit_npc stats %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Skills" action="bypass -h admin_show_skilllist_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Drop" action="bypass -h admin_show_droplist %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><button value="Quests" action="bypass -h admin_show_quests %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td>%butt%</td>
+<td><button value="Edit" action="bypass admin_edit_npc stats %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Skills" action="bypass admin_show_skill_list_npc %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Drop" action="bypass admin_show_drop_list %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Quests" action="bypass admin_show_quests %tmplid%" width=60 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 </tr>
 </table>
-<br><img src="L2UI.SquareWhite" width=260 height=1><br>
+<img src="L2UI.SquareWhite" width=260 height=1><br>
 <table width=270 border=0>
 <tr><td colspan="4"><table width=270 border=0><tr><td width=270><font color="LEVEL">Npc Info</font> : %name% (<font color="LEVEL">%id%</font>) [<font color=00FF00>%lvl%</font> lvl]</td></tr></table></td></tr>
 <tr><td><table width=270 border=0 bgcolor=131210><tr><td width=100><font color="LEVEL">ObjectId</font></td><td align=right width=170>%objid%</td></tr></table></td></tr>
