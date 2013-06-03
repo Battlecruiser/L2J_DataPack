@@ -138,20 +138,20 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 						st.giveAdena((red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
 						takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
 						final PlayerVariables vars = player.getVariables();
-						if ((player.getLevel() < 25) && (!vars.getBool("NEWBIE_SHOTS", false)))
+						if ((player.getLevel() < 25) && !vars.getBool("NEWBIE_SHOTS", false))
 						{
 							st.giveItems(SOULSHOTS_NO_GRADE_FOR_ROOKIES);
 							vars.set("NEWBIE_SHOTS", true);
 							st.playTutorialVoice("tutorial_voice_26");
 						}
-						if (vars.getString("guide_mission", null) == null)
+						if (vars.getString("GUIDE_MISSION", null) == null)
 						{
-							vars.set("guide_mission", 1000);
+							vars.set("GUIDE_MISSION", 1000);
 							player.sendPacket(new ExShowScreenMessage(NpcStringId.ACQUISITION_OF_SOULSHOT_FOR_BEGINNERS_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000));
 						}
-						else if (((vars.getInteger("guide_mission") % 10000) / 1000) != 1)
+						else if (((vars.getInteger("GUIDE_MISSION") % 10000) / 1000) != 1)
 						{
-							vars.set("guide_mission", vars.getInteger("guide_mission") + 1000);
+							vars.set("GUIDE_MISSION", vars.getInteger("GUIDE_MISSION") + 1000);
 							player.sendPacket(new ExShowScreenMessage(NpcStringId.ACQUISITION_OF_SOULSHOT_FOR_BEGINNERS_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000));
 						}
 						htmltext = (red > 0) ? "30566-07.html" : "30566-06.html";
