@@ -20,10 +20,10 @@ package handlers.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jserver.gameserver.TradeController;
+import com.l2jserver.gameserver.datatables.BuyListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.model.L2TradeList;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.buylist.L2BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.BuyList;
 import com.l2jserver.gameserver.network.serverpackets.ExBuySellList;
@@ -84,11 +84,11 @@ public class AdminShop implements IAdminCommandHandler
 			_log.warning("admin buylist failed:" + command);
 		}
 		
-		L2TradeList list = TradeController.getInstance().getBuyList(val);
+		L2BuyList buyList = BuyListData.getInstance().getBuyList(val);
 		
-		if (list != null)
+		if (buyList != null)
 		{
-			activeChar.sendPacket(new BuyList(list, activeChar.getAdena(), 0));
+			activeChar.sendPacket(new BuyList(buyList, activeChar.getAdena(), 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
 		else

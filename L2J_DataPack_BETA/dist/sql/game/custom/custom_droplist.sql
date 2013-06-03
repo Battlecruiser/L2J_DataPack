@@ -35,7 +35,7 @@
 --    Any other mobs within this range (minions, etc) use the default drop categories (most often 2)
 
 CREATE TABLE IF NOT EXISTS `custom_droplist` (
-  `mobId` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `mobId` mediumint(7) unsigned NOT NULL DEFAULT '0',
   `itemId` smallint(5) unsigned NOT NULL DEFAULT '0',
   `min` int(8) unsigned NOT NULL DEFAULT '0',
   `max` int(8) unsigned NOT NULL DEFAULT '0',

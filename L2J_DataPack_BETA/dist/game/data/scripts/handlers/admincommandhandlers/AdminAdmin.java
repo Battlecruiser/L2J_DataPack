@@ -18,15 +18,19 @@
  */
 package handlers.admincommandhandlers;
 
+import java.io.File;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.script.ScriptException;
 
 import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.datatables.BuyListData;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
@@ -40,6 +44,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -217,7 +222,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			if (!st.hasMoreTokens())
 			{
 				activeChar.sendMessage("You need to specify a type to reload!");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|access|quests|walker>");
+				activeChar.sendMessage("Usage: //reload <multisell|buylist|teleport|skill|npc|htm|item|config|access|quests|door|walker|handler>");
 				return false;
 			}
 			
@@ -228,6 +233,11 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					MultisellData.getInstance().load();
 					activeChar.sendMessage("All Multisells have been reloaded");
+				}
+				else if (type.startsWith("buylist"))
+				{
+					BuyListData.getInstance().load();
+					activeChar.sendMessage("All BuyLists have been reloaded");
 				}
 				else if (type.startsWith("teleport"))
 				{
@@ -289,12 +299,26 @@ public class AdminAdmin implements IAdminCommandHandler
 					WalkingManager.getInstance().load();
 					activeChar.sendMessage("All Walkers have been reloaded");
 				}
+				else if (type.startsWith("handler"))
+				{
+					File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/MasterHandler.java");
+					try
+					{
+						L2ScriptEngineManager.getInstance().executeScript(file);
+						activeChar.sendMessage("All handlers have been reloaded");
+					}
+					catch (ScriptException e)
+					{
+						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
+						activeChar.sendMessage("There was an error while loading handlers.");
+					}
+				}
 				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
 			catch (Exception e)
 			{
 				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|teleport|skill|npc|htm|item|config|access|quests|door|walker>");
+				activeChar.sendMessage("Usage: //reload <multisell|buylist|teleport|skill|npc|htm|item|config|access|quests|door|walker|handler>");
 				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
 			}
 		}

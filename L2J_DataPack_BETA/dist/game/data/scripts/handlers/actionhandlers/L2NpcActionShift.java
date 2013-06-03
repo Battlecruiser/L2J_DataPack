@@ -30,7 +30,6 @@ import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.L2Item;
 import com.l2jserver.gameserver.model.stats.BaseStats;
@@ -163,16 +162,6 @@ public class L2NpcActionShift implements IActionHandler
 			{
 				html.replace("%route%", "");
 			}
-			
-			if (target instanceof L2MerchantInstance)
-			{
-				html.replace("%butt%", "<button value=\"Shop\" action=\"bypass -h admin_showShop " + String.valueOf(((L2Npc) target).getTemplate().getNpcId()) + "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-			}
-			else
-			{
-				html.replace("%butt%", "");
-			}
-			
 			activeChar.sendPacket(html);
 		}
 		else if (Config.ALT_GAME_VIEWNPC)

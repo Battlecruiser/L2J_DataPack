@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Edit NPC Drop List(%npcId%, %title_npc_name%, %page%)</title>
+</head>
+<body>
+<table width=278 cellspacing=0 cellpadding=0>
+	<tr>
+		<td fixwidth=55>Item ID:</td>
+		<td fixwidth=80 height=30><edit var="id" type="number" width=80></td>
+		<td fixwidth=4></td>
+		<td fixwidth=55>Category:</td>
+		<td fixwidth=4></td>
+		<td fixwidth=80 height=30><edit var="category" type="number" width=80></td>
+	</tr>
+	<tr>
+		<td fixwidth=55>Min:</td>
+		<td fixwidth=80 height=30><edit var="min" type="number" width=80></td>
+		<td fixwidth=4></td>
+		<td fixwidth=55>Max:</td>
+		<td fixwidth=4></td>
+		<td fixwidth=80 height=30><edit var="max" type="number" width=80></td>
+	</tr>
+	<tr>
+		<td fixwidth=55>Chance:</td>
+		<td fixwidth=80 height=30><edit var="chance" type="number" width=80></td>
+		<td fixwidth=4></td>
+		<td fixwidth=55></td>
+		<td fixwidth=4></td>
+		<td fixwidth=80 align=center><button action="bypass admin_add_drop %npcId% $id $category $min $max $chance" value="Add Item" width=70 height=22 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+	</tr>
+</table>
+%pages%
+<table width=280 height=20 cellspacing=0 background="L2UI_CT1.Button_DF_Calculator">
+	<tr>
+		<td fixwidth=32></td>
+		<td fixwidth=64 align=center>Min</td>
+		<td fixwidth=64 align=center>Max</td>
+		<td fixwidth=60 align=center>Chance</td>
+		<td fixwidth=45></td>
+	</tr>
+</table>
+%drops%
+%pages%
+</body>
+</html>
