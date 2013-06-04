@@ -52,6 +52,11 @@ public class Unstuck implements IUserCommandHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
 		}
+		else if (activeChar.isJailed())
+		{
+			activeChar.sendMessage("You cannot use this function while you are jailed.");
+			return false;
+		}
 		
 		int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		

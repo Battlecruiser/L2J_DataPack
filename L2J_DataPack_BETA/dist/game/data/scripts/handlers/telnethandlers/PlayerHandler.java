@@ -20,19 +20,20 @@ package handlers.telnethandlers;
 
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import com.l2jserver.Config;
-import com.l2jserver.L2DatabaseFactory;
+import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
+import com.l2jserver.gameserver.instancemanager.PunishmentManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
+import com.l2jserver.gameserver.model.punishment.PunishmentTask;
+import com.l2jserver.gameserver.model.punishment.PunishmentType;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -40,6 +41,7 @@ import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.GMAudit;
+import com.l2jserver.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -206,58 +208,35 @@ public class PlayerHandler implements ITelnetHandler
 			try
 			{
 				String name = st.nextToken();
-				L2PcInstance playerObj = L2World.getInstance().getPlayer(name);
+				int charId = CharNameTable.getInstance().getIdByName(name);
 				int delay = 0;
-				try
+				String reason = "";
+				if (st.hasMoreTokens())
 				{
-					delay = Integer.parseInt(st.nextToken());
+					String token = st.nextToken();
+					if (Util.isDigit(token))
+					{
+						delay = Integer.parseInt(token);
+					}
+					while (st.hasMoreTokens())
+					{
+						reason += st.nextToken() + " ";
+					}
+					if (!reason.isEmpty())
+					{
+						reason = reason.substring(0, reason.length() - 1);
+					}
 				}
-				catch (NumberFormatException nfe)
-				{
-				}
-				catch (NoSuchElementException nsee)
-				{
-				}
-				// L2PcInstance playerObj = L2World.getInstance().getPlayer(player);
 				
-				if (playerObj != null)
+				if (charId > 0)
 				{
-					playerObj.setPunishLevel(L2PcInstance.PunishLevel.JAIL, delay);
-					_print.println("Character " + playerObj.getName() + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
+					long expirationTime = delay > 0 ? System.currentTimeMillis() + (delay * 60 * 1000) : -1;
+					PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, expirationTime, reason, "Telnet Admin: " + _cSocket.getInetAddress().getHostAddress()));
+					_print.println("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 				}
 				else
 				{
-					try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-					{
-						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
-						statement.setInt(1, -114356);
-						statement.setInt(2, -249645);
-						statement.setInt(3, -2984);
-						statement.setInt(4, L2PcInstance.PunishLevel.JAIL.value());
-						statement.setLong(5, delay * 60000L);
-						statement.setString(6, name);
-						
-						statement.execute();
-						int count = statement.getUpdateCount();
-						statement.close();
-						
-						if (count == 0)
-						{
-							_print.println("Character not found!");
-						}
-						else
-						{
-							_print.println("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
-						}
-					}
-					catch (SQLException se)
-					{
-						_print.println("SQLException while jailing player");
-						if (Config.DEBUG)
-						{
-							se.printStackTrace();
-						}
-					}
+					_print.println("Character with name: " + name + " was not found!");
 				}
 			}
 			catch (NoSuchElementException nsee)
@@ -278,46 +257,16 @@ public class PlayerHandler implements ITelnetHandler
 			try
 			{
 				String name = st.nextToken();
-				L2PcInstance playerObj = L2World.getInstance().getPlayer(name);
+				int charId = CharNameTable.getInstance().getIdByName(name);
 				
-				if (playerObj != null)
+				if (charId > 0)
 				{
-					playerObj.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
-					_print.println("Character " + playerObj.getName() + " removed from jail");
+					PunishmentManager.getInstance().stopPunishment(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL);
+					_print.println("Character " + name + " have been unjailed");
 				}
 				else
 				{
-					try (Connection con = L2DatabaseFactory.getInstance().getConnection())
-					{
-						PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
-						statement.setInt(1, 17836);
-						statement.setInt(2, 170178);
-						statement.setInt(3, -3507);
-						statement.setInt(4, 0);
-						statement.setLong(5, 0);
-						statement.setString(6, name);
-						
-						statement.execute();
-						int count = statement.getUpdateCount();
-						statement.close();
-						
-						if (count == 0)
-						{
-							_print.println("Character not found!");
-						}
-						else
-						{
-							_print.println("Character " + name + " set free.");
-						}
-					}
-					catch (SQLException se)
-					{
-						_print.println("SQLException while jailing player");
-						if (Config.DEBUG)
-						{
-							se.printStackTrace();
-						}
-					}
+					_print.println("Character with name: " + name + " was not found!");
 				}
 			}
 			catch (NoSuchElementException nsee)

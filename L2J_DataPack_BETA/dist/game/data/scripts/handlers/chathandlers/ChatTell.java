@@ -51,7 +51,7 @@ public class ChatTell implements IChatHandler
 			return;
 		}
 		
-		if (Config.JAIL_DISABLE_CHAT && activeChar.isInJail() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+		if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 		{
 			activeChar.sendPacket(SystemMessageId.CHATTING_PROHIBITED);
 			return;
@@ -70,7 +70,7 @@ public class ChatTell implements IChatHandler
 		
 		if ((receiver != null) && !receiver.isSilenceMode(activeChar.getObjectId()))
 		{
-			if (Config.JAIL_DISABLE_CHAT && receiver.isInJail() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
+			if (Config.JAIL_DISABLE_CHAT && receiver.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
 				activeChar.sendMessage("Player is in jail.");
 				return;
