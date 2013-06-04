@@ -48,16 +48,9 @@
 	<admin command="admin_del_autoann" accessLevel="7" />
 
 	<!-- ADMIN BAN -->
-	<admin command="admin_ban" accessLevel="7" />
-	<admin command="admin_ban_acc" accessLevel="7" confirmDlg="true" />
-	<admin command="admin_ban_char" accessLevel="7" />
-	<admin command="admin_ban_chat" accessLevel="7" />
-	<admin command="admin_unban" accessLevel="7" />
-	<admin command="admin_unban_acc" accessLevel="7" />
-	<admin command="admin_unban_char" accessLevel="7" />
-	<admin command="admin_unban_chat" accessLevel="7" />
-	<admin command="admin_jail" accessLevel="7" confirmDlg="true" />
-	<admin command="admin_unjail" accessLevel="7" />
+	<admin command="admin_punishment" accessLevel="7" />
+	<admin command="admin_punishment_add" accessLevel="7" confirmDlg="true"  />
+	<admin command="admin_punishment_remove" accessLevel="7" confirmDlg="true" />
 
 	<!-- ADMIN BBS -->
 	<admin command="admin_bbs" accessLevel="7" />

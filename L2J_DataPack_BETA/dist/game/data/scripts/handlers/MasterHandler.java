@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.handler.AdminCommandHandler;
 import com.l2jserver.gameserver.handler.BypassHandler;
 import com.l2jserver.gameserver.handler.ChatHandler;
 import com.l2jserver.gameserver.handler.ItemHandler;
+import com.l2jserver.gameserver.handler.PunishmentHandler;
 import com.l2jserver.gameserver.handler.SkillHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.handler.TelnetHandler;
@@ -54,7 +55,6 @@ import handlers.actionhandlers.L2TrapAction;
 import handlers.admincommandhandlers.AdminAdmin;
 import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
-import handlers.admincommandhandlers.AdminBan;
 import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCHSiege;
 import handlers.admincommandhandlers.AdminCache;
@@ -104,6 +104,7 @@ import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
+import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
 import handlers.admincommandhandlers.AdminRepairChar;
 import handlers.admincommandhandlers.AdminRes;
@@ -202,6 +203,9 @@ import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
 import handlers.itemhandlers.TeleportBookmark;
+import handlers.punishmenthandlers.BanHandler;
+import handlers.punishmenthandlers.ChatBanHandler;
+import handlers.punishmenthandlers.JailHandler;
 import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.DeluxeKey;
@@ -301,6 +305,7 @@ public class MasterHandler
 		BypassHandler.class,
 		ChatHandler.class,
 		ItemHandler.class,
+		PunishmentHandler.class,
 		SkillHandler.class,
 		UserCommandHandler.class,
 		VoicedCommandHandler.class,
@@ -336,7 +341,6 @@ public class MasterHandler
 			// Admin Command Handlers
 			AdminAdmin.class,
 			AdminAnnouncements.class,
-			AdminBan.class,
 			AdminBBS.class,
 			AdminBuffs.class,
 			AdminCache.class,
@@ -387,6 +391,7 @@ public class MasterHandler
 			AdminPForge.class,
 			AdminPledge.class,
 			AdminPolymorph.class,
+			AdminPunishment.class,
 			AdminQuest.class,
 			AdminRepairChar.class,
 			AdminRes.class,
@@ -494,6 +499,12 @@ public class MasterHandler
 			ManaPotion.class,
 			EnergyStarStone.class,
 			EventItem.class,
+		},
+		{
+			// Punishment Handlers
+			BanHandler.class,
+			ChatBanHandler.class,
+			JailHandler.class,
 		},
 		{
 			// Skill Handlers

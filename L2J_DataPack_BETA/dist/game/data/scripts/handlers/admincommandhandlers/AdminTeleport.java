@@ -434,7 +434,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		if (player != null)
 		{
 			// Check for jail
-			if (player.isInJail())
+			if (player.isJailed())
 			{
 				activeChar.sendMessage("Sorry, player " + player.getName() + " is in Jail.");
 			}
