@@ -44,12 +44,12 @@ public final class Nottingale extends AbstractNpcAI
 	static
 	{
 		RADARS.put(2, new RadarControl(0, -184545, 243120, 1581, 2));
-		RADARS.put(6, new RadarControl(0, -192361, 254528, 3598, 1));
-		RADARS.put(7, new RadarControl(0, -174600, 219711, 4424, 1));
-		RADARS.put(8, new RadarControl(0, -181989, 208968, 4424, 1));
-		RADARS.put(9, new RadarControl(0, -252898, 235845, 5343, 1));
-		RADARS.put(10, new RadarControl(0, -212819, 209813, 4288, 1));
-		RADARS.put(11, new RadarControl(0, -246899, 251918, 4352, 1));
+		RADARS.put(5, new RadarControl(0, -192361, 254528, 3598, 1));
+		RADARS.put(6, new RadarControl(0, -174600, 219711, 4424, 1));
+		RADARS.put(7, new RadarControl(0, -181989, 208968, 4424, 1));
+		RADARS.put(8, new RadarControl(0, -252898, 235845, 5343, 1));
+		RADARS.put(9, new RadarControl(0, -212819, 209813, 4288, 1));
+		RADARS.put(10, new RadarControl(0, -246899, 251918, 4352, 1));
 	}
 	
 	private Nottingale(String name, String descr)
@@ -57,7 +57,6 @@ public final class Nottingale extends AbstractNpcAI
 		super(name, descr);
 		addStartNpc(NOTTINGALE);
 		addTalkId(NOTTINGALE);
-		addFirstTalkId(NOTTINGALE);
 	}
 	
 	@Override
@@ -66,9 +65,9 @@ public final class Nottingale extends AbstractNpcAI
 		String htmltext = null;
 		switch (event)
 		{
+			case "32627-02.html":
 			case "32627-03.html":
 			case "32627-04.html":
-			case "32627-05.html":
 			{
 				if (player.getClan() != null)
 				{
@@ -86,7 +85,7 @@ public final class Nottingale extends AbstractNpcAI
 						else
 						{
 							player.sendPacket(RADARS.get(2));
-							htmltext = "32627-02.html";
+							htmltext = "32627-01.html";
 						}
 					}
 				}
@@ -100,17 +99,17 @@ public final class Nottingale extends AbstractNpcAI
 					else
 					{
 						player.sendPacket(RADARS.get(2));
-						htmltext = "32627-02.html";
+						htmltext = "32627-01.html";
 					}
 				}
 				break;
 			}
+			case "32627-05.html":
 			case "32627-06.html":
 			case "32627-07.html":
 			case "32627-08.html":
 			case "32627-09.html":
 			case "32627-10.html":
-			case "32627-11.html":
 			{
 				player.sendPacket(RADARS.get(Integer.valueOf(event.substring(6, 8))));
 				htmltext = event;
@@ -118,12 +117,6 @@ public final class Nottingale extends AbstractNpcAI
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		return "32627-01.html";
 	}
 	
 	public static void main(String[] args)
