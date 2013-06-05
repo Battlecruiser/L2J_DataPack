@@ -115,28 +115,46 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2907" levels="5" name="Battlefield Use Secret Medicine of Life">
-		<!-- This skill only has one level, 5. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="61;75" />
+		</cond>
+		<for>
+			<effect name="Heal" noicon="1" val="1900" />
+		</for>
 	</skill>
 	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind">
-		<!-- This skill only has one level, 5. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="61;75" />
+		</cond>
+		<for>
+			<effect name="ManaHeal" noicon="1" val="360" />
+		</for>
 	</skill>
 	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will">
-		<!-- This skill only has one level, 5. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="61;75" />
+		</cond>
+		<for>
+			<effect name="CpHeal" noicon="1" val="360" />
+		</for>
 	</skill>
 	<skill id="2910" levels="1" name="Skull Key of Pain">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
