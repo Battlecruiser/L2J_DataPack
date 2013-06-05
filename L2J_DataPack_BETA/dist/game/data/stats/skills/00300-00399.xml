@@ -135,7 +135,6 @@
 	</skill>
 	<skill id="304" levels="1" name="Song of Vitality" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -163,15 +162,9 @@
 				<mul order="0x30" stat="maxHp" val="1.3" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="maxHp" val="1.3" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="305" levels="1" name="Song of Vengeance" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -197,15 +190,9 @@
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="reflectDam" val="20" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="306" levels="1" name="Song of Flame Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -233,15 +220,9 @@
 				<add order="0x40" stat="fireRes" val="30" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="fireRes" val="30" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="307" levels="1" name="Dance of Aqua Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -272,15 +253,9 @@
 				<add order="0x40" stat="waterRes" val="30" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="waterRes" val="30" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="308" levels="1" name="Song of Storm Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -308,15 +283,9 @@
 				<add order="0x40" stat="windRes" val="30" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="windRes" val="30" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="309" levels="1" name="Dance of Earth Guard" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -347,15 +316,9 @@
 				<add order="0x40" stat="earthRes" val="30" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="earthRes" val="30" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="310" levels="1" name="Dance of the Vampire" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -384,15 +347,9 @@
 				<add order="0x40" stat="absorbDam" val="8" /> <!-- absorb 8% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="absorbDam" val="8" /> <!-- absorb 8% HP from damage inflicted on enemies -->
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="311" levels="1" name="Dance of Protection" enchantGroup1="1" enchantGroup2="1">
 		<table name="#ench1AbnormalTimes"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
-		<table name="#ench1time"> 125 131 136 142 147 153 158 164 169 175 180 186 191 197 202 208 213 219 224 230 235 241 246 252 257 263 268 274 279 285 </table>
 		<table name="#ench2MpConsume"> 58 57 56 55 53 52 51 50 48 47 46 45 43 42 41 40 39 37 36 35 34 32 31 30 29 27 26 25 24 22 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -423,11 +380,6 @@
 				<sub order="0x40" stat="damageZoneVuln" val="30" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<sub order="0x40" stat="damageZoneVuln" val="30" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="312" levels="20" name="Vicious Stance" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
@@ -1249,15 +1201,6 @@
 			<effect name="HealOverTime" noicon="1" ticks="3" val="50" />
 			<effect name="HealPercent" noicon="1" val="50" />
 		</for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<sub order="0x40" stat="cancelVuln" val="100" />
-				<sub order="0x40" stat="debuffVuln" val="30" />
-				<mul order="0x30" stat="healEffect" val="1.3" />
-			</effect>
-			<effect name="HealOverTime" noicon="1" ticks="1" val="50" />
-			<effect name="HealPercent" noicon="1" val="50" />
-		</enchant2for>
 	</skill>
 	<skill id="342" levels="1" name="Touch of Death" enchantGroup1="6" enchantGroup2="6">
 		<!-- Confirmed CT2.5 -->
@@ -1518,7 +1461,6 @@
 	<skill id="349" levels="1" name="Song of Renewal" enchantGroup1="5" enchantGroup2="5">
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1548,15 +1490,6 @@
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="mReuse" val="0.8" />
-				<mul order="0x30" stat="pReuse" val="0.8" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="350" levels="1" name="Physical Mirror">
 		<set name="abnormalLvl" val="1" />
@@ -2002,7 +1935,6 @@
 		<table name="#ench1Power"> 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45 </table>
 		<table name="#ench2AbnormalTimes"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
 		<table name="#ench2Power"> 1.31 1.31 1.31 1.32 1.32 1.32 1.33 1.33 1.33 1.34 1.34 1.34 1.35 1.35 1.35 </table>
-		<table name="#ench2Time"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -2044,7 +1976,6 @@
 	<skill id="360" levels="1" name="Eye of Slayer" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1Power"> 1.31 1.32 1.33 1.34 1.35 1.36 1.37 1.38 1.39 1.4 1.41 1.42 1.43 1.44 1.45 </table>
 		<table name="#ench2AbnormalTimes"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
-		<table name="#ench2Time"> 640 680 720 760 800 840 880 920 960 1000 1040 1080 1120 1160 1200 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
@@ -2077,14 +2008,6 @@
 				<mul order="0x30" stat="pAtk-magicCreature" val="#ench1Power" />
 			</effect>
 		</enchant1for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="pAtk-monsters" val="1.3" />
-				<mul order="0x30" stat="pAtk-dragons" val="1.3" />
-				<mul order="0x30" stat="pAtk-giants" val="1.3" />
-				<mul order="0x30" stat="pAtk-magicCreature" val="1.3" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="361" levels="1" name="Shock Blast" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#ench1Power"> 2731 2745 2759 2773 2787 2800 2814 2828 2842 2856 2870 2884 2898 2912 2926 </table>
@@ -2198,7 +2121,6 @@
 	</skill>
 	<skill id="363" levels="1" name="Song of Meditation" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2225,16 +2147,9 @@
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="regMp" val="1.2" />
-				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="364" levels="1" name="Song of Champion" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2262,17 +2177,9 @@
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="pReuse" val="0.9" />
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
-				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="365" levels="1" name="Siren's Dance" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2301,15 +2208,9 @@
 				<basemul order="0x30" stat="mCritRate" val="1" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<basemul order="0x30" stat="mCritRate" val="1" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="366" levels="1" name="Dance of Shadows" enchantGroup1="5" enchantGroup2="5">
 		<table name="#ench1AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench1Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#ench2mpConsume"> 58 56 54 52 50 48 46 44 42 40 38 36 34 32 30 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -2338,18 +2239,12 @@
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" val="0">
-				<mul order="0x30" stat="runSpd" val="0.5" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="367" levels="1" name="Dance of Medusa" enchantGroup1="5" enchantGroup2="5">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#ench1Power"> 42 45 48 50 53 56 58 61 64 66 69 72 74 77 80 </table>
 		<table name="#ench2AbnormalTimes"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 </table>
 		<table name="#ench2Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 </table>
-		<table name="#ench2Time"> 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
@@ -2381,9 +2276,6 @@
 		<for>
 			<effect name="Petrification" val="0" />
 		</for>
-		<enchant2for>
-			<effect name="Petrification" val="0" />
-		</enchant2for>
 	</skill>
 	<skill id="368" levels="1" name="Vengeance" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6">
 		<table name="#ench1Power"> 8454 8770 9087 9403 9720 10036 10353 10669 10985 11302 11618 11935 12251 12568 12884 </table>

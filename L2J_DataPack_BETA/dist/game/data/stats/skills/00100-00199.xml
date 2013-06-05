@@ -109,7 +109,6 @@
 		<table name="#runSpd"> 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2AbnormalTimes"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench2time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
 		<table name="#ench3-runSpd"> 0.7 0.69 0.68 0.68 0.67 0.66 0.66 0.65 0.64 0.64 0.63 0.62 0.62 0.61 0.6 0.6 0.59 0.58 0.58 0.57 0.56 0.56 0.55 0.54 0.54 0.53 0.52 0.52 0.51 0.5 </table>
 		<table name="#ench3abnormalLvl"> 3 3 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -143,11 +142,6 @@
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Debuff" val="0">
-				<mul order="0x30" stat="runSpd" val="0.7" />
-			</effect>
-		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="#ench3-runSpd" />
@@ -363,7 +357,6 @@
 		<table name="#mpConsume"> 10 21 </table>
 		<table name="#pDef"> 1800 3600 </table>
 		<table name="#ench1AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
-		<table name="#ench1time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench2reuseDelay"> 885000 870000 855000 840000 825000 810000 795000 780000 765000 750000 735000 720000 705000 690000 675000 660000 645000 630000 615000 600000 585000 570000 555000 540000 525000 510000 495000 480000 465000 450000 </table>
 		<table name="#ench3decreasePenalty"> 0.2 0.21 0.22 0.23 0.24 0.25 0.26 0.27 0.28 0.29 0.3 0.31 0.32 0.33 0.34 0.35 0.36 0.37 0.38 0.39 0.4 0.41 0.42 0.43 0.44 0.45 0.46 0.47 0.48 0.49 </table>
 		<table name="#enchabnormalLvl"> 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 5 </table>
@@ -425,7 +418,6 @@
 		<table name="#pSkillEvas"> 25 40 </table>
 		<table name="#rEvas"> 20 25 </table>
 		<table name="#ench1AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
-		<table name="#ench1time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench2reuseDelay"> 885000 870000 855000 840000 825000 810000 795000 780000 765000 750000 735000 720000 705000 690000 675000 660000 645000 630000 615000 600000 585000 570000 555000 540000 525000 510000 495000 480000 465000 450000 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -451,13 +443,6 @@
 				<sub order="0x40" stat="cancelVuln" val="80" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="pSkillEvas" val="40" />
-				<add order="0x40" stat="rEvas" val="25" />
-				<sub order="0x40" stat="cancelVuln" val="80" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="112" levels="4" name="Deflect Arrow" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
@@ -467,7 +452,6 @@
 		<table name="#magicLvl"> 24 32 43 49 </table>
 		<table name="#mpConsume"> 11 14 19 22 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2mpConsume"> 21 21 20 20 19 19 18 18 17 17 16 16 16 15 15 14 14 14 13 13 12 12 12 11 11 10 10 10 9 9 </table>
 		<table name="#ench2sDef"> 1.01 1.01 1.01 1.02 1.02 1.02 1.03 1.03 1.03 1.04 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 1.07 1.07 1.07 1.08 1.08 1.08 1.09 1.09 1.09 1.1 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -493,12 +477,6 @@
 				<mul order="0x30" stat="crossbowWpnVuln" val="#crossbowWpnVuln" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="bowWpnVuln" val="0.6" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.8" />
-			</effect>
-		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="bowWpnVuln" val="0.6" />
@@ -530,7 +508,6 @@
 		<table name="#pAtk"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
-		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -564,11 +541,6 @@
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Debuff" val="0">
-				<mul order="0x30" stat="pAtk" val="0.77" />
-			</effect>
-		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pAtk" val="0.77" />
@@ -581,7 +553,6 @@
 		<table name="#mpConsume"> 29 31 33 35 38 40 42 43 45 46 48 50 51 53 </table>
 		<table name="#ench1Power"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
-		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
@@ -610,11 +581,6 @@
 				<mul order="0x30" stat="pAtk" val="0.77" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Debuff" val="0">
-				<mul order="0x30" stat="pAtk" val="0.77" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="118" levels="1" name="Magician's Movement">
 		<!-- Confirmed CT2.5 -->
@@ -709,7 +675,6 @@
 		<table name="#mpConsume"> 18 19 22 23 24 25 28 28 29 30 32 33 33 34 35 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 94 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
-		<table name="#ench2time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="3" />
@@ -742,11 +707,6 @@
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Debuff" val="0">
-				<mul order="0x30" stat="pDef" val="0.77" />
-			</effect>
-		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" val="0" effectPower="80">
 				<mul order="0x30" stat="pDef" val="0.77" />
@@ -762,7 +722,6 @@
 		<table name="#mpConsume"> 14 18 22 </table>
 		<table name="#mpInitialConsume"> 4 5 6 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-		<table name="#ench1time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2power"> 1.31 1.31 1.31 1.31 1.31 1.31 1.31 1.32 1.32 1.32 1.32 1.32 1.32 1.32 1.33 1.33 1.33 1.33 1.33 1.33 1.33 1.33 1.34 1.34 1.34 1.34 1.34 1.34 1.34 1.35 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -787,11 +746,6 @@
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="mDef" val="1.3" />
-			</effect>
-		</enchant1for>
 		<enchant2for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="mDef" val="#ench2power" />
@@ -804,7 +758,6 @@
 		<table name="#mpInitialConsume"> 4 5 5 5 5 6 6 6 6 7 7 7 7 7 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2AbnormalTimes"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench2time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
@@ -834,11 +787,6 @@
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Debuff" val="0">
-				<mul order="0x30" stat="runSpd" val="0.7" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="129" levels="5" name="Poison">
 		<table name="#abnormalLvls"> 3 5 6 7 8 </table>
@@ -912,7 +860,6 @@
 		<table name="#magicLvl"> 40 49 58 </table>
 		<table name="#mpConsume"> 18 22 27 </table>
 		<table name="#ench1AbnormalTimes"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 </table>
-		<table name="#ench1time"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500 510 520 530 540 550 560 570 580 590 600 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
@@ -934,12 +881,6 @@
 				<mul order="0x30" stat="pDef" val="0.9" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="accCombat" val="10" />
-				<mul order="0x30" stat="pDef" val="0.9" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="134" levels="1" name="Toughness" enchantGroup1="1">
 		<table name="#ench1vuln"> 21 21 21 22 22 22 23 23 23 24 24 24 24 25 25 25 26 26 26 27 27 27 27 28 28 28 29 29 29 30 </table>
