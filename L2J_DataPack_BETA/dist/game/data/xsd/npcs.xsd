@@ -10,10 +10,10 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="exp" use="optional" />
-											<xs:attribute type="xs:float" name="exp_rate" use="optional" />
-											<xs:attribute type="xs:float" name="sp" use="optional" />
-											<xs:attribute type="xs:float" name="rp" use="optional" />
+											<xs:attribute type="xs:decimal" name="exp" use="optional" />
+											<xs:attribute type="xs:decimal" name="exp_rate" use="optional" />
+											<xs:attribute type="xs:decimal" name="sp" use="optional" />
+											<xs:attribute type="xs:decimal" name="rp" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -28,7 +28,7 @@
 														<xs:attribute type="xs:integer" name="id" use="optional" />
 														<xs:attribute type="xs:integer" name="min" use="optional" />
 														<xs:attribute type="xs:integer" name="max" use="optional" />
-														<xs:attribute type="xs:float" name="chance" use="optional" />
+														<xs:attribute type="xs:decimal" name="chance" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -49,13 +49,13 @@
 																	<xs:attribute type="xs:integer" name="id" use="optional" />
 																	<xs:attribute type="xs:integer" name="min" use="optional" />
 																	<xs:attribute type="xs:integer" name="max" use="optional" />
-																	<xs:attribute type="xs:float" name="chance" use="optional" />
+																	<xs:attribute type="xs:decimal" name="chance" use="optional" />
 																</xs:extension>
 															</xs:simpleContent>
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
-												<xs:attribute type="xs:float" name="chance" use="optional" />
+												<xs:attribute type="xs:decimal" name="chance" use="optional" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
@@ -77,8 +77,8 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:float" name="normal" use="optional" />
-														<xs:attribute type="xs:float" name="special" use="optional" />
+														<xs:attribute type="xs:decimal" name="normal" use="optional" />
+														<xs:attribute type="xs:decimal" name="special" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -87,8 +87,8 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:float" name="normal" use="optional" />
-														<xs:attribute type="xs:float" name="special" use="optional" />
+														<xs:attribute type="xs:decimal" name="normal" use="optional" />
+														<xs:attribute type="xs:decimal" name="special" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -106,7 +106,7 @@
 														<xs:attribute type="xs:integer" name="id" use="optional" />
 														<xs:attribute type="xs:integer" name="min" use="optional" />
 														<xs:attribute type="xs:integer" name="max" use="optional" />
-														<xs:attribute type="xs:float" name="chance" use="optional" />
+														<xs:attribute type="xs:decimal" name="chance" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -129,13 +129,13 @@
 																	<xs:attribute type="xs:integer" name="id" use="optional" />
 																	<xs:attribute type="xs:integer" name="min" use="optional" />
 																	<xs:attribute type="xs:integer" name="max" use="optional" />
-																	<xs:attribute type="xs:float" name="chance" use="optional" />
+																	<xs:attribute type="xs:decimal" name="chance" use="optional" />
 																</xs:extension>
 															</xs:simpleContent>
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
-												<xs:attribute type="xs:float" name="chance" use="optional" />
+												<xs:attribute type="xs:decimal" name="chance" use="optional" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>
@@ -150,9 +150,9 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:float" name="ground" use="optional" />
-														<xs:attribute type="xs:float" name="underWater" use="optional" />
-														<xs:attribute type="xs:float" name="flying" use="optional" />
+														<xs:attribute type="xs:decimal" name="ground" use="optional" />
+														<xs:attribute type="xs:decimal" name="underWater" use="optional" />
+														<xs:attribute type="xs:decimal" name="flying" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -161,9 +161,9 @@
 											<xs:complexType>
 												<xs:simpleContent>
 													<xs:extension base="xs:string">
-														<xs:attribute type="xs:float" name="ground" use="optional" />
-														<xs:attribute type="xs:float" name="underWater" use="optional" />
-														<xs:attribute type="xs:float" name="flying" use="optional" />
+														<xs:attribute type="xs:decimal" name="ground" use="optional" />
+														<xs:attribute type="xs:decimal" name="underWater" use="optional" />
+														<xs:attribute type="xs:decimal" name="flying" use="optional" />
 													</xs:extension>
 												</xs:simpleContent>
 											</xs:complexType>
@@ -175,7 +175,7 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="factor" use="optional" />
+											<xs:attribute type="xs:decimal" name="factor" use="optional" />
 											<xs:attribute type="xs:byte" name="skill_factor" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
@@ -192,16 +192,16 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="pAtk" use="optional" />
+											<xs:attribute type="xs:decimal" name="pAtk" use="optional" />
 											<xs:attribute type="xs:integer" name="randDmg" use="optional" />
 											<xs:attribute type="xs:integer" name="crit" use="optional" />
 											<xs:attribute type="xs:short" name="atkSpd" use="optional" />
 											<xs:attribute type="xs:integer" name="reuseDelay" use="optional" />
-											<xs:attribute type="xs:float" name="mAtk" use="optional" />
-											<xs:attribute type="xs:float" name="pDef" use="optional" />
-											<xs:attribute type="xs:float" name="mDef" use="optional" />
-											<xs:attribute type="xs:float" name="accuracy" use="optional" />
-											<xs:attribute type="xs:float" name="evasion" use="optional" />
+											<xs:attribute type="xs:decimal" name="mAtk" use="optional" />
+											<xs:attribute type="xs:decimal" name="pDef" use="optional" />
+											<xs:attribute type="xs:decimal" name="mDef" use="optional" />
+											<xs:attribute type="xs:decimal" name="accuracy" use="optional" />
+											<xs:attribute type="xs:decimal" name="evasion" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
@@ -318,24 +318,24 @@
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="hp" use="optional" />
-											<xs:attribute type="xs:float" name="hp_regen" use="optional" />
-											<xs:attribute type="xs:float" name="mp" use="optional" />
-											<xs:attribute type="xs:float" name="mp_regen" use="optional" />
+											<xs:attribute type="xs:decimal" name="hp" use="optional" />
+											<xs:attribute type="xs:decimal" name="hp_regen" use="optional" />
+											<xs:attribute type="xs:decimal" name="mp" use="optional" />
+											<xs:attribute type="xs:decimal" name="mp_regen" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>
 							</xs:element>
 							<xs:element type="xs:string" name="race" />
-							<xs:element type="xs:float" name="s_npc_prop_hp_rate" />
+							<xs:element type="xs:decimal" name="s_npc_prop_hp_rate" />
 							<xs:element type="xs:integer" name="safe_height" />
 							<xs:element type="xs:string" name="sex" />
 							<xs:element name="shield">
 								<xs:complexType>
 									<xs:simpleContent>
 										<xs:extension base="xs:string">
-											<xs:attribute type="xs:float" name="defence" use="optional" />
-											<xs:attribute type="xs:float" name="rate" use="optional" />
+											<xs:attribute type="xs:decimal" name="defence" use="optional" />
+											<xs:attribute type="xs:decimal" name="rate" use="optional" />
 										</xs:extension>
 									</xs:simpleContent>
 								</xs:complexType>

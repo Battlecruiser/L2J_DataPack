@@ -14,14 +14,14 @@
 												<xs:sequence minOccurs="1" maxOccurs="1">
 													<xs:element name="category" minOccurs="1" maxOccurs="unbounded">
 														<xs:complexType>
-														<xs:sequence minOccurs="1" maxOccurs="1">
-														<xs:element name="augment" minOccurs="1" maxOccurs="unbounded">
-															<xs:complexType>
-																<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-																<xs:attribute name="chance" type="xs:decimal" use="required" />
-															</xs:complexType>
-														</xs:element>
-														</xs:sequence>
+															<xs:sequence minOccurs="1" maxOccurs="1">
+																<xs:element name="augment" minOccurs="1" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:attribute name="id" type="xs:positiveInteger" use="required" />
+																		<xs:attribute name="chance" type="xs:decimal" use="required" />
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
 															<xs:attribute name="probability" type="xs:positiveInteger" use="required" />
 														</xs:complexType>
 													</xs:element>

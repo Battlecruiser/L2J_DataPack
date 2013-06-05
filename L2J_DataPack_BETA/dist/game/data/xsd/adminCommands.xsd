@@ -13,7 +13,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="command" use="required" type="xs:string" /> 
+						<xs:attribute name="command" use="required" type="xs:token" />
 						<xs:attribute name="confirmDlg" type="xs:boolean" />
 					</xs:complexType>
 				</xs:element>
