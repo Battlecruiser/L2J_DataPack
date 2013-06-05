@@ -113,7 +113,6 @@
 		<table name="#ench1Power"> 2149 2195 2241 2286 2332 2378 2423 2469 2515 2561 2606 2652 2698 2743 2789 2835 2880 2926 2972 3018 3063 3109 3155 3200 3246 3292 3337 3383 3429 3475 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench2MpConsume"> 70 69 68 67 66 64 63 62 61 60 58 57 56 55 54 52 51 50 49 48 46 45 44 43 42 40 39 38 37 36 </table>
-		<table name="#ench2Time"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench3rCrit"> -0.05 -0.05 -0.05 -0.06 -0.06 -0.07 -0.07 -0.07 -0.08 -0.08 -0.08 -0.09 -0.09 -0.09 -0.1 -0.1 -0.1 -0.11 -0.11 -0.11 -0.12 -0.12 -0.12 -0.13 -0.13 -0.13 -0.14 -0.14 -0.14 -0.15 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -170,25 +169,6 @@
 			</effect>
 			<effect name="TargetMe" noicon="1" val="0" />
 		</for>
-		<enchant2for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
-				<mul order="0x30" stat="cAtk" val="0.65" />
-				<mul order="0x30" stat="swordWpnVuln" val="1.2" />
-				<mul order="0x30" stat="bigSwordWpnVuln" val="1.2" />
-				<mul order="0x30" stat="bluntWpnVuln" val="1.2" />
-				<mul order="0x30" stat="bigBluntWpnVuln" val="1.2" />
-				<mul order="0x30" stat="daggerWpnVuln" val="1.2" />
-				<mul order="0x30" stat="dualDaggerWpnVuln" val="1.2" />
-				<mul order="0x30" stat="poleWpnVuln" val="1.2" />
-				<mul order="0x30" stat="fistWpnVuln" val="1.2" />
-				<mul order="0x30" stat="dualFistWpnVuln" val="1.2" />
-				<mul order="0x30" stat="dualWpnVuln" val="1.2" />
-				<mul order="0x30" stat="rapierWpnVuln" val="1.2" />
-				<mul order="0x30" stat="ancientWpnVuln" val="1.2" />
-			</effect>
-			<effect name="TargetMe" noicon="1" val="0" />
-		</enchant2for>
 		<enchant3for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Debuff" val="0" effectPower="80">
@@ -370,7 +350,6 @@
 		<table name="#ench2mpConsume"> 167 164 161 158 155 153 150 147 144 141 138 136 133 130 127 124 121 119 116 113 110 107 104 102 99 96 93 90 87 85 </table>
 		<table name="#ench3reuseDelay"> 295000 290000 285000 280000 275000 270000 265000 260000 255000 250000 245000 240000 235000 230000 225000 220000 215000 210000 205000 200000 195000 190000 185000 180000 175000 170000 165000 160000 155000 150000 </table>
 		<table name="#ench4AbnormalTimes"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench4time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
@@ -438,28 +417,6 @@
 				<mul order="0x30" stat="healEffect" val="0.2" />
 			</effect>
 		</enchant1for>
-		<enchant4for>
-			<effect name="Buff" val="0">
-				<sub order="0x40" stat="debuffVuln" val="40" />
-				<mul order="0x30" stat="pDef" val="1.5" />
-				<mul order="0x30" stat="mDef" val="1.5" />
-				<add order="0x40" stat="accCombat" val="6">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-				</add>
-				<add order="0x40" stat="runSpd" val="30" />
-				<mul order="0x30" stat="pAtkSpd" val="1.3">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-				</mul>
-				<add order="0x40" stat="rCrit" val="100">
-					<using kind="Sword,Big Sword" />
-				</add>
-				<mul order="0x30" stat="cAtk" val="2">
-					<using kind="Blunt,Big Blunt" />
-				</mul>
-				<sub order="0x40" stat="cancelVuln" val="40" />
-				<mul order="0x30" stat="healEffect" val="0.2" />
-			</effect>
-		</enchant4for>
 	</skill>
 	<skill id="407" levels="10" name="Psycho Symphony">
 		<!-- Confirmed CT2.5 -->
@@ -603,7 +560,6 @@
 		<table name="#ench1Chance"> 1.2 1.2 1.21 1.21 1.21 1.22 1.22 1.22 1.23 1.23 1.23 1.24 1.24 1.24 1.25 1.25 1.25 1.26 1.26 1.26 1.27 1.27 1.27 1.28 1.28 1.28 1.29 1.29 1.29 1.3 </table>
 		<table name="#ench2AbnormalTimes"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<table name="#ench2Chance"> 1.21 1.21 1.21 1.21 1.21 1.21 1.22 1.22 1.22 1.22 1.22 1.22 1.23 1.23 1.23 1.23 1.23 1.23 1.24 1.24 1.24 1.24 1.24 1.24 1.25 1.25 1.25 1.25 1.25 1.25 </table>
-		<table name="#ench2Duration"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
@@ -646,7 +602,6 @@
 		<table name="#rEvas"> 12 8 4 </table>
 		<table name="#ench1MpConsume"> 33 32 32 31 31 30 30 29 28 28 27 27 26 26 25 24 24 23 23 22 22 21 20 20 19 19 18 18 17 17 </table>
 		<table name="#ench2AbnormalTimes"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
-		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
@@ -669,15 +624,6 @@
 				<mul order="0x30" stat="pAtk" val="0.55" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" val="0">
-				<sub order="0x40" stat="rEvas" val="4" />
-				<mul order="0x30" stat="pDef" val="0.85 " />
-				<mul order="0x30" stat="mDef" val="0.85 " />
-				<sub order="0x40" stat="accCombat" val="12" />
-				<mul order="0x30" stat="pAtk" val="0.55" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="412" levels="10" name="Sand Bomb" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
@@ -687,7 +633,6 @@
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
 		<table name="#ench1AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench1mpConsume"> 33 32 32 31 31 30 30 29 28 28 27 27 26 26 25 24 24 23 23 22 22 21 20 20 19 19 18 18 17 17 </table>
-		<table name="#ench1Time"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -718,11 +663,6 @@
 				<sub order="0x40" stat="accCombat" val="#accCombat" />
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Debuff" val="0">
-				<sub order="0x40" stat="accCombat" val="12" />
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="413" levels="8" name="Rapid Fire" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
@@ -731,7 +671,6 @@
 		<table name="#pAtk"> 62 67 73 78 83 89 94 100 </table>
 		<table name="#ench1pAtk"> 106 107 107 108 109 110 110 111 112 112 113 114 115 115 116 117 117 118 119 120 120 121 122 122 123 124 125 125 126 127 </table>
 		<table name="#ench2AbnormalTimes"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
-		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
@@ -773,19 +712,6 @@
 				</mul>
 			</effect>
 		</enchant1for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="pAtk" val="100">
-					<using kind="Bow" />
-				</add>
-				<mul order="0x30" stat="pAtkSpd" val="1.2">
-					<using kind="Bow" />
-				</mul>
-				<mul order="0x30" stat="pAtkRange" val="0.5">
-					<using kind="Bow" />
-				</mul>
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="414" levels="8" name="Dead Eye" enchantGroup1="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
@@ -957,7 +883,6 @@
 		<table name="#ench1hpConsume"> 200 197 193 190 187 183 180 176 173 170 166 163 159 156 153 149 146 142 139 136 132 129 125 122 119 115 112 108 105 102 </table>
 		<table name="#ench1mpConsume"> 133 131 129 126 124 122 120 117 115 113 111 108 106 104 102 99 97 95 92 90 88 86 83 81 79 77 74 72 70 68 </table>
 		<table name="#ench2AbnormalTimes"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
-		<table name="#ench2Time"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100 102 104 106 108 110 112 114 116 118 120 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
@@ -997,27 +922,6 @@
 				<mul order="0x30" stat="healEffect" val="0.5" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<sub order="0x40" stat="debuffVuln" val="80" />
-				<sub order="0x40" stat="cancelVuln" val="40" />
-				<add order="0x40" stat="runSpd" val="30" />
-				<add order="0x40" stat="accCombat" val="6">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Fist" />
-				</add>
-				<mul order="0x30" stat="pAtkSpd" val="1.3">
-					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole,Dual Fist" />
-				</mul>
-				<add order="0x40" stat="rCrit" val="100">
-					<using kind="Sword,Big Sword,Pole" />
-				</add>
-				<mul order="0x30" stat="cAtk" val="2">
-					<using kind="Blunt,Big Blunt,Dual Fist" />
-				</mul>
-				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.5" />
-				<mul order="0x30" stat="healEffect" val="0.5" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="421" levels="5" name="Fell Swoop" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
@@ -1026,7 +930,6 @@
 		<table name="#mpConsume"> 27 29 31 33 34 </table>
 		<table name="#ench1atkCountMax"> 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 </table>
 		<table name="#ench2AbnormalTimes"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
-		<table name="#ench2Time"> 124 128 132 136 140 144 148 152 156 160 164 168 172 176 180 184 188 192 196 200 204 208 212 216 220 224 228 232 236 240 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="POLEARM_ATTACK" />
@@ -1052,11 +955,6 @@
 				<add order="0x40" stat="atkCountMax" val="#ench1atkCountMax" />
 			</effect>
 		</enchant1for>
-		<enchant2for>
-			<effect name="Buff" val="0">
-				<add order="0x40" stat="atkCountMax" val="5" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="422" levels="3" name="Polearm Accuracy" enchantGroup1="1" enchantGroup2="1">
 		<table name="#accCombat"> 2 3 4 </table>
@@ -1441,7 +1339,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1Power"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
 		<table name="#ench2AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
-		<table name="#ench2Time"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
@@ -1469,10 +1366,6 @@
 			<effect name="Mute" val="0" />
 			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
-		<enchant2for>
-			<effect name="Mute" val="0" />
-			<effect name="PhysicalMute" noicon="1" val="0" />
-		</enchant2for>
 	</skill>
 	<skill id="438" levels="1" name="Soul of the Phoenix">
 		<set name="abnormalLvl" val="1" />
@@ -2626,7 +2519,6 @@
 		<table name="#mpConsume"> 25 30 35 40 46 51 55 </table>
 		<table name="#ench1Power"> 70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
 		<table name="#ench2AbnormalTimes"> 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 </table>
-		<table name="#ench2Time"> 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
@@ -2654,11 +2546,6 @@
 				<mul order="0x30" stat="pAtk" val="0.6" />
 			</effect>
 		</for>
-		<enchant2for>
-			<effect name="Disarm" val="0" abnormalVisualEffect="bleed">
-				<mul order="0x30" stat="pAtk" val="0.6" />
-			</effect>
-		</enchant2for>
 	</skill>
 	<skill id="486" levels="2" name="Increase Range">
 		<!-- Confirmed CT2.5 -->
@@ -2727,7 +2614,6 @@
 		<table name="#mpConsume"> 14 25 </table>
 		<table name="#pAtkSpd"> 1.08 1.12 </table>
 		<table name="#ench1AbnormalTimes"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
-		<table name="#ench1Time"> 1240 1280 1320 1360 1400 1440 1480 1520 1560 1600 1640 1680 1720 1760 1800 1840 1880 1920 1960 2000 2040 2080 2120 2160 2200 2240 2280 2320 2360 2400 </table>
 		<table name="#ench2MpConsume"> 24 24 23 23 22 22 21 21 21 20 20 19 19 18 18 18 17 17 16 16 15 15 15 14 14 13 13 12 12 12 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -2753,13 +2639,6 @@
 				</mul>
 			</effect>
 		</for>
-		<enchant1for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="pAtkSpd" val="1.12">
-					<using kind="Crossbow" />
-				</mul>
-			</effect>
-		</enchant1for>
 	</skill>
 	<skill id="491" levels="1" name="Not In Use">
 		<!-- Confirmed CT2.5 -->
