@@ -93,7 +93,7 @@
 		</for>
 	</skill>
 	<skill id="9011" levels="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
@@ -101,11 +101,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9012" levels="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
@@ -113,11 +118,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9013" levels="1" name="Wind Walk">
-		<!-- Increases moving speed by 15% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -125,11 +135,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9014" levels="1" name="Focus">
-		<!-- Increases critical attack likelihood by 30% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
@@ -137,11 +152,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9015" levels="1" name="Death Whisper">
-		<!-- Increases critical attack influence by 35% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
@@ -149,11 +169,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9016" levels="1" name="Guidance">
-		<!-- Increases accuracy by 4 for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
@@ -161,11 +186,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9017" levels="1" name="Blessed Shield">
-		<!-- Increases shield defense likelihood by 30% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SHIELD_PROB_UP" />
@@ -173,11 +203,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="rShld" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9018" levels="1" name="Blessed Body">
-		<!-- Increases maximum HP by 35% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
@@ -185,11 +220,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="maxHp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9019" levels="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
@@ -197,11 +237,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9020" levels="1" name="Vampiric Rage">
-		<!-- Restores 9% of general physical damage inflicted by enemies as HP for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
@@ -209,11 +254,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9021" levels="1" name="Berserker Spirit">
-		<!-- For 60 minutes, reduces party members' P. Def. by 8%, magic resistance by 16%, and evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and moving speed by 8. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
@@ -221,11 +271,23 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="pAtk" val="1.08" />
+				<mul order="0x30" stat="pAtkSpd" val="1.08" />
+				<mul order="0x30" stat="mAtk" val="1.16" />
+				<mul order="0x30" stat="mAtkSpd" val="1.08" />
+				<add order="0x40" stat="runSpd" val="8" />
+				<mul order="0x30" stat="pDef" val="0.92" />
+				<mul order="0x30" stat="mDef" val="0.84" />
+				<sub order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9022" levels="1" name="Magic Barrier">
-		<!-- Increases magic resistance by 30% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP" />
@@ -233,11 +295,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="mDef" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9023" levels="1" name="Blessed Soul">
-		<!-- Increases maximum MP by 35% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
@@ -245,11 +312,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="maxMp" val="1.35" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9024" levels="1" name="Empower">
-		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
@@ -257,11 +329,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9025" levels="1" name="Acumen">
-		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
@@ -269,11 +346,16 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9026" levels="1" name="Clarity">
-		<!-- For 60 minutes, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. Consumes 3 Runestones. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
@@ -281,8 +363,15 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9027" levels="1" name="PC cafe personal instant lottery">
 		<!-- Confirmed CT2.5 -->
@@ -817,25 +906,28 @@
 		</cond>
 	</skill>
 	<skill id="9059" levels="1" name="Torch Light">
-		<!-- Lights the Torch -->
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="9060" levels="1" name="Maguen Machine">
-		<!-- Skill that allows you to collect Plasma -->
+		<!-- Confirmed CT2.5 -->
+		<set name="affectRange" val="200" />
+		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="9000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="9061" levels="1" name="Uldie Summon Scroll">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
-		<set name="magicLvl" val="1" />
+		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="NOTDONE" />
@@ -924,38 +1016,40 @@
 		</for>
 	</skill>
 	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
-		<!-- Energy is maintained for 10 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15438" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="9068" levels="2" name="Potion of Vitality Maintenance">
-		<!-- Energy is maintained for 30 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="VP_KEEP" />
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15440" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -1039,34 +1133,48 @@
 		</for>
 	</skill>
 	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
-		<!-- Converts 9% of inflicted physical-damage to HP for 20 minutes. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalInstant" val="true" />
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="480" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.xel_mahun_vampiric_rage_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<add order="0x40" stat="absorbDam" val="9" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9074" levels="1" name="Salmon Soup">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Heal" noicon="1" val="2300" />
+		</for>
 	</skill>
 	<skill id="9075" levels="1" name="Awful Soup">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="150" />
+		<set name="effectRange" val="300" />
+		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15507" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="9076" levels="1" name="Secret Door Key">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1099,7 +1207,7 @@
 		</for>
 	</skill>
 	<skill id="9078" levels="1" name="Rainbow Springs Potion">
-		<!-- Increases the regen rate of HP/MP/CP by 30%. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_A" />
@@ -1108,21 +1216,50 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="regHp" val="1.3" />
+				<mul order="0x30" stat="regMp" val="1.3" />
+				<mul order="0x30" stat="regCp" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9079" levels="1" name="Santa's Buff Scroll">
-		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP recovery bonus by 20%, HP recovery bonus by 20%, the rate of Prominent Damage occurring through damage magic by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and resistance to de-buffs by 10%. Decreases moving speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="icon" val="icon.mysterious_wedding_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="16408" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul order="0x30" stat="regHp" val="1.2" />
+				<mul order="0x30" stat="maxMp" val="1.2" />
+				<mul order="0x30" stat="regMp" val="1.2" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+				<add order="0x40" stat="mCritRate" val="2" />
+				<mul order="0x30" stat="cAtk" val="1.2" />
+				<mul order="0x30" stat="pDef" val="1.2" />
+				<mul order="0x30" stat="pAtk" val="1.1" />
+				<mul order="0x30" stat="pAtkSpd" val="1.2" />
+				<mul order="0x30" stat="mDef" val="1.2" />
+				<mul order="0x30" stat="mAtk" val="1.2" />
+				<mul order="0x30" stat="mAtkSpd" val="1.2" />
+				<sub order="0x40" stat="debuffVuln" val="10" />
+				<mul order="0x30" stat="runSpd" val="0.8" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9080" levels="1" name="Santa's Sock">
 		<!-- Confirmed CT2.5 -->
@@ -1161,17 +1298,25 @@
 		</for>
 	</skill>
 	<skill id="9082" levels="1" name="White Christmas Petition">
-		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
+		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="16404" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9083" levels="1" name="Christmas Cake - event">
 		<!-- Confirmed CT2.5 -->
@@ -1188,17 +1333,25 @@
 		</for>
 	</skill>
 	<skill id="9084" levels="1" name="White Christmas Petition - event">
-		<!-- Energy is maintained for 10 minutes. Petition asking for it to snow on Christmas. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
+		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="16406" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="BUFF" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9085" levels="1" name="Santa Claus's Gift">
 		<!-- Confirmed CT2.5 -->
@@ -1223,10 +1376,14 @@
 		</for>
 	</skill>
 	<skill id="9086" levels="1" name="Santa - Potion of Will">
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="CpHeal" noicon="1" val="300" />
+		</for>
 	</skill>
 	<skill id="9087" levels="1" name="Create Item">
 		<!-- Confirmed CT2.5 -->

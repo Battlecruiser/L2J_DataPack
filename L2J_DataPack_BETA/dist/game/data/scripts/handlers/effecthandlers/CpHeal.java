@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * Cp Heal effect implementaion.
+ * Cp Heal effect implementation.
  * @author UnAfraid
  */
 public class CpHeal extends L2Effect
