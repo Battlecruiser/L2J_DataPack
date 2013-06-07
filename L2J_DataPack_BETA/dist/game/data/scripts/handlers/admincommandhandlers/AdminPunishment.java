@@ -181,14 +181,14 @@ public class AdminPunishment implements IAdminCommandHandler
 				String af = st.hasMoreTokens() ? st.nextToken() : null;
 				String t = st.hasMoreTokens() ? st.nextToken() : null;
 				String exp = st.hasMoreTokens() ? st.nextToken() : null;
-				String reason = st.hasMoreTokens() ? st.nextToken() + " " : null;
+				String reason = st.hasMoreTokens() ? st.nextToken() : null;
 				
 				// Let's grab the other part of the reason if there is..
 				if (reason != null)
 				{
 					while (st.hasMoreTokens())
 					{
-						reason += st.nextToken() + " ";
+						reason += " " + st.nextToken();
 					}
 					if (!reason.isEmpty())
 					{

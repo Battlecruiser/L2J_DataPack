@@ -57,6 +57,7 @@ public final class Nottingale extends AbstractNpcAI
 		super(name, descr);
 		addStartNpc(NOTTINGALE);
 		addTalkId(NOTTINGALE);
+		addFirstTalkId(NOTTINGALE);
 	}
 	
 	@Override
