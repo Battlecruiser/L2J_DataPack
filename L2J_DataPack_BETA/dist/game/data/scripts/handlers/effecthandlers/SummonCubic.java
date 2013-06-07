@@ -112,7 +112,7 @@ public class SummonCubic extends L2Effect
 			// If maximum amount is reached, random cubic is removed.
 			final L2Effect cubicMastery = player.getFirstPassiveEffect(L2EffectType.CUBIC_MASTERY);
 			final int cubicCount = (int) (cubicMastery != null ? cubicMastery.calc() : 0);
-			if (player.getCubics().size() >= cubicCount)
+			if (player.getCubics().size() > cubicCount)
 			{
 				player.getCubics().remove(Rnd.get(player.getCubics().size()));
 			}
