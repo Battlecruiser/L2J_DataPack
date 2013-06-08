@@ -623,24 +623,34 @@
 		</for>
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
-		<set name="hitTime" val="200" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="13277" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="25" />
-		<set name="skillType" val="REFUEL" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player canRefuelAirship="25" />
+		</cond>
+		<for>
+			<effect name="RefuelAirship" noicon="1" val="25" />
+		</for>
 	</skill>
 	<skill id="2648" levels="1" name="High Quality Energy Star Stone">
-		<set name="hitTime" val="200" />
+		<!-- Confirmed CT2.5 -->
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="13278" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
-		<set name="skillType" val="REFUEL" />
 		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player canRefuelAirship="100" />
+		</cond>
+		<for>
+			<effect name="RefuelAirship" noicon="1" val="100" />
+		</for>
 	</skill>
 	<skill id="2649" levels="9" name="Escape - Gludin Village">
 		<!-- Confirmed CT2.5 -->

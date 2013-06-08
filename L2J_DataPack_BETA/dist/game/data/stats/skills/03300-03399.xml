@@ -286,55 +286,86 @@
 		</for>
 	</skill>
 	<skill id="3328" levels="1" name="Double Stab">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="133" />
-		<set name="hitTime" val="1670" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1667" />
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="140" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="11500" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3329" levels="1" name="Power Slash">
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="133" />
-		<set name="hitTime" val="1670" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="1667" />
 		<set name="icon" val="icon.weapon_unique_zariche_i00" />
 		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="140" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="11500" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
+		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="6-12" />
+		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectRange" val="80" />
 		<set name="fanRange" val="0,0,80,150" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill3630" />
 		<set name="magicLvl" val="78" />
+		<set name="mpConsume" val="140" />
 		<set name="nextActionAttack" val="true" />
+		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
+		<set name="power" val="15000" />
 		<set name="reuseDelay" val="60000" />
-		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="FRONT_AREA" />
+		<for>
+			<effect name="PhysicalAttack" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
-		<set name="abnormalLvl" val="3" />
-		<set name="abnormalTime" val="30" />
-		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<!-- Confirmed CT2.5 -->
+		<!-- <set name="abnormalLvl" val="3" /> -->
+		<!-- <set name="abnormalTime" val="30" /> -->
+		<!-- <set name="abnormalType" val="ATTACK_TIME_UP" /> -->
 		<set name="affectLimit" val="10-10" />
+		<set name="effectRange" val="200" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill3631" />
-		<set name="lvlBonusRate" val="1" />
+		<!-- <set name="isDebuff" val="true" /> -->
+		<!-- <set name="lvlBonusRate" val="1" /> -->
 		<set name="magicLvl" val="78" />
-		<set name="operateType" val="A2" />
+		<set name="mpConsume" val="200" />
+		<set name="offensive" val="true" />
+		<set name="operateType" val="A1" /> <!-- Should be A2 -->
+		<set name="power" val="200" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="staticReuse" val="true" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="AURA" />
+		<for>
+			<effect name="HpDrain" noicon="1" val="0.05" />
+		</for>
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
 		<!-- Confirmed CT2.5 -->

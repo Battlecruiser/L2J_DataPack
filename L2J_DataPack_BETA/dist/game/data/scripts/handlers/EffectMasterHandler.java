@@ -128,6 +128,7 @@ public final class EffectMasterHandler
 		RandomizeHate.class,
 		RebalanceHP.class,
 		Recovery.class,
+		RefuelAirship.class,
 		Relax.class,
 		RemoveTarget.class,
 		Restoration.class,

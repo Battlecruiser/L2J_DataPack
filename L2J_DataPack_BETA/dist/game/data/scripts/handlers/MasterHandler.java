@@ -181,7 +181,6 @@ import handlers.itemhandlers.Disguise;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
 import handlers.itemhandlers.EnchantScrolls;
-import handlers.itemhandlers.EnergyStarStone;
 import handlers.itemhandlers.EventItem;
 import handlers.itemhandlers.ExtractableItems;
 import handlers.itemhandlers.FishShots;
@@ -217,7 +216,6 @@ import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.NornilsPower;
-import handlers.skillhandlers.RefuelAirShip;
 import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Sow;
@@ -497,7 +495,6 @@ public class MasterHandler
 			Elixir.class,
 			Disguise.class,
 			ManaPotion.class,
-			EnergyStarStone.class,
 			EventItem.class,
 		},
 		{
@@ -519,7 +516,6 @@ public class MasterHandler
 			GetPlayer.class,
 			GiveReco.class,
 			NornilsPower.class,
-			RefuelAirShip.class,
 			Resurrect.class,
 			ShiftTarget.class,
 			Sow.class,

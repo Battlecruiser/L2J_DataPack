@@ -1108,11 +1108,11 @@
 		</cond>
 	</skill>
 	<skill id="23068" levels="1" name="Pomona Agathion Special Skill - Mental Shield Ability">
-		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 50 for 10 minutes. Reuse Delay 1 hours -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
-		<set name="hitTime" val="3000" />
+		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
@@ -1130,16 +1130,28 @@
 		</for>
 	</skill>
 	<skill id="23069" levels="1" name="Threatening Roar">
-		<!-- Decreases moving speed and Atk. Spd. by 80% for 10 seconds. -->
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="castRange" val="600" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="7000" />
 		<set name="icon" val="icon.skill1289" />
+		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="power" val="-1" /> <!-- Land Always -->
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<!-- TODO: Add new operate condition check_abnormal -->
+		<for>
+			<effect name="Debuff" val="0">
+				<mul order="0x30" stat="pAtkSpd" val="0.2" />
+				<mul order="0x30" stat="runSpd" val="0.2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23070" levels="1" name="Red Flame">
 		<!-- Cannot damage the spirit for 10 seconds. Exclusive use for the Reckless Spirit of Fire. -->
