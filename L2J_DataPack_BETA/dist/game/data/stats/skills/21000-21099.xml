@@ -53,6 +53,7 @@
 		</for>
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_UP" />
@@ -71,11 +72,13 @@
 		</for>
 	</skill>
 	<skill id="21005" levels="1" name="Agility">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="86400000" />
 		<set name="skillType" val="BUFF" />
@@ -87,13 +90,13 @@
 		</for>
 	</skill>
 	<skill id="21006" levels="1" name="Large Firework Effect">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3600000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="21007" levels="1" name="Ability of Doubt">
 		<!-- Confirmed CT2.5 -->
