@@ -659,7 +659,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonNpc" noicon="1" val="0">
-				<param npcId="13128" npcCount="1" despawnTime="180000" />
+				<param npcId="13128" npcCount="1" despawnDelay="180000" />
 			</effect>
 		</for>
 	</skill>

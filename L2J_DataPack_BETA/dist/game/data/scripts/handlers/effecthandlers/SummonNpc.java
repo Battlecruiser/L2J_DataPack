@@ -40,7 +40,7 @@ import com.l2jserver.util.Rnd;
  */
 public class SummonNpc extends L2Effect
 {
-	private final int _despawnTime;
+	private final int _despawnDelay;
 	private final int _npcId;
 	private final int _npcCount;
 	private final boolean _randomOffset;
@@ -49,7 +49,7 @@ public class SummonNpc extends L2Effect
 	public SummonNpc(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_despawnTime = template.getParameters().getInteger("despawnTime", 20000);
+		_despawnDelay = template.getParameters().getInteger("despawnDelay", 20000);
 		_npcId = template.getParameters().getInteger("npcId", 0);
 		_npcCount = template.getParameters().getInteger("npcCount", 1);
 		_randomOffset = template.getParameters().getBool("randomOffset", false);
@@ -99,7 +99,7 @@ public class SummonNpc extends L2Effect
 		{
 			case "L2Decoy":
 			{
-				final L2DecoyInstance decoy = new L2DecoyInstance(IdFactory.getInstance().getNextId(), npcTemplate, player, _despawnTime);
+				final L2DecoyInstance decoy = new L2DecoyInstance(IdFactory.getInstance().getNextId(), npcTemplate, player, _despawnDelay);
 				decoy.setCurrentHp(decoy.getMaxHp());
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
@@ -163,9 +163,9 @@ public class SummonNpc extends L2Effect
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());
 				npc.setSummoner(player);
-				if (_despawnTime > 0)
+				if (_despawnDelay > 0)
 				{
-					npc.scheduleDespawn(_despawnTime);
+					npc.scheduleDespawn(_despawnDelay);
 				}
 				npc.setIsRunning(false); // TODO: Fix broadcast info.
 			}
