@@ -18,10 +18,10 @@
  */
 package events.GiftOfVitality;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.event.LongTimeEvent;
+import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -29,22 +29,64 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Gift of Vitality event AI.
- * @author Gnacik
+ * @author Gnacik, Adry_85
  */
 public class GiftOfVitality extends LongTimeEvent
 {
-	// Reuse between buffs
-	private static final int HOURS = 5;
 	// NPC
-	private static final int JACK = 4306;
+	private static final int STEVE_SHYAGEL = 4306;
+	// Skills
+	private static final SkillHolder GIFT_OF_VITALITY = new SkillHolder(23179, 1);
+	private static final SkillHolder JOY_OF_VITALITY = new SkillHolder(23180, 1);
+	
+	private static SkillHolder[] FIGHTER_SKILLS =
+	{
+		new SkillHolder(5627, 1), // Wind Walk
+		new SkillHolder(5628, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(5629, 1), // Bless the Body
+		new SkillHolder(5630, 1), // Vampiric Rage
+		new SkillHolder(5631, 1), // Regeneration
+		new SkillHolder(5632, 1), // Haste
+	};
+	
+	private static SkillHolder[] MAGE_SKILLS =
+	{
+		new SkillHolder(5627, 1), // Wind Walk
+		new SkillHolder(5628, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(5633, 1), // Bless the Soul
+		new SkillHolder(5634, 1), // Acumen
+		new SkillHolder(5635, 1), // Concentration
+		new SkillHolder(5636, 1), // Empower
+	};
+	
+	private static SkillHolder[] SERVITOR_SKILLS =
+	{
+		new SkillHolder(5627, 1), // Wind Walk
+		new SkillHolder(5628, 1), // Shield
+		new SkillHolder(5637, 1), // Magic Barrier
+		new SkillHolder(5629, 1), // Bless the Body
+		new SkillHolder(5633, 1), // Bless the Soul
+		new SkillHolder(5630, 1), // Vampiric Rage
+		new SkillHolder(5634, 1), // Acumen
+		new SkillHolder(5631, 1), // Regeneration
+		new SkillHolder(5635, 1), // Concentration
+		new SkillHolder(5632, 1), // Haste
+		new SkillHolder(5636, 1), // Empower
+	};
 	
 	public GiftOfVitality(String name, String descr)
 	{
 		super(name, descr);
-		addStartNpc(JACK);
-		addFirstTalkId(JACK);
-		addTalkId(JACK);
+		addStartNpc(STEVE_SHYAGEL);
+		addFirstTalkId(STEVE_SHYAGEL);
+		addTalkId(STEVE_SHYAGEL);
 	}
+	
+	// Misc
+	private static final int HOURS = 5; // Reuse between buffs
+	private static final int MIN_LEVEL = 75;
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -52,90 +94,76 @@ public class GiftOfVitality extends LongTimeEvent
 		String htmltext = event;
 		QuestState st = player.getQuestState(getName());
 		
-		if (event.equalsIgnoreCase("vitality"))
+		switch (event)
 		{
-			long _reuse = 0;
-			String _streuse = st.get("reuse");
-			if (_streuse != null)
+			case "vitality":
 			{
-				_reuse = Long.parseLong(_streuse);
-			}
-			if (_reuse > System.currentTimeMillis())
-			{
-				long remainingTime = (_reuse - System.currentTimeMillis()) / 1000;
-				int hours = (int) (remainingTime / 3600);
-				int minutes = (int) ((remainingTime % 3600) / 60);
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
-				sm.addSkillName(23179);
-				sm.addNumber(hours);
-				sm.addNumber(minutes);
-				player.sendPacket(sm);
-				htmltext = "4306-notime.htm";
-			}
-			else
-			{
-				npc.setTarget(player);
-				// Gift of Vitality
-				npc.doCast(SkillTable.getInstance().getInfo(23179, 1));
-				st.setState(State.STARTED);
-				st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
-				htmltext = "4306-okvitality.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("memories_player"))
-		{
-			if (player.getLevel() < 76)
-			{
-				htmltext = "4306-nolevel.htm";
-			}
-			else
-			{
-				npc.setTarget(player);
-				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
-				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
-				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier
-				if (player.isMageClass())
+				long _reuse = 0;
+				String _streuse = st.get("reuse");
+				if (_streuse != null)
 				{
-					npc.doCast(SkillTable.getInstance().getInfo(5633, 1)); // Bless the Soul
-					npc.doCast(SkillTable.getInstance().getInfo(5634, 1)); // Acumen
-					npc.doCast(SkillTable.getInstance().getInfo(5635, 1)); // Concentration
-					npc.doCast(SkillTable.getInstance().getInfo(5636, 1)); // Empower
+					_reuse = Long.parseLong(_streuse);
+				}
+				if (_reuse > System.currentTimeMillis())
+				{
+					long remainingTime = (_reuse - System.currentTimeMillis()) / 1000;
+					int hours = (int) (remainingTime / 3600);
+					int minutes = (int) ((remainingTime % 3600) / 60);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AVAILABLE_AFTER_S1_S2_HOURS_S3_MINUTES);
+					sm.addSkillName(23179);
+					sm.addNumber(hours);
+					sm.addNumber(minutes);
+					player.sendPacket(sm);
+					htmltext = "4306-notime.htm";
 				}
 				else
 				{
-					npc.doCast(SkillTable.getInstance().getInfo(5629, 1)); // Bless the Body
-					npc.doCast(SkillTable.getInstance().getInfo(5630, 1)); // Vampiric Rage
-					npc.doCast(SkillTable.getInstance().getInfo(5631, 1)); // Regeneration
-					npc.doCast(SkillTable.getInstance().getInfo(5632, 1)); // Haste
+					player.doCast(GIFT_OF_VITALITY.getSkill());
+					player.doCast(JOY_OF_VITALITY.getSkill());
+					st.setState(State.STARTED);
+					st.set("reuse", String.valueOf(System.currentTimeMillis() + (HOURS * 3600000)));
+					htmltext = "4306-okvitality.htm";
 				}
-				htmltext = "4306-okbuff.htm";
+				break;
 			}
-		}
-		else if (event.equalsIgnoreCase("memories_summon"))
-		{
-			if (player.getLevel() < 76)
+			case "memories_player":
 			{
-				htmltext = "4306-nolevel.htm";
+				if (player.getLevel() <= MIN_LEVEL)
+				{
+					htmltext = "4306-nolevel.htm";
+				}
+				else
+				{
+					final SkillHolder[] skills = (player.isMageClass()) ? MAGE_SKILLS : FIGHTER_SKILLS;
+					npc.setTarget(player);
+					for (SkillHolder sk : skills)
+					{
+						npc.doCast(sk.getSkill());
+					}
+					htmltext = "4306-okbuff.htm";
+				}
+				break;
 			}
-			else if (!player.hasServitor())
+			case "memories_summon":
 			{
-				htmltext = "4306-nosummon.htm";
-			}
-			else
-			{
-				npc.setTarget(player.getSummon());
-				npc.doCast(SkillTable.getInstance().getInfo(5627, 1)); // Wind Walk
-				npc.doCast(SkillTable.getInstance().getInfo(5628, 1)); // Shield
-				npc.doCast(SkillTable.getInstance().getInfo(5637, 1)); // Magic Barrier
-				npc.doCast(SkillTable.getInstance().getInfo(5629, 1)); // Bless the Body
-				npc.doCast(SkillTable.getInstance().getInfo(5633, 1)); // Bless the Soul
-				npc.doCast(SkillTable.getInstance().getInfo(5630, 1)); // Vampiric Rage
-				npc.doCast(SkillTable.getInstance().getInfo(5634, 1)); // Acumen
-				npc.doCast(SkillTable.getInstance().getInfo(5631, 1)); // Regeneration
-				npc.doCast(SkillTable.getInstance().getInfo(5635, 1)); // Concentration
-				npc.doCast(SkillTable.getInstance().getInfo(5632, 1)); // Haste
-				npc.doCast(SkillTable.getInstance().getInfo(5636, 1)); // Empower
-				htmltext = "4306-okbuff.htm";
+				if (player.getLevel() <= MIN_LEVEL)
+				{
+					htmltext = "4306-nolevel.htm";
+				}
+				else if (!player.hasServitor())
+				{
+					htmltext = "4306-nosummon.htm";
+				}
+				else
+				{
+					npc.setTarget(player.getSummon());
+					for (SkillHolder sk : SERVITOR_SKILLS)
+					{
+						npc.doCast(sk.getSkill());
+					}
+					htmltext = "4306-okbuff.htm";
+				}
+				break;
 			}
 		}
 		return htmltext;
