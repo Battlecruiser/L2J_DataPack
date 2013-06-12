@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00273_InvadersOfTheHolyLand;
+package quests.Q00260_OrcHunting;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,34 +31,37 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * Invaders of the Holy Land (273)
+ * Orc Hunting (260)
  * @author xban1x
  */
-public final class Q00273_InvadersOfTheHolyLand extends Quest
+public final class Q00260_OrcHunting extends Quest
 {
 	// NPC
-	private static final int VARKEES = 30566;
+	private static final int RAYEN = 30221;
 	// Items
-	private static final int BLACK_SOULSTONE = 1475;
-	private static final int RED_SOULSTONE = 1476;
+	private static final int ORC_AMULET = 1114;
+	private static final int ORC_NECKLACE = 1115;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
 	static
 	{
-		MONSTERS.put(20311, 90); // Rakeclaw Imp
-		MONSTERS.put(20312, 87); // Rakeclaw Imp Hunter
-		MONSTERS.put(20313, 77); // Rakeclaw Imp Chieftain
+		MONSTERS.put(20468, ORC_AMULET); // Kaboo Orc
+		MONSTERS.put(20469, ORC_AMULET); // Kaboo Orc Archer
+		MONSTERS.put(20470, ORC_AMULET); // Kaboo Orc Grunt
+		MONSTERS.put(20471, ORC_NECKLACE); // Kaboo Orc Fighter
+		MONSTERS.put(20472, ORC_NECKLACE); // Kaboo Orc Fighter Leader
+		MONSTERS.put(20473, ORC_NECKLACE); // Kaboo Orc Fighter Lieutenant
 	}
 	// Misc
 	private static final int MIN_LVL = 6;
 	
-	private Q00273_InvadersOfTheHolyLand(int questId, String name, String descr)
+	private Q00260_OrcHunting(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		addStartNpc(VARKEES);
-		addTalkId(VARKEES);
+		addStartNpc(RAYEN);
+		addTalkId(RAYEN);
 		addKillId(MONSTERS.keySet());
-		registerQuestItems(BLACK_SOULSTONE, RED_SOULSTONE);
+		registerQuestItems(ORC_AMULET, ORC_NECKLACE);
 	}
 	
 	@Override
@@ -70,19 +73,19 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 		{
 			switch (event)
 			{
-				case "30566-04.htm":
+				case "30221-04.html":
 				{
 					st.startQuest();
 					htmltext = event;
 					break;
 				}
-				case "30566-08.html":
+				case "30221-07.html":
 				{
 					st.exitQuest(true, true);
 					htmltext = event;
 					break;
 				}
-				case "30566-09.html":
+				case "30221-08.html":
 				{
 					htmltext = event;
 					break;
@@ -96,16 +99,9 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if (st != null)
+		if ((st != null) && (getRandom(10) > 4))
 		{
-			if (getRandom(100) <= MONSTERS.get(npc.getNpcId()))
-			{
-				st.giveItems(BLACK_SOULSTONE, 1);
-			}
-			else
-			{
-				st.giveItems(RED_SOULSTONE, 1);
-			}
+			st.giveItems(MONSTERS.get(npc.getNpcId()), 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -122,23 +118,23 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == Race.Orc) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
+					htmltext = (player.getRace() == Race.Elf) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
 					break;
 				}
 				case State.STARTED:
 				{
-					if (hasAtLeastOneQuestItem(player, BLACK_SOULSTONE, RED_SOULSTONE))
+					if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 					{
-						final long black = st.getQuestItemsCount(BLACK_SOULSTONE);
-						final long red = st.getQuestItemsCount(RED_SOULSTONE);
-						st.giveAdena((red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
-						takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
+						final long amulets = st.getQuestItemsCount(ORC_AMULET);
+						final long necklaces = st.getQuestItemsCount(ORC_NECKLACE);
+						st.giveAdena(((amulets * 12) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1000 : 0)), true);
+						takeItems(player, -1, getRegisteredItemIds());
 						Q00281_HeadForTheHills.giveNewbieReward(player);
-						htmltext = (red > 0) ? "30566-07.html" : "30566-06.html";
+						htmltext = "30221-06.html";
 					}
 					else
 					{
-						htmltext = "30566-05.html";
+						htmltext = "30221-05.html";
 					}
 					break;
 				}
@@ -149,6 +145,6 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00273_InvadersOfTheHolyLand(273, Q00273_InvadersOfTheHolyLand.class.getSimpleName(), "Invaders of the Holy Land");
+		new Q00260_OrcHunting(260, Q00260_OrcHunting.class.getSimpleName(), "Orc Hunting");
 	}
 }
