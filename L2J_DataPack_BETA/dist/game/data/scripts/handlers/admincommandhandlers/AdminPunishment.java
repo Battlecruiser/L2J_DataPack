@@ -192,7 +192,6 @@ public class AdminPunishment implements IAdminCommandHandler
 					}
 					if (!reason.isEmpty())
 					{
-						reason = reason.substring(0, reason.length() - 1);
 						reason = reason.replaceAll("\\$", "\\\\\\$");
 						reason = reason.replaceAll("\r\n", "<br1>");
 						reason = reason.replace("<", "&lt;");
