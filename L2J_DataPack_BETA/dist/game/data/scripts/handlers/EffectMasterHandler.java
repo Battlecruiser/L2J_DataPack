@@ -42,6 +42,7 @@ public final class EffectMasterHandler
 		Backstab.class,
 		Betray.class,
 		BigHead.class,
+		Blink.class,
 		BlockBuffSlot.class,
 		BlockResurrection.class,
 		Bluff.class,
@@ -161,7 +162,6 @@ public final class EffectMasterHandler
 		Transformation.class,
 		UnsummonAgathion.class,
 		VitalityPointUp.class,
-		Warp.class,
 	};
 	
 	public static void main(String[] args)

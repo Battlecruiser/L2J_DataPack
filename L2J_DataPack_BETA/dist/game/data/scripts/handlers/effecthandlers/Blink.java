@@ -33,7 +33,7 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Warp effect implementation.<br>
+ * Blink effect implementation.<br>
  * This class handles warp effects, disappear and quickly turn up in a near location. If geodata enabled and an object is between initial and final point, flight is stopped just before colliding with object. Flight course and radius are set as skill properties (flyCourse and flyRadius):
  * <ul>
  * <li>Fly Radius means the distance between starting point and final point, it must be an integer.</li>
@@ -45,14 +45,20 @@ import com.l2jserver.gameserver.util.Util;
  * <br>
  * @author House
  */
-public class Warp extends L2Effect
+public class Blink extends L2Effect
 {
 	private L2Character _actor;
 	private int x, y, z;
 	
-	public Warp(Env env, EffectTemplate template)
+	public Blink(Env env, EffectTemplate template)
 	{
 		super(env, template);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return true;
 	}
 	
 	@Override
@@ -71,17 +77,10 @@ public class Warp extends L2Effect
 	public boolean onStart()
 	{
 		_actor = isSelfEffect() ? getEffector() : getEffected();
-		
-		/*
-		 * if (_actor.isMovementDisabled()) This is removed because in retail you can use Warp while movement is disabled. return false;
-		 */
-		
 		int _radius = getSkill().getFlyRadius();
-		
 		double angle = Util.convertHeadingToDegree(_actor.getHeading());
 		double radian = Math.toRadians(angle);
 		double course = Math.toRadians(getSkill().getFlyCourse());
-		
 		int x1 = (int) (Math.cos(Math.PI + radian + course) * _radius);
 		int y1 = (int) (Math.sin(Math.PI + radian + course) * _radius);
 		
@@ -99,14 +98,11 @@ public class Warp extends L2Effect
 		
 		// TODO: check if this AI intention is retail-like. This stops player's previous movement
 		_actor.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		
 		_actor.broadcastPacket(new FlyToLocation(_actor, x, y, z, FlyType.DUMMY));
 		_actor.abortAttack();
 		_actor.abortCast();
-		
 		_actor.setXYZ(x, y, z);
 		_actor.broadcastPacket(new ValidateLocation(_actor));
-		
 		return true;
 	}
 }
