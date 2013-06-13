@@ -1724,9 +1724,9 @@
 		<set name="simultaneousCast" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
+			<effect self="1" name="Blink" noicon="1" val="0" />
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" special="airstun" />
-			<effect self="1" name="Warp" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
