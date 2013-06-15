@@ -967,7 +967,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8194" levels="1" name="Heavy Majestic Plate Armor Set - PvP">
@@ -983,7 +985,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8195" levels="1" name="Light Nightmarish Leather Armor Set - PvP">
@@ -1000,7 +1004,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8196" levels="1" name="Light Majestic Leather Armor Set - PvP">
@@ -1019,7 +1025,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8197" levels="1" name="Nightmare Robe Set - PvP">
@@ -1036,7 +1044,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8198" levels="1" name="Majestic Robe Set - PvP">
@@ -1053,7 +1063,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8199" levels="1" name="Heavy Imperial Crusader Breastplate Set - PvP">
@@ -1070,7 +1082,9 @@
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 </list>

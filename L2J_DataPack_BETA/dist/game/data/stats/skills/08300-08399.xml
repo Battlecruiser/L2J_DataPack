@@ -24,7 +24,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="10" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8302" levels="1" name="Vesper Noble Heavy Armor Set for Adults">
@@ -46,7 +48,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="10" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8303" levels="1" name="Vesper Light Armor Set for Adults">
@@ -63,7 +67,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="25" skillId="5694" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8304" levels="1" name="Vesper Noble Light Armor Set for Adults">
@@ -84,7 +90,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="25" skillId="5694" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8305" levels="1" name="Vesper Robe Set for Adults">
@@ -102,7 +110,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="25" skillId="5691" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8306" levels="1" name="Vesper Noble Robe Set for Adults">
@@ -123,7 +133,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="25" skillId="5691" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8307" levels="1" name="Boing Hammer's Effect of Doubt">

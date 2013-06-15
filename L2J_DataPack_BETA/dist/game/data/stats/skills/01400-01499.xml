@@ -2725,7 +2725,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5448" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5448" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1482" levels="4" name="Weak Constitution" enchantGroup1="1" enchantGroup2="1">
@@ -2765,12 +2767,13 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5449" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5449" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1483" levels="7" name="Thin Skin" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
-		<table name="#lvl"> 1 2 3 4 5 6 7 </table>
 		<table name="#magicLvl"> 46 52 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 33 38 43 46 49 52 54 </table>
 		<table name="#mpInitialConsume"> 9 10 11 12 13 13 14 </table>
@@ -2806,7 +2809,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5450" triggeredLevel="#lvl" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5450" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1484" levels="4" name="Enervation" enchantGroup1="1" enchantGroup2="1">
@@ -2846,7 +2851,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5451" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5451" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1485" levels="3" name="Spite" enchantGroup1="1" enchantGroup2="1">
@@ -2887,7 +2894,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5452" triggeredLevel="#lvl" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5452" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1486" levels="4" name="Mental Impoverish" enchantGroup1="1" enchantGroup2="1">
@@ -2928,7 +2937,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5453" triggeredLevel="#lvl" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5453" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1487" levels="8" name="Restoration" enchantGroup1="1" enchantGroup2="1">
@@ -3036,7 +3047,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5577" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="2" skillId="5577" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1491" levels="1" name="Summoner Ability - Spirit">
@@ -3047,7 +3060,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5578" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="2" skillId="5578" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1492" levels="1" name="Flame Armor">
@@ -3067,7 +3082,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5567">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="10" skillId="5567" />
 				<add order="0x40" stat="fireRes" val="60" />
 			</effect>
 		</for>
@@ -3089,7 +3105,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5568">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="10" skillId="5568" />
 				<add order="0x40" stat="waterRes" val="60" />
 			</effect>
 		</for>
@@ -3111,7 +3128,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5569">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="10" skillId="5569" />
 				<add order="0x40" stat="windRes" val="60" />
 			</effect>
 		</for>
@@ -3177,7 +3195,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5570" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="30" skillId="5570" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1498" levels="1" name="Mutual Response">

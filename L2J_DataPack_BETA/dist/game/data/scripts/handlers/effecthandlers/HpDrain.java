@@ -98,6 +98,7 @@ public class HpDrain extends L2Effect
 			}
 			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			target.reduceCurrentHp(damage, activeChar, getSkill());
+			target.notifyDamageReceivedToEffects(damage, activeChar, getSkill(), mcrit);
 		}
 		return true;
 	}

@@ -1318,7 +1318,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.15" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="300" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="300" chance="20" skillId="5556" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="756" levels="1" name="Protection of Elemental">
@@ -1332,7 +1334,9 @@
 			<add order="0x40" stat="waterRes" val="20" />
 			<add order="0x40" stat="windRes" val="20" />
 			<add order="0x40" stat="earthRes" val="20" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="20" skillId="5556" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="757" levels="1" name="Protection of Alignment">
@@ -1344,7 +1348,9 @@
 		<for>
 			<add order="0x40" stat="holyRes" val="20" />
 			<add order="0x40" stat="darkRes" val="20" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5556" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="20" skillId="5556" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="758" levels="1" name="Fighter's Will">
@@ -1434,7 +1440,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="8" chanceType="ON_ATTACKED_HIT" triggeredId="5561">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="8" skillId="5561" />
 				<add order="0x40" stat="pAtk" val="100" />
 			</effect>
 		</for>
@@ -1584,7 +1591,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" chanceType="ON_ATTACKED_HIT" triggeredId="5565" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="5" skillId="5565" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="768" levels="1" name="Exciting Adventure">
@@ -1996,7 +2005,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5562">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="20" skillId="5562" />
 				<add order="0x40" stat="pDef" val="200" />
 			</effect>
 		</for>
@@ -2055,7 +2065,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5563">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="20" skillId="5563" />
 				<add order="0x40" stat="mDef" val="200" />
 			</effect>
 		</for>
@@ -2109,7 +2120,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" chanceType="ON_ATTACKED_HIT" triggeredId="5564">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="20" skillId="5564" />
 				<mul order="0x30" stat="cAtk" val="1.1" />
 			</effect>
 		</for>
@@ -2230,7 +2242,9 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="5600" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param chance="10" skillId="5600" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="793" levels="1" name="Rush Impact" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6" enchantGroup8="6">

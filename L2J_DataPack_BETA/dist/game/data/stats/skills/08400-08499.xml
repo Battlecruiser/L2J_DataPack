@@ -144,7 +144,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -166,7 +168,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -187,7 +191,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -214,7 +220,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -239,7 +247,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -263,7 +273,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -289,7 +301,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -312,7 +326,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
@@ -337,7 +353,9 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>

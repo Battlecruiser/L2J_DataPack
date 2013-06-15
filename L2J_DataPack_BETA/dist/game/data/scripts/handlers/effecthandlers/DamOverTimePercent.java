@@ -71,6 +71,7 @@ public class DamOverTimePercent extends L2Effect
 			}
 		}
 		getEffected().reduceCurrentHpByDOT(damage, getEffector(), getSkill());
+		getEffected().notifyDamageReceivedToEffects(damage, getEffector(), getSkill(), false);
 		
 		return getSkill().isToggle();
 	}

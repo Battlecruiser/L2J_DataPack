@@ -344,7 +344,9 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5591" triggeredLevel="#triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minDamage="100" chance="30" skillId="5591" skillLevel="#triggeredLevel" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1512" levels="1" name="Soul Vortex" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -506,16 +508,24 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5592" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="20" skillId="5592" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="#ench1Chance" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5592" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="#ench1Chance" skillId="5592" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="#ench2Chance" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5592" triggeredLevel="#ench2Trigger" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="#ench2Chance" skillId="5592" skillLevel="#ench2Trigger" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5592" triggeredLevel="#ench3Trigger" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="20" skillId="5592" skillLevel="#ench3Trigger" />
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="1516" levels="1" name="Soul Strike" enchantGroup1="6" enchantGroup2="6">
@@ -959,10 +969,14 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="54" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="5698" triggeredLevel="#triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="60" chance="60" skillId="5698" skillLevel="#triggeredLevel" />
+			</effect>
 		</for>
 		<enchant1for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="60" activationMinDamage="60" chanceType="ON_ATTACKED_HIT" triggeredId="5698" triggeredLevel="#ench1triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="60" chance="60" skillId="5698" skillLevel="#ench1triggeredLevel" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="1532" levels="1" name="Enlightenment">
@@ -1267,7 +1281,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="80" activationMinDamage="300" chanceType="ON_ATTACKED_HIT" triggeredId="6059">
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="300" chance="80" skillId="6059" />
 				<mul order="0x30" stat="critVuln" val="0.7" />
 			</effect>
 		</for>

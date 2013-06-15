@@ -82,12 +82,14 @@ public class SoulBlow extends L2Effect
 		}
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
-		if (Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
+		boolean crit = Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+		if (crit)
 		{
 			damage *= 2;
 		}
 		
 		target.reduceCurrentHp(damage, activeChar, getSkill());
+		target.notifyDamageReceivedToEffects(damage, activeChar, getSkill(), crit);
 		
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);

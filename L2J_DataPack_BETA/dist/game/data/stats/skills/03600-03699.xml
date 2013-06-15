@@ -169,7 +169,9 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5605" triggeredLevel="#triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="50" chance="10" skillId="5605" skillLevel="#triggeredLevel" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3609" levels="3" name="Apella Light Armor Set">
@@ -188,7 +190,9 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5607" triggeredLevel="#triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="10" skillId="5607" skillLevel="#triggeredLevel" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3610" levels="3" name="Apella Robe Set">
@@ -207,7 +211,9 @@
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="#mpConsumeRate" />
 			<mul order="0x30" stat="DanceMpConsumeRate" val="#mpConsumeRate" />
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5608" triggeredLevel="#triggeredLevel" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="10" skillId="5608" skillLevel="#triggeredLevel" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3611" levels="1" name="Enchant Heavy Armor (Grade D)">
@@ -907,7 +913,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5685" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="5" skillId="5685" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3655" levels="1" name="PvP Weapon - Rapid Fire">
@@ -947,7 +955,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="40" chanceType="ON_ATTACKED_HIT" triggeredId="5689" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="40" chance="10" skillId="5689" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3659" levels="1" name="PvP Armor - Damage Down">
@@ -957,7 +967,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5690" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="20" skillId="5690" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3660" levels="1" name="PvP Armor - Critical Down">
@@ -967,7 +979,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="20" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5691" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="20" skillId="5691" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3661" levels="1" name="PvP Armor - Heal">
@@ -987,7 +1001,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5693" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="10" skillId="5693" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3663" levels="1" name="PvP Armor - Mirage">
@@ -997,7 +1013,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="25" activationMinDamage="50" chanceType="ON_ATTACKED_HIT" triggeredId="5694" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="50" chance="25" skillId="5694" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3664" levels="1" name="Red Talisman - Max. CP">
@@ -1052,7 +1070,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" activationMinDamage="20" chanceType="ON_ATTACKED_HIT" triggeredId="5695" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minLevel="1" maxLevel="100" minDamage="20" chance="2" skillId="5695" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3667" levels="1" name="Yellow Talisman - Damage Transition">

@@ -71,6 +71,7 @@ public class CpDamPercent extends L2Effect
 				if (getEffected() != getEffector())
 				{
 					getEffector().sendDamageMessage(getEffected(), damage, false, false, false);
+					getEffected().notifyDamageReceivedToEffects(damage, getEffector(), getSkill(), false);
 				}
 			}
 			// Check if damage should be reflected

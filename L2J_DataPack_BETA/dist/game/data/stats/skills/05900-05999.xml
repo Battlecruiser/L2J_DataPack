@@ -1265,7 +1265,9 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="poison" effectPower="90" activationChance="90" chanceType="ON_ATTACKED_HIT" triggeredId="5902" />
+			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
+				<param minLevel="1" maxLevel="100" chance="90" skillId="5902" />
+			</effect>
 			<effect name="Mute" noicon="1" val="0" effectPower="90" />
 			<effect name="PhysicalMute" noicon="1" val="0" effectPower="90" />
 		</for>
