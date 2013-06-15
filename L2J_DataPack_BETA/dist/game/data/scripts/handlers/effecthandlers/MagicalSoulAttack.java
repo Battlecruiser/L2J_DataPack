@@ -99,10 +99,12 @@ public class MagicalSoulAttack extends L2Effect
 			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, getSkill()) > Rnd.get(100))
 			{
 				activeChar.reduceCurrentHp(damage, target, getSkill());
+				activeChar.notifyDamageReceivedToEffects(damage, target, getSkill(), mcrit);
 			}
 			else
 			{
 				target.reduceCurrentHp(damage, activeChar, getSkill());
+				target.notifyDamageReceivedToEffects(damage, activeChar, getSkill(), mcrit);
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}

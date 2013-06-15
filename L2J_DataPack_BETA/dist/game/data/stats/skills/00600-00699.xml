@@ -853,14 +853,16 @@
 		</for>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
-		<!-- CT2.5 retail confirmed -->
+		<!-- Confirmed CT2.5 -->
 		<set name="excludedFromCheck" val="true" />
 		<set name="icon" val="icon.skill0110" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5573" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="2" skillId="5573" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="653" levels="1" name="Rogue Ability - Critical Chance">
@@ -893,7 +895,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_ATTACKED_HIT" triggeredId="5576" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="2" skillId="5576" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="656" levels="3" name="Transform Divine Warrior">

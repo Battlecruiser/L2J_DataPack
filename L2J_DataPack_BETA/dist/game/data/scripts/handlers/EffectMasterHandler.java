@@ -160,6 +160,7 @@ public final class EffectMasterHandler
 		ThrowUp.class,
 		TransferDamage.class,
 		Transformation.class,
+		TriggerSkillByDamage.class,
 		UnsummonAgathion.class,
 		VitalityPointUp.class,
 	};

@@ -1068,7 +1068,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="30" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5425" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="30" skillId="5425" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="528" levels="1" name="Shield of Faith" enchantGroup1="5" enchantGroup2="5" enchantGroup3="5">
@@ -1198,7 +1200,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5426" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="5" skillId="5426" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="533" levels="1" name="Counter Rapid Shot">
@@ -1208,7 +1212,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5427" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="5" skillId="5427" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="534" levels="1" name="Counter Dash">
@@ -1218,7 +1224,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5428" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="5" skillId="5428" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="535" levels="1" name="Counter Mind">
@@ -1228,7 +1236,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="5" activationMinDamage="100" chanceType="ON_ATTACKED_HIT" triggeredId="5429" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param minDamage="100" chance="5" skillId="5429" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="536" levels="1" name="Over the Body">

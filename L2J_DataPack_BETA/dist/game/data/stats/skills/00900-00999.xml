@@ -1857,7 +1857,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="10" chanceType="ON_ATTACKED_HIT" triggeredId="6687" />
+			<effect name="TriggerSkillByDamage" val="0">
+				<param chance="10" skillId="6687" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="984" levels="25" name="Shield Strike">
