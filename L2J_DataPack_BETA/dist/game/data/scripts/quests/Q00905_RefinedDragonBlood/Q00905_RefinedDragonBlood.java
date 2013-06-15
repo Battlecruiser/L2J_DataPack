@@ -18,6 +18,9 @@
  */
 package quests.Q00905_RefinedDragonBlood;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -30,7 +33,7 @@ import com.l2jserver.gameserver.util.Util;
  * Refined Dragon Blood (905)
  * @author Zoey76
  */
-public class Q00905_RefinedDragonBlood extends Quest
+public final class Q00905_RefinedDragonBlood extends Quest
 {
 	// NPCs
 	private static final int[] SEPARATED_SOULS =
@@ -44,21 +47,25 @@ public class Q00905_RefinedDragonBlood extends Quest
 		32870,
 		32891
 	};
-	// Monsters
-	private static final int DRAGON_KNIGHT1 = 22844; // Blue
-	private static final int DRAGON_KNIGHT2 = 22845; // Blue
-	private static final int ELITE_DRAGON_KNIGHT = 22846; // Blue
-	private static final int DRAGON_KNIGHT_WARRIOR = 22847; // Red
-	private static final int DRAKE_LEADER = 22848; // Red
-	private static final int DRAKE_SCOUT = 22850; // Red
-	private static final int DRAKE_MAGE = 22851; // Red
-	private static final int DRAGON_GUARD = 22852; // Blue
-	private static final int DRAGON_MAGE = 22853; // Blue
 	// Items
 	private static final int UNREFINED_RED_DRAGON_BLOOD = 21913;
 	private static final int UNREFINED_BLUE_DRAGON_BLOOD = 21914;
 	private static final int REFINED_RED_DRAGON_BLOOD = 21903;
 	private static final int REFINED_BLUE_DRAGON_BLOOD = 21904;
+	// Monsters
+	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
+	static
+	{
+		MONSTERS.put(22844, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Knight
+		MONSTERS.put(22845, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Knight
+		MONSTERS.put(22846, UNREFINED_BLUE_DRAGON_BLOOD); // Elite Dragon Knight
+		MONSTERS.put(22847, UNREFINED_RED_DRAGON_BLOOD); // Dragon Knight Warrior
+		MONSTERS.put(22848, UNREFINED_RED_DRAGON_BLOOD); // Drake Leader
+		MONSTERS.put(22850, UNREFINED_RED_DRAGON_BLOOD); // Drake Scout
+		MONSTERS.put(22851, UNREFINED_RED_DRAGON_BLOOD); // Drake Mage
+		MONSTERS.put(22852, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Guard
+		MONSTERS.put(22853, UNREFINED_BLUE_DRAGON_BLOOD); // Dragon Mage
+	}
 	// Misc
 	private static final int MIN_LEVEL = 83;
 	private static final int DRAGON_BLOOD_COUNT = 10;
@@ -70,7 +77,7 @@ public class Q00905_RefinedDragonBlood extends Quest
 		super(questId, name, descr);
 		addStartNpc(SEPARATED_SOULS);
 		addTalkId(SEPARATED_SOULS);
-		addKillId(DRAGON_KNIGHT1, DRAGON_KNIGHT2, ELITE_DRAGON_KNIGHT, DRAGON_KNIGHT_WARRIOR, DRAKE_LEADER, DRAKE_SCOUT, DRAKE_MAGE, DRAGON_GUARD, DRAGON_GUARD, DRAGON_MAGE);
+		addKillId(MONSTERS.keySet());
 		registerQuestItems(UNREFINED_RED_DRAGON_BLOOD, UNREFINED_BLUE_DRAGON_BLOOD);
 	}
 	
@@ -80,21 +87,19 @@ public class Q00905_RefinedDragonBlood extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if ((npc.getNpcId() < DRAGON_KNIGHT_WARRIOR) || (npc.getNpcId() > DRAKE_MAGE))
+			final int itemId = MONSTERS.get(npc.getNpcId());
+			if (st.getQuestItemsCount(itemId) < DRAGON_BLOOD_COUNT)
 			{
-				st.giveItems(UNREFINED_BLUE_DRAGON_BLOOD, 1);
-			}
-			else
-			{
-				st.giveItems(UNREFINED_RED_DRAGON_BLOOD, 1);
-			}
-			if ((st.getQuestItemsCount(UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (st.getQuestItemsCount(UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
-			{
-				st.setCond(2, true);
-			}
-			else
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				st.giveItems(itemId, 1);
+				
+				if ((st.getQuestItemsCount(UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (st.getQuestItemsCount(UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
+				{
+					st.setCond(2, true);
+				}
+				else
+				{
+					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
 		}
 	}
