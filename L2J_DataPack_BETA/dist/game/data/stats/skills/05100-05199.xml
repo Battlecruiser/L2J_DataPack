@@ -1231,12 +1231,11 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="180000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" noicon="1" val="0" />
+			<effect name="AddHate" noicon="1" val="#power" />
 		</for>
 	</skill>
 	<skill id="5166" levels="10" name="Slow">

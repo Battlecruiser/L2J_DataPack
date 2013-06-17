@@ -117,7 +117,6 @@
 		<table name="#effectPoints"> -1632 -2091 -2386 </table>
 		<table name="#magicLvl"> 43 55 64 </table>
 		<table name="#mpConsume"> 21 28 33 </table>
-		<table name="#power"> -1632 -2091 -2386 </table>
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="80" />
 		<set name="castRange" val="40" />
@@ -132,12 +131,8 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
-		<for>
-			<effect name="AddHate" noicon="1" val="0" /> <!-- FIXME: Remove when effect_point support is done -->
-		</for>
 	</skill>
 	<skill id="504" levels="37" name="Triple Thrust" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
@@ -503,12 +498,11 @@
 		<set name="mpConsume" val="44" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" noicon="1" val="0" />
+			<effect name="AddHate" noicon="1" val="500" />
 		</for>
 	</skill>
 	<skill id="512" levels="10" name="Create Bio Potion">
