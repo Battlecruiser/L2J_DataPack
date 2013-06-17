@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00360_PlunderTheirSupplies' WHERE name='360_PlunderTheirSupplies';
