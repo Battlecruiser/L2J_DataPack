@@ -44,7 +44,7 @@ public class AddHate extends L2Effect
 	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.HATE;
+		return L2EffectType.NONE;
 	}
 	
 	@Override
@@ -61,7 +61,14 @@ public class AddHate extends L2Effect
 			return false;
 		}
 		
-		((L2Attackable) getEffected()).reduceHate(null, (int) getSkill().getPower());
+		if (calc() > 0)
+		{
+			((L2Attackable) getEffected()).addDamageHate(getEffector(), 0, (int) calc());
+		}
+		else if (calc() < 0)
+		{
+			((L2Attackable) getEffected()).reduceHate(getEffector(), (int) -calc());
+		}
 		return true;
 	}
 }

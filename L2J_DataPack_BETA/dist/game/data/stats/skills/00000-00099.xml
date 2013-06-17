@@ -497,12 +497,11 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="AddHate" noicon="1" val="0" />
+			<effect name="AddHate" noicon="1" val="#power" />
 		</for>
 	</skill>
 	<skill id="16" levels="24" name="Mortal Blow">
@@ -1364,7 +1363,6 @@
 		<set name="mpConsume" val="44" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="500" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1374,7 +1372,7 @@
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant1 name="reuseDelay" val="2000" />
 		<for>
-			<effect name="AddHate" noicon="1" val="0" />
+			<effect name="AddHate" noicon="1" val="500" />
 		</for>
 	</skill>
 	<skill id="54" levels="49" name="Force Blaster" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
