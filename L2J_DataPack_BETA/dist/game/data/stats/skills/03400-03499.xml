@@ -112,8 +112,8 @@
 	</skill>
 	<skill id="3409" levels="1" name="Blessed Ring of Resurrection">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -241,6 +241,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
@@ -366,7 +367,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -403,7 +404,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -425,7 +426,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -447,7 +448,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -469,7 +470,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -491,7 +492,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -513,7 +514,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i06" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -534,6 +535,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-669" />
 		<set name="hitTime" val="3000" />
 		<set name="hpConsume" val="800" />
 		<set name="icon" val="icon.etc_talisman_i01" />
@@ -552,7 +554,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -575,7 +577,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="669" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1005,7 +1007,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1027,7 +1029,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1116,7 +1118,7 @@
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1153,7 +1155,7 @@
 	</skill>
 	<skill id="3499" levels="1" name="Transform Dispel">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="10" />
+		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />

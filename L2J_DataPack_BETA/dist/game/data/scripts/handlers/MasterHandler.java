@@ -209,7 +209,6 @@ import handlers.skillhandlers.BallistaBomb;
 import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
-import handlers.skillhandlers.Disablers;
 import handlers.skillhandlers.Dummy;
 import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
@@ -217,7 +216,6 @@ import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Resurrect;
-import handlers.skillhandlers.ShiftTarget;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
@@ -509,7 +507,6 @@ public class MasterHandler
 			Continuous.class,
 			DeluxeKey.class,
 			Detection.class,
-			Disablers.class,
 			Dummy.class,
 			Fishing.class,
 			FishingSkill.class,
@@ -517,7 +514,6 @@ public class MasterHandler
 			GiveReco.class,
 			NornilsPower.class,
 			Resurrect.class,
-			ShiftTarget.class,
 			Sow.class,
 			TakeCastle.class,
 			TakeFort.class,

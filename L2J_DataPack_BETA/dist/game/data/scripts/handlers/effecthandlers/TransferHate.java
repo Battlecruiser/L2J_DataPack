@@ -18,21 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
+import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.util.Util;
 
 /**
- * Target Me effect implementation.
- * @author -Nemesiss-
+ * Transfer Hate effect implementation.
+ * @author Adry_85
  */
-public class TargetMe extends L2Effect
+public class TransferHate extends L2Effect
 {
-	public TargetMe(Env env, EffectTemplate template)
+	public TransferHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -44,39 +44,33 @@ public class TargetMe extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public boolean isInstant()
 	{
-		if (getEffected().isPlayable())
-		{
-			((L2Playable) getEffected()).setLockedTarget(null);
-		}
+		return true;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected().isPlayable())
+		if (Util.checkIfInRange(getSkill().getEffectRange(), getEffector(), getEffected(), true))
 		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
+			for (L2Character obj : getEffector().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
 			{
-				return false;
-			}
-			
-			if (getEffected().getTarget() != getEffector())
-			{
-				L2PcInstance effector = getEffector().getActingPlayer();
-				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(getEffected(), getSkill()))
+				if ((obj == null) || !obj.isL2Attackable() || obj.isDead())
 				{
-					// Target is different
-					getEffected().setTarget(getEffector());
+					continue;
 				}
+				
+				final L2Attackable hater = ((L2Attackable) obj);
+				final int hate = hater.getHating(getEffector());
+				if (hate <= 0)
+				{
+					continue;
+				}
+				
+				hater.reduceHate(getEffector(), -hate);
+				hater.addDamageHate(getEffected(), 0, hate);
 			}
-			((L2Playable) getEffected()).setLockedTarget(getEffector());
-			return true;
-		}
-		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
-		{
 			return true;
 		}
 		return false;

@@ -650,7 +650,9 @@
 		</for>
 	</skill>
 	<skill id="2229" levels="8" name="Treasure Chest Key">
+		<table name="#effectPoints"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -733,6 +735,7 @@
 		<set name="abnormalTime" val="1" />
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.etc_destory_soul_arrow_i00" />
@@ -759,6 +762,7 @@
 	<skill id="2235" levels="1" name="Anteroom Door Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -776,6 +780,7 @@
 	<skill id="2236" levels="1" name="Chapel Door Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -793,6 +798,7 @@
 	<skill id="2237" levels="1" name="Key of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -810,6 +816,7 @@
 	<skill id="2238" levels="1" name="Room of Splendor Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -830,6 +837,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.ect_piece_of_paper_white_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -848,8 +856,8 @@
 	</skill>
 	<skill id="2240" levels="1" name="Hot Spring Nectar">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -864,6 +872,7 @@
 		</cond>
 	</skill>
 	<skill id="2241" levels="1" name="Hot Spring Mineral Water">
+		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -875,6 +884,7 @@
 		</cond>
 	</skill>
 	<skill id="2242" levels="1" name="Hot Spring Fountain Water">
+		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -886,6 +896,7 @@
 		</cond>
 	</skill>
 	<skill id="2243" levels="1" name="Hot Spring Sulfur">
+		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -898,6 +909,7 @@
 	</skill>
 	<skill id="2244" levels="1" name="Herb of Life">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
@@ -914,6 +926,7 @@
 	</skill>
 	<skill id="2245" levels="1" name="Herb of Mana">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
@@ -933,6 +946,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP_HERB" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -960,6 +974,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP_HERB" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1547,8 +1562,8 @@
 	</skill>
 	<skill id="2276" levels="1" name="Dewdrop of Destruction">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1590,6 +1605,7 @@
 	<skill id="2278" levels="3" name="Herb of Life">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 15 25 100 </table>
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1606,6 +1622,7 @@
 	<skill id="2279" levels="3" name="Herb of Mana">
 		<!-- Confirmed CT2.5 -->
 		<table name="#amount"> 11 18 100 </table>
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1625,6 +1642,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1648,6 +1666,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1671,6 +1690,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.etc_attack_sp_herb_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1694,6 +1714,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_magic_sp_herb_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1717,6 +1738,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_critical_herb_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1740,6 +1762,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="BranchSys2.icon.etc_move_herb_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

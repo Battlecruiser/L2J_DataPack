@@ -26,6 +26,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="magicLvl" val="1" />
@@ -45,6 +46,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="SPEED_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="285" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1204" />
 		<set name="magicLvl" val="1" />
@@ -64,6 +66,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MA_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1059" />
 		<set name="magicLvl" val="1" />
@@ -83,6 +86,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="457" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1085" />
 		<set name="magicLvl" val="1" />
@@ -102,6 +106,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="624" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1078" />
 		<set name="magicLvl" val="1" />
@@ -121,6 +126,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="379" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="1" />
@@ -140,6 +146,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HIT_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="532" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1240" />
 		<set name="magicLvl" val="1" />
@@ -159,6 +166,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="magicLvl" val="1" />
@@ -178,6 +186,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="532" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1242" />
 		<set name="magicLvl" val="1" />
@@ -197,6 +206,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BERSERKER" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1062" />
 		<set name="magicLvl" val="1" />
@@ -220,7 +230,6 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 40 43 49 55 60 66 70 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="aggroPoints" val="200" /> <!-- FIXME: value unconfirmed -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -239,7 +248,6 @@
 		<!-- High Five Skill -->
 		<table name="#magicLvl"> 24 32 40 52 60 66 72 79 </table>
 		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
-		<set name="aggroPoints" val="150" /> <!-- FIXME: value unconfirmed -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -269,6 +277,7 @@
 	<skill id="6817" levels="1" name="Arena HP Recovery">
 		<!-- Arena Skill -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="562" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -283,6 +292,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -312,6 +322,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1800" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="30" />
@@ -328,6 +339,7 @@
 	<skill id="6821" levels="1" name="P. Def. Decrease">
 		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
 		<set name="abnormalTime" val="15" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -347,6 +359,7 @@
 	</skill>
 	<skill id="6824" levels="1" name="Piercing Storm">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -354,6 +367,7 @@
 	<skill id="6825" levels="2" name="Bleed">
 		<!-- "For 8 seconds, inflicts bleed and decreases 120 HP every second." -->
 		<set name="abnormalTime" val="10" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -361,6 +375,7 @@
 	</skill>
 	<skill id="6826" levels="1" name="Critical Strike">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -368,6 +383,7 @@
 	<skill id="6827" levels="1" name="Petrify">
 		<!-- "Inflicted with petrification, the body is rigid like stone for 30 seconds." -->
 		<set name="abnormalTime" val="30" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4111" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -376,6 +392,7 @@
 	<skill id="6828" levels="1" name="Dust Storm">
 		<!-- "For 30 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%." -->
 		<set name="abnormalTime" val="30" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1386" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -383,6 +400,7 @@
 	</skill>
 	<skill id="6829" levels="1" name="Vampiric Attack">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1234" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -391,6 +409,7 @@
 	<skill id="6830" levels="1" name="Bleed">
 		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
 		<set name="abnormalTime" val="5" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -398,6 +417,7 @@
 	</skill>
 	<skill id="6831" levels="1" name="Blood Burst">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -410,12 +430,14 @@
 	</skill>
 	<skill id="6833" levels="1" name="Power Strike">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6834" levels="1" name="Range Magic Attack">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -429,6 +451,7 @@
 	<skill id="6836" levels="1" name="Silence">
 		<!-- Magic skills are blocked. -->
 		<set name="abnormalTime" val="20" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -436,6 +459,7 @@
 	</skill>
 	<skill id="6837" levels="1" name="Range Magic Attack">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -448,6 +472,7 @@
 	</skill>
 	<skill id="6839" levels="2" name="Power Attack">
 		<!-- none -->
+		<set name="effectPoint" val="-100" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -455,6 +480,7 @@
 	<skill id="6840" levels="1" name="Paralysis">
 		<!-- Temporarily inflicted with paralysis and cannot move. -->
 		<set name="abnormalTime" val="20" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -476,6 +502,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="affectRange" val="600" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -504,6 +531,7 @@
 		<set name="affectLimit" val="5-15" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -523,6 +551,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -594,6 +623,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3000" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="81" />
@@ -610,6 +640,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -630,6 +661,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -653,6 +685,7 @@
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1069" />
@@ -679,6 +712,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill4047" />
@@ -701,6 +735,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -727,6 +762,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -753,6 +789,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -773,6 +810,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -795,6 +833,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="affectRange" val="600" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1086" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -818,6 +857,7 @@
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="100" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0129" />
@@ -842,6 +882,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0129" />
@@ -892,6 +933,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1300" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -911,6 +953,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -936,6 +979,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -955,6 +999,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1300" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -976,6 +1021,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -996,6 +1042,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1019,6 +1066,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0122" />
@@ -1042,6 +1090,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2500" />
@@ -1064,6 +1113,7 @@
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0129" />
@@ -1084,6 +1134,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1104,6 +1155,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1126,6 +1178,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="80" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill1170" />
@@ -1149,6 +1202,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1171,6 +1225,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1064" />
@@ -1194,6 +1249,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1240,6 +1296,7 @@
 	<skill id="6884" levels="1" name="Morale Boost">
 		<!-- none -->
 		<set name="abnormalTime" val="60" />
+		<set name="effectPoint" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
@@ -1254,6 +1311,7 @@
 		<table name="#rCrit"> 0.1 0.3 0.5 </table>
 		<table name="#Vuln"> 50 80 90 </table>
 		<set name="abnormalTime" val="60" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill6885" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
@@ -1293,6 +1351,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="100" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
@@ -1311,6 +1370,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1353,6 +1413,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -1371,6 +1432,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1389,6 +1451,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -1407,6 +1470,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1425,6 +1489,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -1443,6 +1508,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2200" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -24,12 +26,14 @@
 		</for>
 	</skill>
 	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -47,12 +51,14 @@
 		</for>
 	</skill>
 	<skill id="3202" levels="3" name="Item Skill: Refresh">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -89,6 +95,7 @@
 	</skill>
 	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
 		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#effectPoints"> 379 438 495 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 20 24 28 </table>
 		<table name="#mpInitialConsume"> 5 6 7 </table>
@@ -96,6 +103,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -831,6 +839,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill3260" />
@@ -850,9 +859,9 @@
 	</skill>
 	<skill id="3261" levels="1" name="Forgiveness">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill3260" />
@@ -867,6 +876,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="700" />
 		<set name="hitTime" val="3200" />
 		<set name="icon" val="icon.skill3260" />
@@ -887,6 +897,7 @@
 	<skill id="3263" levels="1" name="Blessed Resurrection">
 		<!-- Allows the use of Blessed Resurrection. -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1005,7 +1016,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1027,7 +1038,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1046,7 +1057,7 @@
 	</skill>
 	<skill id="3273" levels="1" name="Red Talisman of Recovery">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1066,7 +1077,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1088,7 +1099,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1110,7 +1121,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1132,7 +1143,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1154,7 +1165,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1176,7 +1187,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1200,7 +1211,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1222,7 +1233,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1246,7 +1257,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1270,7 +1281,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1292,7 +1303,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1315,7 +1326,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1341,7 +1352,7 @@
 	</skill>
 	<skill id="3286" levels="1" name="Black Talisman - Mending">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1359,7 +1370,7 @@
 	</skill>
 	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1377,7 +1388,7 @@
 	</skill>
 	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1395,7 +1406,7 @@
 	</skill>
 	<skill id="3289" levels="1" name="Black Talisman - Escape">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1413,7 +1424,7 @@
 	</skill>
 	<skill id="3290" levels="1" name="Black Talisman of Rescue">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1431,7 +1442,7 @@
 	</skill>
 	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1449,7 +1460,7 @@
 	</skill>
 	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.etc_talisman_i05" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

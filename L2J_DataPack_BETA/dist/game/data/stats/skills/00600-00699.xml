@@ -197,6 +197,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -228,6 +229,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -256,7 +258,7 @@
 	</skill>
 	<skill id="619" levels="1" name="Transform Dispel">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="10" />
+		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
@@ -329,7 +331,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="AVOID_UP_SPECIAL" />
-		<set name="aggroPoints" val="408" />
+		<set name="effectPoint" val="408" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0622" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -384,7 +386,7 @@
 		<table name="#ench1hpConsume"> 196 193 190 186 183 180 176 173 170 166 163 160 156 153 150 146 143 140 136 133 130 126 123 120 116 113 110 106 103 100 </table>
 		<table name="#ench2reuseDelay"> 1770000 1710000 1710000 1680000 1650000 1620000 1590000 1560000 1530000 1500000 1470000 1410000 1410000 1380000 1350000 1320000 1290000 1260000 1230000 1200000 1170000 1110000 1110000 1080000 1050000 1020000 990000 960000 930000 900000 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="aggroPoints" val="150" />
+		<set name="effectPoint" val="150" />
 		<set name="hitTime" val="1500" />
 		<set name="hpConsume" val="200" />
 		<set name="icon" val="icon.skill0467" />
@@ -437,6 +439,7 @@
 	</skill>
 	<skill id="627" levels="40" name="Soul Shock" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -337 -346 -356 -366 -375 -385 -395 -405 -415 -425 -435 -445 -455 -465 -474 -484 -494 -503 -513 -522 -532 -541 -550 -558 -567 -575 -583 -591 -599 -607 -614 -621 -627 -634 -640 -646 -651 -656 -661 -665 </table>
 		<table name="#magicLvl"> 34 35 36 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 48 49 51 52 54 56 56 58 59 61 63 65 66 68 70 72 72 74 76 78 80 81 83 85 87 88 89 91 92 94 96 97 99 100 102 103 105 106 108 109 </table>
 		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
@@ -450,6 +453,7 @@
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0101" />
@@ -509,7 +513,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1000" />
+		<set name="effectPoint" val="1000" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0629" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -521,6 +525,7 @@
 	<skill id="630" levels="1" name="Rabbit Tornado">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0027" />
@@ -905,6 +910,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -935,6 +941,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -965,6 +972,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -995,6 +1003,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1025,6 +1034,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1055,6 +1065,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1085,6 +1096,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="excludedFromCheck" val="true" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
@@ -1114,6 +1126,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1145,6 +1158,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1176,6 +1190,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1207,6 +1222,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1238,6 +1254,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1269,6 +1286,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1300,6 +1318,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1331,6 +1350,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1362,6 +1382,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1393,6 +1414,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1424,6 +1446,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1455,6 +1478,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1486,6 +1510,7 @@
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="167" />
+		<set name="effectPoint" val="-598" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1733" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
@@ -1505,6 +1530,7 @@
 	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1900" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
@@ -1524,6 +1550,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="733" />
+		<set name="effectPoint" val="-342" />
 		<set name="hitTime" val="1067" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
 		<set name="ignoreShld" val="true" />
@@ -1543,7 +1570,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />
-		<set name="aggroPoints" val="408" />
+		<set name="effectPoint" val="408" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="magicLvl" val="80" />
@@ -1564,7 +1591,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1585,11 +1612,13 @@
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-6752" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="700" />
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -1599,10 +1628,9 @@
 		<set name="mpConsume" val="51" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="6752" />
+		<set name="power" val="80" />
 		<set name="reuseDelay" val="6000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1610,11 +1638,13 @@
 		</for>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-6752" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_etc" />
 		<set name="isDebuff" val="true" />
@@ -1623,10 +1653,9 @@
 		<set name="mpConsume" val="144" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="6752" />
+		<set name="power" val="40" />
 		<set name="reuseDelay" val="40000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1639,6 +1668,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1667,6 +1697,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-171" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
 		<set name="ignoreShld" val="true" />
@@ -1691,7 +1722,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
-		<set name="aggroPoints" val="438" />
+		<set name="effectPoint" val="676" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="magicLvl" val="80" />
@@ -1714,7 +1745,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1740,6 +1771,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
+		<set name="effectPoint" val="-684" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1758,13 +1790,16 @@
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="Stun" val="0" effectPower="50" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="50" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="687" levels="1" name="Divine Rogue Double Shot">
 		<set name="baseCritRate" val="15" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
+		<set name="effectPoint" val="-684" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_transform_s_attack" />
@@ -1786,6 +1821,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1811,6 +1847,7 @@
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-342" />
 		<set name="effectRange" val="400" />
 		<set name="halfKillRate" val="10" />
 		<set name="hitTime" val="1080" />
@@ -1833,8 +1870,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="AVOID_UP" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="676" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill_transform_buff" />
@@ -1857,7 +1894,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1882,6 +1919,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MA_DOWN" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-541" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1902,6 +1940,7 @@
 	</skill>
 	<skill id="693" levels="1" name="Divine Wizard Holy Strike">
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-844" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -1927,6 +1966,7 @@
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-338" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -1951,6 +1991,7 @@
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-676" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -1976,6 +2017,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="castRange" val="750" />
+		<set name="effectPoint" val="-331" />
 		<set name="effectRange" val="1250" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill_transform_debuff" />
@@ -2004,7 +2046,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TRANSFORM_SCRIFICE" />
 		<set name="affectRange" val="300" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill_transform_buff" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2025,8 +2067,8 @@
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
-		<set name="aggroPoints" val="630" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="826" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill_transform_etc" />
@@ -2041,8 +2083,8 @@
 		</for>
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
-		<set name="aggroPoints" val="274" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="661" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill_transform_etc" />

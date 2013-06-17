@@ -5,6 +5,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-1000" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1386" />
@@ -29,6 +30,7 @@
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -49,6 +51,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2200" />
 		<set name="icon" val="icon.skill0129" />
 		<set name="isDebuff" val="true" />
@@ -73,6 +76,7 @@
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="60" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1160" />
@@ -98,6 +102,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
@@ -121,6 +126,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="effectPoint" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1336" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -166,6 +172,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BLOCK_RESURRECTION" />
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="icon" val="icon.skill5919" />
 		<set name="isDebuff" val="true" />
@@ -188,6 +195,7 @@
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BLOCK_TRANSFORM" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="icon" val="icon.skill5919" />
 		<set name="isDebuff" val="true" />
@@ -202,6 +210,7 @@
 	<skill id="6409" levels="1" name="Reptilikon Earthquake">
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="121" />
@@ -221,6 +230,7 @@
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="fanRange" val="0,0,100,60" />
 		<set name="hitTime" val="2000" />
@@ -251,6 +261,7 @@
 	<skill id="6412" levels="1" name="Reptilikon Critical Blow">
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -268,6 +279,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
@@ -287,6 +299,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0100" />
@@ -309,6 +322,7 @@
 	<skill id="6415" levels="1" name="Reptilikon Scratch">
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="121" />
@@ -328,6 +342,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="fanRange" val="0,0,200,90" />
 		<set name="hitTime" val="2000" />
@@ -355,6 +370,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1102" />
@@ -381,6 +397,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1102" />
@@ -403,6 +420,7 @@
 	</skill>
 	<skill id="6419" levels="1" name="Light of Scout">
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="82" />
@@ -417,6 +435,7 @@
 	</skill>
 	<skill id="6420" levels="1" name="Lizard Strike">
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="83" />
@@ -431,6 +450,7 @@
 	</skill>
 	<skill id="6421" levels="1" name="Rage of Soldier">
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="84" />
@@ -445,6 +465,7 @@
 	</skill>
 	<skill id="6422" levels="1" name="Resistance Explosion">
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="84" />
 		<set name="mpConsume" val="121" />
@@ -462,6 +483,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0100" />
@@ -483,6 +505,7 @@
 	<skill id="6424" levels="1" name="Double Shot">
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="84" />
@@ -499,6 +522,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="2" />
@@ -518,6 +542,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="element" val="3" />	<!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -549,6 +574,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
 		<set name="icon" val="icon.skill1201" />
 		<set name="isDebuff" val="true" />
@@ -576,6 +602,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill6429" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -595,6 +622,7 @@
 	<skill id="6430" levels="1" name="Roar Hip Heal">
 		<!-- Energy Plant Skill -->
 		<set name="castRange" val="2000" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="84" />
@@ -609,8 +637,8 @@
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="PA_UP" />
-		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="379" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1068" />
@@ -631,8 +659,8 @@
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
-		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1077" />
@@ -653,8 +681,8 @@
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="HIT_UP" />
-		<set name="aggroPoints" val="989" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="532" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1240" />
@@ -675,8 +703,8 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="315" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="aggroPoints" val="524" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="495" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1086" />
@@ -702,6 +730,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill6435" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -729,6 +758,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill6435" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -755,6 +785,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="icon" val="icon.skill1183" />
@@ -775,6 +806,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
@@ -788,6 +820,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6439" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
@@ -801,6 +834,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6440" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
@@ -814,6 +848,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6441" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
@@ -827,6 +862,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6439" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
@@ -845,6 +881,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6440" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
@@ -864,6 +901,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6441" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
@@ -889,6 +927,7 @@
 	</skill>
 	<skill id="6446" levels="1" name="Presentation - Freya's Message 2">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -897,6 +936,7 @@
 	</skill>
 	<skill id="6447" levels="1" name="Presentation - Freya's Message 3">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -905,6 +945,7 @@
 	</skill>
 	<skill id="6448" levels="1" name="Presentation - Freya's Message 4">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -913,6 +954,7 @@
 	</skill>
 	<skill id="6449" levels="1" name="Presentation - Freya's Message 5">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="7000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -921,6 +963,7 @@
 	</skill>
 	<skill id="6450" levels="1" name="Presentation - Freya Nova">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -929,6 +972,7 @@
 	</skill>
 	<skill id="6451" levels="1" name="Presentation - Freya Move">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="12000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -937,6 +981,7 @@
 	</skill>
 	<skill id="6452" levels="1" name="Presentation - Freya Space Change">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -945,6 +990,7 @@
 	</skill>
 	<skill id="6453" levels="1" name="Presentation - Freya Death">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -953,6 +999,7 @@
 	</skill>
 	<skill id="6454" levels="1" name="Presentation - Freya Frustration">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -961,6 +1008,7 @@
 	</skill>
 	<skill id="6455" levels="1" name="Presentation - Freya Destroy">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -969,6 +1017,7 @@
 	</skill>
 	<skill id="6456" levels="1" name="Presentation - Freya Eternal Blizzard">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -977,6 +1026,7 @@
 	</skill>
 	<skill id="6457" levels="1" name="Presentation - Absorption of Sirr">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -985,6 +1035,7 @@
 	</skill>
 	<skill id="6458" levels="1" name="Presentation - Transform of Sirr">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -993,6 +1044,7 @@
 	</skill>
 	<skill id="6459" levels="1" name="Presentation - Kegor Super Buff">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1001,6 +1053,7 @@
 	</skill>
 	<skill id="6460" levels="1" name="Presentation - Jinia Super Buff">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="10000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1009,6 +1062,7 @@
 	</skill>
 	<skill id="6461" levels="1" name="Presentation - Kegor's Message 1">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1017,6 +1071,7 @@
 	</skill>
 	<skill id="6462" levels="1" name="Presentation - Kegor's Message 1">
 		<!-- Confirmed CT2.5 -->
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="6000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -1026,6 +1081,7 @@
 	<skill id="6463" levels="1" name="Presentation - Transfer Achievement">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1063,6 +1119,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6467" levels="1" name="Jack O'Lantern Card - Confirm Skill">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1070,6 +1127,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6468" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1077,6 +1135,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6469" levels="1" name="Halloween Defeat">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1084,6 +1143,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6470" levels="1" name="1 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1091,6 +1151,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6471" levels="1" name="2 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1098,6 +1159,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6472" levels="1" name="3 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1105,6 +1167,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6473" levels="1" name="4 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1112,6 +1175,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6474" levels="1" name="5 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1119,6 +1183,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6475" levels="1" name="6 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1126,6 +1191,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6476" levels="1" name="7 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1133,6 +1199,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6477" levels="1" name="8 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1140,6 +1207,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6478" levels="1" name="9 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1147,6 +1215,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6479" levels="1" name="10 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1154,6 +1223,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6480" levels="1" name="11 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1161,6 +1231,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6481" levels="1" name="12 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1168,6 +1239,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6482" levels="1" name="13 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1175,6 +1247,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6483" levels="1" name="14 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1182,6 +1255,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6484" levels="1" name="15 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1189,6 +1263,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6485" levels="1" name="16 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1196,6 +1271,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6486" levels="1" name="17 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1203,6 +1279,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6487" levels="1" name="18 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1210,6 +1287,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6488" levels="1" name="19 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1217,6 +1295,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6489" levels="1" name="20 win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1224,6 +1303,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6490" levels="1" name="Jack's game - Gauge">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1231,6 +1311,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6491" levels="1" name="Jack's game - Target">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1238,56 +1319,72 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6492" levels="28" name="NPC holy attack">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6493" levels="28" name="Jack's game - Target">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6494" levels="28" name="NPC holy attack">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6495" levels="28" name="NPC holy attack">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6496" levels="28" name="NPC holy attack">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6497" levels="28" name="NPC holy attack">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6498" levels="28" name="NPC holy shot">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6499" levels="28" name="NPC holy shot">
+		<table name="#effectPoints"> -138 -204 -285 -379 -477 -566 -597 -624 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 -702 -704 -706 -707 -709 </table>
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />

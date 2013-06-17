@@ -397,6 +397,7 @@
 	</skill>
 	<skill id="2321" levels="1" name="Blessed Scroll of Resurrection - Event Use">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -409,6 +410,7 @@
 	<skill id="2322" levels="1" name="Chest Key - For Events Only">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -715,6 +717,7 @@
 	</skill>
 	<skill id="2342" levels="1" name="Ballista Bomb">
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -729,6 +732,7 @@
 	<skill id="2343" levels="1" name="Gate Key of Kamael">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -745,6 +749,7 @@
 	<skill id="2344" levels="1" name="Gate Key of Records">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -761,6 +766,7 @@
 	<skill id="2345" levels="1" name="Gate Key of Observation">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -777,6 +783,7 @@
 	<skill id="2346" levels="1" name="Gate Key of Specula">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -793,6 +800,7 @@
 	<skill id="2347" levels="1" name="Enuma Elish Key">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -809,6 +817,7 @@
 	<skill id="2348" levels="1" name="Prahnah Key">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -825,6 +834,7 @@
 	<skill id="2349" levels="1" name="Gate Key of Arvitaire">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -841,6 +851,7 @@
 	<skill id="2350" levels="1" name="Leopold Key">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -857,6 +868,7 @@
 	<skill id="2351" levels="1" name="Gate Key of Prediction">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -873,6 +885,7 @@
 	<skill id="2352" levels="1" name="Gate Key of Nornil">
 		<set name="afterEffectId" val="1" /> <!-- Hack to keep doors opened -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -899,6 +912,7 @@
 	<skill id="2354" levels="1" name="Gate Key of Darkness">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -916,6 +930,7 @@
 	<skill id="2355" levels="1" name="Gate Key of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -933,6 +948,7 @@
 	<skill id="2356" levels="1" name="Gate Key of Blood">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -952,7 +968,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="EVIL_BLOOD" />
-		<set name="aggroPoints" val="100" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -968,6 +984,7 @@
 	<skill id="2358" levels="1" name="Holy Water">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -979,6 +996,7 @@
 	<skill id="2359" levels="1" name="Magic Bottle">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -989,6 +1007,7 @@
 	</skill>
 	<skill id="2360" levels="1" name="Water Dragon Claw">
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
@@ -1017,6 +1036,7 @@
 	<skill id="2362" levels="1" name="Prison Gate Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1035,6 +1055,7 @@
 	<skill id="2363" levels="1" name="Underground Warehouse Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1096,6 +1117,7 @@
 	<skill id="2366" levels="1" name="Blue Coral Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1114,6 +1136,7 @@
 	<skill id="2367" levels="1" name="Red Coral Key">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1132,6 +1155,7 @@
 	<skill id="2368" levels="1" name="Spirit of the Lake">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1150,6 +1174,7 @@
 	</skill>
 	<skill id="2369" levels="1" name="Water Dragon Scale">
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="500" />
 		<set name="itemConsumeCount" val="1" />
@@ -1171,7 +1196,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1192,7 +1217,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1213,7 +1238,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1234,7 +1259,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1255,7 +1280,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1276,7 +1301,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1297,7 +1322,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1318,7 +1343,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1339,7 +1364,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1612,6 +1637,7 @@
 	<skill id="2393" levels="1" name="Blessed Scroll of Battlefield Resurrection">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1627,6 +1653,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1719,6 +1746,7 @@
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-1046" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.etc_braided_hemp_i00" />

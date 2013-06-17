@@ -8,6 +8,7 @@
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -32,6 +33,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill0100" />
@@ -63,6 +65,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill4035" />
@@ -92,6 +95,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill0096" />
@@ -119,6 +123,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -150,6 +155,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill4035" />
 		<set name="lvlBonusRate" val="2" />
@@ -176,6 +182,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
@@ -203,6 +210,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill0100" />
@@ -233,6 +241,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill4035" />
@@ -261,6 +270,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill0096" />
@@ -285,6 +295,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -305,6 +316,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 83 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -325,6 +337,7 @@
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -348,6 +361,7 @@
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -370,6 +384,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" />
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -389,6 +404,7 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -408,6 +424,7 @@
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -431,6 +448,7 @@
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -453,6 +471,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -469,6 +488,7 @@
 		</for>
 	</skill>
 	<skill id="5319" levels="9" name="NPC(party) -Magic Single Long Range DD - Wind">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -477,6 +497,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5320" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -485,6 +506,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5321" levels="9" name="NPC(party) -Magic Range Close Range DD - Wind">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -493,6 +515,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5322" levels="9" name="NPC(party) -Magic Single Long Range DD - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -501,6 +524,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5323" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -509,6 +533,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5324" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -517,6 +542,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5325" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -525,6 +551,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5326" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -533,6 +560,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5327" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -547,6 +575,7 @@
 		<table name="#power"> 124 128 131 133 135 137 138 138 138 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -570,6 +599,7 @@
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -592,6 +622,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 75 77 79 80 81 82 83 83 83 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -611,6 +642,7 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#mpConsume"> 69 72 73 75 77 77 78 78 79 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -631,6 +663,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 186 192 196 199 202 205 207 207 207 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -658,6 +691,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill4035" />
@@ -683,6 +717,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -700,6 +735,7 @@
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -717,6 +753,7 @@
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -730,6 +767,7 @@
 	</skill>
 	<skill id="5337" levels="9" name="NPC(party) - Physical Range Long Range Attack">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -742,6 +780,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -757,6 +796,7 @@
 		</for>
 	</skill>
 	<skill id="5339" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -768,6 +808,7 @@
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="300" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -784,6 +825,7 @@
 	</skill>
 	<skill id="5341" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -796,6 +838,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -811,6 +854,7 @@
 		</for>
 	</skill>
 	<skill id="5343" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -819,6 +863,7 @@
 	</skill>
 	<skill id="5344" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -827,6 +872,7 @@
 	</skill>
 	<skill id="5345" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -839,6 +885,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -854,6 +901,7 @@
 		</for>
 	</skill>
 	<skill id="5347" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -862,6 +910,7 @@
 	</skill>
 	<skill id="5348" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -870,6 +919,7 @@
 	</skill>
 	<skill id="5349" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -882,6 +932,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -897,6 +948,7 @@
 		</for>
 	</skill>
 	<skill id="5351" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -908,6 +960,7 @@
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
@@ -923,6 +976,7 @@
 	</skill>
 	<skill id="5353" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -931,6 +985,7 @@
 	</skill>
 	<skill id="5354" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="830" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -938,6 +993,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5355" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -949,6 +1005,7 @@
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
@@ -964,6 +1021,7 @@
 	</skill>
 	<skill id="5357" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -976,6 +1034,7 @@
 		<table name="#power"> 12777 17637 18051 18163 18259 18333 18380 18380 18380 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -995,6 +1054,7 @@
 		<table name="#mpConsume"> 151 156 160 164 167 168 169 171 173 </table>
 		<table name="#power"> 34070 47031 48135 48433 48691 48886 49012 49012 49012 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1014,6 +1074,7 @@
 		<table name="#mpConsume"> 76 78 80 82 84 84 85 86 87 </table>
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
@@ -1029,6 +1090,7 @@
 	</skill>
 	<skill id="5361" levels="9" name="NPC(party) - Physical Range Long Range Attack - Dark">
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -1045,6 +1107,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill0100" />
@@ -1076,6 +1139,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill4035" />
@@ -1105,6 +1169,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="830" />
 		<set name="icon" val="icon.skill0096" />
@@ -1133,6 +1198,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1163,6 +1229,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill4035" />
 		<set name="lvlBonusRate" val="2" />
@@ -1189,6 +1256,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1000" />
@@ -1212,6 +1280,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="lvlBonusRate" val="2" />
@@ -1234,6 +1303,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill4035" />
@@ -1258,6 +1328,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4500" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="lvlBonusRate" val="2" />
@@ -1274,6 +1345,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1294,6 +1366,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1308,6 +1381,7 @@
 		</for>
 	</skill>
 	<skill id="5373" levels="9" name="NPC(party) -Magic Single Long Range DD - Fire">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1322,6 +1396,7 @@
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1339,6 +1414,7 @@
 		</for>
 	</skill>
 	<skill id="5375" levels="9" name="NPC(party) -Magic Range Close Range DD - Fire">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1351,6 +1427,7 @@
 		<table name="#magicLvl"> 75 78 81 84 87 90 93 96 99 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1365,6 +1442,7 @@
 		</for>
 	</skill>
 	<skill id="5377" levels="9" name="NPC(party) -Magic Single Long Range DD - Water">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1373,6 +1451,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5378" levels="9" name="NPC(party) -Magic Range Long Range DD - Water">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1381,6 +1460,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5379" levels="9" name="NPC(party) -Magic Range Close Range DD - Water">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1395,6 +1475,7 @@
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -1411,6 +1492,7 @@
 		</for>
 	</skill>
 	<skill id="5381" levels="9" name="NPC(party) -Magic Range Long Range DD - Wind">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1424,6 +1506,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -1445,6 +1528,7 @@
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -1461,6 +1545,7 @@
 		</for>
 	</skill>
 	<skill id="5384" levels="9" name="NPC(party) -Magic Range Long Range DD - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1469,6 +1554,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5385" levels="9" name="NPC(party) -Magic Range Close Range DD - Earth">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1477,6 +1563,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5386" levels="9" name="NPC(party) -Magic Single Long Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1485,6 +1572,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5387" levels="9" name="NPC(party) -Magic Range Long Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1493,6 +1581,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="5388" levels="9" name="NPC(party) -Magic Range Close Range DD - Holy">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1507,6 +1596,7 @@
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="affectRange" val="40" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1529,6 +1619,7 @@
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1551,6 +1642,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 96 99 101 103 104 106 107 107 107 </table>
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="4000" />
@@ -1572,6 +1664,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 160 165 169 171 174 176 178 178 178 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1594,6 +1687,7 @@
 		<table name="#mpInitialConsume"> 14 15 15 15 16 16 16 16 16 </table>
 		<table name="#power"> 240 247 253 256 260 264 267 267 267 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1621,6 +1715,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1653,7 +1748,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_BUFF" />
 		<set name="affectRange" val="900" />
-		<set name="aggroPoints" val="100" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="mpConsume" val="#mpConsume" />
@@ -1681,6 +1776,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="MAGICAL_STANCE" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill0427" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A2" />
@@ -1690,6 +1786,7 @@
 	<skill id="5398" levels="1" name="NPC - Combination Force">
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1712,6 +1809,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="HOT_GROUND" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1230" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />

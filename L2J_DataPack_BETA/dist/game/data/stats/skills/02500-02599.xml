@@ -207,6 +207,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -229,6 +230,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="BranchSys2.icon.etc_vampiric_rage_herb_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="40" />
@@ -280,6 +282,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="BranchSys2.icon.etc_crt_force_herb_i01" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="48" />
@@ -1500,6 +1503,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1518,6 +1522,7 @@
 		</for>
 	</skill>
 	<skill id="2581" levels="1" name="not_used">
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A1" />
@@ -1525,6 +1530,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2582" levels="1" name="not_used">
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A1" />
@@ -1532,6 +1538,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2583" levels="1" name="not_used">
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A1" />
@@ -1612,6 +1619,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="180" />
 		<set name="abnormalType" val="PD_UP_BOW" />
+		<set name="effectPoint" val="40" />
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
@@ -1672,6 +1680,7 @@
 	</skill>
 	<skill id="2596" levels="1" name="Gran Kain's Blessed Scroll of Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

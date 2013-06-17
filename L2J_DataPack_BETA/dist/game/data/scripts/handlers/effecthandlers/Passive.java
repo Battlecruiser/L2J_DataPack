@@ -18,19 +18,19 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Remove Target effect implementation.
- * @author -Nemesiss-
+ * Passive effect implementation.
+ * @author Adry_85
  */
-public class RemoveTarget extends L2Effect
+public class Passive extends L2Effect
 {
-	public RemoveTarget(Env env, EffectTemplate template)
+	public Passive(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
@@ -42,18 +42,26 @@ public class RemoveTarget extends L2Effect
 	}
 	
 	@Override
-	public boolean isInstant()
+	public void onExit()
 	{
-		return true;
+		getEffected().enableAllSkills();
+		getEffected().setIsImmobilized(false);
+		super.onExit();
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		getEffected().setTarget(null);
-		getEffected().abortAttack();
-		getEffected().abortCast();
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
-		return true;
+		if (!getEffected().isL2Attackable())
+		{
+			return false;
+		}
+		
+		L2Attackable target = (L2Attackable) getEffected();
+		target.abortAttack();
+		target.abortCast();
+		target.disableAllSkills();
+		target.setIsImmobilized(true);
+		return super.onStart();
 	}
 }

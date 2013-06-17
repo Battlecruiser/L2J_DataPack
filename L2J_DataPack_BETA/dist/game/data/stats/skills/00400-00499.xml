@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" levels="10" name="Tribunal" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
+		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
 		<table name="#power"> 924 1054 1146 1240 1337 1437 1538 1639 1741 1841 </table>
@@ -18,6 +19,7 @@
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -106,6 +108,7 @@
 	<skill id="401" levels="10" name="Judgment" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<table name="#abnormalLvls"> 1 1 1 1 2 2 2 2 2 3 </table>
 		<table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
+		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
 		<table name="#power"> 1056 1205 1309 1417 1528 1642 1757 1873 1989 2104 </table>
@@ -122,6 +125,7 @@
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -191,14 +195,17 @@
 		</enchant3for>
 	</skill>
 	<skill id="402" levels="10" name="Arrest" enchantGroup1="1" enchantGroup2="1">
+		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
+		<table name="#ench1EffectPoints"> -1338 -1367 -1396 -1426 -1455 -1484 -1513 -1543 -1572 -1601 -1631 -1660 -1689 -1718 -1748 -1777 -1806 -1836 -1865 -1894 -1923 -1953 -1982 -2011 -2041 -2070 -2099 -2128 -2158 -2187 </table>
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0402" />
@@ -213,6 +220,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -221,14 +229,17 @@
 		</for>
 	</skill>
 	<skill id="403" levels="10" name="Shackle" enchantGroup1="1" enchantGroup2="1">
+		<table name="#effectPoints"> -1046 -1098 -1132 -1163 -1193 -1221 -1247 -1270 -1291 -1309 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
+		<table name="#ench1EffectPoints"> -1338 -1367 -1396 -1426 -1455 -1484 -1513 -1543 -1572 -1601 -1631 -1660 -1689 -1718 -1748 -1777 -1806 -1836 -1865 -1894 -1923 -1953 -1982 -2011 -2041 -2070 -2099 -2128 -2158 -2187 </table>
 		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0403" />
@@ -243,6 +254,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -251,8 +263,10 @@
 		</for>
 	</skill>
 	<skill id="404" levels="5" name="Mass Shackling" enchantGroup1="1" enchantGroup2="1">
+		<table name="#effectPoints"> -1098 -1163 -1221 -1270 -1309 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 40 43 46 59 51 </table>
+		<table name="#ench1EffectPoints"> -1396 -1484 -1572 -1660 -1748 -1836 -1923 -2011 -2099 -2187 -2275 -2363 -2450 -2538 -2626 -2714 -2802 -2890 -2977 -3065 -3153 -3241 -3329 -3417 -3505 -3592 -3680 -3768 -3856 -3944 </table>
 		<table name="#ench2Power"> 41 42 42 43 44 44 45 46 46 47 47 48 49 49 50 51 51 52 53 53 54 54 55 56 56 57 58 58 59 60 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -260,6 +274,7 @@
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="100" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0404" />
 		<set name="isDebuff" val="true" />
@@ -273,6 +288,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
@@ -282,7 +298,7 @@
 	</skill>
 	<skill id="405" levels="10" name="Banish Undead" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggro"> 523 549 566 582 597 611 624 635 646 655 </table>
+		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
@@ -292,8 +308,8 @@
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#ench4HolyAttack"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -338,8 +354,8 @@
 	<skill id="406" levels="3" name="Angelic Icon" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#aggroPoints"> 549 611 655 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 133 153 170 </table>
 		<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
@@ -354,7 +370,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="POSSESSION" />
-		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0406" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -422,6 +438,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
+		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 78 84 87 90 93 96 99 102 105 107 </table>
 		<table name="#power"> 229 262 284 308 332 357 382 407 432 457 </table>
@@ -431,6 +448,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="10" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0407" />
 		<set name="isDebuff" val="true" />
@@ -457,6 +475,7 @@
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
+		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 39 42 44 45 47 48 50 51 53 54 </table>
 		<table name="#power"> 825 941 1023 1107 1194 1283 1373 1464 1554 1644 </table>
@@ -466,6 +485,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="10" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0408" />
 		<set name="isDebuff" val="true" />
@@ -495,6 +515,7 @@
 		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
 		<table name="#abnormalLvls"> 1 1 1 2 2 3 3 4 4 5 </table>
 		<table name="#blowRate"> 1.1 1.1 1.1 1.15 1.15 1.2 1.2 1.25 1.25 1.3 </table>
+		<table name="#effectPoints"> -266 -279 -288 -296 -304 -311 -317 -323 -328 -333 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 52 56 58 60 62 64 66 68 70 72 </table>
 		<table name="#power"> 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 </table>
@@ -509,6 +530,7 @@
 		<set name="blowChance" val="25" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="halfKillRate" val="5" />
 		<set name="hitTime" val="1300" />
@@ -555,6 +577,7 @@
 		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#blowRate"> 1.1 1.15 1.2 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#ench1Chance"> 1.2 1.2 1.21 1.21 1.21 1.22 1.22 1.22 1.23 1.23 1.23 1.24 1.24 1.24 1.25 1.25 1.25 1.26 1.26 1.26 1.27 1.27 1.27 1.28 1.28 1.28 1.29 1.29 1.29 1.3 </table>
@@ -564,6 +587,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MIGHT_MORTAL" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0410" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -597,6 +621,7 @@
 	<skill id="411" levels="3" name="Stealth" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#amount"> 0.55 0.7 0.85 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#rEvas"> 12 8 4 </table>
@@ -605,6 +630,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0411" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -629,6 +655,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 1 1 1 1 2 2 2 2 3 </table>
 		<table name="#accCombat"> 6 6 6 6 6 9 9 9 9 12 </table>
+		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 25 27 28 29 30 31 32 33 34 34 </table>
 		<table name="#ench1AbnormalTimes"> 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 </table>
@@ -639,6 +666,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIT_DOWN" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0412" />
@@ -666,6 +694,7 @@
 	</skill>
 	<skill id="413" levels="8" name="Rapid Fire" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#effectPoints"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 28 29 30 31 32 33 34 34 </table>
 		<table name="#pAtk"> 62 67 73 78 83 89 94 100 </table>
@@ -674,6 +703,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0413" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -716,6 +746,7 @@
 	<skill id="414" levels="8" name="Dead Eye" enchantGroup1="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 </table>
 		<table name="#accCombat"> 1 1 2 2 2 3 3 3 </table>
+		<table name="#effectPoints"> 566 582 597 611 624 635 646 655 </table>
 		<table name="#magicLvl"> 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 28 29 30 31 32 33 34 35 </table>
 		<table name="#pAtk"> 124 134 155 155 166 177 188 199 </table>
@@ -723,6 +754,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SNIPE" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0414" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -769,12 +801,14 @@
 	</skill>
 	<skill id="415" levels="3" name="Spirit of Sagittarius">
 		<table name="#abnormalLvls"> 2 4 6 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#PhysicalMpConsumeRate"> 0.9 0.8 0.7 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MP_COST_DOWN" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0415" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -791,12 +825,14 @@
 	</skill>
 	<skill id="416" levels="3" name="Blessing of Sagittarius">
 		<table name="#abnormalLvls"> 2 4 6 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#pReuse"> 0.9 0.85 0.8 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="REUSE_DELAY_DOWN" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0416" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -813,9 +849,11 @@
 	</skill>
 	<skill id="417" levels="5" name="Pain of Sagittarius" enchantGroup1="1">
 		<table name="#amount"> 36 39 41 43 46 </table>
+		<table name="#effectPoints"> 549 582 611 635 655 </table>
 		<table name="#hpConsume"> 318 343 366 387 407 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#ench1amount"> 47 47 47 47 47 47 47 48 48 48 48 48 48 48 48 49 49 49 49 49 49 49 49 49 50 50 50 50 50 50 </table>
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="icon" val="icon.skill0417" />
@@ -874,6 +912,7 @@
 	<skill id="420" levels="3" name="Zealot" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<table name="#cAtk"> 1.33 1.66 2 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#hpConsume"> 159 183 204 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 106 122 136 </table>
@@ -886,6 +925,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="icon" val="icon.skill0420" />
@@ -926,6 +966,7 @@
 	<skill id="421" levels="5" name="Fell Swoop" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
 		<table name="#atkCountMax"> 1 2 3 4 5 </table>
+		<table name="#effectPoints"> 549 582 611 635 655 </table>
 		<table name="#magicLvl"> 58 62 66 70 74 </table>
 		<table name="#mpConsume"> 27 29 31 33 34 </table>
 		<table name="#ench1atkCountMax"> 6 6 6 6 6 6 6 6 6 6 6 6 6 6 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 8 </table>
@@ -933,6 +974,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="POLEARM_ATTACK" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0421" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -990,6 +1032,7 @@
 		</enchant2for>
 	</skill>
 	<skill id="423" levels="3" name="Dark Form">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#firePower"> 10 15 20 </table>
 		<table name="#magicLvl"> 58 66 74 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
@@ -997,6 +1040,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0423" />
@@ -1049,6 +1093,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="POSSESSION" />
+		<set name="effectPoint" val="655" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0425" />
 		<set name="magicLvl" val="74" />
@@ -1076,6 +1121,7 @@
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
 		<!-- Not Used Anymore -->
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0426" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
@@ -1085,6 +1131,7 @@
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
 		<!-- Not Used Anymore -->
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill0427" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
@@ -1337,14 +1384,17 @@
 	</skill>
 	<skill id="437" levels="1" name="Song of Silence" enchantGroup1="5" enchantGroup2="5">
 		<!-- Confirmed CT2.5 -->
+		<table name="#ench1EffectPoints"> -154 -159 -165 -171 -177 -183 -189 -196 -202 -209 -215 -222 -229 -236 -243 </table>
 		<table name="#ench1Power"> 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 </table>
 		<table name="#ench2AbnormalTimes"> 128 136 144 152 160 168 176 184 192 200 208 216 224 232 240 </table>
+		<table name="#ench2EffectPoints"> -250 -257 -264 -271 -279 -286 -293 -301 -308 -315 -323 -330 -338 -345 -352 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
+		<set name="effectPoint" val="-507" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0437" />
 		<set name="isDebuff" val="true" />
@@ -1358,9 +1408,11 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
+		<enchant2 name="effectPoint" val="#ench2EffectPoints" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Mute" val="0" />
@@ -1371,6 +1423,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
+		<set name="effectPoint" val="673" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0438" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1392,6 +1445,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0439" />
 		<set name="magicLvl" val="79" />
@@ -1408,6 +1462,7 @@
 	</skill>
 	<skill id="440" levels="1" name="Braveheart" enchantGroup1="5">
 		<table name="#ench1amount"> 1010 1020 1030 1040 1050 1060 1070 1080 1090 1100 1110 1120 1130 1140 1150 </table>
+		<set name="effectPoint" val="669" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0440" />
 		<set name="magicLvl" val="78" />
@@ -1427,8 +1482,8 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
-		<set name="aggroPoints" val="673" />
 		<set name="chargeConsume" val="3" />
+		<set name="effectPoint" val="673" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0441" />
 		<set name="magicLvl" val="78" />
@@ -1453,6 +1508,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="chargeConsume" val="5" />
+		<set name="effectPoint" val="673" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0442" />
 		<set name="magicLvl" val="79" />
@@ -1477,6 +1533,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="INVINCIBILITY" />
 		<set name="chargeConsume" val="4" />
+		<set name="effectPoint" val="676" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0443" />
 		<set name="magicLvl" val="79" />
@@ -1518,7 +1575,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MIRAGE" />
-		<set name="aggroPoints" val="673" />
+		<set name="effectPoint" val="673" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0445" />
 		<set name="magicLvl" val="79" />
@@ -1537,6 +1594,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="AVOID_SKILL" />
+		<set name="effectPoint" val="337" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill0446" />
 		<set name="magicLvl" val="79" />
@@ -1555,6 +1613,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="COUNTER_SKILL" />
+		<set name="effectPoint" val="337" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill0447" />
 		<set name="magicLvl" val="79" />
@@ -1627,7 +1686,7 @@
 	</skill>
 	<skill id="450" levels="10" name="Banish Seraph" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggro"> 523 549 566 582 597 611 624 635 646 655 </table>
+		<table name="#effectPoints"> -523 -549 -566 -582 -597 -611 -624 -635 -646 -655 </table>
 		<table name="#itemConsumeCount"> 5 6 7 7 8 8 9 9 10 10 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
@@ -1637,8 +1696,8 @@
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#ench4DarkAttack"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
-		<set name="aggroPoints" val="#aggro" />
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1682,6 +1741,7 @@
 	</skill>
 	<skill id="451" levels="2" name="Sonic Move">
 		<table name="#chargeConsume"> 2 3 </table>
+		<table name="#effectPoints"> 582 624 </table>
 		<table name="#magicLvl"> 62 68 </table>
 		<table name="#mpConsume"> 29 32 </table>
 		<table name="#runSpd"> 40 66 </table>
@@ -1689,6 +1749,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
 		<set name="chargeConsume" val="#chargeConsume" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0451" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1711,9 +1772,9 @@
 	</skill>
 	<skill id="452" levels="5" name="Shock Stomp" enchantGroup1="2">
 		<!-- Confirmed CT2.5 -->
-		<table name="#effectPower"> 40 50 60 70 80 </table>
+		<table name="#chance"> 40 50 60 70 80 </table>
 		<table name="#magicLvl"> 55 60 64 68 72 </table>
-		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
+		<table name="#ench1Chance"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
@@ -1721,6 +1782,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill0452" />
 		<set name="isDebuff" val="true" />
@@ -1740,16 +1802,20 @@
 		</cond>
 		<for>
 			<effect name="Stun" val="0" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#effectPower" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="#chance" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Stun" val="0" />
-			<effect name="RemoveTarget" noicon="1" val="0" effectPower="#ench1Power" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="#ench1Chance" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="453" levels="1" name="Escape Shackle">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="597" />
+		<set name="effectPoint" val="597" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0453" />
 		<set name="magicLvl" val="60" />
@@ -1946,6 +2012,7 @@
 		<table name="#magicLvl"> 60 66 </table>
 		<table name="#mpConsume"> 33 37 </table>
 		<set name="chargeConsume" val="#chargeConsume" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0461" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2087,11 +2154,13 @@
 	</skill>
 	<skill id="468" levels="9" name="Fallen Attack">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -52 -54 -57 -64 -67 -70 -79 -83 -86 </table>
 		<table name="#magicLvl"> 3 4 5 8 9 10 13 14 15 </table>
 		<table name="#mpConsume"> 9 9 10 11 12 13 16 16 17 </table>
 		<table name="#power"> 30 32 35 46 51 55 71 78 84 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0468" />
@@ -2116,7 +2185,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0469" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -2289,11 +2358,13 @@
 	</skill>
 	<skill id="476" levels="15" name="Dark Strike">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 16 16 16 17 18 18 20 21 21 23 23 24 25 26 27 </table>
 		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0476" />
@@ -2316,16 +2387,20 @@
 	</skill>
 	<skill id="477" levels="37" name="Dark Smash" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 29 30 31 31 32 33 34 35 36 37 38 39 40 40 41 42 43 44 45 46 47 48 49 49 50 51 52 53 54 54 55 56 57 58 59 59 60 </table>
 		<table name="#power"> 738 784 833 884 937 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
+		<table name="#ench1EffectPoints"> -335 -335 -335 -337 -337 -337 -338 -338 -338 -340 -340 -340 -341 -341 -341 -342 -342 -342 -343 -343 -343 -344 -344 -344 -345 -345 -345 -346 -346 -346 </table>
 		<table name="#ench1Power"> 3875 3902 3928 3955 3981 4007 4034 4060 4086 4113 4139 4166 4192 4218 4245 4271 4298 4324 4350 4377 4403 4429 4456 4482 4509 4535 4561 4588 4614 4640 </table>
 		<table name="#ench2MpConsume"> 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 </table>
+		<table name="#ench4EffectPoints"> -335 -335 -335 -337 -337 -337 -338 -338 -338 -340 -340 -340 -341 -341 -341 -342 -342 -342 -343 -343 -343 -344 -344 -344 -345 -345 -345 -346 -346 -346 </table>
 		<table name="#enchDuel"> 3717 3781 3845 3909 3973 4037 4100 4164 4228 4292 4356 4420 4483 4547 4611 4675 4739 4803 4866 4930 4994 5058 5122 5186 5249 5313 5377 5441 5505 5569 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0477" />
@@ -2339,6 +2414,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -2346,6 +2422,7 @@
 		<enchant3 name="element" val="5" /> <!-- Dark -->
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant4 name="effectPoint" val="#ench4EffectPoints" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#enchDuel" />
 		<cond msgId="113" addName="1">
@@ -2357,11 +2434,13 @@
 	</skill>
 	<skill id="478" levels="15" name="Double Thrust">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -96 -100 -104 -111 -115 -119 -128 -132 -136 -145 -150 -154 -164 -169 -173 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 16 16 16 18 18 19 20 21 21 23 23 24 25 26 27 </table>
 		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0478" />
@@ -2423,15 +2502,15 @@
 	<skill id="482" levels="2" name="Furious Soul">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#aggro"> 235 523 </table>
 		<table name="#cAtk"> 1.25 1.3 </table>
+		<table name="#effectPoints"> 235 523 </table>
 		<table name="#magicLvl"> 24 55 </table>
 		<table name="#mpConsume"> 11 25 </table>
 		<table name="#rCrit"> 0.2 0.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="90" />
 		<set name="abnormalType" val="PA_UP_SPECIAL" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0482" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2451,7 +2530,7 @@
 	<skill id="483" levels="2" name="Sword Shield" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#aggro"> 204 438 </table>
+		<table name="#effectPoints"> 204 438 </table>
 		<table name="#magicLvl"> 36 52 </table>
 		<table name="#mpConsume"> 16 24 </table>
 		<table name="#pDef"> 1600 3200 </table>
@@ -2461,7 +2540,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0483" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2495,6 +2574,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-303" />
 		<set name="effectRange" val="600" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
@@ -2517,6 +2597,7 @@
 	</skill>
 	<skill id="485" levels="7" name="Disarm" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -341 -408 -467 -523 -582 -624 -655 </table>
 		<table name="#magicLvl"> 36 43 49 55 62 68 74 </table>
 		<table name="#mpConsume"> 25 30 35 40 46 51 55 </table>
 		<table name="#ench1Power"> 70 71 72 72 73 74 74 75 76 76 77 78 78 79 80 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
@@ -2526,6 +2607,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0485" />
@@ -2565,12 +2647,14 @@
 	</skill>
 	<skill id="487" levels="15" name="Penetrating Shot">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -192 -199 -207 -222 -230 -238 -255 -264 -272 -290 -299 -308 -327 -337 -346 </table>
 		<table name="#magicLvl"> 18 19 20 22 23 24 26 27 28 30 31 32 34 35 36 </table>
 		<table name="#mpConsume"> 69 70 71 74 78 81 88 91 95 101 101 104 112 116 120 </table>
 		<table name="#power"> 179 194 210 245 264 285 330 354 381 438 469 502 573 611 651 </table>
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3200" />
 		<set name="icon" val="icon.skill0487" />
@@ -2594,6 +2678,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0489" />
@@ -2601,17 +2686,22 @@
 		<set name="mpConsume" val="53" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="SHIFT_TARGET" />
-		<set name="targetType" val="PARTY_MEMBER" />
+		<set name="targetType" val="ONE" /> <!-- FIXME: should be AREA -->
 		<set name="trait" val="DERANGEMENT" />
+		<cond>
+			<target myPartyExceptMe="true" />
+		</cond>
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
 		</cond>
+		<for>
+			<effect name="TransferHate" noicon="1" val="0" effectPower="80" />
+		</for>
 	</skill>
 	<skill id="490" levels="2" name="Fast Shot" enchantGroup1="1" enchantGroup2="1">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 </table>
-		<table name="#aggro"> 303 549 </table>
+		<table name="#effectPoints"> 303 549 </table>
 		<table name="#magicLvl"> 32 55 </table>
 		<table name="#mpConsume"> 14 25 </table>
 		<table name="#pAtkSpd"> 1.08 1.12 </table>
@@ -2621,7 +2711,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_SPEED_UP_BOW" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0490" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2662,9 +2752,11 @@
 	</skill>
 	<skill id="492" levels="25" name="Spread Wing" enchantGroup1="2" enchantGroup2="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
+		<table name="#ench1EffectPoints"> -335 -335 -335 -337 -337 -337 -338 -338 -338 -340 -340 -340 -341 -341 -341 -342 -342 -342 -343 -343 -343 -344 -344 -344 -345 -345 -345 -346 -346 -346 </table>
 		<table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
 		<table name="#ench2MpConsume"> 73 72 71 69 68 67 66 64 63 62 61 59 58 57 56 54 53 52 50 49 48 47 45 44 43 42 40 39 38 37 </table>
 		<table name="#ench2Power"> 2196 2200 2204 2209 2213 2217 2221 2226 2230 2234 2238 2243 2247 2251 2255 2260 2264 2268 2273 2277 2281 2285 2290 2294 2298 2302 2307 2311 2315 2319 </table>
@@ -2673,6 +2765,7 @@
 		<set name="affectRange" val="150" />
 		<!-- <set name="castRange" val="40" /> -->
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<!-- <set name="effectRange" val="400" /> -->
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0492" />
@@ -2685,6 +2778,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="AURA" />
+		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -2697,6 +2791,7 @@
 	<skill id="493" levels="28" name="Storm Assault" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
+		<table name="#effectPoints"> -114 -117 -119 -121 -124 -126 -129 -131 -133 -136 -138 -140 -142 -144 -146 -148 -150 -152 -154 -156 -157 -159 -160 -162 -163 -164 -166 -167 </table>
 		<table name="#effectRange"> 600 600 600 600 600 600 600 600 600 600 700 700 700 700 700 700 700 700 700 700 800 800 800 800 800 800 800 800 </table>
 		<table name="#magicLvl"> 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
@@ -2711,6 +2806,7 @@
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
@@ -2756,6 +2852,7 @@
 	<skill id="494" levels="37" name="Shoulder Charge" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
 		<table name="#castRange"> 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 400 500 500 500 500 500 500 500 500 500 500 600 600 600 600 600 600 600 600 </table>
+		<table name="#effectPoints"> -183 -188 -193 -198 -203 -208 -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#effectRange"> 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 700 700 700 700 700 700 700 700 700 700 800 800 800 800 800 800 800 800 </table>
 		<table name="#magicLvl"> 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 25 26 27 27 28 29 30 30 31 32 33 34 35 35 36 37 38 38 39 40 41 42 43 43 44 45 45 46 47 48 48 49 50 51 51 52 53 </table>
@@ -2769,6 +2866,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="800" />
@@ -2826,6 +2924,7 @@
 		<table name="#abnormalLvls"> 6 6 7 7 7 7 8 8 8 8 </table>
 		<table name="#castRange"> 400 500 500 500 500 500 600 600 600 600 </table>
 		<table name="#dot"> 107 107 123 123 123 123 123 134 134 134 </table>
+		<table name="#effectPoints"> -266 -279 -288 -296 -304 -311 -317 -323 -328 -333 </table>
 		<table name="#effectRange"> 600 700 700 700 700 700 800 800 800 800 </table>
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 65 70 73 75 77 80 83 85 88 90 </table>
@@ -2841,6 +2940,7 @@
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="#effectRange" />
 		<set name="fanRange" val="0,0,300,100" />
 		<set name="flyType" val="CHARGE" />
@@ -2887,6 +2987,7 @@
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -213 -218 -223 -228 -233 -237 -242 -247 -252 -257 -261 -266 -271 -275 -279 -284 -288 -292 -296 -300 -304 -307 -311 -314 -317 -320 -323 -326 -328 -331 -333 </table>
 		<table name="#magicLvl"> 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 42 43 44 46 47 48 50 50 51 52 53 55 56 57 58 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 </table>
@@ -2899,6 +3000,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0496" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -2938,6 +3040,7 @@
 	</skill>
 	<skill id="497" levels="16" name="Crushing Pain" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -425 -431 -438 -444 -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 </table>
 		<table name="#magicLvl"> 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 60 61 61 62 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>
@@ -2949,6 +3052,7 @@
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2200" />
 		<set name="icon" val="icon.skill0497" />
@@ -2991,6 +3095,7 @@
 	</skill>
 	<skill id="498" levels="12" name="Contagion" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -449 -455 -460 -466 -471 -475 -480 -484 -488 -492 -496 -499 </table>
 		<table name="#magicLvl"> 63 64 65 66 67 68 69 70 71 72 73 74 </table>
 		<table name="#mpConsume"> 63 65 66 67 68 69 70 71 72 73 74 75 </table>
 		<table name="#power"> 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>
@@ -3001,6 +3106,7 @@
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0498" />
@@ -3034,14 +3140,14 @@
 	<skill id="499" levels="3" name="Courage">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 </table>
-		<table name="#aggro"> 341 467 582 </table>
+		<table name="#effectPoints"> 341 467 582 </table>
 		<table name="#magicLvl"> 36 49 62 </table>
 		<table name="#mpConsume"> 16 22 29 </table>
 		<table name="#vuln"> 40 60 100 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="RESIST_SPIRITLESS" />
-		<set name="aggroPoints" val="#aggro" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0499" />
 		<set name="magicLvl" val="#magicLvl" />

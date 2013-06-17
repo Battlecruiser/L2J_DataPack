@@ -4,6 +4,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<set name="affectRange" val="350" />
+		<set name="effectPoint" val="-574" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -28,7 +29,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="FORCE_MEDITATION" />
 		<set name="affectRange" val="350" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6301" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -47,7 +48,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PD_UP" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6302" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
@@ -67,6 +68,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -90,6 +92,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -115,6 +118,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
@@ -137,6 +141,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -164,6 +169,7 @@
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -187,6 +193,7 @@
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -210,6 +217,7 @@
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -231,6 +239,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -240,13 +249,14 @@
 		<set name="mpConsume" val="59" />
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="2000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="RemoveTarget" noicon="1" val="0" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6311" levels="1" name="Solina Thrust">
@@ -254,6 +264,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -275,6 +286,7 @@
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -297,8 +309,8 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -322,6 +334,7 @@
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -345,6 +358,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -363,8 +377,8 @@
 	<skill id="6316" levels="1" name="Accomplish of Authority">
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -384,6 +398,7 @@
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -408,7 +423,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -432,7 +447,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill6319" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -455,6 +470,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill6320" />
 		<set name="isDebuff" val="true" />
@@ -483,6 +499,7 @@
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -506,6 +523,7 @@
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -527,6 +545,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -546,6 +565,7 @@
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -567,6 +587,7 @@
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -587,6 +608,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -606,6 +628,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -627,6 +650,7 @@
 		<set name="affectRange" val="270" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -649,6 +673,7 @@
 		<!-- Monastery of Silence Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -668,6 +693,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="83" />
@@ -735,6 +761,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0096" />
@@ -763,6 +790,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0100" />
@@ -787,6 +815,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -805,6 +834,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -823,6 +853,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="83" />
@@ -841,6 +872,7 @@
 		<!-- Sel Mahum Training Grounds Skills -->
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="83" />
@@ -863,6 +895,7 @@
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0096" />
@@ -891,6 +924,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0100" />
@@ -915,6 +949,7 @@
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="magicLvl" val="83" />
@@ -930,6 +965,7 @@
 	</skill>
 	<skill id="6342" levels="1" name="Trap Over Steam">
 		<set name="affectRange" val="400" />
+		<set name="effectPoint" val="-574" />
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="123" />
@@ -951,6 +987,7 @@
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="#icons" />
@@ -978,6 +1015,7 @@
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="#icons" />
@@ -1007,6 +1045,7 @@
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="#icons" />
@@ -1033,6 +1072,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1047,6 +1087,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF2" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1061,6 +1102,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10800" />
 		<set name="abnormalType" val="SOA_BUFF3" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="#icons" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1073,6 +1115,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
@@ -1086,6 +1129,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
@@ -1097,6 +1141,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_A" />
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1108,6 +1153,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DAMAGE_AMPLIFY" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
@@ -1118,6 +1164,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6374" levels="1" name="Notification">
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1126,6 +1173,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6375" levels="1" name="Notification">
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -1138,6 +1186,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MAX_HP_DOWN" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1417" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1150,6 +1199,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1161,6 +1211,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="VIBRATION" />
+		<set name="effectPoint" val="-1000" />
 		<set name="icon" val="icon.skill0347" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1174,6 +1225,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="fanRange" val="0,0,150,120" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="lvlBonusRate" val="2" />
@@ -1191,6 +1243,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-666" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1336" />
@@ -1217,6 +1270,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="castRange" val="700" />
+		<set name="effectPoint" val="-666" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1336" />
@@ -1243,6 +1297,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0096" />
@@ -1267,6 +1322,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="-666" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill1336" />
@@ -1291,6 +1347,7 @@
 		<table name="#power"> 9125 13688 </table>
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
@@ -1310,6 +1367,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="150" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="650" />
 		<set name="fanRange" val="0,0,150,100" />
 		<set name="hitTime" val="1500" />
@@ -1336,6 +1394,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0100" />
@@ -1359,6 +1418,7 @@
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="15" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="2000" />
@@ -1373,12 +1433,12 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="RemoveTarget" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="6388" levels="1" name="Bistakon Jump Blow">
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="121" />
@@ -1396,6 +1456,7 @@
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="700" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="1200" />
 		<set name="icon" val="icon.skill0102" />
 		<set name="isDebuff" val="true" />
@@ -1419,6 +1480,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-1000" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1386" />
@@ -1445,6 +1507,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0100" />
@@ -1471,6 +1534,7 @@
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1104" />
 		<set name="isDebuff" val="true" />
@@ -1494,6 +1558,7 @@
 	<skill id="6393" levels="1" name="Cokrakon Sonic Beam">
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
 		<set name="hitTime" val="1000" />
 		<set name="magicLvl" val="85" />
@@ -1510,6 +1575,7 @@
 	<skill id="6394" levels="1" name="Cokrakon Sonic Bomb">
 		<set name="affectRange" val="300" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="121" />
@@ -1528,6 +1594,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0096" />
@@ -1552,6 +1619,7 @@
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1169" />
@@ -1578,6 +1646,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill0100" />
@@ -1602,6 +1671,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="fanRange" val="0,0,200,0" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1169" />
@@ -1625,6 +1695,7 @@
 	<skill id="6399" levels="1" name="Cokrakon Dreadful Piercing">
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />

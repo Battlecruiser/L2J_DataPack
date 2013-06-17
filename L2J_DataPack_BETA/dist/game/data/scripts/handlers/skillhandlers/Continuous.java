@@ -20,8 +20,6 @@ package handlers.skillhandlers;
 
 import java.util.List;
 
-import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
@@ -38,9 +36,6 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
-/**
- * @version $Revision: 1.1.2.2.2.9 $ $Date: 2005/04/03 15:55:04 $
- */
 public class Continuous implements ISkillHandler
 {
 	private static final L2SkillType[] SKILL_IDS =
@@ -48,7 +43,6 @@ public class Continuous implements ISkillHandler
 		L2SkillType.BUFF,
 		L2SkillType.DEBUFF,
 		L2SkillType.CONT,
-		L2SkillType.AGGDEBUFF,
 		L2SkillType.FUSION
 	};
 	
@@ -160,25 +154,6 @@ public class Continuous implements ISkillHandler
 						if (effects.get(0).canBeStolen() || skill.isHeroSkill() || skill.isStatic())
 						{
 							skill.getEffects(activeChar, target.getSummon(), new Env(shld, ss, sps, bss));
-						}
-					}
-				}
-				
-				if (skill.getSkillType() == L2SkillType.AGGDEBUFF)
-				{
-					if (target.isL2Attackable())
-					{
-						target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeChar, (int) skill.getPower());
-					}
-					else if (target.isPlayable())
-					{
-						if (target.getTarget() == activeChar)
-						{
-							target.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, activeChar);
-						}
-						else
-						{
-							target.setTarget(activeChar);
 						}
 					}
 				}

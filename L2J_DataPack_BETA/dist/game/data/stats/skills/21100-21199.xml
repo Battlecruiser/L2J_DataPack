@@ -48,6 +48,7 @@
 	<skill id="21102" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse Delay 12 hours. -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="BranchSys.icon.br_sexypanda_cap_i00" />
@@ -376,6 +377,7 @@
 	<skill id="21120" levels="1" name="Jack O'Lantern Card">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
 		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -386,6 +388,7 @@
 	<skill id="21121" levels="1" name="Rotten Jack O'Lantern Card">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
 		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -688,6 +691,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="effectPoint" val="486" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1202,6 +1206,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1237,7 +1242,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1495,7 +1500,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1527,7 +1532,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1569,6 +1574,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="effectPoint" val="486" />
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1583,7 +1589,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="VP_KEEP" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_c_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

@@ -155,6 +155,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="effectPoint" val="-92" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -243,9 +244,11 @@
 	<skill id="3022" levels="6" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
 		<table name="#absorbPart"> 0.21 0.23 0.25 0.28 0.31 0.35 </table>
+		<table name="#effectPoints"> -209 -214 -219 -224 -229 -234 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<table name="#power"> 9.26 9.33 9.31 9.19 8.97 8.65 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill0070" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -275,11 +278,13 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 191 191 291 291 291 403 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
@@ -490,9 +495,11 @@
 	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
 		<table name="#absorbPart"> 0.33 0.31 0.3 0.28 0.26 0.24 0.24 </table>
+		<table name="#effectPoints"> -239 -243 -248 -253 -257 -262 -266 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 70 </table>
 		<table name="#power"> 6.85 7.96 9.26 10.8 12.62 14.82 14.82 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -508,11 +515,13 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 168 168 249 249 249 336 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
@@ -532,11 +541,13 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 </table>
 		<table name="#dot"> 317 317 498 498 498 671 </table>
+		<table name="#effectPoints"> -121 -203 -285 -418 -495 -582 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
@@ -663,6 +674,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#magicLvl"> 64 67 </table>
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1020,6 +1032,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1088,6 +1101,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -1111,6 +1125,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1162,6 +1177,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -1185,6 +1201,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="1000" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
@@ -1207,22 +1224,23 @@
 	</skill>
 	<skill id="3080" levels="10" name="Item Skill: Aggression">
 		<table name="#chance"> 2 2 2 3 3 3 4 4 5 5 </table>
+		<table name="#effectPoints"> -438 -467 -495 -523 -549 -574 -597 -617 -635 -659 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_HIT" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMeProbability" noicon="1" val="0">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3081" levels="10" name="Item Skill: Charm">
@@ -1510,6 +1528,7 @@
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
@@ -1530,6 +1549,7 @@
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1549,6 +1569,7 @@
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1568,6 +1589,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -1588,6 +1610,7 @@
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="activationChance" val="#chance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />

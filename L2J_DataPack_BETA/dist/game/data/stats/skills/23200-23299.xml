@@ -123,9 +123,11 @@
 		</cond>
 	</skill>
 	<skill id="23210" levels="85" name="Aura Flare">
+		<table name="#effectPoints"> -74 -77 -81 -85 -89 -93 -97 -101 -106 -110 -115 -120 -125 -130 -135 -140 -146 -151 -157 -163 -169 -175 -181 -188 -194 -201 -208 -214 -221 -228 -236 -243 -250 -258 -265 -273 -280 -288 -296 -303 -311 -319 -327 -335 -343 -350 -358 -366 -374 -381 -389 -396 -404 -411 -419 -426 -433 -440 -446 -453 -459 -466 -472 -478 -483 -489 -494 -499 -504 -508 -513 -517 -520 -524 -527 -530 -533 -536 -538 -541 -543 -545 -547 -549 -551 </table>
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="MA_DOWN" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1231" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -135,6 +137,8 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23211" levels="85" name="Prominence">
+		<table name="#effectPoints"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1230" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -144,7 +148,9 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23212" levels="85" name="Flame Strike">
+		<table name="#effectPoints"> -92 -97 -101 -106 -111 -116 -121 -126 -132 -138 -143 -149 -156 -162 -168 -175 -182 -189 -196 -204 -211 -219 -227 -235 -243 -251 -259 -268 -277 -285 -294 -303 -313 -322 -331 -341 -350 -360 -369 -379 -389 -399 -408 -418 -428 -438 -448 -457 -467 -477 -486 -495 -505 -514 -523 -532 -541 -549 -558 -566 -574 -582 -590 -597 -604 -611 -617 -624 -630 -635 -641 -646 -650 -655 -659 -662 -666 -669 -673 -676 -679 -681 -684 -687 -689 </table>
 		<set name="affectLimit" val="5-12" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1181" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -155,9 +161,11 @@
 	</skill>
 	<skill id="23213" levels="2" name="Berserker Spirit">
 		<table name="#abnormalLvls"> 1 2 </table>
+		<table name="#effectPoints"> 331 486 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BERSERKER" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1062" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -413,7 +421,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
-		<set name="aggroPoints" val="666" />
 		<set name="blockBuffSlot" val="HIT_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -441,7 +448,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
-		<set name="aggroPoints" val="666" />
 		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -502,7 +508,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
-		<set name="aggroPoints" val="655" />
 		<set name="blockBuffSlot" val="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
@@ -626,7 +631,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="COUNTER_CRITICAL" />
-		<set name="aggroPoints" val="679" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="500" />
@@ -646,7 +650,6 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MD_UP_ATTR" />
-		<set name="aggroPoints" val="662" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -668,7 +671,6 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="RESIST_DEBUFF_DISPEL" />
-		<set name="aggroPoints" val="662" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -1184,7 +1186,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1213,7 +1214,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1242,7 +1242,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="MAX_HP_UP;MAX_MP_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1271,7 +1270,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1300,7 +1298,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1329,7 +1326,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="SPEED_UP;AVOID_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1417,7 +1413,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="666" />
 		<set name="blockBuffSlot" val="HIT_UP" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1444,7 +1439,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="666" />
 		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1503,7 +1497,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
 		<set name="affectRange" val="200" />
-		<set name="aggroPoints" val="655" />
 		<set name="blockBuffSlot" val="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->

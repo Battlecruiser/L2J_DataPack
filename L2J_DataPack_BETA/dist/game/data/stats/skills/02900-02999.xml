@@ -5,6 +5,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_C" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -24,6 +25,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PD_UP_SPECIAL" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -43,6 +45,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -64,6 +67,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.freed_soul_core_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
@@ -84,6 +88,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -92,6 +97,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2905" levels="1" name="Growth Accelerator">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -107,6 +113,7 @@
 		</cond>
 	</skill>
 	<skill id="2906" levels="1" name="Incubation Accelerator">
+		<set name="effectPoint" val="100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
@@ -178,6 +185,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2913" levels="1" name="Soul Extraction">
+		<set name="effectPoint" val="-100" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1844,6 +1852,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
