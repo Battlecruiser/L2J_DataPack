@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
 
@@ -34,9 +35,18 @@ import com.l2jserver.gameserver.network.serverpackets.StopRotation;
  */
 public class Bluff extends L2Effect
 {
+	private final int _chance;
+	
 	public Bluff(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.getParameters().getInteger("chance", 100);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
 	}
 	
 	@Override
@@ -48,17 +58,7 @@ public class Bluff extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected() instanceof L2NpcInstance)
-		{
-			return false;
-		}
-		
-		if ((getEffected() instanceof L2Npc) && (((L2Npc) getEffected()).getNpcId() == 35062))
-		{
-			return false;
-		}
-		
-		if (getEffected() instanceof L2SiegeSummonInstance)
+		if ((getEffected() instanceof L2NpcInstance) || ((getEffected().isNpc()) && (((L2Npc) getEffected()).getNpcId() == 35062)) || (getEffected() instanceof L2SiegeSummonInstance))
 		{
 			return false;
 		}

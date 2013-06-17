@@ -900,9 +900,9 @@ public class Zaken extends AbstractNpcAI
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
-			if (skill.getAggroPoints() > 0)
+			if (skill.getEffectPoint() > 0)
 			{
-				((L2Attackable) npc).addDamageHate(caster, 0, (((skill.getAggroPoints() / npc.getMaxHp()) * 10) * 150));
+				((L2Attackable) npc).addDamageHate(caster, 0, (((skill.getEffectPoint() / npc.getMaxHp()) * 10) * 150));
 			}
 			if (getRandom(12) < 1)
 			{

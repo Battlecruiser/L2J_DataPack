@@ -64,6 +64,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Summer Squash Event Skill -->
 		<set name="castRange" val="200" />
+		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="300" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -176,6 +177,7 @@
 	</skill>
 	<skill id="2014" levels="1" name="Scroll Of Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -554,6 +556,7 @@
 	</skill>
 	<skill id="2049" levels="1" name="Blessed Scroll of Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -766,6 +769,7 @@
 	</skill>
 	<skill id="2062" levels="1" name="Blessed Scroll of Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -803,7 +807,9 @@
 		</for>
 	</skill>
 	<skill id="2065" levels="8" name="Box Key">
+		<table name="#effectPoints"> -1 -2 -3 -4 -5 -6 -7 -8 </table>
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -902,8 +908,10 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="70" />
 		<set name="pvp" val="true" />
-		<set name="skillType" val="AGGREDUCE_CHAR" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DeleteHateOfMe" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="2076" levels="1" name="Bless of Eva">
 		<set name="abnormalLvl" val="2" />
@@ -1284,6 +1292,7 @@
 	</skill>
 	<skill id="2096" levels="1" name="Soul Crystal">
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="1200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

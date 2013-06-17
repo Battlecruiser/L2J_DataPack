@@ -719,7 +719,7 @@
 		</for>
 	</skill>
 	<skill id="8237" levels="1" name="Shalin Heal">
-		<set name="aggroPoints" val="743" />
+		<set name="effectPoint" val="743" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1401" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -736,6 +736,7 @@
 	</skill>
 	<skill id="8238" levels="1" name="Shalin Strike">
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-650" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0003" />
@@ -754,6 +755,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SEED_OF_CRITICAL" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill5760" />
 		<set name="magicLvl" val="73" />
@@ -767,6 +769,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="effectPoint" val="-1300" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.weapon_long_spear_i00" />
 		<set name="lvlBonusRate" val="1" />
@@ -783,6 +786,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="effectPoint" val="495" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1077" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -794,6 +798,7 @@
 	</skill>
 	<skill id="8242" levels="1" name="Ice Ball">
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -812,6 +817,7 @@
 	</skill>
 	<skill id="8243" levels="1" name="Chill Strike">
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -832,6 +838,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -867,6 +874,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -888,7 +896,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -907,7 +915,7 @@
 	</skill>
 	<skill id="8248" levels="1" name="Cancel Gatekeeper Transformation">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="10" />
+		<set name="effectPoint" val="10" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -921,6 +929,7 @@
 		</for>
 	</skill>
 	<skill id="8249" levels="1" name="Cancel Critical Hit">
+		<set name="effectPoint" val="10" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
@@ -962,6 +971,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -976,6 +986,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1082,7 +1093,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1104,7 +1115,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1126,7 +1137,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1148,7 +1159,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1170,7 +1181,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1268,6 +1279,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
 		<set name="affectLimit" val="5-15" />
+		<set name="effectPoint" val="-100" />
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skill0092" />
@@ -1285,7 +1297,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
@@ -1306,6 +1318,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="TRANSFORM" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />

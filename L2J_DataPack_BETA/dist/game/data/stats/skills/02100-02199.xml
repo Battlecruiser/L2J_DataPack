@@ -902,6 +902,7 @@
 	<skill id="2170" levels="1" name="Scroll: Cancel Sleep">
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="1000" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -1092,6 +1093,7 @@
 	</skill>
 	<skill id="2179" levels="1" name="Blessed Scroll of Resurrection: Pet">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1162,6 +1164,7 @@
 	<skill id="2188" levels="1" name="Golden Spice">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1175,6 +1178,7 @@
 	<skill id="2189" levels="1" name="Crystal Spice">
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-150" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

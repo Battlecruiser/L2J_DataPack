@@ -76,17 +76,17 @@ public final class L2AttackableAIScript extends Quest
 		
 		L2Attackable attackable = (L2Attackable) npc;
 		
-		int skillAggroPoints = skill.getAggroPoints();
+		int skillEffectPoint = skill.getEffectPoint();
 		
 		if (caster.hasSummon())
 		{
 			if ((targets.length == 1) && Util.contains(targets, caster.getSummon()))
 			{
-				skillAggroPoints = 0;
+				skillEffectPoint = 0;
 			}
 		}
 		
-		if (skillAggroPoints > 0)
+		if (skillEffectPoint > 0)
 		{
 			if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
 			{
@@ -96,7 +96,7 @@ public final class L2AttackableAIScript extends Quest
 					if ((npcTarget == skillTarget) || (npc == skillTarget))
 					{
 						L2Character originalCaster = isSummon ? caster.getSummon() : caster;
-						attackable.addDamageHate(originalCaster, 0, (skillAggroPoints * 150) / (attackable.getLevel() + 7));
+						attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
 					}
 				}
 			}

@@ -214,6 +214,7 @@
 	<skill id="21014" levels="1" name="Scissors">
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="500" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_gawi_i00" />
@@ -228,6 +229,7 @@
 	<skill id="21015" levels="1" name="Rock">
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_bawi_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -241,6 +243,7 @@
 	<skill id="21016" levels="1" name="Paper">
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="BranchSys.icon.br_xmas_bo_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -724,6 +727,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="600" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="BranchSys.icon.br_Uniform_Hat_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1376,6 +1380,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="-2" />
 		<set name="effectRange" val="-2" />
+		<set name="effectPoint" val="1000" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1405,6 +1410,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="DANCE_OF_SHADOW" />
+		<set name="effectPoint" val="666" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="BranchSys.icon.br_invokespirit_stick_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1424,6 +1430,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="RESURRECTION_SPECIAL" />
+		<set name="effectPoint" val="673" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1475,6 +1482,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="600" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="BranchSys.icon.br_comfortspirit_hat_a_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1509,6 +1517,7 @@
 		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="-2" />
 		<set name="effectRange" val="-2" />
+		<set name="effectPoint" val="1000" />
 		<set name="hitTime" val="10000" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

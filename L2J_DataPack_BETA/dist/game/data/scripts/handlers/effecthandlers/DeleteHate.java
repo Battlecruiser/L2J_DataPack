@@ -18,41 +18,54 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
- * Abort Cast effect implementation.
+ * Delete Hate effect implementation.
+ * @author Adry_85
  */
-public class AbortCast extends L2Effect
+public class DeleteHate extends L2Effect
 {
-	public AbortCast(Env env, EffectTemplate template)
+	public DeleteHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		return true;
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.NONE;
+		return L2EffectType.HATE;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffected() == null) || (getEffected() == getEffector()))
+		if (!getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		if (getEffected().isRaid())
-		{
-			return false;
-		}
-		
-		getEffected().breakCast();
+		L2Attackable target = (L2Attackable) getEffected();
+		target.clearAggroList();
+		target.setWalking();
+		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		return true;
 	}
 }

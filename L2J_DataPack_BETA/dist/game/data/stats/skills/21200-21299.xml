@@ -5,6 +5,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="BranchSys.icon.br_spirit_skill_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -270,6 +271,7 @@
 	</skill>
 	<skill id="21221" levels="1" name="Blessed Resurrection">
 		<!-- Can use the ability of Blessed Resurrection. Reuse delay is 12 hours. -->
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="BranchSys2.icon.br_flag_cap_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />

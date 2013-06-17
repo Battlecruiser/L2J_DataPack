@@ -65,6 +65,7 @@
 	</skill>
 	<skill id="23005" levels="1" name="Gold Majo Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -150,6 +151,7 @@
 	</skill>
 	<skill id="23009" levels="1" name="Plaipitak Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -218,6 +220,7 @@
 	</skill>
 	<skill id="23014" levels="1" name="Bamboo Panda Agathion Special Skill - Power of Blessed Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -473,6 +476,7 @@
 	</skill>
 	<skill id="23030" levels="1" name="White Maneki Neko Agathion Special Skill - Blessed Resurrection Ability">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -988,6 +992,7 @@
 	</skill>
 	<skill id="23062" levels="1" name="Button-Eyed Bear Doll Agathion Special Skill - Ability of Blessed Resurrection">
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill_agathion_special" />
@@ -1135,6 +1140,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="7000" />
 		<set name="icon" val="icon.skill1289" />
@@ -1158,6 +1164,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0211" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1170,6 +1177,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0213" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1242,6 +1250,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
+		<set name="effectPoint" val="486" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1259,6 +1268,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BR_EVENT_BUF5" />
+		<set name="effectPoint" val="486" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -1464,6 +1474,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23094" levels="1" name="Jack O'Lantern Card - Confirm Skill">
+		<set name="effectPoint" val="-1" />
 		<set name="icon" val="BranchSys.icon.br_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1472,6 +1483,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23095" levels="1" name="Rotten Jack O'Lantern Card - Confirm Skill">
+		<set name="effectPoint" val="-1" />
 		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1480,6 +1492,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23096" levels="1" name="Halloween Defeat">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1487,6 +1500,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23097" levels="1" name="First Consecutive Win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1494,6 +1508,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23098" levels="1" name="2nd Consecutive Win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -1501,6 +1516,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23099" levels="1" name="Third Consecutive Win">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />

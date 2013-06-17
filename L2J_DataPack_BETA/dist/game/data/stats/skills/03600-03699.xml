@@ -448,6 +448,7 @@
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
@@ -467,6 +468,7 @@
 	</skill>
 	<skill id="3627" levels="1" name="Tapirawa">
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
@@ -486,6 +488,7 @@
 	</skill>
 	<skill id="3628" levels="1" name="Shabonoba">
 		<set name="castRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
@@ -551,6 +554,7 @@
 	<skill id="3630" levels="1" name="Void Burst">
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill3630" />
 		<set name="magicLvl" val="78" />
@@ -567,6 +571,7 @@
 	<skill id="3631" levels="1" name="Void Flow">
 		<set name="affectLimit" val="6-12" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1900" />
 		<set name="icon" val="icon.skill3631" />
@@ -1023,7 +1028,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1046,7 +1051,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="TALISMAN" />
-		<set name="aggroPoints" val="532" />
+		<set name="effectPoint" val="532" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.etc_talisman_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

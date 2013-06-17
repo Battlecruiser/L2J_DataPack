@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6200" levels="1" name="NPC Transform Dispel">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="10" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skilltransform2" />
@@ -24,9 +24,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="520" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="10" />
 		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -54,9 +54,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="460" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="10" />
 		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -84,9 +84,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="215" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="10" />
 		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -114,9 +114,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="aggroPoints" val="10" />
 		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
 		<set name="icon" val="icon.skilltransform3" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -142,6 +142,7 @@
 	<skill id="6205" levels="19" name="Strider Bite">
 		<!-- Confirmed CT2.5 -->
 		<table name="#dot"> 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87 </table>
+		<table name="#effectPoints"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 68 76 82 89 91 94 96 98 100 100 101 102 103 103 104 104 105 105 105 </table>
 		<table name="#power"> 1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
@@ -150,6 +151,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1080" />
 		<set name="isDebuff" val="true" />
@@ -172,6 +174,7 @@
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
 		<!-- Confirmed CT2.5 -->
+		<table name="#effectPoints"> -523 -566 -604 -635 -646 -655 -662 -669 -676 -679 -681 -684 -687 -689 -692 -694 -696 -698 -700 </table>
 		<table name="#magicLvl"> 55 60 65 70 72 74 76 78 80 81 82 83 84 85 86 87 88 89 90 </table>
 		<table name="#mpConsume"> 40 44 48 52 53 55 56 57 58 58 59 59 60 60 60 61 61 61 61 </table>
 		<table name="#mpInitialConsume"> 10 11 12 13 14 14 14 15 15 15 15 15 15 15 15 16 16 16 16 </table>
@@ -180,6 +183,7 @@
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -203,7 +207,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_UP_SPECIAL" />
-		<set name="aggroPoints" val="438" />
+		<set name="effectPoint" val="438" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.action108" />
 		<set name="magicLvl" val="56" />
@@ -411,6 +415,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -432,6 +437,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="-100" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="icon" val="icon.skill1160" />
@@ -479,6 +485,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="86400" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.etc_ashes_white_i00" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
@@ -490,6 +497,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -501,6 +509,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -512,6 +521,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -523,6 +533,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -534,6 +545,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -545,6 +557,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -556,6 +569,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -567,6 +581,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -578,6 +593,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -589,6 +605,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SIGNAL_D" />
+		<set name="effectPoint" val="-1111" />
 		<set name="icon" val="icon.etc_ashes_red_i00" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
@@ -611,6 +628,7 @@
 		</for>
 	</skill>
 	<skill id="6252" levels="1" name="Humidity Attack">
+		<set name="effectPoint" val="-1111" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -621,6 +639,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -632,6 +651,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -643,6 +663,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -654,6 +675,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -665,6 +687,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -676,6 +699,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -687,6 +711,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -698,6 +723,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -709,6 +735,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="604800" />
 		<set name="abnormalType" val="EVENT_TERRITORY" />
+		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill1184" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -718,6 +745,7 @@
 	</skill>
 	<skill id="6262" levels="1" name="EMP Power">
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="76" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
@@ -729,6 +757,7 @@
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="77" />
@@ -741,6 +770,7 @@
 	</skill>
 	<skill id="6264" levels="1" name="Golem Boom">
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -749,6 +779,7 @@
 	</skill>
 	<skill id="6265" levels="1" name="Smoke">
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
@@ -760,6 +791,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="STUN" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
@@ -770,12 +802,14 @@
 		<set name="trait" val="SHOCK" />
 	</skill>
 	<skill id="6267" levels="1" name="Power Attack">
+		<set name="effectPoint" val="-574" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6268" levels="1" name="Power Attack">
+		<set name="effectPoint" val="-273" />
 		<set name="fanRange" val="0,0,300,90" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
@@ -786,6 +820,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
@@ -796,6 +831,7 @@
 		<set name="trait" val="POISON" />
 	</skill>
 	<skill id="6270" levels="1" name="Grima Power Up">
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A1" />
@@ -808,6 +844,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1068" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="84" />
@@ -820,6 +857,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="84" />
@@ -828,6 +866,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="6273" levels="1" name="Underbug Self Blasting">
+		<set name="effectPoint" val="-676" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
@@ -840,6 +879,7 @@
 		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="10000" />
@@ -861,6 +901,7 @@
 		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="7000" />
@@ -882,6 +923,7 @@
 		<!-- Freya Skills -->
 		<set name="affectRange" val="3000" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="10000" />
@@ -896,6 +938,7 @@
 		<!-- Freya Skills -->
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
@@ -909,6 +952,7 @@
 		<set name="affectRange" val="250" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -928,6 +972,7 @@
 		<!-- Freya Skills -->
 		<set name="affectRange" val="450" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -949,6 +994,7 @@
 		<set name="abnormalType" val="DEATH_CLACK" />
 		<set name="castRange" val="1500" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
 		<set name="icon" val="icon.skill6280" />
 		<set name="isDebuff" val="true" />
@@ -986,7 +1032,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="REFLECT_MAGIC_DD" />
-		<set name="aggroPoints" val="204" />
+		<set name="effectPoint" val="204" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
@@ -1004,6 +1050,7 @@
 		<!-- Freya Skills -->
 		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1200" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1023,8 +1070,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1044,7 +1091,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1800" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
@@ -1062,8 +1109,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PD_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="650" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill6286" />
@@ -1105,7 +1152,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_A" />
 		<set name="affectRange" val="1000" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill6288" />
 		<set name="magicLvl" val="85" />
@@ -1126,7 +1173,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SIGNAL_B" />
 		<set name="affectRange" val="1000" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill6289" />
 		<set name="magicLvl" val="85" />
@@ -1146,6 +1193,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="150" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1164,6 +1212,7 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
 		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-574" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3500" />
@@ -1182,6 +1231,7 @@
 		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1207,6 +1257,7 @@
 		<!-- Freya Ice Knight Skills -->
 		<set name="affectRange" val="250" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1229,7 +1280,7 @@
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="PA_UP" />
 		<set name="affectRange" val="500" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="34400" />
 		<set name="icon" val="icon.skill1040" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1250,6 +1301,7 @@
 		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
@@ -1261,6 +1313,7 @@
 		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-574" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1286,6 +1339,7 @@
 		<!-- Freya Ice Knight Skills -->
 		<set name="castRange" val="1100" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1303,9 +1357,9 @@
 	<skill id="6298" levels="1" name="Summon Follower Knight">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Ice Knight Skills -->
-		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
@@ -1317,6 +1371,7 @@
 		<!-- Freya Skills -->
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-689" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="3000" />

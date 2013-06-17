@@ -673,7 +673,7 @@ public class HallOfSuffering extends Quest
 	{
 		if (skill.hasEffectType(L2EffectType.REBALANCE_HP, L2EffectType.HEAL, L2EffectType.HEAL_PERCENT))
 		{
-			int hate = 2 * skill.getAggroPoints();
+			int hate = 2 * skill.getEffectPoint();
 			if (hate < 2)
 			{
 				hate = 1000;

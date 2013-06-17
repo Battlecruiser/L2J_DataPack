@@ -18,9 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectFlag;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -28,14 +25,13 @@ import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Betray effect implementation.
- * @author decad
+ * Skill Turning effect implementation.
  */
-public class Betray extends L2Effect
+public class SkillTurning extends L2Effect
 {
 	private final int _chance;
 	
-	public Betray(Env env, EffectTemplate template)
+	public SkillTurning(Env env, EffectTemplate template)
 	{
 		super(env, template);
 		_chance = template.getParameters().getInteger("chance", 100);
@@ -48,32 +44,20 @@ public class Betray extends L2Effect
 	}
 	
 	@Override
-	public int getEffectFlags()
-	{
-		return EffectFlag.BETRAYED.getMask();
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
-		return L2EffectType.DEBUFF;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		return L2EffectType.NONE;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if (getEffector().isPlayer() && getEffected().isSummon())
+		if ((getEffected() == null) || (getEffected() == getEffector()) || getEffected().isRaid())
 		{
-			L2PcInstance targetOwner = getEffected().getActingPlayer();
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
-			return true;
+			return false;
 		}
-		return false;
+		
+		getEffected().breakCast();
+		return true;
 	}
 }

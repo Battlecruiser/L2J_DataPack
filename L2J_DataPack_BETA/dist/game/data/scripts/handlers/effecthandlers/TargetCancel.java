@@ -18,23 +18,31 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
+import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Target Me effect implementation.
- * @author -Nemesiss-
+ * Target Cancel effect implementation.
+ * @author -Nemesiss-, Adry_85
  */
-public class TargetMe extends L2Effect
+public class TargetCancel extends L2Effect
 {
-	public TargetMe(Env env, EffectTemplate template)
+	private final int _chance;
+	
+	public TargetCancel(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.getParameters().getInteger("chance", 100);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
 	}
 	
 	@Override
@@ -44,41 +52,18 @@ public class TargetMe extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public boolean isInstant()
 	{
-		if (getEffected().isPlayable())
-		{
-			((L2Playable) getEffected()).setLockedTarget(null);
-		}
+		return true;
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if (getEffected().isPlayable())
-		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
-			{
-				return false;
-			}
-			
-			if (getEffected().getTarget() != getEffector())
-			{
-				L2PcInstance effector = getEffector().getActingPlayer();
-				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(getEffected(), getSkill()))
-				{
-					// Target is different
-					getEffected().setTarget(getEffector());
-				}
-			}
-			((L2Playable) getEffected()).setLockedTarget(getEffector());
-			return true;
-		}
-		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
-		{
-			return true;
-		}
-		return false;
+		getEffected().setTarget(null);
+		getEffected().abortAttack();
+		getEffected().abortCast();
+		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
+		return true;
 	}
 }

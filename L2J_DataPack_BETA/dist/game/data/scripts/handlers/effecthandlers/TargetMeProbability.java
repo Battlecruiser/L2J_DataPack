@@ -18,23 +18,32 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
- * Target Me effect implementation.
- * @author -Nemesiss-
+ * Target Me Probability effect implementation.
+ * @author Adry_85
  */
-public class TargetMe extends L2Effect
+public class TargetMeProbability extends L2Effect
 {
-	public TargetMe(Env env, EffectTemplate template)
+	private final int _chance;
+	
+	public TargetMeProbability(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.getParameters().getInteger("chance", 100);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
 	}
 	
 	@Override
@@ -44,12 +53,9 @@ public class TargetMe extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public boolean isInstant()
 	{
-		if (getEffected().isPlayable())
-		{
-			((L2Playable) getEffected()).setLockedTarget(null);
-		}
+		return true;
 	}
 	
 	@Override
@@ -72,7 +78,6 @@ public class TargetMe extends L2Effect
 					getEffected().setTarget(getEffector());
 				}
 			}
-			((L2Playable) getEffected()).setLockedTarget(getEffector());
 			return true;
 		}
 		else if (getEffected().isL2Attackable() && !getEffected().isRaid())

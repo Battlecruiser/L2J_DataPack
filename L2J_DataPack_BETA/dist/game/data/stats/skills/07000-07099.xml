@@ -7,8 +7,8 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7001" levels="1" name="Dispel Buff">
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
@@ -21,8 +21,8 @@
 		</for>
 	</skill>
 	<skill id="7002" levels="1" name="Dispel Debuff">
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
@@ -35,8 +35,8 @@
 	</skill>
 	<skill id="7003" levels="1" name="Dispel All">
 		<!-- Confirmed CT2.5 -->
-		<set name="aggroPoints" val="100" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
 		<set name="effectRange" val="900" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A1" />
@@ -52,7 +52,7 @@
 	</skill>
 	<skill id="7004" levels="2" name="Dispel Petrification">
 		<!-- This skill only has one level, 2. -->
-		<set name="aggroPoints" val="566" />
+		<set name="effectPoint" val="566" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="A1" />
@@ -69,8 +69,8 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
-		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="655" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -93,8 +93,8 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
-		<set name="aggroPoints" val="655" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="655" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -110,6 +110,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="-409" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -259,7 +260,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="aggroPoints" val="1" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill7029" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -387,8 +388,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1077" />
@@ -409,8 +410,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
-		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1242" />
@@ -431,8 +432,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1086" />
@@ -453,8 +454,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
-		<set name="aggroPoints" val="532" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1240" />
@@ -475,8 +476,8 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_HP_UP" />
-		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1045" />
@@ -497,8 +498,8 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAX_MP_UP" />
-		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1048" />
@@ -519,8 +520,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="AVOID_UP" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1087" />
@@ -541,8 +542,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
-		<set name="aggroPoints" val="457" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1085" />
@@ -563,8 +564,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1257" />
@@ -585,8 +586,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
-		<set name="aggroPoints" val="379" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1068" />
@@ -607,8 +608,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
-		<set name="aggroPoints" val="418" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1040" />
@@ -629,8 +630,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1036" />
@@ -651,8 +652,8 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
-		<set name="aggroPoints" val="646" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1268" />
@@ -673,8 +674,8 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1059" />
@@ -695,8 +696,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
-		<set name="aggroPoints" val="285" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1204" />
@@ -717,8 +718,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
-		<set name="aggroPoints" val="495" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1062" />
@@ -747,6 +748,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1388" />
@@ -768,6 +770,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_PD_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1389" />
@@ -788,8 +791,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
-		<set name="aggroPoints" val="635" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1303" />
@@ -811,6 +814,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1397" />
@@ -834,8 +838,8 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="aggroPoints" val="1" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1355" />
@@ -869,8 +873,8 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1356" />
@@ -903,8 +907,8 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1357" />
@@ -936,8 +940,8 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MULTI_BUFF" />
-		<set name="aggroPoints" val="669" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="500" />
 		<set name="icon" val="icon.skill1363" />
@@ -1085,6 +1089,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7075" levels="1" name="Test - Distance DD">
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="4000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="17" />
@@ -1098,6 +1103,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="coolTime" val="720" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="1080" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="70" />
@@ -1139,6 +1145,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
@@ -1149,6 +1156,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="40" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
@@ -1159,6 +1167,7 @@
 	<skill id="7081" levels="1" name="Effect Test - Land Shot">
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="800" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="3200" />
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A1" />
@@ -1168,6 +1177,7 @@
 	</skill>
 	<skill id="7082" levels="1" name="Effect Test - Chain Lightning">
 		<set name="affectLimit" val="5-12" />
+		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="5000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="75" />
@@ -1178,6 +1188,7 @@
 	</skill>
 	<skill id="7083" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="38" />
 		<set name="operateType" val="A1" />
@@ -1186,6 +1197,7 @@
 	</skill>
 	<skill id="7084" levels="1" name="Test - Trap Skill">
 		<set name="affectLimit" val="6-12" />
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="38" />
 		<set name="operateType" val="CA1" />
@@ -1193,6 +1205,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7085" levels="1" name="Self-Destruct Explosion">
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1201,12 +1214,14 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7086" levels="1" name="Last Stand_test">
+		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="7087" levels="1" name="Chain Magic - Dark Explosion_test">
+		<set name="effectPoint" val="-1063" />
 		<set name="hitTime" val="1000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
@@ -1220,9 +1235,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1499" />
@@ -1251,9 +1266,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1500" />
@@ -1282,9 +1297,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="MAX_HP_UP;MAX_MP_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1501" />
@@ -1313,9 +1328,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1502" />
@@ -1344,9 +1359,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1503" />
@@ -1375,9 +1390,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
-		<set name="aggroPoints" val="1" />
 		<set name="blockBuffSlot" val="SPEED_UP;AVOID_UP" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1504" />
@@ -1407,6 +1422,7 @@
 		<set name="abnormalType" val="DWARF_ATTACK_BUFF" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0825" />
@@ -1434,6 +1450,7 @@
 		<set name="abnormalType" val="DWARF_DEFENCE_BUFF" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0828" />
@@ -1456,9 +1473,9 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PRESERVE_ABNORMAL" />
-		<set name="aggroPoints" val="1" />
 		<set name="canBeDispeled" val="false" />
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1323" />

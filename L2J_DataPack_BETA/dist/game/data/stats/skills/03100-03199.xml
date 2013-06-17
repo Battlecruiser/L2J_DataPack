@@ -9,6 +9,7 @@
 		<set name="abnormalType" val="SLEEP" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -31,6 +32,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -53,6 +55,7 @@
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -74,6 +77,7 @@
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -97,6 +101,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -120,6 +125,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -143,6 +149,7 @@
 		<set name="abnormalType" val="SILENCE" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -165,6 +172,7 @@
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_MAGIC_OFFENSIVE" />
+		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill3080" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
@@ -181,27 +189,26 @@
 	<skill id="3108" levels="10" name="Item Skill: Aggression Up">
 		<table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_CRIT" />
+		<set name="effectPoint" val="-1" />
 		<set name="icon" val="icon.skill3080" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMeProbability" noicon="1" val="0">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3109" levels="10" name="Item Skill: Aggression Down">
 		<table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
-		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
+		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 </table>
 		<set name="activationChance" val="#activationChance" />
 		<set name="chanceType" val="ON_CRIT" />
 		<set name="icon" val="icon.skill3080" />
@@ -212,9 +219,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="AGGREDUCE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="AddHate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3110" levels="10" name="Item Skill: Mana Burn">
 		<table name="#activationChance"> 2 2 2 3 3 3 4 4 5 5 </table>
@@ -500,9 +509,11 @@
 	</skill>
 	<skill id="3123" levels="10" name="Item Skill: Heal">
 		<table name="#amount"> 308 337 365 393 421 448 474 498 520 552 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -518,6 +529,7 @@
 		</for>
 	</skill>
 	<skill id="3124" levels="10" name="Item Skill: Blessed Body">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#maxHp"> 30 60 90 120 150 180 210 240 270 300 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -525,6 +537,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -542,12 +555,14 @@
 		</for>
 	</skill>
 	<skill id="3125" levels="10" name="Item Skill: Battle Roar">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -566,6 +581,7 @@
 		</for>
 	</skill>
 	<skill id="3126" levels="10" name="Item Skill: Prayer">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#healEffect"> 1.04 1.04 1.04 1.05 1.05 1.05 1.06 1.06 1.06 1.07 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -573,6 +589,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -591,10 +608,12 @@
 	</skill>
 	<skill id="3127" levels="10" name="Item Skill: Recharge">
 		<table name="#amount"> 41 44 47 50 53 57 59 62 65 69 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill3123" />
@@ -610,6 +629,7 @@
 		</for>
 	</skill>
 	<skill id="3128" levels="10" name="Item Skill: Blessed Soul">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#maxMp"> 20 40 60 80 100 120 140 160 180 200 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -617,6 +637,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -634,6 +655,7 @@
 		</for>
 	</skill>
 	<skill id="3129" levels="10" name="Item Skill: Mana Gain">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#manaCharge"> 25 27 30 31 32 36 37 38 39 41 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -641,6 +663,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -659,9 +682,11 @@
 	</skill>
 	<skill id="3130" levels="10" name="Item Skill: Ritual">
 		<table name="#amount"> 264 289 313 337 361 384 406 427 446 473 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -676,6 +701,7 @@
 		</for>
 	</skill>
 	<skill id="3131" levels="10" name="Item Skill: Cheer">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#maxCp"> 30 60 90 120 150 180 210 240 270 300 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -683,6 +709,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -700,6 +727,7 @@
 		</for>
 	</skill>
 	<skill id="3132" levels="10" name="Item Skill: Might">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -707,6 +735,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -724,6 +753,7 @@
 		</for>
 	</skill>
 	<skill id="3133" levels="10" name="Item Skill: Empower">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mAtk"> 15.9 18.65 21.6 24.9 28.4 32.15 36.05 40.1 44.2 50.95 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -731,6 +761,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -748,12 +779,14 @@
 		</for>
 	</skill>
 	<skill id="3134" levels="10" name="Item Skill: Duel Might">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -772,6 +805,7 @@
 		</for>
 	</skill>
 	<skill id="3135" levels="10" name="Item Skill: Shield">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -779,6 +813,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -796,6 +831,7 @@
 		</for>
 	</skill>
 	<skill id="3136" levels="10" name="Item Skill: Magic Barrier">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mDef"> 37 40 44 48 52 56 61 65 70 77 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -803,6 +839,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -820,6 +857,7 @@
 		</for>
 	</skill>
 	<skill id="3137" levels="10" name="Item Skill: Duel Weakness">
+		<table name="#effectPoints"> -440 -481 -521 -562 -602 -640 -677 -711 -743 -789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -827,6 +865,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="PVP_DMG_DOWN" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill3123" />
@@ -850,6 +889,7 @@
 		</for>
 	</skill>
 	<skill id="3138" levels="10" name="Item Skill: Heal Empower">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#healEffect"> 44 49 53 57 61 64 68 72 75 79 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -857,6 +897,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -874,6 +915,7 @@
 		</for>
 	</skill>
 	<skill id="3139" levels="10" name="Item Skill: Agility">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -881,6 +923,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -899,12 +942,14 @@
 	</skill>
 	<skill id="3140" levels="10" name="Item Skill: Guidance">
 		<table name="#accCombat"> 1 1 1 2 2 2 3 3 3 4 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -922,6 +967,7 @@
 		</for>
 	</skill>
 	<skill id="3141" levels="10" name="Item Skill: Focus">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
@@ -929,6 +975,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -946,6 +993,7 @@
 		</for>
 	</skill>
 	<skill id="3142" levels="10" name="Item Skill: Wild Magic">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mCritRate"> 1 1 1 2 2 2 3 3 3 4 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
@@ -953,6 +1001,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -970,12 +1019,14 @@
 		</for>
 	</skill>
 	<skill id="3143" levels="10" name="Item Skill: Kiss of Eva">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -994,14 +1045,14 @@
 	</skill>
 	<skill id="3144" levels="10" name="Item Skill: Acrobatics">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggroPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
-		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1020,15 +1071,15 @@
 	</skill>
 	<skill id="3145" levels="10" name="Item Skill: Iron Body">
 		<!-- Confirmed CT2.5 -->
-		<table name="#aggroPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#damageZoneVuln"> 10 10 10 20 20 20 30 30 30 40 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
-		<set name="aggroPoints" val="#aggroPoints" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1095,12 +1146,14 @@
 	</skill>
 	<skill id="3148" levels="10" name="Item Skill: Vampiric Rage">
 		<table name="#absorbDam"> 3 3 3 4 4 4 5 5 5 6 </table>
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 789 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1118,33 +1171,33 @@
 		</for>
 	</skill>
 	<skill id="3149" levels="10" name="Item Skill: Aggression">
+		<table name="#effectPoints"> -438 -467 -495 -523 -549 -574 -597 -617 -635 -659 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 21 22 24 25 27 29 30 31 33 35 </table>
-		<table name="#power"> 438 467 495 523 549 574 597 617 635 659 </table>
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill3123" />
-		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="AGGDAMAGE" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMeProbability" noicon="1" val="0">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3150" levels="10" name="Item Skill: Charm">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 38 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 10 11 11 12 13 13 14 15 16 17 </table>
-		<table name="#power"> 219 234 248 262 275 287 299 309 318 330 </table>
+		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 </table>
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="1500" />
@@ -1158,9 +1211,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="180000" />
-		<set name="skillType" val="AGGREDUCE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="AddHate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3151" levels="10" name="Item Skill: Peace">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1178,9 +1233,11 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="80" />
 		<set name="reuseDelay" val="180000" />
-		<set name="skillType" val="AGGREMOVE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="DeleteHate" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="3152" levels="10" name="Item Skill: Trick">
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
@@ -1193,22 +1250,24 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="180000" />
-		<set name="skillType" val="AGGREDUCE_CHAR" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="RemoveTarget" noicon="1" val="0" />
+			<effect name="TargetCancel" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3153" levels="10" name="Item Skill: Vampiric Touch">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 59 63 68 72 77 81 85 89 93 99 </table>
 		<table name="#mpInitialConsume"> 15 16 17 18 20 21 22 23 24 25 </table>
 		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1229,11 +1288,13 @@
 		</for>
 	</skill>
 	<skill id="3154" levels="10" name="Item Skill: Mana Burn">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 49 53 56 60 64 68 71 75 78 83 </table>
 		<table name="#mpInitialConsume"> 13 14 14 15 16 17 18 19 20 21 </table>
 		<table name="#power"> 68 73 79 84 90 96 101 107 112 120 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -1252,10 +1313,12 @@
 		</for>
 	</skill>
 	<skill id="3155" levels="10" name="Item Skill: Unlock">
+		<table name="#effectPoints"> -5 -6 -7 -8 -9 -10 -11 -12 -13 -14 </table>
 		<table name="#itemConsumeCount"> 4 5 6 7 8 10 11 13 15 17 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 21 22 24 25 27 29 30 31 33 35 </table>
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill3123" />
@@ -1292,6 +1355,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="effectPoint" val="659" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1309,12 +1373,14 @@
 	</skill>
 	<skill id="3159" levels="3" name="Item Skill: Stealth">
 		<table name="#amount"> 0.55 0.7 0.85 </table>
+		<table name="#effectPoints"> 549 617 655 </table>
 		<table name="#magicLvl"> 58 67 75 </table>
 		<table name="#mpConsume"> 27 31 34 </table>
 		<table name="#rEvas"> 12 8 4 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1334,11 +1400,13 @@
 		</for>
 	</skill>
 	<skill id="3160" levels="9" name="Item Skill: Resurrection">
+		<table name="#effectPoints"> 440 481 521 562 602 640 677 711 743 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 </table>
 		<table name="#mpConsume"> 42 44 47 51 52 55 58 61 65 </table>
 		<table name="#mpInitialConsume"> 11 11 12 13 13 14 15 16 17 </table>
 		<table name="#power"> 0 20 30 40 50 55 60 65 70 </table>
 		<set name="castRange" val="400" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="6000" />
 		<set name="icon" val="icon.skill3123" />
@@ -1353,6 +1421,7 @@
 		<set name="targetType" val="CORPSE_PLAYER" />
 	</skill>
 	<skill id="3161" levels="3" name="Item Skill: Skill Clarity">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
@@ -1360,6 +1429,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1377,6 +1447,7 @@
 		</for>
 	</skill>
 	<skill id="3162" levels="3" name="Item Skill: Spell Clarity">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
@@ -1384,6 +1455,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1402,12 +1474,14 @@
 	</skill>
 	<skill id="3163" levels="3" name="Item Skill: Music Clarity">
 		<table name="#DanceMpConsumeRate"> 0.96 0.93 0.9 </table>
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1425,6 +1499,7 @@
 		</for>
 	</skill>
 	<skill id="3164" levels="3" name="Item Skill: Clarity">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
@@ -1433,6 +1508,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1452,11 +1528,13 @@
 		</for>
 	</skill>
 	<skill id="3165" levels="10" name="Item Skill: Prominence">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1477,11 +1555,13 @@
 		</for>
 	</skill>
 	<skill id="3167" levels="10" name="Item Skill: Hydro Blast">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 78 92 78 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1502,11 +1582,13 @@
 		</for>
 	</skill>
 	<skill id="3168" levels="10" name="Item Skill: Hurricane">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -1527,11 +1609,13 @@
 		</for>
 	</skill>
 	<skill id="3169" levels="10" name="Item Skill: Stone">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -1552,11 +1636,13 @@
 		</for>
 	</skill>
 	<skill id="3170" levels="10" name="Item Skill: Solar Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -1577,11 +1663,13 @@
 		</for>
 	</skill>
 	<skill id="3171" levels="10" name="Item Skill: Shadow Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1602,11 +1690,13 @@
 		</for>
 	</skill>
 	<skill id="3172" levels="10" name="Item Skill: Aura Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 61 66 72 77 82 87 92 97 102 110 </table>
 		<set name="castRange" val="900" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -1625,6 +1715,7 @@
 		</for>
 	</skill>
 	<skill id="3173" levels="10" name="Item Skill: Prominence">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1632,6 +1723,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1652,6 +1744,7 @@
 		</for>
 	</skill>
 	<skill id="3174" levels="10" name="Item Skill: Hydro Blast">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1659,6 +1752,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -1679,6 +1773,7 @@
 		</for>
 	</skill>
 	<skill id="3175" levels="10" name="Item Skill: Hurricane">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1686,6 +1781,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -1706,6 +1802,7 @@
 		</for>
 	</skill>
 	<skill id="3176" levels="10" name="Item Skill: Stone">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1713,6 +1810,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -1733,6 +1831,7 @@
 		</for>
 	</skill>
 	<skill id="3177" levels="10" name="Item Skill: Solar Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1740,6 +1839,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
@@ -1760,6 +1860,7 @@
 		</for>
 	</skill>
 	<skill id="3178" levels="10" name="Item Skill: Shadow Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1767,6 +1868,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -1787,6 +1889,7 @@
 		</for>
 	</skill>
 	<skill id="3179" levels="10" name="Item Skill: Aura Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1794,6 +1897,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1000" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill3123" />
@@ -1812,12 +1916,14 @@
 		</for>
 	</skill>
 	<skill id="3180" levels="10" name="Item Skill: Prominence">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1837,12 +1943,14 @@
 		</for>
 	</skill>
 	<skill id="3181" levels="10" name="Item Skill: Hydro Blast">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1862,12 +1970,14 @@
 		</for>
 	</skill>
 	<skill id="3182" levels="10" name="Item Skill: Hurricane">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1887,12 +1997,14 @@
 		</for>
 	</skill>
 	<skill id="3183" levels="10" name="Item Skill: Stone">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1912,12 +2024,14 @@
 		</for>
 	</skill>
 	<skill id="3184" levels="10" name="Item Skill: Solar Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="4" /> <!-- Holy -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1937,12 +2051,14 @@
 		</for>
 	</skill>
 	<skill id="3185" levels="10" name="Item Skill: Shadow Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="5000" />
@@ -1962,12 +2078,14 @@
 		</for>
 	</skill>
 	<skill id="3186" levels="10" name="Item Skill: Aura Flare">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
 		<table name="#power"> 31 33 36 39 41 44 46 49 51 55 </table>
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1985,6 +2103,7 @@
 		</for>
 	</skill>
 	<skill id="3187" levels="10" name="Item Skill: Slow">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -1992,6 +2111,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2016,6 +2136,7 @@
 		</for>
 	</skill>
 	<skill id="3188" levels="10" name="Item Skill: Winter">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2023,6 +2144,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2047,6 +2169,7 @@
 		</for>
 	</skill>
 	<skill id="3189" levels="10" name="Item Skill: Stun">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2054,6 +2177,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="STUN" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill3123" />
@@ -2075,6 +2199,7 @@
 		</for>
 	</skill>
 	<skill id="3190" levels="10" name="Item Skill: Hold">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2082,6 +2207,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2104,6 +2230,7 @@
 		</for>
 	</skill>
 	<skill id="3191" levels="10" name="Item Skill: Sleep">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2111,6 +2238,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2134,6 +2262,7 @@
 		</for>
 	</skill>
 	<skill id="3192" levels="10" name="Item Skill: Paralyze">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2141,6 +2270,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2171,6 +2301,7 @@
 	<skill id="3193" levels="10" name="Item Skill: Medusa">
 		<!-- Confirmed CT2.5 -->
 		<!-- Augmentation Skill (Active) -->
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2178,6 +2309,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="20" />
@@ -2201,6 +2333,7 @@
 		</for>
 	</skill>
 	<skill id="3194" levels="10" name="Item Skill: Fear">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2208,6 +2341,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2231,6 +2365,7 @@
 	<skill id="3195" levels="10" name="Item Skill: Poison">
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
 		<table name="#dmg"> 41 41 50 50 50 58 58 58 63 63 </table>
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2238,6 +2373,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2262,6 +2398,7 @@
 	<skill id="3196" levels="10" name="Item Skill: Bleed">
 		<table name="#abnormalLvls"> 5 5 6 6 6 7 7 7 8 8 </table>
 		<table name="#dmg"> 44 44 54 54 54 62 62 62 67 67 </table>
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2269,6 +2406,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="castRange" val="40" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill3123" />
@@ -2291,6 +2429,7 @@
 		</for>
 	</skill>
 	<skill id="3197" levels="10" name="Item Skill: Silence">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2298,6 +2437,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2320,6 +2460,7 @@
 		</for>
 	</skill>
 	<skill id="3198" levels="10" name="Item Skill: Doom">
+		<table name="#effectPoints"> -436 -465 -493 -521 -547 -572 -595 -615 -633 -657 </table>
 		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
 		<table name="#mpConsume"> 33 35 38 40 43 45 48 50 52 55 </table>
 		<table name="#mpInitialConsume"> 9 9 10 10 11 12 12 13 13 14 </table>
@@ -2327,6 +2468,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="castRange" val="600" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
@@ -2350,12 +2492,14 @@
 		</for>
 	</skill>
 	<skill id="3199" levels="3" name="Item Skill: Skill Refresh">
+		<table name="#effectPoints"> 549 611 655 </table>
 		<table name="#magicLvl"> 55 64 75 </table>
 		<table name="#mpConsume"> 43 49 55 </table>
 		<table name="#mpInitialConsume"> 11 13 14 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
+		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill3123" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

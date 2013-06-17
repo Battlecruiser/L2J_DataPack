@@ -4,6 +4,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_HP_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.stone_4_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -21,6 +22,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MAX_MP_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.stone_5_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="1" />
@@ -35,6 +37,7 @@
 		</for>
 	</skill>
 	<skill id="2802" levels="1" name="Recovery Stone">
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.stone_1_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -858,6 +861,7 @@
 		</for>
 	</skill>
 	<skill id="2837" levels="1" name="Gracia Key">
+		<set name="effectPoint" val="-1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
@@ -891,6 +895,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="ATTRIBUTE_POTION" />
+		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.etc_piece_holy_light" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1437,6 +1442,7 @@
 		</for>
 	</skill>
 	<skill id="2867" levels="1" name="Cupid's Cure">
+		<set name="effectPoint" val="-1000" />
 		<set name="icon" val="icon.skill3260" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1446,6 +1452,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="2868" levels="1" name="Cupid's Enhanced Cure">
+		<set name="effectPoint" val="-1000" />
 		<set name="icon" val="icon.skill3260" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1522,6 +1529,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PA_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="20" />
@@ -1533,6 +1541,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="SPEED_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="30" />
@@ -1544,6 +1553,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
@@ -1555,6 +1565,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
@@ -1566,6 +1577,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BERSERKER" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
@@ -1577,6 +1589,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MA_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
@@ -1588,6 +1601,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="35" />
@@ -1655,6 +1669,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1668,6 +1683,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="VP_UP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1681,6 +1697,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="PD_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="25" />
@@ -1692,6 +1709,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="44" />
@@ -1703,6 +1721,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
@@ -1714,6 +1733,7 @@
 		<set name="abnormalLvl" val="4" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="HIT_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="48" />
@@ -1725,6 +1745,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CHEAP_MAGIC" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="58" />
@@ -1736,6 +1757,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
@@ -1748,6 +1770,7 @@
 		<set name="abnormalLvl" val="7" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
+		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="operateType" val="A2" />
@@ -1765,6 +1788,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="VP_KEEP" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_candle_yellow_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1834,6 +1858,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_baguette" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1854,6 +1879,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_cream" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1879,6 +1905,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
 		<set name="abnormalType" val="WP_CHANGE_EVENT" />
+		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.etc_herb_of_cheesecake" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
