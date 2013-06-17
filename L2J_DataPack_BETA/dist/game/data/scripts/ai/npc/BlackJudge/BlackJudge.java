@@ -34,14 +34,13 @@ public class BlackJudge extends AbstractNpcAI
 {
 	// NPC
 	private static final int BLACK_JUDGE = 30981;
-	
 	// Misc
-	private static final int COST_NOGR = 3600;
-	private static final int COST_D = 8640;
-	private static final int COST_C = 25200;
-	private static final int COST_B = 50400;
-	private static final int COST_A = 86400;
-	private static final int COST_S = 144000;
+	// @formatter:off
+	private static final int[] COSTS =
+	{
+		3600, 8640, 25200, 50400, 86400, 144000
+	};
+	// @formatter:on
 	
 	private BlackJudge()
 	{
@@ -55,87 +54,19 @@ public class BlackJudge extends AbstractNpcAI
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
+		final int level = ((player.getExpertiseLevel() < 5) ? player.getExpertiseLevel() : 5);
 		switch (event)
 		{
 			case "remove_info":
 			{
-				switch (player.getExpertiseLevel())
-				{
-					case 0:
-					{
-						htmltext = "30981-01.html";
-						break;
-					}
-					case 1:
-					{
-						htmltext = "30981-02.html";
-						break;
-					}
-					case 2:
-					{
-						htmltext = "30981-03.html";
-						break;
-					}
-					case 3:
-					{
-						htmltext = "30981-04.html";
-						break;
-					}
-					case 4:
-					{
-						htmltext = "30981-05.html";
-						break;
-					}
-					case 5:
-					case 6:
-					case 7:
-					{
-						htmltext = "30981-06.html";
-						break;
-					}
-				}
+				htmltext = "30981-0" + (level + 1) + ".html";
 				break;
 			}
 			case "remove_dp":
 			{
 				if (player.getDeathPenaltyBuffLevel() > 0)
 				{
-					int cost = 0;
-					switch (player.getExpertiseLevel())
-					{
-						case 0:
-						{
-							cost = COST_NOGR;
-							break;
-						}
-						case 1:
-						{
-							cost = COST_D;
-							break;
-						}
-						case 2:
-						{
-							cost = COST_C;
-							break;
-						}
-						case 3:
-						{
-							cost = COST_B;
-							break;
-						}
-						case 4:
-						{
-							cost = COST_A;
-							break;
-						}
-						case 5:
-						case 6:
-						case 7:
-						{
-							cost = COST_S;
-							break;
-						}
-					}
+					int cost = COSTS[level];
 					
 					if (player.getAdena() >= cost)
 					{
