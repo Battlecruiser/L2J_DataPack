@@ -51,10 +51,19 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedLis
 	}
 	
 	@Override
-	public boolean onStart()
+	public L2EffectType getEffectType()
 	{
-		getEffected().registerDamageReceiveListener(this);
-		return super.onStart();
+		return L2EffectType.NONE;
+	}
+	
+	@Override
+	public void onDamageReceived(double damage, L2Character attacker, L2Skill skill, boolean critical)
+	{
+		int level = getEffected().getLevel();
+		if (!getEffected().isInvul() && (level >= _minLevel) && (level <= _maxLevel) && (damage >= _minDamage) && (Rnd.get(100) < _chance))
+		{
+			_skill.getSkill().getEffects(getEffected(), getEffected());
+		}
 	}
 	
 	@Override
@@ -65,18 +74,9 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedLis
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart()
 	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public void onDamageReceived(double damage, L2Character attacker, L2Skill skill, boolean critical)
-	{
-		int level = getEffected().getLevel();
-		if ((level >= _minLevel) && (level <= _maxLevel) && (damage >= _minDamage) && (Rnd.get(100) < _chance))
-		{
-			_skill.getSkill().getEffects(getEffected(), getEffected());
-		}
+		getEffected().registerDamageReceiveListener(this);
+		return super.onStart();
 	}
 }
