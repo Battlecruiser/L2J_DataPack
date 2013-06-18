@@ -20,13 +20,15 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
+import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * Unsummon Agathion effect implementation.
  * @author Zoey76
  */
-public class UnsummonAgathion extends SummonAgathion
+public class UnsummonAgathion extends L2Effect
 {
 	public UnsummonAgathion(Env env, EffectTemplate template)
 	{
@@ -34,8 +36,26 @@ public class UnsummonAgathion extends SummonAgathion
 	}
 	
 	@Override
-	protected void setAgathionId(L2PcInstance player)
+	public L2EffectType getEffectType()
 	{
-		player.setAgathionId(0);
+		return L2EffectType.NONE;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
+	}
+	
+	@Override
+	public boolean onStart()
+	{
+		final L2PcInstance player = getEffector().getActingPlayer();
+		if (player != null)
+		{
+			player.setAgathionId(0);
+			player.broadcastUserInfo();
+		}
+		return true;
 	}
 }

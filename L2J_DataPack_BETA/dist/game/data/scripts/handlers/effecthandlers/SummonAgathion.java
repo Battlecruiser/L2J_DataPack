@@ -49,49 +49,22 @@ public class SummonAgathion extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
-	{
-		return true; // TODO: Review.
-	}
-	
-	@Override
-	public void onExit()
-	{
-		super.onExit();
-		final L2PcInstance player = getEffector().getActingPlayer();
-		if (player != null)
-		{
-			player.setAgathionId(0);
-			player.broadcastUserInfo();
-		}
-	}
-	
-	@Override
 	public boolean onStart()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer() || getEffected().isAlikeDead())
+		if ((getEffected() == null) || !getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
+		final L2PcInstance player = getEffected().getActingPlayer();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return false;
 		}
 		
-		setAgathionId(player);
+		player.setAgathionId((getSkill() == null) ? 0 : getSkill().getNpcId());
 		player.broadcastUserInfo();
 		return true;
-	}
-	
-	/**
-	 * Set the player's agathion Id.
-	 * @param player the player to set the agathion Id
-	 */
-	protected void setAgathionId(L2PcInstance player)
-	{
-		player.setAgathionId((getSkill() == null) ? 0 : getSkill().getNpcId());
 	}
 }
