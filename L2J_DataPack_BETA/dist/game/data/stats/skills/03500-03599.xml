@@ -1299,6 +1299,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
+		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond msgId="113" addName="1">
 			<not>
 				<target npcType="L2Attackable" />
@@ -1332,6 +1333,7 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
+		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond>
 			<not>
 				<target npcType="L2Attackable" />
