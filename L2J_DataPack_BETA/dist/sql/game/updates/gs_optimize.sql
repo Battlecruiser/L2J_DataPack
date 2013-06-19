@@ -36,7 +36,7 @@ OPTIMIZE TABLE character_summon_skills_save;
 OPTIMIZE TABLE character_tpbookmark;
 OPTIMIZE TABLE character_ui_actions;
 OPTIMIZE TABLE character_ui_categories;
-OPTIMIZE TABLE character_variables
+OPTIMIZE TABLE character_variables;
 OPTIMIZE TABLE characters;
 OPTIMIZE TABLE clan_data;
 OPTIMIZE TABLE clan_notices;
