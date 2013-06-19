@@ -107,13 +107,13 @@ public final class Q00187_NikolasHeart extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		String htmltext = getNoQuestMsg(player);
 		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
-		String htmltext = null;
 		switch (npc.getNpcId())
 		{
 			case RESEARCHER_LORAIN:
@@ -125,7 +125,7 @@ public final class Q00187_NikolasHeart extends Quest
 						final QuestState qs = player.getQuestState("185_Nikolas_Cooperation_Consideration");
 						if ((qs != null) && qs.isCompleted() && st.hasQuestItems(LORAINES_CERTIFICATE))
 						{
-							htmltext = player.getLevel() < MIN_LEVEL ? "30673-02.html" : "30673-01.htm";
+							htmltext = player.getLevel() < MIN_LEVEL ? "30673-02.htm" : "30673-01.htm";
 						}
 						break;
 					}
