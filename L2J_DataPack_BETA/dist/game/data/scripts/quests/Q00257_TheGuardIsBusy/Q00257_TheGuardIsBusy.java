@@ -95,28 +95,30 @@ public final class Q00257_TheGuardIsBusy extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = null;
-		if (st != null)
+		if (st == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "30039-03.htm":
 			{
-				case "30039-03.htm":
-				{
-					st.startQuest();
-					st.giveItems(GLUDIO_LORDS_MARK, 1);
-					htmltext = event;
-					break;
-				}
-				case "30039-05.html":
-				{
-					st.exitQuest(true, true);
-					htmltext = event;
-					break;
-				}
-				case "30039-06.html":
-				{
-					htmltext = event;
-					break;
-				}
+				st.startQuest();
+				st.giveItems(GLUDIO_LORDS_MARK, 1);
+				htmltext = event;
+				break;
+			}
+			case "30039-05.html":
+			{
+				st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			}
+			case "30039-06.html":
+			{
+				htmltext = event;
+				break;
 			}
 		}
 		return htmltext;
@@ -126,16 +128,18 @@ public final class Q00257_TheGuardIsBusy extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if (st != null)
+		if (st == null)
 		{
-			for (MobDrop drop : MONSTERS.get(npc.getNpcId()))
+			return super.onKill(npc, killer, isSummon);
+		}
+		
+		for (MobDrop drop : MONSTERS.get(npc.getNpcId()))
+		{
+			if (drop.getDrop())
 			{
-				if (drop.getDrop())
-				{
-					st.giveItems(drop);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					break;
-				}
+				st.giveItems(drop);
+				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				break;
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -145,33 +149,35 @@ public final class Q00257_TheGuardIsBusy extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getLevel() >= MIN_LVL) ? "30039-02.htm" : "30039-01.html";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (hasAtLeastOneQuestItem(player, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG))
 				{
-					htmltext = (player.getLevel() >= MIN_LVL) ? "30039-02.htm" : "30039-01.html";
-					break;
+					final long amulets = st.getQuestItemsCount(ORC_AMULET);
+					final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
+					st.giveAdena(((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
+					takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);
+					Q00281_HeadForTheHills.giveNewbieReward(player);
+					htmltext = "30039-07.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (hasAtLeastOneQuestItem(player, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG))
-					{
-						final long amulets = st.getQuestItemsCount(ORC_AMULET);
-						final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
-						st.giveAdena(((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
-						takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);
-						Q00281_HeadForTheHills.giveNewbieReward(player);
-						htmltext = "30039-07.html";
-					}
-					else
-					{
-						htmltext = "30039-04.html";
-					}
-					break;
+					htmltext = "30039-04.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

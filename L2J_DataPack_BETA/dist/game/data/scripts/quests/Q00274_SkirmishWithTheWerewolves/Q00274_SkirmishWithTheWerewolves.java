@@ -95,46 +95,48 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
+				if (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE))
 				{
-					if (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE))
-					{
-						htmltext = (player.getRace() == Race.Orc) ? (player.getLevel() >= MIN_LVL) ? "30569-03.htm" : "30569-02.html" : "30569-01.html";
-					}
-					else
-					{
-						htmltext = "30569-08.html";
-					}
-					break;
+					htmltext = (player.getRace() == Race.Orc) ? (player.getLevel() >= MIN_LVL) ? "30569-03.htm" : "30569-02.html" : "30569-01.html";
 				}
-				case State.STARTED:
+				else
 				{
-					switch (st.getCond())
+					htmltext = "30569-08.html";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
+				{
+					case 1:
 					{
-						case 1:
+						htmltext = "30569-05.html";
+						break;
+					}
+					case 2:
+					{
+						final long heads = st.getQuestItemsCount(WEREWOLF_HEAD);
+						if (heads >= 40)
 						{
-							htmltext = "30569-05.html";
-							break;
-						}
-						case 2:
-						{
-							final long heads = st.getQuestItemsCount(WEREWOLF_HEAD);
-							if (heads >= 40)
-							{
-								final long totems = st.getQuestItemsCount(WEREWOLF_TOTEM);
-								st.giveAdena((heads * 30) + (totems * 600) + 2300, true);
-								st.exitQuest(true, true);
-								htmltext = (totems > 0) ? "30569-07.html" : "30569-06.html";
-							}
+							final long totems = st.getQuestItemsCount(WEREWOLF_TOTEM);
+							st.giveAdena((heads * 30) + (totems * 600) + 2300, true);
+							st.exitQuest(true, true);
+							htmltext = (totems > 0) ? "30569-07.html" : "30569-06.html";
 						}
 					}
-					break;
 				}
+				break;
 			}
 		}
 		return htmltext;

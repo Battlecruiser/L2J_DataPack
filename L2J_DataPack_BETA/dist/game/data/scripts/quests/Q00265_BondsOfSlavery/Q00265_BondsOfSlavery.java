@@ -64,27 +64,29 @@ public final class Q00265_BondsOfSlavery extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = null;
-		if (st != null)
+		if (st == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "30357-04.htm":
 			{
-				case "30357-04.htm":
-				{
-					st.startQuest();
-					htmltext = event;
-					break;
-				}
-				case "30357-07.html":
-				{
-					st.exitQuest(true, true);
-					htmltext = event;
-					break;
-				}
-				case "30357-08.html":
-				{
-					htmltext = event;
-					break;
-				}
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30357-07.html":
+			{
+				st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			}
+			case "30357-08.html":
+			{
+				htmltext = event;
+				break;
 			}
 		}
 		return htmltext;
@@ -106,32 +108,34 @@ public final class Q00265_BondsOfSlavery extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.hasQuestItems(IMP_SHACKLES))
 				{
-					htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
-					break;
+					final long shackles = st.getQuestItemsCount(IMP_SHACKLES);
+					st.giveAdena((shackles * 12) + (shackles >= 10 ? 500 : 0), true);
+					st.takeItems(IMP_SHACKLES, -1);
+					Q00281_HeadForTheHills.giveNewbieReward(player);
+					htmltext = "30357-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (st.hasQuestItems(IMP_SHACKLES))
-					{
-						final long shackles = st.getQuestItemsCount(IMP_SHACKLES);
-						st.giveAdena((shackles * 12) + (shackles >= 10 ? 500 : 0), true);
-						st.takeItems(IMP_SHACKLES, -1);
-						Q00281_HeadForTheHills.giveNewbieReward(player);
-						htmltext = "30357-06.html";
-					}
-					else
-					{
-						htmltext = "30357-05.html";
-					}
-					break;
+					htmltext = "30357-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;
