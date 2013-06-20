@@ -50,6 +50,16 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 		_skill = new SkillHolder(template.getParameters().getInteger("skillId"), template.getParameters().getInteger("skillLevel", 1));
 	}
 	
+	public TriggerSkillByDamage(Env env, L2Effect effect)
+	{
+		super(env, effect);
+		_minLevel = effect.getEffectTemplate().getParameters().getInteger("minLevel", 1);
+		_maxLevel = effect.getEffectTemplate().getParameters().getInteger("maxLevel", 100);
+		_minDamage = effect.getEffectTemplate().getParameters().getInteger("minDamage", 1);
+		_chance = effect.getEffectTemplate().getParameters().getInteger("chance", 100);
+		_skill = new SkillHolder(effect.getEffectTemplate().getParameters().getInteger("skillId"), effect.getEffectTemplate().getParameters().getInteger("skillLevel", 1));
+	}
+	
 	@Override
 	public L2EffectType getEffectType()
 	{
