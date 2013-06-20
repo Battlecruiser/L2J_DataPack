@@ -69,14 +69,14 @@ public class TriggerSkillByDamage extends L2Effect implements iDamageReceivedEve
 	@Override
 	public void onExit()
 	{
-		getEffected().getEvents().registerListener(this);
+		getEffected().getEvents().unregisterListener(this);
 		super.onExit();
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		getEffected().getEvents().unregisterListener(this);
+		getEffected().getEvents().registerListener(this);
 		return super.onStart();
 	}
 }
