@@ -162,7 +162,9 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Confusion" abnormalTime="20" val="0" effectPower="20" />
+			<effect name="Confuse" abnormalTime="20" val="0">
+				<param chance="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1107" levels="2" name="Frost Flame">
@@ -797,13 +799,14 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" />
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="DeleteHateOfMe" noicon="1" val="0" />
+			<effect name="DeleteHateOfMe" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1157" levels="5" name="Body To Mind" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -944,7 +947,9 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: this shouldbe "Distrust" effect -->
-			<effect name="Confusion" abnormalTime="20" val="0" effectPower="20" />
+			<effect name="Confuse" abnormalTime="20" val="0">
+				<param chance="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1164" levels="19" name="Curse: Weakness" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">

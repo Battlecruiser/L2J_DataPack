@@ -1951,7 +1951,7 @@
 		<set name="magicLvl" val="77" />
 		<set name="mpConsume" val="35" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
+		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
@@ -1968,7 +1968,9 @@
 			<effect name="TargetCancel" noicon="1" val="0">
 				<param chance="80" />
 			</effect>
-			<effect name="DeleteHateOfMe" noicon="1" val="0" />
+			<effect name="DeleteHateOfMe" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 			<effect name="Stun" val="0" effectPower="40" />
 		</for>
 		<enchant1for>
@@ -1978,7 +1980,9 @@
 			<effect name="TargetCancel" noicon="1" val="0">
 				<param chance="80" />
 			</effect>
-			<effect name="DeleteHateOfMe" noicon="1" val="0" />
+			<effect name="DeleteHateOfMe" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 			<effect name="Stun" val="0" effectPower="#ench1Power" />
 		</enchant1for>
 	</skill>

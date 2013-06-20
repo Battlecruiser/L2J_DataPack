@@ -58,7 +58,7 @@ public final class EffectMasterHandler
 		CharmOfCourage.class,
 		CharmOfLuck.class,
 		ClanGate.class,
-		Confusion.class,
+		Confuse.class,
 		ConsumeBody.class,
 		ConvertItem.class,
 		CpDamPercent.class,

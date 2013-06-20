@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.util.Util;
 
 /**
@@ -32,9 +33,18 @@ import com.l2jserver.gameserver.util.Util;
  */
 public class TransferHate extends L2Effect
 {
+	private final int _chance;
+	
 	public TransferHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.getParameters().getInteger("chance", 100);
+	}
+	
+	@Override
+	public boolean calcSuccess()
+	{
+		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
 	}
 	
 	@Override

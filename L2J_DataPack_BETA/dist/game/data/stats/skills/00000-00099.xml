@@ -71,7 +71,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="RandomizeHate" noicon="1" val="0" effectPower="80" />
+			<effect name="RandomizeHate" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3" levels="9" name="Power Strike">
@@ -420,13 +422,14 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="pvp" val="true" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="DeleteHateOfMe" noicon="1" val="0" />
+			<effect name="DeleteHateOfMe" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 			<effect name="TargetCancel" noicon="1" val="0">
 				<param chance="80" />
 			</effect>
@@ -451,7 +454,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="RandomizeHate" noicon="1" val="0" effectPower="80" />
+			<effect name="RandomizeHate" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 			<effect name="TargetCancel" noicon="1" val="0">
 				<param chance="80" />
 			</effect>
