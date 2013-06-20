@@ -61,7 +61,7 @@ public class StaticDamage extends L2Effect
 		}
 		
 		getEffected().reduceCurrentHp(calc(), getEffector(), getSkill());
-		getEffected().notifyDamageReceivedToEffects(calc(), getEffector(), getSkill(), false);
+		getEffected().notifyDamageReceived(calc(), getEffector(), getSkill(), false);
 		
 		if (getEffector().isPlayer())
 		{

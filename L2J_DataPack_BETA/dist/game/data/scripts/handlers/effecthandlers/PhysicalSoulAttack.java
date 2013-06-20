@@ -109,7 +109,7 @@ public class PhysicalSoulAttack extends L2Effect
 		{
 			activeChar.sendDamageMessage(target, damage, false, crit, false);
 			target.reduceCurrentHp(damage, activeChar, getSkill());
-			target.notifyDamageReceivedToEffects(damage, activeChar, getSkill(), crit);
+			target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
 			
 			// Check if damage should be reflected
 			Formulas.calcDamageReflected(activeChar, target, getSkill(), crit);

@@ -134,7 +134,7 @@ public class SignetMDam extends L2Effect
 					}
 					activeChar.sendDamageMessage(target, mdam, mcrit, false, false);
 					target.reduceCurrentHp(mdam, activeChar, getSkill());
-					target.notifyDamageReceivedToEffects(mdam, activeChar, getSkill(), mcrit);
+					target.notifyDamageReceived(mdam, activeChar, getSkill(), mcrit);
 				}
 				target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
 			}

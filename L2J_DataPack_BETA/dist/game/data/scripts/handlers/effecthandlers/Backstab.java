@@ -79,7 +79,7 @@ public class Backstab extends L2Effect
 		}
 		
 		target.reduceCurrentHp(damage, activeChar, getSkill());
-		target.notifyDamageReceivedToEffects(damage, getEffector(), getSkill(), true);
+		target.notifyDamageReceived(damage, getEffector(), getSkill(), true);
 		
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);

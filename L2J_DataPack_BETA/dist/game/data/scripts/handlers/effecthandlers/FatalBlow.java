@@ -80,7 +80,7 @@ public class FatalBlow extends L2Effect
 		}
 		
 		target.reduceCurrentHp(damage, activeChar, getSkill());
-		target.notifyDamageReceivedToEffects(damage, activeChar, getSkill(), crit);
+		target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
 		
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);

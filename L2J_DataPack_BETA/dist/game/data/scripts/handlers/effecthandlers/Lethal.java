@@ -72,7 +72,7 @@ public class Lethal extends L2Effect
 			// for Players CP and HP is set to 1.
 			if (target.isPlayer())
 			{
-				target.notifyDamageReceivedToEffects(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
 				target.setCurrentCp(1);
 				target.setCurrentHp(1);
 				target.sendPacket(SystemMessageId.LETHAL_STRIKE);
@@ -80,7 +80,7 @@ public class Lethal extends L2Effect
 			// for Monsters HP is set to 1.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceivedToEffects(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
 				target.setCurrentHp(1);
 			}
 			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
@@ -98,7 +98,7 @@ public class Lethal extends L2Effect
 			// for Monsters HP is set to 50%.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceivedToEffects(target.getCurrentHp() * 0.5, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() * 0.5, getEffector(), getSkill(), true);
 				target.setCurrentHp(target.getCurrentHp() * 0.5);
 			}
 			activeChar.sendPacket(SystemMessageId.HALF_KILL);
