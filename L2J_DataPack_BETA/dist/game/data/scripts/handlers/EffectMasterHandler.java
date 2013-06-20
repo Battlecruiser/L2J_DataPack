@@ -147,6 +147,7 @@ public final class EffectMasterHandler
 		SkillTurning.class,
 		Sleep.class,
 		SoulBlow.class,
+		SoulEating.class,
 		Spoil.class,
 		StaticDamage.class,
 		StealAbnormal.class,

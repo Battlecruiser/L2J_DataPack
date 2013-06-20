@@ -22,8 +22,8 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
@@ -52,13 +52,13 @@ public class FocusSouls extends L2Effect
 		}
 		
 		final L2PcInstance target = getEffected().getActingPlayer();
-		final L2Skill soulMastery = target.getKnownSkill(L2Skill.SKILL_SOUL_MASTERY);
-		if (soulMastery != null)
+		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
+		if (maxSouls > 0)
 		{
 			int amount = (int) calc();
-			if ((target.getChargedSouls() < soulMastery.getNumSouls()))
+			if ((target.getChargedSouls() < maxSouls))
 			{
-				int count = ((target.getChargedSouls() + amount) <= soulMastery.getNumSouls()) ? amount : (soulMastery.getNumSouls() - target.getChargedSouls());
+				int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());
 				target.increaseSouls(count);
 			}
 			else

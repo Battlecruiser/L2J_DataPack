@@ -19,11 +19,11 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.events.listeners.iDamageReceivedEventListener;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
-import com.l2jserver.gameserver.model.interfaces.IDamageReceivedListener;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
@@ -32,7 +32,7 @@ import com.l2jserver.util.Rnd;
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedListener
+public class TriggerSkillByDamage extends L2Effect implements iDamageReceivedEventListener
 {
 	private final int _minLevel;
 	private final int _maxLevel;
@@ -57,7 +57,7 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedLis
 	}
 	
 	@Override
-	public void onDamageReceived(double damage, L2Character attacker, L2Skill skill, boolean critical)
+	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit)
 	{
 		int level = getEffected().getLevel();
 		if (!getEffected().isInvul() && (level >= _minLevel) && (level <= _maxLevel) && (damage >= _minDamage) && (Rnd.get(100) < _chance))
@@ -69,14 +69,14 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedLis
 	@Override
 	public void onExit()
 	{
-		getEffected().unregisterDamageReceiveListener(this);
+		getEffected().getEvents().registerListener(this);
 		super.onExit();
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		getEffected().registerDamageReceiveListener(this);
+		getEffected().getEvents().unregisterListener(this);
 		return super.onStart();
 	}
 }
