@@ -19,7 +19,7 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.events.listeners.iDamageReceivedEventListener;
+import com.l2jserver.gameserver.model.actor.events.listeners.IDamageReceivedEventListener;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -32,7 +32,7 @@ import com.l2jserver.util.Rnd;
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public class TriggerSkillByDamage extends L2Effect implements iDamageReceivedEventListener
+public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEventListener
 {
 	private final int _minLevel;
 	private final int _maxLevel;

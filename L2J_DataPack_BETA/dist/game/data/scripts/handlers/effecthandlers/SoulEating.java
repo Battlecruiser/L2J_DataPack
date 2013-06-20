@@ -20,7 +20,7 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.actor.events.listeners.iExperienceReceivedEventListener;
+import com.l2jserver.gameserver.model.actor.events.listeners.IExperienceReceivedEventListener;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.ExSpawnEmitter;
  * Soul Eating effect implementation.
  * @author UnAfraid
  */
-public final class SoulEating extends L2Effect implements iExperienceReceivedEventListener
+public final class SoulEating extends L2Effect implements IExperienceReceivedEventListener
 {
 	private final int _expNeeded;
 	
