@@ -756,7 +756,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="40" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -769,7 +768,9 @@
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>
-			<effect name="DeleteHate" noicon="1" val="0" />
+			<effect name="DeleteHate" noicon="1" val="0">
+				<param chance="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1035" levels="4" name="Mental Shield" enchantGroup1="1" enchantGroup2="1">
@@ -1619,12 +1620,13 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="DeleteHate" noicon="1" val="0" />
+			<effect name="DeleteHate" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1077" levels="3" name="Focus" enchantGroup1="1" enchantGroup2="1">

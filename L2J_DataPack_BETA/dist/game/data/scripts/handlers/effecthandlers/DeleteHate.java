@@ -24,6 +24,7 @@ import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Delete Hate effect implementation.
@@ -31,15 +32,18 @@ import com.l2jserver.gameserver.model.stats.Env;
  */
 public class DeleteHate extends L2Effect
 {
+	private final int _chance;
+	
 	public DeleteHate(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.getParameters().getInteger("chance", 100);
 	}
 	
 	@Override
 	public boolean calcSuccess()
 	{
-		return true;
+		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
 	}
 	
 	@Override

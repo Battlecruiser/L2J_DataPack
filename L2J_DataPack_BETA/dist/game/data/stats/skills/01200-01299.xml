@@ -260,7 +260,9 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Confusion" abnormalTime="20" val="0" effectPower="60" />
+			<effect name="Confuse" abnormalTime="20" val="0">
+				<param chance="60" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1216" levels="1" name="Self Heal">
@@ -2430,12 +2432,13 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="80" />
 		<set name="reuseDelay" val="900000" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="DeleteHate" noicon="1" val="0" />
+			<effect name="DeleteHate" noicon="1" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1274" levels="4" name="Energy Bolt">
