@@ -88,65 +88,67 @@ public final class Q00281_HeadForTheHills extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = null;
-		if (st != null)
+		if (st == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "32173-03.htm":
 			{
-				case "32173-03.htm":
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "32173-06.html":
+			{
+				if (st.hasQuestItems(CLAWS))
 				{
-					st.startQuest();
+					final long claws = st.getQuestItemsCount(CLAWS);
+					st.giveAdena(((claws * 23) + (claws >= 10 ? 400 : 0)), true);
+					st.takeItems(CLAWS, -1);
+					giveNewbieReward(player);
 					htmltext = event;
-					break;
 				}
-				case "32173-06.html":
+				else
 				{
-					if (st.hasQuestItems(CLAWS))
+					htmltext = "32173-07.html";
+				}
+				break;
+			}
+			case "32173-08.html":
+			{
+				htmltext = event;
+				break;
+			}
+			case "32173-09.html":
+			{
+				st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			}
+			case "32173-11.html":
+			{
+				if (st.getQuestItemsCount(CLAWS) >= 50)
+				{
+					if (getRandom(1000) <= 360)
 					{
-						final long claws = st.getQuestItemsCount(CLAWS);
-						st.giveAdena(((claws * 23) + (claws >= 10 ? 400 : 0)), true);
-						st.takeItems(CLAWS, -1);
-						giveNewbieReward(player);
-						htmltext = event;
+						st.giveItems(REWARDS[getRandom(9)], 1);
 					}
 					else
 					{
-						htmltext = "32173-07.html";
+						st.giveItems(REWARDS[9], 1);
 					}
-					break;
-				}
-				case "32173-08.html":
-				{
+					st.takeItems(CLAWS, 50);
+					giveNewbieReward(player);
 					htmltext = event;
-					break;
 				}
-				case "32173-09.html":
+				else
 				{
-					st.exitQuest(true, true);
-					htmltext = event;
-					break;
+					htmltext = "32173-10.html";
 				}
-				case "32173-11.html":
-				{
-					if (st.getQuestItemsCount(CLAWS) >= 50)
-					{
-						if (getRandom(1000) <= 360)
-						{
-							st.giveItems(REWARDS[getRandom(9)], 1);
-						}
-						else
-						{
-							st.giveItems(REWARDS[9], 1);
-						}
-						st.takeItems(CLAWS, 50);
-						giveNewbieReward(player);
-						htmltext = event;
-					}
-					else
-					{
-						htmltext = "32173-10.html";
-					}
-					break;
-				}
+				break;
 			}
 		}
 		return htmltext;
@@ -168,21 +170,23 @@ public final class Q00281_HeadForTheHills extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
-				{
-					htmltext = (player.getLevel() >= MIN_LVL) ? "32173-01.htm" : "32173-02.html";
-					break;
-				}
-				case State.STARTED:
-				{
-					htmltext = st.hasQuestItems(CLAWS) ? "32173-05.html" : "32173-04.html";
-					break;
-				}
+				htmltext = (player.getLevel() >= MIN_LVL) ? "32173-01.htm" : "32173-02.html";
+				break;
+			}
+			case State.STARTED:
+			{
+				htmltext = st.hasQuestItems(CLAWS) ? "32173-05.html" : "32173-04.html";
+				break;
 			}
 		}
 		return htmltext;

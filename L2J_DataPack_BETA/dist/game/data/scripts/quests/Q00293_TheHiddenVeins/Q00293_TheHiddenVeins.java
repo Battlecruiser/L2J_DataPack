@@ -65,39 +65,41 @@ public final class Q00293_TheHiddenVeins extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = null;
-		if (st != null)
+		if (st == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "30535-04.htm":
 			{
-				case "30535-04.htm":
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30535-07.html":
+			{
+				st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			}
+			case "30535-08.html":
+			{
+				htmltext = event;
+				break;
+			}
+			case "30539-03.html":
+			{
+				if (st.getQuestItemsCount(TORN_MAP_FRAGMENT) >= REQUIRED_TORN_MAP_FRAGMENT)
 				{
-					st.startQuest();
+					st.giveItems(HIDDEN_ORE_MAP, 1);
+					st.takeItems(TORN_MAP_FRAGMENT, REQUIRED_TORN_MAP_FRAGMENT);
 					htmltext = event;
-					break;
 				}
-				case "30535-07.html":
+				else
 				{
-					st.exitQuest(true, true);
-					htmltext = event;
-					break;
-				}
-				case "30535-08.html":
-				{
-					htmltext = event;
-					break;
-				}
-				case "30539-03.html":
-				{
-					if (st.getQuestItemsCount(TORN_MAP_FRAGMENT) >= REQUIRED_TORN_MAP_FRAGMENT)
-					{
-						st.giveItems(HIDDEN_ORE_MAP, 1);
-						st.takeItems(TORN_MAP_FRAGMENT, REQUIRED_TORN_MAP_FRAGMENT);
-						htmltext = event;
-					}
-					else
-					{
-						htmltext = "30539-02.html";
-					}
+					htmltext = "30539-02.html";
 				}
 			}
 		}
@@ -129,45 +131,47 @@ public final class Q00293_TheHiddenVeins extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (npc.getNpcId())
+			return htmltext;
+		}
+		
+		switch (npc.getNpcId())
+		{
+			case FILAUR:
 			{
-				case FILAUR:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = (player.getRace() == Race.Dwarf) ? (player.getLevel() >= MIN_LVL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							if (hasAtLeastOneQuestItem(player, CHRYSOLITE_ORE, HIDDEN_ORE_MAP))
-							{
-								final long ores = st.getQuestItemsCount(CHRYSOLITE_ORE);
-								final long maps = st.getQuestItemsCount(HIDDEN_ORE_MAP);
-								st.giveAdena((ores * 5) + (maps * 500) + (((ores + maps) >= 10) ? 2000 : 0), true);
-								takeItems(player, -1, CHRYSOLITE_ORE, HIDDEN_ORE_MAP);
-								Q00281_HeadForTheHills.giveNewbieReward(player);
-								htmltext = (ores > 0) ? (maps > 0) ? "30535-10.html" : "30535-06.html" : "30535-09.html";
-							}
-							else
-							{
-								htmltext = "30535-05.html";
-							}
-							break;
-						}
+						htmltext = (player.getRace() == Race.Dwarf) ? (player.getLevel() >= MIN_LVL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						if (hasAtLeastOneQuestItem(player, CHRYSOLITE_ORE, HIDDEN_ORE_MAP))
+						{
+							final long ores = st.getQuestItemsCount(CHRYSOLITE_ORE);
+							final long maps = st.getQuestItemsCount(HIDDEN_ORE_MAP);
+							st.giveAdena((ores * 5) + (maps * 500) + (((ores + maps) >= 10) ? 2000 : 0), true);
+							takeItems(player, -1, CHRYSOLITE_ORE, HIDDEN_ORE_MAP);
+							Q00281_HeadForTheHills.giveNewbieReward(player);
+							htmltext = (ores > 0) ? (maps > 0) ? "30535-10.html" : "30535-06.html" : "30535-09.html";
+						}
+						else
+						{
+							htmltext = "30535-05.html";
+						}
+						break;
+					}
 				}
-				case CHICHIRIN:
-				{
-					htmltext = "30539-01.html";
-					break;
-				}
+				break;
+			}
+			case CHICHIRIN:
+			{
+				htmltext = "30539-01.html";
+				break;
 			}
 		}
 		return htmltext;

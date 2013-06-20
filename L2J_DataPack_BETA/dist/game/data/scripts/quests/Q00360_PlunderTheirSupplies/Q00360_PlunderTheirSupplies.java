@@ -32,7 +32,7 @@ import com.l2jserver.gameserver.util.Util;
  * Plunder Supplies (360)
  * @author netvirus
  */
-public class Q00360_PlunderTheirSupplies extends Quest
+public final class Q00360_PlunderTheirSupplies extends Quest
 {
 	// Npc
 	private static final int COLEMAN = 30873;
@@ -51,7 +51,7 @@ public class Q00360_PlunderTheirSupplies extends Quest
 		MONSTER_DROP_CHANCES.put(20669, 75); // Taik Orc Supply Leader
 	}
 	
-	public Q00360_PlunderTheirSupplies(int questId, String name, String descr)
+	private Q00360_PlunderTheirSupplies(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(COLEMAN);
@@ -64,12 +64,12 @@ public class Q00360_PlunderTheirSupplies extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
+		String htmltext = null;
 		if (st == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "30873-03.htm":
@@ -129,12 +129,12 @@ public class Q00360_PlunderTheirSupplies extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
+		String htmltext = getNoQuestMsg(player);
 		if (st == null)
 		{
-			return getNoQuestMsg(player);
+			return htmltext;
 		}
 		
-		String htmltext = null;
 		switch (st.getState())
 		{
 			case State.CREATED:

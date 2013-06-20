@@ -69,27 +69,29 @@ public final class Q00260_OrcHunting extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = null;
-		if (st != null)
+		if (st == null)
 		{
-			switch (event)
+			return htmltext;
+		}
+		
+		switch (event)
+		{
+			case "30221-04.html":
 			{
-				case "30221-04.html":
-				{
-					st.startQuest();
-					htmltext = event;
-					break;
-				}
-				case "30221-07.html":
-				{
-					st.exitQuest(true, true);
-					htmltext = event;
-					break;
-				}
-				case "30221-08.html":
-				{
-					htmltext = event;
-					break;
-				}
+				st.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "30221-07.html":
+			{
+				st.exitQuest(true, true);
+				htmltext = event;
+				break;
+			}
+			case "30221-08.html":
+			{
+				htmltext = event;
+				break;
 			}
 		}
 		return htmltext;
@@ -111,33 +113,35 @@ public final class Q00260_OrcHunting extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.Elf) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 				{
-					htmltext = (player.getRace() == Race.Elf) ? (player.getLevel() >= MIN_LVL) ? "30221-03.htm" : "30221-02.html" : "30221-01.html";
-					break;
+					final long amulets = st.getQuestItemsCount(ORC_AMULET);
+					final long necklaces = st.getQuestItemsCount(ORC_NECKLACE);
+					st.giveAdena(((amulets * 12) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1000 : 0)), true);
+					takeItems(player, -1, getRegisteredItemIds());
+					Q00281_HeadForTheHills.giveNewbieReward(player);
+					htmltext = "30221-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
-					{
-						final long amulets = st.getQuestItemsCount(ORC_AMULET);
-						final long necklaces = st.getQuestItemsCount(ORC_NECKLACE);
-						st.giveAdena(((amulets * 12) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1000 : 0)), true);
-						takeItems(player, -1, getRegisteredItemIds());
-						Q00281_HeadForTheHills.giveNewbieReward(player);
-						htmltext = "30221-06.html";
-					}
-					else
-					{
-						htmltext = "30221-05.html";
-					}
-					break;
+					htmltext = "30221-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;
