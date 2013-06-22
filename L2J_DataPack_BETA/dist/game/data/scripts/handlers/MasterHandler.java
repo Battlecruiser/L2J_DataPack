@@ -194,7 +194,6 @@ import handlers.itemhandlers.NicknameColor;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
-import handlers.itemhandlers.ScrollOfResurrection;
 import handlers.itemhandlers.Seed;
 import handlers.itemhandlers.SevenSignsRecord;
 import handlers.itemhandlers.SoulShots;
@@ -233,8 +232,6 @@ import handlers.targethandlers.Clan;
 import handlers.targethandlers.ClanMember;
 import handlers.targethandlers.CorpseClan;
 import handlers.targethandlers.CorpseMob;
-import handlers.targethandlers.CorpsePet;
-import handlers.targethandlers.CorpsePlayer;
 import handlers.targethandlers.EnemySummon;
 import handlers.targethandlers.FlagPole;
 import handlers.targethandlers.FrontArea;
@@ -248,6 +245,7 @@ import handlers.targethandlers.PartyClan;
 import handlers.targethandlers.PartyMember;
 import handlers.targethandlers.PartyNotMe;
 import handlers.targethandlers.PartyOther;
+import handlers.targethandlers.PcBody;
 import handlers.targethandlers.Pet;
 import handlers.targethandlers.Self;
 import handlers.targethandlers.Servitor;
@@ -462,7 +460,6 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
-			ScrollOfResurrection.class,
 			SoulShots.class,
 			SpiritShot.class,
 			BlessedSpiritShot.class,
@@ -566,8 +563,6 @@ public class MasterHandler
 			ClanMember.class,
 			CorpseClan.class,
 			CorpseMob.class,
-			CorpsePet.class,
-			CorpsePlayer.class,
 			EnemySummon.class,
 			FlagPole.class,
 			FrontArea.class,
@@ -581,6 +576,7 @@ public class MasterHandler
 			PartyMember.class,
 			PartyNotMe.class,
 			PartyOther.class,
+			PcBody.class,
 			Pet.class,
 			Self.class,
 			Servitor.class,

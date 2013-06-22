@@ -35,7 +35,7 @@ import com.l2jserver.gameserver.network.SystemMessageId;
 /**
  * @author UnAfraid
  */
-public class CorpsePlayer implements ITargetTypeHandler
+public class PcBody implements ITargetTypeHandler
 {
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
@@ -147,6 +147,6 @@ public class CorpsePlayer implements ITargetTypeHandler
 	@Override
 	public Enum<L2TargetType> getTargetType()
 	{
-		return L2TargetType.CORPSE_PLAYER;
+		return L2TargetType.PC_BODY;
 	}
 }
