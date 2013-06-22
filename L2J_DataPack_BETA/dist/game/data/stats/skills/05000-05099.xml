@@ -8,7 +8,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="108" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="10000000" />
 		<set name="targetType" val="ONE" />
@@ -24,7 +23,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="181" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
 		<set name="targetType" val="ONE" />
@@ -62,7 +60,6 @@
 		<set name="hitTime" val="5000" />
 		<set name="magicLvl" val="76" />
 		<set name="mpConsume" val="103" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="111" />
 		<set name="reuseDelay" val="15000" />
@@ -87,7 +84,6 @@
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="5964" />
 		<set name="targetType" val="AURA" />
@@ -111,7 +107,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="pvp" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Paralyze" val="0" />
@@ -197,7 +192,6 @@
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="6400" />
 		<set name="targetType" val="AREA" />
@@ -217,7 +211,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="106" />
 		<set name="targetType" val="AREA" />
@@ -235,7 +228,6 @@
 		<set name="hitTime" val="1000" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="364" />
 		<set name="targetType" val="AURA" />
@@ -259,7 +251,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -277,7 +268,6 @@
 		<set name="elementPower" val="180" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="61" />
 		<set name="targetType" val="ONE" />
@@ -302,7 +292,6 @@
 		<set name="fanRange" val="0,0,150,150" />
 		<set name="hitTime" val="1300" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -329,7 +318,6 @@
 		<set name="flyType" val="CHARGE" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="FRONT_AREA" />
@@ -358,7 +346,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -399,7 +386,6 @@
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="7000" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
@@ -417,7 +403,6 @@
 		<set name="elementPower" val="180" />
 		<set name="hitTime" val="6000" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="314" />
 		<set name="targetType" val="AURA" />
@@ -668,7 +653,6 @@
 		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
@@ -690,7 +674,6 @@
 		<set name="hitTime" val="1900" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="7000" />
@@ -739,7 +722,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
@@ -758,7 +740,6 @@
 		<set name="hitTime" val="4000" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="20000" />
@@ -820,7 +801,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
@@ -845,7 +825,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
@@ -866,7 +845,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
@@ -908,7 +886,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
@@ -1001,7 +978,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
@@ -1116,7 +1092,6 @@
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
@@ -1243,7 +1218,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
@@ -1260,7 +1234,6 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="2112" />
 		<set name="targetType" val="AURA" />
@@ -1284,7 +1257,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="saveVs" val="CON" />
@@ -1311,7 +1283,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="83" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="6335" />
 		<set name="targetType" val="ONE" />
@@ -1424,7 +1395,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="90" /> <!-- Base Land Rate -->
-		<set name="pvp" val="true" />
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1444,7 +1414,6 @@
 		<set name="hitTime" val="8000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="1084" />
 		<set name="reuseDelay" val="6000" />
@@ -1462,7 +1431,6 @@
 		<set name="hitTime" val="100" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
 		<set name="targetType" val="AURA" />
@@ -1478,7 +1446,6 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="83" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="30215" />
 		<set name="targetType" val="ONE" />
@@ -1494,7 +1461,6 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="83" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="88254" />
 		<set name="targetType" val="ONE" />
@@ -1511,7 +1477,6 @@
 		<set name="hitTime" val="100" />
 		<set name="isSuicideAttack" val="true" />
 		<set name="magicLvl" val="85" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="473" />
 		<set name="targetType" val="AURA" />

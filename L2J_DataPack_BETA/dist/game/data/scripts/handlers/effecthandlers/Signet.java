@@ -78,7 +78,7 @@ public class Signet extends L2Effect
 				continue;
 			}
 			
-			if (_skill.isOffensive() && !L2Skill.checkForAreaOffensiveSkills(getEffector(), cha, _skill, _srcInArena))
+			if (_skill.isBad() && !L2Skill.checkForAreaOffensiveSkills(getEffector(), cha, _skill, _srcInArena))
 			{
 				continue;
 			}
