@@ -90,7 +90,6 @@
 	<skill id="2008" levels="1" name="Item - Beast Spirit Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="targetType" val="SELF" />
@@ -98,7 +97,6 @@
 	<skill id="2009" levels="1" name="Item - Beast Blessed Spirit Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="targetType" val="SELF" />
@@ -340,7 +338,6 @@
 	<skill id="2033" levels="1" name="Item - Beast Soul Shot">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="targetType" val="SELF" />
@@ -430,7 +427,6 @@
 	<skill id="2039" levels="1" name="Soulshot: No Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SOULSHOT" />
 		<set name="targetType" val="SELF" />
@@ -540,7 +536,6 @@
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="targetType" val="SELF" />
@@ -762,7 +757,6 @@
 	<skill id="2061" levels="1" name="Blessed Spiritshot: No Grade">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="skillType" val="SPIRITSHOT" />
 		<set name="targetType" val="SELF" />
@@ -890,7 +884,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A3" />
 		<set name="power" val="-1" /> <!-- Land Always -->
-		<set name="pvp" val="true" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="RandomizeHate" noicon="1" val="0" />
@@ -906,7 +899,6 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="pvp" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DeleteHateOfMe" noicon="1" val="0">
@@ -1313,7 +1305,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="skillType" val="SOW" />
@@ -1327,7 +1318,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="3" />
-		<set name="offensive" val="true" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="CORPSE_MOB" />

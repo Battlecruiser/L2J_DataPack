@@ -104,7 +104,7 @@ public class Continuous implements ISkillHandler
 				}
 			}
 			
-			if (skill.isOffensive() || skill.isDebuff())
+			if (skill.isBad())
 			{
 				shld = Formulas.calcShldUse(activeChar, target, skill);
 				acted = Formulas.calcSkillSuccess(activeChar, target, skill, shld, ss, sps, bss);
