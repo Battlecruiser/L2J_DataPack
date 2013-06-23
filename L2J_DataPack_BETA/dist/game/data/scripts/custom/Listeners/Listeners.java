@@ -92,7 +92,7 @@ public class Listeners extends L2Script
 		}
 		addItemTracker(items);
 		addTransformNotify(player);
-		addSkillUseNotify(player, -1);
+		addSkillUseNotify(player);
 		addAttackNotify(player);
 	}
 	
@@ -376,7 +376,7 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public boolean onUseSkill(SkillUseEvent event)
+	public boolean onSkillUse(SkillUseEvent event)
 	{
 		_log.log(Level.INFO, event.getSkill() + " has been used by " + event.getCaster());
 		return true;
