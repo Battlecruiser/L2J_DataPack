@@ -103,7 +103,7 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		if (event.equals("Respawn"))
 		{
-			L2Npc newGuard = addSpawn(npc.getNpcId(), npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false, 0);
+			L2Npc newGuard = addSpawn(npc.getNpcId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0);
 			newGuard.setIsNoRndWalk(true);
 			newGuard.setIsImmobilized(true);
 			if (npc.getNpcId() == GUARD1)
@@ -118,9 +118,9 @@ public class PrisonGuards extends AbstractNpcAI
 		}
 		else if (event.equals("attackEnd") && (npc.getNpcId() == GUARD2))
 		{
-			if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy()))
+			if ((npc.getX() != npc.getSpawn().getX()) || (npc.getY() != npc.getSpawn().getY()))
 			{
-				npc.teleToLocation(npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false);
+				npc.teleToLocation(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false);
 				npc.setIsImmobilized(true);
 			}
 			((L2Attackable) npc).getAggroList().clear();
@@ -169,9 +169,9 @@ public class PrisonGuards extends AbstractNpcAI
 			}
 			else
 			{
-				if ((npc.getX() != npc.getSpawn().getLocx()) || (npc.getY() != npc.getSpawn().getLocy()))
+				if ((npc.getX() != npc.getSpawn().getX()) || (npc.getY() != npc.getSpawn().getY()))
 				{
-					npc.teleToLocation(npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false);
+					npc.teleToLocation(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false);
 					npc.setIsImmobilized(true);
 				}
 				((L2Attackable) npc).getAggroList().remove(target);

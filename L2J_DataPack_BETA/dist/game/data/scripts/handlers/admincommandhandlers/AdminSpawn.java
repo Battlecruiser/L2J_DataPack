@@ -345,7 +345,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.teleToLocation(spawn.getLocx(), spawn.getLocy(), spawn.getLocz(), true);
+						activeChar.teleToLocation(spawn.getLocation(), true);
 					}
 				}
 			}
@@ -357,7 +357,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getLocx() + " " + spawn.getLocy() + " " + spawn.getLocz());
+					activeChar.sendMessage(index + " - " + spawn.getTemplate().getName() + " (" + spawn + "): " + spawn.getX() + " " + spawn.getY() + " " + spawn.getZ());
 				}
 			}
 		}
@@ -371,9 +371,9 @@ public class AdminSpawn implements IAdminCommandHandler
 	private void printSpawn(L2Npc target, int type)
 	{
 		int i = target.getNpcId();
-		int x = target.getSpawn().getLocx();
-		int y = target.getSpawn().getLocy();
-		int z = target.getSpawn().getLocz();
+		int x = target.getSpawn().getX();
+		int y = target.getSpawn().getY();
+		int z = target.getSpawn().getZ();
 		int h = target.getSpawn().getHeading();
 		switch (type)
 		{
@@ -419,9 +419,9 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				spawn.setCustom(true);
 			}
-			spawn.setLocx(target.getX());
-			spawn.setLocy(target.getY());
-			spawn.setLocz(target.getZ());
+			spawn.setX(target.getX());
+			spawn.setY(target.getY());
+			spawn.setZ(target.getZ());
 			spawn.setAmount(mobCount);
 			spawn.setHeading(activeChar.getHeading());
 			spawn.setRespawnDelay(respawnTime);

@@ -21,7 +21,7 @@ package ai.individual;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -52,7 +52,7 @@ public class FleeNpc extends AbstractNpcAI
 	{
 		if ((npc.getNpcId() >= 18150) && (npc.getNpcId() <= 18157))
 		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-40, 40)), (npc.getY() + getRandom(-40, 40)), npc.getZ(), npc.getHeading()));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((npc.getX() + getRandom(-40, 40)), (npc.getY() + getRandom(-40, 40)), npc.getZ(), npc.getHeading()));
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 			return null;
 		}
@@ -60,7 +60,7 @@ public class FleeNpc extends AbstractNpcAI
 		{
 			if (getRandom(3) == 2)
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-200, 200)), (npc.getY() + getRandom(-200, 200)), npc.getZ(), npc.getHeading()));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((npc.getX() + getRandom(-200, 200)), (npc.getY() + getRandom(-200, 200)), npc.getZ(), npc.getHeading()));
 			}
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 			return null;

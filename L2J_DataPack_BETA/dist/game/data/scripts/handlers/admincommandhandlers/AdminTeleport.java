@@ -33,10 +33,10 @@ import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.instancemanager.RaidBossSpawnManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -126,14 +126,10 @@ public class AdminTeleport implements IAdminCommandHandler
 			{
 				String val = command.substring(11);
 				StringTokenizer st = new StringTokenizer(val);
-				String x1 = st.nextToken();
-				int x = Integer.parseInt(x1);
-				String y1 = st.nextToken();
-				int y = Integer.parseInt(y1);
-				String z1 = st.nextToken();
-				int z = Integer.parseInt(z1);
-				L2CharPosition pos = new L2CharPosition(x, y, z, 0);
-				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, pos);
+				int x = Integer.parseInt(st.nextToken());
+				int y = Integer.parseInt(st.nextToken());
+				int z = Integer.parseInt(st.nextToken());
+				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(x, y, z, 0));
 			}
 			catch (Exception e)
 			{
@@ -564,9 +560,9 @@ public class AdminTeleport implements IAdminCommandHandler
 				{
 					spawn.setCustom(true);
 				}
-				spawn.setLocx(activeChar.getX());
-				spawn.setLocy(activeChar.getY());
-				spawn.setLocz(activeChar.getZ());
+				spawn.setX(activeChar.getX());
+				spawn.setY(activeChar.getY());
+				spawn.setZ(activeChar.getZ());
 				spawn.setAmount(1);
 				spawn.setHeading(activeChar.getHeading());
 				spawn.setRespawnDelay(respawnTime);
@@ -585,7 +581,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				
 				if (Config.DEBUG)
 				{
-					_log.fine("Spawn at X=" + spawn.getLocx() + " Y=" + spawn.getLocy() + " Z=" + spawn.getLocz());
+					_log.fine("Spawn at X=" + spawn.getX() + " Y=" + spawn.getY() + " Z=" + spawn.getZ());
 					_log.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") moved NPC " + target.getObjectId());
 				}
 			}
@@ -616,9 +612,9 @@ public class AdminTeleport implements IAdminCommandHandler
 				{
 					spawn.setCustom(true);
 				}
-				spawnDat.setLocx(activeChar.getX());
-				spawnDat.setLocy(activeChar.getY());
-				spawnDat.setLocz(activeChar.getZ());
+				spawnDat.setX(activeChar.getX());
+				spawnDat.setY(activeChar.getY());
+				spawnDat.setZ(activeChar.getZ());
 				spawnDat.setAmount(1);
 				spawnDat.setHeading(activeChar.getHeading());
 				spawnDat.setRespawnMinDelay(43200);

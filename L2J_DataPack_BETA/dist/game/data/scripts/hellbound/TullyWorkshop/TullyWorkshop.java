@@ -1788,9 +1788,9 @@ public class TullyWorkshop extends Quest
 		if (npc != null)
 		{
 			L2Spawn spawn = npc.getSpawn();
-			int x = spawn.getLocx();
-			int y = spawn.getLocy();
-			int z = spawn.getLocz();
+			int x = spawn.getX();
+			int y = spawn.getY();
+			int z = spawn.getZ();
 			for (L2ZoneType zone : ZoneManager.getInstance().getZones(x, y, z))
 			{
 				for (int i = 0; i < 2; i++)

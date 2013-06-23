@@ -25,8 +25,8 @@ import javolution.util.FastMap;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
@@ -205,7 +205,7 @@ public class AnomicFoundry extends Quest
 			requestHelp(npc, attacker, 1000 * atkIndex, GREATER_EVIL);
 			if (getRandom(10) < 1)
 			{
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location((npc.getX() + getRandom(-800, 800)), (npc.getY() + getRandom(-800, 800)), npc.getZ(), npc.getHeading()));
 			}
 		}
 		
@@ -285,8 +285,8 @@ public class AnomicFoundry extends Quest
 	
 	private static int getSpawnGroup(L2Npc npc)
 	{
-		final int coordX = npc.getSpawn().getLocx();
-		final int coordY = npc.getSpawn().getLocy();
+		final int coordX = npc.getSpawn().getX();
+		final int coordY = npc.getSpawn().getY();
 		final int npcId = npc.getNpcId();
 		
 		for (int i = 0; i < 5; i++)

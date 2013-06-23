@@ -20,8 +20,8 @@ package ai.individual;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -82,7 +82,7 @@ public class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("4"))
 		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96055, -110759, -3312, 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96055, -110759, -3312, 0));
 			startQuestTimer("5", 2000, npc, player);
 		}
 		else if (event.equalsIgnoreCase("5"))
@@ -109,7 +109,7 @@ public class DrChaos extends Quest
 	{
 		if (npc.getNpcId() == DR_CHAOS)
 		{
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(96323, -110914, -3328, 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96323, -110914, -3328, 0));
 			this.startQuestTimer("1", 3000, npc, player);
 		}
 		return "";

@@ -741,9 +741,9 @@ public class RainbowSpringsChateau extends Quest
 				try
 				{
 					_gourds[i] = new L2Spawn(NpcTable.getInstance().getTemplate(GOURDS[i]));
-					_gourds[i].setLocx(ARENAS[i][0] + 150);
-					_gourds[i].setLocy(ARENAS[i][1] + 150);
-					_gourds[i].setLocz(ARENAS[i][2]);
+					_gourds[i].setX(ARENAS[i][0] + 150);
+					_gourds[i].setY(ARENAS[i][1] + 150);
+					_gourds[i].setZ(ARENAS[i][2]);
 					_gourds[i].setHeading(1);
 					_gourds[i].setAmount(1);
 				}
@@ -777,9 +777,9 @@ public class RainbowSpringsChateau extends Quest
 			
 			_gourds[(iterator - 1) - i] = curSpawn;
 			
-			int newX = oldSpawn.getLocx();
-			int newY = oldSpawn.getLocy();
-			int newZ = oldSpawn.getLocz();
+			int newX = oldSpawn.getX();
+			int newY = oldSpawn.getY();
+			int newZ = oldSpawn.getZ();
 			
 			curSpawn.getLastSpawn().teleToLocation(newX, newY, newZ);
 		}

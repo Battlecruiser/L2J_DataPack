@@ -67,16 +67,16 @@ public class ChristmasTree implements IItemHandler
 		try
 		{
 			L2Spawn spawn = new L2Spawn(template1);
-			spawn.setLocx(target.getX());
-			spawn.setLocy(target.getY());
-			spawn.setLocz(target.getZ());
+			spawn.setX(target.getX());
+			spawn.setY(target.getY());
+			spawn.setZ(target.getZ());
 			spawn.setInstanceId(activeChar.getInstanceId());
 			L2Npc npc = spawn.spawnOne(false);
 			npc.setSummoner(activeChar);
 			
 			activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 			
-			activeChar.sendMessage("Created " + template1.getName() + " at x: " + spawn.getLocx() + " y: " + spawn.getLocy() + " z: " + spawn.getLocz());
+			activeChar.sendMessage("Created " + template1.getName() + " at x: " + spawn.getX() + " y: " + spawn.getY() + " z: " + spawn.getZ());
 			return true;
 		}
 		catch (Exception e)

@@ -41,7 +41,6 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
@@ -147,8 +146,8 @@ public class Stage1 extends Quest
 	private static final int TIAT_GUARD = 29162;
 	private static final int TIAT_GUARD_NUMBER = 5;
 	private static final int TIAT_VIDEO_NPC = 29169;
-	private static final L2CharPosition MOVE_TO_TIAT = new L2CharPosition(-250403, 207273, -11952, 16384);
-	private static final L2CharPosition MOVE_TO_DOOR = new L2CharPosition(-251432, 214905, -12088, 16384);
+	private static final Location MOVE_TO_TIAT = new Location(-250403, 207273, -11952, 16384);
+	private static final Location MOVE_TO_DOOR = new Location(-251432, 214905, -12088, 16384);
 	
 	// TODO: handle this better
 	private static final int[] SPAWN_MOB_IDS =
@@ -858,7 +857,7 @@ public class Stage1 extends Quest
 				L2PcInstance target = L2World.getInstance().getPlayer(world.getAllowed().get(getRandom(world.getAllowed().size())));
 				if ((world.deviceSpawnedMobCount < MAX_DEVICESPAWNEDMOBCOUNT) && (target != null) && (target.getInstanceId() == npc.getInstanceId()) && !target.isDead())
 				{
-					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
+					L2Attackable mob = (L2Attackable) addSpawn(SPAWN_MOB_IDS[getRandom(SPAWN_MOB_IDS.length)], npc.getSpawn().getLocation(), false, 0, false, world.getInstanceId());
 					world.deviceSpawnedMobCount++;
 					mob.setSeeThroughSilentMove(true);
 					mob.setRunning();
@@ -899,7 +898,7 @@ public class Stage1 extends Quest
 				L2Character mostHate = ((L2Attackable) npc).getMostHated();
 				if (mostHate != null)
 				{
-					double dist = Util.calculateDistance(mostHate.getXdestination(), mostHate.getYdestination(), npc.getSpawn().getLocx(), npc.getSpawn().getLocy());
+					double dist = Util.calculateDistance(mostHate.getXdestination(), mostHate.getYdestination(), npc.getSpawn().getX(), npc.getSpawn().getY());
 					if (dist > 900)
 					{
 						((L2Attackable) npc).reduceHate(mostHate, ((L2Attackable) npc).getHating(mostHate));

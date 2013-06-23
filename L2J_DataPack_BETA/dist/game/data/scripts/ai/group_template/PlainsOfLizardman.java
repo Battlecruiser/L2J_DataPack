@@ -21,7 +21,7 @@ package ai.group_template;
 import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -148,7 +148,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 							if ((monster.getNpcId() == TANTA_MAGICIAN) || (monster.getNpcId() == TANTA_SCOUT))
 							{
 								target.setIsRunning(true);
-								target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(npc.getX(), npc.getY(), npc.getZ(), 0));
+								target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX(), npc.getY(), npc.getZ(), 0));
 							}
 						}
 					}

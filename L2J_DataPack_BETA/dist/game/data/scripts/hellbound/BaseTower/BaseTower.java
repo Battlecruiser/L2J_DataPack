@@ -93,7 +93,7 @@ public class BaseTower extends Quest
 		{
 			case GUZEN:
 				// Should Kendal be despawned before Guzen's spawn? Or it will be crowd of Kendal's
-				addSpawn(KENDAL, npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz(), 0, false, npc.getSpawn().getRespawnDelay(), false);
+				addSpawn(KENDAL, npc.getSpawn().getLocation(), false, npc.getSpawn().getRespawnDelay(), false);
 				DoorTable.getInstance().getDoor(20260003).openMe();
 				DoorTable.getInstance().getDoor(20260004).openMe();
 				startQuestTimer("close", 60000, npc, null, false);

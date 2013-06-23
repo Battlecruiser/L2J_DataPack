@@ -208,15 +208,8 @@ public class RaidbossInfo extends Quest
 		// Add all Raid Bosses to RAIDS list
 		for (L2NpcTemplate raid : NpcTable.getInstance().getAllNpcOfClassType("L2RaidBoss"))
 		{
-			int x = 0, y = 0, z = 0;
 			final L2Spawn spawn = SpawnTable.getInstance().getFirstSpawn(raid.getNpcId());
-			if (spawn != null)
-			{
-				x = spawn.getLocx();
-				y = spawn.getLocy();
-				z = spawn.getLocz();
-			}
-			RADAR.put(raid.getNpcId(), new Location(x, y, z));
+			RADAR.put(raid.getNpcId(), spawn != null ? spawn.getLocation() : new Location(0, 0, 0));
 		}
 	}
 	

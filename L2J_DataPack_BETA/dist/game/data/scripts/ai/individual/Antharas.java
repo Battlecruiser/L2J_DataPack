@@ -35,9 +35,9 @@ import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -132,15 +132,12 @@ public class Antharas extends AbstractNpcAI
 		try
 		{
 			_Zone = GrandBossManager.getInstance().getZone(179700, 113800, -7709);
-			L2NpcTemplate template1;
-			L2Spawn tempSpawn;
-			
 			// Old Antharas
-			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_OLD_ID);
-			tempSpawn = new L2Spawn(template1);
-			tempSpawn.setLocx(181323);
-			tempSpawn.setLocy(114850);
-			tempSpawn.setLocz(-7623);
+			L2NpcTemplate template1 = NpcTable.getInstance().getTemplate(ANTHARAS_OLD_ID);
+			L2Spawn tempSpawn = new L2Spawn(template1);
+			tempSpawn.setX(181323);
+			tempSpawn.setY(114850);
+			tempSpawn.setZ(-7623);
 			tempSpawn.setHeading(32542);
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
@@ -150,9 +147,9 @@ public class Antharas extends AbstractNpcAI
 			// Weak Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_WEAK_ID);
 			tempSpawn = new L2Spawn(template1);
-			tempSpawn.setLocx(181323);
-			tempSpawn.setLocy(114850);
-			tempSpawn.setLocz(-7623);
+			tempSpawn.setX(181323);
+			tempSpawn.setY(114850);
+			tempSpawn.setZ(-7623);
 			tempSpawn.setHeading(32542);
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
@@ -162,9 +159,9 @@ public class Antharas extends AbstractNpcAI
 			// Normal Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_NORMAL_ID);
 			tempSpawn = new L2Spawn(template1);
-			tempSpawn.setLocx(181323);
-			tempSpawn.setLocy(114850);
-			tempSpawn.setLocz(-7623);
+			tempSpawn.setX(181323);
+			tempSpawn.setY(114850);
+			tempSpawn.setZ(-7623);
 			tempSpawn.setHeading(32542);
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
@@ -174,9 +171,9 @@ public class Antharas extends AbstractNpcAI
 			// Strong Antharas
 			template1 = NpcTable.getInstance().getTemplate(ANTHARAS_STRONG_ID);
 			tempSpawn = new L2Spawn(template1);
-			tempSpawn.setLocx(181323);
-			tempSpawn.setLocy(114850);
-			tempSpawn.setLocz(-7623);
+			tempSpawn.setX(181323);
+			tempSpawn.setY(114850);
+			tempSpawn.setZ(-7623);
 			tempSpawn.setHeading(32542);
 			tempSpawn.setAmount(1);
 			tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
@@ -197,12 +194,12 @@ public class Antharas extends AbstractNpcAI
 			{
 				spawnDat = new L2Spawn(Cube);
 				spawnDat.setAmount(1);
-				spawnDat.setLocx(element[0]);
-				spawnDat.setLocy(element[1]);
-				spawnDat.setLocz(element[2]);
+				spawnDat.setX(element[0]);
+				spawnDat.setY(element[1]);
+				spawnDat.setZ(element[2]);
 				spawnDat.setHeading(element[3]);
 				spawnDat.setRespawnDelay(60);
-				spawnDat.setLocation(0);
+				spawnDat.setLocationId(0);
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 				_teleportCubeSpawn.add(spawnDat);
 			}
@@ -514,7 +511,7 @@ public class Antharas extends AbstractNpcAI
 					// Move at random.
 					if (FWA_MOVEATRANDOM)
 					{
-						L2CharPosition pos = new L2CharPosition(getRandom(175000, 178500), getRandom(112400, 116000), -7707, 0);
+						Location pos = new Location(getRandom(175000, 178500), getRandom(112400, 116000), -7707, 0);
 						_moveAtRandomTask = ThreadPoolManager.getInstance().scheduleGeneral(new MoveAtRandom(_antharas, pos), 500);
 					}
 					
@@ -601,9 +598,9 @@ public class Antharas extends AbstractNpcAI
 							}
 						}
 					}
-					tempSpawn.setLocx(x);
-					tempSpawn.setLocy(y);
-					tempSpawn.setLocz(-7704);
+					tempSpawn.setX(x);
+					tempSpawn.setY(y);
+					tempSpawn.setZ(-7704);
 					tempSpawn.setHeading(0);
 					tempSpawn.setAmount(1);
 					tempSpawn.setRespawnDelay(FWA_ACTIVITYTIMEOFANTHARAS * 2);
@@ -860,18 +857,18 @@ public class Antharas extends AbstractNpcAI
 	private static class MoveAtRandom implements Runnable
 	{
 		private final L2Npc _npc;
-		private final L2CharPosition _pos;
+		private final Location _loc;
 		
-		public MoveAtRandom(L2Npc npc, L2CharPosition pos)
+		public MoveAtRandom(L2Npc npc, Location loc)
 		{
 			_npc = npc;
-			_pos = pos;
+			_loc = loc;
 		}
 		
 		@Override
 		public void run()
 		{
-			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, _pos);
+			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, _loc);
 		}
 	}
 	
