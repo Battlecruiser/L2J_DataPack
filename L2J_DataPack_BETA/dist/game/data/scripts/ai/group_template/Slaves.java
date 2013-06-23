@@ -24,7 +24,7 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -44,7 +44,7 @@ public class Slaves extends AbstractNpcAI
 		22320,
 		22321
 	};
-	private static final L2CharPosition MOVE_TO = new L2CharPosition(-25451, 252291, -3252, 3500);
+	private static final Location MOVE_TO = new Location(-25451, 252291, -3252, 3500);
 	private static final int TRUST_REWARD = 10;
 	
 	private Slaves()

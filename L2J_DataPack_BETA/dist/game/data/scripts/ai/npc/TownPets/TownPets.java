@@ -23,8 +23,8 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -70,10 +70,10 @@ public class TownPets extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("move"))
 		{
-			final int locX = (npc.getSpawn().getLocx() - 50) + getRandom(100);
-			final int locY = (npc.getSpawn().getLocy() - 50) + getRandom(100);
+			final int locX = (npc.getSpawn().getX() - 50) + getRandom(100);
+			final int locY = (npc.getSpawn().getY() - 50) + getRandom(100);
 			npc.setRunning();
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(locX, locY, npc.getZ(), 0));
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(locX, locY, npc.getZ(), 0));
 			startQuestTimer("move", 5000, npc, null);
 		}
 		return null;

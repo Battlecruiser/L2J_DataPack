@@ -66,7 +66,7 @@ public class OutpostCaptain extends AbstractNpcAI
 	{
 		if (HellboundManager.getInstance().getLevel() == 8)
 		{
-			addSpawn(DOORKEEPER, npc.getSpawn().getSpawnLocation(), false, 0, false);
+			addSpawn(DOORKEEPER, npc.getSpawn().getLocation(), false, 0, false);
 		}
 		
 		return super.onKill(npc, killer, isSummon);

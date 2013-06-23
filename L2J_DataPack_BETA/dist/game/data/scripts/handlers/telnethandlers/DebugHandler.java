@@ -50,6 +50,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jserver.gameserver.model.items.instance.L2ItemInstance.ItemLocation;
 import com.l2jserver.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
@@ -396,7 +397,7 @@ public class DebugHandler implements ITelnetHandler
 			}
 			if (obj instanceof L2ItemInstance)
 			{
-				if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
+				if (((L2ItemInstance) obj).getItemLocation() == ItemLocation.VOID)
 				{
 					itemVoidCount++;
 				}

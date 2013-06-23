@@ -325,9 +325,9 @@ public class PailakaDevilsLegacy extends Quest
 			// Set onShip
 			_isOnShip = true;
 			// Set Spawn loc to ship. If he loose aggro he should stay on board ;)
-			npc.getSpawn().setLocx(84973);
-			npc.getSpawn().setLocy(-208721);
-			npc.getSpawn().setLocz(-3340);
+			npc.getSpawn().setX(84973);
+			npc.getSpawn().setY(-208721);
+			npc.getSpawn().setZ(-3340);
 			// To be sure, reduce again
 			((L2Attackable) npc).reduceHate(player, 9999);
 			// Spawn followers

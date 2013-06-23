@@ -70,9 +70,9 @@ public class Shadai extends Quest
 		
 		if (mustRevalidate)
 		{
-			npc.getSpawn().setLocx(coords[0]);
-			npc.getSpawn().setLocy(coords[1]);
-			npc.getSpawn().setLocz(coords[2]);
+			npc.getSpawn().setX(coords[0]);
+			npc.getSpawn().setY(coords[1]);
+			npc.getSpawn().setZ(coords[2]);
 			npc.teleToLocation(coords[0], coords[1], coords[2]);
 		}
 	}

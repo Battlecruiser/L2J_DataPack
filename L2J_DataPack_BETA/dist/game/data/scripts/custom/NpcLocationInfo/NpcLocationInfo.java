@@ -287,9 +287,9 @@ public class NpcLocationInfo extends Quest
 				final L2Spawn spawn = SpawnTable.getInstance().getFirstSpawn(npcId);
 				if (spawn != null)
 				{
-					x = spawn.getLocx();
-					y = spawn.getLocy();
-					z = spawn.getLocz();
+					x = spawn.getX();
+					y = spawn.getY();
+					z = spawn.getZ();
 				}
 				st.addRadar(x, y, z);
 				htmltext = "MoveToLoc.htm";

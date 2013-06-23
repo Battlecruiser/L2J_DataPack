@@ -128,7 +128,7 @@ public class TarBeetleSpawn extends DocumentParser
 	{
 		npc.deleteMe();
 		_spawnList.remove(npc.getObjectId());
-		if (npc.getSpawn().getLocz() < -5000)
+		if (npc.getSpawn().getZ() < -5000)
 		{
 			lowerNpcCount--;
 		}
@@ -147,9 +147,9 @@ public class TarBeetleSpawn extends DocumentParser
 			
 			final L2Spawn spawn = new L2Spawn(NpcTable.getInstance().getTemplate(18804));
 			spawn.setHeading(Rnd.get(65535));
-			spawn.setLocx(loc[0]);
-			spawn.setLocy(loc[1]);
-			spawn.setLocz(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3], null));
+			spawn.setX(loc[0]);
+			spawn.setY(loc[1]);
+			spawn.setZ(GeoData.getInstance().getSpawnHeight(loc[0], loc[1], loc[2], loc[3], null));
 			
 			final L2Npc npc = spawn.doSpawn();
 			npc.setIsNoRndWalk(true);
@@ -257,7 +257,7 @@ public class TarBeetleSpawn extends DocumentParser
 				{
 					npc.deleteMe();
 					iterator.remove();
-					if (npc.getSpawn().getLocz() < -5000)
+					if (npc.getSpawn().getZ() < -5000)
 					{
 						lowerNpcCount--;
 					}

@@ -33,8 +33,8 @@ import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -923,7 +923,7 @@ public class TowerOfNaia extends Quest
 					while (it.hasNext())
 					{
 						L2Npc spore = it.next();
-						if ((spore != null) && !spore.isDead() && (spore.getX() == spore.getSpawn().getLocx()) && (spore.getY() == spore.getSpawn().getLocy()))
+						if ((spore != null) && !spore.isDead() && (spore.getX() == spore.getSpawn().getX()) && (spore.getY() == spore.getSpawn().getY()))
 						{
 							spore.deleteMe();
 							it.remove();
@@ -1227,10 +1227,10 @@ public class TowerOfNaia extends Quest
 			_sporeSpawn.add(npc);
 			npc.setIsRunning(false);
 			int[] coord = SPORES_MOVE_POINTS[getRandom(SPORES_MOVE_POINTS.length)];
-			npc.getSpawn().setLocx(coord[0]);
-			npc.getSpawn().setLocy(coord[1]);
-			npc.getSpawn().setLocz(coord[2]);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(coord[0], coord[1], coord[2], 0));
+			npc.getSpawn().setX(coord[0]);
+			npc.getSpawn().setY(coord[1]);
+			npc.getSpawn().setZ(coord[2]);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coord[0], coord[1], coord[2], 0));
 			startQuestTimer("despawn_spore", 60000, npc, null);
 		}
 		return super.onSpawn(npc);
@@ -1312,10 +1312,10 @@ public class TowerOfNaia extends Quest
 			npc.setIsRunning(false);
 			npc.disableCoreAI(true);
 			npc.setIsNoRndWalk(true);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new L2CharPosition(coords[0], coords[1], coords[2], heading));
-			npc.getSpawn().setLocx(coords[0]);
-			npc.getSpawn().setLocy(coords[1]);
-			npc.getSpawn().setLocz(coords[2]);
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coords[0], coords[1], coords[2], heading));
+			npc.getSpawn().setX(coords[0]);
+			npc.getSpawn().setY(coords[1]);
+			npc.getSpawn().setZ(coords[2]);
 		}
 		return time == 0 ? 100 : time;
 	}

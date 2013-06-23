@@ -21,7 +21,7 @@ package quests.Q10283_RequestOfIceMerchant;
 import quests.Q00115_TheOtherSideOfTruth.Q00115_TheOtherSideOfTruth;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.L2CharPosition;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -40,7 +40,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 	private static final int KIER = 32022;
 	private static final int JINIA = 32760;
 	// Location
-	private static final L2CharPosition MOVE_TO_END = new L2CharPosition(104457, -107010, -3698, 0);
+	private static final Location MOVE_TO_END = new Location(104457, -107010, -3698, 0);
 	// Misc
 	private boolean _jiniaOnSpawn = false;
 	

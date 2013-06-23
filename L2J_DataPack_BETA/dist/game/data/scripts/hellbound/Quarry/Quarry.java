@@ -85,7 +85,7 @@ public class Quarry extends Quest
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 					npc.setAutoAttackable(false);
 					npc.setRHandId(0);
-					npc.teleToLocation(npc.getSpawn().getLocx(), npc.getSpawn().getLocy(), npc.getSpawn().getLocz());
+					npc.teleToLocation(npc.getSpawn().getLocation(), 0);
 					return null;
 				}
 			}

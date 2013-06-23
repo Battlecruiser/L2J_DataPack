@@ -153,9 +153,9 @@ public class SummonNpc extends L2Effect
 					y += (Rnd.nextBoolean() ? Rnd.get(20, 50) : Rnd.get(-50, -20));
 				}
 				
-				spawn.setLocx(x);
-				spawn.setLocy(y);
-				spawn.setLocz(player.getZ());
+				spawn.setX(x);
+				spawn.setY(y);
+				spawn.setZ(player.getZ());
 				spawn.setHeading(player.getHeading());
 				spawn.stopRespawn();
 				

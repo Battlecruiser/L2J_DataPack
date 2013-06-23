@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2World;
@@ -65,8 +64,11 @@ import com.l2jserver.gameserver.util.Util;
 
 /**
  * Crystal Caverns instance zone.<br>
- * TODO: 1. Kechi's Henchmans spawn animation is missing. 2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working. 3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done). 4. Baylor Raid is missing a lot of things This script takes the best elements of
- * different versions and combines them into one script to get the most optimal and retail-like experience. Original sources: theone, L2JEmu, L2JOfficial, L2JFree Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT Please maintain consistency between the Crystal Caverns scripts.
+ * TODO: 1. Kechi's Henchmans spawn animation is missing.<br>
+ * 2. NPC related Traps are not supported by core, so Darnels and Lahm door trap is not working.<br>
+ * 3. Need retail spawn for Coral Garden (EmeraldSteam/Square - done).<br>
+ * 4. Baylor Raid is missing a lot of things This script takes the best elements of different versions and combines them into one script to get the most optimal and retail-like experience.<br>
+ * Original sources: theone, L2JEmu, L2JOfficial, L2JFree Contributing authors: TGS, Lantoc, Janiii, Gigiikun, RosT Please maintain consistency between the Crystal Caverns scripts.
  */
 public class CrystalCaverns extends Quest
 {
@@ -74,7 +76,7 @@ public class CrystalCaverns extends Quest
 	{
 		public L2ItemInstance foodItem = null;
 		public boolean isAtDestination = false;
-		public L2CharPosition oldpos = null;
+		public Location oldLoc = null;
 	}
 	
 	private class CCWorld extends InstanceWorld
@@ -2377,7 +2379,7 @@ public class CrystalCaverns extends Quest
 				int dy;
 				if ((cryGolem.foodItem == null) || !cryGolem.foodItem.isVisible())
 				{
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, cryGolem.oldpos);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, cryGolem.oldLoc);
 					cancelQuestTimers("reachFood");
 					startQuestTimer("backFood", 2000, npc, null, true);
 					return "";
@@ -2416,9 +2418,9 @@ public class CrystalCaverns extends Quest
 			else if (event.equalsIgnoreCase("getFood"))
 			{
 				CrystalGolem cryGolem = world.crystalGolems.get(npc);
-				L2CharPosition newpos = new L2CharPosition(cryGolem.foodItem.getX(), cryGolem.foodItem.getY(), cryGolem.foodItem.getZ(), 0);
-				cryGolem.oldpos = new L2CharPosition(npc.getX(), npc.getY(), npc.getZ(), npc.getHeading());
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, newpos);
+				Location newLoc = new Location(cryGolem.foodItem.getX(), cryGolem.foodItem.getY(), cryGolem.foodItem.getZ(), 0);
+				cryGolem.oldLoc = new Location(npc.getX(), npc.getY(), npc.getZ(), npc.getHeading());
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, newLoc);
 				startQuestTimer("reachFood", 2000, npc, null, true);
 				cancelQuestTimers("getFood");
 			}

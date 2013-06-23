@@ -42,7 +42,6 @@ import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
-import com.l2jserver.gameserver.model.L2CharPosition;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Object.InstanceType;
 import com.l2jserver.gameserver.model.L2Party;
@@ -236,7 +235,7 @@ public class FinalEmperialTomb extends Quest
 		17130045,
 		17130046
 	};
-	protected static final L2CharPosition MOVE_TO_CENTER = new L2CharPosition(-87904, -141296, -9168, 0);
+	protected static final Location MOVE_TO_CENTER = new Location(-87904, -141296, -9168, 0);
 	
 	// spawns
 	private static final int TIME_BETWEEN_DEMON_SPAWNS = 20000;

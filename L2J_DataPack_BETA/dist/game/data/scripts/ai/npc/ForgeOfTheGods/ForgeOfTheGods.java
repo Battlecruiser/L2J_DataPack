@@ -108,7 +108,7 @@ public class ForgeOfTheGods extends AbstractNpcAI
 		_npcCount++;
 		
 		// For monsters at Forge of the Gods - Lower level
-		if (npc.getSpawn().getLocz() < -5000) // && (_npcsAlive < 48))
+		if (npc.getSpawn().getZ() < -5000) // && (_npcsAlive < 48))
 		{
 			if ((_npcCount > BONUS_LOWER_LV03) && (rand <= FORGE_BONUS02))
 			{
