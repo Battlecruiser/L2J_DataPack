@@ -27,6 +27,7 @@ import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
+import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
@@ -34,7 +35,6 @@ import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Monastery AI.
@@ -78,9 +78,8 @@ public class Monastery extends AbstractNpcAI
 	private Monastery()
 	{
 		super(Monastery.class.getSimpleName(), "ai/group_template");
-		addAggroRangeEnterId(SOLINA_CLAN);
-		addAggroRangeEnterId(CAPTAIN, KNIGHT);
-		addSpellFinishedId(SOLINA_CLAN);
+		addSeeCreatureId(SOLINA_CLAN);
+		addSeeCreatureId(CAPTAIN, KNIGHT);
 		addSkillSeeId(DIVINITY_CLAN);
 		addAttackId(KNIGHT, CAPTAIN);
 		addSpawnId(KNIGHT);
@@ -120,37 +119,88 @@ public class Monastery extends AbstractNpcAI
 				}
 			}
 		}
+		else if (event.equals("checking"))
+		{
+			if (!npc.getKnownList().getKnownCharacters().contains(player))
+			{
+				cancelQuestTimer("checking", npc, player);
+				return super.onAdvEvent(event, npc, player);
+			}
+			
+			if (player.getAppearance().getInvisible() || player.isSilentMoving())
+			{
+				npc.setTarget(null);
+				npc.getAI().stopFollow();
+				((L2Attackable) npc).getAggroList().remove(player);
+				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, player, null);
+				
+				for (L2Character character : player.getKnownList().getKnownCharactersInRadius(500))
+				{
+					if ((character instanceof L2MonsterInstance) && (character.getTarget() == player))
+					{
+						character.setTarget(null);
+						character.getAI().stopFollow();
+						((L2Attackable) character).getAggroList().remove(player);
+						character.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, player, null);
+					}
+				}
+				return super.onAdvEvent(event, npc, player);
+			}
+			
+			final double distance = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+			if (((distance < 500) && !player.isDead()))
+			{
+				switch (npc.getNpcId())
+				{
+					case CAPTAIN:
+					case KNIGHT:
+					{
+						npc.setRunning();
+						npc.setTarget(player);
+						((L2Attackable) npc).addDamageHate(player, 0, 999);
+						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player, null);
+						break;
+					}
+					default:
+					{
+						if (player.getActiveWeaponInstance() != null)
+						{
+							npc.setRunning();
+							npc.setTarget(player);
+							if (getRandom(10) < 2)
+							{
+								broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
+							}
+							npc.doCast(DECREASE_SPEED.getSkill());
+							((L2Attackable) npc).addDamageHate(player, 0, 999);
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player, null);
+						}
+					}
+				}
+			}
+			
+		}
 		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		if (player.getActiveWeaponInstance() == null)
+		if (getRandom(10) < 1)
 		{
-			npc.setTarget(null);
-			((L2Attackable) npc).disableAllSkills();
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			return super.onAggroRangeEnter(npc, player, isSummon);
+			broadcastNpcSay(npc, Say2.NPC_ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
 		}
-		
-		if (player.isVisible() && !player.isGM())
+		return super.onAttack(npc, player, damage, isSummon);
+	}
+	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer())
 		{
-			npc.setRunning();
-			npc.setTarget(player);
-			((L2Attackable) npc).enableAllSkills();
-			if (Util.contains(SOLINA_CLAN, npc.getNpcId()))
-			{
-				if (getRandom(10) < 3)
-				{
-					broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
-				}
-				npc.doCast(DECREASE_SPEED.getSkill());
-			}
-			((L2Attackable) npc).addDamageHate(player, 0, 100);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player, null);
+			startQuestTimer("checking", 2000, npc, (L2PcInstance) creature, true);
 		}
-		return super.onAggroRangeEnter(npc, player, isSummon);
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
@@ -175,32 +225,10 @@ public class Monastery extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
-	{
-		if (getRandom(10) < 1)
-		{
-			broadcastNpcSay(npc, Say2.NPC_ALL, SOLINA_KNIGHTS_MSG[getRandom(2)]);
-		}
-		return super.onAttack(npc, player, damage, isSummon);
-	}
-	
-	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		broadcastNpcSay(npc, Say2.NPC_ALL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
 		return super.onSpawn(npc);
-	}
-	
-	@Override
-	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
-	{
-		if (skill.getId() == DECREASE_SPEED.getSkillId())
-		{
-			npc.setIsRunning(true);
-			((L2Attackable) npc).addDamageHate(player, 0, 999);
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
-		}
-		return super.onSpellFinished(npc, player, skill);
 	}
 	
 	public static void main(String[] args)
