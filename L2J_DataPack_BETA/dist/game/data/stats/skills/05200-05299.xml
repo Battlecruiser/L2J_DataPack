@@ -773,10 +773,10 @@
 	</skill>
 	<skill id="5239" levels="5" name="Event Timer">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#abnormalTimes"> 300 600 900 1200 1800 </table>
+		<table name="#abnormalTime"> 300 600 900 1200 1800 </table>
 		<table name="#Time"> 300 600 900 1200 1800 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="#abnormalTimes" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="TIME_CHECK" />
 		<set name="canBeDispeled" val="false" />
 		<set name="effectPoint" val="100" />

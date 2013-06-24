@@ -2217,7 +2217,6 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalLvls"> 1 2 3 3 3 3 3 3 3 3 3 3 3 </table>
 		<table name="#abnormalTime"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
-		<table name="#abnormalTimes"> 120 120 120 150 165 180 195 210 225 240 255 270 285 </table>
 		<table name="#cAtk"> 1.2 1.22 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 1.25 </table>
 		<table name="#effectPoints"> 541 611 659 666 669 673 676 679 681 684 687 689 692 </table>
 		<table name="#magicLvl"> 57 66 75 77 78 79 80 81 82 83 84 85 86 </table>
@@ -2225,7 +2224,7 @@
 		<table name="#mpInitialConsume"> 25 32 39 41 42 43 43 44 45 46 47 48 49 </table>
 		<table name="#rCrit"> 0.25 0.27 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 0.3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
-		<set name="abnormalTime" val="#abnormalTimes" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="BUFF_QUEEN_OF_CAT" />
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="#effectPoints" />

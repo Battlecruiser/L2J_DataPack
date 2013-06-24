@@ -1142,12 +1142,11 @@
 	<skill id="4476" levels="5" name="Silent Move">
 		<!-- Confirmed CT2.5 -->
 		<table name="#abnormalTime"> 60 120 300 600 1200 </table>
-		<table name="#abnormalTimes"> 60 120 300 600 1200 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 </table>
 		<table name="#mpConsume"> 10 16 21 28 36 </table>
 		<table name="#mpInitialConsume"> 3 4 6 7 9 </table>
 		<set name="abnormalLvl" val="1" />
-		<set name="abnormalTime" val="#abnormalTimes" />
+		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="STEALTH" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1500" />
