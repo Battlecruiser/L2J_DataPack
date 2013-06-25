@@ -38,7 +38,7 @@ public class Betray extends L2Effect
 	public Betray(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_chance = template.getParameters().getInteger("chance", 100);
+		_chance = template.hasParameters() ? template.getParameters().getInteger("chance", 100) : 100;
 	}
 	
 	@Override
