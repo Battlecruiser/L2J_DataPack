@@ -25,7 +25,7 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * Dragon Vortex AI
+ * Dragon Vortex AI.
  * @author UnAfraid, improved by Adry_85
  */
 public class DragonVortex extends AbstractNpcAI
@@ -102,7 +102,6 @@ public class DragonVortex extends AbstractNpcAI
 				return "32871-no.html";
 			}
 		}
-		
 		return super.onAdvEvent(event, npc, player);
 	}
 	

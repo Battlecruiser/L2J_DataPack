@@ -134,7 +134,6 @@ import handlers.bypasshandlers.EventEngine;
 import handlers.bypasshandlers.Festival;
 import handlers.bypasshandlers.FortSiege;
 import handlers.bypasshandlers.Freight;
-import handlers.bypasshandlers.Henna;
 import handlers.bypasshandlers.ItemAuctionLink;
 import handlers.bypasshandlers.Link;
 import handlers.bypasshandlers.Loto;
@@ -418,7 +417,6 @@ public class MasterHandler
 			Festival.class,
 			FortSiege.class,
 			Freight.class,
-			Henna.class,
 			ItemAuctionLink.class,
 			Link.class,
 			Loto.class,
