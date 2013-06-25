@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00259_RequestFromTheFarmOwner' WHERE name='259_RanchersPlea';

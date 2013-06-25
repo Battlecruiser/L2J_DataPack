@@ -111,7 +111,7 @@ public final class Q00258_BringWolfPelts extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "30001-02.htm" : "30001-1.html";
+				htmltext = (player.getLevel() >= MIN_LVL) ? "30001-02.htm" : "30001-01.html";
 				break;
 			}
 			case State.STARTED:
@@ -136,7 +136,6 @@ public final class Q00258_BringWolfPelts extends Quest
 									break;
 								}
 							}
-							st.takeItems(WOLF_PELT, -1);
 							st.exitQuest(true, true);
 							htmltext = "30001-05.html";
 							break;
