@@ -24,14 +24,12 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="3031" />
-		<set name="lethalStrikeRate" val="25" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="lethalStrikeRate" val="#ench1LethalStrikeRate" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
@@ -46,19 +44,27 @@
 		</cond>
 		<for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="25" />
+			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="#ench1Power" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="#ench1LethalStrikeRate" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Fear" abnormalTime="#ench2Time" val="0" effectPower="30" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="25" />
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="25" />
+			</effect>
 			<effect name="MagicalAttack" noicon="1" val="0" />
 		</enchant3for>
 	</skill>

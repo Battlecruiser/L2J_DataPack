@@ -733,7 +733,6 @@
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
-		<set name="halfKillRate" val="5" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0321" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -759,7 +758,9 @@
 			<effect name="Bluff" val="0">
 				<param chance="80" />
 			</effect>
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param halfLethal="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="322" levels="6" name="Shield Fortress" enchantGroup1="1" enchantGroup2="1">
@@ -1269,7 +1270,6 @@
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-897" />
 		<set name="effectRange" val="1400" />
-		<set name="halfKillRate" val="10" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0343" />
 		<set name="magicLvl" val="76" />
@@ -1303,7 +1303,9 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param halfLethal="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="344" levels="1" name="Lethal Blow" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6" enchantGroup5="6" enchantGroup6="6" enchantGroup7="6">
@@ -1318,7 +1320,6 @@
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-337" />
 		<set name="effectRange" val="400" />
-		<set name="halfKillRate" val="15" />
 		<set name="hitTime" val="1800" />
 		<set name="icon" val="icon.skill0344" />
 		<set name="magicLvl" val="76" />
@@ -1353,7 +1354,9 @@
 		</cond>
 		<for>
 			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param halfLethal="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="345" levels="1" name="Sonic Rage">

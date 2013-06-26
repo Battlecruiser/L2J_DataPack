@@ -682,10 +682,8 @@
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-337" />
 		<set name="effectRange" val="400" />
-		<set name="halfKillRate" val="8" />
 		<set name="hitTime" val="1800" />
 		<set name="icon" val="icon.skill0928_1" />
-		<set name="lethalStrikeRate" val="1" /> <!-- FIXME: unconfirmed -->
 		<set name="magicLvl" val="83" />
 		<set name="mpConsume" val="82" />
 		<set name="nextActionAttack" val="true" />
@@ -700,7 +698,9 @@
 		</cond>
 		<for>
 			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="1" halfLethal="8" /> <!-- FIXME: full lethal rate unconfirmed -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="929" levels="1" name="Spirit of the Cat">
