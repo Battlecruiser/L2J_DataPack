@@ -1551,7 +1551,6 @@
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
-		<set name="halfKillRate" val="10" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0263" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -1591,7 +1590,9 @@
 		</cond>
 		<for>
 			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param halfLethal="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="264" levels="1" name="Song of Earth" enchantGroup1="1" enchantGroup2="1">

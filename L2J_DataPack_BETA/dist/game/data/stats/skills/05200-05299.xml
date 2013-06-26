@@ -1203,12 +1203,13 @@
 		<set name="effectPoint" val="1" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
-		<set name="lethalStrikeRate" val="#lethalStrikeRate" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param fullLethal="#lethalStrikeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5258" levels="12" name="Mana Burn">

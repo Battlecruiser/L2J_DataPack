@@ -914,7 +914,6 @@
 		<set name="dmgDirectlyToHp" val="true" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="400" />
-		<set name="halfKillRate" val="#baseCritLethal" />
 		<set name="hitTime" val="1080" />
 		<set name="icon" val="icon.skill0030" />
 		<set name="magicLvl" val="#magicLvl" />
@@ -948,7 +947,9 @@
 		</cond>
 		<for>
 			<effect name="Backstab" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0" />
+			<effect name="Lethal" noicon="1" val="0">
+				<param halfLethal="#baseCritLethal" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="33" levels="8" name="Summon Phantom Cubic" enchantGroup1="2">

@@ -33,9 +33,14 @@ import com.l2jserver.util.Rnd;
  */
 public class Lethal extends L2Effect
 {
+	private final int _fullLethal;
+	private final int _halfLethal;
+	
 	public Lethal(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_fullLethal = template.getParameters().getInteger("fullLethal", 0);
+		_halfLethal = template.getParameters().getInteger("halfLethal", 0);
 	}
 	
 	@Override
@@ -67,7 +72,7 @@ public class Lethal extends L2Effect
 		
 		double levelBonus = Formulas.calcLvlBonusMod(activeChar, target, getSkill());
 		// Lethal Strike
-		if (Rnd.get(100) < (getSkill().getLethalStrikeRate() * levelBonus))
+		if (Rnd.get(100) < (_fullLethal * levelBonus))
 		{
 			// for Players CP and HP is set to 1.
 			if (target.isPlayer())
@@ -86,7 +91,7 @@ public class Lethal extends L2Effect
 			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
 		}
 		// Half-Kill
-		else if (Rnd.get(100) < (getSkill().getHalfKillRate() * levelBonus))
+		else if (Rnd.get(100) < (_halfLethal * levelBonus))
 		{
 			// for Players CP is set to 1.
 			if (target.isPlayer())
