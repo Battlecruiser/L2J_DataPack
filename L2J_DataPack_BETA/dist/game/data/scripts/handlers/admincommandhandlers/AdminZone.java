@@ -41,7 +41,6 @@ public class AdminZone implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_zone_check",
-		"admin_zone_reload",
 		"admin_zone_visual",
 		"admin_zone_visual_clear"
 	};
@@ -80,11 +79,6 @@ public class AdminZone implements IAdminCommandHandler
 			
 			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, MapRegionManager.TeleportWhereType.Town);
 			activeChar.sendMessage("TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
-		}
-		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))
-		{
-			ZoneManager.getInstance().reload();
-			activeChar.sendMessage("All Zones have been reloaded");
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual"))
 		{

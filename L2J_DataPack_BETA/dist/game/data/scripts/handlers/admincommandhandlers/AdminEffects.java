@@ -122,7 +122,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			RegionBBSManager.getInstance().changeCommunityBoard();
 			command = "";
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_invis"))
 		{
@@ -171,13 +171,13 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_play_sounds"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "songs/songs.htm");
+			AdminHtml.showAdminHtml(activeChar, "songs/songs.htm");
 		}
 		else if (command.startsWith("admin_play_sounds"))
 		{
 			try
 			{
-				AdminHelpPage.showHelpPage(activeChar, "songs/songs" + command.substring(18) + ".htm");
+				AdminHtml.showAdminHtml(activeChar, "songs/songs" + command.substring(18) + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
@@ -346,7 +346,7 @@ public class AdminEffects implements IAdminCommandHandler
 			if (command.contains("_menu"))
 			{
 				command = "";
-				AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+				AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 			}
 		}
 		else if (command.startsWith("admin_polyself"))
@@ -886,6 +886,6 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			filename = "social";
 		}
-		AdminHelpPage.showHelpPage(activeChar, filename + ".htm");
+		AdminHtml.showAdminHtml(activeChar, filename + ".htm");
 	}
 }

@@ -84,11 +84,11 @@ public class AdminSpawn implements IAdminCommandHandler
 	{
 		if (command.equals("admin_show_spawns"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+			AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 		}
 		else if (command.equalsIgnoreCase("admin_spawn_debug_menu"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");
+			AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
 		}
 		else if (command.startsWith("admin_spawn_debug_print"))
 		{
@@ -103,7 +103,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					printSpawn((L2Npc) target, type);
 					if (command.contains("_menu"))
 					{
-						AdminHelpPage.showHelpPage(activeChar, "spawns_debug.htm");
+						AdminHtml.showAdminHtml(activeChar, "spawns_debug.htm");
 					}
 				}
 				catch (Exception e)
@@ -134,12 +134,12 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 			}
 		}
 		else if (command.equals("admin_show_npcs"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+			AdminHtml.showAdminHtml(activeChar, "npcs.htm");
 		}
 		else if (command.startsWith("admin_npc_index"))
 		{
@@ -160,7 +160,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				AdminHelpPage.showHelpPage(activeChar, "npcs.htm");
+				AdminHtml.showAdminHtml(activeChar, "npcs.htm");
 			}
 		}
 		else if (command.startsWith("admin_instance_spawns"))
@@ -273,7 +273,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{ // Case of wrong or missing monster data
-				AdminHelpPage.showHelpPage(activeChar, "spawns.htm");
+				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
 			}
 		}
 		else if (command.startsWith("admin_list_spawns") || command.startsWith("admin_list_positions"))

@@ -267,7 +267,7 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 		}
-		AdminHelpPage.showHelpPage(activeChar, filename);
+		AdminHtml.showAdminHtml(activeChar, filename);
 	}
 	
 	private void teleportCharacter(L2PcInstance player, int x, int y, int z, L2PcInstance activeChar, String message)
@@ -310,6 +310,6 @@ public class AdminMenu implements IAdminCommandHandler
 	 */
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "charmanage.htm");
+		AdminHtml.showAdminHtml(activeChar, "charmanage.htm");
 	}
 }

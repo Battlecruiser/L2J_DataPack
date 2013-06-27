@@ -223,15 +223,15 @@ public class AdminPolymorph implements IAdminCommandHandler
 	{
 		if (command.contains("transform"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "transform.htm");
+			AdminHtml.showAdminHtml(activeChar, "transform.htm");
 		}
 		else if (command.contains("abnormal"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "abnormal.htm");
+			AdminHtml.showAdminHtml(activeChar, "abnormal.htm");
 		}
 		else
 		{
-			AdminHelpPage.showHelpPage(activeChar, "effects_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "effects_menu.htm");
 		}
 	}
 }

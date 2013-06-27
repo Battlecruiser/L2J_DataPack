@@ -102,11 +102,11 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		if (command.equals("admin_show_moves"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
+			AdminHtml.showAdminHtml(activeChar, "teleports.htm");
 		}
 		if (command.equals("admin_show_moves_other"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "tele/other.html");
+			AdminHtml.showAdminHtml(activeChar, "tele/other.html");
 		}
 		else if (command.equals("admin_show_teleport"))
 		{
@@ -149,12 +149,12 @@ public class AdminTeleport implements IAdminCommandHandler
 			catch (StringIndexOutOfBoundsException e)
 			{
 				// Case of empty or missing coordinates
-				AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
+				AdminHtml.showAdminHtml(activeChar, "teleports.htm");
 			}
 			catch (NumberFormatException nfe)
 			{
 				activeChar.sendMessage("Usage: //move_to <x> <y> <z>");
-				AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
+				AdminHtml.showAdminHtml(activeChar, "teleports.htm");
 			}
 		}
 		else if (command.startsWith("admin_teleport_character"))
@@ -358,7 +358,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void showTeleportWindow(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "move.htm");
+		AdminHtml.showAdminHtml(activeChar, "move.htm");
 	}
 	
 	private void showTeleportCharWindow(L2PcInstance activeChar)

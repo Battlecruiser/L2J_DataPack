@@ -228,7 +228,7 @@ public class AdminEnchant implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "enchant.htm");
+		AdminHtml.showAdminHtml(activeChar, "enchant.htm");
 	}
 	
 	@Override
