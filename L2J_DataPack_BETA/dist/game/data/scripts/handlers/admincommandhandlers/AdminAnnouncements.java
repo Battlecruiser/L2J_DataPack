@@ -86,7 +86,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				command += " (" + activeChar.getName() + ")";
 			}
 			Announcements.getInstance().handleAnnounce(command, 20, false);
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_critannounce_menu"))
 		{
@@ -104,7 +104,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 			{
 			}
 			
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.equals("admin_announce_announcements"))
 		{

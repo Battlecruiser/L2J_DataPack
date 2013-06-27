@@ -144,7 +144,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 	private void showMainPage(L2PcInstance activeChar, String command)
 	{
 		String filename = "mobgroup.htm";
-		AdminHelpPage.showHelpPage(activeChar, filename);
+		AdminHtml.showAdminHtml(activeChar, filename);
 	}
 	
 	private void returnToChar(String command, L2PcInstance activeChar)

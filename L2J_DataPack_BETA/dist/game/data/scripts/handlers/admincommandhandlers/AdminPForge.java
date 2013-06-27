@@ -202,7 +202,7 @@ public class AdminPForge implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "pforge1.htm");
+		AdminHtml.showAdminHtml(activeChar, "pforge1.htm");
 	}
 	
 	private void showPage2(L2PcInstance activeChar, String format)

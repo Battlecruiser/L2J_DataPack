@@ -103,14 +103,14 @@ public class AdminSkill implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_skill_list"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "skills.htm");
+			AdminHtml.showAdminHtml(activeChar, "skills.htm");
 		}
 		else if (command.startsWith("admin_skill_index"))
 		{
 			try
 			{
 				String val = command.substring(18);
-				AdminHelpPage.showHelpPage(activeChar, "skills/" + val + ".htm");
+				AdminHtml.showAdminHtml(activeChar, "skills/" + val + ".htm");
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{

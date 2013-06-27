@@ -18,7 +18,6 @@
 	<admin command="admin_silence" accessLevel="7" />
 	<admin command="admin_diet" accessLevel="7" />
 	<admin command="admin_tradeoff" accessLevel="7" />
-	<admin command="admin_reload" accessLevel="7" confirmDlg="true" />
 	<admin command="admin_set" accessLevel="7" />
 	<admin command="admin_set_mod" accessLevel="7" />
 	<admin command="admin_saveolymp" accessLevel="7" />
@@ -62,15 +61,6 @@
 	<admin command="admin_areacancel" accessLevel="7" />
 	<admin command="admin_removereuse" accessLevel="7" />
 	<admin command="admin_switch_gm_buffs" accessLevel="7" />
-
-	<!-- ADMIN CACHE -->
-	<admin command="admin_cache_htm_rebuild" accessLevel="7" />
-	<admin command="admin_cache_htm_reload" accessLevel="7" />
-	<admin command="admin_cache_reload_path" accessLevel="7" />
-	<admin command="admin_cache_reload_file" accessLevel="7" />
-	<admin command="admin_cache_crest_rebuild" accessLevel="7" />
-	<admin command="admin_cache_crest_reload" accessLevel="7" />
-	<admin command="admin_cache_crest_fix" accessLevel="7" />
 
 	<!-- ADMIN CAMERA -->
 	<admin command="admin_camera" accessLevel="7" />
@@ -332,8 +322,9 @@
 	<admin command="admin_hellbound_setlevel" accessLevel="7" />
 	<admin command="admin_hellbound" accessLevel="7" />
 
-	<!-- ADMIN HELP PAGE -->
-	<admin command="admin_help" accessLevel="7" />
+	<!-- ADMIN HTML -->
+	<admin command="admin_html" accessLevel="7" />
+	<admin command="admin_loadhtml" accessLevel="7" />
 
 	<!-- ADMIN INSTANCE -->
 	<admin command="admin_setinstance" accessLevel="7" />
@@ -461,6 +452,9 @@
 	<admin command="admin_show_quests" accessLevel="7" />
 	<admin command="admin_quest_info" accessLevel="7" />
 
+	<!-- ADMIN RELOAD -->
+	<admin command="admin_reload" accessLevel="7" confirmDlg="true" />
+	
 	<!-- ADMIN REPAIR CHAR -->
 	<admin command="admin_restore" accessLevel="7" />
 	<admin command="admin_repair" accessLevel="7" />
@@ -612,7 +606,6 @@
 
 	<!-- ADMIN ZONE -->
 	<admin command="admin_zone_check" accessLevel="7" />
-	<admin command="admin_zone_reload" accessLevel="7" />
 	<admin command="admin_zone_visual" accessLevel="7" />
 	<admin command="admin_zone_visual_clear" accessLevel="7" />
 

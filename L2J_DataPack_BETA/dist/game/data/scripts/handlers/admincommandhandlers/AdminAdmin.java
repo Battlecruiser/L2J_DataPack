@@ -18,33 +18,18 @@
  */
 package handlers.admincommandhandlers;
 
-import java.io.File;
 import java.util.StringTokenizer;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.script.ScriptException;
 
 import javolution.text.TextBuilder;
 
 import com.l2jserver.Config;
-import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.AdminTable;
-import com.l2jserver.gameserver.datatables.BuyListData;
-import com.l2jserver.gameserver.datatables.DoorTable;
-import com.l2jserver.gameserver.datatables.ItemTable;
-import com.l2jserver.gameserver.datatables.MultisellData;
-import com.l2jserver.gameserver.datatables.NpcTable;
-import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.datatables.TeleportLocationTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.QuestManager;
-import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.olympiad.Olympiad;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jserver.gameserver.scripting.L2ScriptEngineManager;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -70,7 +55,6 @@ public class AdminAdmin implements IAdminCommandHandler
 		"admin_silence",
 		"admin_diet",
 		"admin_tradeoff",
-		"admin_reload",
 		"admin_set",
 		"admin_set_mod",
 		"admin_saveolymp",
@@ -97,13 +81,13 @@ public class AdminAdmin implements IAdminCommandHandler
 		{
 			AdminTable.getInstance().showGm(activeChar);
 			activeChar.sendMessage("Registered into gm list");
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_gmlistoff"))
 		{
 			AdminTable.getInstance().hideGm(activeChar);
 			activeChar.sendMessage("Removed from gm list");
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_silence"))
 		{
@@ -117,7 +101,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				activeChar.setSilenceMode(true);
 				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_saveolymp"))
 		{
@@ -182,7 +166,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			{
 				activeChar.refreshOverloaded();
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_tradeoff"))
 		{
@@ -213,114 +197,7 @@ public class AdminAdmin implements IAdminCommandHandler
 					activeChar.sendMessage("Trade refusal enabled");
 				}
 			}
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
-		}
-		else if (command.startsWith("admin_reload"))
-		{
-			StringTokenizer st = new StringTokenizer(command);
-			st.nextToken();
-			if (!st.hasMoreTokens())
-			{
-				activeChar.sendMessage("You need to specify a type to reload!");
-				activeChar.sendMessage("Usage: //reload <multisell|buylist|teleport|skill|npc|htm|item|config|access|quests|door|walker|handler>");
-				return false;
-			}
-			
-			final String type = st.nextToken();
-			try
-			{
-				if (type.equals("multisell"))
-				{
-					MultisellData.getInstance().load();
-					activeChar.sendMessage("All Multisells have been reloaded");
-				}
-				else if (type.startsWith("buylist"))
-				{
-					BuyListData.getInstance().load();
-					activeChar.sendMessage("All BuyLists have been reloaded");
-				}
-				else if (type.startsWith("teleport"))
-				{
-					TeleportLocationTable.getInstance().reloadAll();
-					activeChar.sendMessage("Teleport Locations have been reloaded");
-				}
-				else if (type.startsWith("skill"))
-				{
-					SkillTable.getInstance().reload();
-					activeChar.sendMessage("All Skills have been reloaded");
-				}
-				else if (type.startsWith("npcId"))
-				{
-					Integer npcId = Integer.parseInt(st.nextToken());
-					if (npcId != null)
-					{
-						NpcTable.getInstance().reloadNpc(npcId, true, true, true, true, true, true);
-						activeChar.sendMessage("NPC " + npcId + " have been reloaded");
-					}
-				}
-				else if (type.equals("npc"))
-				{
-					NpcTable.getInstance().reloadAllNpc();
-					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All NPCs have been reloaded");
-				}
-				else if (type.startsWith("htm"))
-				{
-					HtmCache.getInstance().reload();
-					activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
-				}
-				else if (type.startsWith("item"))
-				{
-					ItemTable.getInstance().reload();
-					activeChar.sendMessage("Item Templates have been reloaded");
-				}
-				else if (type.startsWith("config"))
-				{
-					Config.load();
-					activeChar.sendMessage("All Config Settings have been reloaded");
-				}
-				else if (type.startsWith("access"))
-				{
-					AdminTable.getInstance().load();
-					activeChar.sendMessage("Access Rights have been reloaded");
-				}
-				else if (type.startsWith("quests"))
-				{
-					QuestManager.getInstance().reloadAllQuests();
-					activeChar.sendMessage("All Quests have been reloaded.");
-				}
-				else if (type.startsWith("door"))
-				{
-					DoorTable.getInstance().load();
-					activeChar.sendMessage("All Doors have been reloaded");
-				}
-				else if (type.startsWith("walker"))
-				{
-					WalkingManager.getInstance().load();
-					activeChar.sendMessage("All Walkers have been reloaded");
-				}
-				else if (type.startsWith("handler"))
-				{
-					File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/MasterHandler.java");
-					try
-					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-						activeChar.sendMessage("All handlers have been reloaded");
-					}
-					catch (ScriptException e)
-					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-						activeChar.sendMessage("There was an error while loading handlers.");
-					}
-				}
-				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("An error occured while reloading " + type + " !");
-				activeChar.sendMessage("Usage: //reload <multisell|buylist|teleport|skill|npc|htm|item|config|access|quests|door|walker|handler>");
-				_log.log(Level.WARNING, "An error occured while reloading " + type + ": " + e, e);
-			}
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		else if (command.startsWith("admin_setconfig"))
 		{
@@ -379,7 +256,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					if (cmd[2].equalsIgnoreCase("mod"))
 					{
-						AdminHelpPage.showHelpPage(activeChar, "mods_menu.htm");
+						AdminHtml.showAdminHtml(activeChar, "mods_menu.htm");
 					}
 				}
 			}
@@ -435,7 +312,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				filename = "main";
 				break;
 		}
-		AdminHelpPage.showHelpPage(activeChar, filename + "_menu.htm");
+		AdminHtml.showAdminHtml(activeChar, filename + "_menu.htm");
 	}
 	
 	public void showConfigPage(L2PcInstance activeChar)

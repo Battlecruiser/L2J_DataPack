@@ -402,7 +402,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				AdminHelpPage.showHelpPage(activeChar, "charclasses.htm");
+				AdminHtml.showAdminHtml(activeChar, "charclasses.htm");
 			}
 			catch (NumberFormatException e)
 			{

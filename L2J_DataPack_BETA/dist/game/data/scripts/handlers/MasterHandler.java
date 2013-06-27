@@ -57,7 +57,6 @@ import handlers.admincommandhandlers.AdminAnnouncements;
 import handlers.admincommandhandlers.AdminBBS;
 import handlers.admincommandhandlers.AdminBuffs;
 import handlers.admincommandhandlers.AdminCHSiege;
-import handlers.admincommandhandlers.AdminCache;
 import handlers.admincommandhandlers.AdminCamera;
 import handlers.admincommandhandlers.AdminChangeAccessLevel;
 import handlers.admincommandhandlers.AdminClan;
@@ -84,7 +83,7 @@ import handlers.admincommandhandlers.AdminGmChat;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminHeal;
 import handlers.admincommandhandlers.AdminHellbound;
-import handlers.admincommandhandlers.AdminHelpPage;
+import handlers.admincommandhandlers.AdminHtml;
 import handlers.admincommandhandlers.AdminInstance;
 import handlers.admincommandhandlers.AdminInstanceZone;
 import handlers.admincommandhandlers.AdminInvul;
@@ -106,6 +105,7 @@ import handlers.admincommandhandlers.AdminPledge;
 import handlers.admincommandhandlers.AdminPolymorph;
 import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
+import handlers.admincommandhandlers.AdminReload;
 import handlers.admincommandhandlers.AdminRepairChar;
 import handlers.admincommandhandlers.AdminRes;
 import handlers.admincommandhandlers.AdminRide;
@@ -336,7 +336,6 @@ public class MasterHandler
 			AdminAnnouncements.class,
 			AdminBBS.class,
 			AdminBuffs.class,
-			AdminCache.class,
 			AdminCamera.class,
 			AdminChangeAccessLevel.class,
 			AdminCHSiege.class,
@@ -365,7 +364,7 @@ public class MasterHandler
 			AdminGraciaSeeds.class,
 			AdminHeal.class,
 			AdminHellbound.class,
-			AdminHelpPage.class,
+			AdminHtml.class,
 			AdminInstance.class,
 			AdminInstanceZone.class,
 			AdminInvul.class,
@@ -386,6 +385,7 @@ public class MasterHandler
 			AdminPolymorph.class,
 			AdminPunishment.class,
 			AdminQuest.class,
+			AdminReload.class,
 			AdminRepairChar.class,
 			AdminRes.class,
 			AdminRide.class,

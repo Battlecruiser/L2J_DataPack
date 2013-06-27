@@ -168,7 +168,7 @@ public class AdminPledge implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "game_menu.htm");
+		AdminHtml.showAdminHtml(activeChar, "game_menu.htm");
 	}
 	
 }

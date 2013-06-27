@@ -178,6 +178,6 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 	
 	private void showMainPage(L2PcInstance activeChar)
 	{
-		AdminHelpPage.showHelpPage(activeChar, "territorywar.htm");
+		AdminHtml.showAdminHtml(activeChar, "territorywar.htm");
 	}
 }

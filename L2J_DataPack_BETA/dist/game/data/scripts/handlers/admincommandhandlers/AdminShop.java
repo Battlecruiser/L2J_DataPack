@@ -61,7 +61,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_gmshop"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "gmshops.htm");
+			AdminHtml.showAdminHtml(activeChar, "gmshops.htm");
 		}
 		return true;
 	}

@@ -45,7 +45,7 @@ public class AdminInvul implements IAdminCommandHandler
 		if (command.equals("admin_invul"))
 		{
 			handleInvul(activeChar);
-			AdminHelpPage.showHelpPage(activeChar, "gm_menu.htm");
+			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		if (command.equals("admin_setinvul"))
 		{

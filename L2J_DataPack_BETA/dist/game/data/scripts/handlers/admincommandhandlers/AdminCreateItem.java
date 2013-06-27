@@ -46,7 +46,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	{
 		if (command.equals("admin_itemcreate"))
 		{
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_create_item"))
 		{
@@ -77,7 +77,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_create_coin"))
 		{
@@ -111,7 +111,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_give_item_target"))
 		{
@@ -153,7 +153,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Specify a valid number.");
 			}
-			AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
+			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
 		else if (command.startsWith("admin_give_item_to_all"))
 		{
