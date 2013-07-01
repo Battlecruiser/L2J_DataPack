@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.scripting.scriptengine.events.AttackEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.AugmentEvent;
 import com.l2jserver.gameserver.scripting.scriptengine.events.ClanCreationEvent;
@@ -72,7 +71,6 @@ public class Listeners extends L2Script
 		addItemAugmentNotify();
 		addItemDropPickupNotify();
 		addHennaNotify();
-		addDlgAnswerNotify(SystemMessageId.RESSURECTION_REQUEST_BY_C1_FOR_S2_XP.getId());
 		addRequestBypassToServerNotify();
 		addPlayerNotify();
 	}
@@ -94,6 +92,7 @@ public class Listeners extends L2Script
 		addTransformNotify(player);
 		addSkillUseNotify(player);
 		addAttackNotify(player);
+		addDlgAnswerNotify(player);
 	}
 	
 	/**
@@ -107,9 +106,7 @@ public class Listeners extends L2Script
 		removeTransformNotify(player);
 		removeSkillUseNotify(player);
 		removeAttackNotify(player);
-		removeDlgAnswerNotify();
-		removeRequestBypassToServerNotify();
-		removePlayerNotify();
+		removeDlgAnswerNotify(player);
 	}
 	
 	/**
@@ -388,9 +385,10 @@ public class Listeners extends L2Script
 	 * @param event
 	 */
 	@Override
-	public void onDlgAnswer(DlgAnswerEvent event)
+	public boolean onDlgAnswer(DlgAnswerEvent event)
 	{
 		_log.log(Level.INFO, event.getActiveChar() + " has been answered on " + event.getMessageId() + " with " + event.getAnswer() + " requester: " + event.getRequesterId());
+		return true;
 	}
 	
 	/**
