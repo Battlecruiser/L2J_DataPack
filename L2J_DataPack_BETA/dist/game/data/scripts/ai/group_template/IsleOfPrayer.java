@@ -28,7 +28,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
  * Isle of Prayer AI.
  * @author Zoey76
  */
-public class IsleOfPrayer extends AbstractNpcAI
+public final class IsleOfPrayer extends AbstractNpcAI
 {
 	// Items
 	private static final int YELLOW_SEED_OF_EVIL_SHARD = 9593;
@@ -55,7 +55,7 @@ public class IsleOfPrayer extends AbstractNpcAI
 	private IsleOfPrayer()
 	{
 		super(IsleOfPrayer.class.getSimpleName(), "ai/group_template");
-		addKillId(MUDDY_CORAL);
+		addKillId(ISLAND_GUARDIAN, WHITE_SAND_MIRAGE, MUDDY_CORAL, KLEOPORA, SEYCHELLES, NAIAD, SONNERATIA, CASTALIA, CHRYSOCOLLA, PYTHIA, DARK_WATER_DRAGON, SHADE1, SHADE2, WATER_DRAGON_DETRACTOR1, WATER_DRAGON_DETRACTOR2);
 	}
 	
 	@Override
