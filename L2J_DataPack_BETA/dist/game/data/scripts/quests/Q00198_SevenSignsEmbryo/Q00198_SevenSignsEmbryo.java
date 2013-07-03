@@ -194,8 +194,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
 			st.giveItems(SCULPTURE_OF_DOUBT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			st.setCond(2);
+			st.setCond(2, true);
 		}
 		
 		isBusy = false;
@@ -204,6 +203,8 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU);
 		ns.addStringParameter(player.getName());
 		npc.broadcastPacket(ns);
+		npc.deleteMe();
+		player.showQuestMovie(14);
 		return super.onKill(npc, player, isSummon);
 	}
 	
