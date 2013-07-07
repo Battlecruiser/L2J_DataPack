@@ -140,32 +140,31 @@ public final class Q00650_ABrokenDream extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final List<L2PcInstance> viablePlayers = new ArrayList<>(9);
-		int monsterChance = MONSTER_DROP_CHANCES.get(npc.getNpcId());
+		final List<L2PcInstance> randomList = new ArrayList<>();
+		final QuestState st = killer.getQuestState(getName());
+		if ((st != null) && st.isStarted())
+		{
+			randomList.add(killer);
+			randomList.add(killer);
+		}
+		
+		final int monsterChance = MONSTER_DROP_CHANCES.get(npc.getNpcId());
 		if (killer.isInParty())
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
 				final QuestState qs = member.getQuestState(getName());
-				if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, member, false))
+				if ((qs != null) && qs.isStarted())
 				{
-					viablePlayers.add(member);
+					randomList.add(member);
 				}
 			}
 		}
-		else
-		{
-			final QuestState qs = killer.getQuestState(getName());
-			if ((qs != null) && qs.isStarted())
-			{
-				viablePlayers.add(killer);
-			}
-		}
 		
-		if (!viablePlayers.isEmpty())
+		if (!randomList.isEmpty())
 		{
-			final L2PcInstance player = viablePlayers.get(getRandom(viablePlayers.size()));
-			if (getRandom(1000) < monsterChance)
+			final L2PcInstance player = randomList.get(getRandom(randomList.size()));
+			if ((getRandom(1000) < monsterChance) && Util.checkIfInRange(1500, npc, player, true))
 			{
 				giveItems(player, REMNANTS_OF_OLD_DWARVES_DREAMS, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

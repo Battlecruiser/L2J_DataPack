@@ -206,6 +206,7 @@ public final class Q00189_ContractCompletion extends Quest
 						break;
 					}
 				}
+				break;
 			}
 		}
 		return htmltext;
