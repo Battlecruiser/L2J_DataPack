@@ -214,6 +214,7 @@ public final class Q00190_LostDream extends Quest
 						break;
 					}
 				}
+				break;
 			}
 		}
 		return htmltext;

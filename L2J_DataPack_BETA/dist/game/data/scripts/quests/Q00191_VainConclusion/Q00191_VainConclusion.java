@@ -18,6 +18,8 @@
  */
 package quests.Q00191_VainConclusion;
 
+import quests.Q00188_SealRemoval.Q00188_SealRemoval;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -131,7 +133,7 @@ public final class Q00191_VainConclusion extends Quest
 				{
 					case State.CREATED:
 					{
-						final QuestState qs = player.getQuestState("188_Seal_Removal");
+						final QuestState qs = player.getQuestState(Q00188_SealRemoval.class.getName());
 						if ((qs != null) && qs.isCompleted())
 						{
 							htmltext = (player.getLevel() >= MIN_LEVEL) ? "30970-01.htm" : "30970-02.htm";
@@ -205,6 +207,7 @@ public final class Q00191_VainConclusion extends Quest
 						break;
 					}
 				}
+				break;
 			}
 		}
 		return htmltext;

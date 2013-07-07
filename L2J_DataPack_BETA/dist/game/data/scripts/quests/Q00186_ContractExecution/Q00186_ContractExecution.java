@@ -80,10 +80,13 @@ public final class Q00186_ContractExecution extends Quest
 			}
 			case "30673-03.htm":
 			{
-				st.startQuest();
-				st.giveItems(METALLOGRAPH_RESEARCH_REPORT, 1);
-				st.takeItems(LORAINES_CERTIFICATE, -1);
-				htmltext = event;
+				if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(LORAINES_CERTIFICATE))
+				{
+					st.startQuest();
+					st.giveItems(METALLOGRAPH_RESEARCH_REPORT, 1);
+					st.takeItems(LORAINES_CERTIFICATE, -1);
+					htmltext = event;
+				}
 				break;
 			}
 			case "30621-03.html":
