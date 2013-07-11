@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00045_ToTalkingIsland' WHERE name='45_ToTalkingIsland';
