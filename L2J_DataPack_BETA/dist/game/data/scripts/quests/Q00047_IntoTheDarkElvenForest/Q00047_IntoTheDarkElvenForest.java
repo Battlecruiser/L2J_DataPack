@@ -16,12 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00045_ToTalkingIsland;
+package quests.Q00047_IntoTheDarkElvenForest;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import quests.Q00006_StepIntoTheFuture.Q00006_StepIntoTheFuture;
+import quests.Q00008_AnAdventureBegins.Q00008_AnAdventureBegins;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -31,10 +31,10 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**
- * To Talking Island (45)
+ * Into The Dark Elven Forest (47)
  * @author janiko
  */
-public final class Q00045_ToTalkingIsland extends Quest
+public final class Q00047_IntoTheDarkElvenForest extends Quest
 {
 	// Npcs
 	private static final int GALLADUCCI = 30097;
@@ -52,7 +52,7 @@ public final class Q00045_ToTalkingIsland extends Quest
 	// Misc
 	private static final int MIN_LVL = 3;
 	// Reward
-	private static final int SCROLL_OF_ESCAPE_TALKING_ISLAND_VILLAGE = 7554;
+	private static final int SCROLL_OF_ESCAPE_DARK_ELF_VILLAGE = 7556;
 	// Get condition for each npc
 	private static Map<Integer, ItemHolder> NPC_ITEMS = new HashMap<>();
 	static
@@ -62,7 +62,7 @@ public final class Q00045_ToTalkingIsland extends Quest
 		NPC_ITEMS.put(DUSTIN, new ItemHolder(5, GALLADUCCIS_ORDER_3));
 	}
 	
-	private Q00045_ToTalkingIsland(int questId, String name, String descr)
+	private Q00047_IntoTheDarkElvenForest(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
 		addStartNpc(GALLADUCCI);
@@ -171,7 +171,7 @@ public final class Q00045_ToTalkingIsland extends Quest
 			{
 				if (st.isCond(6) && st.hasQuestItems(PURIFIED_MAGIC_NECKLACE))
 				{
-					st.giveItems(SCROLL_OF_ESCAPE_TALKING_ISLAND_VILLAGE, 1);
+					st.giveItems(SCROLL_OF_ESCAPE_DARK_ELF_VILLAGE, 1);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -208,7 +208,7 @@ public final class Q00045_ToTalkingIsland extends Quest
 						}
 						else
 						{
-							st = talker.getQuestState(Q00006_StepIntoTheFuture.class.getSimpleName());
+							st = talker.getQuestState(Q00008_AnAdventureBegins.class.getSimpleName());
 							if ((st != null) && st.isCompleted() && st.hasQuestItems(MARK_OF_TRAVELER))
 							{
 								htmltext = "30097-01.htm";
@@ -303,6 +303,6 @@ public final class Q00045_ToTalkingIsland extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00045_ToTalkingIsland(45, Q00045_ToTalkingIsland.class.getSimpleName(), "To Talking Island");
+		new Q00047_IntoTheDarkElvenForest(47, Q00047_IntoTheDarkElvenForest.class.getSimpleName(), "Into the Dark Elven Forest");
 	}
 }
