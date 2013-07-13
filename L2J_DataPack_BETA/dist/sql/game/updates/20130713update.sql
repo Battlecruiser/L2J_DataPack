@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00262_TradeWithTheIvoryTower' WHERE name='262_BringMeMushrooms1';
