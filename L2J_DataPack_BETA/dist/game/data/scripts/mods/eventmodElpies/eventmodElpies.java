@@ -18,76 +18,40 @@
  */
 package mods.eventmodElpies;
 
-import java.util.List;
 import java.util.concurrent.ScheduledFuture;
-
-import javolution.util.FastList;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.Announcements;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.datatables.SpawnTable;
+import com.l2jserver.gameserver.model.L2Spawn;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Event;
 
-public class eventmodElpies extends Event
+public final class eventmodElpies extends Event
 {
-	// Event NPC's list
-	private List<L2Npc> _npclist;
-	// Event Task
-	ScheduledFuture<?> _eventTask = null;
-	// Event time
-	public static final int _event_time = 2;
-	// Event state
-	private static boolean _isactive = false;
-	
-	// EVENT VARIABLES
-	
-	// NPc's
-	private static final int _elpy = 900100;
-	// How much Elpy's
-	private static final int _option_howmuch = 100;
-	// Elpy's count
-	private static int _elpies_count = 0;
-	
-	private static final String[] _locations =
-	{
-		"Aden",
-		"Gludin",
-		"Hunters Village",
-		"Dion",
-		"Oren"
-	};
-	
+	// NPC
+	private static final int ELPY = 900100;
+	// Amount of Elpies to spawn when the event starts
+	private static final int ELPY_AMOUNT = 100;
+	// Event duration in minutes
+	private static final int EVENT_DURATION_MINUTES = 2;
 	// @formatter:off
-	private static final int[][] _spawns =
+	private static final int[][] DROPLIST_CONSUMABLES =
 	{
-		// minx, maxx, miny, maxy, zspawn
-		{ 146558, 148341,  26622,  28560, -2200 },
-		{ -84040, -81420, 150257, 151175, -3125 },
-		{ 116094, 117141,  75776,  77072, -2700 },
-		{  18564,  19200, 144377, 145782, -3081 },
-		{  82048,  82940,  53240,  54126, -1490 }
-	};
-	
-	/**
-	 * Drop data:<br>
-	 * Higher the chance harder the item.<br>
-	 * ItemId, chance in percent, min amount, max amount
-	 */
-	private static final int[][] DROPLIST =
-	{
-		{  1540,  80, 10, 15 },	// Quick Healing Potion
-		{  1538,  60,  5, 10 },	// Blessed Scroll of Escape
-		{  3936,  40,  5, 10 },	// Blessed Scroll of Ressurection
-		{  6387,  25,  5, 10 },	// Blessed Scroll of Ressurection Pets
-		{ 22025,  15,  5, 10 },	// Powerful Healing Potion
-		{  6622,  10,  1, 1 },	// Giant's Codex
-		{ 20034,   5,  1, 1 },	// Revita Pop
-		{ 20004,   1,  1, 1 },	// Energy Ginseng
-		{ 20004,   0,  1, 1 }	// Energy Ginseng
+		// itemId, chance, min amount, max amount
+		{  1540, 80, 10, 15 },	// Quick Healing Potion
+		{  1538, 60,  5, 10 },	// Blessed Scroll of Escape
+		{  3936, 40,  5, 10 },	// Blessed Scroll of Ressurection
+		{  6387, 25,  5, 10 },	// Blessed Scroll of Ressurection Pets
+		{ 22025, 15,  5, 10 },	// Powerful Healing Potion
+		{  6622, 10,  1, 1 },	// Giant's Codex
+		{ 20034,  5,  1, 1 },	// Revita Pop
+		{ 20004,  1,  1, 1 },	// Energy Ginseng
+		{ 20004,  0,  1, 1 }	// Energy Ginseng
 	};
 	
 	private static final int[][] DROPLIST_CRYSTALS =
@@ -96,45 +60,115 @@ public class eventmodElpies extends Event
 		{ 1459, 60, 40,  80 },	// Crystal C-Grade
 		{ 1460, 40, 30,  60 },	// Crystal B-Grade
 		{ 1461, 20, 20,  30 },	// Crystal A-Grade
-		{ 1462,  0, 10,  20 },	// Crystal S-Grade
+		{ 1462,  0, 10,  20 }	// Crystal S-Grade
 	};
 	// @formatter:on
-	
-	public static void main(String[] args)
-	{
-		new eventmodElpies(-1, "eventmodElpies", "mods");
-	}
+	// Non-final variables
+	private static boolean EVENT_ACTIVE = false;
+	private static int CURRENT_ELPY_COUNT = 0;
+	private ScheduledFuture<?> _eventTask = null;
 	
 	public eventmodElpies(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
-		
-		addSpawnId(_elpy);
-		addKillId(_elpy);
+		addSpawnId(ELPY);
+		addKillId(ELPY);
 	}
 	
 	@Override
-	public String onSpawn(L2Npc npc)
+	public boolean eventBypass(L2PcInstance activeChar, String bypass)
 	{
-		((L2EventMonsterInstance) npc).eventSetDropOnGround(true);
-		((L2EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
+		return false;
+	}
+	
+	@Override
+	public boolean eventStart()
+	{
+		if (EVENT_ACTIVE)
+		{
+			return false;
+		}
 		
-		return super.onSpawn(npc);
+		// Check Custom Table - we use custom NPC's
+		if (!Config.CUSTOM_NPC_TABLE)
+		{
+			_log.info(getName() + ": Event can't be started because custom NPC table is disabled!");
+			return false;
+		}
+		
+		EVENT_ACTIVE = true;
+		
+		EventLocation[] locations = EventLocation.values();
+		EventLocation randomLoc = locations[getRandom(locations.length)];
+		
+		CURRENT_ELPY_COUNT = 0;
+		long despawnDelay = EVENT_DURATION_MINUTES * 60000;
+		
+		for (int i = 0; i < ELPY_AMOUNT; i++)
+		{
+			addSpawn(ELPY, randomLoc.getRandomX(), randomLoc.getRandomY(), randomLoc.getZ(), 0, true, despawnDelay);
+			CURRENT_ELPY_COUNT++;
+		}
+		
+		Announcements.getInstance().announceToAll("*Squeak Squeak*");
+		Announcements.getInstance().announceToAll("Elpy invasion in " + randomLoc.getName());
+		Announcements.getInstance().announceToAll("Help us exterminate them!");
+		Announcements.getInstance().announceToAll("You have " + EVENT_DURATION_MINUTES + " minutes!");
+		
+		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				Announcements.getInstance().announceToAll("Time is up!");
+				eventStop();
+			}
+		}, despawnDelay);
+		return true;
+	}
+	
+	@Override
+	public boolean eventStop()
+	{
+		if (!EVENT_ACTIVE)
+		{
+			return false;
+		}
+		
+		EVENT_ACTIVE = false;
+		
+		if (_eventTask != null)
+		{
+			_eventTask.cancel(true);
+			_eventTask = null;
+		}
+		
+		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(ELPY))
+		{
+			L2Npc npc = spawn.getLastSpawn();
+			if (npc != null)
+			{
+				npc.deleteMe();
+			}
+		}
+		
+		Announcements.getInstance().announceToAll("*Squeak Squeak*");
+		Announcements.getInstance().announceToAll("Elpy Event finished!");
+		return true;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		// Drop only if event is active
-		if (_isactive)
+		if (EVENT_ACTIVE)
 		{
-			dropItem(npc, killer, DROPLIST);
+			dropItem(npc, killer, DROPLIST_CONSUMABLES);
 			dropItem(npc, killer, DROPLIST_CRYSTALS);
-			_elpies_count--;
+			CURRENT_ELPY_COUNT--;
 			
-			if (_elpies_count <= 0)
+			if (CURRENT_ELPY_COUNT <= 0)
 			{
-				Announcements.getInstance().announceToAll("No more elpies...");
+				Announcements.getInstance().announceToAll("All elpies have been killed!");
 				eventStop();
 			}
 		}
@@ -143,103 +177,57 @@ public class eventmodElpies extends Event
 	}
 	
 	@Override
-	public boolean eventStart()
+	public String onSpawn(L2Npc npc)
 	{
-		// Don't start event if its active
-		if (_isactive)
-		{
-			return false;
-		}
-		
-		// Check Custom Table - we use custom NPC's
-		if (!Config.CUSTOM_NPC_TABLE)
-		{
-			_log.info(getName() + ": Event can't be started, because custom npc table is disabled!");
-			return false;
-		}
-		
-		// Initialize list
-		_npclist = new FastList<>();
-		
-		// Set Event active
-		_isactive = true;
-		
-		// Spawn Elpy's
-		int location = getRandom(0, _locations.length - 1);
-		
-		int[] _spawndata = _spawns[location];
-		
-		_elpies_count = 0;
-		
-		for (int i = 0; i < _option_howmuch; i++)
-		{
-			int x = getRandom(_spawndata[0], _spawndata[1]);
-			int y = getRandom(_spawndata[2], _spawndata[3]);
-			recordSpawn(_elpy, x, y, _spawndata[4], 0, true, _event_time * 60 * 1000);
-			_elpies_count++;
-		}
-		
-		// Announce event start
-		Announcements.getInstance().announceToAll("*Squeak Squeak*");
-		Announcements.getInstance().announceToAll("Elpy invasion in " + _locations[location]);
-		Announcements.getInstance().announceToAll("Help us exterminate them!");
-		Announcements.getInstance().announceToAll("You have " + _event_time + " min...");
-		
-		// Schedule Event end
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				timeUp();
-			}
-		}, _event_time * 60 * 1000);
-		
-		return true;
+		((L2EventMonsterInstance) npc).eventSetDropOnGround(true);
+		((L2EventMonsterInstance) npc).eventSetBlockOffensiveSkills(true);
+		return super.onSpawn(npc);
 	}
 	
-	protected void timeUp()
+	private static enum EventLocation
 	{
-		Announcements.getInstance().announceToAll("Time up !");
-		eventStop();
-	}
-	
-	@Override
-	public boolean eventStop()
-	{
-		// Don't stop inactive event
-		if (!_isactive)
+		ADEN("Aden", 146558, 148341, 26622, 28560, -2200),
+		DION("Dion", 18564, 19200, 144377, 145782, -3081),
+		GLUDIN("Gludin", -84040, -81420, 150257, 151175, -3125),
+		HV("Hunters Village", 116094, 117141, 75776, 77072, -2700),
+		OREN("Oren", 82048, 82940, 53240, 54126, -1490);
+		
+		private final String _name;
+		private final int _minX;
+		private final int _maxX;
+		private final int _minY;
+		private final int _maxY;
+		private final int _z;
+		
+		EventLocation(String name, int minX, int maxX, int minY, int maxY, int z)
 		{
-			return false;
+			_name = name;
+			_minX = minX;
+			_maxX = maxX;
+			_minY = minY;
+			_maxY = maxY;
+			_z = z;
 		}
 		
-		// Set inactive
-		_isactive = false;
-		
-		// Cancel task if any
-		if (_eventTask != null)
+		public String getName()
 		{
-			_eventTask.cancel(true);
-			_eventTask = null;
+			return _name;
 		}
-		// Despawn Npc's
-		if (!_npclist.isEmpty())
+		
+		public int getRandomX()
 		{
-			for (L2Npc _npc : _npclist)
-			{
-				if (_npc != null)
-				{
-					_npc.deleteMe();
-				}
-			}
+			return getRandom(_minX, _maxX);
 		}
-		_npclist.clear();
 		
-		// Announce event end
-		Announcements.getInstance().announceToAll("*Squeak Squeak*");
-		Announcements.getInstance().announceToAll("Elpy's Event finished");
+		public int getRandomY()
+		{
+			return getRandom(_minY, _maxY);
+		}
 		
-		return true;
+		public int getZ()
+		{
+			return _z;
+		}
 	}
 	
 	private static final void dropItem(L2Npc mob, L2PcInstance player, int[][] droplist)
@@ -248,27 +236,16 @@ public class eventmodElpies extends Event
 		
 		for (int[] drop : droplist)
 		{
-			if (chance > drop[1])
+			if (chance >= drop[1])
 			{
 				((L2MonsterInstance) mob).dropItem(player, drop[0], getRandom(drop[2], drop[3]));
-				return;
+				break;
 			}
 		}
 	}
 	
-	private L2Npc recordSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	public static void main(String[] args)
 	{
-		L2Npc _tmp = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
-		if (_tmp != null)
-		{
-			_npclist.add(_tmp);
-		}
-		return _tmp;
-	}
-	
-	@Override
-	public boolean eventBypass(L2PcInstance activeChar, String bypass)
-	{
-		return false;
+		new eventmodElpies(-1, "eventmodElpies", "mods/eventmodElpies");
 	}
 }
