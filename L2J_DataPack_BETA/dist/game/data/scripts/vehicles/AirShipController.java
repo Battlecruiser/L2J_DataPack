@@ -109,15 +109,6 @@ public abstract class AirShipController extends Quest
 	
 	private static final int STARSTONE = 13277;
 	private static final int SUMMON_COST = 5;
-	private static final SystemMessage SM_ALREADY_EXISTS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS);
-	private static final SystemMessage SM_ALREADY_SUMMONED = SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED);
-	private static final SystemMessage SM_NEED_LICENSE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON);
-	private static final SystemMessage SM_NEED_CLANLVL5 = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_CLANLVL_5_TO_SUMMON);
-	private static final SystemMessage SM_NO_PRIVS = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
-	private static final SystemMessage SM_ALREADY_USED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_ALREADY_USED);
-	private static final SystemMessage SM_LICENSE_ALREADY_ACQUIRED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
-	
-	private static final SystemMessage SM_LICENSE_ENTERED = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
 	
 	private static final SystemMessage SM_NEED_MORE = SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_NEED_MORE_S1).addItemName(STARSTONE);
 	
@@ -135,29 +126,29 @@ public abstract class AirShipController extends Quest
 			{
 				if (_dockedShip.isOwner(player))
 				{
-					player.sendPacket(SM_ALREADY_EXISTS);
+					player.sendPacket(SystemMessageId.THE_AIRSHIP_IS_ALREADY_EXISTS);
 				}
 				return null;
 			}
 			if (_isBusy)
 			{
-				player.sendPacket(SM_ALREADY_SUMMONED);
+				player.sendPacket(SystemMessageId.ANOTHER_AIRSHIP_ALREADY_SUMMONED);
 				return null;
 			}
-			if ((player.getClanPrivileges() & L2Clan.CP_CL_SUMMON_AIRSHIP) != L2Clan.CP_CL_SUMMON_AIRSHIP)
+			if (!player.hasClanPrivilege(L2Clan.CP_CL_SUMMON_AIRSHIP))
 			{
-				player.sendPacket(SM_NO_PRIVS);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
 				return null;
 			}
 			int ownerId = player.getClanId();
 			if (!AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
-				player.sendPacket(SM_NEED_LICENSE);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_NEED_LICENSE_TO_SUMMON);
 				return null;
 			}
 			if (AirShipManager.getInstance().hasAirShip(ownerId))
 			{
-				player.sendPacket(SM_ALREADY_USED);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_ALREADY_USED);
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipSummon", STARSTONE, SUMMON_COST, npc, true))
@@ -263,18 +254,18 @@ public abstract class AirShipController extends Quest
 		{
 			if ((player.getClan() == null) || (player.getClan().getLevel() < 5))
 			{
-				player.sendPacket(SM_NEED_CLANLVL5);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_NEED_CLANLVL_5_TO_SUMMON);
 				return null;
 			}
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SM_NO_PRIVS);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_NO_PRIVILEGES);
 				return null;
 			}
 			final int ownerId = player.getClanId();
 			if (AirShipManager.getInstance().hasAirShipLicense(ownerId))
 			{
-				player.sendPacket(SM_LICENSE_ALREADY_ACQUIRED);
+				player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ALREADY_ACQUIRED);
 				return null;
 			}
 			if (!player.destroyItemByItemId("AirShipLicense", LICENSE, 1, npc, true))
@@ -284,7 +275,7 @@ public abstract class AirShipController extends Quest
 			}
 			
 			AirShipManager.getInstance().registerLicense(ownerId);
-			player.sendPacket(SM_LICENSE_ENTERED);
+			player.sendPacket(SystemMessageId.THE_AIRSHIP_SUMMON_LICENSE_ENTERED);
 			return null;
 		}
 		else
