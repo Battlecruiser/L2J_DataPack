@@ -59,11 +59,6 @@ public class CastleMercenaryManager extends AbstractNpcAI
 		addFirstTalkId(NPCS);
 	}
 	
-	private boolean hasRights(L2PcInstance player, L2Npc npc)
-	{
-		return player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && ((player.getClanPrivileges() & L2Clan.CP_CS_MERCENARIES) == L2Clan.CP_CS_MERCENARIES));
-	}
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -122,7 +117,7 @@ public class CastleMercenaryManager extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final String htmltext;
-		if (hasRights(player, npc))
+		if (player.canOverrideCond(PcCondOverride.CASTLE_CONDITIONS) || ((player.getClanId() == npc.getCastle().getOwnerId()) && player.hasClanPrivilege(L2Clan.CP_CS_MERCENARIES)))
 		{
 			if (npc.getCastle().getSiege().getIsInProgress())
 			{

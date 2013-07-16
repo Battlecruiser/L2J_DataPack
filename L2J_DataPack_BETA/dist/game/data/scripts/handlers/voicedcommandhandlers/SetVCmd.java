@@ -61,7 +61,7 @@ public class SetVCmd implements IVoicedCommandHandler
 				}
 				
 				final int n = Integer.parseInt(val);
-				if (!((activeChar.getClanPrivileges() > n) || activeChar.isClanLeader()))
+				if ((activeChar.getClanPrivileges() <= n) || !activeChar.isClanLeader())
 				{
 					return false;
 				}
@@ -71,7 +71,7 @@ public class SetVCmd implements IVoicedCommandHandler
 			}
 			else if (params.startsWith("title"))
 			{
-				
+				// TODO why is this empty?
 			}
 		}
 		return true;

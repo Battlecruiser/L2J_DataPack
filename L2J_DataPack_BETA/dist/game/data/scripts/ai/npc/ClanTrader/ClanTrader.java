@@ -111,7 +111,7 @@ public class ClanTrader extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (player.isClanLeader() || ((player.getClanPrivileges() & L2Clan.CP_CL_TROOPS_FAME) == L2Clan.CP_CL_TROOPS_FAME))
+		if (player.isClanLeader() || player.hasClanPrivilege(L2Clan.CP_CL_TROOPS_FAME))
 		{
 			return npc.getNpcId() + ".html";
 		}

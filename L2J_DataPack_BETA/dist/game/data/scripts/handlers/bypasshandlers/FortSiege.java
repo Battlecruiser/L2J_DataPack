@@ -44,7 +44,7 @@ public class FortSiege implements IBypassHandler
 			return false;
 		}
 		
-		if ((activeChar.getClanId() > 0) && ((activeChar.getClanPrivileges() & L2Clan.CP_CS_MANAGE_SIEGE) == L2Clan.CP_CS_MANAGE_SIEGE))
+		if ((activeChar.getClanId() > 0) && activeChar.hasClanPrivilege(L2Clan.CP_CS_MANAGE_SIEGE))
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // register
 			{
