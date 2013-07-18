@@ -81,9 +81,6 @@ public class Backstab extends L2Effect
 		target.reduceCurrentHp(damage, activeChar, getSkill());
 		target.notifyDamageReceived(damage, getEffector(), getSkill(), true);
 		
-		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
-		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
 		{
@@ -96,6 +93,10 @@ public class Backstab extends L2Effect
 			L2PcInstance activePlayer = activeChar.getActingPlayer();
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
+		
+		// Check if damage should be reflected
+		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
+		
 		return true;
 	}
 }
