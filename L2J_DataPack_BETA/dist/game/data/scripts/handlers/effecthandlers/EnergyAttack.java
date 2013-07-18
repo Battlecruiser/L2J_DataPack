@@ -93,9 +93,9 @@ public class EnergyAttack extends L2Effect
 			double finalDamage = damage * modifier;
 			target.reduceCurrentHp(finalDamage, activeChar, getSkill());
 			target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
+			activeChar.sendDamageMessage(target, (int) finalDamage, false, crit, false);
 			// Check if damage should be reflected
 			Formulas.calcDamageReflected(activeChar, target, getSkill(), crit);
-			activeChar.sendDamageMessage(target, (int) finalDamage, false, crit, false);
 		}
 		else
 		{
