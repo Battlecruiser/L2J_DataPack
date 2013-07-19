@@ -20,6 +20,7 @@ package ai.group_template;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.model.L2Object;
@@ -148,7 +149,7 @@ public class Monastery extends AbstractNpcAI
 			}
 			
 			final double distance = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
-			if (((distance < 500) && !player.isDead()))
+			if (((distance < 500) && !player.isDead() && GeoData.getInstance().canSeeTarget(npc, player)))
 			{
 				switch (npc.getNpcId())
 				{
