@@ -19,6 +19,7 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -56,6 +57,11 @@ public class GetAgro extends L2Effect
 	@Override
 	public boolean onStart()
 	{
+		if (getEffected() instanceof L2NpcInstance)
+		{
+			return false;
+		}
+		
 		CtrlIntention intention = (getEffected().isInCombat() || getEffected().isL2Attackable()) ? CtrlIntention.AI_INTENTION_ATTACK : CtrlIntention.AI_INTENTION_FOLLOW;
 		getEffected().getAI().setIntention(intention, getEffector());
 		return true;
