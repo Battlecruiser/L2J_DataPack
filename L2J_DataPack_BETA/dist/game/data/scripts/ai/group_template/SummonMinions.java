@@ -82,6 +82,12 @@ public class SummonMinions extends AbstractNpcAI
 		MINIONS.put(22265, Arrays.asList(18366, 18366));
 		// Pythia
 		MINIONS.put(22266, Arrays.asList(18366, 18366));
+		// Invader Soldier of Nightmare
+		MINIONS.put(22715, Arrays.asList(22716,22716,22716,22716,22716,22716,22716,22716,22716));
+		// Nihil Invader Soldier
+		MINIONS.put(22726, Arrays.asList(22727,22727,22727,22727,22727,22727,22727,22727,22727));
+		// Mutant Soldier
+		MINIONS.put(22737, Arrays.asList(22738,22738,22738,22738,22738,22738,22738,22738,22738)); 
 		// Tanta Lizardman Summoner
 		MINIONS.put(22774, Arrays.asList(22768, 22768));
 	}
@@ -125,7 +131,7 @@ public class SummonMinions extends AbstractNpcAI
 						{
 							for (int val : MINIONS.get(npcId))
 							{
-								L2Attackable newNpc = (L2Attackable) addSpawn(val, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, 0);
+								L2Attackable newNpc = (L2Attackable) addSpawn(val, (npc.getX() + getRandom(-150, 150)), (npc.getY() + getRandom(-150, 150)), npc.getZ(), 0, false, npc.getInstanceId());
 								newNpc.setRunning();
 								newNpc.addDamageHate(attacker, 0, 999);
 								newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -181,7 +187,7 @@ public class SummonMinions extends AbstractNpcAI
 						HasSpawned = 0;
 						for (int val : MINIONS.get(npcId))
 						{
-							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
+							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, npc.getInstanceId());
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -194,7 +200,7 @@ public class SummonMinions extends AbstractNpcAI
 					{
 						for (int val : MINIONS.get(npcId))
 						{
-							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, 0);
+							L2Attackable newNpc = (L2Attackable) addSpawn(val, npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), 0, false, npc.getInstanceId());
 							newNpc.setRunning();
 							newNpc.addDamageHate(attacker, 0, 999);
 							newNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -207,6 +213,12 @@ public class SummonMinions extends AbstractNpcAI
 						{
 							addSpawn(val, (npc.getX() + getRandom(-100, 100)), (npc.getY() + getRandom(-100, 100)), npc.getZ(), 0, false, 0);
 						}
+					}
+					// Despawn Invader Soldier of Nightmare, Nihil Invader Soldiers, Mutant Soldiers after minions have been summoned
+					if (((npcId == 22715) || (npcId == 22726) || (npcId == 22737)) && !npc.isDead())
+					{
+						onKill(npc, attacker, isSummon);
+						npc.deleteMe();
 					}
 					break;
 			}
