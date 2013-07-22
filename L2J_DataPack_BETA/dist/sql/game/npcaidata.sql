@@ -2320,7 +2320,7 @@ INSERT INTO `npcaidata` VALUES
 (18817, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Martyr of Nightmare
 (18818, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Martyr
 (18819, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Nihil Invader Treasure Chest
-(18820, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Nihil Invader Treasure Chest
+(18820, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Nihil Invader Treasure Chest
 (18821, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Martyr
 (18822, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Mutant Treasure Chest
 (18823, 7, 15, 0, 300, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 300, "null", 0, 0, "fighter"), -- Mutant Treasure Chest
@@ -4793,39 +4793,39 @@ INSERT INTO `npcaidata` VALUES
 (22705, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 444, 0, "legendorc_clan", 300, "null", 0, 0, "fighter"), -- Contaminated Batur Commander
 (22706, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 444, 0, "legendorc_clan", 500, "null", 0, 0, "fighter"), -- Turka Follower's Ghost
 (22707, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 444, 0, "legendorc_clan", 300, "null", 0, 0, "fighter"), -- Turka Commander's Ghost
-(22708, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Warrior of Nightmare
-(22709, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Healer of Nightmare
-(22710, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Guide of Nightmare
-(22711, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Destroyer of Nightmare
-(22712, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Assassin of Nightmare
-(22713, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Shaman of Nightmare
-(22714, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Archer of Nightmare
-(22715, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Soldier of Nightmare
-(22716, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Soldier of Nightmare
-(22717, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Disciple of Nightmare
-(22718, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Elite Soldier of Nightmare
-(22719, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Warrior
-(22720, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Healer
-(22721, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Guide
-(22722, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Destroyer
-(22723, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Assassin
-(22724, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Shaman
-(22725, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Archer
-(22726, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Soldier
-(22727, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Soldier
-(22728, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Disciple
-(22729, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Elite Soldier
-(22730, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Warrior
-(22731, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Healer
-(22732, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Guide
-(22733, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Destroyer
-(22734, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Assassin
-(22735, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Shaman
-(22736, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Overlord
-(22737, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Soldier
-(22738, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Soldier
-(22739, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Disciple
-(22740, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Elite Soldier
+(22708, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Warrior of Nightmare
+(22709, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Healer of Nightmare
+(22710, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Guide of Nightmare
+(22711, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Destroyer of Nightmare
+(22712, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Assassin of Nightmare
+(22713, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Shaman of Nightmare
+(22714, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Archer of Nightmare
+(22715, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Soldier of Nightmare
+(22716, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Soldier of Nightmare
+(22717, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Disciple of Nightmare
+(22718, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Invader Elite Soldier of Nightmare
+(22719, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Warrior
+(22720, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Healer
+(22721, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Guide
+(22722, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Destroyer
+(22723, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Assassin
+(22724, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Shaman
+(22725, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Archer
+(22726, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Soldier
+(22727, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Soldier
+(22728, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Disciple
+(22729, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Nihil Invader Elite Soldier
+(22730, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Warrior
+(22731, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Healer
+(22732, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Guide
+(22733, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Destroyer
+(22734, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Assassin
+(22735, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Shaman
+(22736, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Overlord
+(22737, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Soldier
+(22738, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Soldier
+(22739, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Disciple
+(22740, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 300, 0, "fantasy_clan", 300, "null", 0, 0, "fighter"), -- Mutant Elite Soldier
 (22741, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "robber_clan", 300, "null", 0, 0, "fighter"), -- Grave Robber Warrior
 (22742, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 500, "null", 0, 0, "fighter"), -- Ornithomimus
 (22743, 7, 15, 0, 300, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "null", 500, "null", 0, 0, "fighter"), -- Deinonychus
