@@ -150,17 +150,28 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 		if (!randomList.isEmpty())
 		{
 			final QuestState st3 = randomList.get(getRandom(randomList.size()));
-			if (((getRandom(1000) < MONSTER_DROP_CHANCES.get(npc.getNpcId())) && Util.checkIfInRange(1500, npc, st3.getPlayer(), true)))
+			final long count = st3.getQuestItemsCount(ORC_GOODS);
+			if ((count < ORC_GOODS_REQUIRED_COUNT) && Util.checkIfInRange(1500, npc, st3.getPlayer(), true))
 			{
-				final int rate = (npc.isChampion()) ? (int) Config.L2JMOD_CHAMPION_REWARDS : (int) Config.RATE_QUEST_DROP;
-				st3.giveItems(ORC_GOODS, 1 * rate);
-				if ((st3.getQuestItemsCount(ORC_GOODS)) >= ORC_GOODS_REQUIRED_COUNT)
+				int chance = (int) ((npc.isChampion() ? Config.L2JMOD_CHAMPION_REWARDS : Config.RATE_QUEST_DROP) * MONSTER_DROP_CHANCES.get(npc.getNpcId()));
+				int numItems = chance / 1000;
+				chance = chance % 1000;
+				if (getRandom(1000) < chance)
 				{
-					st3.setCond(2, true);
+					numItems++;
 				}
-				else
+				if (numItems > 0)
 				{
-					st3.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					if ((count + numItems) >= ORC_GOODS_REQUIRED_COUNT)
+					{
+						numItems = ORC_GOODS_REQUIRED_COUNT - (int) count;
+						st3.setCond(2, true);
+					}
+					else
+					{
+						st3.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					st3.giveItems(ORC_GOODS, numItems);
 				}
 			}
 		}
