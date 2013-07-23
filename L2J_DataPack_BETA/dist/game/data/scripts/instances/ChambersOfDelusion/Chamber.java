@@ -25,7 +25,6 @@ import java.util.logging.Level;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
@@ -35,7 +34,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.Instance;
-import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -48,13 +46,12 @@ import com.l2jserver.gameserver.network.serverpackets.Earthquake;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Util;
-import com.l2jserver.util.Rnd;
 
 /**
  * Chambers of Delusion superclass.
  * @author GKR
  */
-public class Chamber extends Quest
+public abstract class Chamber extends Quest
 {
 	protected class CDWorld extends InstanceWorld
 	{
@@ -77,8 +74,8 @@ public class Chamber extends Quest
 		
 		protected void scheduleRoomChange(boolean bossRoom)
 		{
-			Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
-			long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + Rnd.get(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
+			final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
+			final long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
 			
 			// Schedule next room change only if remaining time is enough
 			if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
@@ -102,7 +99,7 @@ public class Chamber extends Quest
 			@Override
 			public void run()
 			{
-				Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
+				final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
 				
 				if ((inst == null) || ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
 				{
@@ -112,7 +109,7 @@ public class Chamber extends Quest
 				{
 					for (int objId : inst.getPlayers())
 					{
-						L2PcInstance pl = L2World.getInstance().getPlayer(objId);
+						final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 						if ((pl != null) && pl.isOnline())
 						{
 							if ((partyInside == null) || !pl.isInParty() || (partyInside != pl.getParty()))
@@ -138,7 +135,7 @@ public class Chamber extends Quest
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "[Chambers of Delusion] ChangeRoomTask exception : " + e.getMessage(), e);
+					_log.log(Level.WARNING, getClass().getSimpleName() + " ChangeRoomTask exception : " + e.getMessage(), e);
 				}
 			}
 		}
@@ -153,8 +150,8 @@ public class Chamber extends Quest
 	
 	// NPCs
 	private final int ENTRANCE_GATEKEEPER;
-	private int ROOM_GATEKEEPER_FIRST;
-	private int ROOM_GATEKEEPER_LAST;
+	private final int ROOM_GATEKEEPER_FIRST;
+	private final int ROOM_GATEKEEPER_LAST;
 	private final int AENKINEL;
 	private final int BOX;
 	
@@ -175,14 +172,14 @@ public class Chamber extends Quest
 	
 	protected Location[] ROOM_ENTER_POINTS;
 	
-	public Chamber(int questId, String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
+	protected Chamber(int questId, String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
 		super(questId, name, descr);
 		
 		INSTANCEID = instanceId;
 		INSTANCE_TEMPLATE = instanceTemplateName;
 		ENTRANCE_GATEKEEPER = entranceGKId;
-		ROOM_GATEKEEPER_LAST = roomGKFirstId;
+		ROOM_GATEKEEPER_FIRST = roomGKFirstId;
 		ROOM_GATEKEEPER_LAST = roomGKLastId;
 		AENKINEL = aenkinelId;
 		BOX = boxId;
@@ -212,7 +209,7 @@ public class Chamber extends Quest
 	
 	private boolean checkConditions(L2PcInstance player)
 	{
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		if (party == null)
 		{
 			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_IN_PARTY_CANT_ENTER));
@@ -237,7 +234,7 @@ public class Chamber extends Quest
 			
 			if (!Util.checkIfInRange(1000, player, partyMember, true))
 			{
-				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_LOCATION_THAT_CANNOT_BE_ENTERED);
 				sm.addPcName(partyMember);
 				party.broadcastPacket(sm);
 				return false;
@@ -245,11 +242,11 @@ public class Chamber extends Quest
 			
 			if (isBigChamber())
 			{
-				Long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
+				final long reentertime = InstanceManager.getInstance().getInstanceTime(partyMember.getObjectId(), INSTANCEID);
 				
 				if (System.currentTimeMillis() < reentertime)
 				{
-					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_REENTER_YET);
 					sm.addPcName(partyMember);
 					party.broadcastPacket(sm);
 					return false;
@@ -264,20 +261,20 @@ public class Chamber extends Quest
 	{
 		if (world instanceof CDWorld)
 		{
-			Calendar reenter = Calendar.getInstance();
-			Calendar now = Calendar.getInstance();
+			final Calendar reenter = Calendar.getInstance();
+			final Calendar now = Calendar.getInstance();
 			reenter.set(Calendar.MINUTE, RESET_MIN);
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			if (reenter.before(now))
 			{
 				reenter.add(Calendar.DAY_OF_WEEK, 1);
 			}
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_RESTRICTED);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
 			{
-				L2PcInstance player = L2World.getInstance().getPlayer(objectId);
+				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
 					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
@@ -289,8 +286,8 @@ public class Chamber extends Quest
 	
 	protected void changeRoom(CDWorld world)
 	{
-		L2Party party = world.getPartyInside();
-		Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+		final L2Party party = world.getPartyInside();
+		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		
 		if ((party == null) || (inst == null))
 		{
@@ -312,7 +309,7 @@ public class Chamber extends Quest
 		}
 		
 		// 10% chance for teleport to raid room if not here already for Northern, Southern, Western and Eastern Chambers
-		else if (!isBigChamber() && !isBossRoom(world) && (Rnd.get(100) < 10))
+		else if (!isBigChamber() && !isBossRoom(world) && (getRandom(100) < 10))
 		{
 			newRoom = ROOM_ENTER_POINTS.length - 1;
 		}
@@ -321,7 +318,7 @@ public class Chamber extends Quest
 		{
 			while (newRoom == world.currentRoom) // otherwise teleport to another room, except current
 			{
-				newRoom = Rnd.get((ROOM_ENTER_POINTS.length - 1));
+				newRoom = getRandom(ROOM_ENTER_POINTS.length - 1);
 			}
 		}
 		
@@ -357,7 +354,7 @@ public class Chamber extends Quest
 	
 	private void enter(CDWorld world)
 	{
-		L2Party party = world.getPartyInside();
+		final L2Party party = world.getPartyInside();
 		
 		if (party == null)
 		{
@@ -372,14 +369,14 @@ public class Chamber extends Quest
 				st = newQuestState(partyMember);
 			}
 			
-			if (hasQuestItems(partyMember, DELUSION_MARK))
+			if (st.hasQuestItems(DELUSION_MARK))
 			{
-				takeItems(partyMember, DELUSION_MARK, -1);
+				st.takeItems(DELUSION_MARK, -1);
 			}
 			
 			if (party.isLeader(partyMember))
 			{
-				giveItems(partyMember, DELUSION_MARK, 1);
+				st.giveItems(DELUSION_MARK, 1);
 			}
 			
 			// Save location for teleport back into main hall
@@ -394,7 +391,7 @@ public class Chamber extends Quest
 	
 	protected void earthQuake(CDWorld world)
 	{
-		L2Party party = world.getPartyInside();
+		final L2Party party = world.getPartyInside();
 		
 		if (party == null)
 		{
@@ -423,7 +420,7 @@ public class Chamber extends Quest
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ALREADY_ENTERED_ANOTHER_INSTANCE_CANT_ENTER));
 				return 0;
 			}
-			CDWorld currentWorld = (CDWorld) world;
+			final CDWorld currentWorld = (CDWorld) world;
 			teleportPlayer(player, ROOM_ENTER_POINTS[currentWorld.currentRoom], world.getInstanceId());
 			return instanceId;
 		}
@@ -433,7 +430,7 @@ public class Chamber extends Quest
 		{
 			return 0;
 		}
-		L2Party party = player.getParty();
+		final L2Party party = player.getParty();
 		instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_TEMPLATE);
 		world = new CDWorld(party);
 		world.setInstanceId(instanceId);
@@ -451,9 +448,9 @@ public class Chamber extends Quest
 		{
 			return;
 		}
-		Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
+		final Instance inst = InstanceManager.getInstance().getInstance(player.getInstanceId());
 		Location ret = inst.getSpawnLoc();
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		
 		if (st != null)
 		{
@@ -478,7 +475,7 @@ public class Chamber extends Quest
 		}
 		
 		teleportPlayer(player, ret, 0);
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
 			world.removeAllowed((player.getObjectId()));
@@ -489,11 +486,11 @@ public class Chamber extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
 		if ((player != null) && (tmpworld != null) && (tmpworld instanceof CDWorld) && (npc.getNpcId() >= ROOM_GATEKEEPER_FIRST) && (npc.getNpcId() <= ROOM_GATEKEEPER_LAST))
 		{
-			CDWorld world = (CDWorld) tmpworld;
+			final CDWorld world = (CDWorld) tmpworld;
 			
 			QuestState st = player.getQuestState(getName());
 			
@@ -507,24 +504,24 @@ public class Chamber extends Quest
 			{
 				if (player.getParty() == null)
 				{
-					htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/ChambersOfDelusion/no_party.htm");
+					htmltext = "no_party.html";
 				}
 				
 				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
 				{
-					htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/ChambersOfDelusion/no_leader.htm");
+					htmltext = "no_leader.html";
 				}
 				
 				else if (hasQuestItems(player, DELUSION_MARK))
 				{
-					takeItems(player, DELUSION_MARK, 1);
+					st.takeItems(DELUSION_MARK, 1);
 					world.stopRoomChangeTask();
 					changeRoom(world);
 				}
 				
 				else
 				{
-					htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/ChambersOfDelusion/no_item.htm");
+					htmltext = "no_item.html";
 				}
 			}
 			
@@ -532,17 +529,15 @@ public class Chamber extends Quest
 			{
 				if (player.getParty() == null)
 				{
-					htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/ChambersOfDelusion/no_party.htm");
+					htmltext = "no_party.html";
 				}
-				
 				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
 				{
-					htmltext = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "/data/scripts/instances/ChambersOfDelusion/no_leader.htm");
+					htmltext = "no_leader.html";
 				}
-				
 				else
 				{
-					Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 					
 					world.stopRoomChangeTask();
 					world.stopBanishTask();
@@ -574,29 +569,24 @@ public class Chamber extends Quest
 		if (!npc.isBusy() && (npc.getCurrentHp() < (npc.getMaxHp() / 10)))
 		{
 			npc.setBusy(true);
-			L2MonsterInstance box = (L2MonsterInstance) npc;
-			if (Rnd.get(100) < 25) // 25% chance to reward
+			final L2MonsterInstance box = (L2MonsterInstance) npc;
+			if (getRandom(100) < 25) // 25% chance to reward
 			{
-				ItemHolder item;
-				if (Rnd.get(100) < 33)
+				if (getRandom(100) < 33)
 				{
-					item = new ItemHolder(ENRIA, (int) (3 * Config.RATE_DROP_ITEMS));
-					box.dropItem(attacker, item);
+					box.dropItem(attacker, ENRIA, (int) (3 * Config.RATE_DROP_ITEMS));
 				}
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
-					item = new ItemHolder(THONS, (int) (4 * Config.RATE_DROP_ITEMS));
-					box.dropItem(attacker, item);
+					box.dropItem(attacker, THONS, (int) (4 * Config.RATE_DROP_ITEMS));
 				}
-				if (Rnd.get(100) < 50)
+				if (getRandom(100) < 50)
 				{
-					item = new ItemHolder(ASOFE, (int) (4 * Config.RATE_DROP_ITEMS));
-					box.dropItem(attacker, item);
+					box.dropItem(attacker, ASOFE, (int) (4 * Config.RATE_DROP_ITEMS));
 				}
-				if (Rnd.get(100) < 16)
+				if (getRandom(100) < 16)
 				{
-					item = new ItemHolder(LEONARD, (int) (2 * Config.RATE_DROP_ITEMS));
-					box.dropItem(attacker, item);
+					box.dropItem(attacker, LEONARD, (int) (2 * Config.RATE_DROP_ITEMS));
 				}
 				
 				box.broadcastEvent("SCE_LUCKY", 2000, null);
@@ -632,11 +622,11 @@ public class Chamber extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
 		if ((tmpworld != null) && (tmpworld instanceof CDWorld))
 		{
-			CDWorld world = (CDWorld) tmpworld;
-			Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+			final CDWorld world = (CDWorld) tmpworld;
+			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			
 			if (isBigChamber())
 			{

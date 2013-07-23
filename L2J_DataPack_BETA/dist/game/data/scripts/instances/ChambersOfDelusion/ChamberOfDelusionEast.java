@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.model.Location;
  * Chamber of Delusion East.
  * @author GKR
  */
-public class ChamberOfDelusionEast extends Chamber
+public final class ChamberOfDelusionEast extends Chamber
 {
 	// NPCs
 	private static final int ENTRANCE_GATEKEEPER = 32658;
@@ -34,22 +34,21 @@ public class ChamberOfDelusionEast extends Chamber
 	private static final int BOX = 18838;
 	
 	// Misc
+	private static final Location[] ENTER_POINTS = new Location[]
+	{
+		new Location(-122368, -218972, -6720),
+		new Location(-122352, -218044, -6720),
+		new Location(-122368, -220220, -6720),
+		new Location(-121440, -218444, -6720),
+		new Location(-121424, -220124, -6720), // Raid room
+	};
 	private static final int INSTANCEID = 127;
 	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionEast.xml";
 	
-	public ChamberOfDelusionEast(int questId, String name, String descr)
+	private ChamberOfDelusionEast(int questId, String name, String descr)
 	{
 		super(questId, name, descr, INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
-		
-		ROOM_ENTER_POINTS = new Location[]
-		{
-			new Location(-122368, -218972, -6720),
-			new Location(-122352, -218044, -6720),
-			new Location(-122368, -220220, -6720),
-			new Location(-121440, -218444, -6720),
-			new Location(-121424, -220124, -6720)
-		// Raid room
-		};
+		ROOM_ENTER_POINTS = ENTER_POINTS;
 	}
 	
 	public static void main(String[] args)
