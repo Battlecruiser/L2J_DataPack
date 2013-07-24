@@ -8,6 +8,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -34,6 +35,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -59,6 +61,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -85,6 +88,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -113,6 +117,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -137,6 +142,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="40" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -163,6 +169,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -207,6 +214,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -424,6 +432,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="95" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
@@ -519,13 +528,15 @@
 	</skill>
 	<skill id="4225" levels="5" name="Resist Shock">
 		<!-- Freya retail confirmed -->
-		<table name="#stunVuln"> 10 20 30 40 50 </table>
+		<table name="#trait_shock"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4225" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="#stunVuln" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="#trait_shock" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4226" levels="1" name="Ban Heal">
@@ -691,6 +702,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="HEAL_EFFECT_DOWN" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
@@ -719,6 +731,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
@@ -892,9 +905,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.5" />
 			<mul order="0x30" stat="mDef" val="2.0" />
-			<sub order="0x40" stat="bleedVuln" val="50" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="50" />
+				<param BLEED="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4247" levels="12" name="NPC Windstrike - Slow">
@@ -946,6 +961,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-100" />
@@ -1098,7 +1114,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="100" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4257" levels="12" name="NPC Hydroblast - Magic">
@@ -1156,6 +1174,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="35" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="#cast" />
@@ -1394,33 +1413,38 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.3" />
-			<mul order="0x30" stat="crossbowWpnVuln" val="0.3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="70" />
+				<param CROSSBOW="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4273" levels="5" name="Resist Dagger">
 		<!-- Freya retail confirmed -->
-		<table name="#daggerVuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<table name="#traits"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4273_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="daggerWpnVuln" val="#daggerVuln" />
-			<mul order="0x30" stat="dualDaggerWpnVuln" val="#daggerVuln" />
-			<mul order="0x30" stat="rapierWpnVuln" val="#daggerVuln" />
+			<effect name="DefenceTrait" val="0">
+				<param DAGGER="#traits" />
+				<param RAPIER="#traits" />
+				<param DUALDAGGER="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4274" levels="5" name="Blunt Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<table name="#bluntVuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<table name="#trait_blunt"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4274_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bluntWpnVuln" val="#bluntVuln" />
-			<mul order="0x30" stat="bigBluntWpnVuln" val="#bluntVuln" />
+			<effect name="DefenceTrait" val="0">
+				<param BLUNT="#trait_blunt" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4275" levels="5" name="Sacred Attack Weak Point">
@@ -1432,25 +1456,29 @@
 	</skill>
 	<skill id="4276" levels="5" name="Archery Attack Weak Point">
 		<!-- Freya retail confirmed -->
-		<table name="#bowVuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<table name="#traits"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill4276_new" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="#bowVuln" />
-			<mul order="0x30" stat="crossbowWpnVuln" val="#bowVuln" />
+			<effect name="DefenceTrait" val="0">
+				<param BOW="#traits" />
+				<param CROSSBOW="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4277" levels="5" name="Resist Poison">
 		<!-- Freya retail confirmed -->
-		<table name="#poisonVuln"> 10 20 30 40 50 </table>
+		<table name="#trait_poison"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4277" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="#poisonVuln" />
+			<effect name="DefenceTrait" val="0">
+				<param POISON="#trait_poison" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4278" levels="1" name="Dark Attack">
@@ -1502,24 +1530,28 @@
 	</skill>
 	<skill id="4284" levels="5" name="Resist Bleeding">
 		<!-- Freya retail confirmed -->
-		<table name="#bleedVuln"> 10 20 30 40 50 </table>
+		<table name="#trait_bleed"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4284" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="#bleedVuln" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="#trait_bleed" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4285" levels="5" name="Resist Sleep">
 		<!-- Freya retail confirmed -->
-		<table name="#sleepVuln"> 10 20 30 40 50 </table>
+		<table name="#trait_sleep"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4285" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="#sleepVuln" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="#trait_sleep" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4286" levels="1" name="Greater Resist Sleep">
@@ -1529,18 +1561,22 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="95" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="95" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4287" levels="5" name="Resist Hold">
 		<!-- Freya retail confirmed -->
-		<table name="#rootVuln"> 10 20 30 40 50 </table>
+		<table name="#trait_hold"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill4287" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="#rootVuln" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="#trait_hold" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4288" levels="1" name="Greater Resist Hold">
@@ -1550,7 +1586,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="95" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="95" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4289" levels="1" name="Wyvern Breath">

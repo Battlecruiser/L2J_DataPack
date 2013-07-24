@@ -37,7 +37,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3304" levels="1" name="White Talisman of Attention">
@@ -47,7 +49,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3305" levels="1" name="White Talisman of Grounding">
@@ -57,7 +61,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3306" levels="1" name="White Talisman of Bravery">
@@ -67,7 +73,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3307" levels="1" name="White Talisman of Motion">
@@ -77,7 +85,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3308" levels="1" name="White Talisman of Freedom">
@@ -87,7 +97,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="10" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3309" levels="1" name="White Talisman of Protection">
@@ -196,7 +208,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="gustVuln" val="100" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param GUST="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3320" levels="1" name="Yellow Talisman of Mental Regeneration">
@@ -349,6 +363,7 @@
 		<!-- <set name="abnormalLvl" val="3" /> -->
 		<!-- <set name="abnormalTime" val="30" /> -->
 		<!-- <set name="abnormalType" val="ATTACK_TIME_UP" /> -->
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="200" />
@@ -576,9 +591,11 @@
 			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
 			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
-			<sub order="0x40" stat="stunVuln" val="13" /> <!-- Shock resistance is increased +13% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3349" levels="1" name="Dynasty Breast Plate - Weapon Master">
@@ -634,9 +651,11 @@
 			<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-			<sub order="0x40" stat="rootVuln" val="13" /> <!-- Hold resistance are increased +13 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3353" levels="1" name="Dynasty Leather Armor - Bow Master">
@@ -796,7 +815,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="18" /> <!-- Stun Resistance +18 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="18" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3366" levels="1" name="Dynasty Resistance Ring">
@@ -804,7 +825,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="8" /> <!-- Stun Resistance +8 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3367" levels="1" name="Dynasty Resistance Earring">
@@ -812,7 +835,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="12" /> <!-- Stun Resistance +12 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3368" levels="1" name="Traits Strengthen Necklace">
@@ -838,7 +863,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="11" /> <!-- Bleed Resistance +11 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3372" levels="1" name="Dynasty Resistance Ring">
@@ -846,7 +873,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="5" /> <!-- Bleed Resistance +5 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3373" levels="1" name="Dynasty Resistance Earring">
@@ -854,7 +883,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="8" /> <!-- Bleed Resistance +8 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3374" levels="1" name="Traits Strengthen Necklace">
@@ -880,7 +911,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="16" /> <!-- Poison Resistance +16 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="16" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3378" levels="1" name="Dynasty Resistance Ring">
@@ -888,7 +921,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="7" /> <!-- Poison Resistance +7 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3379" levels="1" name="Dynasty Resistance Earring">
@@ -896,7 +931,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="11" /> <!-- Poison Resistance +11 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3380" levels="1" name="Traits Strengthen Necklace">
@@ -922,7 +959,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="9" /> <!-- Paralysis Resistance +9 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3384" levels="1" name="Dynasty Resistance Ring">
@@ -930,7 +969,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="4" /> <!-- Paralysis Resistance +4 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3385" levels="1" name="Dynasty Resistance Earring">
@@ -938,7 +979,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="6" /> <!-- Paralysis Resistance +6 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3386" levels="1" name="Traits Strengthen Necklace">
@@ -964,7 +1007,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="18" /> <!-- Hold Resistance +18 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="18" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3390" levels="1" name="Dynasty Resistance Ring">
@@ -972,7 +1017,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="8" /> <!-- Hold Resistance +8 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3391" levels="1" name="Dynasty Resistance Earring">
@@ -980,7 +1027,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="12" /> <!-- Hold Resistance +12 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3392" levels="1" name="Traits Strengthen Necklace">
@@ -1006,7 +1055,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="18" /> <!-- Sleep Resistance +18 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="18" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3396" levels="1" name="Dynasty Resistance Ring">
@@ -1014,7 +1065,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="8" /> <!-- Sleep Resistance +8 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3397" levels="1" name="Dynasty Resistance Earring">
@@ -1022,7 +1075,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="12" /> <!-- Sleep Resistance +12 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3398" levels="1" name="Traits Strengthen Necklace">

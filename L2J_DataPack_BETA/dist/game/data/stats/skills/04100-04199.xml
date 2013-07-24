@@ -50,6 +50,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_FIRE" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -105,6 +106,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="45" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -207,6 +209,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2700" />
@@ -234,6 +237,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ANTARAS_DEBUFF" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="850" />
 		<set name="coolTime" val="1200" />
 		<set name="effectPoint" val="-100" />
@@ -292,6 +296,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="activateRate" val="50" />
 		<set name="affectRange" val="700" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="1800" />
@@ -408,6 +413,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="40" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
@@ -437,6 +443,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="20" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-100" />
@@ -467,6 +474,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIT_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -498,6 +506,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="700" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1200" />
@@ -523,12 +532,14 @@
 	</skill>
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
 		<!-- Freya retail confirmed -->
-		<table name="#derangementVuln"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
+		<table name="#trait_derangement"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="#derangementVuln" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="#trait_derangement" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4122" levels="1" name="Antharas">
@@ -539,8 +550,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="80" />
 			<set order="0x08" stat="debuffImmunity" val="1" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4123" levels="12" name="Hostile Feeling">
@@ -683,6 +696,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="10" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1400" />
@@ -930,6 +944,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4037" />
 		<set name="isDebuff" val="true" />
@@ -954,6 +969,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -991,6 +1007,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="isDebuff" val="true" />
@@ -1014,6 +1031,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="isDebuff" val="true" />
@@ -1037,6 +1055,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -1105,6 +1124,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-100" />
@@ -1291,6 +1311,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
@@ -1334,6 +1355,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="40" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1361,6 +1383,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="70" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
 		<set name="icon" val="icon.skill1183" />
@@ -1383,6 +1406,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="icon" val="icon.skill0279" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1445,6 +1469,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-100" />
@@ -1509,6 +1534,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="affectRange" val="200" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-100" />
@@ -1678,6 +1704,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="660" />
 		<set name="effectPoint" val="-100" />
@@ -1725,6 +1752,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1750,6 +1778,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1777,6 +1806,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1802,6 +1832,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="70" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1826,6 +1857,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="70" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1851,6 +1883,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="50" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1878,6 +1911,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1901,6 +1935,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="20" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -1926,6 +1961,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
@@ -2046,6 +2082,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="castRange" val="750" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-100" />
@@ -2075,6 +2112,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="70" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="700" />
 		<set name="effectPoint" val="-100" />
@@ -2102,6 +2140,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />
@@ -2128,6 +2167,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1250" />

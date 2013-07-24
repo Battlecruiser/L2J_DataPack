@@ -47,7 +47,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="15" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8505" levels="1" name="Pink Talisman - Sleep Resist">
@@ -57,7 +59,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="15" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8506" levels="1" name="Pink Talisman - Hold Resist">
@@ -67,7 +71,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="15" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8507" levels="1" name="Pink Talisman - Paralyze Resist">
@@ -77,7 +83,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="15" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8508" levels="1" name="Pink Talisman - All STAT">

@@ -215,6 +215,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -236,6 +237,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -257,6 +259,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -278,6 +281,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -299,6 +303,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -320,6 +325,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -341,6 +347,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -362,6 +369,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -383,6 +391,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="BR_EVENT_BUF1" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill_agathion_special" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
@@ -547,9 +556,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
-				<add order="0x40" stat="stunProf" val="8">
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8">
 					<using kind="Blunt,Big Blunt" />
-				</add>
+				</add>  -->
 			</effect>
 		</for>
 	</skill>
@@ -1533,9 +1542,9 @@
 				<mul order="0x30" stat="pAtk" val="1.05">
 					<using kind="Blunt,Big Blunt" />
 				</mul>
-				<add order="0x40" stat="stunProf" val="8">
+				<!-- TODO:? <add order="0x40" stat="stunProf" val="8">
 					<using kind="Blunt,Big Blunt" />
-				</add>
+				</add> -->
 			</effect>
 		</for>
 	</skill>

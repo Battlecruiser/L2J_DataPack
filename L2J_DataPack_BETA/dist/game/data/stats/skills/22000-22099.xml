@@ -1412,6 +1412,7 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22084" levels="1" name="Mental Shield">
+		<!-- TODO: Implement me! -->
 		<!-- Increases resistance to hold/sleep/abnormal mental attacks by 40 for 1 hour -->
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="3600" />
@@ -1423,6 +1424,13 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="40" />
+				<param SLEEP="40" />
+				<param DERANGEMENT="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22085" levels="1" name="Focus">
 		<!-- Increases Critical attack rate by 30 for 1 hour -->

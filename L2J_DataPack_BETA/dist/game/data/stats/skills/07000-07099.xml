@@ -108,6 +108,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="35" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-409" />
 		<set name="effectRange" val="900" />
@@ -243,10 +244,16 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7028" levels="1" name="For Stationary NPCs">
+		<!-- TODO: Implement me! -->
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param DERANGEMENT="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="7029" levels="4" name="Super Haste">
 		<!-- GM Skill -->
@@ -984,6 +991,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
 		<set name="lvlBonusRate" val="1" />
@@ -1002,6 +1010,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
 		<set name="lvlBonusRate" val="2" />
@@ -1101,6 +1110,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="1080" />
@@ -1127,6 +1137,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-12" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="300" />

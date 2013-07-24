@@ -71,6 +71,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="affectRange" val="300" />
 		<set name="castRange" val="60" />
 		<set name="effectPoint" val="-1" />
@@ -97,6 +98,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
@@ -121,6 +123,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1000" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1336" />
@@ -218,6 +221,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="affectRange" val="100" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
@@ -285,6 +289,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="60" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -325,6 +330,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -352,6 +358,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -378,6 +385,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DOT_MP" />
+		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="500" />
@@ -460,6 +468,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="100" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-100" />
@@ -549,6 +558,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="2000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
@@ -565,10 +575,11 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" val="0">
-				<sub order="0x40" stat="rootVuln" val="100" />
+			<effect name="Root" val="0" />
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param HOLD="100" />
 			</effect>
-			<effect name="HealPercent" noicon="1" val="90" />
+			<effect name="HealPercent" val="90" noicon="1" />
 		</for>
 	</skill>
 	<skill id="6429" levels="1" name="Cozy Mucus">
@@ -705,6 +716,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill6435" />
 		<set name="isDebuff" val="true" />
@@ -732,6 +744,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill6435" />
 		<set name="isDebuff" val="true" />
@@ -758,6 +771,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -778,6 +792,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="lvlBonusRate" val="1" />
@@ -792,6 +807,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6439" />
 		<set name="lvlBonusRate" val="1" />
@@ -801,11 +817,27 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param BLUNT="95" />
+				<param DAGGER="95" />
+				<param SWORD="50" />
+				<param DUALFIST="95" />
+				<param DUAL="50" />
+				<param RAPIER="95" />
+				<param ANCIENTSWORD="95" />
+				<param DUALDAGGER="95" />
+				<param BOW="99" />
+				<param CROSSBOW="99" />
+				<param POLE="95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6440" levels="1" name="Energy of Strong">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6440" />
 		<set name="lvlBonusRate" val="1" />
@@ -815,11 +847,27 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param BOW="99" />
+				<param CROSSBOW="99" />
+				<param BLUNT="-5" />
+				<param DAGGER="-5" />
+				<param SWORD="-5" />
+				<param DUALFIST="-5" />
+				<param DUAL="-5" />
+				<param RAPIER="-5" />
+				<param ANCIENTSWORD="-5" />
+				<param DUALDAGGER="-5" />
+				<param POLE="-5" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6441" levels="1" name="Energy of Agile">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6441" />
 		<set name="lvlBonusRate" val="1" />
@@ -829,11 +877,27 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param BLUNT="95" />
+				<param DAGGER="95" />
+				<param SWORD="50" />
+				<param DUALFIST="95" />
+				<param DUAL="50" />
+				<param RAPIER="95" />
+				<param ANCIENTSWORD="95" />
+				<param DUALDAGGER="95" />
+				<param BOW="-100" />
+				<param CROSSBOW="-100" />
+				<param POLE="95" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6442" levels="1" name="Efficacy of Wisdom">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6439" />
 		<set name="lvlBonusRate" val="1" />
@@ -853,6 +917,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6440" />
 		<set name="lvlBonusRate" val="1" />
@@ -873,6 +938,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SIGNAL_E" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="icon" val="icon.skill6441" />
 		<set name="lvlBonusRate" val="1" />

@@ -105,19 +105,23 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="darkRes" val="15" />
-			<sub order="0x40" stat="poisonVuln" val="25" />
-			<sub order="0x40" stat="bleedVuln" val="25" />
-			<sub order="0x40" stat="paralyzeVuln" val="15" />
-			<sub order="0x40" stat="stunVuln" val="15" />
-			<sub order="0x40" stat="sleepVuln" val="15" />
-			<add order="0x40" stat="poisonProf" val="25" />
-			<add order="0x40" stat="bleedProf" val="25" />
-			<add order="0x40" stat="paralyzeProf" val="15" />
-			<add order="0x40" stat="stunProf" val="15" />
-			<add order="0x40" stat="sleepProf" val="15" />
 			<mul order="0x30" stat="mReuse" val="0.95" />
 			<mul order="0x30" stat="pReuse" val="0.95" />
 			<add order="0x40" stat="reflectDam" val="4" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="25" />
+				<param BLEED="25" />
+				<param PARALYZE="15" />
+				<param SHOCK="15" />
+				<param SLEEP="15" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="25" />
+				<param BLEED="25" />
+				<param PARALYZE="15" />
+				<param SHOCK="15" />
+				<param SLEEP="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3605" levels="1" name="Clan Oath Heavy Armor Set">
@@ -611,7 +615,7 @@
 	</skill>
 	<skill id="3633" levels="2" name="Residential Shock Immunity">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#vuln"> 80 100 </table>
+		<table name="#trait_shock"> 80 100 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="ABNORMAL_ITEM" />
@@ -622,8 +626,8 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
-				<sub order="0x40" stat="stunVuln" val="#vuln" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="#trait_shock" />
 			</effect>
 		</for>
 	</skill>
@@ -671,9 +675,11 @@
 			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
-			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3637" levels="1" name="Dynasty Platinum Plate - Weapon Master">
@@ -729,9 +735,11 @@
 			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
 			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
 			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
-			<sub order="0x40" stat="rootVuln" val="15" /> <!-- Hold Resistance +15% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3641" levels="1" name="Dynasty Jewel Leather Mail Bow Master">
@@ -861,12 +869,16 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.12" />
-			<sub order="0x40" stat="derangementVuln" val="10" />
-			<add order="0x40" stat="derangementProf" val="10" />
 			<add order="0x40" stat="maxMp" val="38" />
 			<add order="0x40" stat="darkRes" val="30" />
 			<add order="0x40" stat="maxHp" val="105" />
 			<add order="0x40" stat="regMp" val="0.23" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="10" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3650" levels="1" name="PvP Weapon - CP Drain">

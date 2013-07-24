@@ -35,6 +35,7 @@
 	<skill id="6705" levels="1" name="Stun">
 		<!-- Temporarily in shock and unable to move. -->
 		<set name="abnormalTime" val="9" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="operateType" val="P" />
@@ -312,6 +313,7 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
+		<set name="activateRate" val="0" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="520" />
 		<set name="effectRange" val="1100" />
@@ -530,6 +532,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
@@ -582,6 +585,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -691,6 +695,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
@@ -753,6 +758,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -954,6 +960,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -979,6 +986,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
+		<set name="activateRate" val="40" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -1084,6 +1092,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -1127,6 +1136,7 @@
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalTime" val="10" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -1155,6 +1165,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="affectRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />

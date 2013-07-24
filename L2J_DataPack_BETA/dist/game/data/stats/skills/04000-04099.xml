@@ -51,11 +51,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.3" />
-			<mul order="0x30" stat="daggerWpnVuln" val="0.7" />
-			<mul order="0x30" stat="dualDaggerWpnVuln" val="0.7" />
-			<mul order="0x30" stat="bluntWpnVuln" val="1.1" />
-			<mul order="0x30" stat="bigBluntWpnVuln" val="1.1" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="70" />
+				<param DAGGER="30" />
+				<param BLUNT="-10" />
+				<param DUALDAGGER="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4004" levels="1" name="Fragile Skull">
@@ -64,8 +65,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bluntWpnVuln" val="1.1" />
-			<mul order="0x30" stat="bigBluntWpnVuln" val="1.1" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLUNT="-10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4005" levels="1" name="Floating Target">
@@ -75,7 +77,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="windRes" val="15" />
-			<mul order="0x30" stat="bowWpnVuln" val="1.1" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="-10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4006" levels="1" name="Blazing Log">
@@ -85,7 +89,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<sub order="0x40" stat="fireRes" val="15" />
-			<sub order="0x40" stat="poisonVuln" val="50" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4007" levels="1" name="Immortal Life">
@@ -180,6 +186,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -206,6 +213,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="40" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="500" />
@@ -248,7 +256,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4022" levels="1" name="Body Of Nurse Ant">
@@ -480,6 +490,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-100" />
@@ -512,6 +523,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -541,6 +553,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="35" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -571,6 +584,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -603,6 +617,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -745,13 +760,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="100" />
-			<sub order="0x40" stat="sleepVuln" val="100" />
-			<sub order="0x40" stat="stunVuln" val="100" />
-			<sub order="0x40" stat="paralyzeVuln" val="100" />
-			<sub order="0x40" stat="derangementVuln" val="100" />
-			<sub order="0x40" stat="bossVuln" val="100" />
-			<sub order="0x40" stat="physicalBlockadeVuln" val="100" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param HOLD="100" />
+				<param SLEEP="100" />
+				<param DERANGEMENT="100" />
+				<param PARALYZE="100" />
+				<param SHOCK="100" />
+				<param BOSS="100" />
+				<param PHYSICAL_BLOCKADE="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4046" levels="12" name="Sleep">
@@ -761,6 +778,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -790,6 +808,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -889,6 +908,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
@@ -911,6 +931,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1164" />
 		<set name="isDebuff" val="true" />
@@ -936,6 +957,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -961,6 +983,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
@@ -990,7 +1013,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef-insects" val="1.15" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BUG_WEAKNESS="-15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4058" levels="1" name="Plant Weak Point">
@@ -999,7 +1024,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef-animals" val="1.15" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param ANIMAL_WEAKNESS="-15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4059" levels="1" name="Animal Weak Point">
@@ -1008,7 +1035,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef-plants" val="1.15" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PLANT_WEAKNESS="-15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4060" levels="1" name="Beast Weak Point">
@@ -1017,7 +1046,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef-monsters" val="1.15" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BEAST_WEAKNESS="-15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4061" levels="1" name="Dragon Weak Point">
@@ -1026,7 +1057,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef-dragons" val="1.15" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DRAGON_WEAKNESS="-15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4062" levels="1" name="Orfen">
@@ -1037,7 +1070,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="0.2" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4063" levels="1" name="Paralysis">
@@ -1046,6 +1081,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="90" />
 		<set name="castRange" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
@@ -1069,6 +1105,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="30" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1196,6 +1233,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
@@ -1214,14 +1252,16 @@
 	</skill>
 	<skill id="4071" levels="5" name="Resist Archery">
 		<table name="#icons"> icon.skill4071 icon.skill4071 icon.skill4071 icon.skill4272 icon.skill4272 </table>
-		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<table name="#traits"> 10 20 30 40 50 </table>
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="bowWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="crossbowWpnVuln" val="#vuln" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BOW="#traits" />
+				<param CROSSBOW="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4072" levels="12" name="Shock">
@@ -1232,6 +1272,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="30" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1260,6 +1301,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1314,6 +1356,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1343,6 +1386,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1552,6 +1596,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1764,6 +1809,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />

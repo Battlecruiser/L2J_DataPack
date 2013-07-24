@@ -19,8 +19,10 @@
 		<for>
 			<add order="0x40" stat="breath" val="383" />
 			<mul order="0x30" stat="pAtk" val="1.0827" />
-			<sub order="0x40" stat="poisonVuln" val="13" />
 			<mul order="0x30" stat="regMp" val="1.0827" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3702" levels="1" name="Doom Gloves">
@@ -33,7 +35,9 @@
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<mul order="0x30" stat="regMp" val="1.0041" />
-			<sub order="0x40" stat="poisonVuln" val="2" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3703" levels="1" name="Doom Boots">
@@ -46,7 +50,9 @@
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<mul order="0x30" stat="regMp" val="1.0041" />
-			<sub order="0x40" stat="poisonVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3704" levels="1" name="Doom Helmet">
@@ -59,7 +65,9 @@
 			<add order="0x40" stat="breath" val="50" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<mul order="0x30" stat="regMp" val="1.0062" />
-			<sub order="0x40" stat="poisonVuln" val="2" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3705" levels="1" name="Doom Gloves">
@@ -281,7 +289,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<sub order="0x40" stat="paralyzeVuln" val="7.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="7.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3725" levels="1" name="Dark Crystal Breastplate">
@@ -292,7 +302,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.12" />
-			<add order="0x40" stat="paralyzeVuln" val="20" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3726" levels="1" name="Dark Crystal Gaiters">
@@ -303,7 +315,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.02" />
-			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3727" levels="1" name="Dark Crystal Gloves">
@@ -314,7 +328,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3728" levels="1" name="Dark Crystal Boots">
@@ -325,7 +341,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3729" levels="1" name="Dark Crystal Shield">
@@ -345,9 +363,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="20" />
 			<mul order="0x30" stat="pAtkSpd" val="1.0724" />
 			<mul order="0x30" stat="pAtk" val="1.0724" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3731" levels="1" name="Dark Crystal Gloves">
@@ -359,7 +379,9 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3732" levels="1" name="Dark Crystal Boots">
@@ -371,7 +393,9 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3733" levels="1" name="Dark Crystal Helmet">
@@ -383,7 +407,9 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<sub order="0x40" stat="paralyzeVuln" val="7.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="7.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3734" levels="1" name="Dark Crystal Leggings">
@@ -394,8 +420,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0103" />
-			<mul order="0x30" stat="pAtk" val="1.0103" />
-			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
+			<mul order="0x30" stat="pAtk" noicon="1" val="1.0103" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3735" levels="1" name="Dark Crystal Gloves">
@@ -408,7 +436,9 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<sub order="0x40" stat="paralyzeVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3736" levels="1" name="Dark Crystal Robe">
@@ -420,9 +450,11 @@
 		<for>
 			<add order="0x40" stat="cancelVuln" val="8.33" />
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<add order="0x40" stat="paralyzeVuln" val="20" />
 			<mul order="0x30" stat="pDef" val="1.0333" />
 			<add order="0x40" stat="runSpd" val="2.91" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3737" levels="1" name="Dark Crystal Boots">
@@ -435,7 +467,9 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<sub order="0x40" stat="paralyzeVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3738" levels="1" name="Dark Crystal Helmet">
@@ -448,7 +482,9 @@
 			<mul order="0x30" stat="pDef" val="1.02" />
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<sub order="0x40" stat="cancel" val="13" />
-			<sub order="0x40" stat="paralyzeVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3739" levels="1" name="Tallum Gloves">
@@ -460,8 +496,10 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="poisonVuln" val="8" />
-			<sub order="0x40" stat="bleedVuln" val="8" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="8" />
+				<param BLEED="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3740" levels="1" name="Tallum Boots">
@@ -473,8 +511,10 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="poisonVuln" val="8" />
-			<sub order="0x40" stat="bleedVuln" val="8" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="8" />
+				<param BLEED="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3741" levels="1" name="Tallum Plate Armor">
@@ -484,10 +524,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedVuln" val="52" />
 			<add order="0x40" stat="weightPenalty" val="8159" />
-			<add order="0x40" stat="poisonVuln" val="52" />
 			<mul order="0x30" stat="pAtkSpd" val="1.0932" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="52" />
+				<param BLEED="52" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3742" levels="1" name="Tallum Helmet">
@@ -499,8 +541,10 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<sub order="0x40" stat="poisonVuln" val="12" />
-			<sub order="0x40" stat="bleedVuln" val="12" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="12" />
+				<param BLEED="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3743" levels="1" name="Tallum Leather Armor">
@@ -510,10 +554,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedVuln" val="52" />
 			<add order="0x40" stat="maxMp" val="315" />
-			<add order="0x40" stat="poisonVuln" val="52" />
 			<mul order="0x30" stat="regMp" val="1.0932" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="52" />
+				<param BLEED="52" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3744" levels="1" name="Tallum Gloves">
@@ -525,8 +571,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<sub order="0x40" stat="poisonVuln" val="8" />
-			<sub order="0x40" stat="bleedVuln" val="8" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="8" />
+				<param BLEED="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3745" levels="1" name="Tallum Boots">
@@ -538,8 +586,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<sub order="0x40" stat="poisonVuln" val="8" />
-			<sub order="0x40" stat="bleedVuln" val="8" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="8" />
+				<param BLEED="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3746" levels="1" name="Tallum Helmet">
@@ -551,8 +601,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0125" />
 			<add order="0x40" stat="maxMp" val="56" />
-			<sub order="0x40" stat="poisonVuln" val="12" />
-			<sub order="0x40" stat="bleedVuln" val="12" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="12" />
+				<param BLEED="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3747" levels="1" name="Tallum Gloves">
@@ -563,8 +615,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
-			<sub order="0x40" stat="poisonVuln" val="13.33" />
-			<sub order="0x40" stat="bleedVuln" val="13.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="13.33" />
+				<param BLEED="13.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3748" levels="1" name="Tallum Boots">
@@ -575,8 +629,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
-			<sub order="0x40" stat="poisonVuln" val="13.33" />
-			<sub order="0x40" stat="bleedVuln" val="13.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="13.33" />
+				<param BLEED="13.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3749" levels="1" name="Tallum Tunic">
@@ -597,8 +653,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0333" />
-			<sub order="0x40" stat="poisonVuln" val="33.33" />
-			<sub order="0x40" stat="bleedVuln" val="33.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="33.33" />
+				<param BLEED="33.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3751" levels="1" name="Tallum Helmet">
@@ -609,8 +667,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
-			<sub order="0x40" stat="poisonVuln" val="20" />
-			<sub order="0x40" stat="bleedVuln" val="20" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="20" />
+				<param BLEED="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3752" levels="1" name="Majestic Gauntlet">
@@ -622,7 +682,9 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="accCombat" val="0.31" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3753" levels="1" name="Majestic Circlet">
@@ -634,7 +696,9 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
-			<sub order="0x40" stat="stunVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3754" levels="1" name="Majestic Plate Armor">
@@ -646,7 +710,9 @@
 		<for>
 			<add order="0x40" stat="accCombat" val="0.579" />
 			<mul order="0x30" stat="pAtk" val="1.0827" />
-			<add order="0x40" stat="stunVuln" val="20.83" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="20.83" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3755" levels="1" name="Majestic Boots">
@@ -658,7 +724,9 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3756" levels="1" name="Majestic Gauntlet">
@@ -673,7 +741,9 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3757" levels="1" name="Majestic Leather Armor">
@@ -688,7 +758,9 @@
 			<mul order="0x30" stat="pAtk" val="1.0932">
 				<using kind="Bow,Crossbow" />
 			</mul>
-			<add order="0x40" stat="stunVuln" val="20.83" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="20.83" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3758" levels="1" name="Majestic Boots">
@@ -703,7 +775,9 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3759" levels="1" name="Majestic Circlet">
@@ -718,7 +792,9 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="60" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<sub order="0x40" stat="stunVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3760" levels="1" name="Majestic Gauntlet">
@@ -730,7 +806,9 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3761" levels="1" name="Majestic Robe">
@@ -742,7 +820,9 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			<mul order="0x30" stat="regMp" val="1.0333" />
-			<add order="0x40" stat="stunVuln" val="20.83" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="20.83" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3762" levels="1" name="Majestic Boots">
@@ -754,7 +834,9 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<sub order="0x40" stat="stunVuln" val="8.33" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3763" levels="1" name="Majestic Circlet">
@@ -766,7 +848,9 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="60" />
 			<mul order="0x30" stat="regMp" val="1.02" />
-			<sub order="0x40" stat="stunVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3764" levels="1" name="Armor of Nightmare">
@@ -777,8 +861,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.1708" />
-			<sub order="0x40" stat="rootVuln" val="29.16" />
-			<sub order="0x40" stat="sleepVuln" val="29.16" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="29.16" />
+				<param HOLD="29.16" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3765" levels="1" name="Gauntlet of Nightmare">
@@ -789,8 +875,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3766" levels="1" name="Boots of Nightmare">
@@ -801,8 +889,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3767" levels="1" name="Helm of Nightmare">
@@ -813,8 +903,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125" />
-			<sub order="0x40" stat="sleepVuln" val="17.5" />
-			<sub order="0x40" stat="rootVuln" val="17.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="17.5" />
+				<param HOLD="17.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3768" levels="1" name="Nightmarish Leather Armor">
@@ -826,8 +918,10 @@
 		<for>
 			<add order="0x40" stat="absorbDam" val="3" />
 			<mul order="0x30" stat="mDef" val="1.0827" />
-			<sub order="0x40" stat="rootVuln" val="29.16" />
-			<sub order="0x40" stat="sleepVuln" val="29.16" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="29.16" />
+				<param HOLD="29.16" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3769" levels="1" name="Gauntlet of Nightmare">
@@ -838,8 +932,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3770" levels="1" name="Boots of Nightmare">
@@ -850,8 +946,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3771" levels="1" name="Gauntlet of Nightmare">
@@ -863,8 +961,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3772" levels="1" name="Nightmare Robe">
@@ -876,8 +976,10 @@
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0827" />
 			<mul order="0x30" stat="regMp" val="1.0827" />
-			<sub order="0x40" stat="rootVuln" val="29.16" />
-			<sub order="0x40" stat="sleepVuln" val="29.16" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="29.16" />
+				<param HOLD="29.16" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3773" levels="1" name="Boots of Nightmare">
@@ -889,8 +991,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<sub order="0x40" stat="sleepVuln" val="11.66" />
-			<sub order="0x40" stat="rootVuln" val="11.66" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="11.66" />
+				<param HOLD="11.66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3774" levels="1" name="Shield of Nightmare">
@@ -966,7 +1070,9 @@
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="stunVuln" val="8.3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3780" levels="1" name="Major Arcana Robe">
@@ -980,7 +1086,9 @@
 			<add order="0x40" stat="weightPenalty" val="8159" />
 			<mul order="0x30" stat="mAtk" val="1.1603" />
 			<mul order="0x30" stat="runSpd" val="1.0991" />
-			<sub order="0x40" stat="stunVuln" val="20.83" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="20.83" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3781" levels="1" name="Major Arcana Boots">
@@ -994,7 +1102,9 @@
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<sub order="0x40" stat="stunVuln" val="8.3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="8.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3782" levels="1" name="Major Arcana Circlet">
@@ -1008,7 +1118,9 @@
 			<add order="0x40" stat="runSpd" val="1.175" />
 			<sub order="0x40" stat="cancel" val="13" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<sub order="0x40" stat="stunVuln" val="12.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="12.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3783" levels="1" name="Imperial Crusader Gaiters">
@@ -1020,8 +1132,10 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
 			<add order="0x40" stat="maxHp" val="185" />
-			<sub order="0x40" stat="sleepVuln" val="17.5" />
-			<sub order="0x40" stat="rootVuln" val="17.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="17.5" />
+				<param HOLD="17.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3784" levels="1" name="Imperial Crusader Gauntlet">
@@ -1033,8 +1147,10 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3785" levels="1" name="Imperial Crusader Boots">
@@ -1046,8 +1162,10 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3786" levels="1" name="Imperial Crusader Shield">
@@ -1069,8 +1187,10 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="111" />
-			<sub order="0x40" stat="sleepVuln" val="10.5" />
-			<sub order="0x40" stat="rootVuln" val="10.5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="10.5" />
+				<param HOLD="10.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3788" levels="1" name="Imperial Crusader Breastplate">
@@ -1082,8 +1202,10 @@
 		<for>
 			<add order="0x40" stat="maxHp" val="889" />
 			<mul order="0x30" stat="pDef" val="1.0724" />
-			<sub order="0x40" stat="rootVuln" val="28" />
-			<sub order="0x40" stat="sleepVuln" val="28" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="28" />
+				<param HOLD="28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3789" levels="1" name="Dynasty Breastplate">
