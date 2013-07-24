@@ -392,13 +392,13 @@ public final class Venom extends AbstractNpcAI
 	private int checkStatus()
 	{
 		int checkStatus = ALIVE;
-		if (GlobalVariablesManager.getInstance().isVariableStored("VenomStatus"))
+		if (GlobalVariablesManager.getInstance().hasVariable("VenomStatus"))
 		{
-			checkStatus = Integer.parseInt(GlobalVariablesManager.getInstance().getStoredVariable("VenomStatus"));
+			checkStatus = GlobalVariablesManager.getInstance().getInteger("VenomStatus");
 		}
 		else
 		{
-			GlobalVariablesManager.getInstance().storeVariable("VenomStatus", "0");
+			GlobalVariablesManager.getInstance().set("VenomStatus", 0);
 		}
 		return checkStatus;
 	}
@@ -409,7 +409,7 @@ public final class Venom extends AbstractNpcAI
 	 */
 	private void updateStatus(int status)
 	{
-		GlobalVariablesManager.getInstance().storeVariable("VenomStatus", Integer.toString(status));
+		GlobalVariablesManager.getInstance().set("VenomStatus", Integer.toString(status));
 	}
 	
 	private enum MoveTo
