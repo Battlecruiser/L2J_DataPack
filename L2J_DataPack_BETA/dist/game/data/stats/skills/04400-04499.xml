@@ -1171,7 +1171,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4474" levels="5" name="Area Heal - Per">
@@ -1588,7 +1588,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Buff" val="0" effectPower="40">
+			<effect name="Buff" val="0">
 				<add order="0x40" stat="holyPower" val="20" />
 			</effect>
 		</for>
@@ -1617,7 +1617,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="BigHead" val="0" effectPower="80" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" val="0" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
 	<skill id="4493" levels="12" name="NPC Debuff Shield Slow">
@@ -1695,7 +1695,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4497" levels="1" name="Treasure Chest - Level 21">

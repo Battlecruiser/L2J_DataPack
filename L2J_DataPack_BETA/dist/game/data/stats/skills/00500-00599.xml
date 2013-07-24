@@ -441,7 +441,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
@@ -2036,7 +2036,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="123" effectPower="50" abnormalVisualEffect="bleed" />
+			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="560" levels="4" name="Power Slash">
@@ -2377,7 +2377,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="574" levels="4" name="Bomb Installation">
@@ -2506,7 +2506,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" effectPower="60" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="579" levels="4" name="Fire Armor">
@@ -2629,7 +2629,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="123" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="583" levels="4" name="Assimilation">

@@ -755,7 +755,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6334" levels="1" name="Shock">
@@ -783,7 +783,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="40" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6335" levels="1" name="Electric Rain 1">
@@ -885,7 +885,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" effectPower="1" />
+			<effect name="DamOverTime" ticks="3" val="200" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6340" levels="1" name="Shock">
@@ -914,7 +914,7 @@
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<!-- FIXME: effectPower should be 0.05% but we use 1% for now -->
-			<effect name="Stun" val="0" effectPower="1" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6341" levels="1" name="Stronghold Water Cannon">
@@ -1382,7 +1382,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6387" levels="1" name="Bistakon Earthquake">
@@ -1491,7 +1491,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6392" levels="1" name="Cokrakon Sonic Shot">
@@ -1628,7 +1628,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6398" levels="1" name="Cokrakon Sonic Shout">

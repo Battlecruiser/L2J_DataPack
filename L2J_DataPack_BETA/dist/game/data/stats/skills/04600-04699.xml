@@ -25,7 +25,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="40">
+			<effect name="Stun" val="0">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -84,7 +84,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -115,7 +115,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -147,7 +147,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -182,7 +182,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="fireRes" val="#fireRes" />
 				<add order="0x40" stat="waterRes" val="#waterRes" />
 			</effect>
@@ -215,7 +215,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" effectPower="35" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="4607" levels="1" name="Magma Attack">
@@ -1088,7 +1088,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -1369,7 +1369,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Root" val="0" effectPower="80" />
+			<effect name="Root" val="0" />
 		</for>
 	</skill>
 	<skill id="4658" levels="12" name="Hold">
@@ -1399,7 +1399,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Root" val="0" effectPower="80" />
+			<effect name="Root" val="0" />
 		</for>
 	</skill>
 	<skill id="4659" levels="12" name="Hold">
@@ -1429,7 +1429,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Root" val="0" effectPower="80" />
+			<effect name="Root" val="0" />
 		</for>
 	</skill>
 	<skill id="4660" levels="12" name="Sleep">
@@ -1461,7 +1461,7 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Sleep" val="0" effectPower="80" />
+			<effect name="Sleep" val="0" />
 		</for>
 	</skill>
 	<skill id="4661" levels="12" name="Sleep">
@@ -1492,7 +1492,7 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Sleep" val="0" effectPower="80" />
+			<effect name="Sleep" val="0" />
 		</for>
 	</skill>
 	<skill id="4662" levels="12" name="Sleep">
@@ -1523,7 +1523,7 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Sleep" val="0" effectPower="80" />
+			<effect name="Sleep" val="0" />
 		</for>
 	</skill>
 	<skill id="4663" levels="1" name="NPC Hate">
@@ -1943,7 +1943,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="4684" levels="1" name="Valakas Dragon Breath">
@@ -1973,7 +1973,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="216" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="4685" levels="1" name="Valakas Tail Stomp">
@@ -2052,7 +2052,7 @@
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ThrowUp" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4689" levels="2" name="Valakas Fear">

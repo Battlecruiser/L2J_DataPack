@@ -1061,7 +1061,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1120,7 +1120,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1179,7 +1179,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1237,7 +1237,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
@@ -1291,7 +1291,7 @@
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="80">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
@@ -2585,7 +2585,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#vuln" />
 				<sub order="0x40" stat="fireRes" val="#vuln" />
@@ -3178,7 +3178,7 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<for>
-			<effect name="NpcKill" val="0" effectPower="80" />
+			<effect name="NpcKill" val="0" />
 		</for>
 	</skill>
 	<skill id="1396" levels="10" name="Magical Backfire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">

@@ -202,7 +202,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="70">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -509,7 +509,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1096,7 +1096,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" val="0" effectPower="90" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="4064" levels="1" name="Paralysis">
@@ -1290,7 +1290,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="30" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4073" levels="12" name="Shock">
@@ -1319,7 +1319,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4074" levels="2" name="NPC Haste">

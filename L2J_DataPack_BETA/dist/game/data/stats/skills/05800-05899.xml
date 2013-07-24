@@ -382,7 +382,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="70" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="70" />
 		</for>
 	</skill>
 	<skill id="5832" levels="1" name="Hate Aura">
@@ -1244,7 +1244,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="30" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury">
@@ -1298,7 +1298,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Disarm" val="0" effectPower="70" abnormalVisualEffect="bleed" />
+			<effect name="Disarm" val="0" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
@@ -1330,7 +1330,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">

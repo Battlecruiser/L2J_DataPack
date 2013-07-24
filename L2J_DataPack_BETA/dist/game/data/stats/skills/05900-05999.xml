@@ -365,7 +365,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.8" />
-			<effect name="Debuff" val="0" abnormalVisualEffect="bleed" effectPower="80">
+			<effect name="Debuff" val="0" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="pAtk" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.95" />
 				<mul order="0x30" stat="mAtk" val="0.95" />
@@ -400,7 +400,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" abnormalVisualEffect="bleed" effectPower="80">
+			<effect name="Debuff" val="0" abnormalVisualEffect="bleed">
 				<sub order="0x40" stat="rEvas" val="3" />
 				<mul order="0x30" stat="pDef" val="0.5" />
 				<mul order="0x30" stat="mDef" val="0.5" />
@@ -1365,8 +1365,8 @@
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
 				<param minLevel="1" maxLevel="100" chance="90" skillId="5902" />
 			</effect>
-			<effect name="Mute" noicon="1" val="0" effectPower="90" />
-			<effect name="PhysicalMute" noicon="1" val="0" effectPower="90" />
+			<effect name="Mute" noicon="1" val="0" />
+			<effect name="PhysicalMute" noicon="1" val="0" />
 		</for>
 	</skill>
 	<skill id="5994" levels="1" name="Effect of Doubt">

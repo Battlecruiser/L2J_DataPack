@@ -93,7 +93,7 @@
 			<effect name="Spoil" noicon="1" val="0" />
 		</enchant2for>
 		<enchant3for>
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="earthPower" val="#ench3EarthPower" />
 			</effect>
 			<effect name="Spoil" noicon="1" val="0" />
@@ -1255,7 +1255,7 @@
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="0.7" />
@@ -1739,7 +1739,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1987,7 +1987,7 @@
 			<effect name="DeleteHateOfMe" noicon="1" val="0">
 				<param chance="80" />
 			</effect>
-			<effect name="Stun" val="0" effectPower="40" />
+			<effect name="Stun" val="0" />
 		</for>
 		<enchant1for>
 			<effect name="Bluff" val="0" noicon="1">
@@ -2127,7 +2127,7 @@
 				<param chance="60" />
 			</effect>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="40">
+			<effect name="Stun" val="0">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>
@@ -2187,7 +2187,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="40">
+			<effect name="Stun" val="0">
 				<mul order="0x30" stat="pDef" val="0.7" />
 				<mul order="0x30" stat="mDef" val="0.7" />
 			</effect>

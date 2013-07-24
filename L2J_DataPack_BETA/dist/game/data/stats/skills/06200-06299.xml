@@ -169,7 +169,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="6206" levels="19" name="Strider Fear">
@@ -449,7 +449,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" special="stakatoroot" effectPower="100">
+			<effect name="Debuff" val="0" special="stakatoroot">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />

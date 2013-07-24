@@ -1320,7 +1320,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="#damage" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="4580" levels="12" name="Decrease P. Atk.">
@@ -1463,7 +1463,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80">
+			<effect name="Stun" val="0">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>

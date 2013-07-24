@@ -433,7 +433,7 @@
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="90" />
+			<effect name="Stun" val="0" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
@@ -458,7 +458,7 @@
 		<set name="trait" val="GUST" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="90" />
+			<effect name="Stun" val="0" />
 			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5494" />
 		</for>
 	</skill>
@@ -617,7 +617,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5445" levels="1" name="Awakening">
@@ -810,7 +810,7 @@
 			<effect name="DispelByCategory" noicon="1" val="0">
 				<param slot="buff" rate="100" max="20" />
 			</effect>
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -1228,7 +1228,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="71" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="71" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5496" levels="1" name="Dark Fireball">
@@ -1273,8 +1273,8 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
-			<effect name="DamOverTime" noicon="1" ticks="3" val="52" effectPower="80" />
+			<effect name="Stun" val="0" />
+			<effect name="DamOverTime" noicon="1" ticks="3" val="52" />
 		</for>
 	</skill>
 	<skill id="5498" levels="1" name="Self-Destruct">

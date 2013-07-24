@@ -805,7 +805,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="733" levels="1" name="Kechi Double Cutter">
@@ -1166,7 +1166,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" effectPower="60" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="748" levels="1" name="Saber Tooth Tiger Sprint">
@@ -1220,7 +1220,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="750" levels="1" name="Oel Mahum Ultimate Defense">
@@ -1301,7 +1301,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="753" levels="3" name="Doll Blader Throwing Knife">
@@ -1521,7 +1521,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="maxCp" val="0.1" />
 				<add order="0x40" stat="debuffVuln" val="30" />
 				<mul order="0x30" stat="healEffect" val="0.7" />
@@ -1892,7 +1892,7 @@
 		</cond>
 		<for>
 			<effect name="EnergyAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="1" val="80" effectPower="70" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="1" val="80" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="777" levels="1" name="Demolition Impact">
@@ -2275,7 +2275,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6092" chanceType="ON_EXIT" effectPower="50">
+			<effect name="ChanceSkillTrigger" val="0" triggeredId="6092" chanceType="ON_EXIT">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -2372,7 +2372,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="60" />
+			<effect name="Stun" val="0" />
 		</for>
 		<enchant3for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
@@ -2497,7 +2497,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="799" levels="3" name="Master Ability - Defense">

@@ -43,7 +43,7 @@
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -55,13 +55,13 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Fear" abnormalTime="#ench2Time" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="#ench2Time" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -1232,7 +1232,7 @@
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1244,7 +1244,7 @@
 		</enchant3for>
 		<enchant5for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="darkRes" val="#ench5DarkhVuln" />
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
@@ -1706,7 +1706,7 @@
 		<for>
 			<effect self="1" name="Blink" noicon="1" val="0" />
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="99" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="1449" levels="1" name="Transfer Soul">
@@ -1921,7 +1921,7 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.6" />
 			</effect>
 		</for>
@@ -2192,7 +2192,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="PhysicalAttackMute" val="0" effectPower="80" />
+			<effect name="PhysicalAttackMute" val="0" />
 		</for>
 		<enchant1for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
@@ -2319,7 +2319,7 @@
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
-			<effect name="DamOverTime" ticks="3" val="117" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="117" />
 		</for>
 	</skill>
 	<skill id="1468" levels="1" name="Star Fall">
@@ -2344,7 +2344,7 @@
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
 			<!-- NOTE: Damage amount for DOT and effectPower is unconfirmed -->
-			<effect name="DamOverTime" ticks="3" val="117" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="117" />
 		</for>
 	</skill>
 	<skill id="1469" levels="1" name="Leopold" enchantGroup1="6" enchantGroup2="6" enchantGroup3="6" enchantGroup4="6">
@@ -3243,7 +3243,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pAtk" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />

@@ -123,7 +123,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="809" levels="1" name="Golem Tornado Swing">
@@ -1771,7 +1771,7 @@
 		<for>
 			<effect self="1" name="Blink" noicon="1" val="0" />
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" special="airstun" />
+			<effect name="Stun" val="0" special="airstun" />
 		</for>
 	</skill>
 	<skill id="886" levels="11" name="Air Shock Bomb">
@@ -1801,7 +1801,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" special="airstun" />
+			<effect name="Stun" val="0" special="airstun" />
 		</for>
 	</skill>
 	<skill id="887" levels="11" name="Sky Clutch">
@@ -1832,7 +1832,7 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Root" val="0" effectPower="80" special="airroot" />
+			<effect name="Root" val="0" special="airroot" />
 		</for>
 	</skill>
 	<skill id="888" levels="11" name="Energy Storm">
@@ -2104,7 +2104,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.6" />
 				<mul order="0x30" stat="mDef" val="0.6" />
 				<mul order="0x30" stat="runSpd" val="0.6" />

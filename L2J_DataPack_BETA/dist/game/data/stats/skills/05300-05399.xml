@@ -49,7 +49,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5302" levels="9" name="Poison">
@@ -79,7 +79,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5303" levels="9" name="Bleed">
@@ -109,7 +109,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5304" levels="9" name="Paralysis">
@@ -141,7 +141,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" val="0" effectPower="80" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="5305" levels="9" name="Poison">
@@ -168,7 +168,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="60" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5306" levels="9" name="Paralysis">
@@ -197,7 +197,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" effectPower="60" val="0" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="5307" levels="9" name="Stun">
@@ -226,7 +226,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5308" levels="9" name="Poison">
@@ -255,7 +255,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5309" levels="9" name="Bleed">
@@ -285,7 +285,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5310" levels="9" name="NPC(party) - Magic Close Range DD - less powerful">
@@ -693,7 +693,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" />
+			<effect name="Debuff" val="0" />
 		</for>
 	</skill>
 	<skill id="5334" levels="9" name="NPC(party) - Physical Single Close Range Attack">
@@ -1096,7 +1096,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5363" levels="9" name="Poison">
@@ -1126,7 +1126,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5364" levels="9" name="Bleed">
@@ -1157,7 +1157,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5365" levels="9" name="Paralysis">
@@ -1187,7 +1187,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" val="0" effectPower="80" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="5366" levels="9" name="Poison">
@@ -1215,7 +1215,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="60" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5367" levels="9" name="Paralysis">
@@ -1244,7 +1244,7 @@
 		<set name="trait" val="PARALYZE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" val="0" effectPower="60" />
+			<effect name="Paralyze" val="0" />
 		</for>
 	</skill>
 	<skill id="5368" levels="9" name="Stun">
@@ -1291,7 +1291,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" effectPower="80" />
+			<effect name="DamOverTime" ticks="3" val="#dot" />
 		</for>
 	</skill>
 	<skill id="5370" levels="9" name="Bleed">
@@ -1696,7 +1696,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80" />
+			<effect name="Debuff" val="0" />
 		</for>
 	</skill>
 	<skill id="5395" levels="3" name="NPC Clan Buff - Super Might Haste">
