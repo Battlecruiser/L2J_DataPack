@@ -245,7 +245,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="55" abnormalVisualEffect="bleed" effectPower="80">
+			<effect name="DamOverTime" ticks="3" val="55" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
 		</for>
@@ -612,7 +612,7 @@
 		<set name="trait" val="DERANGEMENT" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" effectPower="20" />
+			<effect name="Fear" val="0" />
 		</for>
 	</skill>
 	<skill id="5734" levels="6" name="Gust of Wind">
@@ -673,7 +673,7 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Sleep" val="0" effectPower="25" />
+			<effect name="Sleep" val="0" />
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param SLEEP="100" />
 			</effect>
@@ -887,7 +887,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">

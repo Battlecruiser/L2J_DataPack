@@ -89,7 +89,7 @@
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" effectPower="80" ticks="3" val="58" abnormalVisualEffect="poison">
+			<effect name="DamOverTime" ticks="3" val="58" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -114,7 +114,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 			</effect>
 		</for>
@@ -242,7 +242,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6411" levels="1" name="Reptilikon Summon">
@@ -308,7 +308,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6415" levels="1" name="Reptilikon Scratch">
@@ -486,7 +486,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="60" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="6424" levels="1" name="Double Shot">

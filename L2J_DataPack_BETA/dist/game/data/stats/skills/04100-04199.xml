@@ -171,7 +171,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="100" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4107" levels="1" name="Antharas Stun">
@@ -200,7 +200,7 @@
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
 			<effect name="ThrowUp" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="100" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4108" levels="1" name="Antharas Terror">
@@ -527,7 +527,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4121" levels="12" name="Summoned Monster Magic Protection">
@@ -1145,7 +1145,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1486,7 +1486,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4170" levels="12" name="BOSS Mortal Blow">
@@ -1550,7 +1550,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="50" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4173" levels="12" name="BOSS Might">
@@ -1721,7 +1721,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="4181" levels="12" name="BOSS Mortal Blow">
@@ -2099,7 +2099,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>

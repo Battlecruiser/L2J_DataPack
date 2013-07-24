@@ -187,7 +187,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="30">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -217,7 +217,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="30">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.1" />
 			</effect>
 		</for>
@@ -295,7 +295,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="98">
+			<effect name="Stun" val="0">
 				<mul order="0x30" stat="critDamEvas" val="1.5" />
 			</effect>
 		</for>

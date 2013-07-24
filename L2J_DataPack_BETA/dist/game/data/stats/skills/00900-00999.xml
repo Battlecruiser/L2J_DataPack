@@ -121,7 +121,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="230" abnormalVisualEffect="poison" />
 		</for>
 	</skill>
 	<skill id="905" levels="6" name="Dark Detonation">
@@ -149,7 +149,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="906" levels="6" name="Lance Step">
@@ -248,7 +248,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="230" effectPower="80" abnormalVisualEffect="poison">
+			<effect name="DamOverTime" ticks="3" val="230" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 				<mul order="0x30" stat="pAtkSpd" val="0.8" />
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
@@ -677,7 +677,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="1" val="#dot" abnormalVisualEffect="flame" effectPower="50" />
+			<effect name="DamOverTime" ticks="1" val="#dot" abnormalVisualEffect="flame" />
 		</for>
 	</skill>
 	<skill id="928" levels="1" name="Dual Blow">
@@ -1229,7 +1229,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" effectPower="100" />
+			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="955" levels="1" name="Strider Dash">
@@ -1633,7 +1633,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="974" levels="7" name="Stun Shot">
@@ -1663,7 +1663,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 			<effect name="TargetCancel" noicon="1" val="0">
 				<param chance="40" />
 			</effect>
@@ -1753,7 +1753,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1791,7 +1791,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="80" />
+			<effect name="Stun" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 	</skill>
@@ -2106,7 +2106,7 @@
 			<using kind="Dagger,Dual Dagger" />
 		</cond>
 		<for>
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
 			<effect name="FatalBlow" noicon="1" val="0" />
@@ -2226,7 +2226,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="60" />
+			<effect name="Stun" val="0" />
 		</for>
 	</skill>
 	<skill id="996" levels="1" name="Disarm">
@@ -2277,7 +2277,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="pDef" val="0.9" />
 				<mul order="0x30" stat="mDef" val="0.9" />
 			</effect>

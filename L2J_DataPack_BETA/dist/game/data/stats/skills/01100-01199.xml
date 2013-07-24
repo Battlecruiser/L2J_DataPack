@@ -96,7 +96,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttackMp" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="#mdot" effectPower="80" />
+			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 		</for>
 	</skill>
 	<skill id="1104" levels="14" name="Seal of Winter" enchantGroup1="1" enchantGroup2="1">
@@ -1549,7 +1549,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="60">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>

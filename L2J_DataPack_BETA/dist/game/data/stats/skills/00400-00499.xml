@@ -50,7 +50,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
@@ -86,7 +86,7 @@
 		</enchant2for>
 		<enchant3for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="cAtk" val="#ench3cAtk" />
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 			</effect>
@@ -155,7 +155,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
@@ -173,7 +173,7 @@
 		</for>
 		<enchant3for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<basemul order="0x30" stat="rCrit" val="#ench3rCrit" />
 				<mul order="0x30" stat="cAtk" val="0.65" />
 			</effect>
@@ -347,7 +347,7 @@
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -359,7 +359,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -479,7 +479,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="40">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="runSpd" val="#debuff" />
 				<mul order="0x30" stat="pAtkSpd" val="#debuff" />
 				<mul order="0x30" stat="mAtkSpd" val="#debuff" />
@@ -519,7 +519,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mAtk" val="#debuff" />
 				<mul order="0x30" stat="pAtk" val="#debuff" />
 			</effect>
@@ -1744,7 +1744,7 @@
 			<target race_id="8" /> <!-- Angels -->
 		</cond>
 		<for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -1756,7 +1756,7 @@
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="30" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="25" />
 			</effect>
@@ -2935,7 +2935,7 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="70" />
+			<effect name="Stun" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</for>
 		<enchant2for>
@@ -3001,11 +3001,11 @@
 		</cond>
 		<for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 		<enchant1for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="#ench1Power" abnormalVisualEffect="bleed" effectPower="50" />
+			<effect name="DamOverTime" ticks="3" val="#ench1Power" abnormalVisualEffect="bleed" />
 		</enchant1for>
 		<enchant2for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />

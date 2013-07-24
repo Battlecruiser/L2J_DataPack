@@ -25,7 +25,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" effectPower="90" />
+			<effect name="DamOverTime" ticks="3" val="52" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5501" levels="1" name="Stuns">
@@ -1468,7 +1468,7 @@
 		<set name="trait" val="SHOCK" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="100" /> <!-- using 1 second due abnormal don't have abnormal time -->
+			<effect name="Stun" val="0" /> <!-- using 1 second due abnormal don't have abnormal time -->
 		</for>
 	</skill>
 	<skill id="5582" levels="1" name="Divine Beast Fire Breath">

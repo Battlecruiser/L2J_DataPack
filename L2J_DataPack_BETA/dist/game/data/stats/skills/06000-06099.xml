@@ -1031,7 +1031,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="80">
+			<effect name="Debuff" val="0">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</for>
