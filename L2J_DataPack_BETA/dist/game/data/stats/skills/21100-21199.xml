@@ -1360,28 +1360,46 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21182" levels="1" name="Blessing of Resistance - Hold">
+		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to hold by 40%. Continuously consumes energy. -->
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21183" levels="1" name="Blessing of Resistance - Paralysis">
+		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to paralysis by 40%. Continuously consumes energy. -->
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21184" levels="1" name="Blessing of Resistance - Sleep">
+		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to sleep by 40%. Continuously consumes energy. -->
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21185" levels="1" name="Blessing of Resistance - Movement Speed Decrease">
 		<!-- Raises resistance to decreased moving speed by 40%. Continuously consumes energy. -->
@@ -1392,20 +1410,32 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="21186" levels="1" name="Blessing of Resistance - Bleed">
+		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to bleed by 40%. Continuously consumes energy. -->
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21187" levels="1" name="Blessing of Resistance - Stun">
+		<!-- TODO: Implement me! -->
 		<!-- Raises resistance to stun by 40%. Continuously consumes energy. -->
 		<set name="icon" val="BranchSys2.icon.br_soulavatar_resist_i00" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="T" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="40" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21188" levels="1" name="Recovery Power - HP">
 		<!-- Increases HP recovery bonus by 20%. Continuously consumes energy. -->
@@ -1574,6 +1604,7 @@
 		<set name="abnormalLvl" val="26" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="effectPoint" val="486" />
 		<set name="icon" val="BranchSys2.icon.br_pekingopera_mask_b_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->

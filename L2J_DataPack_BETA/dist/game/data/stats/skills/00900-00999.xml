@@ -98,6 +98,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="400" />
@@ -131,6 +132,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -224,6 +226,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -260,6 +263,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="100" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -646,6 +650,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="10" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -1080,6 +1085,7 @@
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="50" />
 		<set name="affectRange" val="150" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
@@ -1202,6 +1208,7 @@
 		<set name="abnormalLvl" val="6" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="100" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-266" />
@@ -1606,6 +1613,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1636,6 +1644,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-665" />
@@ -1722,6 +1731,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1756,6 +1766,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1843,6 +1854,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
@@ -1863,6 +1875,9 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" val="0" />
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SLEEP="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="982" levels="3" name="Combat Aura">
@@ -2071,6 +2086,7 @@
 	<skill id="991" levels="1" name="Throwing Dagger">
 		<!-- High Five Skill -->
 		<set name="abnormalTime" val="10" />
+		<set name="activateRate" val="40" />
 		<set name="blowChance" val="20" /> <!-- FIXME: value unconfirmed -->
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-569" />
@@ -2179,6 +2195,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="600" />
@@ -2241,6 +2258,7 @@
 		<table name="#mpConsume"> 38 41 44 48 51 55 58 61 62 65 67 69 71 73 75 77 78 78 79 80 80 81 82 82 83 </table>
 		<table name="#power"> 1041 1240 1464 1714 1990 2290 2614 2840 3075 3316 3563 3813 4065 4316 4566 4689 4811 4931 5050 5166 5280 5390 5498 5603 5704 </table>
 		<set name="abnormalTime" val="3" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-52" />
 		<set name="effectRange" val="400" />

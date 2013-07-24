@@ -241,6 +241,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -334,6 +335,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="1000" />
@@ -359,6 +361,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7200" />
 		<set name="abnormalType" val="BIG_BODY" />
+		<set name="activateRate" val="0" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="100" />
 		<set name="hitTime" val="1000" />
@@ -428,6 +431,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="HOLY_ATTACK" />
+		<set name="activateRate" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3200" />
@@ -447,6 +451,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -461,6 +466,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4047" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -478,6 +484,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4038" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -577,6 +584,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="lvlBonusRate" val="1" />
@@ -1007,6 +1015,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1160" />
@@ -1023,6 +1032,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill4038" />
@@ -1039,6 +1049,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="CASTING_TIME_UP" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1206" />
@@ -1055,6 +1066,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill4037" />
@@ -1071,6 +1083,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MA_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1208,6 +1221,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SILENCE_PHYSICAL" />
+		<set name="activateRate" val="0" />
 		<set name="blowChance" val="20" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
@@ -1247,6 +1261,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1299,6 +1314,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ANESTHESIA" />
+		<set name="activateRate" val="20" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
 		<set name="icon" val="icon.skill5085" />
@@ -1314,6 +1330,7 @@
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="CRITICAL_POISON" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="3300" />
 		<set name="icon" val="icon.skill5086" />
@@ -1383,6 +1400,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="90" />
 		<set name="affectRange" val="400" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="2700" />
@@ -1485,6 +1503,7 @@
 		</for>
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
+		<!-- TODO: Implement me! -->
 		<table name="#abnormalLvls"> 1 2 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="60" />
@@ -1495,6 +1514,11 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param BOW="-30" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5099" levels="1" name="Cancel Capture A">
 		<set name="effectPoint" val="1" />

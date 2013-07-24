@@ -7,20 +7,22 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
-			<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
-			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<sub order="0x40" stat="sleepVuln" val="50" /> <!-- Resistance to sleep attacks +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="50" />
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
+				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
+				<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8401" levels="1" name="Vorpal Leather Armor Set">
@@ -30,18 +32,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
-			<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+				<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8402" levels="1" name="Vorpal Robe Set">
@@ -51,17 +55,19 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8403" levels="1" name="Elegia Armor Set">
@@ -71,19 +77,21 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
-			<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
-			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<sub order="0x40" stat="sleepVuln" val="50" /> <!-- Resistance to sleep attacks +50% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to damage magic +2% -->
-			<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="50" />
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
+				<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
+				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to damage magic +2% -->
+				<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8404" levels="1" name="Elegia Leather Armor Set">
@@ -93,16 +101,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
-			<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="50" />
+				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
+				<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8405" levels="1" name="Elegia Robe Set">
@@ -112,18 +122,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8406" levels="1" name="Moirai Armor Set - PvP">
@@ -133,21 +145,23 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-			<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-			<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-			<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
+				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8407" levels="1" name="Moirai Leather Armor Set - PvP">
@@ -157,21 +171,23 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
-			<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
-			<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
-			<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param HOLD="50" />
+				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="3" /> <!-- resistance to fire attributes +3 -->
+				<add order="0x40" stat="waterRes" val="3" /> <!-- resistance to water attributes +3 -->
+				<add order="0x40" stat="windRes" val="3" /> <!-- resistance to wind attributes +3 -->
+				<add order="0x40" stat="earthRes" val="3" /> <!-- resistance to earth attributes +3 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8408" levels="1" name="Moirai Robe Set - PvP">
@@ -181,20 +197,22 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param PARALYZE="50" />
+				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- resistance to earth attributes +5 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8409" levels="1" name="Vorpal Heavy Armor Set - PvP">
@@ -204,26 +222,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
-			<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
-			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<sub order="0x40" stat="sleepVuln" val="50" /> <!-- Resistance to sleep attacks +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BLEED="50" />
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<mul order="0x30" stat="pDef" val="1.0847" /> <!-- Def. Power +8.47% -->
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power +5.57% -->
+				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to Damage Magic +2% -->
+				<add order="0x40" stat="maxHp" val="541" /> <!-- Max. HP +541 -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8410" levels="1" name="Vorpal Leather Armor Set - PvP">
@@ -233,24 +253,26 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
-			<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="cAtkAdd" val="182" /> <!-- Increases Critical Damage by 182 -->
+				<add order="0x40" stat="maxMp" val="360" /> <!-- Increases Max MP by 360 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8411" levels="1" name="Vorpal Robe Set - PvP">
@@ -260,23 +282,25 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 92 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8412" levels="1" name="Elegia Armor Set - PvP">
@@ -286,25 +310,27 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
-			<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
-			<sub order="0x40" stat="bleedVuln" val="50" /> <!-- Resistance to bleed attacks +50% -->
-			<sub order="0x40" stat="rootVuln" val="50" /> <!-- Resistance to hold attacks +50% -->
-			<sub order="0x40" stat="sleepVuln" val="50" /> <!-- Resistance to sleep attacks +50% -->
-			<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to damage magic +2% -->
-			<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BLEED="50" />
+				<param HOLD="50" />
+				<param SLEEP="50" />
+				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- P. Atk. +6.59% -->
+				<add order="0x40" stat="rCrit" val="127.4" /> <!-- Critical rate +127.4 -->
+				<mul order="0x30" stat="magicDamVul" val="0.98" /> <!-- Resistance to damage magic +2% -->
+				<add order="0x40" stat="maxHp" val="550" /> <!-- Max. HP +550 -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="absorbDam" val="3" /> <!-- Steal opponent's HP on attack -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8413" levels="1" name="Elegia Leather Armor Set - PvP">
@@ -314,22 +340,24 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
-			<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Resistance to Paralyze Atk. +50% -->
-			<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param PARALYZE="50" />
+				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
+				<add order="0x40" stat="rCrit" val="170.5" /> <!-- Crt. Rate +170.5 -->
+				<mul order="0x30" stat="runSpd" val="1.03" /> <!-- Moving Spd. +3% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8414" levels="1" name="Elegia Robe Set - PvP">
@@ -339,24 +367,26 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Resistance to Stun Atk. +50% -->
-			<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
-			<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
-			<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
-			<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Bonus +5% -->
+				<add order="0x40" stat="fireRes" val="5" /> <!-- Resistance to fire attributes +5 -->
+				<add order="0x40" stat="waterRes" val="5" /> <!-- Resistance to water attributes +5 -->
+				<add order="0x40" stat="windRes" val="5" /> <!-- Resistance to wind attributes +5 -->
+				<add order="0x40" stat="earthRes" val="5" /> <!-- Resistance to earth attributes +5 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<add order="0x40" stat="maxMp" val="92" /> <!-- Increases Max MP by 97 -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" /> <!-- During PvP, damage received decreased -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8415" levels="5" name="Ring Ability - Drop Rate Up">
@@ -387,10 +417,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0125" />
-			<mul order="0x30" stat="pAtkSpd" val="1.01" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<add order="0x40" stat="fireRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="pAtk" val="1.0125" />
+				<mul order="0x30" stat="pAtkSpd" val="1.01" />
+				<add order="0x40" stat="fireRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8419" levels="1" name="Moirai Cuirass">
@@ -400,13 +432,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" />
-			<mul order="0x30" stat="pAtkSpd" val="1.04" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<add order="0x40" stat="waterRes" val="1" />
-			<add order="0x40" stat="fireRes" val="1" />
-			<add order="0x40" stat="windRes" val="1" />
-			<add order="0x40" stat="earthRes" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="pAtk" val="1.0426" />
+				<mul order="0x30" stat="pAtkSpd" val="1.04" />
+				<add order="0x40" stat="waterRes" val="1" />
+				<add order="0x40" stat="fireRes" val="1" />
+				<add order="0x40" stat="windRes" val="1" />
+				<add order="0x40" stat="earthRes" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8420" levels="1" name="Moirai Gaiter">
@@ -416,10 +450,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0208" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0167" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<add order="0x40" stat="waterRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="pAtk" val="1.0208" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0167" />
+				<add order="0x40" stat="waterRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8421" levels="1" name="Moirai Gauntlet">
@@ -429,10 +465,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0067" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<add order="0x40" stat="windRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
+				<add order="0x40" stat="windRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8422" levels="1" name="Moirai Boots">
@@ -442,10 +480,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0067" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<add order="0x40" stat="earthRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
+				<add order="0x40" stat="earthRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8423" levels="1" name="Moirai Shield">
@@ -465,10 +505,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0125" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<mul order="0x30" stat="regMp" val="1.01" />
-			<add order="0x40" stat="fireRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="5" />
+				<mul order="0x30" stat="pAtk" val="1.0125" />
+				<mul order="0x30" stat="regMp" val="1.01" />
+				<add order="0x40" stat="fireRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8425" levels="1" name="Moirai Leather Hauberk">
@@ -478,10 +520,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0426" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<mul order="0x30" stat="regMp" val="1.04" />
-			<add order="0x40" stat="waterRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="5" />
+				<mul order="0x30" stat="pAtk" val="1.0426" />
+				<mul order="0x30" stat="regMp" val="1.04" />
+				<add order="0x40" stat="waterRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8426" levels="1" name="Moirai Leather Legging">
@@ -491,10 +535,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0208" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<mul order="0x30" stat="regMp" val="1.0167" />
-			<add order="0x40" stat="waterRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="5" />
+				<mul order="0x30" stat="pAtk" val="1.0208" />
+				<mul order="0x30" stat="regMp" val="1.0167" />
+				<add order="0x40" stat="waterRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8427" levels="1" name="Moirai Leather Gloves">
@@ -504,10 +550,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<mul order="0x30" stat="regMp" val="1.0067" />
-			<add order="0x40" stat="windRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="5" />
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+				<mul order="0x30" stat="regMp" val="1.0067" />
+				<add order="0x40" stat="windRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8428" levels="1" name="Moirai Leather Boots">
@@ -517,10 +565,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<mul order="0x30" stat="regMp" val="1.0067" />
-			<add order="0x40" stat="earthRes" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="5" />
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+				<mul order="0x30" stat="regMp" val="1.0067" />
+				<add order="0x40" stat="earthRes" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8429" levels="1" name="Moirai Circlet">
@@ -530,9 +580,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0062" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
-			<add order="0x40" stat="fireRes" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="5" />
+				<mul order="0x30" stat="mAtk" val="1.0062" />
+				<add order="0x40" stat="fireRes" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8430" levels="1" name="Moirai Jacket">
@@ -542,13 +594,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
-			<sub order="0x40" stat="paralyzeVuln" val="5" /> <!-- resistance to Paralysis Attacks by 5% -->
-			<add order="0x40" stat="waterRes" val="1" />
-			<add order="0x40" stat="fireRes" val="1" />
-			<add order="0x40" stat="windRes" val="1" />
-			<add order="0x40" stat="earthRes" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="5" />
+				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
+				<add order="0x40" stat="waterRes" val="1" />
+				<add order="0x40" stat="fireRes" val="1" />
+				<add order="0x40" stat="windRes" val="1" />
+				<add order="0x40" stat="earthRes" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8431" levels="1" name="Moirai Hose">
@@ -558,9 +612,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0103" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
-			<add order="0x40" stat="waterRes" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="5" />
+				<mul order="0x30" stat="mAtk" val="1.0103" />
+				<add order="0x40" stat="waterRes" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8432" levels="1" name="Moirai Gloves">
@@ -570,9 +626,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
-			<add order="0x40" stat="windRes" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="5" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<add order="0x40" stat="windRes" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8433" levels="1" name="Moirai Shoes">
@@ -582,9 +640,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
-			<add order="0x40" stat="earthRes" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="5" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<add order="0x40" stat="earthRes" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8434" levels="1" name="Moirai Sigil">
@@ -604,11 +664,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<mul order="0x30" stat="pDef" val="1.0062" />
-			<add order="0x40" stat="maxHp" val="133" />
-			<sub order="0x40" stat="sleepVuln" val="1" />
-			<sub order="0x40" stat="rootVuln" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="10.5" />
+				<param HOLD="10.5" />
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<mul order="0x30" stat="pDef" val="1.0062" />
+				<add order="0x40" stat="maxHp" val="133" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8436" levels="1" name="Vesper Cuirass">
@@ -618,11 +680,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" />
-			<mul order="0x30" stat="pDef" val="1.0557" />
-			<add order="0x40" stat="maxHp" val="531" />
-			<sub order="0x40" stat="sleepVuln" val="28" />
-			<sub order="0x40" stat="rootVuln" val="28" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="28" />
+				<param HOLD="28" />
+				<mul order="0x30" stat="pAtk" val="1.0557" />
+				<mul order="0x30" stat="pDef" val="1.0557" />
+				<add order="0x40" stat="maxHp" val="531" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8437" levels="1" name="Vesper Gaiter">
@@ -632,11 +696,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0103" />
-			<mul order="0x30" stat="pDef" val="1.0103" />
-			<add order="0x40" stat="maxHp" val="55" />
-			<sub order="0x40" stat="sleepVuln" val="18" />
-			<sub order="0x40" stat="rootVuln" val="18" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="18" />
+				<param HOLD="18" />
+				<mul order="0x30" stat="pAtk" val="1.0103" />
+				<mul order="0x30" stat="pDef" val="1.0103" />
+				<add order="0x40" stat="maxHp" val="55" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8438" levels="1" name="Vesper Gauntlet">
@@ -646,11 +712,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="pDef" val="1.0041" />
-			<add order="0x40" stat="maxHp" val="22" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="pDef" val="1.0041" />
+				<add order="0x40" stat="maxHp" val="22" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8439" levels="1" name="Vesper Boots">
@@ -660,11 +728,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="pDef" val="1.0041" />
-			<add order="0x40" stat="maxHp" val="22" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="pDef" val="1.0041" />
+				<add order="0x40" stat="maxHp" val="22" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8440" levels="1" name="Vesper Verteidiger">
@@ -749,10 +819,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<mul order="0x30" stat="regMp" val="1.0041" />
-			<sub order="0x40" stat="stunVuln" val="8" />
-			<sub order="0x40" stat="cancel" val="4.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="7.5" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<mul order="0x30" stat="regMp" val="1.0041" />
+				<sub order="0x40" stat="cancel" val="4.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8447" levels="1" name="Vesper Jacket">
@@ -762,11 +834,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0847" />
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="regMp" val="1.05" />
-			<sub order="0x40" stat="stunVuln" val="20" />
-			<sub order="0x40" stat="cancel" val="12" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="20" />
+				<mul order="0x30" stat="mAtk" val="1.0847" />
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="regMp" val="1.05" />
+				<sub order="0x40" stat="cancel" val="12" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8448" levels="1" name="Vesper Hose">
@@ -776,10 +850,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0068" />
-			<mul order="0x30" stat="regMp" val="1.0068" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="7.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="12.5" />
+				<mul order="0x30" stat="mAtk" val="1.0068" />
+				<mul order="0x30" stat="regMp" val="1.0068" />
+				<sub order="0x40" stat="cancel" val="7.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8449" levels="1" name="Vesper Gloves">
@@ -789,10 +865,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0027" />
-			<mul order="0x30" stat="regMp" val="1.0027" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="mAtk" val="1.0027" />
+				<mul order="0x30" stat="regMp" val="1.0027" />
+				<sub order="0x40" stat="cancel" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8450" levels="1" name="Vesper Shoes">
@@ -802,10 +880,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0027" />
-			<mul order="0x30" stat="regMp" val="1.0027" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="mAtk" val="1.0027" />
+				<mul order="0x30" stat="regMp" val="1.0027" />
+				<sub order="0x40" stat="cancel" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8451" levels="1" name="Vesper Sigil">
@@ -825,7 +905,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="7.62" />
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="7.62" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8453" levels="1" name="Moirai Necklace">
@@ -835,7 +917,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="6" />
+			<effect name="DefenceTrait" val="0">
+				<param POISON="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8454" levels="1" name="Moirai Ring">
@@ -855,8 +939,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="5" />
-			<sub order="0x40" stat="rootVuln" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="5" />
+				<param HOLD="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8456" levels="1" name="Vesper Necklace">
@@ -876,7 +962,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="4.76" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="4.76" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8458" levels="1" name="Bracelet Weight Gauge Add">
@@ -897,16 +985,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="50" />
-			<add order="0x40" stat="regMp" val="0.23" />
-			<sub order="0x40" stat="bleedVuln" val="20" />
-			<sub order="0x40" stat="paralyzeVuln" val="15" />
-			<sub order="0x40" stat="stunVuln" val="15" />
-			<sub order="0x40" stat="sleepVuln" val="15" />
-			<add order="0x40" stat="waterRes" val="10" />
-			<mul order="0x30" stat="mReuse" val="0.95" />
-			<add order="0x40" stat="reflectDam" val="4" />
-			<sub order="0x40" stat="derangementVuln" val="10" />
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="20" />
+				<param PARALYZE="15" />
+				<param SHOCK="15" />
+				<param SLEEP="15" />
+				<param DERANGEMENT="10" />
+				<add order="0x40" stat="maxMp" val="50" />
+				<add order="0x40" stat="regMp" val="0.23" />
+				<add order="0x40" stat="waterRes" val="10" />
+				<mul order="0x30" stat="mReuse" val="0.95" />
+				<add order="0x40" stat="reflectDam" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8460" levels="1" name="Blessed Necklace of Freya">
@@ -917,21 +1007,23 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="50" />
-			<add order="0x40" stat="regMp" val="0.46" />
-			<sub order="0x40" stat="bleedVuln" val="25" />
-			<sub order="0x40" stat="paralyzeVuln" val="20" />
-			<sub order="0x40" stat="stunVuln" val="20" />
-			<sub order="0x40" stat="sleepVuln" val="20" />
-			<add order="0x40" stat="waterRes" val="15" />
-			<mul order="0x30" stat="mReuse" val="0.95" />
-			<add order="0x40" stat="reflectDam" val="4" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-			<sub order="0x40" stat="derangementVuln" val="10" />
-			<add order="0x40" stat="healEffect" val="15" />
-			<add order="0x10" stat="MEN" val="2" />
-			<add order="0x10" stat="CON" val="1" />
-			<sub order="0x10" stat="STR" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="25" />
+				<param PARALYZE="20" />
+				<param SHOCK="20" />
+				<param SLEEP="20" />
+				<param DERANGEMENT="10" />
+				<add order="0x40" stat="maxMp" val="50" />
+				<add order="0x40" stat="regMp" val="0.46" />
+				<add order="0x40" stat="waterRes" val="15" />
+				<mul order="0x30" stat="mReuse" val="0.95" />
+				<add order="0x40" stat="reflectDam" val="4" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<add order="0x40" stat="healEffect" val="15" />
+				<add order="0x10" stat="MEN" val="2" />
+				<add order="0x10" stat="CON" val="1" />
+				<sub order="0x10" stat="STR" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8461" levels="1" name="Heavy Set">
@@ -1115,11 +1207,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<mul order="0x30" stat="pDef" val="1.0062" />
-			<add order="0x40" stat="maxHp" val="133" />
-			<sub order="0x40" stat="sleepVuln" val="11" />
-			<sub order="0x40" stat="rootVuln" val="11" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="10.5" />
+				<param HOLD="10.5" />
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<mul order="0x30" stat="pDef" val="1.0062" />
+				<add order="0x40" stat="maxHp" val="133" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8482" levels="1" name="Vesper Noble Gaiter">
@@ -1129,11 +1223,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0103" />
-			<mul order="0x30" stat="pDef" val="1.0103" />
-			<add order="0x40" stat="maxHp" val="55" />
-			<sub order="0x40" stat="sleepVuln" val="18" />
-			<sub order="0x40" stat="rootVuln" val="18" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="18" />
+				<param HOLD="18" />
+				<mul order="0x30" stat="pAtk" val="1.0103" />
+				<mul order="0x30" stat="pDef" val="1.0103" />
+				<add order="0x40" stat="maxHp" val="55" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8483" levels="1" name="Vesper Noble Gauntlet">
@@ -1143,11 +1239,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="pDef" val="1.0041" />
-			<add order="0x40" stat="maxHp" val="22" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="pDef" val="1.0041" />
+				<add order="0x40" stat="maxHp" val="22" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8484" levels="1" name="Vesper Noble Boots">
@@ -1157,11 +1255,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="pDef" val="1.0041" />
-			<add order="0x40" stat="maxHp" val="22" />
-			<sub order="0x40" stat="sleepVuln" val="7" />
-			<sub order="0x40" stat="rootVuln" val="7" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="7" />
+				<param HOLD="7" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="pDef" val="1.0041" />
+				<add order="0x40" stat="maxHp" val="22" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8485" levels="1" name="Vesper Noble Leather Helmet">
@@ -1223,10 +1323,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<mul order="0x30" stat="regMp" val="1.0041" />
-			<sub order="0x40" stat="stunVuln" val="8" />
-			<sub order="0x40" stat="cancel" val="4.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="7.5" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<mul order="0x30" stat="regMp" val="1.0041" />
+				<sub order="0x40" stat="cancel" val="4.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8490" levels="1" name="Vesper Noble Hose">
@@ -1236,10 +1338,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0068" />
-			<mul order="0x30" stat="regMp" val="1.0068" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="7.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="12.5" />
+				<mul order="0x30" stat="mAtk" val="1.0068" />
+				<mul order="0x30" stat="regMp" val="1.0068" />
+				<sub order="0x40" stat="cancel" val="7.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8491" levels="1" name="Vesper Noble Gloves">
@@ -1249,10 +1353,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0027" />
-			<mul order="0x30" stat="regMp" val="1.0027" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="mAtk" val="1.0027" />
+				<mul order="0x30" stat="regMp" val="1.0027" />
+				<sub order="0x40" stat="cancel" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8492" levels="1" name="Vesper Noble Shoes">
@@ -1262,10 +1368,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0027" />
-			<mul order="0x30" stat="regMp" val="1.0027" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="cancel" val="3" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<mul order="0x30" stat="mAtk" val="1.0027" />
+				<mul order="0x30" stat="regMp" val="1.0027" />
+				<sub order="0x40" stat="cancel" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8493" levels="1" name="Moirai Shield">

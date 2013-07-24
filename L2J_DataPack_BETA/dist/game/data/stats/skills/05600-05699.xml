@@ -18,25 +18,22 @@
 	</skill>
 	<skill id="5601" levels="12" name="Short-Range Physical Attack Resistance">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#vuln"> 0.95 0.9 0.85 0.8 0.75 0.7 0.65 0.6 0.55 0.45 0.3 0 </table>
+		<table name="#traits"> 5 5 10 10 15 15 20 20 25 25 30 30 35 35 40 40 45 45 55 55 70 70 100 100 </table>
 		<set name="icon" val="icon.skill5601" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bluntWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="daggerWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualDaggerWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="fistWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="petWpnVuln" val="#vuln" />
+			<effect name="DefenceTrait" val="0">
+				<param BLUNT="#traits" />
+				<param DAGGER="#traits" />
+				<param SWORD="#traits" />
+				<param DUALFIST="#traits" />
+				<param DUAL="#traits" />
+				<param RAPIER="#traits" />
+				<param ANCIENTSWORD="#traits" />
+				<param DUALDAGGER="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5602" levels="1" name="Transform Sacrifice">
@@ -94,7 +91,9 @@
 		<for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.4" />
-				<add order="0x40" stat="stunProf" val="20" />
+			</effect>
+			<effect name="AttackTrait" val="0">
+				<param SHOCK="20" />
 			</effect>
 		</for>
 	</skill>
@@ -257,24 +256,22 @@
 	</skill>
 	<skill id="5620" levels="12" name="Short-Range Physical Attack Weakness">
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<table name="#vuln"> 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.4 1.45 1.55 1.7 2 </table>
+		<table name="#traits"> -5 -5 -10 -10 -15 -15 -20 -20 -25 -25 -30 -30 -35 -35 -40 -40 -45 -45 -55 -55 -70 -70 -100 -100 </table>
 		<set name="icon" val="icon.skill5620" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="swordWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bigSwordWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bluntWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="bigBluntWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="daggerWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualDaggerWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="poleWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="fistWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualFistWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="dualWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="rapierWpnVuln" val="#vuln" />
-			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
+			<effect name="DefenceTrait" val="0">
+				<param BLUNT="#traits" />
+				<param DAGGER="#traits" />
+				<param SWORD="#traits" />
+				<param DUALFIST="#traits" />
+				<param DUAL="#traits" />
+				<param ANCIENTSWORD="#traits" />
+				<param RAPIER="#traits" />
+				<param DUALDAGGER="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5621" levels="12" name="Aerial Recharge">
@@ -701,6 +698,7 @@
 		<table name="#abnormalLvls"> 2 3 4 </table>
 		<table name="#effectPoints"> 379 457 532 </table>
 		<table name="#magicLvl"> 40 48 56 </table>
+		<table name="#traits"> 30 40 50 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="RESIST_DERANGEMENT" />
@@ -712,6 +710,13 @@
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
+		<for>
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="#traits" />
+				<param SLEEP="#traits" />
+				<param DERANGEMENT="#traits" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5646" levels="2" name="Unicorn Seraphim - Wild Magic">
 		<!-- Confirmed CT2.5 -->
@@ -1145,24 +1150,28 @@
 	</skill>
 	<skill id="5663" levels="5" name="Resistance to Ancient Sword">
 		<!-- Confirmed CT2.5 -->
-		<table name="#vuln"> 0.9 0.8 0.7 0.6 0.5 </table>
+		<table name="#trait_ancientsword"> 10 20 30 40 50 </table>
 		<set name="icon" val="icon.skill5663" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
+			<effect name="DefenceTrait" val="0">
+				<param ANCIENTSWORD="#trait_ancientsword" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5664" levels="5" name="Weakness to Ancient Sword">
 		<!-- Confirmed CT2.5 -->
-		<table name="#vuln"> 1.11 1.25 1.43 1.67 2 </table>
+		<table name="#trait_ancientsword"> -11 -25 -43 -67 -100 </table>
 		<set name="icon" val="icon.skill5664" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="ancientWpnVuln" val="#vuln" />
+			<effect name="DefenceTrait" val="0">
+				<param ANCIENTSWORD="#trait_ancientsword" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5665" levels="1" name="Stun">
@@ -1170,6 +1179,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1190,6 +1200,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1210,6 +1221,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1230,6 +1242,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4035" />
 		<set name="isDebuff" val="true" />
@@ -1251,6 +1264,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1271,6 +1285,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1291,6 +1306,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1311,6 +1327,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1330,6 +1347,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-1351" />
 		<set name="effectRange" val="400" />
@@ -1421,6 +1439,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="MIRAGE_TRAP" />
+		<set name="activateRate" val="80" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="500" />
@@ -1537,6 +1556,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PVP_WEAPON_BUFF" />
+		<set name="activateRate" val="0" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="100" />
 		<set name="icon" val="icon.skill0228" />
@@ -1799,6 +1819,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SILENCE_ALL" />
+		<set name="activateRate" val="99" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0835" />
 		<set name="isDebuff" val="true" />

@@ -6,7 +6,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="6" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3401" levels="1" name="Dynasty Resistance Necklace">
@@ -14,7 +16,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="9" /> <!-- Fear Resistance +9 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3402" levels="1" name="Dynasty Resistance Ring">
@@ -22,7 +26,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="4" /> <!-- Fear Resistance +4 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3403" levels="1" name="Dynasty Resistance Earring">
@@ -30,7 +36,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="6" /> <!-- Fear Resistance +6 -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3404" levels="1" name="Mystery Effect">
@@ -38,6 +46,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="1200" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
@@ -76,6 +85,7 @@
 		<set name="abnormalLvl" val="0" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="STEALTH" />
+		<set name="activateRate" val="0" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />

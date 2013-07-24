@@ -339,6 +339,7 @@
 	<skill id="6821" levels="1" name="P. Def. Decrease">
 		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
 		<set name="abnormalTime" val="15" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="operateType" val="P" />
@@ -367,6 +368,7 @@
 	<skill id="6825" levels="2" name="Bleed">
 		<!-- "For 8 seconds, inflicts bleed and decreases 120 HP every second." -->
 		<set name="abnormalTime" val="10" />
+		<set name="activateRate" val="100" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="operateType" val="P" />
@@ -383,6 +385,7 @@
 	<skill id="6827" levels="1" name="Petrify">
 		<!-- "Inflicted with petrification, the body is rigid like stone for 30 seconds." -->
 		<set name="abnormalTime" val="30" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4111" />
 		<set name="operateType" val="P" />
@@ -392,6 +395,7 @@
 	<skill id="6828" levels="1" name="Dust Storm">
 		<!-- "For 30 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%." -->
 		<set name="abnormalTime" val="30" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1386" />
 		<set name="operateType" val="P" />
@@ -409,6 +413,7 @@
 	<skill id="6830" levels="1" name="Bleed">
 		<!-- "For 5 seconds, inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600." -->
 		<set name="abnormalTime" val="5" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="operateType" val="P" />
@@ -451,6 +456,7 @@
 	<skill id="6836" levels="1" name="Silence">
 		<!-- Magic skills are blocked. -->
 		<set name="abnormalTime" val="20" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="operateType" val="P" />
@@ -480,6 +486,7 @@
 	<skill id="6840" levels="1" name="Paralysis">
 		<!-- Temporarily inflicted with paralysis and cannot move. -->
 		<set name="abnormalTime" val="20" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1170" />
 		<set name="operateType" val="P" />
@@ -677,6 +684,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -703,6 +711,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -843,6 +852,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="6" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="100" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -867,6 +877,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
@@ -1043,6 +1054,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="650" />
@@ -1088,6 +1100,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
@@ -1150,6 +1163,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -1195,6 +1209,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="300" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
@@ -1264,6 +1279,7 @@
 	<skill id="6884" levels="1" name="Morale Boost">
 		<!-- none -->
 		<set name="abnormalTime" val="60" />
+		<set name="activateRate" val="80" />
 		<set name="effectPoint" val="1" />
 		<set name="operateType" val="P" />
 		<set name="skillType" val="NOTDONE" />
@@ -1277,7 +1293,7 @@
 		<table name="#pmAtk"> 1 1.15 1.15 </table>
 		<table name="#pmAtkSpd"> 1 1 1.15 </table>
 		<table name="#rCrit"> 0.1 0.3 0.5 </table>
-		<table name="#Vuln"> 50 80 90 </table>
+		<table name="#traits"> 50 80 90 </table>
 		<set name="abnormalTime" val="60" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill6885" />
@@ -1287,10 +1303,6 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" val="0">
-				<sub order="0x40" stat="stunVuln" val="#Vuln" />
-				<sub order="0x40" stat="bleedVuln" val="#Vuln" />
-				<sub order="0x40" stat="poisonVuln" val="#Vuln" />
-				<sub order="0x40" stat="paralyzeVuln" val="#Vuln" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
 				<mul order="0x30" stat="pAtk" val="#pmAtk" />
@@ -1298,6 +1310,12 @@
 				<mul order="0x30" stat="mAtkSpd" val="#pmAtkSpd" />
 				<mul order="0x30" stat="pAtkSpd" val="#pmAtkSpd" />
 				<mul order="0x30" stat="bonusExp" val="#bonusExp" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param PARALYZE="#traits" />
+				<param BLEED="#traits" />
+				<param POISON="#traits" />
+				<param SHOCK="#traits" />
 			</effect>
 		</for>
 	</skill>

@@ -69,7 +69,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="10" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="607" levels="1" name="Residence Freedom">
@@ -79,7 +81,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="10" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="608" levels="1" name="Residence Vigilance">
@@ -89,7 +93,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="10" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="609" levels="1" name="Residence Movement">
@@ -446,11 +452,13 @@
 		<table name="#ench1Power"> 2268 2286 2304 2322 2339 2357 2375 2393 2410 2428 2446 2464 2481 2499 2517 2535 2553 2570 2588 2606 2624 2641 2659 2677 2695 2712 2730 2748 2766 2784 </table>
 		<table name="#ench2MpConsume"> 107 105 103 101 99 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 69 67 65 63 61 59 58 56 54 </table>
 		<table name="#ench3AbnormalTimes"> 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 </table>
+		<table name="#ench4ActivateRates"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench4Chance"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="40" />
 		<set name="castRange" val="200" />
 		<set name="coolTime" val="300" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -475,6 +483,7 @@
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant3 name="abnormalTime" val="#ench3AbnormalTimes" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant4 name="activateRate" val="#ench4ActivateRates" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
@@ -837,11 +846,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="cancelVuln" val="5" />
-			<sub order="0x40" stat="stunVuln" val="5" />
-			<sub order="0x40" stat="rootVuln" val="5" />
-			<sub order="0x40" stat="sleepVuln" val="5" />
-			<sub order="0x40" stat="paralyzeVuln" val="5" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="5" />
+				<param HOLD="5" />
+				<param SLEEP="5" />
+				<param PARALYZE="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="651" levels="1" name="Warrior Ability - Haste">
@@ -1612,6 +1622,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="400" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-6752" />
@@ -1637,6 +1648,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-6752" />
@@ -1660,6 +1672,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-342" />
@@ -1687,6 +1700,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="720" />
@@ -1761,6 +1775,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="-684" />
@@ -1809,6 +1824,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-342" />
@@ -1974,6 +1990,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="9-10" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="500" />
@@ -1995,12 +2012,16 @@
 		<set name="trait" val="SLEEP" />
 		<for>
 			<effect name="Sleep" val="0" />
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SLEEP="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="696" levels="1" name="Divine Wizard Surrender to Holy">
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="750" />
 		<set name="effectPoint" val="-331" />
 		<set name="effectRange" val="1250" />

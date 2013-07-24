@@ -48,12 +48,14 @@
 		<table name="#effectPoints"> -234 -248 -262 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
 		<table name="#magicLvl"> 49 52 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 22 24 25 27 28 29 30 31 32 33 34 34 </table>
+		<table name="#ench1ActivateRates"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench1Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
@@ -69,6 +71,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
@@ -399,11 +402,13 @@
 		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<table name="#ench1Power"> 2325 2341 2357 2373 2389 2405 2420 2436 2452 2468 2484 2500 2515 2531 2547 2563 2579 2595 2610 2626 2642 2658 2674 2690 2705 2721 2737 2753 2769 2784 </table>
 		<table name="#ench2MpConsume"> 107 105 103 102 100 98 96 94 92 91 89 87 85 83 82 80 78 76 74 72 71 69 67 65 63 62 60 58 56 54 </table>
+		<table name="#ench3ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#ench3Power"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="1000" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -429,6 +434,7 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Crossbow" />
@@ -873,13 +879,13 @@
 	<skill id="522" levels="4" name="Real Target" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
-		<table name="#bowWpnVuln"> 1.12 1.16 1.2 1.24 </table>
 		<table name="#castRange"> 600 700 800 900 </table>
-		<table name="#crossbowWpnVuln"> 1.16 1.24 1.32 1.4 </table>
 		<table name="#effectPoints"> -193 -252 -296 -323 </table>
 		<table name="#effectRange"> 1100 1200 1300 1400 </table>
 		<table name="#magicLvl"> 40 52 62 70 </table>
 		<table name="#mpConsume"> 11 14 19 22 </table>
+		<table name="#trait_bow"> -12 -16 -20 -24 </table>
+		<table name="#trait_crossbow"> -16 -24 -32 -40 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<table name="#enchVuln"> 0.99 0.99 0.99 0.98 0.98 0.98 0.97 0.97 0.97 0.96 0.96 0.96 0.96 0.95 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
@@ -903,37 +909,46 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget">
-				<mul order="0x30" stat="bowWpnVuln" val="#bowWpnVuln" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="#crossbowWpnVuln" />
+			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget" />
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="#trait_bow" />
+				<param CROSSBOW="#trait_crossbow" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget">
-				<mul order="0x30" stat="bowWpnVuln" val="1.24" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="1.4" />
 				<mul order="0x30" stat="pDef" val="#enchVuln" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="-24" />
+				<param CROSSBOW="-40" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
 			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget">
-				<mul order="0x30" stat="bowWpnVuln" val="1.24" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="1.4" />
 				<mul order="0x30" stat="pAtk" val="#enchVuln" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="-24" />
+				<param CROSSBOW="-40" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
 			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget">
-				<mul order="0x30" stat="bowWpnVuln" val="1.24" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="1.4" />
 				<mul order="0x30" stat="mDef" val="#enchVuln" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="-24" />
+				<param CROSSBOW="-40" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
 			<effect name="Debuff" val="0" abnormalVisualEffect="realtarget">
-				<mul order="0x30" stat="bowWpnVuln" val="1.24" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="1.4" />
 				<mul order="0x30" stat="mAtk" val="#enchVuln" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="-24" />
+				<param CROSSBOW="-40" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -947,6 +962,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="DARK_SEED" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1181,6 +1197,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="T_CRT_RATE_UP" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-671" />
 		<set name="effectRange" val="400" />
@@ -1287,6 +1304,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPOIL_BOMB" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="castRange" val="40" />
@@ -1997,6 +2015,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2125,6 +2144,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2281,6 +2301,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="400" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2334,6 +2355,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="250" />
 		<set name="baseCritRate" val="15" />
@@ -2464,6 +2486,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="720" />
@@ -2550,6 +2573,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="HIT_DOWN" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="-100" />
@@ -2582,6 +2606,7 @@
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="240" />
 		<set name="castRange" val="40" />
@@ -2720,6 +2745,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />

@@ -25,7 +25,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poison Resistance +20% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3503" levels="1" name="Reinforced Leather Set">
@@ -90,8 +92,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="daggerWpnVuln" val="0.94" /> <!-- P. Def. against daggers +6% -->
-			<mul order="0x30" stat="dualDaggerWpnVuln" val="0.94" /> <!-- P. Def. against dualdaggers +6% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DAGGER="6" />
+				<param DUALDAGGER="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3510" levels="1" name="Karmian Set">
@@ -262,7 +266,9 @@
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			<mul order="0x30" stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
 			<mul order="0x30" stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
-			<sub order="0x40" stat="poisonVuln" val="20" /> <!-- Poision Resistance +20% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3528" levels="1" name="Blue Wolf Robe Set">
@@ -293,7 +299,9 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal +4% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3531" levels="1" name="Tallum Heavy Armor Set">
@@ -304,8 +312,10 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
-			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="80" />
+				<param BLEED="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3532" levels="1" name="Dark Crystal Light Armor Set">
@@ -316,7 +326,9 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3533" levels="1" name="Tallum Light Armor Set">
@@ -327,8 +339,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
-			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
-			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="80" />
+				<param BLEED="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3534" levels="1" name="Tallum Robe Set">
@@ -339,8 +353,10 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
-			<sub order="0x40" stat="poisonVuln" val="80" /> <!-- Poison Resistance +80% -->
-			<sub order="0x40" stat="bleedVuln" val="80" /> <!-- Bleed Resistance +80% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="80" />
+				<param BLEED="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3535" levels="1" name="Dark Crystal Robe Set">
@@ -353,7 +369,9 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Paralysis Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3536" levels="1" name="Nightmare Heavy Armor Set">
@@ -363,8 +381,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="70" />
+				<param HOLD="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3537" levels="1" name="Majestic Heavy Armor Set">
@@ -375,7 +395,9 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3538" levels="1" name="Nightmarish Leather Light Armor Set">
@@ -385,9 +407,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
 			<add order="0x40" stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="70" />
+				<param HOLD="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3539" levels="1" name="Majestic Light Armor Set">
@@ -401,7 +425,9 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3540" levels="1" name="Nightmare Robe Set">
@@ -412,8 +438,10 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Resistance +70% -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Resistance +70% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="70" />
+				<param HOLD="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3541" levels="1" name="Majestic Robe Set">
@@ -425,7 +453,9 @@
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun Resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
@@ -554,8 +584,10 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- Sleep Probability -70% -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- Hold Probability -70% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="70" />
+				<param HOLD="70" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3554" levels="1" name="Equipped with Shield">
@@ -565,8 +597,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="80" />
-			<sub order="0x40" stat="bleedVuln" val="80" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="80" />
+				<param BLEED="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3555" levels="1" name="Draconic Light Armor Set">
@@ -591,7 +625,9 @@
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="50" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3557" levels="1" name="Necklace of Valakas">
@@ -603,8 +639,6 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="fireRes" val="15" />
-			<sub order="0x40" stat="sleepVuln" val="40" />
-			<add order="0x40" stat="sleepProf" val="40" />
 			<add order="0x40" stat="maxHp" val="445" />
 			<mul order="0x30" stat="pAtk" val="1.04" />
 			<mul order="0x30" stat="mAtk" val="1.08" />
@@ -612,6 +646,12 @@
 			<mul order="0x30" stat="pReuse" val="0.9" />
 			<mul order="0x30" stat="mReuse" val="0.9" />
 			<add order="0x40" stat="reflectDam" val="5" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SLEEP="40" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3558" levels="1" name="Earring of Antharas">
@@ -623,22 +663,26 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="earthRes" val="15" />
-			<sub order="0x40" stat="bleedVuln" val="40" />
-			<add order="0x40" stat="bleedProf" val="40" />
-			<sub order="0x40" stat="stunVuln" val="30" />
-			<add order="0x40" stat="stunProf" val="30" />
-			<sub order="0x40" stat="derangementVuln" val="30" />
-			<add order="0x40" stat="derangementProf" val="30" />
 			<mul order="0x30" stat="healEffect" val="1.1" />
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="40" />
+				<param SHOCK="30" />
+				<param DERANGEMENT="30" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="40" />
+				<param SHOCK="30" />
+				<param DERANGEMENT="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3559" levels="2" name="Earring of Zaken">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Boss Jewel Skill -->
-		<table name="#bonus"> 20 30 </table>
+		<table name="#traits"> 20 30 </table>
 		<table name="#darkRes"> 0 15 </table>
 		<table name="#healEffect"> 1.1 1.15 </table>
 		<table name="#magicLvl"> 75 80 </table>
@@ -647,15 +691,19 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="30" />
-			<sub order="0x40" stat="stunVuln" val="#bonus" />
-			<sub order="0x40" stat="derangementVuln" val="#bonus" />
-			<add order="0x40" stat="bleedProf" val="30" />
-			<add order="0x40" stat="stunProf" val="#bonus" />
-			<add order="0x40" stat="derangementProf" val="#bonus" />
 			<mul order="0x30" stat="healEffect" val="#healEffect" />
 			<add order="0x40" stat="absorbDam" val="4" />
 			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="AttackTrait" val="0">
+				<param BLEED="30" />
+				<param SHOCK="#traits" />
+				<param DERANGEMENT="#traits" />
+			</effect>
+			<effect name="DefenceTrait" val="0">
+				<param BLEED="30" />
+				<param SHOCK="#traits" />
+				<param DERANGEMENT="#traits" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3560" levels="1" name="Earring of Orfen">
@@ -666,9 +714,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="20" />
-			<add order="0x40" stat="bleedProf" val="20" />
 			<mul order="0x30" stat="healEffect" val="1.06" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="20" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3561" levels="1" name="Ring of Baium">
@@ -679,14 +731,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="40" />
-			<sub order="0x40" stat="rootVuln" val="30" />
-			<add order="0x40" stat="poisonProf" val="40" />
-			<add order="0x40" stat="rootProf" val="30" />
 			<add order="0x40" stat="accCombat" val="2" />
 			<mul order="0x30" stat="cAtk" val="1.15" />
 			<mul order="0x30" stat="pAtkSpd" val="1.04" />
 			<mul order="0x30" stat="mAtkSpd" val="1.04" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="40" />
+				<param HOLD="30" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="40" />
+				<param HOLD="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3562" levels="1" name="Ring of Ant Queen">
@@ -697,12 +753,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="30" />
-			<sub order="0x40" stat="rootVuln" val="20" />
-			<add order="0x40" stat="poisonProf" val="30" />
-			<add order="0x40" stat="rootProf" val="20" />
 			<add order="0x40" stat="accCombat" val="2" />
 			<mul order="0x30" stat="cAtk" val="1.15" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="30" />
+				<param HOLD="20" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="30" />
+				<param HOLD="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3563" levels="1" name="Ring of Core">
@@ -713,9 +773,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="20" />
-			<add order="0x40" stat="poisonProf" val="20" />
 			<add order="0x40" stat="accCombat" val="1" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="20" />
+			</effect>
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3564" levels="3" name="Special Ability: Haste">
@@ -825,10 +889,12 @@
 	</skill>
 	<skill id="3571" levels="2" name="Special Ability: Critical Stun">
 		<!-- Confirmed CT2.5 -->
+		<table name="#activateRates"> 27 43 </table>
 		<table name="#magicLvl"> 75 84 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="#activateRates" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -875,10 +941,12 @@
 	</skill>
 	<skill id="3574" levels="3" name="Special Ability: Critical Slow">
 		<!-- Confirmed CT2.5 -->
+		<table name="#activateRates"> 16 24 33 </table>
 		<table name="#magicLvl"> 75 84 84 </table>
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="#activateRates" />
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
@@ -932,6 +1000,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="80" />
 		<set name="castRange" val="1000" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1500" />
@@ -973,6 +1042,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="4" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
@@ -1062,6 +1132,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="25" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1101,6 +1172,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE_PHYSICAL" />
+		<set name="activateRate" val="10" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -1140,6 +1212,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="25" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -1181,6 +1254,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SILENCE" />
+		<set name="activateRate" val="5" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1064" />
 		<set name="isDebuff" val="true" />
@@ -1250,6 +1324,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="7" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1160" />
 		<set name="isDebuff" val="true" />

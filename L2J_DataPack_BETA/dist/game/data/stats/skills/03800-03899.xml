@@ -102,7 +102,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="3.57" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="3.57" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3809" levels="1" name="Adamantite Ring">
@@ -132,7 +134,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="4.76" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="4.76" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3812" levels="1" name="Ring of Black Ore">
@@ -202,7 +206,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="5.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="5.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3819" levels="1" name="Tateossian Necklace">
@@ -212,7 +218,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="7.61" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="7.61" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3820" levels="1" name="Tateossian Ring">
@@ -262,7 +270,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="5" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3825" levels="3" name="Sword of Might">

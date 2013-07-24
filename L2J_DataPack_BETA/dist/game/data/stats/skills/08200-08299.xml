@@ -26,16 +26,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- Stun resistance +50% -->
-			<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
-			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="50" />
+				<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
+				<mul order="0x30" stat="mAtk" val="1.17" /> <!-- M. Atk +17% -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
+				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			</effect>
 		</for>
 	</skill>
@@ -65,18 +67,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
-			<sub order="0x40" stat="stunVuln" val="13" /> <!-- Shock resistance is increased +13% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="13" />
+				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8204" levels="1" name="Dynasty Breastplate - PvP Weapon Master">
@@ -167,18 +171,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-			<sub order="0x40" stat="rootVuln" val="13" /> <!-- Hold resistance are increased +13% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param HOLD="13" />
+				<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8209" levels="1" name="Dynasty Leather Armor - PvP Bow Master">
@@ -394,18 +400,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
-			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Stun Resistance +15 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param SHOCK="15" />
+				<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal Capacity +4% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8220" levels="1" name="Dynasty Platinum Breastplate - PvP Weapon Master">
@@ -476,18 +484,20 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
-			<sub order="0x40" stat="rootVuln" val="15" /> <!-- Hold Resistance +15% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
 			<effect name="TriggerSkillByDamage" val="0">
 				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param HOLD="15" />
+				<add order="0x40" stat="rEvas" val="5.3" /> <!-- Evasion +5.3 -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8224" levels="1" name="Dynasty Jewel Leather Armor - PvP Bow Master">
@@ -701,9 +711,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.0062" />
-			<sub order="0x40" stat="sleepVuln" val="17.5" />
-			<sub order="0x40" stat="rootVuln" val="17.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="17.5" />
+				<param HOLD="17.5" />
+				<mul order="0x30" stat="mDef" val="1.0062" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8236" levels="1" name="Nightmare Helm">
@@ -712,10 +724,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0062" />
-			<mul order="0x30" stat="mAtk" val="1.0062" />
-			<sub order="0x40" stat="sleepVuln" val="17.5" />
-			<sub order="0x40" stat="rootVuln" val="17.5" />
+			<effect name="DefenceTrait" val="0">
+				<param SLEEP="17.5" />
+				<param HOLD="17.5" />
+				<mul order="0x30" stat="regMp" val="1.0062" />
+				<mul order="0x30" stat="mAtk" val="1.0062" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8237" levels="1" name="Shalin Heal">
@@ -768,6 +782,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="effectPoint" val="-1300" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.weapon_long_spear_i00" />
@@ -1275,6 +1290,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-15" />
 		<set name="effectPoint" val="-100" />
 		<set name="fanRange" val="0,0,150,90" />
@@ -1377,11 +1393,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-			<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP by 531 -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="70" />
+				<param SLEEP="70" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
+				<add order="0x40" stat="maxHp" val="531" /> <!-- Max HP by 531 -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8284" levels="1" name="Vesper Noble Heavy Armor Set">
@@ -1391,15 +1409,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
-			<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP 540 -->
-			<sub order="0x40" stat="rootVuln" val="70" /> <!-- resistance to hold by 70% -->
-			<sub order="0x40" stat="sleepVuln" val="70" /> <!-- resistance to sleep by 70% -->
-			<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
-			<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
-			<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
-			<add order="0x10" stat="cloak" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="70" />
+				<param SLEEP="70" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- P. Def. +5.57% -->
+				<add order="0x40" stat="maxHp" val="540" /> <!-- Max HP 540 -->
+				<add order="0x40" stat="accCombat" val="4" /> <!-- Increases Accuracy by 4 -->
+				<add order="0x40" stat="runSpd" val="5" /> <!-- Increases Speed by 5 -->
+				<mul order="0x30" stat="magicDamVul" val="0.99" /> <!-- Increases M. Def by 1% -->
+				<add order="0x10" stat="cloak" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8285" levels="1" name="Vesper Light Armor Set">
@@ -1422,14 +1442,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
-			<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
-			<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-			<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
-			<sub order="0x40" stat="paralyzeVuln" val="50" /> <!-- Increases Resistance to Paralysis by 50% -->
-			<add order="0x10" stat="cloak" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="50" />
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
+				<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
+				<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
+				<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+				<add order="0x10" stat="cloak" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8287" levels="1" name="Vesper Robe Set">
@@ -1439,11 +1461,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
-			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
+				<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
+				<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8288" levels="1" name="Vesper Noble Robe Set">
@@ -1453,14 +1477,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
-			<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
-			<sub order="0x40" stat="stunVuln" val="50" /> <!-- resistance to Stun Attacks by 50% -->
-			<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
-			<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
-			<add order="0x10" stat="cloak" val="1" />
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="50" />
+				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
+				<mul order="0x30" stat="regMp" val="1.0557" /> <!-- MP Recovery Rate by 5.57% -->
+				<sub order="0x40" stat="cancel" val="30" /> <!-- decreases the damage to be cancelled by magic by 30 -->
+				<add order="0x40" stat="runSpd" val="7" /> <!-- Increases Speed by 7 -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.97" /> <!-- Decreases MP consumption for magic skills by 3% -->
+				<add order="0x10" stat="cloak" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8289" levels="3" name="Special Ability Focus">
@@ -1504,10 +1530,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="rootVuln" val="30" /> <!-- Increases resistance to hold attacks by 30% -->
-			<add order="0x40" stat="rootProf" val="30" /> <!-- Increases hold attack bonus by 30% -->
-			<mul order="0x30" stat="cAtk" val="1.15" /> <!-- Increases critical attack power by 15% -->
-			<add order="0x40" stat="accCombat" val="2" /> <!-- Increases accuracy by 2 -->
+			<effect name="AttackTrait" val="0">
+				<param HOLD="30" />
+				<mul order="0x30" stat="cAtk" val="1.15" /> <!-- Increases critical attack power by 15% -->
+				<add order="0x40" stat="accCombat" val="2" /> <!-- Increases accuracy by 2 -->
+			</effect>
+			<effect name="DefenceTrait" val="0">
+				<param HOLD="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8293" levels="1" name="Olympiad Warrior's Earring">
@@ -1516,11 +1546,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="20" /> <!-- Increases resistance to shock attack by 20% -->
-			<sub order="0x40" stat="derangementVuln" val="20" /> <!-- Increases resistance to mind attack by 20% -->
-			<add order="0x40" stat="stunProf" val="20" /> <!-- Increases shock attack bonus by 20% -->
-			<add order="0x40" stat="derangementProf" val="20" /> <!-- Increases mind attack bonus by 20% -->
-			<add order="0x40" stat="absorbDam" val="4" /> <!-- Recovers 4% of the damage to the enemy as your HP -->
+			<effect name="AttackTrait" val="0">
+				<param SHOCK="20" />
+				<param DERANGEMENT="20" />
+				<add order="0x40" stat="absorbDam" val="4" /> <!-- Recovers 4% of the damage to the enemy as your HP -->
+			</effect>
+			<effect name="DefenceTrait" val="0">
+				<param SHOCK="20" />
+				<param DERANGEMENT="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8294" levels="1" name="Olympiad Warrior's Necklace">
@@ -1529,15 +1563,19 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="15" /> <!-- Increases resistance to paralysis attacks by 15% -->
-			<sub order="0x40" stat="stunVuln" val="15" /> <!-- Increases resistance to shock attacks by 15% -->
-			<sub order="0x40" stat="sleepVuln" val="15" /> <!-- Increases resistance to sleep attacks by 15% -->
-			<add order="0x40" stat="paralyzeProf" val="15" /> <!-- Increases paralysis attack bonus by 15% -->
-			<add order="0x40" stat="stunProf" val="15" /> <!-- Increases shock attack bonus by 15% -->
-			<add order="0x40" stat="sleepProf" val="15" /> <!-- Increases sleep attack bonus by 15% -->
-			<mul order="0x30" stat="pReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
-			<mul order="0x30" stat="mReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
-			<add order="0x40" stat="reflectDam" val="4" /> <!-- Reflects 4% of the damage received back to the enemy -->
+			<effect name="AttackTrait" val="0">
+				<param PARALYZE="15" />
+				<param SHOCK="15" />
+				<param SLEEP="15" />
+				<mul order="0x30" stat="pReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
+				<mul order="0x30" stat="mReuse" val="0.95" /> <!-- Decreases the skill's reuse time by 5% -->
+				<add order="0x40" stat="reflectDam" val="4" /> <!-- Reflects 4% of the damage received back to the enemy -->
+			</effect>
+			<effect name="DefenceTrait" val="0">
+				<param PARALYZE="15" />
+				<param SHOCK="15" />
+				<param SLEEP="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8295" levels="1" name="Special Ability Focus">

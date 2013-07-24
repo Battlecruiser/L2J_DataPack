@@ -524,7 +524,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SHOCK="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3953" levels="1" name="Augment Option - Bleed Resistance">
@@ -535,7 +537,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3954" levels="1" name="Augment Option - Poison Resistance">
@@ -546,7 +550,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="poisonProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3955" levels="1" name="Augment Option - Sleep Resistance">
@@ -557,7 +563,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sleepProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SLEEP="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3956" levels="1" name="Augment Option - Paralysis Resistance">
@@ -568,7 +576,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="paralyzeProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param PARALYZE="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3957" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -579,7 +589,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="1.71" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3958" levels="1" name="Augment Option - Stun Resistance">
@@ -589,7 +601,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3959" levels="1" name="Augment Option - Bleed Resistance">
@@ -599,7 +613,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3960" levels="1" name="Augment Option - Poison Resistance">
@@ -609,7 +625,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3961" levels="1" name="Augment Option - Sleep Resistance">
@@ -619,7 +637,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3962" levels="1" name="Augment Option - Paralysis Resistance">
@@ -629,7 +649,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3963" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -639,7 +661,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="1.71" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3964" levels="1" name="Augment Option - Stun Resistance">
@@ -650,7 +674,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SHOCK="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3965" levels="1" name="Augment Option - Bleed Resistance">
@@ -661,7 +687,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3966" levels="1" name="Augment Option - Poison Resistance">
@@ -672,7 +700,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="poisonProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3967" levels="1" name="Augment Option - Sleep Resistance">
@@ -683,7 +713,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sleepProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SLEEP="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3968" levels="1" name="Augment Option - Paralysis Resistance">
@@ -694,7 +726,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="paralyzeProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param PARALYZE="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3969" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -705,7 +739,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="2.14" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3970" levels="1" name="Augment Option - Stun Resistance">
@@ -715,7 +751,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3971" levels="1" name="Augment Option - Bleed Resistance">
@@ -725,7 +763,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3972" levels="1" name="Augment Option - Poison Resistance">
@@ -735,7 +775,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3973" levels="1" name="Augment Option - Sleep Resistance">
@@ -745,7 +787,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3974" levels="1" name="Augment Option - Paralysis Resistance">
@@ -755,7 +799,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3975" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -765,7 +811,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="2.14" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="2.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3976" levels="1" name="Augment Option - Stun Resistance">
@@ -776,7 +824,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SHOCK="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3977" levels="1" name="Augment Option - Bleed Resistance">
@@ -787,7 +837,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3978" levels="1" name="Augment Option - Poison Resistance">
@@ -798,7 +850,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="poisonProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3979" levels="1" name="Augment Option - Sleep Resistance">
@@ -809,7 +863,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sleepProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SLEEP="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3980" levels="1" name="Augment Option - Paralysis Resistance">
@@ -820,7 +876,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="paralyzeProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param PARALYZE="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3981" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -831,7 +889,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="3" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3982" levels="1" name="Augment Option - Stun Resistance">
@@ -841,7 +901,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3983" levels="1" name="Augment Option - Bleed Resistance">
@@ -851,7 +913,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3984" levels="1" name="Augment Option - Poison Resistance">
@@ -861,7 +925,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3985" levels="1" name="Augment Option - Sleep Resistance">
@@ -871,7 +937,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3986" levels="1" name="Augment Option - Paralysis Resistance">
@@ -881,7 +949,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3987" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -891,7 +961,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="3" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3988" levels="1" name="Augment Option - Stun Resistance">
@@ -902,7 +974,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="stunProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SHOCK="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3989" levels="1" name="Augment Option - Bleed Resistance">
@@ -913,7 +987,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="bleedProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param BLEED="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3990" levels="1" name="Augment Option - Poison Resistance">
@@ -924,7 +1000,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="poisonProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param POISON="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3991" levels="1" name="Augment Option - Sleep Resistance">
@@ -935,7 +1013,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sleepProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param SLEEP="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3992" levels="1" name="Augment Option - Paralysis Resistance">
@@ -946,7 +1026,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="paralyzeProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param PARALYZE="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3993" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -957,7 +1039,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="derangementProf" val="3.42" />
+			<effect name="AttackTrait" noicon="1" val="0">
+				<param DERANGEMENT="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3994" levels="1" name="Augment Option - Stun Resistance">
@@ -967,7 +1051,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="stunVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SHOCK="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3995" levels="1" name="Augment Option - Bleed Resistance">
@@ -977,7 +1063,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="bleedVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param BLEED="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3996" levels="1" name="Augment Option - Poison Resistance">
@@ -987,7 +1075,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="poisonVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param POISON="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3997" levels="1" name="Augment Option - Sleep Resistance">
@@ -997,7 +1087,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="sleepVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param SLEEP="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3998" levels="1" name="Augment Option - Paralysis Resistance">
@@ -1007,7 +1099,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="paralyzeVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param PARALYZE="3.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3999" levels="1" name="Augment Option - Mental Attack Resistance">
@@ -1017,7 +1111,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="derangementVuln" val="3.42" />
+			<effect name="DefenceTrait" noicon="1" val="0">
+				<param DERANGEMENT="3.42" />
+			</effect>
 		</for>
 	</skill>
 </list>

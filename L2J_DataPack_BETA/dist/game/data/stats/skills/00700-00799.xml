@@ -4,6 +4,7 @@
 		<set name="abnormalLvl" val="5" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
+		<set name="activateRate" val="0" />
 		<set name="affectRange" val="1000" />
 		<set name="effectPoint" val="661" />
 		<set name="hitTime" val="7000" />
@@ -219,6 +220,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-676" />
@@ -237,6 +239,9 @@
 		<set name="trait" val="HOLD" />
 		<for>
 			<effect name="Root" val="0" />
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="709" levels="1" name="Sacrifice Enchanter">
@@ -421,6 +426,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="activateRate" val="95" />
 		<set name="castRange" val="800" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -726,6 +732,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-1" />
@@ -777,6 +784,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-342" />
@@ -862,6 +870,7 @@
 		<set name="abnormalLvl" val="9" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DARK_SEED" />
+		<set name="activateRate" val="100" />
 		<set name="castRange" val="900" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-342" />
@@ -982,6 +991,7 @@
 		<set name="abnormalLvl" val="8" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
@@ -1138,6 +1148,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1189,6 +1200,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1269,6 +1281,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -1480,6 +1493,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="TOUCH_OF_DEATH" />
+		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="300" />
 		<set name="baseCritRate" val="50" />
@@ -1523,6 +1537,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-6781" />
@@ -1570,9 +1585,9 @@
 		<enchant2 name="effectPoint" val="#ench2EffectPoints" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="bowWpnVuln" val="0.9" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.95" />
+			<effect name="DefenceTrait" val="0">
+				<param BOW="10" />
+				<param CROSSBOW="5" />
 			</effect>
 		</for>
 	</skill>
@@ -1604,9 +1619,11 @@
 		</cond>
 		<for>
 			<effect name="Buff" val="0">
-				<mul order="0x30" stat="bowWpnVuln" val="0.55" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.75" />
 				<mul order="0x30" stat="mAtk" val="0.01" />
+			</effect>
+			<effect name="DefenceTrait" val="0" noicon="1">
+				<param BOW="45" />
+				<param CROSSBOW="25" />
 			</effect>
 		</for>
 	</skill>
@@ -1787,6 +1804,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="8" />
 		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-655" />
@@ -1815,6 +1833,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
 		<set name="effectPoint" val="-679" />
@@ -1847,6 +1866,7 @@
 		<set name="abnormalLvl" val="10" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="FORCE_OF_DESTRUCTION" />
+		<set name="activateRate" val="80" />
 		<set name="baseCritRate" val="20" />
 		<set name="castRange" val="40" />
 		<set name="chargeConsume" val="2" />
@@ -2234,6 +2254,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="PARALYZE" />
+		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="coolTime" val="720" />
@@ -2266,6 +2287,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="BETRAYAL_MARK" />
+		<set name="activateRate" val="70" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="1100" />
@@ -2292,6 +2314,7 @@
 		<!-- Confirmed CT2.5 -->
 		<table name="#ench1Power"> 4071 4102 4133 4164 4195 4226 4257 4289 4320 4351 4382 4413 4444 4475 4507 </table>
 		<table name="#ench2Cost"> 80 78 76 74 72 70 68 66 64 62 59 57 55 53 51 </table>
+		<table name="#ench3ActivateRates"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench3Chance"> 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#ench8Duel"> 4104 4168 4232 4297 4361 4425 4490 4554 4618 4683 4747 4811 4875 4940 5004 </table>
 		<table name="#enchElementAttack"> 4 7 10 14 17 20 24 27 30 34 37 40 43 47 50 </table>
@@ -2299,6 +2322,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
+		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="600" />
 		<set name="castRange" val="600" />
@@ -2324,6 +2348,7 @@
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2Cost" />
+		<enchant3 name="activateRate" val="#ench3ActivateRates" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="element" val="0" /> <!-- Fire -->
 		<enchant4 name="elementPower" val="#enchElementAttack" />
@@ -2356,12 +2381,14 @@
 	</skill>
 	<skill id="794" levels="1" name="Mass Disarm" enchantGroup1="6" enchantGroup2="6">
 		<!-- Confirmed CT2.5 -->
+		<table name="#ench1ActivateRates"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench1Power"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 </table>
 		<table name="#ench2Reuse"> 145000 140000 135000 130000 125000 120000 115000 110000 105000 100000 95000 90000 85000 80000 75000 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
+		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="200" />
 		<set name="effectPoint" val="-673" />
@@ -2376,6 +2403,7 @@
 		<set name="reuseDelay" val="150000" />
 		<set name="saveVs" val="STR" />
 		<set name="targetType" val="AURA" />
+		<enchant1 name="activateRate" val="#ench1ActivateRates" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -2449,6 +2477,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="POISON" />
+		<set name="activateRate" val="50" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-340" />

@@ -253,6 +253,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="300" />
 		<set name="abnormalType" val="BIG_HEAD" />
+		<set name="activateRate" val="0" />
 		<set name="icon" val="icon.skill2513" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -1630,9 +1631,9 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
-				<mul order="0x30" stat="bowWpnVuln" val="0.8" />
-				<mul order="0x30" stat="crossbowWpnVuln" val="0.8" />
+			<effect name="DefenceTrait" val="0">
+				<param BOW="40" />
+				<param CROSSBOW="20" />
 			</effect>
 		</for>
 	</skill>

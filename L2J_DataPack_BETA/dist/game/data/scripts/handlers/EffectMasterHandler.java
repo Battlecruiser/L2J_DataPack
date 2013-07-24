@@ -39,6 +39,7 @@ public final class EffectMasterHandler
 	private static final Class<?>[] EFFECTS =
 	{
 		AddHate.class,
+		AttackTrait.class,
 		Backstab.class,
 		Betray.class,
 		BigHead.class,
@@ -71,6 +72,7 @@ public final class EffectMasterHandler
 		DamOverTimePercent.class,
 		DeathLink.class,
 		Debuff.class,
+		DefenceTrait.class,
 		DeleteHate.class,
 		DeleteHateOfMe.class,
 		Disarm.class,
