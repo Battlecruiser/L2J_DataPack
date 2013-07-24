@@ -368,9 +368,9 @@ public abstract class AirShipController extends Quest
 			else
 			{
 				p = _arrivalPath[_arrivalPath.length - 1];
-				if (!zone.isInsideZone(p.x, p.y, p.z))
+				if (!zone.isInsideZone(p.getLocation()))
 				{
-					_log.log(Level.WARNING, getName() + ": Arrival path finish point (" + p.x + "," + p.y + "," + p.z + ") not in zone " + _dockZone);
+					_log.log(Level.WARNING, getName() + ": Arrival path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") not in zone " + _dockZone);
 					_arrivalPath = null;
 				}
 			}
@@ -395,9 +395,9 @@ public abstract class AirShipController extends Quest
 			else
 			{
 				p = _departPath[_departPath.length - 1];
-				if (zone.isInsideZone(p.x, p.y, p.z))
+				if (zone.isInsideZone(p.getLocation()))
 				{
-					_log.log(Level.WARNING, getName() + ": Departure path finish point (" + p.x + "," + p.y + "," + p.z + ") in zone " + _dockZone);
+					_log.log(Level.WARNING, getName() + ": Departure path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") in zone " + _dockZone);
 					_departPath = null;
 				}
 			}
