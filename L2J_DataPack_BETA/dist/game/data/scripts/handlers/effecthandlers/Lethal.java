@@ -44,15 +44,15 @@ public class Lethal extends L2Effect
 	}
 	
 	@Override
-	public boolean calcSuccess()
-	{
-		return true;
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.LETHAL;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override

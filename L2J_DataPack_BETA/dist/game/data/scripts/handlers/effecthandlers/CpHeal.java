@@ -38,12 +38,6 @@ public class CpHeal extends L2Effect
 	}
 	
 	@Override
-	public boolean calcSuccess()
-	{
-		return true;
-	}
-	
-	@Override
 	public boolean isInstant()
 	{
 		return true;

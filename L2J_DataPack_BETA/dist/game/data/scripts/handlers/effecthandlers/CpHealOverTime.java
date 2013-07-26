@@ -39,12 +39,6 @@ public class CpHealOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean calcSuccess()
-	{
-		return true;
-	}
-	
-	@Override
 	public boolean canBeStolen()
 	{
 		return true;
