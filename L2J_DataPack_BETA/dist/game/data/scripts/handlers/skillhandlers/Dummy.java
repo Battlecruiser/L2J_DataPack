@@ -20,7 +20,7 @@ package handlers.skillhandlers;
 
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jserver.gameserver.instancemanager.HandysBlockCheckerManager.ArenaParticipantsHolder;
+import com.l2jserver.gameserver.model.ArenaParticipantsHolder;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;

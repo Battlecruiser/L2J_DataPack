@@ -24,7 +24,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.handler.IUserCommandHandler;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -131,7 +131,7 @@ public class Unstuck implements IUserCommandHandler
 			_activeChar.enableAllSkills();
 			_activeChar.setIsCastingNow(false);
 			_activeChar.setInstanceId(0);
-			_activeChar.teleToLocation(MapRegionManager.TeleportWhereType.Town);
+			_activeChar.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 	
