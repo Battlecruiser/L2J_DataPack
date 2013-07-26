@@ -47,12 +47,6 @@ public class StealAbnormal extends L2Effect
 	}
 	
 	@Override
-	public boolean calcSuccess()
-	{
-		return true;
-	}
-	
-	@Override
 	public boolean canBeStolen()
 	{
 		return false;

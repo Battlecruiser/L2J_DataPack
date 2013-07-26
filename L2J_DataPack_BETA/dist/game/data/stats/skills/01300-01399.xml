@@ -2491,9 +2491,7 @@
 		<set name="targetType" val="ENEMY_SUMMON" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Betray" val="0">
-				<param chance="80" />
-			</effect>
+			<effect name="Betray" val="0" />
 		</for>
 	</skill>
 	<skill id="1381" levels="5" name="Mass Fear" enchantGroup1="1" enchantGroup2="1">
