@@ -27,8 +27,8 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SpawnTable;
 import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.instancemanager.GlobalVariablesManager;
-import com.l2jserver.gameserver.instancemanager.MapRegionManager;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -145,7 +145,7 @@ public final class Venom extends AbstractNpcAI
 		{
 			case TELEPORT_CUBE:
 			{
-				talker.teleToLocation(MapRegionManager.TeleportWhereType.Town);
+				talker.teleToLocation(TeleportWhereType.TOWN);
 				break;
 			}
 			case DUNGEON_KEEPER:
