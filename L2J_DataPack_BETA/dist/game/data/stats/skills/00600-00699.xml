@@ -453,7 +453,6 @@
 		<table name="#ench2MpConsume"> 107 105 103 101 99 98 96 94 92 90 89 87 85 83 81 79 78 76 74 72 70 69 67 65 63 61 59 58 56 54 </table>
 		<table name="#ench3AbnormalTimes"> 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 </table>
 		<table name="#ench4ActivateRates"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
-		<table name="#ench4Chance"> 41 42 44 45 46 48 49 50 52 53 54 56 57 58 60 61 62 64 65 66 68 69 70 72 73 74 76 77 78 80 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3" />
@@ -494,7 +493,7 @@
 		</for>
 		<enchant4for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" effectPower="#ench4Chance" />
+			<effect name="Fear" val="0" />
 		</enchant4for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">

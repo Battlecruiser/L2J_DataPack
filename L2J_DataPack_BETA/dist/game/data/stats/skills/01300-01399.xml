@@ -1024,7 +1024,6 @@
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench3ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench4elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1070,7 +1069,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1083,7 +1082,6 @@
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench3ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench4elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1129,7 +1127,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.9" />
@@ -1142,7 +1140,6 @@
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench3ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench4elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1188,7 +1185,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pAtkSpd" val="0.9" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1201,7 +1198,6 @@
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench3ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench4elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1244,7 +1240,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="holyRes" val="30" />
 			</effect>
@@ -1255,7 +1251,6 @@
 		<table name="#ench2mpConsume"> 81 78 74 72 70 66 64 61 58 56 53 50 46 44 42 </table>
 		<table name="#ench2mpInitialConsume"> 20 19 19 18 17 17 16 15 14 14 13 12 12 11 10 </table>
 		<table name="#ench3ActivateRates"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
-		<table name="#ench3effectPower"> 82 83 84 86 87 88 90 91 92 94 95 96 97 99 100 </table>
 		<table name="#ench4elementPower"> 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -1298,7 +1293,7 @@
 		</for>
 		<enchant3for>
 			<effect name="HpDrain" noicon="1" val="0.2" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<sub order="0x40" stat="accCombat" val="6" />
 				<sub order="0x40" stat="darkRes" val="30" />
 			</effect>
@@ -2548,10 +2543,8 @@
 		<table name="#mpConsume"> 80 87 93 98 103 </table>
 		<table name="#power"> 33 36 39 41 44 </table>
 		<table name="#vuln"> 5 10 15 20 25 </table>
-		<table name="#ench1Chance"> 40 40 41 41 41 42 42 42 43 43 43 44 44 44 45 45 45 46 46 46 47 47 47 48 48 48 49 49 49 50 </table>
 		<table name="#ench1MpConsume"> 100 97 96 95 92 91 90 87 86 85 82 81 78 77 76 73 72 71 68 67 66 63 62 60 58 57 55 53 52 50 </table>
 		<table name="#ench2ActivateRates"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 87 88 89 90 </table>
-		<table name="#ench2Chance"> 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
 		<table name="#ench2Vuln"> 26 27 28 29 30 30 31 32 33 34 34 35 36 37 38 38 39 40 41 42 42 43 44 45 46 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="3" />
@@ -2595,7 +2588,7 @@
 		</for>
 		<enchant1for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench1Chance">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="25" />
 				<sub order="0x40" stat="fireRes" val="25" />
@@ -2606,7 +2599,7 @@
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Debuff" val="0" effectPower="#ench2Chance">
+			<effect name="Debuff" val="0">
 				<mul order="0x30" stat="mDef" val="0.85" />
 				<sub order="0x40" stat="waterRes" val="#ench2Vuln" />
 				<sub order="0x40" stat="fireRes" val="#ench2Vuln" />

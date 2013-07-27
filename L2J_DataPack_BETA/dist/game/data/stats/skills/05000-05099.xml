@@ -106,7 +106,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Paralyze" val="0" />
@@ -137,10 +136,10 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<table name="#abnormalTypes"> NONE NONE ULTIMATE_BUFF HEAL_EFFECT_DOWN STUN </table>
+		<table name="#activateRate"> 0 0 0 10 10 </table>
 		<table name="#attackAndSpeed"> 1 1 1.2 1 1 </table>
 		<table name="#effectname1"> Buff Buff Buff Buff Stun </table>
 		<table name="#effectPoints"> 100 100 100 -100 -100 </table>
-		<table name="#effectPower"> 0 0 0 0 20 </table>
 		<table name="#healEffect"> 1 1 1 0.5 1 </table>
 		<table name="#healPercent"> 3 0 0 0 0 </table>
 		<table name="#icons"> icon.skill0000 icon.skill0000 icon.skill0000 icon.skill5008_plague icon.skill5008_psycho </table>
@@ -176,7 +175,7 @@
 				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
 			<effect name="DispelByCategory" noicon="1" val="0">
-				<param slot="buff" rate="#effectPower" max="#maxNegated" />
+				<param slot="buff" rate="#activateRate" max="#maxNegated" />
 			</effect>
 			<effect name="HealPercent" noicon="1" val="#healPercent" />
 		</for>

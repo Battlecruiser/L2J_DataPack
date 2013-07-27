@@ -1267,7 +1267,7 @@
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="#ench1effPower" />
+			<effect name="Stun" val="0" />
 		</enchant1for>
 	</skill>
 	<skill id="49" levels="26" name="Holy Strike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1927,7 +1927,6 @@
 		<table name="#magicLvl"> 55 60 72 </table>
 		<table name="#mpConsume"> 38 42 50 </table>
 		<table name="#ench1ActivateRates"> 36 38 40 42 44 46 47 49 51 53 55 57 58 60 62 64 66 68 69 71 73 75 77 79 80 82 84 86 88 90 </table>
-		<table name="#ench1effectPower"> 36 38 40 42 44 46 47 49 51 53 55 57 58 60 62 64 66 68 69 71 73 75 77 79 80 82 84 86 88 90 </table>
 		<table name="#ench2AbnormalTimes"> 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93 96 99 102 105 108 111 114 117 120 </table>
 		<table name="#ench2ActivateRates"> 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 </table>
 		<table name="#ench2MpConsume"> 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 </table>
@@ -1967,7 +1966,7 @@
 		</for>
 		<enchant1for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="63" abnormalVisualEffect="poison" effectPower="#ench1effectPower" />
+			<effect name="DamOverTime" ticks="3" val="63" abnormalVisualEffect="poison" />
 		</enchant1for>
 	</skill>
 	<skill id="86" levels="3" name="Reflect Damage" enchantGroup1="1" enchantGroup2="1">

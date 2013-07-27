@@ -10,7 +10,6 @@
 		<table name="#traits"> -12 -12 -12 -12 -12 -16 -16 -16 -16 -20 </table>
 		<table name="#ench1Power"> 1881 1921 1961 2001 2041 2081 2121 2161 2201 2241 2281 2321 2361 2401 2441 2481 2521 2561 2601 2641 2681 2721 2761 2801 2841 2881 2921 2961 3001 3041 </table>
 		<table name="#ench2ActivateRates"> 81 82 82 83 84 84 85 86 86 87 87 88 89 89 90 91 91 92 93 93 94 94 95 96 96 97 98 98 99 100 </table>
-		<table name="#ench2Power"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 90 91 92 92 93 94 94 95 96 96 97 98 98 99 100 </table>
 		<table name="#ench3cAtk"> 0.95 0.95 0.94 0.94 0.94 0.93 0.93 0.93 0.92 0.92 0.92 0.91 0.91 0.91 0.9 0.9 0.9 0.89 0.89 0.89 0.88 0.88 0.88 0.87 0.87 0.87 0.86 0.86 0.86 0.85 </table>
 		<table name="#enchElementPower"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -68,7 +67,7 @@
 		</for>
 		<enchant2for>
 			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" effectPower="#ench2Power">
+			<effect name="Debuff" val="0">
 				<basemul order="0x30" stat="rCrit" val="-0.5" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
@@ -315,7 +314,6 @@
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
 		<table name="#ench1Cost"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
-		<table name="#ench2Chance"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
 		<table name="#ench2LethalStrikeRate"> 25 25 25 26 26 26 26 27 27 27 27 28 28 28 29 29 29 29 30 30 30 30 31 31 31 31 32 32 32 33 </table>
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#ench4HolyAttack"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
@@ -353,7 +351,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="#ench2Chance" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="#ench2LethalStrikeRate" />
 			</effect>
@@ -1712,7 +1710,6 @@
 		<table name="#magicLvl"> 55 58 60 62 64 66 68 70 72 74 </table>
 		<table name="#mpConsume"> 50 53 55 58 59 61 63 65 67 68 </table>
 		<table name="#ench1Cost"> 66 65 64 63 62 61 60 58 57 56 55 54 53 52 51 49 48 47 46 45 44 43 41 40 39 38 37 36 35 34 </table>
-		<table name="#ench2Chance"> 30 31 32 32 33 34 34 35 36 36 37 38 38 39 40 40 41 42 42 43 44 44 45 46 46 47 48 48 49 50 </table>
 		<table name="#ench2LethalStrikeRate"> 25 25 25 26 26 26 26 27 27 27 27 28 28 28 29 29 29 29 30 30 30 30 31 31 31 31 32 32 32 33 </table>
 		<table name="#ench3Attack"> 191 196 201 206 211 216 221 227 232 237 242 247 252 257 263 268 273 278 283 288 293 298 304 309 314 319 324 329 334 340 </table>
 		<table name="#ench4DarkAttack"> 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 </table>
@@ -1750,7 +1747,7 @@
 			</effect>
 		</for>
 		<enchant2for>
-			<effect name="Fear" abnormalTime="20" val="0" effectPower="#ench2Chance" />
+			<effect name="Fear" abnormalTime="20" val="0" />
 			<effect name="Lethal" noicon="1" val="0">
 				<param fullLethal="#ench2LethalStrikeRate" />
 			</effect>
@@ -2881,7 +2878,6 @@
 		<table name="#mpConsume"> 25 26 27 27 28 29 30 30 31 32 33 34 35 35 36 37 38 38 39 40 41 42 43 43 44 45 45 46 47 48 48 49 50 51 51 52 53 </table>
 		<table name="#ench1Power"> 16 22 29 35 41 48 54 60 67 73 79 86 92 98 105 111 117 124 130 136 143 149 155 162 168 174 181 187 193 200 </table>
 		<table name="#ench2ActivateRates"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
-		<table name="#ench2Chance"> 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 </table>
 		<table name="#ench7Duel"> 17 25 33 40 48 56 63 71 79 86 94 102 109 117 125 132 140 148 155 163 171 178 186 194 201 209 217 224 232 240 </table>
 		<table name="#enchElementPower"> 1 3 5 6 8 10 11 13 15 16 18 20 21 23 25 26 28 30 31 33 35 36 38 40 41 43 45 46 48 50 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -2940,7 +2936,7 @@
 		</for>
 		<enchant2for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" effectPower="#ench2Chance" />
+			<effect name="Stun" val="0" />
 			<effect name="EnemyCharge" noicon="1" val="0" />
 		</enchant2for>
 	</skill>
@@ -2956,7 +2952,6 @@
 		<table name="#ench1AbnormalLvl"> 8 9 9 9 9 9 9 9 9 9 9 9 9 10 10 10 10 10 10 10 10 10 10 10 10 11 11 11 11 11 </table>
 		<table name="#ench1Power"> 134 135 135 135 135 135 135 136 136 136 136 136 136 137 137 137 137 137 137 138 138 138 138 138 138 139 139 139 139 139 </table>
 		<table name="#ench2ActivateRates"> 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 </table>
-		<table name="#ench2Chance"> 51 52 54 55 56 58 59 60 62 63 64 66 67 68 70 71 72 74 75 76 78 79 80 82 83 84 86 87 88 90 </table>
 		<table name="#ench3Cost"> 88 87 85 84 82 81 79 78 76 75 73 72 70 69 67 66 64 63 61 60 58 57 55 54 52 51 49 48 46 45 </table>
 		<table name="#ench4Duel"> 16 22 29 35 41 48 54 60 67 73 79 86 92 98 105 111 117 124 130 136 143 149 155 162 168 174 181 187 193 200 </table>
 		<table name="#enchMagicLvl"> 76 76 76 77 77 77 78 78 78 79 79 79 80 80 80 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
@@ -3009,7 +3004,7 @@
 		</enchant1for>
 		<enchant2for>
 			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" effectPower="#ench2Chance" />
+			<effect name="DamOverTime" ticks="3" val="134" abnormalVisualEffect="bleed" />
 		</enchant2for>
 	</skill>
 	<skill id="496" levels="31" name="Slashing Blade" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2" enchantGroup5="2" enchantGroup6="2" enchantGroup7="2">

@@ -363,7 +363,6 @@
 		<table name="#ench2MpConsume"> 64 62 60 58 56 53 51 49 47 45 42 40 38 36 33 </table>
 		<table name="#ench2MpInitialConsume"> 16 15 15 14 14 13 12 12 11 11 10 10 9 9 8 </table>
 		<table name="#ench3ActivateRates"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
-		<table name="#ench3effectPower"> 80 81 82 82 83 84 84 85 86 86 87 88 88 89 90 </table>
 		<table name="#ench4Duel"> 114 116 118 119 121 123 124 126 128 130 131 133 135 136 138 </table>
 		<table name="#enchMagicLvl"> 81 81 81 82 82 82 83 83 83 84 84 84 85 85 85 </table>
 		<set name="abnormalLvl" val="1" />
@@ -407,7 +406,7 @@
 		</for>
 		<enchant3for>
 			<effect name="MagicalSoulAttack" noicon="1" val="0" />
-			<effect name="ManaDamOverTime" ticks="3" val="12" effectPower="#ench3effectPower">
+			<effect name="ManaDamOverTime" ticks="3" val="12">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pAtkSpd" val="0.7" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1220,7 +1219,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="-1" /> <!-- Land Always -->
 		<set name="reuseDelay" val="3000" />
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
