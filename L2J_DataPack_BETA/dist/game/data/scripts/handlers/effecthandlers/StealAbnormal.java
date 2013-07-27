@@ -47,15 +47,15 @@ public class StealAbnormal extends L2Effect
 	}
 	
 	@Override
-	public boolean canBeStolen()
-	{
-		return false;
-	}
-	
-	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.NONE;
+	}
+	
+	@Override
+	public boolean isInstant()
+	{
+		return true;
 	}
 	
 	@Override
