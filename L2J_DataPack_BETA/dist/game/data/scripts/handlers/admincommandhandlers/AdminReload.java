@@ -29,6 +29,8 @@ import com.l2jserver.gameserver.datatables.AdminTable;
 import com.l2jserver.gameserver.datatables.BuyListData;
 import com.l2jserver.gameserver.datatables.CrestTable;
 import com.l2jserver.gameserver.datatables.DoorTable;
+import com.l2jserver.gameserver.datatables.EnchantItemData;
+import com.l2jserver.gameserver.datatables.EnchantItemGroupsData;
 import com.l2jserver.gameserver.datatables.ItemTable;
 import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcTable;
@@ -63,7 +65,7 @@ public class AdminReload implements IAdminCommandHandler
 			if (!st.hasMoreTokens())
 			{
 				AdminHtml.showAdminHtml(activeChar, "reload.htm");
-				activeChar.sendMessage("Usage: //reload <config|access|npc [npc_id]|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler>");
+				activeChar.sendMessage("Usage: //reload <config|access|npc [npc_id]|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant>");
 				return true;
 			}
 			
@@ -244,6 +246,13 @@ public class AdminReload implements IAdminCommandHandler
 						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
 						activeChar.sendMessage("There was an error while loading handlers.");
 					}
+					break;
+				}
+				case "enchant":
+				{
+					EnchantItemGroupsData.getInstance().load();
+					EnchantItemData.getInstance().load();
+					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
 					break;
 				}
 				default:
