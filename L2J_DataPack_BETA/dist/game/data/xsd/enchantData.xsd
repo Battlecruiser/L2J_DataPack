@@ -49,6 +49,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="scrollGroupId" type="xs:int" use="optional" />
 					</xs:complexType>
 				</xs:element>
 				<xs:element name="support" minOccurs="1" maxOccurs="unbounded">
