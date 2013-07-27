@@ -5,25 +5,8 @@
 	<enchant id="947" targetGrade="b" />
 	<enchant id="951" targetGrade="c" />
 	<enchant id="955" targetGrade="d" />
-	<enchant id="959" targetGrade="s">
-		<!-- Custom Progressive enchant system uncomment the lines below to enable. -->
-		<!--  <step level="1" successRate="100.00" /> -->
-		<!--  <step level="2" successRate="100.00" /> -->
-		<!--  <step level="3" successRate="100.00" /> -->
-		<!--  <step level="4" successRate="80.00" /> -->
-		<!--  <step level="5" successRate="75.00" /> -->
-		<!--  <step level="6" successRate="70.00" /> -->
-		<!--  <step level="7" successRate="65.00" /> -->
-		<!--  <step level="8" successRate="60.00" /> -->
-		<!--  <step level="9" successRate="55.00" /> -->
-		<!--  <step level="10" successRate="50.00" /> -->
-		<!--  <step level="11" successRate="45.00" /> -->
-		<!--  <step level="12" successRate="40.00" /> -->
-		<!--  <step level="13" successRate="35.00" /> -->
-		<!--  <step level="14" successRate="30.00" /> -->
-		<!--  <step level="15" successRate="25.00" /> -->
-		<!--  <step level="16" successRate="20.00" /> -->
-	</enchant>
+	<enchant id="959" targetGrade="s" />
+	
 	<!-- Scrolls: Enchant Armor -->
 	<enchant id="730" isWeapon="false" targetGrade="a" />
 	<enchant id="948" isWeapon="false" targetGrade="b" />
@@ -44,49 +27,50 @@
 	<enchant id="6576" isWeapon="false" isBlessed="true" targetGrade="d" />
 	<enchant id="6578" isWeapon="false" isBlessed="true" targetGrade="s" />
 
+	<!-- Not used anymore. -->
 	<!-- Crystal Scrolls: Enchant Weapon -->
-	<enchant id="731" targetGrade="a" successRate="100" />
-	<enchant id="949" targetGrade="b" successRate="100" />
-	<enchant id="953" targetGrade="c" successRate="100" />
-	<enchant id="957" targetGrade="d" successRate="100" />
-	<enchant id="961" targetGrade="s" successRate="100" />
+	<!-- <enchant id="731" targetGrade="a" bonusRate="100" />
+	<enchant id="949" targetGrade="b" bonusRate="100" />
+	<enchant id="953" targetGrade="c" bonusRate="100" />
+	<enchant id="957" targetGrade="d" bonusRate="100" />
+	<enchant id="961" targetGrade="s" bonusRate="100" /> -->
 	<!-- Crystal Scrolls: Enchant Armor -->
-	<enchant id="732" isWeapon="false" targetGrade="a" successRate="100" />
-	<enchant id="950" isWeapon="false" targetGrade="b" successRate="100" />
-	<enchant id="954" isWeapon="false" targetGrade="c" successRate="100" />
-	<enchant id="958" isWeapon="false" targetGrade="d" successRate="100" />
-	<enchant id="962" isWeapon="false" targetGrade="s" successRate="100" />
+	<!-- <enchant id="732" isWeapon="false" targetGrade="a" bonusRate="100" />
+	<enchant id="950" isWeapon="false" targetGrade="b" bonusRate="100" />
+	<enchant id="954" isWeapon="false" targetGrade="c" bonusRate="100" />
+	<enchant id="958" isWeapon="false" targetGrade="d" bonusRate="100" />
+	<enchant id="962" isWeapon="false" targetGrade="s" bonusRate="100" /> -->
 
 	<!-- Weapon Enchant Scrolls -->
-	<enchant id="22006" targetGrade="d" successRate="73.326" />
-	<enchant id="22007" targetGrade="c" successRate="73.326" />
-	<enchant id="22008" targetGrade="b" successRate="73.326" />
-	<enchant id="22009" targetGrade="a" successRate="73.326" />
-	<enchant id="20517" targetGrade="s" successRate="73.326" />
+	<enchant id="22006" targetGrade="d" bonusRate="10" />
+	<enchant id="22007" targetGrade="c" bonusRate="10" />
+	<enchant id="22008" targetGrade="b" bonusRate="10" />
+	<enchant id="22009" targetGrade="a" bonusRate="10" />
+	<enchant id="20517" targetGrade="s" bonusRate="10" />
 	<!-- Armor Enchant Scrolls -->
-	<enchant id="22010" isWeapon="false" targetGrade="d" successRate="73.326" />
-	<enchant id="22011" isWeapon="false" targetGrade="c" successRate="73.326" />
-	<enchant id="22012" isWeapon="false" targetGrade="b" successRate="73.326" />
-	<enchant id="22013" isWeapon="false" targetGrade="a" successRate="73.326" />
-	<enchant id="20518" isWeapon="false" targetGrade="s" successRate="73.326" />
+	<enchant id="22010" isWeapon="false" targetGrade="d" bonusRate="10" />
+	<enchant id="22011" isWeapon="false" targetGrade="c" bonusRate="10" />
+	<enchant id="22012" isWeapon="false" targetGrade="b" bonusRate="10" />
+	<enchant id="22013" isWeapon="false" targetGrade="a" bonusRate="10" />
+	<enchant id="20518" isWeapon="false" targetGrade="s" bonusRate="10" />
 
 	<!-- Ancient Weapon Enchant Crystal -->
-	<enchant id="22014" isSafe="true" targetGrade="b" maxEnchant="16" successRate="73.326" />
-	<enchant id="22015" isSafe="true" targetGrade="a" maxEnchant="16" successRate="73.326" />
-	<enchant id="20519" isSafe="true" targetGrade="s" maxEnchant="16" successRate="73.326" />
+	<enchant id="22014" isSafe="true" targetGrade="b" maxEnchant="16" bonusRate="10" />
+	<enchant id="22015" isSafe="true" targetGrade="a" maxEnchant="16" bonusRate="10" />
+	<enchant id="20519" isSafe="true" targetGrade="s" maxEnchant="16" bonusRate="10" />
 	<!-- Ancient Armor Enchant Crystal -->
-	<enchant id="22016" isWeapon="false" isSafe="true" targetGrade="b" maxEnchant="16" successRate="73.326" />
-	<enchant id="22017" isWeapon="false" isSafe="true" targetGrade="a" maxEnchant="16" successRate="73.326" />
-	<enchant id="20520" isWeapon="false" isSafe="true" targetGrade="s" maxEnchant="16" successRate="73.326" />
+	<enchant id="22016" isWeapon="false" isSafe="true" targetGrade="b" maxEnchant="16" bonusRate="10" />
+	<enchant id="22017" isWeapon="false" isSafe="true" targetGrade="a" maxEnchant="16" bonusRate="10" />
+	<enchant id="20520" isWeapon="false" isSafe="true" targetGrade="s" maxEnchant="16" bonusRate="10" />
 
 	<!-- Divine Weapon Enchant Crystal -->
-	<enchant id="22018" targetGrade="b" successRate="100" />
-	<enchant id="22019" targetGrade="a" successRate="100" />
-	<enchant id="20521" targetGrade="s" successRate="100" />
+	<enchant id="22018" targetGrade="b" bonusRate="1" />
+	<enchant id="22019" targetGrade="a" bonusRate="1" />
+	<enchant id="20521" targetGrade="s" bonusRate="1" />
 	<!-- Divine Armor Enchant Crystal -->
-	<enchant id="22020" isWeapon="false" targetGrade="b" successRate="100" />
-	<enchant id="22021" isWeapon="false" targetGrade="a" successRate="100" />
-	<enchant id="20522" isWeapon="false" targetGrade="s" successRate="100" />
+	<enchant id="22020" isWeapon="false" targetGrade="b" bonusRate="1" />
+	<enchant id="22021" isWeapon="false" targetGrade="a" bonusRate="1" />
+	<enchant id="20522" isWeapon="false" targetGrade="s" bonusRate="1" />
 
 	<!-- Scroll: Enchant Weapon of Destruction -->
 	<enchant id="22221" isSafe="true" targetGrade="s" maxEnchant="15" />
@@ -241,30 +225,30 @@
 	</enchant>
 
 	<!-- Weapon-Type Enhance Backup Stone -->
-	<support id="12362" targetGrade="d" maxEnchant="9" successRate="1.20" />
-	<support id="12363" targetGrade="c" maxEnchant="9" successRate="1.18" />
-	<support id="12364" targetGrade="b" maxEnchant="9" successRate="1.15" />
-	<support id="12365" targetGrade="a" maxEnchant="9" successRate="1.12" />
-	<support id="12366" targetGrade="s" maxEnchant="9" successRate="1.10" />
+	<support id="12362" targetGrade="d" maxEnchant="9" bonusRate="20" />
+	<support id="12363" targetGrade="c" maxEnchant="9" bonusRate="18" />
+	<support id="12364" targetGrade="b" maxEnchant="9" bonusRate="15" />
+	<support id="12365" targetGrade="a" maxEnchant="9" bonusRate="12" />
+	<support id="12366" targetGrade="s" maxEnchant="9" bonusRate="10" />
 	
 	<!-- Armor-Type Enhance Backup Stone -->
-	<support id="12367" isWeapon="false" targetGrade="d" maxEnchant="9" successRate="1.35" />
-	<support id="12368" isWeapon="false" targetGrade="c" maxEnchant="9" successRate="1.27" />
-	<support id="12369" isWeapon="false" targetGrade="b" maxEnchant="9" successRate="1.23" />
-	<support id="12370" isWeapon="false" targetGrade="a" maxEnchant="9" successRate="1.18" />
-	<support id="12371" isWeapon="false" targetGrade="s" maxEnchant="9" successRate="1.15" />
+	<support id="12367" isWeapon="false" targetGrade="d" maxEnchant="9" bonusRate="35" />
+	<support id="12368" isWeapon="false" targetGrade="c" maxEnchant="9" bonusRate="27" />
+	<support id="12369" isWeapon="false" targetGrade="b" maxEnchant="9" bonusRate="23" />
+	<support id="12370" isWeapon="false" targetGrade="a" maxEnchant="9" bonusRate="18" />
+	<support id="12371" isWeapon="false" targetGrade="s" maxEnchant="9" bonusRate="15" />
 
 	<!-- Agathion Auxiliary Stone: Enchant Weapon -->
-	<support id="14702" targetGrade="d" maxEnchant="9" successRate="1.20" />
-	<support id="14703" targetGrade="c" maxEnchant="9" successRate="1.18" />
-	<support id="14704" targetGrade="b" maxEnchant="9" successRate="1.15" />
-	<support id="14705" targetGrade="a" maxEnchant="9" successRate="1.12" />
-	<support id="14706" targetGrade="s" maxEnchant="9" successRate="1.10" />
+	<support id="14702" targetGrade="d" maxEnchant="9" bonusRate="20" />
+	<support id="14703" targetGrade="c" maxEnchant="9" bonusRate="18" />
+	<support id="14704" targetGrade="b" maxEnchant="9" bonusRate="15" />
+	<support id="14705" targetGrade="a" maxEnchant="9" bonusRate="12" />
+	<support id="14706" targetGrade="s" maxEnchant="9" bonusRate="10" />
 	
 	<!-- Agathion Auxiliary Stone: Enchant Armor -->
-	<support id="14707" isWeapon="false" targetGrade="d" maxEnchant="9" successRate="1.35" />
-	<support id="14708" isWeapon="false" targetGrade="c" maxEnchant="9" successRate="1.27" />
-	<support id="14709" isWeapon="false" targetGrade="b" maxEnchant="9" successRate="1.23" />
-	<support id="14710" isWeapon="false" targetGrade="a" maxEnchant="9" successRate="1.18" />
-	<support id="14711" isWeapon="false" targetGrade="s" maxEnchant="9" successRate="1.15" />
+	<support id="14707" isWeapon="false" targetGrade="d" maxEnchant="9" bonusRate="35" />
+	<support id="14708" isWeapon="false" targetGrade="c" maxEnchant="9" bonusRate="27" />
+	<support id="14709" isWeapon="false" targetGrade="b" maxEnchant="9" bonusRate="23" />
+	<support id="14710" isWeapon="false" targetGrade="a" maxEnchant="9" bonusRate="18" />
+	<support id="14711" isWeapon="false" targetGrade="s" maxEnchant="9" bonusRate="15" />
 </list>
