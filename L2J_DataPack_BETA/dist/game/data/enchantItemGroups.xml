@@ -82,10 +82,12 @@
 		<!-- Bind only fighter weapon group to all fighter weapons. -->
 		<enchantRate group="FIGHTER_WEAPON_GROUP">
 			<item slot="rhand" magicWeapon="false" /> <!-- Right hand: Weapons, Non magic weapon -->
+			<item slot="lrhand" magicWeapon="false" /> <!-- Two hands: Weapons, Non magic weapon -->
 		</enchantRate>
 		<!-- Bind only mage weapon group to all magic weapons. -->
 		<enchantRate group="MAGE_WEAPON_GROUP">
 			<item slot="rhand" magicWeapon="true" /> <!-- Right hand: Weapons, Magic weapon -->
+			<item slot="lrhand" magicWeapon="true" /> <!-- Two hands: Weapons, Magic weapon -->
 		</enchantRate>
 	</enchantScrollGroup>
 </list>
