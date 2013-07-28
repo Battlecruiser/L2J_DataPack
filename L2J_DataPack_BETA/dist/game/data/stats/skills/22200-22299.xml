@@ -319,16 +319,18 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22247" levels="1" name="Olf's T-shirt Enchant Scroll">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22248" levels="1" name="Blessed Olf's T-shirt Enchant Scroll">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22249" levels="1" name="Birthday Cake">
 		<!-- High Five Skill -->
@@ -375,10 +377,11 @@
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="22254" levels="1" name="Blessed Olf's T-shirt Enchant Scroll">
-		<!-- none -->
-		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="skillType" val="ENCHANT_ARMOR" />
+		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="22255" levels="1" name="Honey Rice Cakes">
 		<!-- none -->
