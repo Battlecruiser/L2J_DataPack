@@ -338,6 +338,7 @@
 	<item id="22229" type="EtcItem" name="Scroll: Enchant Weapon of Destruction (D-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Atk. by 2 for D-Grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. Increases P. Atk. by 2 for two-handed swords, two-handed blunts, dualswords, and hand-to-hand combat weapons. Increases P. Atk. by 4 for bows. Increases P. Atk. by 2 for all weapons. From +4, P. Atk. and M. Atk. increase by 2 times. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. Cannot be used on weapons that are +15 or above. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="default_action" val="skill_reduce" />
 		<set name="etcitem_type" val="scrl_enchant_wp" />
 		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
@@ -353,9 +354,21 @@
 	</item>
 	<item id="22230" type="EtcItem" name="Scroll: Enchant Armor of Destruction (D-Grade) - Event">
 		<!-- Description: When enchanted, increases P. Def. by 1 for D-Grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. When enchant fails, the item is not crystallized by the power of the goddess of destruction, and the existing enchant value is maintained. When armor is enchanted up to +4, HP increases according to the enchant value. Cannot be used on armor that are +6 or above. -->
-		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />		
+		<set name="default_action" val="skill_reduce" />
+		<set name="etcitem_type" val="scrl_enchant_am" />
+		<set name="immediate_effect" val="1" />
 		<set name="material" val="paper" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="item_skill" val="22368-1" />
+
 	</item>
 	<item id="22231" type="EtcItem" name="Mysterious Blessed Spiritshot (S-Grade) - Event">
 		<!-- Description: High-level spirit light is infused into a weapon, instantly and greatly increasing its magic power. Can be used on S-grade weapons. Cannot be exchanged or dropped. Can be stored in a private warehouse. -->
