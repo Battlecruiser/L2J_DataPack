@@ -504,12 +504,12 @@ public abstract class Chamber extends Quest
 			{
 				if (player.getParty() == null)
 				{
-					htmltext = "no_party.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_party.html");
 				}
 				
 				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
 				{
-					htmltext = "no_leader.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_leader.html");
 				}
 				
 				else if (hasQuestItems(player, DELUSION_MARK))
@@ -521,7 +521,7 @@ public abstract class Chamber extends Quest
 				
 				else
 				{
-					htmltext = "no_item.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_item.html");
 				}
 			}
 			
@@ -529,11 +529,11 @@ public abstract class Chamber extends Quest
 			{
 				if (player.getParty() == null)
 				{
-					htmltext = "no_party.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_party.html");
 				}
 				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
 				{
-					htmltext = "no_leader.html";
+					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_leader.html");
 				}
 				else
 				{
