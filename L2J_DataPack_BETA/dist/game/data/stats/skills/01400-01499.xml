@@ -3296,7 +3296,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
-		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -3318,7 +3317,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="PA_UP,9;PD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="PA_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 </list>

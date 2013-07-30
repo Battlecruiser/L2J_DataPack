@@ -24,7 +24,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="520" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
@@ -46,7 +45,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6202" levels="1" name="Transformation Condition - Young Child">
@@ -54,7 +55,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="460" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
@@ -76,7 +76,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6203" levels="1" name="Transformed Condition - Native">
@@ -84,7 +86,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="215" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
@@ -106,7 +107,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6204" levels="1" name="Transformed Condition - Guards of the Dawn">
@@ -114,7 +117,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="-1" />
 		<set name="abnormalType" val="TRANSFORM" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="10" />
 		<set name="effectRange" val="1500" />
@@ -136,7 +138,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6205" levels="19" name="Strider Bite">

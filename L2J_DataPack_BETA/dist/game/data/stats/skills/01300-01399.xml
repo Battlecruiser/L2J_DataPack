@@ -1828,7 +1828,6 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SHIELD_UP" />
 		<set name="activateRate" val="80" />
-		<set name="blockBuffSlot" val="IMPROVE_PA_PD_UP;PD_UP" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-666" />
 		<set name="effectRange" val="1100" />
@@ -1860,7 +1859,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="PD_UP;IMPROVE_PA_PD_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_PA_PD_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1359" levels="1" name="Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
@@ -1875,7 +1876,6 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="BLOCK_SPEED_UP" />
 		<set name="activateRate" val="80" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-666" />
 		<set name="effectRange" val="1100" />
@@ -1907,7 +1907,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1360" levels="1" name="Mass Block Shield" enchantGroup1="5" enchantGroup2="5">
@@ -1925,7 +1927,6 @@
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="IMPROVE_PA_PD_UP;PD_UP" />
 		<set name="effectPoint" val="-666" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1360" />
@@ -1956,7 +1957,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_PA_PD_UP;PD_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_PA_PD_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1361" levels="1" name="Mass Block Wind Walk" enchantGroup1="5" enchantGroup2="5">
@@ -1974,7 +1977,6 @@
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 		<set name="effectPoint" val="-669" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill1361" />
@@ -2005,7 +2007,9 @@
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1362" levels="1" name="Chant of Spirit" enchantGroup1="5" enchantGroup2="5">
@@ -2112,7 +2116,6 @@
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="HIT_UP" />
 		<set name="effectPoint" val="666" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill1364" />
@@ -2137,7 +2140,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="HIT_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="HIT_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1365" levels="1" name="Soul of Pa'agrio" enchantGroup1="5" enchantGroup2="5">
@@ -2151,7 +2156,6 @@
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="effectPoint" val="666" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill1365" />
@@ -2176,7 +2180,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MA_UP,9;MD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MA_UP;MD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1366" levels="1" name="Seal of Despair" enchantGroup1="5" enchantGroup2="5">
