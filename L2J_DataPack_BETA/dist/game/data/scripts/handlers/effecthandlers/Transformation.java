@@ -18,7 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
@@ -65,7 +65,6 @@ public class Transformation extends L2Effect
 		{
 			return false;
 		}
-		TransformationManager.getInstance().transformPlayer((int) calc(), getEffected().getActingPlayer());
-		return true;
+		return TransformData.getInstance().transformPlayer((int) calc(), getEffected().getActingPlayer());
 	}
 }
