@@ -316,12 +316,13 @@
 	</skill>
 	<skill id="6127" levels="1" name="Anti-limit">
 		<!-- Confirmed CT2.5 -->
-		<set name="blockBuffSlot" val="LIMIT" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="BlockBuffSlot" val="0" />
+			<effect name="BlockBuffSlot" val="0">
+				<param slot="LIMIT" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="6128" levels="1" name="Presentation - Cow Rage">

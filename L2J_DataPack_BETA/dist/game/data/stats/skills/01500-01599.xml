@@ -5,7 +5,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
-		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -27,7 +26,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MA_UP,9;MD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MA_UP;MD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1501" levels="1" name="Improved Condition">
@@ -35,7 +36,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
-		<set name="blockBuffSlot" val="MAX_HP_UP;MAX_MP_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -57,7 +57,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MAX_HP_UP;MAX_MP_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1502" levels="1" name="Improved Critical Attack">
@@ -65,7 +67,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
-		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -87,7 +88,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1503" levels="1" name="Improved Shield Defense">
@@ -95,7 +98,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
-		<set name="blockBuffSlot" val="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -117,7 +119,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1504" levels="1" name="Improved Movement">
@@ -125,7 +129,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
-		<set name="blockBuffSlot" val="SPEED_UP;AVOID_UP" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="679" />
 		<set name="effectRange" val="900" />
@@ -147,7 +150,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="SPEED_UP,9;AVOID_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="SPEED_UP;AVOID_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1505" levels="1" name="Sublime Self-Sacrifice">
@@ -575,7 +580,6 @@
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="effectPoint" val="635" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1499" />
@@ -595,7 +599,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="PA_UP,9;PD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="PA_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1518" levels="1" name="Chant of Critical Attack">
@@ -604,7 +610,6 @@
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="646" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1502" />
@@ -624,7 +629,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1519" levels="1" name="Chant of Blood Awakening">
@@ -633,7 +640,6 @@
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
 		<set name="effectPoint" val="655" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1519" />
@@ -653,7 +659,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="VAMPIRIC_ATTACK,9;ATTACK_TIME_DOWN,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1520" levels="1" name="Inquisitor">
@@ -1085,7 +1093,6 @@
 		<set name="abnormalTime" val="2400" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="SPEED_UP;AVOID_UP" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1535" />
@@ -1105,7 +1112,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="SPEED_UP,9;AVOID_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="SPEED_UP;AVOID_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1536" levels="1" name="Combat of Pa'agrio">
@@ -1115,7 +1124,6 @@
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1536" />
@@ -1135,7 +1143,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="PA_UP,9;PD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="PA_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1537" levels="1" name="Critical of Pa'agrio">
@@ -1145,7 +1155,6 @@
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1537" />
@@ -1165,7 +1174,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1538" levels="1" name="Condition of Pa'agrio">
@@ -1175,7 +1186,6 @@
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
 		<set name="affectLimit" val="50-50" />
 		<set name="affectRange" val="1000" />
-		<set name="blockBuffSlot" val="MAX_HP_UP;MAX_MP_UP" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill1538" />
@@ -1195,7 +1205,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MAX_HP_UP;MAX_MP_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1539" levels="4" name="Stigma of Shilen" enchantGroup1="1">

@@ -18,9 +18,14 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.stats.Env;
 
 /**
@@ -29,9 +34,25 @@ import com.l2jserver.gameserver.model.stats.Env;
  */
 public class BlockBuffSlot extends L2Effect
 {
+	private final Set<AbnormalType> _blockBuffSlots;
+	
 	public BlockBuffSlot(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		
+		String blockBuffSlots = template.hasParameters() ? template.getParameters().getString("slot", null) : null;
+		if ((blockBuffSlots != null) && !blockBuffSlots.isEmpty())
+		{
+			_blockBuffSlots = new HashSet<>();
+			for (String slot : blockBuffSlots.split(";"))
+			{
+				_blockBuffSlots.add(AbnormalType.getAbnormalType(slot));
+			}
+		}
+		else
+		{
+			_blockBuffSlots = Collections.<AbnormalType> emptySet();
+		}
 	}
 	
 	@Override
@@ -43,20 +64,19 @@ public class BlockBuffSlot extends L2Effect
 	@Override
 	public void onExit()
 	{
-		if ((getEffected() != null) && (getSkill() != null) && !getSkill().getBlockBuffSlots().isEmpty())
-		{
-			getEffected().getEffectList().removeBlockedBuffSlots(getSkill().getBlockBuffSlots());
-		}
+		getEffected().getEffectList().removeBlockedBuffSlots(_blockBuffSlots);
 	}
 	
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffector() == null) || (getEffected() == null) || ((getSkill() == null) && !getSkill().getBlockBuffSlots().isEmpty()))
+		if (_blockBuffSlots.isEmpty())
 		{
 			return false;
 		}
-		getEffected().getEffectList().addBlockedBuffSlots(getSkill().getBlockBuffSlots());
+		
+		getEffected().getEffectList().addBlockedBuffSlots(_blockBuffSlots);
+		
 		return true;
 	}
 }

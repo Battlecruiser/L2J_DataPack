@@ -430,7 +430,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
-		<set name="blockBuffSlot" val="HIT_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2500" />
@@ -448,7 +447,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="HIT_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="HIT_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23239" levels="1" name="Master's Blessing - Soul of Pa'agrio">
@@ -457,7 +458,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
-		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="2500" />
@@ -475,7 +475,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MA_UP,9;MD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MA_UP;MD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23240" levels="1" name="Master's Blessing - Chant of Magnus">
@@ -517,7 +519,6 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
-		<set name="blockBuffSlot" val="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
 		<set name="castRange" val="900" />
 		<set name="effectRange" val="1400" />
 		<set name="hitTime" val="1500" />
@@ -535,7 +536,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="VAMPIRIC_ATTACK,9;ATTACK_TIME_DOWN,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23242" levels="1" name="Master's Blessing - Spike">
@@ -1195,7 +1198,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_PA_PD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="PA_UP;PD_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
@@ -1213,7 +1215,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="PA_UP,9;PD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="PA_UP;PD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23278" levels="1" name="Master's Blessing - Improve Magic">
@@ -1223,7 +1227,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
@@ -1241,7 +1244,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MA_UP,9;MD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MA_UP;MD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23279" levels="1" name="Master's Blessing - Improve Condition">
@@ -1251,7 +1256,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HP_MP_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="MAX_HP_UP;MAX_MP_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />
@@ -1269,7 +1273,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MAX_HP_UP,9;MAX_MP_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MAX_HP_UP;MAX_MP_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23280" levels="1" name="Master's Blessing - Improve Critical">
@@ -1279,7 +1285,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_CRT_RATE_DMG_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
@@ -1297,7 +1302,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="CRITICAL_PROB_UP,9;CRITICAL_DMG_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="CRITICAL_PROB_UP;CRITICAL_DMG_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23281" levels="1" name="Master's Blessing - Improve Shield Defense">
@@ -1307,7 +1314,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SHIELD_RATE_DEFENCE_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="70" />
@@ -1325,7 +1331,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="SHIELD_PROB_UP,9;SHIELD_DEFENCE_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="SHIELD_PROB_UP;SHIELD_DEFENCE_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23282" levels="1" name="Master's Blessing - Improve Movement">
@@ -1335,7 +1343,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_SPEED_AVOID_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="SPEED_UP;AVOID_UP" />
 		<set name="hitTime" val="1500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="72" />
@@ -1353,7 +1360,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="SPEED_UP,9;AVOID_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="SPEED_UP;AVOID_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23283" levels="1" name="Master's Blessing - Sharpen Edge">
@@ -1422,7 +1431,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_HIT_DEFENCE_CRT_RATE_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="HIT_UP" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="77" />
@@ -1438,7 +1446,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="HIT_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="HIT_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23287" levels="1" name="Master's Blessing - Soul of Pa'agrio">
@@ -1448,7 +1458,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_MA_MD_UP" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="MA_UP;MD_UP" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="77" />
@@ -1464,7 +1473,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="MA_UP,9;MD_UP,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="MA_UP;MD_UP" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23288" levels="1" name="Master's Blessing - Chant of Magnus">
@@ -1506,7 +1517,6 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="IMPROVE_VAMPIRIC_HASTE" />
 		<set name="affectRange" val="200" />
-		<set name="blockBuffSlot" val="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
 		<set name="hitTime" val="500" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="74" />
@@ -1522,7 +1532,9 @@
 			<effect name="DispelBySlot" noicon="1" val="0">
 				<param dispel="VAMPIRIC_ATTACK,9;ATTACK_TIME_DOWN,9" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0" />
+			<effect name="BlockBuffSlot" noicon="1" val="0">
+				<param slot="VAMPIRIC_ATTACK;ATTACK_TIME_DOWN" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="23290" levels="1" name="Master's Blessing - Spike">
