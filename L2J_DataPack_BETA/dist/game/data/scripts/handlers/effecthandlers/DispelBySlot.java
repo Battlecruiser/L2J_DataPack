@@ -98,6 +98,15 @@ public class DispelBySlot extends L2Effect
 				}
 			}
 		}
+		
+		// Stop transformed by GM.
+		for (Entry<AbnormalType, Byte> dispel : _dispelAbnormals.entrySet())
+		{
+			if ((dispel.getKey() == AbnormalType.TRANSFORM) && getEffected().isTransformed())
+			{
+				getEffected().stopTransformation(false);
+			}
+		}
 		return true;
 	}
 }

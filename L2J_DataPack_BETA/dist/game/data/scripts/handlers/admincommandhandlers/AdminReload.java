@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.datatables.MultisellData;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.datatables.TeleportLocationTable;
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
@@ -253,6 +254,12 @@ public class AdminReload implements IAdminCommandHandler
 					EnchantItemGroupsData.getInstance().load();
 					EnchantItemData.getInstance().load();
 					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded item enchanting data.");
+					break;
+				}
+				case "transform":
+				{
+					TransformData.getInstance().load();
+					AdminTable.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded transform data.");
 					break;
 				}
 				default:

@@ -220,15 +220,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="1">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-				<add order="0x40" stat="runSpd" val="11" />
-			</effect>
+			<effect name="Transformation" val="1" />
 		</for>
 	</skill>
 	<skill id="618" levels="1" name="Transform Death Blader">
@@ -252,14 +244,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="2">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="2" />
 		</for>
 	</skill>
 	<skill id="619" levels="1" name="Transform Dispel">
@@ -934,14 +919,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="253">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="253" />
 		</for>
 	</skill>
 	<skill id="657" levels="3" name="Transform Divine Knight">
@@ -965,14 +943,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="252">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="252" />
 		</for>
 	</skill>
 	<skill id="658" levels="3" name="Transform Divine Rogue">
@@ -996,14 +967,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="254">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="254" />
 		</for>
 	</skill>
 	<skill id="659" levels="3" name="Transform Divine Wizard">
@@ -1027,14 +991,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="256">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="256" />
 		</for>
 	</skill>
 	<skill id="660" levels="3" name="Transform Divine Summoner">
@@ -1058,14 +1015,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="258">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="258" />
 		</for>
 	</skill>
 	<skill id="661" levels="3" name="Transform Divine Healer">
@@ -1089,14 +1039,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="255">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="255" />
 		</for>
 	</skill>
 	<skill id="662" levels="3" name="Transform Divine Enchanter">
@@ -1120,14 +1063,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="257">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="257" />
 		</for>
 	</skill>
 	<skill id="663" levels="1" name="Transform Zaken">
@@ -1152,14 +1088,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="305">
-				<set order="0x08" stat="STR" val="48" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="52" />
-				<set order="0x08" stat="INT" val="45" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="45" />
-			</effect>
+			<effect name="Transformation" val="305" />
 		</for>
 	</skill>
 	<skill id="664" levels="1" name="Transform Anakim">
@@ -1184,14 +1113,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="306">
-				<set order="0x08" stat="STR" val="46" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="49" />
-				<set order="0x08" stat="INT" val="50" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="45" />
-			</effect>
+			<effect name="Transformation" val="306" />
 		</for>
 	</skill>
 	<skill id="665" levels="1" name="Transform Venom">
@@ -1216,14 +1138,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="307">
-				<set order="0x08" stat="STR" val="43" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="47" />
-				<set order="0x08" stat="INT" val="46" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="42" />
-			</effect>
+			<effect name="Transformation" val="307" />
 		</for>
 	</skill>
 	<skill id="666" levels="1" name="Transform Gordon">
@@ -1248,14 +1163,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="308">
-				<set order="0x08" stat="STR" val="43" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="47" />
-				<set order="0x08" stat="INT" val="46" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="42" />
-			</effect>
+			<effect name="Transformation" val="308" />
 		</for>
 	</skill>
 	<skill id="667" levels="1" name="Transform Ranku">
@@ -1280,14 +1188,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="309">
-				<set order="0x08" stat="STR" val="43" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="47" />
-				<set order="0x08" stat="INT" val="46" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="42" />
-			</effect>
+			<effect name="Transformation" val="309" />
 		</for>
 	</skill>
 	<skill id="668" levels="1" name="Transform Kechi">
@@ -1312,14 +1213,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="310">
-				<set order="0x08" stat="STR" val="43" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="47" />
-				<set order="0x08" stat="INT" val="46" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="42" />
-			</effect>
+			<effect name="Transformation" val="310" />
 		</for>
 	</skill>
 	<skill id="669" levels="1" name="Transform Demon Prince">
@@ -1344,14 +1238,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="311">
-				<set order="0x08" stat="STR" val="43" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="47" />
-				<set order="0x08" stat="INT" val="46" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="42" />
-			</effect>
+			<effect name="Transformation" val="311" />
 		</for>
 	</skill>
 	<skill id="670" levels="1" name="Transform Heretic">
@@ -1376,14 +1263,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="3">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="3" />
 		</for>
 	</skill>
 	<skill id="671" levels="1" name="Transform Vale Master">
@@ -1408,14 +1288,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="4">
-				<set order="0x08" stat="STR" val="22" />
-				<set order="0x08" stat="DEX" val="21" />
-				<set order="0x08" stat="CON" val="27" />
-				<set order="0x08" stat="INT" val="41" />
-				<set order="0x08" stat="WIT" val="20" />
-				<set order="0x08" stat="MEN" val="39" />
-			</effect>
+			<effect name="Transformation" val="4" />
 		</for>
 	</skill>
 	<skill id="672" levels="1" name="Transform Saber Tooth Tiger">
@@ -1440,14 +1313,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="5">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="28" />
-				<set order="0x08" stat="CON" val="45" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="5" />
 		</for>
 	</skill>
 	<skill id="673" levels="1" name="Transform Oel Mahum">
@@ -1472,14 +1338,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="6">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="6" />
 		</for>
 	</skill>
 	<skill id="674" levels="1" name="Transform Doll Blader">
@@ -1504,14 +1363,7 @@
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="7">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="11" />
-				<set order="0x08" stat="MEN" val="25" />
-			</effect>
+			<effect name="Transformation" val="7" />
 		</for>
 	</skill>
 	<skill id="675" levels="1" name="Divine Warrior Cross Slash">

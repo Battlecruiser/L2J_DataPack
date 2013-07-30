@@ -20,8 +20,8 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -88,7 +88,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 					return false;
 				}
 				
-				else if (cha.isFlyingMounted() || cha.isMounted() || cha.isRidingStrider())
+				else if (cha.isFlyingMounted() || cha.isMounted())
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
 					return false;
@@ -100,7 +100,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 					if (Util.isDigit(parts[1]))
 					{
 						final int id = Integer.parseInt(parts[1]);
-						if (!TransformationManager.getInstance().transformPlayer(id, cha))
+						if (!TransformData.getInstance().transformPlayer(id, cha))
 						{
 							cha.sendMessage("Unknown transformation Id: " + id);
 						}

@@ -18,8 +18,8 @@
  */
 package handlers.admincommandhandlers;
 
+import com.l2jserver.gameserver.datatables.TransformData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
-import com.l2jserver.gameserver.instancemanager.TransformationManager;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -57,6 +57,7 @@ public class AdminRide implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_ride"))
 		{
+			int type = 0;
 			if (player.isMounted() || player.hasSummon())
 			{
 				activeChar.sendMessage("Target already have a summon.");
@@ -65,14 +66,17 @@ public class AdminRide implements IAdminCommandHandler
 			if (command.startsWith("admin_ride_wyvern"))
 			{
 				_petRideId = 12621;
+				type = 2;
 			}
 			else if (command.startsWith("admin_ride_strider"))
 			{
 				_petRideId = 12526;
+				type = 1;
 			}
 			else if (command.startsWith("admin_ride_wolf"))
 			{
 				_petRideId = 16041;
+				type = 3;
 			}
 			else if (command.startsWith("admin_ride_horse")) // handled using transformation
 			{
@@ -82,7 +86,7 @@ public class AdminRide implements IAdminCommandHandler
 				}
 				else
 				{
-					TransformationManager.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
+					TransformData.getInstance().transformPlayer(PURPLE_MANED_HORSE_TRANSFORMATION_ID, player);
 				}
 				
 				return true;
@@ -95,7 +99,7 @@ public class AdminRide implements IAdminCommandHandler
 				}
 				else
 				{
-					TransformationManager.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
+					TransformData.getInstance().transformPlayer(JET_BIKE_TRANSFORMATION_ID, player);
 				}
 				
 				return true;
@@ -106,7 +110,7 @@ public class AdminRide implements IAdminCommandHandler
 				return false;
 			}
 			
-			player.mount(_petRideId, 0, false);
+			player.mount(_petRideId, 0, type, false);
 			
 			return false;
 		}

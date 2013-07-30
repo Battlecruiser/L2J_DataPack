@@ -352,7 +352,7 @@ public class Listeners extends L2Script
 	@Override
 	public boolean onPlayerTransform(TransformEvent event)
 	{
-		_log.log(Level.INFO, "Player (" + event.getTransformation().getPlayer() + ") has been transformed to " + event.getTransformation().toString() + " transform: " + event.isTransforming());
+		_log.log(Level.INFO, "Player (" + event.getPlayer() + ") has been transformed to " + event.getTransformation().toString() + " transform: " + event.isTransforming());
 		return true;
 	}
 	

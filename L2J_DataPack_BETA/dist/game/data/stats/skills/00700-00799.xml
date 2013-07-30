@@ -1939,14 +1939,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="259">
-				<set order="0x08" stat="STR" val="39" />
-				<set order="0x08" stat="INT" val="20" />
-				<set order="0x08" stat="CON" val="45" />
-				<set order="0x08" stat="DEX" val="29" />
-				<set order="0x08" stat="WIT" val="10" />
-				<set order="0x08" stat="MEN" val="27" />
-			</effect>
+			<effect name="Transformation" val="259" />
 		</for>
 	</skill>
 	<skill id="779" levels="1" name="Summon Smart Cubic">
