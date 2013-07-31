@@ -35,6 +35,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.MountType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -420,7 +421,7 @@ public class Baium extends AbstractNpcAI
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
-		if (attacker.getMountType() == 1)
+		if (attacker.getMountType() == MountType.STRIDER)
 		{
 			boolean hasStriderDebuff = false;
 			for (L2Effect e : attacker.getAllEffects())

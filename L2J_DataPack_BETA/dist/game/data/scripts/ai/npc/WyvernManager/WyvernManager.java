@@ -113,7 +113,7 @@ public final class WyvernManager extends AbstractNpcAI
 			{
 				takeItems(player, CRYSTAL_B_GRADE, WYVERN_FEE);
 				player.dismount();
-				player.mount(WYVERN, 0, 2, true);
+				player.mount(WYVERN, 0, true);
 				return "wyvernmanager-04.html";
 			}
 			return replacePart(player.getHtmlPrefix(), "wyvernmanager-06.html");
