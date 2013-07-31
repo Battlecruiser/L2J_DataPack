@@ -361,6 +361,14 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="displayId" use="optional">
+							<xs:simpleType>
+								<xs:restriction base="xs:positiveInteger">
+									<xs:minInclusive value="1" />
+									<xs:maxInclusive value="20003" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
 						<xs:attribute name="normal_attackable" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
@@ -383,6 +391,8 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="setName" type="xs:string" use="optional" />
+						<xs:attribute name="setTitle" type="xs:string" use="optional" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
