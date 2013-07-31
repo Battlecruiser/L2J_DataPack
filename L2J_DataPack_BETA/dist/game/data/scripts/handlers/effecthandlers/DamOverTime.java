@@ -29,9 +29,12 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  */
 public class DamOverTime extends L2Effect
 {
+	private final boolean _canKill;
+	
 	public DamOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_canKill = template.hasParameters() && template.getParameters().getBool("canKill", false);
 	}
 	
 	@Override
@@ -58,7 +61,7 @@ public class DamOverTime extends L2Effect
 			}
 			
 			// For DOT skills that will not kill effected player.
-			if (!getSkill().killByDOT())
+			if (!_canKill)
 			{
 				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
 				if (getEffected().getCurrentHp() <= 1)
