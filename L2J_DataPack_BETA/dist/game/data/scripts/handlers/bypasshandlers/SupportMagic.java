@@ -18,11 +18,12 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jserver.gameserver.datatables.CategoryData;
 import com.l2jserver.gameserver.handler.IBypassHandler;
+import com.l2jserver.gameserver.model.CategoryType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 
 public class SupportMagic implements IBypassHandler
@@ -140,7 +141,7 @@ public class SupportMagic implements IBypassHandler
 		else
 		{
 			npc.setTarget(player);
-			if (player.isMageClass() && (player.getClassId() != ClassId.overlord) && (player.getClassId() != ClassId.warcryer))
+			if (CategoryData.getInstance().isInCategory(CategoryType.BEGINNER_MAGE, player.getClassId().getId()))
 			{
 				for (SkillHolder skill : MAGE_BUFFS)
 				{
