@@ -1514,7 +1514,9 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DamOverTime" ticks="3" val="20" abnormalVisualEffect="poison" />
+			<effect name="DamOverTime" ticks="3" val="20" abnormalVisualEffect="poison">
+				<param canKill="true" />
+			</effect>
 			<effect name="Root" noicon="1" val="0" />
 		</for>
 	</skill>
