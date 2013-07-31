@@ -120,7 +120,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 			case "ridewyvern":
 				if (activeChar.isClanLeader() && (activeChar.getClan().getCastleId() > 0))
 				{
-					activeChar.mount(12621, 0, 2, true);
+					activeChar.mount(12621, 0, true);
 				}
 				break;
 		}

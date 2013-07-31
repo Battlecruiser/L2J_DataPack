@@ -29,6 +29,7 @@ import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.MountType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -402,7 +403,7 @@ public class Valakas extends AbstractNpcAI
 		}
 		
 		// Debuff strider-mounted players.
-		if (attacker.getMountType() == 1)
+		if (attacker.getMountType() == MountType.STRIDER)
 		{
 			final L2Skill skill = SkillTable.getInstance().getInfo(4258, 1);
 			if (attacker.getFirstEffect(skill) == null)

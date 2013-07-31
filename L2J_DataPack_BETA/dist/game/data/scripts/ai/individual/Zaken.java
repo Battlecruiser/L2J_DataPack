@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.MountType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
@@ -782,7 +783,7 @@ public class Zaken extends AbstractNpcAI
 		int npcId = npc.getNpcId();
 		if (npcId == ZAKEN)
 		{
-			if (attacker.getMountType() == 1)
+			if (attacker.getMountType() == MountType.STRIDER)
 			{
 				int sk_4258 = 0;
 				for (L2Effect e : attacker.getAllEffects())
