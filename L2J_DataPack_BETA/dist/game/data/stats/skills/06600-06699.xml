@@ -735,14 +735,7 @@
 			<player canTransform="true" />
 		</cond>
 		<for>
-			<effect name="Transformation" val="126">
-				<set order="0x08" stat="STR" val="40" />
-				<set order="0x08" stat="DEX" val="30" />
-				<set order="0x08" stat="CON" val="43" />
-				<set order="0x08" stat="INT" val="21" />
-				<set order="0x08" stat="WIT" val="13" />
-				<set order="0x08" stat="MEN" val="23" />
-			</effect>
+			<effect name="Transformation" val="126" />
 		</for>
 	</skill>
 	<skill id="6650" levels="1" name="Tacrakahn's Alienation">
