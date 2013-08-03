@@ -368,8 +368,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 					html.replace("%men%", String.valueOf(npc.getBaseMEN()));
 					html.replace("%critical%", String.valueOf(npc.getBaseCritRate()));
 					html.replace("%attackrange%", String.valueOf(npc.getBaseAttackRange()));
-					html.replace("%walkspd%", String.valueOf(npc.getBaseMoveSpd(MoveType.WALK)));
-					html.replace("%runspd%", String.valueOf(npc.getBaseMoveSpd(MoveType.RUN)));
+					html.replace("%walkspd%", String.valueOf(npc.getBaseMoveSpeed(MoveType.WALK)));
+					html.replace("%runspd%", String.valueOf(npc.getBaseMoveSpeed(MoveType.RUN)));
 					break;
 				}
 				case "ai":
