@@ -392,7 +392,7 @@ public class TerritoryWarSuperClass extends Quest
 				{
 					for (TerritoryNPCSpawn wardSpawn : TerritoryWarManager.getInstance().getTerritory(ward.getOwnerCastleId()).getOwnedWard())
 					{
-						if (wardSpawn.getNpcId() == ward.getTerritoryId())
+						if (wardSpawn.getId() == ward.getTerritoryId())
 						{
 							wardSpawn.setNPC(wardSpawn.getNpc().getSpawn().doSpawn());
 							ward.unSpawnMe();
