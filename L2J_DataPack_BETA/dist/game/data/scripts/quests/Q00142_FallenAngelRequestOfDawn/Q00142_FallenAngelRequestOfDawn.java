@@ -135,7 +135,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st;
-		if ((npc.getNpcId() == FALLEN_ANGEL))
+		if ((npc.getId() == FALLEN_ANGEL))
 		{
 			st = player.getQuestState(getName());
 			if (st.isCond(5))
@@ -151,7 +151,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			if (member != null)
 			{
 				st = member.getQuestState(getName());
-				if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+				if (getRandom(1000) < MOBS.get(npc.getId()))
 				{
 					st.giveItems(PROPHECY_FRAGMENT, 1);
 					if (st.getQuestItemsCount(PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
@@ -179,7 +179,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NATOOLS:
 				switch (st.getState())

@@ -108,7 +108,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case LAVASAURUS_NEWBORN:
 					giveQuestItems(st, FRAGMENT_STONE);

@@ -177,7 +177,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 		if (!randomList.isEmpty())
 		{
 			final QuestState st3 = randomList.get(getRandom(randomList.size()));
-			final ItemHolder info = MOBS_DROP_CHANCES.get(npc.getNpcId());
+			final ItemHolder info = MOBS_DROP_CHANCES.get(npc.getId());
 			if ((getRandom(1000) < info.getCount()) && Util.checkIfInRange(1500, npc, killer, false))
 			{
 				switch (info.getId())

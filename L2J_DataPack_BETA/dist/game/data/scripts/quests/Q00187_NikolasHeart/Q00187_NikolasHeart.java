@@ -114,7 +114,7 @@ public final class Q00187_NikolasHeart extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RESEARCHER_LORAIN:
 			{

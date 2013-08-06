@@ -177,7 +177,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    clan = player.getClan()
    part = st.getInt("part")
@@ -302,13 +302,13 @@ class Quest (JQuest) :
              return "Need to start quest!"
          return
      part = leaderst.getInt("part")
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId in CHESTS and part == 4 :
          wins = leaderst.getInt("chest_wins")
          if (self.chests - wins) == 12 or (wins < 4 and not self.getRandom(4)) :
              wins += 1
              leaderst.set("chest_wins",str(wins))
-             npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"###### BINGO! ######"))
+             npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"###### BINGO! ######"))
          self.chests += 1
      elif npcId in MOBS.keys() :
          st = player.getQuestState(qn)

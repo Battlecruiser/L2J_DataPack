@@ -79,7 +79,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:

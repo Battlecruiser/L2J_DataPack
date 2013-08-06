@@ -219,7 +219,7 @@ public class Q00458_PerfectForm extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			if ((npcId == KOOKABURRAS[0]) || (npcId == COUGARS[0]) || (npcId == BUFFALOS[0]) || (npcId == GRENDELS[0]))
 			{
 				npcId++;
@@ -268,7 +268,7 @@ public class Q00458_PerfectForm extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 				log.addNpc(18879, st.getInt("18879"));
 				log.addNpc(18886, st.getInt("18886"));
 				log.addNpc(18893, st.getInt("18893"));

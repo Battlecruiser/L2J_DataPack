@@ -61,13 +61,13 @@ public class CastleBlacksmith extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		return (event.equalsIgnoreCase(npc.getNpcId() + "-02.html") && hasRights(player, npc)) ? event : null;
+		return (event.equalsIgnoreCase(npc.getId() + "-02.html") && hasRights(player, npc)) ? event : null;
 	}
 	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return (hasRights(player, npc)) ? npc.getNpcId() + "-01.html" : "no.html";
+		return (hasRights(player, npc)) ? npc.getId() + "-01.html" : "no.html";
 	}
 	
 	public static void main(String[] args)

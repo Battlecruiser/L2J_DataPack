@@ -219,10 +219,10 @@ public class Q00309_ForAGoodCause extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			float chance = (MUCROKIANS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			float chance = (MUCROKIANS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				if (npc.getNpcId() == CORRUPTED_MUCROKIAN)
+				if (npc.getId() == CORRUPTED_MUCROKIAN)
 				{
 					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
 					st.rewardItems(FALLEN_MUCROKIAN_HIDE, 1);

@@ -58,7 +58,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
    cond=st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30109 and id != State.STARTED : return htmltext
    if id == State.CREATED :
@@ -188,7 +188,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return
    cond=st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId in [20190,20191] :
       if cond == 2 :
         if self.getRandom(50)<2 :

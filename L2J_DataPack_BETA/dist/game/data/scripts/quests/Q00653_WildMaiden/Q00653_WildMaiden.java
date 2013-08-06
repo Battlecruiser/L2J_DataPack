@@ -83,7 +83,7 @@ public class Q00653_WildMaiden extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SUKI:
 				switch (st.getState())

@@ -90,12 +90,12 @@ public class Q00461_RumbleInTheBase extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		QuestState st = null;
-		if (getRandom(1000) >= MONSTERS.get(npc.getNpcId()))
+		if (getRandom(1000) >= MONSTERS.get(npc.getId()))
 		{
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		if (npc.getNpcId() == 18908)
+		if (npc.getId() == 18908)
 		{
 			st = player.getQuestState(getName());
 			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))

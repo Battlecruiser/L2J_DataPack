@@ -145,7 +145,7 @@ public class Q00034_InSearchOfCloth extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RADIA:
 				switch (st.getState())

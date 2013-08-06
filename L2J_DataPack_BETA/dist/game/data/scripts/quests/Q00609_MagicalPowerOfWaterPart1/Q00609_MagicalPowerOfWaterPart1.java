@@ -162,7 +162,7 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WAHKAN:
 				switch (st.getState())

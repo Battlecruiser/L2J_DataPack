@@ -58,7 +58,7 @@ public class DemonPrince extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("cast") && (npc != null) && (npc.getNpcId() == FIEND) && !npc.isDead())
+		if (event.equalsIgnoreCase("cast") && (npc != null) && (npc.getId() == FIEND) && !npc.isDead())
 		{
 			npc.doCast(AOE[getRandom(AOE.length)].getSkill());
 		}
@@ -101,7 +101,7 @@ public class DemonPrince extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if (npc.getNpcId() == FIEND)
+		if (npc.getId() == FIEND)
 		{
 			startQuestTimer("cast", 15000, npc, null);
 		}

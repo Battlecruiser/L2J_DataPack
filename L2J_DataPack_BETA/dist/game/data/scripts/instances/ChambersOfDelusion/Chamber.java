@@ -340,9 +340,9 @@ public abstract class Chamber extends Quest
 			
 			for (L2Npc npc : inst.getNpcs())
 			{
-				if (npc.getNpcId() == ROOM_GATEKEEPER_LAST)
+				if (npc.getId() == ROOM_GATEKEEPER_LAST)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.N21_MINUTES_ARE_ADDED_TO_THE_REMAINING_TIME_IN_THE_INSTANT_ZONE));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.N21_MINUTES_ARE_ADDED_TO_THE_REMAINING_TIME_IN_THE_INSTANT_ZONE));
 				}
 			}
 		}
@@ -488,7 +488,7 @@ public abstract class Chamber extends Quest
 		String htmltext = "";
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 		
-		if ((player != null) && (tmpworld != null) && (tmpworld instanceof CDWorld) && (npc.getNpcId() >= ROOM_GATEKEEPER_FIRST) && (npc.getNpcId() <= ROOM_GATEKEEPER_LAST))
+		if ((player != null) && (tmpworld != null) && (tmpworld instanceof CDWorld) && (npc.getId() >= ROOM_GATEKEEPER_FIRST) && (npc.getId() <= ROOM_GATEKEEPER_LAST))
 		{
 			final CDWorld world = (CDWorld) tmpworld;
 			
@@ -651,7 +651,7 @@ public abstract class Chamber extends Quest
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if ((npc.getNpcId() == BOX) && ((skill.getId() == 5376) || (skill.getId() == 5758)) && !npc.isDead())
+		if ((npc.getId() == BOX) && ((skill.getId() == 5376) || (skill.getId() == 5758)) && !npc.isDead())
 		{
 			npc.doDie(player);
 		}
@@ -662,7 +662,7 @@ public abstract class Chamber extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		QuestState st = player.getQuestState(getName());
 		
 		if (st == null)

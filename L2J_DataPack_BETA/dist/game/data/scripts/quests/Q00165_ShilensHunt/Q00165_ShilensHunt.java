@@ -77,7 +77,7 @@ public class Q00165_ShilensHunt extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(DARK_BEZOAR, 1);
 			if (st.getQuestItemsCount(DARK_BEZOAR) < REQUIRED_COUNT)

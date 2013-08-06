@@ -150,7 +150,7 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NATOOLS:
 				switch (st.getState())

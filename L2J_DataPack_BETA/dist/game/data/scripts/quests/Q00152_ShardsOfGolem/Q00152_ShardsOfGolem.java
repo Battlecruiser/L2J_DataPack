@@ -111,7 +111,7 @@ public class Q00152_ShardsOfGolem extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case HARRYS:
 				{

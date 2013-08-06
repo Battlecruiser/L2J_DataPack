@@ -48,7 +48,7 @@ public class Recipes implements IItemHandler
 			return false;
 		}
 		
-		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getItemId());
+		final L2RecipeList rp = RecipeData.getInstance().getRecipeByItemId(item.getId());
 		if (rp == null)
 		{
 			return false;

@@ -88,7 +88,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 			return null;
 		}
 		
-		if (getRandom(10) < MONSTERS.get(npc.getNpcId()))
+		if (getRandom(10) < MONSTERS.get(npc.getId()))
 		{
 			st.giveItems(TARLK_AMULET, 1);
 			if (st.getQuestItemsCount(TARLK_AMULET) < 30)

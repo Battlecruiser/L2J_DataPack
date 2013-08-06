@@ -87,7 +87,7 @@ public class Q00174_SupplyCheck extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MARCELA:
 				switch (st.getState())

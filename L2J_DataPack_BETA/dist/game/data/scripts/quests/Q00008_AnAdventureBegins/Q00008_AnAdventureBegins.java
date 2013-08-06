@@ -99,7 +99,7 @@ public class Q00008_AnAdventureBegins extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case JASMINE:
 				switch (st.getState())

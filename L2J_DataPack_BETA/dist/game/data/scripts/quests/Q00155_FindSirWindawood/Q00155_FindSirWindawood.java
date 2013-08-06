@@ -70,7 +70,7 @@ public class Q00155_FindSirWindawood extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ABELLOS:
 				switch (st.getState())

@@ -85,7 +85,7 @@ public class ZealotOfShilen extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return (npc.isAttackingNow()) ? "32628-01.html" : npc.getNpcId() + ".html";
+		return (npc.isAttackingNow()) ? "32628-01.html" : npc.getId() + ".html";
 	}
 	
 	@Override

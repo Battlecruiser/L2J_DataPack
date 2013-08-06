@@ -130,7 +130,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30585 and id != State.STARTED : return htmltext
 
@@ -248,7 +248,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20479 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(FIRE_CHARM) == 1 and st.getQuestItemsCount(KASHA_BEAR_PELT)<1 :
@@ -263,11 +263,11 @@ class Quest (JQuest) :
         if st.getInt("cond") == 14:
             st.set("cond","15")
             st.playSound("ItemSound.quest_middle")
-            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"My dear friend of "+player.getName()+", who has gone on ahead of me!"))
+            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"My dear friend of "+player.getName()+", who has gone on ahead of me!"))
         elif st.getInt("cond") == 16:
             st.set("cond","17")
             st.playSound("ItemSound.quest_middle")
-            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"Listen to Tejakar Gandi, young Oroka! The spirit of the slain leopard is calling you, "+player.getName()+"!"))
+            npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"Listen to Tejakar Gandi, young Oroka! The spirit of the slain leopard is calling you, "+player.getName()+"!"))
         elif st.getInt("cond") == 18:
             st.set("cond","19")
             st.playSound("ItemSound.quest_middle")

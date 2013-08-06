@@ -82,7 +82,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    numItems,chance = divmod(100*Config.RATE_QUEST_DROP,100)
    item,count = MOB[npcId]
    if item :

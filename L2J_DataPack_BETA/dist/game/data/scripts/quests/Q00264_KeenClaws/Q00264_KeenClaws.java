@@ -89,7 +89,7 @@ public final class Q00264_KeenClaws extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			final int random = getRandom(100);
-			for (ItemHolder drop : MONSTER_CHANCES.get(npc.getNpcId()))
+			for (ItemHolder drop : MONSTER_CHANCES.get(npc.getId()))
 			{
 				if (random < drop.getCount())
 				{

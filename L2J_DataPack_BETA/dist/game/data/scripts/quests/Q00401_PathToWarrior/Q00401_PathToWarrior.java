@@ -147,7 +147,7 @@ public class Q00401_PathToWarrior extends Quest
 		{
 			case 2:
 			{
-				if ((npc.getNpcId() == MONSTERS[0]) || (npc.getNpcId() == MONSTERS[2]))
+				if ((npc.getId() == MONSTERS[0]) || (npc.getId() == MONSTERS[2]))
 				{
 					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) < 10)
 					{
@@ -166,7 +166,7 @@ public class Q00401_PathToWarrior extends Quest
 			}
 			case 5:
 			{
-				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getNpcId() == MONSTERS[1])) || (npc.getNpcId() == MONSTERS[3]))
+				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getId() == MONSTERS[1])) || (npc.getId() == MONSTERS[3]))
 				{
 					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
 					{
@@ -195,7 +195,7 @@ public class Q00401_PathToWarrior extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case AURON:
 			{

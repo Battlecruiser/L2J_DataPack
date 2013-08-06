@@ -74,7 +74,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      htmltext = Quest.getNoQuestMsg(player)
      st = player.getQuestState(qn)
      if not st : return htmltext
@@ -103,7 +103,7 @@ class Quest (JQuest) :
      if not partyMember: return
      st = partyMember.getQuestState(qn)
      if not st : return
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      chance = self.getRandom(100)
      if npcId in MOBS.keys() :
          urnchance, porcchance = MOBS[npcId]

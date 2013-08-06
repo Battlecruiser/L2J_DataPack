@@ -117,11 +117,11 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 			return;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (Util.checkIfInRange(1500, npc, player, false))
 		{
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getQuestIntId());
+			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			
 			if (Util.contains(MONSTER1, npcId) && st.isCond(2))
 			{

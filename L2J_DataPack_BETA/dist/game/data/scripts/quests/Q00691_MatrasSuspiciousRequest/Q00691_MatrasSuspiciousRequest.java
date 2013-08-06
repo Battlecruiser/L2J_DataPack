@@ -134,7 +134,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		}
 		
 		final QuestState st = pl.getQuestState(getName());
-		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getNpcId()));
+		int chance = (int) (Config.RATE_QUEST_DROP * REWARD_CHANCES.get(npc.getId()));
 		int numItems = Math.max((chance / 1000), 1);
 		chance = chance % 1000;
 		if (getRandom(1000) <= chance)

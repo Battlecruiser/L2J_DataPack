@@ -38,7 +38,7 @@ public class Calculator implements IItemHandler
 			return false;
 		}
 		
-		playable.sendPacket(new ShowCalculator(item.getItemId()));
+		playable.sendPacket(new ShowCalculator(item.getId()));
 		return true;
 	}
 }

@@ -50,7 +50,7 @@ class Quest (JQuest) :
       st = player.getQuestState(qn)
       if not st : return htmltext
 
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       id = st.getState()
       if npcId != SORINT and id != State.STARTED : return htmltext
       
@@ -94,7 +94,7 @@ class Quest (JQuest) :
       if not st : return 
       if st.getState() != State.STARTED : return 
    
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       album = st.getQuestItemsCount(COIN_ALBUM)
       coin = st.getQuestItemsCount(KAILS_COIN)
       clover = st.getQuestItemsCount(CLOVER_COIN)

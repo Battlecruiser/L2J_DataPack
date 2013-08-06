@@ -179,7 +179,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 			return null;
 		}
 		final QuestState st = partyMember.getQuestState(getName());
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if ((st != null) && QUEST_MOBS.containsKey(npcId))
 		{
 			int chance = (int) (QUEST_MOBS.get(npcId).getCount() * Config.RATE_QUEST_DROP);
@@ -214,7 +214,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		}
 		else
 		{
-			if (npc.getNpcId() == DILIOS)
+			if (npc.getId() == DILIOS)
 			{
 				if (st.isCond(1) && st.hasQuestItems(LEKONS_CERTIFICATE))
 				{

@@ -86,7 +86,7 @@ public class Listeners extends L2Script
 		List<Integer> items = new ArrayList<>();
 		for (L2ItemInstance item : player.getInventory().getItems())
 		{
-			items.add(item.getItemId());
+			items.add(item.getId());
 		}
 		addItemTracker(items);
 		addTransformNotify(player);

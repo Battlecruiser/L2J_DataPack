@@ -54,7 +54,7 @@ public class StarStones extends AbstractNpcAI
 		{
 			int itemId = 0;
 			
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case 18684:
 				case 18685:

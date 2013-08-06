@@ -94,7 +94,7 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MOIRA:
 				switch (st.getState())

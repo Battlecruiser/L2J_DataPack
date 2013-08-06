@@ -94,7 +94,7 @@ public class CastleMercenaryManager extends AbstractNpcAI
 				}
 				else
 				{
-					final int listId = Integer.parseInt(npc.getNpcId() + st.nextToken());
+					final int listId = Integer.parseInt(npc.getId() + st.nextToken());
 					((L2MerchantInstance) npc).showBuyWindow(player, listId, false); // NOTE: Not affected by Castle Taxes, baseTax is 20% (done in merchant buylists)
 				}
 				break;

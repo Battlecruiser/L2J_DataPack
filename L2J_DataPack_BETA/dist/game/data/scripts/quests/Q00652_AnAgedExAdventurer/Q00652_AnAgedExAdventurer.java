@@ -83,7 +83,7 @@ public class Q00652_AnAgedExAdventurer extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TANTAN:
 				switch (st.getState())

@@ -137,7 +137,7 @@ public final class Q00293_TheHiddenVeins extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case FILAUR:
 			{

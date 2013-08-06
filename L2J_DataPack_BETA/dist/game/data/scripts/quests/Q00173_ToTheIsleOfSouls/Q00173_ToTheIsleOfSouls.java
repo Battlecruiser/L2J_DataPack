@@ -95,7 +95,7 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GALLADUCCI:
 				switch (st.getState())

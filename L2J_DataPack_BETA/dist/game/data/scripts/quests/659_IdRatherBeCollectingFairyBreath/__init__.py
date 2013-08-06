@@ -62,7 +62,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st: return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if st.getInt("cond") == 1 :
      chance = self.getRandom(100)  
      if npcId in MOBS and chance < 90 :  

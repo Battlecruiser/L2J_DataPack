@@ -145,7 +145,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return
    htmltext = event
-   npcId = str(npc.getNpcId())
+   npcId = str(npc.getId())
    if event == "30182-05.htm" :
        st.playSound("ItemSound.quest_accept")
        st.setState(State.STARTED)
@@ -216,7 +216,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    htmltext = Quest.getNoQuestMsg(player) 
    if not st: return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    cond = st.getInt("cond")
    if npcId == Cliff :
@@ -240,7 +240,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet) :
      st = player.getQuestState(qn)
      if not st : return
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId in Droplist.keys() :
          if Rnd.get(100) < Droplist[npcId] :
              st.giveItems(Medal,1)

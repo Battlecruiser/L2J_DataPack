@@ -910,7 +910,7 @@ public class TullyWorkshop extends Quest
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		ClassId classId = player.getClassId();
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (TULLY_DOORLIST.containsKey(npcId))
 		{
@@ -940,7 +940,7 @@ public class TullyWorkshop extends Quest
 		{
 			if (postMortemSpawn.indexOf(npc) == 11)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.HA_HA_YOU_WERE_SO_AFRAID_OF_DEATH_LET_ME_SEE_IF_YOU_FIND_ME_IN_TIME_MAYBE_YOU_CAN_FIND_A_WAY));
 				npc.deleteMe();
 				return null;
 			}
@@ -1001,7 +1001,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == TOMBSTONE)
+		if (npc.getId() == TOMBSTONE)
 		{
 			final L2Party party = player.getParty();
 			if (party == null)
@@ -1096,7 +1096,7 @@ public class TullyWorkshop extends Quest
 			return null;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (event.equalsIgnoreCase("close") && TULLY_DOORLIST.containsKey(npcId))
 		{
 			// Second instance of 18455
@@ -1114,7 +1114,7 @@ public class TullyWorkshop extends Quest
 		
 		if (event.equalsIgnoreCase("repair_device"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.DE_ACTIVATE_THE_ALARM));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.DE_ACTIVATE_THE_ALARM));
 			brokenContraptions.remove(npc.getObjectId());
 		}
 		else if (event.equalsIgnoreCase("despawn_servant") && !npc.isDead())
@@ -1477,7 +1477,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (Arrays.binarySearch(TELEPORTING_MONSTERS, npcId) >= 0)
 		{
 			if (Math.abs(npc.getZ() - attacker.getZ()) > 150)
@@ -1535,7 +1535,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public String onFactionCall(L2Npc npc, L2Npc caller, L2PcInstance attacker, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if ((npcId == TEMENIR) || (npcId == DRAXIUS) || (npcId == KIRETCENAH))
 		{
 			if (!((L2MonsterInstance) npc).hasMinions())
@@ -1563,7 +1563,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if ((npcId == TULLY) && npc.isInsideRadius(-12557, 273901, -9000, 1000, false, false))
 		{
@@ -1578,7 +1578,7 @@ public class TullyWorkshop extends Quest
 			
 			countdownTime = 600000;
 			_countdown = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CountdownTask(), 60000, 10000);
-			NpcSay ns = new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW);
+			NpcSay ns = new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getId(), NpcStringId.DETONATOR_INITIALIZATION_TIME_S1_MINUTES_FROM_NOW);
 			ns.addStringParameter(Integer.toString((countdownTime / 60000)));
 			postMortemSpawn.get(0).broadcastPacket(ns);
 		}
@@ -1586,25 +1586,25 @@ public class TullyWorkshop extends Quest
 		{
 			if (getRandom(1000) >= 700)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.A_FATAL_ERROR_HAS_OCCURRED));
 				if (countdownTime > 180000)
 				{
 					countdownTime = Math.max(countdownTime - 180000, 60000);
-					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getNpcId() == INGENIOUS_CONTRAPTION))
+					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
-						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED));
+						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_FORWARD_EFFECT_CREATED));
 					}
 				}
 			}
 			else
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.TIME_RIFT_DEVICE_ACTIVATION_SUCCESSFUL));
 				if ((countdownTime > 0) && (countdownTime <= 420000))
 				{
 					countdownTime += 180000;
-					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getNpcId() == INGENIOUS_CONTRAPTION))
+					if ((postMortemSpawn != null) && (postMortemSpawn.size() > 0) && (postMortemSpawn.get(0) != null) && (postMortemSpawn.get(0).getId() == INGENIOUS_CONTRAPTION))
 					{
-						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getNpcId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED));
+						postMortemSpawn.get(0).broadcastPacket(new NpcSay(postMortemSpawn.get(0).getObjectId(), Say2.NPC_SHOUT, postMortemSpawn.get(0).getId(), NpcStringId.ZZZZ_CITY_INTERFERENCE_ERROR_RECURRENCE_EFFECT_CREATED));
 					}
 				}
 			}
@@ -1684,13 +1684,13 @@ public class TullyWorkshop extends Quest
 				}
 			}
 			
-			if (((npc.getNpcId() - 22404) == 3) || ((npc.getNpcId() - 22404) == 6))
+			if (((npc.getId() - 22404) == 3) || ((npc.getId() - 22404) == 6))
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.I_FAILED_PLEASE_FORGIVE_ME_DARION));
 			}
 			else
 			{
-				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE);
+				NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.S1_ILL_BE_BACK_DONT_GET_COMFORTABLE);
 				ns.addStringParameter(killer.getName());
 				npc.broadcastPacket(ns);
 			}
@@ -1722,7 +1722,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if ((npc.getNpcId() == TULLY) && npc.isInsideRadius(-12557, 273901, -9000, 1000, true, false))
+		if ((npc.getId() == TULLY) && npc.isInsideRadius(-12557, 273901, -9000, 1000, true, false))
 		{
 			for (L2Npc spawnedNpc : postMortemSpawn)
 			{
@@ -1733,7 +1733,7 @@ public class TullyWorkshop extends Quest
 			}
 			postMortemSpawn.clear();
 		}
-		else if (npc.getNpcId() == DARION)
+		else if (npc.getId() == DARION)
 		{
 			if (pillarSpawn != null)
 			{
@@ -1741,7 +1741,7 @@ public class TullyWorkshop extends Quest
 			}
 			handleDoorsOnRespawn();
 		}
-		else if (npc.getNpcId() == PILLAR)
+		else if (npc.getId() == PILLAR)
 		{
 			npc.setIsInvul(RaidBossSpawnManager.getInstance().getRaidBossStatusId(DARION) == StatusEnum.ALIVE);
 		}
@@ -1751,7 +1751,7 @@ public class TullyWorkshop extends Quest
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		final int skillId = skill.getId();
 		
 		if ((npcId == AGENT) && (skillId == 5526))
@@ -1767,13 +1767,13 @@ public class TullyWorkshop extends Quest
 		}
 		else if ((npcId >= SERVANT_FIRST) && (npcId <= SERVANT_LAST) && (skillId == 5392))
 		{
-			final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE);
+			final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.S1_THANK_YOU_FOR_GIVING_ME_YOUR_LIFE);
 			ns.addStringParameter(player.getName());
 			npc.broadcastPacket(ns);
 			
-			final int dmg = (int) (player.getCurrentHp() / (npc.getNpcId() - 22404));
+			final int dmg = (int) (player.getCurrentHp() / (npc.getId() - 22404));
 			player.reduceCurrentHp(dmg, null, null);
-			npc.setCurrentHp((npc.getCurrentHp() + 10) - (npc.getNpcId() - 22404));
+			npc.setCurrentHp((npc.getCurrentHp() + 10) - (npc.getId() - 22404));
 		}
 		return null;
 	}
@@ -1949,9 +1949,9 @@ public class TullyWorkshop extends Quest
 			{
 				if ((countdownTime % 60000) == 0)
 				{
-					if ((npc != null) && (npc.getNpcId() == INGENIOUS_CONTRAPTION))
+					if ((npc != null) && (npc.getId() == INGENIOUS_CONTRAPTION))
 					{
-						NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_MINUTES_REMAINING);
+						NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.S1_MINUTES_REMAINING);
 						ns.addStringParameter(Integer.toString((countdownTime / 60000)));
 						npc.broadcastPacket(ns);
 					}
@@ -1967,7 +1967,7 @@ public class TullyWorkshop extends Quest
 				
 				for (L2Npc spawnedNpc : postMortemSpawn)
 				{
-					if ((spawnedNpc != null) && ((spawnedNpc.getNpcId() == INGENIOUS_CONTRAPTION) || (spawnedNpc.getNpcId() == TIMETWISTER_GOLEM)))
+					if ((spawnedNpc != null) && ((spawnedNpc.getId() == INGENIOUS_CONTRAPTION) || (spawnedNpc.getId() == TIMETWISTER_GOLEM)))
 					{
 						spawnedNpc.deleteMe();
 					}
@@ -1985,9 +1985,9 @@ public class TullyWorkshop extends Quest
 			}
 			else
 			{
-				if ((npc != null) && (npc.getNpcId() == INGENIOUS_CONTRAPTION))
+				if ((npc != null) && (npc.getId() == INGENIOUS_CONTRAPTION))
 				{
-					final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getNpcId(), NpcStringId.S1_SECONDS_REMAINING);
+					final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_SHOUT, npc.getId(), NpcStringId.S1_SECONDS_REMAINING);
 					ns.addStringParameter(Integer.toString((countdownTime / 1000)));
 					npc.broadcastPacket(ns);
 				}

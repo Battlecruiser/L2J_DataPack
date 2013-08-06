@@ -83,7 +83,7 @@ public class Q00651_RunawayYouth extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case IVAN:
 				switch (st.getState())

@@ -85,7 +85,7 @@ class Quest (JQuest) :
    return htmltext 
 
  def onTalk (self,npc,player):
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
@@ -167,7 +167,7 @@ class Quest (JQuest) :
     if not sponsor:
       st.exitQuest(1)
       return
-    item,chance,max,cond,check = DROPLIST[npc.getNpcId()]
+    item,chance,max,cond,check = DROPLIST[npc.getId()]
     count,enabled=st.getQuestItemsCount(item),True
     if check :
        enabled=False

@@ -62,7 +62,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      htmltext = Quest.getNoQuestMsg(player)
      st = player.getQuestState(qn)
      if not st : return htmltext
@@ -132,7 +132,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
      st = player.getQuestState(qn)
      if not st : return 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      chanse = self.getRandom(100)
      kargo = st.getQuestItemsCount(CARGO)
      holy = st.getQuestItemsCount(HOLY)

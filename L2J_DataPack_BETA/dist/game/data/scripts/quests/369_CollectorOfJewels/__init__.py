@@ -49,7 +49,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    cond=st.getInt("cond")
    flare = st.getQuestItemsCount(FLARE_SHARD)
@@ -83,14 +83,14 @@ class Quest (JQuest) :
 
  def onKill(self,npc,player,isPet):
    partyMember, st, item, chance = 0,0,0,0
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    # get a random party member that still awaits drop from this NPC
    if npcId in DROPLIST_FREEZE.keys() :
        partyMember = self.getRandomPartyMember(player,"awaitsFreezing","1")
-       item,chance=DROPLIST_FREEZE[npc.getNpcId()]
+       item,chance=DROPLIST_FREEZE[npc.getId()]
    elif npcId in DROPLIST_FLARE.keys() :
        partyMember = self.getRandomPartyMember(player,"awaitsFlare","1")
-       item,chance=DROPLIST_FLARE[npc.getNpcId()]
+       item,chance=DROPLIST_FLARE[npc.getId()]
 
    if partyMember :
        st = partyMember.getQuestState(qn)

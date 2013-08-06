@@ -91,7 +91,7 @@ public class Q00112_WalkOfFate extends Quest
 				htmltext = (player.getLevel() < MIN_LEVEL) ? "30572-03.html" : "30572-01.htm";
 				break;
 			case State.STARTED:
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case LIVINA:
 					{

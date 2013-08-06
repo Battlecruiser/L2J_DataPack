@@ -43,7 +43,7 @@ class Quest (JQuest) :
      return htmltext
 
  def onTalk (self,npc,player):
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      htmltext = Quest.getNoQuestMsg(player)
      st = player.getQuestState(qn)
      if not st : return htmltext
@@ -67,7 +67,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st: return
      if st.getState() == State.STARTED :
-       npcId = npc.getNpcId()
+       npcId = npc.getId()
        chance = self.getRandom(100)
        if (npcId == SPIDER) and (chance < 35) : #Retail statistic info. 64 mob's - 22 claw
          st.giveItems(CLAW,1)

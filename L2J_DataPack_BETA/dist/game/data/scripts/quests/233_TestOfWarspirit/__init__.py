@@ -146,7 +146,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     
     # first time when a player join the quest
@@ -320,7 +320,7 @@ class Quest (JQuest) :
   def onKill(self,npc,player,isPet):
     st = player.getQuestState(qn)
     if not st : return 
-    npcId=npc.getNpcId()
+    npcId=npc.getId()
 
     if (st.getState() == State.STARTED) and (st.get("progress")=="PART1") and not (npcId in PART1_MOBS) : return 
     if (st.getState() == State.STARTED) and (st.get("progress")=="PART2") and not (npcId in PART2_MOBS) : return 

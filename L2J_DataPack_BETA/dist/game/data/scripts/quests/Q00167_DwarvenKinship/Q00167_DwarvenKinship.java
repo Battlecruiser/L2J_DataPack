@@ -113,7 +113,7 @@ public class Q00167_DwarvenKinship extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case CARLON:
 				{

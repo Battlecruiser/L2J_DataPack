@@ -153,7 +153,7 @@ public class Q00700_CursedLife extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == ROK)
+			if (npc.getId() == ROK)
 			{
 				int amount = 0, chance = getRandom(1000);
 				if (chance < 700)
@@ -245,7 +245,7 @@ public class Q00700_CursedLife extends Quest
 			}
 			else
 			{
-				Integer[] chances = MONSTERS.get(npc.getNpcId());
+				Integer[] chances = MONSTERS.get(npc.getId());
 				int chance = getRandom(1000);
 				if (chance < chances[0])
 				{

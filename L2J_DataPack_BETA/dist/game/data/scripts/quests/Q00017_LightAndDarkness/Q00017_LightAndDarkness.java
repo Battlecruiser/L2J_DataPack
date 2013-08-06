@@ -111,7 +111,7 @@ public class Q00017_LightAndDarkness extends Quest
 				break;
 			case State.STARTED:
 				final long blood = st.getQuestItemsCount(BLOOD_OF_SAINT);
-				final int npcId = npc.getNpcId();
+				final int npcId = npc.getId();
 				switch (npcId)
 				{
 					case HIERARCH:

@@ -48,7 +48,7 @@ public final class FrozenLabyrinth extends AbstractNpcAI
 	{
 		if (npc.isScriptValue(0) && (skill != null) && !skill.isMagic())
 		{
-			final int spawnId = (npc.getNpcId() == PRONGHORN) ? PRONGHORN_SPIRIT : LOST_BUFFALO;
+			final int spawnId = (npc.getId() == PRONGHORN) ? PRONGHORN_SPIRIT : LOST_BUFFALO;
 			int diff = 0;
 			for (int i = 0; i < 6; i++)
 			{

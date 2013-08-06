@@ -134,7 +134,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st: return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    SHARD=st.getQuestItemsCount(ROUGHLY_HEWN_ROCK_GOLEM_SHARD)
    SCALE=st.getQuestItemsCount(DELU_LIZARDMAN_SCALE)
    EYES=st.getQuestItemsCount(WATCHING_EYES)
@@ -162,7 +162,7 @@ class Quest (JQuest) :
  def onKill(self,npc,player,isPet):
    st = player.getQuestState(qn)
    if not st: return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    chance = self.getRandom(100)
    if st.getInt("cond") == 2 :
      if npcId in [21106,21102] and chance < 79 :

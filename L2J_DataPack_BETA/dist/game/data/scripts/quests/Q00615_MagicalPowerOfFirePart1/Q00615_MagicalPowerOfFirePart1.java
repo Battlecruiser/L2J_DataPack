@@ -162,7 +162,7 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NARAN:
 				switch (st.getState())

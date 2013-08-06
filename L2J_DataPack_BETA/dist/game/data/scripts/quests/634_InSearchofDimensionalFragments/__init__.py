@@ -31,7 +31,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if st :
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         id = st.getState()
         if id == State.CREATED :
             if player.getLevel() < 20 :

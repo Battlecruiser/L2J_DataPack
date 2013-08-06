@@ -144,7 +144,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != BANDELLOS and id != State.STARTED : return htmltext
 
@@ -277,7 +277,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    if st.getState() != State.STARTED : return 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if not npcId in DROPLIST.keys() : return
    condition,maxcount,item,next_condition=DROPLIST[npcId]
    if st.getInt("cond")==condition and st.getQuestItemsCount(item)<maxcount:

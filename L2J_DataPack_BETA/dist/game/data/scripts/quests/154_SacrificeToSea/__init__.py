@@ -35,7 +35,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId == 30312 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
       if player.getLevel() >= 2 :
@@ -94,7 +94,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20481 :
         st.set("id","0")
         if st.getInt("cond") >= 1 and st.getQuestItemsCount(FOX_FUR_ID)<10 and st.getQuestItemsCount(FOX_FUR_YARN_ID) == 0 :

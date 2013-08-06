@@ -86,7 +86,7 @@ public class Q00109_InSearchOfTheNest extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PIERCE:
 				switch (st.getState())

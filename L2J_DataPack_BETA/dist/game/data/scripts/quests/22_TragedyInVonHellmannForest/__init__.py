@@ -27,7 +27,7 @@ def AutoChat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
        for pc in chars :
-          sm = NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text)
+          sm = NpcSay(npc.getObjectId(), 0, npc.getId(), text)
           pc.sendPacket(sm)
 
 class Quest (JQuest) :
@@ -158,7 +158,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    htmltext = Quest.getNoQuestMsg(player) 
    if not st: return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    state = st.getState()
    id = st.getInt("id")
    ex = st.getInt("ex")
@@ -271,7 +271,7 @@ class Quest (JQuest) :
  def onAttack (self,npc,player,damage,isPet,skill):
    st = player.getQuestState(qn)
    if st :
-       npcId = npc.getNpcId()
+       npcId = npc.getId()
        id = st.getInt("id")
        if npcId == SOUL_OF_WELL :
            if id == 10 and st.getQuestItemsCount(JEWEL1) > 0 :
@@ -284,7 +284,7 @@ class Quest (JQuest) :
    return
 
  def onKill(self,npc,player,isPet):
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    st = player.getQuestState(qn)
    if st :
        if npcId == SOUL_OF_WELL :

@@ -51,7 +51,7 @@ public abstract class AbstractNpcAI extends L2Script
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return npc.getNpcId() + ".html";
+		return npc.getId() + ".html";
 	}
 	
 	/**

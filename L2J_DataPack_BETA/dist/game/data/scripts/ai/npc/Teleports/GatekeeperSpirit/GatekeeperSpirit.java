@@ -67,7 +67,7 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		startQuestTimer(Integer.toString(npc.getNpcId()), 10000, npc, killer);
+		startQuestTimer(Integer.toString(npc.getId()), 10000, npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}
 	

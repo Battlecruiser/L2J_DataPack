@@ -54,7 +54,7 @@ public class Ranku extends AbstractNpcAI
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equalsIgnoreCase("checkup") && (npc.getNpcId() == RANKU) && !npc.isDead())
+		if (event.equalsIgnoreCase("checkup") && (npc.getId() == RANKU) && !npc.isDead())
 		{
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
@@ -73,13 +73,13 @@ public class Ranku extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		if (npc.getNpcId() == RANKU)
+		if (npc.getId() == RANKU)
 		{
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && !MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME));
+					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getId(), NpcStringId.DONT_KILL_ME_PLEASE_SOMETHINGS_STRANGLING_ME));
 					startQuestTimer("checkup", 1000, npc, null);
 					MY_TRACKING_SET.add(minion.getObjectId());
 				}
@@ -91,7 +91,7 @@ public class Ranku extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == MINION)
+		if (npc.getId() == MINION)
 		{
 			if (MY_TRACKING_SET.contains(npc.getObjectId()))
 			{
@@ -105,7 +105,7 @@ public class Ranku extends AbstractNpcAI
 				minion2.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
 			}
 		}
-		else if (npc.getNpcId() == RANKU)
+		else if (npc.getId() == RANKU)
 		{
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{

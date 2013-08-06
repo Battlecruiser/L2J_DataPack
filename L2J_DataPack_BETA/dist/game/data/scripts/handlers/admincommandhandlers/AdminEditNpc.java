@@ -324,7 +324,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				if (target instanceof L2Npc)
 				{
 					L2Npc npc = (L2Npc) target;
-					_log.info("('', 1, " + npc.getNpcId() + ", " + npc.getX() + ", " + npc.getY() + ", " + npc.getZ() + ", 0, 0, " + npc.getHeading() + ", 60, 0, 0),");
+					_log.info("('', 1, " + npc.getId() + ", " + npc.getX() + ", " + npc.getY() + ", " + npc.getZ() + ", 0, 0, " + npc.getHeading() + ", 60, 0, 0),");
 				}
 				break;
 			}
@@ -340,8 +340,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 			NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-" + category.toLowerCase() + ".htm");
 			
-			html.replace("%npcId%", String.valueOf(npc.getNpcId()));
-			html.replace("%title_npc_id%", String.valueOf(npc.getNpcId()));
+			html.replace("%npcId%", String.valueOf(npc.getId()));
+			html.replace("%title_npc_id%", String.valueOf(npc.getId()));
 			html.replace("%title_npc_name%", String.valueOf(npc.getName()));
 			switch (category.toLowerCase())
 			{
@@ -460,7 +460,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		StatsSet newNpcData = new StatsSet();
 		try
 		{
-			newNpcData.set("npcId", npc.getNpcId());
+			newNpcData.set("npcId", npc.getId());
 			switch (statToSet)
 			{
 				case "serverSideName":
@@ -929,7 +929,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			activeChar.sendMessage("Could not set npc property. npc_id:" + npc.getNpcId() + " stat:" + statToSet + " value:" + value);
+			activeChar.sendMessage("Could not set npc property. npc_id:" + npc.getId() + " stat:" + statToSet + " value:" + value);
 		}
 	}
 	
@@ -940,7 +940,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-skills.htm");
 		
-		html.replace("%npcId%", String.valueOf(npc.getNpcId()));
+		html.replace("%npcId%", String.valueOf(npc.getId()));
 		html.replace("%title_npc_name%", String.valueOf(npc.getName()));
 		html.replace("%page%", String.valueOf(page + 1));
 		
@@ -958,7 +958,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			sb.append("<table width=280 cellspacing=0><tr>");
 			for (int i = 0; i < pages; i++)
 			{
-				sb.append("<td align=center><button action=\"bypass admin_show_skill_list_npc " + npc.getNpcId() + " " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+				sb.append("<td align=center><button action=\"bypass admin_show_skill_list_npc " + npc.getId() + " " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 			}
 			sb.append("</tr></table>");
 			html.replace("%pages%", sb.toString());
@@ -1001,7 +1001,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			sb.append(skill.getLevel());
 			sb.append("</td>");
 			sb.append("<td fixwidth=45>");
-			sb.append("<button action=\"bypass admin_del_skill_npc " + npc.getNpcId() + " " + skill.getId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
+			sb.append("<button action=\"bypass admin_del_skill_npc " + npc.getId() + " " + skill.getId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
 			sb.append("</td></tr></table>");
 			
 			i++;
@@ -1021,18 +1021,18 @@ public class AdminEditNpc implements IAdminCommandHandler
 			String table_name = npc.isCustom() ? "custom_npcskills" : "npcskills";
 			try (PreparedStatement ps = con.prepareStatement("INSERT INTO `" + table_name + "`(`npcid`, `skillid`, `level`) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE `level` = ?"))
 			{
-				ps.setInt(1, npc.getNpcId());
+				ps.setInt(1, npc.getId());
 				ps.setInt(2, skill.getId());
 				ps.setInt(3, skill.getLevel());
 				ps.setInt(4, skill.getLevel());
 				ps.executeUpdate();
 			}
-			NpcTable.getInstance().reloadNpc(npc.getNpcId(), false, false, false, true, false, false);
+			NpcTable.getInstance().reloadNpc(npc.getId(), false, false, false, true, false, false);
 			showNpcSkillList(activeChar, npc, 0);
 		}
 		catch (SQLException e)
 		{
-			String message = "Could not store new skill to database. npc_id: " + npc.getNpcId() + " skill_id: " + skill.getId() + " skill_lvl:" + skill.getLevel();
+			String message = "Could not store new skill to database. npc_id: " + npc.getId() + " skill_id: " + skill.getId() + " skill_lvl:" + skill.getLevel();
 			activeChar.sendMessage(message);
 			_log.log(Level.WARNING, message, e);
 		}
@@ -1045,16 +1045,16 @@ public class AdminEditNpc implements IAdminCommandHandler
 			String table_name = npc.isCustom() ? "custom_npcskills" : "npcskills";
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM `" + table_name + "` WHERE `npcid` = ? AND `skillid` = ?"))
 			{
-				ps.setInt(1, npc.getNpcId());
+				ps.setInt(1, npc.getId());
 				ps.setInt(2, skillId);
 				ps.executeUpdate();
 			}
-			NpcTable.getInstance().reloadNpc(npc.getNpcId(), false, false, false, true, false, false);
+			NpcTable.getInstance().reloadNpc(npc.getId(), false, false, false, true, false, false);
 			showNpcSkillList(activeChar, npc, page);
 		}
 		catch (SQLException e)
 		{
-			String message = "Could not delete skill from database. npc_id: " + npc.getNpcId() + " skill_id: " + skillId;
+			String message = "Could not delete skill from database. npc_id: " + npc.getId() + " skill_id: " + skillId;
 			activeChar.sendMessage(message);
 			_log.log(Level.WARNING, message, e);
 		}
@@ -1067,7 +1067,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-drops.htm");
 		
-		html.replace("%npcId%", String.valueOf(npc.getNpcId()));
+		html.replace("%npcId%", String.valueOf(npc.getId()));
 		html.replace("%title_npc_name%", String.valueOf(npc.getName()));
 		html.replace("%page%", String.valueOf(page + 1));
 		
@@ -1091,7 +1091,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			sb.append("<table width=280 cellspacing=0><tr>");
 			for (int i = 0; i < pages; i++)
 			{
-				sb.append("<td align=center><button action=\"bypass admin_show_drop_list " + npc.getNpcId() + " " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+				sb.append("<td align=center><button action=\"bypass admin_show_drop_list " + npc.getId() + " " + i + "\" value=\"" + (i + 1) + "\" width=30 height=22 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 			}
 			sb.append("</tr></table>");
 			html.replace("%pages%", sb.toString());
@@ -1143,7 +1143,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				sb.append(dropData.getChance());
 				sb.append("</td>");
 				sb.append("<td fixwidth=45>");
-				sb.append("<button action=\"bypass admin_del_drop " + npc.getNpcId() + " " + dropCategory.getCategoryType() + " " + item.getItemId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
+				sb.append("<button action=\"bypass admin_del_drop " + npc.getId() + " " + dropCategory.getCategoryType() + " " + item.getItemId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
 				sb.append("</td></tr></table>");
 				
 				i++;
@@ -1169,7 +1169,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			String table_name = npc.isCustom() ? "custom_droplist" : "droplist";
 			try (PreparedStatement ps = con.prepareStatement("INSERT INTO `" + table_name + "`(`mobId`, `itemId`, `min`, `max`, `category`, `chance`) VALUES(?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE `min` = ?, `max` = ?, `chance` = ?"))
 			{
-				ps.setInt(1, npc.getNpcId());
+				ps.setInt(1, npc.getId());
 				ps.setInt(2, itemId);
 				ps.setInt(3, min);
 				ps.setInt(4, max);
@@ -1180,12 +1180,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				ps.setInt(9, chance);
 				ps.executeUpdate();
 			}
-			NpcTable.getInstance().reloadNpc(npc.getNpcId(), false, false, false, false, true, false);
+			NpcTable.getInstance().reloadNpc(npc.getId(), false, false, false, false, true, false);
 			showNpcDropList(activeChar, npc, 0);
 		}
 		catch (SQLException e)
 		{
-			String message = "Could not store new drop to database. npc_id: " + npc.getNpcId() + " item_id: " + itemId;
+			String message = "Could not store new drop to database. npc_id: " + npc.getId() + " item_id: " + itemId;
 			activeChar.sendMessage(message);
 			_log.log(Level.WARNING, message, e);
 		}
@@ -1198,17 +1198,17 @@ public class AdminEditNpc implements IAdminCommandHandler
 			String table_name = npc.isCustom() ? "custom_droplist" : "droplist";
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM `" + table_name + "` WHERE `mobId` = ? AND `category` = ? AND `itemId` = ?"))
 			{
-				ps.setInt(1, npc.getNpcId());
+				ps.setInt(1, npc.getId());
 				ps.setInt(2, category);
 				ps.setInt(3, itemId);
 				ps.executeUpdate();
 			}
-			NpcTable.getInstance().reloadNpc(npc.getNpcId(), false, false, false, false, true, false);
+			NpcTable.getInstance().reloadNpc(npc.getId(), false, false, false, false, true, false);
 			showNpcDropList(activeChar, npc, page);
 		}
 		catch (SQLException e)
 		{
-			String message = "Could not delete drop from database. npc_id: " + npc.getNpcId() + " category: " + category + " item_id:" + itemId;
+			String message = "Could not delete drop from database. npc_id: " + npc.getId() + " category: " + category + " item_id:" + itemId;
 			activeChar.sendMessage(message);
 			_log.log(Level.WARNING, message, e);
 		}

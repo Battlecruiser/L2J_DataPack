@@ -95,7 +95,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30336 and id != State.STARTED : return htmltext
 
@@ -128,7 +128,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if st.getQuestItemsCount(ANATOMY_DIAGRAM_ID) :
     n = self.getRandom(100)
     if npcId == 20026 :

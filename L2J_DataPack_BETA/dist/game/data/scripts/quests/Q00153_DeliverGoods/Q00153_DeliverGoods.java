@@ -60,7 +60,7 @@ public class Q00153_DeliverGoods extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && (npc.getNpcId() == ARNOLD_ID))
+		if ((st != null) && (npc.getId() == ARNOLD_ID))
 		{
 			if (event.equalsIgnoreCase("30041-02.html"))
 			{
@@ -81,7 +81,7 @@ public class Q00153_DeliverGoods extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == ARNOLD_ID)
+			if (npc.getId() == ARNOLD_ID)
 			{
 				switch (st.getState())
 				{
@@ -114,7 +114,7 @@ public class Q00153_DeliverGoods extends Quest
 			}
 			else
 			{
-				if (npc.getNpcId() == JACKSON_ID)
+				if (npc.getId() == JACKSON_ID)
 				{
 					if (st.hasQuestItems(HEAVY_WOOD_BOX_ID))
 					{
@@ -127,7 +127,7 @@ public class Q00153_DeliverGoods extends Quest
 						htmltext = "30002-02.html";
 					}
 				}
-				else if (npc.getNpcId() == SILVIA_ID)
+				else if (npc.getId() == SILVIA_ID)
 				{
 					if (st.hasQuestItems(CLOTH_BUNDLE_ID))
 					{
@@ -141,7 +141,7 @@ public class Q00153_DeliverGoods extends Quest
 						htmltext = "30003-02.html";
 					}
 				}
-				else if (npc.getNpcId() == RANT_ID)
+				else if (npc.getId() == RANT_ID)
 				{
 					if (st.hasQuestItems(CLAY_POT_ID))
 					{

@@ -147,7 +147,7 @@ class Quest (JQuest) :
       st = self.newQuestState(player)
    htmltext = ""
    Ex = qs.getInt("Ex")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    step=st.getInt("step")
    onlyone=st.getInt("onlyone")
    level=player.getLevel()
@@ -223,7 +223,7 @@ class Quest (JQuest) :
         elif step==3 :
           htmltext = htmlfiles[2]
    elif st.getState() == State.COMPLETED and npcTyp == 0:
-     htmltext = str(npc.getNpcId())+"-04.htm"
+     htmltext = str(npc.getId())+"-04.htm"
    if htmltext == None or htmltext == "":
      npc.showChatWindow(player)
    return htmltext

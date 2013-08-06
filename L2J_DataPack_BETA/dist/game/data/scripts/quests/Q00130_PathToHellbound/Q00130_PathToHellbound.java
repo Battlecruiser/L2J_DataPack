@@ -137,7 +137,7 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == CASIAN)
+				if (npc.getId() == CASIAN)
 				{
 					if (!HellboundManager.getInstance().isLocked())
 					{
@@ -152,7 +152,7 @@ public class Q00130_PathToHellbound extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == CASIAN)
+				if (npc.getId() == CASIAN)
 				{
 					switch (st.getCond())
 					{
@@ -173,7 +173,7 @@ public class Q00130_PathToHellbound extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == GALATE)
+				else if (npc.getId() == GALATE)
 				{
 					switch (st.getCond())
 					{

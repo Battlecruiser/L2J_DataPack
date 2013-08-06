@@ -98,10 +98,10 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getId())))
 		{
 			st.takeItems(GALLINTS_OAK_WAND, 1);
-			st.giveItems(MONSTERS.get(npc.getNpcId()), 1);
+			st.giveItems(MONSTERS.get(npc.getId()), 1);
 			if (st.hasQuestItems(SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 			{
 				st.setCond(3, true);
@@ -121,7 +121,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case GALLINT:
 				{
@@ -189,7 +189,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 							st.setCond(2, true);
 						}
 					}
-					htmltext = npc.getNpcId() + "-01.html";
+					htmltext = npc.getId() + "-01.html";
 					break;
 				}
 			}

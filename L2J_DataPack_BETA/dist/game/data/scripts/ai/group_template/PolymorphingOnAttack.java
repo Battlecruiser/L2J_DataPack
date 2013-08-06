@@ -90,7 +90,7 @@ public class PolymorphingOnAttack extends AbstractNpcAI
 	{
 		if (npc.isVisible() && !npc.isDead())
 		{
-			final List<Integer> tmp = MOBSPAWNS.get(npc.getNpcId());
+			final List<Integer> tmp = MOBSPAWNS.get(npc.getId());
 			if (tmp != null)
 			{
 				if ((npc.getCurrentHp() <= ((npc.getMaxHp() * tmp.get(1)) / 100.0)) && (getRandom(100) < tmp.get(2)))

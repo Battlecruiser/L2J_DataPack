@@ -139,7 +139,7 @@ public class Q00042_HelpTheUncle extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WATERS:
 				switch (st.getState())

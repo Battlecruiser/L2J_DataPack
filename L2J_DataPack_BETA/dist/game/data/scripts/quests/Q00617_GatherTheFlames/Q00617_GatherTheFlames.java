@@ -160,7 +160,7 @@ public class Q00617_GatherTheFlames extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(TORCH, 2);
 		}
@@ -182,7 +182,7 @@ public class Q00617_GatherTheFlames extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ROONEY:
 				if (st.isStarted())

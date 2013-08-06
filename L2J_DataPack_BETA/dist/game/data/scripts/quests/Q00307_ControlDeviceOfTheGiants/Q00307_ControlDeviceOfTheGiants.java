@@ -125,7 +125,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GORGOLOS:
 			{

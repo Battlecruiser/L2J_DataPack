@@ -32,7 +32,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if id == State.CREATED :
      st.set("cond","0")
@@ -65,7 +65,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 27020 :
      if st.getQuestItemsCount(VAROOL_FOULCLAWS_FANG) == 0 and self.getRandom(10)>7:
        st.giveItems(VAROOL_FOULCLAWS_FANG,1)

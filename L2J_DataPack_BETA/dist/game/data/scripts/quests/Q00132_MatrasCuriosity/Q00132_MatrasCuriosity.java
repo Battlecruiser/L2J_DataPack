@@ -95,7 +95,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = null;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DEMON_PRINCE:
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");

@@ -524,7 +524,7 @@ public class Stage1 extends Quest
 		spawnState((SOD1World) world);
 		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
 		{
-			if (Util.contains(ATTACKABLE_DOORS, door.getDoorId()))
+			if (Util.contains(ATTACKABLE_DOORS, door.getId()))
 			{
 				door.setIsAttackableDoor(true);
 			}
@@ -773,7 +773,7 @@ public class Stage1 extends Quest
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc.getNpcId() == TIAT_GUARD)
+		if (npc.getId() == TIAT_GUARD)
 		{
 			startQuestTimer("GuardThink", 2500 + getRandom(-200, 200), npc, null, true);
 		}
@@ -820,17 +820,17 @@ public class Stage1 extends Quest
 		if (tmpworld instanceof SOD1World)
 		{
 			SOD1World world = (SOD1World) tmpworld;
-			if ((world.getStatus() == 2) && (npc.getNpcId() == OBELISK))
+			if ((world.getStatus() == 2) && (npc.getId() == OBELISK))
 			{
 				world.setStatus(4);
 				spawnFlaggedNPCs(world, 3);
 			}
-			else if ((world.getStatus() == 3) && (npc.getNpcId() == OBELISK))
+			else if ((world.getStatus() == 3) && (npc.getId() == OBELISK))
 			{
 				world.setStatus(4);
 				spawnFlaggedNPCs(world, 2);
 			}
-			else if ((world.getStatus() <= 8) && (npc.getNpcId() == TIAT))
+			else if ((world.getStatus() <= 8) && (npc.getId() == TIAT))
 			{
 				if (npc.getCurrentHp() < (npc.getMaxHp() / 2))
 				{
@@ -917,7 +917,7 @@ public class Stage1 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if (npc.getNpcId() == SPAWN_DEVICE)
+		if (npc.getId() == SPAWN_DEVICE)
 		{
 			cancelQuestTimer("Spawn", npc, null);
 			return "";
@@ -940,18 +940,18 @@ public class Stage1 extends Quest
 					world.incStatus();
 				}
 			}
-			else if ((world.getStatus() == 4) && (npc.getNpcId() == OBELISK))
+			else if ((world.getStatus() == 4) && (npc.getId() == OBELISK))
 			{
 				spawnState(world);
 			}
-			else if ((world.getStatus() == 5) && (npc.getNpcId() == POWERFUL_DEVICE))
+			else if ((world.getStatus() == 5) && (npc.getId() == POWERFUL_DEVICE))
 			{
 				if (checkKillProgress(npc, world))
 				{
 					spawnState(world);
 				}
 			}
-			else if ((world.getStatus() == 6) && (npc.getNpcId() == THRONE_POWERFUL_DEVICE))
+			else if ((world.getStatus() == 6) && (npc.getId() == THRONE_POWERFUL_DEVICE))
 			{
 				if (checkKillProgress(npc, world))
 				{
@@ -960,7 +960,7 @@ public class Stage1 extends Quest
 			}
 			else if (world.getStatus() >= 7)
 			{
-				if (npc.getNpcId() == TIAT)
+				if (npc.getId() == TIAT)
 				{
 					world.incStatus();
 					for (int objId : world.getAllowed())
@@ -978,7 +978,7 @@ public class Stage1 extends Quest
 					
 					GraciaSeedsManager.getInstance().increaseSoDTiatKilled();
 				}
-				else if (npc.getNpcId() == TIAT_GUARD)
+				else if (npc.getId() == TIAT_GUARD)
 				{
 					addMinion(((L2MonsterInstance) npc).getLeader(), TIAT_GUARD);
 				}
@@ -990,7 +990,7 @@ public class Stage1 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		QuestState st = player.getQuestState(qn);
 		if (st == null)
 		{
@@ -1025,7 +1025,7 @@ public class Stage1 extends Quest
 			switch (action)
 			{
 				case TRAP_TRIGGERED:
-					if (trap.getNpcId() == 18771)
+					if (trap.getId() == 18771)
 					{
 						for (int npcId : TRAP_18771_NPCS)
 						{

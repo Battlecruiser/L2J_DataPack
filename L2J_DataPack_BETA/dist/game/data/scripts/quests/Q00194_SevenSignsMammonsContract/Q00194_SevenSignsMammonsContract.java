@@ -361,7 +361,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == SIR_GUSTAV_ATHEBALDT)
+				if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
 				{
 					st = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "30760-01.htm" : "30760-05.html";
@@ -370,7 +370,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case SIR_GUSTAV_ATHEBALDT:
 					{

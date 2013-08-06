@@ -86,7 +86,7 @@ public class Q00172_NewHorizons extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ZENYA:
 				switch (st.getState())

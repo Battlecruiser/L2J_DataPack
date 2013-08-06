@@ -363,7 +363,7 @@ class Quest (JQuest):
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     cond = st.getInt("cond")
     if id == State.COMPLETED:
@@ -485,7 +485,7 @@ class Quest (JQuest):
     if not st : return 
    
     id   = st.getState()
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     cond = st.getInt("cond")
   #incipios drop
     skins = st.getQuestItemsCount(TD_BCK_SKN)
@@ -545,7 +545,7 @@ class Quest (JQuest):
                else:
                   st.playSound("ItemSound.quest_itemget")   
                st.giveItems(eggs,numItems)
-               npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getNpcId(),"If the eggs get taken, we're dead!"))
+               npc.broadcastPacket(NpcSay(npc.getObjectId(),0,npc.getId(),"If the eggs get taken, we're dead!"))
   #fairy stone destruction    
     elif id == State.STARTED and cond < 5 and st.getQuestItemsCount(FRY_STN_DLX) == 1 :
       if npcId in range(20589,20600)+[20719]:

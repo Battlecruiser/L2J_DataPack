@@ -133,7 +133,7 @@ public class Q00509_AClansFame extends Quest
 			int raid = st.getInt("raid");
 			if (REWARD_POINTS.containsKey(raid))
 			{
-				if ((npc.getNpcId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
+				if ((npc.getId() == REWARD_POINTS.get(raid).get(0)) && !st.hasQuestItems(REWARD_POINTS.get(raid).get(1)))
 				{
 					st.rewardItems(REWARD_POINTS.get(raid).get(1), 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

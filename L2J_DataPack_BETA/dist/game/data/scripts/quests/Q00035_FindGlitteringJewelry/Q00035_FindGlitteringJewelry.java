@@ -137,7 +137,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ELLIE:
 				switch (st.getState())

@@ -106,7 +106,7 @@ public class Q00124_MeetingTheElroki extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MARQUEZ:
 				switch (st.getState())

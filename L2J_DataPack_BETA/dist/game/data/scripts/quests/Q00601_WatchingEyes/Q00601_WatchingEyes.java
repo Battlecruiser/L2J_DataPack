@@ -123,7 +123,7 @@ public class Q00601_WatchingEyes extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		
-		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			st.giveItems(PROOF_OF_AVENGER, 1);
 			if (st.getQuestItemsCount(PROOF_OF_AVENGER) == 100)

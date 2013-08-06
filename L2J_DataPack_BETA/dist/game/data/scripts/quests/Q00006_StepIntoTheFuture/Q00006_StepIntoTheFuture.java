@@ -99,7 +99,7 @@ public class Q00006_StepIntoTheFuture extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ROXXY:
 				switch (st.getState())

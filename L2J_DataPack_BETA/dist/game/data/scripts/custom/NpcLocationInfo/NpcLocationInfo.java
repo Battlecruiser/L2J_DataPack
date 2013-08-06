@@ -303,7 +303,7 @@ public class NpcLocationInfo extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (Util.contains(NPC, npcId))
 		{

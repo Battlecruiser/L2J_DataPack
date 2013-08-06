@@ -254,7 +254,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId == WESLEY :
       if id == State.CREATED :
@@ -273,7 +273,7 @@ class Quest (JQuest) :
      partyMember = self.getRandomPartyMemberState(player, State.STARTED)
      if not partyMember : return
      st = partyMember.getQuestState(qn)
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      # The quest rates increase the rates of dropping "something", but only one
      # entry will be chosen to drop per kill.  In order to not overshadow entries
      # that appear later in the list, first check with the sum of all entries to

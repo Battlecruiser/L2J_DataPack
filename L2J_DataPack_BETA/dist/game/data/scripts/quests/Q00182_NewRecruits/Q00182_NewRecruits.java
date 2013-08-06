@@ -53,14 +53,14 @@ public class Q00182_NewRecruits extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KEKROPUS)
+		if (npc.getId() == KEKROPUS)
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.startQuest();
 			}
 		}
-		else if (npc.getNpcId() == MENACING_MACHINE)
+		else if (npc.getId() == MENACING_MACHINE)
 		{
 			if (event.equalsIgnoreCase("32258-04.html"))
 			{
@@ -86,7 +86,7 @@ public class Q00182_NewRecruits extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (npcId == KEKROPUS)
 		{
 			switch (st.getState())

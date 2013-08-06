@@ -137,9 +137,9 @@ public class Q00331_ArrowOfVengeance extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+			if (getRandom(100) < MONSTERS.get(npc.getId()))
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case 20145:
 					{

@@ -191,7 +191,7 @@ public class Baium extends AbstractNpcAI
 			}
 			case "baium_wakeup":
 			{
-				if ((npc != null) && (npc.getNpcId() == LIVE_BAIUM))
+				if ((npc != null) && (npc.getId() == LIVE_BAIUM))
 				{
 					npc.broadcastSocialAction(1);
 					npc.broadcastPacket(new Earthquake(npc.getX(), npc.getY(), npc.getZ(), 40, 5));
@@ -237,7 +237,7 @@ public class Baium extends AbstractNpcAI
 			}
 			case "baium_despawn":
 			{
-				if ((npc != null) && (npc.getNpcId() == LIVE_BAIUM))
+				if ((npc != null) && (npc.getId() == LIVE_BAIUM))
 				{
 					// just in case the zone reference has been lost (somehow...), restore the reference
 					if (_Zone == null)
@@ -296,7 +296,7 @@ public class Baium extends AbstractNpcAI
 			return "<html><body>Angelic Vortex:<br>You may not enter while admin disabled this zone</body></html>";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case STONE_BAIUM:
 			{

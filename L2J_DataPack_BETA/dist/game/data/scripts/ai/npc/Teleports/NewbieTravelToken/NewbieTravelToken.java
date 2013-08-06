@@ -67,7 +67,7 @@ public class NewbieTravelToken extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.getLevel() >= 20 ? "cant-travel.htm" : npc.getNpcId() + ".htm";
+		return player.getLevel() >= 20 ? "cant-travel.htm" : npc.getId() + ".htm";
 	}
 	
 	private NewbieTravelToken(String name, String descr)

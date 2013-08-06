@@ -70,7 +70,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != KARUKIA and id != State.STARTED : return htmltext
 
@@ -153,7 +153,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    cond = st.getInt("cond") 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    xx = int(player.getX())
    yy = int(player.getY())
    zz = int(player.getZ())

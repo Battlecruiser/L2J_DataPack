@@ -148,7 +148,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30524 and id != State.STARTED : return htmltext
 
@@ -283,7 +283,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20777 :
         if st.getInt("cond") and st.getQuestItemsCount(BEAR_PIC) == 1 and st.getQuestItemsCount(HONEY_JAR) < 5 :
           if st.getInt("id") > 20 :

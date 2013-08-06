@@ -72,7 +72,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KEUCEREUS:
 				switch (st.getState())

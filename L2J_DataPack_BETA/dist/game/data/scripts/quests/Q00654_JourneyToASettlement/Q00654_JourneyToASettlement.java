@@ -110,7 +110,7 @@ public class Q00654_JourneyToASettlement extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		float chance = (MOBS_SKIN.get(npcId) * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{

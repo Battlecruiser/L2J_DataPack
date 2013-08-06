@@ -34,7 +34,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if id == State.CREATED :
      st.set("cond","0")
@@ -69,7 +69,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") == 1:
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      count=st.getQuestItemsCount(BAT_FANG)
      chance = self.getRandom(10)
      for i in DROP[npcId]:

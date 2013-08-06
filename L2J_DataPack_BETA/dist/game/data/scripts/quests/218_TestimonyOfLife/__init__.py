@@ -145,7 +145,7 @@ class Quest (JQuest):
 		htmltext = Quest.getNoQuestMsg(player)
 		st = player.getQuestState(qn)
 		if not st: return htmltext
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		id = st.getState()
 		if npcId != 30460 and id!=State.STARTED: return htmltext
 		if npcId == 30460:
@@ -307,7 +307,7 @@ class Quest (JQuest):
 		st = player.getQuestState(qn)
 		if not st : return
 		if st.getState() != State.STARTED : return
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		if npcId == 20550:
 			if st.hasQuestItems(PUSHKINS_LIST_ID) and st.getQuestItemsCount(PURE_MITHRIL_ORE_ID)<10:
 				if self.getRandom(100)<50:

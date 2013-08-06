@@ -98,7 +98,7 @@ public class CabaleBuffer extends AbstractNpcAI
 			if ((_npc != null) && !_npc.isDecayed())
 			{
 				NpcStringId[] messages = ORATOR_MSG;
-				if (_npc.getNpcId() == SevenSigns.PREACHER_NPC_ID)
+				if (_npc.getId() == SevenSigns.PREACHER_NPC_ID)
 				{
 					messages = PREACHER_MSG;
 				}
@@ -150,7 +150,7 @@ public class CabaleBuffer extends AbstractNpcAI
 				
 				final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
 				
-				if ((playerCabal == winningCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_npc.getNpcId() == SevenSigns.ORATOR_NPC_ID))
+				if ((playerCabal == winningCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_npc.getId() == SevenSigns.ORATOR_NPC_ID))
 				{
 					if (!player.isMageClass())
 					{
@@ -185,7 +185,7 @@ public class CabaleBuffer extends AbstractNpcAI
 						}
 					}
 				}
-				else if ((playerCabal == losingCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_npc.getNpcId() == SevenSigns.PREACHER_NPC_ID))
+				else if ((playerCabal == losingCabal) && (playerCabal != SevenSigns.CABAL_NULL) && (_npc.getId() == SevenSigns.PREACHER_NPC_ID))
 				{
 					if (!player.isMageClass())
 					{

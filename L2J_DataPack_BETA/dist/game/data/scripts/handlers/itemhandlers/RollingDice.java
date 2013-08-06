@@ -41,7 +41,7 @@ public class RollingDice implements IItemHandler
 		}
 		
 		L2PcInstance activeChar = playable.getActingPlayer();
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (activeChar.isInOlympiadMode())
 		{

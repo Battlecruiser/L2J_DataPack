@@ -152,12 +152,12 @@ public class VarkaKetra extends AbstractNpcAI
 	{
 		if (Util.checkIfInRange(1500, player, npc, false))
 		{
-			if (Util.contains(KETRA, npc.getNpcId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS))
+			if (Util.contains(KETRA, npc.getId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS))
 			{
 				decreaseAlliance(player, KETRA_MARKS);
 				exitQuests(player, KETRA_QUESTS);
 			}
-			else if (Util.contains(VARKA, npc.getNpcId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS))
+			else if (Util.contains(VARKA, npc.getId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS))
 			{
 				decreaseAlliance(player, VARKA_MARKS);
 				exitQuests(player, VARKA_QUESTS);
@@ -196,7 +196,7 @@ public class VarkaKetra extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((Util.contains(KETRA, npc.getNpcId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS)) || (Util.contains(VARKA, npc.getNpcId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS)))
+		if ((Util.contains(KETRA, npc.getId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS)) || (Util.contains(VARKA, npc.getId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS)))
 		{
 			if (((L2Attackable) npc).containsTarget(player))
 			{

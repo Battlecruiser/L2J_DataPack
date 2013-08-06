@@ -93,7 +93,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 			return htmltext;
 		}
 		
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:

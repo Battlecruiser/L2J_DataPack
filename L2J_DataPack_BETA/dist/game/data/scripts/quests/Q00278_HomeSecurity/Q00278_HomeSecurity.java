@@ -144,7 +144,7 @@ public class Q00278_HomeSecurity extends Quest
 		int chance, i1;
 		if (st.isCond(1))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case 18907: // Beast Devourer
 				case 18906: // Farm Bandit

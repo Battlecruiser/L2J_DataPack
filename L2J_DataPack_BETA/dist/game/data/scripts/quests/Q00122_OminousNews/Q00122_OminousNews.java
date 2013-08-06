@@ -75,7 +75,7 @@ public class Q00122_OminousNews extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MOIRA:
 				switch (st.getState())

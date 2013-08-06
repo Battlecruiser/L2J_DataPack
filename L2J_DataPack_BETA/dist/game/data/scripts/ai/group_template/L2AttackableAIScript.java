@@ -180,7 +180,7 @@ public final class L2AttackableAIScript extends Quest
 			final L2MonsterInstance mob = (L2MonsterInstance) npc;
 			if ((mob.getLeader() != null) && mob.getLeader().hasMinions())
 			{
-				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(npc.getNpcId()) ? Config.MINIONS_RESPAWN_TIME.get(mob.getNpcId()) * 1000 : -1;
+				final int respawnTime = Config.MINIONS_RESPAWN_TIME.containsKey(npc.getId()) ? Config.MINIONS_RESPAWN_TIME.get(mob.getId()) * 1000 : -1;
 				mob.getLeader().getMinionList().onMinionDie(mob, respawnTime);
 			}
 			
@@ -205,12 +205,12 @@ public final class L2AttackableAIScript extends Quest
 				{
 					if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance." + t.getType() + "Instance")))
 					{
-						ai.addEventId(Quest.QuestEventType.ON_ATTACK, t.getNpcId());
-						ai.addEventId(Quest.QuestEventType.ON_KILL, t.getNpcId());
-						ai.addEventId(Quest.QuestEventType.ON_SPAWN, t.getNpcId());
-						ai.addEventId(Quest.QuestEventType.ON_SKILL_SEE, t.getNpcId());
-						ai.addEventId(Quest.QuestEventType.ON_FACTION_CALL, t.getNpcId());
-						ai.addEventId(Quest.QuestEventType.ON_AGGRO_RANGE_ENTER, t.getNpcId());
+						ai.addEventId(Quest.QuestEventType.ON_ATTACK, t.getId());
+						ai.addEventId(Quest.QuestEventType.ON_KILL, t.getId());
+						ai.addEventId(Quest.QuestEventType.ON_SPAWN, t.getId());
+						ai.addEventId(Quest.QuestEventType.ON_SKILL_SEE, t.getId());
+						ai.addEventId(Quest.QuestEventType.ON_FACTION_CALL, t.getId());
+						ai.addEventId(Quest.QuestEventType.ON_AGGRO_RANGE_ENTER, t.getId());
 					}
 				}
 				catch (ClassNotFoundException ex)

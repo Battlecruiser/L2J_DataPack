@@ -93,7 +93,7 @@ class Quest (JQuest) :
 		st = player.getQuestState(qn)
 		if not st : return htmltext
 
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		cond = st.getInt("cond")
 
 		if npcId == CHAIREN:
@@ -115,7 +115,7 @@ class Quest (JQuest) :
 		if not st : return
 		if st.getState() != State.STARTED : return
 
-		npcId = npc.getNpcId()
+		npcId = npc.getId()
 		cond = st.getInt("cond")
 		if cond == 1 and npcId in MOBS :
 			rand = self.getRandom(100)

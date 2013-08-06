@@ -55,11 +55,11 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30022 and id != State.STARTED : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId == 30022 and st.getInt("cond")==0 :
       if st.getQuestItemsCount(MARK_OF_FAITH) == 0 :
@@ -156,7 +156,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20026 :
         st.set("id","0")
         if st.getInt("cond") and st.getQuestItemsCount(PENDANT_OF_MOTHER) == 0 :

@@ -224,7 +224,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	private String checkFortCondition(L2PcInstance player, L2Npc npc, boolean isEnter)
 	{
 		Fort fortress = npc.getFort();
-		FortDungeon dungeon = _fortDungeons.get(npc.getNpcId());
+		FortDungeon dungeon = _fortDungeons.get(npc.getId());
 		if ((player == null) || (fortress == null) || (dungeon == null))
 		{
 			return "FortressWarden-01.htm";
@@ -330,7 +330,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[0] = 53322;
 			tele[1] = 246380;
 			tele[2] = -6580;
-			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getNpcId()), checkFortCondition(player, npc, true));
+			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
@@ -385,7 +385,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		if (tmpworld instanceof FAUWorld)
 		{
 			FAUWorld world = (FAUWorld) tmpworld;
-			if (Util.contains(RAIDS3, npc.getNpcId()))
+			if (Util.contains(RAIDS3, npc.getId()))
 			{
 				if (player.getParty() != null)
 				{
@@ -424,7 +424,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		}
 		else if (st != null)
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			int cond = 0;
 			if (st.getState() == State.CREATED)
 			{

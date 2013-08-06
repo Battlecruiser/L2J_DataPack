@@ -78,7 +78,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if st :
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      cond = st.getInt("cond")
      if cond == 0 :

@@ -217,10 +217,10 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			float chance = (MUCROKIAN.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			float chance = (MUCROKIAN.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				if (npc.getNpcId() == AWAKENED_MUCROKIAN)
+				if (npc.getId() == AWAKENED_MUCROKIAN)
 				{
 					st.giveItems(AWAKENED_MUCROKIAN_HIDE, 1);
 				}

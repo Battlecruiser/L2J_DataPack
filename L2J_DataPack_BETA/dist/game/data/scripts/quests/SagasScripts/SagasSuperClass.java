@@ -73,7 +73,7 @@ public class SagasSuperClass extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			if (getQuestIntId() == 68)
+			if (getId() == 68)
 			{
 				for (int q = 0; q < 2; q++)
 				{
@@ -83,7 +83,7 @@ public class SagasSuperClass extends Quest
 					}
 				}
 			}
-			else if (player.getClassId().getId() == QuestClass[getQuestIntId() - 67][0])
+			else if (player.getClassId().getId() == QuestClass[getId() - 67][0])
 			{
 				return st;
 			}
@@ -444,7 +444,7 @@ public class SagasSuperClass extends Quest
 		{
 			int cond = st2.getCond();
 			QuestState st = player.getQuestState(getName());
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			if ((npcId == Mob[2]) && (st == st2) && (cond == 17))
 			{
 				int quest0 = st.getInt("Quest0") + 1;
@@ -483,7 +483,7 @@ public class SagasSuperClass extends Quest
 	{
 		String htmltext = "";
 		QuestState st = player.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (st != null)
 		{
 			if (npcId == NPC[4])
@@ -553,7 +553,7 @@ public class SagasSuperClass extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		QuestState st = player.getQuestState(getName());
 		for (int Archon_Minion = 21646; Archon_Minion < 21652; Archon_Minion++)
 		{
@@ -747,7 +747,7 @@ public class SagasSuperClass extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			if ((npcId == NPC[0]) && st.isCompleted())
 			{
 				htmltext = getAlreadyCompletedMsg(player);
@@ -1030,7 +1030,7 @@ public class SagasSuperClass extends Quest
 	
 	private static void autoChat(L2Npc npc, String text)
 	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text));
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), text));
 	}
 	
 	private static void cast(L2Npc npc, L2Character target, int skillId, int level)

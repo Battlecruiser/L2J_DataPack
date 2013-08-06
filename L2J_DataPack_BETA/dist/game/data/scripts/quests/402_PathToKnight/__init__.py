@@ -143,7 +143,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30417 and id != State.STARTED : return htmltext
 
@@ -272,7 +272,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    if st.getInt("cond") :
-      item_required,item,max,chance=DROPLIST[npc.getNpcId()]
+      item_required,item,max,chance=DROPLIST[npc.getId()]
       if st.getQuestItemsCount(item_required) and st.getQuestItemsCount(item)<max and self.getRandom(100)<chance :
         st.giveItems(item,1)
         if st.getQuestItemsCount(item) == max :

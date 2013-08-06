@@ -155,7 +155,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    htmltext = Quest.getNoQuestMsg(player)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    # first talk to Wilbert
    if npcId == WILBERT and id == State.CREATED:
@@ -173,7 +173,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return
    if st.getState() != State.STARTED : return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId in MOBS:
      numItems, chance = divmod(DROP_CHANCE*Config.RATE_QUEST_DROP,100)
      if self.getRandom(100) < chance :

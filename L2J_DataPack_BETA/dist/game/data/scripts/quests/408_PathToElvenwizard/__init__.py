@@ -94,7 +94,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30414 and id != State.STARTED : return htmltext
 
@@ -182,7 +182,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20466 :
         st.set("id","0")
         if st.getInt("cond") != 0 and st.getQuestItemsCount(CHARM_OF_GRAIN) != 0 and st.getQuestItemsCount(RED_DOWN)<5 and self.getRandom(100)<70 :

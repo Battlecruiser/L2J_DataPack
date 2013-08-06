@@ -166,9 +166,9 @@ public class Q00463_IMustBeaGenius extends Quest
 		if (st.isCond(1))
 		{
 			boolean msg = false;
-			int number = MOBS.get(npc.getNpcId()).getCount();
+			int number = MOBS.get(npc.getId()).getCount();
 			
-			if (MOBS.get(npc.getNpcId()).getSpecialChance() == st.getInt("chance"))
+			if (MOBS.get(npc.getId()).getSpecialChance() == st.getInt("chance"))
 			{
 				number = getRandom(100) + 1;
 			}
@@ -186,7 +186,7 @@ public class Q00463_IMustBeaGenius extends Quest
 			
 			if (msg)
 			{
-				final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
+				final NpcSay ns = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2);
 				ns.addStringParameter(player.getName());
 				ns.addStringParameter(String.valueOf(number));
 				npc.broadcastPacket(ns);

@@ -193,7 +193,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case IDENTITY_CONFIRM_DEVICE:
 			{
@@ -238,7 +238,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == CLAUDIA_ATHEBALDT)
+				if (npc.getId() == CLAUDIA_ATHEBALDT)
 				{
 					st = player.getQuestState(Q00194_SevenSignsMammonsContract.class.getSimpleName());
 					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "31001-01.htm" : "31001-02.html";
@@ -247,14 +247,14 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == CLAUDIA_ATHEBALDT)
+				if (npc.getId() == CLAUDIA_ATHEBALDT)
 				{
 					if (st.isCond(1))
 					{
 						htmltext = "31001-07.html";
 					}
 				}
-				else if (npc.getNpcId() == JOHN)
+				else if (npc.getId() == JOHN)
 				{
 					switch (st.getCond())
 					{
@@ -270,7 +270,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == RAYMOND)
+				else if (npc.getId() == RAYMOND)
 				{
 					switch (st.getCond())
 					{
@@ -297,7 +297,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == LIGHT_OF_DAWN)
+				else if (npc.getId() == LIGHT_OF_DAWN)
 				{
 					if (st.isCond(3))
 					{
@@ -307,7 +307,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == PASSWORD_ENTRY_DEVICE)
+				else if (npc.getId() == PASSWORD_ENTRY_DEVICE)
 				{
 					if (st.isCond(3) && st.hasQuestItems(IDENTITY_CARD))
 					{
@@ -315,7 +315,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						player.teleToLocation(-78240, 205858, -7856);
 					}
 				}
-				else if (npc.getNpcId() == SHELF)
+				else if (npc.getId() == SHELF)
 				{
 					if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
 					{
@@ -323,14 +323,14 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 						htmltext = "32580-02.html";
 					}
 				}
-				else if (npc.getNpcId() == DARKNESS_OF_DAWN)
+				else if (npc.getId() == DARKNESS_OF_DAWN)
 				{
 					if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
 					{
 						htmltext = "32579-02.html";
 					}
 				}
-				else if (npc.getNpcId() == IASON_HEINE)
+				else if (npc.getId() == IASON_HEINE)
 				{
 					if (st.isCond(4) && st.hasQuestItems(SHUNAIMANS_CONTRACT))
 					{

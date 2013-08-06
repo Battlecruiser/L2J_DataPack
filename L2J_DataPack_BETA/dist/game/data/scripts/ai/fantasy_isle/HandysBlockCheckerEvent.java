@@ -56,7 +56,7 @@ public class HandysBlockCheckerEvent extends Quest
 			return null;
 		}
 		
-		final int arena = npc.getNpcId() - A_MANAGER_1;
+		final int arena = npc.getId() - A_MANAGER_1;
 		if (eventIsFull(arena))
 		{
 			player.sendPacket(SystemMessageId.CANNOT_REGISTER_CAUSE_QUEUE_FULL);

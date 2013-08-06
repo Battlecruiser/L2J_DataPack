@@ -58,7 +58,7 @@ public class BeastSoulShot implements IItemHandler
 			return false;
 		}
 		
-		final int itemId = item.getItemId();
+		final int itemId = item.getId();
 		final short shotConsumption = activeOwner.getSummon().getSoulShotsPerHit();
 		final long shotCount = item.getCount();
 		final SkillHolder[] skills = item.getItem().getSkills();

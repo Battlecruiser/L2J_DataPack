@@ -42,7 +42,7 @@ public class StrongholdsTeleports extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.getLevel() < 20 ? String.valueOf(npc.getNpcId()) + ".htm" : String.valueOf(npc.getNpcId()) + "-no.htm";
+		return player.getLevel() < 20 ? String.valueOf(npc.getId()) + ".htm" : String.valueOf(npc.getId()) + "-no.htm";
 	}
 	
 	private StrongholdsTeleports(String name, String descr)

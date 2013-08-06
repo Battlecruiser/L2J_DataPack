@@ -90,7 +90,7 @@ public class PrisonGuards extends AbstractNpcAI
 		{
 			npc.setIsNoRndWalk(true);
 			npc.setIsImmobilized(true);
-			if (npc.getNpcId() == GUARD1)
+			if (npc.getId() == GUARD1)
 			{
 				npc.setIsInvul(true);
 				npc.disableCoreAI(true);
@@ -103,10 +103,10 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		if (event.equals("Respawn"))
 		{
-			L2Npc newGuard = addSpawn(npc.getNpcId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0);
+			L2Npc newGuard = addSpawn(npc.getId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0);
 			newGuard.setIsNoRndWalk(true);
 			newGuard.setIsImmobilized(true);
-			if (npc.getNpcId() == GUARD1)
+			if (npc.getId() == GUARD1)
 			{
 				newGuard.setIsInvul(true);
 				newGuard.disableCoreAI(true);
@@ -116,7 +116,7 @@ public class PrisonGuards extends AbstractNpcAI
 			_guards.remove(npc);
 			_guards.put(newGuard, place);
 		}
-		else if (event.equals("attackEnd") && (npc.getNpcId() == GUARD2))
+		else if (event.equals("attackEnd") && (npc.getId() == GUARD2))
 		{
 			if ((npc.getX() != npc.getSpawn().getX()) || (npc.getY() != npc.getSpawn().getY()))
 			{
@@ -135,7 +135,7 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		L2Character caster = isSummon ? player.getSummon() : player;
 		
-		if (npc.getNpcId() == GUARD2)
+		if (npc.getId() == GUARD2)
 		{
 			if (_firstAttacked && (caster.getFirstEffect(SKILL_EVENT_TIMER) == null))
 			{
@@ -154,7 +154,7 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		L2Character target = isSummon ? player.getSummon() : player;
 		
-		if (npc.getNpcId() == GUARD2)
+		if (npc.getId() == GUARD2)
 		{
 			if (target.getFirstEffect(SKILL_EVENT_TIMER) != null)
 			{
@@ -205,7 +205,7 @@ public class PrisonGuards extends AbstractNpcAI
 			return null;
 		}
 		
-		if (npc.getNpcId() == GUARD2)
+		if (npc.getId() == GUARD2)
 		{
 			cancelQuestTimer("attackEnd", null, null);
 			startQuestTimer("attackEnd", 180000, npc, null);
@@ -216,7 +216,7 @@ public class PrisonGuards extends AbstractNpcAI
 			((L2Attackable) npc).addDamageHate(attacker, 0, 999);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
 		}
-		else if ((npc.getNpcId() == GUARD1) && (getRandom(100) < 5))
+		else if ((npc.getId() == GUARD1) && (getRandom(100) < 5))
 		{
 			final QuestState qs = player.getQuestState(IOPRace.class.getSimpleName());
 			if ((qs != null) && (qs.getInt(GUARDVARS[_guards.get(npc)]) != 1))
@@ -244,8 +244,8 @@ public class PrisonGuards extends AbstractNpcAI
 	{
 		if (fromAttack)
 		{
-			NpcStringId npcString = (npc.getNpcId() == GUARD1 ? NpcStringId.ITS_NOT_EASY_TO_OBTAIN : NpcStringId.YOURE_OUT_OF_YOUR_MIND_COMING_HERE);
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), npcString));
+			NpcStringId npcString = (npc.getId() == GUARD1 ? NpcStringId.ITS_NOT_EASY_TO_OBTAIN : NpcStringId.YOURE_OUT_OF_YOUR_MIND_COMING_HERE);
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), npcString));
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(effectId, isSpell ? 9 : 1);

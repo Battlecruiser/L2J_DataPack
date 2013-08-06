@@ -79,7 +79,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30421 and id != State.STARTED : return htmltext
 
@@ -159,7 +159,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20015 :
         st.set("id","0")
         if st.getInt("cond") == 1 and st.getQuestItemsCount(LUCKY_KEY) == 1 and st.getQuestItemsCount(FAMILYS_ASHES)<3 :

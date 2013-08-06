@@ -33,7 +33,7 @@ class Quest (JQuest) :
      htmltext = "<html><body>This quest can only be undertaken by a party of level 75 or higher. Only the party leader may talk to the quest NPCs.</body></html>"
      st = player.getQuestState(qn)
      if not st : return htmltext
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      cond = st.getInt("cond")
      if id == State.COMPLETED :
@@ -110,7 +110,7 @@ class Quest (JQuest) :
      state = st.getState()
      if state != State.STARTED : return
      cond = st.getInt("cond")
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
  
      if npcId in MOBS1 and cond == 4 :
          if self.getRandom(100) < CHANCE:

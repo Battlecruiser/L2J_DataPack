@@ -139,22 +139,22 @@ public class Q00328_SenseForBusiness extends Quest
 		if ((st != null) && st.isStarted())
 		{
 			final int chance = getRandom(100);
-			if (MONSTER_EYES.containsKey(npc.getNpcId()))
+			if (MONSTER_EYES.containsKey(npc.getId()))
 			{
-				if (chance < MONSTER_EYES.get(npc.getNpcId())[0])
+				if (chance < MONSTER_EYES.get(npc.getId())[0])
 				{
 					st.giveItems(MONSTER_EYE_CARCASS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
-				else if (chance < MONSTER_EYES.get(npc.getNpcId())[1])
+				else if (chance < MONSTER_EYES.get(npc.getId())[1])
 				{
 					st.giveItems(MONSTER_EYE_LENS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
-			else if (MONSTER_BASILISKS.containsKey(npc.getNpcId()))
+			else if (MONSTER_BASILISKS.containsKey(npc.getId()))
 			{
-				if (chance < MONSTER_BASILISKS.get(npc.getNpcId()))
+				if (chance < MONSTER_BASILISKS.get(npc.getId()))
 				{
 					st.giveItems(BASILISK_GIZZARD, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

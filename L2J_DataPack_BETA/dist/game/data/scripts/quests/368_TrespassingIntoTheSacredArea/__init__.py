@@ -33,7 +33,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return htmltext
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      level = player.getLevel()
      cond = st.getInt("cond")
@@ -57,7 +57,7 @@ class Quest (JQuest) :
      if not partyMember : return
      st = partyMember.getQuestState(qn)
 
-     chance = CHANCE + npc.getNpcId() - 20794
+     chance = CHANCE + npc.getId() - 20794
      numItems, chance = divmod(chance * Config.RATE_QUEST_DROP,100)
      if self.getRandom(100) < chance :
         numItems += 1

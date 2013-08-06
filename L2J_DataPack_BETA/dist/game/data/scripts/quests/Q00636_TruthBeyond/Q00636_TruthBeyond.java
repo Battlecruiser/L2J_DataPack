@@ -92,7 +92,7 @@ public final class Q00636_TruthBeyond extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if (npc.getNpcId() == ELIYAH)
+		if (npc.getId() == ELIYAH)
 		{
 			if (st.hasQuestItems(VISITOR_MARK) || st.hasQuestItems(FADED_MARK) || st.hasQuestItems(MARK))
 			{

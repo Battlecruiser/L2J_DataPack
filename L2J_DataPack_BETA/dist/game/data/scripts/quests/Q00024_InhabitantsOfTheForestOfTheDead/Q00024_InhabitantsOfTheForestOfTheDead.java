@@ -226,7 +226,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DORIAN:
 				switch (st.getState())

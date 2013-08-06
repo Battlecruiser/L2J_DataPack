@@ -81,7 +81,7 @@ public class Slaves extends AbstractNpcAI
 					slave.clearAggroList();
 					slave.abortAttack();
 					slave.abortCast();
-					slave.broadcastPacket(new NpcSay(slave.getObjectId(), Say2.NPC_ALL, slave.getNpcId(), NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL));
+					slave.broadcastPacket(new NpcSay(slave.getObjectId(), Say2.NPC_ALL, slave.getId(), NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL));
 					
 					if ((HellboundManager.getInstance().getLevel() >= 1) && (HellboundManager.getInstance().getLevel() <= 2))
 					{

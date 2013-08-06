@@ -216,7 +216,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
     state = st.getState()
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     cond = st.getInt("cond")
     if state == State.COMPLETED :
        htmltext = Quest.getAlreadyCompletedMsg(player)

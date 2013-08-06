@@ -141,7 +141,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 	{
 		final L2PcInstance partyMember;
 		final QuestState st;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PILGRIM_OF_SPLENDOR:
 				partyMember = getRandomPartyMember(player, "awaitsWaterbinder", "1");
@@ -229,7 +229,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					return super.onKill(npc, player, isSummon);
 				}
 				
-				if (Util.contains(MOBS, npc.getNpcId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
+				if (Util.contains(MOBS, npc.getId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
 				{
 					if (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS)
 					{
@@ -263,7 +263,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			return "no_sub.html";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case CARADINE:
 				switch (st.getState())

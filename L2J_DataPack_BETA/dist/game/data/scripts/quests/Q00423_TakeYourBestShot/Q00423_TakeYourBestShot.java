@@ -116,7 +116,7 @@ public class Q00423_TakeYourBestShot extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case JOHNNY:
 				switch (st.getState())

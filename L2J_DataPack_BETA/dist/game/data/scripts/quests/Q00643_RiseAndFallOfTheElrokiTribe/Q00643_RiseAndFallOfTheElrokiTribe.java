@@ -190,7 +190,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (Util.contains(MOBS1, npcId))
 		{
@@ -247,11 +247,11 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == SINGSING)
+				if (npc.getId() == SINGSING)
 				{
 					htmltext = (st.hasQuestItems(BONES_OF_A_PLAINS_DINOSAUR)) ? "32106-08.html" : "32106-14.html";
 				}
-				else if (npc.getNpcId() == KARAKAWEI)
+				else if (npc.getId() == KARAKAWEI)
 				{
 					if (isFirstTalk)
 					{

@@ -348,7 +348,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	
 	private void spawnNext(L2Npc npc, int growthLevel, L2PcInstance player, int food)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int nextNpcId = 0;
 		
 		// find the next mob to spawn, based on the current npcId, growthlevel, and food.
@@ -476,7 +476,7 @@ public class FeedableBeasts extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("polymorph Mad Cow") && (npc != null) && (player != null))
 		{
-			if (MAD_COW_POLYMORPH.containsKey(npc.getNpcId()))
+			if (MAD_COW_POLYMORPH.containsKey(npc.getId()))
 			{
 				// remove the feed info from the previous mob
 				if (_FeedInfo.get(npc.getObjectId()) == player.getObjectId())
@@ -486,7 +486,7 @@ public class FeedableBeasts extends AbstractNpcAI
 				// despawn the mad cow
 				npc.deleteMe();
 				// spawn the new mob
-				L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getNpcId()), npc);
+				L2Attackable nextNpc = (L2Attackable) addSpawn(MAD_COW_POLYMORPH.get(npc.getId()), npc);
 				
 				// register the player in the feedinfo for the mob that just spawned
 				_FeedInfo.put(nextNpc.getObjectId(), player.getObjectId());
@@ -508,7 +508,7 @@ public class FeedableBeasts extends AbstractNpcAI
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
 		// gather some values on local variables
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		int skillId = skill.getId();
 		// check if the npc and skills used are valid for this script. Exit if invalid.
 		if ((skillId != SKILL_GOLDEN_SPICE) && (skillId != SKILL_CRYSTAL_SPICE))

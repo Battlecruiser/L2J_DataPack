@@ -153,7 +153,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 			final long count = st3.getQuestItemsCount(ORC_GOODS);
 			if ((count < ORC_GOODS_REQUIRED_COUNT) && Util.checkIfInRange(1500, npc, st3.getPlayer(), true))
 			{
-				int chance = (int) ((npc.isChampion() ? Config.L2JMOD_CHAMPION_REWARDS : Config.RATE_QUEST_DROP) * MONSTER_DROP_CHANCES.get(npc.getNpcId()));
+				int chance = (int) ((npc.isChampion() ? Config.L2JMOD_CHAMPION_REWARDS : Config.RATE_QUEST_DROP) * MONSTER_DROP_CHANCES.get(npc.getId()));
 				int numItems = chance / 1000;
 				chance = chance % 1000;
 				if (getRandom(1000) < chance)

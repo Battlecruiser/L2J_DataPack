@@ -92,7 +92,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == BRAZIER_OF_PURITY)
+		if (npc.getId() == BRAZIER_OF_PURITY)
 		{
 			final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
 			if (partyMember != null)

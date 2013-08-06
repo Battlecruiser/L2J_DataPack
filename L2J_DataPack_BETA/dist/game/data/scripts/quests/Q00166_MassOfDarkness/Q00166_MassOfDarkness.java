@@ -83,7 +83,7 @@ public class Q00166_MassOfDarkness extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case UNDRIAS:
 				{
@@ -124,7 +124,7 @@ public class Q00166_MassOfDarkness extends Quest
 				{
 					if (st.isStarted())
 					{
-						final int npcId = npc.getNpcId();
+						final int npcId = npc.getId();
 						final int itemId = NPCs.get(npcId);
 						if (st.isCond(1) && !st.hasQuestItems(itemId))
 						{

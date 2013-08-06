@@ -98,7 +98,7 @@ public class Q00450_GraveRobberRescue extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KANEMIKA)
+		if (npc.getId() == KANEMIKA)
 		{
 			switch (st.getState())
 			{
@@ -152,11 +152,11 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				if (getRandom(100) < 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.GRUNT_OH));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_OH));
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.GRUNT_WHATS_WRONG_WITH_ME));
 				}
 				npc.deleteMe();
 				htmltext = null;

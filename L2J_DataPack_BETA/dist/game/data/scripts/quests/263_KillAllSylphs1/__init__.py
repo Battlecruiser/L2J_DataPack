@@ -34,7 +34,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
 
    if id == State.CREATED :
@@ -66,7 +66,7 @@ class Quest (JQuest) :
    if st.getState() != State.STARTED : return 
    
    item=ORC_NECKLACE
-   if npc.getNpcId() == 20385 :
+   if npc.getId() == 20385 :
      item = ORC_AMULET
    if self.getRandom(10)>4 :
      st.giveItems(item,1)

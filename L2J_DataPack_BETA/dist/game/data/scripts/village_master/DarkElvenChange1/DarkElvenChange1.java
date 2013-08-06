@@ -109,7 +109,7 @@ public class DarkElvenChange1 extends Quest
 						st.exitQuest(false);
 					}
 				}
-				event = npc.getNpcId() + "-" + suffix + ".html";
+				event = npc.getId() + "-" + suffix + ".html";
 			}
 		}
 		return event;
@@ -136,12 +136,12 @@ public class DarkElvenChange1 extends Quest
 			{
 				case darkFighter:
 				{
-					htmltext = npc.getNpcId() + "-01.html";
+					htmltext = npc.getId() + "-01.html";
 					break;
 				}
 				case darkMage:
 				{
-					htmltext = npc.getNpcId() + "-08.html";
+					htmltext = npc.getId() + "-08.html";
 					break;
 				}
 				default:
@@ -149,19 +149,19 @@ public class DarkElvenChange1 extends Quest
 					if (cid.level() == 1)
 					{
 						// first occupation change already made
-						return npc.getNpcId() + "-32.html";
+						return npc.getId() + "-32.html";
 					}
 					else if (cid.level() >= 2)
 					{
 						// second/third occupation change already made
-						return npc.getNpcId() + "-31.html";
+						return npc.getId() + "-31.html";
 					}
 				}
 			}
 		}
 		else
 		{
-			htmltext = npc.getNpcId() + "-33.html"; // other races
+			htmltext = npc.getId() + "-33.html"; // other races
 		}
 		return htmltext;
 	}

@@ -84,7 +84,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ANDELLIA:
 				switch (st.getState())

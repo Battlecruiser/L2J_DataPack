@@ -194,7 +194,7 @@ public final class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case GALLADUCCI:
 			{
@@ -280,19 +280,19 @@ public final class Q00046_OnceMoreInTheArmsOfTheMotherTree extends Quest
 			{
 				if (st.isStarted())
 				{
-					final ItemHolder i = NPC_ITEMS.get(npc.getNpcId());
+					final ItemHolder i = NPC_ITEMS.get(npc.getId());
 					final int cond = i.getId();
 					if (st.isCond(cond))
 					{
 						final int itemId = (int) i.getCount();
 						if (st.hasQuestItems(itemId))
 						{
-							htmltext = npc.getNpcId() + "-01.html";
+							htmltext = npc.getId() + "-01.html";
 						}
 					}
 					else if (st.isCond(cond + 1))
 					{
-						htmltext = npc.getNpcId() + "-04.html";
+						htmltext = npc.getId() + "-04.html";
 					}
 				}
 				break;

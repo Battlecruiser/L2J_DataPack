@@ -100,7 +100,7 @@ public class TowerOfInfinitum extends Quest
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		
 		if (event.equalsIgnoreCase("enter") && (npcId == JERIAN))
 		{

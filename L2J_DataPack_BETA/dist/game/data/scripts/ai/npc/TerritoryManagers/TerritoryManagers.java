@@ -72,14 +72,14 @@ public class TerritoryManagers extends AbstractNpcAI
 			// If the player does not have the second class transfer or is under level 40, it cannot continue.
 			return "36490-08.html";
 		}
-		return npc.getNpcId() + ".html";
+		return npc.getId() + ".html";
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		final int itemId = 13757 + (npcId - 36490);
 		final int territoryId = 81 + (npcId - 36490);
 		switch (event)

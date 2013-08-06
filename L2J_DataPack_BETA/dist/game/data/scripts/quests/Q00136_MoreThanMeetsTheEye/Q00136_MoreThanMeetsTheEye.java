@@ -148,7 +148,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if ((npcId != GLASS_JAGUAR) && st.isCond(3))
 		{
 			final int count = ((npcId == MIRROR) && ((st.getQuestItemsCount(ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
@@ -177,7 +177,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case HARDIN:
 				switch (st.getState())

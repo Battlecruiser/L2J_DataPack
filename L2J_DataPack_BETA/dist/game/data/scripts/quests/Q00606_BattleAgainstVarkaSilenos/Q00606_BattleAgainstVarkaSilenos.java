@@ -110,7 +110,7 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(killer, 1);
-		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
 			st.giveItems(MANE, 1);

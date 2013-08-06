@@ -119,7 +119,7 @@ public class Q00310_OnlyWhatRemains extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(DIRTY_BEAD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

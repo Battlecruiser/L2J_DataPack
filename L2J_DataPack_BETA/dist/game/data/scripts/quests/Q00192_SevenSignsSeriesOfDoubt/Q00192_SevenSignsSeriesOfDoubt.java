@@ -202,11 +202,11 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 		{
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == CROOP)
+				if (npc.getId() == CROOP)
 				{
 					htmltext = "30676-05.html";
 				}
-				else if (npc.getNpcId() == UNIDENTIFIED_BODY)
+				else if (npc.getId() == UNIDENTIFIED_BODY)
 				{
 					htmltext = "32568-04.html";
 				}
@@ -214,11 +214,11 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == CROOP)
+				if (npc.getId() == CROOP)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30676-01.htm" : "30676-04.html";
 				}
-				else if (npc.getNpcId() == UNIDENTIFIED_BODY)
+				else if (npc.getId() == UNIDENTIFIED_BODY)
 				{
 					htmltext = "32568-04.html";
 				}
@@ -226,7 +226,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case CROOP:
 					{

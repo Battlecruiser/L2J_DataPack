@@ -60,7 +60,7 @@ public class Q00903_TheCallOfAntharas extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case BEHEMOTH_DRAGON:
 				{

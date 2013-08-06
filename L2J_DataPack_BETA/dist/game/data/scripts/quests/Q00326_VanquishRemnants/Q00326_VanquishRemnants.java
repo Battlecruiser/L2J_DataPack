@@ -103,9 +103,9 @@ public final class Q00326_VanquishRemnants extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getNpcId())[0]))
+		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getId())[0]))
 		{
-			st.giveItems(MONSTERS.get(npc.getNpcId())[1], 1);
+			st.giveItems(MONSTERS.get(npc.getId())[1], 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);

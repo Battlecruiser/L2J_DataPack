@@ -158,7 +158,7 @@ public final class Q00186_ContractExecution extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RESEARCHER_LORAIN:
 			{

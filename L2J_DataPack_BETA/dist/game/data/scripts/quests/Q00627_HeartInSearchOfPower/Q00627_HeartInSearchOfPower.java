@@ -163,7 +163,7 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			final float chance = (MONSTERS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.giveItems(BEAD_OF_OBEDIENCE, 1);
@@ -192,13 +192,13 @@ public class Q00627_HeartInSearchOfPower extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				if (npc.getNpcId() == MYSTERIOUS_NECROMANCER)
+				if (npc.getId() == MYSTERIOUS_NECROMANCER)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL_REQUIRED) ? "31518-01.htm" : "31518-00.htm";
 				}
 				break;
 			case State.STARTED:
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case MYSTERIOUS_NECROMANCER:
 						switch (st.getCond())

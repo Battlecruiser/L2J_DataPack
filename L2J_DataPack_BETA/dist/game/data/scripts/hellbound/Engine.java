@@ -259,7 +259,7 @@ public class Engine extends Quest implements Runnable
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (pointsInfo.containsKey(npcId))
 		{
 			PointsInfoHolder npcInfo = pointsInfo.get(npcId);
@@ -269,7 +269,7 @@ public class Engine extends Quest implements Runnable
 				HellboundManager.getInstance().updateTrust(npcInfo.pointsAmount, true);
 			}
 			
-			if ((npc.getNpcId() == 18465) && (HellboundManager.getInstance().getLevel() == 4))
+			if ((npc.getId() == 18465) && (HellboundManager.getInstance().getLevel() == 4))
 			{
 				HellboundManager.getInstance().setLevel(5);
 			}

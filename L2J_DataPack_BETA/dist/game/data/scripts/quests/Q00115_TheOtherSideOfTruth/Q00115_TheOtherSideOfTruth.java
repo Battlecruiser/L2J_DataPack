@@ -208,7 +208,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-02.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -275,7 +275,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-03.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -338,7 +338,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case "32021-06.html":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case ICE_SCULPTURE1:
 					{
@@ -397,7 +397,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 		{
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == RAFFORTY)
+				if (npc.getId() == RAFFORTY)
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}
@@ -410,7 +410,7 @@ public class Q00115_TheOtherSideOfTruth extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case RAFFORTY:
 					{

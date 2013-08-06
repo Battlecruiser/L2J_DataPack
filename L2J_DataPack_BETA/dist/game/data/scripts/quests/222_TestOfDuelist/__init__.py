@@ -91,7 +91,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if id == State.CREATED :
      st.set("step","0")
@@ -146,7 +146,7 @@ class Quest (JQuest) :
   if not st : return 
   if st.getState() != State.STARTED : return 
    
-  npcId = npc.getNpcId()
+  npcId = npc.getId()
   step,maxcount,item=DROPLIST[npcId]
   count=st.getQuestItemsCount(item)
   if st.getInt("step")==step and count<maxcount:

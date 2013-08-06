@@ -117,7 +117,7 @@ public final class Q00188_SealRemoval extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RESEARCHER_LORAIN:
 			{

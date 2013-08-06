@@ -46,7 +46,7 @@ class Quest (JQuest) :
 
 
  def onTalk (self,npc,player) :
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st: return htmltext
@@ -136,7 +136,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st: return
    if st.getState() != State.STARTED : return 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId in [20517,20518,20455] :
       bones = st.getQuestItemsCount(BONE_FRAGMENT1_ID)
       if st.getQuestItemsCount(CECKTINONS_VOUCHER2_ID) == 1 and bones < 10 :

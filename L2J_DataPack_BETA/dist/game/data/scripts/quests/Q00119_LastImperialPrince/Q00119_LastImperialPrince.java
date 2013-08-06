@@ -113,7 +113,7 @@ public class Q00119_LastImperialPrince extends Quest
 		{
 			case State.COMPLETED:
 			{
-				if (npc.getNpcId() == NAMELESS_SPIRIT)
+				if (npc.getId() == NAMELESS_SPIRIT)
 				{
 					htmltext = "31453-06.html";
 				}
@@ -126,7 +126,7 @@ public class Q00119_LastImperialPrince extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == NAMELESS_SPIRIT)
+				if (npc.getId() == NAMELESS_SPIRIT)
 				{
 					if (st.isCond(1))
 					{
@@ -145,7 +145,7 @@ public class Q00119_LastImperialPrince extends Quest
 						htmltext = "31453-09.html";
 					}
 				}
-				else if (npc.getNpcId() == DEVORIN)
+				else if (npc.getId() == DEVORIN)
 				{
 					if (st.isCond(1))
 					{

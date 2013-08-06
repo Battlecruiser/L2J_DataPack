@@ -141,7 +141,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if (getRandom(100) < MOBS.get(npc.getNpcId()))
+		if (getRandom(100) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(DARK_CRYSTAL, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -159,7 +159,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KLUCK:
 				switch (st.getState())

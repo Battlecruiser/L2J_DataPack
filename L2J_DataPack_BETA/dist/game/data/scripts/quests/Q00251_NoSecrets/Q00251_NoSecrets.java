@@ -83,7 +83,7 @@ public class Q00251_NoSecrets extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
-			final int npcId = npc.getNpcId();
+			final int npcId = npc.getId();
 			
 			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
 			{

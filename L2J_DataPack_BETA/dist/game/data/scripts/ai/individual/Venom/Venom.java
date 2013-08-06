@@ -141,7 +141,7 @@ public final class Venom extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TELEPORT_CUBE:
 			{

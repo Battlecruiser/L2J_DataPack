@@ -133,7 +133,7 @@ public class Q00037_MakeFormalWear extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ALEXIS:
 				switch (st.getState())
