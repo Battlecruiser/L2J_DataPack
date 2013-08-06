@@ -81,7 +81,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 		{
 			for (TerritoryNPCSpawn spawn : terr.getSpawnList())
 			{
-				if (NPCS.keySet().contains(spawn.getNpcId()))
+				if (NPCS.keySet().contains(spawn.getId()))
 				{
 					startQuestTimer("say", DELAY, spawn.getNpc(), null, true);
 				}
