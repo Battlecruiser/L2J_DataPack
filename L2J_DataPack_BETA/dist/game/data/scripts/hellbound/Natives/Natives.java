@@ -53,7 +53,7 @@ public class Natives extends Quest
 	{
 		String htmltext = "";
 		final int hellboundLevel = HellboundManager.getInstance().getLevel();
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		QuestState qs = player.getQuestState(getName());
 		if (qs == null)
 		{
@@ -89,7 +89,7 @@ public class Natives extends Quest
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (npc.getNpcId() == TRAITOR)
+		if (npc.getId() == TRAITOR)
 		{
 			if (event.equalsIgnoreCase("open_door"))
 			{
@@ -97,7 +97,7 @@ public class Natives extends Quest
 				if (qs.getQuestItemsCount(MARK_OF_BETRAYAL) >= 10)
 				{
 					qs.takeItems(MARK_OF_BETRAYAL, 10);
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS));
 					HellboundManager.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : doors)
@@ -133,12 +133,12 @@ public class Natives extends Quest
 				}
 			}
 		}
-		else if ((npc.getNpcId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
+		else if ((npc.getId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.HUN_HUNGRY));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.HUN_HUNGRY));
 			npc.doDie(null);
 		}
-		else if (npc.getNpcId() == INCASTLE)
+		else if (npc.getId() == INCASTLE)
 		{
 			if (event.equalsIgnoreCase("FreeSlaves"))
 			{
@@ -169,7 +169,7 @@ public class Natives extends Quest
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if ((npc.getNpcId() == NATIVE) && (HellboundManager.getInstance().getLevel() < 6))
+		if ((npc.getId() == NATIVE) && (HellboundManager.getInstance().getLevel() < 6))
 		{
 			startQuestTimer("hungry_death", 600000, npc, null);
 		}

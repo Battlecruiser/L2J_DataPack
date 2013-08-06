@@ -37,7 +37,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    cond=st.getInt("cond")
    if cond == 0 :
@@ -61,7 +61,7 @@ class Quest (JQuest) :
    if not partyMember : return
    st = partyMember.getQuestState(qn)
    
-   if self.getRandom(100) < CHANCE + ((npc.getNpcId() - 20985) * 2) :
+   if self.getRandom(100) < CHANCE + ((npc.getId() - 20985) * 2) :
      st.giveItems(HAIR,1)
      st.playSound("ItemSound.quest_itemget")
    return

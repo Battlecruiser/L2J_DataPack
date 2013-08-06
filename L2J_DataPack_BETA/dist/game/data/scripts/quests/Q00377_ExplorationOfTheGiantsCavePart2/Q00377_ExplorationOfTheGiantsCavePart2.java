@@ -145,7 +145,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SOBLING)
+		if (npc.getId() == SOBLING)
 		{
 			switch (st.getState())
 			{

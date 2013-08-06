@@ -175,7 +175,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case ROIEN:
 				{

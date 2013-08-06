@@ -128,7 +128,7 @@ public class Q00602_ShadowOfLight extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		
-		int chance = (npc.getNpcId() == MOBS[0]) ? 560 : 800;
+		int chance = (npc.getId() == MOBS[0]) ? 560 : 800;
 		
 		if (st.isCond(1) && (getRandom(1000) < chance))
 		{

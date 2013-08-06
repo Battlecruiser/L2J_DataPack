@@ -145,7 +145,7 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case EDMOND:
 			{

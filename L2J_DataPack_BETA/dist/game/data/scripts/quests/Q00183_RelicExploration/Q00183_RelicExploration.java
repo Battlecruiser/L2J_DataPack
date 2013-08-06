@@ -123,7 +123,7 @@ public final class Q00183_RelicExploration extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case HEAD_BLACKSMITH_KUSTO:
 			{

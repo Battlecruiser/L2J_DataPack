@@ -125,7 +125,7 @@ public class Q00135_TempleExecutor extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if ((getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			if (st.getQuestItemsCount(STOLEN_CARGO) < ITEM_COUNT)
 			{
@@ -158,7 +158,7 @@ public class Q00135_TempleExecutor extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SHEGFIELD:
 				switch (st.getState())

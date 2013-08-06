@@ -59,7 +59,7 @@ public class PavelArchaic extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		L2Attackable golem = (L2Attackable) addSpawn(npc.getNpcId() + 1, npc.getLocation(), false, 0);
+		L2Attackable golem = (L2Attackable) addSpawn(npc.getId() + 1, npc.getLocation(), false, 0);
 		attackPlayer(golem, killer);
 		return super.onKill(npc, killer, isSummon);
 	}

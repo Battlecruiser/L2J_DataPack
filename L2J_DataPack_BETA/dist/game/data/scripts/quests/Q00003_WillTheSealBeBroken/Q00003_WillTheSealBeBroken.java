@@ -90,7 +90,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case OMEN_BEAST:
 				giveItem(st, OMEN_BEAST_EYE, getRegisteredItemIds());

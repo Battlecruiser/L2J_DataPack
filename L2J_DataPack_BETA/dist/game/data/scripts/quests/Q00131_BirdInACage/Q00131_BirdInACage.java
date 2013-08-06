@@ -182,7 +182,7 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32264-01.htm" : "32264-02.html";
 				}
@@ -190,7 +190,7 @@ public class Q00131_BirdInACage extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					switch (st.getCond())
 					{
@@ -221,7 +221,7 @@ public class Q00131_BirdInACage extends Quest
 						}
 					}
 				}
-				else if (npc.getNpcId() == PARME)
+				else if (npc.getId() == PARME)
 				{
 					if (st.getCond() < 3)
 					{

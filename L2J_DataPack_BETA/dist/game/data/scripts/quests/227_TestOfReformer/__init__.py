@@ -86,7 +86,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30118 and id != State.STARTED : return htmltext
 
@@ -186,7 +186,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return 
    if st.getState() != State.STARTED : return 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 27099 :
     if st.getInt("cond") == 1 and st.getQuestItemsCount(RIPPED_DIARY) < 7 and st.getQuestItemsCount(BOOK_OF_REFORM) >= 1 :
       if st.getQuestItemsCount(RIPPED_DIARY) == 6 :

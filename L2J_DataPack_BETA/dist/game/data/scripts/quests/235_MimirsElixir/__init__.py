@@ -53,7 +53,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     cond = st.getInt("cond")
     if npcId == LADD :
@@ -125,7 +125,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
    
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      drop = self.getRandom(100)
      cond = st.getInt("cond")
      dropcond = DROPLIST[npcId][0]

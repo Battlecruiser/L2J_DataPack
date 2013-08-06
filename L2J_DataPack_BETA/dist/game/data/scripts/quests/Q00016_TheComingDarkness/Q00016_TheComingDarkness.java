@@ -110,7 +110,7 @@ public class Q00016_TheComingDarkness extends Quest
 				htmltext = (player.getLevel() >= 62) ? "31517-00.htm" : "31517-05.html";
 				break;
 			case State.STARTED:
-				final int npcId = npc.getNpcId();
+				final int npcId = npc.getId();
 				if (npcId == HIERARCH)
 				{
 					if (st.isCond(6))

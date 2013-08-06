@@ -92,7 +92,7 @@ public final class Q00276_TotemOfTheHestui extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, killer, npc, true))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case KASHA_BEAR:
 				{

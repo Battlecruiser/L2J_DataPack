@@ -117,7 +117,7 @@ public class Q00324_SweetestVenom extends Quest
 			long sacs = st.getQuestItemsCount(VENOM_SAC);
 			if (sacs < REQUIRED_COUNT)
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(VENOM_SAC, 1);
 					if ((++sacs) < REQUIRED_COUNT)

@@ -128,7 +128,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30597 and id != State.STARTED : return htmltext
 
@@ -160,7 +160,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   item,chance=DROPLIST[npc.getNpcId()]
+   item,chance=DROPLIST[npc.getId()]
    st.giveItems(item,1)
    st.playSound("ItemSound.quest_itemget")
    if self.getRandom(100)<chance :

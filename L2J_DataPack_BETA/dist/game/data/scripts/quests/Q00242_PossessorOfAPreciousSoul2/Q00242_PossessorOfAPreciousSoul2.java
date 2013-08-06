@@ -173,7 +173,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 			return "no_sub.html";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case VIRGIL:
 				switch (st.getState())

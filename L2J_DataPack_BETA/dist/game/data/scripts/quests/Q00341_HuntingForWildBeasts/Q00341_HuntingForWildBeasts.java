@@ -127,7 +127,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 			long skins = st.getQuestItemsCount(BEAR_SKIN);
 			if (skins < REQUIRED_COUNT)
 			{
-				if (getRandom(100) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(BEAR_SKIN, 1);
 					if ((++skins) < REQUIRED_COUNT)

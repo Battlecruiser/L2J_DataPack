@@ -58,7 +58,7 @@ public class BirthdayCake extends AbstractNpcAI
 	private void addTask(L2Npc npc)
 	{
 		final SkillHolder holder;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BIRTHDAY_CAKE:
 			{
@@ -101,7 +101,7 @@ public class BirthdayCake extends AbstractNpcAI
 			if (!_npc.isInsideZone(ZoneId.PEACE))
 			{
 				L2Skill skill = _holder.getSkill();
-				switch (_npc.getNpcId())
+				switch (_npc.getId())
 				{
 					case BIRTHDAY_CAKE:
 					{

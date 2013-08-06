@@ -102,7 +102,7 @@ public final class Q00269_InventionAmbition extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && (getRandom(100) < MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && (getRandom(100) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(ENERGY_ORE, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

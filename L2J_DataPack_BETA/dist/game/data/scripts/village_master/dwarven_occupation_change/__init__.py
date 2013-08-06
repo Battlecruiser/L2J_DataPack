@@ -46,7 +46,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onAdvEvent (self,event,npc,player) :
-   npcId    = npc.getNpcId()
+   npcId    = npc.getId()
    htmltext = event
    st = player.getQuestState(qn)
    if not st : return
@@ -87,7 +87,7 @@ class Quest (JQuest) :
  def onTalk (Self,npc,player) :
    htmltext = default
    key      = 0
-   npcId    = npc.getNpcId()
+   npcId    = npc.getId()
    race     = player.getRace().ordinal()
    classid  = player.getClassId().getId()
    st = player.getQuestState(qn)

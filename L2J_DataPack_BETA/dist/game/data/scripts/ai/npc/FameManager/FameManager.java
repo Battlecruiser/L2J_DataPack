@@ -77,16 +77,16 @@ public class FameManager extends AbstractNpcAI
 						player.setFame(player.getFame() - DECREASE_COST);
 						player.setPkKills(player.getPkKills() - 1);
 						player.sendPacket(new UserInfo(player));
-						htmltext = npc.getNpcId() + "-06.html";
+						htmltext = npc.getId() + "-06.html";
 					}
 					else
 					{
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 				}
 				else
 				{
-					htmltext = npc.getNpcId() + "-05.html";
+					htmltext = npc.getId() + "-05.html";
 				}
 				break;
 			}
@@ -100,16 +100,16 @@ public class FameManager extends AbstractNpcAI
 						player.getClan().addReputationScore(50, true);
 						player.sendPacket(new UserInfo(player));
 						player.sendPacket(SystemMessageId.ACQUIRED_50_CLAN_FAME_POINTS);
-						htmltext = npc.getNpcId() + "-04.html";
+						htmltext = npc.getId() + "-04.html";
 					}
 					else
 					{
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 				}
 				else
 				{
-					htmltext = npc.getNpcId() + "-03.html";
+					htmltext = npc.getId() + "-03.html";
 				}
 				break;
 			}
@@ -120,7 +120,7 @@ public class FameManager extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return ((player.getFame() > 0) && (player.getLevel() >= MIN_LVL) && (player.getClassId().level() >= CLASS_LVL)) ? npc.getNpcId() + ".html" : npc.getNpcId() + "-01.html";
+		return ((player.getFame() > 0) && (player.getLevel() >= MIN_LVL) && (player.getClassId().level() >= CLASS_LVL)) ? npc.getId() + ".html" : npc.getId() + "-01.html";
 	}
 	
 	public static void main(String[] args)

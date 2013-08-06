@@ -96,7 +96,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.COMPLETED:

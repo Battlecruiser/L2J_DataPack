@@ -169,7 +169,7 @@ public class Q00287_FiguringItOut extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
+		if (getRandom(1000) < MONSTERS.get(npc.getId()))
 		{
 			st.giveItems(VIAL_OF_TANTA_BLOOD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

@@ -43,7 +43,7 @@ public class L2DoorInstanceActionShift implements IActionHandler
 			html.replace("%hp%", String.valueOf((int) door.getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(door.getMaxHp()));
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
-			html.replace("%doorid%", String.valueOf(door.getDoorId()));
+			html.replace("%doorid%", String.valueOf(door.getId()));
 			
 			html.replace("%minx%", String.valueOf(door.getX(0)));
 			html.replace("%miny%", String.valueOf(door.getY(0)));

@@ -38,7 +38,7 @@ public class SpecialXMas implements IItemHandler
 			return false;
 		}
 		
-		playable.broadcastPacket(new ShowXMasSeal(item.getItemId()));
+		playable.broadcastPacket(new ShowXMasSeal(item.getId()));
 		return true;
 	}
 }

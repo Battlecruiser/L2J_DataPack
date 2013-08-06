@@ -95,7 +95,7 @@ public class StakatoNest extends AbstractNpcAI
 	{
 		L2MonsterInstance mob = (L2MonsterInstance) npc;
 		
-		if ((mob.getNpcId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
+		if ((mob.getId() == STAKATO_LEADER) && (getRandom(1000) < 100) && (mob.getCurrentHp() < (mob.getMaxHp() * 0.3)))
 		{
 			L2MonsterInstance _follower = checkMinion(npc);
 			
@@ -122,7 +122,7 @@ public class StakatoNest extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		L2MonsterInstance monster;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
 				monster = checkMinion(npc);
@@ -183,7 +183,7 @@ public class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (Util.contains(COCOONS, npc.getNpcId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
+		if (Util.contains(COCOONS, npc.getId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
 			npc.doDie(caster);
 			L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);

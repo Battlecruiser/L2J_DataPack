@@ -99,7 +99,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30644 and id != State.STARTED : return htmltext
    cond=st.getInt("cond")
@@ -178,7 +178,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return
    cond = st.getInt("cond")
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 27110 and cond == 1 and not st.getQuestItemsCount(BROKEN_KEY) :
       st.giveItems(BROKEN_KEY,1)
       st.addSpawn(30647,npc,True,0)

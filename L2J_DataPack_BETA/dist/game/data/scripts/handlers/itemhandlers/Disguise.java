@@ -42,7 +42,7 @@ public class Disguise implements IItemHandler
 		L2PcInstance activeChar = playable.getActingPlayer();
 		
 		int regId = TerritoryWarManager.getInstance().getRegisteredTerritoryId(activeChar);
-		if ((regId > 0) && (regId == (item.getItemId() - 13596)))
+		if ((regId > 0) && (regId == (item.getId() - 13596)))
 		{
 			if ((activeChar.getClan() != null) && (activeChar.getClan().getCastleId() > 0))
 			{

@@ -97,23 +97,23 @@ public class SanctumOftheLordsOfDawn extends Quest
 			}
 			case "teleportPlayer":
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case GUARDS_OF_THE_DAWN:
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN));
 						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_2:
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST));
 						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_3:
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CANT_APPROACH_THIS_PLACE));
 						player.teleToLocation(-75987, 213470, -7123);
 						break;
 					}
@@ -156,7 +156,7 @@ public class SanctumOftheLordsOfDawn extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case LIGHT_OF_DAWN:
 			{

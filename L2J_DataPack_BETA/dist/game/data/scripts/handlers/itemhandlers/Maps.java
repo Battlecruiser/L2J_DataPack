@@ -38,7 +38,7 @@ public class Maps implements IItemHandler
 			return false;
 		}
 		
-		playable.sendPacket(new ShowMiniMap(item.getItemId()));
+		playable.sendPacket(new ShowMiniMap(item.getId()));
 		return true;
 	}
 }

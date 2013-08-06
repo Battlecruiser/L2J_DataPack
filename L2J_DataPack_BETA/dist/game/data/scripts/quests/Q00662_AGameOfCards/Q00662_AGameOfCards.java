@@ -727,7 +727,7 @@ public final class Q00662_AGameOfCards extends Quest
 		final L2PcInstance player = players.get(Rnd.get(players.size()));
 		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if (MONSTERS.get(npc.getNpcId()) < getRandom(1000))
+			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{
 				final QuestState st = player.getQuestState(getName());
 				if (st != null)

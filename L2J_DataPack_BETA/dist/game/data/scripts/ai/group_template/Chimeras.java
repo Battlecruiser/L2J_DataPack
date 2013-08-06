@@ -98,7 +98,7 @@ public class Chimeras extends AbstractNpcAI
 					}
 					
 					npc.setIsDead(true);
-					if (npc.getNpcId() == CELTUS)
+					if (npc.getId() == CELTUS)
 					{
 						((L2Attackable) npc).dropItem(caster, CONTAINED_LIFE_FORCE, 1);
 					}

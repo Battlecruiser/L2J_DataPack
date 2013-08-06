@@ -59,7 +59,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     htmltext = Quest.getNoQuestMsg(player) 
     if not st: return htmltext
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     cond = st.getInt("cond")
     silver = st.getQuestItemsCount(Silver_Ice)
@@ -102,7 +102,7 @@ class Quest (JQuest) :
     if not partyMember : return
     st = partyMember.getQuestState(qn)
     if st :
-        chance = int((npc.getNpcId() - 22050)*Config.RATE_QUEST_DROP)
+        chance = int((npc.getId() - 22050)*Config.RATE_QUEST_DROP)
         numItems, chance = divmod(chance,100)
         random = self.getRandom(100)
         if random <= chance:

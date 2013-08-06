@@ -141,7 +141,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
 
     # first time when a player join the quest
@@ -293,15 +293,15 @@ class Quest (JQuest) :
     if st.getState() != State.STARTED : return 
     if isPet : return
 
-    if st.getInt("cond") == 7 and npc.getNpcId() == 29020 :
-      if player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == PIPETTE_KNIFE and st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0:
+    if st.getInt("cond") == 7 and npc.getId() == 29020 :
+      if player.getActiveWeaponItem() and player.getActiveWeaponItem().getId() == PIPETTE_KNIFE and st.getQuestItemsCount(RED_PIPETTE_KNIFE) == 0:
         st.giveItems(RED_PIPETTE_KNIFE,1)
         st.takeItems(PIPETTE_KNIFE,1)
         st.playSound("ItemSound.quest_itemget")
     return
 
   def onKill(self,npc,player,isPet):
-    npcId=npc.getNpcId()
+    npcId=npc.getId()
     # the chests always spawn, even if the RB is killed with nobody nearby doing the quest.
     if npcId in CHEST_SPAWNS.keys() :
       self.addSpawn(CHEST_SPAWNS[npcId], npc.getX(), npc.getY(), npc.getZ(),npc.getHeading(), True, 60000)

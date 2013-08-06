@@ -43,7 +43,7 @@ class Quest (JQuest) :
     id = st.getState()
     if id == State.CREATED :
       st.set("cond","0")
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     if npcId == NAMELESS_SPIRIT:
       if int(st.get("cond")) == 0 :
         if st.getPlayer().getLevel() >= 74 :
@@ -116,7 +116,7 @@ class Quest (JQuest) :
 
   def onKill (self,npc,player,isPet) :
     st = player.getQuestState(qn)
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     if st:
       if int(st.get("cond")) == 1 or int(st.get("cond")) == 2 :
         if npcId in range(18120,18256) :
@@ -349,7 +349,7 @@ class Quest (JQuest) :
         st.getPlayer().teleToLocation(178298,-84574,-7216)
         htmltext = None
       else :
-        htmltext = ""+str(npc.getNpcId())+"-0.htm"
+        htmltext = ""+str(npc.getId())+"-0.htm"
     # Ghost Chamberlain of Elmoreden: Teleport to Imperial Tomb entrance
     elif event == "16" :
       if st.getQuestItemsCount(ANTIQUE_BROOCH) >= 1 :
@@ -360,7 +360,7 @@ class Quest (JQuest) :
         st.getPlayer().teleToLocation(186942,-75602,-2834)
         htmltext = None
       else :
-        htmltext = ""+str(npc.getNpcId())+"-0.htm"
+        htmltext = ""+str(npc.getId())+"-0.htm"
     # Teleport to Pilgrims Temple
     elif event == "17" :
       if st.getQuestItemsCount(ANTIQUE_BROOCH) >= 1 :

@@ -103,7 +103,7 @@ public class Q00002_WhatWomenWant extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ARUJIEN:
 				switch (st.getState())

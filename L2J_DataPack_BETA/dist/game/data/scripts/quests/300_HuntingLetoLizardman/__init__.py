@@ -46,7 +46,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    cond=st.getInt("cond")
    if cond == 0 :
@@ -66,7 +66,7 @@ class Quest (JQuest) :
    
    count = st.getQuestItemsCount(BRACELET)
    cond = st.getInt("cond")
-   if self.getRandom(100) < CHANCE + ((npc.getNpcId() - 20579)*5) and count < 60 and cond == 1:
+   if self.getRandom(100) < CHANCE + ((npc.getId() - 20579)*5) and count < 60 and cond == 1:
      st.giveItems(BRACELET,1)
      if count == 59 :
         st.playSound("ItemSound.quest_middle")

@@ -74,7 +74,7 @@ public class Q00121_PavelTheGiant extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NEWYEAR:
 				switch (st.getState())

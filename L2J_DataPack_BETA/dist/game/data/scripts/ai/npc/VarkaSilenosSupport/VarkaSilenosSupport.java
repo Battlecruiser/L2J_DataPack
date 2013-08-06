@@ -149,7 +149,7 @@ public class VarkaSilenosSupport extends AbstractNpcAI
 	{
 		String htmltext = getNoQuestMsg(player);
 		final int AllianceLevel = getAllianceLevel(player);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ASHAS:
 				htmltext = (AllianceLevel < 0) ? "31377-friend.html" : "31377-no.html";

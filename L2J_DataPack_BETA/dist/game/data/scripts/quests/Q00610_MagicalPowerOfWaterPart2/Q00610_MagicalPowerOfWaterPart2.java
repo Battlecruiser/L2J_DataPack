@@ -72,7 +72,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if (npc.getNpcId() == ASHUTAR)
+			if (npc.getId() == ASHUTAR)
 			{
 				switch (st.getCond())
 				{
@@ -164,7 +164,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ASEFA:
 				switch (st.getState())

@@ -136,7 +136,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		/*
 		 * if(player.getQuestState(qn) == null) newQuestState(player);
 		 */
-		if (npc.getNpcId() == MESSENGER)
+		if (npc.getId() == MESSENGER)
 		{
 			if (!checkIsAttacker(player.getClan()))
 			{
@@ -153,7 +153,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		else
 		{
-			int index = npc.getNpcId() - TELEPORT_1;
+			int index = npc.getId() - TELEPORT_1;
 			if ((index == 0) && _firstPhase)
 			{
 				html = "teleporter_notyet.htm";
@@ -370,7 +370,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	{
 		if (_hall.isInSiege())
 		{
-			final int npcId = npc.getNpcId();
+			final int npcId = npc.getId();
 			for (int keys : _data.keySet())
 			{
 				if (_data.get(keys).npc == npcId)

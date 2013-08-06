@@ -117,7 +117,7 @@ public class SagaOfTheDuelist extends SagasSuperClass
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getNpcId() == TUNATUN)
+		if (npc.getId() == TUNATUN)
 		{
 			String htmltext = getNoQuestMsg(player);
 			QuestState st = player.getQuestState(getName());

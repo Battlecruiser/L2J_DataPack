@@ -275,7 +275,7 @@ def AutoChat(npc,text) :
     chars = npc.getKnownList().getKnownPlayers().values().toArray()
     if chars != None:
        for pc in chars :
-          sm = NpcSay(npc.getObjectId(), 0, npc.getNpcId(), text)
+          sm = NpcSay(npc.getObjectId(), 0, npc.getId(), text)
           pc.sendPacket(sm)
 
 def HasRequestCompleted(st,level) :
@@ -400,7 +400,7 @@ class Quest (JQuest) :
         htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         cond = st.getInt("cond")
         id = st.getState()
         level = player.getLevel()
@@ -507,7 +507,7 @@ class Quest (JQuest) :
     def onKill(self,npc,player,isPet):
         st = player.getQuestState(qn)
         if not st : return
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         cond = st.getInt("cond")
         rand = Rnd.get(100)
         instructions_1 = st.getQuestItemsCount(Test_Instructions_1)
@@ -599,7 +599,7 @@ class Quest (JQuest) :
             it1,it2,id = Tor_requests_tospawn[npcId]
             if st.getQuestItemsCount(it1) and not st.getQuestItemsCount(it2) :
                 st.addSpawn(id,300000)
-        if npcId in Lizardmen and player.getActiveWeaponItem() and player.getActiveWeaponItem().getItemId() == Cyb_Dagger and st.getQuestItemsCount(Cyb_Req) and not st.getQuestItemsCount(3708):
+        if npcId in Lizardmen and player.getActiveWeaponItem() and player.getActiveWeaponItem().getId() == Cyb_Dagger and st.getQuestItemsCount(Cyb_Req) and not st.getQuestItemsCount(3708):
             if Rnd.get(2) :
                 if cond == 2 or cond == 3 :
                     for item in range(3698,3707) :

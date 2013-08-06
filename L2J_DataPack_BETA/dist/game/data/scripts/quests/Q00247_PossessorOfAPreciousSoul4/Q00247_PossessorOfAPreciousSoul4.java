@@ -110,7 +110,7 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 			return "no_sub.html";
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case CARADINE:
 			{

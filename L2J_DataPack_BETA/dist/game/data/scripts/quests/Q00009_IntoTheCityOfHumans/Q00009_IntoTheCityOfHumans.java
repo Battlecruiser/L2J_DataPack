@@ -88,7 +88,7 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case PETUKAI:
 				switch (st.getState())

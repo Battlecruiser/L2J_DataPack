@@ -48,7 +48,7 @@ public class SpiritShot implements IItemHandler
 		final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 		final SkillHolder[] skills = item.getItem().getSkills();
 		
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		
 		if (skills == null)
 		{

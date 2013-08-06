@@ -109,7 +109,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30476 and id != State.STARTED : return htmltext
 
@@ -271,7 +271,7 @@ class Quest (JQuest) :
    if not st : return
    if st.getState() != State.STARTED : return
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20144 :
       if st.getInt("cond") >=1 and st.getQuestItemsCount(METHEUS_FUNERAL_JAR_ID) and st.getQuestItemsCount(KASANDRAS_REMAINS_ID) == 0 :
         st.giveItems(KASANDRAS_REMAINS_ID,1)

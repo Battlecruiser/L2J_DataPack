@@ -69,13 +69,13 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 			return null;
 		}
 		
-		if (TELEPORTERS.containsKey(npc.getNpcId()))
+		if (TELEPORTERS.containsKey(npc.getId()))
 		{
 			st.getPlayer().teleToLocation(12661, 181687, -3560);
 			st.setState(State.STARTED);
-			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
+			st.set("id", String.valueOf(TELEPORTERS.get(npc.getId())));
 		}
-		else if (npc.getNpcId() == RACE_MANAGER)
+		else if (npc.getId() == RACE_MANAGER)
 		{
 			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
 			{
@@ -88,7 +88,7 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 			}
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "You've arrived here from a different way. I'll send you to Dion Castle Town which is the nearest town."));
+				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), "You've arrived here from a different way. I'll send you to Dion Castle Town which is the nearest town."));
 				st.getPlayer().teleToLocation(15670, 142983, -2700);
 			}
 			st.exitQuest(true);

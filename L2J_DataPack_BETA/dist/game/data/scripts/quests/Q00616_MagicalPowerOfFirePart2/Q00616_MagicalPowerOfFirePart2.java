@@ -72,7 +72,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			if (npc.getNpcId() == NASTRON)
+			if (npc.getId() == NASTRON)
 			{
 				switch (st.getCond())
 				{
@@ -164,7 +164,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case UDAN:
 				switch (st.getState())

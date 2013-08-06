@@ -103,7 +103,7 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final L2PcInstance member = getRandomPartyMember(player, 1);
-		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getNpcId())))
+		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
 			st.giveItems(MINERAL_FRAGMENT, 1);

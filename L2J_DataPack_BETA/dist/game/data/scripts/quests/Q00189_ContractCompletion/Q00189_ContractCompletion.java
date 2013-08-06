@@ -124,7 +124,7 @@ public final class Q00189_ContractCompletion extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BLUEPRINT_SELLER_LUKA:
 			{

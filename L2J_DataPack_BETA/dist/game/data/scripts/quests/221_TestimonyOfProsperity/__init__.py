@@ -182,7 +182,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30104 and id != State.STARTED : return htmltext
 
@@ -413,7 +413,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId in [20223,20154,20155,20156] :
     st.set("id","0")
     if st.getInt("cond") and st.getQuestItemsCount(RING_OF_TESTIMONY1_ID) == 1  :

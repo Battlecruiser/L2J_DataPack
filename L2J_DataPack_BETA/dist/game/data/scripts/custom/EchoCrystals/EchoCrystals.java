@@ -101,17 +101,17 @@ public class EchoCrystals extends Quest
 				
 				if (!st.hasQuestItems(score))
 				{
-					htmltext = npc.getNpcId() + "-" + noscore + ".htm";
+					htmltext = npc.getId() + "-" + noscore + ".htm";
 				}
 				else if (st.getQuestItemsCount(ADENA) < COST)
 				{
-					htmltext = npc.getNpcId() + "-" + noadena + ".htm";
+					htmltext = npc.getId() + "-" + noadena + ".htm";
 				}
 				else
 				{
 					st.takeItems(ADENA, COST);
 					st.giveItems(crystal, 1);
-					htmltext = npc.getNpcId() + "-" + ok + ".htm";
+					htmltext = npc.getId() + "-" + ok + ".htm";
 				}
 			}
 		}

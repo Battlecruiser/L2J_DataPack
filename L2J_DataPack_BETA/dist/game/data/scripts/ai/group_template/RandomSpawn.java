@@ -93,7 +93,7 @@ public class RandomSpawn extends AbstractNpcAI
 	{
 		if (!npc.isTeleporting())
 		{
-			final Location[] spawnlist = SPAWN_POINTS.get(npc.getNpcId());
+			final Location[] spawnlist = SPAWN_POINTS.get(npc.getId());
 			final Location loc = spawnlist[getRandom(spawnlist.length)];
 			if (!npc.isInsideRadius(loc, 200, false, false))
 			{

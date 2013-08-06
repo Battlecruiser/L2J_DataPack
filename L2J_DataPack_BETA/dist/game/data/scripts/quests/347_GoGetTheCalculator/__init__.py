@@ -81,7 +81,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     if npcId != BRUNON and id != State.STARTED : return htmltext
 
@@ -119,7 +119,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == GEMSTONE_BEAST and st.getInt("cond")==5 and self.getRandom(2)==1 and st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL)<10 :
         st.giveItems(GEMSTONE_BEAST_CRYSTAL,1)
         if st.getQuestItemsCount(GEMSTONE_BEAST_CRYSTAL) == 10 :

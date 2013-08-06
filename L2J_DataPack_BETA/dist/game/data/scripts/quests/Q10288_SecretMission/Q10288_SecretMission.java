@@ -84,7 +84,7 @@ public class Q10288_SecretMission extends Quest
 				}
 				break;
 			case "teleport":
-				if ((npc.getNpcId() == AQUILANI) && st.isCompleted())
+				if ((npc.getId() == AQUILANI) && st.isCompleted())
 				{
 					player.teleToLocation(118833, -80589, -2688);
 					return null;
@@ -115,7 +115,7 @@ public class Q10288_SecretMission extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DOMINIC:
 				switch (st.getState())

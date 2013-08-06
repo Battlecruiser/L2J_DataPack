@@ -149,7 +149,7 @@ public class KetraOrcSupport extends AbstractNpcAI
 	{
 		String htmltext = getNoQuestMsg(player);
 		final int AllianceLevel = getAllianceLevel(player);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KADUN:
 				htmltext = (AllianceLevel > 0) ? "31370-friend.html" : "31370-no.html";

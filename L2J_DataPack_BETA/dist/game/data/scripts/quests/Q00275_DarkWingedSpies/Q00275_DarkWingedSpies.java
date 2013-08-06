@@ -79,7 +79,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 		{
 			final long count = st.getQuestItemsCount(DARKWING_BAT_FANG);
 			
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case DARKWING_BAT:
 				{

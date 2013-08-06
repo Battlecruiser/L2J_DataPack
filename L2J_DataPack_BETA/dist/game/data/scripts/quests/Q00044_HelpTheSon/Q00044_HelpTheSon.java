@@ -140,7 +140,7 @@ public class Q00044_HelpTheSon extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case LUNDY:
 				switch (st.getState())

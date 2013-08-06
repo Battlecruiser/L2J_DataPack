@@ -410,7 +410,7 @@ public class Beleth extends AbstractNpcAI
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if ((npc.getNpcId() == 29118) && (killer != null))
+		if ((npc.getId() == 29118) && (killer != null))
 		{
 			setBelethKiller(1, killer);
 			GrandBossManager.getInstance().setBossStatus(29118, 3);
@@ -435,7 +435,7 @@ public class Beleth extends AbstractNpcAI
 			spawn(32470, new Location(12470, 215607, -9381, 49152));
 			ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(27), 1000);
 		}
-		else if (npc.getNpcId() == 29119)
+		else if (npc.getId() == 29119)
 		{
 			if (npc.getObjectId() == ALLOW_OBJECT_ID)
 			{
@@ -468,7 +468,7 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance player, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && skill.hasEffectType(L2EffectType.HEAL) && (getRandom(100) < 80))
 		{
 			npc.setTarget(player);
 			npc.doCast(HORN_OF_RISING.getSkill());
@@ -484,7 +484,7 @@ public class Beleth extends AbstractNpcAI
 			return super.onAttack(npc, attacker, damage, isSummon);
 		}
 		
-		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
+		if ((npc.getId() == 29118) || (npc.getId() == 29119))
 		{
 			if ((npc.getObjectId() == ALLOW_OBJECT_ID) && !ATTACKED)
 			{
@@ -533,7 +533,7 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow())
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow())
 		{
 			if ((player != null) && !player.isDead())
 			{
@@ -576,7 +576,7 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if ((npc != null) && !npc.isDead() && ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119)) && !npc.isCastingNow() && !MOVIE)
+		if ((npc != null) && !npc.isDead() && ((npc.getId() == 29118) || (npc.getId() == 29119)) && !npc.isCastingNow() && !MOVIE)
 		{
 			if (getRandom(100) < 40)
 			{
@@ -595,14 +595,14 @@ public class Beleth extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if ((npc.getNpcId() == 29118) || (npc.getNpcId() == 29119))
+		if ((npc.getId() == 29118) || (npc.getId() == 29119))
 		{
 			npc.setRunning();
 			if (!MOVIE && !npc.getKnownList().getKnownPlayersInRadius(300).isEmpty() && (getRandom(100) < 60))
 			{
 				npc.doCast(BLEED.getSkill());
 			}
-			if (npc.getNpcId() == 29118)
+			if (npc.getId() == 29118)
 			{
 				npc.getSpawn().setRespawnDelay(0);// setOnKillDelay
 			}

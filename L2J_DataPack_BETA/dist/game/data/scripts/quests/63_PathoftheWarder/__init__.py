@@ -69,7 +69,7 @@ class Quest (JQuest) :
         htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED :
@@ -170,7 +170,7 @@ class Quest (JQuest) :
         st = player.getQuestState(qn)
         if not st : return
         if st.getState() != State.STARTED : return
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         cond = st.getInt("cond")
         if npcId == Novice :
             if st.getQuestItemsCount(Order) < 10  and cond == 2 :

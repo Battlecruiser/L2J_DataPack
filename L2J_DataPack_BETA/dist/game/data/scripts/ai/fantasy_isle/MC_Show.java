@@ -329,7 +329,7 @@ public class MC_Show extends AbstractNpcAI
 	
 	private void autoChat(L2Npc npc, NpcStringId npcString, int type)
 	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getNpcId(), npcString));
+		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getId(), npcString));
 	}
 	
 	@Override
@@ -337,7 +337,7 @@ public class MC_Show extends AbstractNpcAI
 	{
 		if (IS_STARTED)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case 32433:
 					autoChat(npc, MESSAGES[0], Say2.NPC_SHOUT);
@@ -405,7 +405,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("7"))
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case 32433:
 						autoChat(npc, MESSAGES[7], Say2.NPC_SHOUT);
@@ -435,7 +435,7 @@ public class MC_Show extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("11"))
 			{
-				switch (npc.getNpcId())
+				switch (npc.getId())
 				{
 					case 32433:
 						autoChat(npc, MESSAGES[10], Say2.NPC_SHOUT);

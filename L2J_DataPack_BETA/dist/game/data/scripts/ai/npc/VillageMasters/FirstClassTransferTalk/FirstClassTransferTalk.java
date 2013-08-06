@@ -73,14 +73,14 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = npc.getNpcId() + "_";
+		String htmltext = npc.getId() + "_";
 		
-		if (MASTERS.get(npc.getNpcId()) != player.getRace())
+		if (MASTERS.get(npc.getId()) != player.getRace())
 		{
 			return htmltext += "no.html";
 		}
 		
-		switch (MASTERS.get(npc.getNpcId()))
+		switch (MASTERS.get(npc.getId()))
 		{
 			case Human:
 			{

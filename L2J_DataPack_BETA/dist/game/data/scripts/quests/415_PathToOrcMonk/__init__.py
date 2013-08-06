@@ -108,7 +108,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    cond = st.getInt("cond")
    if npcId != 30587 and id != State.STARTED : return htmltext
@@ -237,7 +237,7 @@ class Quest (JQuest) :
    # only fists/dual fists or bare hands are allowed
    if player.getActiveWeaponItem() != None :
       if player.getActiveWeaponItem().getItemType() != L2WeaponType.FIST and player.getActiveWeaponItem().getItemType() != L2WeaponType.DUALFIST: return
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20479 :
         st.set("id","0")
         if st.getInt("cond")and st.getQuestItemsCount(LEATHER_POUCH1) == 1 :

@@ -87,7 +87,7 @@ public final class Q00905_RefinedDragonBlood extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			final int itemId = MONSTERS.get(npc.getNpcId());
+			final int itemId = MONSTERS.get(npc.getId());
 			if (st.getQuestItemsCount(itemId) < DRAGON_BLOOD_COUNT)
 			{
 				st.giveItems(itemId, 1);

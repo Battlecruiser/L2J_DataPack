@@ -38,7 +38,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30532 and id != State.STARTED : return htmltext
 
@@ -92,7 +92,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId in [20322, 20323]: item = GOBLIN_NECKLACE
    if npcId in [20324, 20327]: item = GOBLIN_PENDANT
    if npcId == 20528 : item = GOBLIN_LORD_PENDANT

@@ -53,14 +53,14 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KEKROPUS)
+		if (npc.getId() == KEKROPUS)
 		{
 			if (event.equalsIgnoreCase("32138-03.html"))
 			{
 				st.startQuest();
 			}
 		}
-		else if (npc.getNpcId() == MENACING_MACHINE)
+		else if (npc.getId() == MENACING_MACHINE)
 		{
 			if (event.equalsIgnoreCase("32258-08.html"))
 			{
@@ -89,7 +89,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == KEKROPUS)
+		if (npc.getId() == KEKROPUS)
 		{
 			switch (st.getState())
 			{
@@ -127,7 +127,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 					break;
 			}
 		}
-		else if ((npc.getNpcId() == MENACING_MACHINE) && (st.getState() == State.STARTED))
+		else if ((npc.getId() == MENACING_MACHINE) && (st.getState() == State.STARTED))
 		{
 			htmltext = "32258-01.html";
 		}

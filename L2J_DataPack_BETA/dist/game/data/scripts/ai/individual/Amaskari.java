@@ -80,7 +80,7 @@ public class Amaskari extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("stop_toggle"))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[2]));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), AMASKARI_NPCSTRING_ID[2]));
 			((L2MonsterInstance) npc).clearAggroList();
 			((L2MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			npc.setIsInvul(false);
@@ -90,11 +90,11 @@ public class Amaskari extends AbstractNpcAI
 		{
 			if (getRandom(100) > 20)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[2]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), MINIONS_NPCSTRING_ID[2]));
 			}
 			else if (getRandom(100) > 40)
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), MINIONS_NPCSTRING_ID[3]));
+				npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), MINIONS_NPCSTRING_ID[3]));
 			}
 			startQuestTimer("onspawn_msg", (getRandom(8) + 1) * 30000, npc, null);
 		}
@@ -104,14 +104,14 @@ public class Amaskari extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, L2Skill skill)
 	{
-		if ((npc.getNpcId() == AMASKARI) && (getRandom(1000) < 25))
+		if ((npc.getId() == AMASKARI) && (getRandom(1000) < 25))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), AMASKARI_NPCSTRING_ID[0]));
+			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), AMASKARI_NPCSTRING_ID[0]));
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && (getRandom(10) == 0))
 				{
-					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[0]));
+					minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getId(), MINIONS_NPCSTRING_ID[0]));
 					minion.setCurrentHp(minion.getCurrentHp() - (minion.getCurrentHp() / 5));
 				}
 			}
@@ -122,12 +122,12 @@ public class Amaskari extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == AMASKARI_PRISONER)
+		if (npc.getId() == AMASKARI_PRISONER)
 		{
 			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
-				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[1]));
+				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), AMASKARI_NPCSTRING_ID[1]));
 				final L2Effect e = master.getFirstEffect(BUFF_ID);
 				if ((e != null) && (e.getSkill().getAbnormalLvl() == 3) && master.isInvul())
 				{
@@ -147,7 +147,7 @@ public class Amaskari extends AbstractNpcAI
 					}
 					else
 					{
-						master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getNpcId(), AMASKARI_NPCSTRING_ID[3]));
+						master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), AMASKARI_NPCSTRING_ID[3]));
 						// master.doCast(INVINCIBILITY.getSkill())
 						master.setIsInvul(true);
 						startQuestTimer("stop_toggle", 10000, master, null);
@@ -155,7 +155,7 @@ public class Amaskari extends AbstractNpcAI
 				}
 			}
 		}
-		else if (npc.getNpcId() == AMASKARI)
+		else if (npc.getId() == AMASKARI)
 		{
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
@@ -163,7 +163,7 @@ public class Amaskari extends AbstractNpcAI
 				{
 					if (getRandom(1000) > 300)
 					{
-						minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getNpcId(), MINIONS_NPCSTRING_ID[1]));
+						minion.broadcastPacket(new NpcSay(minion.getObjectId(), Say2.NPC_ALL, minion.getId(), MINIONS_NPCSTRING_ID[1]));
 					}
 					
 					HellboundManager.getInstance().updateTrust(30, true);

@@ -68,7 +68,7 @@ public class DemonPrinceFloor extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = null;
-		if (npc.getNpcId() == GK_4)
+		if (npc.getId() == GK_4)
 		{
 			htmltext = checkConditions(player);
 			
@@ -77,7 +77,7 @@ public class DemonPrinceFloor extends Quest
 				enterInstance(player, "DemonPrince.xml");
 			}
 		}
-		else if (npc.getNpcId() == CUBE)
+		else if (npc.getId() == CUBE)
 		{
 			InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if ((world != null) && (world.getInstanceId() == INSTANCEID))

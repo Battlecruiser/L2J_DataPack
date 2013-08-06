@@ -133,7 +133,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 		if (_atcGludio != null)
 		{
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getNpcId(), npcString));
+			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), Say2.NPC_SHOUT, _atcGludio.getId(), npcString));
 		}
 	}
 	
@@ -146,7 +146,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 		}
 		if (_atcGracia != null)
 		{
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getNpcId(), npcStringId));
+			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), Say2.NPC_SHOUT, _atcGracia.getId(), npcStringId));
 		}
 	}
 	
@@ -159,7 +159,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 			{
 				for (int id : CONTROLLERS)
 				{
-					if (((L2Npc) obj).getNpcId() == id)
+					if (obj.getId() == id)
 					{
 						return (L2Npc) obj;
 					}
@@ -238,7 +238,7 @@ public class AirShipGludioGracia extends Quest implements Runnable
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	@Override

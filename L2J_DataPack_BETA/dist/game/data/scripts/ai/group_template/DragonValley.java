@@ -103,11 +103,11 @@ public class DragonValley extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		L2Attackable mob = (L2Attackable) npc;
-		if (Util.contains(HERB_DROP, npc.getNpcId()) && mob.isSweepActive())
+		if (Util.contains(HERB_DROP, npc.getId()) && mob.isSweepActive())
 		{
 			((L2Attackable) npc).dropItem(killer, getRandom(8604, 8605), 1);
 		}
-		else if (npc.getNpcId() == NECROMANCER_OF_THE_VALLEY)
+		else if (npc.getId() == NECROMANCER_OF_THE_VALLEY)
 		{
 			spawnGhost(npc, killer, isSummon, 20);
 		}
@@ -125,7 +125,7 @@ public class DragonValley extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		((L2Attackable) npc).setOnKillDelay(0);
-		if (npc.getNpcId() == EXPLODING_ORC_GHOST)
+		if (npc.getId() == EXPLODING_ORC_GHOST)
 		{
 			startQuestTimer("SelfDestruction", 3000, npc, null);
 		}

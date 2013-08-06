@@ -93,7 +93,7 @@ public class SummonPet extends L2Effect
 			return false;
 		}
 		
-		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getItemId());
+		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
 			return false;

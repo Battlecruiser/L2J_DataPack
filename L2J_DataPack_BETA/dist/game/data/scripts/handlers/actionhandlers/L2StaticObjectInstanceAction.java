@@ -36,7 +36,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 		final L2StaticObjectInstance staticObject = (L2StaticObjectInstance) target;
 		if (staticObject.getType() < 0)
 		{
-			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getStaticObjectId());
+			_log.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + staticObject.getId());
 		}
 		
 		// Check if the L2PcInstance already target the L2NpcInstance
@@ -57,7 +57,7 @@ public class L2StaticObjectInstanceAction implements IActionHandler
 			{
 				if (staticObject.getType() == 2)
 				{
-					final String filename = (staticObject.getStaticObjectId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
+					final String filename = (staticObject.getId() == 24230101) ? "data/html/signboards/tomb_of_crystalgolem.htm" : "data/html/signboards/pvp_signboard.htm";
 					final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), filename);
 					final NpcHtmlMessage html = new NpcHtmlMessage(staticObject.getObjectId());
 					

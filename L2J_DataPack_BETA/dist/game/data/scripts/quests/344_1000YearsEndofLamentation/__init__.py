@@ -125,7 +125,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return htmltext
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      if npcId != GILMORE and id != State.STARTED : return htmltext
      
@@ -158,7 +158,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
    
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      chance = (CHANCE+(npcId-20234)*2)*Config.RATE_QUEST_DROP
      bonus = int(divmod(chance,100)[0])
      if st.getInt("cond") == 1 and self.getRandom(100)<chance :

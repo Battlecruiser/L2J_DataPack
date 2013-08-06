@@ -136,7 +136,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != WALDERAL and id != State.STARTED : return htmltext
 
@@ -155,7 +155,7 @@ class Quest (JQuest) :
      if not partyMember : return
      st = partyMember.getQuestState(qn)
      
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      item,chance=MOB[npcId]
      chance*=Config.RATE_QUEST_DROP
      chance = int(chance)

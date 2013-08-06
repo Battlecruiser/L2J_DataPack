@@ -217,17 +217,17 @@ public class WeaverOlf extends AbstractNpcAI
 					}
 					else
 					{
-						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
+						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WHAT_A_PREDICAMENT_MY_ATTEMPTS_WERE_UNSUCCESSFUL));
 					}
 				}
 				else
 				{
-					return npc.getNpcId() + "-low.htm";
+					return npc.getId() + "-low.htm";
 				}
 			}
 			else
 			{
-				return npc.getNpcId() + "-no.htm";
+				return npc.getId() + "-no.htm";
 			}
 			return super.onAdvEvent(event, npc, player);
 		}
@@ -237,7 +237,7 @@ public class WeaverOlf extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		return npc.getNpcId() + "-1.htm";
+		return npc.getId() + "-1.htm";
 	}
 	
 	public static void main(String[] args)

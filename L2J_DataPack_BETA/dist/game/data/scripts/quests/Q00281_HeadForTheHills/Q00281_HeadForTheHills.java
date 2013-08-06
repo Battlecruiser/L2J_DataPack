@@ -158,7 +158,7 @@ public final class Q00281_HeadForTheHills extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && (getRandom(1000) <= MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && (getRandom(1000) <= MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(CLAWS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

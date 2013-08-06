@@ -123,7 +123,7 @@ public class Q00618_IntoTheFlame extends Quest
 		if (member != null)
 		{
 			final QuestState qs = member.getQuestState(getName());
-			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getNpcId())))
+			if ((qs.getQuestItemsCount(VACUALITE_ORE) < REQUIRED_COUNT) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 			{
 				qs.giveItems(VACUALITE_ORE, 1);
 				if (qs.getQuestItemsCount(VACUALITE_ORE) >= REQUIRED_COUNT)
@@ -148,7 +148,7 @@ public class Q00618_IntoTheFlame extends Quest
 		{
 			return htmltext;
 		}
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KLEIN:
 			{

@@ -117,7 +117,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WOODLEY:
 				switch (st.getState())

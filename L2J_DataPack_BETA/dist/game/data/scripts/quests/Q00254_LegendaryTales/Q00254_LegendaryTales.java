@@ -225,7 +225,7 @@ public class Q00254_LegendaryTales extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			int raids = st.getInt("raids");
-			Bosses boss = Bosses.valueOf(npc.getNpcId());
+			Bosses boss = Bosses.valueOf(npc.getId());
 			
 			if (!checkMask(st, boss))
 			{

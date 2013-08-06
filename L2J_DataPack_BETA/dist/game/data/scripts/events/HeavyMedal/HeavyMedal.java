@@ -106,7 +106,7 @@ public class HeavyMedal extends LongTimeEvent
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			htmltext = String.valueOf(npc.getNpcId()) + "-lvl-" + String.valueOf(level) + ".htm";
+			htmltext = String.valueOf(npc.getId()) + "-lvl-" + String.valueOf(level) + ".htm";
 		}
 		return htmltext;
 	}
@@ -118,7 +118,7 @@ public class HeavyMedal extends LongTimeEvent
 		{
 			newQuestState(player);
 		}
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	public int checkLevel(QuestState st)

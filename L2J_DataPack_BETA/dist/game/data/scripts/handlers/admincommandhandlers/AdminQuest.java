@@ -169,11 +169,11 @@ public class AdminQuest implements IAdminCommandHandler
 				{
 					if (q.unload())
 					{
-						activeChar.sendMessage("Script Successfully Unloaded [" + q.getName() + "/" + q.getQuestIntId() + "]");
+						activeChar.sendMessage("Script Successfully Unloaded [" + q.getName() + "/" + q.getId() + "]");
 					}
 					else
 					{
-						activeChar.sendMessage("Failed unloading [" + q.getName() + "/" + q.getQuestIntId() + "].");
+						activeChar.sendMessage("Failed unloading [" + q.getName() + "/" + q.getId() + "].");
 					}
 				}
 				else
@@ -212,7 +212,7 @@ public class AdminQuest implements IAdminCommandHandler
 					}
 				}
 				msg.replace("%quests%", sb.toString());
-				msg.replace("%tmplid%", Integer.toString(npc.getTemplate().getNpcId()));
+				msg.replace("%tmplid%", Integer.toString(npc.getTemplate().getId()));
 				msg.replace("%questName%", "");
 				activeChar.sendPacket(msg);
 				questset.clear();
@@ -274,7 +274,7 @@ public class AdminQuest implements IAdminCommandHandler
 					}
 				}
 				
-				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getQuestIntId() + "</font></td></tr></table></td></tr>");
+				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">ID:</font> <font color=00FF00>" + quest.getId() + "</font></td></tr></table></td></tr>");
 				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Name:</font> <font color=00FF00>" + quest.getName() + "</font></td></tr></table></td></tr>");
 				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Descr:</font> <font color=00FF00>" + quest.getDescr() + "</font></td></tr></table></td></tr>");
 				sb.append("<tr><td colspan=\"4\"><table width=270 border=0 bgcolor=131210><tr><td width=270><font color=\"LEVEL\">Path:</font> <font color=00FF00>" + quest.getClass().getName().substring(0, quest.getClass().getName().lastIndexOf('.')).replaceAll("\\.", "/") + "</font></td></tr></table></td></tr>");
@@ -293,7 +293,7 @@ public class AdminQuest implements IAdminCommandHandler
 					sb.append(timers);
 				}
 				msg.replace("%quests%", sb.toString());
-				msg.replace("%tmplid%", Integer.toString(npc.getNpcId()));
+				msg.replace("%tmplid%", Integer.toString(npc.getId()));
 				msg.replace("%questName%", "<table><tr><td width=\"50\" align=\"left\"><a action=\"bypass -h admin_script_load " + quest.getName() + "\">Reload</a></td> <td width=\"150\"  align=\"center\"><a action=\"bypass -h admin_quest_info " + quest.getName() + "\">" + quest.getName() + "</a></td> <td width=\"50\" align=\"right\"><a action=\"bypass -h admin_script_unload " + quest.getName() + "\">Unload</a></tr></td></table>");
 				activeChar.sendPacket(msg);
 			}

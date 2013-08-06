@@ -158,11 +158,11 @@ public final class Q00280_TheFoodChain extends Quest
 		if ((st != null) && Util.checkIfInRange(1500, npc, killer, true))
 		{
 			final int chance = getRandom(1000);
-			for (ItemHolder dropChance : MONSTER_CHANCE.get(npc.getNpcId()))
+			for (ItemHolder dropChance : MONSTER_CHANCE.get(npc.getId()))
 			{
 				if (chance < dropChance.getId())
 				{
-					st.giveItemRandomly(MONSTER_ITEM.get(npc.getNpcId()), dropChance.getCount(), 0, 1, true);
+					st.giveItemRandomly(MONSTER_ITEM.get(npc.getId()), dropChance.getCount(), 0, 1, true);
 					break;
 				}
 			}

@@ -1462,22 +1462,22 @@ public class FinalEmperialTomb extends Quest
 		if (tmpworld instanceof FETWorld)
 		{
 			final FETWorld world = (FETWorld) tmpworld;
-			if ((npc.getNpcId() == SCARLET1) && (world.getStatus() == 3) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
+			if ((npc.getId() == SCARLET1) && (world.getStatus() == 3) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.80)))
 			{
 				controlStatus(world);
 			}
-			else if ((npc.getNpcId() == SCARLET1) && (world.getStatus() == 4) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
+			else if ((npc.getId() == SCARLET1) && (world.getStatus() == 4) && (npc.getCurrentHp() < (npc.getMaxHp() * 0.20)))
 			{
 				controlStatus(world);
 			}
 			if (skill != null)
 			{
 				// When Dewdrop of Destruction is used on Portraits they suicide.
-				if (Util.contains(PORTRAITS, npc.getNpcId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+				if (Util.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
 				{
 					npc.doDie(attacker);
 				}
-				else if ((npc.getNpcId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
+				else if ((npc.getId() == FRINTEZZA) && (skill.getId() == SOUL_BREAKING_ARROW_SKILL_ID))
 				{
 					npc.setScriptValue(1);
 					npc.setTarget(null);
@@ -1505,7 +1505,7 @@ public class FinalEmperialTomb extends Quest
 		if (tmpworld instanceof FETWorld)
 		{
 			FETWorld world = (FETWorld) tmpworld;
-			if (npc.getNpcId() == HALL_ALARM)
+			if (npc.getId() == HALL_ALARM)
 			{
 				ThreadPoolManager.getInstance().scheduleGeneral(new StatusTask(world, 0), 2000);
 				if (debug)
@@ -1513,7 +1513,7 @@ public class FinalEmperialTomb extends Quest
 					_log.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
 				}
 			}
-			else if (npc.getNpcId() == DARK_CHOIR_PLAYER)
+			else if (npc.getId() == DARK_CHOIR_PLAYER)
 			{
 				world.darkChoirPlayerCount--;
 				if (world.darkChoirPlayerCount < 1)
@@ -1525,13 +1525,13 @@ public class FinalEmperialTomb extends Quest
 					}
 				}
 			}
-			else if (npc.getNpcId() == SCARLET2)
+			else if (npc.getId() == SCARLET2)
 			{
 				controlStatus(world);
 			}
 			else if (world.getStatus() <= 2)
 			{
-				if (npc.getNpcId() == HALL_KEEPER_CAPTAIN)
+				if (npc.getId() == HALL_KEEPER_CAPTAIN)
 				{
 					if (getRandom(100) < 5)
 					{
@@ -1559,7 +1559,7 @@ public class FinalEmperialTomb extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
@@ -1569,7 +1569,7 @@ public class FinalEmperialTomb extends Quest
 		{
 			enterInstance(player, "FinalEmperialTomb.xml", ENTER_TELEPORT);
 		}
-		else if (npc.getNpcId() == CUBE)
+		else if (npc.getId() == CUBE)
 		{
 			int x = -87534 + getRandom(500);
 			int y = -153048 + getRandom(500);

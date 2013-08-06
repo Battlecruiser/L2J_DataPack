@@ -108,7 +108,7 @@ public class Q00001_LettersOfLove extends Quest
 				{
 					case 1:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -131,7 +131,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 2:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -157,7 +157,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 3:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{
@@ -195,7 +195,7 @@ public class Q00001_LettersOfLove extends Quest
 					}
 					case 4:
 					{
-						switch (npc.getNpcId())
+						switch (npc.getId())
 						{
 							case DARIN:
 							{

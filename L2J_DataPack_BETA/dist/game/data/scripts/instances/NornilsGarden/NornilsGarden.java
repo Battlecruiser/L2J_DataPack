@@ -529,7 +529,7 @@ public class NornilsGarden extends Quest
 			return getNoQuestMsg(player);
 		}
 		
-		if ((npc.getNpcId() == _garden_guard) && event.equalsIgnoreCase("enter_instance"))
+		if ((npc.getId() == _garden_guard) && event.equalsIgnoreCase("enter_instance"))
 		{
 			try
 			{
@@ -539,7 +539,7 @@ public class NornilsGarden extends Quest
 			{
 			}
 		}
-		else if ((npc.getNpcId() == 32258) && event.equalsIgnoreCase("exit"))
+		else if ((npc.getId() == 32258) && event.equalsIgnoreCase("exit"))
 		{
 			try
 			{
@@ -549,7 +549,7 @@ public class NornilsGarden extends Quest
 			{
 			}
 		}
-		else if (Util.contains(_final_gates, npc.getNpcId()))
+		else if (Util.contains(_final_gates, npc.getId()))
 		{
 			if (event.equalsIgnoreCase("32260-02.html") || event.equalsIgnoreCase("32261-02.html") || event.equalsIgnoreCase("32262-02.html"))
 			{
@@ -560,26 +560,26 @@ public class NornilsGarden extends Quest
 				int correct = st.getInt("correct");
 				correct++;
 				st.set("correct", String.valueOf(correct));
-				htmltext = npc.getNpcId() + "-0" + String.valueOf(correct + 2) + ".html";
+				htmltext = npc.getId() + "-0" + String.valueOf(correct + 2) + ".html";
 			}
 			else if (event.equalsIgnoreCase("check"))
 			{
 				int correct = st.getInt("correct");
-				if ((npc.getNpcId() == 32260) && (correct == 3))
+				if ((npc.getId() == 32260) && (correct == 3))
 				{
 					openDoor(st, player, 16200014);
 				}
-				else if ((npc.getNpcId() == 32261) && (correct == 3))
+				else if ((npc.getId() == 32261) && (correct == 3))
 				{
 					openDoor(st, player, 16200015);
 				}
-				else if ((npc.getNpcId() == 32262) && (correct == 4))
+				else if ((npc.getId() == 32262) && (correct == 4))
 				{
 					openDoor(st, player, 16200016);
 				}
 				else
 				{
-					return npc.getNpcId() + "-00.html";
+					return npc.getId() + "-00.html";
 				}
 			}
 		}
@@ -589,12 +589,12 @@ public class NornilsGarden extends Quest
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (Util.contains(_final_gates, npc.getNpcId()))
+		if (Util.contains(_final_gates, npc.getId()))
 		{
 			QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
 			if ((cst != null) && (cst.getState() == State.STARTED))
 			{
-				return npc.getNpcId() + "-01.html";
+				return npc.getId() + "-01.html";
 			}
 			return getNoQuestMsg(player);
 		}
@@ -610,19 +610,19 @@ public class NornilsGarden extends Quest
 		{
 			st = newQuestState(player);
 		}
-		return npc.getNpcId() + ".html";
+		return npc.getId() + ".html";
 	}
 	
 	@Override
 	public final String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		if ((npc.getNpcId() == _herb_jar) && !npc.isDead())
+		if ((npc.getId() == _herb_jar) && !npc.isDead())
 		{
 			dropHerb(npc, attacker, HP_HERBS_DROPLIST);
 			dropHerb(npc, attacker, MP_HERBS_DROPLIST);
 			npc.doDie(attacker);
 		}
-		else if ((npc.getNpcId() == 18362) && (npc.getInstanceId() > 0))
+		else if ((npc.getId() == 18362) && (npc.getInstanceId() > 0))
 		{
 			spawn1(npc);
 		}
@@ -640,7 +640,7 @@ public class NornilsGarden extends Quest
 		
 		for (int _gk[] : _gatekeepers)
 		{
-			if (npc.getNpcId() == _gk[0])
+			if (npc.getId() == _gk[0])
 			{
 				// Drop key
 				((L2MonsterInstance) npc).dropItem(player, _gk[1], 1);
@@ -655,7 +655,7 @@ public class NornilsGarden extends Quest
 					}
 				}
 			}
-			if (npc.getNpcId() == 18355)
+			if (npc.getId() == 18355)
 			{
 				spawn2(npc);
 			}

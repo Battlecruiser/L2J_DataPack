@@ -79,15 +79,15 @@ public class TeleportToFantasy extends AbstractNpcAI
 			return null;
 		}
 		
-		if (TELEPORTERS.containsKey(npc.getNpcId()))
+		if (TELEPORTERS.containsKey(npc.getId()))
 		{
 			int random_id = getRandom(ISLE_LOCS.length);
 			
 			player.teleToLocation(ISLE_LOCS[random_id], false);
 			st.setState(State.STARTED);
-			st.set("id", String.valueOf(TELEPORTERS.get(npc.getNpcId())));
+			st.set("id", String.valueOf(TELEPORTERS.get(npc.getId())));
 		}
-		else if (npc.getNpcId() == PADDIES)
+		else if (npc.getId() == PADDIES)
 		{
 			if ((st.getState() == State.STARTED) && (st.getInt("id") > 0))
 			{
@@ -98,7 +98,7 @@ public class TeleportToFantasy extends AbstractNpcAI
 			
 			else
 			{
-				player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getNpcId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
+				player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
 				player.teleToLocation(43835, -47749, -792);
 			}
 			st.exitQuest(true);

@@ -331,7 +331,7 @@ public class RainbowSpringsChateau extends Quest
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		String html = "";
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (npcId == MESSENGER)
 		{
 			final String main = (_rainbow.getOwnerId() > 0) ? "messenger_yetti001.htm" : "messenger_yetti001a.htm";
@@ -385,7 +385,7 @@ public class RainbowSpringsChateau extends Quest
 	{
 		String html = event;
 		final L2Clan clan = player.getClan();
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case MESSENGER:
 				switch (event)
@@ -631,7 +631,7 @@ public class RainbowSpringsChateau extends Quest
 			return null;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		final int index = _acceptedClans.indexOf(clan);
 		
 		if (npcId == CHEST)
@@ -668,15 +668,13 @@ public class RainbowSpringsChateau extends Quest
 			return null;
 		}
 		
-		int yeti = ((L2Npc) target).getNpcId();
-		
+		int yeti = target.getId();
 		if (!isYetiTarget(yeti))
 		{
 			return null;
 		}
 		
 		final L2Clan clan = player.getClan();
-		
 		if ((clan == null) || !_acceptedClans.contains(clan))
 		{
 			return null;
@@ -842,7 +840,7 @@ public class RainbowSpringsChateau extends Quest
 			_usedTextPassages.put(message, new ArrayList<L2Clan>());
 			int shout = Say2.NPC_SHOUT;
 			int objId = npc.getObjectId();
-			NpcSay say = new NpcSay(objId, shout, npc.getNpcId(), message);
+			NpcSay say = new NpcSay(objId, shout, npc.getId(), message);
 			npc.broadcastPacket(say);
 		}
 	}

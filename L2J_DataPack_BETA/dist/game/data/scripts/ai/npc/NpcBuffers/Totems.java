@@ -59,7 +59,7 @@ public class Totems extends AbstractNpcAI
 	private void addTask(L2Npc npc)
 	{
 		final SkillHolder holder;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TOTEM_OF_BODY:
 			{

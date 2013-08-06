@@ -295,7 +295,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != SORINT and id == State.CREATED : return htmltext
    if npcId != SORINT and npcId != BERNARD and id == State.STARTED and st.get("part")== "SOLO" : return htmltext
@@ -341,7 +341,7 @@ class Quest (JQuest) :
    return htmltext
 
  def onKill(self,npc,player,isPet):
-   npcId=npc.getNpcId()
+   npcId=npc.getId()
    st = 0
    # solo section of the quest
    if npcId in [HARITMATR, HARITSHA] :

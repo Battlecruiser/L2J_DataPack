@@ -97,9 +97,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			if (MONSTERS_SKULLS.containsKey(npc.getNpcId()))
+			if (MONSTERS_SKULLS.containsKey(npc.getId()))
 			{
-				if (getRandom(100) < MONSTERS_SKULLS.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS_SKULLS.get(npc.getId()))
 				{
 					long skulls = st.getQuestItemsCount(ELF_SKULL);
 					if (skulls < 3)
@@ -116,9 +116,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 					}
 				}
 			}
-			else if (MONSTERS_BONES.containsKey(npc.getNpcId()))
+			else if (MONSTERS_BONES.containsKey(npc.getId()))
 			{
-				if (getRandom(100) < MONSTERS_BONES.get(npc.getNpcId()))
+				if (getRandom(100) < MONSTERS_BONES.get(npc.getId()))
 				{
 					long bones = st.getQuestItemsCount(BONE_FRAGMENT);
 					if (bones < 10)

@@ -195,7 +195,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		float chance = (MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{

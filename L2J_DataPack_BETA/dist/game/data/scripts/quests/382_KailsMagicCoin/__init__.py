@@ -38,7 +38,7 @@ class Quest (JQuest) :
       htmltext = Quest.getNoQuestMsg(player)
       st = player.getQuestState(qn)
       if not st : return htmltext
-      npcId = npc.getNpcId()
+      npcId = npc.getId()
       id = st.getState()
       cond=st.getInt("cond")
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0 or player.getLevel() < 55 :
@@ -59,7 +59,7 @@ class Quest (JQuest) :
       if st.getQuestItemsCount(ROYAL_MEMBERSHIP) :
          if self.getRandom(MAX) < chance :
             numItems = numItems + 1
-         npcId = npc.getNpcId()
+         npcId = npc.getId()
          if numItems != 0 :
             st.giveItems(MOBS[npcId][self.getRandom(len(MOBS[npcId]))],int(numItems))
             st.playSound("ItemSound.quest_itemget")

@@ -43,7 +43,7 @@ public class MercTicket implements IItemHandler
 			return false;
 		}
 		
-		int itemId = item.getItemId();
+		int itemId = item.getId();
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		Castle castle = CastleManager.getInstance().getCastle(activeChar);
 		int castleId = -1;
@@ -105,12 +105,12 @@ public class MercTicket implements IItemHandler
 			}
 		}
 		
-		if (MercTicketManager.getInstance().isAtCasleLimit(item.getItemId()))
+		if (MercTicketManager.getInstance().isAtCasleLimit(item.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
 		}
-		else if (MercTicketManager.getInstance().isAtTypeLimit(item.getItemId()))
+		else if (MercTicketManager.getInstance().isAtTypeLimit(item.getId()))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_MERCENARY_CANNOT_BE_POSITIONED_ANYMORE);
 			return false;
@@ -121,7 +121,7 @@ public class MercTicket implements IItemHandler
 			return false;
 		}
 		
-		MercTicketManager.getInstance().addTicket(item.getItemId(), activeChar);
+		MercTicketManager.getInstance().addTicket(item.getId(), activeChar);
 		activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false); // Remove item from char's inventory
 		activeChar.sendPacket(SystemMessageId.PLACE_CURRENT_LOCATION_DIRECTION);
 		return true;

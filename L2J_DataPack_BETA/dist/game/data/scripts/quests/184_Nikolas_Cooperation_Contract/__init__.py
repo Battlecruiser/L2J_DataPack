@@ -64,7 +64,7 @@ class Quest (JQuest) :
             st.playSound("ItemSound3.sys_siren")
             self.startQuestTimer("1",60000, alarm, player)
             time.sleep(1)
-            player.sendPacket(NpcSay(alarm.getObjectId(), 0, alarm.getNpcId(), "Intruder Alert! The alarm will self-destruct in 2 minutes."))
+            player.sendPacket(NpcSay(alarm.getObjectId(), 0, alarm.getId(), "Intruder Alert! The alarm will self-destruct in 2 minutes."))
         elif event == "32366-05.htm" :
             st.unset("step")
             st.playSound("ItemSound.quest_middle")
@@ -92,19 +92,19 @@ class Quest (JQuest) :
                 else :
                     htmltext == "32367-06.htm"
         elif event == "1" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "The alarm will self-destruct in 60 seconds. Enter passcode to override."))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getId(), "The alarm will self-destruct in 60 seconds. Enter passcode to override."))
             self.startQuestTimer("2",30000, npc, player)
             return
         elif event == "2" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "The alarm will self-destruct in 30 seconds. Enter passcode to override."))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getId(), "The alarm will self-destruct in 30 seconds. Enter passcode to override."))
             self.startQuestTimer("3",20000, npc, player)
             return
         elif event == "3" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "The alarm will self-destruct in 10 seconds. Enter passcode to override."))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getId(), "The alarm will self-destruct in 10 seconds. Enter passcode to override."))
             self.startQuestTimer("4",10000, npc, player)
             return
         elif event == "4" :
-            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getNpcId(), "Recorder crushed."))
+            player.sendPacket(NpcSay(npc.getObjectId(), 0, npc.getId(), "Recorder crushed."))
             npc.deleteMe()
             st.set("step","2")
             return
@@ -114,7 +114,7 @@ class Quest (JQuest) :
         htmltext = Quest.getNoQuestMsg(player)
         st = player.getQuestState(qn)
         if not st : return htmltext
-        npcId = npc.getNpcId()
+        npcId = npc.getId()
         id = st.getState()
         cond = st.getInt("cond")
         if id == State.COMPLETED:

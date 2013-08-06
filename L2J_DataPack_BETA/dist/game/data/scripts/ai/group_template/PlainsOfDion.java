@@ -81,7 +81,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 			
 			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getFactionRange()))
 			{
-				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, ((L2MonsterInstance) obj).getNpcId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
+				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
 				{
 					final L2MonsterInstance monster = (L2MonsterInstance) obj;
 					attackPlayer(monster, player);

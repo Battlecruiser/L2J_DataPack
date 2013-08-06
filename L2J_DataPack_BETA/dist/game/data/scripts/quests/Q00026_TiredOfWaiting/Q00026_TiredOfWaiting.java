@@ -57,7 +57,7 @@ public class Q00026_TiredOfWaiting extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ISAEL_SILVERSHADOW:
 				if (event.equalsIgnoreCase("30655-04.html"))
@@ -101,7 +101,7 @@ public class Q00026_TiredOfWaiting extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		switch (st.getState())
 		{
 			case State.CREATED:

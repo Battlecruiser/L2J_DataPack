@@ -93,7 +93,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		L2PcInstance pl = getRandomPartyMember(player, "progress", "1");
-		final int idx = Arrays.binarySearch(MONSTERS, npc.getNpcId());
+		final int idx = Arrays.binarySearch(MONSTERS, npc.getId());
 		if ((pl == null) || (idx < 0))
 		{
 			return null;

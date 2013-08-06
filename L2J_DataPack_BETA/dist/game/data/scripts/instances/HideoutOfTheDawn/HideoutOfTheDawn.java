@@ -59,7 +59,7 @@ public class HideoutOfTheDawn extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case WOOD:
 			{

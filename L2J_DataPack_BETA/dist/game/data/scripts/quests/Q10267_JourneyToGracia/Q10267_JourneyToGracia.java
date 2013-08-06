@@ -83,7 +83,7 @@ public class Q10267_JourneyToGracia extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ORVEN:
 				switch (st.getState())

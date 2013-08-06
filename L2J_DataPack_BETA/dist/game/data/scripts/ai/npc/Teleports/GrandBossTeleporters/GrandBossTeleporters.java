@@ -102,7 +102,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			return null;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case 13001:
 			{

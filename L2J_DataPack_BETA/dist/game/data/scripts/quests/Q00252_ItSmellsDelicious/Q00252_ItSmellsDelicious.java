@@ -69,7 +69,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == STAN)
+		if (npc.getId() == STAN)
 		{
 			if (event.equalsIgnoreCase("30200-05.htm"))
 			{
@@ -88,7 +88,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		QuestState st;
 		if (Util.contains(MOBS, npcId) && (getRandom(1000) < 599))
 		{
@@ -131,7 +131,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == STAN)
+		if (npc.getId() == STAN)
 		{
 			switch (st.getState())
 			{

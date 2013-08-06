@@ -85,7 +85,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    htmltext = Quest.getNoQuestMsg(player)
    if st :
-       npcId = npc.getNpcId()
+       npcId = npc.getId()
        cond = st.getInt("cond")
        id = st.getState()
        if id == State.COMPLETED :
@@ -141,7 +141,7 @@ class Quest (JQuest) :
    st = partyMember.getQuestState(qn)
    if st :
         if st.getState() == State.STARTED :
-            npcId = npc.getNpcId()
+            npcId = npc.getId()
             cond = st.getInt("cond")
             chance = CHANCE[npcId]*Config.RATE_QUEST_DROP
             numItems, chance = divmod(chance,MAX)

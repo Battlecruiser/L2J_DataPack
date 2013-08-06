@@ -183,7 +183,7 @@ public class Q00290_ThreatRemoval extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		float chance = (MOBS_TAG.get(npcId) * Config.RATE_QUEST_DROP);
 		if (getRandom(1000) < chance)
 		{

@@ -52,14 +52,14 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == MOUEN)
+		if (npc.getId() == MOUEN)
 		{
 			if (event.equalsIgnoreCase("30196-03.htm"))
 			{
 				st.startQuest();
 			}
 		}
-		else if ((npc.getNpcId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
+		else if ((npc.getId() == JOHNNY) && event.equalsIgnoreCase("32744-03.htm"))
 		{
 			st.giveAdena(83056, true);
 			st.addExpAndSp(477496, 58743);
@@ -78,7 +78,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == MOUEN)
+		if (npc.getId() == MOUEN)
 		{
 			switch (st.getState())
 			{
@@ -96,7 +96,7 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 					break;
 			}
 		}
-		else if (npc.getNpcId() == JOHNNY)
+		else if (npc.getId() == JOHNNY)
 		{
 			if (st.isCond(1))
 			{

@@ -127,7 +127,7 @@ public class ManorManager implements IBypassHandler
 					activeChar.sendPacket(new ExShowManorDefaultInfo());
 					break;
 				case 6: // Buy harvester
-					((L2MerchantInstance) manager).showBuyWindow(activeChar, 300000 + manager.getNpcId());
+					((L2MerchantInstance) manager).showBuyWindow(activeChar, 300000 + manager.getId());
 					break;
 				case 9: // Edit sales (Crop sales)
 					activeChar.sendPacket(new ExShowProcureCropDetail(state));

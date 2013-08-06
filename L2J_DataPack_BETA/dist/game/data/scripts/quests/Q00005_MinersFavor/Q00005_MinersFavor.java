@@ -101,7 +101,7 @@ public class Q00005_MinersFavor extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BOLTER:
 				switch (st.getState())
@@ -137,13 +137,13 @@ public class Q00005_MinersFavor extends Quest
 				}
 				break;
 			case REED:
-				htmltext = giveItem(st, npc.getNpcId(), REDSTONE_BEER);
+				htmltext = giveItem(st, npc.getId(), REDSTONE_BEER);
 				break;
 			case SHARI:
-				htmltext = giveItem(st, npc.getNpcId(), BOOMBOOM_POWDER);
+				htmltext = giveItem(st, npc.getId(), BOOMBOOM_POWDER);
 				break;
 			case GARITA:
-				htmltext = giveItem(st, npc.getNpcId(), MINING_BOOTS);
+				htmltext = giveItem(st, npc.getId(), MINING_BOOTS);
 				break;
 		}
 		return htmltext;

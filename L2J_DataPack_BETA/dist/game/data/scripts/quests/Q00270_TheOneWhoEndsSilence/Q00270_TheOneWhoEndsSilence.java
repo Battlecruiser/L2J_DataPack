@@ -277,7 +277,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case SEEKER_SOLINA:
 			{

@@ -98,7 +98,7 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if (st != null)
 		{
-			if (getRandom(100) <= MONSTERS.get(npc.getNpcId()))
+			if (getRandom(100) <= MONSTERS.get(npc.getId()))
 			{
 				st.giveItems(BLACK_SOULSTONE, 1);
 			}

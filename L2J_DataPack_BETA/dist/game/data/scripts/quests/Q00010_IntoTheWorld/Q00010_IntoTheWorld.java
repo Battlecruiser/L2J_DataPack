@@ -102,7 +102,7 @@ public class Q00010_IntoTheWorld extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BALANKI:
 				switch (st.getState())

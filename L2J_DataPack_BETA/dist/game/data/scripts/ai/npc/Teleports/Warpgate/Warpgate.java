@@ -87,7 +87,7 @@ public class Warpgate extends AbstractNpcAI
 				return "warpgate-locked.htm";
 			}
 		}
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	@Override

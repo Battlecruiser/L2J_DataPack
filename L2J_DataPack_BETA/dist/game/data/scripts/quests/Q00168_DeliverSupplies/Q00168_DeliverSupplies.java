@@ -82,7 +82,7 @@ public class Q00168_DeliverSupplies extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case JENNA:
 				{
@@ -164,19 +164,19 @@ public class Q00168_DeliverSupplies extends Quest
 				case ROSELYN:
 				case KRISTIN:
 				{
-					if (st.isCond(3) && st.hasQuestItems(SENTRIES.get(npc.getNpcId())))
+					if (st.isCond(3) && st.hasQuestItems(SENTRIES.get(npc.getId())))
 					{
-						st.takeItems(SENTRIES.get(npc.getNpcId()), -1);
+						st.takeItems(SENTRIES.get(npc.getId()), -1);
 						st.giveItems(OLD_BRONZE_SWORD, 1);
 						if (st.getQuestItemsCount(OLD_BRONZE_SWORD) >= 2)
 						{
 							st.setCond(4, true);
 						}
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
-					else if (!st.hasQuestItems(SENTRIES.get(npc.getNpcId())) && st.hasQuestItems(OLD_BRONZE_SWORD))
+					else if (!st.hasQuestItems(SENTRIES.get(npc.getId())) && st.hasQuestItems(OLD_BRONZE_SWORD))
 					{
-						htmltext = npc.getNpcId() + "-02.html";
+						htmltext = npc.getId() + "-02.html";
 					}
 					break;
 				}

@@ -62,7 +62,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == RAFFORTY)
+		if (npc.getId() == RAFFORTY)
 		{
 			if (event.equalsIgnoreCase("32020-03.htm"))
 			{
@@ -73,7 +73,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 				st.setCond(2, true);
 			}
 		}
-		else if ((npc.getNpcId() == KIER) && event.equalsIgnoreCase("spawn"))
+		else if ((npc.getId() == KIER) && event.equalsIgnoreCase("spawn"))
 		{
 			if (_jiniaOnSpawn)
 			{
@@ -92,7 +92,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			_jiniaOnSpawn = false;
 			return null;
 		}
-		else if ((npc.getNpcId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
+		else if ((npc.getId() == JINIA) && event.equalsIgnoreCase("32760-04.html"))
 		{
 			st.giveAdena(190000, true);
 			st.addExpAndSp(627000, 50300);
@@ -113,7 +113,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		}
 		
 		final QuestState st = player.getQuestState(getName());
-		if ((npc.getNpcId() == JINIA) && (st != null) && (st.isCond(2)))
+		if ((npc.getId() == JINIA) && (st != null) && (st.isCond(2)))
 		{
 			return "32760-01.html";
 		}
@@ -130,7 +130,7 @@ public class Q10283_RequestOfIceMerchant extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case RAFFORTY:
 				switch (st.getState())

@@ -120,7 +120,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		
 		if (Util.isDigit(event))
 		{
-			htmltext = Integer.toString(npc.getNpcId()) + "-1" + event + ".html";
+			htmltext = Integer.toString(npc.getId()) + "-1" + event + ".html";
 			st.giveItems(10520 + Integer.valueOf(event), 2);
 			st.addExpAndSp(202160, 20375);
 			st.exitQuest(false, true);
@@ -138,7 +138,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			return null;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case AIR:
 				if ((st.isCond(8) || st.isCond(10)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
@@ -183,7 +183,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case HOLLY:
 			{

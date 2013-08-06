@@ -37,7 +37,7 @@ public class ElrokiTeleporters extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ORAHOCHIN:
 			{

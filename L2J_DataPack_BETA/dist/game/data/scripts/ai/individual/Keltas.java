@@ -162,7 +162,7 @@ public class Keltas extends AbstractNpcAI
 		{
 			if ((_spawnedKeltas != null) && !_spawnedKeltas.isDead())
 			{
-				_spawnedKeltas.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getNpcId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
+				_spawnedKeltas.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getId(), NpcStringId.THAT_IS_IT_FOR_TODAYLETS_RETREAT_EVERYONE_PULL_BACK));
 				_spawnedKeltas.deleteMe();
 				_spawnedKeltas.getSpawn().decreaseCount(_spawnedKeltas);
 				despawnMinions();
@@ -186,7 +186,7 @@ public class Keltas extends AbstractNpcAI
 		if (!npc.isTeleporting())
 		{
 			_spawnedKeltas = (L2MonsterInstance) npc;
-			npc.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getNpcId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
+			npc.broadcastPacket(new NpcSay(_spawnedKeltas.getObjectId(), Say2.NPC_SHOUT, _spawnedKeltas.getId(), NpcStringId.GUYS_SHOW_THEM_OUR_POWER));
 			spawnMinions();
 			startQuestTimer("despawn", 1800000, null, null);
 		}

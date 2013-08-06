@@ -622,7 +622,7 @@ public class Zaken extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("CreateOnePrivateEx"))
 		{
-			((L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), 0, false, 0)).setIsRaidMinion(true);
+			((L2Attackable) addSpawn(npc.getId(), npc.getX(), npc.getY(), npc.getZ(), 0, false, 0)).setIsRaidMinion(true);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -634,8 +634,8 @@ public class Zaken extends AbstractNpcAI
 		{
 			return super.onFactionCall(npc, caller, attacker, isSummon);
 		}
-		int npcId = npc.getNpcId();
-		int callerId = caller.getNpcId();
+		int npcId = npc.getId();
+		int callerId = caller.getId();
 		
 		if ((getTimeHour() < 5) && (callerId != ZAKEN) && (npcId == ZAKEN))
 		{
@@ -655,7 +655,7 @@ public class Zaken extends AbstractNpcAI
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, L2Skill skill)
 	{
-		if (npc.getNpcId() == ZAKEN)
+		if (npc.getId() == ZAKEN)
 		{
 			int skillId = skill.getId();
 			if (skillId == 4222)
@@ -780,7 +780,7 @@ public class Zaken extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == ZAKEN)
 		{
 			if (attacker.getMountType() == MountType.STRIDER)
@@ -869,7 +869,7 @@ public class Zaken extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == ZAKEN)
 		{
 			npc.broadcastPacket(new PlaySound(1, "BS02_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
@@ -898,7 +898,7 @@ public class Zaken extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == ZAKEN)
 		{
 			if (skill.getEffectPoint() > 0)
@@ -959,7 +959,7 @@ public class Zaken extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (npcId == ZAKEN)
 		{
 			if (_Zone.isInsideZone(npc))

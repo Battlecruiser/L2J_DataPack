@@ -123,7 +123,7 @@ public class Q00626_ADarkTwilight extends Quest
 		if (partyMember != null)
 		{
 			final QuestState st = partyMember.getQuestState(getName());
-			final float chance = (MONSTERS.get(npc.getNpcId()) * Config.RATE_QUEST_DROP);
+			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
 				st.giveItems(BLOOD_OF_SAINT, 1);

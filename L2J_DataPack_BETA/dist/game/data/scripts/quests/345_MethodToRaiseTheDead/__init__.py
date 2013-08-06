@@ -59,7 +59,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return htmltext
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      if npcId != 30970 and id != State.STARTED : return htmltext
 
@@ -102,7 +102,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
    
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      random = self.getRandom(100)
      if random<=CHANCE :
          if not st.getQuestItemsCount(VICTIMS_ARM_BONE) :

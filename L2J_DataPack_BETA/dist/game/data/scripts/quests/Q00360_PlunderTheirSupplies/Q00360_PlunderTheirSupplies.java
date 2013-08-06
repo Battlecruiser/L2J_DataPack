@@ -103,7 +103,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			return super.onKill(npc, killer, isPet);
 		}
 		
-		if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getNpcId()))
+		if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
 		{
 			st.giveItems(SUPPLY_ITEMS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

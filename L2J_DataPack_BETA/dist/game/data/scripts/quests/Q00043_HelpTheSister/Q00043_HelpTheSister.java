@@ -139,7 +139,7 @@ public class Q00043_HelpTheSister extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case COOPER:
 				switch (st.getState())

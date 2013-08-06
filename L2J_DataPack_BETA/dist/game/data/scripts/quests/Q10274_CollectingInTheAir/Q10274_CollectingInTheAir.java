@@ -93,7 +93,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		
 		if (st.isCond(1) && (skill.getId() == 2630))
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case 18684:
 				case 18685:

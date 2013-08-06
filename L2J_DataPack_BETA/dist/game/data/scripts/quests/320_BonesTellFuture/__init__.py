@@ -28,7 +28,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if st.getInt("cond")==0 :
      if player.getRace().ordinal() != 2 :

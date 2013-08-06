@@ -124,7 +124,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 		String htmltext = getNoQuestMsg(player);
 		if (st != null)
 		{
-			switch (npc.getNpcId())
+			switch (npc.getId())
 			{
 				case ALBERIUS:
 				{
@@ -275,14 +275,14 @@ public class Q00102_SeaOfSporesFever extends Quest
 				case VELTRESS:
 				case BERROS:
 				{
-					if (st.hasQuestItems(ALBERIUS_LIST, SENTINELS.get(npc.getNpcId())))
+					if (st.hasQuestItems(ALBERIUS_LIST, SENTINELS.get(npc.getId())))
 					{
-						st.takeItems(SENTINELS.get(npc.getNpcId()), -1);
+						st.takeItems(SENTINELS.get(npc.getId()), -1);
 						if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 						{
 							st.setCond(6);
 						}
-						htmltext = npc.getNpcId() + "-01.html";
+						htmltext = npc.getId() + "-01.html";
 					}
 					break;
 				}

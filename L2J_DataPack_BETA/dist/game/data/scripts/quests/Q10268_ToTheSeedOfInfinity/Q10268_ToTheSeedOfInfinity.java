@@ -72,7 +72,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case KEUCEREUS:
 				switch (st.getState())

@@ -283,11 +283,11 @@ class Quest (JQuest) :
     elif event == "30766-04.htm":
       st.set("cond","9")
       spawnedNpc=st.addSpawn(30766,160622,21230,-3710,90000)
-      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Blood and Honour."))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getId(),"Blood and Honour."))
       spawnedNpc=st.addSpawn(30759,160665,21209,-3710,90000)
-      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Ambition and Power"))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getId(),"Ambition and Power"))
       spawnedNpc=st.addSpawn(30758,160665,21291,-3710,90000)
-      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"War and Death"))
+      spawnedNpc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getId(),"War and Death"))
     elif event == "30766-08.htm":
       st.takeItems(Scepter_Judgement,-1)
       exit503(0,st)
@@ -299,7 +299,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     if npcId != NPC[3] and id == State.CREATED : return htmltext
 
@@ -477,7 +477,7 @@ class Quest (JQuest) :
         return htmltext
 
   def onAttack(self, npc, player, damage, isPet, skill):
-    npdId = npc.getNpcId()
+    npdId = npc.getId()
     if (npc.getMaxHp()/2) > npc.getCurrentHp():
       if Rnd.get(100) < 4:
         if self.ImpGraveKepperStat == 1:
@@ -510,7 +510,7 @@ class Quest (JQuest) :
                leader_st = leader.getQuestState(qn)
     if leader_st :
       if leader_st.getState() != State.STARTED : return
-      npcId=npc.getNpcId()
+      npcId=npc.getId()
       condition,maxcount,chance,itemList = DROPLIST[npcId]
       random = self.getRandom(100)
       cond = leader_st.getInt("cond")
@@ -528,7 +528,7 @@ class Quest (JQuest) :
         else:
           if npcId == 27181:                # Imperial Gravekeeper
             spawnedNpc=leader_st.addSpawn(30765,120000)
-            npc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getNpcId(),"Curse of the gods on the one that defiles the property of the empire!"))
+            npc.broadcastPacket(NpcSay(spawnedNpc.getObjectId(),0,spawnedNpc.getId(),"Curse of the gods on the one that defiles the property of the empire!"))
             leader_st.set("ImpGraveKeeper","3")
             self.ImpGraveKepperStat = 1
           else:

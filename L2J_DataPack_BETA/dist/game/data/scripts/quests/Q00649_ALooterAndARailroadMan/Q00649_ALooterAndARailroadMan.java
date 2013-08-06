@@ -128,7 +128,7 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(1000) < MONSTERS.get(npc.getNpcId())))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 		{
 			st.giveItems(THIEF_GUILD_MARK, 1);
 			if (st.getQuestItemsCount(THIEF_GUILD_MARK) == 200)

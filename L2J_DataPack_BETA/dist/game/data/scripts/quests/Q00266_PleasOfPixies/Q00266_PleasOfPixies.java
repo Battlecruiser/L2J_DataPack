@@ -92,7 +92,7 @@ public final class Q00266_PleasOfPixies extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			final int chance = getRandom(10);
-			for (ItemHolder mob : MONSTERS.get(npc.getNpcId()))
+			for (ItemHolder mob : MONSTERS.get(npc.getId()))
 			{
 				if (chance < mob.getId())
 				{

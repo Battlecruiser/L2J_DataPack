@@ -342,7 +342,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ASAMAH:
 				switch (st.getState())

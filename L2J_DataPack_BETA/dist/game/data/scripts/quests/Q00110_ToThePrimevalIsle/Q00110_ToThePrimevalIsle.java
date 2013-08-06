@@ -79,7 +79,7 @@ public class Q00110_ToThePrimevalIsle extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ANTON:
 				switch (st.getState())

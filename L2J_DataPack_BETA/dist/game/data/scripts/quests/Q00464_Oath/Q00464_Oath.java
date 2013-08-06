@@ -150,7 +150,7 @@ public class Q00464_Oath extends Quest
 				st.addExpAndSp(NPC[i][1], NPC[i][2]);
 				st.giveAdena(NPC[i][3], true);
 				st.exitQuest(QuestType.DAILY, true);
-				htmltext = npc.getNpcId() + "-02.html";
+				htmltext = npc.getId() + "-02.html";
 				break;
 			case "32596-02.html":
 			case "32596-03.html":
@@ -214,7 +214,7 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			((L2MonsterInstance) npc).dropItem(killer, STRONGBOX, 1);
 		}
@@ -230,7 +230,7 @@ public class Q00464_Oath extends Quest
 		
 		if ((st != null) && st.isStarted())
 		{
-			int npcId = npc.getNpcId();
+			int npcId = npc.getId();
 			
 			if (npcId == NPC[0][0])
 			{

@@ -65,9 +65,9 @@ public class ClanTrader extends AbstractNpcAI
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_ADDED_S1S_POINTS_TO_REPUTATION_SCORE);
 			sm.addNumber(count);
 			player.sendPacket(sm);
-			return npc.getNpcId() + "-04.html";
+			return npc.getId() + "-04.html";
 		}
-		return npc.getNpcId() + "-03.html";
+		return npc.getId() + "-03.html";
 	}
 	
 	@Override
@@ -86,7 +86,7 @@ public class ClanTrader extends AbstractNpcAI
 			}
 			case "repinfo":
 			{
-				htmltext = (player.getClan().getLevel() > 4) ? npc.getNpcId() + "-02.html" : npc.getNpcId() + "-05.html";
+				htmltext = (player.getClan().getLevel() > 4) ? npc.getId() + "-02.html" : npc.getId() + "-05.html";
 				break;
 			}
 			case "exchange-ba":
@@ -113,9 +113,9 @@ public class ClanTrader extends AbstractNpcAI
 	{
 		if (player.isClanLeader() || player.hasClanPrivilege(L2Clan.CP_CL_TROOPS_FAME))
 		{
-			return npc.getNpcId() + ".html";
+			return npc.getId() + ".html";
 		}
-		return npc.getNpcId() + "-01.html";
+		return npc.getId() + "-01.html";
 	}
 	
 	public static void main(String[] args)

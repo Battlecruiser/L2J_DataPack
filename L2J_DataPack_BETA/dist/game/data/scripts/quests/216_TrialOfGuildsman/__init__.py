@@ -139,7 +139,7 @@ class Quest (JQuest) :
    htmltext = Quest.getNoQuestMsg(player)
    st = player.getQuestState(qn)
    if not st : return htmltext
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30103 and id != State.STARTED : return htmltext
    if npcId == 30103 and st.getInt("cond")==0 and st.getInt("onlyone")==0 :
@@ -234,7 +234,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId == 20223 :
      if st.getInt("cond") >= 1 and st.getQuestItemsCount(VALKONS_RECOMMEND_ID) == 1 and st.getQuestItemsCount(MANDRAGORA_BERRY_ID) == 0 :
          st.giveItems(MANDRAGORA_BERRY_ID,1)

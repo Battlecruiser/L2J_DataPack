@@ -101,7 +101,7 @@ public class Q00701_ProofOfExistence extends Quest
 			return super.onKill(npc, player, isSummon);
 		}
 		final QuestState st = member.getQuestState(getName());
-		if (npc.getNpcId() == ENIRA)
+		if (npc.getId() == ENIRA)
 		{
 			final int chance = getRandom(1000);
 			final int count;
@@ -128,7 +128,7 @@ public class Q00701_ProofOfExistence extends Quest
 			st.giveItems(BANSHEE_QUEENS_EYE, count);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		else if (getRandom(1000) < MOBS.get(npc.getNpcId()))
+		else if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
 			st.giveItems(DEADMANS_REMAINS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

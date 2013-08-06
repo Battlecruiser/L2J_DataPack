@@ -122,7 +122,7 @@ public class FreyaCelebration extends LongTimeEvent
 			return null;
 		}
 		
-		if ((npc.getNpcId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
+		if ((npc.getId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
 		{
 			if (getRandom(100) < 5)
 			{

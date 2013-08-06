@@ -63,7 +63,7 @@ class Quest (JQuest) :
      st = player.getQuestState(qn)
      if not st : return htmltext
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      id = st.getState()
      level = player.getLevel()
      cond = st.getInt("cond")
@@ -161,7 +161,7 @@ class Quest (JQuest) :
      if not st : return 
      if st.getState() != State.STARTED : return 
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      cond = st.getInt("cond")
      chance=self.getRandom(100)
      if cond==2 and npcId in range(20496,20500) :

@@ -279,7 +279,7 @@ public class MasterOfEnchanting extends LongTimeEvent
 		{
 			newQuestState(player);
 		}
-		return npc.getNpcId() + ".htm";
+		return npc.getId() + ".htm";
 	}
 	
 	public static void main(String[] args)

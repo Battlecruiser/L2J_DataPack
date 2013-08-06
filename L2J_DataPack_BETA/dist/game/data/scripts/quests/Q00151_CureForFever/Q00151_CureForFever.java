@@ -92,7 +92,7 @@ public class Q00151_CureForFever extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ELLIAS:
 				switch (st.getState())

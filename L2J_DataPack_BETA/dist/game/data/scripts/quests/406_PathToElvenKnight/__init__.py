@@ -60,7 +60,7 @@ class Quest (JQuest) :
    st = player.getQuestState(qn)
    if not st : return htmltext
 
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    id = st.getState()
    if npcId != 30327 and id != State.STARTED : return htmltext
 
@@ -128,7 +128,7 @@ class Quest (JQuest) :
    if not st : return 
    if st.getState() != State.STARTED : return 
    
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    if npcId != 20782 :
         if st.getInt("cond")==1 and st.getQuestItemsCount(TOPAZ_PIECE)<20 and self.getRandom(100)<70 :
             st.giveItems(TOPAZ_PIECE,1)

@@ -93,7 +93,7 @@ public class Q00451_LuciensAltar extends Quest
 			return htmltext;
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (npcId == DAICHIR)
 		{
 			switch (st.getState())

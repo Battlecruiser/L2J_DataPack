@@ -102,7 +102,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if (st != null)
 		{
-			if (npc.getNpcId() == VALDSTONE)
+			if (npc.getId() == VALDSTONE)
 			{
 				int amount = 0, chance = getRandom(1000);
 				if (chance < 215)
@@ -126,7 +126,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 			}
 			else
 			{
-				if (getRandom(1000) < MONSTERS.get(npc.getNpcId()))
+				if (getRandom(1000) < MONSTERS.get(npc.getId()))
 				{
 					st.giveItems(VULTURES_GOLDEN_FEATHER, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

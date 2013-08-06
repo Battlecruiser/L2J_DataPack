@@ -164,7 +164,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 			}
 			case State.CREATED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					final QuestState qs = player.getQuestState(Q00131_BirdInACage.class.getSimpleName());
 					if ((qs != null) && qs.isCompleted())
@@ -180,7 +180,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 			}
 			case State.STARTED:
 			{
-				if (npc.getNpcId() == KANIS)
+				if (npc.getId() == KANIS)
 				{
 					if (st.isCond(1))
 					{
@@ -195,7 +195,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 						htmltext = "32264-13.html";
 					}
 				}
-				else if (npc.getNpcId() == GALATE)
+				else if (npc.getId() == GALATE)
 				{
 					if (st.getCond() < 3)
 					{

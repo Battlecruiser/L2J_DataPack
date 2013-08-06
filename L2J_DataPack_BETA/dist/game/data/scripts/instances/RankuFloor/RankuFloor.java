@@ -69,7 +69,7 @@ public class RankuFloor extends Quest
 	{
 		String htmltext = null;
 		
-		if (npc.getNpcId() == GK_9)
+		if (npc.getId() == GK_9)
 		{
 			htmltext = checkConditions(player);
 			
@@ -78,7 +78,7 @@ public class RankuFloor extends Quest
 				enterInstance(player, "Ranku.xml");
 			}
 		}
-		else if (npc.getNpcId() == CUBE)
+		else if (npc.getId() == CUBE)
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
 			if ((world != null) && (world.getInstanceId() == INSTANCEID))

@@ -58,7 +58,7 @@ public class EvasGiftBoxes extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getNpcId() == GIFTBOX)
+		if (npc.getId() == GIFTBOX)
 		{
 			int isKissOfEvaBuffed = 0;
 			if (killer.getFirstEffect(KISSOFEVA) != null)

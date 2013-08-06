@@ -113,8 +113,8 @@ public class QuestLink implements IBypassHandler
 			}
 			else
 			{
-				questId = q.getQuestIntId();
-				if (q.getQuestIntId() > 10000)
+				questId = q.getId();
+				if (q.getId() > 10000)
 				{
 					questId -= 5000;
 				}
@@ -155,7 +155,7 @@ public class QuestLink implements IBypassHandler
 		
 		if (q != null)
 		{
-			if (((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
+			if (((q.getId() >= 1) && (q.getId() < 20000)) && ((player.getWeightPenalty() >= 3) || !player.isInventoryUnder90(true)))
 			{
 				player.sendPacket(SystemMessageId.INVENTORY_LESS_THAN_80_PERCENT);
 				return;
@@ -163,7 +163,7 @@ public class QuestLink implements IBypassHandler
 			
 			if (qs == null)
 			{
-				if ((q.getQuestIntId() >= 1) && (q.getQuestIntId() < 20000))
+				if ((q.getId() >= 1) && (q.getId() < 20000))
 				{
 					// Too many ongoing quests.
 					if (player.getAllActiveQuests().length > 40)
@@ -241,7 +241,7 @@ public class QuestLink implements IBypassHandler
 		// collect awaiting quests and start points
 		List<Quest> options = new FastList<>();
 		
-		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getNpcId());
+		QuestState[] awaits = player.getQuestsForTalk(npc.getTemplate().getId());
 		List<Quest> starts = npc.getTemplate().getEventQuests(QuestEventType.QUEST_START);
 		
 		// Quests are limited between 1 and 999 because those are the quests that are supported by the client.
@@ -252,7 +252,7 @@ public class QuestLink implements IBypassHandler
 			{
 				if (!options.contains(x.getQuest()))
 				{
-					if ((x.getQuest().getQuestIntId() > 0) && (x.getQuest().getQuestIntId() < 20000))
+					if ((x.getQuest().getId() > 0) && (x.getQuest().getId() < 20000))
 					{
 						options.add(x.getQuest());
 					}
@@ -266,7 +266,7 @@ public class QuestLink implements IBypassHandler
 			{
 				if (!options.contains(x))
 				{
-					if ((x.getQuestIntId() > 0) && (x.getQuestIntId() < 20000))
+					if ((x.getId() > 0) && (x.getId() < 20000))
 					{
 						options.add(x);
 					}

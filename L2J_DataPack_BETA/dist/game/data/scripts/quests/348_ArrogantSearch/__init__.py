@@ -195,7 +195,7 @@ class Quest (JQuest) :
     st = player.getQuestState(qn)
     if not st : return htmltext
 
-    npcId = npc.getNpcId()
+    npcId = npc.getId()
     id = st.getState()
     if npcId != HANELLIN and id != State.STARTED : return htmltext
 
@@ -350,7 +350,7 @@ class Quest (JQuest) :
      if not st : return
      if st.getState() != State.STARTED : return
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId in ATTACK_DROPS_24.keys() :
          cond = ATTACK_DROPS_24[npcId][0]
          chance =  ATTACK_DROPS_24[npcId][3]
@@ -378,7 +378,7 @@ class Quest (JQuest) :
      if not st : return
      if st.getState() != State.STARTED : return
 
-     npcId = npc.getNpcId()
+     npcId = npc.getId()
      if npcId in DROPS.keys() :
          cond = DROPS[npcId][0]
          if st.getInt("cond") == cond and st.getQuestItemsCount(DROPS[npcId][1]) < DROPS[npcId][2] and self.getRandom(100) < DROPS[npcId][3] and (DROPS[npcId][4] == 0 or st.getQuestItemsCount(DROPS[npcId][4])>0) :

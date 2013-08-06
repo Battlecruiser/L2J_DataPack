@@ -18,7 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
@@ -64,7 +63,7 @@ public class Bluff extends L2Effect
 	@Override
 	public boolean onStart()
 	{
-		if ((getEffected() instanceof L2NpcInstance) || ((getEffected().isNpc()) && (((L2Npc) getEffected()).getNpcId() == 35062)) || (getEffected() instanceof L2SiegeSummonInstance))
+		if ((getEffected() instanceof L2NpcInstance) || ((getEffected().isNpc()) && (getEffected().getId() == 35062)) || (getEffected() instanceof L2SiegeSummonInstance))
 		{
 			return false;
 		}

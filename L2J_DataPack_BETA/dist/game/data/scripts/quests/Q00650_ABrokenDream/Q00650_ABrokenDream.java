@@ -148,7 +148,7 @@ public final class Q00650_ABrokenDream extends Quest
 			randomList.add(killer);
 		}
 		
-		final int monsterChance = MONSTER_DROP_CHANCES.get(npc.getNpcId());
+		final int monsterChance = MONSTER_DROP_CHANCES.get(npc.getId());
 		if (killer.isInParty())
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())

@@ -93,7 +93,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case NAKUSIN:
 				switch (st.getState())
@@ -123,22 +123,22 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 				}
 				break;
 			case VARKEES:
-				htmltext = giveItem(st, npc.getNpcId(), HONEY_KHANDAR, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
 			case URUTU:
-				htmltext = giveItem(st, npc.getNpcId(), DEEP_SEA_ORB, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
 			case HESTUI:
-				htmltext = giveItem(st, npc.getNpcId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
 			case KUNAI:
-				htmltext = giveItem(st, npc.getNpcId(), SPIDER_DUST, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
 			case USKA:
-				htmltext = giveItem(st, npc.getNpcId(), ANCESTOR_SKULL, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
 			case GROOKIN:
-				htmltext = giveItem(st, npc.getNpcId(), BLOODY_AXE, getRegisteredItemIds());
+				htmltext = giveItem(st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
 		}
 		return htmltext;

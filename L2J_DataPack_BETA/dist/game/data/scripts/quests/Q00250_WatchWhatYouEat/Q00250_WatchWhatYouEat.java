@@ -74,7 +74,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			if (event.equalsIgnoreCase("32743-03.htm"))
 			{
@@ -103,7 +103,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			newQuestState(player);
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			return "32743-20.html";
 		}
@@ -123,7 +123,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 		{
 			for (int[] mob : MOBS)
 			{
-				if (npc.getNpcId() == mob[0])
+				if (npc.getId() == mob[0])
 				{
 					if (!st.hasQuestItems(mob[1]))
 					{
@@ -150,7 +150,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getNpcId() == SALLY)
+		if (npc.getId() == SALLY)
 		{
 			switch (st.getState())
 			{

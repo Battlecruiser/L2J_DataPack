@@ -75,7 +75,7 @@ public final class DelusionTeleport extends AbstractNpcAI
 	{
 		final QuestState st = player.getQuestState(getName());
 		
-		if (npc.getNpcId() == NPCS[0])
+		if (npc.getId() == NPCS[0])
 		{
 			final L2TownZone town = TownManager.getTown(npc.getX(), npc.getY(), npc.getZ());
 			final int townId = ((town == null) ? 0 : town.getTownId());

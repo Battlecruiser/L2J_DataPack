@@ -83,7 +83,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		if (killer.getParty() != null)
 		{
 			final List<QuestState> PartyMembers = new ArrayList<>();
@@ -118,7 +118,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case LUKAS:
 				switch (st.getState())

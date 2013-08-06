@@ -59,7 +59,7 @@ class Quest (JQuest) :
  def __init__(self,id,name,descr): JQuest.__init__(self,id,name,descr)
 
  def onAdvEvent (self,event,npc,player) :
-   npcId    = npc.getNpcId()
+   npcId    = npc.getId()
    htmltext = default
    suffix = ''
    st = player.getQuestState(qn)
@@ -93,7 +93,7 @@ class Quest (JQuest) :
 
  def onTalk (self,npc,player):
    st = player.getQuestState(qn)
-   npcId = npc.getNpcId()
+   npcId = npc.getId()
    race = player.getRace().ordinal()
    classId = player.getClassId()
    id = classId.getId()

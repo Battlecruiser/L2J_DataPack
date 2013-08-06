@@ -125,7 +125,7 @@ public final class Q00191_VainConclusion extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case DOROTHY_LOCKSMITH:
 			{

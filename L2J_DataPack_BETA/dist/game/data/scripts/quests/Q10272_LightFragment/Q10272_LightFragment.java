@@ -182,7 +182,7 @@ public class Q10272_LightFragment extends Quest
 			return htmltext;
 		}
 		
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case ORBYU:
 			{

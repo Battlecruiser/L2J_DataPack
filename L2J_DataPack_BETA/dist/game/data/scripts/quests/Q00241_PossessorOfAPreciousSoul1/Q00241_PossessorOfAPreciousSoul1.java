@@ -198,7 +198,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	{
 		final L2PcInstance partyMember;
 		final QuestState st;
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case BARAHAM:
 				partyMember = getRandomPartyMember(player, 3);
@@ -272,7 +272,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 		}
 		
 		String htmltext = getNoQuestMsg(player);
-		switch (npc.getNpcId())
+		switch (npc.getId())
 		{
 			case TALIEN:
 				switch (st.getState())

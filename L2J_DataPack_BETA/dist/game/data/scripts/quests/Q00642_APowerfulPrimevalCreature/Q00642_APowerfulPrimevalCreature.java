@@ -119,7 +119,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getNpcId();
+		int npcId = npc.getId();
 		if (MOBS_TISSUE.containsKey(npcId))
 		{
 			float chance = (MOBS_TISSUE.get(npcId) * Config.RATE_QUEST_DROP);

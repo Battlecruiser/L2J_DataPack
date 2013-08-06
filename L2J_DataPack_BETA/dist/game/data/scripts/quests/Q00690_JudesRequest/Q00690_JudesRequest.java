@@ -132,7 +132,7 @@ public class Q00690_JudesRequest extends Quest
 		}
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		final int npcId = npc.getNpcId();
+		final int npcId = npc.getId();
 		int chance = 0;
 		if (npcId == LESSER_EVIL)
 		{
