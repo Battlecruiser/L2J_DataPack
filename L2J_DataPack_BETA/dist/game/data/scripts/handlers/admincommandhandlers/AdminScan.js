@@ -61,7 +61,7 @@ AdminCommandHandler.getInstance().registerHandler(new JavaAdapter(IAdminCommandH
 					if (character instanceof L2Npc)
 					{
 						sb.append("<tr>");
-						sb.append("<td width=\"54\">" + character.getNpcId() + "</td>");
+						sb.append("<td width=\"54\">" + character.getId() + "</td>");
 						sb.append("<td width=\"54\">" + character.getName() + "</td>");
 						sb.append("<td width=\"54\">" + Math.round(Util.calculateDistance(player, character, false)) + "</td>");
 						sb.append("<td width=\"54\"><a action=\"bypass -h admin_deleteNpcByObjectId " + character.getObjectId() + "\"><font color=\"LEVEL\">Delete</font></a></td>");
@@ -89,7 +89,7 @@ AdminCommandHandler.getInstance().registerHandler(new JavaAdapter(IAdminCommandH
 							{
 								spawn.stopRespawn();
 								
-								if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcid()))
+								if (RaidBossSpawnManager.getInstance().isDefined(spawn.getId()))
 								{
 									RaidBossSpawnManager.getInstance().deleteSpawn(spawn, true);
 								}
