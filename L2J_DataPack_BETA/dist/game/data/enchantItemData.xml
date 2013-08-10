@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/enchantData.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/enchantItemData.xsd">
 	<!-- Scrolls: Enchant Weapon -->
 	<enchant id="729" targetGrade="a" />
 	<enchant id="947" targetGrade="b" />
@@ -8,24 +8,24 @@
 	<enchant id="959" targetGrade="s" />
 	
 	<!-- Scrolls: Enchant Armor -->
-	<enchant id="730" isWeapon="false" targetGrade="a" />
-	<enchant id="948" isWeapon="false" targetGrade="b" />
-	<enchant id="952" isWeapon="false" targetGrade="c" />
-	<enchant id="956" isWeapon="false" targetGrade="d" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
-	<enchant id="960" isWeapon="false" targetGrade="s" />
+	<enchant id="730" targetGrade="a" />
+	<enchant id="948" targetGrade="b" />
+	<enchant id="952" targetGrade="c" />
+	<enchant id="956" targetGrade="d" scrollGroupId="0" /> <!-- Default scroll groups binding. -->
+	<enchant id="960" targetGrade="s" />
 
 	<!-- Blessed Scrolls: Enchant Weapon -->
-	<enchant id="6569" isBlessed="true" targetGrade="a" />
-	<enchant id="6571" isBlessed="true" targetGrade="b" />
-	<enchant id="6573" isBlessed="true" targetGrade="c" />
-	<enchant id="6575" isBlessed="true" targetGrade="d" />
-	<enchant id="6577" isBlessed="true" targetGrade="s" />
+	<enchant id="6569" targetGrade="a" />
+	<enchant id="6571" targetGrade="b" />
+	<enchant id="6573" targetGrade="c" />
+	<enchant id="6575" targetGrade="d" />
+	<enchant id="6577" targetGrade="s" />
 	<!-- Blessed Scrolls: Enchant Armor -->
-	<enchant id="6570" isWeapon="false" isBlessed="true" targetGrade="a" />
-	<enchant id="6572" isWeapon="false" isBlessed="true" targetGrade="b" />
-	<enchant id="6574" isWeapon="false" isBlessed="true" targetGrade="c" />
-	<enchant id="6576" isWeapon="false" isBlessed="true" targetGrade="d" />
-	<enchant id="6578" isWeapon="false" isBlessed="true" targetGrade="s" />
+	<enchant id="6570" targetGrade="a" />
+	<enchant id="6572" targetGrade="b" />
+	<enchant id="6574" targetGrade="c" />
+	<enchant id="6576" targetGrade="d" />
+	<enchant id="6578" targetGrade="s" />
 
 	<!-- Not used anymore. -->
 	<!-- Crystal Scrolls: Enchant Weapon -->
@@ -35,11 +35,11 @@
 	<enchant id="957" targetGrade="d" bonusRate="100" />
 	<enchant id="961" targetGrade="s" bonusRate="100" /> -->
 	<!-- Crystal Scrolls: Enchant Armor -->
-	<!-- <enchant id="732" isWeapon="false" targetGrade="a" bonusRate="100" />
-	<enchant id="950" isWeapon="false" targetGrade="b" bonusRate="100" />
-	<enchant id="954" isWeapon="false" targetGrade="c" bonusRate="100" />
-	<enchant id="958" isWeapon="false" targetGrade="d" bonusRate="100" />
-	<enchant id="962" isWeapon="false" targetGrade="s" bonusRate="100" /> -->
+	<!-- <enchant id="732" targetGrade="a" bonusRate="100" />
+	<enchant id="950" targetGrade="b" bonusRate="100" />
+	<enchant id="954" targetGrade="c" bonusRate="100" />
+	<enchant id="958" targetGrade="d" bonusRate="100" />
+	<enchant id="962" targetGrade="s" bonusRate="100" /> -->
 
 	<!-- Weapon Enchant Scrolls -->
 	<enchant id="22006" targetGrade="d" bonusRate="10" />
@@ -48,42 +48,42 @@
 	<enchant id="22009" targetGrade="a" bonusRate="10" />
 	<enchant id="20517" targetGrade="s" bonusRate="10" />
 	<!-- Armor Enchant Scrolls -->
-	<enchant id="22010" isWeapon="false" targetGrade="d" bonusRate="10" />
-	<enchant id="22011" isWeapon="false" targetGrade="c" bonusRate="10" />
-	<enchant id="22012" isWeapon="false" targetGrade="b" bonusRate="10" />
-	<enchant id="22013" isWeapon="false" targetGrade="a" bonusRate="10" />
-	<enchant id="20518" isWeapon="false" targetGrade="s" bonusRate="10" />
+	<enchant id="22010" targetGrade="d" bonusRate="10" />
+	<enchant id="22011" targetGrade="c" bonusRate="10" />
+	<enchant id="22012" targetGrade="b" bonusRate="10" />
+	<enchant id="22013" targetGrade="a" bonusRate="10" />
+	<enchant id="20518" targetGrade="s" bonusRate="10" />
 
 	<!-- Ancient Weapon Enchant Crystal -->
-	<enchant id="22014" isSafe="true" targetGrade="b" maxEnchant="16" bonusRate="10" />
-	<enchant id="22015" isSafe="true" targetGrade="a" maxEnchant="16" bonusRate="10" />
-	<enchant id="20519" isSafe="true" targetGrade="s" maxEnchant="16" bonusRate="10" />
+	<enchant id="22014" targetGrade="b" maxEnchant="16" bonusRate="10" />
+	<enchant id="22015" targetGrade="a" maxEnchant="16" bonusRate="10" />
+	<enchant id="20519" targetGrade="s" maxEnchant="16" bonusRate="10" />
 	<!-- Ancient Armor Enchant Crystal -->
-	<enchant id="22016" isWeapon="false" isSafe="true" targetGrade="b" maxEnchant="16" bonusRate="10" />
-	<enchant id="22017" isWeapon="false" isSafe="true" targetGrade="a" maxEnchant="16" bonusRate="10" />
-	<enchant id="20520" isWeapon="false" isSafe="true" targetGrade="s" maxEnchant="16" bonusRate="10" />
+	<enchant id="22016" targetGrade="b" maxEnchant="16" bonusRate="10" />
+	<enchant id="22017" targetGrade="a" maxEnchant="16" bonusRate="10" />
+	<enchant id="20520" targetGrade="s" maxEnchant="16" bonusRate="10" />
 
 	<!-- Divine Weapon Enchant Crystal -->
-	<enchant id="22018" targetGrade="b" bonusRate="1" />
-	<enchant id="22019" targetGrade="a" bonusRate="1" />
-	<enchant id="20521" targetGrade="s" bonusRate="1" />
+	<enchant id="22018" targetGrade="b" bonusRate="100" />
+	<enchant id="22019" targetGrade="a" bonusRate="100" />
+	<enchant id="20521" targetGrade="s" bonusRate="100" />
 	<!-- Divine Armor Enchant Crystal -->
-	<enchant id="22020" isWeapon="false" targetGrade="b" bonusRate="1" />
-	<enchant id="22021" isWeapon="false" targetGrade="a" bonusRate="1" />
-	<enchant id="20522" isWeapon="false" targetGrade="s" bonusRate="1" />
+	<enchant id="22020" targetGrade="b" bonusRate="100" />
+	<enchant id="22021" targetGrade="a" bonusRate="100" />
+	<enchant id="20522" targetGrade="s" bonusRate="100" />
 
 	<!-- Scroll: Enchant Weapon of Destruction -->
-	<enchant id="22221" isSafe="true" targetGrade="s" maxEnchant="15" />
-	<enchant id="22223" isSafe="true" targetGrade="a" maxEnchant="15" />
-	<enchant id="22225" isSafe="true" targetGrade="b" maxEnchant="15" />
-	<enchant id="22227" isSafe="true" targetGrade="c" maxEnchant="15" />
-	<enchant id="22229" isSafe="true" targetGrade="d" maxEnchant="15" />
+	<enchant id="22221" targetGrade="s" maxEnchant="15" />
+	<enchant id="22223" targetGrade="a" maxEnchant="15" />
+	<enchant id="22225" targetGrade="b" maxEnchant="15" />
+	<enchant id="22227" targetGrade="c" maxEnchant="15" />
+	<enchant id="22229" targetGrade="d" maxEnchant="15" />
 	<!-- Scroll: Enchant Armor of Destruction -->
-	<enchant id="22222" isWeapon="false" isSafe="true" targetGrade="s" maxEnchant="6" />
-	<enchant id="22224" isWeapon="false" isSafe="true" targetGrade="a" maxEnchant="6" />
-	<enchant id="22226" isWeapon="false" isSafe="true" targetGrade="b" maxEnchant="6" />
-	<enchant id="22228" isWeapon="false" isSafe="true" targetGrade="c" maxEnchant="6" />
-	<enchant id="22230" isWeapon="false" isSafe="true" targetGrade="d" maxEnchant="6" />
+	<enchant id="22222" targetGrade="s" maxEnchant="6" />
+	<enchant id="22224" targetGrade="a" maxEnchant="6" />
+	<enchant id="22226" targetGrade="b" maxEnchant="6" />
+	<enchant id="22228" targetGrade="c" maxEnchant="6" />
+	<enchant id="22230" targetGrade="d" maxEnchant="6" />
 
 	<!-- Master Yogi's Scroll: Enchant Weapon -->
 	<enchant id="13540" maxEnchant="23">
@@ -91,25 +91,25 @@
 	</enchant>
 
 	<!-- Olf's T-shirt Enchant Scroll -->
-	<enchant id="21581" isWeapon="false" maxEnchant="10">
+	<enchant id="21581" maxEnchant="10">
 		<item id="21580" /> <!-- Olf's T-shirt -->
 		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
 	</enchant>
 
 	<!-- Blessed Olf's T-shirt Enchant Scroll -->
-	<enchant id="21582" isWeapon="false" isBlessed="true" maxEnchant="10">
+	<enchant id="21582" maxEnchant="10">
 		<item id="21580" /> <!-- Olf's T-shirt -->
 		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
 	</enchant>
 
 	<!-- Blessed Olf's T-shirt Enchant Scroll - Event -->
-	<enchant id="21707" isWeapon="false" isBlessed="true" maxEnchant="10">
+	<enchant id="21707" maxEnchant="10">
 		<item id="21580" /> <!-- Olf's T-shirt -->
 		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
 	</enchant>
 
 	<!-- Event - Herdsman's Love Scroll Event -->
-	<enchant id="15381" isWeapon="false" maxEnchant="16">
+	<enchant id="15381" maxEnchant="16">
 		<item id="15383" /> <!-- Weaver's Multi-colored Clothes (7-day limited period) -->
 		<item id="15384" /> <!-- Weaver's Multi-colored Clothes (30-day limited period) -->
 		<item id="15385" /> <!-- Weaver's Multi-colored Clothes (60-day limited period) -->
@@ -123,7 +123,7 @@
 	</enchant>
 
 	<!-- Event - Vitality Belt Enchant Scroll -->
-	<enchant id="15382" isWeapon="false" maxEnchant="50">
+	<enchant id="15382" maxEnchant="50">
 		<item id="15393" /> <!-- Vitality Belt (7-day limited period) -->
 		<item id="15394" /> <!-- Vitality Belt (30-day limited period) -->
 		<item id="15395" /> <!-- Vitality Belt (60-day limited period) -->
@@ -232,11 +232,11 @@
 	<support id="12366" targetGrade="s" maxEnchant="9" bonusRate="10" />
 	
 	<!-- Armor-Type Enhance Backup Stone -->
-	<support id="12367" isWeapon="false" targetGrade="d" maxEnchant="9" bonusRate="35" />
-	<support id="12368" isWeapon="false" targetGrade="c" maxEnchant="9" bonusRate="27" />
-	<support id="12369" isWeapon="false" targetGrade="b" maxEnchant="9" bonusRate="23" />
-	<support id="12370" isWeapon="false" targetGrade="a" maxEnchant="9" bonusRate="18" />
-	<support id="12371" isWeapon="false" targetGrade="s" maxEnchant="9" bonusRate="15" />
+	<support id="12367" targetGrade="d" maxEnchant="9" bonusRate="35" />
+	<support id="12368" targetGrade="c" maxEnchant="9" bonusRate="27" />
+	<support id="12369" targetGrade="b" maxEnchant="9" bonusRate="23" />
+	<support id="12370" targetGrade="a" maxEnchant="9" bonusRate="18" />
+	<support id="12371" targetGrade="s" maxEnchant="9" bonusRate="15" />
 
 	<!-- Agathion Auxiliary Stone: Enchant Weapon -->
 	<support id="14702" targetGrade="d" maxEnchant="9" bonusRate="20" />
@@ -246,9 +246,9 @@
 	<support id="14706" targetGrade="s" maxEnchant="9" bonusRate="10" />
 	
 	<!-- Agathion Auxiliary Stone: Enchant Armor -->
-	<support id="14707" isWeapon="false" targetGrade="d" maxEnchant="9" bonusRate="35" />
-	<support id="14708" isWeapon="false" targetGrade="c" maxEnchant="9" bonusRate="27" />
-	<support id="14709" isWeapon="false" targetGrade="b" maxEnchant="9" bonusRate="23" />
-	<support id="14710" isWeapon="false" targetGrade="a" maxEnchant="9" bonusRate="18" />
-	<support id="14711" isWeapon="false" targetGrade="s" maxEnchant="9" bonusRate="15" />
+	<support id="14707" targetGrade="d" maxEnchant="9" bonusRate="35" />
+	<support id="14708" targetGrade="c" maxEnchant="9" bonusRate="27" />
+	<support id="14709" targetGrade="b" maxEnchant="9" bonusRate="23" />
+	<support id="14710" targetGrade="a" maxEnchant="9" bonusRate="18" />
+	<support id="14711" targetGrade="s" maxEnchant="9" bonusRate="15" />
 </list>

@@ -19,9 +19,6 @@
 							</xs:element>
 						</xs:sequence>
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="isBlessed" type="xs:boolean" />
-						<xs:attribute name="isSafe" type="xs:boolean" />
-						<xs:attribute name="isWeapon" type="xs:boolean" />
 						<xs:attribute name="maxEnchant">
 							<xs:simpleType>
 								<xs:restriction base="xs:positiveInteger">
@@ -55,7 +52,6 @@
 				<xs:element name="support" minOccurs="1" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:attribute name="id" type="xs:positiveInteger" use="required" />
-						<xs:attribute name="isWeapon" type="xs:boolean" />
 						<xs:attribute name="maxEnchant" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:positiveInteger">
