@@ -21,6 +21,8 @@ package quests.Q00104_SpiritOfMirrors;
 import java.util.HashMap;
 import java.util.Map;
 
+import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.Race;
@@ -29,7 +31,6 @@ import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
  * Spirit of Mirrors (104)
@@ -56,9 +57,6 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		MONSTERS.put(27005, SPIRITBOUND_WAND3); // Spirit Of Mirrors
 	}
 	// Rewards
-	private static final int SOULSHOT_NO_GRADE = 1835;
-	private static final int SPIRITSHOT_NO_GRADE = 2509;
-	private static final int SPIRITSHOT = 5790;
 	private static final ItemHolder[] REWARDS =
 	{
 		new ItemHolder(1060, 100), // Lesser Healing Potion
@@ -136,28 +134,14 @@ public final class Q00104_SpiritOfMirrors extends Quest
 						{
 							if (st.isCond(3) && st.hasQuestItems(SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 							{
-								if ((player.getLevel() < 25) && player.isMageClass())
-								{
-									st.rewardItems(SPIRITSHOT, 3000);
-									st.playTutorialVoice("tutorial_voice_027");
-								}
+								Q00281_HeadForTheHills.giveNewbieReward(player);
 								for (ItemHolder reward : REWARDS)
 								{
 									st.giveItems(reward);
 								}
-								if (player.isMageClass())
-								{
-									st.giveItems(SPIRITSHOT_NO_GRADE, 500);
-								}
-								else
-								{
-									st.giveItems(SOULSHOT_NO_GRADE, 1000);
-								}
 								st.addExpAndSp(39750, 3407);
 								st.giveAdena(16866, true);
 								st.exitQuest(false, true);
-								// TODO: Newbie Guide
-								showOnScreenMsg(player, NpcStringId.ACQUISITION_OF_RACE_SPECIFIC_WEAPON_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 								htmltext = "30017-06.html";
 							}
 							else

@@ -18,15 +18,15 @@
  */
 package quests.Q00101_SwordOfSolidarity;
 
+import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.ClassId;
 import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
  * Sword of Solidarity (101)
@@ -51,7 +51,6 @@ public class Q00101_SwordOfSolidarity extends Quest
 		20362, // Tunath Orc Warrior
 	};
 	// Rewards
-	private static final int SOULSHOT_NO_GRADE = 5789;
 	private static final ItemHolder[] REWARDS =
 	{
 		new ItemHolder(738, 1), // Sword of Solidarity
@@ -111,11 +110,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 				{
 					if (st.isCond(5) && st.hasQuestItems(BROKEN_SWORD_HANDLE))
 					{
-						if ((player.getLevel() < 25) && (player.getClassId() == ClassId.fighter))
-						{
-							st.rewardItems(SOULSHOT_NO_GRADE, 7000);
-							st.playTutorialVoice("tutorial_voice_026");
-						}
+						Q00281_HeadForTheHills.giveNewbieReward(player);
 						for (ItemHolder reward : REWARDS)
 						{
 							st.giveItems(reward);
@@ -123,8 +118,6 @@ public class Q00101_SwordOfSolidarity extends Quest
 						st.addExpAndSp(25747, 2171);
 						st.giveAdena(10981, true);
 						st.exitQuest(false, true);
-						// TODO: Newbie Guide
-						showOnScreenMsg(player, NpcStringId.ACQUISITION_OF_RACE_SPECIFIC_WEAPON_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 						htmltext = event;
 					}
 					break;
