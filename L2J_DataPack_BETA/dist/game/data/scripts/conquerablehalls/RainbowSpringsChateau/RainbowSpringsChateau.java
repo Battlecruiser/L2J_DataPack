@@ -680,8 +680,6 @@ public class RainbowSpringsChateau extends Quest
 			return null;
 		}
 		
-		final int itemId = item.getItemId();
-		
 		// Nectar must spawn the enraged yeti. Dunno if it makes any other thing
 		// Also, the items must execute:
 		// - Reduce gourd hpb ( reduceGourdHp(int, L2PcInstance) )
@@ -689,6 +687,7 @@ public class RainbowSpringsChateau extends Quest
 		// - Change arena gourds ( moveGourds() )
 		// - Increase gourd hp ( increaseGourdHp(int) )
 		
+		final int itemId = item.getId();
 		if (itemId == RAINBOW_NECTAR)
 		{
 			// Spawn enraged (where?)
