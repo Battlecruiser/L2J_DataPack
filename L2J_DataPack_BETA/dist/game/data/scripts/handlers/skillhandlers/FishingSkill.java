@@ -80,7 +80,7 @@ public class FishingSkill implements ISkillHandler
 		{
 			SS = 2;
 		}
-		L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getItemId());
+		L2FishingRod fishingRod = FishingRodsData.getInstance().getFishingRod(weaponItem.getId());
 		double gradeBonus = fishingRod.getFishingRodLevel() * 0.1; // TODO: Check this formula (is guessed)
 		final L2Skill expertiseSkill = SkillTable.getInstance().getInfo(1315, player.getSkillLevel(1315));
 		int dmg = (int) ((fishingRod.getFishingRodDamage() + expertiseSkill.getPower() + skill.getPower()) * gradeBonus * SS);

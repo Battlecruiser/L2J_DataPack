@@ -1130,7 +1130,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 					continue;
 				}
 				
-				sb.append("Name: <font color=\"LEVEL\">[" + item.getName() + "]</font> ID: <font color=\"LEVEL\">[" + item.getItemId() + "]</font> Category: <font color=\"LEVEL\">[" + dropCategory.getCategoryType() + "]</font>");
+				sb.append("Name: <font color=\"LEVEL\">[" + item.getName() + "]</font> ID: <font color=\"LEVEL\">[" + item.getId() + "]</font> Category: <font color=\"LEVEL\">[" + dropCategory.getCategoryType() + "]</font>");
 				sb.append("<table width=277 height=32 cellspacing=0 background=\"L2UI_CT1.Windows.Windows_DF_TooltipBG\">");
 				sb.append("<tr><td fixwidth=32 background=\"" + item.getIcon() + "\"></td>");
 				sb.append("<td fixwidth=64 align=center>");
@@ -1143,7 +1143,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				sb.append(dropData.getChance());
 				sb.append("</td>");
 				sb.append("<td fixwidth=45>");
-				sb.append("<button action=\"bypass admin_del_drop " + npc.getId() + " " + dropCategory.getCategoryType() + " " + item.getItemId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
+				sb.append("<button action=\"bypass admin_del_drop " + npc.getId() + " " + dropCategory.getCategoryType() + " " + item.getId() + " " + page + "\" value=\"Delete\" width=45 height=30 back=\"L2UI_CT1.Button_DF_Calculator_Down\" fore=\"L2UI_CT1.Button_DF_Calculator\">");
 				sb.append("</td></tr></table>");
 				
 				i++;
