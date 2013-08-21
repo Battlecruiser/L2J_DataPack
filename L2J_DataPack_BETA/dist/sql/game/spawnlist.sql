@@ -32964,6 +32964,9 @@ INSERT INTO `spawnlist` VALUES
 ("monastery_of_silence", 1, 22800, 113753, -72107, -592, 0, 0, 0, 60, 0, 0, 0),
 ("monastery_of_silence", 1, 22800, 113997, -73252, -592, 0, 0, 59645, 60, 0, 0, 0),
 ("monastery_of_silence", 1, 22800, 114578, -73396, -592, 0, 0, 0, 60, 0, 0, 0),
+-- Monastery Minigame instructors
+("monastery_of_silence", 1, 32758, 110805, -81851, -1588, 0, 0, 0, 0, 0, 0, 0),
+("monastery_of_silence", 1, 32758, 114956, -71152, -548, 0, 0, 0, 0, 0, 0, 0),
 -- Mennon
 ("godard01_npc2315_01", 1, 31369, 123712, -72224, -3008, 0, 0, 16000, 60, 0, 0, 0),
 -- Tablet of Vision
