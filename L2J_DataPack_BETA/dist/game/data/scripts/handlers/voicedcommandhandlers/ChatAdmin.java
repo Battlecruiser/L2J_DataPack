@@ -98,7 +98,7 @@ public class ChatAdmin implements IVoicedCommandHandler
 						return false;
 					}
 					
-					PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, expirationTime, "Chat banned by moderator", activeChar.getName()));
+					PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, expirationTime, "Chat banned by moderator", activeChar.getName()));
 					player.sendMessage("Chat banned by moderator " + activeChar.getName());
 					
 					if (expirationTime > 0)
