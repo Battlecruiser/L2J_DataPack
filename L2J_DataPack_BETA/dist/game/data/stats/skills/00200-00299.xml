@@ -2067,12 +2067,12 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="SummonCubic" noicon="1" val="0">
-				<param npcId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#cubicPower" />
+				<param cubicId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#cubicPower" />
 			</effect>
 		</for>
 		<enchant1for>
 			<effect name="SummonCubic" noicon="1" val="0">
-				<param npcId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#ench1Power" />
+				<param cubicId="4" cubicDelay="20" cubicDuration="900" cubicMaxCount="15" cubicSkillChance="20" cubicPower="#ench1Power" />
 			</effect>
 		</enchant1for>
 	</skill>

@@ -562,7 +562,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic" noicon="1" val="0">
-				<param npcId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
+				<param cubicId="3" cubicDelay="13" cubicDuration="3600" cubicMaxCount="20" />
 				<param cubicSkill1Chance="13" cubicSkill2Chance="33" cubicSkill3Chance="53" />
 			</effect>
 		</for>

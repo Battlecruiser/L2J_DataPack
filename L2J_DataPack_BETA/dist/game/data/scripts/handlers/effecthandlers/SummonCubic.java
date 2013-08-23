@@ -32,7 +32,8 @@ import com.l2jserver.util.Rnd;
  */
 public class SummonCubic extends L2Effect
 {
-	private final int _npcId;
+	/** Cubic ID. */
+	private final int _cubicId;
 	/** Cubic power. */
 	private final int _cubicPower;
 	/** Cubic duration. */
@@ -47,7 +48,7 @@ public class SummonCubic extends L2Effect
 	public SummonCubic(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_npcId = template.getParameters().getInteger("npcId", 0);
+		_cubicId = template.getParameters().getInteger("cubicId", -1);
 		// Custom AI data.
 		_cubicPower = template.getParameters().getInteger("cubicPower", 0);
 		_cubicDuration = template.getParameters().getInteger("cubicDuration", 0);
@@ -76,9 +77,9 @@ public class SummonCubic extends L2Effect
 			return false;
 		}
 		
-		if (_npcId <= 0)
+		if (_cubicId < 0)
 		{
-			_log.warning(SummonCubic.class.getSimpleName() + ": Invalid NPC Id:" + _npcId + " in skill Id: " + getSkill().getId());
+			_log.warning(SummonCubic.class.getSimpleName() + ": Invalid Cubic Id:" + _cubicId + " in skill Id: " + getSkill().getId());
 			return false;
 		}
 		
@@ -100,24 +101,32 @@ public class SummonCubic extends L2Effect
 		}
 		
 		// If cubic is already present, it's replaced.
-		final L2CubicInstance cubic = player.getCubicById(_npcId);
+		final L2CubicInstance cubic = player.getCubicById(_cubicId);
 		if (cubic != null)
 		{
 			cubic.stopAction();
 			cubic.cancelDisappear();
-			player.getCubics().remove(cubic);
+			player.getCubics().remove(_cubicId);
 		}
 		else
 		{
 			// If maximum amount is reached, random cubic is removed.
 			final L2Effect cubicMastery = player.getFirstPassiveEffect(L2EffectType.CUBIC_MASTERY);
-			final int cubicCount = (int) (cubicMastery != null ? cubicMastery.calc() : 0);
-			if (player.getCubics().size() > cubicCount)
+			// Players with no mastery can have only one cubic.
+			final int allowedCubicCount = (int) (cubicMastery != null ? cubicMastery.calc() : 1);
+			final int currentCubicCount = player.getCubics().size();
+			// Extra cubics are removed, one by one, randomly.
+			for (int i = 0; i <= (currentCubicCount - allowedCubicCount); i++)
 			{
-				player.getCubics().remove(Rnd.get(player.getCubics().size()));
+				final int removedCubicId = (int) player.getCubics().keySet().toArray()[Rnd.get(currentCubicCount)];
+				final L2CubicInstance removedCubic = player.getCubicById(removedCubicId);
+				removedCubic.stopAction();
+				removedCubic.cancelDisappear();
+				player.getCubics().remove(removedCubic.getId());
 			}
 		}
-		player.addCubic(_npcId, _cubicSkillLevel, _cubicPower, _cubicDelay, _cubicSkillChance, _cubicMaxCount, _cubicDuration, getEffected() != getEffector());
+		// Adding a new cubic.
+		player.addCubic(_cubicId, _cubicSkillLevel, _cubicPower, _cubicDelay, _cubicSkillChance, _cubicMaxCount, _cubicDuration, getEffected() != getEffector());
 		player.broadcastUserInfo();
 		return true;
 	}
