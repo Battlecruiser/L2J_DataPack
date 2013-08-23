@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Gatekeeper Spirit AI.
- * @author Charus, lion
+ * @author Zoey76
  */
 public class GatekeeperSpirit extends AbstractNpcAI
 {
@@ -39,44 +39,85 @@ public class GatekeeperSpirit extends AbstractNpcAI
 	// Exit gatekeeper spawn locations
 	private static final Location SPAWN_LILITH_GATEKEEPER = new Location(184410, -10111, -5488);
 	private static final Location SPAWN_ANAKIM_GATEKEEPER = new Location(184410, -13102, -5488);
+	// Teleport
+	private static final Location TELEPORT_DUSK = new Location(184464, -13104, -5504);
+	private static final Location TELEPORT_DAWN = new Location(184448, -10112, -5504);
+	private static final Location EXIT = new Location(182960, -11904, -4897);
 	
 	private GatekeeperSpirit()
 	{
 		super(GatekeeperSpirit.class.getSimpleName(), "ai/npc/Teleports");
 		addStartNpc(GATEKEEPER_SPIRIT_ENTER);
 		addFirstTalkId(GATEKEEPER_SPIRIT_ENTER);
+		addTalkId(GATEKEEPER_SPIRIT_ENTER);
 		addKillId(LILITH, ANAKIM);
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
-		int sealOfAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
-		int compWinner = SevenSigns.getInstance().getCabalHighestScore();
-		
-		if ((playerCabal == sealOfAvariceOwner) && (playerCabal == compWinner) && (sealOfAvariceOwner != SevenSigns.CABAL_NULL))
-		{
-			return (sealOfAvariceOwner == SevenSigns.CABAL_DUSK) ? "dusk.htm" : "dawn.htm";
-		}
-		
-		npc.showChatWindow(player);
-		return super.onFirstTalk(npc, player);
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
-	{
-		startQuestTimer(Integer.toString(npc.getId()), 10000, npc, killer);
-		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		Location loc = (event.equals(Integer.toString(LILITH)) ? SPAWN_LILITH_GATEKEEPER : SPAWN_ANAKIM_GATEKEEPER);
-		addSpawn(GATEKEEPER_SPIRIT_EXIT, loc, false, 900000);
-		return super.onAdvEvent(event, npc, player);
+		String htmltext = null;
+		switch (event)
+		{
+			case "ANAKIM":
+			{
+				addSpawn(GATEKEEPER_SPIRIT_EXIT, SPAWN_ANAKIM_GATEKEEPER, false, 900000);
+				break;
+			}
+			case "LILITH":
+			{
+				addSpawn(GATEKEEPER_SPIRIT_EXIT, SPAWN_LILITH_GATEKEEPER, false, 900000);
+				break;
+			}
+			case "TeleportIn":
+			{
+				final int playerCabal = SevenSigns.getInstance().getPlayerCabal(player.getObjectId());
+				final int sealOfAvariceOwner = SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_AVARICE);
+				final int compWinner = SevenSigns.getInstance().getCabalHighestScore();
+				if (!SevenSigns.getInstance().isSealValidationPeriod())
+				{
+					htmltext = "31111-no.html";
+				}
+				else if ((compWinner == SevenSigns.CABAL_DUSK) && (playerCabal == SevenSigns.CABAL_DUSK) && (sealOfAvariceOwner == SevenSigns.CABAL_DUSK))
+				{
+					player.teleToLocation(TELEPORT_DUSK, false);
+				}
+				else if ((compWinner == SevenSigns.CABAL_DAWN) && (playerCabal == SevenSigns.CABAL_DAWN) && (sealOfAvariceOwner == SevenSigns.CABAL_DAWN))
+				{
+					player.teleToLocation(TELEPORT_DAWN, false);
+				}
+				else
+				{
+					htmltext = "31111-no.html";
+				}
+				break;
+			}
+			case "TeleportOut":
+			{
+				player.teleToLocation(EXIT, true);
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		switch (npc.getId())
+		{
+			case ANAKIM:
+			{
+				startQuestTimer("ANAKIM", 10000, npc, killer);
+				break;
+			}
+			case LILITH:
+			{
+				startQuestTimer("LILITH", 10000, npc, killer);
+				break;
+			}
+		}
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	public static void main(String[] args)

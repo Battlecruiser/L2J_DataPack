@@ -234,8 +234,6 @@ INSERT INTO `teleport` VALUES
 ('Aden(hall) -> out)',415,147723,7916,-475,0,0,57),
 ('Aden(hall) -> in)',416,148580,4578,-408,0,0,57),
 ('Aden(hall) -> outofcastle)',417,147582,8753,-496,0,0,57),
-('Disciples Necropolis -> Anakim (DUSK)',450,185065,-12612,-5104,0,0,57),
-('Disciples Necropolis -> Lilith (DAWN)',451,185060,-9622,-5104,0,0,57),
 ('Anakim/Lilith -> Disciples Necropolis',452,183225,-11911,-4897,0,0,57),
 ('TI -> DE Village',1005,9709,15566,-4568,24000,0,57),
 ('TI -> Dwarven Village',1006,115120,-178224,-880,46000,0,57),
