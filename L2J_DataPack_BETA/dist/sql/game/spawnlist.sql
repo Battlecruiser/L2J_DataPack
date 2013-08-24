@@ -5084,8 +5084,6 @@ INSERT INTO `spawnlist` VALUES
 ("Orc_Village_Npc", 1, 31786, -45616, -110320, -240, 0, 0, 49000, 60, 0, 0, 0),
 -- Dimensional Merchant
 ("Orc_Village_Npc", 1, 32478, -43728, -113472, -240, 0, 0, 33000, 60, 0, 0, 0),
--- Priest of Blessing
-("Orc_Village_Npc", 1, 32783, -45032, -113561, -192, 0, 0, 2390, 60, 0, 0, 0),
 -- Manor Manager
 ("Orc_Village_Npc", 1, 35645, -44172, -112236, -240, 0, 0, 40000, 60, 0, 0, 0),
 
