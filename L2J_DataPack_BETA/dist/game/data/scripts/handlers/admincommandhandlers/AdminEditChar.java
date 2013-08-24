@@ -390,7 +390,7 @@ public class AdminEditChar implements IAdminCommandHandler
 						player.setBaseClass(classidval);
 					}
 					String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					player.store();
+					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
@@ -454,7 +454,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				player.setName(val);
-				player.store();
+				player.storeMe();
 				
 				activeChar.sendMessage("Changed name to " + val);
 				player.sendMessage("Your name has been changed by a GM.");
@@ -1076,7 +1076,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		player.setPkKills(pkkillsval);
 		
 		// Save the changed parameters to the database.
-		player.store();
+		player.storeMe();
 		
 		StatusUpdate su = new StatusUpdate(player);
 		su.addAttribute(StatusUpdate.CUR_HP, hpval);

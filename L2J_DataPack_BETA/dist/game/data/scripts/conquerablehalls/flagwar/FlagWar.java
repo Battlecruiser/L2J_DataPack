@@ -199,7 +199,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				html = "messenger_clanalreadyregistered.htm";
 			}
-			else if (_hall.getOwnerId() == clan.getClanId())
+			else if (_hall.getOwnerId() == clan.getId())
 			{
 				html = "messenger_curownermessage.htm";
 			}
@@ -214,7 +214,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 						if (player.destroyItemByItemId(_hall.getName() + " Siege", QUEST_REWARD, 1, npc, false)) // Quest passed
 						{
 							registerClan(clan);
-							html = getFlagHtml(_data.get(clan.getClanId()).flag);
+							html = getFlagHtml(_data.get(clan.getId()).flag);
 						}
 						else
 						{
@@ -227,7 +227,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 						if (player.reduceAdena(qn + " Siege", 200000, npc, false)) // Fee payed
 						{
 							registerClan(clan);
-							html = getFlagHtml(_data.get(clan.getClanId()).flag);
+							html = getFlagHtml(_data.get(clan.getId()).flag);
 						}
 						else
 						{
@@ -244,7 +244,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				html = "messenger_onlyleaderselectally.htm";
 			}
-			else if (!_data.containsKey(clan.getClanId()))
+			else if (!_data.containsKey(clan.getId()))
 			{
 				html = "messenger_clannotregistered.htm";
 			}
@@ -264,8 +264,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 					}
 					if ((id > 0) && ((html = getAllyHtml(id)) != null))
 					{
-						_data.get(clan.getClanId()).npc = id;
-						saveNpc(id, clan.getClanId());
+						_data.get(clan.getId()).npc = id;
+						saveNpc(id, clan.getId());
 					}
 				}
 				else
@@ -282,7 +282,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				html = "messenger_clannotregistered.htm";
 			}
-			else if ((cd = _data.get(clan.getClanId())) == null)
+			else if ((cd = _data.get(clan.getId())) == null)
 			{
 				html = "messenger_notclannotleader.htm";
 			}
@@ -306,19 +306,19 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			{
 				html = "messenger_registrationpassed.htm";
 			}
-			else if (!_data.containsKey(clan.getClanId()))
+			else if (!_data.containsKey(clan.getId()))
 			{
 				html = "messenger_notclannotleader.htm";
 			}
-			else if (_data.get(clan.getClanId()).players.size() >= 18)
+			else if (_data.get(clan.getId()).players.size() >= 18)
 			{
 				html = "messenger_clanqueuefull.htm";
 			}
 			else
 			{
-				ClanData data = _data.get(clan.getClanId());
+				ClanData data = _data.get(clan.getId());
 				data.players.add(player.getObjectId());
-				saveMember(clan.getClanId(), player.getObjectId());
+				saveMember(clan.getId(), player.getObjectId());
 				if (data.npc == 0)
 				{
 					html = "messenger_leaderdidnotchooseyet.htm";
@@ -699,7 +699,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private void registerClan(L2Clan clan)
 	{
-		final int clanId = clan.getClanId();
+		final int clanId = clan.getId();
 		
 		L2SiegeClan sc = new L2SiegeClan(clanId, SiegeClanType.ATTACKER);
 		getAttackers().put(clanId, sc);

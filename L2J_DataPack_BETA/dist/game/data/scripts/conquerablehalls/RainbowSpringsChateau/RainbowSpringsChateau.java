@@ -388,7 +388,7 @@ public class RainbowSpringsChateau extends Quest
 						{
 							html = "messenger_yetti014.htm";
 						}
-						else if (_warDecreesCount.containsKey(clan.getClanId()))
+						else if (_warDecreesCount.containsKey(clan.getId()))
 						{
 							html = "messenger_yetti013.htm";
 						}
@@ -406,9 +406,9 @@ public class RainbowSpringsChateau extends Quest
 							else
 							{
 								long count = warDecrees.getCount();
-								_warDecreesCount.put(clan.getClanId(), count);
+								_warDecreesCount.put(clan.getId(), count);
 								player.destroyItem("Rainbow Springs Registration", warDecrees, npc, true);
-								updateAttacker(clan.getClanId(), count, false);
+								updateAttacker(clan.getId(), count, false);
 								html = "messenger_yetti009.htm";
 							}
 						}
@@ -418,7 +418,7 @@ public class RainbowSpringsChateau extends Quest
 						{
 							html = "messenger_yetti010.htm";
 						}
-						else if (!_warDecreesCount.containsKey(clan.getClanId()))
+						else if (!_warDecreesCount.containsKey(clan.getId()))
 						{
 							html = "messenger_yetti016.htm";
 						}
@@ -428,17 +428,17 @@ public class RainbowSpringsChateau extends Quest
 						}
 						else
 						{
-							updateAttacker(clan.getClanId(), 0, true);
+							updateAttacker(clan.getId(), 0, true);
 							html = "messenger_yetti018.htm";
 						}
 						break;
 					case "unregister":
 						if (_rainbow.isRegistering())
 						{
-							if (_warDecreesCount.containsKey(clan.getClanId()))
+							if (_warDecreesCount.containsKey(clan.getId()))
 							{
-								player.addItem("Rainbow Spring unregister", WAR_DECREES, _warDecreesCount.get(clan.getClanId()) / 2, npc, true);
-								_warDecreesCount.remove(clan.getClanId());
+								player.addItem("Rainbow Spring unregister", WAR_DECREES, _warDecreesCount.get(clan.getId()) / 2, npc, true);
+								_warDecreesCount.remove(clan.getId());
 								html = "messenger_yetti019.htm";
 							}
 							else
