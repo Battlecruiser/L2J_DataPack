@@ -59,6 +59,8 @@ public class Escape extends L2Effect
 			return false;
 		}
 		getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(getEffected(), _escapeType), true);
+		getEffected().getActingPlayer().setIsIn7sDungeon(false);
+		getEffected().setInstanceId(0);
 		return true;
 	}
 }
