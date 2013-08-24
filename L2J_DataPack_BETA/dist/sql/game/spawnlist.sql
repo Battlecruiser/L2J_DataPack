@@ -15178,8 +15178,6 @@ INSERT INTO `spawnlist` VALUES
 ("Dark_Elf_Village_Npc", 1, 31850, 10087, 28179, -3632, 0, 0, 28165, 60, 0, 0, 0),
 -- Dimensional Merchant
 ("Dark_Elf_Village_Npc", 1, 32478, 13436, 17248, -4568, 0, 0, 47500, 60, 0, 0, 0),
--- Priest of Blessing
-("Dark_Elf_Village_Npc", 1, 32783, 12086, 16589, -4584, 0, 0, 3355, 60, 0, 0, 0),
 -- Manor Manager
 ("Dark_Elf_Village_Npc", 1, 35231, 9383, 17746, -4568, 0, 0, 46256, 60, 0, 0, 0),
 
@@ -20788,8 +20786,6 @@ INSERT INTO `spawnlist` VALUES
 ("oren03_npc2119_18", 1, 32529, 46216, 39585, -3510, 0, 0, 0, 60, 0, 0, 0),
 ("oren03_npc2119_19", 1, 32529, 46139, 41117, -3508, 0, 0, 0, 60, 0, 0, 0),
 ("oren03_npc2119_20", 1, 32529, 45580, 40728, -3509, 0, 0, 0, 60, 0, 0, 0),
--- Priest of Blessing
-("Elven_Village_Npc", 1, 32783, 45413, 48351, -3056, 0, 0, 50020, 60, 0, 0, 0),
 -- Manor Manager
 ("Elven_Village_Npc", 1, 35230, 43849, 50558, -3056, 0, 0, 1448, 60, 0, 0, 0),
 
