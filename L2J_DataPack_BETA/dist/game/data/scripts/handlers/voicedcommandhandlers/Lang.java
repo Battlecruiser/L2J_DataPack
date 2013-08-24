@@ -41,7 +41,7 @@ public class Lang implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final NpcHtmlMessage msg = new NpcHtmlMessage(1);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		if (params == null)
 		{
 			final StringBuilder html = StringUtil.startAppend(100);

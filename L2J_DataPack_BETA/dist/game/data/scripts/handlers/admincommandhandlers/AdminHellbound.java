@@ -81,7 +81,7 @@ public class AdminHellbound implements IAdminCommandHandler
 	
 	private void showMenu(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(0);
+		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/hellbound.htm");
 		html.replace("%hbstage%", String.valueOf(HellboundManager.getInstance().getLevel()));
 		html.replace("%trust%", String.valueOf(HellboundManager.getInstance().getTrust()));

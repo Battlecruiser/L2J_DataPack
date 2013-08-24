@@ -48,11 +48,6 @@ public class QuestLink implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
-		if (!target.isNpc())
-		{
-			return false;
-		}
-		
 		String quest = "";
 		try
 		{
@@ -67,7 +62,15 @@ public class QuestLink implements IBypassHandler
 		}
 		else
 		{
-			showQuestWindow(activeChar, (L2Npc) target, quest);
+			int questNameEnd = quest.indexOf(" ");
+			if (questNameEnd == -1)
+			{
+				showQuestWindow(activeChar, (L2Npc) target, quest);
+			}
+			else
+			{
+				activeChar.processQuestEvent(quest.substring(0, questNameEnd), quest.substring(questNameEnd).trim());
+			}
 		}
 		return true;
 	}

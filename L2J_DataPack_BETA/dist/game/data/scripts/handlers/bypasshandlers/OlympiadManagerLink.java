@@ -233,7 +233,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				String[] params = command.split(" ");
 				
 				if (params[1] == null)
@@ -288,7 +288,7 @@ public class OlympiadManagerLink implements IBypassHandler
 			{
 				int val = Integer.parseInt(command.substring(9, 10));
 				
-				NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
+				final NpcHtmlMessage reply = new NpcHtmlMessage(target.getObjectId());
 				
 				switch (val)
 				{

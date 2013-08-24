@@ -434,7 +434,7 @@ public class eventmodRace extends Event
 	
 	private void showMenu(L2PcInstance activeChar)
 	{
-		NpcHtmlMessage html = new NpcHtmlMessage(0);
+		final NpcHtmlMessage html = new NpcHtmlMessage();
 		String content = getHtm(activeChar.getHtmlPrefix(), "admin_menu.htm");
 		html.setHtml(content);
 		activeChar.sendPacket(html);

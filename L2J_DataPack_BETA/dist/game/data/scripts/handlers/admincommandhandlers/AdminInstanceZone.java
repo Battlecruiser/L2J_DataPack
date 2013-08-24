@@ -138,7 +138,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 		
 		StringUtil.append(html, "</table></html>");
 		
-		NpcHtmlMessage ms = new NpcHtmlMessage(1);
+		final NpcHtmlMessage ms = new NpcHtmlMessage();
 		ms.setHtml(html.toString());
 		
 		activeChar.sendPacket(ms);

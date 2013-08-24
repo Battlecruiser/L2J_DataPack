@@ -195,7 +195,7 @@ public class AdminSpawn implements IAdminCommandHandler
 							}
 						}
 						StringUtil.append(html, "<tr><td>Skipped:</td><td>" + String.valueOf(skiped) + "</td></tr></table></body></html>");
-						NpcHtmlMessage ms = new NpcHtmlMessage(1);
+						final NpcHtmlMessage ms = new NpcHtmlMessage();
 						ms.setHtml(html.toString());
 						activeChar.sendPacket(ms);
 					}
@@ -487,7 +487,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_spawn_index ", Integer.toString(level), " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_spawns\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		}
 		
-		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
+		activeChar.sendPacket(new NpcHtmlMessage(tb.toString()));
 	}
 	
 	private void showNpcs(L2PcInstance activeChar, String starting, int from)
@@ -512,6 +512,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			StringUtil.append(tb, "<br><center><button value=\"Next\" action=\"bypass -h admin_npc_index ", starting, " ", Integer.toString(i), "\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"Back\" action=\"bypass -h admin_show_npcs\" width=40 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></center></body></html>");
 		}
 		
-		activeChar.sendPacket(new NpcHtmlMessage(5, tb.toString()));
+		activeChar.sendPacket(new NpcHtmlMessage(tb.toString()));
 	}
 }

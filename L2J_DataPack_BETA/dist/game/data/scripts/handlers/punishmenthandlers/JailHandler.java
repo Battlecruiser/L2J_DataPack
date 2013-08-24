@@ -165,7 +165,7 @@ public class JailHandler extends PlayerSpawnListener implements IPunishmentHandl
 		ThreadPoolManager.getInstance().scheduleGeneral(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
 		
 		// Open a Html message to inform the player
-		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/jail_in.htm");
 		if (content != null)
 		{
@@ -201,7 +201,7 @@ public class JailHandler extends PlayerSpawnListener implements IPunishmentHandl
 		ThreadPoolManager.getInstance().scheduleGeneral(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
 		
 		// Open a Html message to inform the player
-		final NpcHtmlMessage msg = new NpcHtmlMessage(0);
+		final NpcHtmlMessage msg = new NpcHtmlMessage();
 		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/jail_out.htm");
 		if (content != null)
 		{

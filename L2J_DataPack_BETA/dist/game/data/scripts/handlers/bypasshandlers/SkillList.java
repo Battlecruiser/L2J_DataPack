@@ -111,7 +111,7 @@ public class SkillList implements IBypassHandler
 					}
 					text += "</body></html>";
 					
-					NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 					html.setHtml(text);
 					html.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 					activeChar.sendPacket(html);

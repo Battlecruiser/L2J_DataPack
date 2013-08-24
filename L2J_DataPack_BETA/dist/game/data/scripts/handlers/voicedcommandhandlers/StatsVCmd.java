@@ -73,7 +73,7 @@ public class StatsVCmd implements IVoicedCommandHandler
 			StringUtil.append(replyMSG, "<font color=\"FF0000\">", plr.getName(), "</font><br>");
 		}
 		replyMSG.append("</body></html>");
-		final NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
+		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 		return true;

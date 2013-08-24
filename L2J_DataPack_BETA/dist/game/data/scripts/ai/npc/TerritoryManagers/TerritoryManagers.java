@@ -213,7 +213,7 @@ public class TerritoryManagers extends AbstractNpcAI
 					badgeId = TerritoryWarManager.getInstance().TERRITORY_ITEM_IDS.get(territoryId);
 				}
 				int[] reward = TerritoryWarManager.getInstance().calcReward(player);
-				NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				if (TerritoryWarManager.getInstance().isTWInProgress() || (reward[0] == 0))
 				{
 					html.setFile(player.getHtmlPrefix(), "data/scripts/ai/npc/TerritoryManagers/reward-0a.html");
