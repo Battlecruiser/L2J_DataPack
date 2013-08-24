@@ -73,7 +73,7 @@ public class ClanPenalty implements IUserCommandHandler
 		
 		htmlContent.append("</tr></table><img src=\"L2UI.SquareWhite\" width=270 height=1></center></body></html>");
 		
-		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage(0);
+		final NpcHtmlMessage penaltyHtml = new NpcHtmlMessage();
 		penaltyHtml.setHtml(htmlContent.toString());
 		activeChar.sendPacket(penaltyHtml);
 		

@@ -37,7 +37,7 @@ public class L2DoorInstanceActionShift implements IActionHandler
 			L2DoorInstance door = (L2DoorInstance) target;
 			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final NpcHtmlMessage html = new NpcHtmlMessage();
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
 			html.replace("%class%", target.getClass().getSimpleName());
 			html.replace("%hp%", String.valueOf((int) door.getCurrentHp()));

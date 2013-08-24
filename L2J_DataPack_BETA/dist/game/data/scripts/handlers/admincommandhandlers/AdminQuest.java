@@ -195,7 +195,7 @@ public class AdminQuest implements IAdminCommandHandler
 			else
 			{
 				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
-				NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId(), 1);
+				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				StringBuilder sb = new StringBuilder();
 				Set<String> questset = new HashSet<>();
@@ -238,7 +238,7 @@ public class AdminQuest implements IAdminCommandHandler
 				}
 				L2Npc npc = L2Npc.class.cast(activeChar.getTarget());
 				StringBuilder sb = new StringBuilder();
-				NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId(), 1);
+				final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
 				msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npc-quests.htm");
 				String events = "", npcs = "", items = "", timers = "";
 				

@@ -75,7 +75,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					{
 						content = content.replaceAll("%punishments%", Util.implode(PunishmentType.values(), ";"));
 						content = content.replaceAll("%affects%", Util.implode(PunishmentAffect.values(), ";"));
-						activeChar.sendPacket(new NpcHtmlMessage(5, 5, content));
+						activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 					}
 					else
 					{
@@ -138,7 +138,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								content = content.replaceAll("%punishments%", sb.toString());
 								content = content.replaceAll("%affects%", Util.implode(PunishmentAffect.values(), ";"));
 								content = content.replaceAll("%affect_type%", affect.name());
-								activeChar.sendPacket(new NpcHtmlMessage(5, 5, content));
+								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
 							{
@@ -162,7 +162,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								content = content.replaceAll("%acc%", target.getAccountName());
 								content = content.replaceAll("%char%", target.getName());
 								content = content.replaceAll("%ip%", target.getIPAddress());
-								activeChar.sendPacket(new NpcHtmlMessage(5, 5, content));
+								activeChar.sendPacket(new NpcHtmlMessage(0, 1, content));
 							}
 							else
 							{

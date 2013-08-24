@@ -267,7 +267,7 @@ public class Festival implements IBypassHandler
 					
 					StringUtil.append(strBuffer, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Chat 0\">Go back.</a></body></html>");
 					
-					NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setHtml(strBuffer.toString());
 					activeChar.sendPacket(html);
 					break;

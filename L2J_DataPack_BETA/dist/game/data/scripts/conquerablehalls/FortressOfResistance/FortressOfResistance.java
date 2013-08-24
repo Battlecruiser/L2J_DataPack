@@ -105,7 +105,8 @@ public final class FortressOfResistance extends ClanHallSiegeEngine
 		String html = HtmCache.getInstance().getHtm(null, "data/scripts/conquerablehalls/FortressOfResistance/partisan_ordery_brakel001.htm");
 		if (html != null)
 		{
-			_messengerMsg = new NpcHtmlMessage(5);
+			// FIXME: We don't have an object id to put in here :(
+			_messengerMsg = new NpcHtmlMessage();
 			_messengerMsg.setHtml(html);
 			_messengerMsg.replace("%nextSiege%", Util.formatDate(_hall.getSiegeDate().getTime(), "yyyy-MM-dd HH:mm:ss"));
 		}

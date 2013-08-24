@@ -298,7 +298,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		StringUtil.append(html, "<br><center><button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ", Integer.toString(target.getObjectId()), "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></html>");
 		
-		NpcHtmlMessage ms = new NpcHtmlMessage(1);
+		final NpcHtmlMessage ms = new NpcHtmlMessage();
 		ms.setHtml(html.toString());
 		activeChar.sendPacket(ms);
 		

@@ -337,7 +337,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		if (category.equalsIgnoreCase("stats") || category.equalsIgnoreCase("ai") || category.equalsIgnoreCase("elementals") || category.equalsIgnoreCase("visuals"))
 		{
-			NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
+			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-" + category.toLowerCase() + ".htm");
 			
 			html.replace("%npcId%", String.valueOf(npc.getId()));
@@ -937,7 +937,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final int PAGE_SIZE = 20;
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-skills.htm");
 		
 		html.replace("%npcId%", String.valueOf(npc.getId()));
@@ -1064,7 +1064,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		final int PAGE_SIZE = 20;
 		
-		NpcHtmlMessage html = new NpcHtmlMessage(5, 1);
+		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/editnpc-drops.htm");
 		
 		html.replace("%npcId%", String.valueOf(npc.getId()));

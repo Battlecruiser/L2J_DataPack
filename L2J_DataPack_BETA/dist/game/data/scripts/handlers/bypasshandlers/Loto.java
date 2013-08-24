@@ -96,7 +96,7 @@ public class Loto implements IBypassHandler
 		int npcId = npc.getTemplate().getId();
 		String filename;
 		SystemMessage sm;
-		NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 		
 		if (val == 0) // 0 - first buy lottery ticket window
 		{

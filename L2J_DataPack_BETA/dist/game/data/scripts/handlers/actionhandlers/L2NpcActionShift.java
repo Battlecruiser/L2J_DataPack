@@ -63,7 +63,7 @@ public class L2NpcActionShift implements IActionHandler
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final NpcHtmlMessage html = new NpcHtmlMessage();
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
@@ -171,7 +171,7 @@ public class L2NpcActionShift implements IActionHandler
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);
 			
-			NpcHtmlMessage html = new NpcHtmlMessage(0);
+			final NpcHtmlMessage html = new NpcHtmlMessage();
 			int hpMul = Math.round((float) (((L2Character) target).getStat().calcStat(Stats.MAX_HP, 1, (L2Character) target, null) / BaseStats.CON.calcBonus((L2Character) target)));
 			if (hpMul == 0)
 			{

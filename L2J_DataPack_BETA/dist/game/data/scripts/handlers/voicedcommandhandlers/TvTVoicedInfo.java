@@ -54,7 +54,7 @@ public class TvTVoicedInfo implements IVoicedCommandHandler
 				String htmContent = (USE_STATIC_HTML && !HTML.isEmpty()) ? HTML : HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/TvTEvent/Status.htm");
 				try
 				{
-					NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage(5);
+					final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage();
 					
 					npcHtmlMessage.setHtml(htmContent);
 					// npcHtmlMessage.replace("%objectId%",

@@ -52,15 +52,15 @@ public class PlayerHelp implements IBypassHandler
 			final StringTokenizer st = new StringTokenizer(path);
 			final String[] cmd = st.nextToken().split("#");
 			
-			NpcHtmlMessage html;
+			final NpcHtmlMessage html;
 			if (cmd.length > 1)
 			{
 				final int itemId = Integer.parseInt(cmd[1]);
-				html = new NpcHtmlMessage(1, itemId);
+				html = new NpcHtmlMessage(0, itemId);
 			}
 			else
 			{
-				html = new NpcHtmlMessage(1);
+				html = new NpcHtmlMessage();
 			}
 			
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/help/" + cmd[0]);
