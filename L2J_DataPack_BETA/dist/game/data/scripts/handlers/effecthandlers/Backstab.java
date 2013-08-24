@@ -18,7 +18,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.ShotType;
+import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
