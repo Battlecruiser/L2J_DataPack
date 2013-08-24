@@ -88,8 +88,8 @@ public class ClanWarsList implements IUserCommandHandler
 			
 			try (PreparedStatement ps = con.prepareStatement(query))
 			{
-				ps.setInt(1, clan.getClanId());
-				ps.setInt(2, clan.getClanId());
+				ps.setInt(1, clan.getId());
+				ps.setInt(2, clan.getId());
 				
 				SystemMessage sm;
 				try (ResultSet rs = ps.executeQuery())

@@ -147,7 +147,7 @@ public final class WyvernManager extends AbstractNpcAI
 				final Fort fort = npc.getFort();
 				if ((player.getClan() != null) && (fort != null) && (fort.getOwnerClan() != null))
 				{
-					return (player.isClanLeader() && (player.getClanId() == npc.getFort().getOwnerClan().getClanId()));
+					return (player.isClanLeader() && (player.getClanId() == npc.getFort().getOwnerClan().getId()));
 				}
 				return false;
 			}

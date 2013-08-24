@@ -127,7 +127,7 @@ public class AdminClan implements IAdminCommandHandler
 						sb.append("<tr>");
 						sb.append("<td>" + clan.getName() + "</td>");
 						sb.append("<td>" + clan.getNewLeaderName() + "</td>");
-						sb.append("<td><a action=\"bypass -h admin_clan_force_pending " + clan.getClanId() + "\">Force</a></td>");
+						sb.append("<td><a action=\"bypass -h admin_clan_force_pending " + clan.getId() + "\">Force</a></td>");
 						sb.append("</tr>");
 					}
 				}

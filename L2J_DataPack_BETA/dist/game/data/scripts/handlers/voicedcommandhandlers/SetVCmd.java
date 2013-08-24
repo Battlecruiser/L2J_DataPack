@@ -47,7 +47,7 @@ public class SetVCmd implements IVoicedCommandHandler
 			}
 			
 			final L2PcInstance player = activeChar.getTarget().getActingPlayer();
-			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getClanId() != player.getClan().getClanId()))
+			if ((activeChar.getClan() == null) || (player.getClan() == null) || (activeChar.getClan().getId() != player.getClan().getId()))
 			{
 				return false;
 			}

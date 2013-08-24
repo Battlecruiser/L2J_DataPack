@@ -98,7 +98,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 			
 			if ((clan != null) && checkIsAttacker(clan))
 			{
-				final int id = clan.getClanId();
+				final int id = clan.getId();
 				if ((id > 0) && _damageToLidia.containsKey(id))
 				{
 					int newDamage = _damageToLidia.get(id);

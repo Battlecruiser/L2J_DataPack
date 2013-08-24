@@ -115,7 +115,7 @@ public class SummonPet extends L2Effect
 		
 		if (!pet.isRespawned())
 		{
-			pet.store();
+			pet.storeMe();
 		}
 		
 		player.setPet(pet);
