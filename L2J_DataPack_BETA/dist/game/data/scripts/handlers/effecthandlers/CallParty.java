@@ -60,7 +60,7 @@ public class CallParty extends L2Effect
 				{
 					if (getEffector() != partyMember)
 					{
-						partyMember.teleToLocation(getEffector().getX(), getEffector().getY(), getEffector().getZ(), true);
+						partyMember.teleToLocation(getEffector().getLocation(), true);
 					}
 				}
 			}

@@ -107,7 +107,7 @@ public class AdminInstance implements IAdminCommandHandler
 				{
 					L2PcInstance player = (L2PcInstance) target;
 					player.sendMessage("Admin set your instance to:" + val);
-					player.teleToLocation(player.getX(), player.getY(), player.getZ());
+					player.teleToLocation(player.getLocation());
 				}
 				activeChar.sendMessage("Moved " + target.getName() + " to instance " + target.getInstanceId() + ".");
 				return true;

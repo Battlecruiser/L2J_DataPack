@@ -82,10 +82,7 @@ public class EnergySeeds extends AbstractNpcAI
 		12240024, 12240025, 12240026, 12240027, 12240028, 12240029, 12240030,
 		12240031
 	};
-	private static final int[] SOD_EXIT_POINT =
-	{
-		-248717, 250260, 4337
-	};
+	private static final Location SOD_EXIT_POINT = new Location(-248717, 250260, 4337);
 	// @formatter:off
 	private static final int SOD_ZONE = 60009;
 	
@@ -213,7 +210,7 @@ public class EnergySeeds extends AbstractNpcAI
 			{
 				if (ch != null)
 				{
-					ch.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+					ch.teleToLocation(SOD_EXIT_POINT);
 				}
 			}
 			stopAI(GraciaSeeds.DESTRUCTION);
@@ -237,7 +234,7 @@ public class EnergySeeds extends AbstractNpcAI
 	{
 		if (npc.getId() == TEMPORARY_TELEPORTER)
 		{
-			player.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+			player.teleToLocation(SOD_EXIT_POINT);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		return null;
@@ -269,7 +266,7 @@ public class EnergySeeds extends AbstractNpcAI
 				case SOD_ZONE:
 					if (!isSeedActive(GraciaSeeds.DESTRUCTION) && !character.isGM())
 					{
-						character.teleToLocation(SOD_EXIT_POINT[0], SOD_EXIT_POINT[1], SOD_EXIT_POINT[2]);
+						character.teleToLocation(SOD_EXIT_POINT);
 					}
 					break;
 			}

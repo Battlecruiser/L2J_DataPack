@@ -198,7 +198,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				L2PcInstance player = L2World.getInstance().getPlayer(targetName);
 				if (player != null)
 				{
-					teleportCharacter(player, activeChar.getX(), activeChar.getY(), activeChar.getZ(), activeChar);
+					teleportCharacter(player, activeChar.getLocation(), activeChar);
 				}
 				else
 				{
@@ -250,7 +250,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				{
 					z -= intVal;
 				}
-				activeChar.teleToLocation(x, y, z, false);
+				activeChar.teleToLocation(new Location(x, y, z));
 				showTeleportWindow(activeChar);
 			}
 			catch (Exception e)
@@ -346,7 +346,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			int z = Integer.parseInt(z1);
 			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			activeChar.teleToLocation(x, y, z, false);
+			activeChar.teleToLocation(x, y, z);
 			
 			activeChar.sendMessage("You have been teleported to " + Coords);
 		}
@@ -410,7 +410,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				int y = Integer.parseInt(y1);
 				String z1 = st.nextToken();
 				int z = Integer.parseInt(z1);
-				teleportCharacter(player, x, y, z, null);
+				teleportCharacter(player, new Location(x, y, z), null);
 			}
 			catch (NoSuchElementException nsee)
 			{
@@ -420,12 +420,10 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	/**
 	 * @param player
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param loc
 	 * @param activeChar
 	 */
-	private void teleportCharacter(L2PcInstance player, int x, int y, int z, L2PcInstance activeChar)
+	private void teleportCharacter(L2PcInstance player, Location loc, L2PcInstance activeChar)
 	{
 		if (player != null)
 		{
@@ -448,7 +446,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				player.sendMessage("Admin is teleporting you.");
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				player.teleToLocation(x, y, z, true);
+				player.teleToLocation(loc, true);
 			}
 		}
 	}
@@ -486,7 +484,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			int z = player.getZ();
 			
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			activeChar.teleToLocation(x, y, z, true);
+			activeChar.teleToLocation(new Location(x, y, z), true);
 			
 			activeChar.sendMessage("You have teleported to character " + player.getName() + ".");
 		}

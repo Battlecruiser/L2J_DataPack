@@ -18,8 +18,12 @@
  */
 package ai.npc.Teleports.PaganTeleporters;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -33,6 +37,13 @@ public class PaganTeleporters extends AbstractNpcAI
 	// NPCs
 	private static final int TRIOLS_MIRROR_1 = 32039;
 	private static final int TRIOLS_MIRROR_2 = 32040;
+	// Locations
+	private static final Map<Integer, Location> TRIOLS_LOCS = new HashMap<>();
+	static
+	{
+		TRIOLS_LOCS.put(TRIOLS_MIRROR_1, new Location(-12766, -35840, -10856));
+		TRIOLS_LOCS.put(TRIOLS_MIRROR_2, new Location(36640, -51218, 718));
+	}
 	// @formatter:off
 	private static final int[] NPCS =
 	{
@@ -67,18 +78,9 @@ public class PaganTeleporters extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		switch (npc.getId())
+		if (TRIOLS_LOCS.containsKey(npc.getId()))
 		{
-			case TRIOLS_MIRROR_1:
-			{
-				player.teleToLocation(-12766, -35840, -10856);
-				break;
-			}
-			case TRIOLS_MIRROR_2:
-			{
-				player.teleToLocation(36640, -51218, 718);
-				break;
-			}
+			player.teleToLocation(TRIOLS_LOCS.get(npc.getId()));
 		}
 		return "";
 	}

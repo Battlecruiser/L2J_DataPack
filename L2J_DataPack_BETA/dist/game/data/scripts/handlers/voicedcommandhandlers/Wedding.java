@@ -36,6 +36,7 @@ import com.l2jserver.gameserver.instancemanager.CoupleManager;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.effects.AbnormalEffect;
 import com.l2jserver.gameserver.model.entity.L2Event;
@@ -472,7 +473,7 @@ public class Wedding implements IVoicedCommandHandler
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
 		
-		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
+		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation(), partner.isIn7sDungeon());
 		// continue execution later
 		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(ef, teleportTimer));
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
@@ -483,17 +484,13 @@ public class Wedding implements IVoicedCommandHandler
 	static class EscapeFinalizer implements Runnable
 	{
 		private final L2PcInstance _activeChar;
-		private final int _partnerx;
-		private final int _partnery;
-		private final int _partnerz;
+		private final Location _partnerLoc;
 		private final boolean _to7sDungeon;
 		
-		EscapeFinalizer(L2PcInstance activeChar, int x, int y, int z, boolean to7sDungeon)
+		EscapeFinalizer(L2PcInstance activeChar, Location loc, boolean to7sDungeon)
 		{
 			_activeChar = activeChar;
-			_partnerx = x;
-			_partnery = y;
-			_partnerz = z;
+			_partnerLoc = loc;
 			_to7sDungeon = to7sDungeon;
 		}
 		
@@ -505,7 +502,7 @@ public class Wedding implements IVoicedCommandHandler
 				return;
 			}
 			
-			if ((SiegeManager.getInstance().getSiege(_partnerx, _partnery, _partnerz) != null) && SiegeManager.getInstance().getSiege(_partnerx, _partnery, _partnerz).getIsInProgress())
+			if ((SiegeManager.getInstance().getSiege(_partnerLoc) != null) && SiegeManager.getInstance().getSiege(_partnerLoc).getIsInProgress())
 			{
 				_activeChar.sendMessage("Your partner is in siege, you can't go to your partner.");
 				return;
@@ -517,7 +514,7 @@ public class Wedding implements IVoicedCommandHandler
 			
 			try
 			{
-				_activeChar.teleToLocation(_partnerx, _partnery, _partnerz);
+				_activeChar.teleToLocation(_partnerLoc);
 			}
 			catch (Exception e)
 			{

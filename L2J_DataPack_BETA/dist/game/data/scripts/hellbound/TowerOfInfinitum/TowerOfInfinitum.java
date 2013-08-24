@@ -96,6 +96,8 @@ public class TowerOfInfinitum extends Quest
 		});
 	}
 	
+	private static final Location ENTER_LOCATION = new Location(-22204, 277056, -15023);
+	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -118,7 +120,7 @@ public class TowerOfInfinitum extends Quest
 					}
 					for (L2PcInstance partyMember : party.getMembers())
 					{
-						partyMember.teleToLocation(-22204, 277056, -15023, true);
+						partyMember.teleToLocation(ENTER_LOCATION, true);
 					}
 					htmltext = null;
 				}

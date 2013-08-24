@@ -253,7 +253,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 					for (L2PcInstance player : L2Event._teams.get(teamId))
 					{
 						player.setTitle(L2Event._teamNames.get(teamId));
-						player.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
+						player.teleToLocation(activeChar.getLocation(), true);
 						player.setInstanceId(activeChar.getInstanceId());
 					}
 				}
@@ -326,7 +326,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				for (L2PcInstance player : L2Event._teams.get(teamId))
 				{
 					player.getPoly().setPolyInfo("npc", polyIds[Rnd.get(polyIds.length)]);
-					player.teleToLocation(player.getX(), player.getY(), player.getZ(), true);
+					player.teleToLocation(player.getLocation(), true);
 					CharInfo info1 = new CharInfo(player);
 					player.broadcastPacket(info1);
 					UserInfo info2 = new UserInfo(player);

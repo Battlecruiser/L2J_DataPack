@@ -341,7 +341,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				{
 					if (showposition && (npc != null))
 					{
-						activeChar.teleToLocation(npc.getX(), npc.getY(), npc.getZ(), true);
+						activeChar.teleToLocation(npc.getLocation(), true);
 					}
 					else
 					{

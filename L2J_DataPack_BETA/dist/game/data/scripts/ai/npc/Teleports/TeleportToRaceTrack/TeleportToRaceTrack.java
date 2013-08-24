@@ -57,6 +57,8 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 		new Location(87386, -143246, -1293),
 		new Location(12882, 181053, -3560)
 	};
+	private static final Location TELEPORT = new Location(12661, 181687, -3560);
+	private static final Location DION_CASTLE_TOWN = new Location(15670, 142983, -2700);
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -71,7 +73,7 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 		
 		if (TELEPORTERS.containsKey(npc.getId()))
 		{
-			st.getPlayer().teleToLocation(12661, 181687, -3560);
+			st.getPlayer().teleToLocation(TELEPORT);
 			st.setState(State.STARTED);
 			st.set("id", String.valueOf(TELEPORTERS.get(npc.getId())));
 		}
@@ -89,7 +91,7 @@ public class TeleportToRaceTrack extends AbstractNpcAI
 			else
 			{
 				player.sendPacket(new NpcSay(npc.getObjectId(), 0, npc.getId(), "You've arrived here from a different way. I'll send you to Dion Castle Town which is the nearest town."));
-				st.getPlayer().teleToLocation(15670, 142983, -2700);
+				st.getPlayer().teleToLocation(DION_CASTLE_TOWN);
 			}
 			st.exitQuest(true);
 		}

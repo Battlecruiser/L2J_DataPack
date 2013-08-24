@@ -120,7 +120,7 @@ public class PrisonGuards extends AbstractNpcAI
 		{
 			if ((npc.getX() != npc.getSpawn().getX()) || (npc.getY() != npc.getSpawn().getY()))
 			{
-				npc.teleToLocation(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false);
+				npc.teleToLocation(npc.getSpawn().getLocation());
 				npc.setIsImmobilized(true);
 			}
 			((L2Attackable) npc).getAggroList().clear();
@@ -171,7 +171,7 @@ public class PrisonGuards extends AbstractNpcAI
 			{
 				if ((npc.getX() != npc.getSpawn().getX()) || (npc.getY() != npc.getSpawn().getY()))
 				{
-					npc.teleToLocation(npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false);
+					npc.teleToLocation(npc.getSpawn().getLocation());
 					npc.setIsImmobilized(true);
 				}
 				((L2Attackable) npc).getAggroList().remove(target);

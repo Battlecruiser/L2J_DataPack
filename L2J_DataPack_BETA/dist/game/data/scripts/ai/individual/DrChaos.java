@@ -39,6 +39,9 @@ public class DrChaos extends Quest
 	private static final int CHAOS_GOLEM = 25703;
 	private static boolean _IsGolemSpawned;
 	
+	private static final Location PLAYER_TELEPORT = new Location(94832, -112624, -3304);
+	private static final Location NPC_LOCATION = new Location(-113091, -243942, -15536);
+	
 	private DrChaos(int questId, String name, String descr)
 	{
 		super(questId, name, descr);
@@ -87,8 +90,8 @@ public class DrChaos extends Quest
 		}
 		else if (event.equalsIgnoreCase("5"))
 		{
-			player.teleToLocation(94832, -112624, -3304);
-			npc.teleToLocation(-113091, -243942, -15536);
+			player.teleToLocation(PLAYER_TELEPORT);
+			npc.teleToLocation(NPC_LOCATION);
 			if (!_IsGolemSpawned)
 			{
 				L2Npc golem = addSpawn(CHAOS_GOLEM, 94640, -112496, -3336, 0, false, 0);

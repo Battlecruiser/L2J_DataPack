@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.ZoneManager;
 import com.l2jserver.gameserver.model.L2CommandChannel;
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
@@ -38,6 +39,8 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 	// NPCs
 	private static final int BELETH = 29118;
 	private static final int NAIA_CUBE = 32376;
+	// Location
+	private static final Location TELEPORT_CITADEL = new Location(16342, 209557, -9352);
 	
 	private SteelCitadelTeleport()
 	{
@@ -83,7 +86,7 @@ public class SteelCitadelTeleport extends AbstractNpcAI
 					if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
 					{
 						zone.allowPlayerEntry(pl, 30);
-						pl.teleToLocation(16342, 209557, -9352, true);
+						pl.teleToLocation(TELEPORT_CITADEL, true);
 					}
 				}
 			}

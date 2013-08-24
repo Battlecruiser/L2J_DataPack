@@ -20,6 +20,7 @@ package hellbound.Shadai;
 
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.quest.Quest;
 
@@ -30,18 +31,8 @@ public class Shadai extends Quest
 {
 	private static final int SHADAI = 32347;
 	
-	private static final int[] DAY_COORDS =
-	{
-		16882,
-		238952,
-		9776
-	};
-	private static final int[] NIGHT_COORDS =
-	{
-		9064,
-		253037,
-		-1928
-	};
+	private static final Location DAY_COORDS = new Location(16882, 238952, 9776);
+	private static final Location NIGHT_COORDS = new Location(9064, 253037, -1928);
 	
 	@Override
 	public final String onSpawn(L2Npc npc)
@@ -56,24 +47,22 @@ public class Shadai extends Quest
 	
 	protected static void validatePosition(L2Npc npc)
 	{
-		int[] coords = DAY_COORDS;
+		Location coords = DAY_COORDS;
 		boolean mustRevalidate = false;
-		if ((npc.getX() != NIGHT_COORDS[0]) && GameTimeController.getInstance().isNight())
+		if ((npc.getX() != NIGHT_COORDS.getX()) && GameTimeController.getInstance().isNight())
 		{
 			coords = NIGHT_COORDS;
 			mustRevalidate = true;
 		}
-		else if ((npc.getX() != DAY_COORDS[0]) && !GameTimeController.getInstance().isNight())
+		else if ((npc.getX() != DAY_COORDS.getX()) && !GameTimeController.getInstance().isNight())
 		{
 			mustRevalidate = true;
 		}
 		
 		if (mustRevalidate)
 		{
-			npc.getSpawn().setX(coords[0]);
-			npc.getSpawn().setY(coords[1]);
-			npc.getSpawn().setZ(coords[2]);
-			npc.teleToLocation(coords[0], coords[1], coords[2]);
+			npc.getSpawn().setLocation(coords);
+			npc.teleToLocation(coords);
 		}
 	}
 	

@@ -27,6 +27,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -60,6 +61,10 @@ public class QueenAnt extends AbstractNpcAI
 		GUARD,
 		ROYAL
 	};
+	
+	private static final Location OUST_LOC_1 = new Location(-19480, 187344, -5600);
+	private static final Location OUST_LOC_2 = new Location(-17928, 180912, -5520);
+	private static final Location OUST_LOC_3 = new Location(-23808, 182368, -5600);
 	
 	private static final int QUEEN_X = -21610;
 	private static final int QUEEN_Y = 181594;
@@ -132,15 +137,15 @@ public class QueenAnt extends AbstractNpcAI
 		GrandBossManager.getInstance().addBoss(npc);
 		if (getRandom(100) < 33)
 		{
-			_zone.movePlayersTo(-19480, 187344, -5600);
+			_zone.movePlayersTo(OUST_LOC_1);
 		}
 		else if (getRandom(100) < 50)
 		{
-			_zone.movePlayersTo(-17928, 180912, -5520);
+			_zone.movePlayersTo(OUST_LOC_2);
 		}
 		else
 		{
-			_zone.movePlayersTo(-23808, 182368, -5600);
+			_zone.movePlayersTo(OUST_LOC_3);
 		}
 		GrandBossManager.getInstance().addBoss(npc);
 		startQuestTimer("action", 10000, npc, null, true);

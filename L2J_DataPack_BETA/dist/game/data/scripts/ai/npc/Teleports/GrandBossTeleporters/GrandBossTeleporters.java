@@ -26,6 +26,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -55,6 +56,11 @@ public class GrandBossTeleporters extends AbstractNpcAI
 	// Items
 	private static final int PORTAL_STONE = 3865;
 	private static final int VACUALITE_FLOATING_STONE = 7267;
+	private static final Location ENTER_HALL_OF_FLAMES = new Location(183813, -115157, -3303);
+	private static final Location TELEPORT_INTO_ANTHARAS_LAIR = new Location(179700, 113800, -7709);
+	private static final Location TELEPORT_OUT_OF_ANTHARAS_LAIR = new Location(79800, 151200, -3534);
+	private static final Location TELEPORT_INTO_VALAKAS_LAIR = new Location(204328, -111874, 70);
+	private static final Location TELEPORT_OUT_OF_VALAKAS_LAIR = new Location(150037, -57720, -2976);
 	
 	private Quest valakasAI()
 	{
@@ -81,7 +87,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 		
 		if (st.hasQuestItems(VACUALITE_FLOATING_STONE))
 		{
-			player.teleToLocation(183813, -115157, -3303);
+			player.teleToLocation(ENTER_HALL_OF_FLAMES);
 			st.set("allowEnter", "1");
 		}
 		else
@@ -132,7 +138,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 								zone.allowPlayerEntry(player, 30);
 							}
 							
-							player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
+							player.teleToLocation(TELEPORT_INTO_ANTHARAS_LAIR.getX() + getRandom(700), TELEPORT_INTO_ANTHARAS_LAIR.getY() + getRandom(2100), TELEPORT_INTO_ANTHARAS_LAIR.getZ());
 							
 							if (status == 0)
 							{
@@ -150,7 +156,8 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			}
 			case 31859:
 			{
-				player.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+				
+				player.teleToLocation(TELEPORT_OUT_OF_ANTHARAS_LAIR.getX() + getRandom(600), TELEPORT_OUT_OF_ANTHARAS_LAIR.getY() + getRandom(1100), TELEPORT_OUT_OF_ANTHARAS_LAIR.getZ());
 				break;
 			}
 			case 31385:
@@ -175,7 +182,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 								zone.allowPlayerEntry(player, 30);
 							}
 							
-							player.teleToLocation(204328 + getRandom(600), -111874 + getRandom(600), 70);
+							player.teleToLocation(TELEPORT_INTO_VALAKAS_LAIR.getX() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getY() + getRandom(600), TELEPORT_INTO_VALAKAS_LAIR.getZ());
 							
 							playerCount++;
 							
@@ -247,7 +254,7 @@ public class GrandBossTeleporters extends AbstractNpcAI
 			}
 			case 31759:
 			{
-				player.teleToLocation(150037 + getRandom(500), -57720 + getRandom(500), -2976);
+				player.teleToLocation(TELEPORT_OUT_OF_VALAKAS_LAIR.getX() + getRandom(500), TELEPORT_OUT_OF_VALAKAS_LAIR.getY() + getRandom(500), TELEPORT_OUT_OF_VALAKAS_LAIR.getZ());
 				break;
 			}
 		}
