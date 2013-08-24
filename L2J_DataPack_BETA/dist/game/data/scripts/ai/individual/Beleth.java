@@ -80,6 +80,8 @@ public class Beleth extends AbstractNpcAI
 	private static SkillHolder HORN_OF_RISING = new SkillHolder(5497, 1);
 	private static SkillHolder LIGHTENING = new SkillHolder(5499, 1);
 	
+	protected static final Location BELETH_SPAWN = new Location(16323, 213059, -9357, 49152);
+	
 	private Beleth(String name, String descr)
 	{
 		super(name, descr);
@@ -274,7 +276,7 @@ public class Beleth extends AbstractNpcAI
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(16), 1400);
 						break;
 					case 16:
-						BELETH.teleToLocation(16323, 213059, -9357, 49152, false);
+						BELETH.teleToLocation(BELETH_SPAWN);
 						ThreadPoolManager.getInstance().scheduleGeneral(new Spawn(17), 200);
 						break;
 					case 17:

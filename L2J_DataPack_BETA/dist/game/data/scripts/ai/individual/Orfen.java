@@ -213,7 +213,7 @@ public class Orfen extends AbstractNpcAI
 				L2Attackable mob = _Minions.get(i);
 				if (!npc.isInsideRadius(mob, 3000, false, false))
 				{
-					mob.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+					mob.teleToLocation(npc.getLocation());
 					((L2Attackable) npc).clearAggroList();
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null, null);
 				}
@@ -251,7 +251,7 @@ public class Orfen extends AbstractNpcAI
 				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), TEXT[getRandom(4)]);
 				packet.addStringParameter(caster.getName().toString());
 				npc.broadcastPacket(packet);
-				originalCaster.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+				originalCaster.teleToLocation(npc.getLocation());
 				npc.setTarget(originalCaster);
 				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
 			}
@@ -306,7 +306,7 @@ public class Orfen extends AbstractNpcAI
 				NpcSay packet = new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npcId, TEXT[getRandom(3)]);
 				packet.addStringParameter(attacker.getName().toString());
 				npc.broadcastPacket(packet);
-				attacker.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+				attacker.teleToLocation(npc.getLocation());
 				npc.setTarget(attacker);
 				npc.doCast(SkillTable.getInstance().getInfo(4064, 1));
 			}

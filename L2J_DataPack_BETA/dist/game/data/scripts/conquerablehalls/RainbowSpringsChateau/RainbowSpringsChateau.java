@@ -46,6 +46,7 @@ import com.l2jserver.gameserver.model.L2Clan;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -233,28 +234,12 @@ public class RainbowSpringsChateau extends Quest
 		35599
 	};
 	
-	private static final int[][] ARENAS =
+	private static final Location[] ARENAS = new Location[]
 	{
-		{
-			151562,
-			-127080,
-			-2214
-		}, // Arena 1
-		{
-			153141,
-			-125335,
-			-2214
-		}, // Arena 2
-		{
-			153892,
-			-127530,
-			-2214
-		}, // Arena 3
-		{
-			155657,
-			-125752,
-			-2214
-		}, // Arena 4
+		new Location(151562, -127080, -2214), // Arena 1
+		new Location(153141, -125335, -2214), // Arena 2
+		new Location(153892, -127530, -2214), // Arena 3
+		new Location(155657, -125752, -2214), // Arena 4
 	};
 	
 	protected static final int[] ARENA_ZONES =
@@ -724,7 +709,7 @@ public class RainbowSpringsChateau extends Quest
 				{
 					pc.getSummon().unSummon(pc);
 				}
-				pc.teleToLocation(ARENAS[arena][0], ARENAS[arena][1], ARENAS[arena][2]);
+				pc.teleToLocation(ARENAS[arena]);
 			}
 		}
 	}
@@ -738,9 +723,9 @@ public class RainbowSpringsChateau extends Quest
 				try
 				{
 					_gourds[i] = new L2Spawn(NpcTable.getInstance().getTemplate(GOURDS[i]));
-					_gourds[i].setX(ARENAS[i][0] + 150);
-					_gourds[i].setY(ARENAS[i][1] + 150);
-					_gourds[i].setZ(ARENAS[i][2]);
+					_gourds[i].setX(ARENAS[i].getX() + 150);
+					_gourds[i].setY(ARENAS[i].getY() + 150);
+					_gourds[i].setZ(ARENAS[i].getZ());
 					_gourds[i].setHeading(1);
 					_gourds[i].setAmount(1);
 				}
@@ -774,11 +759,7 @@ public class RainbowSpringsChateau extends Quest
 			
 			_gourds[(iterator - 1) - i] = curSpawn;
 			
-			int newX = oldSpawn.getX();
-			int newY = oldSpawn.getY();
-			int newZ = oldSpawn.getZ();
-			
-			curSpawn.getLastSpawn().teleToLocation(newX, newY, newZ);
+			curSpawn.getLastSpawn().teleToLocation(oldSpawn.getLocation());
 		}
 	}
 	

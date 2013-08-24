@@ -327,7 +327,7 @@ public abstract class Chamber extends Quest
 			if (world.getInstanceId() == partyMember.getInstanceId())
 			{
 				partyMember.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-				partyMember.teleToLocation(ROOM_ENTER_POINTS[newRoom], 50);
+				partyMember.teleToLocation(ROOM_ENTER_POINTS[newRoom], true);
 			}
 		}
 		
@@ -465,7 +465,7 @@ public abstract class Chamber extends Quest
 						int x = Integer.parseInt(coords[0]);
 						int y = Integer.parseInt(coords[1]);
 						int z = Integer.parseInt(coords[2]);
-						ret = new Location(x, y, z);
+						ret.setLocation(new Location(x, y, z));
 					}
 					catch (Exception e)
 					{

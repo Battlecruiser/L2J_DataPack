@@ -68,6 +68,8 @@ public class TeleportToFantasy extends AbstractNpcAI
 		new Location(-59720, -55921, -2032)
 	};
 	
+	private static final Location RUNE_TOWNSHIP = new Location(43835, -47749, -792);
+	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
@@ -99,7 +101,7 @@ public class TeleportToFantasy extends AbstractNpcAI
 			else
 			{
 				player.sendPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_ILL_BE_SENDING_YOU_BACK_TO_RUNE_TOWNSHIP_WHICH_IS_THE_NEAREST_TOWN));
-				player.teleToLocation(43835, -47749, -792);
+				player.teleToLocation(RUNE_TOWNSHIP);
 			}
 			st.exitQuest(true);
 		}

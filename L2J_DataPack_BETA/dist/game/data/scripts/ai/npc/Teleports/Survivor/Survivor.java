@@ -20,6 +20,7 @@ package ai.npc.Teleports.Survivor;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
@@ -35,6 +36,8 @@ public class Survivor extends AbstractNpcAI
 	private static final int SURVIVOR = 32632;
 	// Misc
 	private static final int MIN_LEVEL = 75;
+	// Location
+	private static final Location TELEPORT = new Location(-149406, 255247, -80);
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -52,7 +55,7 @@ public class Survivor extends AbstractNpcAI
 			else
 			{
 				takeItems(player, PcInventory.ADENA_ID, 150000);
-				player.teleToLocation(-149406, 255247, -80);
+				player.teleToLocation(TELEPORT);
 				return null;
 			}
 		}

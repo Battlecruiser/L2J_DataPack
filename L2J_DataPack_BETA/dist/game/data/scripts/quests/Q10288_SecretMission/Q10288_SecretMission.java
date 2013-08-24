@@ -18,6 +18,7 @@
  */
 package quests.Q10288_SecretMission;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -36,6 +37,8 @@ public class Q10288_SecretMission extends Quest
 	private static final int GREYMORE = 32757;
 	// Item
 	private static final int LETTER = 15529;
+	// Location
+	private static final Location TELEPORT = new Location(118833, -80589, -2688);
 	
 	public Q10288_SecretMission(int questId, String name, String descr)
 	{
@@ -86,7 +89,7 @@ public class Q10288_SecretMission extends Quest
 			case "teleport":
 				if ((npc.getId() == AQUILANI) && st.isCompleted())
 				{
-					player.teleToLocation(118833, -80589, -2688);
+					player.teleToLocation(TELEPORT);
 					return null;
 				}
 		}

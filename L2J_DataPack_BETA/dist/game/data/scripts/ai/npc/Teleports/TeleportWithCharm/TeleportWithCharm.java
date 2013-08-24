@@ -20,6 +20,7 @@ package ai.npc.Teleports.TeleportWithCharm;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -36,6 +37,9 @@ public class TeleportWithCharm extends AbstractNpcAI
 	// Items
 	private final static int ORC_GATEKEEPER_CHARM = 1658;
 	private final static int DWARF_GATEKEEPER_TOKEN = 1659;
+	// Locations
+	private final static Location ORC_TELEPORT = new Location(-80826, 149775, -3043);
+	private final static Location DWARF_TELEPORT = new Location(-80826, 149775, -3043);
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -47,7 +51,7 @@ public class TeleportWithCharm extends AbstractNpcAI
 				if (hasQuestItems(player, DWARF_GATEKEEPER_TOKEN))
 				{
 					takeItems(player, DWARF_GATEKEEPER_TOKEN, 1);
-					player.teleToLocation(-80826, 149775, -3043);
+					player.teleToLocation(DWARF_TELEPORT);
 				}
 				else
 				{
@@ -60,7 +64,7 @@ public class TeleportWithCharm extends AbstractNpcAI
 				if (hasQuestItems(player, ORC_GATEKEEPER_CHARM))
 				{
 					takeItems(player, ORC_GATEKEEPER_CHARM, 1);
-					player.teleToLocation(-80826, 149775, -3043);
+					player.teleToLocation(ORC_TELEPORT);
 				}
 				else
 				{

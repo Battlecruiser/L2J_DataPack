@@ -20,6 +20,7 @@ package ai.npc.Teleports.CrumaTower;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -31,6 +32,8 @@ public class CrumaTower extends AbstractNpcAI
 {
 	// NPC
 	private static final int MOZELLA = 30483;
+	// Location
+	private static final Location TELEPORT_LOC = new Location(17724, 114004, -11672);
 	// Misc
 	private static final int MAX_LEVEL = 55;
 	
@@ -39,7 +42,7 @@ public class CrumaTower extends AbstractNpcAI
 	{
 		if (player.getLevel() <= MAX_LEVEL)
 		{
-			player.teleToLocation(17724, 114004, -11672);
+			player.teleToLocation(TELEPORT_LOC);
 			return null;
 		}
 		return "30483-1.htm";

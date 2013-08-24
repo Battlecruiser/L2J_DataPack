@@ -23,6 +23,7 @@ import java.util.logging.Level;
 
 import com.l2jserver.gameserver.handler.IBypassHandler;
 import com.l2jserver.gameserver.instancemanager.SiegeManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
@@ -99,7 +100,7 @@ public class Observation implements IBypassHandler
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{
 			// enter mode
-			player.enterObserverMode(x, y, z);
+			player.enterObserverMode(new Location(x, y, z));
 			player.sendPacket(new ItemList(player, false));
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);

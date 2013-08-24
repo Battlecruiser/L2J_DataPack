@@ -85,9 +85,7 @@ public final class Venom extends AbstractNpcAI
 	private L2Npc _venom;
 	private final L2Npc _massymore;
 	
-	private int _venomX;
-	private int _venomY;
-	private int _venomZ;
+	private final Location _loc;
 	
 	private boolean _aggroMode = false;
 	private boolean _prisonIsOpen = false;
@@ -117,9 +115,7 @@ public final class Venom extends AbstractNpcAI
 		
 		_massymore = SpawnTable.getInstance().getFirstSpawn(DUNGEON_KEEPER).getLastSpawn();
 		_venom = SpawnTable.getInstance().getFirstSpawn(VENOM).getLastSpawn();
-		_venomX = _venom.getX();
-		_venomY = _venom.getY();
-		_venomZ = _venom.getZ();
+		_loc = _venom.getLocation();
 		_venom.disableSkill(VENOM_TELEPORT.getSkill(), 0);
 		_venom.disableSkill(RANGE_TELEPORT.getSkill(), 0);
 		_venom.doRevive();
@@ -152,7 +148,7 @@ public final class Venom extends AbstractNpcAI
 			{
 				if (_prisonIsOpen)
 				{
-					talker.teleToLocation(TELEPORT, 0);
+					talker.teleToLocation(TELEPORT);
 				}
 				else
 				{
@@ -181,7 +177,7 @@ public final class Venom extends AbstractNpcAI
 			case "raid_check":
 				if (!npc.isInsideZone(ZoneId.SIEGE) && !npc.isTeleporting())
 				{
-					npc.teleToLocation(new Location(_venomX, _venomY, _venomZ), false);
+					npc.teleToLocation(_loc);
 				}
 				break;
 			case "cube_despawn":
@@ -257,7 +253,7 @@ public final class Venom extends AbstractNpcAI
 		switch (skill.getId())
 		{
 			case 4222:
-				npc.teleToLocation(new Location(_venomX, _venomY, _venomZ), false);
+				npc.teleToLocation(_loc);
 				break;
 			case 4995:
 				teleportTarget(player);
@@ -370,9 +366,7 @@ public final class Venom extends AbstractNpcAI
 				cancelQuestTimer("tower_check", _venom, null);
 				break;
 		}
-		_venomX = _venom.getX();
-		_venomY = _venom.getY();
-		_venomZ = _venom.getZ();
+		_loc.setLocation(_venom.getLocation());
 	}
 	
 	private void teleportTarget(L2PcInstance player)

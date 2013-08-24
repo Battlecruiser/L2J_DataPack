@@ -20,6 +20,7 @@ package hellbound.Deltuva;
 
 import quests.Q00132_MatrasCuriosity.Q00132_MatrasCuriosity;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -31,6 +32,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
 public class Deltuva extends Quest
 {
 	private static final int DELTUVA = 32313;
+	// Location
+	private static final Location TELEPORT = new Location(17934, 283189, -9701);
 	
 	@Override
 	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -45,7 +48,7 @@ public class Deltuva extends Quest
 			}
 			else
 			{
-				player.teleToLocation(17934, 283189, -9701);
+				player.teleToLocation(TELEPORT);
 			}
 		}
 		return htmltext;

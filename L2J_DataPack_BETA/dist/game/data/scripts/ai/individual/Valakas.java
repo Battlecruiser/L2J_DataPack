@@ -104,6 +104,9 @@ public class Valakas extends AbstractNpcAI
 		new Location(215456, -117328, -1392),
 		new Location(213200, -118160, -1424)
 	};
+	private static final Location ATTACKER_REMOVE = new Location(150037, -57255, -2976);
+	private static final Location VALAKAS_LAIR = new Location(212852, -114842, -1632);
+	private static final Location VALAKAS_REGENERATION_LOC = new Location(-105200, -253104, -15264);
 	// Valakas status.
 	private static final byte DORMANT = 0; // Valakas is spawned and no one has entered yet. Entry is unlocked.
 	private static final byte WAITING = 1; // Valakas is spawned and someone has entered, triggering a 30 minute window for additional people to enter. Entry is unlocked.
@@ -195,7 +198,7 @@ public class Valakas extends AbstractNpcAI
 				_timeTracker = System.currentTimeMillis();
 				
 				// Teleport Valakas to his lair.
-				npc.teleToLocation(212852, -114842, -1632);
+				npc.teleToLocation(VALAKAS_LAIR);
 				
 				// Sound + socialAction.
 				for (L2PcInstance plyr : ZONE.getPlayersInside())
@@ -225,7 +228,7 @@ public class Valakas extends AbstractNpcAI
 					if ((_timeTracker + 900000) < System.currentTimeMillis())
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						npc.teleToLocation(-105200, -253104, -15264);
+						npc.teleToLocation(VALAKAS_REGENERATION_LOC);
 						
 						GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
 						npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
@@ -398,7 +401,7 @@ public class Valakas extends AbstractNpcAI
 		
 		if (GrandBossManager.getInstance().getBossStatus(VALAKAS) != FIGHTING)
 		{
-			attacker.teleToLocation(150037, -57255, -2976);
+			attacker.teleToLocation(ATTACKER_REMOVE);
 			return null;
 		}
 		

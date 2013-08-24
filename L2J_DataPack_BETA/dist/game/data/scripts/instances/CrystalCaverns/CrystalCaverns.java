@@ -2891,11 +2891,11 @@ public class CrystalCaverns extends Quest
 				{
 					int x = (int) (radius * Math.cos((i * 2 * Math.PI) / members));
 					int y = (int) (radius * Math.sin((i++ * 2 * Math.PI) / members));
-					p.teleToLocation(153571 + x, 142075 + y, -12737);
+					p.teleToLocation(new Location(153571 + x, 142075 + y, -12737));
 					L2Summon pet = p.getSummon();
 					if (pet != null)
 					{
-						pet.teleToLocation(153571 + x, 142075 + y, -12737, true);
+						pet.teleToLocation(new Location(153571 + x, 142075 + y, -12737), true);
 						pet.broadcastPacket(new ValidateLocation(pet));
 					}
 					p.setIsParalyzed(true);

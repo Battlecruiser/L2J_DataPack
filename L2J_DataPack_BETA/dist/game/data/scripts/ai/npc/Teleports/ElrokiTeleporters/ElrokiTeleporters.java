@@ -20,6 +20,7 @@ package ai.npc.Teleports.ElrokiTeleporters;
 
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 
@@ -33,6 +34,9 @@ public class ElrokiTeleporters extends AbstractNpcAI
 	// NPCs
 	private static final int ORAHOCHIN = 32111;
 	private static final int GARIACHIN = 32112;
+	// Locations
+	private static final Location TELEPORT_ORAHOCIN = new Location(4990, -1879, -3178);
+	private static final Location TELEPORT_GARIACHIN = new Location(7557, -5513, -3221);
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
@@ -45,12 +49,12 @@ public class ElrokiTeleporters extends AbstractNpcAI
 				{
 					return "32111-no.htm";
 				}
-				player.teleToLocation(4990, -1879, -3178);
+				player.teleToLocation(TELEPORT_ORAHOCIN);
 				break;
 			}
 			case GARIACHIN:
 			{
-				player.teleToLocation(7557, -5513, -3221);
+				player.teleToLocation(TELEPORT_GARIACHIN);
 				break;
 			}
 		}

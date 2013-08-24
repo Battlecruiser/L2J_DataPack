@@ -25,6 +25,7 @@ import ai.npc.AbstractNpcAI;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.instancemanager.HellboundManager;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -51,6 +52,9 @@ public class Warpgate extends AbstractNpcAI
 		32318,
 		32319
 	};
+	// Locations
+	private static final Location HELLBOUND = new Location(-11272, 236464, -3248);
+	protected static final Location REMOVE_LOC = new Location(-16555, 209375, -3670);
 	
 	private static final boolean canEnter(L2PcInstance player)
 	{
@@ -98,7 +102,7 @@ public class Warpgate extends AbstractNpcAI
 			return "warpgate-no.htm";
 		}
 		
-		player.teleToLocation(-11272, 236464, -3248, true);
+		player.teleToLocation(HELLBOUND, true);
 		HellboundManager.getInstance().unlock();
 		return null;
 	}
@@ -137,7 +141,7 @@ public class Warpgate extends AbstractNpcAI
 		{
 			try
 			{
-				_char.teleToLocation(-16555, 209375, -3670, true);
+				_char.teleToLocation(REMOVE_LOC, true);
 			}
 			catch (Exception e)
 			{

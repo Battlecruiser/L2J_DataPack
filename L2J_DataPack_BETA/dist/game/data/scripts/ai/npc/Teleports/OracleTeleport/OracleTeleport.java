@@ -254,15 +254,13 @@ public class OracleTeleport extends AbstractNpcAI
 		{
 			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
+				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
 			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
 			{
-				Location loc = RETURN_LOCS[st.getInt("id")];
-				player.teleToLocation(loc.getX(), loc.getY(), loc.getZ());
+				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				htmltext = "rift_back.htm";
 				st.exitQuest(true);
 			}
@@ -272,12 +270,12 @@ public class OracleTeleport extends AbstractNpcAI
 			int id = st.getInt("id");
 			if (Util.contains(TOWN_DAWN, id))
 			{
-				player.teleToLocation(-80157, 111344, -4901);
+				player.teleToLocation(new Location(-80157, 111344, -4901));
 				player.setIsIn7sDungeon(true);
 			}
 			else if (Util.contains(TOWN_DUSK, id))
 			{
-				player.teleToLocation(-81261, 86531, -5157);
+				player.teleToLocation(new Location(-81261, 86531, -5157));
 				player.setIsIn7sDungeon(true);
 			}
 			else
@@ -288,7 +286,7 @@ public class OracleTeleport extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("Dimensional"))
 		{
 			htmltext = "oracle.htm";
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		else if (event.equalsIgnoreCase("5.htm"))
 		{
@@ -308,7 +306,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.setState(State.STARTED);
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		else if (event.equalsIgnoreCase("6.htm"))
 		{
@@ -355,7 +353,7 @@ public class OracleTeleport extends AbstractNpcAI
 			st.setState(State.STARTED);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
 			htmltext = "ziggurat_rift.htm";
-			player.teleToLocation(-114755, -179466, -6752);
+			player.teleToLocation(new Location(-114755, -179466, -6752));
 		}
 		return htmltext;
 	}
@@ -381,7 +379,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
-			player.teleToLocation(-80157, 111344, -4901);
+			player.teleToLocation(new Location(-80157, 111344, -4901));
 			player.setIsIn7sDungeon(true);
 		}
 		if (Util.contains(TOWN_DUSK, npcId))
@@ -398,7 +396,7 @@ public class OracleTeleport extends AbstractNpcAI
 			}
 			st.set("id", Integer.toString(i));
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ACCEPT);
-			player.teleToLocation(-81261, 86531, -5157);
+			player.teleToLocation(new Location(-81261, 86531, -5157));
 			player.setIsIn7sDungeon(true);
 		}
 		else if ((npcId >= 31494) && (npcId <= 31507))

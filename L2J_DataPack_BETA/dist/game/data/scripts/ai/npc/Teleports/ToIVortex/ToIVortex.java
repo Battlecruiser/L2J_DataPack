@@ -18,18 +18,23 @@
  */
 package ai.npc.Teleports.ToIVortex;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import ai.npc.AbstractNpcAI;
 
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;
 
 /**
  * Tower of Insolence Vortex teleport AI.<br>
- * Updated to High Five by pmq.
+ * Updated to High Five by pmq.<br>
+ * Reworked by xban1x.
  * @author Plim
  */
-public class ToIVortex extends AbstractNpcAI
+public final class ToIVortex extends AbstractNpcAI
 {
 	// NPCs
 	private static final int KEPLON = 30949;
@@ -42,6 +47,34 @@ public class ToIVortex extends AbstractNpcAI
 	private static final int GREEN_DIMENSION_STONE = 4401;
 	private static final int BLUE_DIMENSION_STONE = 4402;
 	private static final int RED_DIMENSION_STONE = 4403;
+	// Locations
+	private static final Map<String, Location> TOI_FLOORS = new HashMap<>();
+	// Misc
+	private static final Map<String, Integer> DIMENSION_TRADE = new HashMap<>();
+	static
+	{
+		TOI_FLOORS.put("1", new Location(114356, 13423, -5096, GREEN_DIMENSION_STONE));
+		TOI_FLOORS.put("2", new Location(114666, 13380, -3608, GREEN_DIMENSION_STONE));
+		TOI_FLOORS.put("3", new Location(111982, 16028, -2120, GREEN_DIMENSION_STONE));
+		TOI_FLOORS.put("4", new Location(114636, 13413, -640, BLUE_DIMENSION_STONE));
+		TOI_FLOORS.put("5", new Location(114152, 19902, 928, BLUE_DIMENSION_STONE));
+		TOI_FLOORS.put("6", new Location(117131, 16044, 1944, BLUE_DIMENSION_STONE));
+		TOI_FLOORS.put("7", new Location(113026, 17687, 2952, RED_DIMENSION_STONE));
+		TOI_FLOORS.put("8", new Location(115571, 13723, 3960, RED_DIMENSION_STONE));
+		TOI_FLOORS.put("9", new Location(114649, 14144, 4976, RED_DIMENSION_STONE));
+		TOI_FLOORS.put("10", new Location(118507, 16605, 5984, RED_DIMENSION_STONE));
+		
+		DIMENSION_TRADE.put("GREEN", GREEN_DIMENSION_STONE);
+		DIMENSION_TRADE.put("BLUE", BLUE_DIMENSION_STONE);
+		DIMENSION_TRADE.put("RED", RED_DIMENSION_STONE);
+	}
+	
+	private ToIVortex()
+	{
+		super(ToIVortex.class.getSimpleName(), "ai/npc/Teleports");
+		addStartNpc(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
+		addTalkId(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
+	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
@@ -51,138 +84,22 @@ public class ToIVortex extends AbstractNpcAI
 		switch (event)
 		{
 			case "1":
-			{
-				// 1st Floor
-				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
-				{
-					takeItems(player, GREEN_DIMENSION_STONE, 1);
-					player.teleToLocation(114356, 13423, -5096, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "2":
-			{
-				// 2nd Floor
-				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
-				{
-					takeItems(player, GREEN_DIMENSION_STONE, 1);
-					player.teleToLocation(114666, 13380, -3608, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "3":
-			{
-				// 3rd Floor
-				if (hasQuestItems(player, GREEN_DIMENSION_STONE))
-				{
-					takeItems(player, GREEN_DIMENSION_STONE, 1);
-					player.teleToLocation(111982, 16028, -2120, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "4":
-			{
-				// 4th Floor
-				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
-				{
-					takeItems(player, BLUE_DIMENSION_STONE, 1);
-					player.teleToLocation(114636, 13413, -640, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "5":
-			{
-				// 5th Floor
-				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
-				{
-					takeItems(player, BLUE_DIMENSION_STONE, 1);
-					player.teleToLocation(114152, 19902, 928, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "6":
-			{
-				// 6th Floor
-				if (hasQuestItems(player, BLUE_DIMENSION_STONE))
-				{
-					takeItems(player, BLUE_DIMENSION_STONE, 1);
-					player.teleToLocation(117131, 16044, 1944, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "7":
-			{
-				// 7th Floor
-				if (hasQuestItems(player, RED_DIMENSION_STONE))
-				{
-					takeItems(player, RED_DIMENSION_STONE, 1);
-					player.teleToLocation(113026, 17687, 2952, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "8":
-			{
-				// 8th Floor
-				if (hasQuestItems(player, RED_DIMENSION_STONE))
-				{
-					takeItems(player, RED_DIMENSION_STONE, 1);
-					player.teleToLocation(115571, 13723, 3960, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "9":
-			{
-				// 9th Floor
-				if (hasQuestItems(player, RED_DIMENSION_STONE))
-				{
-					takeItems(player, RED_DIMENSION_STONE, 1);
-					player.teleToLocation(114649, 14144, 4976, true);
-				}
-				else
-				{
-					return "no-stones.htm";
-				}
-				break;
-			}
 			case "10":
 			{
-				// 10 Floor
-				if (hasQuestItems(player, RED_DIMENSION_STONE))
+				final Location loc = TOI_FLOORS.get(event);
+				if (hasQuestItems(player, loc.getHeading()))
 				{
-					takeItems(player, RED_DIMENSION_STONE, 1);
-					player.teleToLocation(118507, 16605, 5984, true);
+					takeItems(player, loc.getHeading(), 1);
+					loc.setHeading(0);
+					player.teleToLocation(loc, true);
 				}
 				else
 				{
@@ -191,37 +108,13 @@ public class ToIVortex extends AbstractNpcAI
 				break;
 			}
 			case "GREEN":
-			{
-				if (player.getAdena() >= 10000)
-				{
-					takeItems(player, PcInventory.ADENA_ID, 10000);
-					giveItems(player, GREEN_DIMENSION_STONE, 1);
-				}
-				else
-				{
-					return npcId + "no-adena.htm";
-				}
-				break;
-			}
 			case "BLUE":
-			{
-				if (player.getAdena() >= 10000)
-				{
-					takeItems(player, PcInventory.ADENA_ID, 10000);
-					giveItems(player, BLUE_DIMENSION_STONE, 1);
-				}
-				else
-				{
-					return npcId + "no-adena.htm";
-				}
-				break;
-			}
 			case "RED":
 			{
 				if (player.getAdena() >= 10000)
 				{
 					takeItems(player, PcInventory.ADENA_ID, 10000);
-					giveItems(player, RED_DIMENSION_STONE, 1);
+					giveItems(player, DIMENSION_TRADE.get(event), 1);
 				}
 				else
 				{
@@ -233,15 +126,8 @@ public class ToIVortex extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	private ToIVortex(String name, String descr)
-	{
-		super(name, descr);
-		addStartNpc(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
-		addTalkId(KEPLON, EUCLIE, PITHGON, DIMENSION_VORTEX_1, DIMENSION_VORTEX_2, DIMENSION_VORTEX_3);
-	}
-	
 	public static void main(String[] args)
 	{
-		new ToIVortex(ToIVortex.class.getSimpleName(), "ai/npc/Teleports");
+		new ToIVortex();
 	}
 }

@@ -102,7 +102,7 @@ public class Ranku extends AbstractNpcAI
 			if ((master != null) && !master.isDead())
 			{
 				L2MonsterInstance minion2 = MinionList.spawnMinion(master, MINION_2);
-				minion2.teleToLocation(npc.getX(), npc.getY(), npc.getZ());
+				minion2.teleToLocation(npc.getLocation());
 			}
 		}
 		else if (npc.getId() == RANKU)

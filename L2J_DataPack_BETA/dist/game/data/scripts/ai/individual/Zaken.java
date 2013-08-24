@@ -28,6 +28,7 @@ import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.instancemanager.GrandBossManager;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.MountType;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -47,9 +48,7 @@ public class Zaken extends AbstractNpcAI
 {
 	private int _1001 = 0; // used for first cancel of QuestTimer "1001"
 	private int _ai0 = 0; // used for zaken coords updater
-	private int _ai1 = 0; // used for X coord tracking for non-random teleporting in zaken's self teleport skill
-	private int _ai2 = 0; // used for Y coord tracking for non-random teleporting in zaken's self teleport skill
-	private int _ai3 = 0; // used for Z coord tracking for non-random teleporting in zaken's self teleport skill
+	private final Location _loc = new Location(0, 0, 0);
 	private int _ai4 = 0; // used for spawning minions cycles
 	private int _quest0 = 0; // used for teleporting progress
 	private int _quest1 = 0; // used for most hated players progress
@@ -223,9 +222,7 @@ public class Zaken extends AbstractNpcAI
 		
 		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 		_ai0 = 0;
-		_ai1 = npc.getX();
-		_ai2 = npc.getY();
-		_ai3 = npc.getZ();
+		_loc.setLocation(npc.getLocation());
 		_quest0 = 0;
 		_quest1 = 0;
 		_quest2 = 3;
@@ -278,9 +275,7 @@ public class Zaken extends AbstractNpcAI
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4224, 1));
-					_ai1 = npc.getX();
-					_ai2 = npc.getY();
-					_ai3 = npc.getZ();
+					_loc.setLocation(npc.getLocation());
 				}
 				if (sk_4227 == 0) // use zaken regeneration
 				{
@@ -293,7 +288,7 @@ public class Zaken extends AbstractNpcAI
 					int i1 = 1;
 					if (((L2Attackable) npc).getMostHated() != null)
 					{
-						if ((((((L2Attackable) npc).getMostHated().getX() - _ai1) * (((L2Attackable) npc).getMostHated().getX() - _ai1)) + ((((L2Attackable) npc).getMostHated().getY() - _ai2) * (((L2Attackable) npc).getMostHated().getY() - _ai2))) > (1500 * 1500))
+						if ((((((L2Attackable) npc).getMostHated().getX() - _loc.getX()) * (((L2Attackable) npc).getMostHated().getX() - _loc.getX())) + ((((L2Attackable) npc).getMostHated().getY() - _loc.getY()) * (((L2Attackable) npc).getMostHated().getY() - _loc.getY()))) > (1500 * 1500))
 						{
 							i0 = 1;
 						}
@@ -311,7 +306,7 @@ public class Zaken extends AbstractNpcAI
 							{
 								i0 = 0;
 							}
-							else if ((((c_quest0.getX() - _ai1) * (c_quest0.getX() - _ai1)) + ((c_quest0.getY() - _ai2) * (c_quest0.getY() - _ai2))) > (1500 * 1500))
+							else if ((((c_quest0.getX() - _loc.getX()) * (c_quest0.getX() - _loc.getX())) + ((c_quest0.getY() - _loc.getY()) * (c_quest0.getY() - _loc.getY()))) > (1500 * 1500))
 							{
 								i0 = 1;
 							}
@@ -330,7 +325,7 @@ public class Zaken extends AbstractNpcAI
 							{
 								i0 = 0;
 							}
-							else if ((((c_quest1.getX() - _ai1) * (c_quest1.getX() - _ai1)) + ((c_quest1.getY() - _ai2) * (c_quest1.getY() - _ai2))) > (1500 * 1500))
+							else if ((((c_quest1.getX() - _loc.getX()) * (c_quest1.getX() - _loc.getX())) + ((c_quest1.getY() - _loc.getY()) * (c_quest1.getY() - _loc.getY()))) > (1500 * 1500))
 							{
 								i0 = 1;
 							}
@@ -349,7 +344,7 @@ public class Zaken extends AbstractNpcAI
 							{
 								i0 = 0;
 							}
-							else if ((((c_quest2.getX() - _ai1) * (c_quest2.getX() - _ai1)) + ((c_quest2.getY() - _ai2) * (c_quest2.getY() - _ai2))) > (1500 * 1500))
+							else if ((((c_quest2.getX() - _loc.getX()) * (c_quest2.getX() - _loc.getX())) + ((c_quest2.getY() - _loc.getY()) * (c_quest2.getY() - _loc.getY()))) > (1500 * 1500))
 							{
 								i0 = 1;
 							}
@@ -368,7 +363,7 @@ public class Zaken extends AbstractNpcAI
 							{
 								i0 = 0;
 							}
-							else if ((((c_quest3.getX() - _ai1) * (c_quest3.getX() - _ai1)) + ((c_quest3.getY() - _ai2) * (c_quest3.getY() - _ai2))) > (1500 * 1500))
+							else if ((((c_quest3.getX() - _loc.getX()) * (c_quest3.getX() - _loc.getX())) + ((c_quest3.getY() - _loc.getY()) * (c_quest3.getY() - _loc.getY()))) > (1500 * 1500))
 							{
 								i0 = 1;
 							}
@@ -387,7 +382,7 @@ public class Zaken extends AbstractNpcAI
 							{
 								i0 = 0;
 							}
-							else if ((((c_quest4.getX() - _ai1) * (c_quest4.getX() - _ai1)) + ((c_quest4.getY() - _ai2) * (c_quest4.getY() - _ai2))) > (1500 * 1500))
+							else if ((((c_quest4.getX() - _loc.getX()) * (c_quest4.getX() - _loc.getX())) + ((c_quest4.getY() - _loc.getY()) * (c_quest4.getY() - _loc.getY()))) > (1500 * 1500))
 							{
 								i0 = 1;
 							}
@@ -404,9 +399,9 @@ public class Zaken extends AbstractNpcAI
 						{
 							_quest0 = 0;
 							int i2 = getRandom(15);
-							_ai1 = Xcoords[i2] + getRandom(650);
-							_ai2 = Ycoords[i2] + getRandom(650);
-							_ai3 = Zcoords[i2];
+							_loc.setX(Xcoords[i2] + getRandom(650));
+							_loc.setY(Ycoords[i2] + getRandom(650));
+							_loc.setZ(Zcoords[i2]);
 							npc.setTarget(npc);
 							npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
 						}
@@ -414,9 +409,7 @@ public class Zaken extends AbstractNpcAI
 				}
 				if ((getRandom(20) < 1) && (_ai0 == 0))
 				{
-					_ai1 = npc.getX();
-					_ai2 = npc.getY();
-					_ai3 = npc.getZ();
+					_loc.setLocation(npc.getLocation());
 				}
 				L2Character c_ai0 = null;
 				if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK) && (_quest1 == 0))
@@ -471,9 +464,9 @@ public class Zaken extends AbstractNpcAI
 			if (getRandom(40) < 1)
 			{
 				int i2 = getRandom(15);
-				_ai1 = Xcoords[i2] + getRandom(650);
-				_ai2 = Ycoords[i2] + getRandom(650);
-				_ai3 = Zcoords[i2];
+				_loc.setX(Xcoords[i2] + getRandom(650));
+				_loc.setY(Ycoords[i2] + getRandom(650));
+				_loc.setZ(Zcoords[i2]);
 				npc.setTarget(npc);
 				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
 			}
@@ -643,9 +636,7 @@ public class Zaken extends AbstractNpcAI
 			if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) && (_ai0 == 0) && (damage < 10) && (getRandom((30 * 15)) < 1))// todo - damage missing
 			{
 				_ai0 = 1;
-				_ai1 = caller.getX();
-				_ai2 = caller.getY();
-				_ai3 = caller.getZ();
+				_loc.setLocation(caller.getLocation());
 				startQuestTimer("1002", 300, caller, null);
 			}
 		}
@@ -660,13 +651,13 @@ public class Zaken extends AbstractNpcAI
 			int skillId = skill.getId();
 			if (skillId == 4222)
 			{
-				npc.teleToLocation(_ai1, _ai2, _ai3);
+				npc.teleToLocation(_loc);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			else if (skillId == 4216)
 			{
 				int i1 = getRandom(15);
-				player.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+				player.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 				((L2Attackable) npc).stopHating(player);
 				L2Character nextTarget = ((L2Attackable) npc).getMostHated();
 				if (nextTarget != null)
@@ -679,7 +670,7 @@ public class Zaken extends AbstractNpcAI
 			{
 				int i0 = 0;
 				int i1 = getRandom(15);
-				player.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+				player.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 				((L2Attackable) npc).stopHating(player);
 				
 				if ((c_quest0 != null) && (_quest0 > 0) && (c_quest0 != player) && (c_quest0.getZ() > (player.getZ() - 100)) && (c_quest0.getZ() < (player.getZ() + 100)))
@@ -695,7 +686,7 @@ public class Zaken extends AbstractNpcAI
 					if (i0 == 0)
 					{
 						i1 = getRandom(15);
-						c_quest0.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+						c_quest0.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 						((L2Attackable) npc).stopHating(c_quest0);
 					}
 				}
@@ -712,7 +703,7 @@ public class Zaken extends AbstractNpcAI
 					if (i0 == 0)
 					{
 						i1 = getRandom(15);
-						c_quest1.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+						c_quest1.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 						((L2Attackable) npc).stopHating(c_quest1);
 					}
 				}
@@ -729,7 +720,7 @@ public class Zaken extends AbstractNpcAI
 					if (i0 == 0)
 					{
 						i1 = getRandom(15);
-						c_quest2.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+						c_quest2.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 						((L2Attackable) npc).stopHating(c_quest2);
 					}
 				}
@@ -746,7 +737,7 @@ public class Zaken extends AbstractNpcAI
 					if (i0 == 0)
 					{
 						i1 = getRandom(15);
-						c_quest3.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+						c_quest3.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 						((L2Attackable) npc).stopHating(c_quest3);
 					}
 				}
@@ -763,7 +754,7 @@ public class Zaken extends AbstractNpcAI
 					if (i0 == 0)
 					{
 						i1 = getRandom(15);
-						c_quest4.teleToLocation(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]);
+						c_quest4.teleToLocation(new Location(Xcoords[i1] + getRandom(650), Ycoords[i1] + getRandom(650), Zcoords[i1]));
 						((L2Attackable) npc).stopHating(c_quest4);
 					}
 				}
@@ -856,9 +847,9 @@ public class Zaken extends AbstractNpcAI
 			{
 				_quest2 = (_quest2 - 1);
 				int i2 = getRandom(15);
-				_ai1 = Xcoords[i2] + getRandom(650);
-				_ai2 = Ycoords[i2] + getRandom(650);
-				_ai3 = Zcoords[i2];
+				_loc.setX(Xcoords[i2] + getRandom(650));
+				_loc.setY(Ycoords[i2] + getRandom(650));
+				_loc.setZ(Zcoords[i2]);
 				npc.setTarget(npc);
 				npc.doCast(SkillTable.getInstance().getInfo(4222, 1));
 			}

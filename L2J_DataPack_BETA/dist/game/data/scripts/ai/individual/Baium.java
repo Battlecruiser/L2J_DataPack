@@ -79,7 +79,14 @@ public class Baium extends AbstractNpcAI
 		new Location(115168, 17200, 10080, 0),
 		new Location(115792, 16608, 10080, 0)
 	};
-	
+	private static final Location[] TELEPORT_CUBIC_LOCATION = new Location[]
+	{
+		new Location(108784, 16000, -4928),
+		new Location(113824, 10448, -5164),
+		new Location(115488, 22096, -5168),
+	};
+	private static final Location BAIUM_DESPAWN = new Location(116033, 17447, 10104);
+	private static final Location BAIUM_ENTER = new Location(113100, 14500, 10077);
 	// Skills
 	private static final SkillHolder GENERAL_ATTACK = new SkillHolder(4127, 1);
 	private static final SkillHolder WIND_OF_FORCE = new SkillHolder(4128, 1);
@@ -274,7 +281,7 @@ public class Baium extends AbstractNpcAI
 					}
 					else if (!_Zone.isInsideZone(npc))
 					{
-						npc.teleToLocation(116033, 17447, 10104);
+						npc.teleToLocation(BAIUM_DESPAWN);
 					}
 				}
 				break;
@@ -352,7 +359,7 @@ public class Baium extends AbstractNpcAI
 					// allow entry for the player for the next 30 secs (more than enough time for the TP to happen)
 					// Note: this just means 30secs to get in, no limits on how long it takes before we get out.
 					_Zone.allowPlayerEntry(player, 30);
-					player.teleToLocation(113100, 14500, 10077);
+					player.teleToLocation(BAIUM_ENTER);
 				}
 				else
 				{
@@ -362,26 +369,8 @@ public class Baium extends AbstractNpcAI
 			}
 			case TELEPORT_CUBIC:
 			{
-				int x, y, z;
-				switch (getRandom(3))
-				{
-					case 0:
-						x = 108784 + getRandom(100);
-						y = 16000 + getRandom(100);
-						z = -4928;
-						break;
-					case 1:
-						x = 113824 + getRandom(100);
-						y = 10448 + getRandom(100);
-						z = -5164;
-						break;
-					default:
-						x = 115488 + getRandom(100);
-						y = 22096 + getRandom(100);
-						z = -5168;
-						break;
-				}
-				player.teleToLocation(x, y, z);
+				final Location loc = TELEPORT_CUBIC_LOCATION[getRandom(TELEPORT_CUBIC_LOCATION.length)];
+				player.teleToLocation(loc.getX() + getRandom(100), loc.getY() + getRandom(100), loc.getZ());
 				break;
 			}
 		}
