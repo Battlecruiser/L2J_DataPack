@@ -18,9 +18,7 @@
  */
 package quests.Q00306_CrystalOfFireAndIce;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -104,36 +102,22 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		QuestState qs = killer.getQuestState(getName());
-		if ((qs != null) && qs.isStarted() && ((npc.getId() == UNDINE_NOBLE) || !killer.isInParty()))
+		final QuestState qs;
+		if (npc.getId() == UNDINE_NOBLE) // Undine Noble gives quest drops only for the killer
 		{
-			giveKillReward(killer, npc);
-			return super.onKill(npc, killer, isSummon);
-		}
-		
-		final List<L2PcInstance> players = new ArrayList<>();
-		if ((qs != null) && qs.isStarted())
-		{
-			players.add(killer);
-			players.add(killer);
-		}
-		
-		if (killer.isInParty())
-		{
-			for (L2PcInstance member : killer.getParty().getMembers())
+			qs = killer.getQuestState(getName());
+			if ((qs != null) && qs.isStarted())
 			{
-				qs = member.getQuestState(getName());
-				if ((qs != null) && qs.isStarted())
-				{
-					players.add(member);
-				}
+				giveKillReward(killer, npc);
 			}
 		}
-		
-		if (!players.isEmpty())
+		else
 		{
-			final L2PcInstance player = players.get(getRandom(players.size()));
-			giveKillReward(player, npc);
+			qs = getRandomPartyMemberState(killer, -1, 3, npc);
+			if (qs != null)
+			{
+				giveKillReward(qs.getPlayer(), npc);
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
