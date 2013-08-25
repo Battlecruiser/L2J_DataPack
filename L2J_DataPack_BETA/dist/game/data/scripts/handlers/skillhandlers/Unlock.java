@@ -43,13 +43,6 @@ public class Unlock implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		L2Object[] targetList = skill.getTargetList(activeChar);
-		
-		if (targetList == null)
-		{
-			return;
-		}
-		
 		for (L2Object target : targets)
 		{
 			if (target.isDoor())
@@ -88,7 +81,7 @@ public class Unlock implements ISkillHandler
 					return;
 				}
 				
-				if (doorUnlock(skill) && (!door.getOpen()))
+				if (doorUnlock(skill) && !door.getOpen())
 				{
 					door.openMe();
 				}
