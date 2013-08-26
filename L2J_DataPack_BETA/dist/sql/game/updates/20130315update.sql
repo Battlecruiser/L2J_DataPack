@@ -15,7 +15,7 @@ UPDATE character_quests SET name='Q00614_SlayTheEnemyCommanderVarka' WHERE name=
 UPDATE character_quests SET name='Q00615_MagicalPowerOfFirePart1' WHERE name='615_MagicalPowerOfFirePart1';
 UPDATE character_quests SET name='Q00616_MagicalPowerOfFirePart2' WHERE name='616_MagicalPowerOfFirePart2';
 
-UPDATE quest_global_data SET quest_name='Q00610_respawn' WHERE quest_name='610_respawn';
-UPDATE quest_global_data SET quest_name='Q00616_respawn' WHERE quest_name='616_respawn';
+UPDATE quest_global_data SET var='Q00610_respawn' WHERE var='610_respawn';
+UPDATE quest_global_data SET var='Q00616_respawn' WHERE var='616_respawn';
 
 ALTER TABLE `characters` DROP `varka_ketra_ally`;
