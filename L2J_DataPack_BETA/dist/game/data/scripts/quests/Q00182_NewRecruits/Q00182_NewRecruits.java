@@ -18,9 +18,9 @@
  */
 package quests.Q00182_NewRecruits;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -93,7 +93,7 @@ public class Q00182_NewRecruits extends Quest
 			{
 				case State.CREATED:
 					final int level = player.getLevel();
-					if (player.getRace() == Race.Kamael)
+					if (player.getRace() == PcRace.Kamael)
 					{
 						htmltext = "32138-00.html";
 					}

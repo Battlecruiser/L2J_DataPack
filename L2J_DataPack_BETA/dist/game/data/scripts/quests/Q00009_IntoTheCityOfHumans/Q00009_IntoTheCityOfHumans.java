@@ -18,9 +18,9 @@
  */
 package quests.Q00009_IntoTheCityOfHumans;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -94,7 +94,7 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
-						htmltext = (player.getLevel() >= MIN_LEVEL) ? (player.getRace() == Race.Orc) ? "30583-01.htm" : "30583-02.html" : "30583-03.html";
+						htmltext = (player.getLevel() >= MIN_LEVEL) ? (player.getRace() == PcRace.Orc) ? "30583-01.htm" : "30583-02.html" : "30583-03.html";
 						break;
 					case State.STARTED:
 						if (st.isCond(1))

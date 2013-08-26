@@ -18,9 +18,9 @@
  */
 package quests.Q00159_ProtectTheWaterSource;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -114,7 +114,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == Race.Elf) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
+					htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
 					break;
 				}
 				case State.STARTED:

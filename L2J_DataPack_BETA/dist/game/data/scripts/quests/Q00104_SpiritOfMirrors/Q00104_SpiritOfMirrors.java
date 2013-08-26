@@ -23,9 +23,9 @@ import java.util.Map;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -127,7 +127,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 					{
 						case State.CREATED:
 						{
-							htmltext = (player.getRace() == Race.Human) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
+							htmltext = (player.getRace() == PcRace.Human) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
 							break;
 						}
 						case State.STARTED:

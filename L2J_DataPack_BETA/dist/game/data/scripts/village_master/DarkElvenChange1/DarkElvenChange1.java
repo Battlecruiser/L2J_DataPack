@@ -18,10 +18,10 @@
  */
 package village_master.DarkElvenChange1;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.util.Util;
@@ -83,7 +83,7 @@ public class DarkElvenChange1 extends Quest
 		{
 			int i = Integer.valueOf(event);
 			final ClassId cid = player.getClassId();
-			if ((cid.getRace() == Race.DarkElf) && (cid.getId() == CLASSES[i][1]))
+			if ((cid.getRace() == PcRace.DarkElf) && (cid.getId() == CLASSES[i][1]))
 			{
 				int suffix;
 				final boolean item = st.hasQuestItems(CLASSES[i][6]);
@@ -130,7 +130,7 @@ public class DarkElvenChange1 extends Quest
 		}
 		
 		final ClassId cid = player.getClassId();
-		if (cid.getRace() == Race.DarkElf)
+		if (cid.getRace() == PcRace.DarkElf)
 		{
 			switch (cid)
 			{

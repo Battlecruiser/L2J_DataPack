@@ -23,9 +23,9 @@ import java.util.Map;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -167,7 +167,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 		{
 			case State.CREATED:
 			{
-				if (talker.getRace() == Race.Elf)
+				if (talker.getRace() == PcRace.Elf)
 				{
 					htmltext = (talker.getLevel() >= MIN_LVL) ? "30218-03.htm" : "30218-02.htm";
 				}

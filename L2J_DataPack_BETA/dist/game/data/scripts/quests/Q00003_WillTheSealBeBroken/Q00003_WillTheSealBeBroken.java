@@ -18,9 +18,9 @@
  */
 package quests.Q00003_WillTheSealBeBroken;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -121,7 +121,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
-				htmltext = (player.getRace() != Race.DarkElf) ? "30141-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30141-02.htm" : "30141-01.html";
+				htmltext = (player.getRace() != PcRace.DarkElf) ? "30141-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30141-02.htm" : "30141-01.html";
 				break;
 			case State.STARTED:
 				if (st.isCond(1))

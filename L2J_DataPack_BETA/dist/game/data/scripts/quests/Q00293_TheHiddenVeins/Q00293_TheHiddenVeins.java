@@ -20,9 +20,9 @@ package quests.Q00293_TheHiddenVeins;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -145,7 +145,7 @@ public final class Q00293_TheHiddenVeins extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getRace() == Race.Dwarf) ? (player.getLevel() >= MIN_LVL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
+						htmltext = (player.getRace() == PcRace.Dwarf) ? (player.getLevel() >= MIN_LVL) ? "30535-03.htm" : "30535-02.htm" : "30535-01.htm";
 						break;
 					}
 					case State.STARTED:
