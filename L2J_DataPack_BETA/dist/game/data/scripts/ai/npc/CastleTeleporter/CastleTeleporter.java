@@ -78,9 +78,8 @@ public class CastleTeleporter extends AbstractNpcAI
 			msg.addStringParameter(npc.getCastle().getName());
 			npc.getCastle().oustAllPlayers();
 			npc.setScriptValue(0);
-			
-			final L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
-			for (L2PcInstance pl : players)
+			// TODO: Is it possible to get all the players for that region, instead of all players?
+			for (L2PcInstance pl : L2World.getInstance().getPlayers())
 			{
 				if (region == MapRegionManager.getInstance().getMapRegionLocId(pl))
 				{

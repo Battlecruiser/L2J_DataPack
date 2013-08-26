@@ -65,7 +65,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				String ip = String.valueOf(task.getKey());
-				for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{
@@ -109,7 +109,7 @@ public class ChatBanHandler implements IPunishmentHandler
 			case IP:
 			{
 				String ip = String.valueOf(task.getKey());
-				for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{
 					if (player.getIPAddress().equals(ip))
 					{

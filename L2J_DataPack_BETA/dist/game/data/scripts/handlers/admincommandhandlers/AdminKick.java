@@ -53,7 +53,7 @@ public class AdminKick implements IAdminCommandHandler
 		if (command.startsWith("admin_kick_non_gm"))
 		{
 			int counter = 0;
-			for (L2PcInstance player : L2World.getInstance().getAllPlayersArray())
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
 				if (!player.isGM())
 				{
