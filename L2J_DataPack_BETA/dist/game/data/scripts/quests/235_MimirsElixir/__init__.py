@@ -4,7 +4,7 @@ import sys
 from com.l2jserver.gameserver.model.quest import State
 from com.l2jserver.gameserver.model.quest import QuestState
 from com.l2jserver.gameserver.model.quest import Quest as JQuest
-from com.l2jserver.gameserver.model.base import Race
+from com.l2jserver.gameserver.enums import PcRace
 #Quest info
 qn = "235_MimirsElixir"
 QUEST_NUMBER,QUEST_NAME,QUEST_DESCRIPTION = 235,"MimirsElixir","Mimir's Elixir"
@@ -59,7 +59,7 @@ class Quest (JQuest) :
     if npcId == LADD :
         if id == State.CREATED :
             st.set("cond","0")
-            if player.getRace() == Race.Kamael :
+            if player.getRace() == PcRace.Kamael :
                 st.exitQuest(1)
                 htmltext = "<html><body>I'm sorry, but I am not allowed to offer this quest to Kamael. Talk to Hierarch Kekropus.</body></html>"
             elif player.getLevel() < MINLEVEL :
