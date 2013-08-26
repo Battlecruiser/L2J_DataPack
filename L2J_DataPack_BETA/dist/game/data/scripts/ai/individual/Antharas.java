@@ -821,7 +821,7 @@ public class Antharas extends AbstractNpcAI
 			GrandBossManager.getInstance().setBossStatus(_bossId, DORMANT);
 			if (FWA_DOSERVEREARTHQUAKE)
 			{
-				for (L2PcInstance p : L2World.getInstance().getAllPlayersArray())
+				for (L2PcInstance p : L2World.getInstance().getPlayers())
 				{
 					p.broadcastPacket(new Earthquake(185708, 114298, -8221, 20, 10));
 				}

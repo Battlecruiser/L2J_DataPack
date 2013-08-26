@@ -848,7 +848,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void listCharacters(L2PcInstance activeChar, int page)
 	{
-		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
+		L2PcInstance[] players = L2World.getInstance().getPlayers().toArray(new L2PcInstance[L2World.getInstance().getAllPlayersCount()]);
 		
 		int maxCharactersPerPage = 20;
 		int maxPages = players.length / maxCharactersPerPage;
@@ -1132,13 +1132,12 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		int CharactersFound = 0;
 		String name;
-		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/charfind.htm");
 		
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		
-		for (L2PcInstance player : players)
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{ // Add player info into new Table row
 			name = player.getName();
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
@@ -1198,14 +1197,14 @@ public class AdminEditChar implements IAdminCommandHandler
 				throw new IllegalArgumentException("Malformed IPv4 number");
 			}
 		}
-		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
+		
 		int CharactersFound = 0;
 		L2GameClient client;
 		String name, ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/ipfind.htm");
-		for (L2PcInstance player : players)
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			client = player.getClient();
 			if (client == null)
@@ -1313,16 +1312,12 @@ public class AdminEditChar implements IAdminCommandHandler
 	 */
 	private void findDualbox(L2PcInstance activeChar, int multibox)
 	{
-		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
-		
 		Map<String, List<L2PcInstance>> ipMap = new HashMap<>();
-		
 		String ip = "0.0.0.0";
 		L2GameClient client;
-		
 		final Map<String, Integer> dualboxIPs = new HashMap<>();
 		
-		for (L2PcInstance player : players)
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())
@@ -1378,15 +1373,11 @@ public class AdminEditChar implements IAdminCommandHandler
 	
 	private void findDualboxStrict(L2PcInstance activeChar, int multibox)
 	{
-		L2PcInstance[] players = L2World.getInstance().getAllPlayersArray();
-		
 		Map<IpPack, List<L2PcInstance>> ipMap = new HashMap<>();
-		
 		L2GameClient client;
-		
 		final Map<IpPack, Integer> dualboxIPs = new HashMap<>();
 		
-		for (L2PcInstance player : players)
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			client = player.getClient();
 			if ((client == null) || client.isDetached())

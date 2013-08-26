@@ -186,7 +186,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.sendMessage("This item does not stack - Creation aborted.");
 				return false;
 			}
-			for (L2PcInstance onlinePlayer : L2World.getInstance().getAllPlayersArray())
+			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 			{
 				if ((activeChar != onlinePlayer) && onlinePlayer.isOnline() && ((onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached()))
 				{
