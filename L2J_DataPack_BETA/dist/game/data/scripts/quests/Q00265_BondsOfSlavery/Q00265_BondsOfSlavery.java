@@ -23,9 +23,9 @@ import java.util.Map;
 
 import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -118,7 +118,7 @@ public final class Q00265_BondsOfSlavery extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getRace() == Race.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
+				htmltext = (player.getRace() == PcRace.DarkElf) ? (player.getLevel() >= MIN_LVL) ? "30357-03.htm" : "30357-02.html" : "30357-01.html";
 				break;
 			}
 			case State.STARTED:

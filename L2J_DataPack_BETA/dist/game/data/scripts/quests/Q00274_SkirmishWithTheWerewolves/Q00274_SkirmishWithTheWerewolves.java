@@ -18,9 +18,9 @@
  */
 package quests.Q00274_SkirmishWithTheWerewolves;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -107,7 +107,7 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE))
 				{
-					htmltext = (player.getRace() == Race.Orc) ? (player.getLevel() >= MIN_LVL) ? "30569-03.htm" : "30569-02.html" : "30569-01.html";
+					htmltext = (player.getRace() == PcRace.Orc) ? (player.getLevel() >= MIN_LVL) ? "30569-03.htm" : "30569-02.html" : "30569-01.html";
 				}
 				else
 				{

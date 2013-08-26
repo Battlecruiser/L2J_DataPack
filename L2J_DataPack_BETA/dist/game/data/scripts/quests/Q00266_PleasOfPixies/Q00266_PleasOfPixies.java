@@ -23,9 +23,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jserver.gameserver.enums.PcRace;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.base.Race;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
@@ -122,7 +122,7 @@ public final class Q00266_PleasOfPixies extends Quest
 			{
 				case State.CREATED:
 				{
-					htmltext = (player.getRace() == Race.Elf) ? (player.getLevel() >= MIN_LVL) ? "31852-03.htm" : "31852-02.htm" : "31852-01.htm";
+					htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LVL) ? "31852-03.htm" : "31852-02.htm" : "31852-01.htm";
 					break;
 				}
 				case State.STARTED:
