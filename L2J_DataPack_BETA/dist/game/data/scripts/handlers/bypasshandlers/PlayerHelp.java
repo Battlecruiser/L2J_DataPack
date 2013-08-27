@@ -64,7 +64,6 @@ public class PlayerHelp implements IBypassHandler
 			}
 			
 			html.setFile(activeChar.getHtmlPrefix(), "data/html/help/" + cmd[0]);
-			html.disableValidation();
 			activeChar.sendPacket(html);
 		}
 		catch (Exception e)
