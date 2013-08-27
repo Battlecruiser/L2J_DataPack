@@ -20,6 +20,7 @@ package quests.Q00270_TheOneWhoEndsSilence;
 
 import quests.Q10288_SecretMission.Q10288_SecretMission;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;

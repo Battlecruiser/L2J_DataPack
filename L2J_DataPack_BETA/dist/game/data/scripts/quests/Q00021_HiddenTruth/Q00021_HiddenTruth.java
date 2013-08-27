@@ -18,6 +18,7 @@
  */
 package quests.Q00021_HiddenTruth;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.WalkingManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;

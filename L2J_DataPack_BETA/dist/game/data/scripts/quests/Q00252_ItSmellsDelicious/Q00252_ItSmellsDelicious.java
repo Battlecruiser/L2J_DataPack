@@ -21,6 +21,7 @@ package quests.Q00252_ItSmellsDelicious;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;

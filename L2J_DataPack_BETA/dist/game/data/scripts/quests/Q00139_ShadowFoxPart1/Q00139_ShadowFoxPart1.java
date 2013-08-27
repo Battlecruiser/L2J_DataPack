@@ -20,6 +20,7 @@ package quests.Q00139_ShadowFoxPart1;
 
 import quests.Q00138_TempleChampionPart2.Q00138_TempleChampionPart2;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;

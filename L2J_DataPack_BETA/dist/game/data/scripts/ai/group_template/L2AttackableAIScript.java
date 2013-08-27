@@ -26,6 +26,7 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.datatables.NpcTable;
+import com.l2jserver.gameserver.enums.QuestEventType;
 import com.l2jserver.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
@@ -205,12 +206,12 @@ public final class L2AttackableAIScript extends Quest
 				{
 					if (L2Attackable.class.isAssignableFrom(Class.forName("com.l2jserver.gameserver.model.actor.instance." + t.getType() + "Instance")))
 					{
-						ai.addEventId(Quest.QuestEventType.ON_ATTACK, t.getId());
-						ai.addEventId(Quest.QuestEventType.ON_KILL, t.getId());
-						ai.addEventId(Quest.QuestEventType.ON_SPAWN, t.getId());
-						ai.addEventId(Quest.QuestEventType.ON_SKILL_SEE, t.getId());
-						ai.addEventId(Quest.QuestEventType.ON_FACTION_CALL, t.getId());
-						ai.addEventId(Quest.QuestEventType.ON_AGGRO_RANGE_ENTER, t.getId());
+						ai.addEventId(QuestEventType.ON_ATTACK, t.getId());
+						ai.addEventId(QuestEventType.ON_KILL, t.getId());
+						ai.addEventId(QuestEventType.ON_SPAWN, t.getId());
+						ai.addEventId(QuestEventType.ON_SKILL_SEE, t.getId());
+						ai.addEventId(QuestEventType.ON_FACTION_CALL, t.getId());
+						ai.addEventId(QuestEventType.ON_AGGRO_RANGE_ENTER, t.getId());
 					}
 				}
 				catch (ClassNotFoundException ex)
