@@ -42,8 +42,8 @@ public class StealAbnormal extends L2Effect
 	{
 		super(env, template);
 		_slot = template.getParameters().getString("slot", null);
-		_rate = template.getParameters().getInteger("rate", 0);
-		_max = template.getParameters().getInteger("max", 0);
+		_rate = template.getParameters().getInt("rate", 0);
+		_max = template.getParameters().getInt("max", 0);
 	}
 	
 	@Override

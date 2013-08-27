@@ -388,7 +388,7 @@ public final class Venom extends AbstractNpcAI
 		int checkStatus = ALIVE;
 		if (GlobalVariablesManager.getInstance().hasVariable("VenomStatus"))
 		{
-			checkStatus = GlobalVariablesManager.getInstance().getInteger("VenomStatus");
+			checkStatus = GlobalVariablesManager.getInstance().getInt("VenomStatus");
 		}
 		else
 		{

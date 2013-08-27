@@ -48,13 +48,13 @@ public class SummonCubic extends L2Effect
 	public SummonCubic(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_cubicId = template.getParameters().getInteger("cubicId", -1);
+		_cubicId = template.getParameters().getInt("cubicId", -1);
 		// Custom AI data.
-		_cubicPower = template.getParameters().getInteger("cubicPower", 0);
-		_cubicDuration = template.getParameters().getInteger("cubicDuration", 0);
-		_cubicDelay = template.getParameters().getInteger("cubicDelay", 0);
-		_cubicMaxCount = template.getParameters().getInteger("cubicMaxCount", -1);
-		_cubicSkillChance = template.getParameters().getInteger("cubicSkillChance", 0);
+		_cubicPower = template.getParameters().getInt("cubicPower", 0);
+		_cubicDuration = template.getParameters().getInt("cubicDuration", 0);
+		_cubicDelay = template.getParameters().getInt("cubicDelay", 0);
+		_cubicMaxCount = template.getParameters().getInt("cubicMaxCount", -1);
+		_cubicSkillChance = template.getParameters().getInt("cubicSkillChance", 0);
 	}
 	
 	@Override

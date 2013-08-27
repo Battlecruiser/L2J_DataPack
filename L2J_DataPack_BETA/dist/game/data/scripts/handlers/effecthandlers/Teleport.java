@@ -35,7 +35,7 @@ public class Teleport extends L2Effect
 	public Teleport(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_loc = new Location(template.getParameters().getInteger("x", 0), template.getParameters().getInteger("y", 0), template.getParameters().getInteger("z", 0));
+		_loc = new Location(template.getParameters().getInt("x", 0), template.getParameters().getInt("y", 0), template.getParameters().getInt("z", 0));
 	}
 	
 	@Override

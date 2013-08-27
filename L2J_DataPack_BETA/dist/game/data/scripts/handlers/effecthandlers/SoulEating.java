@@ -41,13 +41,13 @@ public final class SoulEating extends L2Effect implements IExperienceReceivedEve
 	public SoulEating(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_expNeeded = template.getParameters().getInteger("expNeeded");
+		_expNeeded = template.getParameters().getInt("expNeeded");
 	}
 	
 	public SoulEating(Env env, L2Effect effect)
 	{
 		super(env, effect);
-		_expNeeded = effect.getEffectTemplate().getParameters().getInteger("expNeeded");
+		_expNeeded = effect.getEffectTemplate().getParameters().getInt("expNeeded");
 	}
 	
 	@Override

@@ -37,8 +37,8 @@ public class SetSkill extends L2Effect
 	public SetSkill(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_skillId = template.getParameters().getInteger("skillId", 0);
-		_skillLvl = template.getParameters().getInteger("skillLvl", 1);
+		_skillId = template.getParameters().getInt("skillId", 0);
+		_skillLvl = template.getParameters().getInt("skillLvl", 1);
 	}
 	
 	@Override
