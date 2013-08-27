@@ -54,7 +54,6 @@ public class Book implements IItemHandler
 		{
 			final NpcHtmlMessage itemReply = new NpcHtmlMessage(0, item.getId());
 			itemReply.setHtml(content);
-			itemReply.disableValidation();
 			activeChar.sendPacket(itemReply);
 		}
 		
