@@ -44,7 +44,7 @@ public class DispelBySlotProbability extends L2Effect
 	{
 		super(env, template);
 		_dispel = template.getParameters().getString("dispel", null);
-		_rate = template.getParameters().getInteger("rate", 0);
+		_rate = template.getParameters().getInt("rate", 0);
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
 			_dispelAbnormals = new EnumMap<>(AbnormalType.class);

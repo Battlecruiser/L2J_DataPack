@@ -39,8 +39,8 @@ public class Lethal extends L2Effect
 	public Lethal(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_fullLethal = template.getParameters().getInteger("fullLethal", 0);
-		_halfLethal = template.getParameters().getInteger("halfLethal", 0);
+		_fullLethal = template.getParameters().getInt("fullLethal", 0);
+		_halfLethal = template.getParameters().getInt("halfLethal", 0);
 	}
 	
 	@Override

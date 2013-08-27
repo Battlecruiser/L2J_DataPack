@@ -139,9 +139,9 @@ public final class Q00261_CollectorsDream extends Quest
 			vars.set("GUIDE_MISSION", 100000);
 			player.sendPacket(MESSAGE);
 		}
-		else if (((vars.getInteger("GUIDE_MISSION") % 100000000) / 10000000) != 1)
+		else if (((vars.getInt("GUIDE_MISSION") % 100000000) / 10000000) != 1)
 		{
-			vars.set("GUIDE_MISSION", vars.getInteger("GUIDE_MISSION") + 10000000);
+			vars.set("GUIDE_MISSION", vars.getInt("GUIDE_MISSION") + 10000000);
 			player.sendPacket(MESSAGE);
 		}
 	}

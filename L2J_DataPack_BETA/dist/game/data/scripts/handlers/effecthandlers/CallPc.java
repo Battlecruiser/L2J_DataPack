@@ -46,8 +46,8 @@ public class CallPc extends L2Effect
 	public CallPc(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_itemId = template.getParameters().getInteger("itemId", 0);
-		_itemCount = template.getParameters().getInteger("itemCount", 0);
+		_itemId = template.getParameters().getInt("itemId", 0);
+		_itemCount = template.getParameters().getInt("itemCount", 0);
 	}
 	
 	@Override

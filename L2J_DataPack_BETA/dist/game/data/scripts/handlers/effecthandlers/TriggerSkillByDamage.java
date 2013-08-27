@@ -43,21 +43,21 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	public TriggerSkillByDamage(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_minLevel = template.getParameters().getInteger("minLevel", 1);
-		_maxLevel = template.getParameters().getInteger("maxLevel", 100);
-		_minDamage = template.getParameters().getInteger("minDamage", 1);
-		_chance = template.getParameters().getInteger("chance", 100);
-		_skill = new SkillHolder(template.getParameters().getInteger("skillId"), template.getParameters().getInteger("skillLevel", 1));
+		_minLevel = template.getParameters().getInt("minLevel", 1);
+		_maxLevel = template.getParameters().getInt("maxLevel", 100);
+		_minDamage = template.getParameters().getInt("minDamage", 1);
+		_chance = template.getParameters().getInt("chance", 100);
+		_skill = new SkillHolder(template.getParameters().getInt("skillId"), template.getParameters().getInt("skillLevel", 1));
 	}
 	
 	public TriggerSkillByDamage(Env env, L2Effect effect)
 	{
 		super(env, effect);
-		_minLevel = effect.getEffectTemplate().getParameters().getInteger("minLevel", 1);
-		_maxLevel = effect.getEffectTemplate().getParameters().getInteger("maxLevel", 100);
-		_minDamage = effect.getEffectTemplate().getParameters().getInteger("minDamage", 1);
-		_chance = effect.getEffectTemplate().getParameters().getInteger("chance", 100);
-		_skill = new SkillHolder(effect.getEffectTemplate().getParameters().getInteger("skillId"), effect.getEffectTemplate().getParameters().getInteger("skillLevel", 1));
+		_minLevel = effect.getEffectTemplate().getParameters().getInt("minLevel", 1);
+		_maxLevel = effect.getEffectTemplate().getParameters().getInt("maxLevel", 100);
+		_minDamage = effect.getEffectTemplate().getParameters().getInt("minDamage", 1);
+		_chance = effect.getEffectTemplate().getParameters().getInt("chance", 100);
+		_skill = new SkillHolder(effect.getEffectTemplate().getParameters().getInt("skillId"), effect.getEffectTemplate().getParameters().getInt("skillLevel", 1));
 	}
 	
 	@Override

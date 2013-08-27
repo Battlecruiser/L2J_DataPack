@@ -44,7 +44,7 @@ public class Confuse extends L2Effect
 	public Confuse(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInteger("chance", 100) : 100;
+		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override

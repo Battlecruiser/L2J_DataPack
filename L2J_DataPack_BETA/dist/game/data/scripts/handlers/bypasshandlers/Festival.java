@@ -216,14 +216,14 @@ public class Festival implements IBypassHandler
 					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, npc.getFestivalType());
 					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(npc.getFestivalType());
 					
-					final int dawnScore = dawnData.getInteger("score");
-					final int duskScore = duskData.getInteger("score");
+					final int dawnScore = dawnData.getInt("score");
+					final int duskScore = duskData.getInt("score");
 					int overallScore = 0;
 					
 					// If no data is returned, assume there is no record, or all scores are 0.
 					if (overallData != null)
 					{
-						overallScore = overallData.getInteger("score");
+						overallScore = overallData.getInt("score");
 					}
 					
 					StringUtil.append(strBuffer, SevenSignsFestival.getFestivalName(npc.getFestivalType()), " festival.<br>");

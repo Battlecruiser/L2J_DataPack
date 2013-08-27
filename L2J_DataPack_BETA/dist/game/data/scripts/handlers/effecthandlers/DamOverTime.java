@@ -34,7 +34,7 @@ public class DamOverTime extends L2Effect
 	public DamOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_canKill = template.hasParameters() && template.getParameters().getBool("canKill", false);
+		_canKill = template.hasParameters() && template.getParameters().getBoolean("canKill", false);
 	}
 	
 	@Override

@@ -49,11 +49,11 @@ public class SummonNpc extends L2Effect
 	public SummonNpc(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_despawnDelay = template.getParameters().getInteger("despawnDelay", 20000);
-		_npcId = template.getParameters().getInteger("npcId", 0);
-		_npcCount = template.getParameters().getInteger("npcCount", 1);
-		_randomOffset = template.getParameters().getBool("randomOffset", false);
-		_isSummonSpawn = template.getParameters().getBool("isSummonSpawn", false);
+		_despawnDelay = template.getParameters().getInt("despawnDelay", 20000);
+		_npcId = template.getParameters().getInt("npcId", 0);
+		_npcCount = template.getParameters().getInt("npcCount", 1);
+		_randomOffset = template.getParameters().getBoolean("randomOffset", false);
+		_isSummonSpawn = template.getParameters().getBoolean("isSummonSpawn", false);
 	}
 	
 	@Override

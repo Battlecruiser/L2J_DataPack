@@ -199,7 +199,7 @@ public final class Q00281_HeadForTheHills extends Quest
 	public static final void giveNewbieReward(L2PcInstance player)
 	{
 		final PlayerVariables vars = player.getVariables();
-		if ((player.getLevel() < 25) && !vars.getBool("NEWBIE_SHOTS", false))
+		if ((player.getLevel() < 25) && !vars.getBoolean("NEWBIE_SHOTS", false))
 		{
 			if (player.isMageClass())
 			{
@@ -218,9 +218,9 @@ public final class Q00281_HeadForTheHills extends Quest
 			vars.set("GUIDE_MISSION", 1000);
 			player.sendPacket(MESSAGE);
 		}
-		else if (((vars.getInteger("GUIDE_MISSION") % 10000) / 1000) != 1)
+		else if (((vars.getInt("GUIDE_MISSION") % 10000) / 1000) != 1)
 		{
-			vars.set("GUIDE_MISSION", vars.getInteger("GUIDE_MISSION") + 1000);
+			vars.set("GUIDE_MISSION", vars.getInt("GUIDE_MISSION") + 1000);
 			player.sendPacket(MESSAGE);
 		}
 	}
