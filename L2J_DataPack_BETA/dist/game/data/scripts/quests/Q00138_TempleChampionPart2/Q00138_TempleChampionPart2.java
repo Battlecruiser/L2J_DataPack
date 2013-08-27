@@ -20,6 +20,7 @@ package quests.Q00138_TempleChampionPart2;
 
 import quests.Q00137_TempleChampionPart1.Q00137_TempleChampionPart1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;

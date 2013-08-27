@@ -21,6 +21,7 @@ package quests.Q10272_LightFragment;
 import quests.Q10271_TheEnvelopingDarkness.Q10271_TheEnvelopingDarkness;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.itemcontainer.PcInventory;

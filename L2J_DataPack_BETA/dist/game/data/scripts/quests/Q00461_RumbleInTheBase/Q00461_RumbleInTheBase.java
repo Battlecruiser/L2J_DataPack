@@ -23,11 +23,12 @@ import java.util.Map;
 
 import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
 
+import com.l2jserver.gameserver.enums.QuestSound;
+import com.l2jserver.gameserver.enums.QuestType;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.QuestState.QuestType;
 import com.l2jserver.gameserver.model.quest.State;
 
 /**

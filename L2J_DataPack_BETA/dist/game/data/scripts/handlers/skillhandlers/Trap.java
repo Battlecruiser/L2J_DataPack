@@ -18,12 +18,13 @@
  */
 package handlers.skillhandlers;
 
+import com.l2jserver.gameserver.enums.QuestEventType;
+import com.l2jserver.gameserver.enums.TrapAction;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.quest.Quest.TrapAction;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -97,9 +98,9 @@ public class Trap implements ISkillHandler
 						continue;
 					}
 					
-					if (trap.getTemplate().getEventQuests(Quest.QuestEventType.ON_TRAP_ACTION) != null)
+					if (trap.getTemplate().getEventQuests(QuestEventType.ON_TRAP_ACTION) != null)
 					{
-						for (Quest quest : trap.getTemplate().getEventQuests(Quest.QuestEventType.ON_TRAP_ACTION))
+						for (Quest quest : trap.getTemplate().getEventQuests(QuestEventType.ON_TRAP_ACTION))
 						{
 							quest.notifyTrapAction(trap, activeChar, TrapAction.TRAP_DISARMED);
 						}

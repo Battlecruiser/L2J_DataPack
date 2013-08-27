@@ -20,6 +20,7 @@ package quests.Q00126_TheNameOfEvil2;
 
 import quests.Q00125_TheNameOfEvil1.Q00125_TheNameOfEvil1;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;

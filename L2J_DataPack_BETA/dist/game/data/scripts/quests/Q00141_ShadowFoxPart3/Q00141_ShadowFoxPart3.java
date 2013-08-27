@@ -24,6 +24,7 @@ import java.util.Map;
 import quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2;
 import quests.Q00998_FallenAngelSelect.Q00998_FallenAngelSelect;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.instancemanager.QuestManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;

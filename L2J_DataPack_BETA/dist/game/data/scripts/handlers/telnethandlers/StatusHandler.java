@@ -27,6 +27,7 @@ import java.util.Calendar;
 import com.l2jserver.gameserver.GameTimeController;
 import com.l2jserver.gameserver.LoginServerThread;
 import com.l2jserver.gameserver.datatables.AdminTable;
+import com.l2jserver.gameserver.enums.ItemLocation;
 import com.l2jserver.gameserver.handler.ITelnetHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
@@ -37,7 +38,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.items.instance.L2ItemInstance.ItemLocation;
 
 /**
  * @author UnAfraid

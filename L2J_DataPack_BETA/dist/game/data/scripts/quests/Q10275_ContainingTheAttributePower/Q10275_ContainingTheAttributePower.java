@@ -18,6 +18,7 @@
  */
 package quests.Q10275_ContainingTheAttributePower;
 
+import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.Elementals;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
