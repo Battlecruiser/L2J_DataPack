@@ -258,7 +258,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 						{
 							if (hasAtLeastOneQuestItem(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
 							{
-								htmltext = "30008-08.html";
+								htmltext = "30283-08.html";
 							}
 							else if (st.hasQuestItems(DIRECTIONS_TO_RUINS))
 							{
