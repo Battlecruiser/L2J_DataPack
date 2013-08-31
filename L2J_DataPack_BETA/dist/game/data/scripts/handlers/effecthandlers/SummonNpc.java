@@ -83,7 +83,7 @@ public class SummonNpc extends L2Effect
 		}
 		
 		final L2PcInstance player = getEffected().getActingPlayer();
-		if (player.hasSummon() || player.isMounted())
+		if (player.isMounted())
 		{
 			return false;
 		}
