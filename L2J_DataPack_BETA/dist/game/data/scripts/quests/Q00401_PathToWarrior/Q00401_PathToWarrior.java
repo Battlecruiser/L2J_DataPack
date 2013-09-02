@@ -167,7 +167,7 @@ public class Q00401_PathToWarrior extends Quest
 			}
 			case 5:
 			{
-				if (((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && (npc.getId() == MONSTERS[1])) || (npc.getId() == MONSTERS[3]))
+				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && ((npc.getId() == MONSTERS[1]) || (npc.getId() == MONSTERS[3])))
 				{
 					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
 					{
