@@ -1201,13 +1201,23 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="9076" levels="1" name="Secret Door Key">
-		<set name="effectPoint" val="-100000" />
+		<!-- Confirmed CT2.5 -->
+		<set name="castRange" val="40" />
+		<set name="effectPoint" val="-1" />
+		<set name="effectRange" val="400" />
+		<set name="hitTime" val="500" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="15690" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="power" val="100" />
+		<set name="reuseDelay" val="3000" />
+		<set name="skillType" val="UNLOCK_SPECIAL" />
+		<set name="targetType" val="UNLOCKABLE" />
+		<cond msgId="113" addName="1">
+			<target npcId="23150001,23150002" />
+		</cond>
 	</skill>
 	<skill id="9077" levels="1" name="Open Packaged Book">
 		<!-- Confirmed CT2.5 -->
