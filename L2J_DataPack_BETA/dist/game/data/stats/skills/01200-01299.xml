@@ -1784,13 +1784,20 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="CORPSE_CLAN" />
-		<enchant1 name="power" val="#ench1power" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="#power" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="#ench1power" />
+			</effect>
+		</enchant1for>
 	</skill>
 	<skill id="1255" levels="2" name="Party Recall">
 		<!-- Confirmed CT2.5 -->

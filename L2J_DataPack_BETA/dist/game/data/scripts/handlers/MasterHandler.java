@@ -214,7 +214,6 @@ import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
 import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.NornilsPower;
-import handlers.skillhandlers.Resurrect;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.TakeCastle;
 import handlers.skillhandlers.TakeFort;
@@ -510,7 +509,6 @@ public class MasterHandler
 			GetPlayer.class,
 			GiveReco.class,
 			NornilsPower.class,
-			Resurrect.class,
 			Sow.class,
 			TakeCastle.class,
 			TakeFort.class,
