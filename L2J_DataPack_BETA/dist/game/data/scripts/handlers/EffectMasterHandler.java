@@ -138,6 +138,7 @@ public final class EffectMasterHandler
 		Relax.class,
 		Restoration.class,
 		RestorationRandom.class,
+		Resurrection.class,
 		Root.class,
 		ServitorShare.class,
 		SetSkill.class,

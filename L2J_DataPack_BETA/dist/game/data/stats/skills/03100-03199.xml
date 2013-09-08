@@ -1425,10 +1425,13 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PC_BODY" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3161" levels="3" name="Item Skill: Skill Clarity">
 		<table name="#effectPoints"> 549 611 655 </table>

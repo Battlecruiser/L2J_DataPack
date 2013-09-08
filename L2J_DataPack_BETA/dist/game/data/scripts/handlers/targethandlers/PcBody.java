@@ -26,8 +26,8 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -77,7 +77,7 @@ public class PcBody implements ITargetTypeHandler
 			{
 				boolean condGood = true;
 				
-				if (skill.getSkillType() == L2SkillType.RESURRECT)
+				if (skill.hasEffectType(L2EffectType.RESURRECTION))
 				{
 					if (targetPlayer != null)
 					{

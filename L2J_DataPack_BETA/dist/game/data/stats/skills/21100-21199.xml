@@ -55,10 +55,13 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="43200000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PC_BODY" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="21103" levels="1" name="Great Adventurer's Soul Power : Endless">
 		<!-- For five minutes, the Great Spirit increases maximum HP by 20%, maximum MP by 20%, moving speed by 20%, and resistance against debuff by 10%. -->

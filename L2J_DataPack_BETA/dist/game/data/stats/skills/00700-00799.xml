@@ -31,10 +31,13 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="252" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="70" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PC_BODY" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="70" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="702" levels="1" name="Divine Healer Cleanse">
 		<set name="castRange" val="600" />
@@ -977,10 +980,13 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PC_BODY" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="#power" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="741" levels="3" name="Heretic Heal Side Effect">
 		<!-- Confirmed CT2.5 -->

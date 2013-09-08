@@ -129,10 +129,13 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="100" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="RESURRECT" />
 		<set name="targetType" val="PC_BODY" />
+		<for>
+			<effect name="Resurrection" noicon="1" val="0">
+				<param power="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="3410" levels="1" name="Blue Talisman of Reflection">
 		<set name="abnormalLvl" val="1" />
