@@ -314,13 +314,17 @@
 	<skill id="6038" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="BOT_PENALTY" />
+		<set name="abnormalType" val="NONE" />
 		<set name="icon" val="icon.skill6038" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="BlockChat" val="0" />
+		</for>
 	</skill>
 	<skill id="6039" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
@@ -330,8 +334,12 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="BlockParty" val="0" />
+		</for>
 	</skill>
 	<skill id="6040" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
@@ -341,8 +349,12 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="Flag" val="0" />
+		</for>
 	</skill>
 	<skill id="6041" levels="1" name="Phoenix Rush">
 		<!-- Confirmed CT2.5 -->
@@ -626,8 +638,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="BlockAction" val="0">
+				<param blockedActions="-2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6056" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
@@ -637,8 +655,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="BlockAction" val="0">
+				<param blockedActions="-2" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6057" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
@@ -648,8 +672,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="Debuff" val="0">
+				<mul order="0x30" stat="runSpd" val="0.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6058" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
@@ -659,8 +689,14 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="skillType" val="DEBUFF" />
+		<set name="targetType" val="ONE" />
+		<set name="stayAfterDeath" val="True" />
+		<for>
+			<effect name="Debuff" val="0">
+				<mul order="0x30" stat="runSpd" val="0.0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="6059" levels="1" name="Counter Critical">
 		<!-- Confirmed CT2.5 -->
