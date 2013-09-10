@@ -55,7 +55,7 @@ public final class BlockParty extends L2Effect
 			return false;
 		}
 		
-		PunishmentManager.getInstance().startPunishment(new PunishmentTask(getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "Party banned by bot report", "system"));
+		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "Party banned by bot report", "system", true));
 		return true;
 	}
 	
