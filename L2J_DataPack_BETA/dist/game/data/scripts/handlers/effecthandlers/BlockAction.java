@@ -70,12 +70,12 @@ public final class BlockAction extends L2Effect
 		
 		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
 		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system"));
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
 		}
 		
 		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
 		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system"));
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
 		}
 		
 		return true;
