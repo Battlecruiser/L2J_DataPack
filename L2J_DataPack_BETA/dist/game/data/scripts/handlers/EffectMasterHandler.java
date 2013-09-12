@@ -103,6 +103,7 @@ public final class EffectMasterHandler
 		HealOverTime.class,
 		HealPercent.class,
 		Hide.class,
+		HolythingPossess.class,
 		HpByLevel.class,
 		HpDrain.class,
 		ImmobileBuff.class,

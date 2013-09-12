@@ -19,11 +19,9 @@
 package handlers.targethandlers;
 
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
-import com.l2jserver.gameserver.instancemanager.CastleManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.entity.Castle;
+import com.l2jserver.gameserver.model.actor.instance.L2ArtefactInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 
@@ -35,21 +33,14 @@ public class Holy implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		if (!activeChar.isPlayer())
-		{
-			return EMPTY_TARGET_LIST;
-		}
-		
-		final L2PcInstance player = activeChar.getActingPlayer();
-		final Castle castle = CastleManager.getInstance().getCastle(player);
-		if ((player.getClan() == null) || (castle == null) || !player.checkIfOkToCastSealOfRule(castle, true, skill, target))
+		if (!(target instanceof L2ArtefactInstance))
 		{
 			return EMPTY_TARGET_LIST;
 		}
 		
 		return new L2Object[]
 		{
-			activeChar.getTarget()
+			target
 		};
 	}
 	
