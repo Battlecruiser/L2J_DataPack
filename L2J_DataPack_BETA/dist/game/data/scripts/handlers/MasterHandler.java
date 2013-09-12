@@ -171,7 +171,6 @@ import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTell;
 import handlers.chathandlers.ChatTrade;
 import handlers.itemhandlers.BeastSoulShot;
-import handlers.itemhandlers.BeastSpice;
 import handlers.itemhandlers.BeastSpiritShot;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
@@ -458,37 +457,36 @@ public class MasterHandler
 		},
 		{
 			// Item Handlers
-			SoulShots.class,
-			SpiritShot.class,
-			BlessedSpiritShot.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
+			BlessedSpiritShot.class,
+			Book.class,
 			Bypass.class,
 			Calculator.class,
-			Maps.class,
-			NicknameColor.class,
-			Recipes.class,
-			RollingDice.class,
+			Disguise.class,
+			Elixir.class,
 			EnchantAttribute.class,
 			EnchantScrolls.class,
+			EventItem.class,
 			ExtractableItems.class,
-			Book.class,
-			SevenSignsRecord.class,
+			FishShots.class,
+			Harvester.class,
 			ItemSkills.class,
 			ItemSkillsTemplate.class,
-			Seed.class,
-			Harvester.class,
-			MercTicket.class,
-			FishShots.class,
-			PetFood.class,
-			SpecialXMas.class,
-			SummonItems.class,
-			BeastSpice.class,
-			TeleportBookmark.class,
-			Elixir.class,
-			Disguise.class,
 			ManaPotion.class,
-			EventItem.class,
+			Maps.class,
+			MercTicket.class,
+			NicknameColor.class,
+			PetFood.class,
+			Recipes.class,
+			RollingDice.class,
+			Seed.class,
+			SevenSignsRecord.class,
+			SoulShots.class,
+			SpecialXMas.class,
+			SpiritShot.class,
+			SummonItems.class,
+			TeleportBookmark.class,
 		},
 		{
 			// Punishment Handlers
