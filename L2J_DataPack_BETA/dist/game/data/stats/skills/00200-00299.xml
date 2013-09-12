@@ -927,6 +927,7 @@
 		</for>
 	</skill>
 	<skill id="246" levels="1" name="Seal of Ruler">
+		<!-- Confirmed CT2.5 -->
 		<set name="castRange" val="85" />
 		<set name="effectRange" val="400" />
 		<set name="hitTime" val="180000" />
@@ -936,8 +937,13 @@
 		<set name="mpInitialConsume" val="50" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="skillType" val="TAKECASTLE" />
 		<set name="targetType" val="HOLY" />
+		<cond>
+			<player canPossessHolything="true" />
+		</cond>
+		<for>
+			<effect name="HolythingPossess" noicon="1" val="0" />
+		</for>
 	</skill>
 	<skill id="247" levels="1" name="Build Headquarters">
 		<set name="hitTime" val="4000" />
