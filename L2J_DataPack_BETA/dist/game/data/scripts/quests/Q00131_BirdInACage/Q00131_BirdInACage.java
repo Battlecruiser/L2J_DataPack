@@ -147,7 +147,7 @@ public class Q00131_BirdInACage extends Quest
 				}
 				break;
 			}
-			case "32292-04.html":
+			case "32271-04.html":
 			{
 				if (st.isCond(3))
 				{

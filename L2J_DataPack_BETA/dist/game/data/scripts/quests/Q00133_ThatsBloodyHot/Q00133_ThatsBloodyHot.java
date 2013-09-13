@@ -70,6 +70,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 				}
 				break;
 			}
+			case "32264-06.html":
 			case "32264-07.html":
 			{
 				if (st.isCond(1))
@@ -117,6 +118,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 				{
 					st.takeItems(REFINED_CRYSTAL_SAMPLE, -1);
 					htmltext = event;
+					st.setCond(4);
 				}
 				break;
 			}
