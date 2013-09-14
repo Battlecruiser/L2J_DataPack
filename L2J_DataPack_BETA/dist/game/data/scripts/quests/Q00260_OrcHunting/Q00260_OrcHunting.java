@@ -77,7 +77,7 @@ public final class Q00260_OrcHunting extends Quest
 		
 		switch (event)
 		{
-			case "30221-04.html":
+			case "30221-04.htm":
 			{
 				st.startQuest();
 				htmltext = event;
