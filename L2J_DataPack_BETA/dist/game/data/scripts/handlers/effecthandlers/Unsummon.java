@@ -20,22 +20,26 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
 import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
+import com.l2jserver.util.Rnd;
 
 /**
- * Npc Kill effect implementation.
+ * Unsummon effect implementation.
  * @author Adry_85
  */
-public class NpcKill extends L2Effect
+public class Unsummon extends L2Effect
 {
-	public NpcKill(Env env, EffectTemplate template)
+	private final int _chance;
+	
+	public Unsummon(Env env, EffectTemplate template)
 	{
 		super(env, template);
+		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
@@ -51,9 +55,25 @@ public class NpcKill extends L2Effect
 	}
 	
 	@Override
+	public boolean calcSuccess()
+	{
+		int magicLevel = getSkill().getMagicLevel();
+		if ((magicLevel <= 0) || ((getEffected().getLevel() - 9) <= magicLevel))
+		{
+			double chance = _chance * Formulas.calcAttributeBonus(getEffector(), getEffected(), getSkill()) * Formulas.calcGeneralTraitBonus(getEffector(), getEffected(), getSkill().getTraitType(), false);
+			if (chance > (Rnd.nextDouble() * 100))
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	@Override
 	public boolean onStart()
 	{
-		if ((getEffected() instanceof L2SiegeSummonInstance))
+		if (!getEffected().isSummon())
 		{
 			return false;
 		}

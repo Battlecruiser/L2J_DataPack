@@ -3175,7 +3175,9 @@
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1mpInitialConsume" />
 		<for>
-			<effect name="NpcKill" val="0" />
+			<effect name="Unsummon" val="0">
+				<param chance="80" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1396" levels="10" name="Magical Backfire" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
