@@ -123,7 +123,7 @@ public final class EffectMasterHandler
 		MpConsumePerLevel.class,
 		Mute.class,
 		NoblesseBless.class,
-		NpcKill.class,
+		Unsummon.class,
 		OpenCommonRecipeBook.class,
 		OpenDwarfRecipeBook.class,
 		Paralyze.class,
