@@ -980,8 +980,11 @@ public class TowerOfNaia extends Quest
 			if ((_lock == null) || (_lock.getCurrentHp() > (_lock.getMaxHp() / 10)))
 			{
 				htmltext = null;
-				_lock.deleteMe();
-				_lock = null;
+				if (_lock != null)
+				{
+					_lock.deleteMe();
+					_lock = null;
+				}
 				cancelQuestTimers("spawn_lock");
 				startQuestTimer("spawn_lock", 300000, null, null);
 				npc.setTarget(player);
