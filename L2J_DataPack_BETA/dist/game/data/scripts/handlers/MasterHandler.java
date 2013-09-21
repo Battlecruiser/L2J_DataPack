@@ -268,6 +268,7 @@ import handlers.usercommandhandlers.Mount;
 import handlers.usercommandhandlers.MyBirthday;
 import handlers.usercommandhandlers.OlympiadStat;
 import handlers.usercommandhandlers.PartyInfo;
+import handlers.usercommandhandlers.SiegeStatus;
 import handlers.usercommandhandlers.Time;
 import handlers.usercommandhandlers.Unstuck;
 import handlers.voicedcommandhandlers.Banking;
@@ -527,6 +528,7 @@ public class MasterHandler
 			ChannelDelete.class,
 			ChannelInfo.class,
 			MyBirthday.class,
+			SiegeStatus.class,
 		},
 		{
 			// Voiced Command Handlers
