@@ -452,8 +452,10 @@
 	</skill>
 	<skill id="3626" levels="1" name="Kabokula">
 		<set name="castRange" val="300" />
+		<set name="channelingSkillId" val="5106" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="500" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="isDebuff" val="true" />
@@ -463,17 +465,17 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="FUSION" />
 		<set name="targetType" val="ONE" />
-		<set name="triggeredId" val="5106" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
 		</cond>
 	</skill>
 	<skill id="3627" levels="1" name="Tapirawa">
 		<set name="castRange" val="300" />
+		<set name="channelingSkillId" val="5107" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="500" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="isDebuff" val="true" />
@@ -483,17 +485,17 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="FUSION" />
 		<set name="targetType" val="ONE" />
-		<set name="triggeredId" val="5107" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
 		</cond>
 	</skill>
 	<skill id="3628" levels="1" name="Shabonoba">
 		<set name="castRange" val="300" />
+		<set name="channelingSkillId" val="5108" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-100" />
-		<set name="effectRange" val="900" />
+		<set name="effectRange" val="500" />
 		<set name="hitTime" val="25000" />
 		<set name="icon" val="icon.weapon_seize_mace_i00" />
 		<set name="isDebuff" val="true" />
@@ -503,9 +505,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="FUSION" />
 		<set name="targetType" val="ONE" />
-		<set name="triggeredId" val="5108" />
 		<cond msgId="109">
 			<target npcId="22215,22216,22217" />
 		</cond>

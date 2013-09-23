@@ -39,6 +39,7 @@
 	</skill>
 	<skill id="5104" levels="3" name="Battle Force">
 		<!-- Not Used Anymore -->
+		<table name="#pAtk"> 1.05 1.10 1.15 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
@@ -48,11 +49,16 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul stat="pAtk" order="0x30" val="#pAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5105" levels="3" name="Spell Force">
 		<!-- Not Used Anymore -->
+		<table name="#mAtk"> 1.05 1.10 1.15 </table>
 		<table name="#abnormalLvls"> 1 2 3 </table>
 		<set name="abnormalLvl" val="#abnormalLvls" />
 		<set name="abnormalTime" val="15" />
@@ -62,8 +68,12 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff" val="0">
+				<mul stat="mAtk" order="0x30" val="#mAtk" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5106" levels="4" name="Capture A State">
 		<table name="#abnormalLvls"> 1 2 3 4 </table>
@@ -411,6 +421,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill0454" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
@@ -426,21 +437,26 @@
 		</for>
 	</skill>
 	<skill id="5124" levels="1" name="Anti-Music">
+		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelBySlotProbability" noicon="1" val="0">
+				<param dispel="DANCE_OF_AQUA_GUARD;DANCE_OF_CONCENTRATION;DANCE_OF_CONCENTRATION;DANCE_OF_EARTH_GUARD;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_LIGHT;DANCE_OF_MYSTIC;DANCE_OF_PROTECTION;DANCE_OF_SHADOW;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_FLAME_GUARD;SONG_OF_HUNTER;SONG_OF_INVOCATION;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_STORM_GUARD;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BLADESTORM;DANCE_OF_ALIGNMENT;SONG_OF_ELEMENTAL;SONG_OF_WINDSTORM" rate="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill0456" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" val="0">
@@ -452,11 +468,11 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill0457" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" val="0">
@@ -487,11 +503,11 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill0459" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" val="0">
@@ -508,11 +524,11 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill0460" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" val="0">
@@ -550,13 +566,21 @@
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5134" levels="1" name="Anti-Summoning Field">
+		<!-- TODO: Update to H5! -->
 		<set name="abnormalTime" val="15" />
+		<set name="affectRange" val="200" />
+		<set name="attribute" val="5" />
+		<set name="attributePower" val="20" />
 		<set name="icon" val="icon.skill1424" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Unsummon" val="0">
+				<param chance="80" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="5135" levels="1" name="Slash">
 		<!-- CT2.5 retail confirmed -->
@@ -784,8 +808,10 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="MULTI_DEBUFF" />
+		<set name="affectRange" val="200" />
 		<set name="icon" val="icon.skill1422" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="isDebuff" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="skillType" val="DEBUFF" />

@@ -104,6 +104,7 @@ public class SummonNpc extends L2Effect
 				decoy.setCurrentMp(decoy.getMaxMp());
 				decoy.setHeading(player.getHeading());
 				decoy.setInstanceId(player.getInstanceId());
+				decoy.setSummoner(player);
 				decoy.spawnMe(player.getX(), player.getY(), player.getZ());
 				player.setDecoy(decoy);
 				break;
@@ -127,9 +128,13 @@ public class SummonNpc extends L2Effect
 						z = wordPosition.getZ();
 					}
 				}
-				getSkill().getEffects(player, effectPoint);
 				effectPoint.setIsInvul(true);
+				effectPoint.setSummoner(player);
 				effectPoint.spawnMe(x, y, z);
+				if (_despawnDelay > 0)
+				{
+					effectPoint.scheduleDespawn(_despawnDelay);
+				}
 				break;
 			}
 			default:
@@ -160,9 +165,9 @@ public class SummonNpc extends L2Effect
 				spawn.stopRespawn();
 				
 				final L2Npc npc = spawn.doSpawn(_isSummonSpawn);
+				npc.setSummoner(player);
 				npc.setName(npcTemplate.getName());
 				npc.setTitle(npcTemplate.getName());
-				npc.setSummoner(player);
 				if (_despawnDelay > 0)
 				{
 					npc.scheduleDespawn(_despawnDelay);
