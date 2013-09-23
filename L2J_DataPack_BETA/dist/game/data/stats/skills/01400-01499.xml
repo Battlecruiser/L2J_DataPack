@@ -648,7 +648,6 @@
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5130" />
 		<set name="effectPoint" val="-676" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="20" />
@@ -660,26 +659,24 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13025" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="500" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
-		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect self="1" ticks="9" name="SignetMDam" val="0" />
-		</for>
+		<channelingEffects>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</channelingEffects>
 	</skill>
 	<skill id="1420" levels="1" name="Cyclone">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5132" />
 		<set name="effectPoint" val="-676" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="20" />
@@ -691,26 +688,24 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13025" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="500" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
-		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect self="1" ticks="9" name="SignetMDam" val="0" />
-		</for>
+		<channelingEffects>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</channelingEffects>
 	</skill>
 	<skill id="1421" levels="1" name="Raging Waves">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5131" />
 		<set name="effectPoint" val="-676" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="20" />
@@ -722,25 +717,22 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13025" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="500" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
-		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect self="1" ticks="9" name="SignetMDam" val="0" />
-		</for>
+		<channelingEffects>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</channelingEffects>
 	</skill>
 	<skill id="1422" levels="1" name="Day of Doom">
-		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5145" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1422" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -749,25 +741,23 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="58" />
 		<set name="mpInitialConsume" val="15" />
-		<set name="npcId" val="13025" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect ticks="5" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13028" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1423" levels="1" name="Gehenna">
 		<set name="affectLimit" val="15-25" />
 		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5133" />
 		<set name="effectPoint" val="-676" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
@@ -779,25 +769,22 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="36" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13025" />
+		<set name="mpPerChanneling" val="80" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="500" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET_CASTTIME" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
-		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect self="1" ticks="9" name="SignetMDam" val="0" />
-		</for>
+		<channelingEffects>
+			<effect name="MagicalAttack" noicon="1" val="0" />
+		</channelingEffects>
 	</skill>
 	<skill id="1424" levels="1" name="Anti-Summoning Field">
-		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5134" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill1424" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -806,19 +793,18 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="70" />
 		<set name="mpInitialConsume" val="70" />
-		<set name="npcId" val="13020" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Removed ticks from here -->
-			<effect ticks="6" name="SignetAntiSummon" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13030" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="1425" levels="1" name="Purification Field">
@@ -2452,24 +2438,25 @@
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
 		<set name="castRange" val="900" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="15000" />
-		<set name="hitTimings" val="10,15,15,15,15,15,15" />
 		<set name="icon" val="icon.skill1472" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="79" />
 		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="30" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
-		<for>
+		<channelingEffects>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-		</for>
+		</channelingEffects>
 	</skill>
 	<skill id="1473" levels="1" name="Change Weapon">
 		<!-- Confirmed CT2.5 -->

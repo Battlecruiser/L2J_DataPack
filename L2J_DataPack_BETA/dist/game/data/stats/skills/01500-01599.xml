@@ -1366,24 +1366,25 @@
 		<!-- Kamael Final Form Skill -->
 		<!-- TODO: Related with Quest "Long live the Pa'agrio Lord! -->
 		<set name="castRange" val="900" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="effectPoint" val="-676" />
 		<set name="effectRange" val="1000" />
 		<set name="element" val="5" /> <!-- Dark -->
 		<set name="elementPower" val="20" />
 		<set name="hitTime" val="15000" />
-		<set name="hitTimings" val="10,15,15,15,15,15,15" />
 		<set name="icon" val="icon.skill1472" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="79" />
 		<set name="mpInitialConsume" val="36" />
+		<set name="mpPerChanneling" val="30" />
 		<set name="operateType" val="CA1" />
 		<set name="power" val="30" />
 		<set name="reuseDelay" val="300000" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
-		<for>
+		<channelingEffects>
 			<effect name="MagicalAttack" noicon="1" val="0" />
-		</for>
+		</channelingEffects>
 	</skill>
 	<skill id="1546" levels="1" name="Strider Fear">
 		<!-- Confirmed CT2.5 -->

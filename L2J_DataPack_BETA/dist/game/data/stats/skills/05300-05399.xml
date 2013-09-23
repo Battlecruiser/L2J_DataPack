@@ -1727,11 +1727,13 @@
 		</for>
 	</skill>
 	<skill id="5396" levels="1" name="NPC - Spell Stance">
+		<set name="castRange" val="400" />
+		<set name="channelingSkillId" val="5397" />
+		<set name="channelingTickInterval" val="2" />
 		<set name="hitTime" val="15000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="CA5" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5397" levels="3" name="NPC - Spell Force">
 		<table name="#abnormalLvls"> 1 2 3 </table>

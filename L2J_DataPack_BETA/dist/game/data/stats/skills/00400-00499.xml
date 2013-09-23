@@ -1140,22 +1140,34 @@
 	<skill id="426" levels="1" name="Battle Force">
 		<!-- Not Used Anymore -->
 		<set name="effectPoint" val="1" />
+		<set name="channelingSkillId" val="5104" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="600" />
 		<set name="icon" val="icon.skill0426" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
+		<set name="mpPerChanneling" val="15" />
+		<set name="reuseDelay" val="30000" />
+		<set name="hitTime" val="15000" />
 		<set name="operateType" val="CA5" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
 		<!-- Not Used Anymore -->
 		<set name="effectPoint" val="1" />
+		<set name="channelingSkillId" val="5105" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="600" />
 		<set name="icon" val="icon.skill0427" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
+		<set name="mpPerChanneling" val="15" />
+		<set name="reuseDelay" val="30000" />
+		<set name="hitTime" val="15000" />
 		<set name="operateType" val="CA5" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm" enchantGroup1="5">
 		<table name="#ench1DanceMpConsumeRate"> 0.89 0.89 0.89 0.89 0.89 0.89 0.89 0.88 0.88 0.88 0.88 0.88 0.88 0.88 0.87 </table>
@@ -1851,8 +1863,6 @@
 		</for>
 	</skill>
 	<skill id="454" levels="1" name="Symbol of Defense">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5123" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0454" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1861,24 +1871,21 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="455" levels="1" name="Symbol of Noise">
-		<set name="affectRange" val="180" />
 		<set name="castRange" val="900" />
-		<set name="effectId" val="5124" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0455" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1887,23 +1894,20 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13025" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="GROUND" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="6" name="SignetNoise" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13025" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="456" levels="1" name="Symbol of Resistance">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5125" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0456" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1912,23 +1916,20 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="457" levels="1" name="Symbol of Honor">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5126" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0457" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1937,23 +1938,20 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="458" levels="1" name="Symbol of Energy">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5127" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0458" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1962,23 +1960,20 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="459" levels="1" name="Symbol of the Sniper">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5128" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0459" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -1987,23 +1982,20 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="460" levels="1" name="Symbol of the Assassin">
-		<set name="affectRange" val="180" />
-		<set name="effectId" val="5129" />
 		<set name="hitTime" val="5000" />
 		<set name="icon" val="icon.skill0460" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
@@ -2012,18 +2004,17 @@
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="44" />
 		<set name="mpInitialConsume" val="36" />
-		<set name="npcId" val="13018" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="SIGNET" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="1509">
 			<player olympiad="false" />
 		</cond>
 		<for>
-			<!-- FIXME: Remove ticks from here -->
-			<effect ticks="24" name="Signet" val="0" />
+			<effect name="SummonNpc" val="0">
+				<param npcId="13018" npcCount="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="461" levels="2" name="Break Duress">

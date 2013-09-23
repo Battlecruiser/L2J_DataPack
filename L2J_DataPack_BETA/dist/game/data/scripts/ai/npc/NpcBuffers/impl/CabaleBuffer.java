@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.npc.NpcBuffers;
+package ai.npc.NpcBuffers.impl;
 
 import java.util.Collection;
 

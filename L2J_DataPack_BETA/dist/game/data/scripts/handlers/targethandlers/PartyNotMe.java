@@ -21,10 +21,10 @@ package handlers.targethandlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.Config;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
@@ -38,46 +38,29 @@ public class PartyNotMe implements ITargetTypeHandler
 	@Override
 	public L2Object[] getTargetList(L2Skill skill, L2Character activeChar, boolean onlyFirst, L2Character target)
 	{
-		List<L2Character> targetList = new ArrayList<>();
-		if (onlyFirst)
-		{
-			return new L2Character[]
-			{
-				activeChar
-			};
-		}
-		
-		L2PcInstance player = null;
-		
-		if (activeChar.isSummon())
-		{
-			player = ((L2Summon) activeChar).getOwner();
-			targetList.add(player);
-		}
-		else if (activeChar.isPlayer())
-		{
-			player = activeChar.getActingPlayer();
-			if (activeChar.getSummon() != null)
-			{
-				targetList.add(activeChar.getSummon());
-			}
-		}
-		
+		final List<L2Character> targetList = new ArrayList<>();
 		if (activeChar.getParty() != null)
 		{
-			List<L2PcInstance> partyList = activeChar.getParty().getMembers();
-			
+			final List<L2PcInstance> partyList = activeChar.getParty().getMembers();
 			for (L2PcInstance partyMember : partyList)
 			{
-				if (partyMember == null)
+				if ((partyMember == null) || partyMember.isDead())
 				{
 					continue;
 				}
-				else if (partyMember == player)
+				else if (partyMember == activeChar)
 				{
 					continue;
 				}
-				else if (!partyMember.isDead() && Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
+				else if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, activeChar, partyMember, true))
+				{
+					continue;
+				}
+				else if ((skill.getAffectRange() > 0) && !Util.checkIfInRange(skill.getAffectRange(), activeChar, partyMember, true))
+				{
+					continue;
+				}
+				else
 				{
 					targetList.add(partyMember);
 					

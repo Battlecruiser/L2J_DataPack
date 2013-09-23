@@ -1183,14 +1183,20 @@
 		</for>
 	</skill>
 	<skill id="5493" levels="1" name="Naia Production">
+		<set name="channelingSkillId" val="5106" />
+		<set name="channelingSkillId" val="5106" />
+		<set name="castRange" val="800" />
+		<set name="effectRange" val="1000" />
 		<set name="effectPoint" val="1" />
 		<set name="hitTime" val="25000" />
+		<set name="itemConsumeId" val="8764" /> <!-- Trap Stone -->
+		<set name="itemConsumeCount" val="1" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
+		<set name="mpPerChanneling" val="15" />
 		<set name="operateType" val="CA5" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5494" levels="1" name="Gust">
 		<!-- Confirmed CT2.5 -->

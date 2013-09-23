@@ -20,7 +20,6 @@ package handlers.skillhandlers;
 
 import java.util.List;
 
-import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
@@ -43,7 +42,6 @@ public class Continuous implements ISkillHandler
 		L2SkillType.BUFF,
 		L2SkillType.DEBUFF,
 		L2SkillType.CONT,
-		L2SkillType.FUSION
 	};
 	
 	@Override
@@ -55,16 +53,6 @@ public class Continuous implements ISkillHandler
 		if (activeChar.isPlayer())
 		{
 			player = activeChar.getActingPlayer();
-		}
-		
-		if (skill.getEffectId() != 0)
-		{
-			L2Skill sk = SkillTable.getInstance().getInfo(skill.getEffectId(), skill.getEffectLvl() == 0 ? 1 : skill.getEffectLvl());
-			
-			if (sk != null)
-			{
-				skill = sk;
-			}
 		}
 		
 		boolean ss = skill.useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
