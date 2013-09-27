@@ -18,38 +18,62 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 /**
- * Protect the Supplies Safe (730)
+ * Make Spears Dull! (735)
  * @author Gigiikun
  */
-public class ProtectTheSupplies extends TerritoryWarSuperClass
+public final class Q00735_MakeSpearsDull extends TerritoryWarSuperClass
 {
-	public static String qn1 = "730_ProtecttheSuppliesSafe.";
-	public static int qnu = 730;
-	public static String qna = "Protect the Supplies Safe";
-	
-	public ProtectTheSupplies()
+	public Q00735_MakeSpearsDull()
 	{
-		super(qnu, qn1, qna);
-		NPC_IDS = new int[]
+		super(735, Q00735_MakeSpearsDull.class.getSimpleName(), "Make Spears Dull");
+		CLASS_IDS = new int[]
 		{
-			36591,
-			36592,
-			36593,
-			36594,
-			36595,
-			36596,
-			36597,
-			36598,
-			36599
+			23,
+			101,
+			36,
+			108,
+			8,
+			93,
+			2,
+			88,
+			3,
+			89,
+			48,
+			114,
+			46,
+			113,
+			55,
+			117,
+			9,
+			92,
+			24,
+			102,
+			37,
+			109,
+			34,
+			107,
+			21,
+			100,
+			127,
+			131,
+			128,
+			132,
+			129,
+			133,
+			130,
+			134,
+			135,
+			136
 		};
-		qn = qn1;
-		addAttackId(NPC_IDS);
-	}
-	
-	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
-		return npcid - 36510;
+		RANDOM_MIN = 15;
+		RANDOM_MAX = 20;
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_WARRIORS_AND_ROGUES,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK
+		};
 	}
 }

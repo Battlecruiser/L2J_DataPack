@@ -21,38 +21,31 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * Deny Blessings (737)
+ * Pierce through a Shield! (734)
  * @author Gigiikun
  */
-public class KillThePriests extends TerritoryWarSuperClass
+public final class Q00734_PierceThroughAShield extends TerritoryWarSuperClass
 {
-	public static String qn1 = "737_DenyBlessings";
-	public static int qnu = 737;
-	public static String qna = "Deny Blessings";
-	
-	public KillThePriests()
+	public Q00734_PierceThroughAShield()
 	{
-		super(qnu, qn1, qna);
+		super(734, Q00734_PierceThroughAShield.class.getSimpleName(), "Pierce through a Shield");
 		CLASS_IDS = new int[]
 		{
-			43,
-			112,
-			30,
-			105,
-			16,
-			97,
-			17,
-			98,
-			52,
-			116
+			6,
+			91,
+			5,
+			90,
+			20,
+			99,
+			33,
+			106
 		};
-		qn = qn1;
-		RANDOM_MIN = 3;
-		RANDOM_MAX = 8;
+		RANDOM_MIN = 10;
+		RANDOM_MAX = 15;
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_HEALERS_AND_BUFFERS,
-			NpcStringId.YOU_WEAKENED_THE_ENEMYS_ATTACK
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_KNIGHTS,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_DEFENSE
 		};
 	}
 }

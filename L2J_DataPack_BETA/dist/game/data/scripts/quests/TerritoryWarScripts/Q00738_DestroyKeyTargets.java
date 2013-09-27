@@ -21,38 +21,27 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * For the Sake of the Territory - Innadril (722)
+ * Destroy Key Targets (738)
  * @author Gigiikun
  */
-public class TheTerritoryInnadril extends TerritoryWarSuperClass
+public final class Q00738_DestroyKeyTargets extends TerritoryWarSuperClass
 {
-	public static String qn1 = "722_FortheSakeoftheTerritoryInnadril";
-	public static int qnu = 722;
-	public static String qna = "For the Sake of the Territory - Innadril";
-	
-	public TheTerritoryInnadril()
+	public Q00738_DestroyKeyTargets()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36504;
-		TERRITORY_ID = 86;
-		LEADER_IDS = new int[]
+		super(738, Q00738_DestroyKeyTargets.class.getSimpleName(), "Destroy Key Targets");
+		CLASS_IDS = new int[]
 		{
-			36538,
-			36540,
-			36543,
-			36596
+			51,
+			115,
+			57,
+			118
 		};
-		GUARD_IDS = new int[]
-		{
-			36539,
-			36541,
-			36542
-		};
-		qn = qn1;
+		RANDOM_MIN = 3;
+		RANDOM_MAX = 8;
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.THE_CATAPULT_OF_INNADRIL_HAS_BEEN_DESTROYED
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_WARSMITHS_AND_OVERLORDS,
+			NpcStringId.YOU_DESTROYED_THE_ENEMYS_PROFESSIONALS
 		};
-		registerKillIds();
 	}
 }

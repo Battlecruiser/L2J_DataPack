@@ -18,41 +18,33 @@
  */
 package quests.TerritoryWarScripts;
 
-import com.l2jserver.gameserver.network.NpcStringId;
-
 /**
- * For the Sake of the Territory - Gludio (717)
+ * Protect the Religious Association Leader (732)
  * @author Gigiikun
  */
-public class TheTerritoryGludio extends TerritoryWarSuperClass
+public final class Q00732_ProtectTheReligiousAssociationLeader extends TerritoryWarSuperClass
 {
-	public static String qn1 = "717_FortheSakeoftheTerritoryGludio";
-	public static int qnu = 717;
-	public static String qna = "For the Sake of the Territory - Gludio";
-	
-	public TheTerritoryGludio()
+	public Q00732_ProtectTheReligiousAssociationLeader()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36499;
-		TERRITORY_ID = 81;
-		LEADER_IDS = new int[]
+		super(732, Q00732_ProtectTheReligiousAssociationLeader.class.getSimpleName(), "Protect the Religious Association Leader");
+		NPC_IDS = new int[]
 		{
-			36508,
 			36510,
-			36513,
-			36591
+			36516,
+			36522,
+			36528,
+			36534,
+			36540,
+			36546,
+			36552,
+			36558
 		};
-		GUARD_IDS = new int[]
-		{
-			36509,
-			36511,
-			36512
-		};
-		qn = qn1;
-		npcString = new NpcStringId[]
-		{
-			NpcStringId.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED
-		};
-		registerKillIds();
+		addAttackId(NPC_IDS);
+	}
+	
+	@Override
+	public int getTerritoryIdForThisNPCId(int npcId)
+	{
+		return 81 + ((npcId - 36510) / 6);
 	}
 }

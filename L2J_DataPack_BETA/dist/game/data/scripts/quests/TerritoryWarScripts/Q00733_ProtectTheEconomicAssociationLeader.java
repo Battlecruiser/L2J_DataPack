@@ -19,37 +19,32 @@
 package quests.TerritoryWarScripts;
 
 /**
- * Protect the Religious Association Leader (732)
+ * Protect the Economic Association Leader (733)
  * @author Gigiikun
  */
-public class ProtectTheReligious extends TerritoryWarSuperClass
+public final class Q00733_ProtectTheEconomicAssociationLeader extends TerritoryWarSuperClass
 {
-	public static String qn1 = "732_ProtecttheReligiousAssociationLeader";
-	public static int qnu = 732;
-	public static String qna = "Protect the Religious Association Leader";
-	
-	public ProtectTheReligious()
+	public Q00733_ProtectTheEconomicAssociationLeader()
 	{
-		super(qnu, qn1, qna);
+		super(733, Q00733_ProtectTheEconomicAssociationLeader.class.getSimpleName(), "Protect the Economic Association Leader");
 		NPC_IDS = new int[]
 		{
-			36510,
-			36516,
-			36522,
-			36528,
-			36534,
-			36540,
-			36546,
-			36552,
-			36558
+			36513,
+			36519,
+			36525,
+			36531,
+			36537,
+			36543,
+			36549,
+			36555,
+			36561
 		};
-		qn = qn1;
 		addAttackId(NPC_IDS);
 	}
 	
 	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
+	public int getTerritoryIdForThisNPCId(int npcId)
 	{
-		return 81 + ((npcid - 36510) / 6);
+		return 81 + ((npcId - 36513) / 6);
 	}
 }

@@ -18,38 +18,40 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 /**
- * Protect the Military Association Leader (731)
+ * Weaken the magic! (736)
  * @author Gigiikun
  */
-public class ProtectTheMilitary extends TerritoryWarSuperClass
+public final class Q00736_WeakenTheMagic extends TerritoryWarSuperClass
 {
-	public static String qn1 = "731_ProtecttheMilitaryAssociationLeader";
-	public static int qnu = 731;
-	public static String qna = "Protect the Military Association Leader";
-	
-	public ProtectTheMilitary()
+	public Q00736_WeakenTheMagic()
 	{
-		super(qnu, qn1, qna);
-		NPC_IDS = new int[]
+		super(736, Q00736_WeakenTheMagic.class.getSimpleName(), "Weaken the magic");
+		CLASS_IDS = new int[]
 		{
-			36508,
-			36514,
-			36520,
-			36526,
-			36532,
-			36538,
-			36544,
-			36550,
-			36556
+			40,
+			110,
+			27,
+			103,
+			13,
+			95,
+			12,
+			94,
+			41,
+			111,
+			28,
+			104,
+			14,
+			96
 		};
-		qn = qn1;
-		addAttackId(NPC_IDS);
-	}
-	
-	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
-		return 81 + ((npcid - 36508) / 6);
+		RANDOM_MIN = 10;
+		RANDOM_MAX = 15;
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_ENEMIES,
+			NpcStringId.YOU_WEAKENED_THE_ENEMYS_MAGIC
+		};
 	}
 }

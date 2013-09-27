@@ -21,37 +21,32 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * For the Sake of the Territory - Oren (720)
+ * For the Sake of the Territory - Aden (721)
  * @author Gigiikun
  */
-public class TheTerritoryOren extends TerritoryWarSuperClass
+public final class Q00721_ForTheSakeOfTheTerritoryAden extends TerritoryWarSuperClass
 {
-	public static String qn1 = "720_FortheSakeoftheTerritoryOren";
-	public static int qnu = 720;
-	public static String qna = "For the Sake of the Territory - Oren";
-	
-	public TheTerritoryOren()
+	public Q00721_ForTheSakeOfTheTerritoryAden()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36502;
-		TERRITORY_ID = 84;
+		super(721, Q00721_ForTheSakeOfTheTerritoryAden.class.getSimpleName(), "For the Sake of the Territory - Aden");
+		CATAPULT_ID = 36503;
+		TERRITORY_ID = 85;
 		LEADER_IDS = new int[]
 		{
-			36526,
-			36528,
-			36531,
-			36594
+			36532,
+			36534,
+			36537,
+			36595
 		};
 		GUARD_IDS = new int[]
 		{
-			36527,
-			36529,
-			36530
+			36533,
+			36535,
+			36536
 		};
-		qn = qn1;
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.THE_CATAPULT_OF_OREN_HAS_BEEN_DESTROYED
+			NpcStringId.THE_CATAPULT_OF_ADEN_HAS_BEEN_DESTROYED
 		};
 		registerKillIds();
 	}

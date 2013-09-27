@@ -18,38 +18,36 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 /**
- * Protect the Economic Association Leader (733)
+ * For the Sake of the Territory - Rune (724)
  * @author Gigiikun
  */
-public class ProtectTheEconomic extends TerritoryWarSuperClass
+public final class Q00724_ForTheSakeOfTheTerritoryRune extends TerritoryWarSuperClass
 {
-	public static String qn1 = "733_ProtecttheEconomicAssociationLeader";
-	public static int qnu = 733;
-	public static String qna = "Protect the Economic Association Leader";
-	
-	public ProtectTheEconomic()
+	public Q00724_ForTheSakeOfTheTerritoryRune()
 	{
-		super(qnu, qn1, qna);
-		NPC_IDS = new int[]
+		super(724, Q00724_ForTheSakeOfTheTerritoryRune.class.getSimpleName(), "For the Sake of the Territory - Rune");
+		CATAPULT_ID = 36506;
+		TERRITORY_ID = 88;
+		LEADER_IDS = new int[]
 		{
-			36513,
-			36519,
-			36525,
-			36531,
-			36537,
-			36543,
-			36549,
+			36550,
+			36552,
 			36555,
-			36561
+			36598
 		};
-		qn = qn1;
-		addAttackId(NPC_IDS);
-	}
-	
-	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
-		return 81 + ((npcid - 36513) / 6);
+		GUARD_IDS = new int[]
+		{
+			36551,
+			36553,
+			36554
+		};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.THE_CATAPULT_OF_RUNE_HAS_BEEN_DESTROYED
+		};
+		registerKillIds();
 	}
 }
