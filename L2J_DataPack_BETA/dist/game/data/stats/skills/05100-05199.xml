@@ -418,6 +418,7 @@
 		</for>
 	</skill>
 	<skill id="5123" levels="1" name="Maximum Defense">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -426,8 +427,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<add order="0x40" stat="pDef" val="1000" />
@@ -437,11 +437,12 @@
 		</for>
 	</skill>
 	<skill id="5124" levels="1" name="Anti-Music">
+		<!-- Confirmed CT2.5 -->
 		<set name="affectRange" val="200" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DispelBySlotProbability" noicon="1" val="0">
 				<param dispel="DANCE_OF_AQUA_GUARD;DANCE_OF_CONCENTRATION;DANCE_OF_CONCENTRATION;DANCE_OF_EARTH_GUARD;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_LIGHT;DANCE_OF_MYSTIC;DANCE_OF_PROTECTION;DANCE_OF_SHADOW;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_FLAME_GUARD;SONG_OF_HUNTER;SONG_OF_INVOCATION;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_STORM_GUARD;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BLADESTORM;DANCE_OF_ALIGNMENT;SONG_OF_ELEMENTAL;SONG_OF_WINDSTORM" rate="100" />
@@ -449,6 +450,7 @@
 		</for>
 	</skill>
 	<skill id="5125" levels="1" name="Maximum Resist Status">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -457,7 +459,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<sub order="0x40" stat="debuffVuln" val="60" />
@@ -465,6 +467,7 @@
 		</for>
 	</skill>
 	<skill id="5126" levels="1" name="Maximum Recovery">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -473,7 +476,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="regHp" val="1.4" />
@@ -482,6 +485,7 @@
 		</for>
 	</skill>
 	<skill id="5127" levels="1" name="Recover Force">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -490,8 +494,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="CONT" /> <!-- FIXME: This is not retail like -->
-		<set name="targetType" val="AURA" /> <!-- FIXME: Aura Friendly ? -->
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.2" />
@@ -500,6 +503,7 @@
 		</for>
 	</skill>
 	<skill id="5128" levels="1" name="Maximize long-range weapon use">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -508,7 +512,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<mul order="0x30" stat="pAtk" val="1.2">
@@ -521,6 +525,7 @@
 		</for>
 	</skill>
 	<skill id="5129" levels="1" name="Smokescreen">
+		<!-- Confirmed CT2.5 -->
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="7" />
 		<set name="abnormalType" val="COMBINATION" />
@@ -529,7 +534,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
+		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff" val="0">
 				<add order="0x40" stat="rEvas" val="15" />
@@ -541,28 +546,24 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5131" levels="1" name="Tsunami">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5132" levels="1" name="Cyclone">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5133" levels="1" name="Gehenna">
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="CONT" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="5134" levels="1" name="Anti-Summoning Field">
