@@ -41,14 +41,12 @@ public class Continuous implements ISkillHandler
 	{
 		L2SkillType.BUFF,
 		L2SkillType.DEBUFF,
-		L2SkillType.CONT,
 	};
 	
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
 		boolean acted = true;
-		
 		L2PcInstance player = null;
 		if (activeChar.isPlayer())
 		{
@@ -122,7 +120,7 @@ public class Continuous implements ISkillHandler
 				// if this is a debuff let the duel manager know about it
 				// so the debuff can be removed after the duel
 				// (player & target must be in the same duel)
-				if (target.isPlayer() && target.getActingPlayer().isInDuel() && ((skill.getSkillType() == L2SkillType.DEBUFF) || (skill.getSkillType() == L2SkillType.BUFF)) && (player != null) && (player.getDuelId() == target.getActingPlayer().getDuelId()))
+				if (target.isPlayer() && target.getActingPlayer().isInDuel() && (player != null) && (player.getDuelId() == target.getActingPlayer().getDuelId()))
 				{
 					DuelManager dm = DuelManager.getInstance();
 					for (L2Effect buff : skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss)))
