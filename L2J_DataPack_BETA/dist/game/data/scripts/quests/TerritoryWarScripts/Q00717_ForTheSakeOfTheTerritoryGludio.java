@@ -18,38 +18,36 @@
  */
 package quests.TerritoryWarScripts;
 
+import com.l2jserver.gameserver.network.NpcStringId;
+
 /**
- * Protect the Territory Catapult! (729)
+ * For the Sake of the Territory - Gludio (717)
  * @author Gigiikun
  */
-public class ProtectTheCatapult extends TerritoryWarSuperClass
+public final class Q00717_ForTheSakeOfTheTerritoryGludio extends TerritoryWarSuperClass
 {
-	public static String qn1 = "729_Protecttheterritorycatapult";
-	public static int qnu = 729;
-	public static String qna = "Protect the territory catapult";
-	
-	public ProtectTheCatapult()
+	public Q00717_ForTheSakeOfTheTerritoryGludio()
 	{
-		super(qnu, qn1, qna);
-		NPC_IDS = new int[]
+		super(717, Q00717_ForTheSakeOfTheTerritoryGludio.class.getSimpleName(), "For the Sake of the Territory - Gludio");
+		CATAPULT_ID = 36499;
+		TERRITORY_ID = 81;
+		LEADER_IDS = new int[]
 		{
-			36499,
-			36500,
-			36501,
-			36502,
-			36503,
-			36504,
-			36505,
-			36506,
-			36507
+			36508,
+			36510,
+			36513,
+			36591
 		};
-		qn = qn1;
-		addAttackId(NPC_IDS);
-	}
-	
-	@Override
-	public int getTerritoryIdForThisNPCId(int npcid)
-	{
-		return npcid - 36418;
+		GUARD_IDS = new int[]
+		{
+			36509,
+			36511,
+			36512
+		};
+		npcString = new NpcStringId[]
+		{
+			NpcStringId.THE_CATAPULT_OF_GLUDIO_HAS_BEEN_DESTROYED
+		};
+		registerKillIds();
 	}
 }

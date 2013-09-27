@@ -21,42 +21,33 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * Weaken the magic! (736)
+ * For the Sake of the Territory - Giran (719)
  * @author Gigiikun
  */
-public class KillTheWizards extends TerritoryWarSuperClass
+public final class Q00719_ForTheSakeOfTheTerritoryGiran extends TerritoryWarSuperClass
 {
-	public static String qn1 = "736_Weakenmagic";
-	public static int qnu = 736;
-	public static String qna = "Weaken magic";
-	
-	public KillTheWizards()
+	public Q00719_ForTheSakeOfTheTerritoryGiran()
 	{
-		super(qnu, qn1, qna);
-		CLASS_IDS = new int[]
+		super(719, Q00719_ForTheSakeOfTheTerritoryGiran.class.getSimpleName(), "For the Sake of the Territory - Giran");
+		CATAPULT_ID = 36501;
+		TERRITORY_ID = 83;
+		LEADER_IDS = new int[]
 		{
-			40,
-			110,
-			27,
-			103,
-			13,
-			95,
-			12,
-			94,
-			41,
-			111,
-			28,
-			104,
-			14,
-			96
+			36520,
+			36522,
+			36525,
+			36593
 		};
-		qn = qn1;
-		RANDOM_MIN = 10;
-		RANDOM_MAX = 15;
+		GUARD_IDS = new int[]
+		{
+			36521,
+			36523,
+			36524
+		};
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_ENEMIES,
-			NpcStringId.YOU_WEAKENED_THE_ENEMYS_MAGIC
+			NpcStringId.THE_CATAPULT_OF_GIRAN_HAS_BEEN_DESTROYED
 		};
+		registerKillIds();
 	}
 }

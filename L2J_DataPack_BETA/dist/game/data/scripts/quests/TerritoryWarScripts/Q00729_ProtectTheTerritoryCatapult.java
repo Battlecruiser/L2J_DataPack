@@ -18,41 +18,33 @@
  */
 package quests.TerritoryWarScripts;
 
-import com.l2jserver.gameserver.network.NpcStringId;
-
 /**
- * For the Sake of the Territory - Aden (721)
+ * Protect the Territory Catapult! (729)
  * @author Gigiikun
  */
-public class TheTerritoryAden extends TerritoryWarSuperClass
+public final class Q00729_ProtectTheTerritoryCatapult extends TerritoryWarSuperClass
 {
-	public static String qn1 = "721_FortheSakeoftheTerritoryAden";
-	public static int qnu = 721;
-	public static String qna = "For the Sake of the Territory - Aden";
-	
-	public TheTerritoryAden()
+	public Q00729_ProtectTheTerritoryCatapult()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36503;
-		TERRITORY_ID = 85;
-		LEADER_IDS = new int[]
+		super(729, Q00729_ProtectTheTerritoryCatapult.class.getSimpleName(), "Protect the Territory Catapult");
+		NPC_IDS = new int[]
 		{
-			36532,
-			36534,
-			36537,
-			36595
+			36499,
+			36500,
+			36501,
+			36502,
+			36503,
+			36504,
+			36505,
+			36506,
+			36507
 		};
-		GUARD_IDS = new int[]
-		{
-			36533,
-			36535,
-			36536
-		};
-		qn = qn1;
-		npcString = new NpcStringId[]
-		{
-			NpcStringId.THE_CATAPULT_OF_ADEN_HAS_BEEN_DESTROYED
-		};
-		registerKillIds();
+		addAttackId(NPC_IDS);
+	}
+	
+	@Override
+	public int getTerritoryIdForThisNPCId(int npcId)
+	{
+		return npcId - 36418;
 	}
 }

@@ -21,32 +21,33 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * Destroy Key Targets (738)
+ * For the Sake of the Territory - Schuttgart (725)
  * @author Gigiikun
  */
-public class KillTheKeyTargets extends TerritoryWarSuperClass
+public final class Q00725_ForTheSakeOfTheTerritorySchuttgart extends TerritoryWarSuperClass
 {
-	public static String qn1 = "738_DestroyKeyTargets";
-	public static int qnu = 738;
-	public static String qna = "Destroy Key Targets";
-	
-	public KillTheKeyTargets()
+	public Q00725_ForTheSakeOfTheTerritorySchuttgart()
 	{
-		super(qnu, qn1, qna);
-		CLASS_IDS = new int[]
+		super(725, Q00725_ForTheSakeOfTheTerritorySchuttgart.class.getSimpleName(), "For the Sake of the Territory - Schuttgart");
+		CATAPULT_ID = 36507;
+		TERRITORY_ID = 89;
+		LEADER_IDS = new int[]
 		{
-			51,
-			115,
-			57,
-			118
+			36556,
+			36558,
+			36561,
+			36599
 		};
-		qn = qn1;
-		RANDOM_MIN = 3;
-		RANDOM_MAX = 8;
+		GUARD_IDS = new int[]
+		{
+			36557,
+			36559,
+			36560
+		};
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_WARSMITHS_AND_OVERLORDS,
-			NpcStringId.YOU_DESTROYED_THE_ENEMYS_PROFESSIONALS
+			NpcStringId.THE_CATAPULT_OF_SCHUTTGART_HAS_BEEN_DESTROYED
 		};
+		registerKillIds();
 	}
 }

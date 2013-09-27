@@ -21,37 +21,32 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * For the Sake of the Territory - Goddard (723)
+ * For the Sake of the Territory - Innadril (722)
  * @author Gigiikun
  */
-public class TheTerritoryGoddard extends TerritoryWarSuperClass
+public final class Q00722_ForTheSakeOfTheTerritoryInnadril extends TerritoryWarSuperClass
 {
-	public static String qn1 = "723_FortheSakeoftheTerritoryGoddard";
-	public static int qnu = 723;
-	public static String qna = "For the Sake of the Territory - Goddard";
-	
-	public TheTerritoryGoddard()
+	public Q00722_ForTheSakeOfTheTerritoryInnadril()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36505;
-		TERRITORY_ID = 87;
+		super(722, Q00722_ForTheSakeOfTheTerritoryInnadril.class.getSimpleName(), "For the Sake of the Territory - Innadril");
+		CATAPULT_ID = 36504;
+		TERRITORY_ID = 86;
 		LEADER_IDS = new int[]
 		{
-			36544,
-			36546,
-			36549,
-			36597
+			36538,
+			36540,
+			36543,
+			36596
 		};
 		GUARD_IDS = new int[]
 		{
-			36545,
-			36547,
-			36548
+			36539,
+			36541,
+			36542
 		};
-		qn = qn1;
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.THE_CATAPULT_OF_GODDARD_HAS_BEEN_DESTROYED
+			NpcStringId.THE_CATAPULT_OF_INNADRIL_HAS_BEEN_DESTROYED
 		};
 		registerKillIds();
 	}

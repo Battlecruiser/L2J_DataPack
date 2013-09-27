@@ -18,41 +18,33 @@
  */
 package quests.TerritoryWarScripts;
 
-import com.l2jserver.gameserver.network.NpcStringId;
-
 /**
- * For the Sake of the Territory - Rune (724)
+ * Protect the Supplies Safe (730)
  * @author Gigiikun
  */
-public class TheTerritoryRune extends TerritoryWarSuperClass
+public final class Q00730_ProtectTheSuppliesSafe extends TerritoryWarSuperClass
 {
-	public static String qn1 = "724_FortheSakeoftheTerritoryRune";
-	public static int qnu = 724;
-	public static String qna = "For the Sake of the Territory - Rune";
-	
-	public TheTerritoryRune()
+	public Q00730_ProtectTheSuppliesSafe()
 	{
-		super(qnu, qn1, qna);
-		CATAPULT_ID = 36506;
-		TERRITORY_ID = 88;
-		LEADER_IDS = new int[]
+		super(730, Q00730_ProtectTheSuppliesSafe.class.getSimpleName(), "Protect the Supplies Safe");
+		NPC_IDS = new int[]
 		{
-			36550,
-			36552,
-			36555,
-			36598
+			36591,
+			36592,
+			36593,
+			36594,
+			36595,
+			36596,
+			36597,
+			36598,
+			36599
 		};
-		GUARD_IDS = new int[]
-		{
-			36551,
-			36553,
-			36554
-		};
-		qn = qn1;
-		npcString = new NpcStringId[]
-		{
-			NpcStringId.THE_CATAPULT_OF_RUNE_HAS_BEEN_DESTROYED
-		};
-		registerKillIds();
+		addAttackId(NPC_IDS);
+	}
+	
+	@Override
+	public int getTerritoryIdForThisNPCId(int npcId)
+	{
+		return npcId - 36510;
 	}
 }

@@ -21,36 +21,33 @@ package quests.TerritoryWarScripts;
 import com.l2jserver.gameserver.network.NpcStringId;
 
 /**
- * Pierce through a Shield! (734)
+ * For the Sake of the Territory - Goddard (723)
  * @author Gigiikun
  */
-public class KillTheKnights extends TerritoryWarSuperClass
+public final class Q00723_ForTheSakeOfTheTerritoryGoddard extends TerritoryWarSuperClass
 {
-	public static String qn1 = "734_Piercethroughashield";
-	public static int qnu = 734;
-	public static String qna = "Pierce through a shield";
-	
-	public KillTheKnights()
+	public Q00723_ForTheSakeOfTheTerritoryGoddard()
 	{
-		super(qnu, qn1, qna);
-		CLASS_IDS = new int[]
+		super(723, Q00723_ForTheSakeOfTheTerritoryGoddard.class.getSimpleName(), "For the Sake of the Territory - Goddard");
+		CATAPULT_ID = 36505;
+		TERRITORY_ID = 87;
+		LEADER_IDS = new int[]
 		{
-			6,
-			91,
-			5,
-			90,
-			20,
-			99,
-			33,
-			106
+			36544,
+			36546,
+			36549,
+			36597
 		};
-		qn = qn1;
-		RANDOM_MIN = 10;
-		RANDOM_MAX = 15;
+		GUARD_IDS = new int[]
+		{
+			36545,
+			36547,
+			36548
+		};
 		npcString = new NpcStringId[]
 		{
-			NpcStringId.YOU_HAVE_DEFEATED_S2_OF_S1_KNIGHTS,
-			NpcStringId.YOU_WEAKENED_THE_ENEMYS_DEFENSE
+			NpcStringId.THE_CATAPULT_OF_GODDARD_HAS_BEEN_DESTROYED
 		};
+		registerKillIds();
 	}
 }
