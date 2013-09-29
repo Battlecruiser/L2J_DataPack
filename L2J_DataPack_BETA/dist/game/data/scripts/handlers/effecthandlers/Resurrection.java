@@ -37,7 +37,7 @@ public class Resurrection extends L2Effect
 	public Resurrection(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_power = template.getParameters().getInt("power", 0);
+		_power = template.hasParameters() ? template.getParameters().getInt("power", 0) : 0;
 	}
 	
 	@Override
