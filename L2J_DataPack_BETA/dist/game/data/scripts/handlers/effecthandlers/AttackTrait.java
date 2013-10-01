@@ -38,7 +38,7 @@ public class AttackTrait extends L2Effect
 {
 	private static final Logger _log = Logger.getLogger(AttackTrait.class.getName());
 	
-	private final Map<TraitType, Float> _attackTraits = new HashMap<>();
+	private final Map<TraitType, Integer> _attackTraits = new HashMap<>();
 	
 	/**
 	 * @param env
@@ -54,12 +54,12 @@ public class AttackTrait extends L2Effect
 				try
 				{
 					final TraitType traitType = TraitType.valueOf(param.getKey());
-					final float value = (Float.parseFloat((String) param.getValue()) + 100) / 100;
+					final int value = Integer.parseInt((String) param.getValue());
 					_attackTraits.put(traitType, value);
 				}
 				catch (NumberFormatException e)
 				{
-					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be float value " + param.getValue() + " found.");
+					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be int value " + param.getValue() + " found.");
 				}
 				catch (Exception e)
 				{
@@ -85,9 +85,14 @@ public class AttackTrait extends L2Effect
 		final CharStat charStat = getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
 		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
+			for (Entry<TraitType, Integer> trait : _attackTraits.entrySet())
 			{
-				charStat.getAttackTraits()[trait.getKey().getId()] *= trait.getValue();
+				if (trait.getValue() == 0)
+				{
+					continue;
+				}
+				
+				charStat.getAttackTraits()[trait.getKey().getId()] *= (trait.getValue() + 100) / 100f;
 				charStat.getAttackTraitsCount()[trait.getKey().getId()]++;
 			}
 		}
@@ -100,9 +105,14 @@ public class AttackTrait extends L2Effect
 		final CharStat charStat = getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
 		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
+			for (Entry<TraitType, Integer> trait : _attackTraits.entrySet())
 			{
-				charStat.getAttackTraits()[trait.getKey().getId()] /= trait.getValue();
+				if (trait.getValue() == 0)
+				{
+					continue;
+				}
+				
+				charStat.getAttackTraits()[trait.getKey().getId()] /= (trait.getValue() + 100) / 100f;
 				charStat.getAttackTraitsCount()[trait.getKey().getId()]--;
 			}
 		}

@@ -38,7 +38,7 @@ public class DefenceTrait extends L2Effect
 {
 	private static final Logger _log = Logger.getLogger(DefenceTrait.class.getName());
 	
-	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
+	private final Map<TraitType, Integer> _defenceTraits = new HashMap<>();
 	
 	/**
 	 * @param env
@@ -54,12 +54,12 @@ public class DefenceTrait extends L2Effect
 				try
 				{
 					final TraitType traitType = TraitType.valueOf(param.getKey());
-					final float value = (Float.parseFloat((String) param.getValue()) + 100) / 100;
+					final int value = Integer.parseInt((String) param.getValue());
 					_defenceTraits.put(traitType, value);
 				}
 				catch (NumberFormatException e)
 				{
-					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be float value " + param.getValue() + " found.");
+					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be int value " + param.getValue() + " found.");
 				}
 				catch (Exception e)
 				{
@@ -85,11 +85,15 @@ public class DefenceTrait extends L2Effect
 		final CharStat charStat = getEffected().getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
+			for (Entry<TraitType, Integer> trait : _defenceTraits.entrySet())
 			{
-				if (trait.getValue() < 2.0f)
+				if (trait.getValue() == 0)
 				{
-					charStat.getDefenceTraits()[trait.getKey().getId()] *= trait.getValue();
+					continue;
+				}
+				else if (trait.getValue() < 100)
+				{
+					charStat.getDefenceTraits()[trait.getKey().getId()] *= (trait.getValue() + 100) / 100f;
 					charStat.getDefenceTraitsCount()[trait.getKey().getId()]++;
 				}
 				else
@@ -107,11 +111,15 @@ public class DefenceTrait extends L2Effect
 		final CharStat charStat = getEffected().getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
+			for (Entry<TraitType, Integer> trait : _defenceTraits.entrySet())
 			{
-				if (trait.getValue() < 2.0f)
+				if (trait.getValue() == 0)
 				{
-					charStat.getDefenceTraits()[trait.getKey().getId()] /= trait.getValue();
+					continue;
+				}
+				else if (trait.getValue() < 100)
+				{
+					charStat.getDefenceTraits()[trait.getKey().getId()] /= (trait.getValue() + 100) / 100f;
 					charStat.getDefenceTraitsCount()[trait.getKey().getId()]--;
 				}
 				else
