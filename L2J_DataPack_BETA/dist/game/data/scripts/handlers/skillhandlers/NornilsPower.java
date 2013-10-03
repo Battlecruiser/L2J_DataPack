@@ -53,7 +53,7 @@ public class NornilsPower implements ISkillHandler
 		
 		if ((world != null) && (world.getInstanceId() == instanceId) && (world.getTemplateId() == 11))
 		{
-			if (activeChar.isInsideRadius(-107393, 83677, 100, true))
+			if (activeChar.isInsideRadius(-107393, 83677, 0, 100, false, true))
 			{
 				activeChar.destroyItemByItemId("NornilsPower", 9713, 1, activeChar, true);
 				L2DoorInstance door = InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(16200010);
