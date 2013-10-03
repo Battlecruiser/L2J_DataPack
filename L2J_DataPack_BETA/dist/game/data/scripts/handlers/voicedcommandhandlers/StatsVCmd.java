@@ -67,8 +67,8 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().kills.size() * 50), "<html><body>" + "<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">", pc.getName(), "</font><br>Total kills <font color=\"FF0000\">", String.valueOf(pc.getEventStatus().kills.size()), "</font><br><br>Detailed list: <br>");
-		for (L2PcInstance plr : pc.getEventStatus().kills)
+		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().getKills().size() * 50), "<html><body>" + "<center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">", pc.getName(), "</font><br>Total kills <font color=\"FF0000\">", String.valueOf(pc.getEventStatus().getKills().size()), "</font><br><br>Detailed list: <br>");
+		for (L2PcInstance plr : pc.getEventStatus().getKills())
 		{
 			StringUtil.append(replyMSG, "<font color=\"FF0000\">", plr.getName(), "</font><br>");
 		}
