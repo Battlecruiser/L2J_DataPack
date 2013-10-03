@@ -271,8 +271,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 							continue;
 						}
 						
-						player.getEventStatus().eventSitForced = !player.getEventStatus().eventSitForced;
-						if (player.getEventStatus().eventSitForced)
+						player.getEventStatus().setSitForced(!player.getEventStatus().isSitForced());
+						if (player.getEventStatus().isSitForced())
 						{
 							player.sitDown();
 						}
@@ -593,7 +593,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 			}
 			else if (type.equalsIgnoreCase("kills") && (player.getEventStatus() != null))
 			{
-				num = n * player.getEventStatus().kills.size();
+				num = n * player.getEventStatus().getKills().size();
 			}
 			else
 			{
