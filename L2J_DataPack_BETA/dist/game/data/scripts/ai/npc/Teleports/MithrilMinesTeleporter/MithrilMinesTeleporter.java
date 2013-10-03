@@ -66,17 +66,17 @@ public class MithrilMinesTeleporter extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.isInsideRadius(173147, -173762, L2Npc.INTERACTION_DISTANCE, true))
+		if (npc.isInsideRadius(173147, -173762, 0, L2Npc.INTERACTION_DISTANCE, false, true))
 		{
 			return "32652-01.htm";
 		}
 		
-		if (npc.isInsideRadius(181941, -174614, L2Npc.INTERACTION_DISTANCE, true))
+		if (npc.isInsideRadius(181941, -174614, 0, L2Npc.INTERACTION_DISTANCE, false, true))
 		{
 			return "32652-02.htm";
 		}
 		
-		if (npc.isInsideRadius(179560, -182956, L2Npc.INTERACTION_DISTANCE, true))
+		if (npc.isInsideRadius(179560, -182956, 0, L2Npc.INTERACTION_DISTANCE, false, true))
 		{
 			return "32652-03.htm";
 		}

@@ -88,7 +88,7 @@ public class Q00423_TakeYourBestShot extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.isInsideRadius(96782, 85918, 100, true))
+		if (npc.isInsideRadius(96782, 85918, 0, 100, false, true))
 		{
 			return "32740-ugoros.html";
 		}
