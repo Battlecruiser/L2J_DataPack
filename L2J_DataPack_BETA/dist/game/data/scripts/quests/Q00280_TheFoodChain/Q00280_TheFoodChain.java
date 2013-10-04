@@ -95,6 +95,7 @@ public final class Q00280_TheFoodChain extends Quest
 			case "32175-03.htm":
 			{
 				st.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "32175-06.html":
