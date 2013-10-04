@@ -181,7 +181,7 @@ public final class Q00281_HeadForTheHills extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "32173-01.htm" : "32173-02.html";
+				htmltext = (player.getLevel() >= MIN_LVL) ? "32173-01.htm" : "32173-02.htm";
 				break;
 			}
 			case State.STARTED:
