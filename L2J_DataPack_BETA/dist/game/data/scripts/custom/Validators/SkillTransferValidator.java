@@ -21,6 +21,7 @@ package custom.Validators;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.datatables.SkillTreesData;
+import com.l2jserver.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jserver.gameserver.model.L2SkillLearn;
 import com.l2jserver.gameserver.model.PcCondOverride;
 import com.l2jserver.gameserver.model.actor.L2Npc;
@@ -117,7 +118,7 @@ public final class SkillTransferValidator extends L2Script
 								if (count < 0)
 								{
 									final String className = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-									Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, 1);
+									Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " has too many transfered skills or items, skill:" + s.getName() + " (" + sk.getId() + "/" + sk.getLevel() + "), class:" + className, IllegalActionPunishmentType.BROADCAST);
 									if (Config.SKILL_CHECK_REMOVE)
 									{
 										player.removeSkill(sk);
