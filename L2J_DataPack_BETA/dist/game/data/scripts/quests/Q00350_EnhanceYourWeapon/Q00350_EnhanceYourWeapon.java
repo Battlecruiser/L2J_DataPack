@@ -32,9 +32,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jserver.Config;
+import com.l2jserver.gameserver.model.AbsorberInfo;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.actor.L2Attackable.AbsorberInfo;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
@@ -427,13 +427,13 @@ public class Q00350_EnhanceYourWeapon extends Quest
 			// Fail if the killer isn't in the _absorbersList of this L2Attackable and mob is not boss
 			AbsorberInfo ai = mob.getAbsorbersList().get(killer.getObjectId());
 			boolean isSuccess = true;
-			if ((ai == null) || (ai._objId != killer.getObjectId()))
+			if ((ai == null) || (ai.getObjectId() != killer.getObjectId()))
 			{
 				isSuccess = false;
 			}
 			
 			// Check if the soul crystal was used when HP of this L2Attackable wasn't higher than half of it
-			if ((ai != null) && (ai._absorbedHP > (mob.getMaxHp() / 2.0)))
+			if ((ai != null) && (ai.getAbsorbedHp() > (mob.getMaxHp() / 2.0)))
 			{
 				isSuccess = false;
 			}
