@@ -146,7 +146,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param SHOCK="50" />
@@ -172,7 +176,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param HOLD="50" />
@@ -198,7 +206,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
+				<param targetType="SELF" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param PARALYZE="50" />
@@ -223,7 +235,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param BLEED="50" />
@@ -254,7 +270,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param SHOCK="50" />
@@ -283,7 +303,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
+				<param targetType="SELF" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param SHOCK="50" />
@@ -311,7 +335,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5693" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param BLEED="50" />
@@ -341,7 +369,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5694" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
+				<param targetType="ONE" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param PARALYZE="50" />
@@ -368,7 +400,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5691" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
+				<param targetType="SELF" />
 			</effect>
 			<effect name="DefenceTrait" val="0" noicon="1">
 				<param SHOCK="50" />

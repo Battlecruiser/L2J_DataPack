@@ -18,6 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import java.util.logging.Logger;
+
+import com.l2jserver.gameserver.enums.InstanceType;
+import com.l2jserver.gameserver.handler.ITargetTypeHandler;
+import com.l2jserver.gameserver.handler.TargetHandler;
+import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.events.listeners.IDamageReceivedEventListener;
 import com.l2jserver.gameserver.model.effects.EffectTemplate;
@@ -25,6 +31,7 @@ import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.L2Skill;
+import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
@@ -34,30 +41,38 @@ import com.l2jserver.util.Rnd;
  */
 public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEventListener
 {
-	private final int _minLevel;
-	private final int _maxLevel;
+	private static final Logger _log = Logger.getLogger(TriggerSkillByDamage.class.getName());
+	
+	private final int _minAttackerLevel;
+	private final int _maxAttackerLevel;
 	private final int _minDamage;
 	private final int _chance;
 	private final SkillHolder _skill;
+	private final L2TargetType _targetType;
+	private final InstanceType _attackerType;
 	
 	public TriggerSkillByDamage(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_minLevel = template.getParameters().getInt("minLevel", 1);
-		_maxLevel = template.getParameters().getInt("maxLevel", 100);
+		_minAttackerLevel = template.getParameters().getInt("minAttackerLevel", 1);
+		_maxAttackerLevel = template.getParameters().getInt("maxAttackerLevel", 100);
 		_minDamage = template.getParameters().getInt("minDamage", 1);
 		_chance = template.getParameters().getInt("chance", 100);
 		_skill = new SkillHolder(template.getParameters().getInt("skillId"), template.getParameters().getInt("skillLevel", 1));
+		_targetType = template.getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_attackerType = template.getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
 	public TriggerSkillByDamage(Env env, L2Effect effect)
 	{
 		super(env, effect);
-		_minLevel = effect.getEffectTemplate().getParameters().getInt("minLevel", 1);
-		_maxLevel = effect.getEffectTemplate().getParameters().getInt("maxLevel", 100);
+		_minAttackerLevel = effect.getEffectTemplate().getParameters().getInt("minAttackerLevel", 1);
+		_maxAttackerLevel = effect.getEffectTemplate().getParameters().getInt("maxAttackerLevel", 100);
 		_minDamage = effect.getEffectTemplate().getParameters().getInt("minDamage", 1);
 		_chance = effect.getEffectTemplate().getParameters().getInt("chance", 100);
 		_skill = new SkillHolder(effect.getEffectTemplate().getParameters().getInt("skillId"), effect.getEffectTemplate().getParameters().getInt("skillLevel", 1));
+		_targetType = effect.getEffectTemplate().getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_attackerType = effect.getEffectTemplate().getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
 	@Override
@@ -69,10 +84,42 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	@Override
 	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit)
 	{
-		int level = getEffected().getLevel();
-		if (!getEffected().isInvul() && (level >= _minLevel) && (level <= _maxLevel) && (damage >= _minDamage) && (Rnd.get(100) < _chance))
+		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
+		if (targetHandler == null)
 		{
-			_skill.getSkill().getEffects(getEffected(), getEffected());
+			_log.warning("Handler for target type: " + _targetType + " does not exist.");
+			return;
+		}
+		
+		if (attacker == target)
+		{
+			return;
+		}
+		
+		if ((attacker.getLevel() < _minAttackerLevel) || (attacker.getLevel() > _maxAttackerLevel))
+		{
+			return;
+		}
+		
+		if ((damage < _minDamage) || (Rnd.get(100) > _chance) || !attacker.getInstanceType().isType(_attackerType))
+		{
+			return;
+		}
+		
+		final L2Skill triggerSkill = _skill.getSkill();
+		final L2Object[] targets = targetHandler.getTargetList(triggerSkill, target, false, attacker);
+		for (L2Object triggerTarget : targets)
+		{
+			if ((triggerTarget == null) || !triggerTarget.isCharacter())
+			{
+				continue;
+			}
+			
+			final L2Character targetChar = (L2Character) triggerTarget;
+			if (!targetChar.isInvul())
+			{
+				target.makeTriggerCast(triggerSkill, targetChar);
+			}
 		}
 	}
 	

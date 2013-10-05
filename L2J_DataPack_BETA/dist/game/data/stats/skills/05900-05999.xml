@@ -1362,7 +1362,11 @@
 		<for>
 			<effect name="MagicalAttack" noicon="1" val="0" />
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minLevel="1" maxLevel="100" chance="90" skillId="5902" />
+				<param attackerType="L2Attackable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="90" />
+				<param skillId="5902" skillLevel="1" /> <!-- NPC Trigger Target Cancel -->
+				<param targetType="SELF" />
 			</effect>
 			<effect name="Mute" noicon="1" val="0" />
 			<effect name="PhysicalMute" noicon="1" val="0" />

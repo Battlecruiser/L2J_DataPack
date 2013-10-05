@@ -1366,7 +1366,11 @@
 		<for>
 			<mul order="0x30" stat="mDef" val="1.15" />
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="300" chance="20" skillId="5556" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="300" />
+				<param chance="20" />
+				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -1382,7 +1386,11 @@
 			<add order="0x40" stat="windRes" val="20" />
 			<add order="0x40" stat="earthRes" val="20" />
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="20" skillId="5556" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="20" />
+				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -1396,7 +1404,11 @@
 			<add order="0x40" stat="holyRes" val="20" />
 			<add order="0x40" stat="darkRes" val="20" />
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="20" skillId="5556" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="20" />
+				<param skillId="5556" skillLevel="1" /> <!-- Protection Power -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -1489,7 +1501,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="8" skillId="5561" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="8" />
+				<param skillId="5561" skillLevel="1" /> <!-- Seed of Revenge -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="pAtk" val="100" />
 			</effect>
 		</for>
@@ -1652,7 +1668,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="5" skillId="5565" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="5" />
+				<param skillId="5565" skillLevel="1" /> <!-- Expose Weak Point -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -2066,7 +2086,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="20" skillId="5562" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="5562" skillLevel="1" /> <!-- Spirit of Phoenix -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="pDef" val="200" />
 			</effect>
 		</for>
@@ -2126,7 +2150,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="20" skillId="5563" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="5563" skillLevel="1" /> <!-- Eva's Will -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="mDef" val="200" />
 			</effect>
 		</for>
@@ -2181,7 +2209,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="20" skillId="5564" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="20" />
+				<param skillId="5564" skillLevel="1" /> <!-- Pain of Shillien -->
+				<param targetType="SELF" />
 				<mul order="0x30" stat="cAtk" val="1.1" />
 			</effect>
 		</for>
@@ -2305,7 +2337,11 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param chance="10" skillId="5600" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="10" />
+				<param skillId="5600" skillLevel="1" /> <!-- Betrayal Mark -->
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>

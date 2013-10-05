@@ -859,7 +859,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="2" skillId="5573" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5573" skillLevel="1" /> <!-- Knight Ability - Defense -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -894,7 +898,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="2" skillId="5576" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5576" skillLevel="1" /> <!-- Enchanter Ability - Barrier -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>

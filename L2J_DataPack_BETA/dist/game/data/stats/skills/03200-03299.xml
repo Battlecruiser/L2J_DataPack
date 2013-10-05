@@ -169,7 +169,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5146" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5146" skillLevel="#triggeredLevel" /> <!-- Heal -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -183,7 +187,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5147" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5147" skillLevel="#triggeredLevel" /> <!-- Blessed Body -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -197,7 +205,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5148" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5148" skillLevel="#triggeredLevel" /> <!-- Prayer -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -211,7 +223,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5149" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5149" skillLevel="#triggeredLevel" /> <!-- Recharge -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -225,7 +241,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5150" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5150" skillLevel="#triggeredLevel" /> <!-- Blessed Soul -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -239,7 +259,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5151" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5151" skillLevel="#triggeredLevel" /> <!-- Mana Gain -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -253,7 +277,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5152" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5152" skillLevel="#triggeredLevel" /> <!-- Ritual -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -267,7 +295,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5153" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5153" skillLevel="#triggeredLevel" /> <!-- Cheer -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -281,7 +313,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5154" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5154" skillLevel="#triggeredLevel" /> <!-- Might -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -295,7 +331,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5156" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5156" skillLevel="#triggeredLevel" /> <!-- Empower -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -308,7 +348,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5157" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5157" skillLevel="#triggeredLevel" /> <!-- Duel Might -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -322,7 +366,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5158" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5158" skillLevel="#triggeredLevel" /> <!-- Shield -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -336,7 +384,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5159" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5159" skillLevel="#triggeredLevel" /> <!-- Magic Barrier -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -350,7 +402,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5160" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5160" skillLevel="#triggeredLevel" /> <!-- Duel Weakness -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -364,7 +420,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5161" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5161" skillLevel="#triggeredLevel" /> <!-- Agility -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -378,7 +438,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5162" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5162" skillLevel="#triggeredLevel" /> <!-- Guidance -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -392,7 +456,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5163" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5163" skillLevel="#triggeredLevel" /> <!-- Focus -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -406,7 +474,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5164" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5164" skillLevel="#triggeredLevel" /> <!-- Wild Magic -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -420,7 +492,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="1" skillId="5165" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="1" />
+				<param skillId="5165" skillLevel="#triggeredLevel" /> <!-- Charm -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -434,7 +510,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="2" skillId="5166" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5166" skillLevel="#triggeredLevel" /> <!-- Slow -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -448,7 +528,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5167" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5167" skillLevel="#triggeredLevel" /> <!-- Winter -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -462,7 +546,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5168" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5168" skillLevel="#triggeredLevel" /> <!-- Stun -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -476,7 +564,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5169" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5169" skillLevel="#triggeredLevel" /> <!-- Hold -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -490,7 +582,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5170" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5170" skillLevel="#triggeredLevel" /> <!-- Sleep -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -504,7 +600,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5171" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5171" skillLevel="#triggeredLevel" /> <!-- Paralyze -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -518,7 +618,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5172" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5172" skillLevel="#triggeredLevel" /> <!-- Medusa -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -532,7 +636,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5173" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5173" skillLevel="#triggeredLevel" /> <!-- Fear -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -546,7 +654,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5174" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5174" skillLevel="#triggeredLevel" /> <!-- Poison -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -560,7 +672,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5175" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5175" skillLevel="#triggeredLevel" /> <!-- Bleed -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -574,7 +690,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5176" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5176" skillLevel="#triggeredLevel" /> <!-- Silence -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
@@ -588,7 +708,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="4" skillId="5177" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="4" />
+				<param skillId="5177" skillLevel="#triggeredLevel" /> <!-- Doom -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>
