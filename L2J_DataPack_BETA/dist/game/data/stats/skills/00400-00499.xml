@@ -1617,7 +1617,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="80" skillId="5144" />
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="80" />
+				<param skillId="5144" skillLevel="1" /> <!-- Mirage -->
+				<param targetType="ONE" />
 			</effect>
 		</for>
 	</skill>

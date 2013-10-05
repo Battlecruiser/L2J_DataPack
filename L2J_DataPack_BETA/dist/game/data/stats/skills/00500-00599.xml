@@ -1095,7 +1095,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="30" skillId="5425" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5425" skillLevel="1" /> <!-- Iron Shield -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -1229,7 +1233,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="5" skillId="5426" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="5" />
+				<param skillId="5426" skillLevel="1" /> <!-- Counter Chance -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -1241,7 +1249,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="5" skillId="5427" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="5" />
+				<param skillId="5427" skillLevel="1" /> <!-- Counter Rapid Shot -->
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
@@ -1253,7 +1265,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="5" skillId="5428" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="5" />
+				<param skillId="5428" skillLevel="1" /> <!-- Counter Dash -->
+				<param targetType="PARTY" />
 			</effect>
 		</for>
 	</skill>
@@ -1265,7 +1281,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="5" skillId="5429" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="5" />
+				<param skillId="5429" skillLevel="1" /> <!-- Counter Mind -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>

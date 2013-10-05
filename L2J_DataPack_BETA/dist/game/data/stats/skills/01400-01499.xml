@@ -2771,7 +2771,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5448" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5448" skillLevel="1" /> <!-- Oblivion -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -2817,7 +2821,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5449" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5449" skillLevel="1" /> <!-- Weak Constitution -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -2863,7 +2871,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5450" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5450" skillLevel="1" /> <!-- Tin Skin -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -2909,7 +2921,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5451" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5451" skillLevel="1" /> <!-- Enervation -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -2956,7 +2972,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5452" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5452" skillLevel="1" /> <!-- Spite -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -3003,7 +3023,11 @@
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0" abnormalVisualEffect="poison">
-				<param minDamage="100" chance="30" skillId="5453" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5453" skillLevel="1" /> <!-- Mental Impoverish -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -3114,7 +3138,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="2" skillId="5577" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5577" skillLevel="1" /> <!-- Healer Ability - Heal -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -3127,7 +3155,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="2" skillId="5578" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="2" />
+				<param skillId="5578" skillLevel="1" /> <!-- Summoner Ability - Spirit -->
+				<param targetType="SELF" />
 			</effect>
 		</for>
 	</skill>
@@ -3149,7 +3181,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="10" skillId="5567" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="10" />
+				<param skillId="5567" skillLevel="1" /> <!-- Flame Armor -->
+				<param targetType="ONE" />
 				<add order="0x40" stat="fireRes" val="60" />
 			</effect>
 		</for>
@@ -3172,7 +3208,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="10" skillId="5568" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="10" />
+				<param skillId="5568" skillLevel="1" /> <!-- Frost Armor -->
+				<param targetType="ONE" />
 				<add order="0x40" stat="waterRes" val="60" />
 			</effect>
 		</for>
@@ -3195,7 +3235,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param chance="10" skillId="5569" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="1" />
+				<param chance="10" />
+				<param skillId="5569" skillLevel="1" /> <!-- Hurricane Armor -->
+				<param targetType="ONE" />
 				<add order="0x40" stat="windRes" val="60" />
 			</effect>
 		</for>
@@ -3264,7 +3308,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minDamage="100" chance="30" skillId="5570" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
+				<param minDamage="100" />
+				<param chance="30" />
+				<param skillId="5570" skillLevel="1" /> <!-- Excessive Royalty -->
+				<param targetType="SUMMON" />
 			</effect>
 		</for>
 	</skill>

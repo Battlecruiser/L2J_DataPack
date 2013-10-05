@@ -1066,7 +1066,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="#activationChance" skillId="5561" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="#activationChance" />
+				<param skillId="5561" skillLevel="#triggeredLevel" /> <!-- Seed of Revenge -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="pAtk" val="300" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
 				<mul order="0x30" stat="cAtk" val="#cAtk" />
@@ -1093,7 +1097,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="#activationChance" skillId="5562" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="#activationChance" />
+				<param skillId="5562" skillLevel="#triggeredLevel" /> <!-- Spirit of Phoenix -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="pDef" val="500" />
 				<add order="0x40" stat="fireRes" val="#elementRes" />
 				<add order="0x40" stat="darkRes" val="#elementRes" />
@@ -1121,7 +1129,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="#activationChance" skillId="5563" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="#activationChance" />
+				<param skillId="5563" skillLevel="#triggeredLevel" /> <!-- Eva's Will -->
+				<param targetType="SELF" />
 				<add order="0x40" stat="mDef" val="400" />
 				<add order="0x40" stat="waterPower" val="#waterPower" />
 				<basemul order="0x30" stat="rCrit" val="#rCrit" />
@@ -1148,7 +1160,11 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage" val="0">
-				<param minLevel="1" maxLevel="100" chance="#activationChance" skillId="5564" skillLevel="#triggeredLevel" />
+				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="#activationChance" />
+				<param skillId="5564" skillLevel="#triggeredLevel" /> <!-- Pain of Shillien -->
+				<param targetType="SELF" />
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<add order="0x40" stat="windPower" val="#windPower" />
 				<add order="0x40" stat="absorbDam" val="#absorbDam" />
