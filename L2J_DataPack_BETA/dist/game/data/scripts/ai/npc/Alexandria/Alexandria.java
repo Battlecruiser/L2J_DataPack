@@ -52,7 +52,7 @@ public final class Alexandria extends AbstractNpcAI
 	// Agathions
 	private static final QuestItemHolder[] LITTLE_DEVILS = new QuestItemHolder[]
 	{
-		new QuestItemHolder(10321, 600, 10408),
+		new AdditionalQuestItemHolder(10321, 600, 1, 10408),
 		new QuestItemHolder(10322, 10),
 		new QuestItemHolder(10323, 10),
 		new QuestItemHolder(10324, 5),
@@ -61,7 +61,7 @@ public final class Alexandria extends AbstractNpcAI
 	};
 	private static final QuestItemHolder[] LITTLE_ANGELS = new QuestItemHolder[]
 	{
-		new QuestItemHolder(10315, 600, 10408),
+		new AdditionalQuestItemHolder(10315, 600, 1, 10408),
 		new QuestItemHolder(10316, 10),
 		new QuestItemHolder(10317, 10),
 		new QuestItemHolder(10318, 5),
@@ -96,9 +96,9 @@ public final class Alexandria extends AbstractNpcAI
 			final int chance = getRandom(1000);
 			int chance2 = 0;
 			int chance3 = 0;
-			for (ItemHolder agathion : AGATHIONS.get(event))
+			for (QuestItemHolder agathion : AGATHIONS.get(event))
 			{
-				chance3 += agathion.getCount();
+				chance3 += agathion.getChance();
 				if ((chance >= chance2) && (chance2 < chance3))
 				{
 					boolean hasAllItems = true;
@@ -116,14 +116,14 @@ public final class Alexandria extends AbstractNpcAI
 						{
 							takeItems(player, item);
 						}
+						
 						giveItems(player, agathion.getId(), 1);
-						if (agathion.getCount() == 0)
+						htmltext = "30098-03.html";
+						
+						if (agathion instanceof AdditionalQuestItemHolder)
 						{
-							htmltext = "30098-03.html";
-						}
-						else
-						{
-							giveItems(player, (int) agathion.getCount(), 1);
+							final AdditionalQuestItemHolder addAgathion = (AdditionalQuestItemHolder) agathion;
+							giveItems(player, addAgathion.getAdditionalId(), 1);
 							htmltext = "30098-03a.html";
 						}
 					}
@@ -133,7 +133,7 @@ public final class Alexandria extends AbstractNpcAI
 					}
 					break;
 				}
-				chance2 += agathion.getCount();
+				chance2 += agathion.getChance();
 			}
 		}
 		return htmltext;
@@ -142,5 +142,21 @@ public final class Alexandria extends AbstractNpcAI
 	public static void main(String[] args)
 	{
 		new Alexandria();
+	}
+	
+	public static class AdditionalQuestItemHolder extends QuestItemHolder
+	{
+		private final int _additionalId;
+		
+		public AdditionalQuestItemHolder(int id, int chance, long count, int additionalId)
+		{
+			super(id, chance, count);
+			_additionalId = additionalId;
+		}
+		
+		public int getAdditionalId()
+		{
+			return _additionalId;
+		}
 	}
 }
