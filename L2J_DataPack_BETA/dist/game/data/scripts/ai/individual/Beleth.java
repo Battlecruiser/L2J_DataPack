@@ -502,7 +502,7 @@ public class Beleth extends AbstractNpcAI
 			{
 				return null;
 			}
-			final double distance = Math.sqrt(npc.getPlanDistanceSq(attacker.getX(), attacker.getY()));
+			final double distance = npc.calculateDistance(attacker, false, false);
 			if ((distance > 500) || (getRandom(100) < 80))
 			{
 				for (L2Npc beleth : MINIONS)
@@ -539,7 +539,7 @@ public class Beleth extends AbstractNpcAI
 		{
 			if ((player != null) && !player.isDead())
 			{
-				final double distance2 = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+				final double distance2 = npc.calculateDistance(player, false, false);
 				if ((distance2 > 890) && !npc.isMovementDisabled())
 				{
 					npc.setTarget(player);

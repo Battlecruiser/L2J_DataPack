@@ -148,7 +148,7 @@ public class Monastery extends AbstractNpcAI
 				return super.onAdvEvent(event, npc, player);
 			}
 			
-			final double distance = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+			final double distance = npc.calculateDistance(player, false, false);
 			if (((distance < 500) && !player.isDead() && GeoData.getInstance().canSeeTarget(npc, player)))
 			{
 				switch (npc.getId())

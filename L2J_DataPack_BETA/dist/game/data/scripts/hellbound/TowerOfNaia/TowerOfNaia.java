@@ -1309,7 +1309,7 @@ public class TowerOfNaia extends Quest
 		int time = 0;
 		if (npc != null)
 		{
-			double distance = Util.calculateDistance(coords[0], coords[1], coords[2], npc.getX(), npc.getY(), npc.getZ(), true);
+			double distance = npc.calculateDistance(coords[0], coords[1], coords[2], true, false);
 			int heading = Util.calculateHeadingFrom(npc.getX(), npc.getY(), coords[0], coords[1]);
 			time = (int) ((distance / npc.getWalkSpeed()) * 1000);
 			npc.setIsRunning(false);

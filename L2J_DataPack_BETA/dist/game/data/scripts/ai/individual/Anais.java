@@ -120,7 +120,7 @@ public final class Anais extends AbstractNpcAI
 			case "GUARD_ATTACK":
 				if (_nextTarget != null)
 				{
-					final double distance = Math.sqrt(npc.getPlanDistanceSq(_nextTarget.getX(), _nextTarget.getY()));
+					final double distance = npc.calculateDistance(_nextTarget, false, false);
 					if (distance < 100)
 					{
 						npc.doCast(DIVINE_NOVA.getSkill());
