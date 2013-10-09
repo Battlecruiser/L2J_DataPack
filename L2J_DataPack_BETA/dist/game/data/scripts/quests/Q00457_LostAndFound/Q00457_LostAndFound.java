@@ -107,7 +107,7 @@ public final class Q00457_LostAndFound extends Quest
 				st.exitQuest(QuestType.DAILY);
 				break;
 			case "check":
-				final double distance = Math.sqrt(npc.getPlanDistanceSq(player.getX(), player.getY()));
+				final double distance = npc.calculateDistance(player, false, false);
 				if (distance > 1000)
 				{
 					if (distance > 5000)
