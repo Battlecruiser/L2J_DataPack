@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.cache.HtmCache;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
+import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
 import com.l2jserver.gameserver.model.punishment.PunishmentTask;
@@ -50,7 +51,15 @@ public class AdminPunishment implements IAdminCommandHandler
 	{
 		"admin_punishment",
 		"admin_punishment_add",
-		"admin_punishment_remove"
+		"admin_punishment_remove",
+		"admin_ban_acc",
+		"admin_unban_acc",
+		"admin_ban_chat",
+		"admin_unban_chat",
+		"admin_ban_char",
+		"admin_unban_char",
+		"admin_jail",
+		"admin_unjail"
 	};
 	
 	private static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
@@ -148,12 +157,25 @@ public class AdminPunishment implements IAdminCommandHandler
 						}
 						case "player":
 						{
-							if ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer())
+							L2PcInstance target = null;
+							if (st.hasMoreTokens())
+							{
+								final String playerName = st.nextToken();
+								if (playerName.isEmpty() && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
+								{
+									return useAdminCommand("admin_punishment", activeChar);
+								}
+								target = L2World.getInstance().getPlayer(playerName);
+							}
+							if ((target == null) && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
 							{
 								activeChar.sendMessage("You must target player!");
 								break;
 							}
-							L2PcInstance target = activeChar.getTarget().getActingPlayer();
+							if (target == null)
+							{
+								target = activeChar.getTarget().getActingPlayer();
+							}
 							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment-player.htm");
 							if (content != null)
 							{
@@ -304,6 +326,62 @@ public class AdminPunishment implements IAdminCommandHandler
 				activeChar.sendMessage("Punishment " + type.name() + " have been stopped to: " + affect + " " + name + "!");
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, affect.name(), name);
 				return useAdminCommand("admin_punishment info " + name + " " + affect.name(), activeChar);
+			}
+			case "admin_ban_char":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
+				}
+			}
+			case "admin_unban_char":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.BAN), activeChar);
+				}
+			}
+			case "admin_ban_acc":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, 0, "Banned by admin"), activeChar);
+				}
+			}
+			case "admin_unban_acc":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.ACCOUNT, PunishmentType.BAN), activeChar);
+				}
+			}
+			case "admin_ban_chat":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "Chat banned by admin"), activeChar);
+				}
+			}
+			case "admin_unban_chat":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN), activeChar);
+				}
+			}
+			case "admin_jail":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_add %s %s %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL, 0, "Jailed by admin"), activeChar);
+				}
+			}
+			case "admin_unjail":
+			{
+				if (st.hasMoreTokens())
+				{
+					return useAdminCommand(String.format("admin_punishment_remove %s %s %s", st.nextToken(), PunishmentAffect.CHARACTER, PunishmentType.JAIL), activeChar);
+				}
 			}
 		}
 		return true;
