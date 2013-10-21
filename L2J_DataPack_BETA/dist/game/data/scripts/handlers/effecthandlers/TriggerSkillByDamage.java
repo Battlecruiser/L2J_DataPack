@@ -126,6 +126,11 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	@Override
 	public void onExit()
 	{
+		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
+		{
+			return;
+		}
+		
 		getEffected().getEvents().unregisterListener(this);
 		super.onExit();
 	}
@@ -133,6 +138,11 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	@Override
 	public boolean onStart()
 	{
+		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
+		{
+			return false;
+		}
+		
 		getEffected().getEvents().registerListener(this);
 		return super.onStart();
 	}
