@@ -24,7 +24,7 @@ import java.util.Map;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.QuestItemHolder;
+import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -50,31 +50,31 @@ public final class Q00628_HuntGoldenRam extends Quest
 	private static final int REQUIRED_ITEM_COUNT = 100;
 	private static final int MIN_LVL = 66;
 	// Mobs
-	private static final Map<Integer, QuestItemHolder> MOBS_DROP_CHANCES = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
 	// Buffs
-	private static final Map<String, QuestItemHolder> BUFFS = new HashMap<>();
+	private static final Map<String, ItemChanceHolder> BUFFS = new HashMap<>();
 	
 	static
 	{
-		MOBS_DROP_CHANCES.put(21508, new QuestItemHolder(SPLINTER_STAKATO_CHITIN, 500, 1)); // splinter_stakato
-		MOBS_DROP_CHANCES.put(21509, new QuestItemHolder(SPLINTER_STAKATO_CHITIN, 430, 1)); // splinter_stakato_worker
-		MOBS_DROP_CHANCES.put(21510, new QuestItemHolder(SPLINTER_STAKATO_CHITIN, 521, 1)); // splinter_stakato_soldier
-		MOBS_DROP_CHANCES.put(21511, new QuestItemHolder(SPLINTER_STAKATO_CHITIN, 575, 1)); // splinter_stakato_drone
-		MOBS_DROP_CHANCES.put(21512, new QuestItemHolder(SPLINTER_STAKATO_CHITIN, 746, 1)); // splinter_stakato_drone_a
-		MOBS_DROP_CHANCES.put(21513, new QuestItemHolder(NEEDLE_STAKATO_CHITIN, 500, 2)); // needle_stakato
-		MOBS_DROP_CHANCES.put(21514, new QuestItemHolder(NEEDLE_STAKATO_CHITIN, 430, 2)); // needle_stakato_worker
-		MOBS_DROP_CHANCES.put(21515, new QuestItemHolder(NEEDLE_STAKATO_CHITIN, 520, 2)); // needle_stakato_soldier
-		MOBS_DROP_CHANCES.put(21516, new QuestItemHolder(NEEDLE_STAKATO_CHITIN, 531, 2)); // needle_stakato_drone
-		MOBS_DROP_CHANCES.put(21517, new QuestItemHolder(NEEDLE_STAKATO_CHITIN, 744, 2)); // needle_stakato_drone_a
+		MOBS_DROP_CHANCES.put(21508, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.5, 1)); // splinter_stakato
+		MOBS_DROP_CHANCES.put(21509, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.43, 1)); // splinter_stakato_worker
+		MOBS_DROP_CHANCES.put(21510, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.521, 1)); // splinter_stakato_soldier
+		MOBS_DROP_CHANCES.put(21511, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.575, 1)); // splinter_stakato_drone
+		MOBS_DROP_CHANCES.put(21512, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.746, 1)); // splinter_stakato_drone_a
+		MOBS_DROP_CHANCES.put(21513, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.5, 2)); // needle_stakato
+		MOBS_DROP_CHANCES.put(21514, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.43, 2)); // needle_stakato_worker
+		MOBS_DROP_CHANCES.put(21515, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.52, 2)); // needle_stakato_soldier
+		MOBS_DROP_CHANCES.put(21516, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.531, 2)); // needle_stakato_drone
+		MOBS_DROP_CHANCES.put(21517, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.744, 2)); // needle_stakato_drone_a
 		
-		BUFFS.put("Focus", new QuestItemHolder(4404, 2, 2)); // (buff_id, buff_level, buff_cost)
-		BUFFS.put("Death", new QuestItemHolder(4405, 2, 2));
-		BUFFS.put("Might", new QuestItemHolder(4393, 3, 3));
-		BUFFS.put("Acumen", new QuestItemHolder(4400, 2, 3));
-		BUFFS.put("Berserker", new QuestItemHolder(4397, 1, 3));
-		BUFFS.put("Vampiric", new QuestItemHolder(4399, 2, 3));
-		BUFFS.put("Empower", new QuestItemHolder(4401, 1, 6));
-		BUFFS.put("Haste", new QuestItemHolder(4402, 2, 6));
+		BUFFS.put("Focus", new ItemChanceHolder(4404, 2, 2)); // (buff_id, buff_level, buff_cost)
+		BUFFS.put("Death", new ItemChanceHolder(4405, 2, 2));
+		BUFFS.put("Might", new ItemChanceHolder(4393, 3, 3));
+		BUFFS.put("Acumen", new ItemChanceHolder(4400, 2, 3));
+		BUFFS.put("Berserker", new ItemChanceHolder(4397, 1, 3));
+		BUFFS.put("Vampiric", new ItemChanceHolder(4399, 2, 3));
+		BUFFS.put("Empower", new ItemChanceHolder(4401, 1, 6));
+		BUFFS.put("Haste", new ItemChanceHolder(4402, 2, 6));
 	}
 	
 	private Q00628_HuntGoldenRam(int questId, String name, String descr)
@@ -166,12 +166,12 @@ public final class Q00628_HuntGoldenRam extends Quest
 			{
 				if (st.isCond(3))
 				{
-					final QuestItemHolder buffs = BUFFS.get(event);
+					final ItemChanceHolder buffs = BUFFS.get(event);
 					if (st.getQuestItemsCount(GOLDEN_RAM_COIN) >= buffs.getCount())
 					{
 						st.takeItems(GOLDEN_RAM_COIN, buffs.getCount());
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), buffs.getChance()));
+						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), (int) buffs.getChance()));
 						htmltext = "31556-03.htm";
 					}
 					else
@@ -266,7 +266,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 		QuestState qs = getRandomPartyMemberState(killer, -1, 1, npc);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, false))
 		{
-			final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
+			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if ((item.getCount() <= qs.getCond()) && !qs.isCond(3))
 			{
 				giveItemRandomly(killer, npc, item.getId(), 1, REQUIRED_ITEM_COUNT, item.getChance(), true);

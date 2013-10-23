@@ -43,20 +43,20 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	private static final int REQUIRED_TALON_COUNT = 100;
 	private static final int MIN_LVL = 66;
 	// Mobs
-	private static final Map<Integer, Integer> MOBS_DROP_CHANCES = new HashMap<>();
+	private static final Map<Integer, Double> MOBS_DROP_CHANCES = new HashMap<>();
 	
 	static
 	{
-		MOBS_DROP_CHANCES.put(21508, 599); // splinter_stakato
-		MOBS_DROP_CHANCES.put(21509, 524); // splinter_stakato_worker
-		MOBS_DROP_CHANCES.put(21510, 640); // splinter_stakato_soldier
-		MOBS_DROP_CHANCES.put(21511, 830); // splinter_stakato_drone
-		MOBS_DROP_CHANCES.put(21512, 970); // splinter_stakato_drone_a
-		MOBS_DROP_CHANCES.put(21513, 682); // needle_stakato
-		MOBS_DROP_CHANCES.put(21514, 595); // needle_stakato_worker
-		MOBS_DROP_CHANCES.put(21515, 727); // needle_stakato_soldier
-		MOBS_DROP_CHANCES.put(21516, 879); // needle_stakato_drone
-		MOBS_DROP_CHANCES.put(21517, 999); // needle_stakato_drone_a
+		MOBS_DROP_CHANCES.put(21508, 0.599); // splinter_stakato
+		MOBS_DROP_CHANCES.put(21509, 0.524); // splinter_stakato_worker
+		MOBS_DROP_CHANCES.put(21510, 0.64); // splinter_stakato_soldier
+		MOBS_DROP_CHANCES.put(21511, 0.83); // splinter_stakato_drone
+		MOBS_DROP_CHANCES.put(21512, 0.97); // splinter_stakato_drone_a
+		MOBS_DROP_CHANCES.put(21513, 0.682); // needle_stakato
+		MOBS_DROP_CHANCES.put(21514, 0.595); // needle_stakato_worker
+		MOBS_DROP_CHANCES.put(21515, 0.727); // needle_stakato_soldier
+		MOBS_DROP_CHANCES.put(21516, 0.879); // needle_stakato_drone
+		MOBS_DROP_CHANCES.put(21517, 0.999); // needle_stakato_drone_a
 	}
 	
 	private Q00629_CleanUpTheSwampOfScreams(int questId, String name, String descr)
