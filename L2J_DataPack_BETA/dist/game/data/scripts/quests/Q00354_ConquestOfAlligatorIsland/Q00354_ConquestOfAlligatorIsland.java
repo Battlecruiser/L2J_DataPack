@@ -21,20 +21,17 @@ package quests.Q00354_ConquestOfAlligatorIsland;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Conquest of Alligator Island (354)
  * @author Adry_85
  */
-public class Q00354_ConquestOfAlligatorIsland extends Quest
+public final class Q00354_ConquestOfAlligatorIsland extends Quest
 {
 	// NPC
 	private static final int KLUCK = 30895;
@@ -45,25 +42,25 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 38;
 	// Mobs
-	private static final Map<Integer, Integer> MOB1 = new HashMap<>();
+	private static final Map<Integer, Double> MOB1 = new HashMap<>();
 	private static final Map<Integer, Integer> MOB2 = new HashMap<>();
 	static
 	{
-		MOB1.put(20804, 84); // crokian_lad
-		MOB1.put(20805, 91); // dailaon_lad
-		MOB1.put(20806, 88); // crokian_lad_warrior
-		MOB1.put(20807, 92); // farhite_lad
+		MOB1.put(20804, 0.84); // crokian_lad
+		MOB1.put(20805, 0.91); // dailaon_lad
+		MOB1.put(20806, 0.88); // crokian_lad_warrior
+		MOB1.put(20807, 0.92); // farhite_lad
 		MOB2.put(22208, 14); // nos_lad
 		MOB2.put(20991, 69); // tribe_of_swamp
 	}
 	
-	private Q00354_ConquestOfAlligatorIsland(int questId, String name, String descr)
+	private Q00354_ConquestOfAlligatorIsland()
 	{
-		super(questId, name, descr);
-		addKillId(MOB1.keySet());
-		addKillId(MOB2.keySet());
+		super(354, Q00354_ConquestOfAlligatorIsland.class.getSimpleName(), "Conquest of Alligator Island");
 		addStartNpc(KLUCK);
 		addTalkId(KLUCK);
+		addKillId(MOB1.keySet());
+		addKillId(MOB2.keySet());
 		registerQuestItems(ALLIGATOR_TOOTH, MYSTERIOUS_MAP_PIECE);
 	}
 	
@@ -94,20 +91,20 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "ADENA":
 			{
-				final int count = (int) st.getQuestItemsCount(ALLIGATOR_TOOTH);
+				final long count = st.getQuestItemsCount(ALLIGATOR_TOOTH);
 				if (count >= 100)
 				{
 					st.giveAdena((count * 220) + 10700, true);
 					st.takeItems(ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-06.html";
 				}
-				else if ((count > 0) && (count < 100))
+				else if (count > 0)
 				{
-					st.giveAdena((count * 220) + 10700, true);
+					st.giveAdena((count * 220) + 3100, true);
 					st.takeItems(ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-07.html";
 				}
-				else if (count == 0)
+				else
 				{
 					htmltext = "30895-08.html";
 				}
@@ -121,16 +118,16 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "REWARD":
 			{
-				final int count = (int) st.getQuestItemsCount(MYSTERIOUS_MAP_PIECE);
-				if ((count > 0) && (count < 10))
-				{
-					htmltext = "30895-12.html";
-				}
-				else if (count >= 10)
+				final long count = st.getQuestItemsCount(MYSTERIOUS_MAP_PIECE);
+				if (count >= 10)
 				{
 					st.giveItems(PIRATES_TREASURE_MAP, 1);
 					st.takeItems(MYSTERIOUS_MAP_PIECE, 10);
 					htmltext = "30895-13.html";
+				}
+				else if (count > 0)
+				{
+					htmltext = "30895-12.html";
 				}
 				break;
 			}
@@ -142,29 +139,20 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if ((st != null) && st.isStarted() && Util.checkIfInRange(1500, npc, player, false))
+		if ((st != null) && st.isStarted())
 		{
 			int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
 			{
-				float chance = MOB1.get(npcId) * Config.RATE_QUEST_DROP;
-				if (getRandom(100) < chance)
-				{
-					st.giveItems(ALLIGATOR_TOOTH, 1);
-					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
 			}
 			else if (MOB2.containsKey(npcId))
 			{
-				float chance = MOB2.get(npcId) * Config.RATE_QUEST_DROP;
-				st.giveItems(ALLIGATOR_TOOTH, getRandom(100) < chance ? 2 : 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
+				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
 			}
 			
-			if (getRandom(10) == 5)
-			{
-				st.giveItems(MYSTERIOUS_MAP_PIECE, 1);
-			}
+			st.giveItemRandomly(npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -183,15 +171,13 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html";
+				htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html");
 				break;
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
-				{
-					htmltext = (!st.hasQuestItems(MYSTERIOUS_MAP_PIECE)) ? "30895-04.html" : "30895-11.html";
-				}
+				htmltext = (st.hasQuestItems(MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
+				break;
 			}
 		}
 		return htmltext;
@@ -199,6 +185,6 @@ public class Q00354_ConquestOfAlligatorIsland extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00354_ConquestOfAlligatorIsland(354, Q00354_ConquestOfAlligatorIsland.class.getSimpleName(), "Conquest of Alligator Island");
+		new Q00354_ConquestOfAlligatorIsland();
 	}
 }
