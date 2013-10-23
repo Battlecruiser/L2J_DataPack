@@ -25,6 +25,7 @@ import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
+import com.l2jserver.gameserver.model.holders.QuestItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -52,7 +53,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
 	// Buffs
-	private static final Map<String, ItemChanceHolder> BUFFS = new HashMap<>();
+	private static final Map<String, QuestItemHolder> BUFFS = new HashMap<>();
 	
 	static
 	{
@@ -67,14 +68,14 @@ public final class Q00628_HuntGoldenRam extends Quest
 		MOBS_DROP_CHANCES.put(21516, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.531, 2)); // needle_stakato_drone
 		MOBS_DROP_CHANCES.put(21517, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.744, 2)); // needle_stakato_drone_a
 		
-		BUFFS.put("Focus", new ItemChanceHolder(4404, 2, 2)); // (buff_id, buff_level, buff_cost)
-		BUFFS.put("Death", new ItemChanceHolder(4405, 2, 2));
-		BUFFS.put("Might", new ItemChanceHolder(4393, 3, 3));
-		BUFFS.put("Acumen", new ItemChanceHolder(4400, 2, 3));
-		BUFFS.put("Berserker", new ItemChanceHolder(4397, 1, 3));
-		BUFFS.put("Vampiric", new ItemChanceHolder(4399, 2, 3));
-		BUFFS.put("Empower", new ItemChanceHolder(4401, 1, 6));
-		BUFFS.put("Haste", new ItemChanceHolder(4402, 2, 6));
+		BUFFS.put("Focus", new QuestItemHolder(4404, 2, 2)); // (buff_id, buff_level, buff_cost)
+		BUFFS.put("Death", new QuestItemHolder(4405, 2, 2));
+		BUFFS.put("Might", new QuestItemHolder(4393, 3, 3));
+		BUFFS.put("Acumen", new QuestItemHolder(4400, 2, 3));
+		BUFFS.put("Berserker", new QuestItemHolder(4397, 1, 3));
+		BUFFS.put("Vampiric", new QuestItemHolder(4399, 2, 3));
+		BUFFS.put("Empower", new QuestItemHolder(4401, 1, 6));
+		BUFFS.put("Haste", new QuestItemHolder(4402, 2, 6));
 	}
 	
 	private Q00628_HuntGoldenRam(int questId, String name, String descr)
@@ -166,12 +167,12 @@ public final class Q00628_HuntGoldenRam extends Quest
 			{
 				if (st.isCond(3))
 				{
-					final ItemChanceHolder buffs = BUFFS.get(event);
+					final QuestItemHolder buffs = BUFFS.get(event);
 					if (st.getQuestItemsCount(GOLDEN_RAM_COIN) >= buffs.getCount())
 					{
 						st.takeItems(GOLDEN_RAM_COIN, buffs.getCount());
 						npc.setTarget(player);
-						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), (int) buffs.getChance()));
+						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), buffs.getChance()));
 						htmltext = "31556-03.htm";
 					}
 					else
