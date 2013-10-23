@@ -24,7 +24,7 @@ import java.util.Map;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.holders.QuestItemHolder;
+import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
@@ -53,29 +53,29 @@ public class Q00111_ElrokianHuntersProof extends Quest
 	// Misc
 	private static final int MIN_LEVEL = 75;
 	// Mobs
-	private static final Map<Integer, QuestItemHolder> MOBS_DROP_CHANCES = new HashMap<>();
+	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
 	static
 	{
-		MOBS_DROP_CHANCES.put(22196, new QuestItemHolder(DIARY_FRAGMENT, 510, 4)); // velociraptor_leader
-		MOBS_DROP_CHANCES.put(22197, new QuestItemHolder(DIARY_FRAGMENT, 510, 4)); // velociraptor
-		MOBS_DROP_CHANCES.put(22198, new QuestItemHolder(DIARY_FRAGMENT, 510, 4)); // velociraptor_s
-		MOBS_DROP_CHANCES.put(22218, new QuestItemHolder(DIARY_FRAGMENT, 250, 4)); // velociraptor_n
-		MOBS_DROP_CHANCES.put(22223, new QuestItemHolder(DIARY_FRAGMENT, 260, 4)); // velociraptor_leader2
-		MOBS_DROP_CHANCES.put(22200, new QuestItemHolder(ORNITHOMINUS_CLAW, 660, 11)); // ornithomimus_leader
-		MOBS_DROP_CHANCES.put(22201, new QuestItemHolder(ORNITHOMINUS_CLAW, 330, 11)); // ornithomimus
-		MOBS_DROP_CHANCES.put(22202, new QuestItemHolder(ORNITHOMINUS_CLAW, 660, 11)); // ornithomimus_s
-		MOBS_DROP_CHANCES.put(22219, new QuestItemHolder(ORNITHOMINUS_CLAW, 330, 11)); // ornithomimus_n
-		MOBS_DROP_CHANCES.put(22224, new QuestItemHolder(ORNITHOMINUS_CLAW, 330, 11)); // ornithomimus_leader2
-		MOBS_DROP_CHANCES.put(22203, new QuestItemHolder(DEINONYCHUS_BONE, 650, 11)); // deinonychus_leader
-		MOBS_DROP_CHANCES.put(22204, new QuestItemHolder(DEINONYCHUS_BONE, 320, 11)); // deinonychus
-		MOBS_DROP_CHANCES.put(22205, new QuestItemHolder(DEINONYCHUS_BONE, 660, 11)); // deinonychus_s
-		MOBS_DROP_CHANCES.put(22220, new QuestItemHolder(DEINONYCHUS_BONE, 320, 11)); // deinonychus_n
-		MOBS_DROP_CHANCES.put(22225, new QuestItemHolder(DEINONYCHUS_BONE, 320, 11)); // deinonychus_leader2
-		MOBS_DROP_CHANCES.put(22208, new QuestItemHolder(PACHYCEPHALOSAURUS_SKIN, 500, 11)); // pachycephalosaurus_ldr
-		MOBS_DROP_CHANCES.put(22209, new QuestItemHolder(PACHYCEPHALOSAURUS_SKIN, 500, 11)); // pachycephalosaurus
-		MOBS_DROP_CHANCES.put(22210, new QuestItemHolder(PACHYCEPHALOSAURUS_SKIN, 500, 11)); // pachycephalosaurus_s
-		MOBS_DROP_CHANCES.put(22221, new QuestItemHolder(PACHYCEPHALOSAURUS_SKIN, 490, 11)); // pachycephalosaurus_n
-		MOBS_DROP_CHANCES.put(22226, new QuestItemHolder(PACHYCEPHALOSAURUS_SKIN, 500, 11)); // pachycephalosaurus_ldr2
+		MOBS_DROP_CHANCES.put(22196, new ItemChanceHolder(DIARY_FRAGMENT, 0.51, 4)); // velociraptor_leader
+		MOBS_DROP_CHANCES.put(22197, new ItemChanceHolder(DIARY_FRAGMENT, 0.51, 4)); // velociraptor
+		MOBS_DROP_CHANCES.put(22198, new ItemChanceHolder(DIARY_FRAGMENT, 0.51, 4)); // velociraptor_s
+		MOBS_DROP_CHANCES.put(22218, new ItemChanceHolder(DIARY_FRAGMENT, 0.25, 4)); // velociraptor_n
+		MOBS_DROP_CHANCES.put(22223, new ItemChanceHolder(DIARY_FRAGMENT, 0.26, 4)); // velociraptor_leader2
+		MOBS_DROP_CHANCES.put(22200, new ItemChanceHolder(ORNITHOMINUS_CLAW, 0.66, 11)); // ornithomimus_leader
+		MOBS_DROP_CHANCES.put(22201, new ItemChanceHolder(ORNITHOMINUS_CLAW, 0.33, 11)); // ornithomimus
+		MOBS_DROP_CHANCES.put(22202, new ItemChanceHolder(ORNITHOMINUS_CLAW, 0.66, 11)); // ornithomimus_s
+		MOBS_DROP_CHANCES.put(22219, new ItemChanceHolder(ORNITHOMINUS_CLAW, 0.33, 11)); // ornithomimus_n
+		MOBS_DROP_CHANCES.put(22224, new ItemChanceHolder(ORNITHOMINUS_CLAW, 0.33, 11)); // ornithomimus_leader2
+		MOBS_DROP_CHANCES.put(22203, new ItemChanceHolder(DEINONYCHUS_BONE, 0.65, 11)); // deinonychus_leader
+		MOBS_DROP_CHANCES.put(22204, new ItemChanceHolder(DEINONYCHUS_BONE, 0.32, 11)); // deinonychus
+		MOBS_DROP_CHANCES.put(22205, new ItemChanceHolder(DEINONYCHUS_BONE, 0.66, 11)); // deinonychus_s
+		MOBS_DROP_CHANCES.put(22220, new ItemChanceHolder(DEINONYCHUS_BONE, 0.32, 11)); // deinonychus_n
+		MOBS_DROP_CHANCES.put(22225, new ItemChanceHolder(DEINONYCHUS_BONE, 0.32, 11)); // deinonychus_leader2
+		MOBS_DROP_CHANCES.put(22208, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_ldr
+		MOBS_DROP_CHANCES.put(22209, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus
+		MOBS_DROP_CHANCES.put(22210, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_s
+		MOBS_DROP_CHANCES.put(22221, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.49, 11)); // pachycephalosaurus_n
+		MOBS_DROP_CHANCES.put(22226, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_ldr2
 	}
 	
 	private Q00111_ElrokianHuntersProof(int questId, String name, String descr)
@@ -223,7 +223,7 @@ public class Q00111_ElrokianHuntersProof extends Quest
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
 		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, player, false))
 		{
-			final QuestItemHolder item = MOBS_DROP_CHANCES.get(npc.getId());
+			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if ((item.getCount() == qs.getMemoState()))
 			{
 				if (qs.isCond(4))
