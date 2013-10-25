@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00368_TrespassingIntoTheHolyGround' WHERE name='368_TrespassingIntoTheSacredArea';
