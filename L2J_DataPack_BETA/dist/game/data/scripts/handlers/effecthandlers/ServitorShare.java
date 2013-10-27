@@ -19,12 +19,13 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ThreadPoolManager;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Servitor Share effect implementation.<br>
@@ -32,7 +33,7 @@ import com.l2jserver.gameserver.model.stats.Env;
  * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
  * @author UnAfraid, Zoey76
  */
-public class ServitorShare extends L2Effect
+public final class ServitorShare extends AbstractEffect
 {
 	private static final class ScheduledEffectExitTask implements Runnable
 	{
@@ -52,15 +53,9 @@ public class ServitorShare extends L2Effect
 		}
 	}
 	
-	public ServitorShare(Env env, EffectTemplate template)
+	public ServitorShare(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return false;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -76,13 +71,12 @@ public class ServitorShare extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		final L2Character effected = getEffected().isPlayer() ? getEffected().getSummon() : getEffected().getActingPlayer();
+		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
 		if (effected != null)
 		{
-			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, getSkill().getId()), 100);
+			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
 		}
-		super.onExit();
 	}
 }

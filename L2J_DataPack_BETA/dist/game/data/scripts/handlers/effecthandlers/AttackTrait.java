@@ -21,35 +21,29 @@ package handlers.effecthandlers;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.logging.Logger;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.stat.CharStat;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.TraitType;
 
 /**
  * Attack Trait effect implementation
  * @author Nos
  */
-public class AttackTrait extends L2Effect
+public final class AttackTrait extends AbstractEffect
 {
-	private static final Logger _log = Logger.getLogger(AttackTrait.class.getName());
-	
 	private final Map<TraitType, Float> _attackTraits = new HashMap<>();
 	
-	/**
-	 * @param env
-	 * @param template
-	 */
-	public AttackTrait(Env env, EffectTemplate template)
+	public AttackTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		if (template.hasParameters())
+		super(attachCond, applyCond, set, params);
+		
+		if (hasParameters())
 		{
-			for (Entry<String, Object> param : template.getParameters().getSet().entrySet())
+			for (Entry<String, Object> param : getParameters().getSet().entrySet())
 			{
 				try
 				{
@@ -74,15 +68,23 @@ public class AttackTrait extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
+		final CharStat charStat = info.getEffected().getStat();
+		synchronized (charStat.getAttackTraits())
+		{
+			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
+			{
+				charStat.getAttackTraits()[trait.getKey().getId()] /= trait.getValue();
+				charStat.getAttackTraitsCount()[trait.getKey().getId()]--;
+			}
+		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		final CharStat charStat = getEffected().getStat();
+		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
 		{
 			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
@@ -92,19 +94,5 @@ public class AttackTrait extends L2Effect
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		final CharStat charStat = getEffected().getStat();
-		synchronized (charStat.getAttackTraits())
-		{
-			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
-			{
-				charStat.getAttackTraits()[trait.getKey().getId()] /= trait.getValue();
-				charStat.getAttackTraitsCount()[trait.getKey().getId()]--;
-			}
-		}
 	}
 }

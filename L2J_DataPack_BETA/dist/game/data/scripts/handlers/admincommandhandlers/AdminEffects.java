@@ -31,7 +31,7 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.CharInfo;
@@ -204,7 +204,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					if (!player.isGM())
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.startAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 						player.setIsParalyzed(true);
 						player.startParalyze();
 					}
@@ -221,7 +221,7 @@ public class AdminEffects implements IAdminCommandHandler
 				Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
 				for (L2PcInstance player : plrs)
 				{
-					player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
+					player.stopAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 					player.setIsParalyzed(false);
 				}
 			}
@@ -248,11 +248,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.startAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 					}
 					else
 					{
-						player.startAbnormalEffect(AbnormalEffect.HOLD_2);
+						player.startAbnormalEffect(AbnormalVisualEffect.HOLD_2);
 					}
 					player.setIsParalyzed(true);
 					player.startParalyze();
@@ -281,11 +281,11 @@ public class AdminEffects implements IAdminCommandHandler
 					player = (L2Character) target;
 					if (type.equals("1"))
 					{
-						player.stopAbnormalEffect(AbnormalEffect.HOLD_1);
+						player.stopAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 					}
 					else
 					{
-						player.stopAbnormalEffect(AbnormalEffect.HOLD_2);
+						player.stopAbnormalEffect(AbnormalVisualEffect.HOLD_2);
 					}
 					player.setIsParalyzed(false);
 				}
@@ -303,7 +303,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.startAbnormalEffect(AbnormalEffect.BIG_HEAD);
+					player.startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -319,7 +319,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (target instanceof L2Character)
 				{
 					player = (L2Character) target;
-					player.stopAbnormalEffect(AbnormalEffect.BIG_HEAD);
+					player.stopAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
 				}
 			}
 			catch (Exception e)
@@ -331,7 +331,7 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				int val = Integer.parseInt(st.nextToken());
-				boolean sendMessage = activeChar.getFirstEffect(7029) != null;
+				boolean sendMessage = activeChar.isAffectedBySkill(7029);
 				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
 				if ((val >= 1) && (val <= 4))
 				{

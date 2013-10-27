@@ -277,7 +277,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5827" levels="6" name="Fireball">
@@ -302,7 +302,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5828" levels="6" name="Unholy Flare">
@@ -326,7 +326,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5829" levels="6" name="Fire Flare">
@@ -350,7 +350,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5830" levels="1" name="Polearm Thrust">
@@ -365,7 +365,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5831" levels="1" name="Polearm Swing">
@@ -381,7 +381,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="3" val="70" />
 		</for>
 	</skill>
@@ -406,7 +406,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMe" />
 		</for>
 	</skill>
 	<skill id="5833" levels="1" name="Shield">
@@ -427,7 +427,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -450,7 +450,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="1.33" />
 			</effect>
 		</for>
@@ -468,7 +468,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="CLAN_MEMBER" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="10" />
+			<effect name="HealPercent" val="10" />
 		</for>
 	</skill>
 	<skill id="5836" levels="1" name="Greater Heal">
@@ -491,7 +491,7 @@
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="270" />
-			<effect name="HealPercent" noicon="1" val="20" />
+			<effect name="HealPercent" val="20" />
 		</for>
 	</skill>
 	<skill id="5837" levels="1" name="Double Throwing Javelin">
@@ -506,7 +506,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5838" levels="1" name="Throwing Javelin">
@@ -521,7 +521,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5839" levels="1" name="Breath">
@@ -542,7 +542,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5840" levels="1" name="Fire Breath">
@@ -565,7 +565,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5841" levels="1" name="Multi Defense">
@@ -586,7 +586,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 				<mul order="0x30" stat="mDef" val="1.33" />
 			</effect>
@@ -607,7 +607,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5843" levels="1" name="Terror">
@@ -634,7 +634,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5844" levels="1" name="Thunder Storm">
@@ -653,7 +653,7 @@
 		<set name="power" val="834" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5845" levels="12" name="NPC Trigger Bleed">
@@ -718,7 +718,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -749,8 +749,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0">
+			<effect name="Stun" />
+			<effect name="TargetCancel">
 				<param chance="80" />
 			</effect>
 		</for>
@@ -1157,8 +1157,8 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpByLevel" noicon="1" val="73" />
-			<effect name="Debuff" val="0">
+			<effect name="HpByLevel" val="73" />
+			<effect name="Debuff">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1243,8 +1243,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5883" levels="1" name="Meggling Injury">
@@ -1297,8 +1297,8 @@
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Disarm" val="0" abnormalVisualEffect="bleed" />
+			<effect name="PhysicalAttack" />
+			<effect name="Disarm" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5885" levels="2" name="Weakened Sweep">
@@ -1329,8 +1329,8 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5886" levels="1" name="Ground Shaker">
@@ -1355,7 +1355,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub order="0x40" stat="rEvas" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -1404,7 +1404,7 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="TargetCancel" noicon="1" val="0">
+			<effect name="TargetCancel">
 				<param chance="80" />
 			</effect>
 		</for>
@@ -1474,7 +1474,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Bluff" val="0">
+			<effect name="Bluff">
 				<param chance="80" />
 			</effect>
 		</for>
@@ -1510,7 +1510,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<mul order="0x30" stat="mDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1547,7 +1547,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="0.8" />
 				<mul order="0x30" stat="mDef" val="0.8" />
 				<sub order="0x40" stat="rEvas" val="10" />
@@ -1591,7 +1591,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub order="0x40" stat="rEvas" val="5" />
 				<mul order="0x30" stat="runSpd" val="0.9" />
 				<mul order="0x30" stat="pDef" val="0.9" />
@@ -1623,7 +1623,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub order="0x40" stat="rEvas" val="10" />
 				<mul order="0x30" stat="runSpd" val="0.8" />
 				<mul order="0x30" stat="pDef" val="0.8" />
@@ -1646,7 +1646,7 @@
 		<set name="power" val="3000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 </list>

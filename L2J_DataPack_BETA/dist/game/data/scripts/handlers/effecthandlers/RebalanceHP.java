@@ -19,22 +19,23 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.util.Util;
 
 /**
  * Rebalance HP effect implementation.
  * @author Adry_85, earendil
  */
-public class RebalanceHP extends L2Effect
+public final class RebalanceHP extends AbstractEffect
 {
-	public RebalanceHP(Env env, EffectTemplate template)
+	public RebalanceHP(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,19 +51,19 @@ public class RebalanceHP extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffector().isPlayer() || !getEffector().isInParty())
+		if (!info.getEffector().isPlayer() || !info.getEffector().isInParty())
 		{
 			return false;
 		}
 		
 		double fullHP = 0;
 		double currentHPs = 0;
-		final L2Party party = getEffector().getParty();
+		final L2Party party = info.getEffector().getParty();
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
+			if (member.isDead() || !Util.checkIfInRange(info.getSkill().getAffectRange(), info.getEffector(), member, true))
 			{
 				continue;
 			}
@@ -74,7 +75,7 @@ public class RebalanceHP extends L2Effect
 		double percentHP = currentHPs / fullHP;
 		for (L2PcInstance member : party.getMembers())
 		{
-			if (member.isDead() || !Util.checkIfInRange(getSkill().getAffectRange(), getEffector(), member, true))
+			if (member.isDead() || !Util.checkIfInRange(info.getSkill().getAffectRange(), info.getEffector(), member, true))
 			{
 				continue;
 			}

@@ -24,22 +24,23 @@ import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.events.listeners.IDamageReceivedEventListener;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.util.Rnd;
 
 /**
  * Trigger Skill By Damage effect implementation.
  * @author UnAfraid
  */
-public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEventListener
+public class TriggerSkillByDamage extends AbstractEffect implements IDamageReceivedEventListener
 {
 	private static final Logger _log = Logger.getLogger(TriggerSkillByDamage.class.getName());
 	
@@ -51,28 +52,16 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	private final L2TargetType _targetType;
 	private final InstanceType _attackerType;
 	
-	public TriggerSkillByDamage(Env env, EffectTemplate template)
+	public TriggerSkillByDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_minAttackerLevel = template.getParameters().getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = template.getParameters().getInt("maxAttackerLevel", 100);
-		_minDamage = template.getParameters().getInt("minDamage", 1);
-		_chance = template.getParameters().getInt("chance", 100);
-		_skill = new SkillHolder(template.getParameters().getInt("skillId"), template.getParameters().getInt("skillLevel", 1));
-		_targetType = template.getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
-		_attackerType = template.getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
-	}
-	
-	public TriggerSkillByDamage(Env env, L2Effect effect)
-	{
-		super(env, effect);
-		_minAttackerLevel = effect.getEffectTemplate().getParameters().getInt("minAttackerLevel", 1);
-		_maxAttackerLevel = effect.getEffectTemplate().getParameters().getInt("maxAttackerLevel", 100);
-		_minDamage = effect.getEffectTemplate().getParameters().getInt("minDamage", 1);
-		_chance = effect.getEffectTemplate().getParameters().getInt("chance", 100);
-		_skill = new SkillHolder(effect.getEffectTemplate().getParameters().getInt("skillId"), effect.getEffectTemplate().getParameters().getInt("skillLevel", 1));
-		_targetType = effect.getEffectTemplate().getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
-		_attackerType = effect.getEffectTemplate().getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
+		super(attachCond, applyCond, set, params);
+		_minAttackerLevel = getParameters().getInt("minAttackerLevel", 1);
+		_maxAttackerLevel = getParameters().getInt("maxAttackerLevel", 100);
+		_minDamage = getParameters().getInt("minDamage", 1);
+		_chance = getParameters().getInt("chance", 100);
+		_skill = new SkillHolder(getParameters().getInt("skillId"), getParameters().getInt("skillLevel", 1));
+		_targetType = getParameters().getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
+		_attackerType = getParameters().getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
 	@Override
@@ -124,26 +113,25 @@ public class TriggerSkillByDamage extends L2Effect implements IDamageReceivedEve
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
 		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
 			return;
 		}
 		
-		getEffected().getEvents().unregisterListener(this);
-		super.onExit();
+		info.getEffected().getEvents().unregisterListener(this);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
 		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
 		{
 			return false;
 		}
 		
-		getEffected().getEvents().registerListener(this);
-		return super.onStart();
+		info.getEffected().getEvents().registerListener(this);
+		return true;
 	}
 }

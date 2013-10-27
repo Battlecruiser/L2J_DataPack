@@ -18,17 +18,13 @@
  */
 package handlers.skillhandlers;
 
-import java.util.List;
-
 import com.l2jserver.gameserver.enums.ShotType;
 import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.instancemanager.DuelManager;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Env;
@@ -100,47 +96,23 @@ public class Continuous implements ISkillHandler
 			{
 				if (skill.isToggle())
 				{
-					List<L2Effect> effects = target.getAllEffects();
-					if (effects != null)
-					{
-						for (L2Effect e : effects)
-						{
-							if (e != null)
-							{
-								if (e.getSkill().getId() == skill.getId())
-								{
-									e.exit();
-									return;
-								}
-							}
-						}
-					}
+					target.stopSkillEffects(true, skill.getId());
 				}
 				
-				// if this is a debuff let the duel manager know about it
-				// so the debuff can be removed after the duel
-				// (player & target must be in the same duel)
+				// Apply effects
+				final Env env = new Env(shld, ss, sps, bss);
+				skill.applyEffects(activeChar, null, target, env, false, false);
+				
+				// If this is a bad skill notify the duel manager, so it can be removed after the duel (player & target must be in the same duel).
 				if (target.isPlayer() && target.getActingPlayer().isInDuel() && (player != null) && (player.getDuelId() == target.getActingPlayer().getDuelId()))
 				{
-					DuelManager dm = DuelManager.getInstance();
-					for (L2Effect buff : skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss)))
-					{
-						if (buff != null)
-						{
-							dm.onBuff(target.getActingPlayer(), buff);
-						}
-					}
+					DuelManager.getInstance().onBuff(target.getActingPlayer(), skill);
 				}
-				else
+				else if (target.hasServitor() && (target.getSummon() != activeChar))
 				{
-					List<L2Effect> effects = skill.getEffects(activeChar, target, new Env(shld, ss, sps, bss));
-					L2Summon summon = target.getSummon();
-					if ((summon != null) && (summon != activeChar) && summon.isServitor() && !effects.isEmpty())
+					if (skill.isHeroSkill() || skill.isStatic()) // TODO: Can be stolen.
 					{
-						if (effects.get(0).canBeStolen() || skill.isHeroSkill() || skill.isStatic())
-						{
-							skill.getEffects(activeChar, target.getSummon(), new Env(shld, ss, sps, bss));
-						}
+						skill.applyEffects(activeChar, null, target.getSummon(), env, false, false);
 					}
 				}
 			}
@@ -150,17 +122,7 @@ public class Continuous implements ISkillHandler
 			}
 		}
 		
-		// self Effect :]
-		if (skill.hasSelfEffects())
-		{
-			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if ((effect != null) && effect.isSelfEffect())
-			{
-				// Replace old effect with new one.
-				effect.exit();
-			}
-			skill.getEffectsSelf(activeChar);
-		}
+		skill.applyEffects(activeChar, null, activeChar, null, true, false);
 		
 		activeChar.setChargedShot(bss ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS, false);
 	}

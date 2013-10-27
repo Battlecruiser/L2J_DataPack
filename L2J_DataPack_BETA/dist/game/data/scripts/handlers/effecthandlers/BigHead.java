@@ -18,21 +18,22 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Big Head effect implementation.
  * @author LBaldi
  */
-public class BigHead extends L2Effect
+public final class BigHead extends AbstractEffect
 {
-	public BigHead(Env env, EffectTemplate template)
+	public BigHead(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -42,15 +43,15 @@ public class BigHead extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.BIG_HEAD);
+		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.BIG_HEAD);
+		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
 		return true;
 	}
 }

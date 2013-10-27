@@ -4,8 +4,7 @@ CREATE TABLE IF NOT EXISTS `character_summon_skills_save` (
   `summonSkillId` INT NOT NULL DEFAULT 0,
   `skill_id` INT NOT NULL DEFAULT 0,
   `skill_level` INT(3) NOT NULL DEFAULT 1,
-  `effect_count` INT NOT NULL DEFAULT 0,
-  `effect_cur_time` INT NOT NULL DEFAULT 0,
+  `remaining_time` INT NOT NULL DEFAULT 0,
   `buff_index` INT(2) NOT NULL DEFAULT 0,
   PRIMARY KEY (`ownerId`,`ownerClassIndex`,`summonSkillId`,`skill_id`,`skill_level`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

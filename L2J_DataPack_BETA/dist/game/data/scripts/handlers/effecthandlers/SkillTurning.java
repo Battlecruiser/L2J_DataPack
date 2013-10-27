@@ -18,35 +18,29 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Skill Turning effect implementation.
  */
-public class SkillTurning extends L2Effect
+public final class SkillTurning extends AbstractEffect
 {
 	private final int _chance;
 	
-	public SkillTurning(Env env, EffectTemplate template)
+	public SkillTurning(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -56,14 +50,14 @@ public class SkillTurning extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || (getEffected() == getEffector()) || getEffected().isRaid())
+		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || info.getEffected().isRaid())
 		{
 			return false;
 		}
 		
-		getEffected().breakCast();
+		info.getEffected().breakCast();
 		return true;
 	}
 }

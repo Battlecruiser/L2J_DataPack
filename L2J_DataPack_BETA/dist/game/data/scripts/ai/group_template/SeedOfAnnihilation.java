@@ -344,7 +344,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("transform"))
 		{
-			if (player.getFirstEffect(6408) != null)
+			if (player.isAffectedBySkill(6408))
 			{
 				npc.showChatWindow(player, 2);
 			}

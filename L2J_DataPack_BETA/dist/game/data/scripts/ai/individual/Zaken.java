@@ -36,7 +36,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -256,28 +255,18 @@ public class Zaken extends AbstractNpcAI
 				_1001 = 0;
 				cancelQuestTimer("1001", npc, null);
 			}
-			int sk_4223 = 0;
-			int sk_4227 = 0;
-			for (L2Effect e : npc.getAllEffects())
-			{
-				if (e.getSkill().getId() == 4227)
-				{
-					sk_4227 = 1;
-				}
-				if (e.getSkill().getId() == 4223)
-				{
-					sk_4223 = 1;
-				}
-			}
+			
+			boolean sk_4223 = npc.isAffectedBySkill(4223);
+			boolean sk_4227 = npc.isAffectedBySkill(4227);
 			if (getTimeHour() < 5)
 			{
-				if (sk_4223 == 1) // use night face if zaken have day face
+				if (sk_4223) // use night face if zaken have day face
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4224, 1));
 					_loc.setLocation(npc.getLocation());
 				}
-				if (sk_4227 == 0) // use zaken regeneration
+				if (!sk_4227) // use zaken regeneration
 				{
 					npc.setTarget(npc);
 					npc.doCast(SkillTable.getInstance().getInfo(4227, 1));
@@ -450,17 +439,19 @@ public class Zaken extends AbstractNpcAI
 					_quest1 = 0;
 				}
 			}
-			else if (sk_4223 == 0) // use day face if not night time
+			else if (!sk_4223) // use day face if not night time
 			{
 				npc.setTarget(npc);
 				npc.doCast(SkillTable.getInstance().getInfo(4223, 1));
 				_quest2 = 3;
 			}
-			if (sk_4227 == 1) // when switching to day time, cancel zaken night regen
+			
+			if (sk_4227) // when switching to day time, cancel zaken night regen
 			{
 				npc.setTarget(npc);
 				npc.doCast(SkillTable.getInstance().getInfo(4242, 1));
 			}
+			
 			if (getRandom(40) < 1)
 			{
 				int i2 = getRandom(15);
@@ -776,15 +767,8 @@ public class Zaken extends AbstractNpcAI
 		{
 			if (attacker.getMountType() == MountType.STRIDER)
 			{
-				int sk_4258 = 0;
-				for (L2Effect e : attacker.getAllEffects())
-				{
-					if (e.getSkill().getId() == 4258)
-					{
-						sk_4258 = 1;
-					}
-				}
-				if (sk_4258 == 0)
+				boolean sk_4258 = attacker.isAffectedBySkill(4258);
+				if (!sk_4258)
 				{
 					npc.setTarget(attacker);
 					npc.doCast(SkillTable.getInstance().getInfo(4258, 1));

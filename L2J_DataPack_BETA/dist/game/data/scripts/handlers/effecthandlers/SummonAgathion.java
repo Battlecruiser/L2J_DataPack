@@ -18,28 +18,22 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Summon Agathion effect implementation.
  * @author Zoey76
  */
-public class SummonAgathion extends L2Effect
+public final class SummonAgathion extends AbstractEffect
 {
-	public SummonAgathion(Env env, EffectTemplate template)
+	public SummonAgathion(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,21 +43,21 @@ public class SummonAgathion extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || !getEffected().isPlayer())
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 			return false;
 		}
 		
-		player.setAgathionId((getSkill() == null) ? 0 : getSkill().getNpcId());
+		player.setAgathionId((info.getSkill() == null) ? 0 : info.getSkill().getNpcId());
 		player.broadcastUserInfo();
 		return true;
 	}

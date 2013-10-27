@@ -18,31 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Buff effect implementation.
  * @author mkizub
  */
-public class Buff extends L2Effect
+public class Buff extends AbstractEffect
 {
-	public Buff(Env env, EffectTemplate template)
+	public Buff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public Buff(Env env, L2Effect effect)
-	{
-		super(env, effect);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return !getSkill().isPassive();
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,8 +42,8 @@ public class Buff extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return getSkill().isPassive() || getSkill().isToggle();
+		return info.getSkill().isPassive() || info.getSkill().isToggle();
 	}
 }

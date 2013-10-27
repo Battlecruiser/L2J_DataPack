@@ -14,7 +14,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="6645" itemCount="500" />
 			</effect>
 		</for>
@@ -33,7 +33,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="6646" itemCount="500" />
 			</effect>
 		</for>
@@ -52,7 +52,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="6647" itemCount="500" />
 			</effect>
 		</for>
@@ -75,7 +75,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2505" levels="1" name="Chant of Combat">
@@ -97,7 +97,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1517" skillLvl="1" />
 			</effect>
 		</for>
@@ -121,7 +121,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1518" skillLvl="1" />
 			</effect>
 		</for>
@@ -145,7 +145,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1519" skillLvl="1" />
 			</effect>
 		</for>
@@ -161,7 +161,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="12774" npcCount="1" despawnDelay="180000" />
 			</effect>
 		</for>
@@ -177,7 +177,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="12777" npcCount="1" despawnDelay="180000" />
 			</effect>
 		</for>
@@ -200,7 +200,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2511" levels="1" name="Scroll of Transformation - Gatekeeper">
@@ -242,7 +242,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -271,7 +271,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="BigHead" val="0" abnormalVisualEffect="bighead">
+			<effect name="BigHead" abnormalVisualEffect="bighead">
 				<mul order="0x30" stat="regHp" val="2" />
 				<mul order="0x30" stat="regMp" val="2" />
 			</effect>
@@ -295,7 +295,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -387,7 +387,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Teleport" noicon="1" val="0">
+			<effect name="Teleport">
 				<param x="-120050" y="44500" z="360" />
 			</effect>
 		</for>
@@ -411,7 +411,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="818" skillLvl="1" />
 			</effect>
 		</for>
@@ -435,7 +435,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="819" skillLvl="1" />
 			</effect>
 		</for>
@@ -459,7 +459,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="820" skillLvl="1" />
 			</effect>
 		</for>
@@ -483,7 +483,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="821" skillLvl="1" />
 			</effect>
 		</for>
@@ -511,7 +511,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -534,7 +534,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2533" levels="1" name="Pathfinder Supplies">
@@ -555,7 +555,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2534" levels="1" name="Pathfinder Supplies">
@@ -576,7 +576,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2535" levels="1" name="Pathfinder Supplies">
@@ -597,7 +597,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2536" levels="1" name="Pathfinder Supplies">
@@ -618,7 +618,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2537" levels="1" name="Pathfinder Supplies">
@@ -639,7 +639,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2538" levels="1" name="Pathfinder Supplies">
@@ -660,7 +660,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2539" levels="1" name="Pathfinder Supplies">
@@ -681,7 +681,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2540" levels="1" name="Pathfinder Supplies">
@@ -702,7 +702,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2541" levels="1" name="Pathfinder Supplies">
@@ -723,7 +723,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2542" levels="1" name="Pathfinder Supplies">
@@ -744,7 +744,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2543" levels="1" name="Pathfinder Supplies">
@@ -765,7 +765,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2544" levels="1" name="Pathfinder Supplies">
@@ -786,7 +786,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2545" levels="1" name="Pathfinder Supplies">
@@ -807,7 +807,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2546" levels="1" name="Pathfinder Supplies">
@@ -828,7 +828,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2547" levels="1" name="Pathfinder Supplies">
@@ -849,7 +849,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2548" levels="1" name="Pathfinder Supplies">
@@ -870,7 +870,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2549" levels="1" name="Pathfinder Supplies">
@@ -891,7 +891,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2550" levels="1" name="Pathfinder Supplies">
@@ -912,7 +912,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2551" levels="1" name="Pathfinder Supplies">
@@ -933,7 +933,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2552" levels="1" name="Pathfinder Supplies">
@@ -954,7 +954,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2553" levels="1" name="Pathfinder Supplies">
@@ -975,7 +975,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2554" levels="1" name="Pathfinder Supplies">
@@ -996,7 +996,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2555" levels="1" name="Pathfinder Supplies">
@@ -1017,7 +1017,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2556" levels="1" name="Pathfinder Supplies">
@@ -1038,7 +1038,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2557" levels="1" name="Pathfinder Supplies">
@@ -1059,7 +1059,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2558" levels="1" name="Pathfinder Supplies">
@@ -1080,7 +1080,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2559" levels="1" name="Pathfinder Supplies">
@@ -1101,7 +1101,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2560" levels="1" name="Pathfinder Supplies">
@@ -1122,7 +1122,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2561" levels="1" name="Pathfinder Supplies">
@@ -1143,7 +1143,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2562" levels="1" name="Pathfinder Supplies">
@@ -1164,7 +1164,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2563" levels="1" name="Pathfinder Supplies">
@@ -1185,7 +1185,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2564" levels="1" name="Pathfinder Supplies">
@@ -1206,7 +1206,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2565" levels="1" name="Pathfinder Supplies">
@@ -1227,7 +1227,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2566" levels="1" name="Pathfinder Supplies">
@@ -1248,7 +1248,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2567" levels="1" name="Pathfinder Supplies">
@@ -1269,7 +1269,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2568" levels="1" name="Pathfinder Supplies">
@@ -1290,7 +1290,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2569" levels="1" name="Pathfinder Supplies">
@@ -1311,7 +1311,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2570" levels="1" name="Pathfinder Supplies">
@@ -1332,7 +1332,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2571" levels="1" name="Pathfinder Supplies">
@@ -1353,7 +1353,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2572" levels="1" name="Pathfinder's Reward">
@@ -1374,7 +1374,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2573" levels="1" name="Pathfinder's Reward">
@@ -1395,7 +1395,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2574" levels="1" name="Pathfinder's Reward">
@@ -1416,7 +1416,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2575" levels="1" name="Pathfinder's Reward">
@@ -1437,7 +1437,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2576" levels="1" name="Pathfinder's Reward">
@@ -1458,7 +1458,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2577" levels="1" name="Instant Defense">
@@ -1473,7 +1473,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" val="0" special="invincible" />
+			<effect name="Invincible" special="invincible" />
 		</for>
 	</skill>
 	<skill id="2578" levels="1" name="Cure Poison Paralyze">
@@ -1483,7 +1483,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="POISON,9" />
 			</effect>
 		</for>
@@ -1495,7 +1495,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="DEATH_CLACK,1" />
 			</effect>
 		</for>
@@ -1517,7 +1517,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1567,7 +1567,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="#value" />
+			<effect name="VitalityPointUp" val="#value" />
 		</for>
 	</skill>
 	<skill id="2587" levels="1" name="Increase number of teleport slots.">
@@ -1613,7 +1613,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="30" />
+			<effect name="HealPercent" val="30" />
 		</for>
 	</skill>
 	<skill id="2593" levels="1" name="Bow/Crossbow Attack Resistance Potion">
@@ -1631,7 +1631,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BOW="40" />
 				<param CROSSBOW="20" />
 			</effect>
@@ -1653,7 +1653,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -1674,7 +1674,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -1691,7 +1691,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0">
+			<effect name="Resurrection">
 				<param power="100" />
 			</effect>
 		</for>

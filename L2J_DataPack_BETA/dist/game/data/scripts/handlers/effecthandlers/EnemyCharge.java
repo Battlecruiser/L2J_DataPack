@@ -18,34 +18,22 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 
-public class EnemyCharge extends L2Effect
+public final class EnemyCharge extends AbstractEffect
 {
-	static final Logger _log = Logger.getLogger(EnemyCharge.class.getName());
-	
-	private int _x, _y, _z;
-	
-	public EnemyCharge(Env env, EffectTemplate template)
+	public EnemyCharge(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -55,29 +43,29 @@ public class EnemyCharge extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isMovementDisabled())
+		if (info.getEffected().isMovementDisabled())
 		{
 			return false;
 		}
 		
 		// Get current position of the L2Character
-		final int curX = getEffector().getX();
-		final int curY = getEffector().getY();
-		final int curZ = getEffector().getZ();
+		final int curX = info.getEffector().getX();
+		final int curY = info.getEffector().getY();
+		final int curZ = info.getEffector().getZ();
 		
 		// Calculate distance (dx,dy) between current position and destination
-		double dx = getEffected().getX() - curX;
-		double dy = getEffected().getY() - curY;
-		double dz = getEffected().getZ() - curZ;
+		double dx = info.getEffected().getX() - curX;
+		double dy = info.getEffected().getY() - curY;
+		double dz = info.getEffected().getZ() - curZ;
 		double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + getEffected().getX() + "," + getEffected().getY());
+			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
 			return false;
 		}
-		int offset = Math.max((int) distance - getSkill().getFlyRadius(), 30);
+		int offset = Math.max((int) distance - info.getSkill().getFlyRadius(), 30);
 		
 		double cos;
 		double sin;
@@ -101,21 +89,21 @@ public class EnemyCharge extends L2Effect
 		cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		_x = curX + (int) ((distance - offset) * cos);
-		_y = curY + (int) ((distance - offset) * sin);
-		_z = getEffected().getZ();
+		int x = curX + (int) ((distance - offset) * cos);
+		int y = curY + (int) ((distance - offset) * sin);
+		int z = info.getEffected().getZ();
 		
 		if (Config.GEODATA > 0)
 		{
-			Location destiny = GeoData.getInstance().moveCheck(getEffector().getX(), getEffector().getY(), getEffector().getZ(), _x, _y, _z, getEffector().getInstanceId());
-			_x = destiny.getX();
-			_y = destiny.getY();
+			Location destiny = GeoData.getInstance().moveCheck(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
+			x = destiny.getX();
+			y = destiny.getY();
 		}
-		getEffector().broadcastPacket(new FlyToLocation(getEffector(), _x, _y, _z, FlyType.CHARGE));
+		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), x, y, z, FlyType.CHARGE));
 		
 		// maybe is need force set X,Y,Z
-		getEffector().setXYZ(_x, _y, _z);
-		getEffector().broadcastPacket(new ValidateLocation(getEffector()));
+		info.getEffector().setXYZ(x, y, z);
+		info.getEffector().broadcastPacket(new ValidateLocation(info.getEffector()));
 		
 		return true;
 	}

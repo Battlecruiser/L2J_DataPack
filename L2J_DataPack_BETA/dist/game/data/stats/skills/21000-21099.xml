@@ -10,7 +10,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21001" levels="1" name="Release Seal on Agathion - Gold Majo">
@@ -23,7 +23,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21002" levels="1" name="Release Seal on Agathion - Black Majo">
@@ -36,7 +36,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21003" levels="1" name="Release Seal on Agathion - Plaipitak">
@@ -49,7 +49,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21004" levels="1" name="Wind Walk">
@@ -66,7 +66,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -84,7 +84,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -113,7 +113,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="BigHead" val="0" abnormalVisualEffect="bighead" />
+			<effect name="BigHead" abnormalVisualEffect="bighead" />
 		</for>
 	</skill>
 	<skill id="21008" levels="1" name="Release Seal on Agathion - Baby Panda">
@@ -126,7 +126,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21009" levels="1" name="Release Seal on Agathion - Bamboo Panda">
@@ -139,7 +139,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21010" levels="1" name="Release Seal on Agathion - Sexy Panda">
@@ -152,7 +152,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21011" levels="1" name="Energy Recovery">
@@ -169,7 +169,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -188,7 +188,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -207,7 +207,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -420,7 +420,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21032" levels="1" name="Agathion Seal Release - Naughty Cupid">
@@ -433,7 +433,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21033" levels="1" name="Release Seal on Agathion - White Maneki Neko">
@@ -446,7 +446,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21034" levels="1" name="Release Seal on Agathion - Black Maneki Neko">
@@ -459,7 +459,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21035" levels="1" name="Release Seal on Agathion - Brown Maneki Neko">
@@ -472,7 +472,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21036" levels="1" name="Release Seal on Agathion - One-eyed Bat Drove">
@@ -485,7 +485,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21037" levels="1" name="Release Seal on Agathion - Pegasus">
@@ -498,7 +498,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21038" levels="1" name="Release Seal on Agathion - Yellow-robed Tojigong">
@@ -511,7 +511,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21039" levels="1" name="Release Seal on Agathion - Blue-robed Tojigong">
@@ -524,7 +524,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21040" levels="1" name="Release Seal on Agathion - Green-robed Tojigong">
@@ -537,7 +537,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21041" levels="1" name="Release Seal on Agathion - Bugbear">
@@ -550,7 +550,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21042" levels="1" name="Baguette's Blessing">
@@ -563,8 +563,8 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
-			<effect name="ManaHealPercent" noicon="1" val="50" />
+			<effect name="HealPercent" val="100" />
+			<effect name="ManaHealPercent" val="50" />
 		</for>
 	</skill>
 	<skill id="21043" levels="1" name="Agathion Seal Cancel - Red Sumo Wrestler">
@@ -577,7 +577,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21044" levels="1" name="Agathion Seal Cancel - Blue Sumo Wrestler Agathion">
@@ -590,7 +590,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21045" levels="1" name="Agathion Seal Cancel - Great Sumo Match">
@@ -603,7 +603,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21046" levels="1" name="Agathion Seal Cancel - Button-Eyed Bear Doll">
@@ -616,7 +616,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21047" levels="1" name="Agathion Seal Cancel - God of Fortune">
@@ -629,7 +629,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21048" levels="1" name="Agathion Seal Cancel - Dryad">
@@ -642,7 +642,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21049" levels="1" name="Agathion Seal Cancel - Wonboso">
@@ -655,7 +655,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21050" levels="1" name="Agathion Seal Cancel - Daewoonso">
@@ -668,7 +668,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21051" levels="1" name="Steam Beatle Mount">
@@ -701,7 +701,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.25" />
 			</effect>
 		</for>
@@ -719,7 +719,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.25" />
 			</effect>
 		</for>
@@ -737,7 +737,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0">
+			<effect name="Resurrection">
 				<param power="100" />
 			</effect>
 		</for>
@@ -756,7 +756,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -774,7 +774,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -795,7 +795,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -816,7 +816,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="regMp" val="3.09" />
 			</effect>
 		</for>
@@ -838,7 +838,7 @@
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" noicon="1" val="444" />
+			<effect name="Heal" val="444" />
 		</for>
 	</skill>
 	<skill id="21060" levels="1" name="Death Whisper">
@@ -855,7 +855,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -873,7 +873,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -892,7 +892,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -911,7 +911,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -932,7 +932,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="regMp" val="3.09" />
 			</effect>
 		</for>
@@ -953,7 +953,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -974,7 +974,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -997,7 +997,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -1018,7 +1018,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
@@ -1037,7 +1037,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -1056,7 +1056,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -1074,7 +1074,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -1093,7 +1093,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -1114,7 +1114,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="regMp" val="3.09" />
 			</effect>
 		</for>
@@ -1135,7 +1135,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -1157,7 +1157,7 @@
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" noicon="1" val="444" />
+			<effect name="Heal" val="444" />
 		</for>
 	</skill>
 	<skill id="21076" levels="1" name="Resist Unholy">
@@ -1176,7 +1176,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="darkRes" val="30" />
 			</effect>
 		</for>
@@ -1195,7 +1195,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -1214,7 +1214,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -1232,7 +1232,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -1251,7 +1251,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -1272,7 +1272,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="regMp" val="3.09" />
 			</effect>
 		</for>
@@ -1293,7 +1293,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
 		</for>
@@ -1315,7 +1315,7 @@
 		<set name="trait" val="ETC" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="30" />
-			<effect name="Heal" noicon="1" val="444" />
+			<effect name="Heal" val="444" />
 		</for>
 	</skill>
 	<skill id="21084" levels="1" name="Energy Recovery">
@@ -1334,7 +1334,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<sub order="0x40" stat="vitalityConsumeRate" val="10" />
 			</effect>
 		</for>
@@ -1349,7 +1349,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21086" levels="1" name="Blessing of Love">
@@ -1368,7 +1368,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" val="0" special="invincible" />
+			<effect name="Invincible" special="invincible" />
 		</for>
 	</skill>
 	<skill id="21087" levels="1" name="Berserker Spirit">
@@ -1385,7 +1385,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<mul order="0x30" stat="mAtk" val="1.16" />
@@ -1421,7 +1421,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="CallPc" noicon="1" val="0">
+			<effect name="CallPc">
 				<param itemId="0" itemCount="0" />
 			</effect>
 		</for>
@@ -1441,7 +1441,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SilentMove" abnormalVisualEffect="stealth" val="0">
+			<effect name="SilentMove" abnormalVisualEffect="stealth">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 			</effect>
 		</for>
@@ -1462,7 +1462,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="PhoenixBless" val="0" />
+			<effect name="PhoenixBless" />
 		</for>
 	</skill>
 	<skill id="21091" levels="1" name="Agathion Seal Cancel - Weaver">
@@ -1475,7 +1475,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="21092" levels="1" name="Theme - Love">
@@ -1512,7 +1512,7 @@
 		<set name="reuseDelay" val="43200000" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0">
+			<effect name="Resurrection">
 				<param power="100" />
 			</effect>
 		</for>
@@ -1531,7 +1531,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
@@ -1561,7 +1561,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="CallPc" noicon="1" val="0">
+			<effect name="CallPc">
 				<param itemId="0" itemCount="0" />
 			</effect>
 		</for>
@@ -1580,7 +1580,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<add order="0x40" stat="runSpd" val="20" />
@@ -1602,7 +1602,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="pDef" val="1.2" />
 				<mul order="0x30" stat="pAtk" val="1.1" />

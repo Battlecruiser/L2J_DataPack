@@ -69,7 +69,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="10" />
 			</effect>
 		</for>
@@ -81,7 +81,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="10" />
 			</effect>
 		</for>
@@ -93,7 +93,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="10" />
 			</effect>
 		</for>
@@ -259,7 +259,7 @@
 			<player canUntransform="true" />
 		</cond>
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="TRANSFORM,-1" />
 			</effect>
 		</for>
@@ -287,7 +287,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="621" levels="1" name="Create Special Bolt">
@@ -307,7 +307,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="10113" itemCount="1" />
 			</effect>
 		</for>
@@ -335,7 +335,7 @@
 			<player flyMounted="false" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="#rEvas" />
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 				<add order="0x40" stat="pSkillEvas" val="#pSkillEvas" />
@@ -398,7 +398,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="FocusSouls" noicon="1" val="50" />
+			<effect name="FocusSouls" val="50" />
 		</for>
 	</skill>
 	<skill id="626" levels="4" name="Critical Sense" enchantGroup1="1" enchantGroup2="1">
@@ -473,12 +473,12 @@
 			<using kind="Crossbow" />
 		</cond>
 		<for>
-			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" />
+			<effect name="PhysicalSoulAttack" />
+			<effect name="Fear" />
 		</for>
 		<enchant4for>
-			<effect name="PhysicalSoulAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" />
+			<effect name="PhysicalSoulAttack" />
+			<effect name="Fear" />
 		</enchant4for>
 	</skill>
 	<skill id="628" levels="1" name="Warp">
@@ -498,7 +498,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Blink" noicon="1" val="0" />
+			<effect name="Blink" />
 		</for>
 	</skill>
 	<skill id="629" levels="1" name="Rabbit Magic Eye">
@@ -830,7 +830,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<param HOLD="5" />
 				<param SLEEP="5" />
@@ -847,7 +847,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
+			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5572" />
 		</for>
 	</skill>
 	<skill id="652" levels="1" name="Knight Ability - Defense">
@@ -858,7 +858,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
@@ -875,7 +875,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
+			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5574" />
 		</for>
 	</skill>
 	<skill id="654" levels="1" name="Wizard Ability - Mana Steal">
@@ -886,7 +886,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
+			<effect name="ChanceSkillTrigger" activationChance="2" chanceType="ON_HIT" triggeredId="5575" />
 		</for>
 	</skill>
 	<skill id="655" levels="1" name="Enchanter Ability - Barrier">
@@ -897,7 +897,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
 				<param minDamage="1" />
 				<param chance="2" />
@@ -1391,7 +1391,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="676" levels="1" name="Divine Warrior Sonic Blaster">
@@ -1409,7 +1409,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="677" levels="1" name="Divine Warrior Transfixion of Earth">
@@ -1428,7 +1428,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="678" levels="1" name="Divine Warrior War Cry">
@@ -1445,7 +1445,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.25" />
 			</effect>
 		</for>
@@ -1470,10 +1470,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="680" levels="1" name="Divine Knight Hate">
@@ -1499,7 +1499,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMe" />
 		</for>
 	</skill>
 	<skill id="681" levels="1" name="Divine Knight Hate Aura">
@@ -1524,7 +1524,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="TargetMe" val="0" />
+			<effect name="TargetMe" />
 		</for>
 	</skill>
 	<skill id="682" levels="1" name="Divine Knight Stun Attack">
@@ -1551,8 +1551,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="683" levels="1" name="Divine Knight Thunder Storm">
@@ -1579,8 +1579,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="684" levels="1" name="Divine Knight Ultimate Defense">
@@ -1597,7 +1597,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" val="0" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
 				<add order="0x40" stat="pDef" val="3600" />
 				<add order="0x40" stat="mDef" val="2700" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -1624,10 +1624,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="686" levels="1" name="Divine Rogue Stun Shot">
@@ -1653,9 +1653,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0">
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+			<effect name="TargetCancel">
 				<param chance="40" />
 			</effect>
 		</for>
@@ -1676,7 +1676,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="688" levels="1" name="Divine Rogue Bleed Attack">
@@ -1703,7 +1703,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="3" val="139" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
@@ -1724,8 +1724,8 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="Lethal" noicon="1" val="0">
+			<effect name="FatalBlow" />
+			<effect name="Lethal">
 				<param halfLethal="10" />
 			</effect>
 		</for>
@@ -1747,7 +1747,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -1772,10 +1772,10 @@
 			<player hp="30" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="10" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="692" levels="1" name="Divine Wizard Holy Flare">
@@ -1795,8 +1795,8 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect self="1" name="Buff" val="0">
+			<effect name="MagicalAttack" />
+			<effect self="1" name="Buff">
 				<mul order="0x30" stat="pvpMagicalDmg" val="0.5" />
 			</effect>
 		</for>
@@ -1821,7 +1821,7 @@
 			<target race_id="1" /> <!-- Undead -->
 		</cond>
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="694" levels="1" name="Divine Wizard Holy Curtain">
@@ -1842,7 +1842,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="695" levels="1" name="Divine Wizard Holy Cloud">
@@ -1870,8 +1870,8 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SLEEP" />
 		<for>
-			<effect name="Sleep" val="0" />
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="Sleep" />
+			<effect name="DefenceTrait">
 				<param SLEEP="100" />
 			</effect>
 		</for>
@@ -1898,7 +1898,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<sub order="0x40" stat="holyRes" val="25" />
 				<add order="0x40" stat="darkRes" val="12" />
 			</effect>
@@ -1924,10 +1924,10 @@
 			<player mp="10" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.2" />
 			</effect>
-			<effect self="1" name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_START" triggeredId="5602" />
+			<effect self="1" name="ChanceSkillTrigger" chanceType="ON_START" triggeredId="5602" />
 		</for>
 	</skill>
 	<skill id="698" levels="1" name="Divine Healer Major Heal">
@@ -1943,7 +1943,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="946" />
+			<effect name="Heal" val="946" />
 		</for>
 	</skill>
 	<skill id="699" levels="1" name="Divine Healer Battle Heal">
@@ -1959,7 +1959,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="826" />
+			<effect name="Heal" val="826" />
 		</for>
 	</skill>
 </list>

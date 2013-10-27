@@ -19,52 +19,35 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.datatables.TransformData;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Transformation effect implementation.
  * @author nBd
  */
-public class Transformation extends L2Effect
+public final class Transformation extends AbstractEffect
 {
-	public Transformation(Env env, EffectTemplate template)
+	public Transformation(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public Transformation(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean canBeStolen()
+	public void onExit(BuffInfo info)
 	{
-		return false;
+		info.getEffected().stopTransformation(false);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart(BuffInfo info)
 	{
-		return L2EffectType.TRANSFORMATION;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().stopTransformation(false);
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (!getEffected().isPlayer())
+		if (!info.getEffected().isPlayer())
 		{
 			return false;
 		}
-		return TransformData.getInstance().transformPlayer((int) calc(), getEffected().getActingPlayer());
+		return TransformData.getInstance().transformPlayer((int) getValue(), info.getEffected().getActingPlayer());
 	}
 }

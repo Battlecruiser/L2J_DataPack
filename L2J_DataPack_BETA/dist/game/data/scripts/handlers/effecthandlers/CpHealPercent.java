@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -30,11 +31,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Cp Heal Percent effect implementation.
  * @author UnAfraid
  */
-public class CpHealPercent extends L2Effect
+public final class CpHealPercent extends AbstractEffect
 {
-	public CpHealPercent(Env env, EffectTemplate template)
+	public CpHealPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,16 +51,16 @@ public class CpHealPercent extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
 			return false;
 		}
 		
 		double amount = 0;
-		double power = calc();
+		double power = getValue();
 		boolean full = (power == 100.0);
 		
 		amount = full ? target.getMaxCp() : (target.getMaxCp() * power) / 100.0;

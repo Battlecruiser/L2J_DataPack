@@ -71,8 +71,6 @@ public class ItemSkillsTemplate implements IItemHandler
 			return false;
 		}
 		
-		int skillId;
-		int skillLvl;
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		for (SkillHolder skillInfo : skills)
 		{
@@ -120,37 +118,6 @@ public class ItemSkillsTemplate implements IItemHandler
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PET_USES_S1);
 					sm.addSkillName(itemSkill);
 					playable.sendPacket(sm);
-				}
-				else
-				{
-					skillId = skillInfo.getSkillId();
-					skillLvl = skillInfo.getSkillLvl();
-					// Short buff icon for healing potions.
-					switch (skillId)
-					{
-						case 2031:
-						case 2032:
-						case 2037:
-						case 26025:
-						case 26026:
-							final int buffId = activeChar.getShortBuffTaskSkillId();
-							if ((skillId == 2037) || (skillId == 26025))
-							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
-							}
-							else if (((skillId == 2032) || (skillId == 26026)) && (buffId != 2037) && (buffId != 26025))
-							{
-								activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
-							}
-							else
-							{
-								if ((buffId != 2037) && (buffId != 26025) && (buffId != 2032) && (buffId != 26026))
-								{
-									activeChar.shortBuffStatusUpdate(skillId, skillLvl, itemSkill.getAbnormalTime());
-								}
-							}
-							break;
-					}
 				}
 				
 				if (item.isPotion() || item.isElixir() || (item.getItemType() == L2EtcItemType.HERB) || itemSkill.isSimultaneousCast())

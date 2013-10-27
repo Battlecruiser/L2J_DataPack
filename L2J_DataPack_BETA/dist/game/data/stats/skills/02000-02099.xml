@@ -39,7 +39,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="12774" npcCount="1" despawnDelay="180000" />
 			</effect>
 		</for>
@@ -55,7 +55,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="12777" npcCount="1" despawnDelay="180000" />
 			</effect>
 		</for>
@@ -112,7 +112,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -129,7 +129,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -146,7 +146,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -168,7 +168,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -185,7 +185,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0" />
+			<effect name="Resurrection" />
 		</for>
 	</skill>
 	<skill id="2015" levels="1" name="Scroll: Enchant Weapon (Grade B)">
@@ -358,7 +358,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -375,7 +375,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -397,7 +397,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>
@@ -425,7 +425,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" noicon="1" val="435" />
+			<effect name="Heal" val="435" />
 		</for>
 	</skill>
 	<skill id="2039" levels="1" name="Soulshot: No Grade">
@@ -452,7 +452,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="CLANHALL" />
 			</effect>
 		</for>
@@ -474,7 +474,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="CASTLE" />
 			</effect>
 		</for>
@@ -486,7 +486,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="POISON,3" />
 			</effect>
 		</for>
@@ -498,7 +498,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="POISON,7" />
 			</effect>
 		</for>
@@ -510,7 +510,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="BLEEDING,3" />
 			</effect>
 		</for>
@@ -522,7 +522,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="BLEEDING,7" />
 			</effect>
 		</for>
@@ -534,7 +534,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonPet" noicon="1" val="0" />
+			<effect name="SummonPet" />
 		</for>
 	</skill>
 	<skill id="2047" levels="1" name="Spiritshot: No Grade">
@@ -565,7 +565,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0">
+			<effect name="Resurrection">
 				<param power="100" />
 			</effect>
 		</for>
@@ -583,7 +583,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -601,7 +601,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -619,7 +619,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -637,7 +637,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -655,7 +655,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -673,7 +673,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="4" />
 			</effect>
 		</for>
@@ -691,7 +691,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -709,7 +709,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -727,7 +727,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -745,7 +745,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -758,7 +758,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="FATAL_POISON,1" />
 			</effect>
 		</for>
@@ -782,7 +782,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="PC_BODY" />
 		<for>
-			<effect name="Resurrection" noicon="1" val="0">
+			<effect name="Resurrection">
 				<param power="100" />
 			</effect>
 		</for>
@@ -809,7 +809,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="regMp" val="1.82" />
 			</effect>
 		</for>
@@ -899,8 +899,8 @@
 		<set name="operateType" val="A3" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="RandomizeHate" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="RandomizeHate" />
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -914,7 +914,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DeleteHateOfMe" noicon="1" val="0">
+			<effect name="DeleteHateOfMe">
 				<param chance="70" />
 			</effect>
 		</for>
@@ -931,7 +931,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="breath" val="5" />
 			</effect>
 		</for>
@@ -948,7 +948,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="0.83" />
 				<add order="0x40" stat="reflectDam" val="20" />
 			</effect>
@@ -968,7 +968,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1835" itemCount="300" />
 			</effect>
 		</for>
@@ -987,7 +987,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1463" itemCount="300" />
 			</effect>
 		</for>
@@ -1006,7 +1006,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1464" itemCount="300" />
 			</effect>
 		</for>
@@ -1025,7 +1025,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1465" itemCount="300" />
 			</effect>
 		</for>
@@ -1044,7 +1044,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1466" itemCount="300" />
 			</effect>
 		</for>
@@ -1063,7 +1063,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="1467" itemCount="300" />
 			</effect>
 		</for>
@@ -1082,7 +1082,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2509" itemCount="300" />
 			</effect>
 		</for>
@@ -1101,7 +1101,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2510" itemCount="300" />
 			</effect>
 		</for>
@@ -1120,7 +1120,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2511" itemCount="300" />
 			</effect>
 		</for>
@@ -1139,7 +1139,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2512" itemCount="300" />
 			</effect>
 		</for>
@@ -1158,7 +1158,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2513" itemCount="300" />
 			</effect>
 		</for>
@@ -1177,7 +1177,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="2514" itemCount="300" />
 			</effect>
 		</for>
@@ -1196,7 +1196,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3947" itemCount="300" />
 			</effect>
 		</for>
@@ -1215,7 +1215,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3948" itemCount="300" />
 			</effect>
 		</for>
@@ -1234,7 +1234,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3949" itemCount="300" />
 			</effect>
 		</for>
@@ -1253,7 +1253,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3950" itemCount="300" />
 			</effect>
 		</for>
@@ -1272,7 +1272,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3951" itemCount="300" />
 			</effect>
 		</for>
@@ -1291,7 +1291,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="3952" itemCount="300" />
 			</effect>
 		</for>
@@ -1335,7 +1335,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<for>
-			<effect name="Harvesting" noicon="1" val="0" />
+			<effect name="Harvesting" />
 		</for>
 	</skill>
 	<skill id="2099" levels="1" name="Escape: 5 minutes">
@@ -1353,7 +1353,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Escape" noicon="1" val="0">
+			<effect name="Escape">
 				<param escapeType="TOWN" />
 			</effect>
 		</for>

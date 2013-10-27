@@ -19,21 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Petrification effect implementation.
  */
-public class Petrification extends L2Effect
+public final class Petrification extends AbstractEffect
 {
-	public Petrification(Env env, EffectTemplate template)
+	public Petrification(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,20 +50,20 @@ public class Petrification extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_2);
-		if (!getEffected().isPlayer())
+		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.HOLD_2);
+		if (!info.getEffected().isPlayer())
 		{
-			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_2);
-		getEffected().startParalyze();
-		return super.onStart();
+		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_2);
+		info.getEffected().startParalyze();
+		return true;
 	}
 }

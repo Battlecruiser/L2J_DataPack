@@ -19,23 +19,24 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.Location;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Teleport effect implementation.
  * @author Adry_85
  */
-public class Teleport extends L2Effect
+public final class Teleport extends AbstractEffect
 {
 	private final Location _loc;
 	
-	public Teleport(Env env, EffectTemplate template)
+	public Teleport(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_loc = new Location(template.getParameters().getInt("x", 0), template.getParameters().getInt("y", 0), template.getParameters().getInt("z", 0));
+		super(attachCond, applyCond, set, params);
+		_loc = new Location(getParameters().getInt("x", 0), getParameters().getInt("y", 0), getParameters().getInt("z", 0));
 	}
 	
 	@Override
@@ -51,9 +52,9 @@ public class Teleport extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().teleToLocation(_loc, true);
+		info.getEffected().teleToLocation(_loc, true);
 		return true;
 	}
 }

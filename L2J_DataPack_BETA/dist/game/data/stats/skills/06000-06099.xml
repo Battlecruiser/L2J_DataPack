@@ -258,9 +258,9 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Invincible" noicon="1" val="0" />
-			<effect name="Stun" noicon="1" val="0" />
-			<effect name="ImmobileBuff" noicon="1" val="0" />
+			<effect name="Invincible" />
+			<effect name="Stun" />
+			<effect name="ImmobileBuff" />
 		</for>
 	</skill>
 	<skill id="6035" levels="1" name="Red Team Transformation">
@@ -314,16 +314,15 @@
 	<skill id="6038" levels="1" name="Report Status">
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="600" />
-		<set name="abnormalType" val="NONE" />
+		<set name="abnormalType" val="BOT_PENALTY" />
 		<set name="icon" val="icon.skill6038" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="BlockChat" val="0" />
+			<effect name="BlockChat" />
 		</for>
 	</skill>
 	<skill id="6039" levels="1" name="Report Status">
@@ -334,11 +333,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="BlockParty" val="0" />
+			<effect name="BlockParty" />
 		</for>
 	</skill>
 	<skill id="6040" levels="1" name="Report Status">
@@ -349,11 +347,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="Flag" val="0" />
+			<effect name="Flag" />
 		</for>
 	</skill>
 	<skill id="6041" levels="1" name="Phoenix Rush">
@@ -375,8 +372,8 @@
 			<target mindistance="200" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="EnemyCharge" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="EnemyCharge" />
 		</for>
 	</skill>
 	<skill id="6042" levels="1" name="Phoenix Cleanse">
@@ -394,7 +391,7 @@
 		<set name="reuseDelay" val="180000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="5" />
 			</effect>
 		</for>
@@ -417,7 +414,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="6044" levels="1" name="Phoenix Flame Beak">
@@ -438,7 +435,7 @@
 		<set name="reuseDelay" val="13000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6045" levels="1" name="Presentation - Fortune Bug">
@@ -464,7 +461,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6047" levels="14" name="Whirlwind">
@@ -483,7 +480,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6048" levels="14" name="Lance Smash">
@@ -504,7 +501,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6049" levels="4" name="Battle Cry">
@@ -527,7 +524,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mDef" val="#amount" />
@@ -550,7 +547,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6051" levels="14" name="Energy Burst">
@@ -570,7 +567,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="6052" levels="14" name="Shockwave">
@@ -590,7 +587,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="6053" levels="4" name="Howl">
@@ -616,7 +613,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#amount" />
 				<mul order="0x30" stat="pDef" val="#amount" />
 				<mul order="0x30" stat="mAtk" val="#amount" />
@@ -638,11 +635,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="BlockAction" val="0">
+			<effect name="BlockAction">
 				<param blockedActions="-2" />
 			</effect>
 		</for>
@@ -655,11 +651,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="BlockAction" val="0">
+			<effect name="BlockAction">
 				<param blockedActions="-2" />
 			</effect>
 		</for>
@@ -672,11 +667,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.0" />
 			</effect>
 		</for>
@@ -689,11 +683,10 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.0" />
 			</effect>
 		</for>
@@ -711,7 +704,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="2">
 					<using kind="Sword,Big Sword,Blunt,Big Blunt,Dagger,Dual Dagger,Dual Sword,Dual Fist,Pole,Ancient,Rapier" />
 				</mul>
@@ -731,7 +724,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.5" />
 			</effect>
 		</for>
@@ -956,7 +949,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="6091" levels="1" name="Anchor">
@@ -974,7 +967,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="6092" levels="1" name="Lightning Shock">
@@ -994,7 +987,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="6093" levels="1" name="Panther Hide">
@@ -1014,7 +1007,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Hide" val="0">
+			<effect name="Hide">
 				<mul order="0x30" stat="runSpd" val="0.9" />
 			</effect>
 		</for>
@@ -1033,7 +1026,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="buff" rate="25" max="2" />
 			</effect>
 		</for>
@@ -1063,8 +1056,8 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff">
 				<sub order="0x40" stat="darkRes" val="25" />
 			</effect>
 		</for>
@@ -1087,7 +1080,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
+			<effect name="FatalBlow" />
 		</for>
 	</skill>
 	<skill id="6097" levels="1" name="Scissors">

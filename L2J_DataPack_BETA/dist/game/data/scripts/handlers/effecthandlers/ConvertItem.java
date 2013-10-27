@@ -19,14 +19,14 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.Elementals;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.itemcontainer.Inventory;
 import com.l2jserver.gameserver.model.items.L2Weapon;
 import com.l2jserver.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -35,17 +35,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Convert Item effect implementation.
  * @author Zoey76
  */
-public class ConvertItem extends L2Effect
+public final class ConvertItem extends AbstractEffect
 {
-	public ConvertItem(Env env, EffectTemplate template)
+	public ConvertItem(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -55,14 +49,14 @@ public class ConvertItem extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffector() == null) || (getEffected() == null) || getEffected().isAlikeDead() || !getEffected().isPlayer())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || info.getEffected().isAlikeDead() || !info.getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isEnchanting())
 		{
 			return false;

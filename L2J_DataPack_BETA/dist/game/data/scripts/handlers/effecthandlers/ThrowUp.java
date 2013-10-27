@@ -21,11 +21,11 @@ package handlers.effecthandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
@@ -33,13 +33,11 @@ import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
 /**
  * Throw Up effect implementation.
  */
-public class ThrowUp extends L2Effect
+public final class ThrowUp extends AbstractEffect
 {
-	private int _x, _y, _z;
-	
-	public ThrowUp(Env env, EffectTemplate template)
+	public ThrowUp(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,44 +47,30 @@ public class ThrowUp extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public void onExit()
-	{
-		getEffected().stopStunning(false);
-		getEffected().setXYZ(_x, _y, _z);
-		getEffected().broadcastPacket(new ValidateLocation(getEffected()));
-	}
-	
-	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
 		// Get current position of the L2Character
-		final int curX = getEffected().getX();
-		final int curY = getEffected().getY();
-		final int curZ = getEffected().getZ();
+		final int curX = info.getEffected().getX();
+		final int curY = info.getEffected().getY();
+		final int curZ = info.getEffected().getZ();
 		
 		// Calculate distance between effector and effected current position
-		double dx = getEffector().getX() - curX;
-		double dy = getEffector().getY() - curY;
-		double dz = getEffector().getZ() - curZ;
+		double dx = info.getEffector().getX() - curX;
+		double dy = info.getEffector().getY() - curY;
+		double dz = info.getEffector().getZ() - curZ;
 		double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + getEffector().getX() + "," + getEffector().getY());
+			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());
 			return false;
 		}
-		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
+		int offset = Math.min((int) distance + info.getSkill().getFlyRadius(), 1400);
 		
 		double cos;
 		double sin;
@@ -110,18 +94,21 @@ public class ThrowUp extends L2Effect
 		cos = dx / distance;
 		
 		// Calculate the new destination with offset included
-		_x = getEffector().getX() - (int) (offset * cos);
-		_y = getEffector().getY() - (int) (offset * sin);
-		_z = getEffected().getZ();
+		int x = info.getEffector().getX() - (int) (offset * cos);
+		int y = info.getEffector().getY() - (int) (offset * sin);
+		int z = info.getEffected().getZ();
 		
 		if (Config.GEODATA > 0)
 		{
-			Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), _x, _y, _z, getEffected().getInstanceId());
-			_x = destiny.getX();
-			_y = destiny.getY();
+			Location destiny = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
+			x = destiny.getX();
+			y = destiny.getY();
 		}
-		getEffected().startStunning();
-		getEffected().broadcastPacket(new FlyToLocation(getEffected(), _x, _y, _z, FlyType.THROW_UP));
+		
+		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), x, y, z, FlyType.THROW_UP));
+		// TODO: Review.
+		info.getEffected().setXYZ(x, y, z);
+		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
 		return true;
 	}
 }

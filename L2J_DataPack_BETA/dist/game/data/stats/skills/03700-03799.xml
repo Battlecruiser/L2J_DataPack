@@ -20,7 +20,7 @@
 			<add order="0x40" stat="breath" val="383" />
 			<mul order="0x30" stat="pAtk" val="1.0827" />
 			<mul order="0x30" stat="regMp" val="1.0827" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="13" />
 			</effect>
 		</for>
@@ -35,7 +35,7 @@
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<mul order="0x30" stat="regMp" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="2" />
 			</effect>
 		</for>
@@ -50,7 +50,7 @@
 			<add order="0x40" stat="breath" val="33" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<mul order="0x30" stat="regMp" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="3" />
 			</effect>
 		</for>
@@ -65,7 +65,7 @@
 			<add order="0x40" stat="breath" val="50" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<mul order="0x30" stat="regMp" val="1.0062" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="2" />
 			</effect>
 		</for>
@@ -289,7 +289,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="7.5" />
 			</effect>
 		</for>
@@ -302,7 +302,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.12" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
 		</for>
@@ -315,7 +315,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.02" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
 		</for>
@@ -328,7 +328,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
 		</for>
@@ -341,7 +341,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.01" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
 		</for>
@@ -365,7 +365,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0724" />
 			<mul order="0x30" stat="pAtk" val="1.0724" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
 		</for>
@@ -379,7 +379,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
 		</for>
@@ -393,7 +393,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
 		</for>
@@ -407,7 +407,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
 			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="7.5" />
 			</effect>
 		</for>
@@ -420,8 +420,8 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0103" />
-			<mul order="0x30" stat="pAtk" noicon="1" val="1.0103" />
-			<effect name="DefenceTrait" val="0">
+			<mul order="0x30" stat="pAtk" val="1.0103" />
+			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
 		</for>
@@ -436,7 +436,7 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="8.33" />
 			</effect>
 		</for>
@@ -452,7 +452,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			<mul order="0x30" stat="pDef" val="1.0333" />
 			<add order="0x40" stat="runSpd" val="2.91" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
 		</for>
@@ -467,7 +467,7 @@
 			<mul order="0x30" stat="pDef" val="1.0133" />
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="8.33" />
 			</effect>
 		</for>
@@ -482,7 +482,7 @@
 			<mul order="0x30" stat="pDef" val="1.02" />
 			<add order="0x40" stat="runSpd" val="1.75" />
 			<sub order="0x40" stat="cancel" val="13" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
 		</for>
@@ -496,7 +496,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
 			</effect>
@@ -511,7 +511,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
 			</effect>
@@ -526,7 +526,7 @@
 		<for>
 			<add order="0x40" stat="weightPenalty" val="8159" />
 			<mul order="0x30" stat="pAtkSpd" val="1.0932" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="52" />
 				<param BLEED="52" />
 			</effect>
@@ -541,7 +541,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="12" />
 				<param BLEED="12" />
 			</effect>
@@ -556,7 +556,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="315" />
 			<mul order="0x30" stat="regMp" val="1.0932" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="52" />
 				<param BLEED="52" />
 			</effect>
@@ -571,7 +571,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
 			</effect>
@@ -586,7 +586,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0083" />
 			<add order="0x40" stat="maxMp" val="37" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
 			</effect>
@@ -601,7 +601,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0125" />
 			<add order="0x40" stat="maxMp" val="56" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="12" />
 				<param BLEED="12" />
 			</effect>
@@ -615,7 +615,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="13.33" />
 				<param BLEED="13.33" />
 			</effect>
@@ -629,7 +629,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0133" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="13.33" />
 				<param BLEED="13.33" />
 			</effect>
@@ -653,7 +653,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.0333" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="33.33" />
 				<param BLEED="33.33" />
 			</effect>
@@ -667,7 +667,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="mDef" val="1.02" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="20" />
 				<param BLEED="20" />
 			</effect>
@@ -682,7 +682,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
 			<add order="0x40" stat="accCombat" val="0.31" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -696,7 +696,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
 		</for>
@@ -710,7 +710,7 @@
 		<for>
 			<add order="0x40" stat="accCombat" val="0.579" />
 			<mul order="0x30" stat="pAtk" val="1.0827" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
 		</for>
@@ -724,7 +724,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0062" />
 			<add order="0x40" stat="accCombat" val="0.47" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -741,7 +741,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -758,7 +758,7 @@
 			<mul order="0x30" stat="pAtk" val="1.0932">
 				<using kind="Bow,Crossbow" />
 			</mul>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
 		</for>
@@ -775,7 +775,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="40" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -792,7 +792,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="60" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
 		</for>
@@ -806,7 +806,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -820,7 +820,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			<mul order="0x30" stat="regMp" val="1.0333" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
 		</for>
@@ -834,7 +834,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="40" />
 			<mul order="0x30" stat="regMp" val="1.0133" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
 		</for>
@@ -848,7 +848,7 @@
 		<for>
 			<add order="0x40" stat="maxMp" val="60" />
 			<mul order="0x30" stat="regMp" val="1.02" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
 		</for>
@@ -861,7 +861,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.1708" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
 			</effect>
@@ -875,7 +875,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -889,7 +889,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0083" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -903,7 +903,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0125" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="17.5" />
 				<param HOLD="17.5" />
 			</effect>
@@ -918,7 +918,7 @@
 		<for>
 			<add order="0x40" stat="absorbDam" val="3" />
 			<mul order="0x30" stat="mDef" val="1.0827" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
 			</effect>
@@ -932,7 +932,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -946,7 +946,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -961,7 +961,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -976,7 +976,7 @@
 		<for>
 			<mul order="0x30" stat="mAtk" val="1.0827" />
 			<mul order="0x30" stat="regMp" val="1.0827" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
 			</effect>
@@ -991,7 +991,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.0041" />
 			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
 			</effect>
@@ -1070,7 +1070,7 @@
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.3" />
 			</effect>
 		</for>
@@ -1086,7 +1086,7 @@
 			<add order="0x40" stat="weightPenalty" val="8159" />
 			<mul order="0x30" stat="mAtk" val="1.1603" />
 			<mul order="0x30" stat="runSpd" val="1.0991" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
 		</for>
@@ -1102,7 +1102,7 @@
 			<add order="0x40" stat="runSpd" val="1.16" />
 			<sub order="0x40" stat="cancel" val="8" />
 			<add order="0x40" stat="weightPenalty" val="960" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8.3" />
 			</effect>
 		</for>
@@ -1118,7 +1118,7 @@
 			<add order="0x40" stat="runSpd" val="1.175" />
 			<sub order="0x40" stat="cancel" val="13" />
 			<add order="0x40" stat="weightPenalty" val="1440" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
 		</for>
@@ -1132,7 +1132,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0208" />
 			<add order="0x40" stat="maxHp" val="185" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="17.5" />
 				<param HOLD="17.5" />
 			</effect>
@@ -1147,7 +1147,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 			</effect>
@@ -1162,7 +1162,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0083" />
 			<add order="0x40" stat="maxHp" val="74" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 			</effect>
@@ -1187,7 +1187,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.0125" />
 			<add order="0x40" stat="maxHp" val="111" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
 			</effect>
@@ -1202,7 +1202,7 @@
 		<for>
 			<add order="0x40" stat="maxHp" val="889" />
 			<mul order="0x30" stat="pDef" val="1.0724" />
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="28" />
 				<param HOLD="28" />
 			</effect>

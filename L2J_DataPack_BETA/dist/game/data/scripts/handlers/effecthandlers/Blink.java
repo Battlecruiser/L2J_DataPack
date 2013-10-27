@@ -22,11 +22,11 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
@@ -45,20 +45,11 @@ import com.l2jserver.gameserver.util.Util;
  * <br>
  * @author House
  */
-public class Blink extends L2Effect
+public final class Blink extends AbstractEffect
 {
-	private L2Character _actor;
-	private int x, y, z;
-	
-	public Blink(Env env, EffectTemplate template)
+	public Blink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -68,35 +59,35 @@ public class Blink extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		_actor = isSelfEffect() ? getEffector() : getEffected();
-		int _radius = getSkill().getFlyRadius();
-		double angle = Util.convertHeadingToDegree(_actor.getHeading());
-		double radian = Math.toRadians(angle);
-		double course = Math.toRadians(getSkill().getFlyCourse());
-		int x1 = (int) (Math.cos(Math.PI + radian + course) * _radius);
-		int y1 = (int) (Math.sin(Math.PI + radian + course) * _radius);
+		final L2Character effected = isSelfEffect() ? info.getEffector() : info.getEffected();
+		final int radius = info.getSkill().getFlyRadius();
+		final double angle = Util.convertHeadingToDegree(effected.getHeading());
+		final double radian = Math.toRadians(angle);
+		final double course = Math.toRadians(info.getSkill().getFlyCourse());
+		final int x1 = (int) (Math.cos(Math.PI + radian + course) * radius);
+		final int y1 = (int) (Math.sin(Math.PI + radian + course) * radius);
 		
-		x = _actor.getX() + x1;
-		y = _actor.getY() + y1;
-		z = _actor.getZ();
+		int x = effected.getX() + x1;
+		int y = effected.getY() + y1;
+		int z = effected.getZ();
 		
 		if (Config.GEODATA > 0)
 		{
-			Location destiny = GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), x, y, z, _actor.getInstanceId());
+			final Location destiny = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceId());
 			x = destiny.getX();
 			y = destiny.getY();
 			z = destiny.getZ();
 		}
 		
 		// TODO: check if this AI intention is retail-like. This stops player's previous movement
-		_actor.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		_actor.broadcastPacket(new FlyToLocation(_actor, x, y, z, FlyType.DUMMY));
-		_actor.abortAttack();
-		_actor.abortCast();
-		_actor.setXYZ(x, y, z);
-		_actor.broadcastPacket(new ValidateLocation(_actor));
+		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		effected.broadcastPacket(new FlyToLocation(effected, x, y, z, FlyType.DUMMY));
+		effected.abortAttack();
+		effected.abortCast();
+		effected.setXYZ(x, y, z);
+		effected.broadcastPacket(new ValidateLocation(effected));
 		return true;
 	}
 }

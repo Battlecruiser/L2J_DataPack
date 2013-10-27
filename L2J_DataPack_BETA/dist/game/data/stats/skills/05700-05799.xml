@@ -19,7 +19,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="0.34" />
 			</effect>
 		</for>
@@ -43,7 +43,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="0.34" />
 			</effect>
 		</for>
@@ -135,7 +135,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5709" levels="2" name="Whirlpool">
@@ -151,7 +151,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5710" levels="2" name="Triple Sword">
@@ -168,7 +168,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5711" levels="1" name="Power of Rage">
@@ -185,7 +185,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="5712" levels="1" name="Energy Ditch">
@@ -198,7 +198,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Heal" noicon="1" val="200" />
+			<effect name="Heal" val="200" />
 		</for>
 	</skill>
 	<skill id="5713" levels="5" name="Energy Ditch">
@@ -244,7 +244,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 			<effect name="DamOverTime" ticks="3" val="55" abnormalVisualEffect="bleed">
 				<mul order="0x30" stat="runSpd" val="0.77" />
 			</effect>
@@ -322,7 +322,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5721" levels="6" name="Blade Strike">
@@ -342,7 +342,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5722" levels="6" name="Hammer Assault">
@@ -362,7 +362,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5723" levels="6" name="Hammer Swing">
@@ -383,7 +383,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5724" levels="6" name="Broom Strike">
@@ -403,7 +403,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5725" levels="6" name="Broom Trusting">
@@ -423,7 +423,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5726" levels="6" name="Scissors Attack">
@@ -443,7 +443,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5727" levels="6" name="Scissors Strike">
@@ -463,7 +463,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5728" levels="6" name="Shobel Attack">
@@ -483,7 +483,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5729" levels="6" name="Shobel Whirlwind">
@@ -502,7 +502,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5730" levels="6" name="Made Fireball">
@@ -527,7 +527,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5731" levels="6" name="Incense of Death">
@@ -549,7 +549,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5732" levels="6" name="Flame Strike">
@@ -578,7 +578,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5733" levels="6" name="Fear of Steward">
@@ -611,8 +611,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Fear" val="0" />
+			<effect name="MagicalAttack" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5734" levels="6" name="Gust of Wind">
@@ -637,7 +637,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5735" levels="6" name="Curse of Steward">
@@ -672,9 +672,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Sleep" val="0" />
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="MagicalAttack" />
+			<effect name="Sleep" />
+			<effect name="DefenceTrait">
 				<param SLEEP="100" />
 			</effect>
 		</for>
@@ -696,7 +696,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5737" levels="6" name="Power Stamp">
@@ -715,7 +715,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5738" levels="6" name="Power Roar">
@@ -734,7 +734,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5739" levels="1" name="Invincible">
@@ -752,7 +752,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Invincible" val="0" special="invincible" />
+			<effect name="Invincible" special="invincible" />
 		</for>
 	</skill>
 	<skill id="5740" levels="1" name="Recovery Pet">
@@ -765,9 +765,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="CpHeal" noicon="1" val="5000" />
-			<effect name="HealPercent" noicon="1" val="100" />
-			<effect name="ManaHealPercent" noicon="1" val="100" />
+			<effect name="CpHeal" val="5000" />
+			<effect name="HealPercent" val="100" />
+			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="5741" levels="1" name="Mental Pot">
@@ -780,7 +780,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ManaHealPercent" noicon="1" val="100" />
+			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="5742" levels="5" name="Area Recharge - Per">
@@ -835,7 +835,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5746" levels="12" name="Double Attack">
@@ -856,7 +856,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5747" levels="12" name="Spin Attack">
@@ -886,8 +886,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5748" levels="12" name="Meteor Shower">
@@ -923,7 +923,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5750" levels="12" name="Flash">
@@ -946,7 +946,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5751" levels="12" name="Lightning Wave">
@@ -968,7 +968,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5752" levels="12" name="Flare">
@@ -995,7 +995,7 @@
 			<player active_effect_id="5753" />
 		</cond>
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5753" levels="1" name="Awakening">
@@ -1011,7 +1011,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="5754" levels="1" name="Presentation - Adiantum Round Fighter">
@@ -1091,7 +1091,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5762" levels="1" name="Blessing of Pathfinder">
@@ -1146,7 +1146,7 @@
 		<set name="power" val="4472" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5766" levels="1" name="Naia Sprout">
@@ -1162,7 +1162,7 @@
 		<set name="power" val="4472" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5767" levels="1" name="Naia Sprout">
@@ -1178,7 +1178,7 @@
 		<set name="power" val="4472" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5768" levels="1" name="Naia Sprout">
@@ -1194,7 +1194,7 @@
 		<set name="power" val="4472" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5769" levels="12" name="not_used">
@@ -1230,7 +1230,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="5772" levels="1" name="Surrender to Fire">
@@ -1272,7 +1272,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="#value" />
+			<effect name="VitalityPointUp" val="#value" />
 		</for>
 	</skill>
 	<skill id="5775" levels="1" name="Great Blessing of Pathfinder">

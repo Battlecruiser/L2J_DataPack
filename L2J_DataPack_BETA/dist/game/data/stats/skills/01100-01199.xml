@@ -95,7 +95,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttackMp" noicon="1" val="0" />
+			<effect name="MagicalAttackMp" />
 			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
 		</for>
 	</skill>
@@ -139,7 +139,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 			</effect>
 		</for>
@@ -163,7 +163,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Confuse" abnormalTime="20" val="0">
+			<effect name="Confuse" abnormalTime="20">
 				<param chance="20" />
 			</effect>
 		</for>
@@ -266,6 +266,9 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchNpcId" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantGroup1="2" enchantGroup2="2">
 		<table name="#amount"> 41 44 49 52 57 60 66 70 73 77 81 86 90 94 98 102 104 106 108 110 113 115 116 118 120 122 124 126 128 129 131 133 134 136 </table>
@@ -294,10 +297,10 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+			<effect name="ManaHealByLevel" val="#amount" />
 		</for>
 		<enchant1for>
-			<effect name="ManaHealByLevel" noicon="1" val="#ench1amount" />
+			<effect name="ManaHealByLevel" val="#ench1amount" />
 		</enchant1for>
 	</skill>
 	<skill id="1127" levels="45" name="Servitor Heal" enchantGroup1="2" enchantGroup2="2">
@@ -328,10 +331,10 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
+			<effect name="Heal" val="#amount" />
 		</for>
 		<enchant1for>
-			<effect name="Heal" noicon="1" val="#ench1amount" />
+			<effect name="Heal" val="#ench1amount" />
 		</enchant1for>
 	</skill>
 	<skill id="1128" levels="18" name="Summon Shadow" enchantGroup1="1">
@@ -368,6 +371,9 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchNpcId" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantGroup1="1">
 		<table name="#itemConsumeCount"> 11 13 6 9 9 6 9 </table>
@@ -401,6 +407,9 @@
 		<!-- Summon-specific -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchNpcId" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantGroup1="1" enchantGroup2="1">
 		<table name="#abnormalLvls"> 2 3 </table>
@@ -433,7 +442,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="#mDef" />
 			</effect>
 		</for>
@@ -469,7 +478,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="#pDef" />
 			</effect>
 		</for>
@@ -505,7 +514,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 			</effect>
 		</for>
@@ -541,7 +550,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
@@ -577,7 +586,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="#mAtk" />
 			</effect>
 		</for>
@@ -613,7 +622,7 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
@@ -640,7 +649,7 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.4" />
+			<effect name="HpDrain" val="0.4" />
 		</for>
 	</skill>
 	<skill id="1148" levels="13" name="Death Spike" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -679,7 +688,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1151" levels="16" name="Corpse Life Drain" enchantGroup1="2" enchantGroup2="2">
@@ -709,11 +718,11 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="HpByLevel" noicon="1" val="#drain" />
+			<effect name="HpByLevel" val="#drain" />
 		</for>
 		<enchant2for>
-			<effect name="HpByLevel" noicon="1" val="#ench1Drain" />
-			<effect self="1" name="CpHeal" noicon="1" val="#ench2Bravery" />
+			<effect name="HpByLevel" val="#ench1Drain" />
+			<effect self="1" name="CpHeal" val="#ench2Bravery" />
 		</enchant2for>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
@@ -745,6 +754,9 @@
 		<set name="expPenalty" val="0.9" /> <!-- 90 percent of acquired Exp will be consumed. -->
 		<set name="npcId" val="#npcIds" />
 		<enchant1 name="npcId" val="#enchNpcId" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantGroup1="2" enchantGroup2="2">
 		<table name="#effectPoints"> -219 -229 -239 -248 -257 -266 -275 -283 -291 -299 -306 -312 -318 -323 -328 </table>
@@ -780,7 +792,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1156" levels="13" name="Forget">
@@ -800,7 +812,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="DeleteHateOfMe" noicon="1" val="0">
+			<effect name="DeleteHateOfMe">
 				<param chance="80" />
 			</effect>
 		</for>
@@ -822,14 +834,14 @@
 		<set name="targetType" val="SELF" />
 		<enchant2 name="hpConsume" val="#ench2hpConsume" />
 		<for>
-			<effect name="ManaHeal" noicon="1" val="#amount" />
+			<effect name="ManaHeal" val="#amount" />
 		</for>
 		<enchant1for>
-			<effect name="ManaHeal" noicon="1" val="#ench1amount" />
+			<effect name="ManaHeal" val="#ench1amount" />
 		</enchant1for>
 		<enchant3for>
-			<effect name="CpHeal" noicon="1" val="#ench3Bravery" />
-			<effect name="ManaHeal" noicon="1" val="61" />
+			<effect name="CpHeal" val="#ench3Bravery" />
+			<effect name="ManaHeal" val="61" />
 		</enchant3for>
 	</skill>
 	<skill id="1159" levels="22" name="Curse Death Link" enchantGroup1="2" enchantGroup2="2">
@@ -865,7 +877,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="DeathLink" noicon="1" val="0" />
+			<effect name="DeathLink" />
 		</for>
 	</skill>
 	<skill id="1160" levels="15" name="Slow" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -912,12 +924,12 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<sub order="0x40" stat="rEvas" val="#ench3rEvas" />
 			</effect>
@@ -943,7 +955,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: this shouldbe "Distrust" effect -->
-			<effect name="Confuse" abnormalTime="20" val="0">
+			<effect name="Confuse" abnormalTime="20">
 				<param chance="20" />
 			</effect>
 		</for>
@@ -994,18 +1006,18 @@
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 				<mul order="0x30" stat="runSpd" val="#ench3runSpd" />
 			</effect>
 		</enchant3for>
 		<enchant4for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtk" val="0.77" />
 				<mul order="0x30" stat="pDef" val="#ench4pDef" />
 			</effect>
@@ -1133,7 +1145,7 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="1170" levels="13" name="Anchor" enchantGroup1="1" enchantGroup2="1">
@@ -1179,7 +1191,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_EXIT" triggeredId="6091">
+			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6091">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -1222,7 +1234,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1172" levels="8" name="Aura Burn">
@@ -1245,7 +1257,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1174" levels="22" name="Frost Wall" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1287,7 +1299,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1175" levels="8" name="Aqua Swirl">
@@ -1312,7 +1324,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1176" levels="15" name="Tempest" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1351,7 +1363,7 @@
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1177" levels="5" name="Wind Strike">
@@ -1376,7 +1388,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1178" levels="8" name="Twister">
@@ -1401,7 +1413,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1181" levels="3" name="Flame Strike">
@@ -1428,7 +1440,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="1182" levels="3" name="Resist Aqua" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1465,22 +1477,22 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="waterRes" val="#vuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="waterRes" val="#enchvuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="waterRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="waterRes" val="#ench3vuln" />
 			</effect>
 		</enchant3for>
@@ -1548,8 +1560,8 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="MagicalAttack" />
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -1589,22 +1601,22 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="windRes" val="#vuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="windRes" val="#enchvuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="windRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="windRes" val="#ench3vuln" />
 			</effect>
 		</enchant3for>
@@ -1644,22 +1656,22 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="fireRes" val="#vuln" />
 			</effect>
 		</for>
 		<enchant1for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="fireRes" val="#enchvuln" />
 			</effect>
 		</enchant1for>
 		<enchant2for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="fireRes" val="#enchvuln" />
 			</effect>
 		</enchant2for>
 		<enchant3for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="fireRes" val="#ench3vuln" />
 			</effect>
 		</enchant3for>

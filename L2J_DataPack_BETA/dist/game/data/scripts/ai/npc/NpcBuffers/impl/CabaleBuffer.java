@@ -27,7 +27,7 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -292,8 +292,8 @@ public class CabaleBuffer extends AbstractNpcAI
 	
 	public int getAbnormalLvl(L2PcInstance player, int skillId)
 	{
-		final L2Effect effect = player.getFirstEffect(skillId);
-		return (effect != null) ? effect.getSkill().getAbnormalLvl() : 0;
+		final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(skillId);
+		return (info != null) ? info.getSkill().getAbnormalLvl() : 0;
 	}
 	
 	public static void main(String[] args)

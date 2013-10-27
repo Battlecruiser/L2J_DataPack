@@ -16,14 +16,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param HOLD="70" />
 				<param SLEEP="70" />
 				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -42,14 +42,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="10" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param HOLD="70" />
 				<param SLEEP="70" />
 				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
@@ -79,7 +79,7 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="25" />
@@ -105,7 +105,7 @@
 			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
 			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="25" />
@@ -121,14 +121,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="25" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
@@ -147,14 +147,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
 				<param chance="25" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.0847" /> <!-- M. Atk. 8.47% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Speed 15% -->
@@ -176,7 +176,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
+			<effect name="ChanceSkillTrigger" activationChance="33" activationMinDamage="1" chanceType="ON_HIT" triggeredId="21007" />
 		</for>
 	</skill>
 	<skill id="8308" levels="1" name="Red Talisman - Guardian of the Territory">
@@ -196,10 +196,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1200" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="1200" />
+			<effect name="CpHeal" val="1200" />
 		</for>
 	</skill>
 	<skill id="8309" levels="1" name="Red Talisman - Territory Convoy">
@@ -219,10 +219,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="800" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="800" />
+			<effect name="CpHeal" val="800" />
 		</for>
 	</skill>
 	<skill id="8310" levels="1" name="Arcana Sigil">
@@ -267,7 +267,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
@@ -374,7 +374,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8328" levels="1" name="Release Seal on Agathion - Oink oink">
@@ -387,7 +387,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8329" levels="1" name="Summon Friend">
@@ -415,7 +415,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8331" levels="1" name="Blue Talisman - Buff Cancel">
@@ -433,7 +433,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="buff" rate="25" max="5" />
 			</effect>
 		</for>
@@ -453,7 +453,7 @@
 		<set name="reuseDelay" val="360000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="StealAbnormal" noicon="1" val="0">
+			<effect name="StealAbnormal">
 				<param slot="buff" rate="25" max="3" />
 			</effect>
 		</for>
@@ -475,10 +475,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="maxCp" val="1500" />
 			</effect>
-			<effect name="CpHeal" noicon="1" val="1500" />
+			<effect name="CpHeal" val="1500" />
 		</for>
 	</skill>
 	<skill id="8334" levels="1" name="Blue Talisman - Lord's Divine Protection">
@@ -498,7 +498,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pvpMagicalDef" val="1.75" />
 				<mul order="0x30" stat="pvpPhysDef" val="1.75" />
 			</effect>
@@ -521,7 +521,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="earthRes" val="15" />
 				<add order="0x40" stat="waterRes" val="15" />
 				<add order="0x40" stat="windRes" val="15" />
@@ -693,11 +693,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param SHOCK="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param BLEED="15" />
 			</effect>
 		</for>
@@ -710,11 +710,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param HOLD="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param POISON="15" />
 			</effect>
 		</for>
@@ -727,11 +727,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param BLEED="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param PARALYZE="15" />
 			</effect>
 		</for>
@@ -744,11 +744,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param PARALYZE="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param HOLD="15" />
 			</effect>
 		</for>
@@ -761,11 +761,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param DERANGEMENT="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="15" />
 			</effect>
 		</for>
@@ -778,11 +778,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param SLEEP="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="15" />
 			</effect>
 		</for>
@@ -795,11 +795,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param SHOCK="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SLEEP="15" />
 			</effect>
 		</for>
@@ -812,11 +812,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param POISON="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param HOLD="15" />
 			</effect>
 		</for>
@@ -829,11 +829,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param HOLD="15" />
 				<mul order="0x30" stat="maxCp" val="#maxCp" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param DERANGEMENT="15" />
 			</effect>
 		</for>
@@ -854,7 +854,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="StaticDamage" noicon="1" val="10000" />
+			<effect name="StaticDamage" val="10000" />
 		</for>
 	</skill>
 	<skill id="8358" levels="1" name="Remove the seal of an Agathion - Towbat">
@@ -867,7 +867,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8359" levels="1" name="Notifier">
@@ -893,7 +893,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -907,11 +907,11 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<for>
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param SHOCK="20" />
 				<param DERANGEMENT="20" />
 			</effect>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20" />
 				<param DERANGEMENT="20" />
 			</effect>
@@ -1311,7 +1311,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -1331,7 +1331,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="50" />
 				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -1351,7 +1351,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->

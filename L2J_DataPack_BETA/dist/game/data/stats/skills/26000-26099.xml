@@ -18,7 +18,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26001" levels="1" name="Middle fortuna box">
@@ -39,7 +39,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26002" levels="1" name="Large fortuna box">
@@ -60,7 +60,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26003" levels="1" name="Small fortuna cube">
@@ -81,7 +81,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26004" levels="1" name="Middle fortuna cube">
@@ -102,7 +102,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26005" levels="1" name="Large fortuna cube">
@@ -123,7 +123,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26006" levels="1" name="Weapon Enchant Scroll - D Grade">
@@ -250,7 +250,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -267,7 +267,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -279,7 +279,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" noicon="1" val="435" />
+			<effect name="Heal" val="435" />
 		</for>
 	</skill>
 	<skill id="26025" levels="1" name="Powerful Healing Potion">
@@ -326,7 +326,7 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" noicon="1" val="#amount" />
+			<effect name="CpHeal" val="#amount" />
 		</for>
 	</skill>
 	<skill id="26028" levels="6" name="Secret medicine of Life">
@@ -343,7 +343,7 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
+			<effect name="Heal" val="#amount" />
 		</for>
 	</skill>
 	<skill id="26029" levels="1" name="Potion of Will">
@@ -353,7 +353,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" noicon="1" val="50" />
+			<effect name="CpHeal" val="50" />
 		</for>
 	</skill>
 	<skill id="26030" levels="1" name="Healing medicine for Mana">
@@ -364,7 +364,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ManaHeal" noicon="1" val="60" />
+			<effect name="ManaHeal" val="60" />
 		</for>
 	</skill>
 	<skill id="26031" levels="1" name="Wind Walk Scroll">
@@ -380,7 +380,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -398,7 +398,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -416,7 +416,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -434,7 +434,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -452,7 +452,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -470,7 +470,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -488,7 +488,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -506,7 +506,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -524,7 +524,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -542,7 +542,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -560,7 +560,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="0.92" />
 				<mul order="0x30" stat="mDef" val="0.84" />
 				<sub order="0x40" stat="rEvas" val="4" />
@@ -585,7 +585,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -603,7 +603,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -621,7 +621,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
@@ -641,7 +641,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="mCritRate" val="2" />
 			</effect>
 		</for>
@@ -812,7 +812,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26066" levels="1" name="A Scroll Bundle of Mage">
@@ -833,7 +833,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="26067" levels="5" name="Bone Quiver">
@@ -851,7 +851,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="10000" />
 			</effect>
 		</for>
@@ -872,7 +872,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="#itemCount" />
 			</effect>
 		</for>
@@ -893,7 +893,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="#itemCount" />
 			</effect>
 		</for>
@@ -914,7 +914,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="#itemCount" />
 			</effect>
 		</for>
@@ -934,7 +934,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="1" />
 			</effect>
 		</for>
@@ -954,7 +954,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="1" />
 			</effect>
 		</for>
@@ -974,7 +974,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="#itemId" itemCount="10000" />
 			</effect>
 		</for>

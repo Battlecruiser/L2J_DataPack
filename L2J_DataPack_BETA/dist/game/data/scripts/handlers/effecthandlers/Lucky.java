@@ -18,20 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Lucky effect implementation.
  * @author Zoey76
  */
-public class Lucky extends L2Effect
+public final class Lucky extends AbstractEffect
 {
-	public Lucky(Env env, EffectTemplate template)
+	public Lucky(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -41,14 +42,14 @@ public class Lucky extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return getSkill().isPassive();
+		return info.getSkill().isPassive();
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 }

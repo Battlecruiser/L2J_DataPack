@@ -20,32 +20,22 @@ package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Paralyze effect implementation.
  */
-public class Paralyze extends L2Effect
+public final class Paralyze extends AbstractEffect
 {
-	public Paralyze(Env env, EffectTemplate template)
+	public Paralyze(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public Paralyze(Env env, L2Effect effect)
-	{
-		super(env, effect);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -61,21 +51,21 @@ public class Paralyze extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.HOLD_1);
-		if (!getEffected().isPlayer())
+		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.HOLD_1);
+		if (!info.getEffected().isPlayer())
 		{
-			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.HOLD_1);
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, getEffector());
-		getEffected().startParalyze();
-		return super.onStart();
+		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_1);
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffector());
+		info.getEffected().startParalyze();
+		return true;
 	}
 }

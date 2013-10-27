@@ -18,27 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * Focus Max Energy effect implementation.
  * @author Adry_85
  */
-public class FocusMaxEnergy extends L2Effect
+public final class FocusMaxEnergy extends AbstractEffect
 {
-	public FocusMaxEnergy(Env env, EffectTemplate template)
+	public FocusMaxEnergy(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,17 +42,17 @@ public class FocusMaxEnergy extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			final L2Skill sonicMastery = getEffected().getSkills().get(992);
-			final L2Skill focusMastery = getEffected().getSkills().get(993);
+			final L2Skill sonicMastery = info.getEffected().getSkills().get(992);
+			final L2Skill focusMastery = info.getEffected().getSkills().get(993);
 			int maxCharge = (sonicMastery != null) ? sonicMastery.getLevel() : (focusMastery != null) ? focusMastery.getLevel() : 0;
 			if (maxCharge != 0)
 			{
-				int count = maxCharge - getEffected().getActingPlayer().getCharges();
-				getEffected().getActingPlayer().increaseCharges(count, maxCharge);
+				int count = maxCharge - info.getEffected().getActingPlayer().getCharges();
+				info.getEffected().getActingPlayer().increaseCharges(count, maxCharge);
 				return true;
 			}
 		}

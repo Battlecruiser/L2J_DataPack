@@ -22,8 +22,8 @@ import ai.npc.AbstractNpcAI;
 
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 
 /**
@@ -52,10 +52,10 @@ public class TarBeetle extends AbstractNpcAI
 		if ((spawn.getBeetle(npc).getScriptValue() > 0) && canCastSkill(npc))
 		{
 			int level = 0;
-			final L2Effect effect = player.getFirstEffect(SKILL_ID);
-			if (effect != null)
+			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(SKILL_ID);
+			if (info != null)
 			{
-				level = effect.getSkill().getAbnormalLvl();
+				level = info.getSkill().getAbnormalLvl();
 			}
 			if (level < 3)
 			{

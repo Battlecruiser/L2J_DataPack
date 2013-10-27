@@ -18,38 +18,32 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Target Me Probability effect implementation.
  * @author Adry_85
  */
-public class TargetMeProbability extends L2Effect
+public final class TargetMeProbability extends AbstractEffect
 {
 	private final int _chance;
 	
-	public TargetMeProbability(Env env, EffectTemplate template)
+	public TargetMeProbability(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -59,28 +53,28 @@ public class TargetMeProbability extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayable())
+		if (info.getEffected().isPlayable())
 		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
+			if (info.getEffected() instanceof L2SiegeSummonInstance)
 			{
 				return false;
 			}
 			
-			if (getEffected().getTarget() != getEffector())
+			if (info.getEffected().getTarget() != info.getEffector())
 			{
-				L2PcInstance effector = getEffector().getActingPlayer();
+				L2PcInstance effector = info.getEffector().getActingPlayer();
 				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(getEffected(), getSkill()))
+				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
 				{
 					// Target is different
-					getEffected().setTarget(getEffector());
+					info.getEffected().setTarget(info.getEffector());
 				}
 			}
 			return true;
 		}
-		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
+		else if (info.getEffected().isL2Attackable() && !info.getEffected().isRaid())
 		{
 			return true;
 		}

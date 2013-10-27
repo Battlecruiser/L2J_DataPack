@@ -18,31 +18,25 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Sweeper effect implementation.
  * @author Zoey76
  */
-public class Sweeper extends L2Effect
+public final class Sweeper extends AbstractEffect
 {
 	private static final int MAX_SWEEPER_TIME = 15000;
 	
-	public Sweeper(Env env, EffectTemplate template)
+	public Sweeper(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,15 +46,15 @@ public class Sweeper extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isL2Attackable())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		final L2Attackable monster = (L2Attackable) getEffected();
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2Attackable monster = (L2Attackable) info.getEffected();
 		if (!monster.checkSpoilOwner(player, false))
 		{
 			return false;
@@ -90,7 +84,7 @@ public class Sweeper extends L2Effect
 			}
 			else
 			{
-				player.addItem("Sweeper", item, getEffected(), true);
+				player.addItem("Sweeper", item, info.getEffected(), true);
 			}
 		}
 		return true;

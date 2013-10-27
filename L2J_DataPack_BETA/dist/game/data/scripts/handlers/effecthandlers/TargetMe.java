@@ -18,64 +18,58 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Target Me effect implementation.
  * @author -Nemesiss-
  */
-public class TargetMe extends L2Effect
+public final class TargetMe extends AbstractEffect
 {
-	public TargetMe(Env env, EffectTemplate template)
+	public TargetMe(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (getEffected().isPlayable())
+		if (info.getEffected().isPlayable())
 		{
-			((L2Playable) getEffected()).setLockedTarget(null);
+			((L2Playable) info.getEffected()).setLockedTarget(null);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayable())
+		if (info.getEffected().isPlayable())
 		{
-			if (getEffected() instanceof L2SiegeSummonInstance)
+			if (info.getEffected() instanceof L2SiegeSummonInstance)
 			{
 				return false;
 			}
 			
-			if (getEffected().getTarget() != getEffector())
+			if (info.getEffected().getTarget() != info.getEffector())
 			{
-				L2PcInstance effector = getEffector().getActingPlayer();
+				L2PcInstance effector = info.getEffector().getActingPlayer();
 				// If effector is null, then its not a player, but NPC. If its not null, then it should check if the skill is pvp skill.
-				if ((effector == null) || effector.checkPvpSkill(getEffected(), getSkill()))
+				if ((effector == null) || effector.checkPvpSkill(info.getEffected(), info.getSkill()))
 				{
 					// Target is different
-					getEffected().setTarget(getEffector());
+					info.getEffected().setTarget(info.getEffector());
 				}
 			}
-			((L2Playable) getEffected()).setLockedTarget(getEffector());
+			((L2Playable) info.getEffected()).setLockedTarget(info.getEffector());
 			return true;
 		}
-		else if (getEffected().isL2Attackable() && !getEffected().isRaid())
+		else if (info.getEffected().isL2Attackable() && !info.getEffected().isRaid())
 		{
 			return true;
 		}

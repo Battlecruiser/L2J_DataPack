@@ -19,21 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Get Agro effect implementation.
  * @author Adry_85
  */
-public class GetAgro extends L2Effect
+public final class GetAgro extends AbstractEffect
 {
-	public GetAgro(Env env, EffectTemplate template)
+	public GetAgro(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,15 +50,15 @@ public class GetAgro extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected() instanceof L2NpcInstance)
+		if (info.getEffected() instanceof L2NpcInstance)
 		{
 			return false;
 		}
 		
-		CtrlIntention intention = (getEffected().isInCombat() || getEffected().isL2Attackable()) ? CtrlIntention.AI_INTENTION_ATTACK : CtrlIntention.AI_INTENTION_FOLLOW;
-		getEffected().getAI().setIntention(intention, getEffector());
+		CtrlIntention intention = (info.getEffected().isInCombat() || info.getEffected().isL2Attackable()) ? CtrlIntention.AI_INTENTION_ATTACK : CtrlIntention.AI_INTENTION_FOLLOW;
+		info.getEffected().getAI().setIntention(intention, info.getEffector());
 		return true;
 	}
 }

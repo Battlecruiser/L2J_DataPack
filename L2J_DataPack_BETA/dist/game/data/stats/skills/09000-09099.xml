@@ -89,7 +89,7 @@
 			<target npcId="13270" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="9011" levels="1" name="Might">
@@ -105,7 +105,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -123,7 +123,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -141,7 +141,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -159,7 +159,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -177,7 +177,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.35" />
 			</effect>
 		</for>
@@ -195,7 +195,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="4" />
 			</effect>
 		</for>
@@ -213,7 +213,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="rShld" val="1.3" />
 			</effect>
 		</for>
@@ -231,7 +231,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -249,7 +249,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -267,7 +267,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" />
 			</effect>
 		</for>
@@ -285,7 +285,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.08" />
 				<mul order="0x30" stat="pAtkSpd" val="1.08" />
 				<mul order="0x30" stat="mAtk" val="1.16" />
@@ -310,7 +310,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="1.3" />
 			</effect>
 		</for>
@@ -328,7 +328,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -346,7 +346,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.75" />
 			</effect>
 		</for>
@@ -364,7 +364,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -382,7 +382,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.8" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.8" />
@@ -408,7 +408,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9028" levels="1" name="Cool air cannon of fortune">
@@ -433,7 +433,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13271" npcCount="1" />
 			</effect>
 		</for>
@@ -449,7 +449,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13275" npcCount="1" />
 			</effect>
 		</for>
@@ -465,7 +465,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13271" npcCount="1" />
 			</effect>
 		</for>
@@ -481,7 +481,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13275" npcCount="1" />
 			</effect>
 		</for>
@@ -531,7 +531,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9037" levels="1" name="Special July 7th Parcel (Event)">
@@ -552,7 +552,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9038" levels="1" name="Steamed Rice Cake">
@@ -565,7 +565,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="9039" levels="1" name="Steamed Rice Cake">
@@ -578,7 +578,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="9040" levels="1" name="PC Cafe Points">
@@ -621,7 +621,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9043" levels="1" name="6th Anniversary Cube">
@@ -643,7 +643,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9044" levels="1" name="6th Anniversary Cube">
@@ -665,7 +665,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9045" levels="1" name="6th Anniversary Cube">
@@ -687,7 +687,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9046" levels="1" name="6th Anniversary Cube">
@@ -709,7 +709,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9047" levels="1" name="6th Anniversary Cube">
@@ -731,7 +731,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9048" levels="1" name="6th Anniversary Cube">
@@ -753,7 +753,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9049" levels="1" name="Golden Spice">
@@ -866,7 +866,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9056" levels="1" name="Crystal Spice Capsule">
@@ -889,7 +889,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9057" levels="1" name="Freezing Core">
@@ -988,7 +988,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9065" levels="1" name="Shiny Halloween Toy Chest">
@@ -1010,7 +1010,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9066" levels="1" name="Scroll of Transformation Box">
@@ -1032,7 +1032,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9067" levels="1" name="Potion of Vitality Maintenance">
@@ -1051,7 +1051,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -1071,7 +1071,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -1085,7 +1085,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="GiveSp" noicon="1" val="10000" />
+			<effect name="GiveSp" val="10000" />
 		</for>
 	</skill>
 	<skill id="9070" levels="1" name="Halloween Pumpkin">
@@ -1107,7 +1107,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9071" levels="1" name="Halloween Pumpkin - event">
@@ -1129,7 +1129,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9072" levels="1" name="Small Halloween Pumpkin">
@@ -1151,7 +1151,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9073" levels="1" name="Energy of Vampiric Rage">
@@ -1170,7 +1170,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" />
 			</effect>
 		</for>
@@ -1183,7 +1183,7 @@
 		<set name="reuseDelay" val="600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" noicon="1" val="2300" />
+			<effect name="Heal" val="2300" />
 		</for>
 	</skill>
 	<skill id="9075" levels="1" name="Awful Soup">
@@ -1238,7 +1238,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9078" levels="1" name="Rainbow Springs Potion">
@@ -1254,7 +1254,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="regHp" val="1.3" />
 				<mul order="0x30" stat="regMp" val="1.3" />
 				<mul order="0x30" stat="regCp" val="1.3" />
@@ -1276,7 +1276,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="regHp" val="1.2" />
 				<mul order="0x30" stat="maxMp" val="1.2" />
 				<mul order="0x30" stat="regMp" val="1.2" />
@@ -1315,7 +1315,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9081" levels="1" name="Christmas Cake">
@@ -1329,7 +1329,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="9082" levels="1" name="White Christmas Petition">
@@ -1349,7 +1349,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -1365,7 +1365,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="9084" levels="1" name="White Christmas Petition - event">
@@ -1385,7 +1385,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -1409,7 +1409,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="9086" levels="1" name="Santa - Potion of Will">
@@ -1419,7 +1419,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CpHeal" noicon="1" val="300" />
+			<effect name="CpHeal" val="300" />
 		</for>
 	</skill>
 	<skill id="9087" levels="1" name="Create Item">
@@ -1442,7 +1442,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="172" skillLvl="10" />
 			</effect>
 		</for>
@@ -1486,7 +1486,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="758" skillLvl="1" />
 			</effect>
 		</for>
@@ -1510,7 +1510,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="759" skillLvl="1" />
 			</effect>
 		</for>
@@ -1535,7 +1535,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="945" skillLvl="1" />
 			</effect>
 		</for>
@@ -1559,7 +1559,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="755" skillLvl="1" />
 			</effect>
 		</for>
@@ -1583,7 +1583,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="756" skillLvl="1" />
 			</effect>
 		</for>
@@ -1607,7 +1607,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="757" skillLvl="1" />
 			</effect>
 		</for>
@@ -1622,7 +1622,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13286" npcCount="1" />
 			</effect>
 		</for>
@@ -1637,7 +1637,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13287" npcCount="1" />
 			</effect>
 		</for>
@@ -1652,7 +1652,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13293" npcCount="1" />
 			</effect>
 		</for>
@@ -1667,7 +1667,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13294" npcCount="1" />
 			</effect>
 		</for>

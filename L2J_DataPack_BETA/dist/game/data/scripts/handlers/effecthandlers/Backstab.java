@@ -19,30 +19,31 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Backstab effect implementation.
  * @author Adry_85
  */
-public class Backstab extends L2Effect
+public final class Backstab extends AbstractEffect
 {
-	public Backstab(Env env, EffectTemplate template)
+	public Backstab(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return getEffector().isBehindTarget() && !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill()) && Formulas.calcBlowSuccess(getEffector(), getEffected(), getSkill());
+		return info.getEffector().isBehindTarget() && !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -58,28 +59,28 @@ public class Backstab extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
 		
-		boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-		double damage = (int) Formulas.calcBackstabDamage(activeChar, target, getSkill(), shld, ss);
+		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		double damage = (int) Formulas.calcBackstabDamage(activeChar, target, info.getSkill(), shld, ss);
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
-		if (Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
+		if (Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target))
 		{
 			damage *= 2;
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, getSkill());
-		target.notifyDamageReceived(damage, getEffector(), getSkill(), true);
+		target.reduceCurrentHp(damage, activeChar, info.getSkill());
+		target.notifyDamageReceived(damage, activeChar, info.getSkill(), true);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -95,7 +96,7 @@ public class Backstab extends L2Effect
 		}
 		
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
+		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
 		
 		return true;
 	}

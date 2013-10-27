@@ -13,7 +13,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.2" />
 			</effect>
 		</for>
@@ -31,7 +31,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.2" />
 			</effect>
 		</for>
@@ -66,10 +66,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="761" skillLvl="1" />
 			</effect>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="762" skillLvl="1" />
 			</effect>
 		</for>
@@ -93,7 +93,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="763" skillLvl="1" />
 			</effect>
 		</for>
@@ -117,10 +117,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="784" skillLvl="1" />
 			</effect>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="785" skillLvl="1" />
 			</effect>
 		</for>
@@ -144,10 +144,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="786" skillLvl="1" />
 			</effect>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="787" skillLvl="1" />
 			</effect>
 		</for>
@@ -171,10 +171,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="788" skillLvl="1" />
 			</effect>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="789" skillLvl="1" />
 			</effect>
 		</for>
@@ -198,7 +198,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="768" skillLvl="1" />
 			</effect>
 		</for>
@@ -222,7 +222,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="769" skillLvl="1" />
 			</effect>
 		</for>
@@ -246,7 +246,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="770" skillLvl="1" />
 			</effect>
 		</for>
@@ -270,7 +270,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="771" skillLvl="1" />
 			</effect>
 		</for>
@@ -294,7 +294,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="772" skillLvl="1" />
 			</effect>
 		</for>
@@ -318,7 +318,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="773" skillLvl="1" />
 			</effect>
 		</for>
@@ -342,7 +342,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="774" skillLvl="1" />
 			</effect>
 		</for>
@@ -366,7 +366,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="776" skillLvl="1" />
 			</effect>
 		</for>
@@ -390,7 +390,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="777" skillLvl="1" />
 			</effect>
 		</for>
@@ -414,7 +414,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="778" skillLvl="1" />
 			</effect>
 		</for>
@@ -438,7 +438,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="790" skillLvl="1" />
 			</effect>
 		</for>
@@ -462,7 +462,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="791" skillLvl="1" />
 			</effect>
 		</for>
@@ -486,7 +486,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1492" skillLvl="1" />
 			</effect>
 		</for>
@@ -510,7 +510,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1493" skillLvl="1" />
 			</effect>
 		</for>
@@ -534,7 +534,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1494" skillLvl="1" />
 			</effect>
 		</for>
@@ -558,7 +558,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1495" skillLvl="1" />
 			</effect>
 		</for>
@@ -582,7 +582,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1467" skillLvl="1" />
 			</effect>
 		</for>
@@ -606,7 +606,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1468" skillLvl="1" />
 			</effect>
 		</for>
@@ -630,7 +630,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1505" skillLvl="1" />
 			</effect>
 		</for>
@@ -654,7 +654,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1506" skillLvl="1" />
 			</effect>
 		</for>
@@ -678,7 +678,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1507" skillLvl="1" />
 			</effect>
 		</for>
@@ -702,7 +702,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1508" skillLvl="1" />
 			</effect>
 		</for>
@@ -726,7 +726,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1509" skillLvl="1" />
 			</effect>
 		</for>
@@ -750,7 +750,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="775" skillLvl="1" />
 			</effect>
 		</for>
@@ -773,7 +773,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2833" levels="1" name="S80 Armor Chest">
@@ -794,7 +794,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2834" levels="1" name="S Weapon Chest">
@@ -815,7 +815,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2835" levels="1" name="S Armor Chest">
@@ -836,7 +836,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2836" levels="1" name="S Accessory Chest">
@@ -857,7 +857,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2837" levels="1" name="Gracia Key">
@@ -888,7 +888,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2839" levels="1" name="Sacred Light Fragment">
@@ -923,7 +923,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="932" skillLvl="1" />
 			</effect>
 		</for>
@@ -954,7 +954,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2843" levels="1" name="Duel Supplies">
@@ -975,7 +975,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2844" levels="1" name="Duel Supplies">
@@ -996,7 +996,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2845" levels="1" name="Duel Supplies">
@@ -1017,7 +1017,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2846" levels="1" name="Duel Supplies">
@@ -1038,7 +1038,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2847" levels="1" name="Duel Supplies">
@@ -1059,7 +1059,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2848" levels="1" name="Duel Supplies">
@@ -1080,7 +1080,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2849" levels="1" name="Duel Supplies">
@@ -1101,7 +1101,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2850" levels="1" name="Duel Supplies">
@@ -1122,7 +1122,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2851" levels="1" name="Duel Supplies">
@@ -1143,7 +1143,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2852" levels="1" name="Duel Reward Box">
@@ -1164,7 +1164,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2853" levels="1" name="Duel Reward Box">
@@ -1185,7 +1185,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2854" levels="1" name="Duel Reward Box">
@@ -1206,7 +1206,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2855" levels="1" name="Duel Reward Box">
@@ -1227,7 +1227,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2856" levels="1" name="Santa's Buff Gift Set">
@@ -1244,7 +1244,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="cAtk" val="1.2" />
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
@@ -1278,7 +1278,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<sub order="0x40" stat="debuffVuln" val="10" />
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
@@ -1313,7 +1313,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2859" levels="1" name="Christmas Gift">
@@ -1337,7 +1337,7 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="Heal" noicon="1" val="#amount" />
+			<effect name="Heal" val="#amount" />
 		</for>
 	</skill>
 	<skill id="2861" levels="6" name="Highest Power Secret Medicine of Mind">
@@ -1353,7 +1353,7 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" noicon="1" val="#amount" />
+			<effect name="ManaHeal" val="#amount" />
 		</for>
 	</skill>
 	<skill id="2862" levels="6" name="Highest Power Secret Medicine of Will">
@@ -1369,7 +1369,7 @@
 			<player levelRange="#levelRange" />
 		</cond>
 		<for>
-			<effect name="CpHeal" noicon="1" val="#amount" />
+			<effect name="CpHeal" val="#amount" />
 		</for>
 	</skill>
 	<skill id="2863" levels="1" name="Highest Power Healing Potion">
@@ -1396,7 +1396,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Heal" noicon="1" val="870" />
+			<effect name="Heal" val="870" />
 		</for>
 	</skill>
 	<skill id="2865" levels="1" name="Agathion's New Year's Gift 1">
@@ -1417,7 +1417,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2866" levels="1" name="Agathion's New Year's Gift 2">
@@ -1438,7 +1438,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2867" levels="1" name="Cupid's Cure">
@@ -1473,7 +1473,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13187" npcCount="1" />
 			</effect>
 		</for>
@@ -1490,7 +1490,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13188" npcCount="1" />
 			</effect>
 		</for>
@@ -1505,7 +1505,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13191" npcCount="1" />
 			</effect>
 		</for>
@@ -1520,7 +1520,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13192" npcCount="1" />
 			</effect>
 		</for>
@@ -1621,7 +1621,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13194" npcCount="1" />
 			</effect>
 		</for>
@@ -1638,7 +1638,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13195" npcCount="1" />
 			</effect>
 		</for>
@@ -1662,7 +1662,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2883" levels="1" name="Energy Replenishing Herb Tea">
@@ -1808,7 +1808,7 @@
 		<set name="reuseDelay" val="3600000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="2895" levels="1" name="Special White Day Candy Basket">
@@ -1829,7 +1829,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2896" levels="1" name="White Day Candy Basket">
@@ -1850,7 +1850,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2897" levels="1" name="Baguette's Herb">
@@ -1868,7 +1868,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" special="baguettesword,blackafro">
+			<effect name="Buff" special="baguettesword,blackafro">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
@@ -1889,7 +1889,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" special="baguettesword,yellowafro">
+			<effect name="Buff" special="baguettesword,yellowafro">
 				<mul order="0x30" stat="maxHp" val="1.1" />
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="mAtkSpd" val="1.1" />
@@ -1915,7 +1915,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" special="baguettesword,pinkafro">
+			<effect name="Buff" special="baguettesword,pinkafro">
 				<mul order="0x30" stat="maxMp" val="1.1" />
 				<mul order="0x30" stat="regMp" val="1.2" />
 			</effect>

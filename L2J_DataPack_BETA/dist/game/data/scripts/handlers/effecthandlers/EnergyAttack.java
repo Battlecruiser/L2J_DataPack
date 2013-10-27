@@ -19,12 +19,13 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -32,17 +33,17 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Energy Attack effect implementation.
  * @author Adry_85
  */
-public class EnergyAttack extends L2Effect
+public final class EnergyAttack extends AbstractEffect
 {
-	public EnergyAttack(Env env, EffectTemplate template)
+	public EnergyAttack(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -58,24 +59,24 @@ public class EnergyAttack extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
 		
-		boolean ss = getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
+		boolean ss = info.getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		boolean crit = false;
-		if (getSkill().getBaseCritRate() > 0)
+		if (info.getSkill().getBaseCritRate() > 0)
 		{
-			crit = Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+			crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
 		}
 		// damage calculation
-		double damage = Formulas.calcPhysDam(activeChar, target, getSkill(), shld, false, ss);
+		double damage = Formulas.calcPhysDam(activeChar, target, info.getSkill(), shld, false, ss);
 		
 		double modifier = 0;
 		if (activeChar.isPlayer())
@@ -91,11 +92,11 @@ public class EnergyAttack extends L2Effect
 		if (damage > 0)
 		{
 			double finalDamage = damage * modifier;
-			target.reduceCurrentHp(finalDamage, activeChar, getSkill());
-			target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
+			target.reduceCurrentHp(finalDamage, activeChar, info.getSkill());
+			target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit);
 			activeChar.sendDamageMessage(target, (int) finalDamage, false, crit, false);
 			// Check if damage should be reflected
-			Formulas.calcDamageReflected(activeChar, target, getSkill(), crit);
+			Formulas.calcDamageReflected(activeChar, target, info.getSkill(), crit);
 		}
 		else
 		{

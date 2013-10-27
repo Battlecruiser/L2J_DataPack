@@ -18,50 +18,43 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Passive effect implementation.
  * @author Adry_85
  */
-public class Passive extends L2Effect
+public final class Passive extends AbstractEffect
 {
-	public Passive(Env env, EffectTemplate template)
+	public Passive(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
+		info.getEffected().enableAllSkills();
+		info.getEffected().setIsImmobilized(false);
 	}
 	
 	@Override
-	public void onExit()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().enableAllSkills();
-		getEffected().setIsImmobilized(false);
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (!getEffected().isL2Attackable())
+		if (!info.getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		L2Attackable target = (L2Attackable) getEffected();
+		L2Attackable target = (L2Attackable) info.getEffected();
 		target.abortAttack();
 		target.abortCast();
 		target.disableAllSkills();
 		target.setIsImmobilized(true);
-		return super.onStart();
+		return true;
 	}
 }

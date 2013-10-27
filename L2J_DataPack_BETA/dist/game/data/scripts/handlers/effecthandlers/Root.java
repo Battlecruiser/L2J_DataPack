@@ -19,21 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Root effect implementation.
  * @author mkizub
  */
-public class Root extends L2Effect
+public final class Root extends AbstractEffect
 {
-	public Root(Env env, EffectTemplate template)
+	public Root(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,20 +50,19 @@ public class Root extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (!getEffected().isPlayer())
+		if (!info.getEffected().isPlayer())
 		{
-			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
-		super.onExit();
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().stopMove(null);
-		getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
-		return super.onStart();
+		info.getEffected().stopMove(null);
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
+		return true;
 	}
 }

@@ -18,21 +18,22 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Grow effect implementation.
  */
-public class Grow extends L2Effect
+public final class Grow extends AbstractEffect
 {
-	public Grow(Env env, EffectTemplate template)
+	public Grow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -42,30 +43,30 @@ public class Grow extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (getEffected().isNpc())
+		if (info.getEffected().isNpc())
 		{
-			L2Npc npc = (L2Npc) getEffected();
+			L2Npc npc = (L2Npc) info.getEffected();
 			// TODO: Uncomment line when fix for mobs falling underground is found
 			// npc.setCollisionHeight(npc.getTemplate().collisionHeight);
 			npc.setCollisionRadius(npc.getTemplate().getfCollisionRadius());
 			
-			getEffected().stopAbnormalEffect(AbnormalEffect.GROW);
+			info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.GROW);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isNpc())
+		if (info.getEffected().isNpc())
 		{
-			L2Npc npc = (L2Npc) getEffected();
+			L2Npc npc = (L2Npc) info.getEffected();
 			// TODO: Uncomment line when fix for mobs falling underground is found
 			// npc.setCollisionHeight((int) (npc.getCollisionHeight() * 1.24));
 			npc.setCollisionRadius((npc.getCollisionRadius() * 1.19));
 			
-			getEffected().startAbnormalEffect(AbnormalEffect.GROW);
+			info.getEffected().startAbnormalEffect(AbnormalVisualEffect.GROW);
 			return true;
 		}
 		return false;

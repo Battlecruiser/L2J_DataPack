@@ -63,7 +63,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2607" levels="1" name="Pailaka Door Key">
@@ -97,7 +97,7 @@
 			<player level="76" />
 		</cond>
 		<for>
-			<effect name="GiveSp" noicon="1" val="#amount" />
+			<effect name="GiveSp" val="#amount" />
 		</for>
 	</skill>
 	<skill id="2609" levels="20" name="Escape">
@@ -120,7 +120,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Teleport" noicon="1" val="0">
+			<effect name="Teleport">
 				<param x="#coordX" y="#coordY" z="#coordZ" />
 			</effect>
 		</for>
@@ -182,7 +182,7 @@
 			<player npcIdRadius="32529,300,true" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="13854" itemCount="1" />
 			</effect>
 		</for>
@@ -255,7 +255,7 @@
 		<set name="reuseDelay" val="1800000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="32544" npcCount="1" />
 			</effect>
 		</for>
@@ -429,7 +429,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="firePower" val="20" />
 			</effect>
 		</for>
@@ -446,7 +446,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="earthPower" val="20" />
 			</effect>
 		</for>
@@ -476,7 +476,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2639" levels="1" name="Five-year anniversary event box">
@@ -497,7 +497,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2640" levels="1" name="Five-year anniversary event box">
@@ -518,7 +518,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2641" levels="1" name="Five-Year Anniversary Event Box">
@@ -539,7 +539,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2642" levels="1" name="Five-Year Anniversary Event Box">
@@ -560,7 +560,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2643" levels="1" name="Five-Year Anniversary Event Box">
@@ -581,7 +581,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2644" levels="1" name="Five-Year Anniversary Event Box">
@@ -602,7 +602,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2645" levels="1" name="Multi-Colored Honey Rice Cake">
@@ -614,7 +614,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="2646" levels="1" name="Honey Wheat Cake">
@@ -626,7 +626,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="2647" levels="1" name="Energy Star Stone">
@@ -641,7 +641,7 @@
 			<player canRefuelAirship="25" />
 		</cond>
 		<for>
-			<effect name="RefuelAirship" noicon="1" val="25" />
+			<effect name="RefuelAirship" val="25" />
 		</for>
 	</skill>
 	<skill id="2648" levels="1" name="High Quality Energy Star Stone">
@@ -656,7 +656,7 @@
 			<player canRefuelAirship="100" />
 		</cond>
 		<for>
-			<effect name="RefuelAirship" noicon="1" val="100" />
+			<effect name="RefuelAirship" val="100" />
 		</for>
 	</skill>
 	<skill id="2649" levels="9" name="Escape - Gludin Village">
@@ -679,7 +679,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Teleport" noicon="1" val="0">
+			<effect name="Teleport">
 				<param x="#coordX" y="#coordY" z="#coordZ" />
 			</effect>
 		</for>
@@ -703,7 +703,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="912" skillLvl="1" />
 			</effect>
 		</for>
@@ -727,7 +727,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="913" skillLvl="1" />
 			</effect>
 		</for>
@@ -751,7 +751,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="914" skillLvl="1" />
 			</effect>
 		</for>
@@ -775,7 +775,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="915" skillLvl="1" />
 			</effect>
 		</for>
@@ -799,7 +799,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="917" skillLvl="1" />
 			</effect>
 		</for>
@@ -823,7 +823,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="918" skillLvl="1" />
 			</effect>
 		</for>
@@ -847,7 +847,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="919" skillLvl="1" />
 			</effect>
 		</for>
@@ -871,7 +871,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="922" skillLvl="1" />
 			</effect>
 		</for>
@@ -895,7 +895,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="923" skillLvl="1" />
 			</effect>
 		</for>
@@ -919,7 +919,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="924" skillLvl="1" />
 			</effect>
 		</for>
@@ -943,7 +943,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1532" skillLvl="1" />
 			</effect>
 		</for>
@@ -967,7 +967,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1533" skillLvl="1" />
 			</effect>
 		</for>
@@ -991,7 +991,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1535" skillLvl="1" />
 			</effect>
 		</for>
@@ -1015,7 +1015,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1536" skillLvl="1" />
 			</effect>
 		</for>
@@ -1039,7 +1039,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1537" skillLvl="1" />
 			</effect>
 		</for>
@@ -1063,7 +1063,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="1538" skillLvl="1" />
 			</effect>
 		</for>
@@ -1087,7 +1087,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="928" skillLvl="1" />
 			</effect>
 		</for>
@@ -1111,7 +1111,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="929" skillLvl="1" />
 			</effect>
 		</for>
@@ -1135,7 +1135,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="930" skillLvl="1" />
 			</effect>
 		</for>
@@ -1159,7 +1159,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="SetSkill" noicon="1" val="0">
+			<effect name="SetSkill">
 				<param skillId="931" skillLvl="1" />
 			</effect>
 		</for>

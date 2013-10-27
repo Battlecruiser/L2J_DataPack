@@ -20,7 +20,7 @@
 		<set name="reuseDelay" val="12000" />
 		<set name="targetType" val="OWNER_PET" />
 		<for>
-			<effect name="ManaHealByLevel" noicon="1" val="#amount" />
+			<effect name="ManaHealByLevel" val="#amount" />
 		</for>
 	</skill>
 	<skill id="5201" levels="6" name="Pet Concentration">
@@ -48,7 +48,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="OWNER_PET" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<sub order="0x40" stat="cancel" val="#cancel" />
 			</effect>
 		</for>
@@ -77,7 +77,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5203" levels="12" name="Fear">
@@ -104,7 +104,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
@@ -120,7 +120,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="HealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="5206" levels="1" name="Decrease Speed">
@@ -147,7 +147,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.85" />
 			</effect>
 		</for>
@@ -176,7 +176,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pAtkSpd" val="0.85" />
 			</effect>
 		</for>
@@ -195,7 +195,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -214,7 +214,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -233,7 +233,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.35" />
 			</effect>
 		</for>
@@ -252,7 +252,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -271,7 +271,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="regHp" val="1.2" />
 			</effect>
 		</for>
@@ -290,7 +290,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -309,7 +309,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxMp" val="1.35" />
 			</effect>
 		</for>
@@ -328,7 +328,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -347,7 +347,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<sub order="0x40" stat="cancel" val="18" />
 			</effect>
 		</for>
@@ -366,7 +366,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.55" />
 			</effect>
 		</for>
@@ -404,7 +404,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5220" levels="1" name="Fear of giant mutated animal">
@@ -430,7 +430,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5221" levels="1" name="Balor - Physical Close Range Weak Point">
@@ -440,7 +440,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLUNT="-70" />
 				<param DAGGER="-70" />
 				<param SWORD="-70" />
@@ -458,7 +458,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BOW="-70" />
 			</effect>
 		</for>
@@ -470,7 +470,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="0.3" />
 			</effect>
 		</for>
@@ -490,7 +490,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.5" />
 				<mul order="0x30" stat="pDef" val="1.5" />
 			</effect>
@@ -511,7 +511,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Invincible" val="0" special="invincible" />
+			<effect name="Invincible" special="invincible" />
 		</for>
 	</skill>
 	<skill id="5226" levels="1" name="Imprison">
@@ -541,7 +541,7 @@
 		<set name="power" val="5800" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5228" levels="1" name="Jump Attack">
@@ -558,7 +558,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5229" levels="1" name="Strong Punch">
@@ -586,9 +586,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
-			<effect name="ThrowUp" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+			<effect name="ThrowUp" />
 		</for>
 	</skill>
 	<skill id="5230" levels="1" name="Stun">
@@ -612,8 +612,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5231" levels="1" name="Stun">
@@ -637,8 +637,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5232" levels="1" name="Stun">
@@ -662,8 +662,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5233" levels="1" name="Weight Spin Attack - Weak">
@@ -678,7 +678,7 @@
 		<set name="power" val="4563" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5234" levels="1" name="Weight Spin Attack - Mid">
@@ -693,7 +693,7 @@
 		<set name="power" val="7685" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5235" levels="1" name="Weight Spin Attack - Strong">
@@ -708,7 +708,7 @@
 		<set name="power" val="13688" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5236" levels="1" name="Speed Up">
@@ -725,7 +725,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="33" />
 			</effect>
 		</for>
@@ -744,7 +744,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
 		</for>
@@ -776,8 +776,8 @@
 		<set name="saveVs" val="CON" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="Paralyze" val="0" />
+			<effect name="MagicalAttack" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="5239" levels="5" name="Event Timer">
@@ -797,7 +797,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="5240" levels="1" name="Stun">
@@ -823,8 +823,8 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5241" levels="1" name="Stun">
@@ -849,8 +849,8 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5242" levels="1" name="Sickness">
@@ -874,7 +874,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0" abnormalVisualEffect="earthquake" />
+			<effect name="Debuff" abnormalVisualEffect="earthquake" />
 		</for>
 	</skill>
 	<skill id="5243" levels="1" name="Blind">
@@ -905,10 +905,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
-			<effect name="Buff" noicon="1" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 			</effect>
 		</for>
@@ -924,10 +924,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtk" val="1.15" />
 			</effect>
-			<effect name="Buff" noicon="1" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mDef" val="1.15" />
 			</effect>
 		</for>
@@ -951,7 +951,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5247" levels="12" name="Seed of Darkness">
@@ -985,7 +985,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" triggeredId="5248" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="5248" levels="12" name="Seed Explosion">
@@ -1006,7 +1006,7 @@
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5249" levels="12" name="Boss Dark Circle">
@@ -1028,7 +1028,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5250" levels="1" name="Stun">
@@ -1054,7 +1054,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5251" levels="12" name="Poison">
@@ -1085,7 +1085,7 @@
 		<set name="trait" val="POISON" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" triggeredId="5252" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="5252" levels="12" name="Paralysis">
@@ -1110,7 +1110,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="5253" levels="12" name="Bleed">
@@ -1143,7 +1143,7 @@
 		<set name="trait" val="BLEED" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
+			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="5252" triggeredLevel="#triggeredLevel" />
 		</for>
 	</skill>
 	<skill id="5254" levels="12" name="Invasion of Spirit">
@@ -1173,7 +1173,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
-			<effect name="ChanceSkillTrigger" noicon="1" val="0" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
+			<effect name="ChanceSkillTrigger" triggeredId="5255" triggeredLevel="#triggeredLevel" chanceType="ON_EXIT" />
 		</for>
 	</skill>
 	<skill id="5255" levels="12" name="Mana Burn">
@@ -1189,7 +1189,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttackMp" noicon="1" val="0" />
+			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
 	<skill id="5256" levels="1" name="Announcement of Death">
@@ -1211,7 +1211,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="5257" />
+			<effect name="ChanceSkillTrigger" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="5257" />
 		</for>
 	</skill>
 	<skill id="5257" levels="2" name="Death">
@@ -1224,7 +1224,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Lethal" noicon="1" val="0">
+			<effect name="Lethal">
 				<param fullLethal="#lethalStrikeRate" />
 			</effect>
 		</for>
@@ -1247,7 +1247,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttackMp" noicon="1" val="0" />
+			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
 	<skill id="5259" levels="12" name="Fear">
@@ -1278,7 +1278,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5260" levels="12" name="Disarm">
@@ -1303,7 +1303,7 @@
 		<set name="saveVs" val="STR" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Disarm" val="0" abnormalVisualEffect="bleed" />
+			<effect name="Disarm" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
 	<skill id="5261" levels="1" name="Zombie">
@@ -1343,7 +1343,7 @@
 		<set name="reuseDelay" val="25000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5263" levels="12" name="NPC _ Chain Lightning">
@@ -1366,7 +1366,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5264" levels="12" name="Death Mark">
@@ -1394,7 +1394,7 @@
 		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0" abnormalVisualEffect="deathmark" />
+			<effect name="Debuff" abnormalVisualEffect="deathmark" />
 		</for>
 	</skill>
 	<skill id="5265" levels="12" name="NPC - Soul Emission">
@@ -1419,7 +1419,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5266" levels="12" name="Magical Backfire">
@@ -1448,7 +1448,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="#val" />
 				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#val" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="#val" />
@@ -1470,7 +1470,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5268" levels="17" name="Poison">
@@ -1517,7 +1517,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 				<mul order="0x30" stat="pAtkSpd" val="0.77" />
 				<mul order="0x30" stat="mAtkSpd" val="0.7" />
@@ -1544,8 +1544,8 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0">
+			<effect name="Stun" />
+			<effect name="TargetCancel">
 				<param chance="100" />
 			</effect>
 		</for>
@@ -1572,8 +1572,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="#traits" />
 		<for>
-			<effect name="Root" val="0" />
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="Root" />
+			<effect name="DefenceTrait">
 				<param HOLD="100" />
 			</effect>
 		</for>
@@ -1589,7 +1589,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="TargetMeProbability" noicon="1" val="0">
+			<effect name="TargetMeProbability">
 				<param chance="80" />
 			</effect>
 		</for>
@@ -1610,7 +1610,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5274" levels="9" name="NPC(party) - Physical Single Long Range Attack">
@@ -1628,7 +1628,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5275" levels="9" name="NPC(party) - Physical Range Close Range Attack">
@@ -1646,7 +1646,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5276" levels="9" name="NPC(party) - Physical Range Long Range Attack">
@@ -1666,7 +1666,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5277" levels="9" name="NPC(party) - Physical Single Close Range Attack - Fire">
@@ -1687,7 +1687,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5278" levels="9" name="NPC(party) - Physical Single Long Range Attack - Fire">
@@ -1707,7 +1707,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5279" levels="9" name="NPC(party) - Physical Range Close Range Attack - Fire">
@@ -1726,7 +1726,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5280" levels="9" name="NPC(party) - Physical Range Long Range Attack - Fire">
@@ -1748,7 +1748,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5281" levels="9" name="NPC(party) - Physical Single Close Range Attack - Water">
@@ -1770,7 +1770,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5282" levels="9" name="NPC(party) - Physical Single Long Range Attack - Water">
@@ -1790,7 +1790,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5283" levels="9" name="NPC(party) - Physical Range Close Range Attack - Water">
@@ -1809,7 +1809,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5284" levels="9" name="NPC(party) - Physical Range Long Range Attack - Water">
@@ -1831,7 +1831,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5285" levels="9" name="NPC(party) - Physical Single Close Range Attack - Wind">
@@ -1853,7 +1853,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5286" levels="9" name="NPC(party) - Physical Single Long Range Attack - Wind">
@@ -1873,7 +1873,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5287" levels="9" name="NPC(party) - Physical Range Close Range Attack - Wind">
@@ -1892,7 +1892,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5288" levels="9" name="NPC(party) - Physical Range Long Range Attack - Wind">
@@ -1914,7 +1914,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5289" levels="9" name="NPC(party) - Physical Single Close Range Attack - Earth">
@@ -1936,7 +1936,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5290" levels="9" name="NPC(party) - Physical Single Long Range Attack - Earth">
@@ -1956,7 +1956,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5291" levels="9" name="NPC(party) - Physical Range Close Range Attack - Earth">
@@ -1975,7 +1975,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5292" levels="9" name="NPC(party) - Physical Range Long Range Attack - Earth">
@@ -1997,7 +1997,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5293" levels="9" name="NPC(party) - Physical Single Close Range Attack - Holy">
@@ -2019,7 +2019,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5294" levels="9" name="NPC(party) - Physical Single Long Range Attack - Holy">
@@ -2039,7 +2039,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5295" levels="9" name="NPC(party) - Physical Range Close Range Attack - Holy">
@@ -2058,7 +2058,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5296" levels="9" name="NPC(party) - Physical Range Long Range Attack - Holy">
@@ -2080,7 +2080,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5297" levels="9" name="NPC(party) - Physical Single Close Range Attack - Dark">
@@ -2101,7 +2101,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5298" levels="9" name="NPC(party) - Physical Single Long Range Attack - Dark">
@@ -2121,7 +2121,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5299" levels="9" name="NPC(party) - Physical Range Close Range Attack - Dark">
@@ -2140,7 +2140,7 @@
 		<set name="power" val="13066" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 </list>

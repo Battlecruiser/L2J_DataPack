@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.ThreadPoolManager;
 import com.l2jserver.gameserver.datatables.SkillTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.quest.Event;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
@@ -344,7 +343,7 @@ public class eventmodRace extends Event
 		}
 		else if (event.equalsIgnoreCase("finish"))
 		{
-			if (player.getFirstEffect(_skill) != null)
+			if (player.isAffectedBySkill(_skill))
 			{
 				winRace(player);
 				return "900104-winner.htm";
@@ -411,20 +410,10 @@ public class eventmodRace extends Event
 			player.standUp();
 		}
 		
-		for (L2Effect e : player.getAllEffects())
-		{
-			if (e.getSkill().getAbnormalType() == AbnormalType.SPEED_UP)
-			{
-				e.exit();
-			}
-			// Song of Wind
-			if ((e.getSkill() != null) && ((e.getSkill().getId() == 268) || (e.getSkill().getId() == 298)))
-			{
-				e.exit();
-			}
-		}
-		
-		SkillTable.getInstance().getInfo(_skill, 1).getEffects(player, player);
+		player.getEffectList().stopSkillEffects(true, AbnormalType.SPEED_UP);
+		player.stopSkillEffects(true, 268);
+		player.stopSkillEffects(true, 298); // Rabbit Spirit Totem
+		SkillTable.getInstance().getInfo(_skill, 1).applyEffects(player, null, player, null, false, false);
 	}
 	
 	private void sendMessage(L2PcInstance player, String text)

@@ -18,12 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.util.Util;
 
@@ -31,26 +31,20 @@ import com.l2jserver.gameserver.util.Util;
  * Transfer Hate effect implementation.
  * @author Adry_85
  */
-public class TransferHate extends L2Effect
+public final class TransferHate extends AbstractEffect
 {
 	private final int _chance;
 	
-	public TransferHate(Env env, EffectTemplate template)
+	public TransferHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -60,11 +54,11 @@ public class TransferHate extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (Util.checkIfInRange(getSkill().getEffectRange(), getEffector(), getEffected(), true))
+		if (Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true))
 		{
-			for (L2Character obj : getEffector().getKnownList().getKnownCharactersInRadius(getSkill().getAffectRange()))
+			for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
 			{
 				if ((obj == null) || !obj.isL2Attackable() || obj.isDead())
 				{
@@ -72,14 +66,14 @@ public class TransferHate extends L2Effect
 				}
 				
 				final L2Attackable hater = ((L2Attackable) obj);
-				final int hate = hater.getHating(getEffector());
+				final int hate = hater.getHating(info.getEffector());
 				if (hate <= 0)
 				{
 					continue;
 				}
 				
-				hater.reduceHate(getEffector(), -hate);
-				hater.addDamageHate(getEffected(), 0, hate);
+				hater.reduceHate(info.getEffector(), -hate);
+				hater.addDamageHate(info.getEffected(), 0, hate);
 			}
 			return true;
 		}

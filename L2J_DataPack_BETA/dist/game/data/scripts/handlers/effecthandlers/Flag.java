@@ -18,55 +18,38 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Flag effect implementation.
  * @author BiggBoss
  */
-public final class Flag extends L2Effect
+public final class Flag extends AbstractEffect
 {
-	/**
-	 * @param env
-	 * @param template
-	 */
-	public Flag(Env env, EffectTemplate template)
+	public Flag(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
+		info.getEffected().getActingPlayer().updatePvPFlag(0);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || !getEffected().isPlayer())
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		getEffected().updatePvPFlag(1);
+		info.getEffected().updatePvPFlag(1);
 		
 		return true;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		getEffected().updatePvPFlag(1);
-		
-		return super.onActionTime();
-	}
-	
-	@Override
-	public void onExit()
-	{
-		getEffected().getActingPlayer().updatePvPFlag(0);
 	}
 }

@@ -42,7 +42,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.QuestTimer;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -412,15 +411,7 @@ public class Baium extends AbstractNpcAI
 		
 		if (attacker.getMountType() == MountType.STRIDER)
 		{
-			boolean hasStriderDebuff = false;
-			for (L2Effect e : attacker.getAllEffects())
-			{
-				if (e.getSkill().getId() == HINDER_STRIDER.getSkillId())
-				{
-					hasStriderDebuff = true;
-				}
-			}
-			if (!hasStriderDebuff)
+			if (!attacker.isAffectedBySkill(HINDER_STRIDER.getSkillId()))
 			{
 				npc.setTarget(attacker);
 				if (npc.isMuted())

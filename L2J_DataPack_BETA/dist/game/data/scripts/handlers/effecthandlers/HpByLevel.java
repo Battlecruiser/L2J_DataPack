@@ -18,10 +18,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -29,11 +30,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Hp By Level effect implementation..
  * @author Zoey76
  */
-public class HpByLevel extends L2Effect
+public final class HpByLevel extends AbstractEffect
 {
-	public HpByLevel(Env env, EffectTemplate template)
+	public HpByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,21 +50,21 @@ public class HpByLevel extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffector() == null)
+		if (info.getEffector() == null)
 		{
 			return false;
 		}
 		// Calculation
-		final int abs = (int) calc();
-		final double absorb = ((getEffector().getCurrentHp() + abs) > getEffector().getMaxHp() ? getEffector().getMaxHp() : (getEffector().getCurrentHp() + abs));
-		final int restored = (int) (absorb - getEffector().getCurrentHp());
-		getEffector().setCurrentHp(absorb);
+		final int abs = (int) getValue();
+		final double absorb = ((info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs));
+		final int restored = (int) (absorb - info.getEffector().getCurrentHp());
+		info.getEffector().setCurrentHp(absorb);
 		// System message
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 		sm.addNumber(restored);
-		getEffector().sendPacket(sm);
+		info.getEffector().sendPacket(sm);
 		return true;
 	}
 }

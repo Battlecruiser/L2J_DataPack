@@ -21,35 +21,35 @@ package handlers.effecthandlers;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.logging.Logger;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.stat.CharStat;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.TraitType;
 
 /**
- * Defence Trait effect implementation
+ * Defence Trait effect implementation.
  * @author Nos
  */
-public class DefenceTrait extends L2Effect
+public final class DefenceTrait extends AbstractEffect
 {
-	private static final Logger _log = Logger.getLogger(DefenceTrait.class.getName());
-	
 	private final Map<TraitType, Float> _defenceTraits = new HashMap<>();
 	
-	/**
-	 * @param env
-	 * @param template
-	 */
-	public DefenceTrait(Env env, EffectTemplate template)
+	public DefenceTrait(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		if (template.hasParameters())
+		super(attachCond, applyCond, set, params);
+		
+		if (!hasParameters())
 		{
-			for (Entry<String, Object> param : template.getParameters().getSet().entrySet())
+			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+			return;
+		}
+		
+		for (Entry<String, Object> param : getParameters().getSet().entrySet())
+		{
+			try
 			{
 				try
 				{
@@ -70,23 +70,42 @@ public class DefenceTrait extends L2Effect
 					_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getValue());
 				}
 			}
+			catch (NumberFormatException e)
+			{
+				_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be int value " + param.getValue() + " found.");
+			}
+			catch (Exception e)
+			{
+				_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getValue());
+			}
 		}
-		else
+	}
+	
+	@Override
+	public void onExit(BuffInfo info)
+	{
+		final CharStat charStat = info.getEffected().getStat();
+		synchronized (charStat.getDefenceTraits())
 		{
-			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
+			{
+				if (trait.getValue() < 2.0f)
+				{
+					charStat.getDefenceTraits()[trait.getKey().getId()] /= trait.getValue();
+					charStat.getDefenceTraitsCount()[trait.getKey().getId()]--;
+				}
+				else
+				{
+					charStat.getTraitsInvul()[trait.getKey().getId()]--;
+				}
+			}
 		}
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onStart(BuffInfo info)
 	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		final CharStat charStat = getEffected().getStat();
+		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getDefenceTraits())
 		{
 			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
@@ -103,26 +122,5 @@ public class DefenceTrait extends L2Effect
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		final CharStat charStat = getEffected().getStat();
-		synchronized (charStat.getDefenceTraits())
-		{
-			for (Entry<TraitType, Float> trait : _defenceTraits.entrySet())
-			{
-				if (trait.getValue() < 2.0f)
-				{
-					charStat.getDefenceTraits()[trait.getKey().getId()] /= trait.getValue();
-					charStat.getDefenceTraitsCount()[trait.getKey().getId()]--;
-				}
-				else
-				{
-					charStat.getTraitsInvul()[trait.getKey().getId()]--;
-				}
-			}
-		}
 	}
 }

@@ -17,7 +17,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0" />
+			<effect name="Buff" />
 		</for>
 	</skill>
 	<skill id="2901" levels="1" name="Ancient Herb - Immortal">
@@ -37,7 +37,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Invincible" val="0" />
+			<effect name="Invincible" />
 		</for>
 	</skill>
 	<skill id="2902" levels="1" name="Ancient Herb - Terminator">
@@ -57,7 +57,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.7" />
 			</effect>
 		</for>
@@ -79,7 +79,7 @@
 			<player level="78" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="250" />
 			</effect>
 		</for>
@@ -131,7 +131,7 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="Heal" noicon="1" val="1900" />
+			<effect name="Heal" val="1900" />
 		</for>
 	</skill>
 	<skill id="2908" levels="5" name="Battlefield Use Secret Medicine of Mind">
@@ -145,7 +145,7 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="ManaHeal" noicon="1" val="360" />
+			<effect name="ManaHeal" val="360" />
 		</for>
 	</skill>
 	<skill id="2909" levels="5" name="Battlefield Use Secret Medicine of Will">
@@ -159,7 +159,7 @@
 			<player levelRange="61;75" />
 		</cond>
 		<for>
-			<effect name="CpHeal" noicon="1" val="360" />
+			<effect name="CpHeal" val="360" />
 		</for>
 	</skill>
 	<skill id="2910" levels="1" name="Skull Key of Pain">
@@ -202,7 +202,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="#npcId" npcCount="1" />
 			</effect>
 		</for>
@@ -225,7 +225,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Teleport" noicon="1" val="0">
+			<effect name="Teleport">
 				<param x="89417" y="-44506" z="-2136" />
 			</effect>
 		</for>
@@ -257,7 +257,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2918" levels="1" name="Small Staccato Silk Cocoon">
@@ -278,7 +278,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2919" levels="1" name="Ancient Parchment">
@@ -299,7 +299,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2920" levels="1" name="Titan's Ancient Book">
@@ -320,7 +320,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2921" levels="1" name="Gludio Supply Box - magic pin">
@@ -341,7 +341,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2922" levels="1" name="Dion supply box - magic pin">
@@ -362,7 +362,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2923" levels="1" name="Giran supply box - magic pin">
@@ -383,7 +383,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2924" levels="1" name="Oren supply box - magic pin">
@@ -404,7 +404,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2925" levels="1" name="Aden supply box - magic pin">
@@ -425,7 +425,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2926" levels="1" name="Innadril supply box - magic pin">
@@ -446,7 +446,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2927" levels="1" name="Goddard supply box - magic pin">
@@ -467,7 +467,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2928" levels="1" name="Rune supply box - magic pin">
@@ -488,7 +488,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2929" levels="1" name="Schuttgart supply box - magic pin">
@@ -509,7 +509,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2930" levels="1" name="Gludio supply box - magic pouch">
@@ -530,7 +530,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2931" levels="1" name="Dion supply box - magic pouch">
@@ -551,7 +551,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2932" levels="1" name="Giran supply box - magic pouch">
@@ -572,7 +572,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2933" levels="1" name="Oren supply box - magic pouch">
@@ -593,7 +593,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2934" levels="1" name="Aden supply box - magic pouch">
@@ -614,7 +614,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2935" levels="1" name="Innadril supply box - magic pouch">
@@ -635,7 +635,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2936" levels="1" name="Goddard supply box - magic pouch">
@@ -656,7 +656,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2937" levels="1" name="Rune supply box - magic pouch">
@@ -677,7 +677,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2938" levels="1" name="Schuttgart supply box - magic pouch">
@@ -698,7 +698,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2939" levels="1" name="Gludio supply box - belt">
@@ -719,7 +719,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2940" levels="1" name="Dion supply box - belt">
@@ -740,7 +740,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2941" levels="1" name="Giran supply box - belt">
@@ -761,7 +761,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2942" levels="1" name="Oren supply box - belt">
@@ -782,7 +782,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2943" levels="1" name="Aden supply box - belt">
@@ -803,7 +803,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2944" levels="1" name="Innadril supply box - belt">
@@ -824,7 +824,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2945" levels="1" name="Goddard supply box - belt">
@@ -845,7 +845,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2946" levels="1" name="Rune supply box - belt">
@@ -866,7 +866,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2947" levels="1" name="Schuttgart supply box - belt">
@@ -887,7 +887,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2948" levels="1" name="Gludio Supply Box - magic pin">
@@ -908,7 +908,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2949" levels="1" name="Dion supply box - magic pin">
@@ -929,7 +929,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2950" levels="1" name="Giran supply box - magic pin">
@@ -950,7 +950,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2951" levels="1" name="Oren supply box - magic pin">
@@ -971,7 +971,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2952" levels="1" name="Aden supply box - magic pin">
@@ -992,7 +992,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2953" levels="1" name="Innadril supply box - magic pin">
@@ -1013,7 +1013,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2954" levels="1" name="Goddard supply box - magic pin">
@@ -1034,7 +1034,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2955" levels="1" name="Rune supply box - magic pin">
@@ -1055,7 +1055,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2956" levels="1" name="Schuttgart supply box - magic pin">
@@ -1076,7 +1076,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2957" levels="1" name="Gludio supply box - magic pouch">
@@ -1097,7 +1097,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2958" levels="1" name="Dion supply box - magic pouch">
@@ -1118,7 +1118,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2959" levels="1" name="Giran supply box - magic pouch">
@@ -1139,7 +1139,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2960" levels="1" name="Oren supply box - magic pouch">
@@ -1160,7 +1160,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2961" levels="1" name="Aden supply box - magic pouch">
@@ -1181,7 +1181,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2962" levels="1" name="Innadril supply box - magic pouch">
@@ -1202,7 +1202,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2963" levels="1" name="Goddard supply box - magic pouch">
@@ -1223,7 +1223,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2964" levels="1" name="Rune supply box - magic pouch">
@@ -1244,7 +1244,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2965" levels="1" name="Schuttgart supply box - magic pouch">
@@ -1265,7 +1265,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2966" levels="1" name="Gludio supply box - belt">
@@ -1286,7 +1286,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2967" levels="1" name="Dion supply box - belt">
@@ -1307,7 +1307,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2968" levels="1" name="Giran supply box - belt">
@@ -1328,7 +1328,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2969" levels="1" name="Oren supply box - belt">
@@ -1349,7 +1349,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2970" levels="1" name="Aden supply box - belt">
@@ -1370,7 +1370,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2971" levels="1" name="Innadril supply box - belt">
@@ -1391,7 +1391,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2972" levels="1" name="Goddard supply box - belt">
@@ -1412,7 +1412,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2973" levels="1" name="Rune supply box - belt">
@@ -1433,7 +1433,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2974" levels="1" name="Schuttgart supply box - belt">
@@ -1454,7 +1454,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2975" levels="1" name="Gludio supply box - magic rune clip">
@@ -1475,7 +1475,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2976" levels="1" name="Dion supply box - magic rune clip">
@@ -1496,7 +1496,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2977" levels="1" name="Giran supply box - magic rune clip">
@@ -1517,7 +1517,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2978" levels="1" name="Oren supply box - magic rune clip">
@@ -1538,7 +1538,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2979" levels="1" name="Aden supply box - magic rune clip">
@@ -1559,7 +1559,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2980" levels="1" name="Innadril supply box - magic rune clip">
@@ -1580,7 +1580,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2981" levels="1" name="Goddard supply box - magic rune clip">
@@ -1601,7 +1601,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2982" levels="1" name="Rune supply box - magic rune clip">
@@ -1622,7 +1622,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2983" levels="1" name="Schuttgart supply box - magic rune clip">
@@ -1643,7 +1643,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2984" levels="1" name="Gludio supply box - magic ornament">
@@ -1664,7 +1664,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2985" levels="1" name="Dion supply box - magic ornament">
@@ -1685,7 +1685,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2986" levels="1" name="Giran supply box - magic ornament">
@@ -1706,7 +1706,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2987" levels="1" name="Oren supply box - magic ornament">
@@ -1727,7 +1727,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2988" levels="1" name="Aden supply box - magic ornament">
@@ -1748,7 +1748,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2989" levels="1" name="Innadril supply box - magic ornament">
@@ -1769,7 +1769,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2990" levels="1" name="Goddard supply box - magic ornament">
@@ -1790,7 +1790,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2991" levels="1" name="Rune supply box - magic ornament">
@@ -1811,7 +1811,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2992" levels="1" name="Schuttgart supply box - magic ornament">
@@ -1832,7 +1832,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="RestorationRandom" noicon="1" val="0" />
+			<effect name="RestorationRandom" />
 		</for>
 	</skill>
 	<skill id="2993" levels="1" name="Ancient herb - Deceiver">

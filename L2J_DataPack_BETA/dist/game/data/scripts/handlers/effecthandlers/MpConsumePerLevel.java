@@ -18,45 +18,39 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Mp Consume Per Level effect implementation.
  */
-public class MpConsumePerLevel extends L2Effect
+public final class MpConsumePerLevel extends AbstractEffect
 {
-	public MpConsumePerLevel(Env env, EffectTemplate template)
+	public MpConsumePerLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final double base = calc() * getEffectTemplate().getTotalTickCount();
-		final double consume = (getAbnormalTime() > 0) ? ((getEffected().getLevel() - 1) / 7.5) * base * getAbnormalTime() : base;
-		if (consume > getEffected().getCurrentMp())
+		final double base = getValue() * getTicks();
+		final double consume = (info.getAbnormalTime() > 0) ? ((info.getEffected().getLevel() - 1) / 7.5) * base * info.getAbnormalTime() : base;
+		if (consume > info.getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		
-		getEffected().reduceCurrentMp(consume);
-		return getSkill().isToggle();
+		info.getEffected().reduceCurrentMp(consume);
+		return info.getSkill().isToggle();
 	}
 }

@@ -19,30 +19,31 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Fatal Blow effect implementation.
  * @author Adry_85
  */
-public class FatalBlow extends L2Effect
+public final class FatalBlow extends AbstractEffect
 {
-	public FatalBlow(Env env, EffectTemplate template)
+	public FatalBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill()) && Formulas.calcBlowSuccess(getEffector(), getEffected(), getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -58,29 +59,29 @@ public class FatalBlow extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
 		
-		boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-		double damage = (int) Formulas.calcBlowDamage(activeChar, target, getSkill(), shld, ss);
+		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		double damage = (int) Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
-		boolean crit = Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+		boolean crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
 		if (crit)
 		{
 			damage *= 2;
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, getSkill());
-		target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
+		target.reduceCurrentHp(damage, activeChar, info.getSkill());
+		target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -96,7 +97,7 @@ public class FatalBlow extends L2Effect
 		}
 		
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
+		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
 		return true;
 	}
 }

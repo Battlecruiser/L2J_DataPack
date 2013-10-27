@@ -18,37 +18,31 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Enlarge Abnormal Slot effect implementation.
  * @author Zoey76
  */
-public class EnlargeAbnormalSlot extends L2Effect
+public final class EnlargeAbnormalSlot extends AbstractEffect
 {
-	public EnlargeAbnormalSlot(Env env, EffectTemplate template)
+	public EnlargeAbnormalSlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return L2EffectType.ENLARGE_ABNORMAL_SLOT;
+		return info.getSkill().isPassive();
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onStart(BuffInfo info)
 	{
-		return getSkill().isPassive();
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		return (getEffector() != null) && (getEffected() != null) && getEffected().isPlayer();
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 }

@@ -20,13 +20,13 @@ package handlers.effecthandlers;
 
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jserver.gameserver.network.serverpackets.ItemList;
@@ -37,18 +37,13 @@ import com.l2jserver.util.Rnd;
  * Harvesting effect implementation.
  * @author l3x, Zoey76
  */
-public class Harvesting extends L2Effect
+public final class Harvesting extends AbstractEffect
 {
-	public Harvesting(Env env, EffectTemplate template)
+	public Harvesting(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
-	/**
-	 * @param activeChar
-	 * @param target
-	 * @return
-	 */
 	private boolean calcSuccess(L2PcInstance activeChar, L2MonsterInstance target)
 	{
 		int basicSuccess = 100;
@@ -77,27 +72,21 @@ public class Harvesting extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isNpc() || !getEffected().isDead())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isNpc() || !info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final L2PcInstance player = getEffector().getActingPlayer();
-		final L2Object[] targets = getSkill().getTargetList(player, false, getEffected());
+		final L2PcInstance player = info.getEffector().getActingPlayer();
+		final L2Object[] targets = info.getSkill().getTargetList(player, false, info.getEffected());
 		if ((targets == null) || (targets.length == 0))
 		{
 			return false;

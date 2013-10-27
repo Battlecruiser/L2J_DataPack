@@ -24,12 +24,12 @@ import java.util.List;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.model.L2ExtractableProductItem;
 import com.l2jserver.gameserver.model.L2ExtractableSkill;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.util.Rnd;
 
@@ -39,17 +39,11 @@ import com.l2jserver.util.Rnd;
  * This effect has been unhardcoded in order to work on targets as well.
  * @author Zoey76
  */
-public class RestorationRandom extends L2Effect
+public final class RestorationRandom extends AbstractEffect
 {
-	public RestorationRandom(Env env, EffectTemplate template)
+	public RestorationRandom(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -59,14 +53,14 @@ public class RestorationRandom extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffector() == null) || (getEffected() == null) || !getEffector().isPlayer() || !getEffected().isPlayer())
+		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer())
 		{
 			return false;
 		}
 		
-		final L2ExtractableSkill exSkill = getSkill().getExtractableSkill();
+		final L2ExtractableSkill exSkill = info.getSkill().getExtractableSkill();
 		if (exSkill == null)
 		{
 			return false;
@@ -74,7 +68,7 @@ public class RestorationRandom extends L2Effect
 		
 		if (exSkill.getProductItems().isEmpty())
 		{
-			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + getSkill().getId());
+			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + info.getSkill().getId());
 			return false;
 		}
 		
@@ -103,7 +97,7 @@ public class RestorationRandom extends L2Effect
 			chanceFrom += chance;
 		}
 		
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
@@ -116,7 +110,7 @@ public class RestorationRandom extends L2Effect
 			{
 				continue;
 			}
-			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), getEffector(), true);
+			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), info.getEffector(), true);
 		}
 		return true;
 	}

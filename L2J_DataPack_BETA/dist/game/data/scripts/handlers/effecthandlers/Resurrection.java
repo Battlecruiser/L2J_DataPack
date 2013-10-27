@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
 
@@ -30,14 +31,14 @@ import com.l2jserver.gameserver.taskmanager.DecayTaskManager;
  * Resurrection effect implementation.
  * @author Adry_85
  */
-public class Resurrection extends L2Effect
+public final class Resurrection extends AbstractEffect
 {
 	private final int _power;
 	
-	public Resurrection(Env env, EffectTemplate template)
+	public Resurrection(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_power = template.hasParameters() ? template.getParameters().getInt("power", 0) : 0;
+		super(attachCond, applyCond, set, params);
+		_power = hasParameters() ? getParameters().getInt("power", 0) : 0;
 	}
 	
 	@Override
@@ -53,16 +54,16 @@ public class Resurrection extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isPlayer())
 		{
 			if (target.getActingPlayer() != null)
 			{
-				target.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), getSkill(), target.isPet(), _power);
+				target.getActingPlayer().reviveRequest(activeChar.getActingPlayer(), info.getSkill(), target.isPet(), _power);
 			}
 		}
 		else

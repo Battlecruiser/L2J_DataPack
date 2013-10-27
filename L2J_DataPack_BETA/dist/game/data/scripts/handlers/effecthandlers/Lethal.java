@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.util.Rnd;
@@ -31,16 +32,16 @@ import com.l2jserver.util.Rnd;
  * Lethal effect implementation.
  * @author Adry_85
  */
-public class Lethal extends L2Effect
+public final class Lethal extends AbstractEffect
 {
 	private final int _fullLethal;
 	private final int _halfLethal;
 	
-	public Lethal(Env env, EffectTemplate template)
+	public Lethal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_fullLethal = template.getParameters().getInt("fullLethal", 0);
-		_halfLethal = template.getParameters().getInt("halfLethal", 0);
+		super(attachCond, applyCond, set, params);
+		_fullLethal = getParameters().getInt("fullLethal", 0);
+		_halfLethal = getParameters().getInt("halfLethal", 0);
 	}
 	
 	@Override
@@ -56,10 +57,10 @@ public class Lethal extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		if (activeChar.isPlayer() && !activeChar.getAccessLevel().canGiveDamage())
 		{
 			return false;
@@ -70,14 +71,14 @@ public class Lethal extends L2Effect
 			return false;
 		}
 		
-		double levelBonus = Formulas.calcLvlBonusMod(activeChar, target, getSkill());
+		double levelBonus = Formulas.calcLvlBonusMod(activeChar, target, info.getSkill());
 		// Lethal Strike
 		if (Rnd.get(100) < (_fullLethal * levelBonus))
 		{
 			// for Players CP and HP is set to 1.
 			if (target.isPlayer())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true);
 				target.setCurrentCp(1);
 				target.setCurrentHp(1);
 				target.sendPacket(SystemMessageId.LETHAL_STRIKE);
@@ -85,7 +86,7 @@ public class Lethal extends L2Effect
 			// for Monsters HP is set to 1.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() - 1, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() - 1, info.getEffector(), info.getSkill(), true);
 				target.setCurrentHp(1);
 			}
 			activeChar.sendPacket(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL);
@@ -103,7 +104,7 @@ public class Lethal extends L2Effect
 			// for Monsters HP is set to 50%.
 			else if (target.isMonster() || target.isSummon())
 			{
-				target.notifyDamageReceived(target.getCurrentHp() * 0.5, getEffector(), getSkill(), true);
+				target.notifyDamageReceived(target.getCurrentHp() * 0.5, info.getEffector(), info.getSkill(), true);
 				target.setCurrentHp(target.getCurrentHp() * 0.5);
 			}
 			activeChar.sendPacket(SystemMessageId.HALF_KILL);

@@ -37,7 +37,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="10" />
 			</effect>
 		</for>
@@ -49,7 +49,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="10" />
 			</effect>
 		</for>
@@ -61,7 +61,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="10" />
 			</effect>
 		</for>
@@ -73,7 +73,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param DERANGEMENT="10" />
 			</effect>
 		</for>
@@ -85,7 +85,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="10" />
 			</effect>
 		</for>
@@ -97,7 +97,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="10" />
 			</effect>
 		</for>
@@ -209,7 +209,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param GUST="100" />
 			</effect>
 		</for>
@@ -242,7 +242,7 @@
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="rEvas" val="2" />
 				<mul order="0x30" stat="critDamEvas" val="1.05" />
 			</effect>
@@ -316,7 +316,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="3329" levels="1" name="Power Slash">
@@ -335,7 +335,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="3330" levels="1" name="Air Blade">
@@ -356,7 +356,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="3331" levels="1" name="Enslave">
@@ -380,7 +380,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.05" />
+			<effect name="HpDrain" val="0.05" />
 		</for>
 	</skill>
 	<skill id="3332" levels="1" name="Orange Talisman - Hot Springs Recovery">
@@ -404,7 +404,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="10166" itemCount="1" />
 			</effect>
 		</for>
@@ -430,7 +430,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="8626" itemCount="1" />
 			</effect>
 		</for>
@@ -456,7 +456,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="8632" itemCount="1" />
 			</effect>
 		</for>
@@ -497,7 +497,7 @@
 		</cond>
 		<for>
 			<effect name="Transformation" val="103" />
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="BIG_HEAD,9" />
 			</effect>
 		</for>
@@ -594,7 +594,7 @@
 			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="13" />
 			</effect>
 		</for>
@@ -654,7 +654,7 @@
 			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
 			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
 			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="13" />
 			</effect>
 		</for>
@@ -790,7 +790,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="3362" levels="1" name="Traits Strengthen Necklace">
@@ -816,7 +816,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="18" />
 			</effect>
 		</for>
@@ -826,7 +826,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="8" />
 			</effect>
 		</for>
@@ -836,7 +836,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12" />
 			</effect>
 		</for>
@@ -864,7 +864,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="11" />
 			</effect>
 		</for>
@@ -874,7 +874,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="5" />
 			</effect>
 		</for>
@@ -884,7 +884,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="8" />
 			</effect>
 		</for>
@@ -912,7 +912,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="16" />
 			</effect>
 		</for>
@@ -922,7 +922,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="7" />
 			</effect>
 		</for>
@@ -932,7 +932,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="11" />
 			</effect>
 		</for>
@@ -960,7 +960,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="9" />
 			</effect>
 		</for>
@@ -970,7 +970,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="4" />
 			</effect>
 		</for>
@@ -980,7 +980,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="6" />
 			</effect>
 		</for>
@@ -1008,7 +1008,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="18" />
 			</effect>
 		</for>
@@ -1018,7 +1018,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="8" />
 			</effect>
 		</for>
@@ -1028,7 +1028,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="12" />
 			</effect>
 		</for>
@@ -1056,7 +1056,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="18" />
 			</effect>
 		</for>
@@ -1066,7 +1066,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="8" />
 			</effect>
 		</for>
@@ -1076,7 +1076,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="12" />
 			</effect>
 		</for>

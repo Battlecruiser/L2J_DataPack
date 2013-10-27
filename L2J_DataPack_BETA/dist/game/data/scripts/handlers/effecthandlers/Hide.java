@@ -19,13 +19,13 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.DeleteObject;
 import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
 
@@ -33,46 +33,35 @@ import com.l2jserver.gameserver.network.serverpackets.L2GameServerPacket;
  * Hide effect implementation.
  * @author ZaKaX, nBd
  */
-public class Hide extends L2Effect
+public final class Hide extends AbstractEffect
 {
-	public Hide(Env env, EffectTemplate template)
+	public Hide(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public Hide(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.HIDE;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = getEffected().getActingPlayer();
+			L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			if (!activeChar.inObserverMode())
 			{
 				activeChar.getAppearance().setVisible();
 			}
-			activeChar.stopAbnormalEffect(AbnormalEffect.STEALTH);
+			activeChar.stopAbnormalEffect(AbnormalVisualEffect.STEALTH);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			L2PcInstance activeChar = getEffected().getActingPlayer();
+			L2PcInstance activeChar = info.getEffected().getActingPlayer();
 			activeChar.getAppearance().setInvisible();
-			activeChar.startAbnormalEffect(AbnormalEffect.STEALTH);
+			activeChar.startAbnormalEffect(AbnormalVisualEffect.STEALTH);
 			
 			if ((activeChar.getAI().getNextIntention() != null) && (activeChar.getAI().getNextIntention().getCtrlIntention() == CtrlIntention.AI_INTENTION_ATTACK))
 			{

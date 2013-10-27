@@ -25,7 +25,7 @@
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
+			<effect name="FatalBlow" />
 		</for>
 	</skill>
 	<skill id="20003" levels="1" name="Dragon Slash">
@@ -40,7 +40,7 @@
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="20004" levels="1" name="Dragon Dash">
@@ -51,7 +51,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="runSpd" val="2" />
 			</effect>
 		</for>
@@ -65,7 +65,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
 		</for>
@@ -83,12 +83,12 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.15" />
 				<mul order="0x30" stat="maxCp" val="1.15" />
 			</effect>
-			<effect name="CpHealPercent" noicon="1" val="15" />
-			<effect name="HealPercent" noicon="1" val="15" />
+			<effect name="CpHealPercent" val="15" />
+			<effect name="HealPercent" val="15" />
 		</for>
 	</skill>
 </list>

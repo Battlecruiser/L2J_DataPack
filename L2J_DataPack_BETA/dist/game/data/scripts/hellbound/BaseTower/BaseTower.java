@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.datatables.DoorTable;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.base.ClassId;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 
@@ -104,11 +103,7 @@ public class BaseTower extends Quest
 					final L2PcInstance pl = BODY_DESTROYER_TARGET_LIST.get(npc.getObjectId());
 					if ((pl != null) && pl.isOnline() && !pl.isDead())
 					{
-						final L2Effect e = pl.getFirstEffect(DEATH_WORD.getSkill());
-						if (e != null)
-						{
-							e.exit();
-						}
+						pl.stopSkillEffects(true, DEATH_WORD.getSkillId());
 					}
 					
 					BODY_DESTROYER_TARGET_LIST.remove(npc.getObjectId());

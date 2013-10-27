@@ -18,10 +18,10 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.PetItemList;
 
@@ -29,22 +29,16 @@ import com.l2jserver.gameserver.network.serverpackets.PetItemList;
  * Restoration effect implementation.
  * @author Zoey76
  */
-public class Restoration extends L2Effect
+public final class Restoration extends AbstractEffect
 {
 	private final int _itemId;
 	private final int _itemCount;
 	
-	public Restoration(Env env, EffectTemplate template)
+	public Restoration(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_itemId = template.getParameters().getInt("itemId", 0);
-		_itemCount = template.getParameters().getInt("itemCount", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
+		_itemId = getParameters().getInt("itemId", 0);
+		_itemCount = getParameters().getInt("itemCount", 0);
 	}
 	
 	@Override
@@ -54,28 +48,28 @@ public class Restoration extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || !getEffected().isPlayable())
+		if ((info.getEffected() == null) || !info.getEffected().isPlayable())
 		{
 			return false;
 		}
 		
 		if ((_itemId <= 0) || (_itemCount <= 0))
 		{
-			getEffected().sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
+			info.getEffected().sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 			_log.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
 			return false;
 		}
 		
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getActingPlayer().addItem("Skill", _itemId, _itemCount, getEffector(), true);
+			info.getEffected().getActingPlayer().addItem("Skill", _itemId, _itemCount, info.getEffector(), true);
 		}
-		else if (getEffected().isPet())
+		else if (info.getEffected().isPet())
 		{
-			getEffected().getInventory().addItem("Skill", _itemId, _itemCount, getEffected().getActingPlayer(), getEffector());
-			getEffected().getActingPlayer().sendPacket(new PetItemList(getEffected().getInventory().getItems()));
+			info.getEffected().getInventory().addItem("Skill", _itemId, _itemCount, info.getEffected().getActingPlayer(), info.getEffector());
+			info.getEffected().getActingPlayer().sendPacket(new PetItemList(info.getEffected().getInventory().getItems()));
 		}
 		return true;
 	}

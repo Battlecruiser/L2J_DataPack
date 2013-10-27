@@ -18,30 +18,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Mana Heal Over Time effect implementation.
  */
-public class ManaHealOverTime extends L2Effect
+public final class ManaHealOverTime extends AbstractEffect
 {
-	public ManaHealOverTime(Env env, EffectTemplate template)
+	public ManaHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public ManaHealOverTime(Env env, L2Effect effect)
-	{
-		super(env, effect);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,15 +41,15 @@ public class ManaHealOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double mp = getEffected().getCurrentMp();
-		double maxmp = getEffected().getMaxRecoverableMp();
+		double mp = info.getEffected().getCurrentMp();
+		double maxmp = info.getEffected().getMaxRecoverableMp();
 		
 		// Not needed to set the MP and send update packet if player is already at max MP
 		if (mp >= maxmp)
@@ -67,9 +57,9 @@ public class ManaHealOverTime extends L2Effect
 			return true;
 		}
 		
-		mp += calc() * getEffectTemplate().getTotalTickCount();
+		mp += getValue() * getTicks();
 		mp = Math.min(mp, maxmp);
-		getEffected().setCurrentMp(mp);
-		return getSkill().isToggle();
+		info.getEffected().setCurrentMp(mp);
+		return info.getSkill().isToggle();
 	}
 }

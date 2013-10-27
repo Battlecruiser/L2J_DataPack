@@ -14,7 +14,7 @@
 			<player canUntransform="true" />
 		</cond>
 		<for>
-			<effect name="DispelBySlot" noicon="1" val="0">
+			<effect name="DispelBySlot">
 				<param dispel="TRANSFORM,-1" />
 			</effect>
 		</for>
@@ -42,10 +42,10 @@
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
 			</effect>
-			<effect name="DispelBySlotProbability" noicon="1" val="0">
+			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0">
+			<effect name="BlockBuffSlot">
 				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 			</effect>
 		</for>
@@ -73,10 +73,10 @@
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
 			</effect>
-			<effect name="DispelBySlotProbability" noicon="1" val="0">
+			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0">
+			<effect name="BlockBuffSlot">
 				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 			</effect>
 		</for>
@@ -104,10 +104,10 @@
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
 			</effect>
-			<effect name="DispelBySlotProbability" noicon="1" val="0">
+			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0">
+			<effect name="BlockBuffSlot">
 				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 			</effect>
 		</for>
@@ -135,10 +135,10 @@
 				<add order="0x40" stat="weightPenalty" val="9000" />
 				<add order="0x40" stat="inventoryLimit" val="8" />
 			</effect>
-			<effect name="DispelBySlotProbability" noicon="1" val="0">
+			<effect name="DispelBySlotProbability">
 				<param dispel="IMPROVE_SPEED_AVOID_UP;SPEED_UP" rate="100" />
 			</effect>
-			<effect name="BlockBuffSlot" noicon="1" val="0">
+			<effect name="BlockBuffSlot">
 				<param slot="IMPROVE_SPEED_AVOID_UP;SPEED_UP" />
 			</effect>
 		</for>
@@ -172,7 +172,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="bleed" />
 		</for>
 	</skill>
@@ -203,7 +203,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="6207" levels="1" name="Strider Dash">
@@ -221,7 +221,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="66" />
 			</effect>
 		</for>
@@ -430,7 +430,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Debuff" val="0" special="stakatoroot">
+			<effect name="Debuff" special="stakatoroot">
 				<mul order="0x30" stat="runSpd" val="0.2" />
 			</effect>
 		</for>
@@ -452,8 +452,8 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0" special="stakatoroot">
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff" special="stakatoroot">
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -477,7 +477,7 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="15352" itemCount="1" />
 			</effect>
 		</for>
@@ -624,7 +624,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonNpc" noicon="1" val="0">
+			<effect name="SummonNpc">
 				<param npcId="13270" npcCount="1" despawnDelay="7200" />
 			</effect>
 		</for>
@@ -896,8 +896,8 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
+			<effect name="PhysicalAttack" />
+			<effect name="ChanceSkillTrigger" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="6275" levels="1" name="Eternal Blizzard">
@@ -917,8 +917,8 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
+			<effect name="PhysicalAttack" />
+			<effect name="ChanceSkillTrigger" triggeredId="6662" triggeredLevel="2" chanceType="ON_START" />
 		</for>
 	</skill>
 	<skill id="6276" levels="1" name="Eternal Blizzard">
@@ -966,7 +966,7 @@
 		<set name="power" val="18560" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6279" levels="1" name="Attack Nearby Range">
@@ -984,7 +984,7 @@
 		<set name="power" val="18560" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6280" levels="1" name="Death Clack">
@@ -1007,7 +1007,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="6281" />
+			<effect name="ChanceSkillTrigger" abnormalVisualEffect="bleed" chanceType="ON_EXIT" triggeredId="6281" />
 		</for>
 	</skill>
 	<skill id="6281" levels="1" name="Cold Judgement">
@@ -1021,7 +1021,7 @@
 		<set name="power" val="18560" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6282" levels="1" name="Reflect Magic">
@@ -1038,7 +1038,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="vengeanceMdam" val="20" />
 			</effect>
 		</for>
@@ -1058,7 +1058,7 @@
 		<set name="power" val="18560" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6284" levels="1" name="Freya's Bless">
@@ -1075,7 +1075,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.15" />
 				<mul order="0x30" stat="pAtk" val="1.15" />
 				<mul order="0x30" stat="runSpd" val="1.15" />
@@ -1095,7 +1095,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
 			</effect>
 		</for>
@@ -1118,7 +1118,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="1.1" />
 				<mul order="0x30" stat="regHp" val="1.15" />
 			</effect>
@@ -1137,9 +1137,9 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="CpHealPercent" noicon="1" val="100" />
-			<effect name="HealPercent" noicon="1" val="100" />
-			<effect name="ManaHealPercent" noicon="1" val="100" />
+			<effect name="CpHealPercent" val="100" />
+			<effect name="HealPercent" val="100" />
+			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="6288" levels="1" name="Jinia's Prayer">
@@ -1157,7 +1157,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="4" />
 				<mul order="0x30" stat="mDef" val="4" />
 			</effect>
@@ -1178,7 +1178,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="3" />
 				<mul order="0x30" stat="mAtk" val="3" />
 				<mul order="0x30" stat="pAtkSpd" val="1.25" />
@@ -1201,7 +1201,7 @@
 		<set name="power" val="4563" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6291" levels="1" name="Power Strike">
@@ -1218,7 +1218,7 @@
 		<set name="power" val="4563" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6292" levels="1" name="Rush">
@@ -1242,8 +1242,8 @@
 			<target mindistance="250" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="EnemyCharge" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="EnemyCharge" />
 		</for>
 	</skill>
 	<skill id="6293" levels="1" name="Power Strike">
@@ -1263,7 +1263,7 @@
 		<set name="power" val="4563" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6294" levels="1" name="Leader's Roar">
@@ -1284,7 +1284,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
 		</for>
@@ -1322,8 +1322,8 @@
 			<target mindistance="250" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="EnemyCharge" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="EnemyCharge" />
 		</for>
 	</skill>
 	<skill id="6297" levels="1" name="Cylinder Throw">
@@ -1342,7 +1342,7 @@
 		<set name="power" val="4563" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6298" levels="1" name="Summon Follower Knight">
@@ -1372,8 +1372,8 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="ChanceSkillTrigger" val="0" triggeredId="6662" chanceType="ON_START" />
+			<effect name="PhysicalAttack" />
+			<effect name="ChanceSkillTrigger" triggeredId="6662" chanceType="ON_START" />
 		</for>
 	</skill>
 </list>
