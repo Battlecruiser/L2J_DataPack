@@ -114,7 +114,17 @@ public class L2NpcActionShift implements IActionHandler
 			
 			if (((L2Npc) target).getSpawn() != null)
 			{
-				html.replace("%spawn%", ((L2Npc) target).getSpawn().getX() + " " + ((L2Npc) target).getSpawn().getY() + " " + ((L2Npc) target).getSpawn().getZ());
+				html.replace("%territory%", ((L2Npc) target).getSpawn().getSpawnTerritory() == null ? "None" : ((L2Npc) target).getSpawn().getSpawnTerritory().getName());
+				if (((L2Npc) target).getSpawn().isTerritoryBased())
+				{
+					html.replace("%spawntype%", "Random");
+					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX(target) + " " + ((L2Npc) target).getSpawn().getY(target) + " " + ((L2Npc) target).getSpawn().getZ(target));
+				}
+				else
+				{
+					html.replace("%spawntype%", "Fixed");
+					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX() + " " + ((L2Npc) target).getSpawn().getY() + " " + ((L2Npc) target).getSpawn().getZ());
+				}
 				html.replace("%loc2d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn(), false, false)));
 				html.replace("%loc3d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn(), true, false)));
 				if (((L2Npc) target).getSpawn().getRespawnMinDelay() == 0)
@@ -132,6 +142,8 @@ public class L2NpcActionShift implements IActionHandler
 			}
 			else
 			{
+				html.replace("%territory%", "<font color=FF0000>--</font>");
+				html.replace("%spawntype%", "<font color=FF0000>--</font>");
 				html.replace("%spawn%", "<font color=FF0000>null</font>");
 				html.replace("%loc2d%", "<font color=FF0000>--</font>");
 				html.replace("%loc3d%", "<font color=FF0000>--</font>");

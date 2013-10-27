@@ -31,6 +31,7 @@ import com.l2jserver.gameserver.model.TeleportWhereType;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.zone.L2ZoneType;
 import com.l2jserver.gameserver.model.zone.ZoneId;
+import com.l2jserver.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.util.StringUtil;
 
@@ -90,6 +91,10 @@ public class AdminZone implements IAdminCommandHandler
 				{
 					zone.visualizeZone(activeChar.getZ());
 				}
+				for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				{
+					territory.visualizeZone(activeChar.getZ());
+				}
 				showHtml(activeChar);
 			}
 			else
@@ -147,6 +152,10 @@ public class AdminZone implements IAdminCommandHandler
 				}
 				StringUtil.append(zones, " ");
 			}
+		}
+		for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+		{
+			StringUtil.append(zones, territory.getName() + "<br1>");
 		}
 		adminReply.replace("%ZLIST%", zones.toString());
 		activeChar.sendPacket(adminReply);
