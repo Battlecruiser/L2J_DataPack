@@ -18,20 +18,16 @@
  */
 package quests.Q00376_ExplorationOfTheGiantsCavePart1;
 
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.serverpackets.RadarControl;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Exploration of the Giants' Cave Part 1 (376)<br>
  * Original Jython script by Gnacik.
  * @author nonom
- * @version 2010-02-17 based on official Franz server
  */
 public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 {
@@ -44,8 +40,6 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 	private static final int BOOK3 = 14838;
 	private static final int BOOK4 = 14839;
 	private static final int BOOK5 = 14840;
-	// Drop Chance
-	private static final int DROP_CHANCE = 20;
 	// Mobs
 	private static final int[] MOBS =
 	{
@@ -58,23 +52,10 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 		22676,
 		22677
 	};
-	// Rewards
-	private static final int RECIPE_DYNASTY_SWORD_60 = 9967;
-	private static final int RECIPE_DYNASTY_BLADE_60 = 9968;
-	private static final int RECIPE_DYNASTY_PHANTOM_60 = 9969;
-	private static final int RECIPE_DYNASTY_BOW_60 = 9970;
-	private static final int RECIPE_DYNASTY_KNIFE_60 = 9971;
-	private static final int RECIPE_DYNASTY_HALBERD_60 = 9972;
-	private static final int RECIPE_DYNASTY_CUDGEL_60 = 9973;
-	private static final int RECIPE_DYNASTY_MACE_60 = 9974;
-	private static final int RECIPE_DYNASTY_BAGHNAKH_60 = 9975;
-	private static final int LEONARD = 9628;
-	private static final int ADAMANTINE = 9629;
-	private static final int ORICHALCUM = 9630;
 	
-	public Q00376_ExplorationOfTheGiantsCavePart1(int id, String name, String descr)
+	private Q00376_ExplorationOfTheGiantsCavePart1()
 	{
-		super(id, name, descr);
+		super(376, Q00376_ExplorationOfTheGiantsCavePart1.class.getSimpleName(), "Exploration of the Giants' Cave - Part 1");
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(MOBS);
@@ -91,56 +72,18 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("31147-02.htm"))
+		switch (event)
 		{
-			st.startQuest();
-			player.sendPacket(new RadarControl(0, 2, 185712, 47414, -4350));
-		}
-		else if (event.equalsIgnoreCase("31147-quit.html"))
-		{
-			st.exitQuest(true, true);
-		}
-		else if (Util.isDigit(event))
-		{
-			final int val = Integer.parseInt(event);
-			switch (val)
+			case "31147-02.htm":
 			{
-				case RECIPE_DYNASTY_SWORD_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Sword (60%)
-					break;
-				case RECIPE_DYNASTY_BLADE_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Blade (60%)
-					break;
-				case RECIPE_DYNASTY_PHANTOM_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Phantom (60%)
-					break;
-				case RECIPE_DYNASTY_BOW_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Bow (60%)
-					break;
-				case RECIPE_DYNASTY_KNIFE_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Knife (60%)
-					break;
-				case RECIPE_DYNASTY_HALBERD_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Halberd (60%)
-					break;
-				case RECIPE_DYNASTY_CUDGEL_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Cudgel (60%)
-					break;
-				case RECIPE_DYNASTY_MACE_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Mace (60%)
-					break;
-				case RECIPE_DYNASTY_BAGHNAKH_60:
-					htmltext = exchangeRequest(st, val, 1, 10); // Recipe Dynasty Bagh-Nakh (60%)
-					break;
-				case LEONARD:
-					htmltext = exchangeRequest(st, val, 6, 1); // Leonard
-					break;
-				case ADAMANTINE:
-					htmltext = exchangeRequest(st, val, 3, 1); // Adamantine
-					break;
-				case ORICHALCUM:
-					htmltext = exchangeRequest(st, val, 4, 1); // Orichalcum
-					break;
+				st.startQuest();
+				player.sendPacket(new RadarControl(0, 2, 185712, 47414, -4350));
+				break;
+			}
+			case "31147-quit.html":
+			{
+				st.exitQuest(true, true);
+				break;
 			}
 		}
 		return htmltext;
@@ -149,16 +92,10 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
+		if (st != null)
 		{
-			return null;
-		}
-		
-		if (st.isCond(1) && (getRandom(100) < DROP_CHANCE))
-		{
-			st.giveItems(ANCIENT_PARCHMENT, 1);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			giveItemRandomly(player, npc, ANCIENT_PARCHMENT, 1, 0, 0.2, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -173,39 +110,19 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 			return htmltext;
 		}
 		
-		if (npc.getId() == SOBLING)
+		if (st.isCreated())
 		{
-			switch (st.getState())
-			{
-				case State.CREATED:
-					htmltext = (player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html";
-					break;
-				case State.STARTED:
-					htmltext = (st.hasQuestItems(BOOK1) && st.hasQuestItems(BOOK2) && st.hasQuestItems(BOOK3) && st.hasQuestItems(BOOK4) && st.hasQuestItems(BOOK5)) ? "31147-03.html" : "31147-02a.html";
-					break;
-			}
+			htmltext = (player.getLevel() >= 79 ? "31147-01.htm" : "31147-00.html");
+		}
+		else if (st.isStarted())
+		{
+			htmltext = (st.hasQuestItems(BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
 		}
 		return htmltext;
 	}
 	
-	private static String exchangeRequest(QuestState st, int giveid, int qty, int rem)
-	{
-		if ((st.getQuestItemsCount(BOOK1) >= rem) && (st.getQuestItemsCount(BOOK2) >= rem) && (st.getQuestItemsCount(BOOK3) >= rem) && (st.getQuestItemsCount(BOOK4) >= rem) && (st.getQuestItemsCount(BOOK5) >= rem))
-		{
-			st.takeItems(BOOK1, rem);
-			st.takeItems(BOOK2, rem);
-			st.takeItems(BOOK3, rem);
-			st.takeItems(BOOK4, rem);
-			st.takeItems(BOOK5, rem);
-			st.giveItems(giveid, qty);
-			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
-			return "31147-ok.html";
-		}
-		return "31147-no.html";
-	}
-	
 	public static void main(String[] args)
 	{
-		new Q00376_ExplorationOfTheGiantsCavePart1(376, Q00376_ExplorationOfTheGiantsCavePart1.class.getSimpleName(), "Exploration of the Giants' Cave - Part 1");
+		new Q00376_ExplorationOfTheGiantsCavePart1();
 	}
 }
