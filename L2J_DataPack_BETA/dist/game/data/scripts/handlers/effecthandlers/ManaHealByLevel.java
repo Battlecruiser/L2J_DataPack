@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -31,11 +32,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Mana Heal By Level effect implementation.
  * @author UnAfraid
  */
-public class ManaHealByLevel extends L2Effect
+public final class ManaHealByLevel extends AbstractEffect
 {
-	public ManaHealByLevel(Env env, EffectTemplate template)
+	public ManaHealByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,22 +52,22 @@ public class ManaHealByLevel extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor() || target.isInvul())
 		{
 			return false;
 		}
 		
-		double amount = calc();
+		double amount = getValue();
 		
 		// recharged mp influenced by difference between target level and skill level
 		// if target is within 5 levels or lower then skill level there's no penalty.
 		amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
-		if (target.getLevel() > getSkill().getMagicLevel())
+		if (target.getLevel() > info.getSkill().getMagicLevel())
 		{
-			int lvlDiff = target.getLevel() - getSkill().getMagicLevel();
+			int lvlDiff = target.getLevel() - info.getSkill().getMagicLevel();
 			// if target is too high compared to skill level, the amount of recharged mp gradually decreases.
 			if (lvlDiff == 6)
 			{
@@ -117,10 +118,10 @@ public class ManaHealByLevel extends L2Effect
 			target.setCurrentMp(amount + target.getCurrentMp());
 		}
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
+		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
+			sm.addCharName(info.getEffector());
 		}
 		else
 		{

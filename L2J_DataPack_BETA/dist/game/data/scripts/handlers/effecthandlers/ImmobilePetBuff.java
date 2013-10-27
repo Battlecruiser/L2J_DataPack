@@ -18,23 +18,22 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Summon;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Immobile Pet Buff effect implementation.
  * @author demonia
  */
-public class ImmobilePetBuff extends L2Effect
+public final class ImmobilePetBuff extends AbstractEffect
 {
-	private L2Summon _pet;
-	
-	public ImmobilePetBuff(Env env, EffectTemplate template)
+	public ImmobilePetBuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -44,23 +43,17 @@ public class ImmobilePetBuff extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (_pet != null)
-		{
-			_pet.setIsImmobilized(false);
-		}
+		info.getEffected().setIsImmobilized(false);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		_pet = null;
-		
-		if (getEffected().isSummon() && getEffector().isPlayer() && (((L2Summon) getEffected()).getOwner() == getEffector()))
+		if (info.getEffected().isSummon() && info.getEffector().isPlayer() && (((L2Summon) info.getEffected()).getOwner() == info.getEffector()))
 		{
-			_pet = (L2Summon) getEffected();
-			_pet.setIsImmobilized(true);
+			info.getEffected().setIsImmobilized(true);
 			return true;
 		}
 		return false;

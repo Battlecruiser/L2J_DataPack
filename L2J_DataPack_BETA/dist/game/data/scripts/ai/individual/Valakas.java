@@ -36,8 +36,8 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.type.L2BossZone;
 import com.l2jserver.gameserver.network.serverpackets.PlaySound;
@@ -244,8 +244,8 @@ public class Valakas extends AbstractNpcAI
 				}
 				
 				// Verify if "Valakas Regeneration" skill is active.
-				final L2Effect e = npc.getFirstEffect(VALAKAS_REGENERATION);
-				final int lvl = e != null ? e.getSkill().getLevel() : 0;
+				final BuffInfo info = npc.getEffectList().getBuffInfoBySkillId(VALAKAS_REGENERATION);
+				final int lvl = info != null ? info.getSkill().getLevel() : 0;
 				
 				// Current HPs are inferior to 25% ; apply lvl 4 of regen skill.
 				if ((npc.getCurrentHp() < (npc.getMaxHp() / 4)) && (lvl != 4))
@@ -409,7 +409,7 @@ public class Valakas extends AbstractNpcAI
 		if (attacker.getMountType() == MountType.STRIDER)
 		{
 			final L2Skill skill = SkillTable.getInstance().getInfo(4258, 1);
-			if (attacker.getFirstEffect(skill) == null)
+			if (!attacker.isAffectedBySkill(4258))
 			{
 				npc.setTarget(attacker);
 				npc.doCast(skill);
@@ -522,7 +522,7 @@ public class Valakas extends AbstractNpcAI
 		final int hpRatio = (int) ((npc.getCurrentHp() / npc.getMaxHp()) * 100);
 		
 		// Valakas Lava Skin has priority.
-		if ((hpRatio < 75) && (getRandom(150) == 0) && (npc.getFirstEffect(VALAKAS_LAVA_SKIN.getSkillId()) == null))
+		if ((hpRatio < 75) && (getRandom(150) == 0) && !npc.isAffectedBySkill(VALAKAS_LAVA_SKIN.getSkillId()))
 		{
 			return VALAKAS_LAVA_SKIN;
 		}

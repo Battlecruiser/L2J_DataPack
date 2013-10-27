@@ -18,10 +18,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ChangeWaitType;
 import com.l2jserver.gameserver.network.serverpackets.Revive;
@@ -30,11 +31,11 @@ import com.l2jserver.gameserver.network.serverpackets.Revive;
  * Fake Death effect implementation.
  * @author mkizub
  */
-public class FakeDeath extends L2Effect
+public final class FakeDeath extends AbstractEffect
 {
-	public FakeDeath(Env env, EffectTemplate template)
+	public FakeDeath(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -44,44 +45,45 @@ public class FakeDeath extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
-		if (manaDam > getEffected().getCurrentMp())
+		final double manaDam = getValue() * getTicks();
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		info.getEffected().reduceCurrentMp(manaDam);
+		
+		return info.getSkill().isToggle();
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getActingPlayer().setIsFakeDeath(false);
-			getEffected().getActingPlayer().setRecentFakeDeath(true);
+			info.getEffected().getActingPlayer().setIsFakeDeath(false);
+			info.getEffected().getActingPlayer().setRecentFakeDeath(true);
 		}
 		
-		getEffected().broadcastPacket(new ChangeWaitType(getEffected(), ChangeWaitType.WT_STOP_FAKEDEATH));
-		getEffected().broadcastPacket(new Revive(getEffected()));
+		info.getEffected().broadcastPacket(new ChangeWaitType(info.getEffected(), ChangeWaitType.WT_STOP_FAKEDEATH));
+		info.getEffected().broadcastPacket(new Revive(info.getEffected()));
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().startFakeDeath();
+		info.getEffected().startFakeDeath();
 		return true;
 	}
 }

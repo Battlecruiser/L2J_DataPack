@@ -18,21 +18,22 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2AirShipInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Refuel Airship effect implementation.
  * @author Adry_85
  */
-public class RefuelAirship extends L2Effect
+public final class RefuelAirship extends AbstractEffect
 {
-	public RefuelAirship(Env env, EffectTemplate template)
+	public RefuelAirship(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,10 +49,10 @@ public class RefuelAirship extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		final L2AirShipInstance ship = getEffector().getActingPlayer().getAirShip();
-		ship.setFuel(ship.getFuel() + (int) calc());
+		final L2AirShipInstance ship = info.getEffector().getActingPlayer().getAirShip();
+		ship.setFuel(ship.getFuel() + (int) getValue());
 		ship.updateAbnormalEffect();
 		return true;
 	}

@@ -345,7 +345,7 @@
 			<player agathionId="1556" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="weightPenalty" val="9000" />
 			</effect>
 		</for>
@@ -379,7 +379,7 @@
 			<player agathionId="1557" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 			</effect>
 		</for>
@@ -413,7 +413,7 @@
 			<player agathionId="1558" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="mAtkSpd" val="1.3" />
 			</effect>
 		</for>
@@ -448,7 +448,7 @@
 			<player agathionId="1559" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -701,7 +701,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="23163" levels="1" name="Turkey's Big Mistake">
@@ -755,7 +755,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- TODO: Need new effect i_dispel_by_name. -->
-			<effect name="VitalityPointUp" noicon="1" val="5000" />
+			<effect name="VitalityPointUp" val="5000" />
 		</for>
 	</skill>
 	<skill id="23167" levels="1" name="Rosy Seduction">
@@ -846,10 +846,10 @@
 			</and>
 		</cond>
 		<for>
-			<effect name="Invincible" val="0" special="invincible" />
-			<effect name="CpHealPercent" noicon="1" val="100" />
-			<effect name="HealPercent" noicon="1" val="100" />
-			<effect name="ManaHealPercent" noicon="1" val="100" />
+			<effect name="Invincible" special="invincible" />
+			<effect name="CpHealPercent" val="100" />
+			<effect name="HealPercent" val="100" />
+			<effect name="ManaHealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="23173" levels="1" name="Phoenix Agathion Special Skill - Oriental Phoenix">
@@ -866,7 +866,7 @@
 			<player agathionId="1574" />
 		</cond>
 		<for>
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="debuff" rate="100" max="20" />
 			</effect>
 		</for>
@@ -957,7 +957,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0" abnormalVisualEffect="vitality">
+			<effect name="Buff" abnormalVisualEffect="vitality">
 				<mul order="0x30" stat="vitalityConsumeRate" val="0" />
 			</effect>
 		</for>
@@ -972,7 +972,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="VitalityPointUp" noicon="1" val="20000" />
+			<effect name="VitalityPointUp" val="20000" />
 		</for>
 	</skill>
 	<skill id="23181" levels="1" name="Three-headed Dragon Agathion Cute Trick">
@@ -1004,7 +1004,7 @@
 			<player agathionId="1575" />
 		</cond>
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="runSpd" val="20" />
 			</effect>
 		</for>
@@ -1040,7 +1040,7 @@
 			<player agathionId="20983" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1076,7 +1076,7 @@
 			<player agathionId="20984" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1112,7 +1112,7 @@
 			<player agathionId="20985" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1148,7 +1148,7 @@
 			<player agathionId="20986" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1184,7 +1184,7 @@
 			<player agathionId="20987" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1220,7 +1220,7 @@
 			<player agathionId="20988" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1256,7 +1256,7 @@
 			<player agathionId="20989" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>
@@ -1292,7 +1292,7 @@
 			<player agathionId="20990" />
 		</cond>
 		<for>
-			<effect name="Restoration" noicon="1" val="0">
+			<effect name="Restoration">
 				<param itemId="20993" itemCount="1" />
 			</effect>
 		</for>

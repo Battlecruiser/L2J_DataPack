@@ -19,11 +19,11 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -31,23 +31,17 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Spoil effect implementation.
  * @author _drunk_, Ahmed, Zoey76
  */
-public class Spoil extends L2Effect
+public final class Spoil extends AbstractEffect
 {
-	public Spoil(Env env, EffectTemplate template)
+	public Spoil(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcMagicSuccess(getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcMagicSuccess(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -57,25 +51,25 @@ public class Spoil extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffected().isMonster() || getEffected().isDead())
+		if (!info.getEffected().isMonster() || info.getEffected().isDead())
 		{
-			getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
+			info.getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return false;
 		}
 		
-		final L2MonsterInstance target = (L2MonsterInstance) getEffected();
+		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
 		if (target.isSpoil())
 		{
-			getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
+			info.getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
 			return false;
 		}
 		
 		target.setSpoil(true);
-		target.setIsSpoiledBy(getEffector().getObjectId());
-		getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
-		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, getEffector());
+		target.setIsSpoiledBy(info.getEffector().getObjectId());
+		info.getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
+		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, info.getEffector());
 		return true;
 	}
 }

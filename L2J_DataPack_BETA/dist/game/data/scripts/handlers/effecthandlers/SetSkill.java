@@ -19,32 +19,26 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.datatables.SkillTable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
-import com.l2jserver.gameserver.model.stats.Env;
 
 /**
  * Set Skill effect implementation.
  * @author Zoey76
  */
-public class SetSkill extends L2Effect
+public final class SetSkill extends AbstractEffect
 {
 	private final int _skillId;
 	private final int _skillLvl;
 	
-	public SetSkill(Env env, EffectTemplate template)
+	public SetSkill(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_skillId = template.getParameters().getInt("skillId", 0);
-		_skillLvl = template.getParameters().getInt("skillLvl", 1);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
+		_skillId = getParameters().getInt("skillId", 0);
+		_skillLvl = getParameters().getInt("skillLvl", 1);
 	}
 	
 	@Override
@@ -54,9 +48,9 @@ public class SetSkill extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || !getEffected().isPlayer())
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
 			return false;
 		}
@@ -66,7 +60,7 @@ public class SetSkill extends L2Effect
 		{
 			return false;
 		}
-		getEffected().getActingPlayer().addSkill(skill, true);
+		info.getEffected().getActingPlayer().addSkill(skill, true);
 		return true;
 	}
 }

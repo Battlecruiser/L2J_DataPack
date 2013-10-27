@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
@@ -115,7 +114,7 @@ public class HellboundTown extends Quest
 	@Override
 	public final String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (npc.getFirstEffect(STONE.getSkill()) == null)
+		if (!npc.isAffectedBySkill(STONE.getSkillId()))
 		{
 			return "32358-02.htm";
 		}
@@ -194,11 +193,11 @@ public class HellboundTown extends Quest
 			{
 				if (event.equalsIgnoreCase("rebuff") && !world.isAmaskariDead)
 				{
-					STONE.getSkill().getEffects(npc, npc);
+					STONE.getSkill().applyEffects(npc, null, npc, null, false, false);
 				}
 				else if (event.equalsIgnoreCase("break_chains"))
 				{
-					if ((npc.getFirstEffect(STONE.getSkill()) == null) || world.isAmaskariDead)
+					if (!npc.isAffectedBySkill(STONE.getSkillId()) || world.isAmaskariDead)
 					{
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NATIVES_NPCSTRING_ID[0]));
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NATIVES_NPCSTRING_ID[2]));
@@ -206,13 +205,11 @@ public class HellboundTown extends Quest
 					else
 					{
 						cancelQuestTimer("rebuff", npc, null);
-						for (L2Effect e : npc.getAllEffects())
+						if (npc.isAffectedBySkill(STONE.getSkillId()))
 						{
-							if (e.getSkill() == STONE.getSkill())
-							{
-								e.exit();
-							}
+							npc.stopSkillEffects(false, STONE.getSkillId());
 						}
+						
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NATIVES_NPCSTRING_ID[0]));
 						npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NATIVES_NPCSTRING_ID[1]));
 						HellboundManager.getInstance().updateTrust(10, true);
@@ -241,7 +238,7 @@ public class HellboundTown extends Quest
 		{
 			((L2QuestGuardInstance) npc).setPassive(true);
 			((L2QuestGuardInstance) npc).setAutoAttackable(false);
-			STONE.getSkill().getEffects(npc, npc);
+			STONE.getSkill().applyEffects(npc, null, npc, null, false, false);
 			startQuestTimer("rebuff", 357000, npc, null);
 		}
 		else if ((npc.getId() == TOWN_GUARD) || (npc.getId() == KEYMASTER))

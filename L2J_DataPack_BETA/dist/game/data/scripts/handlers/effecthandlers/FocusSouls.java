@@ -18,11 +18,11 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
@@ -30,17 +30,11 @@ import com.l2jserver.gameserver.network.SystemMessageId;
  * Focus Souls effect implementation.
  * @author nBd, Adry_85
  */
-public class FocusSouls extends L2Effect
+public final class FocusSouls extends AbstractEffect
 {
-	public FocusSouls(Env env, EffectTemplate template)
+	public FocusSouls(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,18 +44,18 @@ public class FocusSouls extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffected().isPlayer() || getEffected().isAlikeDead())
+		if (!info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
 			return false;
 		}
 		
-		final L2PcInstance target = getEffected().getActingPlayer();
+		final L2PcInstance target = info.getEffected().getActingPlayer();
 		final int maxSouls = (int) target.calcStat(Stats.MAX_SOULS, 0, null, null);
 		if (maxSouls > 0)
 		{
-			int amount = (int) calc();
+			int amount = (int) getValue();
 			if ((target.getChargedSouls() < maxSouls))
 			{
 				int count = ((target.getChargedSouls() + amount) <= maxSouls) ? amount : (maxSouls - target.getChargedSouls());

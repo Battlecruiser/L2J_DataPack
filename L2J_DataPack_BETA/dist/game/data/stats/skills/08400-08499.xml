@@ -7,7 +7,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
@@ -32,7 +32,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
 				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
@@ -55,7 +55,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
@@ -77,7 +77,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
@@ -101,7 +101,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
@@ -122,7 +122,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
@@ -145,14 +145,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- Atk Power +4.26% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -175,14 +175,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param HOLD="50" />
 				<mul order="0x30" stat="pAtk" val="1.0426" /> <!-- P. Atk. +4.26% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
@@ -205,14 +205,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Power +8.11% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
@@ -234,14 +234,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
@@ -269,14 +269,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- Atk. Power + 5.57% -->
 				<mul order="0x30" stat="pDef" val="1.0557" /> <!-- Def. Power + 5.57% -->
@@ -302,14 +302,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.087" /> <!-- M. Power +8.7% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
@@ -334,14 +334,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param BLEED="50" />
 				<param HOLD="50" />
 				<param SLEEP="50" />
@@ -368,14 +368,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 				<mul order="0x30" stat="pAtk" val="1.0659" /> <!-- Attack Power +6.59% -->
 				<mul order="0x30" stat="pAtkSpd" val="1.06" /> <!-- Atk. Spd. +6% -->
@@ -399,14 +399,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="TriggerSkillByDamage" val="0">
+			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
 				<param chance="2" />
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 				<mul order="0x30" stat="mAtk" val="1.1" /> <!-- M. Power +10% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- M. Spd. +15% -->
@@ -453,7 +453,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="pAtk" val="1.0125" />
 				<mul order="0x30" stat="pAtkSpd" val="1.01" />
@@ -468,7 +468,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="pAtk" val="1.0426" />
 				<mul order="0x30" stat="pAtkSpd" val="1.04" />
@@ -486,7 +486,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="pAtk" val="1.0208" />
 				<mul order="0x30" stat="pAtkSpd" val="1.0167" />
@@ -501,7 +501,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="pAtk" val="1.0083" />
 				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
@@ -516,7 +516,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="pAtk" val="1.0083" />
 				<mul order="0x30" stat="pAtkSpd" val="1.0067" />
@@ -541,7 +541,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="5" />
 				<mul order="0x30" stat="pAtk" val="1.0125" />
 				<mul order="0x30" stat="regMp" val="1.01" />
@@ -556,7 +556,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="5" />
 				<mul order="0x30" stat="pAtk" val="1.0426" />
 				<mul order="0x30" stat="regMp" val="1.04" />
@@ -571,7 +571,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="5" />
 				<mul order="0x30" stat="pAtk" val="1.0208" />
 				<mul order="0x30" stat="regMp" val="1.0167" />
@@ -586,7 +586,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="5" />
 				<mul order="0x30" stat="pAtk" val="1.0083" />
 				<mul order="0x30" stat="regMp" val="1.0067" />
@@ -601,7 +601,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param HOLD="5" />
 				<mul order="0x30" stat="pAtk" val="1.0083" />
 				<mul order="0x30" stat="regMp" val="1.0067" />
@@ -616,7 +616,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 				<mul order="0x30" stat="mAtk" val="1.0062" />
 				<add order="0x40" stat="fireRes" val="5" />
@@ -630,7 +630,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 				<mul order="0x30" stat="mAtk" val="1.0811" /> <!-- M. Atk. +8.11% -->
 				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Cast. Spd. +15% -->
@@ -648,7 +648,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 				<mul order="0x30" stat="mAtk" val="1.0103" />
 				<add order="0x40" stat="waterRes" val="5" />
@@ -662,7 +662,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 				<mul order="0x30" stat="mAtk" val="1.0041" />
 				<add order="0x40" stat="windRes" val="5" />
@@ -676,7 +676,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 				<mul order="0x30" stat="mAtk" val="1.0041" />
 				<add order="0x40" stat="earthRes" val="5" />
@@ -700,7 +700,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
 				<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -716,7 +716,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="28" />
 				<param HOLD="28" />
 				<mul order="0x30" stat="pAtk" val="1.0557" />
@@ -732,7 +732,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="18" />
 				<param HOLD="18" />
 				<mul order="0x30" stat="pAtk" val="1.0103" />
@@ -748,7 +748,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 				<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -764,7 +764,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 				<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -855,7 +855,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="7.5" />
 				<mul order="0x30" stat="mAtk" val="1.0041" />
 				<mul order="0x30" stat="regMp" val="1.0041" />
@@ -870,7 +870,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="20" />
 				<mul order="0x30" stat="mAtk" val="1.0847" />
 				<mul order="0x30" stat="mAtkSpd" val="1.15" />
@@ -886,7 +886,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 				<mul order="0x30" stat="mAtk" val="1.0068" />
 				<mul order="0x30" stat="regMp" val="1.0068" />
@@ -901,7 +901,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="mAtk" val="1.0027" />
 				<mul order="0x30" stat="regMp" val="1.0027" />
@@ -916,7 +916,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="mAtk" val="1.0027" />
 				<mul order="0x30" stat="regMp" val="1.0027" />
@@ -941,7 +941,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="7.62" />
 			</effect>
 		</for>
@@ -953,7 +953,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="6" />
 			</effect>
 		</for>
@@ -975,7 +975,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="5" />
 				<param HOLD="5" />
 			</effect>
@@ -998,7 +998,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="4.76" />
 			</effect>
 		</for>
@@ -1021,7 +1021,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="20" />
 				<param PARALYZE="15" />
 				<param SHOCK="15" />
@@ -1043,7 +1043,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="25" />
 				<param PARALYZE="20" />
 				<param SHOCK="20" />
@@ -1118,7 +1118,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="SummonAgathion" noicon="1" val="0" />
+			<effect name="SummonAgathion" />
 		</for>
 	</skill>
 	<skill id="8465" levels="1" name="Notifier">
@@ -1243,7 +1243,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
 				<mul order="0x30" stat="pAtk" val="1.0062" />
@@ -1259,7 +1259,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="18" />
 				<param HOLD="18" />
 				<mul order="0x30" stat="pAtk" val="1.0103" />
@@ -1275,7 +1275,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 				<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -1291,7 +1291,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
 				<mul order="0x30" stat="pAtk" val="1.0041" />
@@ -1359,7 +1359,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="7.5" />
 				<mul order="0x30" stat="mAtk" val="1.0041" />
 				<mul order="0x30" stat="regMp" val="1.0041" />
@@ -1374,7 +1374,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 				<mul order="0x30" stat="mAtk" val="1.0068" />
 				<mul order="0x30" stat="regMp" val="1.0068" />
@@ -1389,7 +1389,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="mAtk" val="1.0027" />
 				<mul order="0x30" stat="regMp" val="1.0027" />
@@ -1404,7 +1404,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="5" />
 				<mul order="0x30" stat="mAtk" val="1.0027" />
 				<mul order="0x30" stat="regMp" val="1.0027" />

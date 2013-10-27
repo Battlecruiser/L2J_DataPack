@@ -21,38 +21,32 @@ package handlers.effecthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.util.Rnd;
 
 /**
  * Randomize Hate effect implementation.
  */
-public class RandomizeHate extends L2Effect
+public final class RandomizeHate extends AbstractEffect
 {
 	private final int _chance;
 	
-	public RandomizeHate(Env env, EffectTemplate template)
+	public RandomizeHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -62,18 +56,18 @@ public class RandomizeHate extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || (getEffected() == getEffector()) || !getEffected().isL2Attackable())
+		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || !info.getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		L2Attackable effectedMob = (L2Attackable) getEffected();
+		L2Attackable effectedMob = (L2Attackable) info.getEffected();
 		final List<L2Character> targetList = new ArrayList<>();
-		for (L2Character cha : getEffected().getKnownList().getKnownCharacters())
+		for (L2Character cha : info.getEffected().getKnownList().getKnownCharacters())
 		{
-			if ((cha != null) && (cha != effectedMob) && (cha != getEffector()))
+			if ((cha != null) && (cha != effectedMob) && (cha != info.getEffector()))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
 				if (cha.isL2Attackable() && (((L2Attackable) cha).getFactionId() != null) && ((L2Attackable) cha).getFactionId().equals(effectedMob.getFactionId()))
@@ -92,8 +86,8 @@ public class RandomizeHate extends L2Effect
 		
 		// Choosing randomly a new target
 		final L2Character target = targetList.get(Rnd.get(targetList.size()));
-		final int hate = effectedMob.getHating(getEffector());
-		effectedMob.stopHating(getEffector());
+		final int hate = effectedMob.getHating(info.getEffector());
+		effectedMob.stopHating(info.getEffector());
 		effectedMob.addDamageHate(target, 0, hate);
 		
 		return true;

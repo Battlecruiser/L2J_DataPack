@@ -21,14 +21,14 @@ package handlers.effecthandlers;
 import com.l2jserver.Config;
 import com.l2jserver.gameserver.SevenSigns;
 import com.l2jserver.gameserver.instancemanager.InstanceManager;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
 import com.l2jserver.gameserver.model.holders.SummonRequestHolder;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
@@ -38,22 +38,16 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Call Pc effect implementation.
  * @author Adry_85
  */
-public class CallPc extends L2Effect
+public final class CallPc extends AbstractEffect
 {
 	private static int _itemId;
 	private static int _itemCount;
 	
-	public CallPc(Env env, EffectTemplate template)
+	public CallPc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_itemId = template.getParameters().getInt("itemId", 0);
-		_itemCount = template.getParameters().getInt("itemCount", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
+		_itemId = getParameters().getInt("itemId", 0);
+		_itemCount = getParameters().getInt("itemCount", 0);
 	}
 	
 	@Override
@@ -63,15 +57,15 @@ public class CallPc extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected() == getEffector())
+		if (info.getEffected() == info.getEffector())
 		{
 			return false;
 		}
 		
-		L2PcInstance target = getEffected().getActingPlayer();
-		L2PcInstance activeChar = getEffector().getActingPlayer();
+		L2PcInstance target = info.getEffected().getActingPlayer();
+		L2PcInstance activeChar = info.getEffector().getActingPlayer();
 		if (checkSummonTargetStatus(target, activeChar))
 		{
 			if ((_itemId != 0) && (_itemCount != 0))
@@ -89,7 +83,7 @@ public class CallPc extends L2Effect
 				target.sendPacket(sm);
 			}
 			
-			target.addScript(new SummonRequestHolder(activeChar, getSkill()));
+			target.addScript(new SummonRequestHolder(activeChar, info.getSkill()));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
 			confirm.addCharName(activeChar);
 			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());

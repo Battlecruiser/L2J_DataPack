@@ -19,21 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Relax effect implementation.
  */
-public class Relax extends L2Effect
+public final class Relax extends AbstractEffect
 {
-	public Relax(Env env, EffectTemplate template)
+	public Relax(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,55 +50,56 @@ public class Relax extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			if (!getEffected().getActingPlayer().isSitting())
+			if (!info.getEffected().getActingPlayer().isSitting())
 			{
 				return false;
 			}
 		}
 		
-		if ((getEffected().getCurrentHp() + 1) > getEffected().getMaxRecoverableHp())
+		if ((info.getEffected().getCurrentHp() + 1) > info.getEffected().getMaxRecoverableHp())
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_DEACTIVATED_HP_FULL);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_DEACTIVATED_HP_FULL);
 				return false;
 			}
 		}
 		
-		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
-		if (manaDam > getEffected().getCurrentMp())
+		final double manaDam = getValue() * getTicks();
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 				return false;
 			}
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
-		return true;
+		info.getEffected().reduceCurrentMp(manaDam);
+		
+		return info.getSkill().isToggle();
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getActingPlayer().sitDown(false);
+			info.getEffected().getActingPlayer().sitDown(false);
 		}
 		else
 		{
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
-		return super.onStart();
+		return true;
 	}
 }

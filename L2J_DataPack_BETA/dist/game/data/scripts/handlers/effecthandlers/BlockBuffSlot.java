@@ -22,25 +22,25 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Block Buff Slot effect implementation.
  * @author Zoey76
  */
-public class BlockBuffSlot extends L2Effect
+public final class BlockBuffSlot extends AbstractEffect
 {
 	private final Set<AbnormalType> _blockBuffSlots;
 	
-	public BlockBuffSlot(Env env, EffectTemplate template)
+	public BlockBuffSlot(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 		
-		String blockBuffSlots = template.hasParameters() ? template.getParameters().getString("slot", null) : null;
+		String blockBuffSlots = hasParameters() ? getParameters().getString("slot", null) : null;
 		if ((blockBuffSlots != null) && !blockBuffSlots.isEmpty())
 		{
 			_blockBuffSlots = new HashSet<>();
@@ -56,26 +56,20 @@ public class BlockBuffSlot extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
+		info.getEffected().getEffectList().removeBlockedBuffSlots(_blockBuffSlots);
 	}
 	
 	@Override
-	public void onExit()
-	{
-		getEffected().getEffectList().removeBlockedBuffSlots(_blockBuffSlots);
-	}
-	
-	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
 		if (_blockBuffSlots.isEmpty())
 		{
 			return false;
 		}
 		
-		getEffected().getEffectList().addBlockedBuffSlots(_blockBuffSlots);
+		info.getEffected().getEffectList().addBlockedBuffSlots(_blockBuffSlots);
 		
 		return true;
 	}

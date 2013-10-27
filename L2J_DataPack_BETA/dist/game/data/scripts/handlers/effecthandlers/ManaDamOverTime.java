@@ -18,20 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Mana Dam Over Time effect implementation.
  */
-public class ManaDamOverTime extends L2Effect
+public final class ManaDamOverTime extends AbstractEffect
 {
-	public ManaDamOverTime(Env env, EffectTemplate template)
+	public ManaDamOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -41,21 +42,21 @@ public class ManaDamOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final double manaDam = calc() * getEffectTemplate().getTotalTickCount();
-		if ((manaDam > getEffected().getCurrentMp()) && getSkill().isToggle())
+		final double manaDam = getValue() * getTicks();
+		if ((manaDam > info.getEffected().getCurrentMp()) && info.getSkill().isToggle())
 		{
-			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
-		return getSkill().isToggle();
+		info.getEffected().reduceCurrentMp(manaDam);
+		return info.getSkill().isToggle();
 	}
 }

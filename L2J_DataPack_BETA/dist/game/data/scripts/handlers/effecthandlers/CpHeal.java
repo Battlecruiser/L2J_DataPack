@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -30,17 +31,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Cp Heal effect implementation.
  * @author UnAfraid
  */
-public class CpHeal extends L2Effect
+public final class CpHeal extends AbstractEffect
 {
-	public CpHeal(Env env, EffectTemplate template)
+	public CpHeal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,15 +45,21 @@ public class CpHeal extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		L2Character target = getEffected();
+		return true;
+	}
+	
+	@Override
+	public boolean onStart(BuffInfo info)
+	{
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
 			return false;
 		}
 		
-		double amount = calc();
+		double amount = getValue();
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, target.getMaxRecoverableCp() - target.getCurrentCp()), 0);

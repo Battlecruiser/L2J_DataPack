@@ -20,7 +20,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="mAtkSpd" val="0.8" />
 			</effect>
 		</for>
@@ -39,7 +39,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6402" levels="5" name="Torumba Poison Strike">
@@ -88,7 +88,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 			<effect name="DamOverTime" ticks="3" val="58" abnormalVisualEffect="poison">
 				<mul order="0x30" stat="runSpd" val="0.8" />
 			</effect>
@@ -113,8 +113,8 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Debuff" val="0">
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.3" />
 			</effect>
 		</for>
@@ -139,7 +139,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0" abnormalVisualEffect="mute">
+			<effect name="Debuff" abnormalVisualEffect="mute">
 				<add order="0x40" stat="runSpd" val="20" />
 				<mul order="0x30" stat="pAtkSpd" val="1.2" />
 				<mul order="0x30" stat="mAtkSpd" val="1.2" />
@@ -158,7 +158,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" val="0" />
+			<effect name="Petrification" />
 		</for>
 	</skill>
 	<skill id="6407" levels="1" name="Torumba's Constraint">
@@ -180,7 +180,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="BlockResurrection" val="0" />
+			<effect name="BlockResurrection" />
 		</for>
 	</skill>
 	<skill id="6408" levels="1" name="Soul Weakness">
@@ -212,7 +212,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6410" levels="1" name="Reptilikon Rush">
@@ -239,8 +239,8 @@
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="6411" levels="1" name="Reptilikon Summon">
@@ -263,7 +263,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6413" levels="1" name="Reptilikon Missile">
@@ -280,7 +280,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6414" levels="1" name="Reptilikon Charge">
@@ -305,8 +305,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="6415" levels="1" name="Reptilikon Scratch">
@@ -321,7 +321,7 @@
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6416" levels="1" name="Reptilikon Poison Breath">
@@ -404,7 +404,7 @@
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="69" abnormalVisualEffect="poison" />
-			<effect name="ManaDamOverTime" noicon="1" ticks="3" val="4" />
+			<effect name="ManaDamOverTime" ticks="3" val="4" />
 		</for>
 	</skill>
 	<skill id="6419" levels="1" name="Light of Scout">
@@ -418,7 +418,7 @@
 		<set name="power" val="6844" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6420" levels="1" name="Lizard Strike">
@@ -432,7 +432,7 @@
 		<set name="power" val="6844" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6421" levels="1" name="Rage of Soldier">
@@ -446,7 +446,7 @@
 		<set name="power" val="6844" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6422" levels="1" name="Resistance Explosion">
@@ -459,7 +459,7 @@
 		<set name="power" val="6844" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6423" levels="1" name="Shock">
@@ -483,8 +483,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="6424" levels="1" name="Double Shot">
@@ -499,7 +499,7 @@
 		<set name="power" val="6844" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="6425" levels="1" name="Demotivation Hex">
@@ -516,7 +516,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pDef" val="0.1" />
 			</effect>
 		</for>
@@ -537,7 +537,7 @@
 		<set name="power" val="120" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="6427" levels="1" name="Medicinal Mushroom 1">
@@ -573,11 +573,11 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" val="0" />
-			<effect name="DefenceTrait" val="0" noicon="1">
+			<effect name="Root" />
+			<effect name="DefenceTrait">
 				<param HOLD="100" />
 			</effect>
-			<effect name="HealPercent" val="90" noicon="1" />
+			<effect name="HealPercent" val="90" />
 		</for>
 	</skill>
 	<skill id="6429" levels="1" name="Cozy Mucus">
@@ -595,7 +595,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.15">
 					<using kind="Bow,Crossbow" />
 				</mul>
@@ -613,7 +613,7 @@
 		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HealPercent" noicon="1" val="30" />
+			<effect name="HealPercent" val="30" />
 		</for>
 	</skill>
 	<skill id="6431" levels="1" name="Feral Might">
@@ -633,7 +633,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtk" val="1.19" />
 			</effect>
 		</for>
@@ -655,7 +655,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<basemul order="0x30" stat="rCrit" val="0.35" />
 			</effect>
 		</for>
@@ -677,7 +677,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="accCombat" val="7" />
 			</effect>
 		</for>
@@ -699,7 +699,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.38" />
 			</effect>
 		</for>
@@ -816,7 +816,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLUNT="95" />
 				<param DAGGER="95" />
 				<param SWORD="50" />
@@ -846,7 +846,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BOW="99" />
 				<param CROSSBOW="99" />
 				<param BLUNT="-5" />
@@ -876,7 +876,7 @@
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLUNT="95" />
 				<param DAGGER="95" />
 				<param SWORD="50" />
@@ -906,7 +906,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pveMagicalDmg" val="2.0" />
 			</effect>
 		</for>
@@ -926,7 +926,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pvePhysDmg" val="2.0" />
 				<mul order="0x30" stat="pvePhysSkillsDmg" val="2.0" />
 			</effect>
@@ -947,7 +947,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pveBowDmg" val="2.0" />
 				<mul order="0x30" stat="pveBowSkillsDmg" val="2.0" />
 			</effect>

@@ -19,11 +19,12 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.model.L2Clan;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,11 +32,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Clan Gate effect implementation.
  * @author ZaKaX
  */
-public class ClanGate extends L2Effect
+public final class ClanGate extends AbstractEffect
 {
-	public ClanGate(Env env, EffectTemplate template)
+	public ClanGate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -45,22 +46,22 @@ public class ClanGate extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().stopAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
+		info.getEffected().stopAbnormalEffect(AbnormalVisualEffect.MAGIC_CIRCLE);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().startAbnormalEffect(AbnormalEffect.MAGIC_CIRCLE);
-		if (getEffected().isPlayer())
+		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.MAGIC_CIRCLE);
+		if (info.getEffected().isPlayer())
 		{
-			L2Clan clan = getEffected().getActingPlayer().getClan();
+			L2Clan clan = info.getEffected().getActingPlayer().getClan();
 			if (clan != null)
 			{
 				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL);
-				clan.broadcastToOtherOnlineMembers(msg, getEffected().getActingPlayer());
+				clan.broadcastToOtherOnlineMembers(msg, info.getEffected().getActingPlayer());
 			}
 		}
 		return true;

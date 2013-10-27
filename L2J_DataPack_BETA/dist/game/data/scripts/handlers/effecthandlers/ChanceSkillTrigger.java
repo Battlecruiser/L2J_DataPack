@@ -18,87 +18,44 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.ChanceCondition;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Chance Skill Trigger effect implementation.
  */
-public class ChanceSkillTrigger extends L2Effect
+public final class ChanceSkillTrigger extends AbstractEffect
 {
-	public ChanceSkillTrigger(Env env, EffectTemplate template)
+	public ChanceSkillTrigger(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public ChanceSkillTrigger(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
-	public boolean canBeStolen()
+	public boolean onActionTime(BuffInfo info)
 	{
-		return true;
+		info.getEffected().onActionTimeChanceEffect(info.getSkill().getElement());
+		return info.getSkill().isPassive();
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public ChanceCondition getTriggeredChanceCondition()
-	{
-		return getEffectTemplate().getChanceCondition();
-	}
-	
-	@Override
-	public int getTriggeredChanceId()
-	{
-		return getEffectTemplate().getTriggeredId();
-	}
-	
-	@Override
-	public int getTriggeredChanceLevel()
-	{
-		return getEffectTemplate().getTriggeredLevel();
-	}
-	
-	@Override
-	public boolean onActionTime()
-	{
-		getEffected().onActionTimeChanceEffect(getSkill().getElement());
-		return getSkill().isPassive();
-	}
-	
-	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
 		// trigger only if effect in use and successfully ticked to the end
-		if (isInUse() && (getTickCount() >= getEffectTemplate().getTotalTickCount()))
+		if (info.getTickCount(this) >= getTicks())
 		{
-			getEffected().onExitChanceEffect(getSkill().getElement());
+			info.getEffected().onExitChanceEffect(info.getSkill().getElement());
 		}
-		getEffected().removeChanceEffect(this);
-		super.onExit();
+		info.getEffected().removeChanceEffect(this);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().addChanceTrigger(this);
-		getEffected().onStartChanceEffect(getSkill().getElement());
-		return super.onStart();
-	}
-	
-	@Override
-	public boolean triggersChanceSkill()
-	{
-		return getEffectTemplate().getTriggeredId() > 1;
+		info.getEffected().addChanceTrigger(this);
+		info.getEffected().onStartChanceEffect(info.getSkill().getElement());
+		return true;
 	}
 }

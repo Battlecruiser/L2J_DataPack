@@ -18,21 +18,22 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * CP Damage Percent effect implementation.
  * @author Zoey76, Adry_85
  */
-public class CpDamPercent extends L2Effect
+public final class CpDamPercent extends AbstractEffect
 {
-	public CpDamPercent(Env env, EffectTemplate template)
+	public CpDamPercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,34 +49,34 @@ public class CpDamPercent extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			if (getEffected().isPlayer() && getEffected().getActingPlayer().isFakeDeath())
+			if (info.getEffected().isPlayer() && info.getEffected().getActingPlayer().isFakeDeath())
 			{
-				getEffected().stopFakeDeath(true);
+				info.getEffected().stopFakeDeath(true);
 			}
 			
-			int damage = (int) ((getEffected().getCurrentCp() * calc()) / 100);
+			int damage = (int) ((info.getEffected().getCurrentCp() * getValue()) / 100);
 			// Manage attack or cast break of the target (calculating rate, sending message)
-			if (!getEffected().isRaid() && Formulas.calcAtkBreak(getEffected(), damage))
+			if (!info.getEffected().isRaid() && Formulas.calcAtkBreak(info.getEffected(), damage))
 			{
-				getEffected().breakAttack();
-				getEffected().breakCast();
+				info.getEffected().breakAttack();
+				info.getEffected().breakCast();
 			}
 			
 			if (damage > 0)
 			{
-				getEffected().setCurrentCp(getEffected().getCurrentCp() - damage);
-				if (getEffected() != getEffector())
+				info.getEffected().setCurrentCp(info.getEffected().getCurrentCp() - damage);
+				if (info.getEffected() != info.getEffector())
 				{
-					getEffector().sendDamageMessage(getEffected(), damage, false, false, false);
-					getEffected().notifyDamageReceived(damage, getEffector(), getSkill(), false);
+					info.getEffector().sendDamageMessage(info.getEffected(), damage, false, false, false);
+					info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false);
 				}
 			}
 			// Check if damage should be reflected
-			Formulas.calcDamageReflected(getEffector(), getEffected(), getSkill(), false);
+			Formulas.calcDamageReflected(info.getEffector(), info.getEffected(), info.getSkill(), false);
 			return true;
 		}
 		return false;

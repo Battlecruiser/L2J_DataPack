@@ -25,8 +25,8 @@ import com.l2jserver.gameserver.instancemanager.HellboundManager;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
@@ -128,8 +128,8 @@ public class Amaskari extends AbstractNpcAI
 			if ((master != null) && !master.isDead())
 			{
 				master.broadcastPacket(new NpcSay(master.getObjectId(), Say2.NPC_ALL, master.getId(), AMASKARI_NPCSTRING_ID[1]));
-				final L2Effect e = master.getFirstEffect(BUFF_ID);
-				if ((e != null) && (e.getSkill().getAbnormalLvl() == 3) && master.isInvul())
+				final BuffInfo info = master.getEffectList().getBuffInfoBySkillId(BUFF_ID);
+				if ((info != null) && (info.getSkill().getAbnormalLvl() == 3) && master.isInvul())
 				{
 					master.setCurrentHp(master.getCurrentHp() + (master.getCurrentHp() / 5));
 				}
@@ -137,13 +137,13 @@ public class Amaskari extends AbstractNpcAI
 				{
 					master.clearAggroList();
 					master.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-					if (e == null)
+					if (info == null)
 					{
 						master.doCast(BUFF[0].getSkill());
 					}
-					else if (e.getSkill().getAbnormalLvl() < 3)
+					else if (info.getSkill().getAbnormalLvl() < 3)
 					{
-						master.doCast(BUFF[e.getSkill().getAbnormalLvl()].getSkill());
+						master.doCast(BUFF[info.getSkill().getAbnormalLvl()].getSkill());
 					}
 					else
 					{

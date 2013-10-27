@@ -19,21 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Chameleon Rest effect implementation.
  */
-public class ChameleonRest extends L2Effect
+public final class ChameleonRest extends AbstractEffect
 {
-	public ChameleonRest(Env env, EffectTemplate template)
+	public ChameleonRest(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,44 +50,43 @@ public class ChameleonRest extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			if (!getEffected().getActingPlayer().isSitting())
+			if (!info.getEffected().getActingPlayer().isSitting())
 			{
 				return false;
 			}
 		}
 		
-		double manaDam = calc();
-		
-		if (manaDam > getEffected().getCurrentMp())
+		double manaDam = getValue();
+		if (manaDam > info.getEffected().getCurrentMp())
 		{
-			getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
+			info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_MP);
 			return false;
 		}
 		
-		getEffected().reduceCurrentMp(manaDam);
+		info.getEffected().reduceCurrentMp(manaDam);
 		return false;
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getActingPlayer().sitDown(false);
+			info.getEffected().getActingPlayer().sitDown(false);
 		}
 		else
 		{
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
-		return super.onStart();
+		return true;
 	}
 }

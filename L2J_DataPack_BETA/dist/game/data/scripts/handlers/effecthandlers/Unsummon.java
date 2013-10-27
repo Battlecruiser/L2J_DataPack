@@ -18,12 +18,13 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.util.Rnd;
@@ -32,35 +33,23 @@ import com.l2jserver.util.Rnd;
  * Unsummon effect implementation.
  * @author Adry_85
  */
-public class Unsummon extends L2Effect
+public final class Unsummon extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Unsummon(Env env, EffectTemplate template)
+	public Unsummon(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
-	public boolean isInstant()
-	{
-		return true;
-	}
-	
-	@Override
-	public boolean calcSuccess()
-	{
-		int magicLevel = getSkill().getMagicLevel();
-		if ((magicLevel <= 0) || ((getEffected().getLevel() - 9) <= magicLevel))
+		int magicLevel = info.getSkill().getMagicLevel();
+		if ((magicLevel <= 0) || ((info.getEffected().getLevel() - 9) <= magicLevel))
 		{
-			double chance = _chance * Formulas.calcAttributeBonus(getEffector(), getEffected(), getSkill()) * Formulas.calcGeneralTraitBonus(getEffector(), getEffected(), getSkill().getTraitType(), false);
+			double chance = _chance * Formulas.calcAttributeBonus(info.getEffector(), info.getEffected(), info.getSkill()) * Formulas.calcGeneralTraitBonus(info.getEffector(), info.getEffected(), info.getSkill().getTraitType(), false);
 			if (chance > (Rnd.nextDouble() * 100))
 			{
 				return true;
@@ -71,15 +60,21 @@ public class Unsummon extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean isInstant()
 	{
-		if (!getEffected().isSummon())
+		return true;
+	}
+	
+	@Override
+	public boolean onStart(BuffInfo info)
+	{
+		if (!info.getEffected().isSummon())
 		{
 			return false;
 		}
 		
-		final L2PcInstance summonOwner = getEffected().getActingPlayer();
-		final L2Summon summon = getEffected().getSummon();
+		final L2PcInstance summonOwner = info.getEffected().getActingPlayer();
+		final L2Summon summon = info.getEffected().getSummon();
 		if (summon != null)
 		{
 			if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())

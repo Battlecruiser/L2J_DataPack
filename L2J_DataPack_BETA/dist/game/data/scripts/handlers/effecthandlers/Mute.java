@@ -19,20 +19,21 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlEvent;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Mute effect implementation.
  */
-public class Mute extends L2Effect
+public final class Mute extends AbstractEffect
 {
-	public Mute(Env env, EffectTemplate template)
+	public Mute(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,10 +49,10 @@ public class Mute extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().abortCast();
-		getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
-		return super.onStart();
+		info.getEffected().abortCast();
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
+		return true;
 	}
 }

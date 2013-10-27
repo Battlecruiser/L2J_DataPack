@@ -19,32 +19,31 @@
 package handlers.effecthandlers;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jserver.gameserver.datatables.BotReportTable;
 import com.l2jserver.gameserver.instancemanager.PunishmentManager;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.punishment.PunishmentAffect;
 import com.l2jserver.gameserver.model.punishment.PunishmentTask;
 import com.l2jserver.gameserver.model.punishment.PunishmentType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
+ * Block Action effect implementation.
  * @author BiggBoss
  */
-public final class BlockAction extends L2Effect
+public final class BlockAction extends AbstractEffect
 {
-	private final ArrayList<Integer> _blockedActions;
+	private final List<Integer> _blockedActions;
 	
-	/**
-	 * @param env
-	 * @param template
-	 */
-	public BlockAction(Env env, EffectTemplate template)
+	public BlockAction(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		String[] rawActions = template.getParameters().getString("blockedActions").split(",");
+		super(attachCond, applyCond, set, params);
+		
+		String[] rawActions = getParameters().getString("blockedActions").split(",");
 		_blockedActions = new ArrayList<>(rawActions.length);
 		for (String act : rawActions)
 		{
@@ -61,48 +60,42 @@ public final class BlockAction extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
-	{
-		if ((getEffected() == null) || !getEffected().isPlayer())
-		{
-			return false;
-		}
-		
-		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
-		}
-		
-		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
-		}
-		
-		return true;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().stopPunishment(getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
-		}
-		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
-		{
-			PunishmentManager.getInstance().stopPunishment(getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
-		}
-	}
-	
-	@Override
 	public boolean checkCondition(Object id)
 	{
 		return !_blockedActions.contains(id);
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.ACTION_BLOCK;
+		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
+		}
+		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
+		}
+	}
+	
+	@Override
+	public boolean onStart(BuffInfo info)
+	{
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
+		{
+			return false;
+		}
+		
+		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
+		}
+		
+		if (_blockedActions.contains(BotReportTable.CHAT_BLOCK_ID))
+		{
+			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
+		}
+		
+		return true;
 	}
 }

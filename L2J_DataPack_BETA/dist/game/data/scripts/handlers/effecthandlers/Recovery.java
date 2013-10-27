@@ -18,26 +18,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Recovery effect implementation.
  * @author Kerberos
  */
-public class Recovery extends L2Effect
+public final class Recovery extends AbstractEffect
 {
-	public Recovery(Env env, EffectTemplate template)
+	public Recovery(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -47,11 +41,11 @@ public class Recovery extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
+			info.getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
 			return true;
 		}
 		return false;

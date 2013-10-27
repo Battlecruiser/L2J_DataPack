@@ -113,7 +113,7 @@ public class TowerOfInfinitum extends Quest
 				{
 					for (L2PcInstance partyMember : party.getMembers())
 					{
-						if (!Util.checkIfInRange(300, partyMember, npc, true) || (partyMember.getFirstEffect(PASS_SKILL) == null))
+						if (!Util.checkIfInRange(300, partyMember, npc, true) || !partyMember.isAffectedBySkill(PASS_SKILL))
 						{
 							return "32302-02.htm";
 						}

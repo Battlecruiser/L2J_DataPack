@@ -168,7 +168,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3018" levels="6" name="Special Ability: Back Blow">
@@ -261,7 +261,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="#absorbPart" />
+			<effect name="HpDrain" val="#absorbPart" />
 		</for>
 	</skill>
 	<skill id="3023" levels="6" name="Special Ability: Critical Damage">
@@ -510,7 +510,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="#absorbPart" />
+			<effect name="HpDrain" val="#absorbPart" />
 		</for>
 	</skill>
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
@@ -686,7 +686,7 @@
 		<set name="power" val="8.39" />
 		<set name="targetType" val="NONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="3050" levels="2" name="Special Ability: Focus">
@@ -864,7 +864,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.65" />
+			<effect name="HpDrain" val="0.65" />
 		</for>
 	</skill>
 	<skill id="3060" levels="2" name="Special Ability: Critical Drain">
@@ -879,7 +879,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.35" />
+			<effect name="HpDrain" val="0.35" />
 		</for>
 	</skill>
 	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
@@ -1046,7 +1046,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3071" levels="2" name="Special Ability: Rsk. Focus">
@@ -1117,7 +1117,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" val="0" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
@@ -1140,7 +1140,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6126">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -1193,7 +1193,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" val="0" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
@@ -1217,7 +1217,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
-			<effect name="ChanceSkillTrigger" val="0" chanceType="ON_EXIT" triggeredId="6126">
+			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6126">
 				<mul order="0x30" stat="pAtkSpd" val="0.5" />
 				<mul order="0x30" stat="runSpd" val="0.5" />
 				<mul order="0x30" stat="mAtkSpd" val="0.5" />
@@ -1239,7 +1239,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="TargetMeProbability" noicon="1" val="0">
+			<effect name="TargetMeProbability">
 				<param chance="40" />
 			</effect>
 		</for>
@@ -1273,7 +1273,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttackMp" noicon="1" val="0" />
+			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
 	<skill id="3083" levels="10" name="Item Skill: Slow">
@@ -1422,7 +1422,7 @@
 		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Petrification" val="0" />
+			<effect name="Petrification" />
 		</for>
 	</skill>
 	<skill id="3090" levels="10" name="Item Skill: Fear">
@@ -1548,7 +1548,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttackMp" noicon="1" val="0" />
+			<effect name="MagicalAttackMp" />
 		</for>
 	</skill>
 	<skill id="3096" levels="10" name="Item Skill: Slow">

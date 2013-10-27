@@ -18,12 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2SiegeSummonInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.network.serverpackets.StartRotation;
 import com.l2jserver.gameserver.network.serverpackets.StopRotation;
@@ -32,26 +32,21 @@ import com.l2jserver.gameserver.network.serverpackets.StopRotation;
  * Bluff effect implementation.
  * @author decad
  */
-public class Bluff extends L2Effect
+public final class Bluff extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Bluff(Env env, EffectTemplate template)
+	public Bluff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -61,16 +56,16 @@ public class Bluff extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() instanceof L2NpcInstance) || ((getEffected().isNpc()) && (getEffected().getId() == 35062)) || (getEffected() instanceof L2SiegeSummonInstance))
+		if ((info.getEffected() instanceof L2NpcInstance) || ((info.getEffected().isNpc()) && (info.getEffected().getId() == 35062)) || (info.getEffected() instanceof L2SiegeSummonInstance))
 		{
 			return false;
 		}
 		
-		getEffected().broadcastPacket(new StartRotation(getEffected().getObjectId(), getEffected().getHeading(), 1, 65535));
-		getEffected().broadcastPacket(new StopRotation(getEffected().getObjectId(), getEffector().getHeading(), 65535));
-		getEffected().setHeading(getEffector().getHeading());
+		info.getEffected().broadcastPacket(new StartRotation(info.getEffected().getObjectId(), info.getEffected().getHeading(), 1, 65535));
+		info.getEffected().broadcastPacket(new StopRotation(info.getEffected().getObjectId(), info.getEffector().getHeading(), 65535));
+		info.getEffected().setHeading(info.getEffector().getHeading());
 		return true;
 	}
 }

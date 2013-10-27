@@ -24,12 +24,12 @@ import java.util.List;
 import com.l2jserver.gameserver.ai.CtrlEvent;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.L2Object;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.util.Rnd;
 
@@ -37,20 +37,20 @@ import com.l2jserver.util.Rnd;
  * Confuse effect implementation.
  * @author littlecrow
  */
-public class Confuse extends L2Effect
+public final class Confuse extends AbstractEffect
 {
 	private final int _chance;
 	
-	public Confuse(Env env, EffectTemplate template)
+	public Confuse(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -60,55 +60,44 @@ public class Confuse extends L2Effect
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public void onExit(BuffInfo info)
 	{
+		if (!info.getEffected().isPlayer())
+		{
+			info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
+		}
+	}
+	
+	@Override
+	public boolean onStart(BuffInfo info)
+	{
+		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
+		
 		final List<L2Character> targetList = new ArrayList<>();
 		// Getting the possible targets
-		for (L2Object obj : getEffected().getKnownList().getKnownObjects().values())
+		for (L2Object obj : info.getEffected().getKnownList().getKnownObjects().values())
 		{
-			if (((getEffected().isMonster() && obj.isL2Attackable()) || (obj instanceof L2Character)) && (obj != getEffected()))
+			if (((info.getEffected().isMonster() && obj.isL2Attackable()) || (obj instanceof L2Character)) && (obj != info.getEffected()))
 			{
 				targetList.add((L2Character) obj);
 			}
 		}
+		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())
 		{
 			// Choosing randomly a new target
 			final L2Character target = targetList.get(Rnd.nextInt(targetList.size()));
 			// Attacking the target
-			getEffected().setTarget(target);
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
-			return true;
+			info.getEffected().setTarget(target);
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
-		return false;
-	}
-	
-	@Override
-	public void onExit()
-	{
-		if (!getEffected().isPlayer())
-		{
-			getEffected().getAI().notifyEvent(CtrlEvent.EVT_THINK);
-		}
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		return true;
 	}
 }

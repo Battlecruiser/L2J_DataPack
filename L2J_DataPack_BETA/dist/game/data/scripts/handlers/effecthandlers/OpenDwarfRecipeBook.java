@@ -19,28 +19,22 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.RecipeController;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Open Dwarf Recipe Book effect implementation.
  * @author Adry_85
  */
-public class OpenDwarfRecipeBook extends L2Effect
+public final class OpenDwarfRecipeBook extends AbstractEffect
 {
-	public OpenDwarfRecipeBook(Env env, EffectTemplate template)
+	public OpenDwarfRecipeBook(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,14 +44,14 @@ public class OpenDwarfRecipeBook extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffector().isPlayer())
+		if (!info.getEffector().isPlayer())
 		{
 			return false;
 		}
 		
-		L2PcInstance player = getEffector().getActingPlayer();
+		L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);

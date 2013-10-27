@@ -12,7 +12,7 @@
 		<set name="power" val="10000000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5001" levels="1" name="Alfred - Life Drain">
@@ -27,7 +27,7 @@
 		<set name="power" val="111" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.8" />
+			<effect name="HpDrain" val="0.8" />
 		</for>
 	</skill>
 	<skill id="5002" levels="1" name="Giselle - Vampiric Rage">
@@ -44,7 +44,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<add order="0x40" stat="absorbDam" val="9" /> <!-- absorb HP from damage inflicted on enemies -->
 			</effect>
 		</for>
@@ -65,7 +65,7 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5004" levels="1" name="Dimensional Stun">
@@ -89,9 +89,9 @@
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="ThrowUp" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
+			<effect name="PhysicalAttack" />
+			<effect name="ThrowUp" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="5005" levels="1" name="Frintezza's Ghost Summoning">
@@ -108,7 +108,7 @@
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Paralyze" val="0" />
+			<effect name="Paralyze" />
 		</for>
 	</skill>
 	<skill id="5006" levels="1" name="Frintezza's Melody">
@@ -166,7 +166,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="#traits" />
 		<for>
-			<effect name="#effectname1" val="0">
+			<effect name="#effectname1">
 				<mul order="0x30" stat="pAtk" val="#attackAndSpeed" />
 				<mul order="0x30" stat="mAtk" val="#attackAndSpeed" />
 				<mul order="0x30" stat="pAtkSpd" val="#attackAndSpeed" />
@@ -174,10 +174,10 @@
 				<add order="0x40" stat="runSpd" val="#attackAndSpeed" />
 				<mul order="0x30" stat="healEffect" val="#healEffect" />
 			</effect>
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="buff" rate="#activateRate" max="#maxNegated" />
 			</effect>
-			<effect name="HealPercent" noicon="1" val="#healPercent" />
+			<effect name="HealPercent" val="#healPercent" />
 		</for>
 	</skill>
 	<skill id="5009" levels="1" name="Frintezza's Ghostly Fighter">
@@ -195,7 +195,7 @@
 		<set name="power" val="6400" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5010" levels="1" name="Frintezza's Ghostly Mage">
@@ -214,7 +214,7 @@
 		<set name="power" val="106" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5011" levels="1" name="Frintezza's Bomber Ghost">
@@ -231,7 +231,7 @@
 		<set name="power" val="364" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5012" levels="1" name="Breath of Scarlet">
@@ -255,7 +255,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" abnormalVisualEffect="dancestun" />
+			<effect name="Stun" abnormalVisualEffect="dancestun" />
 		</for>
 	</skill>
 	<skill id="5013" levels="1" name="Frintezza Ghost Drain">
@@ -272,7 +272,7 @@
 		<set name="power" val="61" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.8" />
+			<effect name="HpDrain" val="0.8" />
 		</for>
 	</skill>
 	<skill id="5014" levels="3" name="Frintezza's Daemon Attack">
@@ -296,7 +296,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5015" levels="6" name="Frintezza's Daemon Charge">
@@ -325,7 +325,7 @@
 			<player insideZoneId="5015" />
 		</cond>
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5016" levels="1" name="Yoke of Scarlet">
@@ -351,7 +351,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Paralyze" val="0" abnormalVisualEffect="floatroot" />
+			<effect name="Paralyze" abnormalVisualEffect="floatroot" />
 		</for>
 	</skill>
 	<skill id="5017" levels="1" name="Frintezza's Daemon Morph">
@@ -370,10 +370,10 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Grow" val="0">
+			<effect name="Grow">
 				<mul order="0x30" stat="runSpd" val="1.22" />
 			</effect>
-			<effect name="HealPercent" noicon="1" val="20" />
+			<effect name="HealPercent" val="20" />
 		</for>
 	</skill>
 	<skill id="5018" levels="2" name="Frintezza's Daemon Field">
@@ -392,7 +392,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5019" levels="1" name="Frintezza's Daemon Drain">
@@ -409,7 +409,7 @@
 		<set name="power" val="314" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="HpDrain" noicon="1" val="0.8" />
+			<effect name="HpDrain" val="0.8" />
 		</for>
 	</skill>
 	<skill id="5020" levels="1" name="Forced Action">
@@ -648,7 +648,7 @@
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="CharmOfCourage" noicon="1" val="0" />
+			<effect name="CharmOfCourage" />
 		</for>
 	</skill>
 	<skill id="5042" levels="12" name="NPC Dispel Bomb">
@@ -664,8 +664,8 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="MagicalAttack" />
+			<effect name="DispelByCategory">
 				<param slot="buff" rate="25" max="20" />
 			</effect>
 		</for>
@@ -686,7 +686,7 @@
 		<set name="reuseDelay" val="7000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5044" levels="3" name="NPC Ultimate Defense">
@@ -711,7 +711,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="ImmobileBuff" val="0" abnormalVisualEffect="invulnerable">
+			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
 				<add order="0x40" stat="pDef" val="#pDef" />
 				<add order="0x40" stat="mDef" val="#mDef" />
 				<sub order="0x40" stat="cancelVuln" val="80" />
@@ -734,7 +734,7 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5046" levels="12" name="Castle Power Shot">
@@ -752,7 +752,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5047" levels="12" name="Castle Spinning Slash">
@@ -812,7 +812,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5052" levels="12" name="Castle Long AE Fire">
@@ -836,7 +836,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5053" levels="12" name="Castle DD Water">
@@ -856,7 +856,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5054" levels="12" name="Castle Self AE Water">
@@ -897,7 +897,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5057" levels="12" name="Castle Self AE Wind">
@@ -989,7 +989,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5066" levels="12" name="Castle Self AE Unholy">
@@ -1108,7 +1108,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5074" levels="1" name="The Victor of War">
@@ -1185,7 +1185,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 				<basemul order="0x30" stat="rCrit" val="0.3" />
 			</effect>
@@ -1208,7 +1208,7 @@
 		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="1.33" />
 				<mul order="0x30" stat="pAtk" val="1.15" />
 			</effect>
@@ -1235,8 +1235,8 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect name="PhysicalMute" val="0" />
+			<effect name="FatalBlow" />
+			<effect name="PhysicalMute" />
 		</for>
 	</skill>
 	<skill id="5082" levels="4" name="NPC Spinning, Slashing Trick">
@@ -1251,7 +1251,7 @@
 		<set name="power" val="2112" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5083" levels="4" name="Stun">
@@ -1277,9 +1277,9 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
-			<effect name="Stun" val="0" />
-			<effect name="TargetCancel" noicon="1" val="0">
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+			<effect name="TargetCancel">
 				<param chance="10" />
 			</effect>
 		</for>
@@ -1301,8 +1301,8 @@
 		<set name="power" val="6335" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="FatalBlow" noicon="1" val="0" />
-			<effect self="1" name="Buff" val="0">
+			<effect name="FatalBlow" />
+			<effect self="1" name="Buff">
 				<param chance="80" />
 				<add order="0x40" stat="runSpd" val="40" />
 			</effect>
@@ -1352,7 +1352,7 @@
 		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="Buff" val="0">
+			<effect name="Buff">
 				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
 				<mul order="0x30" stat="pAtk" val="#pAtk" />
 				<mul order="0x30" stat="pDef" val="#pDef" />
@@ -1416,7 +1416,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Fear" val="0" />
+			<effect name="Fear" />
 		</for>
 	</skill>
 	<skill id="5093" levels="1" name="Antharas Meteor">
@@ -1436,7 +1436,7 @@
 		<set name="reuseDelay" val="6000" />
 		<set name="targetType" val="AREA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5094" levels="1" name="Antharas Subordinate Suicide ">
@@ -1452,7 +1452,7 @@
 		<set name="power" val="473" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5095" levels="1" name="Antharas Subordinate Melee Attack">
@@ -1467,7 +1467,7 @@
 		<set name="power" val="30215" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5096" levels="1" name="Antharas Subordinate Remote Attack">
@@ -1482,7 +1482,7 @@
 		<set name="power" val="88254" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="PhysicalAttack" noicon="1" val="0" />
+			<effect name="PhysicalAttack" />
 		</for>
 	</skill>
 	<skill id="5097" levels="1" name="Antharas Subordinate Suicide (Narrow Range)">
@@ -1498,7 +1498,7 @@
 		<set name="power" val="473" />
 		<set name="targetType" val="AURA" />
 		<for>
-			<effect name="MagicalAttack" noicon="1" val="0" />
+			<effect name="MagicalAttack" />
 		</for>
 	</skill>
 	<skill id="5098" levels="2" name="Capture Penalty">
@@ -1514,7 +1514,7 @@
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<for>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BOW="-30" />
 			</effect>
 		</for>

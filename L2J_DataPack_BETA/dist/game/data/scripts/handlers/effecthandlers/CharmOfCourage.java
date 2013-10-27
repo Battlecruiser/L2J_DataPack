@@ -18,22 +18,23 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**
  * Charm Of Courage effect implementation.
  * @author nBd
  */
-public class CharmOfCourage extends L2Effect
+public final class CharmOfCourage extends AbstractEffect
 {
-	public CharmOfCourage(Env env, EffectTemplate template)
+	public CharmOfCourage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,20 +50,20 @@ public class CharmOfCourage extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
+			info.getEffected().broadcastPacket(new EtcStatusUpdate(info.getEffected().getActingPlayer()));
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().broadcastPacket(new EtcStatusUpdate(getEffected().getActingPlayer()));
+			info.getEffected().broadcastPacket(new EtcStatusUpdate(info.getEffected().getActingPlayer()));
 			return true;
 		}
 		return false;

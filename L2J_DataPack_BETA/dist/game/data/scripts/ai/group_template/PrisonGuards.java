@@ -137,9 +137,9 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		if (npc.getId() == GUARD2)
 		{
-			if (_firstAttacked && (caster.getFirstEffect(SKILL_EVENT_TIMER) == null))
+			if (_firstAttacked && !caster.isAffectedBySkill(SKILL_EVENT_TIMER))
 			{
-				if (caster.getFirstEffect(SKILL_SILENCE) == null)
+				if (!caster.isAffectedBySkill(SKILL_SILENCE))
 				{
 					castDebuff(npc, caster, SKILL_SILENCE, isSummon, false, true);
 				}
@@ -156,7 +156,7 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		if (npc.getId() == GUARD2)
 		{
-			if (target.getFirstEffect(SKILL_EVENT_TIMER) != null)
+			if (target.isAffectedBySkill(SKILL_EVENT_TIMER))
 			{
 				cancelQuestTimer("attackEnd", null, null);
 				startQuestTimer("attackEnd", 180000, npc, null);
@@ -190,9 +190,9 @@ public class PrisonGuards extends AbstractNpcAI
 		
 		_firstAttacked = true;
 		
-		if (attacker.getFirstEffect(SKILL_EVENT_TIMER) == null)
+		if (!attacker.isAffectedBySkill(SKILL_EVENT_TIMER))
 		{
-			if (attacker.getFirstEffect(SKILL_PERTIFICATION) == null)
+			if (!attacker.isAffectedBySkill(SKILL_PERTIFICATION))
 			{
 				castDebuff(npc, attacker, SKILL_PERTIFICATION, isSummon, true, false);
 			}

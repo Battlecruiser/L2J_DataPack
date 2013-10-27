@@ -20,28 +20,29 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Dispel By Category effect implementation.
  * @author DS, Adry_85
  */
-public class DispelByCategory extends L2Effect
+public final class DispelByCategory extends AbstractEffect
 {
 	private final String _slot;
 	private final int _rate;
 	private final int _max;
 	
-	public DispelByCategory(Env env, EffectTemplate template)
+	public DispelByCategory(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_slot = template.getParameters().getString("slot", null);
-		_rate = template.getParameters().getInt("rate", 0);
-		_max = template.getParameters().getInt("max", 0);
+		super(attachCond, applyCond, set, params);
+		_slot = getParameters().getString("slot", null);
+		_rate = getParameters().getInt("rate", 0);
+		_max = getParameters().getInt("max", 0);
 	}
 	
 	@Override
@@ -57,17 +58,17 @@ public class DispelByCategory extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		final List<L2Effect> canceled = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), _slot, _rate, _max);
-		for (L2Effect eff : canceled)
+		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
+		for (BuffInfo can : canceled)
 		{
-			eff.exit();
+			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
 		}
 		return true;
 	}

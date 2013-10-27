@@ -68,7 +68,7 @@ public class FairyTrees extends AbstractNpcAI
 					L2Skill skill = SkillTable.getInstance().getInfo(4243, 1);
 					if ((skill != null) && (originalKiller != null))
 					{
-						skill.getEffects(newNpc, originalKiller);
+						skill.applyEffects(newNpc, null, originalKiller, null, false, false);
 					}
 				}
 			}

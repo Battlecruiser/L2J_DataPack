@@ -18,23 +18,21 @@
  */
 package handlers;
 
-import java.lang.reflect.Method;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jserver.gameserver.handler.EffectHandler;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 
 import handlers.effecthandlers.*;
 
 /**
  * Effect Master handler.
- * @author BiggBoss
+ * @author BiggBoss, Zoey76
  */
 public final class EffectMasterHandler
 {
 	private static final Logger _log = Logger.getLogger(EffectMasterHandler.class.getName());
-	
-	private static final Class<?> LOAD_INSTANCES = EffectHandler.class;
 	
 	private static final Class<?>[] EFFECTS =
 	{
@@ -175,58 +173,26 @@ public final class EffectMasterHandler
 		VitalityPointUp.class,
 	};
 	
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args)
 	{
-		Object loadInstance = null;
-		Method method = null;
-		
-		try
-		{
-			method = LOAD_INSTANCES.getMethod("getInstance");
-			loadInstance = method.invoke(LOAD_INSTANCES);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Failed invoking getInstance method for handler: " + LOAD_INSTANCES.getSimpleName(), e);
-			return;
-		}
-		
-		method = null; // Releasing variable for next method
-		
 		for (Class<?> c : EFFECTS)
 		{
 			if (c == null)
 			{
 				continue; // Disabled handler
 			}
-			
-			try
-			{
-				if (method == null)
-				{
-					method = loadInstance.getClass().getMethod("registerHandler", Class.class);
-				}
-				
-				method.invoke(loadInstance, c);
-				
-			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Failed loading effect handler: " + c.getSimpleName(), e);
-				continue;
-			}
+			EffectHandler.getInstance().registerHandler((Class<? extends AbstractEffect>) c);
 		}
 		
 		// And lets try get size
 		try
 		{
-			method = loadInstance.getClass().getMethod("size");
-			Object returnVal = method.invoke(loadInstance);
-			_log.log(Level.INFO, loadInstance.getClass().getSimpleName() + ": Loaded " + returnVal + " Handlers");
+			_log.log(Level.INFO, EffectMasterHandler.class.getSimpleName() + ": Loaded " + EffectHandler.getInstance().size() + " effect handlers.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed invoking size method for handler: " + loadInstance.getClass().getSimpleName(), e);
+			_log.log(Level.WARNING, "Failed invoking size method for handler: " + EffectMasterHandler.class.getSimpleName(), e);
 		}
 	}
 }

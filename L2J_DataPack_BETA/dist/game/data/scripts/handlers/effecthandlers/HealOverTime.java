@@ -18,31 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExRegMax;
 
 /**
  * Heal Over Time effect implementation.
  */
-public class HealOverTime extends L2Effect
+public final class HealOverTime extends AbstractEffect
 {
-	public HealOverTime(Env env, EffectTemplate template)
+	public HealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public HealOverTime(Env env, L2Effect effect)
-	{
-		super(env, effect);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,15 +42,15 @@ public class HealOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead() || getEffected().isDoor())
+		if (info.getEffected().isDead() || info.getEffected().isDoor())
 		{
 			return false;
 		}
 		
-		double hp = getEffected().getCurrentHp();
-		double maxhp = getEffected().getMaxRecoverableHp();
+		double hp = info.getEffected().getCurrentHp();
+		double maxhp = info.getEffected().getMaxRecoverableHp();
 		
 		// Not needed to set the HP and send update packet if player is already at max HP
 		if (hp >= maxhp)
@@ -68,18 +58,18 @@ public class HealOverTime extends L2Effect
 			return false;
 		}
 		
-		hp += calc() * getEffectTemplate().getTotalTickCount();
+		hp += getValue() * getTicks();
 		hp = Math.min(hp, maxhp);
-		getEffected().setCurrentHp(hp);
-		return getSkill().isToggle();
+		info.getEffected().setCurrentHp(hp);
+		return info.getSkill().isToggle();
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer() && (getEffectTemplate().getTotalTickCount() > 0))
+		if (info.getEffected().isPlayer() && (getTicks() > 0))
 		{
-			getEffected().sendPacket(new ExRegMax(calc(), getAbnormalTime(), getAbnormalTime() / getEffectTemplate().getTotalTickCount()));
+			info.getEffected().sendPacket(new ExRegMax(getValue(), info.getAbnormalTime(), info.getAbnormalTime() / getTicks()));
 		}
 		return true;
 	}

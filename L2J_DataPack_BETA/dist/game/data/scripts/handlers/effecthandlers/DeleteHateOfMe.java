@@ -19,31 +19,32 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Delete Hate Of Me effect implementation.
  * @author Adry_85
  */
-public class DeleteHateOfMe extends L2Effect
+public final class DeleteHateOfMe extends AbstractEffect
 {
 	private final int _chance;
 	
-	public DeleteHateOfMe(Env env, EffectTemplate template)
+	public DeleteHateOfMe(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_chance = template.hasParameters() ? template.getParameters().getInt("chance", 100) : 100;
+		super(attachCond, applyCond, set, params);
+		_chance = hasParameters() ? getParameters().getInt("chance", 100) : 100;
 	}
 	
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return Formulas.calcProbability(_chance, getEffector(), getEffected(), getSkill());
+		return Formulas.calcProbability(_chance, info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -59,15 +60,15 @@ public class DeleteHateOfMe extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffected().isL2Attackable())
+		if (!info.getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		L2Attackable target = (L2Attackable) getEffected();
-		target.stopHating(getEffector());
+		L2Attackable target = (L2Attackable) info.getEffected();
+		target.stopHating(info.getEffector());
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		return true;

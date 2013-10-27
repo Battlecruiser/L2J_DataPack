@@ -23,10 +23,8 @@ import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
-import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
@@ -112,34 +110,10 @@ public class HideoutOfTheDawn extends Quest
 	
 	private static final void removeBuffs(L2Character ch)
 	{
-		for (L2Effect e : ch.getAllEffects())
+		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
+		if (ch.hasSummon())
 		{
-			if (e == null)
-			{
-				continue;
-			}
-			L2Skill skill = e.getSkill();
-			if (skill.isDebuff() || skill.isStayAfterDeath())
-			{
-				continue;
-			}
-			e.exit();
-		}
-		if (ch.getSummon() != null)
-		{
-			for (L2Effect e : ch.getSummon().getAllEffects())
-			{
-				if (e == null)
-				{
-					continue;
-				}
-				L2Skill skill = e.getSkill();
-				if (skill.isDebuff() || skill.isStayAfterDeath())
-				{
-					continue;
-				}
-				e.exit();
-			}
+			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
 	}
 	

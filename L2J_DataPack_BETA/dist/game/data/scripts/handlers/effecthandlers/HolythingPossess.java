@@ -19,11 +19,11 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.instancemanager.CastleManager;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.entity.Castle;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,17 +31,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Holything Possess effect implementation.
  * @author Adry_85
  */
-public class HolythingPossess extends L2Effect
+public final class HolythingPossess extends AbstractEffect
 {
-	public HolythingPossess(Env env, EffectTemplate template)
+	public HolythingPossess(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,15 +45,15 @@ public class HolythingPossess extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffector().isPlayer())
+		if (!info.getEffector().isPlayer())
 		{
 			return false;
 		}
 		
-		Castle castle = CastleManager.getInstance().getCastle(getEffector());
-		castle.engrave(getEffector().getActingPlayer().getClan(), getEffected());
+		Castle castle = CastleManager.getInstance().getCastle(info.getEffector());
+		castle.engrave(info.getEffector().getActingPlayer().getClan(), info.getEffected());
 		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING), false);
 		return true;
 	}

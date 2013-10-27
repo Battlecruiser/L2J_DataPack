@@ -22,8 +22,7 @@ import com.l2jserver.gameserver.handler.ISkillHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.AbnormalType;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 
@@ -67,11 +66,8 @@ public class Detection implements ISkillHandler
 						continue;
 					}
 					
-					L2Effect eHide = target.getFirstEffect(L2EffectType.HIDE);
-					if (eHide != null)
-					{
-						eHide.exit();
-					}
+					// Remove Hide.
+					target.getEffectList().stopSkillEffects(true, AbnormalType.HIDE);
 				}
 			}
 		}

@@ -19,22 +19,23 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.ai.CtrlIntention;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.EffectFlag;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Betray effect implementation.
  * @author decad
  */
-public class Betray extends L2Effect
+public final class Betray extends AbstractEffect
 {
-	public Betray(Env env, EffectTemplate template)
+	public Betray(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,18 +51,18 @@ public class Betray extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffector().isPlayer() && getEffected().isSummon())
+		if (info.getEffector().isPlayer() && info.getEffected().isSummon())
 		{
-			L2PcInstance targetOwner = getEffected().getActingPlayer();
-			getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
+			L2PcInstance targetOwner = info.getEffected().getActingPlayer();
+			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
 			return true;
 		}
 		return false;

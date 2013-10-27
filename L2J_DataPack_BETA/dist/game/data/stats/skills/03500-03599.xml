@@ -25,7 +25,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="20" />
 			</effect>
 		</for>
@@ -92,7 +92,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param DAGGER="6" />
 				<param DUALDAGGER="6" />
 			</effect>
@@ -266,7 +266,7 @@
 			<add order="0x40" stat="breath" val="200" /> <!-- Breath Gauge increased +200 -->
 			<mul order="0x30" stat="pAtk" val="1.027" /> <!-- P. Atk. +2.7% -->
 			<mul order="0x30" stat="regMp" val="1.025" /> <!-- MP Regeneration +2.5% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="20" />
 			</effect>
 		</for>
@@ -299,7 +299,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.04" /> <!-- Heal +4% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 			</effect>
 		</for>
@@ -312,7 +312,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.08" /> <!-- Atk. Spd. +8% -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="80" />
 				<param BLEED="80" />
 			</effect>
@@ -326,7 +326,7 @@
 		<for>
 			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Atk. Spd. +4% -->
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 			</effect>
 		</for>
@@ -339,7 +339,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
 			<add order="0x40" stat="maxMp" val="222" /> <!-- MP +222 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="80" />
 				<param BLEED="80" />
 			</effect>
@@ -353,7 +353,7 @@
 		<for>
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="mDef" val="1.08" /> <!-- M. Def. +8% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="80" />
 				<param BLEED="80" />
 			</effect>
@@ -369,7 +369,7 @@
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Small decrease in chance of spell interruption -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param PARALYZE="50" />
 			</effect>
 		</for>
@@ -381,7 +381,7 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="70" />
 				<param HOLD="70" />
 			</effect>
@@ -395,7 +395,7 @@
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk. +4% -->
 			<add order="0x40" stat="accCombat" val="3.1" /> <!-- Accuracy +3.1 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 			</effect>
 		</for>
@@ -408,7 +408,7 @@
 		<for>
 			<mul order="0x30" stat="mDef" val="1.04" /> <!-- M. Def. +4% -->
 			<add order="0x40" stat="absorbDam" val="3" /> <!-- Restores 3% of melee damage inflicted on the enemy to oneself -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="70" />
 				<param HOLD="70" />
 			</effect>
@@ -425,7 +425,7 @@
 			</mul>
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 			</effect>
 		</for>
@@ -438,7 +438,7 @@
 		<for>
 			<mul order="0x30" stat="regMp" val="1.04" /> <!-- MP Regeneration +4% -->
 			<mul order="0x30" stat="mAtk" val="1.08" /> <!-- M. Atk. +8% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="70" />
 				<param HOLD="70" />
 			</effect>
@@ -453,7 +453,7 @@
 			<add order="0x40" stat="maxMp" val="240" /> <!-- MP +240 -->
 			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
 			<mul order="0x30" stat="regMp" val="1.08" /> <!-- MP Regeneration +8% -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 			</effect>
 		</for>
@@ -584,7 +584,7 @@
 		<for>
 			<mul order="0x30" stat="pDef" val="1.08" /> <!-- P Def. +8% -->
 			<add order="0x40" stat="maxHp" val="445" /> <!-- Maximum HP +445 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="70" />
 				<param HOLD="70" />
 			</effect>
@@ -597,7 +597,7 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="80" />
 				<param BLEED="80" />
 			</effect>
@@ -625,7 +625,7 @@
 			<add order="0x40" stat="runSpd" val="7" /> <!-- Movement Speed +7 -->
 			<sub order="0x40" stat="cancel" val="50" /> <!-- Casting Cancel Probability -50% -->
 			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SHOCK="50" />
 			</effect>
 		</for>
@@ -646,10 +646,10 @@
 			<mul order="0x30" stat="pReuse" val="0.9" />
 			<mul order="0x30" stat="mReuse" val="0.9" />
 			<add order="0x40" stat="reflectDam" val="5" />
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param SLEEP="40" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param SLEEP="40" />
 			</effect>
 		</for>
@@ -667,12 +667,12 @@
 			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
 			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
 			<add order="0x40" stat="absorbDam" val="4" /> <!-- absorb 4% HP from damage inflicted on enemies -->
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param BLEED="40" />
 				<param SHOCK="30" />
 				<param DERANGEMENT="30" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="40" />
 				<param SHOCK="30" />
 				<param DERANGEMENT="30" />
@@ -694,12 +694,12 @@
 			<mul order="0x30" stat="healEffect" val="#healEffect" />
 			<add order="0x40" stat="absorbDam" val="4" />
 			<add order="0x40" stat="darkRes" val="#darkRes" />
-			<effect name="AttackTrait" val="0">
+			<effect name="AttackTrait">
 				<param BLEED="30" />
 				<param SHOCK="#traits" />
 				<param DERANGEMENT="#traits" />
 			</effect>
-			<effect name="DefenceTrait" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="30" />
 				<param SHOCK="#traits" />
 				<param DERANGEMENT="#traits" />
@@ -715,10 +715,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<mul order="0x30" stat="healEffect" val="1.06" />
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param BLEED="20" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param BLEED="20" />
 			</effect>
 		</for>
@@ -735,11 +735,11 @@
 			<mul order="0x30" stat="cAtk" val="1.15" />
 			<mul order="0x30" stat="pAtkSpd" val="1.04" />
 			<mul order="0x30" stat="mAtkSpd" val="1.04" />
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param POISON="40" />
 				<param HOLD="30" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="40" />
 				<param HOLD="30" />
 			</effect>
@@ -755,11 +755,11 @@
 		<for>
 			<add order="0x40" stat="accCombat" val="2" />
 			<mul order="0x30" stat="cAtk" val="1.15" />
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param POISON="30" />
 				<param HOLD="20" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="30" />
 				<param HOLD="20" />
 			</effect>
@@ -774,10 +774,10 @@
 		<set name="targetType" val="SELF" />
 		<for>
 			<add order="0x40" stat="accCombat" val="1" />
-			<effect name="AttackTrait" noicon="1" val="0">
+			<effect name="AttackTrait">
 				<param POISON="20" />
 			</effect>
-			<effect name="DefenceTrait" noicon="1" val="0">
+			<effect name="DefenceTrait">
 				<param POISON="20" />
 			</effect>
 		</for>
@@ -906,7 +906,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3572" levels="4" name="Special Ability: Critical Damage">
@@ -960,7 +960,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1015,7 +1015,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" val="0" />
+			<effect name="Root" />
 		</for>
 	</skill>
 	<skill id="3578" levels="1" name="Special Ability: Infinity Blade">
@@ -1053,7 +1053,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="pDef" val="0.77" />
 			</effect>
 		</for>
@@ -1084,7 +1084,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: this should be "Distrust" effect -->
-			<effect name="Confuse" abnormalTime="20" val="0">
+			<effect name="Confuse" abnormalTime="20">
 				<param chance="20" />
 			</effect>
 		</for>
@@ -1144,7 +1144,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3585" levels="1" name="Special Ability: Infinity Wing">
@@ -1184,7 +1184,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="PhysicalMute" val="0" />
+			<effect name="PhysicalMute" />
 		</for>
 	</skill>
 	<skill id="3587" levels="1" name="Special Ability: Infinity Fang">
@@ -1224,7 +1224,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
-			<effect name="Stun" val="0" />
+			<effect name="Stun" />
 		</for>
 	</skill>
 	<skill id="3589" levels="1" name="Special Ability: Infinity Stinger">
@@ -1266,7 +1266,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
-			<effect name="Mute" val="0" />
+			<effect name="Mute" />
 		</for>
 	</skill>
 	<skill id="3591" levels="1" name="Special Ability: Infinity Spear">
@@ -1298,7 +1298,7 @@
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- NOTE: The Cancel effect have been reduced in H5, value unconfirmed -->
-			<effect name="DispelByCategory" noicon="1" val="0">
+			<effect name="DispelByCategory">
 				<param slot="buff" rate="5" max="2" />
 			</effect>
 		</for>
@@ -1336,7 +1336,7 @@
 		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
-			<effect name="Debuff" val="0">
+			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.7" />
 			</effect>
 		</for>
@@ -1373,7 +1373,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="HealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="3597" levels="1" name="Special Ability: Infinity Rod">
@@ -1407,7 +1407,7 @@
 			</not>
 		</cond>
 		<for>
-			<effect name="HealPercent" noicon="1" val="100" />
+			<effect name="HealPercent" val="100" />
 		</for>
 	</skill>
 	<skill id="3599" levels="1" name="Polearm Multi-attack">

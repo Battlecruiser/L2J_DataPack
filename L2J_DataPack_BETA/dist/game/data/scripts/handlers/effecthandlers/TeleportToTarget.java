@@ -22,11 +22,12 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.GeoData;
 import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.model.Location;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation;
 import com.l2jserver.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jserver.gameserver.network.serverpackets.ValidateLocation;
@@ -36,11 +37,11 @@ import com.l2jserver.gameserver.util.Util;
  * Teleport To Target effect implementation.
  * @author Didldak, Adry_85
  */
-public class TeleportToTarget extends L2Effect
+public final class TeleportToTarget extends AbstractEffect
 {
-	public TeleportToTarget(Env env, EffectTemplate template)
+	public TeleportToTarget(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -56,11 +57,11 @@ public class TeleportToTarget extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character activeChar = getEffector();
-		L2Character target = getEffected();
-		if (getEffected() == null)
+		L2Character activeChar = info.getEffector();
+		L2Character target = info.getEffected();
+		if (target == null)
 		{
 			return false;
 		}

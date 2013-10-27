@@ -20,36 +20,30 @@ package handlers.effecthandlers;
 
 import java.util.List;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
-import com.l2jserver.gameserver.network.SystemMessageId;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Steal Abnormal effect implementation.
  * @author Adry_85, Zoey76
  */
-public class StealAbnormal extends L2Effect
+public final class StealAbnormal extends AbstractEffect
 {
 	private final String _slot;
+	
 	private final int _rate;
 	private final int _max;
 	
-	public StealAbnormal(Env env, EffectTemplate template)
+	public StealAbnormal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_slot = template.getParameters().getString("slot", null);
-		_rate = template.getParameters().getInt("rate", 0);
-		_max = template.getParameters().getInt("max", 0);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
+		_slot = getParameters().getString("slot", null);
+		_rate = getParameters().getInt("rate", 0);
+		_max = getParameters().getInt("max", 0);
 	}
 	
 	@Override
@@ -59,34 +53,45 @@ public class StealAbnormal extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() != null) && getEffected().isPlayer() && (getEffector() != getEffected()))
+		if ((info.getEffected() != null) && info.getEffected().isPlayer() && (info.getEffector() != info.getEffected()))
 		{
-			final List<L2Effect> toSteal = Formulas.calcCancelStealEffects(getEffector(), getEffected(), getSkill(), _slot, _rate, _max);
+			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
 			if (toSteal.isEmpty())
 			{
 				return false;
 			}
-			final Env env = new Env();
-			env.setCharacter(getEffected());
-			env.setTarget(getEffector());
-			for (L2Effect eff : toSteal)
+			
+			for (BuffInfo infoToSteal : toSteal)
 			{
-				env.setSkill(eff.getSkill());
-				final L2Effect effect = eff.getEffectTemplate().getStolenEffect(env, eff);
-				if (effect != null)
+				// Invert effected and effector.
+				final Env env = new Env();
+				env.setCharacter(info.getEffected());
+				env.setTarget(info.getEffector());
+				env.setSkill(infoToSteal.getSkill());
+				final BuffInfo stolen = new BuffInfo(env);
+				stolen.setAbnormalTime(infoToSteal.getTime()); // Copy the remaining time.
+				// To include all the effects, it's required to go through the template rather the buff info.
+				for (AbstractEffect effect : infoToSteal.getSkill().getEffectTemplates())
 				{
-					effect.scheduleEffect();
-					if (effect.isIconDisplay() && getEffector().isPlayer())
+					if (effect != null)
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-						sm.addSkillName(effect);
-						getEffector().sendPacket(sm);
+						if (effect.isInstant())
+						{
+							if (effect.calcSuccess(stolen))
+							{
+								effect.onStart(stolen);
+							}
+						}
+						else if (effect.onStart(stolen))
+						{
+							stolen.addEffect(effect);
+						}
 					}
-					getEffector().getEffectList().add(effect);
 				}
-				eff.exit();
+				info.getEffected().getEffectList().remove(infoToSteal);
+				info.getEffector().getEffectList().add(stolen);
 			}
 			return true;
 		}

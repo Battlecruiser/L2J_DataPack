@@ -61,7 +61,7 @@ public class EvasGiftBoxes extends AbstractNpcAI
 		if (npc.getId() == GIFTBOX)
 		{
 			int isKissOfEvaBuffed = 0;
-			if (killer.getFirstEffect(KISSOFEVA) != null)
+			if (killer.isAffectedBySkill(KISSOFEVA))
 			{
 				isKissOfEvaBuffed = 1;
 			}

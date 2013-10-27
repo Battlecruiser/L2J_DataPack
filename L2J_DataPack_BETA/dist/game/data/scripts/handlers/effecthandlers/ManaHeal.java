@@ -18,11 +18,12 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -31,11 +32,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Mana Heal effect implementation.
  * @author UnAfraid
  */
-public class ManaHeal extends L2Effect
+public final class ManaHeal extends AbstractEffect
 {
-	public ManaHeal(Env env, EffectTemplate template)
+	public ManaHeal(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,17 +52,17 @@ public class ManaHeal extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
+		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
 			return false;
 		}
 		
-		double amount = calc();
+		double amount = getValue();
 		
-		if (!getSkill().isStatic())
+		if (!info.getSkill().isStatic())
 		{
 			amount = target.calcStat(Stats.MANA_CHARGE, amount, null, null);
 		}
@@ -73,10 +74,10 @@ public class ManaHeal extends L2Effect
 			target.setCurrentMp(amount + target.getCurrentMp());
 		}
 		SystemMessage sm;
-		if (getEffector().getObjectId() != target.getObjectId())
+		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_MP_RESTORED_BY_C1);
-			sm.addCharName(getEffector());
+			sm.addCharName(info.getEffector());
 		}
 		else
 		{

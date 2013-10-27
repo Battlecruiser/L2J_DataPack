@@ -19,22 +19,23 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * HP Drain effect implementation.
  * @author Adry_85
  */
-public class HpDrain extends L2Effect
+public final class HpDrain extends AbstractEffect
 {
-	public HpDrain(Env env, EffectTemplate template)
+	public HpDrain(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -50,22 +51,22 @@ public class HpDrain extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		// TODO: Unhardcode Cubic Skill to avoid double damage
-		if (activeChar.isAlikeDead() || (getSkill().getId() == 4050))
+		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4050))
 		{
 			return false;
 		}
 		
-		boolean sps = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
-		boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
-		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-		int damage = (int) Formulas.calcMagicDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
+		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
+		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		int drain = 0;
 		int cp = (int) target.getCurrentCp();
@@ -84,7 +85,7 @@ public class HpDrain extends L2Effect
 			drain = damage;
 		}
 		
-		double hpAdd = (calc() * drain);
+		double hpAdd = (getValue() * drain);
 		double hpFinal = ((activeChar.getCurrentHp() + hpAdd) > activeChar.getMaxHp() ? activeChar.getMaxHp() : (activeChar.getCurrentHp() + hpAdd));
 		activeChar.setCurrentHp(hpFinal);
 		
@@ -97,8 +98,8 @@ public class HpDrain extends L2Effect
 				target.breakCast();
 			}
 			activeChar.sendDamageMessage(target, damage, mcrit, false, false);
-			target.reduceCurrentHp(damage, activeChar, getSkill());
-			target.notifyDamageReceived(damage, activeChar, getSkill(), mcrit);
+			target.reduceCurrentHp(damage, activeChar, info.getSkill());
+			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit);
 		}
 		return true;
 	}

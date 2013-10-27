@@ -73,20 +73,20 @@ public class Q10273_GoodDayToFly extends Quest
 				break;
 			case "32557-09.html":
 				st.set("transform", "1");
-				AURA_BIRD_FALCON.getSkill().getEffects(player, player);
+				AURA_BIRD_FALCON.getSkill().applyEffects(player, null, player, null, false, false);
 				break;
 			case "32557-10.html":
 				st.set("transform", "2");
-				AURA_BIRD_OWL.getSkill().getEffects(player, player);
+				AURA_BIRD_OWL.getSkill().applyEffects(player, null, player, null, false, false);
 				break;
 			case "32557-13.html":
 				switch (st.getInt("transform"))
 				{
 					case 1:
-						AURA_BIRD_FALCON.getSkill().getEffects(player, player);
+						AURA_BIRD_FALCON.getSkill().applyEffects(player, null, player, null, false, false);
 						break;
 					case 2:
-						AURA_BIRD_OWL.getSkill().getEffects(player, player);
+						AURA_BIRD_OWL.getSkill().applyEffects(player, null, player, null, false, false);
 						break;
 				}
 				break;

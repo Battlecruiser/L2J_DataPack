@@ -18,30 +18,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Cp Heal Over Time effect implementation.
  */
-public class CpHealOverTime extends L2Effect
+public final class CpHealOverTime extends AbstractEffect
 {
-	public CpHealOverTime(Env env, EffectTemplate template)
+	public CpHealOverTime(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public CpHealOverTime(Env env, L2Effect effect)
-	{
-		super(env, effect);
-	}
-	
-	@Override
-	public boolean canBeStolen()
-	{
-		return true;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -51,15 +41,15 @@ public class CpHealOverTime extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double cp = getEffected().getCurrentCp();
-		double maxcp = getEffected().getMaxRecoverableCp();
+		double cp = info.getEffected().getCurrentCp();
+		double maxcp = info.getEffected().getMaxRecoverableCp();
 		
 		// Not needed to set the CP and send update packet if player is already at max CP
 		if (cp >= maxcp)
@@ -67,9 +57,9 @@ public class CpHealOverTime extends L2Effect
 			return false;
 		}
 		
-		cp += calc() * getEffectTemplate().getTotalTickCount();
+		cp += getValue() * getTicks();
 		cp = Math.min(cp, maxcp);
-		getEffected().setCurrentCp(cp);
-		return getSkill().isToggle();
+		info.getEffected().setCurrentCp(cp);
+		return true;
 	}
 }

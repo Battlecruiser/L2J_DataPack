@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.skills.L2SkillType;
 import com.l2jserver.gameserver.model.stats.Formulas;
@@ -64,11 +63,11 @@ public class Dummy implements ISkillHandler
 					{
 						if (Formulas.calcBuffDebuffReflection(target, skill))
 						{
-							skill.getEffects(target, activeChar);
+							skill.applyEffects(target, null, activeChar, null, false, false);
 						}
 						else
 						{
-							skill.getEffects(activeChar, target);
+							skill.applyEffects(activeChar, null, target, null, false, false);
 						}
 					}
 				}
@@ -79,13 +78,11 @@ public class Dummy implements ISkillHandler
 		// Self Effect
 		if (skill.hasSelfEffects())
 		{
-			final L2Effect effect = activeChar.getFirstEffect(skill.getId());
-			if ((effect != null) && effect.isSelfEffect())
+			if (activeChar.isAffectedBySkill(skill.getId()))
 			{
-				// Replace old effect with new one.
-				effect.exit();
+				activeChar.stopSkillEffects(true, skill.getId());
 			}
-			skill.getEffectsSelf(activeChar);
+			skill.applyEffects(activeChar, null, activeChar, null, true, false);
 		}
 		
 		if (skill.useSpiritShot())

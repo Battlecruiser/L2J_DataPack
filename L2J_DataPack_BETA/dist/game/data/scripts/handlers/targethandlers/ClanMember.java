@@ -59,7 +59,7 @@ public class ClanMember implements ITargetTypeHandler
 					{
 						continue;
 					}
-					if (((L2Npc) newTarget).getFirstEffect(skill) != null)
+					if (((L2Npc) newTarget).isAffectedBySkill(skill.getId()))
 					{
 						continue;
 					}

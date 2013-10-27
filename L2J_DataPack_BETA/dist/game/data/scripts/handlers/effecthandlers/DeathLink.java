@@ -19,11 +19,12 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Formulas;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.util.Rnd;
@@ -32,11 +33,11 @@ import com.l2jserver.util.Rnd;
  * Death Link effect implementation.
  * @author Adry_85
  */
-public class DeathLink extends L2Effect
+public final class DeathLink extends AbstractEffect
 {
-	public DeathLink(Env env, EffectTemplate template)
+	public DeathLink(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -52,27 +53,27 @@ public class DeathLink extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
 		
-		boolean sps = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
-		boolean bss = getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
+		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
+		boolean bss = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
 		{
 			target.stopFakeDeath(true);
 		}
 		
-		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, getSkill()));
-		final byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-		int damage = (int) Formulas.calcMagicDam(activeChar, target, getSkill(), shld, sps, bss, mcrit);
+		final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, info.getSkill()));
+		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		int damage = (int) Formulas.calcMagicDam(activeChar, target, info.getSkill(), shld, sps, bss, mcrit);
 		
 		if (damage > 0)
 		{
@@ -84,20 +85,20 @@ public class DeathLink extends L2Effect
 			}
 			
 			// Shield Deflect Magic: Reflect all damage on caster.
-			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, getSkill()) > Rnd.get(100))
+			if (target.getStat().calcStat(Stats.VENGEANCE_SKILL_MAGIC_DAMAGE, 0, target, info.getSkill()) > Rnd.get(100))
 			{
-				activeChar.reduceCurrentHp(damage, target, getSkill());
-				activeChar.notifyDamageReceived(damage, target, getSkill(), mcrit);
+				activeChar.reduceCurrentHp(damage, target, info.getSkill());
+				activeChar.notifyDamageReceived(damage, target, info.getSkill(), mcrit);
 			}
 			else
 			{
-				target.reduceCurrentHp(damage, activeChar, getSkill());
-				target.notifyDamageReceived(damage, activeChar, getSkill(), mcrit);
+				target.reduceCurrentHp(damage, activeChar, info.getSkill());
+				target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit);
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}
 		
-		if (getSkill().isSuicideAttack())
+		if (info.getSkill().isSuicideAttack())
 		{
 			activeChar.doDie(activeChar);
 		}

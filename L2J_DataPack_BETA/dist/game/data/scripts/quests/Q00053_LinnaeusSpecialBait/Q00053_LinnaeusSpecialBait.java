@@ -22,10 +22,10 @@ import com.l2jserver.Config;
 import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Linnaeus Special Bait (53)<br>
@@ -146,10 +146,10 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		if (!ALT_IGNORE_FISHING)
 		{
 			level = player.getSkillLevel(1315);
-			L2Effect effect = player.getFirstEffect(2274);
-			if (effect != null)
+			final BuffInfo info = player.getEffectList().getBuffInfoBySkillId(2274);
+			if (info != null)
 			{
-				level = (int) effect.getSkill().getPower();
+				level = (int) info.getSkill().getPower();
 			}
 		}
 		return level;

@@ -35,10 +35,11 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
+import com.l2jserver.gameserver.model.interfaces.IL2Procedure;
 import com.l2jserver.gameserver.model.quest.Quest;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
@@ -178,7 +179,7 @@ public class Kamaloka extends Quest
 	/*
 	 * List of buffs NOT removed on enter from player and pet On retail only newbie guide buffs not removed CAUTION: array must be sorted in ascension order !
 	 */
-	private static final int[] BUFFS_WHITELIST =
+	protected static final int[] BUFFS_WHITELIST =
 	{
 		4322,
 		4323,
@@ -1259,6 +1260,19 @@ public class Kamaloka extends Quest
 		31340
 	};
 	
+	private static final IL2Procedure<BuffInfo> REMOVE_BUFFS = new IL2Procedure<BuffInfo>()
+	{
+		@Override
+		public boolean execute(BuffInfo info)
+		{
+			if ((info != null) && !info.getSkill().isStayAfterDeath() && (Arrays.binarySearch(BUFFS_WHITELIST, info.getSkill().getId()) < 0))
+			{
+				info.getEffected().getEffectList().stopSkillEffects(true, info.getSkill());
+			}
+			return true;
+		}
+	};
+	
 	protected class KamaWorld extends InstanceWorld
 	{
 		public int index; // 0-18 index of the kama type in arrays
@@ -1354,42 +1368,11 @@ public class Kamaloka extends Quest
 	 */
 	private static final void removeBuffs(L2Character ch)
 	{
-		for (L2Effect e : ch.getAllEffects())
+		ch.getEffectList().forEach(REMOVE_BUFFS, false);
+		
+		if (ch.hasSummon())
 		{
-			if (e == null)
-			{
-				continue;
-			}
-			L2Skill skill = e.getSkill();
-			if (skill.isDebuff() || skill.isStayAfterDeath())
-			{
-				continue;
-			}
-			if (Arrays.binarySearch(BUFFS_WHITELIST, skill.getId()) >= 0)
-			{
-				continue;
-			}
-			e.exit();
-		}
-		if (ch.getSummon() != null)
-		{
-			for (L2Effect e : ch.getSummon().getAllEffects())
-			{
-				if (e == null)
-				{
-					continue;
-				}
-				L2Skill skill = e.getSkill();
-				if (skill.isDebuff() || skill.isStayAfterDeath())
-				{
-					continue;
-				}
-				if (Arrays.binarySearch(BUFFS_WHITELIST, skill.getId()) >= 0)
-				{
-					continue;
-				}
-				e.exit();
-			}
+			ch.getSummon().getEffectList().forEach(REMOVE_BUFFS, false);
 		}
 	}
 	
@@ -1710,7 +1693,7 @@ public class Kamaloka extends Quest
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.getEffects(world.boss, world.boss);
+								skill.applyEffects(world.boss, null, world.boss, null, false, false);
 							}
 						}
 					}
@@ -1751,7 +1734,7 @@ public class Kamaloka extends Quest
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.getEffects(world.boss, world.boss);
+								skill.applyEffects(world.boss, null, world.boss, null, false, false);
 							}
 						}
 					}
@@ -1774,7 +1757,7 @@ public class Kamaloka extends Quest
 						final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 						if (skill != null)
 						{
-							skill.getEffects(world.boss, world.boss);
+							skill.applyEffects(world.boss, null, world.boss, null, false, false);
 						}
 					}
 				}

@@ -19,24 +19,25 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.instancemanager.MapRegionManager;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.TeleportWhereType;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Escape effect implementation.
  * @author Adry_85
  */
-public class Escape extends L2Effect
+public final class Escape extends AbstractEffect
 {
 	private final TeleportWhereType _escapeType;
 	
-	public Escape(Env env, EffectTemplate template)
+	public Escape(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_escapeType = template.getParameters().getEnum("escapeType", TeleportWhereType.class, null);
+		super(attachCond, applyCond, set, params);
+		_escapeType = getParameters().getEnum("escapeType", TeleportWhereType.class, null);
 	}
 	
 	@Override
@@ -52,15 +53,15 @@ public class Escape extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
 		if (_escapeType == null)
 		{
 			return false;
 		}
-		getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(getEffected(), _escapeType), true);
-		getEffected().getActingPlayer().setIsIn7sDungeon(false);
-		getEffected().setInstanceId(0);
+		info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
+		info.getEffected().getActingPlayer().setIsIn7sDungeon(false);
+		info.getEffected().setInstanceId(0);
 		return true;
 	}
 }

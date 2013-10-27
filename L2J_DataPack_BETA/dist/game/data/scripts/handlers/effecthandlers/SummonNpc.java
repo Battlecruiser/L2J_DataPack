@@ -21,16 +21,16 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2EffectPointInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.util.Point3D;
 import com.l2jserver.util.Rnd;
 
@@ -38,7 +38,7 @@ import com.l2jserver.util.Rnd;
  * Summon Npc effect implementation.
  * @author Zoey76
  */
-public class SummonNpc extends L2Effect
+public final class SummonNpc extends AbstractEffect
 {
 	private final int _despawnDelay;
 	private final int _npcId;
@@ -46,20 +46,14 @@ public class SummonNpc extends L2Effect
 	private final boolean _randomOffset;
 	private final boolean _isSummonSpawn;
 	
-	public SummonNpc(Env env, EffectTemplate template)
+	public SummonNpc(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_despawnDelay = template.getParameters().getInt("despawnDelay", 20000);
-		_npcId = template.getParameters().getInt("npcId", 0);
-		_npcCount = template.getParameters().getInt("npcCount", 1);
-		_randomOffset = template.getParameters().getBoolean("randomOffset", false);
-		_isSummonSpawn = template.getParameters().getBoolean("isSummonSpawn", false);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
+		_despawnDelay = getParameters().getInt("despawnDelay", 20000);
+		_npcId = getParameters().getInt("npcId", 0);
+		_npcCount = getParameters().getInt("npcCount", 1);
+		_randomOffset = getParameters().getBoolean("randomOffset", false);
+		_isSummonSpawn = getParameters().getBoolean("isSummonSpawn", false);
 	}
 	
 	@Override
@@ -69,20 +63,20 @@ public class SummonNpc extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffected() == null) || !getEffected().isPlayer() || getEffected().isAlikeDead() || getEffected().getActingPlayer().inObserverMode())
+		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
 		{
 			return false;
 		}
 		
 		if ((_npcId <= 0) || (_npcCount <= 0))
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC Id or count skill Id: " + getSkill().getId());
+			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + info.getSkill().getId());
 			return false;
 		}
 		
-		final L2PcInstance player = getEffected().getActingPlayer();
+		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isMounted())
 		{
 			return false;
@@ -91,7 +85,7 @@ public class SummonNpc extends L2Effect
 		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC Id: " + _npcId + ", skill Id:" + getSkill().getId());
+			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + info.getSkill().getId());
 			return false;
 		}
 		
@@ -118,7 +112,7 @@ public class SummonNpc extends L2Effect
 				int y = player.getY();
 				int z = player.getZ();
 				
-				if (getSkill().getTargetType() == L2TargetType.GROUND)
+				if (info.getSkill().getTargetType() == L2TargetType.GROUND)
 				{
 					final Point3D wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
 					if (wordPosition != null)
@@ -128,6 +122,7 @@ public class SummonNpc extends L2Effect
 						z = wordPosition.getZ();
 					}
 				}
+				
 				effectPoint.setIsInvul(true);
 				effectPoint.setSummoner(player);
 				effectPoint.spawnMe(x, y, z);

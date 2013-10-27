@@ -121,7 +121,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case TANTA_SUMMONER:
-				if (npc.getFirstEffect(DEMOTIVATION_HEX.getSkillId()) == null)
+				if (!npc.isAffectedBySkill(DEMOTIVATION_HEX.getSkillId()))
 				{
 					npc.doCast(DEMOTIVATION_HEX.getSkill());
 				}

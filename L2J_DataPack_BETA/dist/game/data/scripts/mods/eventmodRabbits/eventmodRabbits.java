@@ -217,7 +217,7 @@ public class eventmodRabbits extends Event
 				player.untransform();
 			}
 			
-			SkillTable.getInstance().getInfo(2428, 1).getEffects(npc, player);
+			SkillTable.getInstance().getInfo(2428, 1).applyEffects(npc, null, player, null, false, false);
 			
 			return null;
 		}
@@ -270,7 +270,7 @@ public class eventmodRabbits extends Event
 		// So... Apply raid curse if player don't use skill on chest but attack it
 		if (_isactive && (npc.getId() == _npc_chest))
 		{
-			SkillTable.getInstance().getInfo(4515, 1).getEffects(npc, attacker);
+			SkillTable.getInstance().getInfo(4515, 1).applyEffects(npc, null, attacker, null, false, false);
 		}
 		
 		return super.onAttack(npc, attacker, damage, isSummon);

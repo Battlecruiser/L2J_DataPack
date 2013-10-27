@@ -18,27 +18,21 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Attackable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Add Hate effect implementation.
  * @author Adry_85
  */
-public class AddHate extends L2Effect
+public final class AddHate extends AbstractEffect
 {
-	public AddHate(Env env, EffectTemplate template)
+	public AddHate(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -48,20 +42,21 @@ public class AddHate extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (!getEffected().isL2Attackable())
+		if (!info.getEffected().isL2Attackable())
 		{
 			return false;
 		}
 		
-		if (calc() > 0)
+		final double val = getValue();
+		if (val > 0)
 		{
-			((L2Attackable) getEffected()).addDamageHate(getEffector(), 0, (int) calc());
+			((L2Attackable) info.getEffected()).addDamageHate(info.getEffector(), 0, (int) val);
 		}
-		else if (calc() < 0)
+		else if (val < 0)
 		{
-			((L2Attackable) getEffected()).reduceHate(getEffector(), (int) -calc());
+			((L2Attackable) info.getEffected()).reduceHate(info.getEffector(), (int) -val);
 		}
 		return true;
 	}

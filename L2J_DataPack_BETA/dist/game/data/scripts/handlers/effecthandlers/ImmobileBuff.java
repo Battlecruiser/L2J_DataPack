@@ -18,25 +18,20 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Immobile Buff effect implementation.
  * @author mkizub
  */
-public class ImmobileBuff extends Buff
+public final class ImmobileBuff extends Buff
 {
-	public ImmobileBuff(Env env, EffectTemplate template)
+	public ImmobileBuff(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public ImmobileBuff(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -46,16 +41,15 @@ public class ImmobileBuff extends Buff
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		getEffected().setIsImmobilized(false);
-		super.onExit();
+		info.getEffected().setIsImmobilized(false);
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		getEffected().setIsImmobilized(true);
-		return super.onStart();
+		info.getEffected().setIsImmobilized(true);
+		return true;
 	}
 }

@@ -18,26 +18,22 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Playable;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Transfer Damage effect implementation.
  * @author UnAfraid
  */
-public class TransferDamage extends L2Effect
+public final class TransferDamage extends AbstractEffect
 {
-	public TransferDamage(Env env, EffectTemplate template)
+	public TransferDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	public TransferDamage(Env env, L2Effect effect)
-	{
-		super(env, effect);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -47,20 +43,20 @@ public class TransferDamage extends L2Effect
 	}
 	
 	@Override
-	public void onExit()
+	public void onExit(BuffInfo info)
 	{
-		if (getEffected().isPlayable() && getEffector().isPlayer())
+		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
 		{
-			((L2Playable) getEffected()).setTransferDamageTo(null);
+			((L2Playable) info.getEffected()).setTransferDamageTo(null);
 		}
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayable() && getEffector().isPlayer())
+		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
 		{
-			((L2Playable) getEffected()).setTransferDamageTo(getEffector().getActingPlayer());
+			((L2Playable) info.getEffected()).setTransferDamageTo(info.getEffector().getActingPlayer());
 		}
 		return true;
 	}

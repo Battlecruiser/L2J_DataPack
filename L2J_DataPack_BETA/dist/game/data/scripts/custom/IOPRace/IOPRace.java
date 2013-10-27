@@ -98,10 +98,10 @@ public class IOPRace extends Quest
 			L2Skill skill = SkillTable.getInstance().getInfo(5239, 5);
 			if (skill != null)
 			{
-				skill.getEffects(npc, player);
+				skill.applyEffects(npc, null, player, null, false, false);
 				if (player.hasSummon())
 				{
-					skill.getEffects(npc, player.getSummon());
+					skill.applyEffects(npc, null, player.getSummon(), null, false, false);
 				}
 			}
 			

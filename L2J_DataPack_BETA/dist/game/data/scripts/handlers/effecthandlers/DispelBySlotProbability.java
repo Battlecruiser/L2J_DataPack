@@ -23,28 +23,31 @@ import java.util.EnumMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.CharEffectList;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.skills.AbnormalType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.util.Rnd;
 
 /**
  * Dispel By Slot Probability effect implementation.
- * @author Adry_85
+ * @author Adry_85, Zoey76
  */
-public class DispelBySlotProbability extends L2Effect
+public final class DispelBySlotProbability extends AbstractEffect
 {
 	private final String _dispel;
-	private final Map<AbnormalType, Byte> _dispelAbnormals;
+	private final Map<AbnormalType, Short> _dispelAbnormals;
 	private final int _rate;
 	
-	public DispelBySlotProbability(Env env, EffectTemplate template)
+	public DispelBySlotProbability(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_dispel = template.getParameters().getString("dispel", null);
-		_rate = template.getParameters().getInt("rate", 0);
+		super(attachCond, applyCond, set, params);
+		_dispel = getParameters().getString("dispel", null);
+		_rate = getParameters().getInt("rate", 0);
 		if ((_dispel != null) && !_dispel.isEmpty())
 		{
 			_dispelAbnormals = new EnumMap<>(AbnormalType.class);
@@ -52,12 +55,12 @@ public class DispelBySlotProbability extends L2Effect
 			{
 				String[] ngt = ngtStack.split(",");
 				final AbnormalType type = AbnormalType.getAbnormalType(ngt[0]);
-				_dispelAbnormals.put(type, Byte.MAX_VALUE);
+				_dispelAbnormals.put(type, Short.MAX_VALUE);
 			}
 		}
 		else
 		{
-			_dispelAbnormals = Collections.<AbnormalType, Byte> emptyMap();
+			_dispelAbnormals = Collections.<AbnormalType, Short> emptyMap();
 		}
 	}
 	
@@ -74,25 +77,40 @@ public class DispelBySlotProbability extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
 		if (_dispelAbnormals.isEmpty())
 		{
 			return false;
 		}
 		
-		for (L2Effect effect : getEffected().getAllEffects())
+		final L2Character effected = info.getEffected();
+		final CharEffectList effectList = effected.getEffectList();
+		// There is no need to iterate over all buffs,
+		// Just iterate once over all slots to dispel and get the buff with that abnormal if exists,
+		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
+		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
 		{
-			if (effect == null)
+			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());
+			if (toDispel == null)
 			{
 				continue;
 			}
 			
-			for (Entry<AbnormalType, Byte> negate : _dispelAbnormals.entrySet())
+			if ((Rnd.get(100) < _rate))
 			{
-				if ((effect.getSkill().getAbnormalType() == negate.getKey()) && (Rnd.get(100) < _rate))
+				// Dispel transformations (buff and by GM)
+				if ((entry.getKey() == AbnormalType.TRANSFORM))
 				{
-					effect.exit();
+					if (effected.isTransformed() || (effected.isPlayer() || (entry.getValue() == effected.getActingPlayer().getTransformationId()) || (entry.getValue() < 0)))
+					{
+						info.getEffected().stopTransformation(true);
+					}
+				}
+				
+				if ((toDispel.getSkill().getAbnormalType() == entry.getKey()) && (entry.getValue() >= toDispel.getSkill().getAbnormalLvl()))
+				{
+					effectList.stopSkillEffects(true, entry.getKey());
 				}
 			}
 		}

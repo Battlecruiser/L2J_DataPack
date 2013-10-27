@@ -38,9 +38,9 @@ import com.l2jserver.gameserver.instancemanager.SiegeManager;
 import com.l2jserver.gameserver.model.L2World;
 import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.AbnormalEffect;
 import com.l2jserver.gameserver.model.entity.L2Event;
 import com.l2jserver.gameserver.model.entity.TvTEvent;
+import com.l2jserver.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jserver.gameserver.model.skills.L2Skill;
 import com.l2jserver.gameserver.model.zone.ZoneId;
 import com.l2jserver.gameserver.network.SystemMessageId;
@@ -48,10 +48,10 @@ import com.l2jserver.gameserver.network.serverpackets.ActionFailed;
 import com.l2jserver.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jserver.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
-import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.util.Broadcast;
 
 /**
+ * Wedding voiced commands handler.
  * @author evill33t
  */
 public class Wedding implements IVoicedCommandHandler
@@ -150,7 +150,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You are already engaged.");
 			if (Config.L2JMOD_WEDDING_PUNISH_INFIDELITY)
 			{
-				activeChar.startAbnormalEffect(AbnormalEffect.BIG_HEAD); // give player a Big Head
+				activeChar.startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD); // give player a Big Head
 				// lets recycle the sevensigns debuffs
 				int skillId;
 				
@@ -171,12 +171,9 @@ public class Wedding implements IVoicedCommandHandler
 				}
 				
 				final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
-				if (activeChar.getFirstEffect(skill) == null)
+				if (!activeChar.isAffectedBySkill(skillId))
 				{
-					skill.getEffects(activeChar, activeChar);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
-					sm.addSkillName(skill);
-					activeChar.sendPacket(sm);
+					skill.applyEffects(activeChar, null, activeChar, null, false, false);
 				}
 			}
 			return false;

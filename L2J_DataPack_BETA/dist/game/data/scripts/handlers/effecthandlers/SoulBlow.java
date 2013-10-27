@@ -19,33 +19,34 @@
 package handlers.effecthandlers;
 
 import com.l2jserver.gameserver.enums.ShotType;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.BaseStats;
-import com.l2jserver.gameserver.model.stats.Env;
 import com.l2jserver.gameserver.model.stats.Formulas;
 
 /**
  * Soul Blow effect implementation.
  * @author Adry_85
  */
-public class SoulBlow extends L2Effect
+public final class SoulBlow extends AbstractEffect
 {
-	public SoulBlow(Env env, EffectTemplate template)
+	public SoulBlow(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	/**
 	 * If is not evaded and blow lands.
 	 */
 	@Override
-	public boolean calcSuccess()
+	public boolean calcSuccess(BuffInfo info)
 	{
-		return !Formulas.calcPhysicalSkillEvasion(getEffector(), getEffected(), getSkill()) && Formulas.calcBlowSuccess(getEffector(), getEffected(), getSkill());
+		return !Formulas.calcPhysicalSkillEvasion(info.getEffector(), info.getEffected(), info.getSkill()) && Formulas.calcBlowSuccess(info.getEffector(), info.getEffected(), info.getSkill());
 	}
 	
 	@Override
@@ -61,35 +62,35 @@ public class SoulBlow extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Character target = getEffected();
-		L2Character activeChar = getEffector();
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
 			return false;
 		}
 		
-		boolean ss = getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
-		byte shld = Formulas.calcShldUse(activeChar, target, getSkill());
-		double damage = (int) Formulas.calcBlowDamage(activeChar, target, getSkill(), shld, ss);
-		if ((getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
+		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
+		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
+		double damage = (int) Formulas.calcBlowDamage(activeChar, target, info.getSkill(), shld, ss);
+		if ((info.getSkill().getMaxSoulConsumeCount() > 0) && activeChar.isPlayer())
 		{
 			// Souls Formula (each soul increase +4%)
-			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : getSkill().getMaxSoulConsumeCount();
+			int chargedSouls = (activeChar.getActingPlayer().getChargedSouls() <= info.getSkill().getMaxSoulConsumeCount()) ? activeChar.getActingPlayer().getChargedSouls() : info.getSkill().getMaxSoulConsumeCount();
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		
 		// Crit rate base crit rate for skill, modified with STR bonus
-		boolean crit = Formulas.calcCrit(getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
+		boolean crit = Formulas.calcCrit(info.getSkill().getBaseCritRate() * 10 * BaseStats.STR.calcBonus(activeChar), true, target);
 		if (crit)
 		{
 			damage *= 2;
 		}
 		
-		target.reduceCurrentHp(damage, activeChar, getSkill());
-		target.notifyDamageReceived(damage, activeChar, getSkill(), crit);
+		target.reduceCurrentHp(damage, activeChar, info.getSkill());
+		target.notifyDamageReceived(damage, activeChar, info.getSkill(), crit);
 		
 		// Manage attack or cast break of the target (calculating rate, sending message...)
 		if (!target.isRaid() && Formulas.calcAtkBreak(target, damage))
@@ -104,7 +105,7 @@ public class SoulBlow extends L2Effect
 			activePlayer.sendDamageMessage(target, (int) damage, false, true, false);
 		}
 		// Check if damage should be reflected
-		Formulas.calcDamageReflected(activeChar, target, getSkill(), true);
+		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
 		
 		return true;
 	}

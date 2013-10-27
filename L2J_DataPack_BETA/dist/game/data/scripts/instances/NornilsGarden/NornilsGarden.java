@@ -29,7 +29,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.L2Effect;
 import com.l2jserver.gameserver.model.entity.Instance;
 import com.l2jserver.gameserver.model.instancezone.InstanceWorld;
 import com.l2jserver.gameserver.model.quest.Quest;
@@ -196,38 +195,26 @@ public class NornilsGarden extends Quest
 	
 	private static final void removeBuffs(L2Character ch)
 	{
-		for (L2Effect e : ch.getAllEffects())
-		{
-			if (e == null)
-			{
-				continue;
-			}
-			L2Skill skill = e.getSkill();
-			if (skill.isDebuff() || skill.isStayAfterDeath())
-			{
-				continue;
-			}
-			e.exit();
-		}
+		ch.stopAllEffectsExceptThoseThatLastThroughDeath();
 	}
 	
 	private static final void giveBuffs(L2Character ch)
 	{
 		if (skill1 != null)
 		{
-			skill1.getEffects(ch, ch);
+			skill1.applyEffects(ch, null, ch, null, false, false);
 		}
 		if (skill2 != null)
 		{
-			skill2.getEffects(ch, ch);
+			skill2.applyEffects(ch, null, ch, null, false, false);
 		}
 		if (skill3 != null)
 		{
-			skill3.getEffects(ch, ch);
+			skill3.applyEffects(ch, null, ch, null, false, false);
 		}
 		if (skill4 != null)
 		{
-			skill4.getEffects(ch, ch);
+			skill4.applyEffects(ch, null, ch, null, false, false);
 		}
 	}
 	

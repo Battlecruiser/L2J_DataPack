@@ -18,28 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.L2Party;
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Call Party effect implementation.
  * @author Adry_85
  */
-public class CallParty extends L2Effect
+public final class CallParty extends AbstractEffect
 {
-	public CallParty(Env env, EffectTemplate template)
+	public CallParty(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-	}
-	
-	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,18 +42,17 @@ public class CallParty extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		L2Party party = getEffector().getParty();
-		if (party != null)
+		if (info.getEffector().isInParty())
 		{
-			for (L2PcInstance partyMember : party.getMembers())
+			for (L2PcInstance partyMember : info.getEffector().getParty().getMembers())
 			{
-				if (CallPc.checkSummonTargetStatus(partyMember, getEffector().getActingPlayer()))
+				if (CallPc.checkSummonTargetStatus(partyMember, info.getEffector().getActingPlayer()))
 				{
-					if (getEffector() != partyMember)
+					if (info.getEffector() != partyMember)
 					{
-						partyMember.teleToLocation(getEffector().getLocation(), true);
+						partyMember.teleToLocation(info.getEffector().getLocation(), true);
 					}
 				}
 			}

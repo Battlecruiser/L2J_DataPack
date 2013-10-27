@@ -18,20 +18,21 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 
 /**
  * Static Damage effect implementation.
  * @author Adry_85
  */
-public class StaticDamage extends L2Effect
+public final class StaticDamage extends AbstractEffect
 {
-	public StaticDamage(Env env, EffectTemplate template)
+	public StaticDamage(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -47,19 +48,19 @@ public class StaticDamage extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffector().isAlikeDead())
+		if (info.getEffector().isAlikeDead())
 		{
 			return false;
 		}
 		
-		getEffected().reduceCurrentHp(calc(), getEffector(), getSkill());
-		getEffected().notifyDamageReceived(calc(), getEffector(), getSkill(), false);
+		info.getEffected().reduceCurrentHp(getValue(), info.getEffector(), info.getSkill());
+		info.getEffected().notifyDamageReceived(getValue(), info.getEffector(), info.getSkill(), false);
 		
-		if (getEffector().isPlayer())
+		if (info.getEffector().isPlayer())
 		{
-			getEffector().sendDamageMessage(getEffected(), (int) calc(), false, false, false);
+			info.getEffector().sendDamageMessage(info.getEffected(), (int) getValue(), false, false, false);
 		}
 		return true;
 	}

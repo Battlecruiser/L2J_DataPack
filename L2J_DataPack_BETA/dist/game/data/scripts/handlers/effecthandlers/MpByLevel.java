@@ -18,10 +18,11 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 
@@ -29,11 +30,11 @@ import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
  * Mp By Level effect implementation.
  * @author Zoey76
  */
-public class MpByLevel extends L2Effect
+public final class MpByLevel extends AbstractEffect
 {
-	public MpByLevel(Env env, EffectTemplate template)
+	public MpByLevel(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
+		super(attachCond, applyCond, set, params);
 	}
 	
 	@Override
@@ -49,21 +50,21 @@ public class MpByLevel extends L2Effect
 	}
 	
 	@Override
-	public boolean onStart()
+	public boolean onStart(BuffInfo info)
 	{
-		if ((getEffector() == null) || (getEffected() == null))
+		if ((info.getEffector() == null) || (info.getEffected() == null))
 		{
 			return false;
 		}
 		// Calculation
-		final int abs = (int) calc();
-		final double absorb = ((getEffected().getCurrentMp() + abs) > getEffected().getMaxMp() ? getEffected().getMaxMp() : (getEffected().getCurrentMp() + abs));
-		final int restored = (int) (absorb - getEffected().getCurrentMp());
-		getEffected().setCurrentMp(absorb);
+		final int abs = (int) getValue();
+		final double absorb = ((info.getEffected().getCurrentMp() + abs) > info.getEffected().getMaxMp() ? info.getEffected().getMaxMp() : (info.getEffected().getCurrentMp() + abs));
+		final int restored = (int) (absorb - info.getEffected().getCurrentMp());
+		info.getEffected().setCurrentMp(absorb);
 		// System message
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 		sm.addNumber(restored);
-		getEffected().sendPacket(sm);
+		info.getEffected().sendPacket(sm);
 		return true;
 	}
 }

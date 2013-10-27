@@ -18,24 +18,25 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
+import com.l2jserver.gameserver.model.StatsSet;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.network.SystemMessageId;
 
 /**
  * Dam Over Time Percent effect implementation.
  * @author Adry_85
  */
-public class DamOverTimePercent extends L2Effect
+public final class DamOverTimePercent extends AbstractEffect
 {
 	private final boolean _canKill;
 	
-	public DamOverTimePercent(Env env, EffectTemplate template)
+	public DamOverTimePercent(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_canKill = template.hasParameters() && template.getParameters().getBoolean("canKill", false);
+		super(attachCond, applyCond, set, params);
+		_canKill = hasParameters() && getParameters().getBoolean("canKill", false);
 	}
 	
 	@Override
@@ -45,19 +46,19 @@ public class DamOverTimePercent extends L2Effect
 	}
 	
 	@Override
-	public boolean onActionTime()
+	public boolean onActionTime(BuffInfo info)
 	{
-		if (getEffected().isDead())
+		if (info.getEffected().isDead())
 		{
 			return false;
 		}
 		
-		double damage = getEffected().getCurrentHp() * calc() * getEffectTemplate().getTotalTickCount();
-		if (damage >= (getEffected().getCurrentHp() - 1))
+		double damage = info.getEffected().getCurrentHp() * getValue() * getTicks();
+		if (damage >= (info.getEffected().getCurrentHp() - 1))
 		{
-			if (getSkill().isToggle())
+			if (info.getSkill().isToggle())
 			{
-				getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
+				info.getEffected().sendPacket(SystemMessageId.SKILL_REMOVED_DUE_LACK_HP);
 				return false;
 			}
 			
@@ -65,17 +66,17 @@ public class DamOverTimePercent extends L2Effect
 			if (!_canKill)
 			{
 				// Fix for players dying by DOTs if HP < 1 since reduceCurrentHP method will kill them
-				if (getEffected().getCurrentHp() <= 1)
+				if (info.getEffected().getCurrentHp() <= 1)
 				{
-					return getSkill().isToggle();
+					return info.getSkill().isToggle();
 				}
 				
-				damage = getEffected().getCurrentHp() - 1;
+				damage = info.getEffected().getCurrentHp() - 1;
 			}
 		}
-		getEffected().reduceCurrentHpByDOT(damage, getEffector(), getSkill());
-		getEffected().notifyDamageReceived(damage, getEffector(), getSkill(), false);
+		info.getEffected().reduceCurrentHpByDOT(damage, info.getEffector(), info.getSkill());
+		info.getEffected().notifyDamageReceived(damage, info.getEffector(), info.getSkill(), false);
 		
-		return getSkill().isToggle();
+		return info.getSkill().isToggle();
 	}
 }

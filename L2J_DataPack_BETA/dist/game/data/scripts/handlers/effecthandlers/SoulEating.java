@@ -18,14 +18,14 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.events.listeners.IExperienceReceivedEventListener;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jserver.gameserver.model.effects.EffectTemplate;
-import com.l2jserver.gameserver.model.effects.L2Effect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
-import com.l2jserver.gameserver.model.stats.Env;
+import com.l2jserver.gameserver.model.conditions.Condition;
+import com.l2jserver.gameserver.model.effects.AbstractEffect;
+import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.stats.Stats;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.serverpackets.ExSpawnEmitter;
@@ -34,34 +34,32 @@ import com.l2jserver.gameserver.network.serverpackets.ExSpawnEmitter;
  * Soul Eating effect implementation.
  * @author UnAfraid
  */
-public final class SoulEating extends L2Effect implements IExperienceReceivedEventListener
+public final class SoulEating extends AbstractEffect implements IExperienceReceivedEventListener
 {
 	private final int _expNeeded;
 	
-	public SoulEating(Env env, EffectTemplate template)
+	public SoulEating(Condition attachCond, Condition applyCond, StatsSet set, StatsSet params)
 	{
-		super(env, template);
-		_expNeeded = template.getParameters().getInt("expNeeded");
-	}
-	
-	public SoulEating(Env env, L2Effect effect)
-	{
-		super(env, effect);
-		_expNeeded = effect.getEffectTemplate().getParameters().getInt("expNeeded");
+		super(attachCond, applyCond, set, params);
+		_expNeeded = getParameters().getInt("expNeeded");
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
+	public void onExit(BuffInfo info)
 	{
-		return L2EffectType.NONE;
+		if (info.getEffected().isPlayer())
+		{
+			info.getEffected().getEvents().unregisterListener(this);
+		}
 	}
 	
 	@Override
 	public boolean onExperienceReceived(L2Playable playable, long exp)
 	{
-		final L2PcInstance player = getEffected().isPlayer() ? getEffected().getActingPlayer() : null;
-		if ((player != null) && (exp >= _expNeeded))
+		// TODO: Verify logic.
+		if (playable.isPlayer() && (exp >= _expNeeded))
 		{
+			final L2PcInstance player = playable.getActingPlayer();
 			final int maxSouls = (int) player.calcStat(Stats.MAX_SOULS, 0, null, null);
 			if (player.getChargedSouls() >= maxSouls)
 			{
@@ -81,22 +79,12 @@ public final class SoulEating extends L2Effect implements IExperienceReceivedEve
 	}
 	
 	@Override
-	public void onExit()
+	public boolean onStart(BuffInfo info)
 	{
-		if (getEffected().isPlayer())
+		if (info.getEffected().isPlayer())
 		{
-			getEffected().getEvents().unregisterListener(this);
+			info.getEffected().getEvents().registerListener(this);
 		}
-		super.onExit();
-	}
-	
-	@Override
-	public boolean onStart()
-	{
-		if (getEffected().isPlayer())
-		{
-			getEffected().getEvents().registerListener(this);
-		}
-		return super.onStart();
+		return true;
 	}
 }
