@@ -51,28 +51,17 @@ public final class DefenceTrait extends AbstractEffect
 		{
 			try
 			{
-				try
+				final TraitType traitType = TraitType.valueOf(param.getKey());
+				final float value = Float.parseFloat((String) param.getValue());
+				if (value == 0)
 				{
-					final TraitType traitType = TraitType.valueOf(param.getKey());
-					final float value = Float.parseFloat((String) param.getValue());
-					if (value == 0)
-					{
-						continue;
-					}
-					_defenceTraits.put(traitType, (value + 100) / 100);
+					continue;
 				}
-				catch (NumberFormatException e)
-				{
-					_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
-				}
-				catch (Exception e)
-				{
-					_log.warning(getClass().getSimpleName() + ": value of L2TraitType enum required but found: " + param.getValue());
-				}
+				_defenceTraits.put(traitType, (value + 100) / 100);
 			}
 			catch (NumberFormatException e)
 			{
-				_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " enum must be int value " + param.getValue() + " found.");
+				_log.warning(getClass().getSimpleName() + ": value of " + param.getKey() + " must be float value " + param.getValue() + " found.");
 			}
 			catch (Exception e)
 			{
