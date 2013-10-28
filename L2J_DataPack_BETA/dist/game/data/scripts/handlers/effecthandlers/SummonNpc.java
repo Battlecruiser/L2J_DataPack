@@ -21,6 +21,7 @@ package handlers.effecthandlers;
 import com.l2jserver.gameserver.datatables.NpcTable;
 import com.l2jserver.gameserver.idfactory.IdFactory;
 import com.l2jserver.gameserver.model.L2Spawn;
+import com.l2jserver.gameserver.model.Location;
 import com.l2jserver.gameserver.model.StatsSet;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2DecoyInstance;
@@ -31,7 +32,6 @@ import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.targets.L2TargetType;
-import com.l2jserver.gameserver.util.Point3D;
 import com.l2jserver.util.Rnd;
 
 /**
@@ -114,7 +114,7 @@ public final class SummonNpc extends AbstractEffect
 				
 				if (info.getSkill().getTargetType() == L2TargetType.GROUND)
 				{
-					final Point3D wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
+					final Location wordPosition = player.getActingPlayer().getCurrentSkillWorldPosition();
 					if (wordPosition != null)
 					{
 						x = wordPosition.getX();
