@@ -141,10 +141,8 @@
 		<set name="mpConsume" val="62" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -170,10 +168,8 @@
 		<set name="mpConsume" val="62" />
 		<set name="mpInitialConsume" val="16" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
 		<set name="reuseDelay" val="8000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -869,9 +865,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff" abnormalVisualEffect="earthquake" />
@@ -1445,7 +1439,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="15000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Debuff">
@@ -1512,9 +1505,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="80" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">

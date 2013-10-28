@@ -17,9 +17,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -97,9 +95,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -178,9 +174,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="90" /> <!-- Base Land Rate -->
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="3" val="#mdot" />
@@ -768,9 +762,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
-		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -1156,7 +1148,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1357,8 +1348,6 @@
 		<set name="icon" val="icon.skill4267" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="power" val="0" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 	</skill>
@@ -1387,14 +1376,14 @@
 		<set name="icon" val="#icons" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="P" />
-		<set name="power" val="0" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="#rate" />
-			<mul order="0x30" stat="regMp" val="#rate" />
-			<mul order="0x30" stat="runSpd" val="#rateSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="#rate" />
+				<mul order="0x30" stat="regMp" val="#rate" />
+				<mul order="0x30" stat="runSpd" val="#rateSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4271" levels="8" name="Increase Force">

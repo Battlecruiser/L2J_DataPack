@@ -36,7 +36,6 @@ public class Continuous implements ISkillHandler
 	private static final L2SkillType[] SKILL_IDS =
 	{
 		L2SkillType.BUFF,
-		L2SkillType.DEBUFF,
 	};
 	
 	@Override
