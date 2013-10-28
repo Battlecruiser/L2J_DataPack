@@ -52,11 +52,11 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="83" />
-		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
-		<set name="power" val="80" /> <!-- Base Land Rate --> <!-- FIXME: Base Land Rate unconformed -->
+		<set name="isDebuff" val="true" />
+		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
+		<set name="activateRate" val="80" /> <!-- FIXME: Base Land Rate unconformed -->
 		<set name="reuseDelay" val="10000" /> <!-- FIXME: reuseDelay unconfirmed -->
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: Time value is unconfirmed -->
@@ -441,7 +441,6 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TargetCancel" />
@@ -773,7 +772,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="DEBUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
