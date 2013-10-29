@@ -28,13 +28,12 @@ import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Elrokian Hunter's Proof (111)
  * @author Adry_85
  */
-public class Q00111_ElrokianHuntersProof extends Quest
+public final class Q00111_ElrokianHuntersProof extends Quest
 {
 	// NPCs
 	private static final int MARQUEZ = 32113;
@@ -71,19 +70,19 @@ public class Q00111_ElrokianHuntersProof extends Quest
 		MOBS_DROP_CHANCES.put(22205, new ItemChanceHolder(DEINONYCHUS_BONE, 0.66, 11)); // deinonychus_s
 		MOBS_DROP_CHANCES.put(22220, new ItemChanceHolder(DEINONYCHUS_BONE, 0.32, 11)); // deinonychus_n
 		MOBS_DROP_CHANCES.put(22225, new ItemChanceHolder(DEINONYCHUS_BONE, 0.32, 11)); // deinonychus_leader2
-		MOBS_DROP_CHANCES.put(22208, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_ldr
-		MOBS_DROP_CHANCES.put(22209, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus
-		MOBS_DROP_CHANCES.put(22210, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_s
+		MOBS_DROP_CHANCES.put(22208, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.50, 11)); // pachycephalosaurus_ldr
+		MOBS_DROP_CHANCES.put(22209, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.50, 11)); // pachycephalosaurus
+		MOBS_DROP_CHANCES.put(22210, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.50, 11)); // pachycephalosaurus_s
 		MOBS_DROP_CHANCES.put(22221, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.49, 11)); // pachycephalosaurus_n
-		MOBS_DROP_CHANCES.put(22226, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.5, 11)); // pachycephalosaurus_ldr2
+		MOBS_DROP_CHANCES.put(22226, new ItemChanceHolder(PACHYCEPHALOSAURUS_SKIN, 0.50, 11)); // pachycephalosaurus_ldr2
 	}
 	
-	private Q00111_ElrokianHuntersProof(int questId, String name, String descr)
+	private Q00111_ElrokianHuntersProof()
 	{
-		super(questId, name, descr);
-		addKillId(MOBS_DROP_CHANCES.keySet());
+		super(111, Q00111_ElrokianHuntersProof.class.getSimpleName(), "Elrokian Hunter's Proof");
 		addStartNpc(MARQUEZ);
 		addTalkId(MARQUEZ, MUSHIKA, ASAMAH, KIRIKACHIN);
+		addKillId(MOBS_DROP_CHANCES.keySet());
 		registerQuestItems(DIARY_FRAGMENT, EXPEDITION_MEMBERS_LETTER, ORNITHOMINUS_CLAW, DEINONYCHUS_BONE, PACHYCEPHALOSAURUS_SKIN, PRACTICE_ELROKIAN_TRAP);
 	}
 	
@@ -221,23 +220,24 @@ public class Q00111_ElrokianHuntersProof extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, player, false))
+		if (qs != null)
 		{
 			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
-			if ((item.getCount() == qs.getMemoState()))
+			if (item.getCount() == qs.getMemoState())
 			{
 				if (qs.isCond(4))
 				{
-					giveItemRandomly(player, npc, item.getId(), 1, 50, item.getChance(), true);
-					if (qs.getQuestItemsCount(DIARY_FRAGMENT) >= 50)
+					if (giveItemRandomly(player, npc, item.getId(), 1, 50, item.getChance(), true))
 					{
 						qs.setCond(5);
 					}
 				}
 				else if (qs.isCond(10))
 				{
-					giveItemRandomly(player, npc, item.getId(), 1, 10, item.getChance(), true);
-					if ((qs.getQuestItemsCount(ORNITHOMINUS_CLAW) >= 10) && (qs.getQuestItemsCount(DEINONYCHUS_BONE) >= 10) && (qs.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) >= 10))
+					if (giveItemRandomly(player, npc, item.getId(), 1, 10, item.getChance(), true) //
+						&& (qs.getQuestItemsCount(ORNITHOMINUS_CLAW) >= 10) //
+						&& (qs.getQuestItemsCount(DEINONYCHUS_BONE) >= 10) //
+						&& (qs.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) >= 10))
 					{
 						qs.setCond(11);
 					}
@@ -261,14 +261,17 @@ public class Q00111_ElrokianHuntersProof extends Quest
 		{
 			case State.COMPLETED:
 			{
-				htmltext = getAlreadyCompletedMsg(player);
+				if (npc.getId() == MARQUEZ)
+				{
+					htmltext = getAlreadyCompletedMsg(player);
+				}
 				break;
 			}
 			case State.CREATED:
 			{
 				if (npc.getId() == MARQUEZ)
 				{
-					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32113-01.htm" : "32113-06.html";
+					htmltext = ((player.getLevel() >= MIN_LEVEL) ? "32113-01.htm" : "32113-06.html");
 				}
 				break;
 			}
@@ -304,8 +307,8 @@ public class Q00111_ElrokianHuntersProof extends Quest
 								else
 								{
 									st.takeItems(DIARY_FRAGMENT, -1);
-									htmltext = "32113-17.html";
 									st.setMemoState(5);
+									htmltext = "32113-17.html";
 								}
 								break;
 							}
@@ -398,7 +401,7 @@ public class Q00111_ElrokianHuntersProof extends Quest
 								{
 									htmltext = "32115-10.html";
 								}
-								else if (((st.getQuestItemsCount(ORNITHOMINUS_CLAW) >= 10) && (st.getQuestItemsCount(DEINONYCHUS_BONE) >= 10) && (st.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) >= 10)))
+								else
 								{
 									st.setMemoState(12);
 									st.setCond(12, true);
@@ -476,6 +479,6 @@ public class Q00111_ElrokianHuntersProof extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00111_ElrokianHuntersProof(111, Q00111_ElrokianHuntersProof.class.getSimpleName(), "Elrokian Hunter's Proof");
+		new Q00111_ElrokianHuntersProof();
 	}
 }

@@ -146,7 +146,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			{
 				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
 			}
-			else if (MOB2.containsKey(npcId))
+			else
 			{
 				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
 				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);

@@ -29,10 +29,9 @@ import com.l2jserver.gameserver.model.holders.QuestItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
- * Hunt Golden Ram (628)
+ * Hunt of the Golden Ram Mercenary Force (628)
  * @author netvirus
  */
 public final class Q00628_HuntGoldenRam extends Quest
@@ -57,14 +56,14 @@ public final class Q00628_HuntGoldenRam extends Quest
 	
 	static
 	{
-		MOBS_DROP_CHANCES.put(21508, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.5, 1)); // splinter_stakato
-		MOBS_DROP_CHANCES.put(21509, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.43, 1)); // splinter_stakato_worker
+		MOBS_DROP_CHANCES.put(21508, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.500, 1)); // splinter_stakato
+		MOBS_DROP_CHANCES.put(21509, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.430, 1)); // splinter_stakato_worker
 		MOBS_DROP_CHANCES.put(21510, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.521, 1)); // splinter_stakato_soldier
 		MOBS_DROP_CHANCES.put(21511, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.575, 1)); // splinter_stakato_drone
 		MOBS_DROP_CHANCES.put(21512, new ItemChanceHolder(SPLINTER_STAKATO_CHITIN, 0.746, 1)); // splinter_stakato_drone_a
-		MOBS_DROP_CHANCES.put(21513, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.5, 2)); // needle_stakato
-		MOBS_DROP_CHANCES.put(21514, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.43, 2)); // needle_stakato_worker
-		MOBS_DROP_CHANCES.put(21515, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.52, 2)); // needle_stakato_soldier
+		MOBS_DROP_CHANCES.put(21513, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.500, 2)); // needle_stakato
+		MOBS_DROP_CHANCES.put(21514, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.430, 2)); // needle_stakato_worker
+		MOBS_DROP_CHANCES.put(21515, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.520, 2)); // needle_stakato_soldier
 		MOBS_DROP_CHANCES.put(21516, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.531, 2)); // needle_stakato_drone
 		MOBS_DROP_CHANCES.put(21517, new ItemChanceHolder(NEEDLE_STAKATO_CHITIN, 0.744, 2)); // needle_stakato_drone_a
 		
@@ -78,9 +77,9 @@ public final class Q00628_HuntGoldenRam extends Quest
 		BUFFS.put("Haste", new QuestItemHolder(4402, 2, 6));
 	}
 	
-	private Q00628_HuntGoldenRam(int questId, String name, String descr)
+	private Q00628_HuntGoldenRam()
 	{
-		super(questId, name, descr);
+		super(628, Q00628_HuntGoldenRam.class.getSimpleName(), "Hunt of the Golden Ram Mercenary Force");
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN, SELINA);
 		addFirstTalkId(ABERCROMBIE, SELINA);
@@ -112,17 +111,14 @@ public final class Q00628_HuntGoldenRam extends Quest
 						htmltext = "31554-05.htm";
 						st.setCond(3);
 					}
+					else if (itemRecruit)
+					{
+						htmltext = "31554-04.htm";
+						st.setCond(2);
+					}
 					else
 					{
-						if (!itemRecruit && !itemSoldier)
-						{
-							htmltext = "31554-03.htm";
-						}
-						else if (itemRecruit && !itemSoldier)
-						{
-							htmltext = "31554-04.htm";
-							st.setCond(2);
-						}
+						htmltext = "31554-03.htm";
 					}
 				}
 				break;
@@ -217,16 +213,13 @@ public final class Q00628_HuntGoldenRam extends Quest
 			{
 				if (st.isStarted())
 				{
-					if (itemRecruit || itemSolder)
+					if (itemRecruit)
 					{
-						if (itemRecruit)
-						{
-							htmltext = "31555-01.htm";
-						}
-						else if (itemSolder)
-						{
-							htmltext = "31555-02.htm";
-						}
+						htmltext = "31555-01.htm";
+					}
+					else if (itemSolder)
+					{
+						htmltext = "31555-02.htm";
 					}
 					else
 					{
@@ -239,16 +232,13 @@ public final class Q00628_HuntGoldenRam extends Quest
 			{
 				if (st.isStarted())
 				{
-					if (itemRecruit || itemSolder)
+					if (itemRecruit)
 					{
-						if (itemRecruit)
-						{
-							htmltext = "31556-01.htm";
-						}
-						else if (itemSolder)
-						{
-							htmltext = "31556-02.htm";
-						}
+						htmltext = "31556-01.htm";
+					}
+					else if (itemSolder)
+					{
+						htmltext = "31556-02.htm";
 					}
 					else
 					{
@@ -265,7 +255,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		QuestState qs = getRandomPartyMemberState(killer, -1, 1, npc);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, false))
+		if ((qs != null))
 		{
 			final ItemChanceHolder item = MOBS_DROP_CHANCES.get(npc.getId());
 			if ((item.getCount() <= qs.getCond()) && !qs.isCond(3))
@@ -294,7 +284,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 				{
 					case State.CREATED:
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "31554-01.htm" : "31554-02.htm";
+						htmltext = ((player.getLevel() >= MIN_LVL) ? "31554-01.htm" : "31554-02.htm");
 						break;
 					}
 					case State.STARTED:
@@ -305,7 +295,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 						{
 							case 1:
 							{
-								htmltext = (itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html";
+								htmltext = ((itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html");
 								break;
 							}
 							case 2:
@@ -329,7 +319,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 								else
 								{
 									st.setCond(1);
-									htmltext = (itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html";
+									htmltext = ((itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html");
 								}
 								break;
 							}
@@ -342,7 +332,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 								else
 								{
 									st.setCond(1);
-									htmltext = (itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html";
+									htmltext = ((itemCountSplinter >= REQUIRED_ITEM_COUNT) ? "31554-07.html" : "31554-06.html");
 								}
 								break;
 							}
@@ -366,6 +356,6 @@ public final class Q00628_HuntGoldenRam extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00628_HuntGoldenRam(628, Q00628_HuntGoldenRam.class.getSimpleName(), "Hunt Golden Ram");
+		new Q00628_HuntGoldenRam();
 	}
 }

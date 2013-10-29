@@ -86,7 +86,7 @@ public final class Q00365_DevilsLegacy extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "30095-02.html":
+			case "30095-02.htm":
 			{
 				st.startQuest();
 				st.setMemoState(1);

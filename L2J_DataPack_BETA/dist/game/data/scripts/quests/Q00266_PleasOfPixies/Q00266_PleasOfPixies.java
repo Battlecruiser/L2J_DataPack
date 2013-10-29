@@ -43,8 +43,7 @@ public final class Q00266_PleasOfPixies extends Quest
 	// Items
 	private static final int PREDATORS_FANG = 1334;
 	// Monsters
-	//@formatter:off
-	private static final Map<Integer,List<ItemHolder>> MONSTERS = new HashMap<>();
+	private static final Map<Integer, List<ItemHolder>> MONSTERS = new HashMap<>();
 	static
 	{
 		MONSTERS.put(20537, Arrays.asList(new ItemHolder(10, 2))); // Elder Red Keltir
@@ -53,7 +52,7 @@ public final class Q00266_PleasOfPixies extends Quest
 		MONSTERS.put(20530, Arrays.asList(new ItemHolder(8, 1))); // Young Red Keltir
 	}
 	// Rewards
-	private static final Map<Integer,List<ItemHolder>> REWARDS = new HashMap<>();
+	private static final Map<Integer, List<ItemHolder>> REWARDS = new HashMap<>();
 	static
 	{
 		REWARDS.put(0, Arrays.asList(new ItemHolder(1337, 1), new ItemHolder(3032, 1))); // Emerald, Recipe: Spiritshot D
@@ -61,13 +60,12 @@ public final class Q00266_PleasOfPixies extends Quest
 		REWARDS.put(2, Arrays.asList(new ItemHolder(1339, 1), new ItemHolder(1061, 1))); // Onyx, Greater Healing Potion
 		REWARDS.put(3, Arrays.asList(new ItemHolder(1336, 1), new ItemHolder(1060, 1))); // Glass Shard, Lesser Healing Potion
 	}
-	//@formatter:on
 	// Misc
 	private static final int MIN_LVL = 3;
 	
-	private Q00266_PleasOfPixies(int questId, String name, String descr)
+	private Q00266_PleasOfPixies()
 	{
-		super(questId, name, descr);
+		super(266, Q00266_PleasOfPixies.class.getSimpleName(), "Pleas of Pixies");
 		addStartNpc(PIXY_MURIKA);
 		addTalkId(PIXY_MURIKA);
 		addKillId(MONSTERS.keySet());
@@ -78,7 +76,7 @@ public final class Q00266_PleasOfPixies extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && event.equalsIgnoreCase("31852-04.htm"))
+		if ((st != null) && event.equals("31852-04.htm"))
 		{
 			st.startQuest();
 			return event;
@@ -97,15 +95,11 @@ public final class Q00266_PleasOfPixies extends Quest
 			{
 				if (chance < mob.getId())
 				{
-					st.giveItems(PREDATORS_FANG, mob.getCount());
-					if (st.getQuestItemsCount(PREDATORS_FANG) >= 100)
+					if (st.giveItemRandomly(npc, PREDATORS_FANG, mob.getCount(), 100, 1.0, true))
 					{
-						st.setCond(2, true);
+						st.setCond(2);
 					}
-					else
-					{
-						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
+					break;
 				}
 			}
 		}
@@ -117,59 +111,71 @@ public final class Q00266_PleasOfPixies extends Quest
 	{
 		final QuestState st = player.getQuestState(getName());
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		if (st == null)
 		{
-			switch (st.getState())
+			return htmltext;
+		}
+		switch (st.getState())
+		{
+			case State.CREATED:
 			{
-				case State.CREATED:
+				if (player.getRace() != PcRace.Elf)
 				{
-					htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LVL) ? "31852-03.htm" : "31852-02.htm" : "31852-01.htm";
-					break;
+					htmltext = "31852-01.htm";
 				}
-				case State.STARTED:
+				else if (player.getLevel() < MIN_LVL)
 				{
-					switch (st.getCond())
+					htmltext = "31852-02.htm";
+				}
+				else
+				{
+					htmltext = "31852-03.htm";
+				}
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
+				{
+					case 1:
 					{
-						case 1:
-						{
-							htmltext = "31852-05.html";
-							break;
-						}
-						case 2:
-						{
-							if (st.getQuestItemsCount(PREDATORS_FANG) >= 100)
-							{
-								final int chance = getRandom(100);
-								int reward;
-								if (chance < 2)
-								{
-									reward = 0;
-									st.playSound(QuestSound.ITEMSOUND_QUEST_JACKPOT);
-								}
-								else if (chance < 20)
-								{
-									reward = 1;
-								}
-								else if (chance < 45)
-								{
-									reward = 2;
-								}
-								else
-								{
-									reward = 3;
-								}
-								for (ItemHolder item : REWARDS.get(reward))
-								{
-									st.rewardItems(item.getId(), item.getCount());
-								}
-								st.exitQuest(true, true);
-								htmltext = "31852-06.html";
-							}
-							break;
-						}
+						htmltext = "31852-05.html";
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (st.getQuestItemsCount(PREDATORS_FANG) >= 100)
+						{
+							final int chance = getRandom(100);
+							int reward;
+							if (chance < 2)
+							{
+								reward = 0;
+								st.playSound(QuestSound.ITEMSOUND_QUEST_JACKPOT);
+							}
+							else if (chance < 20)
+							{
+								reward = 1;
+							}
+							else if (chance < 45)
+							{
+								reward = 2;
+							}
+							else
+							{
+								reward = 3;
+							}
+							for (ItemHolder item : REWARDS.get(reward))
+							{
+								st.rewardItems(item);
+							}
+							st.exitQuest(true, true);
+							htmltext = "31852-06.html";
+						}
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -177,6 +183,6 @@ public final class Q00266_PleasOfPixies extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00266_PleasOfPixies(266, Q00266_PleasOfPixies.class.getSimpleName(), "Pleas of Pixies");
+		new Q00266_PleasOfPixies();
 	}
 }

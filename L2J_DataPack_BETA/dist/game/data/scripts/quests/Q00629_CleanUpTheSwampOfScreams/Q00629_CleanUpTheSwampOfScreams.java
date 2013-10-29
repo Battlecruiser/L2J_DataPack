@@ -26,13 +26,12 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * Clean Up The Swamp Of Screams (629)
  * @author netvirus
  */
-final class Q00629_CleanUpTheSwampOfScreams extends Quest
+public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 {
 	// NPC
 	private static final int PIERCE = 31553;
@@ -49,9 +48,9 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	{
 		MOBS_DROP_CHANCES.put(21508, 0.599); // splinter_stakato
 		MOBS_DROP_CHANCES.put(21509, 0.524); // splinter_stakato_worker
-		MOBS_DROP_CHANCES.put(21510, 0.64); // splinter_stakato_soldier
-		MOBS_DROP_CHANCES.put(21511, 0.83); // splinter_stakato_drone
-		MOBS_DROP_CHANCES.put(21512, 0.97); // splinter_stakato_drone_a
+		MOBS_DROP_CHANCES.put(21510, 0.640); // splinter_stakato_soldier
+		MOBS_DROP_CHANCES.put(21511, 0.830); // splinter_stakato_drone
+		MOBS_DROP_CHANCES.put(21512, 0.970); // splinter_stakato_drone_a
 		MOBS_DROP_CHANCES.put(21513, 0.682); // needle_stakato
 		MOBS_DROP_CHANCES.put(21514, 0.595); // needle_stakato_worker
 		MOBS_DROP_CHANCES.put(21515, 0.727); // needle_stakato_soldier
@@ -59,9 +58,9 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 		MOBS_DROP_CHANCES.put(21517, 0.999); // needle_stakato_drone_a
 	}
 	
-	private Q00629_CleanUpTheSwampOfScreams(int questId, String name, String descr)
+	private Q00629_CleanUpTheSwampOfScreams()
 	{
-		super(questId, name, descr);
+		super(629, Q00629_CleanUpTheSwampOfScreams.class.getSimpleName(), "Clean Up The Swamp Of Screams");
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE);
 		addKillId(MOBS_DROP_CHANCES.keySet());
@@ -129,7 +128,7 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 2, npc);
-		if ((qs != null) && qs.isStarted() && Util.checkIfInRange(1500, npc, killer, false))
+		if ((qs != null))
 		{
 			giveItemRandomly(killer, npc, TALON_OF_STAKATO, 1, 0, MOBS_DROP_CHANCES.get(npc.getId()), true);
 		}
@@ -150,12 +149,12 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() >= MIN_LVL) ? "31553-01.htm" : "31553-02.htm";
+				htmltext = ((player.getLevel() >= MIN_LVL) ? "31553-01.htm" : "31553-02.htm");
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = (st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html";
+				htmltext = ((st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
 				break;
 			}
 		}
@@ -164,6 +163,6 @@ final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00629_CleanUpTheSwampOfScreams(629, Q00629_CleanUpTheSwampOfScreams.class.getSimpleName(), "Clean Up The Swamp Of Screams");
+		new Q00629_CleanUpTheSwampOfScreams();
 	}
 }
