@@ -18,11 +18,13 @@
  */
 package quests.Q00376_ExplorationOfTheGiantsCavePart1;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 /**
  * Exploration of the Giants' Cave Part 1 (376)<br>
@@ -41,24 +43,25 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 	private static final int BOOK4 = 14839;
 	private static final int BOOK5 = 14840;
 	// Mobs
-	private static final int[] MOBS =
+	private static final Map<Integer, Double> MOBS = new HashMap<>();
+	static
 	{
-		22670,
-		22671,
-		22672,
-		22673,
-		22674,
-		22675,
-		22676,
-		22677
-	};
+		MOBS.put(22670, 0.314); // const_lord
+		MOBS.put(22671, 0.302); // const_gaurdian
+		MOBS.put(22672, 0.300); // const_seer
+		MOBS.put(22673, 0.258); // hirokai
+		MOBS.put(22674, 0.248); // imagro
+		MOBS.put(22675, 0.264); // palite
+		MOBS.put(22676, 0.258); // hamrit
+		MOBS.put(22677, 0.266); // kranout
+	}
 	
 	private Q00376_ExplorationOfTheGiantsCavePart1()
 	{
 		super(376, Q00376_ExplorationOfTheGiantsCavePart1.class.getSimpleName(), "Exploration of the Giants' Cave - Part 1");
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
-		addKillId(MOBS);
+		addKillId(MOBS.keySet());
 		registerQuestItems(ANCIENT_PARCHMENT);
 	}
 	
@@ -77,7 +80,6 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 			case "31147-02.htm":
 			{
 				st.startQuest();
-				player.sendPacket(new RadarControl(0, 2, 185712, 47414, -4350));
 				break;
 			}
 			case "31147-quit.html":
@@ -95,7 +97,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
 		if (st != null)
 		{
-			giveItemRandomly(player, npc, ANCIENT_PARCHMENT, 1, 0, 0.2, true);
+			giveItemRandomly(player, npc, ANCIENT_PARCHMENT, 1, 0, MOBS.get(npc.getId()), true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
