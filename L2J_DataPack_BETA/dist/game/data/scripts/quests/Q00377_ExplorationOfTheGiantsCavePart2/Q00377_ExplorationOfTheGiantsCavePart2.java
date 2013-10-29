@@ -18,11 +18,13 @@
  */
 package quests.Q00377_ExplorationOfTheGiantsCavePart2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 
 /**
  * Exploration of the Giants' Cave Part 2 (377)<br>
@@ -41,25 +43,29 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	private static final int BOOK4 = 14845;
 	private static final int BOOK5 = 14846;
 	// Mobs
-	private static final int[] MOBS =
+	private static final Map<Integer, Integer> MOBS1 = new HashMap<>();
+	private static final Map<Integer, Double> MOBS2 = new HashMap<>();
+	static
 	{
-		22661,
-		22662,
-		22663,
-		22664,
-		22665,
-		22666,
-		22667,
-		22668,
-		22669
-	};
+		MOBS1.put(22660, 366); // lesser_giant_re
+		MOBS1.put(22661, 424); // lesser_giant_soldier_re
+		MOBS1.put(22662, 304); // lesser_giant_shooter_re
+		MOBS1.put(22663, 304); // lesser_giant_scout_re
+		MOBS1.put(22664, 354); // lesser_giant_mage_re
+		MOBS1.put(22665, 324); // lesser_giant_elder_re
+		MOBS2.put(22666, 0.276); // barif_re
+		MOBS2.put(22667, 0.284); // barif_pet_re
+		MOBS2.put(22668, 0.240); // gamlin_re
+		MOBS2.put(22669, 0.240); // leogul_re
+	}
 	
 	private Q00377_ExplorationOfTheGiantsCavePart2()
 	{
 		super(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
-		addKillId(MOBS);
+		addKillId(MOBS1.keySet());
+		addKillId(MOBS2.keySet());
 		registerQuestItems(TITAN_ANCIENT_BOOK);
 	}
 	
@@ -78,7 +84,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			case "31147-02.htm":
 			{
 				st.startQuest();
-				player.sendPacket(new RadarControl(0, 2, -113360, -244676, -15536));
 				break;
 			}
 			case "31147-quit.html":
@@ -96,7 +101,16 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
 		if (st != null)
 		{
-			giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, 1, 0, 0.5, true);
+			int npcId = npc.getId();
+			if (MOBS1.containsKey(npcId))
+			{
+				final int itemCount = ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2);
+				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, itemCount, 0, 1.0, true);
+			}
+			else if (MOBS2.containsKey(npcId))
+			{
+				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS1.get(npcId), true);
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
