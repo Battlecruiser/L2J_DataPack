@@ -18,37 +18,37 @@
  */
 package quests.Q00252_ItSmellsDelicious;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.l2jserver.gameserver.enums.QuestSound;
-import com.l2jserver.gameserver.model.L2Object;
-import com.l2jserver.gameserver.model.L2Party;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
- * It Smells Delicious! (252) Updated by corbin12, thanks VLight for help.
- * @author Dumpster
+ * It Smells Delicious! (252)<br>
+ * Updated by corbin12, thanks VlLight for help.
+ * @author Dumpster, jurchiks
  */
 public class Q00252_ItSmellsDelicious extends Quest
 {
+	// NPC
 	public static final int STAN = 30200;
-	public static final int MAHUM_DIARY = 15500;
-	public static final int MAHUM_COOKBOOK = 15501;
-	
+	// Items
+	public static final int DIARY = 15500;
+	public static final int COOKBOOK_PAGE = 15501;
+	// Monsters
 	private static final int[] MOBS =
 	{
 		22786,
 		22787,
 		22788
 	};
-	
 	private static final int CHEF = 18908;
+	// Misc
+	private static final double DIARY_CHANCE = 0.599;
+	private static final int DIARY_MAX_COUNT = 10;
+	private static final double COOKBOOK_PAGE_CHANCE = 0.36;
+	private static final int COOKBOOK_PAGE_MAX_COUNT = 5;
 	
 	public Q00252_ItSmellsDelicious(int id, String name, String descr)
 	{
@@ -57,69 +57,82 @@ public class Q00252_ItSmellsDelicious extends Quest
 		addTalkId(STAN);
 		addKillId(CHEF);
 		addKillId(MOBS);
-		registerQuestItems(MAHUM_DIARY, MAHUM_COOKBOOK);
+		registerQuestItems(DIARY, COOKBOOK_PAGE);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
 		final QuestState st = player.getQuestState(getName());
+		
 		if (st == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
-		if (npc.getId() == STAN)
+		String htmltext = null;
+		
+		switch (event)
 		{
-			if (event.equalsIgnoreCase("30200-05.htm"))
-			{
-				st.startQuest();
-			}
-			else if (event.equalsIgnoreCase("30200-08.htm"))
-			{
-				st.giveAdena(147656, true);
-				st.addExpAndSp(716238, 78324);
-				st.exitQuest(false, true);
-			}
+			case "30200-05.htm":
+				if (st.isCreated())
+				{
+					st.startQuest();
+					htmltext = event;
+				}
+				break;
+			case "30200-08.html":
+				if (st.isCond(2))
+				{
+					st.giveAdena(147656, true);
+					st.addExpAndSp(716238, 78324);
+					st.exitQuest(false, true);
+					htmltext = event;
+				}
+				break;
 		}
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final int npcId = npc.getId();
-		QuestState st;
-		if (Util.contains(MOBS, npcId) && (getRandom(1000) < 599))
+		final QuestState qs;
+		if (npc.getId() == CHEF) // only the killer gets quest items from the chef
 		{
-			st = getRandomPartyMemberQuestState(player, getName());
-			if (st != null)
+			qs = killer.getQuestState(getName());
+			if ((qs != null) && qs.isCond(1))
 			{
-				st.giveItems(MAHUM_DIARY, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
-				if ((st.getQuestItemsCount(MAHUM_DIARY) >= 10) && (st.getQuestItemsCount(MAHUM_COOKBOOK) >= 5))
+				if (qs.giveItemRandomly(npc, COOKBOOK_PAGE, 1, COOKBOOK_PAGE_MAX_COUNT, COOKBOOK_PAGE_CHANCE, true))
 				{
-					st.setCond(2, true);
+					if (hasMaxDiaries(qs))
+					{
+						qs.setCond(2, true);
+					}
 				}
 			}
 		}
-		else if (npcId == CHEF)
+		else
 		{
-			st = player.getQuestState(getName());
-			if ((st != null) && st.isStarted() && (st.isCond(1)) && (st.getQuestItemsCount(MAHUM_COOKBOOK) < 5) && (getRandom(1000) < 360))
+			qs = getRandomPartyMemberState(killer, 1, 3, npc);
+			if ((qs != null) && qs.isCond(1))
 			{
-				st.giveItems(MAHUM_COOKBOOK, 1);
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				
-				if ((st.getQuestItemsCount(MAHUM_DIARY) >= 10) && (st.getQuestItemsCount(MAHUM_COOKBOOK) >= 5))
+				if (qs.giveItemRandomly(npc, DIARY, 1, DIARY_MAX_COUNT, DIARY_CHANCE, true))
 				{
-					st.setCond(2, true);
+					if (hasMaxCookbookPages(qs))
+					{
+						qs.setCond(2, true);
+					}
 				}
 			}
 		}
-		return super.onKill(npc, player, isSummon);
+		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public boolean checkPartyMember(QuestState qs, L2Npc npc)
+	{
+		return !hasMaxDiaries(qs);
 	}
 	
 	@Override
@@ -137,72 +150,38 @@ public class Q00252_ItSmellsDelicious extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
-					htmltext = (player.getLevel() >= 82) ? "30200-01.htm" : "30200-02.htm";
+					htmltext = ((player.getLevel() >= 82) ? "30200-01.htm" : "30200-02.htm");
 					break;
 				case State.STARTED:
-					if (st.isCond(1))
+					switch (st.getCond())
 					{
-						htmltext = "30200-06.htm";
-					}
-					else if (st.isCond(2))
-					{
-						if ((st.getQuestItemsCount(MAHUM_DIARY) >= 10) && (st.getQuestItemsCount(MAHUM_COOKBOOK) >= 5))
-						{
-							htmltext = "30200-07.htm";
-						}
+						case 1:
+							htmltext = "30200-06.html";
+							break;
+						case 2:
+							if (hasMaxDiaries(st) && hasMaxCookbookPages(st))
+							{
+								htmltext = "30200-07.html";
+							}
+							break;
 					}
 					break;
 				case State.COMPLETED:
-					htmltext = "30200-03.htm";
+					htmltext = "30200-03.html";
+					break;
 			}
 		}
 		return htmltext;
 	}
 	
-	private static QuestState getRandomPartyMemberQuestState(L2PcInstance player, String questName)
+	private static boolean hasMaxDiaries(QuestState qs)
 	{
-		if (player == null)
-		{
-			return null;
-		}
-		
-		final L2Party party = player.getParty();
-		QuestState st;
-		
-		if ((party == null) || party.getMembers().isEmpty())
-		{
-			st = player.getQuestState(questName);
-			if ((st == null) || st.isStarted() || (!st.isCond(1)) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
-			{
-				return null;
-			}
-			return st;
-		}
-		
-		final List<QuestState> candidates = new ArrayList<>();
-		// get the target for enforcing distance limitations.
-		L2Object target = player.getTarget();
-		
-		if (target == null)
-		{
-			target = player;
-		}
-		
-		for (final L2PcInstance partyMember : party.getMembers())
-		{
-			if (partyMember.isDead() || !partyMember.isInsideRadius(target, 1500, true, false))
-			{
-				continue;
-			}
-			
-			st = partyMember.getQuestState(questName);
-			if ((st == null) || (st.getState() != State.STARTED) || (!st.isCond(1)) || (st.getQuestItemsCount(MAHUM_DIARY) >= 10))
-			{
-				continue;
-			}
-			candidates.add(st);
-		}
-		return candidates.isEmpty() ? null : candidates.get(getRandom(candidates.size()));
+		return (qs.getQuestItemsCount(DIARY) >= DIARY_MAX_COUNT);
+	}
+	
+	private static boolean hasMaxCookbookPages(QuestState qs)
+	{
+		return (qs.getQuestItemsCount(COOKBOOK_PAGE) >= COOKBOOK_PAGE_MAX_COUNT);
 	}
 	
 	public static void main(String[] args)

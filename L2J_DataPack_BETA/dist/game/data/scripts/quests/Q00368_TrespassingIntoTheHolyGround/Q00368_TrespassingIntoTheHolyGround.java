@@ -69,7 +69,7 @@ public final class Q00368_TrespassingIntoTheHolyGround extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "30926-02.html":
+			case "30926-02.htm":
 			{
 				st.startQuest();
 				htmltext = event;
@@ -93,7 +93,23 @@ public final class Q00368_TrespassingIntoTheHolyGround extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
+		final int i;
+		switch (npc.getId())
+		{
+			case 20795:
+			case 20797:
+			{
+				i = 1;
+				break;
+			}
+			default:
+			{
+				i = 3;
+				break;
+			}
+		}
+		
+		final QuestState st = getRandomPartyMemberState(player, -1, i, npc);
 		if (st != null)
 		{
 			giveItemRandomly(player, npc, BLADE_STAKATO_FANG, 1, 0, MOBS.get(npc.getId()), true);

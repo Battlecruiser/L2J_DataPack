@@ -18,18 +18,13 @@
  */
 package quests.Q00032_AnObviousLie;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
-import com.l2jserver.gameserver.util.Util;
 
 /**
  * An Obvious Lie (32).
@@ -160,7 +155,7 @@ public final class Q00032_AnObviousLie extends Quest
 				{
 					st.takeItems(THREAD, 1000);
 					st.takeItems(SUEDE, 500);
-					st.rewardItems(EARS.get(event), 1);
+					st.giveItems(EARS.get(event), 1);
 					st.exitQuest(false, true);
 					htmltext = "30094-16.html";
 				}
@@ -177,45 +172,10 @@ public final class Q00032_AnObviousLie extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final List<QuestState> players = new ArrayList<>();
-		QuestState qs = killer.getQuestState(getName());
-		if ((qs != null) && qs.isCond(3))
+		final QuestState qs = getRandomPartyMemberState(killer, 3, 3, npc);
+		if ((qs != null) && qs.giveItemRandomly(npc, MEDICINAL_HERB, 1, REQUIRED_HERB_COUNT, 1.0, true))
 		{
-			players.add(qs);
-			players.add(qs);
-		}
-		
-		if (killer.isInParty())
-		{
-			for (L2PcInstance member : killer.getParty().getMembers())
-			{
-				qs = member.getQuestState(getName());
-				if ((qs != null) && qs.isCond(3))
-				{
-					players.add(qs);
-				}
-			}
-		}
-		
-		if (!players.isEmpty())
-		{
-			qs = players.get(getRandom(players.size()));
-			if (Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
-			{
-				final long herbCount = qs.getQuestItemsCount(MEDICINAL_HERB);
-				if (herbCount < REQUIRED_HERB_COUNT)
-				{
-					qs.giveItems(MEDICINAL_HERB, 1);
-					if ((herbCount + 1) == REQUIRED_HERB_COUNT)
-					{
-						qs.setCond(4, true);
-					}
-					else
-					{
-						qs.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
-				}
-			}
+			qs.setCond(4);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -233,26 +193,20 @@ public final class Q00032_AnObviousLie extends Quest
 		{
 			case MAXIMILIAN:
 			{
-				switch (st.getState())
+				if (st.isCreated())
 				{
-					case State.CREATED:
+					htmltext = ((player.getLevel() >= MIN_LVL) ? "30120-01.htm" : "30120-03.htm");
+				}
+				else if (st.isStarted())
+				{
+					if (st.isCond(1))
 					{
-						htmltext = (player.getLevel() >= MIN_LVL) ? "30120-01.htm" : "30120-03.htm";
-						break;
+						htmltext = "30120-04.html";
 					}
-					case State.STARTED:
-					{
-						if (st.isCond(1))
-						{
-							htmltext = "30120-04.html";
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
-					}
+				}
+				else
+				{
+					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
 			}
@@ -272,12 +226,12 @@ public final class Q00032_AnObviousLie extends Quest
 					}
 					case 4:
 					{
-						htmltext = (st.getQuestItemsCount(MEDICINAL_HERB) >= 20) ? "30094-04.html" : "30094-05.html";
+						htmltext = ((st.getQuestItemsCount(MEDICINAL_HERB) >= 20) ? "30094-04.html" : "30094-05.html");
 						break;
 					}
 					case 5:
 					{
-						htmltext = (st.getQuestItemsCount(SPIRIT_ORE) >= 500) ? "30094-07.html" : "30094-08.html";
+						htmltext = ((st.getQuestItemsCount(SPIRIT_ORE) >= 500) ? "30094-07.html" : "30094-08.html");
 						break;
 					}
 					case 6:
@@ -292,7 +246,14 @@ public final class Q00032_AnObviousLie extends Quest
 					}
 					case 8:
 					{
-						htmltext = (st.getQuestItemsCount(THREAD) >= 1000) && (st.getQuestItemsCount(SUEDE) >= 500) ? "30094-13.html" : "30094-14.html";
+						if ((st.getQuestItemsCount(THREAD) >= 1000) && (st.getQuestItemsCount(SUEDE) >= 500))
+						{
+							htmltext = "30094-13.html";
+						}
+						else
+						{
+							htmltext = "30094-14.html";
+						}
 						break;
 					}
 				}
