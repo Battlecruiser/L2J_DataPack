@@ -109,7 +109,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 			}
 			else
 			{
-				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS1.get(npcId), true);
+				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS2.get(npcId), true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
