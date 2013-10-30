@@ -106,13 +106,18 @@ public final class SummonCubic extends AbstractEffect
 		else
 		{
 			// If maximum amount is reached, random cubic is removed.
-			final BuffInfo cubicMastery = player.getEffectList().getBuffInfoBySkillId(L2Skill.SKILL_CUBIC_MASTERY);
 			// Players with no mastery can have only one cubic.
 			int allowedCubicCount = 1;
-			for (AbstractEffect effect : cubicMastery.getEffects())
+			// TODO: Unhardcode skill ID check so effect could work on any skill.
+			if (player.isAffectedBySkill(L2Skill.SKILL_CUBIC_MASTERY))
 			{
-				allowedCubicCount += effect != null ? effect.getValue() : 0;
+				final BuffInfo cubicMastery = player.getEffectList().getBuffInfoBySkillId(L2Skill.SKILL_CUBIC_MASTERY);
+				for (AbstractEffect effect : cubicMastery.getEffects())
+				{
+					allowedCubicCount += effect != null ? effect.getValue() : 0;
+				}
 			}
+			
 			final int currentCubicCount = player.getCubics().size();
 			// Extra cubics are removed, one by one, randomly.
 			for (int i = 0; i <= (currentCubicCount - allowedCubicCount); i++)
