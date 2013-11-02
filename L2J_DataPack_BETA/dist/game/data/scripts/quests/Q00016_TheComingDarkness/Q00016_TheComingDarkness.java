@@ -67,7 +67,7 @@ public class Q00016_TheComingDarkness extends Quest
 		{
 			case "31517-02.htm":
 				st.startQuest();
-				st.giveItems(CRYSTAL_OF_SEAL, 5);
+				giveItems(player, CRYSTAL_OF_SEAL, 5);
 				break;
 			case "31512-01.html":
 			case "31513-01.html":
@@ -77,7 +77,7 @@ public class Q00016_TheComingDarkness extends Quest
 				final int npcId = Integer.parseInt(event.replace("-01.html", ""));
 				if ((cond == (npcId - 31511)) && st.hasQuestItems(CRYSTAL_OF_SEAL))
 				{
-					st.takeItems(CRYSTAL_OF_SEAL, 1);
+					takeItems(player, CRYSTAL_OF_SEAL, 1);
 					st.setCond(cond + 1, true);
 				}
 				break;

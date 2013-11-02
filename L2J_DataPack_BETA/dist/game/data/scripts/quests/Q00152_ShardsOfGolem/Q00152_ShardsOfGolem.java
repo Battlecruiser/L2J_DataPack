@@ -66,7 +66,7 @@ public class Q00152_ShardsOfGolem extends Quest
 				case "30035-03.htm":
 				{
 					st.startQuest();
-					st.giveItems(HARRYS_1ST_RECIEPT, 1);
+					giveItems(player, HARRYS_1ST_RECIEPT, 1);
 					htmltext = event;
 					break;
 				}
@@ -74,8 +74,8 @@ public class Q00152_ShardsOfGolem extends Quest
 				{
 					if (st.isCond(1) && st.hasQuestItems(HARRYS_1ST_RECIEPT))
 					{
-						st.takeItems(HARRYS_1ST_RECIEPT, -1);
-						st.giveItems(HARRYS_2ND_RECIEPT, 1);
+						takeItems(player, HARRYS_1ST_RECIEPT, -1);
+						giveItems(player, HARRYS_2ND_RECIEPT, 1);
 						st.setCond(2, true);
 						htmltext = event;
 					}
@@ -90,10 +90,10 @@ public class Q00152_ShardsOfGolem extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(2) && (getRandom(100) < 30) && (st.getQuestItemsCount(GOLEM_SHARD) < 5))
+		if ((st != null) && st.isCond(2) && (getRandom(100) < 30) && (getQuestItemsCount(killer, GOLEM_SHARD) < 5))
 		{
-			st.giveItems(GOLEM_SHARD, 1);
-			if (st.getQuestItemsCount(GOLEM_SHARD) >= 5)
+			giveItems(killer, GOLEM_SHARD, 1);
+			if (getQuestItemsCount(killer, GOLEM_SHARD) >= 5)
 			{
 				st.setCond(3, true);
 			}
@@ -148,7 +148,7 @@ public class Q00152_ShardsOfGolem extends Quest
 								{
 									if (st.hasQuestItems(HARRYS_2ND_RECIEPT, TOOL_BOX))
 									{
-										st.giveItems(WOODEN_BREASTPLATE, 1);
+										giveItems(player, WOODEN_BREASTPLATE, 1);
 										st.addExpAndSp(5000, 0);
 										st.exitQuest(false, true);
 										htmltext = "30035-05.html";
@@ -180,7 +180,7 @@ public class Q00152_ShardsOfGolem extends Quest
 						}
 						case 2:
 						{
-							if (st.hasQuestItems(HARRYS_2ND_RECIEPT) && (st.getQuestItemsCount(GOLEM_SHARD) < 5))
+							if (st.hasQuestItems(HARRYS_2ND_RECIEPT) && (getQuestItemsCount(player, GOLEM_SHARD) < 5))
 							{
 								htmltext = "30283-03.html";
 							}
@@ -188,10 +188,10 @@ public class Q00152_ShardsOfGolem extends Quest
 						}
 						case 3:
 						{
-							if (st.hasQuestItems(HARRYS_2ND_RECIEPT) && (st.getQuestItemsCount(GOLEM_SHARD) >= 5))
+							if (st.hasQuestItems(HARRYS_2ND_RECIEPT) && (getQuestItemsCount(player, GOLEM_SHARD) >= 5))
 							{
-								st.takeItems(GOLEM_SHARD, -1);
-								st.giveItems(TOOL_BOX, 1);
+								takeItems(player, GOLEM_SHARD, -1);
+								giveItems(player, TOOL_BOX, 1);
 								st.setCond(4, true);
 								htmltext = "30283-04.html";
 							}

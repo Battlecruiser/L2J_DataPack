@@ -94,7 +94,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 			}
 			case "32017-06.html":
 			{
-				if (st.isCond(2) && (st.getQuestItemsCount(ORC_GOODS) >= ORC_GOODS_REQUIRED_COUNT))
+				if (st.isCond(2) && (getQuestItemsCount(player, ORC_GOODS) >= ORC_GOODS_REQUIRED_COUNT))
 				{
 					htmltext = event;
 				}
@@ -110,7 +110,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 				if (st.isCond(2))
 				{
 					final ItemHolder reward = REWARDS.get(event);
-					st.rewardItems(reward.getId(), reward.getCount());
+					rewardItems(player, reward.getId(), reward.getCount());
 					st.exitQuest(true, true);
 					htmltext = "32017-07.html";
 				}
@@ -124,7 +124,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		if ((qs != null) && qs.giveItemRandomly(npc, ORC_GOODS, 1, ORC_GOODS_REQUIRED_COUNT, MONSTER_DROP_CHANCES.get(npc.getId()), true))
+		if ((qs != null) && giveItemRandomly(killer, npc, ORC_GOODS, 1, ORC_GOODS_REQUIRED_COUNT, MONSTER_DROP_CHANCES.get(npc.getId()), true))
 		{
 			qs.setCond(2, true);
 		}
@@ -150,7 +150,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(2) && (st.getQuestItemsCount(ORC_GOODS) >= ORC_GOODS_REQUIRED_COUNT))
+				if (st.isCond(2) && (getQuestItemsCount(player, ORC_GOODS) >= ORC_GOODS_REQUIRED_COUNT))
 				{
 					htmltext = "32017-04.html";
 				}

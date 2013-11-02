@@ -449,11 +449,11 @@ public final class Q00511_AwlUnderFoot extends Quest
 			}
 			else if (_fortDungeons.containsKey(npcId) && (cond > 0) && (st.getState() == State.STARTED))
 			{
-				long count = st.getQuestItemsCount(DL_MARK);
+				long count = getQuestItemsCount(player, DL_MARK);
 				if ((cond == 1) && (count > 0))
 				{
 					htmltext = "FortressWarden-14.htm";
-					st.takeItems(DL_MARK, -1);
+					takeItems(player, DL_MARK, -1);
 					st.rewardItems(KNIGHT_EPALUETTE, count);
 				}
 				else if ((cond == 1) && (count == 0))
@@ -470,7 +470,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		QuestState st = player.getQuestState(getName());
 		if (st.isCond(1))
 		{
-			st.giveItems(DL_MARK, 140);
+			giveItems(player, DL_MARK, 140);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}

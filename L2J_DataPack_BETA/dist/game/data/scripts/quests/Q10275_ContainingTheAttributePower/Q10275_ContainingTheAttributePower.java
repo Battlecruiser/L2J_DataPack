@@ -85,44 +85,44 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				break;
 			case "32325-03.html":
 				st.setCond(3, true);
-				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
+				giveItems(player, YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-03.html":
 				st.setCond(8, true);
-				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
+				giveItems(player, YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 			case "32325-06.html":
-				if (st.hasQuestItems(YINSWORD))
+				if (hasQuestItems(player, YINSWORD))
 				{
-					st.takeItems(YINSWORD, 1);
+					takeItems(player, YINSWORD, 1);
 					htmltext = "32325-07.html";
 				}
-				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
+				giveItems(player, YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-06.html":
-				if (st.hasQuestItems(YANGSWORD))
+				if (hasQuestItems(player, YANGSWORD))
 				{
-					st.takeItems(YANGSWORD, 1);
+					takeItems(player, YANGSWORD, 1);
 					htmltext = "32326-07.html";
 				}
-				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
+				giveItems(player, YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 			case "32325-09.html":
 				st.setCond(5, true);
 				BLESSING_OF_FIRE.getSkill().applyEffects(player, null, player, null, false, false);
-				st.giveItems(YINSWORD, 1, Elementals.FIRE, 10);
+				giveItems(player, YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-09.html":
 				st.setCond(10, true);
 				BLESSING_OF_EARTH.getSkill().applyEffects(player, null, player, null, false, false);
-				st.giveItems(YANGSWORD, 1, Elementals.EARTH, 10);
+				giveItems(player, YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 		}
 		
 		if (Util.isDigit(event))
 		{
 			htmltext = Integer.toString(npc.getId()) + "-1" + event + ".html";
-			st.giveItems(10520 + Integer.valueOf(event), 2);
+			giveItems(player, 10520 + Integer.valueOf(event), 2);
 			st.addExpAndSp(202160, 20375);
 			st.exitQuest(false, true);
 		}
@@ -142,10 +142,10 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		switch (npc.getId())
 		{
 			case AIR:
-				if ((st.isCond(8) || st.isCond(10)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (st.getQuestItemsCount(SOULPIECEAIR) < 6) && (getRandom(100) < 30))
+				if ((st.isCond(8) || st.isCond(10)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (getQuestItemsCount(player, SOULPIECEAIR) < 6) && (getRandom(100) < 30))
 				{
-					st.giveItems(SOULPIECEAIR, 1);
-					if (st.getQuestItemsCount(SOULPIECEAIR) >= 6)
+					giveItems(player, SOULPIECEAIR, 1);
+					if (getQuestItemsCount(player, SOULPIECEAIR) >= 6)
 					{
 						st.setCond(st.getCond() + 1, true);
 					}
@@ -156,10 +156,10 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				break;
 			case WATER:
-				if (((st.getCond() >= 3) || (st.getCond() <= 5)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && (st.getQuestItemsCount(SOULPIECEWATER) < 6) && (getRandom(100) < 30))
+				if (((st.getCond() >= 3) || (st.getCond() <= 5)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YINSWORD) && (getQuestItemsCount(player, SOULPIECEWATER) < 6) && (getRandom(100) < 30))
 				{
-					st.giveItems(SOULPIECEWATER, 1);
-					if (st.getQuestItemsCount(SOULPIECEWATER) >= 6)
+					giveItems(player, SOULPIECEWATER, 1);
+					if (getQuestItemsCount(player, SOULPIECEWATER) >= 6)
 					{
 						st.setCond(st.getCond() + 1, true);
 					}
@@ -249,8 +249,8 @@ public class Q10275_ContainingTheAttributePower extends Quest
 							break;
 						case 4:
 							htmltext = "32325-08.html";
-							st.takeItems(YINSWORD, 1);
-							st.takeItems(SOULPIECEWATER, -1);
+							takeItems(player, YINSWORD, 1);
+							takeItems(player, SOULPIECEWATER, -1);
 							break;
 						case 6:
 							htmltext = "32325-10.html";
@@ -274,8 +274,8 @@ public class Q10275_ContainingTheAttributePower extends Quest
 							break;
 						case 9:
 							htmltext = "32326-08.html";
-							st.takeItems(YANGSWORD, 1);
-							st.takeItems(SOULPIECEAIR, -1);
+							takeItems(player, YANGSWORD, 1);
+							takeItems(player, SOULPIECEAIR, -1);
 							break;
 						case 11:
 							htmltext = "32326-10.html";

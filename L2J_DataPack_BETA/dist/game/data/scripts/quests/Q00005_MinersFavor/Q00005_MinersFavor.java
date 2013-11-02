@@ -71,16 +71,16 @@ public class Q00005_MinersFavor extends Quest
 		{
 			case "30554-03.htm":
 				st.startQuest();
-				st.giveItems(BOLTERS_LIST, 1);
-				st.giveItems(BOLTERS_SMELLY_SOCKS, 1);
+				giveItems(player, BOLTERS_LIST, 1);
+				giveItems(player, BOLTERS_SMELLY_SOCKS, 1);
 				break;
 			case "30526-02.html":
 				if (!st.hasQuestItems(BOLTERS_SMELLY_SOCKS))
 				{
 					return "30526-04.html";
 				}
-				st.takeItems(BOLTERS_SMELLY_SOCKS, -1);
-				st.giveItems(MINERS_PICK, 1);
+				takeItems(player, BOLTERS_SMELLY_SOCKS, -1);
+				giveItems(player, MINERS_PICK, 1);
 				checkProgress(st);
 				break;
 			case "30554-05.html":
@@ -119,7 +119,7 @@ public class Q00005_MinersFavor extends Quest
 						{
 							st.giveAdena(2466, true);
 							st.addExpAndSp(5672, 446);
-							st.giveItems(NECKLACE, 1);
+							giveItems(player, NECKLACE, 1);
 							st.exitQuest(false, true);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
@@ -168,7 +168,7 @@ public class Q00005_MinersFavor extends Quest
 		{
 			return npcId + "-02.html";
 		}
-		st.giveItems(itemId, 1);
+		giveItems(st.getPlayer(), itemId, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		checkProgress(st);
 		return npcId + "-01.html";

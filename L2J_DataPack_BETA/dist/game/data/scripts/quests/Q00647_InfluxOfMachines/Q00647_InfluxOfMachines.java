@@ -98,9 +98,9 @@ public class Q00647_InfluxOfMachines extends Quest
 				htmltext = event;
 				break;
 			case "32069-06.html":
-				if (st.isCond(2) && (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
+				if (st.isCond(2) && (getQuestItemsCount(player, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
 				{
-					st.giveItems(RECIPES[getRandom(RECIPES.length)], 1);
+					giveItems(player, RECIPES[getRandom(RECIPES.length)], 1);
 					st.exitQuest(true, true);
 					htmltext = event;
 				}
@@ -122,8 +122,8 @@ public class Q00647_InfluxOfMachines extends Quest
 			final QuestState st = member.getQuestState(getName());
 			if (st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 			{
-				st.giveItems(BROKEN_GOLEM_FRAGMENT, 1);
-				if (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT)
+				giveItems(player, BROKEN_GOLEM_FRAGMENT, 1);
+				if (getQuestItemsCount(player, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT)
 				{
 					st.setCond(2, true);
 				}
@@ -156,7 +156,7 @@ public class Q00647_InfluxOfMachines extends Quest
 				{
 					htmltext = "32069-04.html";
 				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
+				else if (st.isCond(2) && (getQuestItemsCount(player, BROKEN_GOLEM_FRAGMENT) >= FRAGMENT_COUNT))
 				{
 					htmltext = "32069-05.html";
 				}

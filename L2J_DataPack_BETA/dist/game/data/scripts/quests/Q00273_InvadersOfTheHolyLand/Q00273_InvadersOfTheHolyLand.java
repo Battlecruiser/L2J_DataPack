@@ -101,11 +101,11 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 		{
 			if (getRandom(100) <= MONSTERS.get(npc.getId()))
 			{
-				st.giveItems(BLACK_SOULSTONE, 1);
+				giveItems(killer, BLACK_SOULSTONE, 1);
 			}
 			else
 			{
-				st.giveItems(RED_SOULSTONE, 1);
+				giveItems(killer, RED_SOULSTONE, 1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
@@ -130,8 +130,8 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 				{
 					if (hasAtLeastOneQuestItem(player, BLACK_SOULSTONE, RED_SOULSTONE))
 					{
-						final long black = st.getQuestItemsCount(BLACK_SOULSTONE);
-						final long red = st.getQuestItemsCount(RED_SOULSTONE);
+						final long black = getQuestItemsCount(player, BLACK_SOULSTONE);
+						final long red = getQuestItemsCount(player, RED_SOULSTONE);
 						st.giveAdena((red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
 						takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
 						Q00281_HeadForTheHills.giveNewbieReward(player);

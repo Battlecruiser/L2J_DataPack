@@ -113,11 +113,11 @@ public class Q00287_FiguringItOut extends Quest
 				st.startQuest();
 				break;
 			case "Icarus":
-				if (st.getQuestItemsCount(VIAL_OF_TANTA_BLOOD) >= 500)
+				if (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) >= 500)
 				{
 					final ItemHolder holder = ICARUS[getRandom(ICARUS.length)];
-					st.giveItems(holder);
-					st.takeItems(VIAL_OF_TANTA_BLOOD, 500);
+					giveItems(player, holder);
+					takeItems(player, VIAL_OF_TANTA_BLOOD, 500);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 					htmltext = "32742-06.html";
 				}
@@ -127,11 +127,11 @@ public class Q00287_FiguringItOut extends Quest
 				}
 				break;
 			case "Moirai":
-				if (st.getQuestItemsCount(VIAL_OF_TANTA_BLOOD) >= 100)
+				if (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) >= 100)
 				{
 					final ItemHolder holder = MOIRAI[getRandom(MOIRAI.length)];
-					st.giveItems(holder);
-					st.takeItems(VIAL_OF_TANTA_BLOOD, 100);
+					giveItems(player, holder);
+					takeItems(player, VIAL_OF_TANTA_BLOOD, 100);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 					htmltext = "32742-08.html";
 				}
@@ -172,7 +172,7 @@ public class Q00287_FiguringItOut extends Quest
 		
 		if (getRandom(1000) < MONSTERS.get(npc.getId()))
 		{
-			st.giveItems(VIAL_OF_TANTA_BLOOD, 1);
+			giveItems(player, VIAL_OF_TANTA_BLOOD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
@@ -196,7 +196,7 @@ public class Q00287_FiguringItOut extends Quest
 				htmltext = ((player.getLevel() >= MIN_LEVEL) && (prev != null) && prev.isCompleted()) ? "32742-01.htm" : "32742-14.htm";
 				break;
 			case State.STARTED:
-				htmltext = (st.getQuestItemsCount(VIAL_OF_TANTA_BLOOD) < 100) ? "32742-04.html" : "32742-05.html";
+				htmltext = (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) < 100) ? "32742-04.html" : "32742-05.html";
 				break;
 		}
 		return htmltext;

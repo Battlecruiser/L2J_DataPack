@@ -91,17 +91,17 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "ADENA":
 			{
-				final long count = st.getQuestItemsCount(ALLIGATOR_TOOTH);
+				final long count = getQuestItemsCount(player, ALLIGATOR_TOOTH);
 				if (count >= 100)
 				{
 					st.giveAdena((count * 220) + 10700, true);
-					st.takeItems(ALLIGATOR_TOOTH, -1);
+					takeItems(player, ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-06.html";
 				}
 				else if (count > 0)
 				{
 					st.giveAdena((count * 220) + 3100, true);
-					st.takeItems(ALLIGATOR_TOOTH, -1);
+					takeItems(player, ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-07.html";
 				}
 				else
@@ -118,11 +118,11 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "REWARD":
 			{
-				final long count = st.getQuestItemsCount(MYSTERIOUS_MAP_PIECE);
+				final long count = getQuestItemsCount(player, MYSTERIOUS_MAP_PIECE);
 				if (count >= 10)
 				{
-					st.giveItems(PIRATES_TREASURE_MAP, 1);
-					st.takeItems(MYSTERIOUS_MAP_PIECE, 10);
+					giveItems(player, PIRATES_TREASURE_MAP, 1);
+					takeItems(player, MYSTERIOUS_MAP_PIECE, 10);
 					htmltext = "30895-13.html";
 				}
 				else if (count > 0)
@@ -139,7 +139,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if ((st != null) && st.isStarted())
+		if (st != null)
 		{
 			int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))

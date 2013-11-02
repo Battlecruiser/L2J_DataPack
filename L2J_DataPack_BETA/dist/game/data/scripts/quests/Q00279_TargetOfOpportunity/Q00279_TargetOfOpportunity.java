@@ -83,8 +83,8 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		}
 		else if (event.equalsIgnoreCase("32302-08.html") && (st.getInt("progress") == 1) && st.hasQuestItems(SEAL_COMPONENTS[0]) && st.hasQuestItems(SEAL_COMPONENTS[1]) && st.hasQuestItems(SEAL_COMPONENTS[2]) && st.hasQuestItems(SEAL_COMPONENTS[3]))
 		{
-			st.giveItems(SEAL_BREAKERS[0], 1);
-			st.giveItems(SEAL_BREAKERS[1], 1);
+			giveItems(player, SEAL_BREAKERS[0], 1);
+			giveItems(player, SEAL_BREAKERS[1], 1);
 			st.exitQuest(true, true);
 		}
 		return htmltext;
@@ -105,7 +105,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 		{
 			if (!st.hasQuestItems(SEAL_COMPONENTS[idx]))
 			{
-				st.giveItems(SEAL_COMPONENTS[idx], 1);
+				giveItems(player, SEAL_COMPONENTS[idx], 1);
 				if (haveAllExceptThis(st, idx))
 				{
 					st.setCond(2, true);

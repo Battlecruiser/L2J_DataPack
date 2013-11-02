@@ -91,7 +91,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			case "31740-4.html":
 				if (st.isCreated())
 				{
-					st.takeItems(CARADINE_LETTER, -1);
+					takeItems(player, CARADINE_LETTER, -1);
 					st.startQuest();
 				}
 				break;
@@ -106,17 +106,17 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			case "31741-5.html":
 				if (st.isCond(3) && st.hasQuestItems(WATERBINDER) && st.hasQuestItems(EVERGREEN))
 				{
-					st.takeItems(WATERBINDER, 1);
-					st.takeItems(EVERGREEN, 1);
+					takeItems(player, WATERBINDER, 1);
+					takeItems(player, EVERGREEN, 1);
 					st.setCond(4, true);
 				}
 				break;
 			case "31741-9.html":
-				if (st.isCond(5) && (st.hasQuestItems(RAIN_SONG) || (st.getQuestItemsCount(FRAGMENTS) >= 100)))
+				if (st.isCond(5) && (st.hasQuestItems(RAIN_SONG) || (getQuestItemsCount(player, FRAGMENTS) >= 100)))
 				{
-					st.takeItems(RAIN_SONG, -1);
-					st.takeItems(FRAGMENTS, -1);
-					st.giveItems(RELIC_BOX, 1);
+					takeItems(player, RAIN_SONG, -1);
+					takeItems(player, FRAGMENTS, -1);
+					giveItems(player, RELIC_BOX, 1);
 					st.setCond(6, true);
 				}
 				else
@@ -127,8 +127,8 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 			case "30721-2.html":
 				if (st.isCond(6) && st.hasQuestItems(RELIC_BOX))
 				{
-					st.takeItems(RELIC_BOX, -1);
-					st.giveItems(CARADINE_LETTER_LAST, 1);
+					takeItems(player, RELIC_BOX, -1);
+					giveItems(player, CARADINE_LETTER_LAST, 1);
 					st.addExpAndSp(719843, 0);
 					st.exitQuest(false, true);
 				}
@@ -154,7 +154,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					{
 						if (chance < CHANCE_FOR_DROP)
 						{
-							st.giveItems(WATERBINDER, 1);
+							giveItems(player, WATERBINDER, 1);
 							st.unset("awaitsWaterbinder");
 							if (st.hasQuestItems(EVERGREEN))
 							{
@@ -179,7 +179,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					{
 						if (chance < CHANCE_FOR_DROP)
 						{
-							st.giveItems(EVERGREEN, 1);
+							giveItems(player, EVERGREEN, 1);
 							st.unset("awaitsEvergreen");
 							if (st.hasQuestItems(WATERBINDER))
 							{
@@ -204,7 +204,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 						{
 							if (pst.isCond(4) && !pst.hasQuestItems(RAIN_SONG))
 							{
-								pst.giveItems(RAIN_SONG, 1);
+								giveItems(player, RAIN_SONG, 1);
 								pst.setCond(5, true);
 							}
 						}
@@ -217,7 +217,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					{
 						if (pst.isCond(4) && !pst.hasQuestItems(RAIN_SONG))
 						{
-							pst.giveItems(RAIN_SONG, 1);
+							giveItems(player, RAIN_SONG, 1);
 							pst.setCond(5, true);
 						}
 					}
@@ -230,12 +230,12 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					return super.onKill(npc, player, isSummon);
 				}
 				
-				if (Util.contains(MOBS, npc.getId()) && (st.getQuestItemsCount(FRAGMENTS) < 100) && (st.isCond(4)))
+				if (Util.contains(MOBS, npc.getId()) && (getQuestItemsCount(player, FRAGMENTS) < 100) && (st.isCond(4)))
 				{
 					if (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS)
 					{
-						st.giveItems(FRAGMENTS, 1);
-						if (st.getQuestItemsCount(FRAGMENTS) < 100)
+						giveItems(player, FRAGMENTS, 1);
+						if (getQuestItemsCount(player, FRAGMENTS) < 100)
 						{
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
@@ -300,7 +300,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 								htmltext = "31741-8.html";
 								break;
 							case 5:
-								if (st.hasQuestItems(RAIN_SONG) || (st.getQuestItemsCount(FRAGMENTS) >= 100))
+								if (st.hasQuestItems(RAIN_SONG) || (getQuestItemsCount(player, FRAGMENTS) >= 100))
 								{
 									htmltext = "31741-7.html";
 								}
@@ -310,7 +310,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 								}
 								break;
 							case 6:
-								if (st.getQuestItemsCount(RELIC_BOX) == 1)
+								if (getQuestItemsCount(player, RELIC_BOX) == 1)
 								{
 									htmltext = "31741-11.html";
 								}

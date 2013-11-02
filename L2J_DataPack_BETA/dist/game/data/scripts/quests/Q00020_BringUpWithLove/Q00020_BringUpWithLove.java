@@ -81,8 +81,8 @@ public class Q00020_BringUpWithLove extends Quest
 			{
 				if (st.isCond(2) && st.hasQuestItems(INNOCENCE_JEWEL))
 				{
-					st.giveItems(WATER_CRYSTAL, 1);
-					st.takeItems(INNOCENCE_JEWEL, -1);
+					giveItems(player, WATER_CRYSTAL, 1);
+					takeItems(player, INNOCENCE_JEWEL, -1);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -136,7 +136,7 @@ public class Q00020_BringUpWithLove extends Quest
 		final QuestState st = player.getQuestState(Q00020_BringUpWithLove.class.getSimpleName());
 		if ((st != null) && st.isCond(1) && !st.hasQuestItems(INNOCENCE_JEWEL) && (getRandom(100) < 5))
 		{
-			st.giveItems(INNOCENCE_JEWEL, 1);
+			giveItems(player, INNOCENCE_JEWEL, 1);
 			st.setCond(2, true);
 		}
 	}

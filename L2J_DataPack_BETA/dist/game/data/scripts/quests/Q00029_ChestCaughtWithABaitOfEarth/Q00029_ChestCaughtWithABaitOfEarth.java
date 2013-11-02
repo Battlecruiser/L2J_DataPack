@@ -67,8 +67,8 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 			case "31574-08.htm":
 				if (st.isCond(1) && st.hasQuestItems(PURPLE_TREASURE_BOX))
 				{
-					st.giveItems(SMALL_GLASS_BOX, 1);
-					st.takeItems(PURPLE_TREASURE_BOX, -1);
+					giveItems(player, SMALL_GLASS_BOX, 1);
+					takeItems(player, PURPLE_TREASURE_BOX, -1);
 					st.setCond(2, true);
 					htmltext = "31574-07.htm";
 				}
@@ -76,7 +76,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 			case "30909-03.htm":
 				if (st.isCond(2) && st.hasQuestItems(SMALL_GLASS_BOX))
 				{
-					st.giveItems(PLATED_LEATHER_GLOVES, 1);
+					giveItems(player, PLATED_LEATHER_GLOVES, 1);
 					st.exitQuest(false, true);
 					htmltext = "30909-02.htm";
 				}

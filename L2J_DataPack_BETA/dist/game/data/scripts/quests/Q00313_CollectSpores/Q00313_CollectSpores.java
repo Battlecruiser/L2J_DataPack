@@ -116,7 +116,7 @@ public final class Q00313_CollectSpores extends Quest
 				{
 					case 1:
 					{
-						if (st.getQuestItemsCount(SPORE_SAC) < REQUIRED_SAC_COUNT)
+						if (getQuestItemsCount(player, SPORE_SAC) < REQUIRED_SAC_COUNT)
 						{
 							htmltext = "30150-06.html";
 						}
@@ -124,7 +124,7 @@ public final class Q00313_CollectSpores extends Quest
 					}
 					case 2:
 					{
-						if (st.getQuestItemsCount(SPORE_SAC) >= REQUIRED_SAC_COUNT)
+						if (getQuestItemsCount(player, SPORE_SAC) >= REQUIRED_SAC_COUNT)
 						{
 							st.giveAdena(3500, true);
 							st.exitQuest(true, true);

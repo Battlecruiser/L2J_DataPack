@@ -57,7 +57,7 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.giveItems(TAYR_HEAD, 1);
+			giveItems(player, TAYR_HEAD, 1);
 			st.setCond(2, true);
 		}
 	}
@@ -80,7 +80,7 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 			case "31377-07.html":
 				if (st.hasQuestItems(TAYR_HEAD) && st.isCond(2))
 				{
-					st.giveItems(WISDOM_FEATHER, 1);
+					giveItems(player, WISDOM_FEATHER, 1);
 					st.addExpAndSp(10000, 0);
 					st.exitQuest(true, true);
 				}

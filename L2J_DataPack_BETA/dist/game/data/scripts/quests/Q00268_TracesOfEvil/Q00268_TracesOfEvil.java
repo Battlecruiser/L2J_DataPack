@@ -72,8 +72,8 @@ public final class Q00268_TracesOfEvil extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			st.giveItems(CONTAMINATED_KASHA_SPIDER_VENOM, 1);
-			if (st.getQuestItemsCount(CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
+			giveItems(killer, CONTAMINATED_KASHA_SPIDER_VENOM, 1);
+			if (getQuestItemsCount(killer, CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
 			{
 				st.setCond(2, true);
 			}
@@ -110,7 +110,7 @@ public final class Q00268_TracesOfEvil extends Quest
 						}
 						case 2:
 						{
-							if (st.getQuestItemsCount(CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
+							if (getQuestItemsCount(player, CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
 							{
 								st.giveAdena(2474, true);
 								st.addExpAndSp(8738, 409);

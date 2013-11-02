@@ -65,7 +65,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					st.giveItems(BOX, 1);
+					giveItems(player, BOX, 1);
 				}
 				break;
 			case "31378-02.html":

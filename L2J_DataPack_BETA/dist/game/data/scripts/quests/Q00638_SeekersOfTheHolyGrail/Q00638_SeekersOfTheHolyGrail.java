@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Seekers Of The Holy Grail (638)
@@ -36,11 +35,11 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 {
 	private static class DropInfo
 	{
-		public final int itemId;
-		public final double chance;
-		public final int keyId;
-		public final int keyChance;
-		public final int keyCount;
+		private final int _itemId;
+		private final double _chance;
+		private final int _keyId;
+		private final int _keyChance;
+		private final int _keyCount;
 		
 		public DropInfo(int itemId, double chance)
 		{
@@ -49,11 +48,36 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 		
 		public DropInfo(int itemId, double chance, int keyId, int keyChance, int count)
 		{
-			this.itemId = itemId;
-			this.chance = chance;
-			this.keyId = keyId;
-			this.keyChance = keyChance;
-			this.keyCount = count;
+			_itemId = itemId;
+			_chance = chance;
+			_keyId = keyId;
+			_keyChance = keyChance;
+			_keyCount = count;
+		}
+		
+		public int getItemId()
+		{
+			return _itemId;
+		}
+		
+		public double getChance()
+		{
+			return _chance;
+		}
+		
+		public int getKeyId()
+		{
+			return _keyId;
+		}
+		
+		public int getKeyChance()
+		{
+			return _keyChance;
+		}
+		
+		public int getKeyCount()
+		{
+			return _keyCount;
 		}
 	}
 	
@@ -164,26 +188,26 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 			}
 			case "reward":
 			{
-				if (st.isStarted() && (st.getQuestItemsCount(TOTEM) >= TOTEMS_REQUIRED_COUNT))
+				if (st.isStarted() && (getQuestItemsCount(player, TOTEM) >= TOTEMS_REQUIRED_COUNT))
 				{
 					if (getRandom(100) < 80)
 					{
 						if (getRandomBoolean())
 						{
-							st.rewardItems(SCROLL_ENCHANT_A_S, 1);
+							rewardItems(player, SCROLL_ENCHANT_A_S, 1);
 						}
 						else
 						{
-							st.rewardItems(SCROLL_ENCHANT_W_S, 1);
+							rewardItems(player, SCROLL_ENCHANT_W_S, 1);
 						}
 						htmltext = "31328-07.html";
 					}
 					else
 					{
-						st.giveAdena(3576000, true);
+						giveAdena(player, 3576000, true);
 						htmltext = "31328-08.html";
 					}
-					st.takeItems(TOTEM, 2000);
+					takeItems(player, TOTEM, 2000);
 				}
 				break;
 			}
@@ -207,11 +231,11 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 		if (qs != null)
 		{
 			final DropInfo info = MOBS_DROP_CHANCES.get(npc.getId());
-			if (qs.giveItemRandomly(npc, info.itemId, 1, 0, info.chance, true))
+			if (giveItemRandomly(killer, npc, info.getItemId(), 1, 0, info.getChance(), true))
 			{
-				if ((info.keyId > 0) && (getRandom(100) < info.keyChance))
+				if ((info.getKeyId() > 0) && (getRandom(100) < info.getKeyChance()))
 				{
-					((L2MonsterInstance) npc).dropItem(killer, info.keyId, info.keyCount);
+					((L2MonsterInstance) npc).dropItem(killer, info.getKeyId(), info.getKeyCount());
 				}
 			}
 		}
@@ -227,18 +251,14 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 		{
 			return htmltext;
 		}
-		switch (st.getState())
+		
+		if (st.isCreated())
 		{
-			case State.CREATED:
-			{
-				htmltext = ((player.getLevel() >= MIN_LVL) ? "31328-01.htm" : "31328-02.htm");
-				break;
-			}
-			case State.STARTED:
-			{
-				htmltext = ((st.getQuestItemsCount(TOTEM) >= TOTEMS_REQUIRED_COUNT) ? "31328-04.html" : "31328-05.html");
-				break;
-			}
+			htmltext = ((player.getLevel() >= MIN_LVL) ? "31328-01.htm" : "31328-02.htm");
+		}
+		else if (st.isStarted())
+		{
+			htmltext = ((getQuestItemsCount(player, TOTEM) >= TOTEMS_REQUIRED_COUNT) ? "31328-04.html" : "31328-05.html");
 		}
 		return htmltext;
 	}

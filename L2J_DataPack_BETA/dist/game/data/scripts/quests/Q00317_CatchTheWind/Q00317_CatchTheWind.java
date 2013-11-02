@@ -76,11 +76,11 @@ public final class Q00317_CatchTheWind extends Quest
 			case "30361-08.html":
 			case "30361-09.html":
 			{
-				final long shardCount = st.getQuestItemsCount(WIND_SHARD);
+				final long shardCount = getQuestItemsCount(player, WIND_SHARD);
 				if (shardCount > 0)
 				{
 					st.giveAdena(((shardCount * 40) + (shardCount >= 10 ? 2988 : 0)), true);
-					st.takeItems(WIND_SHARD, -1);
+					takeItems(player, WIND_SHARD, -1);
 				}
 				
 				if (event.equals("30361-08.html"))

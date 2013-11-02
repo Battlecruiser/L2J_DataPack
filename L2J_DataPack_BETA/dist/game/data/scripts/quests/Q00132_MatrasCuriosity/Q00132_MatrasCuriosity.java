@@ -81,12 +81,12 @@ public final class Q00132_MatrasCuriosity extends Quest
 		{
 			st.giveAdena(65884, true);
 			st.addExpAndSp(50541, 5094);
-			st.giveItems(FIRE, 1);
-			st.giveItems(WATER, 1);
-			st.giveItems(EARTH, 1);
-			st.giveItems(WIND, 1);
-			st.giveItems(DARKNESS, 1);
-			st.giveItems(DIVINITY, 1);
+			giveItems(player, FIRE, 1);
+			giveItems(player, WATER, 1);
+			giveItems(player, EARTH, 1);
+			giveItems(player, WIND, 1);
+			giveItems(player, DARKNESS, 1);
+			giveItems(player, DIVINITY, 1);
 			st.exitQuest(false, true);
 		}
 		return htmltext;
@@ -103,7 +103,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 				if (pl != null)
 				{
 					final QuestState st = pl.getQuestState(getName());
-					st.giveItems(BLUEPRINT_PRINCE, 1);
+					giveItems(player, BLUEPRINT_PRINCE, 1);
 					st.set("rewarded_prince", "2");
 					
 					if (st.hasQuestItems(BLUEPRINT_RANKU))
@@ -121,7 +121,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 				if (pl != null)
 				{
 					final QuestState st = pl.getQuestState(getName());
-					st.giveItems(BLUEPRINT_RANKU, 1);
+					giveItems(player, BLUEPRINT_RANKU, 1);
 					st.set("rewarded_ranku", "2");
 					
 					if (st.hasQuestItems(BLUEPRINT_PRINCE))
@@ -164,8 +164,8 @@ public final class Q00132_MatrasCuriosity extends Quest
 				case 2:
 					if (st.hasQuestItems(BLUEPRINT_RANKU) && st.hasQuestItems(BLUEPRINT_PRINCE))
 					{
-						st.takeItems(BLUEPRINT_RANKU, -1);
-						st.takeItems(BLUEPRINT_PRINCE, -1);
+						takeItems(player, BLUEPRINT_RANKU, -1);
+						takeItems(player, BLUEPRINT_PRINCE, -1);
 						st.setCond(3, true);
 						htmltext = "32245-05.htm";
 					}

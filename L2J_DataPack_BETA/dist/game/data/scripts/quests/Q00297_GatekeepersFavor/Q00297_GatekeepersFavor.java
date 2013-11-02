@@ -71,10 +71,10 @@ public class Q00297_GatekeepersFavor extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isStarted() && (st.getQuestItemsCount(STARSTONE) < STARSTONE_COUT))
+		if ((st != null) && st.isStarted() && (getQuestItemsCount(killer, STARSTONE) < STARSTONE_COUT))
 		{
-			st.giveItems(STARSTONE, 1);
-			if (st.getQuestItemsCount(STARSTONE) >= STARSTONE_COUT)
+			giveItems(killer, STARSTONE, 1);
+			if (getQuestItemsCount(killer, STARSTONE) >= STARSTONE_COUT)
 			{
 				st.setCond(2, true);
 			}
@@ -106,9 +106,9 @@ public class Q00297_GatekeepersFavor extends Quest
 				{
 					htmltext = "30540-04.html";
 				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(STARSTONE) >= STARSTONE_COUT))
+				else if (st.isCond(2) && (getQuestItemsCount(player, STARSTONE) >= STARSTONE_COUT))
 				{
-					st.giveItems(GATEKEEPER_TOKEN, 2);
+					giveItems(player, GATEKEEPER_TOKEN, 2);
 					st.exitQuest(true, true);
 					htmltext = "30540-05.html";
 				}

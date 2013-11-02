@@ -57,7 +57,7 @@ public class Q00607_ProveYourCourageKetra extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			st.giveItems(SHADITH_HEAD, 1);
+			giveItems(player, SHADITH_HEAD, 1);
 			st.setCond(2, true);
 		}
 	}
@@ -80,7 +80,7 @@ public class Q00607_ProveYourCourageKetra extends Quest
 			case "31370-07.html":
 				if (st.hasQuestItems(SHADITH_HEAD) && st.isCond(2))
 				{
-					st.giveItems(VALOR_TOTEM, 1);
+					giveItems(player, VALOR_TOTEM, 1);
 					st.addExpAndSp(10000, 0);
 					st.exitQuest(true, true);
 				}

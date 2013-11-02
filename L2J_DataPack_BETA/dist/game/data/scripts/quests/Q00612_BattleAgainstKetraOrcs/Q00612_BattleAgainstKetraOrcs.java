@@ -90,12 +90,12 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 			case "31377-06.html":
 				break;
 			case "31377-07.html":
-				if (st.getQuestItemsCount(MOLAR) < MOLAR_COUNT)
+				if (getQuestItemsCount(player, MOLAR) < MOLAR_COUNT)
 				{
 					return "31377-08.html";
 				}
-				st.takeItems(MOLAR, MOLAR_COUNT);
-				st.giveItems(SEED, 20);
+				takeItems(player, MOLAR, MOLAR_COUNT);
+				giveItems(player, SEED, 20);
 				break;
 			case "31377-09.html":
 				st.exitQuest(true, true);
@@ -114,7 +114,7 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
-			st.giveItems(MOLAR, 1);
+			giveItems(killer, MOLAR, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);

@@ -57,7 +57,7 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 		if (event.equals("32548-05.html"))
 		{
 			st.startQuest();
-			st.giveItems(INTRODUCTION, 1);
+			giveItems(player, INTRODUCTION, 1);
 		}
 		return event;
 	}

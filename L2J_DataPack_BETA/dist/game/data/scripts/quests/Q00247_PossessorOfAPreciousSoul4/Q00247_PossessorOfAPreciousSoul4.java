@@ -71,7 +71,7 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 		{
 			case "31740-3.html":
 				st.startQuest();
-				st.takeItems(CARADINE_LETTER_LAST, -1);
+				takeItems(player, CARADINE_LETTER_LAST, -1);
 				break;
 			case "31740-5.html":
 				if (st.isCond(1))
@@ -85,7 +85,7 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 				{
 					player.setNoble(true);
 					st.addExpAndSp(93836, 0);
-					st.giveItems(NOBLESS_TIARA, 1);
+					giveItems(player, NOBLESS_TIARA, 1);
 					npc.setTarget(player);
 					npc.doCast(MIMIRS_ELIXIR.getSkill());
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));

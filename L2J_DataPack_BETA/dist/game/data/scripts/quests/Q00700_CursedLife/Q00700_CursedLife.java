@@ -127,9 +127,9 @@ public class Q00700_CursedLife extends Quest
 				}
 				case State.STARTED:
 				{
-					long bones = st.getQuestItemsCount(SWALLOWED_BONES);
-					long ribs = st.getQuestItemsCount(SWALLOWED_STERNUM);
-					long skulls = st.getQuestItemsCount(SWALLOWED_SKULL);
+					long bones = getQuestItemsCount(player, SWALLOWED_BONES);
+					long ribs = getQuestItemsCount(player, SWALLOWED_STERNUM);
+					long skulls = getQuestItemsCount(player, SWALLOWED_SKULL);
 					long sum = bones + ribs + skulls;
 					if (sum > 0)
 					{
@@ -193,7 +193,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(49) + 76;
 				}
-				st.giveItems(SWALLOWED_BONES, amount);
+				giveItems(player, SWALLOWED_BONES, amount);
 				chance = getRandom(1000);
 				if (chance < 520)
 				{
@@ -219,7 +219,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(8) + 6;
 				}
-				st.giveItems(SWALLOWED_STERNUM, amount);
+				giveItems(player, SWALLOWED_STERNUM, amount);
 				chance = getRandom(1000);
 				if (chance < 185)
 				{
@@ -241,7 +241,7 @@ public class Q00700_CursedLife extends Quest
 				{
 					amount = getRandom(6) + 17;
 				}
-				st.giveItems(SWALLOWED_SKULL, amount);
+				giveItems(player, SWALLOWED_SKULL, amount);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
@@ -250,17 +250,17 @@ public class Q00700_CursedLife extends Quest
 				int chance = getRandom(1000);
 				if (chance < chances[0])
 				{
-					st.giveItems(SWALLOWED_BONES, 1);
+					giveItems(player, SWALLOWED_BONES, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if (chance < chances[1])
 				{
-					st.giveItems(SWALLOWED_STERNUM, 1);
+					giveItems(player, SWALLOWED_STERNUM, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if (chance < chances[2])
 				{
-					st.giveItems(SWALLOWED_SKULL, 1);
+					giveItems(player, SWALLOWED_SKULL, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}

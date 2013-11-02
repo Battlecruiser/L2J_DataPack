@@ -95,7 +95,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case "32114-08.html":
 				if (st.isCond(1))
 				{
-					st.giveItems(GAZKH_FRAGMENT, 1);
+					giveItems(player, GAZKH_FRAGMENT, 1);
 					st.setCond(2, true);
 				}
 				break;
@@ -235,8 +235,8 @@ public class Q00125_TheNameOfEvil1 extends Quest
 			case "32121-18.html":
 				if (st.isCond(7) && st.hasQuestItems(GAZKH_FRAGMENT))
 				{
-					st.giveItems(EPITAPH_OF_WISDOM, 1);
-					st.takeItems(GAZKH_FRAGMENT, -1);
+					giveItems(player, EPITAPH_OF_WISDOM, 1);
+					takeItems(player, GAZKH_FRAGMENT, -1);
 					st.setCond(8, true);
 					st.unset("Memo");
 				}
@@ -258,30 +258,30 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		int npcId = npc.getId();
 		if (ORNITHOMIMUS.containsKey(npcId))
 		{
-			if (st.getQuestItemsCount(ORNITHOMIMUS_CLAW) < 2)
+			if (getQuestItemsCount(player, ORNITHOMIMUS_CLAW) < 2)
 			{
 				float chance = ORNITHOMIMUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
-					st.giveItems(ORNITHOMIMUS_CLAW, 1);
+					giveItems(player, ORNITHOMIMUS_CLAW, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
 		else if (DEINONYCHUS.containsKey(npcId))
 		{
-			if (st.getQuestItemsCount(DEINONYCHUS_BONE) < 2)
+			if (getQuestItemsCount(player, DEINONYCHUS_BONE) < 2)
 			{
 				float chance = DEINONYCHUS.get(npcId) * Config.RATE_QUEST_DROP;
 				if (getRandom(1000) < chance)
 				{
-					st.giveItems(DEINONYCHUS_BONE, 1);
+					giveItems(player, DEINONYCHUS_BONE, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
 		}
 		
-		if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) == 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) == 2))
+		if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) == 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) == 2))
 		{
 			st.setCond(4, true);
 		}
@@ -360,10 +360,10 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = "32117-10.html";
 							break;
 						case 4:
-							if ((st.getQuestItemsCount(ORNITHOMIMUS_CLAW) >= 2) && (st.getQuestItemsCount(DEINONYCHUS_BONE) >= 2))
+							if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) >= 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) >= 2))
 							{
-								st.takeItems(ORNITHOMIMUS_CLAW, -1);
-								st.takeItems(DEINONYCHUS_BONE, -1);
+								takeItems(player, ORNITHOMIMUS_CLAW, -1);
+								takeItems(player, DEINONYCHUS_BONE, -1);
 								htmltext = "32117-11.html";
 							}
 							break;

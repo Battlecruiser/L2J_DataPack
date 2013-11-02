@@ -102,7 +102,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(2) && (st.getQuestItemsCount(BEAR_SKIN) >= REQUIRED_COUNT))
+					if (st.isCond(2) && (getQuestItemsCount(player, BEAR_SKIN) >= REQUIRED_COUNT))
 					{
 						st.giveAdena(ADENA_COUNT, true);
 						st.exitQuest(true, true);
@@ -125,12 +125,12 @@ public class Q00341_HuntingForWildBeasts extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			long skins = st.getQuestItemsCount(BEAR_SKIN);
+			long skins = getQuestItemsCount(player, BEAR_SKIN);
 			if (skins < REQUIRED_COUNT)
 			{
 				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
-					st.giveItems(BEAR_SKIN, 1);
+					giveItems(player, BEAR_SKIN, 1);
 					if ((++skins) < REQUIRED_COUNT)
 					{
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

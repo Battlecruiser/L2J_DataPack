@@ -75,7 +75,7 @@ public final class Q00188_SealRemoval extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					st.giveItems(BROKEN_METAL_PIECES, 1);
+					giveItems(player, BROKEN_METAL_PIECES, 1);
 					htmltext = event;
 				}
 				break;

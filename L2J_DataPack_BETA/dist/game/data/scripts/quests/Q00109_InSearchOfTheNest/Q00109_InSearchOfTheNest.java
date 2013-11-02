@@ -60,11 +60,11 @@ public class Q00109_InSearchOfTheNest extends Quest
 				st.startQuest();
 				break;
 			case "32015-2.html":
-				st.giveItems(SCOUTS_NOTE, 1);
+				giveItems(player, SCOUTS_NOTE, 1);
 				st.setCond(2, true);
 				break;
 			case "31553-3.html":
-				st.takeItems(SCOUTS_NOTE, -1);
+				takeItems(player, SCOUTS_NOTE, -1);
 				st.setCond(3, true);
 				break;
 			case "31554-2.html":

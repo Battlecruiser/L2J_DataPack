@@ -169,7 +169,7 @@ public class Q10289_FadeToBlack extends Quest
 							return null;
 					}
 					
-					int marksOfDarkness = (int) st.getQuestItemsCount(MARK_OF_DARKNESS);
+					int marksOfDarkness = (int) getQuestItemsCount(player, MARK_OF_DARKNESS);
 					if (marksOfDarkness > 0)
 					{
 						st.addExpAndSp(55983 * marksOfDarkness, 136500 * marksOfDarkness);
@@ -223,7 +223,7 @@ public class Q10289_FadeToBlack extends Quest
 				{
 					if (party == null) // if no party, the winner gets it all
 					{
-						st.giveItems(MARK_OF_SPLENDOR, 1);
+						giveItems(randomKiller, MARK_OF_SPLENDOR, 1);
 						st.setCond(3, true);
 					}
 					else
@@ -238,13 +238,13 @@ public class Q10289_FadeToBlack extends Quest
 							
 							if (idx == rnd) // only one lucky player will get the good item
 							{
-								st.giveItems(MARK_OF_SPLENDOR, 1);
+								giveItems(member, MARK_OF_SPLENDOR, 1);
 								st.setCond(3, true);
 							}
 							else
 							// the rest will get the bad one and can get multiple ones (the reward increases so not entirely bad)
 							{
-								st.giveItems(MARK_OF_DARKNESS, 1);
+								giveItems(member, MARK_OF_DARKNESS, 1);
 								st.setCond(2, true);
 							}
 							idx++;

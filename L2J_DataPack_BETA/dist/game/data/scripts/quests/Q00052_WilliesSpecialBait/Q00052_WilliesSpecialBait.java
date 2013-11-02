@@ -65,10 +65,10 @@ public class Q00052_WilliesSpecialBait extends Quest
 				st.startQuest();
 				break;
 			case "31574-07.html":
-				if (st.isCond(2) && (st.getQuestItemsCount(TARLK_EYE) >= 100))
+				if (st.isCond(2) && (getQuestItemsCount(player, TARLK_EYE) >= 100))
 				{
 					htmltext = "31574-06.htm";
-					st.giveItems(EARTH_FISHING_LURE, 4);
+					giveItems(player, EARTH_FISHING_LURE, 4);
 					st.exitQuest(false, true);
 				}
 				break;
@@ -86,7 +86,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		if (st.getQuestItemsCount(TARLK_EYE) < 100)
+		if (getQuestItemsCount(player, TARLK_EYE) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
@@ -96,7 +96,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 			}
 		}
 		
-		if (st.getQuestItemsCount(TARLK_EYE) >= 100)
+		if (getQuestItemsCount(player, TARLK_EYE) >= 100)
 		{
 			st.setCond(2, true);
 		}

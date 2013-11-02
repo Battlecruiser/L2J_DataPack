@@ -100,7 +100,7 @@ public class Q00288_HandleWithCare extends Quest
 					ItemHolder reward = null;
 					if (st.hasQuestItems(MIDDLE_GRADE_LIZARD_SCALE))
 					{
-						st.takeItems(MIDDLE_GRADE_LIZARD_SCALE, 1);
+						takeItems(player, MIDDLE_GRADE_LIZARD_SCALE, 1);
 						final int rnd = getRandom(10);
 						if (rnd == 0)
 						{
@@ -129,7 +129,7 @@ public class Q00288_HandleWithCare extends Quest
 					}
 					else if (st.hasQuestItems(HIGH_GRADE_LIZARD_SCALE))
 					{
-						st.takeItems(HIGH_GRADE_LIZARD_SCALE, 1);
+						takeItems(player, HIGH_GRADE_LIZARD_SCALE, 1);
 						final int rnd = getRandom(10);
 						if (rnd == 0)
 						{
@@ -147,11 +147,11 @@ public class Q00288_HandleWithCare extends Quest
 						{
 							reward = REWARDS[3];
 						}
-						st.giveItems(REWARDS[4]);
+						giveItems(player, REWARDS[4]);
 					}
 					if (reward != null)
 					{
-						st.giveItems(reward);
+						giveItems(player, reward);
 					}
 					st.exitQuest(true, true);
 					htmltext = event;
@@ -170,13 +170,13 @@ public class Q00288_HandleWithCare extends Quest
 		{
 			if (!st.hasQuestItems(MIDDLE_GRADE_LIZARD_SCALE))
 			{
-				st.giveItems(MIDDLE_GRADE_LIZARD_SCALE, 1);
+				giveItems(killer, MIDDLE_GRADE_LIZARD_SCALE, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				st.setCond(2, true);
 			}
 			else if (!st.hasQuestItems(HIGH_GRADE_LIZARD_SCALE))
 			{
-				st.giveItems(HIGH_GRADE_LIZARD_SCALE, 1);
+				giveItems(killer, HIGH_GRADE_LIZARD_SCALE, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				st.setCond(3, true);
 			}

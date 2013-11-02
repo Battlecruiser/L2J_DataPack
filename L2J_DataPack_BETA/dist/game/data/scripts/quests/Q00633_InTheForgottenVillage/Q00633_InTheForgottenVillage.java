@@ -26,7 +26,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * In The Forgotten Village (633)
@@ -120,11 +119,11 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			{
 				if (st.isCond(2))
 				{
-					if (st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
+					if (getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
 					{
-						st.giveAdena(25000, true);
+						giveAdena(player, 25000, true);
 						st.addExpAndSp(305235, 0);
-						st.takeItems(RIB_BONE_OF_A_BLACK_MAGUS, -1);
+						takeItems(player, RIB_BONE_OF_A_BLACK_MAGUS, -1);
 						st.setCond(1, true);
 						htmltext = event;
 					}
@@ -159,7 +158,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			{
 				case RIB_BONE_OF_A_BLACK_MAGUS:
 				{
-					if (qs.isCond(1) && qs.giveItemRandomly(npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getCount(), true))
+					if (qs.isCond(1) && giveItemRandomly(killer, npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getCount(), true))
 					{
 						qs.setCond(2);
 					}
@@ -167,7 +166,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 				}
 				case ZOMBIES_LIVER:
 				{
-					qs.giveItemRandomly(npc, ZOMBIES_LIVER, 1, 0, info.getCount(), true);
+					giveItemRandomly(killer, npc, ZOMBIES_LIVER, 1, 0, info.getCount(), true);
 					break;
 				}
 			}
@@ -185,18 +184,14 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (st.isCreated())
 		{
-			case State.CREATED:
-			{
-				htmltext = ((player.getLevel() >= MIN_LVL) ? "31388-01.htm" : "31388-02.htm");
-				break;
-			}
-			case State.STARTED:
-			{
-				htmltext = ((st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
-				break;
-			}
+			htmltext = ((player.getLevel() >= MIN_LVL) ? "31388-01.htm" : "31388-02.htm");
+		}
+		else if (st.isStarted())
+		{
+			htmltext = ((getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
+			
 		}
 		return htmltext;
 	}

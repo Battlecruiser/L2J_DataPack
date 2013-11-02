@@ -71,7 +71,7 @@ public class Q00043_HelpTheSister extends Quest
 			case "30829-03.html":
 				if (st.hasQuestItems(CRAFTED_DAGGER))
 				{
-					st.takeItems(CRAFTED_DAGGER, 1);
+					takeItems(player, CRAFTED_DAGGER, 1);
 					st.setCond(2, true);
 				}
 				else
@@ -80,10 +80,10 @@ public class Q00043_HelpTheSister extends Quest
 				}
 				break;
 			case "30829-06.html":
-				if (st.getQuestItemsCount(MAP_PIECE) == 30)
+				if (getQuestItemsCount(player, MAP_PIECE) == 30)
 				{
-					st.takeItems(MAP_PIECE, -1);
-					st.giveItems(MAP, 1);
+					takeItems(player, MAP_PIECE, -1);
+					giveItems(player, MAP, 1);
 					st.setCond(4, true);
 				}
 				else
@@ -94,7 +94,7 @@ public class Q00043_HelpTheSister extends Quest
 			case "30097-02.html":
 				if (st.hasQuestItems(MAP))
 				{
-					st.takeItems(MAP, -1);
+					takeItems(player, MAP, -1);
 					st.setCond(5, true);
 				}
 				else
@@ -103,7 +103,7 @@ public class Q00043_HelpTheSister extends Quest
 				}
 				break;
 			case "30829-09.html":
-				st.giveItems(PET_TICKET, 1);
+				giveItems(player, PET_TICKET, 1);
 				st.exitQuest(false, true);
 				break;
 		}
@@ -117,8 +117,8 @@ public class Q00043_HelpTheSister extends Quest
 		
 		if ((st != null) && st.isCond(2))
 		{
-			st.giveItems(MAP_PIECE, 1);
-			if (st.getQuestItemsCount(MAP_PIECE) == 30)
+			giveItems(player, MAP_PIECE, 1);
+			if (getQuestItemsCount(player, MAP_PIECE) == 30)
 			{
 				st.setCond(3, true);
 			}

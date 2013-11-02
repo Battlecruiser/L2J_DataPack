@@ -78,7 +78,7 @@ public class Q10274_CollectingInTheAir extends Quest
 		if (event.equals("32557-03.html"))
 		{
 			st.startQuest();
-			st.giveItems(SCROLL, 8);
+			giveItems(player, SCROLL, 8);
 		}
 		return event;
 	}
@@ -99,17 +99,17 @@ public class Q10274_CollectingInTheAir extends Quest
 				case 18684:
 				case 18685:
 				case 18686:
-					st.giveItems(RED, 1);
+					giveItems(caster, RED, 1);
 					break;
 				case 18687:
 				case 18688:
 				case 18689:
-					st.giveItems(BLUE, 1);
+					giveItems(caster, BLUE, 1);
 					break;
 				case 18690:
 				case 18691:
 				case 18692:
-					st.giveItems(GREEN, 1);
+					giveItems(caster, GREEN, 1);
 					break;
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
@@ -145,10 +145,10 @@ public class Q10274_CollectingInTheAir extends Quest
 				}
 				break;
 			case State.STARTED:
-				if ((st.getQuestItemsCount(RED) + st.getQuestItemsCount(BLUE) + st.getQuestItemsCount(GREEN)) >= 8)
+				if ((getQuestItemsCount(player, RED) + getQuestItemsCount(player, BLUE) + getQuestItemsCount(player, GREEN)) >= 8)
 				{
 					htmltext = "32557-05.html";
-					st.giveItems(13728, 1);
+					giveItems(player, 13728, 1);
 					st.addExpAndSp(25160, 2525);
 					st.exitQuest(false, true);
 				}

@@ -99,9 +99,9 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return "32711-09a.html";
 				}
-				st.takeItems(CET_1_SHEET, 1);
-				st.takeItems(CET_2_SHEET, 1);
-				st.takeItems(CET_3_SHEET, 1);
+				takeItems(player, CET_1_SHEET, 1);
+				takeItems(player, CET_2_SHEET, 1);
+				takeItems(player, CET_3_SHEET, 1);
 				hekaton = addSpawn(HEKATON_PRIME, 191777, 56197, -7624, 0, false, 0);
 				htmltext = "32711-09.html";
 				break;
@@ -130,19 +130,19 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 		{
 			case GORGOLOS:
 			{
-				st.giveItems(CET_1_SHEET, 1);
+				giveItems(player, CET_1_SHEET, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
 			case LAST_TITAN_UTENUS:
 			{
-				st.giveItems(CET_2_SHEET, 1);
+				giveItems(player, CET_2_SHEET, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
 			case GIANT_MARPANAK:
 			{
-				st.giveItems(CET_3_SHEET, 1);
+				giveItems(player, CET_3_SHEET, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
@@ -196,7 +196,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				}
 				else if (st.isCond(2))
 				{
-					st.giveItems(SUPPORT_ITEMS, 1);
+					giveItems(player, SUPPORT_ITEMS, 1);
 					st.exitQuest(true, true);
 					htmltext = "32711-10.html";
 				}

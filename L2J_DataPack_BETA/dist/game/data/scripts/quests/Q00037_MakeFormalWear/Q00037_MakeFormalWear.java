@@ -71,11 +71,11 @@ public class Q00037_MakeFormalWear extends Quest
 				st.startQuest();
 				break;
 			case "31520-02.html":
-				st.giveItems(SIGNET_RING, 1);
+				giveItems(player, SIGNET_RING, 1);
 				st.setCond(2, true);
 				break;
 			case "31521-02.html":
-				st.giveItems(ICE_WINE, 1);
+				giveItems(player, ICE_WINE, 1);
 				st.setCond(3, true);
 				break;
 			case "31627-02.html":
@@ -83,11 +83,11 @@ public class Q00037_MakeFormalWear extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(ICE_WINE, 1);
+				takeItems(player, ICE_WINE, 1);
 				st.setCond(4, true);
 				break;
 			case "31521-05.html":
-				st.giveItems(BOX_OF_COOKIES, 1);
+				giveItems(player, BOX_OF_COOKIES, 1);
 				st.setCond(5, true);
 				break;
 			case "31520-05.html":
@@ -95,7 +95,7 @@ public class Q00037_MakeFormalWear extends Quest
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(BOX_OF_COOKIES, 1);
+				takeItems(player, BOX_OF_COOKIES, 1);
 				st.setCond(6, true);
 				break;
 			case "31520-08.html":
@@ -103,9 +103,9 @@ public class Q00037_MakeFormalWear extends Quest
 				{
 					return "31520-09.html";
 				}
-				st.takeItems(SEWING_KIT, 1);
-				st.takeItems(JEWEL_BOX, 1);
-				st.takeItems(MYSTERIOUS_CLOTH, 1);
+				takeItems(player, SEWING_KIT, 1);
+				takeItems(player, JEWEL_BOX, 1);
+				takeItems(player, MYSTERIOUS_CLOTH, 1);
 				st.setCond(7, true);
 				break;
 			case "31520-12.html":
@@ -113,8 +113,8 @@ public class Q00037_MakeFormalWear extends Quest
 				{
 					return "31520-13.html";
 				}
-				st.takeItems(DRESS_SHOES_BOX, 1);
-				st.giveItems(FORMAL_WEAR, 1);
+				takeItems(player, DRESS_SHOES_BOX, 1);
+				giveItems(player, FORMAL_WEAR, 1);
 				st.exitQuest(false, true);
 				break;
 			default:

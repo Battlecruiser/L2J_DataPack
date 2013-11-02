@@ -176,12 +176,12 @@ public class Q00463_IMustBeaGenius extends Quest
 			
 			if (number > 0)
 			{
-				st.giveItems(CORPSE_LOG, number);
+				giveItems(player, CORPSE_LOG, number);
 				msg = true;
 			}
-			else if ((number < 0) && ((st.getQuestItemsCount(CORPSE_LOG) + number) > 0))
+			else if ((number < 0) && ((getQuestItemsCount(player, CORPSE_LOG) + number) > 0))
 			{
-				st.takeItems(CORPSE_LOG, Math.abs(number));
+				takeItems(player, CORPSE_LOG, Math.abs(number));
 				msg = true;
 			}
 			
@@ -193,10 +193,10 @@ public class Q00463_IMustBeaGenius extends Quest
 				npc.broadcastPacket(ns);
 				
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if (st.getQuestItemsCount(CORPSE_LOG) == st.getInt("number"))
+				if (getQuestItemsCount(player, CORPSE_LOG) == st.getInt("number"))
 				{
-					st.takeItems(CORPSE_LOG, -1);
-					st.giveItems(COLLECTION, 1);
+					takeItems(player, CORPSE_LOG, -1);
+					giveItems(player, COLLECTION, 1);
 					st.setCond(2, true);
 				}
 			}
@@ -239,7 +239,7 @@ public class Q00463_IMustBeaGenius extends Quest
 					}
 					else
 					{
-						st.takeItems(COLLECTION, -1);
+						takeItems(player, COLLECTION, -1);
 						st.set("var", "1");
 						htmltext = "32069-06.html";
 					}

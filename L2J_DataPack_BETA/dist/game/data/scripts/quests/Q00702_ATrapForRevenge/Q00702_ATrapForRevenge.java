@@ -83,15 +83,15 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32563-09.html"))
 		{
-			st.giveAdena(st.getQuestItemsCount(DRAKES_FLESH) * 100, false);
-			st.takeItems(DRAKES_FLESH, -1);
+			st.giveAdena(getQuestItemsCount(player, DRAKES_FLESH) * 100, false);
+			takeItems(player, DRAKES_FLESH, -1);
 		}
 		else if (event.equalsIgnoreCase("32563-11.html"))
 		{
 			if (st.hasQuestItems(VARIANT_DRAKE_WING_HORNS))
 			{
-				st.giveAdena(st.getQuestItemsCount(VARIANT_DRAKE_WING_HORNS) * 200000, false);
-				st.takeItems(VARIANT_DRAKE_WING_HORNS, -1);
+				st.giveAdena(getQuestItemsCount(player, VARIANT_DRAKE_WING_HORNS) * 200000, false);
+				takeItems(player, VARIANT_DRAKE_WING_HORNS, -1);
 				htmltext = "32563-12.html";
 			}
 			else
@@ -105,23 +105,23 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32557-03.html"))
 		{
-			if (!st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) < 100))
+			if (!st.hasQuestItems(ROTTEN_BLOOD) && (getQuestItemsCount(player, EXTRACTED_RED_STAR_STONE) < 100))
 			{
 				htmltext = "32557-03.html";
 			}
-			else if (st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) < 100))
+			else if (st.hasQuestItems(ROTTEN_BLOOD) && (getQuestItemsCount(player, EXTRACTED_RED_STAR_STONE) < 100))
 			{
 				htmltext = "32557-04.html";
 			}
-			else if (!st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) >= 100))
+			else if (!st.hasQuestItems(ROTTEN_BLOOD) && (getQuestItemsCount(player, EXTRACTED_RED_STAR_STONE) >= 100))
 			{
 				htmltext = "32557-05.html";
 			}
-			else if (st.hasQuestItems(ROTTEN_BLOOD) && (st.getQuestItemsCount(EXTRACTED_RED_STAR_STONE) >= 100))
+			else if (st.hasQuestItems(ROTTEN_BLOOD) && (getQuestItemsCount(player, EXTRACTED_RED_STAR_STONE) >= 100))
 			{
-				st.giveItems(BAIT_FOR_DRAKES, 1);
-				st.takeItems(ROTTEN_BLOOD, 1);
-				st.takeItems(EXTRACTED_RED_STAR_STONE, 100);
+				giveItems(player, BAIT_FOR_DRAKES, 1);
+				takeItems(player, ROTTEN_BLOOD, 1);
+				takeItems(player, EXTRACTED_RED_STAR_STONE, 100);
 				htmltext = "32557-06.html";
 			}
 		}
@@ -135,7 +135,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-06.html"))
 		{
-			if (st.getQuestItemsCount(DRAKES_FLESH) < 100)
+			if (getQuestItemsCount(player, DRAKES_FLESH) < 100)
 			{
 				htmltext = "32555-06.html";
 			}
@@ -146,8 +146,8 @@ public class Q00702_ATrapForRevenge extends Quest
 		}
 		else if (event.equalsIgnoreCase("32555-08.html"))
 		{
-			st.giveItems(ROTTEN_BLOOD, 1);
-			st.takeItems(DRAKES_FLESH, 100);
+			giveItems(player, ROTTEN_BLOOD, 1);
+			takeItems(player, DRAKES_FLESH, 100);
 		}
 		else if (event.equalsIgnoreCase("32555-10.html"))
 		{
@@ -170,24 +170,24 @@ public class Q00702_ATrapForRevenge extends Quest
 				st.giveAdena(getRandom(49917) + 125000, false);
 				if (i1 < 720)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9629, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
 				}
 				else if (i1 < 840)
 				{
-					st.giveItems(9629, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				else if (i1 < 960)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				else if (i1 < 1000)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9629, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				htmltext = "32555-15.html";
 			}
@@ -199,15 +199,15 @@ public class Q00702_ATrapForRevenge extends Quest
 				}
 				else if (i1 < 340)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
 				}
 				else if (i1 < 470)
 				{
-					st.giveItems(9629, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
 				}
 				else if (i1 < 600)
 				{
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				
 				htmltext = "32555-16.html";
@@ -217,24 +217,24 @@ public class Q00702_ATrapForRevenge extends Quest
 				st.giveAdena(getRandom(49917) + 25000, false);
 				if (i1 < 720)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9629, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
 				}
 				else if (i1 < 840)
 				{
-					st.giveItems(9629, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				else if (i1 < 960)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				else if (i1 < 1000)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
-					st.giveItems(9629, getRandom(3) + 1);
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				htmltext = "32555-17.html";
 			}
@@ -246,20 +246,20 @@ public class Q00702_ATrapForRevenge extends Quest
 				}
 				else if (i1 < 340)
 				{
-					st.giveItems(9628, getRandom(3) + 1);
+					giveItems(player, 9628, getRandom(3) + 1);
 				}
 				else if (i1 < 470)
 				{
-					st.giveItems(9629, getRandom(3) + 1);
+					giveItems(player, 9629, getRandom(3) + 1);
 				}
 				else if (i1 < 600)
 				{
-					st.giveItems(9630, getRandom(3) + 1);
+					giveItems(player, 9630, getRandom(3) + 1);
 				}
 				
 				htmltext = "32555-18.html";
 			}
-			st.takeItems(VARIANT_DRAKE_WING_HORNS, 1);
+			takeItems(player, VARIANT_DRAKE_WING_HORNS, 1);
 		}
 		return htmltext;
 	}
@@ -279,57 +279,57 @@ public class Q00702_ATrapForRevenge extends Quest
 			case 22612:
 				if (chance < 413)
 				{
-					st.giveItems(DRAKES_FLESH, 2);
+					giveItems(player, DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 22613:
 				if (chance < 440)
 				{
-					st.giveItems(DRAKES_FLESH, 2);
+					giveItems(player, DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 25632:
 				if (chance < 996)
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 22610:
 				if (chance < 485)
 				{
-					st.giveItems(DRAKES_FLESH, 2);
+					giveItems(player, DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 22611:
 				if (chance < 451)
 				{
-					st.giveItems(DRAKES_FLESH, 2);
+					giveItems(player, DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 25631:
 				if (chance < 485)
 				{
-					st.giveItems(DRAKES_FLESH, 2);
+					giveItems(player, DRAKES_FLESH, 2);
 				}
 				else
 				{
-					st.giveItems(DRAKES_FLESH, 1);
+					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
 			case 25626:
@@ -354,7 +354,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				{
 					count = getRandom(5) + 14;
 				}
-				st.giveItems(VARIANT_DRAKE_WING_HORNS, count);
+				giveItems(player, VARIANT_DRAKE_WING_HORNS, count);
 				break;
 		}
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

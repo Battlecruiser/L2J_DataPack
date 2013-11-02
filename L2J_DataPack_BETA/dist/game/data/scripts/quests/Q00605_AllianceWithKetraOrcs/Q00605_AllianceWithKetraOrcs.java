@@ -175,7 +175,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				count = CAPTAIN_BADGE_COUNT[st.getCond() - 1];
 				break;
 		}
-		if (st.getQuestItemsCount(itemId) < count)
+		if (getQuestItemsCount(st.getPlayer(), itemId) < count)
 		{
 			return true;
 		}
@@ -216,39 +216,39 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				st.setCond(1);
 				break;
 			case "31371-12.html":
-				if (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[0])
+				if (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[0])
 				{
 					return getNoQuestMsg(player);
 				}
-				st.takeItems(VARKA_BADGE_SOLDIER, -1);
-				st.giveItems(KETRA_MARKS[0], 1);
+				takeItems(player, VARKA_BADGE_SOLDIER, -1);
+				giveItems(player, KETRA_MARKS[0], 1);
 				st.setCond(2, true);
 				break;
 			case "31371-15.html":
-				if ((st.getQuestItemsCount(VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[1]) || (st.getQuestItemsCount(VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[1]))
+				if ((getQuestItemsCount(player, VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[1]) || (getQuestItemsCount(player, VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[1]))
 				{
 					return getNoQuestMsg(player);
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, KETRA_MARKS[0]);
-				st.giveItems(KETRA_MARKS[1], 1);
+				giveItems(player, KETRA_MARKS[1], 1);
 				st.setCond(3, true);
 				break;
 			case "31371-18.html":
-				if ((st.getQuestItemsCount(VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[2]) || (st.getQuestItemsCount(VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[2]) || (st.getQuestItemsCount(VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[2]))
+				if ((getQuestItemsCount(player, VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[2]) || (getQuestItemsCount(player, VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[2]) || (getQuestItemsCount(player, VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[2]))
 				{
 					return getNoQuestMsg(player);
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, KETRA_MARKS[1]);
-				st.giveItems(KETRA_MARKS[2], 1);
+				giveItems(player, KETRA_MARKS[2], 1);
 				st.setCond(4, true);
 				break;
 			case "31371-21.html":
-				if (!st.hasQuestItems(VALOR_TOTEM) || (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[3]) || (st.getQuestItemsCount(VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[3]) || (st.getQuestItemsCount(VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[3]))
+				if (!st.hasQuestItems(VALOR_TOTEM) || (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[3]) || (getQuestItemsCount(player, VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[3]) || (getQuestItemsCount(player, VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[3]))
 				{
 					return getNoQuestMsg(player);
 				}
 				takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, VALOR_TOTEM, KETRA_MARKS[2]);
-				st.giveItems(KETRA_MARKS[3], 1);
+				giveItems(player, KETRA_MARKS[3], 1);
 				st.setCond(5, true);
 				break;
 			case "31371-26.html":
@@ -273,7 +273,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 			final DropInfo info = MOBS.get(npc.getId());
 			if ((st.getCond() >= info.getMinCond()) && canGetItem(st, info.getItemId()) && (getRandom(1000) < info.getChance()))
 			{
-				st.giveItems(info.getItemId(), 1);
+				giveItems(killer, info.getItemId(), 1);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -298,25 +298,25 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 				switch (st.getCond())
 				{
 					case 1:
-						htmltext = (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[0]) ? "31371-11.html" : "31371-10.html";
+						htmltext = (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[0]) ? "31371-11.html" : "31371-10.html";
 						break;
 					case 2:
-						htmltext = (st.hasQuestItems(KETRA_MARKS[0]) && (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[1]) && (st.getQuestItemsCount(VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[1])) ? "31371-14.html" : "31371-13.html";
+						htmltext = (st.hasQuestItems(KETRA_MARKS[0]) && (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[1]) && (getQuestItemsCount(player, VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[1])) ? "31371-14.html" : "31371-13.html";
 						break;
 					case 3:
-						htmltext = (st.hasQuestItems(KETRA_MARKS[1]) && (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[2]) && (st.getQuestItemsCount(VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[2]) && (st.getQuestItemsCount(VARKA_BADGE_CAPTAIN) >= CAPTAIN_BADGE_COUNT[2])) ? "31371-17.html" : "31371-16.html";
+						htmltext = (st.hasQuestItems(KETRA_MARKS[1]) && (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[2]) && (getQuestItemsCount(player, VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[2]) && (getQuestItemsCount(player, VARKA_BADGE_CAPTAIN) >= CAPTAIN_BADGE_COUNT[2])) ? "31371-17.html" : "31371-16.html";
 						break;
 					case 4:
-						htmltext = (hasQuestItems(player, KETRA_MARKS[2], VALOR_TOTEM) && (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[3]) && (st.getQuestItemsCount(VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[3]) && (st.getQuestItemsCount(VARKA_BADGE_CAPTAIN) >= CAPTAIN_BADGE_COUNT[3])) ? "31371-20.html" : "31371-19.html";
+						htmltext = (hasQuestItems(player, KETRA_MARKS[2], VALOR_TOTEM) && (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) >= SOLDIER_BADGE_COUNT[3]) && (getQuestItemsCount(player, VARKA_BADGE_OFFICER) >= OFFICER_BADGE_COUNT[3]) && (getQuestItemsCount(player, VARKA_BADGE_CAPTAIN) >= CAPTAIN_BADGE_COUNT[3])) ? "31371-20.html" : "31371-19.html";
 						break;
 					case 5:
-						if (!st.hasQuestItems(KETRA_MARKS[3]) || !st.hasQuestItems(WISDOM_TOTEM) || (st.getQuestItemsCount(VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[4]) || (st.getQuestItemsCount(VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[4]) || (st.getQuestItemsCount(VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[4]))
+						if (!st.hasQuestItems(KETRA_MARKS[3]) || !st.hasQuestItems(WISDOM_TOTEM) || (getQuestItemsCount(player, VARKA_BADGE_SOLDIER) < SOLDIER_BADGE_COUNT[4]) || (getQuestItemsCount(player, VARKA_BADGE_OFFICER) < OFFICER_BADGE_COUNT[4]) || (getQuestItemsCount(player, VARKA_BADGE_CAPTAIN) < CAPTAIN_BADGE_COUNT[4]))
 						{
 							return "31371-22.html";
 						}
 						st.setCond(6, true);
 						takeItems(player, -1, VARKA_BADGE_SOLDIER, VARKA_BADGE_OFFICER, VARKA_BADGE_CAPTAIN, WISDOM_TOTEM, KETRA_MARKS[3]);
-						st.giveItems(KETRA_MARKS[4], 1);
+						giveItems(player, KETRA_MARKS[4], 1);
 						htmltext = "31371-23.html";
 						break;
 					case 6:

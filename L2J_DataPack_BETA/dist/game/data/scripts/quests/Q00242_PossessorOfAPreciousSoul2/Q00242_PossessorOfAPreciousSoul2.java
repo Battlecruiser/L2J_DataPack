@@ -82,7 +82,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		{
 			case "31742-02.html":
 				st.startQuest();
-				st.takeItems(VIRGILS_LETTER, -1);
+				takeItems(player, VIRGILS_LETTER, -1);
 				break;
 			case "31743-05.html":
 				if (st.isCond(1))
@@ -112,14 +112,14 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 				if (st.isCond(7))
 				{
 					st.setCond(8, true);
-					st.giveItems(SORCERY_INGREDIENT, 1);
+					giveItems(player, SORCERY_INGREDIENT, 1);
 				}
 				break;
 			case "30759-05.html":
 				if (st.isCond(8))
 				{
-					st.takeItems(GOLDEN_HAIR, -1);
-					st.takeItems(SORCERY_INGREDIENT, -1);
+					takeItems(player, GOLDEN_HAIR, -1);
+					takeItems(player, SORCERY_INGREDIENT, -1);
 					st.set("awaitsDrops", "1");
 					st.setCond(9, true);
 				}
@@ -148,12 +148,12 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		if (st.isCond(9) && (st.getQuestItemsCount(ORB_OF_BINDING) < 4))
+		if (st.isCond(9) && (getQuestItemsCount(player, ORB_OF_BINDING) < 4))
 		{
-			st.giveItems(ORB_OF_BINDING, 1);
+			giveItems(player, ORB_OF_BINDING, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
-		if (st.getQuestItemsCount(ORB_OF_BINDING) >= 4)
+		if (getQuestItemsCount(player, ORB_OF_BINDING) >= 4)
 		{
 			st.unset("awaitsDrops");
 		}
@@ -194,7 +194,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 								break;
 							case 11:
 								htmltext = "31742-04.html";
-								st.giveItems(CARADINE_LETTER, 1);
+								giveItems(player, CARADINE_LETTER, 1);
 								st.addExpAndSp(455764, 0);
 								st.exitQuest(false, true);
 								break;
@@ -258,7 +258,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 						npc.doDie(npc);
 						if (CHANCE_FOR_HAIR >= getRandom(100))
 						{
-							st.giveItems(GOLDEN_HAIR, 1);
+							giveItems(player, GOLDEN_HAIR, 1);
 							st.setCond(5, true);
 							htmltext = "31752-01.html";
 						}
@@ -309,7 +309,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 					if (st.hasQuestItems(ORB_OF_BINDING))
 					{
 						htmltext = "31748-02.html";
-						st.takeItems(ORB_OF_BINDING, 1);
+						takeItems(player, ORB_OF_BINDING, 1);
 						npc.doDie(npc);
 						
 						st.set("cornerstones", Integer.toString(st.getInt("cornerstones") + 1));

@@ -99,11 +99,11 @@ public class Q00461_RumbleInTheBase extends Quest
 		if (npc.getId() == 18908)
 		{
 			st = player.getQuestState(getName());
-			if ((st != null) && st.isCond(1) && (st.getQuestItemsCount(SHINY_SALMON) < 5))
+			if ((st != null) && st.isCond(1) && (getQuestItemsCount(player, SHINY_SALMON) < 5))
 			{
-				st.giveItems(SHINY_SALMON, 1);
+				giveItems(player, SHINY_SALMON, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
+				if ((getQuestItemsCount(player, SHINY_SALMON) >= 5) && (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) >= 10))
 				{
 					st.setCond(2, true);
 				}
@@ -118,11 +118,11 @@ public class Q00461_RumbleInTheBase extends Quest
 			}
 			
 			st = member.getQuestState(getName());
-			if (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) < 10)
+			if (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) < 10)
 			{
-				st.giveItems(SHOES_STRING_OF_SEL_MAHUM, 1);
+				giveItems(player, SHOES_STRING_OF_SEL_MAHUM, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				if ((st.getQuestItemsCount(SHINY_SALMON) >= 5) && (st.getQuestItemsCount(SHOES_STRING_OF_SEL_MAHUM) >= 10))
+				if ((getQuestItemsCount(player, SHINY_SALMON) >= 5) && (getQuestItemsCount(player, SHOES_STRING_OF_SEL_MAHUM) >= 10))
 				{
 					st.setCond(2, true);
 				}

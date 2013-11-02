@@ -106,7 +106,7 @@ public final class Q00257_TheGuardIsBusy extends Quest
 			case "30039-03.htm":
 			{
 				st.startQuest();
-				st.giveItems(GLUDIO_LORDS_MARK, 1);
+				giveItems(player, GLUDIO_LORDS_MARK, 1);
 				htmltext = event;
 				break;
 			}
@@ -138,7 +138,7 @@ public final class Q00257_TheGuardIsBusy extends Quest
 		{
 			if (drop.getDrop())
 			{
-				st.giveItems(drop);
+				giveItems(killer, drop);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				break;
 			}
@@ -167,7 +167,7 @@ public final class Q00257_TheGuardIsBusy extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG))
 				{
-					final long amulets = st.getQuestItemsCount(ORC_AMULET);
+					final long amulets = getQuestItemsCount(player, ORC_AMULET);
 					final long common = getQuestItemsCount(player, ORC_NECKLACE, WEREWOLF_FANG);
 					st.giveAdena(((amulets * 10) + (common * 20) + (((amulets + common) >= 10) ? 1000 : 0)), true);
 					takeItems(player, -1, ORC_AMULET, ORC_NECKLACE, WEREWOLF_FANG);

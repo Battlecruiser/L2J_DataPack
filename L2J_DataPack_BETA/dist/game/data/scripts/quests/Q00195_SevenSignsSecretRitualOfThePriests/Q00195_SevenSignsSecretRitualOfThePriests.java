@@ -91,7 +91,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			{
 				if (st.isCond(1))
 				{
-					st.giveItems(IDENTITY_CARD, 1);
+					giveItems(player, IDENTITY_CARD, 1);
 					st.setCond(2, true);
 					htmltext = event;
 				}
@@ -130,7 +130,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(IDENTITY_CARD) && st.hasQuestItems(SHUNAIMANS_CONTRACT))
 				{
-					st.takeItems(IDENTITY_CARD, -1);
+					takeItems(player, IDENTITY_CARD, -1);
 					st.setCond(4, true);
 					htmltext = event;
 					if (player.getTransformationId() == 113)
@@ -319,7 +319,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 				{
 					if (st.isCond(3) && !st.hasQuestItems(SHUNAIMANS_CONTRACT))
 					{
-						st.giveItems(SHUNAIMANS_CONTRACT, 1);
+						giveItems(player, SHUNAIMANS_CONTRACT, 1);
 						htmltext = "32580-02.html";
 					}
 				}

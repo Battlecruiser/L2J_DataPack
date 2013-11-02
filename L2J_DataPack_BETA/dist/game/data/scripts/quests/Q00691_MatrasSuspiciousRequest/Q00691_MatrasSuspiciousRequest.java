@@ -93,7 +93,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					if (gemsCount >= 744)
 					{
 						st.set("submitted_gems", Integer.toString(gemsCount - 744));
-						st.giveItems(DYNASTY_SOUL_II, 1);
+						giveItems(player, DYNASTY_SOUL_II, 1);
 						htmltext = "32245-09.html";
 					}
 					else
@@ -106,9 +106,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 				if (st.isStarted())
 				{
 					final int submittedCount = st.getInt("submitted_gems");
-					final int broughtCount = (int) st.getQuestItemsCount(RED_GEM);
+					final int broughtCount = (int) getQuestItemsCount(player, RED_GEM);
 					final int finalCount = submittedCount + broughtCount;
-					st.takeItems(RED_GEM, broughtCount);
+					takeItems(player, RED_GEM, broughtCount);
 					st.set("submitted_gems", Integer.toString(finalCount));
 					htmltext = getHtm(player.getHtmlPrefix(), "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
 				}
@@ -140,7 +140,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		chance = chance % 1000;
 		if (getRandom(1000) <= chance)
 		{
-			st.giveItems(RED_GEM, numItems);
+			giveItems(player, RED_GEM, numItems);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);

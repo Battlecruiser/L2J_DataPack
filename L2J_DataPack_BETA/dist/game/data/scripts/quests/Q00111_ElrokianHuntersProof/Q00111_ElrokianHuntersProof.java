@@ -142,7 +142,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 				{
 					st.setMemoState(6);
 					st.setCond(6, true);
-					st.giveItems(EXPEDITION_MEMBERS_LETTER, 1);
+					giveItems(player, EXPEDITION_MEMBERS_LETTER, 1);
 					htmltext = event;
 				}
 				break;
@@ -200,12 +200,12 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 			}
 			case "32116-10.html":
 			{
-				if (st.isMemoState(12) && st.hasQuestItems(PRACTICE_ELROKIAN_TRAP))
+				if (st.isMemoState(12) && hasQuestItems(player, PRACTICE_ELROKIAN_TRAP))
 				{
-					st.takeItems(PRACTICE_ELROKIAN_TRAP, -1);
-					st.giveItems(ELROKIAN_TRAP, 1);
-					st.giveItems(TRAP_STONE, 100);
-					st.giveAdena(1071691, true);
+					takeItems(player, PRACTICE_ELROKIAN_TRAP, -1);
+					giveItems(player, ELROKIAN_TRAP, 1);
+					giveItems(player, TRAP_STONE, 100);
+					giveAdena(player, 1071691, true);
 					st.addExpAndSp(553524, 55538);
 					st.exitQuest(false, true);
 					htmltext = event;
@@ -235,9 +235,9 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 				else if (qs.isCond(10))
 				{
 					if (giveItemRandomly(player, npc, item.getId(), 1, 10, item.getChance(), true) //
-						&& (qs.getQuestItemsCount(ORNITHOMINUS_CLAW) >= 10) //
-						&& (qs.getQuestItemsCount(DEINONYCHUS_BONE) >= 10) //
-						&& (qs.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) >= 10))
+						&& (getQuestItemsCount(player, ORNITHOMINUS_CLAW) >= 10) //
+						&& (getQuestItemsCount(player, DEINONYCHUS_BONE) >= 10) //
+						&& (getQuestItemsCount(player, PACHYCEPHALOSAURUS_SKIN) >= 10))
 					{
 						qs.setCond(11);
 					}
@@ -300,13 +300,13 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 							}
 							case 4:
 							{
-								if (st.getQuestItemsCount(DIARY_FRAGMENT) < 50)
+								if (getQuestItemsCount(player, DIARY_FRAGMENT) < 50)
 								{
 									htmltext = "32113-16.html";
 								}
 								else
 								{
-									st.takeItems(DIARY_FRAGMENT, -1);
+									takeItems(player, DIARY_FRAGMENT, -1);
 									st.setMemoState(5);
 									htmltext = "32113-17.html";
 								}
@@ -397,7 +397,7 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 							}
 							case 11:
 							{
-								if ((st.getQuestItemsCount(ORNITHOMINUS_CLAW) < 10) || (st.getQuestItemsCount(DEINONYCHUS_BONE) < 10) || (st.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) < 10))
+								if ((getQuestItemsCount(player, ORNITHOMINUS_CLAW) < 10) || (getQuestItemsCount(player, DEINONYCHUS_BONE) < 10) || (st.getQuestItemsCount(PACHYCEPHALOSAURUS_SKIN) < 10))
 								{
 									htmltext = "32115-10.html";
 								}
@@ -405,10 +405,10 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 								{
 									st.setMemoState(12);
 									st.setCond(12, true);
-									st.giveItems(PRACTICE_ELROKIAN_TRAP, 1);
-									st.takeItems(ORNITHOMINUS_CLAW, -1);
-									st.takeItems(DEINONYCHUS_BONE, -1);
-									st.takeItems(PACHYCEPHALOSAURUS_SKIN, -1);
+									giveItems(player, PRACTICE_ELROKIAN_TRAP, 1);
+									takeItems(player, ORNITHOMINUS_CLAW, -1);
+									takeItems(player, DEINONYCHUS_BONE, -1);
+									takeItems(player, PACHYCEPHALOSAURUS_SKIN, -1);
 									htmltext = "32115-11.html";
 								}
 								break;
@@ -436,11 +436,11 @@ public final class Q00111_ElrokianHuntersProof extends Quest
 							}
 							case 6:
 							{
-								if (st.hasQuestItems(EXPEDITION_MEMBERS_LETTER))
+								if (hasQuestItems(player, EXPEDITION_MEMBERS_LETTER))
 								{
 									st.setMemoState(7);
 									st.setCond(7, true);
-									st.takeItems(EXPEDITION_MEMBERS_LETTER, -1);
+									takeItems(player, EXPEDITION_MEMBERS_LETTER, -1);
 									htmltext = "32116-02.html";
 								}
 								break;

@@ -70,7 +70,7 @@ public class Q00018_MeetingWithTheGoldenRam extends Quest
 				break;
 			case "31315-02.html":
 				st.setCond(2, true);
-				st.giveItems(BOX, 1);
+				giveItems(player, BOX, 1);
 				break;
 			case "31555-02.html":
 				if (st.hasQuestItems(BOX))

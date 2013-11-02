@@ -122,7 +122,7 @@ public class Q00310_OnlyWhatRemains extends Quest
 		
 		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
-			st.giveItems(DIRTY_BEAD, 1);
+			giveItems(player, DIRTY_BEAD, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
@@ -150,15 +150,15 @@ public class Q00310_OnlyWhatRemains extends Quest
 				{
 					htmltext = "32640-08.html";
 				}
-				else if (st.getQuestItemsCount(DIRTY_BEAD) < 500)
+				else if (getQuestItemsCount(player, DIRTY_BEAD) < 500)
 				{
 					htmltext = "32640-09.html";
 				}
 				else
 				{
-					st.takeItems(DIRTY_BEAD, 500);
-					st.giveItems(GROW_ACCELERATOR, 1);
-					st.giveItems(MULTI_COLORED_JEWEL, 1);
+					takeItems(player, DIRTY_BEAD, 500);
+					giveItems(player, GROW_ACCELERATOR, 1);
+					giveItems(player, MULTI_COLORED_JEWEL, 1);
 					htmltext = "32640-10.html";
 				}
 				break;

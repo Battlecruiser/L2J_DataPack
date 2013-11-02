@@ -104,19 +104,19 @@ public class Q00140_ShadowFoxPart2 extends Quest
 			case "30912-14.html":
 				if (getRandom(10) < CHANCE)
 				{
-					if (st.getQuestItemsCount(DARK_OXYDE) < OXYDE_COUNT)
+					if (getQuestItemsCount(player, DARK_OXYDE) < OXYDE_COUNT)
 					{
-						st.giveItems(DARK_OXYDE, 1);
-						st.takeItems(DARK_CRYSTAL, 5);
+						giveItems(player, DARK_OXYDE, 1);
+						takeItems(player, DARK_CRYSTAL, 5);
 						return "30912-12.html";
 					}
-					st.giveItems(CRYPTOGRAM_OF_THE_GODDESS_SWORD, 1);
-					st.takeItems(DARK_CRYSTAL, -1);
-					st.takeItems(DARK_OXYDE, -1);
+					giveItems(player, CRYPTOGRAM_OF_THE_GODDESS_SWORD, 1);
+					takeItems(player, DARK_CRYSTAL, -1);
+					takeItems(player, DARK_OXYDE, -1);
 					st.setCond(4, true);
 					return "30912-13.html";
 				}
-				st.takeItems(DARK_CRYSTAL, 5);
+				takeItems(player, DARK_CRYSTAL, 5);
 				break;
 			case "30895-11.html":
 				st.giveAdena(18775, true);
@@ -144,7 +144,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 		final QuestState st = member.getQuestState(getName());
 		if (getRandom(100) < MOBS.get(npc.getId()))
 		{
-			st.giveItems(DARK_CRYSTAL, 1);
+			giveItems(player, DARK_CRYSTAL, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
@@ -186,7 +186,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 								}
 								else
 								{
-									st.takeItems(CRYPTOGRAM_OF_THE_GODDESS_SWORD, -1);
+									takeItems(player, CRYPTOGRAM_OF_THE_GODDESS_SWORD, -1);
 									st.set("talk", "1");
 									htmltext = "30895-09.html";
 								}
@@ -211,7 +211,7 @@ public class Q00140_ShadowFoxPart2 extends Quest
 							htmltext = (st.isSet("talk")) ? "30912-07.html" : "30912-02.html";
 							break;
 						case 3:
-							htmltext = (st.getQuestItemsCount(DARK_CRYSTAL) >= CRYSTAL_COUNT) ? "30912-11.html" : "30912-10.html";
+							htmltext = (getQuestItemsCount(player, DARK_CRYSTAL) >= CRYSTAL_COUNT) ? "30912-11.html" : "30912-10.html";
 							break;
 						case 4:
 							htmltext = "30912-15.html";

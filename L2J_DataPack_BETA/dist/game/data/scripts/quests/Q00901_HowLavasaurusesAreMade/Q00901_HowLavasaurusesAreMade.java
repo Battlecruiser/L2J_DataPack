@@ -81,19 +81,19 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 				st.startQuest();
 				break;
 			case "32049-12.html":
-				st.giveItems(TOTEM_OF_BODY, 1);
+				giveItems(player, TOTEM_OF_BODY, 1);
 				st.exitQuest(QuestType.DAILY, true);
 				break;
 			case "32049-13.html":
-				st.giveItems(TOTEM_OF_SPIRIT, 1);
+				giveItems(player, TOTEM_OF_SPIRIT, 1);
 				st.exitQuest(QuestType.DAILY, true);
 				break;
 			case "32049-14.html":
-				st.giveItems(TOTEM_OF_FORTITUDE, 1);
+				giveItems(player, TOTEM_OF_FORTITUDE, 1);
 				st.exitQuest(QuestType.DAILY, true);
 				break;
 			case "32049-15.html":
-				st.giveItems(TOTEM_OF_COURAGE, 1);
+				giveItems(player, TOTEM_OF_COURAGE, 1);
 				st.exitQuest(QuestType.DAILY, true);
 				break;
 			default:
@@ -152,10 +152,10 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 				{
 					if (gotAllQuestItems(st))
 					{
-						st.takeItems(FRAGMENT_STONE, -1);
-						st.takeItems(FRAGMENT_HEAD, -1);
-						st.takeItems(FRAGMENT_BODY, -1);
-						st.takeItems(FRAGMENT_HORN, -1);
+						takeItems(player, FRAGMENT_STONE, -1);
+						takeItems(player, FRAGMENT_HEAD, -1);
+						takeItems(player, FRAGMENT_BODY, -1);
+						takeItems(player, FRAGMENT_HORN, -1);
 						htmltext = "32049-06.html";
 					}
 					else
@@ -181,9 +181,9 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	
 	public static void giveQuestItems(QuestState st, int itemId)
 	{
-		if (st.getQuestItemsCount(itemId) < 10)
+		if (getQuestItemsCount(st.getPlayer(), itemId) < 10)
 		{
-			st.giveItems(itemId, 1);
+			giveItems(st.getPlayer(), itemId, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if (gotAllQuestItems(st))
@@ -194,7 +194,7 @@ public class Q00901_HowLavasaurusesAreMade extends Quest
 	
 	public static boolean gotAllQuestItems(QuestState st)
 	{
-		return (st.getQuestItemsCount(FRAGMENT_STONE) >= 10) && (st.getQuestItemsCount(FRAGMENT_HEAD) >= 10) && (st.getQuestItemsCount(FRAGMENT_BODY) >= 10) && (st.getQuestItemsCount(FRAGMENT_HORN) >= 10);
+		return (getQuestItemsCount(st.getPlayer(), FRAGMENT_STONE) >= 10) && (getQuestItemsCount(st.getPlayer(), FRAGMENT_HEAD) >= 10) && (getQuestItemsCount(st.getPlayer(), FRAGMENT_BODY) >= 10) && (getQuestItemsCount(st.getPlayer(), FRAGMENT_HORN) >= 10);
 	}
 	
 	public static void main(String[] values)

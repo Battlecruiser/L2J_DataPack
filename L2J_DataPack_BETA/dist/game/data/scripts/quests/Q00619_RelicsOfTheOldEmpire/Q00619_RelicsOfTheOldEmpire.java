@@ -35,15 +35,30 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 {
 	private static final class DropInfo
 	{
-		public final double dropChance;
-		public final int doubleItemChance;
-		public final boolean dropEntrancePass;
+		public final double _dropChance;
+		public final int _doubleItemChance;
+		public final boolean _dropEntrancePass;
 		
 		public DropInfo(double dropChance, int doubleItemChance, boolean dropEntrancePass)
 		{
-			this.dropChance = dropChance;
-			this.doubleItemChance = doubleItemChance;
-			this.dropEntrancePass = dropEntrancePass;
+			_dropChance = dropChance;
+			_doubleItemChance = doubleItemChance;
+			_dropEntrancePass = dropEntrancePass;
+		}
+		
+		public double getDropChance()
+		{
+			return _dropChance;
+		}
+		
+		public int getDoubleItemChance()
+		{
+			return _doubleItemChance;
+		}
+		
+		public boolean getDropEntrancePass()
+		{
+			return _dropEntrancePass;
 		}
 	}
 	
@@ -268,18 +283,18 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 				final DropInfo info = MOBS.get(npcId);
 				final int itemCount;
 				
-				if (info.doubleItemChance > 0)
+				if (info.getDoubleItemChance() > 0)
 				{
-					itemCount = ((getRandom(100) < info.doubleItemChance) ? 2 : 1);
+					itemCount = ((getRandom(100) < info.getDoubleItemChance()) ? 2 : 1);
 				}
 				else
 				{
 					itemCount = 1;
 				}
 				
-				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, info.dropChance, true);
+				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, info.getDropChance(), true);
 				
-				if (info.dropEntrancePass)
+				if (info.getDropEntrancePass())
 				{
 					giveItemRandomly(player, npc, ENTRANCE_PASS_TO_THE_SEPULCHER, 1, 0, 1.0 / 30, false);
 				}

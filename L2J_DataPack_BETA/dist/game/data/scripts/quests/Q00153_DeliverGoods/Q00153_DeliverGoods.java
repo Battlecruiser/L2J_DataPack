@@ -66,10 +66,10 @@ public class Q00153_DeliverGoods extends Quest
 			if (event.equalsIgnoreCase("30041-02.html"))
 			{
 				st.startQuest();
-				st.giveItems(DELIVERY_LIST_ID, 1);
-				st.giveItems(HEAVY_WOOD_BOX_ID, 1);
-				st.giveItems(CLOTH_BUNDLE_ID, 1);
-				st.giveItems(CLAY_POT_ID, 1);
+				giveItems(player, DELIVERY_LIST_ID, 1);
+				giveItems(player, HEAVY_WOOD_BOX_ID, 1);
+				giveItems(player, CLOTH_BUNDLE_ID, 1);
+				giveItems(player, CLAY_POT_ID, 1);
 			}
 		}
 		return event;
@@ -96,13 +96,13 @@ public class Q00153_DeliverGoods extends Quest
 						}
 						else if (st.isCond(2))
 						{
-							st.takeItems(DELIVERY_LIST_ID, -1);
-							st.takeItems(JACKSONS_RECEIPT_ID, -1);
-							st.takeItems(SILVIAS_RECEIPT_ID, -1);
-							st.takeItems(RANTS_RECEIPT_ID, -1);
+							takeItems(player, DELIVERY_LIST_ID, -1);
+							takeItems(player, JACKSONS_RECEIPT_ID, -1);
+							takeItems(player, SILVIAS_RECEIPT_ID, -1);
+							takeItems(player, RANTS_RECEIPT_ID, -1);
 							// On retail it gives 2 rings but one at the time.
-							st.giveItems(RING_OF_KNOWLEDGE_ID, 1);
-							st.giveItems(RING_OF_KNOWLEDGE_ID, 1);
+							giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
+							giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
 							st.addExpAndSp(XP_REWARD_AMOUNT, 0);
 							st.exitQuest(false);
 							htmltext = "30041-04.html";
@@ -119,8 +119,8 @@ public class Q00153_DeliverGoods extends Quest
 				{
 					if (st.hasQuestItems(HEAVY_WOOD_BOX_ID))
 					{
-						st.takeItems(HEAVY_WOOD_BOX_ID, -1);
-						st.giveItems(JACKSONS_RECEIPT_ID, 1);
+						takeItems(player, HEAVY_WOOD_BOX_ID, -1);
+						giveItems(player, JACKSONS_RECEIPT_ID, 1);
 						htmltext = "30002-01.html";
 					}
 					else
@@ -132,9 +132,9 @@ public class Q00153_DeliverGoods extends Quest
 				{
 					if (st.hasQuestItems(CLOTH_BUNDLE_ID))
 					{
-						st.takeItems(CLOTH_BUNDLE_ID, -1);
-						st.giveItems(SILVIAS_RECEIPT_ID, 1);
-						st.giveItems(SOULSHOT_NO_GRADE_ID, 3);
+						takeItems(player, CLOTH_BUNDLE_ID, -1);
+						giveItems(player, SILVIAS_RECEIPT_ID, 1);
+						giveItems(player, SOULSHOT_NO_GRADE_ID, 3);
 						htmltext = "30003-01.html";
 					}
 					else
@@ -146,8 +146,8 @@ public class Q00153_DeliverGoods extends Quest
 				{
 					if (st.hasQuestItems(CLAY_POT_ID))
 					{
-						st.takeItems(CLAY_POT_ID, -1);
-						st.giveItems(RANTS_RECEIPT_ID, 1);
+						takeItems(player, CLAY_POT_ID, -1);
+						giveItems(player, RANTS_RECEIPT_ID, 1);
 						htmltext = "30054-01.html";
 					}
 					else

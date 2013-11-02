@@ -88,7 +88,7 @@ public class Q00124_MeetingTheElroki extends Quest
 			case "32118-04.html":
 				if (st.isCond(5))
 				{
-					st.giveItems(MANTARASA_EGG, 1);
+					giveItems(player, MANTARASA_EGG, 1);
 					st.setCond(6, true);
 				}
 				break;

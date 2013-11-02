@@ -70,7 +70,7 @@ public class Q00166_MassOfDarkness extends Quest
 		if ((st != null) && event.equals("30130-03.htm"))
 		{
 			st.startQuest();
-			st.giveItems(UNDRIAS_LETTER, 1);
+			giveItems(player, UNDRIAS_LETTER, 1);
 			return event;
 		}
 		return null;
@@ -128,7 +128,7 @@ public class Q00166_MassOfDarkness extends Quest
 						final int itemId = NPCs.get(npcId);
 						if (st.isCond(1) && !st.hasQuestItems(itemId))
 						{
-							st.giveItems(itemId, 1);
+							giveItems(player, itemId, 1);
 							if (st.hasQuestItems(CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
 							{
 								st.setCond(2, true);

@@ -112,9 +112,9 @@ public class Q00331_ArrowOfVengeance extends Quest
 				}
 				case State.STARTED:
 				{
-					final long harpyFeathers = st.getQuestItemsCount(HARPY_FEATHER);
-					final long medusaVenoms = st.getQuestItemsCount(MEDUSA_VENOM);
-					final long wyrmsTeeth = st.getQuestItemsCount(WYRMS_TOOTH);
+					final long harpyFeathers = getQuestItemsCount(player, HARPY_FEATHER);
+					final long medusaVenoms = getQuestItemsCount(player, MEDUSA_VENOM);
+					final long wyrmsTeeth = getQuestItemsCount(player, WYRMS_TOOTH);
 					if ((harpyFeathers + medusaVenoms + wyrmsTeeth) > 0)
 					{
 						st.giveAdena(((harpyFeathers * HARPY_FEATHER_ADENA) + (medusaVenoms * MEDUSA_VENOM_ADENA) + (wyrmsTeeth * WYRMS_TOOTH_ADENA) + ((harpyFeathers + medusaVenoms + wyrmsTeeth) >= BONUS_COUNT ? BONUS : 0)), true);
@@ -144,17 +144,17 @@ public class Q00331_ArrowOfVengeance extends Quest
 				{
 					case 20145:
 					{
-						st.giveItems(HARPY_FEATHER, 1);
+						giveItems(player, HARPY_FEATHER, 1);
 						break;
 					}
 					case 20158:
 					{
-						st.giveItems(MEDUSA_VENOM, 1);
+						giveItems(player, MEDUSA_VENOM, 1);
 						break;
 					}
 					case 20176:
 					{
-						st.giveItems(WYRMS_TOOTH, 1);
+						giveItems(player, WYRMS_TOOTH, 1);
 						break;
 					}
 				}

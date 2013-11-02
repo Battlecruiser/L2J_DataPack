@@ -136,14 +136,14 @@ public class Q00450_GraveRobberRescue extends Quest
 			
 			if (getRandom(100) < 66)
 			{
-				st.giveItems(EVIDENCE_OF_MIGRATION, 1);
+				giveItems(player, EVIDENCE_OF_MIGRATION, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX() + 100, npc.getY() + 100, npc.getZ(), 0));
 				npc.setBusy(true);
 				
 				startQuestTimer("despawn", 3000, npc, player);
 				
-				if (st.getQuestItemsCount(EVIDENCE_OF_MIGRATION) == 10)
+				if (getQuestItemsCount(player, EVIDENCE_OF_MIGRATION) == 10)
 				{
 					st.setCond(2, true);
 				}

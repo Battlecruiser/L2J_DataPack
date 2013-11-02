@@ -66,7 +66,7 @@ public class Q00017_LightAndDarkness extends Quest
 				if (player.getLevel() >= 61)
 				{
 					st.startQuest();
-					st.giveItems(BLOOD_OF_SAINT, 4);
+					giveItems(player, BLOOD_OF_SAINT, 4);
 				}
 				else
 				{
@@ -82,7 +82,7 @@ public class Q00017_LightAndDarkness extends Quest
 				if ((cond == (npcId - 31507)) && st.hasQuestItems(BLOOD_OF_SAINT))
 				{
 					htmltext = npcId + "-01.html";
-					st.takeItems(BLOOD_OF_SAINT, 1);
+					takeItems(player, BLOOD_OF_SAINT, 1);
 					st.setCond(cond + 1, true);
 				}
 				break;
@@ -110,7 +110,7 @@ public class Q00017_LightAndDarkness extends Quest
 				htmltext = ((st2 != null) && (st2.isCompleted())) ? "31517-00.htm" : "31517-06.html";
 				break;
 			case State.STARTED:
-				final long blood = st.getQuestItemsCount(BLOOD_OF_SAINT);
+				final long blood = getQuestItemsCount(player, BLOOD_OF_SAINT);
 				final int npcId = npc.getId();
 				switch (npcId)
 				{

@@ -84,8 +84,8 @@ public final class Q00186_ContractExecution extends Quest
 				if ((player.getLevel() >= MIN_LEVEL) && st.hasQuestItems(LORAINES_CERTIFICATE))
 				{
 					st.startQuest();
-					st.giveItems(METALLOGRAPH_RESEARCH_REPORT, 1);
-					st.takeItems(LORAINES_CERTIFICATE, -1);
+					giveItems(player, METALLOGRAPH_RESEARCH_REPORT, 1);
+					takeItems(player, LORAINES_CERTIFICATE, -1);
 					htmltext = event;
 				}
 				break;
@@ -142,7 +142,7 @@ public final class Q00186_ContractExecution extends Quest
 		{
 			if (!st.hasQuestItems(LETO_LIZARDMAN_ACCESSORY))
 			{
-				st.giveItems(LETO_LIZARDMAN_ACCESSORY, 1);
+				giveItems(killer, LETO_LIZARDMAN_ACCESSORY, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

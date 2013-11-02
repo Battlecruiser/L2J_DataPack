@@ -90,7 +90,7 @@ public class Q00130_PathToHellbound extends Quest
 			{
 				if (st.isCond(2))
 				{
-					st.giveItems(CASIANS_BLUE_CRYSTAL, 1);
+					giveItems(player, CASIANS_BLUE_CRYSTAL, 1);
 					st.setCond(3, true);
 					htmltext = event;
 				}

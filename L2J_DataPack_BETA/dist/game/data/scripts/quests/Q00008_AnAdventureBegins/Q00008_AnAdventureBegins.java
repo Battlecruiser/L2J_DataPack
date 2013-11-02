@@ -66,20 +66,20 @@ public class Q00008_AnAdventureBegins extends Quest
 				st.startQuest();
 				break;
 			case "30134-06.html":
-				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
-				st.giveItems(MARK_OF_TRAVELER, 1);
+				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
+				giveItems(player, MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
 			case "30355-02.html":
 				st.setCond(2, true);
-				st.giveItems(ROSELYNS_NOTE, 1);
+				giveItems(player, ROSELYNS_NOTE, 1);
 				break;
 			case "30144-02.html":
 				if (!st.hasQuestItems(ROSELYNS_NOTE))
 				{
 					return "30144-03.html";
 				}
-				st.takeItems(ROSELYNS_NOTE, -1);
+				takeItems(player, ROSELYNS_NOTE, -1);
 				st.setCond(3, true);
 				break;
 			default:

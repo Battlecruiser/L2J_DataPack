@@ -76,7 +76,7 @@ public class Q00151_CureForFever extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && (getRandom(5) == CHANCE))
 		{
-			st.giveItems(POISON_SAC, 1);
+			giveItems(killer, POISON_SAC, 1);
 			st.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -103,7 +103,7 @@ public class Q00151_CureForFever extends Quest
 					case State.STARTED:
 						if (st.isCond(3) && st.hasQuestItems(FEVER_MEDICINE))
 						{
-							st.giveItems(ROUND_SHIELD, 1);
+							giveItems(player, ROUND_SHIELD, 1);
 							st.addExpAndSp(13106, 613);
 							st.exitQuest(false, true);
 							showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000); // TODO: Newbie Guide
@@ -129,8 +129,8 @@ public class Q00151_CureForFever extends Quest
 					if (st.isCond(2) && st.hasQuestItems(POISON_SAC))
 					{
 						st.setCond(3, true);
-						st.takeItems(POISON_SAC, -1);
-						st.giveItems(FEVER_MEDICINE, 1);
+						takeItems(player, POISON_SAC, -1);
+						giveItems(player, FEVER_MEDICINE, 1);
 						htmltext = "30032-01.html";
 					}
 					else if (st.isCond(3) && st.hasQuestItems(FEVER_MEDICINE))
