@@ -75,55 +75,55 @@ public class Q00278_HomeSecurity extends Quest
 			
 			if (i0 < 10)
 			{
-				st.giveItems(960, 1);
+				giveItems(player, 960, 1);
 			}
 			else if (i0 < 19)
 			{
-				st.giveItems(960, 2);
+				giveItems(player, 960, 2);
 			}
 			else if (i0 < 27)
 			{
-				st.giveItems(960, 3);
+				giveItems(player, 960, 3);
 			}
 			else if (i0 < 34)
 			{
-				st.giveItems(960, 4);
+				giveItems(player, 960, 4);
 			}
 			else if (i0 < 40)
 			{
-				st.giveItems(960, 5);
+				giveItems(player, 960, 5);
 			}
 			else if (i0 < 45)
 			{
-				st.giveItems(960, 6);
+				giveItems(player, 960, 6);
 			}
 			else if (i0 < 49)
 			{
-				st.giveItems(960, 7);
+				giveItems(player, 960, 7);
 			}
 			else if (i0 < 52)
 			{
-				st.giveItems(960, 8);
+				giveItems(player, 960, 8);
 			}
 			else if (i0 < 54)
 			{
-				st.giveItems(960, 9);
+				giveItems(player, 960, 9);
 			}
 			else if (i0 < 55)
 			{
-				st.giveItems(960, 10);
+				giveItems(player, 960, 10);
 			}
 			else if (i0 < 75)
 			{
-				st.giveItems(9553, 1);
+				giveItems(player, 9553, 1);
 			}
 			else if (i0 < 90)
 			{
-				st.giveItems(9553, 2);
+				giveItems(player, 9553, 2);
 			}
 			else
 			{
-				st.giveItems(959, 1);
+				giveItems(player, 959, 1);
 			}
 			
 			st.exitQuest(true, true);
@@ -152,8 +152,8 @@ public class Q00278_HomeSecurity extends Quest
 					chance = getRandom(1000);
 					if (chance < 85)
 					{
-						st.giveItems(SEL_MAHUM_MANE, 1);
-						if (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300)
+						giveItems(player, SEL_MAHUM_MANE, 1);
+						if (getQuestItemsCount(player, SEL_MAHUM_MANE) >= 300)
 						{
 							st.setCond(2, true);
 						}
@@ -168,28 +168,28 @@ public class Q00278_HomeSecurity extends Quest
 					if (chance < 486)
 					{
 						i1 = getRandom(6) + 1;
-						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
+						if ((i1 + getQuestItemsCount(player, SEL_MAHUM_MANE)) >= 300)
 						{
-							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
+							giveItems(player, SEL_MAHUM_MANE, (300 - getQuestItemsCount(player, SEL_MAHUM_MANE)));
 							st.setCond(2, true);
 						}
 						else
 						{
-							st.giveItems(SEL_MAHUM_MANE, i1);
+							giveItems(player, SEL_MAHUM_MANE, i1);
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
 					else
 					{
 						i1 = (getRandom(5) + 1);
-						if ((i1 + st.getQuestItemsCount(SEL_MAHUM_MANE)) >= 300)
+						if ((i1 + getQuestItemsCount(player, SEL_MAHUM_MANE)) >= 300)
 						{
-							st.giveItems(SEL_MAHUM_MANE, (300 - st.getQuestItemsCount(SEL_MAHUM_MANE)));
+							giveItems(player, SEL_MAHUM_MANE, (300 - getQuestItemsCount(player, SEL_MAHUM_MANE)));
 							st.setCond(2, true);
 						}
 						else
 						{
-							st.giveItems(SEL_MAHUM_MANE, i1);
+							giveItems(player, SEL_MAHUM_MANE, i1);
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
@@ -215,11 +215,11 @@ public class Q00278_HomeSecurity extends Quest
 				htmltext = "31537-01.htm";
 				break;
 			case State.STARTED:
-				if (st.isCond(1) || (st.getQuestItemsCount(SEL_MAHUM_MANE) < 300))
+				if (st.isCond(1) || (getQuestItemsCount(player, SEL_MAHUM_MANE) < 300))
 				{
 					htmltext = "31537-06.html";
 				}
-				else if (st.isCond(2) && (st.getQuestItemsCount(SEL_MAHUM_MANE) >= 300))
+				else if (st.isCond(2) && (getQuestItemsCount(player, SEL_MAHUM_MANE) >= 300))
 				{
 					htmltext = "31537-05.html";
 				}

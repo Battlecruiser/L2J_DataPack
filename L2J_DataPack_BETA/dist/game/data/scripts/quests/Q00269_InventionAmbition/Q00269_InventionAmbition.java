@@ -105,7 +105,7 @@ public final class Q00269_InventionAmbition extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (getRandom(100) < MONSTERS.get(npc.getId())))
 		{
-			st.giveItems(ENERGY_ORE, 1);
+			giveItems(killer, ENERGY_ORE, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -129,9 +129,9 @@ public final class Q00269_InventionAmbition extends Quest
 				{
 					if (st.hasQuestItems(ENERGY_ORE))
 					{
-						final long count = st.getQuestItemsCount(ENERGY_ORE);
+						final long count = getQuestItemsCount(player, ENERGY_ORE);
 						st.giveAdena((count * 50) + (count >= 10 ? 2044 : null), true);
-						st.takeItems(ENERGY_ORE, -1);
+						takeItems(player, ENERGY_ORE, -1);
 						htmltext = "32486-06.html";
 					}
 					else

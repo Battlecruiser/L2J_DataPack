@@ -97,7 +97,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 				st.startQuest();
 				break;
 			case "30894-03.html":
-				st.giveItems(CRYPTOGRAM_OF_THE_ANGEL_SEARCH, 1);
+				giveItems(player, CRYPTOGRAM_OF_THE_ANGEL_SEARCH, 1);
 				st.setCond(2, true);
 				break;
 			case "30289-05.html":
@@ -141,7 +141,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 			st = player.getQuestState(getName());
 			if (st.isCond(5))
 			{
-				st.giveItems(FALLEN_ANGEL_BLOOD, 1);
+				giveItems(player, FALLEN_ANGEL_BLOOD, 1);
 				st.setCond(6, true);
 				isAngelSpawned = false;
 			}
@@ -154,10 +154,10 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 				st = member.getQuestState(getName());
 				if (getRandom(1000) < MOBS.get(npc.getId()))
 				{
-					st.giveItems(PROPHECY_FRAGMENT, 1);
-					if (st.getQuestItemsCount(PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
+					giveItems(player, PROPHECY_FRAGMENT, 1);
+					if (getQuestItemsCount(player, PROPHECY_FRAGMENT) >= FRAGMENT_COUNT)
 					{
-						st.takeItems(PROPHECY_FRAGMENT, -1);
+						takeItems(player, PROPHECY_FRAGMENT, -1);
 						st.setCond(5, true);
 					}
 					else
@@ -216,7 +216,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 							}
 							else
 							{
-								st.takeItems(CRYPTOGRAM_OF_THE_ANGEL_SEARCH, -1);
+								takeItems(player, CRYPTOGRAM_OF_THE_ANGEL_SEARCH, -1);
 								st.set("talk", "1");
 								htmltext = "30289-02.html";
 							}

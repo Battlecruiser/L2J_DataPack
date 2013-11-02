@@ -143,8 +143,8 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			}
 			case "32106-09.html":
 			{
-				st.giveAdena(1374 * st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR), true);
-				st.takeItems(BONES_OF_A_PLAINS_DINOSAUR, -1);
+				st.giveAdena(1374 * getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR), true);
+				takeItems(player, BONES_OF_A_PLAINS_DINOSAUR, -1);
 				htmltext = event;
 				break;
 			}
@@ -156,7 +156,7 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 				}
 				else
 				{
-					st.giveAdena(1374 * st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR), true);
+					st.giveAdena(1374 * getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR), true);
 					htmltext = "32106-12.html";
 				}
 				st.exitQuest(true, true);
@@ -164,14 +164,14 @@ public class Q00643_RiseAndFallOfTheElrokiTribe extends Quest
 			}
 			case "exchange":
 			{
-				if (st.getQuestItemsCount(BONES_OF_A_PLAINS_DINOSAUR) < 300)
+				if (getQuestItemsCount(player, BONES_OF_A_PLAINS_DINOSAUR) < 300)
 				{
 					htmltext = "32117-04.html";
 				}
 				else
 				{
 					st.rewardItems(PIECE[getRandom(PIECE.length)], 5);
-					st.takeItems(BONES_OF_A_PLAINS_DINOSAUR, 300);
+					takeItems(player, BONES_OF_A_PLAINS_DINOSAUR, 300);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "32117-05.html";
 				}

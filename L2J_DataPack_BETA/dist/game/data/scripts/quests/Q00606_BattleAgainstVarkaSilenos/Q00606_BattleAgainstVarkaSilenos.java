@@ -90,12 +90,12 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 			case "31370-06.html":
 				break;
 			case "31370-07.html":
-				if (st.getQuestItemsCount(MANE) < MANE_COUNT)
+				if (getQuestItemsCount(player, MANE) < MANE_COUNT)
 				{
 					return "31370-08.html";
 				}
-				st.takeItems(MANE, MANE_COUNT);
-				st.giveItems(HORN, 20);
+				takeItems(player, MANE, MANE_COUNT);
+				giveItems(player, HORN, 20);
 				break;
 			case "31370-09.html":
 				st.exitQuest(true, true);
@@ -114,7 +114,7 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
-			st.giveItems(MANE, 1);
+			giveItems(killer, MANE, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);

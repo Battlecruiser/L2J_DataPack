@@ -113,9 +113,9 @@ public class Q00328_SenseForBusiness extends Quest
 				}
 				case State.STARTED:
 				{
-					final long carcass = st.getQuestItemsCount(MONSTER_EYE_CARCASS);
-					final long lens = st.getQuestItemsCount(MONSTER_EYE_LENS);
-					final long gizzards = st.getQuestItemsCount(BASILISK_GIZZARD);
+					final long carcass = getQuestItemsCount(player, MONSTER_EYE_CARCASS);
+					final long lens = getQuestItemsCount(player, MONSTER_EYE_LENS);
+					final long gizzards = getQuestItemsCount(player, BASILISK_GIZZARD);
 					if ((carcass + lens + gizzards) > 0)
 					{
 						st.giveAdena(((carcass * MONSTER_EYE_CARCASS_ADENA) + (lens * MONSTER_EYE_LENS_ADENA) + (gizzards * BASILISK_GIZZARD_ADENA) + ((carcass + lens + gizzards) >= BONUS_COUNT ? BONUS : 0)), true);
@@ -144,12 +144,12 @@ public class Q00328_SenseForBusiness extends Quest
 			{
 				if (chance < MONSTER_EYES.get(npc.getId())[0])
 				{
-					st.giveItems(MONSTER_EYE_CARCASS, 1);
+					giveItems(player, MONSTER_EYE_CARCASS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else if (chance < MONSTER_EYES.get(npc.getId())[1])
 				{
-					st.giveItems(MONSTER_EYE_LENS, 1);
+					giveItems(player, MONSTER_EYE_LENS, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -157,7 +157,7 @@ public class Q00328_SenseForBusiness extends Quest
 			{
 				if (chance < MONSTER_BASILISKS.get(npc.getId()))
 				{
-					st.giveItems(BASILISK_GIZZARD, 1);
+					giveItems(player, BASILISK_GIZZARD, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}

@@ -89,26 +89,26 @@ public final class Q00032_AnObviousLie extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					st.giveItems(MAP_OF_GENTLER, 1);
+					giveItems(player, MAP_OF_GENTLER, 1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "31706-02.html":
 			{
-				if (st.isCond(2) && st.hasQuestItems(MAP_OF_GENTLER))
+				if (st.isCond(2) && hasQuestItems(player, MAP_OF_GENTLER))
 				{
 					st.setCond(3, true);
-					st.takeItems(MAP_OF_GENTLER, 1);
+					takeItems(player, MAP_OF_GENTLER, 1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30094-06.html":
 			{
-				if (st.isCond(4) && (st.getQuestItemsCount(MEDICINAL_HERB) >= 20))
+				if (st.isCond(4) && (getQuestItemsCount(player, MEDICINAL_HERB) >= 20))
 				{
-					st.takeItems(MEDICINAL_HERB, 20);
+					takeItems(player, MEDICINAL_HERB, 20);
 					st.setCond(5, true);
 					htmltext = event;
 				}
@@ -116,9 +116,9 @@ public final class Q00032_AnObviousLie extends Quest
 			}
 			case "30094-09.html":
 			{
-				if (st.isCond(5) && (st.getQuestItemsCount(SPIRIT_ORE) >= 500))
+				if (st.isCond(5) && (getQuestItemsCount(player, SPIRIT_ORE) >= 500))
 				{
-					st.takeItems(SPIRIT_ORE, 500);
+					takeItems(player, SPIRIT_ORE, 500);
 					st.setCond(6, true);
 					htmltext = event;
 				}
@@ -151,11 +151,11 @@ public final class Q00032_AnObviousLie extends Quest
 			case "raccoon":
 			case "rabbit":
 			{
-				if (st.isCond(8) && (st.getQuestItemsCount(THREAD) >= 1000) && (st.getQuestItemsCount(SUEDE) >= 500))
+				if (st.isCond(8) && (getQuestItemsCount(player, THREAD) >= 1000) && (getQuestItemsCount(player, SUEDE) >= 500))
 				{
-					st.takeItems(THREAD, 1000);
-					st.takeItems(SUEDE, 500);
-					st.giveItems(EARS.get(event), 1);
+					takeItems(player, THREAD, 1000);
+					takeItems(player, SUEDE, 500);
+					giveItems(player, EARS.get(event), 1);
 					st.exitQuest(false, true);
 					htmltext = "30094-16.html";
 				}
@@ -173,7 +173,7 @@ public final class Q00032_AnObviousLie extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 3, 3, npc);
-		if ((qs != null) && qs.giveItemRandomly(npc, MEDICINAL_HERB, 1, REQUIRED_HERB_COUNT, 1.0, true))
+		if ((qs != null) && giveItemRandomly(killer, npc, MEDICINAL_HERB, 1, REQUIRED_HERB_COUNT, 1.0, true))
 		{
 			qs.setCond(4);
 		}
@@ -226,12 +226,12 @@ public final class Q00032_AnObviousLie extends Quest
 					}
 					case 4:
 					{
-						htmltext = ((st.getQuestItemsCount(MEDICINAL_HERB) >= 20) ? "30094-04.html" : "30094-05.html");
+						htmltext = ((getQuestItemsCount(player, MEDICINAL_HERB) >= 20) ? "30094-04.html" : "30094-05.html");
 						break;
 					}
 					case 5:
 					{
-						htmltext = ((st.getQuestItemsCount(SPIRIT_ORE) >= 500) ? "30094-07.html" : "30094-08.html");
+						htmltext = ((getQuestItemsCount(player, SPIRIT_ORE) >= 500) ? "30094-07.html" : "30094-08.html");
 						break;
 					}
 					case 6:
@@ -246,7 +246,7 @@ public final class Q00032_AnObviousLie extends Quest
 					}
 					case 8:
 					{
-						if ((st.getQuestItemsCount(THREAD) >= 1000) && (st.getQuestItemsCount(SUEDE) >= 500))
+						if ((getQuestItemsCount(player, THREAD) >= 1000) && (getQuestItemsCount(player, SUEDE) >= 500))
 						{
 							htmltext = "30094-13.html";
 						}
@@ -265,7 +265,7 @@ public final class Q00032_AnObviousLie extends Quest
 				{
 					case 2:
 					{
-						if (st.hasQuestItems(MAP_OF_GENTLER))
+						if (hasQuestItems(player, MAP_OF_GENTLER))
 						{
 							htmltext = "31706-01.html";
 						}

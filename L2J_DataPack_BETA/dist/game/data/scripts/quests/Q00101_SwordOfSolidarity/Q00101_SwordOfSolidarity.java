@@ -92,7 +92,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 				case "30008-04.htm":
 				{
 					st.startQuest();
-					st.giveItems(ROIENS_LETTER, 1);
+					giveItems(player, ROIENS_LETTER, 1);
 					htmltext = event;
 					break;
 				}
@@ -100,8 +100,8 @@ public class Q00101_SwordOfSolidarity extends Quest
 				{
 					if (st.isCond(1) && st.hasQuestItems(ROIENS_LETTER))
 					{
-						st.takeItems(ROIENS_LETTER, -1);
-						st.giveItems(DIRECTIONS_TO_RUINS, 1);
+						takeItems(player, ROIENS_LETTER, -1);
+						giveItems(player, DIRECTIONS_TO_RUINS, 1);
 						st.setCond(2, true);
 						htmltext = event;
 					}
@@ -114,7 +114,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 						Q00281_HeadForTheHills.giveNewbieReward(player);
 						for (ItemHolder reward : REWARDS)
 						{
-							st.giveItems(reward);
+							giveItems(player, reward);
 						}
 						st.addExpAndSp(25747, 2171);
 						st.giveAdena(10981, true);
@@ -136,7 +136,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 		{
 			if (!st.hasQuestItems(BROKEN_BLADE_TOP))
 			{
-				st.giveItems(BROKEN_BLADE_TOP, 1);
+				giveItems(killer, BROKEN_BLADE_TOP, 1);
 				if (st.hasQuestItems(BROKEN_BLADE_BOTTOM))
 				{
 					st.setCond(3, true);
@@ -148,7 +148,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 			}
 			else if (!st.hasQuestItems(BROKEN_BLADE_BOTTOM))
 			{
-				st.giveItems(BROKEN_BLADE_BOTTOM, 1);
+				giveItems(killer, BROKEN_BLADE_BOTTOM, 1);
 				if (st.hasQuestItems(BROKEN_BLADE_TOP))
 				{
 					st.setCond(3, true);
@@ -216,8 +216,8 @@ public class Q00101_SwordOfSolidarity extends Quest
 								{
 									if (st.hasQuestItems(ALTRANS_NOTE))
 									{
-										st.takeItems(ALTRANS_NOTE, -1);
-										st.giveItems(BROKEN_SWORD_HANDLE, 1);
+										takeItems(player, ALTRANS_NOTE, -1);
+										giveItems(player, BROKEN_SWORD_HANDLE, 1);
 										st.setCond(5, true);
 										htmltext = "30008-06.html";
 									}
@@ -271,7 +271,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 							if (st.hasQuestItems(BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
 							{
 								takeItems(player, -1, DIRECTIONS_TO_RUINS, BROKEN_BLADE_TOP, BROKEN_BLADE_BOTTOM);
-								st.giveItems(ALTRANS_NOTE, 1);
+								giveItems(player, ALTRANS_NOTE, 1);
 								st.setCond(4, true);
 								htmltext = "30283-04.html";
 							}

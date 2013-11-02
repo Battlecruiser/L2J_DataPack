@@ -64,12 +64,12 @@ public class Q00182_NewRecruits extends Quest
 		{
 			if (event.equalsIgnoreCase("32258-04.html"))
 			{
-				st.giveItems(847, 2);
+				giveItems(player, 847, 2);
 				st.exitQuest(false, true);
 			}
 			else if (event.equalsIgnoreCase("32258-05.html"))
 			{
-				st.giveItems(890, 2);
+				giveItems(player, 890, 2);
 				st.exitQuest(false, true);
 			}
 		}

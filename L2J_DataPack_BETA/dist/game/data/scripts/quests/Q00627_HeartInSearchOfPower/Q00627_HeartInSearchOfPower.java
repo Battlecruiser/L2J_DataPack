@@ -94,12 +94,12 @@ public class Q00627_HeartInSearchOfPower extends Quest
 				st.startQuest();
 				break;
 			case "31518-06.html":
-				if (st.getQuestItemsCount(BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
+				if (getQuestItemsCount(player, BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
 				{
 					return "31518-05.html";
 				}
-				st.giveItems(SEAL_OF_LIGHT, 1);
-				st.takeItems(BEAD_OF_OBEDIENCE, -1);
+				giveItems(player, SEAL_OF_LIGHT, 1);
+				takeItems(player, BEAD_OF_OBEDIENCE, -1);
 				st.setCond(3);
 				break;
 			case "Adena":
@@ -139,8 +139,8 @@ public class Q00627_HeartInSearchOfPower extends Quest
 			case "31519-02.html":
 				if (st.hasQuestItems(SEAL_OF_LIGHT) && st.isCond(3))
 				{
-					st.giveItems(GEM_OF_SAINTS, 1);
-					st.takeItems(SEAL_OF_LIGHT, -1);
+					giveItems(player, GEM_OF_SAINTS, 1);
+					takeItems(player, SEAL_OF_LIGHT, -1);
 					st.setCond(4);
 				}
 				else
@@ -167,8 +167,8 @@ public class Q00627_HeartInSearchOfPower extends Quest
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				st.giveItems(BEAD_OF_OBEDIENCE, 1);
-				if (st.getQuestItemsCount(BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
+				giveItems(killer, BEAD_OF_OBEDIENCE, 1);
+				if (getQuestItemsCount(killer, BEAD_OF_OBEDIENCE) < BEAD_OF_OBEDIENCE_COUNT_REQUIRED)
 				{
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}

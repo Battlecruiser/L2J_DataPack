@@ -67,8 +67,8 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 			case "31572-08.htm":
 				if (st.isCond(1) && st.hasQuestItems(YELLOW_TREASURE_BOX))
 				{
-					st.giveItems(KIKIS_LETTER, 1);
-					st.takeItems(YELLOW_TREASURE_BOX, -1);
+					giveItems(player, KIKIS_LETTER, 1);
+					takeItems(player, YELLOW_TREASURE_BOX, -1);
 					st.setCond(2, true);
 					htmltext = "31572-07.htm";
 				}
@@ -76,7 +76,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 			case "31442-03.htm":
 				if (st.isCond(2) && st.hasQuestItems(KIKIS_LETTER))
 				{
-					st.giveItems(ELVEN_RING, 1);
+					giveItems(player, ELVEN_RING, 1);
 					st.exitQuest(false, true);
 					htmltext = "31442-02.htm";
 				}

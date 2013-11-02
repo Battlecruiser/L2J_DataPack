@@ -66,20 +66,20 @@ public class Q00006_StepIntoTheFuture extends Quest
 				st.startQuest();
 				break;
 			case "30006-06.html":
-				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
-				st.giveItems(MARK_OF_TRAVELER, 1);
+				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
+				giveItems(player, MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
 			case "30033-02.html":
 				st.setCond(2, true);
-				st.giveItems(BAULRO_LETTER, 1);
+				giveItems(player, BAULRO_LETTER, 1);
 				break;
 			case "30311-02.html":
 				if (!st.hasQuestItems(BAULRO_LETTER))
 				{
 					return "30311-03.html";
 				}
-				st.takeItems(BAULRO_LETTER, -1);
+				takeItems(player, BAULRO_LETTER, -1);
 				st.setCond(3, true);
 				break;
 			default:

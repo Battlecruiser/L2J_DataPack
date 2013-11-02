@@ -65,8 +65,8 @@ public class Q00172_NewHorizons extends Quest
 				st.startQuest();
 				break;
 			case "32163-02.html":
-				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
-				st.giveItems(MARK_OF_TRAVELER, 1);
+				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
+				giveItems(player, MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
 			default:

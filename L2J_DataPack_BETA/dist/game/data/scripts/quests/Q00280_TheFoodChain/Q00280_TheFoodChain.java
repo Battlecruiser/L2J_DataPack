@@ -102,8 +102,8 @@ public final class Q00280_TheFoodChain extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 				{
-					final long greyTeeth = st.getQuestItemsCount(GREY_KELTIR_TOOTH);
-					final long blackTeeth = st.getQuestItemsCount(BLACK_WOLF_TOOTH);
+					final long greyTeeth = getQuestItemsCount(player, GREY_KELTIR_TOOTH);
+					final long blackTeeth = getQuestItemsCount(player, BLACK_WOLF_TOOTH);
 					st.giveAdena(2 * (greyTeeth + blackTeeth), true);
 					takeItems(player, -1, GREY_KELTIR_TOOTH, BLACK_WOLF_TOOTH);
 					htmltext = event;
@@ -126,18 +126,18 @@ public final class Q00280_TheFoodChain extends Quest
 			}
 			case "32175-11.html":
 			{
-				final long greyTeeth = st.getQuestItemsCount(GREY_KELTIR_TOOTH);
-				final long blackTeeth = st.getQuestItemsCount(BLACK_WOLF_TOOTH);
+				final long greyTeeth = getQuestItemsCount(player, GREY_KELTIR_TOOTH);
+				final long blackTeeth = getQuestItemsCount(player, BLACK_WOLF_TOOTH);
 				if ((greyTeeth + blackTeeth) >= TEETH_COUNT)
 				{
 					if (greyTeeth >= TEETH_COUNT)
 					{
-						st.takeItems(GREY_KELTIR_TOOTH, TEETH_COUNT);
+						takeItems(player, GREY_KELTIR_TOOTH, TEETH_COUNT);
 					}
 					else
 					{
-						st.takeItems(GREY_KELTIR_TOOTH, greyTeeth);
-						st.takeItems(BLACK_WOLF_TOOTH, TEETH_COUNT - greyTeeth);
+						takeItems(player, GREY_KELTIR_TOOTH, greyTeeth);
+						takeItems(player, BLACK_WOLF_TOOTH, TEETH_COUNT - greyTeeth);
 					}
 					st.rewardItems(REWARDS[getRandom(5)], 1);
 					htmltext = event;

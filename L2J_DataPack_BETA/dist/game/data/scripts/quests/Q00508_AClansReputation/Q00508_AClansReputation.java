@@ -188,7 +188,7 @@ public class Q00508_AClansReputation extends Quest
 					{
 						htmltext = "30868-" + raid + "b.html";
 						st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
-						st.takeItems(REWARD_POINTS.get(raid).get(1), -1);
+						takeItems(player, REWARD_POINTS.get(raid).get(1), -1);
 						final int rep = REWARD_POINTS.get(raid).get(2);
 						clan.addReputationScore(rep, true);
 						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(rep));

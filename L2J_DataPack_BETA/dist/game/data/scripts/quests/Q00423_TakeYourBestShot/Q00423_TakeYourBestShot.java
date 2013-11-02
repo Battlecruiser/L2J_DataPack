@@ -157,7 +157,7 @@ public class Q00423_TakeYourBestShot extends Quest
 						}
 						else if (st.isCond(2))
 						{
-							st.giveItems(SEER_UGOROS_PASS, 1);
+							giveItems(player, SEER_UGOROS_PASS, 1);
 							st.exitQuest(true, true);
 							htmltext = "32740-04.html";
 						}

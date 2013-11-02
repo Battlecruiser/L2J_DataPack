@@ -50,8 +50,8 @@ public class Q10291_FireDragonDestroyer extends Quest
 				
 				if ((st != null) && st.isCond(1) && st.hasQuestItems(POOR_NECKLACE))
 				{
-					st.takeItems(POOR_NECKLACE, -1);
-					st.giveItems(VALOR_NECKLACE, 1);
+					takeItems(st.getPlayer(), POOR_NECKLACE, -1);
+					giveItems(st.getPlayer(), VALOR_NECKLACE, 1);
 					st.setCond(2, true);
 				}
 			}
@@ -91,7 +91,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 		if (event.equals("31540-05.htm"))
 		{
 			st.startQuest();
-			st.giveItems(POOR_NECKLACE, 1);
+			giveItems(player, POOR_NECKLACE, 1);
 		}
 		
 		return event;
@@ -152,7 +152,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 					}
 					else
 					{
-						st.giveItems(POOR_NECKLACE, 1);
+						giveItems(player, POOR_NECKLACE, 1);
 						htmltext = "31540-07.html";
 					}
 				}
@@ -161,7 +161,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 					htmltext = "31540-08.html";
 					st.giveAdena(126549, true);
 					st.addExpAndSp(717291, 77397);
-					st.giveItems(VALAKAS_SLAYER_CIRCLET, 1);
+					giveItems(player, VALAKAS_SLAYER_CIRCLET, 1);
 					st.exitQuest(false, true);
 				}
 				break;

@@ -78,15 +78,15 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			{
 				if (st.hasQuestItems(DINOSAUR_FANG_NECKLACE))
 				{
-					st.giveAdena(3000 * st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE), true);
-					st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
+					st.giveAdena(3000 * getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE), true);
+					takeItems(player, DINOSAUR_FANG_NECKLACE, -1);
 					htmltext = event;
 				}
 				break;
 			}
 			case "donation":
 			{
-				if (st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE) < 100)
+				if (getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE) < 100)
 				{
 					htmltext = "32105-07.html";
 				}
@@ -102,7 +102,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 						st.giveAdena(150000, true);
 						htmltext = "32105-09.html";
 					}
-					st.takeItems(DINOSAUR_FANG_NECKLACE, 100);
+					takeItems(player, DINOSAUR_FANG_NECKLACE, 100);
 				}
 				break;
 			}
@@ -110,7 +110,7 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest
 			{
 				if (st.hasQuestItems(DINOSAUR_FANG_NECKLACE))
 				{
-					st.giveAdena(3000 * st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE), true);
+					st.giveAdena(3000 * getQuestItemsCount(player, DINOSAUR_FANG_NECKLACE), true);
 				}
 				st.exitQuest(true, true);
 				htmltext = event;

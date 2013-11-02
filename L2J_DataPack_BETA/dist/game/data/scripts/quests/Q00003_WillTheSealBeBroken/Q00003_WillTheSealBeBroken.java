@@ -131,7 +131,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 				}
 				else
 				{
-					st.giveItems(ENCHANT, 1);
+					giveItems(player, ENCHANT, 1);
 					st.exitQuest(false, true);
 					htmltext = "30141-06.html";
 				}
@@ -147,7 +147,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	{
 		if (!st.hasQuestItems(item))
 		{
-			st.giveItems(item, 1);
+			giveItems(st.getPlayer(), item, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			if (st.hasQuestItems(items))
 			{

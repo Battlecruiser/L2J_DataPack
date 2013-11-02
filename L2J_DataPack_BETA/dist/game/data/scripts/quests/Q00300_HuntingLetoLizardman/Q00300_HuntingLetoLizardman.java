@@ -89,9 +89,9 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 			}
 			case "30126-06.html":
 			{
-				if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
+				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 				{
-					st.takeItems(BRACELET_OF_LIZARDMAN, -1);
+					takeItems(player, BRACELET_OF_LIZARDMAN, -1);
 					int rand = getRandom(1000);
 					if (rand < 500)
 					{
@@ -127,8 +127,8 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st.isCond(1) && (getRandom(1000) < MOBS_SAC.get(npc.getId())))
 			{
-				st.giveItems(BRACELET_OF_LIZARDMAN, 1);
-				if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)
+				giveItems(player, BRACELET_OF_LIZARDMAN, 1);
+				if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) == REQUIRED_BRACELET_COUNT)
 				{
 					st.setCond(2, true);
 				}
@@ -169,7 +169,7 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 					}
 					case 2:
 					{
-						if (st.getQuestItemsCount(BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
+						if (getQuestItemsCount(player, BRACELET_OF_LIZARDMAN) >= REQUIRED_BRACELET_COUNT)
 						{
 							htmltext = "30126-05.html";
 						}

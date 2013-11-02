@@ -75,7 +75,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			{
 				if (getRandom(10) < 5)
 				{
-					st.giveItems(TAG_ID, 1);
+					giveItems(player, TAG_ID, 1);
 				}
 				else
 				{
@@ -117,7 +117,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 					else if (st.isCond(2))
 					{
 						htmltext = "32773-5.html";
-						st.takeItems(TAG_ID, -1);
+						takeItems(player, TAG_ID, -1);
 						st.giveAdena(95200, true);
 						st.addExpAndSp(435024, 50366);
 						st.exitQuest(QuestType.DAILY, true);

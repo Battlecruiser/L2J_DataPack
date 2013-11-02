@@ -104,7 +104,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 			case "31739-05.html":
 				if (st.isCond(4) && st.hasQuestItems(LEGEND_OF_SEVENTEEN))
 				{
-					st.takeItems(LEGEND_OF_SEVENTEEN, -1);
+					takeItems(player, LEGEND_OF_SEVENTEEN, -1);
 					st.setCond(5, true);
 				}
 				break;
@@ -115,31 +115,31 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				}
 				break;
 			case "31042-05.html":
-				if (st.isCond(7) && (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) >= 10))
+				if (st.isCond(7) && (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) >= 10))
 				{
-					st.takeItems(MALRUK_SUCCUBUS_CLAW, -1);
-					st.giveItems(ECHO_CRYSTAL, 1);
+					takeItems(player, MALRUK_SUCCUBUS_CLAW, -1);
+					giveItems(player, ECHO_CRYSTAL, 1);
 					st.setCond(8, true);
 				}
 				break;
 			case "31739-08.html":
 				if (st.isCond(8) && st.hasQuestItems(ECHO_CRYSTAL))
 				{
-					st.takeItems(ECHO_CRYSTAL, -1);
+					takeItems(player, ECHO_CRYSTAL, -1);
 					st.setCond(9, true);
 				}
 				break;
 			case "30692-02.html":
 				if (st.isCond(9) && !st.hasQuestItems(POETRY_BOOK))
 				{
-					st.giveItems(POETRY_BOOK, 1);
+					giveItems(player, POETRY_BOOK, 1);
 					st.setCond(10, true);
 				}
 				break;
 			case "31739-11.html":
 				if (st.isCond(10) && st.hasQuestItems(POETRY_BOOK))
 				{
-					st.takeItems(POETRY_BOOK, -1);
+					takeItems(player, POETRY_BOOK, -1);
 					st.setCond(11, true);
 				}
 				break;
@@ -162,17 +162,17 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				}
 				break;
 			case "31336-05.html":
-				if (st.isCond(15) && (st.getQuestItemsCount(CRIMSON_MOSS) >= 5))
+				if (st.isCond(15) && (getQuestItemsCount(player, CRIMSON_MOSS) >= 5))
 				{
-					st.takeItems(CRIMSON_MOSS, -1);
-					st.giveItems(RAHORAKTIS_MEDICINE, 1);
+					takeItems(player, CRIMSON_MOSS, -1);
+					giveItems(player, RAHORAKTIS_MEDICINE, 1);
 					st.setCond(16, true);
 				}
 				break;
 			case "31743-02.html":
 				if (st.isCond(16) && st.hasQuestItems(RAHORAKTIS_MEDICINE))
 				{
-					st.takeItems(RAHORAKTIS_MEDICINE, -1);
+					takeItems(player, RAHORAKTIS_MEDICINE, -1);
 					st.setCond(17, true);
 				}
 				break;
@@ -185,7 +185,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 			case "31740-05.html":
 				if (st.getCond() >= 18)
 				{
-					st.giveItems(VIRGILS_LETTER, 1);
+					giveItems(player, VIRGILS_LETTER, 1);
 					st.addExpAndSp(263043, 0);
 					st.exitQuest(false, true);
 				}
@@ -209,7 +209,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 				}
 				
 				st = partyMember.getQuestState(getName());
-				st.giveItems(LEGEND_OF_SEVENTEEN, 1);
+				giveItems(player, LEGEND_OF_SEVENTEEN, 1);
 				st.setCond(4, true);
 				break;
 			case MALRUK_SUCCUBUS_1:
@@ -222,10 +222,10 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					return null;
 				}
 				st = partyMember.getQuestState(getName());
-				if ((MALRUK_SUCCUBUS_CLAW_CHANCE >= getRandom(100)) && (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) < 10))
+				if ((MALRUK_SUCCUBUS_CLAW_CHANCE >= getRandom(100)) && (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) < 10))
 				{
-					st.giveItems(MALRUK_SUCCUBUS_CLAW, 1);
-					if (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) == 10)
+					giveItems(player, MALRUK_SUCCUBUS_CLAW, 1);
+					if (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) == 10)
 					{
 						st.setCond(7, true);
 					}
@@ -242,10 +242,10 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 					return null;
 				}
 				st = partyMember.getQuestState(getName());
-				if ((CRIMSON_MOSS_CHANCE >= getRandom(100)) && (st.getQuestItemsCount(CRIMSON_MOSS) < 5))
+				if ((CRIMSON_MOSS_CHANCE >= getRandom(100)) && (getQuestItemsCount(player, CRIMSON_MOSS) < 5))
 				{
-					st.giveItems(CRIMSON_MOSS, 1);
-					if (st.getQuestItemsCount(CRIMSON_MOSS) == 5)
+					giveItems(player, CRIMSON_MOSS, 1);
+					if (getQuestItemsCount(player, CRIMSON_MOSS) == 5)
 					{
 						st.setCond(15, true);
 					}
@@ -353,7 +353,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 						htmltext = "31042-04.html";
 						break;
 					case 7:
-						if (st.getQuestItemsCount(MALRUK_SUCCUBUS_CLAW) >= 10)
+						if (getQuestItemsCount(player, MALRUK_SUCCUBUS_CLAW) >= 10)
 						{
 							htmltext = "31042-03.html";
 						}
@@ -412,7 +412,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 						htmltext = "31336-04.html";
 						break;
 					case 15:
-						if (st.getQuestItemsCount(CRIMSON_MOSS) >= 5)
+						if (getQuestItemsCount(player, CRIMSON_MOSS) >= 5)
 						{
 							htmltext = "31336-03.html";
 						}

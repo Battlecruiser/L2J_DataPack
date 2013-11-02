@@ -68,13 +68,13 @@ public class Q00551_OlympiadStarter extends Quest
 		}
 		else if (event.equalsIgnoreCase("31688-04.html"))
 		{
-			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5);
+			final long count = getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5);
 			if (count > 0)
 			{
-				st.giveItems(OLY_CHEST, count); // max 2
+				giveItems(player, OLY_CHEST, count); // max 2
 				if (count == 2)
 				{
-					st.giveItems(MEDAL_OF_GLORY, 3);
+					giveItems(player, MEDAL_OF_GLORY, 3);
 				}
 				st.exitQuest(QuestType.DAILY, true);
 			}
@@ -100,19 +100,19 @@ public class Q00551_OlympiadStarter extends Quest
 					case 3:
 						if (!st.hasQuestItems(CERT_3))
 						{
-							st.giveItems(CERT_3, 1);
+							giveItems(loser, CERT_3, 1);
 						}
 						break;
 					case 5:
 						if (!st.hasQuestItems(CERT_5))
 						{
-							st.giveItems(CERT_5, 1);
+							giveItems(loser, CERT_5, 1);
 						}
 						break;
 					case 10:
 						if (!st.hasQuestItems(CERT_10))
 						{
-							st.giveItems(CERT_10, 1);
+							giveItems(loser, CERT_10, 1);
 						}
 						break;
 				}
@@ -135,19 +135,19 @@ public class Q00551_OlympiadStarter extends Quest
 					case 3:
 						if (!st.hasQuestItems(CERT_3))
 						{
-							st.giveItems(CERT_3, 1);
+							giveItems(winner, CERT_3, 1);
 						}
 						break;
 					case 5:
 						if (!st.hasQuestItems(CERT_5))
 						{
-							st.giveItems(CERT_5, 1);
+							giveItems(winner, CERT_5, 1);
 						}
 						break;
 					case 10:
 						if (!st.hasQuestItems(CERT_10))
 						{
-							st.giveItems(CERT_10, 1);
+							giveItems(winner, CERT_10, 1);
 						}
 						break;
 				}
@@ -191,12 +191,12 @@ public class Q00551_OlympiadStarter extends Quest
 		}
 		else if (st.isStarted())
 		{
-			final long count = st.getQuestItemsCount(CERT_3) + st.getQuestItemsCount(CERT_5) + st.getQuestItemsCount(CERT_10);
+			final long count = getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5) + getQuestItemsCount(player, CERT_10);
 			if (count == 3)
 			{
 				htmltext = "31688-04.html";
-				st.giveItems(OLY_CHEST, 4);
-				st.giveItems(MEDAL_OF_GLORY, 5);
+				giveItems(player, OLY_CHEST, 4);
+				giveItems(player, MEDAL_OF_GLORY, 5);
 				st.exitQuest(QuestType.DAILY, true);
 			}
 			else

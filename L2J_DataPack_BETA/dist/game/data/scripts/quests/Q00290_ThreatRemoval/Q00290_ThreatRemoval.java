@@ -94,7 +94,7 @@ public class Q00290_ThreatRemoval extends Quest
 			{
 				if (st.isCond(1))
 				{
-					st.takeItems(SEL_MAHUM_ID_TAG, 400);
+					takeItems(player, SEL_MAHUM_ID_TAG, 400);
 					switch (getRandom(10))
 					{
 						case 0:
@@ -216,7 +216,7 @@ public class Q00290_ThreatRemoval extends Quest
 			{
 				if (st.isCond(1))
 				{
-					htmltext = (st.getQuestItemsCount(SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
+					htmltext = (getQuestItemsCount(player, SEL_MAHUM_ID_TAG) < 400) ? "30201-04.html" : "30201-05.html";
 				}
 				break;
 			}

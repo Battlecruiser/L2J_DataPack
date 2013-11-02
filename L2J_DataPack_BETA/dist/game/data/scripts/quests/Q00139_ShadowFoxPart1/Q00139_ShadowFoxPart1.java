@@ -91,12 +91,12 @@ public class Q00139_ShadowFoxPart1 extends Quest
 			case "30896-17.html":
 				if (getRandom(20) < 3)
 				{
-					st.takeItems(FRAGMENT, 10);
-					st.takeItems(CHEST, 1);
+					takeItems(player, FRAGMENT, 10);
+					takeItems(player, CHEST, 1);
 					return "30896-16.html";
 				}
-				st.takeItems(FRAGMENT, -1);
-				st.takeItems(CHEST, -1);
+				takeItems(player, FRAGMENT, -1);
+				takeItems(player, CHEST, -1);
 				st.set("talk", "1");
 				break;
 			case "30896-19.html":
@@ -134,7 +134,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 		if (!st.isSet("talk") && (getRandom(100) < DROP_CHANCE))
 		{
 			int itemId = (getRandom(11) == 0) ? CHEST : FRAGMENT;
-			st.giveItems(itemId, 1);
+			giveItems(player, itemId, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
@@ -163,7 +163,7 @@ public class Q00139_ShadowFoxPart1 extends Quest
 						htmltext = (st.isSet("talk")) ? "30896-11.html" : "30896-05.html";
 						break;
 					case 2:
-						htmltext = (st.isSet("talk")) ? "30896-18.html" : ((st.getQuestItemsCount(FRAGMENT) >= 10) && (st.getQuestItemsCount(CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
+						htmltext = (st.isSet("talk")) ? "30896-18.html" : ((getQuestItemsCount(player, FRAGMENT) >= 10) && (getQuestItemsCount(player, CHEST) >= 1)) ? "30896-15.html" : "30896-14.html";
 						break;
 				}
 				break;

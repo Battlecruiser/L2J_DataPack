@@ -105,8 +105,8 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			{
 				if (st.isCond(6) && st.hasQuestItems(JACOBS_NECKLACE))
 				{
-					st.giveItems(CROOPS_LETTER, 1);
-					st.takeItems(JACOBS_NECKLACE, -1);
+					giveItems(player, CROOPS_LETTER, 1);
+					takeItems(player, JACOBS_NECKLACE, -1);
 					st.setCond(7, true);
 					htmltext = event;
 				}
@@ -134,7 +134,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			{
 				if (st.isCond(5))
 				{
-					st.giveItems(JACOBS_NECKLACE, 1);
+					giveItems(player, JACOBS_NECKLACE, 1);
 					st.setCond(6, true);
 					htmltext = event;
 				}
@@ -152,7 +152,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(CROOPS_INTRODUCTION))
 				{
-					st.takeItems(CROOPS_INTRODUCTION, -1);
+					takeItems(player, CROOPS_INTRODUCTION, -1);
 					st.setCond(4, true);
 					htmltext = event;
 				}
@@ -173,7 +173,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 					if (player.getLevel() >= MIN_LEVEL)
 					{
 						st.addExpAndSp(52518015, 5817677);
-						st.takeItems(CROOPS_LETTER, -1);
+						takeItems(player, CROOPS_LETTER, -1);
 						st.exitQuest(false, true);
 						htmltext = "30191-03.html";
 					}
@@ -239,7 +239,7 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest
 							}
 							case 2:
 							{
-								st.giveItems(CROOPS_INTRODUCTION, 1);
+								giveItems(player, CROOPS_INTRODUCTION, 1);
 								st.setCond(3, true);
 								htmltext = "30676-07.html";
 								break;

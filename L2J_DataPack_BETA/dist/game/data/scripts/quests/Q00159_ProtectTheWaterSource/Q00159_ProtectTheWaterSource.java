@@ -59,7 +59,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 		if ((st != null) && event.equals("30154-04.htm"))
 		{
 			st.startQuest();
-			st.giveItems(HYACINTH_CHARM, 1);
+			giveItems(player, HYACINTH_CHARM, 1);
 			return event;
 		}
 		return null;
@@ -77,17 +77,17 @@ public class Q00159_ProtectTheWaterSource extends Quest
 				{
 					if ((getRandom(100) < 40) && st.hasQuestItems(HYACINTH_CHARM) && !st.hasQuestItems(PLAGUE_DUST))
 					{
-						st.giveItems(PLAGUE_DUST, 1);
+						giveItems(killer, PLAGUE_DUST, 1);
 						st.setCond(2, true);
 					}
 					break;
 				}
 				case 3:
 				{
-					long dust = st.getQuestItemsCount(PLAGUE_DUST);
+					long dust = getQuestItemsCount(killer, PLAGUE_DUST);
 					if ((getRandom(100) < 40) && (dust < 5) && st.hasQuestItems(HYACINTH_CHARM2))
 					{
-						st.giveItems(PLAGUE_DUST, 1);
+						giveItems(killer, PLAGUE_DUST, 1);
 						if ((++dust) >= 5)
 						{
 							st.setCond(4, true);
@@ -134,9 +134,9 @@ public class Q00159_ProtectTheWaterSource extends Quest
 						{
 							if (st.hasQuestItems(HYACINTH_CHARM, PLAGUE_DUST))
 							{
-								st.takeItems(HYACINTH_CHARM, -1);
-								st.takeItems(PLAGUE_DUST, -1);
-								st.giveItems(HYACINTH_CHARM2, 1);
+								takeItems(player, HYACINTH_CHARM, -1);
+								takeItems(player, PLAGUE_DUST, -1);
+								giveItems(player, HYACINTH_CHARM2, 1);
 								st.setCond(3, true);
 								htmltext = "30154-06.html";
 							}
@@ -152,7 +152,7 @@ public class Q00159_ProtectTheWaterSource extends Quest
 						}
 						case 4:
 						{
-							if (st.hasQuestItems(HYACINTH_CHARM2) && (st.getQuestItemsCount(PLAGUE_DUST) >= 5))
+							if (st.hasQuestItems(HYACINTH_CHARM2) && (getQuestItemsCount(player, PLAGUE_DUST) >= 5))
 							{
 								st.giveAdena(18250, true);
 								st.exitQuest(false, true);

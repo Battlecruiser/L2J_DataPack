@@ -73,9 +73,9 @@ public class Q00169_OffspringOfNightmares extends Quest
 				{
 					if (st.isCond(2) && st.hasQuestItems(PERFECT_SKULL))
 					{
-						st.giveItems(BONE_GAITERS, 1);
+						giveItems(player, BONE_GAITERS, 1);
 						st.addExpAndSp(17475, 818);
-						st.giveAdena(17030 + (10 * st.getQuestItemsCount(CRACKED_SKULL)), true);
+						st.giveAdena(17030 + (10 * getQuestItemsCount(player, CRACKED_SKULL)), true);
 						st.exitQuest(false, true);
 						showOnScreenMsg(player, NpcStringId.LAST_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000); // TODO: Newbie Guide
 						htmltext = event;
@@ -95,12 +95,12 @@ public class Q00169_OffspringOfNightmares extends Quest
 		{
 			if ((getRandom(10) > 7) && !st.hasQuestItems(PERFECT_SKULL))
 			{
-				st.giveItems(PERFECT_SKULL, 1);
+				giveItems(killer, PERFECT_SKULL, 1);
 				st.setCond(2, true);
 			}
 			else if (getRandom(10) > 4)
 			{
-				st.giveItems(CRACKED_SKULL, 1);
+				giveItems(killer, CRACKED_SKULL, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

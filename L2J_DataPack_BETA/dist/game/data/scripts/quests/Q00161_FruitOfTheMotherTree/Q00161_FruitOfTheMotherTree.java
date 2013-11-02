@@ -62,7 +62,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 		{
 			case "30362-04.htm":
 				st.startQuest();
-				st.giveItems(ANDELLRIAS_LETTER, 1);
+				giveItems(player, ANDELLRIAS_LETTER, 1);
 				break;
 			case "30371-03.html":
 				break;
@@ -115,8 +115,8 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 				{
 					if (st.isCond(1) && st.hasQuestItems(ANDELLRIAS_LETTER))
 					{
-						st.takeItems(ANDELLRIAS_LETTER, -1);
-						st.giveItems(MOTHERTREE_FRUIT, 1);
+						takeItems(player, ANDELLRIAS_LETTER, -1);
+						giveItems(player, MOTHERTREE_FRUIT, 1);
 						st.setCond(2, true);
 						htmltext = "30371-01.html";
 					}

@@ -73,9 +73,9 @@ public class Q00641_AttackSailren extends Quest
 				st.startQuest();
 				break;
 			case "32109-2a.html":
-				if (st.getQuestItemsCount(GAZKH_FRAGMENT) >= 30)
+				if (getQuestItemsCount(player, GAZKH_FRAGMENT) >= 30)
 				{
-					st.giveItems(GAZKH, 1);
+					giveItems(player, GAZKH, 1);
 					st.exitQuest(true, true);
 				}
 				break;
@@ -92,8 +92,8 @@ public class Q00641_AttackSailren extends Quest
 			final QuestState st = partyMember.getQuestState(getName());
 			if (st != null)
 			{
-				st.giveItems(GAZKH_FRAGMENT, 1);
-				if (st.getQuestItemsCount(GAZKH_FRAGMENT) < 30)
+				giveItems(player, GAZKH_FRAGMENT, 1);
+				if (getQuestItemsCount(player, GAZKH_FRAGMENT) < 30)
 				{
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}

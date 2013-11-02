@@ -56,13 +56,13 @@ public class Q00652_AnAgedExAdventurer extends Quest
 		String htmltext = null;
 		if (event.equals("32012-04.htm"))
 		{
-			if (st.getQuestItemsCount(SOULSHOT_C) < 100)
+			if (getQuestItemsCount(player, SOULSHOT_C) < 100)
 			{
 				return "32012-05.htm";
 			}
 			
 			st.startQuest();
-			st.takeItems(SOULSHOT_C, 100);
+			takeItems(player, SOULSHOT_C, 100);
 			npc.deleteMe();
 			htmltext = event;
 		}
@@ -101,7 +101,7 @@ public class Q00652_AnAgedExAdventurer extends Quest
 				{
 					if (getRandom(10) <= 4)
 					{
-						st.giveItems(ENCHANT_ARMOR_D, 1);
+						giveItems(player, ENCHANT_ARMOR_D, 1);
 						st.giveAdena(5026, true);
 						htmltext = "30180-01.html";
 					}

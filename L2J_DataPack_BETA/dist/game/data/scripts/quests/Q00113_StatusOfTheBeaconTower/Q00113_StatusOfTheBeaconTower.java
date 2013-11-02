@@ -61,7 +61,7 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 		{
 			case "31979-02.htm":
 				st.startQuest();
-				st.giveItems(FLAME_BOX, 1);
+				giveItems(player, FLAME_BOX, 1);
 				break;
 			case "32016-02.html":
 				if (st.hasQuestItems(FIRE_BOX))

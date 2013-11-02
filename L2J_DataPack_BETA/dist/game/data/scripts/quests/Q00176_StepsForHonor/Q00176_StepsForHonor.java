@@ -104,7 +104,7 @@ public class Q00176_StepsForHonor extends Quest
 						htmltext = "36479-12.html";
 						break;
 					case 8:
-						st.giveItems(CLOAK, 1);
+						giveItems(player, CLOAK, 1);
 						st.exitQuest(false, true);
 						htmltext = "36479-13.html";
 						break;

@@ -84,7 +84,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 			case "30200-08.html":
 				if (st.isCond(2))
 				{
-					st.giveAdena(147656, true);
+					giveAdena(player, 147656, true);
 					st.addExpAndSp(716238, 78324);
 					st.exitQuest(false, true);
 					htmltext = event;
@@ -103,7 +103,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 			qs = killer.getQuestState(getName());
 			if ((qs != null) && qs.isCond(1))
 			{
-				if (qs.giveItemRandomly(npc, COOKBOOK_PAGE, 1, COOKBOOK_PAGE_MAX_COUNT, COOKBOOK_PAGE_CHANCE, true))
+				if (giveItemRandomly(killer, npc, COOKBOOK_PAGE, 1, COOKBOOK_PAGE_MAX_COUNT, COOKBOOK_PAGE_CHANCE, true))
 				{
 					if (hasMaxDiaries(qs))
 					{
@@ -117,7 +117,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 			qs = getRandomPartyMemberState(killer, 1, 3, npc);
 			if ((qs != null) && qs.isCond(1))
 			{
-				if (qs.giveItemRandomly(npc, DIARY, 1, DIARY_MAX_COUNT, DIARY_CHANCE, true))
+				if (giveItemRandomly(killer, npc, DIARY, 1, DIARY_MAX_COUNT, DIARY_CHANCE, true))
 				{
 					if (hasMaxCookbookPages(qs))
 					{

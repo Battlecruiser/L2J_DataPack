@@ -105,8 +105,8 @@ public class Q00645_GhostsOfBatur extends Quest
 			if (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR])
 			{
 				final QuestState st = player.getQuestState(getName());
-				st.giveItems(CURSED_BURIAL_ITEMS, 1);
-				if (st.isCond(1) && (st.getQuestItemsCount(CURSED_BURIAL_ITEMS) >= 500))
+				giveItems(killer, CURSED_BURIAL_ITEMS, 1);
+				if (st.isCond(1) && (getQuestItemsCount(killer, CURSED_BURIAL_ITEMS) >= 500))
 				{
 					st.setCond(2, true);
 				}
@@ -139,7 +139,7 @@ public class Q00645_GhostsOfBatur extends Quest
 			case State.STARTED:
 			{
 				// Support for old quest reward.
-				final long count = st.getQuestItemsCount(CURSED_GRAVE_GOODS);
+				final long count = getQuestItemsCount(player, CURSED_GRAVE_GOODS);
 				if ((count > 0) && (count < 180))
 				{
 					st.giveAdena(56000 + (count * 64), false);

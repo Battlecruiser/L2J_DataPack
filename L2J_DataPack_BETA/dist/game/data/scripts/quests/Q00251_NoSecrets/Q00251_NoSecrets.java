@@ -86,10 +86,10 @@ public class Q00251_NoSecrets extends Quest
 		{
 			final int npcId = npc.getId();
 			
-			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (st.getQuestItemsCount(DIARY) < 10))
+			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (getQuestItemsCount(player, DIARY) < 10))
 			{
-				st.giveItems(DIARY, 1);
-				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
+				giveItems(player, DIARY, 1);
+				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
 					st.setCond(2, true);
 				}
@@ -98,10 +98,10 @@ public class Q00251_NoSecrets extends Quest
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
-			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (st.getQuestItemsCount(TABLE) < 5))
+			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (getQuestItemsCount(player, TABLE) < 5))
 			{
-				st.giveItems(TABLE, 1);
-				if ((st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
+				giveItems(player, TABLE, 1);
+				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
 					st.setCond(2, true);
 				}
@@ -134,7 +134,7 @@ public class Q00251_NoSecrets extends Quest
 				{
 					htmltext = "30201-05.htm";
 				}
-				else if ((st.isCond(2)) && (st.getQuestItemsCount(DIARY) >= 10) && (st.getQuestItemsCount(TABLE) >= 5))
+				else if ((st.isCond(2)) && (getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
 				{
 					htmltext = "30201-04.htm";
 					st.giveAdena(313355, true);

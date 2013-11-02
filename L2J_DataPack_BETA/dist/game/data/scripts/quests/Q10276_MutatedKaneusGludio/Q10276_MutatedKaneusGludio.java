@@ -160,12 +160,12 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	{
 		if ((npcId == TOMLAN_KAMOS) && !st.hasQuestItems(TISSUE_TK))
 		{
-			st.giveItems(TISSUE_TK, 1);
+			giveItems(st.getPlayer(), TISSUE_TK, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == OL_ARIOSH) && !st.hasQuestItems(TISSUE_OA))
 		{
-			st.giveItems(TISSUE_OA, 1);
+			giveItems(st.getPlayer(), TISSUE_OA, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}

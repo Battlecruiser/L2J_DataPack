@@ -103,25 +103,25 @@ public class Q00309_ForAGoodCause extends Quest
 	
 	private boolean canGiveItem(QuestState st, int quanty)
 	{
-		long mucrokian = st.getQuestItemsCount(MUCROKIAN_HIDE);
-		long fallen = st.getQuestItemsCount(FALLEN_MUCROKIAN_HIDE);
+		long mucrokian = getQuestItemsCount(st.getPlayer(), MUCROKIAN_HIDE);
+		long fallen = getQuestItemsCount(st.getPlayer(), FALLEN_MUCROKIAN_HIDE);
 		if (fallen > 0)
 		{
 			if (fallen >= (quanty / 2))
 			{
-				st.takeItems(FALLEN_MUCROKIAN_HIDE, (quanty / 2));
+				takeItems(st.getPlayer(), FALLEN_MUCROKIAN_HIDE, (quanty / 2));
 				return true;
 			}
 			else if (mucrokian >= (quanty - (fallen * 2)))
 			{
-				st.takeItems(FALLEN_MUCROKIAN_HIDE, fallen);
-				st.takeItems(MUCROKIAN_HIDE, (quanty - (fallen * 2)));
+				takeItems(st.getPlayer(), FALLEN_MUCROKIAN_HIDE, fallen);
+				takeItems(st.getPlayer(), MUCROKIAN_HIDE, (quanty - (fallen * 2)));
 				return true;
 			}
 		}
 		else if (mucrokian >= quanty)
 		{
-			st.takeItems(MUCROKIAN_HIDE, quanty);
+			takeItems(st.getPlayer(), MUCROKIAN_HIDE, quanty);
 			return true;
 		}
 		return false;
@@ -197,11 +197,11 @@ public class Q00309_ForAGoodCause extends Quest
 		{
 			if (Util.contains(MOIRAI_PIECES, item))
 			{
-				st.giveItems(item, getRandom(1, 4));
+				giveItems(st.getPlayer(), item, getRandom(1, 4));
 			}
 			else
 			{
-				st.giveItems(item, 1);
+				giveItems(st.getPlayer(), item, 1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			htmltext = "32646-16.htm";
@@ -225,12 +225,12 @@ public class Q00309_ForAGoodCause extends Quest
 			{
 				if (npc.getId() == CORRUPTED_MUCROKIAN)
 				{
-					st.giveItems(FALLEN_MUCROKIAN_HIDE, 1);
+					giveItems(killer, FALLEN_MUCROKIAN_HIDE, 1);
 					st.rewardItems(FALLEN_MUCROKIAN_HIDE, 1);
 				}
 				else
 				{
-					st.giveItems(MUCROKIAN_HIDE, 1);
+					giveItems(killer, MUCROKIAN_HIDE, 1);
 				}
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}

@@ -54,7 +54,7 @@ public class Q00155_FindSirWindawood extends Quest
 		if ((st != null) && event.equalsIgnoreCase("30042-03.htm"))
 		{
 			st.startQuest();
-			st.giveItems(OFFICIAL_LETTER, 1);
+			giveItems(player, OFFICIAL_LETTER, 1);
 			return event;
 		}
 		return null;
@@ -89,7 +89,7 @@ public class Q00155_FindSirWindawood extends Quest
 			case SIR_COLLIN_WINDAWOOD:
 				if (st.isStarted() && st.hasQuestItems(OFFICIAL_LETTER))
 				{
-					st.giveItems(HASTE_POTION, 1);
+					giveItems(player, HASTE_POTION, 1);
 					st.exitQuest(false, true);
 					htmltext = "30311-01.html";
 				}

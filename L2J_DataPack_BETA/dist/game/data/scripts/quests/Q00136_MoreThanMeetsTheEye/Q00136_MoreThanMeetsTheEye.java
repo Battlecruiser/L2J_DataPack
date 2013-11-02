@@ -75,8 +75,8 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 	
 	private void giveItem(QuestState st, int itemId, int count, int maxCount, int cond)
 	{
-		st.giveItems(itemId, count);
-		if (st.getQuestItemsCount(itemId) >= maxCount)
+		giveItems(st.getPlayer(), itemId, count);
+		if (getQuestItemsCount(st.getPlayer(), itemId) >= maxCount)
 		{
 			st.setCond(cond, true);
 		}
@@ -115,14 +115,14 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 				break;
 			case "30832-14.html":
 				st.unset("talked");
-				st.giveItems(ORDER, 1);
+				giveItems(player, ORDER, 1);
 				st.setCond(6, true);
 				break;
 			case "30832-17.html":
 				st.set("talked", "2");
 				break;
 			case "30832-19.html":
-				st.giveItems(TRANSFORM_BOOK, 1);
+				giveItems(player, TRANSFORM_BOOK, 1);
 				st.giveAdena(67550, true);
 				st.exitQuest(false, true);
 				break;
@@ -130,7 +130,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 				st.setCond(3, true);
 				break;
 			case "30464-03.html":
-				st.takeItems(ORDER, -1);
+				takeItems(player, ORDER, -1);
 				st.setCond(7, true);
 				break;
 			default:
@@ -152,12 +152,12 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 		final int npcId = npc.getId();
 		if ((npcId != GLASS_JAGUAR) && st.isCond(3))
 		{
-			final int count = ((npcId == MIRROR) && ((st.getQuestItemsCount(ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
+			final int count = ((npcId == MIRROR) && ((getQuestItemsCount(killer, ECTOPLASM) + 2) < ECTOPLASM_COUNT)) ? 2 : 1;
 			final int index = npcId - GHOST1;
 			
-			if ((getRandom(1000) < CHANCES[index]) && ((st.getQuestItemsCount(ECTOPLASM) + count) < ECTOPLASM_COUNT))
+			if ((getRandom(1000) < CHANCES[index]) && ((getQuestItemsCount(killer, ECTOPLASM) + count) < ECTOPLASM_COUNT))
 			{
-				st.giveItems(ECTOPLASM, 1);
+				giveItems(killer, ECTOPLASM, 1);
 			}
 			giveItem(st, ECTOPLASM, count, ECTOPLASM_COUNT, 4);
 		}
@@ -208,7 +208,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 								}
 								else if (st.hasQuestItems(STABILIZED_ECTOPLASM))
 								{
-									st.takeItems(STABILIZED_ECTOPLASM, -1);
+									takeItems(player, STABILIZED_ECTOPLASM, -1);
 									st.set("talked", "1");
 									htmltext = "30832-09.html";
 								}
@@ -234,7 +234,7 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 								}
 								else
 								{
-									st.takeItems(BOOK_OF_SEAL, -1);
+									takeItems(player, BOOK_OF_SEAL, -1);
 									st.set("talked", "1");
 									htmltext = "30832-16.html";
 								}
@@ -261,15 +261,15 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 							htmltext = "30701-04.html";
 							break;
 						case 4:
-							if (st.getQuestItemsCount(ECTOPLASM) < ECTOPLASM_COUNT)
+							if (getQuestItemsCount(player, ECTOPLASM) < ECTOPLASM_COUNT)
 							{
-								st.giveItems(STABILIZED_ECTOPLASM, 1);
+								giveItems(player, STABILIZED_ECTOPLASM, 1);
 								st.setCond(5, true);
 								htmltext = "30701-06.html";
 							}
 							else
 							{
-								st.takeItems(ECTOPLASM, -1);
+								takeItems(player, ECTOPLASM, -1);
 								htmltext = "30701-05.html";
 							}
 							break;
@@ -298,8 +298,8 @@ public class Q00136_MoreThanMeetsTheEye extends Quest
 							htmltext = "30464-04.html";
 							break;
 						case 8:
-							st.giveItems(BOOK_OF_SEAL, 1);
-							st.takeItems(GLASS_JAGUAR_CRYSTAL, -1);
+							giveItems(player, BOOK_OF_SEAL, 1);
+							takeItems(player, GLASS_JAGUAR_CRYSTAL, -1);
 							st.setCond(9, true);
 							htmltext = "30464-05.html";
 							break;

@@ -99,7 +99,7 @@ public final class Q00265_BondsOfSlavery extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (getRandom(10) < MONSTERS.get(npc.getId())))
 		{
-			st.giveItems(IMP_SHACKLES, 1);
+			giveItems(killer, IMP_SHACKLES, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -126,9 +126,9 @@ public final class Q00265_BondsOfSlavery extends Quest
 			{
 				if (st.hasQuestItems(IMP_SHACKLES))
 				{
-					final long shackles = st.getQuestItemsCount(IMP_SHACKLES);
+					final long shackles = getQuestItemsCount(player, IMP_SHACKLES);
 					st.giveAdena((shackles * 12) + (shackles >= 10 ? 500 : 0), true);
-					st.takeItems(IMP_SHACKLES, -1);
+					takeItems(player, IMP_SHACKLES, -1);
 					Q00281_HeadForTheHills.giveNewbieReward(player);
 					htmltext = "30357-06.html";
 				}

@@ -69,7 +69,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 		
 		if (event.equalsIgnoreCase("exalted-00b.htm"))
 		{
-			st.giveItems(ELITE_CERTIFICATE, 1);
+			giveItems(player, ELITE_CERTIFICATE, 1);
 		}
 		else if (event.equalsIgnoreCase("exalted-03.htm"))
 		{
@@ -119,8 +119,8 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 				}
 				else if (st.isCond(4))
 				{
-					st.takeItems(ELITE_CERTIFICATE, -1);
-					st.giveItems(TOP_ELITE_CERTIFICATE, 1);
+					takeItems(player, ELITE_CERTIFICATE, -1);
+					giveItems(player, TOP_ELITE_CERTIFICATE, 1);
 					st.exitQuest(false);
 					htmltext = "exalted-05.htm";
 				}

@@ -59,7 +59,7 @@ public class Q10267_JourneyToGracia extends Quest
 		{
 			case "30857-06.html":
 				st.startQuest();
-				st.giveItems(LETTER, 1);
+				giveItems(player, LETTER, 1);
 				break;
 			case "32564-02.html":
 				st.setCond(2, true);

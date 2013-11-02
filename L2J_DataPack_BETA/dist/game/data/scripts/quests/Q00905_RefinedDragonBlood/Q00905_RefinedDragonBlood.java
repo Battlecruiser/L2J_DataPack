@@ -89,11 +89,11 @@ public final class Q00905_RefinedDragonBlood extends Quest
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
 			final int itemId = MONSTERS.get(npc.getId());
-			if (st.getQuestItemsCount(itemId) < DRAGON_BLOOD_COUNT)
+			if (getQuestItemsCount(player, itemId) < DRAGON_BLOOD_COUNT)
 			{
-				st.giveItems(itemId, 1);
+				giveItems(player, itemId, 1);
 				
-				if ((st.getQuestItemsCount(UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (st.getQuestItemsCount(UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
+				if ((getQuestItemsCount(player, UNREFINED_RED_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT) && (getQuestItemsCount(player, UNREFINED_BLUE_DRAGON_BLOOD) >= DRAGON_BLOOD_COUNT))
 				{
 					st.setCond(2, true);
 				}
@@ -134,14 +134,14 @@ public final class Q00905_RefinedDragonBlood extends Quest
 				}
 				case "32864-11.html":
 				{
-					st.giveItems(REFINED_RED_DRAGON_BLOOD, 1);
+					giveItems(player, REFINED_RED_DRAGON_BLOOD, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 				}
 				case "32864-12.html":
 				{
-					st.giveItems(REFINED_BLUE_DRAGON_BLOOD, 1);
+					giveItems(player, REFINED_BLUE_DRAGON_BLOOD, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = event;

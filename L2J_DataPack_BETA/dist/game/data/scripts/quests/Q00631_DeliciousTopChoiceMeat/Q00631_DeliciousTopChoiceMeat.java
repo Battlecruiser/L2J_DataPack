@@ -122,7 +122,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 			case "31537-06.html":
 			{
-				if (st.isCond(2) && (st.getQuestItemsCount(PRIME_MEAT) >= 120))
+				if (st.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= 120))
 				{
 					switch (getRandom(10))
 					{
@@ -201,7 +201,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		if (getRandom(1000) < chance)
 		{
 			st.rewardItems(PRIME_MEAT, 1);
-			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
+			if (getQuestItemsCount(player, PRIME_MEAT) < 120)
 			{
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
@@ -234,14 +234,14 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			{
 				if (st.isCond(1))
 				{
-					if (st.getQuestItemsCount(PRIME_MEAT) < 120)
+					if (getQuestItemsCount(player, PRIME_MEAT) < 120)
 					{
 						htmltext = "31537-04.html";
 					}
 				}
 				else if (st.isCond(2))
 				{
-					if (st.getQuestItemsCount(PRIME_MEAT) >= 120)
+					if (getQuestItemsCount(player, PRIME_MEAT) >= 120)
 					{
 						htmltext = "31537-05.html";
 					}

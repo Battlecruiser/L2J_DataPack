@@ -83,26 +83,26 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 				break;
 			case "30894-03.html":
 				st.setCond(2, true);
-				st.giveItems(SEALED_PROPHECY_PATH_OF_THE_GOD, 1);
+				giveItems(player, SEALED_PROPHECY_PATH_OF_THE_GOD, 1);
 				break;
 			case "30297-03.html":
-				st.takeItems(SEALED_PROPHECY_PATH_OF_THE_GOD, -1);
+				takeItems(player, SEALED_PROPHECY_PATH_OF_THE_GOD, -1);
 				st.set("talk", "1");
 				break;
 			case "30297-05.html":
 				st.unset("talk");
 				st.setCond(3, true);
-				st.giveItems(PROPHECY_PATH_OF_THE_GOD, 1);
-				st.giveItems(EMPTY_SOUND_CRYSTAL, 1);
+				giveItems(player, PROPHECY_PATH_OF_THE_GOD, 1);
+				giveItems(player, EMPTY_SOUND_CRYSTAL, 1);
 				break;
 			case "30612-03.html":
-				st.takeItems(PROPHECY_PATH_OF_THE_GOD, -1);
+				takeItems(player, PROPHECY_PATH_OF_THE_GOD, -1);
 				st.set("talk", "1");
 				break;
 			case "30612-09.html":
 				st.unset("talk");
 				st.setCond(4, true);
-				st.giveItems(ANGEL_MEDICINE, 1);
+				giveItems(player, ANGEL_MEDICINE, 1);
 				break;
 			case "32368-04.html":
 				if (isAngelSpawned)
@@ -114,7 +114,7 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 				isAngelSpawned = true;
 				break;
 			case "32369-03.html":
-				st.takeItems(ANGEL_MEDICINE, -1);
+				takeItems(player, ANGEL_MEDICINE, -1);
 				st.set("talk", "1");
 				break;
 			case "32369-06.html":
@@ -122,8 +122,8 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 				break;
 			case "32369-11.html":
 				st.unset("talk");
-				st.takeItems(EMPTY_SOUND_CRYSTAL, -1);
-				st.giveItems(ANGELS_MESSAGE, 1);
+				takeItems(player, EMPTY_SOUND_CRYSTAL, -1);
+				giveItems(player, ANGELS_MESSAGE, 1);
 				st.setCond(5, true);
 				npc.deleteMe();
 				isAngelSpawned = false;

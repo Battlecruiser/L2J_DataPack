@@ -116,13 +116,13 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 				{
 					if (st.isSet("spawned"))
 					{
-						st.takeItems(KEY, 1);
+						takeItems(player, KEY, 1);
 						htmltext = "31561-04.html";
 					}
 					else
 					{
-						st.giveItems(STOLEN_GREEN_TOTEM, 1);
-						st.takeItems(KEY, 1);
+						giveItems(player, STOLEN_GREEN_TOTEM, 1);
+						takeItems(player, KEY, 1);
 						st.setCond(3, true);
 						htmltext = "31561-03.html";
 					}
@@ -201,8 +201,8 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 							}
 							break;
 						case 3:
-							st.giveItems(GREEN_TOTEM, 1);
-							st.giveItems(WISDOM_STONE, 1);
+							giveItems(player, GREEN_TOTEM, 1);
+							giveItems(player, WISDOM_STONE, 1);
 							st.exitQuest(true, true);
 							htmltext = "31372-04.html";
 							break;
