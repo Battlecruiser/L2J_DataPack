@@ -204,7 +204,6 @@ import handlers.punishmenthandlers.BanHandler;
 import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
 import handlers.skillhandlers.BallistaBomb;
-import handlers.skillhandlers.Continuous;
 import handlers.skillhandlers.DeluxeKey;
 import handlers.skillhandlers.Detection;
 import handlers.skillhandlers.Dummy;
@@ -498,7 +497,6 @@ public class MasterHandler
 		{
 			// Skill Handlers
 			BallistaBomb.class,
-			Continuous.class,
 			DeluxeKey.class,
 			Detection.class,
 			Dummy.class,

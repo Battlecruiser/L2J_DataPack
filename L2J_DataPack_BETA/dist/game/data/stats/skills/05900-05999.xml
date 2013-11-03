@@ -44,7 +44,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TargetCancel" />
@@ -756,7 +755,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff" abnormalVisualEffect="vitality">
@@ -1148,7 +1146,6 @@
 		<set name="mpConsume" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -1174,7 +1171,6 @@
 		<set name="mpConsume" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="7200000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<cond>
 			<player canTransform="true" />
@@ -1235,7 +1231,6 @@
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
@@ -1268,7 +1263,6 @@
 		<set name="mpConsume" val="41" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">

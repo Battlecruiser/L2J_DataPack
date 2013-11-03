@@ -76,7 +76,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="windRes" val="15" />
+			<effect name="Buff">
+				<sub order="0x40" stat="windRes" val="15" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param BOW="-10" />
 			</effect>
@@ -88,7 +90,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="fireRes" val="15" />
+			<effect name="Buff">
+				<sub order="0x40" stat="fireRes" val="15" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="50" />
 			</effect>
@@ -100,8 +104,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="20" />
-			<sub order="0x40" stat="darkPower" val="20" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="20" />
+				<sub order="0x40" stat="darkPower" val="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4008" levels="1" name="Insect Skin">
@@ -110,7 +116,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="fireRes" val="15" />
+			<effect name="Buff">
+				<sub order="0x40" stat="fireRes" val="15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4009" levels="5" name="Resist Fire">
@@ -360,7 +368,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Grow">
@@ -382,7 +389,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -408,7 +414,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -435,7 +440,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -836,7 +840,6 @@
 		<set name="effectPoint" val="-1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1329,7 +1332,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -1528,7 +1530,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="#pDef" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="#pDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4085" levels="1" name="Critical Power">
@@ -1538,7 +1542,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="cAtk" val="1.25" />
+			<effect name="Buff">
+				<mul order="0x30" stat="cAtk" val="1.25" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4086" levels="1" name="Critical Chance">
@@ -1548,7 +1554,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="0.5" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4087" levels="12" name="NPC Blaze">
@@ -1615,7 +1623,6 @@
 		<set name="mpConsume" val="18" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1635,7 +1642,6 @@
 		<set name="mpConsume" val="18" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1663,7 +1669,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Grow">
@@ -1688,7 +1693,6 @@
 		<set name="mpConsume" val="18" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1705,7 +1709,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4094" levels="12" name="NPC Cancel Magic">
@@ -1734,7 +1740,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="reflectDam" val="20" />
+			<effect name="Buff">
+				<add order="0x40" stat="reflectDam" val="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="4096" levels="3" name="NPC Hawkeye">
@@ -1752,7 +1760,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1782,7 +1789,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="#hot" />
@@ -1842,7 +1848,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

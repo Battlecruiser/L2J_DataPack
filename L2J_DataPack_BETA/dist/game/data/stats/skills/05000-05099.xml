@@ -41,7 +41,6 @@
 		<set name="mpConsume" val="49" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -365,7 +364,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Grow">
@@ -598,9 +596,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpDmg" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpDmg" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpDmg" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpDmg" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpDmg" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpDmg" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5039" levels="1" name="NPC - Ultra Bomb">
@@ -631,7 +631,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="HealOverTime" ticks="1" val="#hot" />
@@ -706,7 +705,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
@@ -1115,7 +1113,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="1.1" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxCp" val="1.1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5075" levels="1" name="The Vanquished of War">
@@ -1124,7 +1124,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="0.9" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxCp" val="0.9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5076" levels="15" name="Death Penalty">
@@ -1138,15 +1140,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-			<mul order="0x30" stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-			<mul order="0x30" stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
-			<sub order="0x40" stat="accCombat" val="#accCombatrEvas" />
-			<sub order="0x40" stat="rEvas" val="#accCombatrEvas" />
-			<mul order="0x30" stat="pDef" val="#pDefmDef" />
-			<mul order="0x30" stat="mDef" val="#pDefmDef" />
-			<mul order="0x30" stat="runSpd" val="#runSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul order="0x30" stat="mAtk" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<mul order="0x30" stat="mAtkSpd" val="#pAtkpAtkSpdmAtkmAtkSpd" />
+				<sub order="0x40" stat="accCombat" val="#accCombatrEvas" />
+				<sub order="0x40" stat="rEvas" val="#accCombatrEvas" />
+				<mul order="0x30" stat="pDef" val="#pDefmDef" />
+				<mul order="0x30" stat="mDef" val="#pDefmDef" />
+				<mul order="0x30" stat="runSpd" val="#runSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5077" levels="1" name="NPC Remove Death Penalty">
@@ -1163,7 +1167,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="cAtk" val="1.5" />
+			<effect name="Buff">
+				<mul order="0x30" stat="cAtk" val="1.5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5079" levels="1" name="NPC Focused Haste">
@@ -1180,7 +1186,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">
@@ -1203,7 +1208,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="CLAN" />
 		<for>
 			<effect name="Buff">

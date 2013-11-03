@@ -326,28 +326,34 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Pole" />
-			</add>
-			<add order="0x40" stat="atkCountMax" val="#atkCountMax">
-				<using kind="Pole" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Pole" />
+				</add>
+				<add order="0x40" stat="atkCountMax" val="#atkCountMax">
+					<using kind="Pole" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Pole" />
-			</add>
-			<add order="0x40" stat="atkCountMax" val="10">
-				<using kind="Pole" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Pole" />
+				</add>
+				<add order="0x40" stat="atkCountMax" val="10">
+					<using kind="Pole" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Pole" />
-			</add>
-			<add order="0x40" stat="atkCountMax" val="#ench2AtkCountMax">
-				<using kind="Pole" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Pole" />
+				</add>
+				<add order="0x40" stat="atkCountMax" val="#ench2AtkCountMax">
+					<using kind="Pole" />
+				</add>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="217" levels="45" name="Sword/Blunt Weapon Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -361,22 +367,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="76.4">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
-			<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="76.4">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+				<mul order="0x30" stat="pAtkSpd" val="#ench2pAtkSpd">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="221" levels="1" name="Silent Move" enchantGroup1="1">
@@ -473,9 +485,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#evas">
-				<player running="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#evas">
+					<player running="true" />
+				</add>
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="-11" />
 			</effect>
@@ -504,31 +518,37 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="6">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="6">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="81.3">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="6">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="regHp" val="#ench2regHp">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="81.3">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="6">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="regHp" val="#ench2regHp">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="228" levels="3" name="Fast Spell Casting" enchantGroup1="1">
@@ -543,10 +563,14 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="#mAtkSpd" />
+			</effect>
 		</for>
 		<enchant1for>
-			<mul order="0x30" stat="mAtkSpd" val="#ench1Power" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="#ench1Power" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="229" levels="7" name="Fast Mana Recovery" enchantGroup1="1">
@@ -560,10 +584,14 @@
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="regMp" val="#regMp" />
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#regMp" />
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="regMp" val="#ench1regMp" />
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#ench1regMp" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="230" levels="2" name="Sprint" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1" enchantGroup4="1">
@@ -591,7 +619,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -631,22 +658,28 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Heavy" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Heavy" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Heavy" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Heavy" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="79.3">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="regHp" val="#ench2regHp">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="79.3">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="regHp" val="#ench2regHp">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="232" levels="52" name="Heavy Armor Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -663,28 +696,34 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="critVuln" val="#critVuln">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="critVuln" val="#critVuln">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="critVuln" val="0.65">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="critVuln" val="0.65">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="172.6">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="critVuln" val="#ench2critVuln">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="172.6">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="critVuln" val="#ench2critVuln">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="233" levels="47" name="Light Armor Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -702,37 +741,43 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="critDamEvas" val="#critDamEvas">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="critDamEvas" val="#critDamEvas">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="7">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="critDamEvas" val="1.35">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="7">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="critDamEvas" val="1.35">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="65.6">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="rEvas" val="#ench2rEvas">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="critDamEvas" val="1.35">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="65.6">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="rEvas" val="#ench2rEvas">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="critDamEvas" val="1.35">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="234" levels="41" name="Robe Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -750,33 +795,41 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="55.2">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="regMp" val="#ench2mpReg">
-				<and>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="55.2">
 					<using kind="Magic" />
-					<player resting="true" />
-				</and>
-			</mul>
+				</add>
+				<mul order="0x30" stat="regMp" val="#ench2mpReg">
+					<and>
+						<using kind="Magic" />
+						<player resting="true" />
+					</and>
+				</mul>
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pDef" val="55.2">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="mDef" val="#ench3mDef">
-				<using kind="Magic" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="55.2">
+					<using kind="Magic" />
+				</add>
+				<mul order="0x30" stat="mDef" val="#ench3mDef">
+					<using kind="Magic" />
+				</mul>
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="235" levels="41" name="Robe Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -794,33 +847,41 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="84.7">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="regMp" val="#ench2mpReg">
-				<and>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="84.7">
 					<using kind="Magic" />
-					<player resting="true" />
-				</and>
-			</mul>
+				</add>
+				<mul order="0x30" stat="regMp" val="#ench2mpReg">
+					<and>
+						<using kind="Magic" />
+						<player resting="true" />
+					</and>
+				</mul>
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pDef" val="84.7">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="mDef" val="#ench3mDef">
-				<using kind="Magic" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="84.7">
+					<using kind="Magic" />
+				</add>
+				<mul order="0x30" stat="mDef" val="#ench3mDef">
+					<using kind="Magic" />
+				</mul>
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="236" levels="41" name="Light Armor Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -836,46 +897,52 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.91">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.91">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.91">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.91">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="69.6">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.91">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="#ench2regMp">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="69.6">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.91">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="#ench2regMp">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="239" levels="7" name="Expertise S84">
@@ -977,16 +1044,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pAtk" val="1.45" />
-			<mul order="0x30" stat="mAtk" val="1.17" />
-			<mul order="0x30" stat="mAtkSpd" val="0.7">
-				<using kind="Bow,Pole" />
-			</mul>
-			<sub order="0x40" stat="accCombat" val="8">
-				<using kind="Bow,Pole" />
-			</sub>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pAtk" val="1.45" />
+				<mul order="0x30" stat="mAtk" val="1.17" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7">
+					<using kind="Bow,Pole" />
+				</mul>
+				<sub order="0x40" stat="accCombat" val="8">
+					<using kind="Bow,Pole" />
+				</sub>
+			</effect>
 		</for>
 	</skill>
 	<skill id="250" levels="42" name="Weapon Mastery">
@@ -1000,17 +1069,19 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pAtk" val="1.45" />
-			<mul order="0x30" stat="mAtk" val="1.17" />
-			<mul order="0x30" stat="mAtkSpd" val="0.7">
-				<using kind="Bow,Pole" />
-			</mul>
-			<sub order="0x40" stat="accCombat" val="8">
-				<using kind="Bow,Pole" />
-			</sub>
-			<add order="0x40" stat="absorbDamMana" val="10" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pAtk" val="1.45" />
+				<mul order="0x30" stat="mAtk" val="1.17" />
+				<mul order="0x30" stat="mAtkSpd" val="0.7">
+					<using kind="Bow,Pole" />
+				</mul>
+				<sub order="0x40" stat="accCombat" val="8">
+					<using kind="Bow,Pole" />
+				</sub>
+				<add order="0x40" stat="absorbDamMana" val="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="251" levels="45" name="Robe Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1024,33 +1095,41 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="128.8">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="regMp" val="#ench2mpReg">
-				<and>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="128.8">
 					<using kind="Magic" />
-					<player resting="true" />
-				</and>
-			</mul>
+				</add>
+				<mul order="0x30" stat="regMp" val="#ench2mpReg">
+					<and>
+						<using kind="Magic" />
+						<player resting="true" />
+					</and>
+				</mul>
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pDef" val="128.8">
-				<using kind="Magic" />
-			</add>
-			<mul order="0x30" stat="mDef" val="#ench3mDef">
-				<using kind="Magic" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="128.8">
+					<using kind="Magic" />
+				</add>
+				<mul order="0x30" stat="mDef" val="#ench3mDef">
+					<using kind="Magic" />
+				</mul>
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="252" levels="45" name="Light Armor Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -1063,46 +1142,52 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.9">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.9">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.9">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.9">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="118.2">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.9">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="#ench2regMp">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="118.2">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.9">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="#ench2regMp">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="253" levels="43" name="Heavy Armor Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1116,48 +1201,56 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.71">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.71">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.71">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.71">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="93.3">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="#ench2mAtkSpd">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="93.3">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="#ench2mAtkSpd">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant2for>
 		<enchant3for>
-			<add order="0x40" stat="pDef" val="93.3">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.71">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="#ench3pAtkSpd">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="93.3">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.71">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="#ench3pAtkSpd">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant3for>
 	</skill>
 	<skill id="254" levels="11" name="Spoil" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2">
@@ -1273,9 +1366,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="258" levels="33" name="Light Armor Mastery" enchantGroup1="1" enchantGroup2="1">
@@ -1288,46 +1383,52 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.88">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.88">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.88">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="1.2">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.88">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="1.2">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="46">
-				<using kind="Light" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.88">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Light" />
-			</mul>
-			<mul order="0x30" stat="regMp" val="#ench2regMp">
-				<using kind="Light" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="46">
+					<using kind="Light" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.88">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Light" />
+				</mul>
+				<mul order="0x30" stat="regMp" val="#ench2regMp">
+					<using kind="Light" />
+				</mul>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="259" levels="33" name="Heavy Armor Mastery" enchantGroup1="1" enchantGroup2="1" enchantGroup3="1">
@@ -1341,37 +1442,43 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.68">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.68">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1pDef">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="1.68">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1pDef">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="1.68">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="56.1">
-				<using kind="Heavy" />
-			</add>
-			<mul order="0x30" stat="mAtkSpd" val="#ench2mAtkSpd">
-				<using kind="Heavy" />
-			</mul>
-			<mul order="0x30" stat="pAtkSpd" val="1.25">
-				<using kind="Heavy" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="56.1">
+					<using kind="Heavy" />
+				</add>
+				<mul order="0x30" stat="mAtkSpd" val="#ench2mAtkSpd">
+					<using kind="Heavy" />
+				</mul>
+				<mul order="0x30" stat="pAtkSpd" val="1.25">
+					<using kind="Heavy" />
+				</mul>
+			</effect>
 		</enchant2for>
 		<enchant3for>
 			<add order="0x40" stat="pDef" val="56.1">
@@ -1626,7 +1733,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1656,7 +1762,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1686,7 +1791,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1716,7 +1820,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1745,7 +1848,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1773,7 +1875,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1803,7 +1904,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1833,7 +1933,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1866,7 +1965,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1899,7 +1997,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1932,7 +2029,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1965,7 +2061,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -1998,7 +2093,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -2033,7 +2127,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -2258,7 +2351,6 @@
 		<set name="mpConsume" val="35" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
@@ -2374,10 +2466,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="manaCharge" val="#manaCharge" />
+			<effect name="Buff">
+				<add order="0x40" stat="manaCharge" val="#manaCharge" />
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="manaCharge" val="#ench1manaCharge" />
+			<effect name="Buff">
+				<add order="0x40" stat="manaCharge" val="#ench1manaCharge" />
+			</effect>
 		</enchant1for>
 	</skill>
 	<skill id="286" levels="3" name="Provoke">
@@ -2422,7 +2518,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="DefenceTrait">
@@ -2538,22 +2633,28 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#final">
-				<player hp="30" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#final">
+					<player hp="30" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pDef" val="#ench1final">
-				<player hp="30" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#ench1final">
+					<player hp="30" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pDef" val="215.75">
-				<player hp="30" />
-			</add>
-			<add order="0x40" stat="sDef" val="#ench2sDef">
-				<player hp="30" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="215.75">
+					<player hp="30" />
+				</add>
+				<add order="0x40" stat="sDef" val="#ench2sDef">
+					<player hp="30" />
+				</add>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="292" levels="1" name="Bison Spirit Totem">
@@ -2567,7 +2668,6 @@
 		<set name="mpConsume" val="32" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />
@@ -2602,28 +2702,34 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#Attack">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
-			<add order="0x40" stat="accCombat" val="3">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#Attack">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+				<add order="0x40" stat="accCombat" val="3">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="pAtk" val="#ench1pAtk">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
-			<add order="0x40" stat="accCombat" val="3">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#ench1pAtk">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+				<add order="0x40" stat="accCombat" val="3">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="pAtk" val="129.3">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
-			<add order="0x40" stat="accCombat" val="#ench2Acc">
-				<using kind="Big Sword,Big Blunt" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="129.3">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+				<add order="0x40" stat="accCombat" val="#ench2Acc">
+					<using kind="Big Sword,Big Blunt" />
+				</add>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="294" levels="1" name="Shadow Sense">
@@ -2632,9 +2738,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3">
-				<game night="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3">
+					<game night="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="295" levels="1" name="Iron Body">
@@ -2644,7 +2752,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="damageZoneVuln" val="40" />
+			<effect name="Buff">
+				<sub order="0x40" stat="damageZoneVuln" val="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="296" levels="1" name="Chameleon Rest">
@@ -2676,7 +2786,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2718,7 +2827,6 @@
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Fist" />

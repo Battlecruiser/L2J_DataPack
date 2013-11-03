@@ -7,13 +7,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
-			<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
-			<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
-			<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.04" /> <!-- Attack Speed +4% -->
+				<mul order="0x30" stat="pAtk" val="1.04" /> <!-- P. Atk +4% -->
+				<add order="0x40" stat="maxMp" val="289" /> <!-- Maximum MP +289 -->
+				<add order="0x40" stat="weightPenalty" val="5759" /> <!-- Point at which a weight penalty is applied +5759 -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -56,12 +58,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
-			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
+				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -69,7 +74,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8203" levels="1" name="Dynasty Breastplate - PvP Shield Master">
@@ -106,14 +110,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -121,7 +128,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8205" levels="1" name="Dynasty Breastplate - PvP Force Master">
@@ -131,13 +137,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -145,7 +154,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8206" levels="1" name="Dynasty Breastplate - PvP Bard">
@@ -155,13 +163,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -169,7 +180,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8207" levels="1" name="Dynasty Leather Armor - PvP">
@@ -179,13 +189,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
-			<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
-			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
+				<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
+				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -193,7 +206,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8208" levels="1" name="Dynasty Leather Armor - PvP Dagger Master">
@@ -230,14 +242,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-			<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -245,7 +260,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8210" levels="1" name="Dynasty Tunic - PvP">
@@ -255,12 +269,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
-			<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
+				<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -268,7 +285,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8211" levels="1" name="Dynasty Tunic - PvP Healer">
@@ -278,14 +294,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -293,7 +312,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8212" levels="1" name="Dynasty Tunic - PvP Enchanter">
@@ -303,14 +321,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -318,7 +339,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8213" levels="1" name="Dynasty Tunic - PvP Summoner">
@@ -328,14 +348,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
-			<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
+				<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -343,7 +366,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8214" levels="1" name="Dynasty Tunic - PvP Wizard">
@@ -353,13 +375,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -367,7 +392,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8215" levels="1" name="Dynasty Leather Armor - PvP Force Master">
@@ -377,13 +401,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -391,7 +418,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8216" levels="1" name="Dynasty Leather Armor - PvP Weapon Master">
@@ -401,14 +427,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -416,7 +445,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8217" levels="1" name="Dynasty Leather Armor - PvP Enchanter">
@@ -426,14 +454,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- decrease MP consumption -5% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- decrease MP consumption -5% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -441,7 +472,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8218" levels="1" name="Dynasty Leather Armor - PvP Summoner">
@@ -451,14 +481,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
-			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
-			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
+				<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
+				<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -466,7 +499,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8219" levels="1" name="Dynasty Platinum Breastplate - PvP Shield Master">
@@ -503,14 +535,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
-			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
+				<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -518,7 +553,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8221" levels="1" name="Dynasty Platinum Breastplate - PvP Bard">
@@ -528,13 +562,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% Decrease for Song and Dance Skills -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.066" /> <!-- P. Def. +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% Decrease for Song and Dance Skills -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -542,7 +579,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8222" levels="1" name="Dynasty Platinum Breastplate - PvP Force Master">
@@ -552,13 +588,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max. HP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- Decreases MP consumption by 6% for active skills -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max. HP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- Decreases MP consumption by 6% for active skills -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -566,7 +605,6 @@
 				<param skillId="5693" skillLevel="1" /> <!-- PvP Armor - Speed Down -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8223" levels="1" name="Dynasty Jewel Leather Armor - PvP Dagger Master">
@@ -603,14 +641,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="5.3" /> <!-- Accuracy +5.3 -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
-			<add order="0x40" stat="regMp" val="1.066" /> <!-- MP Recovery +6.6% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="5.3" /> <!-- Accuracy +5.3 -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0324" /> <!-- Atk. Spd. +3.24% -->
+				<add order="0x40" stat="regMp" val="1.066" /> <!-- MP Recovery +6.6% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -618,7 +659,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8225" levels="1" name="Dynasty Jewel Leather Armor - PvP Force Master">
@@ -628,13 +668,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.066" /> <!-- P. Atk. +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -642,7 +685,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8226" levels="1" name="Dynasty Jewel Leather Armor - PvP Weapon Master">
@@ -652,14 +694,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
-			<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
-			<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.066" /> <!-- Physical Attack Power +6.6% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Maximum HP +492 effect -->
+				<add order="0x40" stat="rCrit" val="29.5" /> <!-- Critical Rate +29.5 Increase -->
+				<add order="0x40" stat="cAtkAdd" val="282" /> <!-- Critical Damage +282 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -667,7 +712,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8227" levels="1" name="Dynasty Jewel Leather Armor - PvP Summoner">
@@ -677,14 +721,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.066" /> <!-- Atk. Spd. +6.6% -->
-			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- P. Atk. +2.66% -->
-			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- P. Def. +2.66% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.066" /> <!-- Atk. Spd. +6.6% -->
+				<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- P. Atk. +2.66% -->
+				<mul order="0x30" stat="pDef" val="1.0266" /> <!-- P. Def. +2.66% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -692,7 +739,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8228" levels="1" name="Dynasty Jewel Leather Armor - PvP Enchanter">
@@ -702,14 +748,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- Decrease MP consumption -6% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- Decrease MP consumption -6% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -717,7 +766,6 @@
 				<param skillId="5694" skillLevel="1" /> <!-- PvP Armor - Mirage -->
 				<param targetType="ONE" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8229" levels="1" name="Dynasty Silver Satin Tunic - PvP Healer">
@@ -727,14 +775,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="healEffect" val="22" /> <!-- Heal Capacity +22 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="healEffect" val="22" /> <!-- Heal Capacity +22 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -742,7 +793,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8230" levels="1" name="Dynasty Silver Satin Tunic - PvP Enchanter">
@@ -752,14 +802,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Magic Cancel Rate -15 -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.94" /> <!-- MP Consumption -6% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -767,7 +820,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8231" levels="1" name="Dynasty Silver Satin Tunic - PvP Summoner">
@@ -777,14 +829,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<mul order="0x30" stat="pDef" val="1.033" /> <!-- P. Def. +3.3% -->
-			<mul order="0x30" stat="pAtk" val="1.033" /> <!-- P. Atk. +3.3% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<mul order="0x30" stat="pDef" val="1.033" /> <!-- P. Def. +3.3% -->
+				<mul order="0x30" stat="pAtk" val="1.033" /> <!-- P. Atk. +3.3% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -792,7 +847,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8232" levels="1" name="Dynasty Silver Satin Tunic - PvP Wizard">
@@ -802,13 +856,16 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<mul order="0x30" stat="mAtk" val="1.066" /> <!-- M. Atk. +6.6% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul order="0x30" stat="mAtk" val="1.066" /> <!-- M. Atk. +6.6% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="1" />
@@ -816,7 +873,6 @@
 				<param skillId="5691" skillLevel="1" /> <!-- PvP Armor - Critical Down -->
 				<param targetType="SELF" />
 			</effect>
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
 		</for>
 	</skill>
 	<skill id="8233" levels="1" name="Zubei's Helmet">
@@ -825,7 +881,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="0.88" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="0.88" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8234" levels="1" name="Zubei's Helmet">
@@ -834,7 +892,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0125" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0125" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8235" levels="1" name="Nightmare Helm">
@@ -987,7 +1047,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1023,7 +1082,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1045,7 +1103,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1245,7 +1302,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1267,7 +1323,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1289,7 +1344,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1311,7 +1365,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1333,7 +1386,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1450,7 +1502,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1471,7 +1522,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -1564,10 +1614,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
-			<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
+				<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="8286" levels="1" name="Vesper Noble Light Armor Set">
@@ -1633,10 +1685,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8290" levels="12" name="Add Belt Inventory Slot">
@@ -1646,7 +1700,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="inventoryLimit" val="#inventoryLimit" />
+			<effect name="Buff">
+				<add order="0x40" stat="inventoryLimit" val="#inventoryLimit" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8291" levels="12" name="Add Belt Weight Gauge">
@@ -1656,7 +1712,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="#weightPenalty" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="#weightPenalty" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8292" levels="1" name="Olympiad Warrior's Ring">
@@ -1720,10 +1778,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="109.2" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="109.2" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8296" levels="1" name="Special Ability Focus">
@@ -1733,10 +1793,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="109.2" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="109.2" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8297" levels="1" name="Special Ability Haste">
@@ -1746,10 +1808,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.04" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.04" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8298" levels="1" name="Special Ability Focus">
@@ -1759,10 +1823,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="109.2" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="109.2" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8299" levels="1" name="Arcana Sigil">

@@ -7,7 +7,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8002" levels="1" name="Augment Option - Dark Attack">
@@ -17,7 +19,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8003" levels="1" name="Augment Option - Fire Attack">
@@ -27,7 +31,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="firePower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8004" levels="1" name="Augment Option - Water Attack">
@@ -37,7 +43,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8005" levels="1" name="Augment Option - Wind Attack">
@@ -47,7 +55,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8006" levels="1" name="Augment Option - Earth Attack">
@@ -57,7 +67,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8007" levels="1" name="Augment Option - Divine Resistance">
@@ -67,7 +79,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8008" levels="1" name="Augment Option - Dark Resistance">
@@ -77,7 +91,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8009" levels="1" name="Augment Option - Fire Resistance">
@@ -87,7 +103,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8010" levels="1" name="Augment Option - Water Resistance">
@@ -97,7 +115,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8011" levels="1" name="Augment Option - Wind Resistance">
@@ -107,7 +127,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8012" levels="1" name="Augment Option - Earth Resistance">
@@ -117,7 +139,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8013" levels="1" name="Augment Option - Divine Attack">
@@ -127,7 +151,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8014" levels="1" name="Augment Option - Dark Attack">
@@ -137,7 +163,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8015" levels="1" name="Augment Option - Fire Attack">
@@ -147,7 +175,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="firePower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8016" levels="1" name="Augment Option - Water Attack">
@@ -157,7 +187,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8017" levels="1" name="Augment Option - Wind Attack">
@@ -167,7 +199,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8018" levels="1" name="Augment Option - Earth Attack">
@@ -177,7 +211,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8019" levels="1" name="Augment Option - Divine Resistance">
@@ -187,7 +223,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8020" levels="1" name="Augment Option - Dark Resistance">
@@ -197,7 +235,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8021" levels="1" name="Augment Option - Fire Resistance">
@@ -207,7 +247,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8022" levels="1" name="Augment Option - Water Resistance">
@@ -217,7 +259,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8023" levels="1" name="Augment Option - Wind Resistance">
@@ -227,7 +271,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8024" levels="1" name="Augment Option - Earth Resistance">
@@ -237,7 +283,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8025" levels="1" name="Augment Option - Divine Attack">
@@ -247,7 +295,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8026" levels="1" name="Augment Option - Dark Attack">
@@ -257,7 +307,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8027" levels="1" name="Augment Option - Fire Attack">
@@ -267,7 +319,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="firePower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8028" levels="1" name="Augment Option - Water Attack">
@@ -277,7 +331,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8029" levels="1" name="Augment Option - Wind Attack">
@@ -287,7 +343,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8030" levels="1" name="Augment Option - Earth Attack">
@@ -297,7 +355,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8031" levels="1" name="Augment Option - Divine Resistance">
@@ -307,7 +367,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8032" levels="1" name="Augment Option - Dark Resistance">
@@ -317,7 +379,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8033" levels="1" name="Augment Option - Fire Resistance">
@@ -327,7 +391,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8034" levels="1" name="Augment Option - Water Resistance">
@@ -337,7 +403,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8035" levels="1" name="Augment Option - Wind Resistance">
@@ -347,7 +415,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8036" levels="1" name="Augment Option - Earth Resistance">
@@ -357,7 +427,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8037" levels="1" name="Augment Option - Divine Attack">
@@ -367,7 +439,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8038" levels="1" name="Augment Option - Dark Attack">
@@ -377,7 +451,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8039" levels="1" name="Augment Option - Fire Attack">
@@ -387,7 +463,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="firePower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8040" levels="1" name="Augment Option - Water Attack">
@@ -397,7 +475,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8041" levels="1" name="Augment Option - Wind Attack">
@@ -407,7 +487,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8042" levels="1" name="Augment Option - Earth Attack">
@@ -417,7 +499,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthPower" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthPower" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8043" levels="1" name="Augment Option - Divine Resistance">
@@ -427,7 +511,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8044" levels="1" name="Augment Option - Dark Resistance">
@@ -437,7 +523,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8045" levels="1" name="Augment Option - Fire Resistance">
@@ -447,7 +535,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8046" levels="1" name="Augment Option - Water Resistance">
@@ -457,7 +547,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8047" levels="1" name="Augment Option - Wind Resistance">
@@ -467,7 +559,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8048" levels="1" name="Augment Option - Earth Resistance">
@@ -477,7 +571,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="4.28" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="4.28" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8049" levels="1" name="Augment Option - Enhance Shock">
@@ -1063,7 +1159,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyPower" val="6.42" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyPower" val="6.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8098" levels="1" name="Augment Option - Dark Attack">
@@ -1073,7 +1171,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkPower" val="6.42" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkPower" val="6.42" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8099" levels="1" name="Augment Option - Fire Attack">
@@ -1083,7 +1183,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="firePower" val="6.42" />
+			<effect name="Buff">
+				<add order="0x40" stat="firePower" val="6.42" />
+			</effect>
 		</for>
 	</skill>
 </list>

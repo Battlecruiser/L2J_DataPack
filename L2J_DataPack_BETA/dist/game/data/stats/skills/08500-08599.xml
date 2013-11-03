@@ -7,7 +7,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="CON" val="2" />
+			<effect name="Buff">
+				<add order="0x10" stat="CON" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8501" levels="1" name="Pink Talisman - INT">
@@ -17,7 +19,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="INT" val="2" />
+			<effect name="Buff">
+				<add order="0x10" stat="INT" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8502" levels="1" name="Pink Talisman - WIT">
@@ -27,7 +31,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="WIT" val="2" />
+			<effect name="Buff">
+				<add order="0x10" stat="WIT" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8503" levels="1" name="Pink Talisman - MEN">
@@ -37,7 +43,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="MEN" val="2" />
+			<effect name="Buff">
+				<add order="0x10" stat="MEN" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8504" levels="1" name="Pink Talisman - Stun Resist">
@@ -95,12 +103,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x10" stat="STR" val="1" />
-			<add order="0x10" stat="DEX" val="1" />
-			<add order="0x10" stat="CON" val="1" />
-			<add order="0x10" stat="INT" val="1" />
-			<add order="0x10" stat="WIT" val="1" />
-			<add order="0x10" stat="MEN" val="1" />
+			<effect name="Buff">
+				<add order="0x10" stat="STR" val="1" />
+				<add order="0x10" stat="DEX" val="1" />
+				<add order="0x10" stat="CON" val="1" />
+				<add order="0x10" stat="INT" val="1" />
+				<add order="0x10" stat="WIT" val="1" />
+				<add order="0x10" stat="MEN" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8509" levels="1" name="High Angel Circlet">

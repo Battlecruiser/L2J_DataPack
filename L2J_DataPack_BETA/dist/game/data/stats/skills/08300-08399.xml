@@ -6,7 +6,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8301" levels="1" name="Vesper Heavy Armor Set for Adults">
@@ -72,13 +74,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
-			<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5% -->
+				<add order="0x40" stat="maxMp" val="347" /> <!-- Max MP by 347 -->
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
@@ -95,16 +99,18 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
-			<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
-			<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
-			<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
-			<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
-			<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
-			<add order="0x10" stat="cloak" val="1" />
-			<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
-			<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0557" /> <!-- P. Atk. +5.57% -->
+				<mul order="0x30" stat="pAtkSpd" val="1.05" /> <!-- Atk. Spd. +5% -->
+				<mul order="0x30" stat="regMp" val="1.05" /> <!-- MP Recovery Rate by 5.57% -->
+				<add order="0x40" stat="maxMp" val="354" /> <!-- Max MP by 354 -->
+				<add order="0x40" stat="rEvas" val="3" /> <!-- Increases Evasion by 3 -->
+				<add order="0x40" stat="cAtkAdd" val="172" /> <!-- Increases Critical Damage by 172 -->
+				<add order="0x10" stat="cloak" val="1" />
+				<mul order="0x30" stat="pvpMagicalDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDef" val="1.05" />
+				<mul order="0x30" stat="pvpPhysDef" val="1.05" />
+			</effect>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
 				<param minDamage="50" />
@@ -193,7 +199,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -216,7 +221,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -231,8 +235,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
-			<sub order="0x40" stat="cancel" val="13" />
+			<effect name="Buff">
+				<mul order="0x30" stat="magicDamVul" val="0.98" />
+				<sub order="0x40" stat="cancel" val="13" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8311" levels="1" name="Dynasty Sigil">
@@ -241,8 +247,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="magicDamVul" val="0.98" />
-			<add order="0x40" stat="darkRes" val="2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="magicDamVul" val="0.98" />
+				<add order="0x40" stat="darkRes" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8312" levels="2" name="Special Ability Cheap Shot">
@@ -253,8 +261,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8314" levels="1" name="Release Seal on Agathion - Saerom">
@@ -340,7 +350,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="672" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="672" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8325" levels="1" name="Wild Rose Pig Candy">
@@ -472,7 +484,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -495,7 +506,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -518,7 +528,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -553,7 +562,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="5000" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="5000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8338" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
@@ -565,10 +576,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#hp" />
-			<add order="0x40" stat="regHp" val="#hpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regHp" val="#hp" />
+				<add order="0x40" stat="regHp" val="#hpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8339" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
@@ -580,10 +593,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regHp" val="#hp" />
-			<add order="0x40" stat="regHp" val="#hpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regHp" val="#hp" />
+				<add order="0x40" stat="regHp" val="#hpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8340" levels="4" name="Low-grade Magic Rune Clip Iron Belt">
@@ -595,10 +610,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regMp" val="#mp" />
-			<add order="0x40" stat="regMp" val="#mpsit">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#mp" />
+				<add order="0x40" stat="regMp" val="#mpsit">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8341" levels="4" name="Low-grade Magic Rune Clip Mithril Belt">
@@ -609,10 +626,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="regMp" val="#amount" />
-			<add order="0x40" stat="regMp" val="#amount">
-				<player resting="true" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="regMp" val="#amount" />
+				<add order="0x40" stat="regMp" val="#amount">
+					<player resting="true" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="8342" levels="4" name="Low-grade Magic Ornament Iron Belt">
@@ -623,7 +642,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8343" levels="4" name="Low-grade Magic Ornament Iron Belt">
@@ -634,8 +655,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8344" levels="4" name="Low-grade Magic Ornament Iron Belt">
@@ -646,8 +669,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8345" levels="4" name="Low-grade Magic Ornament Mithril Belt">
@@ -658,7 +683,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8346" levels="4" name="Low-grade Magic Ornament Mithril Belt">
@@ -669,8 +696,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8347" levels="4" name="Low-grade Magic Ornament Mithril Belt">
@@ -681,8 +710,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
-			<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDef" val="#pvp" />
+				<mul order="0x30" stat="pvpMagicalDef" val="#pvp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8348" levels="2" name="Royal Guard Earring - Gludio">
@@ -890,7 +921,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="82800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff" abnormalVisualEffect="vitality">
@@ -1114,7 +1144,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8380" levels="2" name="Royal Guard Ring - Dion">
@@ -1125,7 +1157,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8381" levels="2" name="Royal Guard Ring - Giran">
@@ -1136,7 +1170,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8382" levels="2" name="Royal Guard Ring - Oren">
@@ -1147,7 +1183,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8383" levels="2" name="Royal Guard Ring - Aden">
@@ -1158,7 +1196,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8384" levels="2" name="Royal Guard Ring - Innadril">
@@ -1169,7 +1209,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8385" levels="2" name="Royal Guard Ring - Goddard">
@@ -1180,7 +1222,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8386" levels="2" name="Royal Guard Ring - Rune">
@@ -1191,7 +1235,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8387" levels="2" name="Royal Guard Ring - Schuttgart">
@@ -1202,7 +1248,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8388" levels="2" name="Royal Guard Necklace - Gludio">
@@ -1213,7 +1261,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8389" levels="2" name="Royal Guard Necklace - Dion">
@@ -1224,7 +1274,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="holyRes" val="#holyRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="holyRes" val="#holyRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8390" levels="2" name="Royal Guard Necklace - Giran">
@@ -1235,7 +1287,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8391" levels="2" name="Royal Guard Necklace - Oren">
@@ -1246,7 +1300,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="#darkRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="#darkRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8392" levels="2" name="Royal Guard Necklace - Aden">
@@ -1257,7 +1313,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="#earthRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="#earthRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8393" levels="2" name="Royal Guard Necklace - Innadril">
@@ -1268,7 +1326,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="#waterRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="#waterRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8394" levels="2" name="Royal Guard Necklace - Goddard">
@@ -1279,7 +1339,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8395" levels="2" name="Royal Guard Necklace - Rune">
@@ -1290,7 +1352,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#fireRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#fireRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8396" levels="2" name="Royal Guard Necklace - Schuttgart">
@@ -1301,7 +1365,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#windRes" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#windRes" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="8397" levels="1" name="Moirai Armor Set">

@@ -51,7 +51,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<cond msgId="113" addName="1">
@@ -76,7 +75,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="9000" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="9000" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3407" levels="1" name="Stealth Ring">
@@ -90,7 +91,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SilentMove" abnormalVisualEffect="stealth">
@@ -149,7 +149,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -163,11 +162,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="109.2" />
-			<mul order="0x30" stat="maxHp" val="1.1" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="109.2" />
+				<mul order="0x30" stat="maxHp" val="1.1" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3412" levels="1" name="Dynasty Breast Plate">
@@ -177,10 +178,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
-			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.046" /> <!-- P. Def +4.6% -->
+				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3413" levels="1" name="Dynasty Leather Armor">
@@ -190,11 +193,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
-			<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
-			<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="1.72" /> <!-- Evacion +1.72 -->
+				<add order="0x40" stat="accCombat" val="1.72" /> <!-- Accuracy +1.72 -->
+				<add order="0x40" stat="maxHp" val="418" /> <!-- MaxHP +418 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3414" levels="1" name="Dynasty Leather Armor - Force Master">
@@ -204,11 +209,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3415" levels="1" name="Dynasty Leather Armor - Weapon Master">
@@ -218,12 +225,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3416" levels="1" name="Dynasty Tunic">
@@ -233,10 +242,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
-			<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
-			<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.12" /> <!-- Casting Spd. +12% -->
+				<add order="0x40" stat="maxMp" val="257" /> <!-- Max MP +257 -->
+				<add order="0x40" stat="darkRes" val="6" /> <!-- Darkness Resistance +6 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3417" levels="1" name="Equipped with Shield">
@@ -247,7 +258,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="rShld" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="rShld" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3418" levels="1" name="Active Skill: Transform Pig">
@@ -258,7 +271,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -284,12 +296,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
-			<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
-			<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.054" /> <!-- increase Atk. Spd. +5.4% -->
+				<mul order="0x30" stat="pAtk" val="1.0266" /> <!-- Increase P. Atk. +2.66% -->
+				<mul order="0x30" stat="pDef" val="1.0266" /> <!-- Increase P. Def. +2.66% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3421" levels="1" name="Wolf Mount">
@@ -364,15 +378,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
-			<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
-			<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+			<effect name="Buff">
+				<mul order="0x30" stat="maxHp" val="1.25" /> <!-- HP +25% -->
+				<mul order="0x30" stat="maxMp" val="1.3" /> <!-- MP +30% -->
+				<mul order="0x30" stat="maxCp" val="1.5" /> <!-- CP +50% -->
+				<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
+				<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
+				<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
+			</effect>
 			<effect name="ChanceSkillTrigger" activationChance="5" chanceType="ON_HIT" triggeredId="5547" />
-			<!-- NOTE: PvP extra damage is increased in H5, values unconfirmed -->
-			<mul order="0x30" stat="pvpPhysDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.1" /> <!-- PVP Damage Bonus +10% -->
-			<add order="0x40" stat="reflectDam" val="9" /> <!-- Reflect Damage 9% -->
 		</for>
 	</skill>
 	<skill id="3428" levels="1" name="Blue Talisman - Explosion">
@@ -389,7 +405,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -426,7 +441,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -448,7 +462,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -470,7 +483,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -492,7 +504,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -514,7 +525,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -536,7 +546,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -575,7 +584,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -598,7 +606,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -611,7 +618,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="118" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="118" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3440" levels="1" name="Silk Shirt">
@@ -619,7 +628,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="51" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="51" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3441" levels="1" name="Silk Shirt">
@@ -627,7 +638,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="354" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="354" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3442" levels="1" name="Silk Shirt">
@@ -635,8 +648,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="59" />
-			<add order="0x40" stat="maxMp" val="26" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="59" />
+				<add order="0x40" stat="maxMp" val="26" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3443" levels="1" name="Silk Shirt">
@@ -644,8 +659,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="59" />
-			<add order="0x40" stat="maxCp" val="117" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="59" />
+				<add order="0x40" stat="maxCp" val="117" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3444" levels="1" name="Silk Shirt">
@@ -653,8 +670,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="26" />
-			<add order="0x40" stat="maxCp" val="117" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="26" />
+				<add order="0x40" stat="maxCp" val="117" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3445" levels="1" name="Thin Leather Shirt">
@@ -662,7 +681,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="147" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="147" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3446" levels="1" name="Thin Leather Shirt">
@@ -670,7 +691,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="72" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="72" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3447" levels="1" name="Thin Leather Shirt">
@@ -678,7 +701,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="441" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="441" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3448" levels="1" name="Thin Leather Shirt">
@@ -686,8 +711,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="74" />
-			<add order="0x40" stat="maxMp" val="36" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="74" />
+				<add order="0x40" stat="maxMp" val="36" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3449" levels="1" name="Thin Leather Shirt">
@@ -695,8 +722,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="74" />
-			<add order="0x40" stat="maxCp" val="222" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="74" />
+				<add order="0x40" stat="maxCp" val="222" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3450" levels="1" name="Thin Leather Shirt">
@@ -704,8 +733,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="36" />
-			<add order="0x40" stat="maxCp" val="222" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="36" />
+				<add order="0x40" stat="maxCp" val="222" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3451" levels="1" name="Scale Shirt">
@@ -713,7 +744,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="172" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="172" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3452" levels="1" name="Scale Shirt">
@@ -721,7 +754,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="85" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="85" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3453" levels="1" name="Scale Shirt">
@@ -729,7 +764,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="516" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="516" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3454" levels="1" name="Scale Shirt">
@@ -737,8 +774,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="86" />
-			<add order="0x40" stat="maxMp" val="43" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="86" />
+				<add order="0x40" stat="maxMp" val="43" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3455" levels="1" name="Scale Shirt">
@@ -746,8 +785,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="86" />
-			<add order="0x40" stat="maxCp" val="258" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="86" />
+				<add order="0x40" stat="maxCp" val="258" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3456" levels="1" name="Scale Shirt">
@@ -755,8 +796,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="43" />
-			<add order="0x40" stat="maxCp" val="258" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="43" />
+				<add order="0x40" stat="maxCp" val="258" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3457" levels="1" name="Mithril Shirt">
@@ -764,7 +807,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="224" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="224" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3458" levels="1" name="Mithril Shirt">
@@ -772,7 +817,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="111" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="111" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3459" levels="1" name="Mithril Shirt">
@@ -780,7 +827,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="672" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="672" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3460" levels="1" name="Mithril Shirt">
@@ -788,8 +837,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="112" />
-			<add order="0x40" stat="maxMp" val="56" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="112" />
+				<add order="0x40" stat="maxMp" val="56" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3461" levels="1" name="Mithril Shirt">
@@ -797,8 +848,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="112" />
-			<add order="0x40" stat="maxCp" val="336" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="112" />
+				<add order="0x40" stat="maxCp" val="336" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3462" levels="1" name="Mithril Shirt">
@@ -806,8 +859,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="56" />
-			<add order="0x40" stat="maxCp" val="336" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="56" />
+				<add order="0x40" stat="maxCp" val="336" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3463" levels="1" name="Striped Silk Shirt">
@@ -815,7 +870,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="135" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="135" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3464" levels="1" name="Striped Silk Shirt">
@@ -823,7 +880,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="66" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="66" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3465" levels="1" name="Striped Silk Shirt">
@@ -831,7 +890,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="405" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="405" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3466" levels="1" name="Striped Silk Shirt">
@@ -839,8 +900,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="68" />
-			<add order="0x40" stat="maxMp" val="33" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="68" />
+				<add order="0x40" stat="maxMp" val="33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3467" levels="1" name="Striped Silk Shirt">
@@ -848,8 +911,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="68" />
-			<add order="0x40" stat="maxCp" val="203" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="68" />
+				<add order="0x40" stat="maxCp" val="203" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3468" levels="1" name="Striped Silk Shirt">
@@ -857,8 +922,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="33" />
-			<add order="0x40" stat="maxCp" val="203" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="33" />
+				<add order="0x40" stat="maxCp" val="203" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3469" levels="1" name="Thin Stripe Leather Shirt">
@@ -866,7 +933,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="160" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="160" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3470" levels="1" name="Thin Stripe Leather Shirt">
@@ -874,7 +943,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="78" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="78" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3471" levels="1" name="Thin Stripe Leather Shirt">
@@ -882,7 +953,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="480" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="480" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3472" levels="1" name="Thin Stripe Leather Shirt">
@@ -890,8 +963,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="80" />
-			<add order="0x40" stat="maxMp" val="39" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="80" />
+				<add order="0x40" stat="maxMp" val="39" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3473" levels="1" name="Thin Stripe Leather Shirt">
@@ -899,8 +974,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="80" />
-			<add order="0x40" stat="maxCp" val="240" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="80" />
+				<add order="0x40" stat="maxCp" val="240" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3474" levels="1" name="Thin Stripe Leather Shirt">
@@ -908,8 +985,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="39" />
-			<add order="0x40" stat="maxCp" val="240" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="39" />
+				<add order="0x40" stat="maxCp" val="240" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3475" levels="1" name="Striped Scale Shirt">
@@ -917,7 +996,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="186" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="186" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3476" levels="1" name="Striped Scale Shirt">
@@ -925,7 +1006,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="92" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="92" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3477" levels="1" name="Striped Scale Shirt">
@@ -933,7 +1016,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="564" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="564" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3478" levels="1" name="Striped Scale Shirt">
@@ -941,8 +1026,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="93" />
-			<add order="0x40" stat="maxMp" val="46" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="93" />
+				<add order="0x40" stat="maxMp" val="46" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3479" levels="1" name="Striped Scale Shirt">
@@ -950,8 +1037,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="93" />
-			<add order="0x40" stat="maxCp" val="282" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="93" />
+				<add order="0x40" stat="maxCp" val="282" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3480" levels="1" name="Striped Scale Shirt">
@@ -959,8 +1048,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="46" />
-			<add order="0x40" stat="maxCp" val="282" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="46" />
+				<add order="0x40" stat="maxCp" val="282" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3481" levels="1" name="Striped Mithril Shirt">
@@ -968,7 +1059,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="246" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="246" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3482" levels="1" name="Striped Mithril Shirt">
@@ -976,7 +1069,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="122" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="122" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3483" levels="1" name="Striped Mithril Shirt">
@@ -984,7 +1079,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxCp" val="744" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxCp" val="744" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3484" levels="1" name="Striped Mithril Shirt">
@@ -992,8 +1089,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="123" />
-			<add order="0x40" stat="maxMp" val="61" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="123" />
+				<add order="0x40" stat="maxMp" val="61" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3485" levels="1" name="Striped Mithril Shirt">
@@ -1001,8 +1100,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="123" />
-			<add order="0x40" stat="maxCp" val="372" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="123" />
+				<add order="0x40" stat="maxCp" val="372" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3486" levels="1" name="Striped Mithril Shirt">
@@ -1010,8 +1111,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="61" />
-			<add order="0x40" stat="maxCp" val="372" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="61" />
+				<add order="0x40" stat="maxCp" val="372" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3487" levels="1" name="Blue Talisman of Power">
@@ -1028,7 +1131,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1050,7 +1152,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1065,7 +1166,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="11.7" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="11.7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3490" levels="1" name="Yellow Talisman of Defense">
@@ -1075,7 +1178,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="18.3" />
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="18.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3491" levels="1" name="Yellow Talisman of Evasion">
@@ -1085,7 +1190,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="1.1" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="1.1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3492" levels="1" name="Yellow Talisman of Speed">
@@ -1095,7 +1202,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="3" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3493" levels="1" name="Yellow Talisman of Regeneration">
@@ -1105,7 +1214,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3494" levels="1" name="Yellow Talisman of CP Regeneration">
@@ -1115,7 +1226,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regCp" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regCp" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3495" levels="1" name="Yellow Talisman of Healing">
@@ -1125,7 +1238,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="healEffect" val="8" />
+			<effect name="Buff">
+				<add order="0x40" stat="healEffect" val="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3496" levels="1" name="Red Talisman of Recovery">
@@ -1152,7 +1267,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3498" levels="1" name="Special Ability: Light">
@@ -1162,7 +1279,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="weightLimit" val="1.2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="weightLimit" val="1.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3499" levels="1" name="Transform Dispel">

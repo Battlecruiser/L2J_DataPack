@@ -7,9 +7,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0208" />
-			<add order="0x40" stat="maxMp" val="133" />
-			<add order="0x40" stat="darkRes" val="3.33" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0208" />
+				<add order="0x40" stat="maxMp" val="133" />
+				<add order="0x40" stat="darkRes" val="3.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3801" levels="1" name="Dynasty Gloves">
@@ -19,9 +21,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="53" />
-			<add order="0x40" stat="darkRes" val="1.33" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0083" />
+				<add order="0x40" stat="maxMp" val="53" />
+				<add order="0x40" stat="darkRes" val="1.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3802" levels="1" name="Dynasty Shoes">
@@ -31,9 +35,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="53" />
-			<add order="0x40" stat="darkRes" val="1.33" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0083" />
+				<add order="0x40" stat="maxMp" val="53" />
+				<add order="0x40" stat="darkRes" val="1.33" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3803" levels="1" name="Dynasty Circlet">
@@ -43,9 +49,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0125" />
-			<add order="0x40" stat="maxMp" val="80" />
-			<add order="0x40" stat="darkRes" val="2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0125" />
+				<add order="0x40" stat="maxMp" val="80" />
+				<add order="0x40" stat="darkRes" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3804" levels="1" name="Dynasty Silver Satin Tunic">
@@ -55,7 +63,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3805" levels="1" name="Dynasty Jewel Leather Mail">
@@ -65,11 +75,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.4" />
-			<add order="0x40" stat="darkRes" val="3.2" />
-			<add order="0x30" stat="maxMp" val="492" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0477" />
-			<add order="0x40" stat="rEvas" val="3.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.4" />
+				<add order="0x40" stat="darkRes" val="3.2" />
+				<add order="0x30" stat="maxMp" val="492" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0477" />
+				<add order="0x40" stat="rEvas" val="3.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3806" levels="1" name="Dynasty Platinum Plate">
@@ -79,10 +91,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="3.2" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-			<add order="0x30" stat="maxHp" val="1023" />
-			<mul order="0x30" stat="pDef" val="1.0724" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="3.2" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<add order="0x30" stat="maxHp" val="1023" />
+				<mul order="0x30" stat="pDef" val="1.0724" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3807" levels="1" name="Adamantite Earring">
@@ -92,7 +106,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="17" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="17" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3808" levels="1" name="Adamantite Necklace">
@@ -114,7 +130,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0071" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0071" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3810" levels="1" name="Earring of Black Ore">
@@ -124,7 +142,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="1.71" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="1.71" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3811" levels="1" name="Necklace of Black Ore">
@@ -146,7 +166,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="9" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3813" levels="1" name="Phoenix Necklace">
@@ -156,7 +178,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="21" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="21" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3814" levels="1" name="Phoenix Ring">
@@ -166,7 +190,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0071" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0071" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3815" levels="1" name="Phoenix Earring">
@@ -176,7 +202,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3816" levels="1" name="Majestic Necklace">
@@ -186,7 +214,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.01" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3817" levels="1" name="Majestic Ring">
@@ -196,7 +226,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="11" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3818" levels="1" name="Majestic Earring">
@@ -230,7 +262,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="earthRes" val="1.14" />
+			<effect name="Buff">
+				<add order="0x40" stat="earthRes" val="1.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3821" levels="1" name="Tateossian Earring">
@@ -240,7 +274,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="20" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3822" levels="1" name="Dynasty Necklace">
@@ -250,7 +286,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="30" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3823" levels="1" name="Dynasty Ring">
@@ -260,7 +298,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="1.14" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="1.14" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3824" levels="1" name="Dynasty Earring">
@@ -284,7 +324,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3826" levels="2" name="Sword of Boost HP">
@@ -296,7 +338,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3827" levels="1" name="Sword of Critical Power">
@@ -306,7 +350,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="220" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="220" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3828" levels="1" name="Sword of Critical Chance">
@@ -316,7 +362,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3829" levels="1" name="Sword of Stun">
@@ -338,7 +386,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3831" levels="2" name="Rapier of Boost HP">
@@ -350,7 +400,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3832" levels="1" name="Rapier of Critical Power">
@@ -360,7 +412,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="169" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="169" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3833" levels="1" name="Rapier of Critical Chance">
@@ -370,7 +424,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3834" levels="1" name="Rapier of Stun">
@@ -392,7 +448,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3836" levels="2" name="Dual-Blade Weapon of Boost HP">
@@ -404,7 +462,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3837" levels="1" name="Dual-Blade Weapon of Critical Power">
@@ -414,7 +474,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="268" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="268" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3838" levels="1" name="Dual-Blade Weapon of Critical Chance">
@@ -424,7 +486,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3839" levels="1" name="Dual-Blade Weapon of Stun">
@@ -445,7 +509,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3841" levels="1" name="Two-handed Sword of Guidance">
@@ -455,7 +521,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.9" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3842" levels="1" name="Two-handed Sword of Vampiric Rage">
@@ -465,7 +533,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="3" />
+			<effect name="Buff">
+				<add order="0x40" stat="absorbDam" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3843" levels="1" name="Two-handed Sword of Boost HP">
@@ -475,7 +545,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="398" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="398" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3844" levels="1" name="Two-handed Sword of Critical Power">
@@ -485,7 +557,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="340" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="340" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3845" levels="2" name="Two-handed Sword of Critical Chance">
@@ -496,7 +570,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3846" levels="2" name="Ancient Sword of Haste">
@@ -507,7 +583,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3847" levels="1" name="Ancient Sword of Guidance">
@@ -517,7 +595,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.9" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3848" levels="1" name="Ancient Sword of Vampiric Rage">
@@ -527,7 +607,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="3" />
+			<effect name="Buff">
+				<add order="0x40" stat="absorbDam" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3849" levels="1" name="Ancient Sword of Boost HP">
@@ -537,7 +619,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="398" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="398" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3850" levels="1" name="Ancient Sword of Critical Power">
@@ -547,7 +631,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="303" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="303" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3851" levels="2" name="Ancient Sword of Critical Chance">
@@ -558,7 +644,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3852" levels="3" name="Sword of Mana Boost">
@@ -570,7 +658,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="#maxMp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="#maxMp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3853" levels="2" name="Sword of Mana Regeneration">
@@ -581,7 +671,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3854" levels="1" name="Sword of Empower">
@@ -591,7 +683,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="21.77" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="21.77" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3855" levels="1" name="not_used">
@@ -607,7 +701,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="healEffect" val="37" />
+			<effect name="Buff">
+				<add order="0x40" stat="healEffect" val="37" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3857" levels="1" name="Sword of Clarity">
@@ -617,9 +713,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3858" levels="3" name="Dagger of Avoid">
@@ -630,7 +728,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="3.3 " />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="3.3 " />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3859" levels="2" name="Dagger of Haste">
@@ -641,7 +741,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3860" levels="1" name="Dagger of Regeneration">
@@ -651,7 +753,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3861" levels="1" name="Dagger of Poison">
@@ -671,7 +775,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.3" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3863" levels="4" name="Bow of Guidance">
@@ -682,7 +788,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.3" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3864" levels="2" name="Bow of Haste">
@@ -693,7 +801,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3865" levels="1" name="Bow of Long Shot">
@@ -703,9 +813,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtkRange" val="100">
-				<using kind="Bow" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Bow" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3866" levels="1" name="Dynasty Leather Gloves">
@@ -715,11 +827,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="0.31" />
-			<add order="0x40" stat="accCombat" val="0.31" />
-			<add order="0x40" stat="maxHp" val="82" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-			<add order="0x40" stat="darkRes" val="0.8" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="0.31" />
+				<add order="0x40" stat="accCombat" val="0.31" />
+				<add order="0x40" stat="maxHp" val="82" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
+				<add order="0x40" stat="darkRes" val="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3867" levels="1" name="Bow of Boost HP">
@@ -729,7 +843,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="444" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3868" levels="4" name="Crossbow of Guidance">
@@ -740,7 +856,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.7" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3869" levels="2" name="Crossbow of Haste">
@@ -751,7 +869,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3870" levels="1" name="Crossbow of Long Shot">
@@ -761,9 +881,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtkRange" val="100">
-				<using kind="Crossbow" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Crossbow" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3871" levels="1" name="not_used">
@@ -779,7 +901,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="444" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="444" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3873" levels="2" name="Polearm of Critical Power">
@@ -791,7 +915,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3874" levels="1" name="Polearm of Critical Chance">
@@ -801,7 +927,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="54.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="54.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3875" levels="1" name="Polearm of Regeneration">
@@ -811,7 +939,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3876" levels="1" name="Polearm of Stun">
@@ -833,7 +963,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3878" levels="1" name="Polearm of Might">
@@ -843,7 +975,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="31.25" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="31.25" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3879" levels="3" name="Fist Weapon of Might">
@@ -855,7 +989,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3880" levels="2" name="Fist Weapon of Haste">
@@ -866,7 +1002,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3881" levels="1" name="Fist Weapon of Boost HP">
@@ -876,7 +1014,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="372" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="372" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3882" levels="1" name="Fist Weapon of Stun">
@@ -896,7 +1036,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="528" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="528" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3884" levels="3" name="Blunt Weapon of Boost HP">
@@ -908,7 +1050,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3885" levels="2" name="Blunt Weapon of Stun">
@@ -930,7 +1074,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3887" levels="1" name="Blunt Weapon of Regeneration">
@@ -940,7 +1086,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3888" levels="1" name="Blunt Weapon of Guidance">
@@ -950,7 +1098,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="4.2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3889" levels="3" name="Blunt Weapon of Empower">
@@ -962,7 +1112,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3890" levels="1" name="Blunt Weapon of Mana Boost">
@@ -972,7 +1124,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="289" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="289" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3891" levels="2" name="Blunt Weapon of Boost HP">
@@ -984,7 +1138,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3892" levels="1" name="Blunt Weapon of Clarity">
@@ -994,7 +1150,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3893" levels="1" name="Blunt Weapon of Mana Regeneration">
@@ -1004,7 +1162,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3894" levels="1" name="Two-handed Blunt Weapon of Critical Power">
@@ -1014,7 +1174,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="415" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="415" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3895" levels="3" name="Two-handed Blunt Weapon of Critical Chance">
@@ -1025,7 +1187,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="52.2" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="52.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3896" levels="2" name="Two-handed Blunt Weapon of Haste">
@@ -1036,7 +1200,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3897" levels="1" name="Two-handed Blunt Weapon of Might">
@@ -1046,7 +1212,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="32.97" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="32.97" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3898" levels="1" name="Two-handed Blunt Weapon of Guidance">
@@ -1056,7 +1224,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="4.2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3899" levels="3" name="Staff of Empower">
@@ -1068,7 +1238,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+			</effect>
 		</for>
 	</skill>
 </list>

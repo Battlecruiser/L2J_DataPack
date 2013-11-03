@@ -7,7 +7,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="5" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3301" levels="1" name="Yellow Talisman of Violent Haste">
@@ -17,7 +19,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtkSpd" val="10" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtkSpd" val="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3302" levels="1" name="Yellow Talisman of Arcane Haste">
@@ -27,7 +31,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtkSpd" val="8" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtkSpd" val="8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3303" levels="1" name="White Talisman of Bandages">
@@ -109,7 +115,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="cancelVuln" val="100" />
+			<effect name="Buff">
+				<sub order="0x40" stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3310" levels="1" name="Yellow Talisman of Physical Regeneration">
@@ -119,7 +127,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.03" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.03" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3311" levels="1" name="Yellow Talisman of CP Regeneration">
@@ -129,7 +139,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regCp" val="1.03" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regCp" val="1.03" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3312" levels="1" name="Yellow Talisman of Healing">
@@ -139,7 +151,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="healEffect" val="40" />
+			<effect name="Buff">
+				<add order="0x40" stat="healEffect" val="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3313" levels="1" name="Yellow Talisman of Alacrity">
@@ -149,9 +163,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtkSpd" val="5" />
-			<add order="0x40" stat="mAtkSpd" val="4" />
-			<add order="0x40" stat="runSpd" val="3" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtkSpd" val="5" />
+				<add order="0x40" stat="mAtkSpd" val="4" />
+				<add order="0x40" stat="runSpd" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3314" levels="1" name="Grey Talisman of Weight Training">
@@ -161,7 +177,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="weightLimit" val="1.1" />
+			<effect name="Buff">
+				<mul order="0x30" stat="weightLimit" val="1.1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3315" levels="1" name="Grey Talisman of Fishing">
@@ -179,7 +197,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="critDamEvas" val="1.03" />
+			<effect name="Buff">
+				<mul order="0x30" stat="critDamEvas" val="1.03" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3317" levels="1" name="Yellow Talisman of Critical Reduction">
@@ -189,7 +209,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="critAddVuln" val="100" />
+			<effect name="Buff">
+				<sub order="0x40" stat="critAddVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3318" levels="1" name="Flag Display">
@@ -221,7 +243,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.03" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.03" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3321" levels="1" name="Blue Talisman of Evasion">
@@ -238,7 +262,6 @@
 		<set name="mpInitialConsume" val="4" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -254,7 +277,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="1" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3323" levels="1" name="Bronze Bracelet">
@@ -263,7 +288,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="2" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3324" levels="1" name="Steel Bracelet">
@@ -272,7 +299,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="3" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3325" levels="1" name="Mithril Bracelet">
@@ -281,7 +310,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="4" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3326" levels="1" name="Jewelry Bracelet">
@@ -289,7 +320,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="5" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="5" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3327" levels="1" name="Oriharukon Bracelet">
@@ -297,7 +330,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x50" stat="talisman" val="6" />
+			<effect name="Buff">
+				<set order="0x50" stat="talisman" val="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3328" levels="1" name="Double Stab">
@@ -471,7 +506,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -490,7 +524,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -513,7 +546,6 @@
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -589,11 +621,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul order="0x30" stat="healEffect" val="1.03" /> <!-- Received Increased Heal +3% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Darkness resistance is increased +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="13" />
 			</effect>
@@ -606,12 +640,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
-			<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
-			<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- MaxHP +492 -->
+				<add order="0x40" stat="rCrit" val="24.6" /> <!-- Critical Damage Chance +24.6 -->
+				<add order="0x40" stat="cAtkAdd" val="234" /> <!-- Critical Damage +234 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3350" levels="1" name="Dynasty Breast Plate - Force Master">
@@ -621,11 +657,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.054" /> <!-- P. Atk. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- HP +492 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Resistance to Darkness attacks +8 -->
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.95" /> <!-- MP consumption of the active skill is decreased -5% -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3351" levels="1" name="Dynasty Breast Plate - Bard">
@@ -635,11 +673,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.054" /> <!-- P. Def. +5.4% -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 effect -->
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.95" /> <!-- MP consumption is decreased when song and dance skills are used -5% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3352" levels="1" name="Dynasty Leather Armor - Dagger Master">
@@ -649,11 +689,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
-			<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="4.3" /> <!-- Evasion +4.3 -->
+				<add order="0x40" stat="maxHp" val="492" /> <!-- Max HP +492 Effect -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 			<effect name="DefenceTrait">
 				<param HOLD="13" />
 			</effect>
@@ -666,12 +708,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
-			<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
-			<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4.3" /> <!-- Accuracy +4.3 -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 Effect -->
+				<mul order="0x30" stat="pAtkSpd" val="1.0266" /> <!-- Atk. Spd. are increased +2.66% -->
+				<add order="0x40" stat="regMp" val="1.72" /> <!-- MP recovery are increased +1.72 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3354" levels="1" name="Dynasty Tunic - Healer">
@@ -681,12 +725,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="healEffect" val="20" /> <!-- Increase amount of heal +20 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3355" levels="1" name="Dynasty Tunic - Enchanter">
@@ -696,12 +742,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<sub order="0x40" stat="cancel" val="15" /> <!-- Decrease magic cancel rate -15% -->
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.95" /> <!-- Decrease MP consumption -5% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3356" levels="1" name="Dynasty Tunic - Summoner">
@@ -711,12 +759,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
-			<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<mul order="0x30" stat="pDef" val="1.026" /> <!-- P. Def. +2.6% -->
+				<mul order="0x30" stat="pAtk" val="1.026" /> <!-- Increase P. Atk. +2.6% -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3357" levels="1" name="Dynasty Tunic - Wizard">
@@ -726,11 +776,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
-			<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
-			<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
-			<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
-			<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" /> <!-- Casting Spd. +15% -->
+				<mul order="0x30" stat="mAtk" val="1.054" /> <!-- Increase M. Atk +5.4% -->
+				<add order="0x40" stat="maxMp" val="321" /> <!-- Max MP +321 -->
+				<add order="0x40" stat="darkRes" val="8" /> <!-- Dark Resistance +8 -->
+				<add order="0x10" stat="cloak" val="1" /> <!-- Opens cloak slot -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="3358" levels="1" name="Flag Equip">
@@ -741,11 +793,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="runSpd" val="0.2" />
-			<mul order="0x30" stat="pAtkSpd" val="0.2" />
-			<mul order="0x30" stat="pAtk" val="0.2" />
-			<mul order="0x30" stat="mAtkSpd" val="0.2" />
-			<mul order="0x30" stat="mAtk" val="0.2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="runSpd" val="0.2" />
+				<mul order="0x30" stat="pAtkSpd" val="0.2" />
+				<mul order="0x30" stat="pAtk" val="0.2" />
+				<mul order="0x30" stat="mAtkSpd" val="0.2" />
+				<mul order="0x30" stat="mAtk" val="0.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3359" levels="1" name="Transform Native">
@@ -758,7 +812,6 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canTransform="true" />
@@ -776,8 +829,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="0.88" />
+			<effect name="Buff">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.88" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.88" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3361" levels="1" name="Summon Agathion - Fortress">

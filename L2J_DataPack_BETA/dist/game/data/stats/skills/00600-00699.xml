@@ -7,7 +7,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="4" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="601" levels="1" name="Residence Agility">
@@ -17,7 +19,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="4" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="602" levels="1" name="Residence Shield Block">
@@ -27,7 +31,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rShld" val="20" />
+			<effect name="Buff">
+				<add order="0x40" stat="rShld" val="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="603" levels="1" name="Residence Shield Defense">
@@ -37,7 +43,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="sDef" val="225" />
+			<effect name="Buff">
+				<add order="0x40" stat="sDef" val="225" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="604" levels="1" name="Residence Resist Typhoon">
@@ -47,8 +55,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="waterRes" val="10" />
-			<add order="0x40" stat="windRes" val="10" />
+			<effect name="Buff">
+				<add order="0x40" stat="waterRes" val="10" />
+				<add order="0x40" stat="windRes" val="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="605" levels="1" name="Residence Resist Lava">
@@ -58,8 +68,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="10" />
-			<add order="0x40" stat="earthRes" val="10" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="10" />
+				<add order="0x40" stat="earthRes" val="10" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="606" levels="1" name="Residence Fortitude">
@@ -105,7 +117,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="6" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="610" levels="1" name="Residence Death Fortune">
@@ -126,9 +140,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="17.3" />
-			<add order="0x40" stat="rCrit" val="#rCrit" />
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="17.3" />
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="612" levels="3" name="Water Squad">
@@ -140,9 +156,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="27.3" />
-			<add order="0x40" stat="mDef" val="#mDef" />
-			<mul order="0x30" stat="sDef" val="#sDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="27.3" />
+				<add order="0x40" stat="mDef" val="#mDef" />
+				<mul order="0x30" stat="sDef" val="#sDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="613" levels="3" name="Wind Squad">
@@ -154,9 +172,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="2" />
-			<add order="0x40" stat="rEvas" val="#rEvas" />
-			<add order="0x40" stat="runSpd" val="#runSpd" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="2" />
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="614" levels="3" name="Earth Squad">
@@ -167,7 +187,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mDef" val="#mDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="#mDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="615" levels="3" name="Holy Squad">
@@ -179,11 +201,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="healEffect" val="20" />
-			<mul order="0x30" stat="maxMp" val="#maxMp" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
+			<effect name="Buff">
+				<add order="0x40" stat="healEffect" val="20" />
+				<mul order="0x30" stat="maxMp" val="#maxMp" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#MpConsumeRate" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="#MpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="616" levels="3" name="Dark Squad">
@@ -195,8 +219,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<basemul order="0x30" stat="mCritRate" val="#mCritRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="617" levels="1" name="Transform Onyx Beast">
@@ -210,7 +236,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -234,7 +259,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -329,7 +353,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -416,16 +439,22 @@
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="#rCrit" />
-			<add order="0x40" stat="cAtkAdd" val="#cAtk" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#rCrit" />
+				<add order="0x40" stat="cAtkAdd" val="#cAtk" />
+			</effect>
 		</for>
 		<enchant1for>
-			<basemul order="0x30" stat="rCrit" val="#ench1rCrit" />
-			<add order="0x40" stat="cAtkAdd" val="317" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#ench1rCrit" />
+				<add order="0x40" stat="cAtkAdd" val="317" />
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<basemul order="0x30" stat="rCrit" val="0.25" />
-			<add order="0x40" stat="cAtkAdd" val="#ench2cAtk" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.25" />
+				<add order="0x40" stat="cAtkAdd" val="#ench2cAtk" />
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="627" levels="40" name="Soul Shock" enchantGroup1="2" enchantGroup2="2" enchantGroup3="2" enchantGroup4="2">
@@ -495,7 +524,6 @@
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
 		<set name="simultaneousCast" val="true" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Blink" />
@@ -548,49 +576,35 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkSBP">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkDual">
-				<using kind="Dual Sword,Dual Fist" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkDagger">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkBow">
-				<using kind="Bow" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkCBow">
-				<using kind="Crossbow" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkDSword">
-				<using kind="Big Sword" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkDBlunt">
-				<using kind="Big Sword" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkRapier">
-				<using kind="Rapier" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pAtk" val="#pAtkAncient">
-				<using kind="Ancient" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtkSBP">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkDual">
+					<using kind="Dual Sword,Dual Fist" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkDagger">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkBow">
+					<using kind="Bow" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkCBow">
+					<using kind="Crossbow" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkDSword">
+					<using kind="Big Sword" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkDBlunt">
+					<using kind="Big Sword" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkRapier">
+					<using kind="Rapier" />
+				</add>
+				<add order="0x40" stat="pAtk" val="#pAtkAncient">
+					<using kind="Ancient" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="632" levels="6" name="Emergent Ability - Defense">
@@ -605,19 +619,17 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDefHeavy">
-				<using kind="Heavy" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pDef" val="#pDefLight">
-				<using kind="Light" />
-			</add>
-		</for>
-		<for>
-			<add order="0x40" stat="pDef" val="#pDefRobe">
-				<using kind="Magic" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDefHeavy">
+					<using kind="Heavy" />
+				</add>
+				<add order="0x40" stat="pDef" val="#pDefLight">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="pDef" val="#pDefRobe">
+					<using kind="Magic" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="633" levels="6" name="Emergent Ability - Empower">
@@ -630,7 +642,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#matk" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#matk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="634" levels="6" name="Emergent Ability - Magic Defense">
@@ -643,7 +657,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mDef" val="#mdef" />
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="#mdef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="635" levels="3" name="Not In Use">
@@ -672,30 +688,32 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="22.9">
-				<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
-			</add>
-			<add order="0x40" stat="pAtk" val="27.9">
-				<using kind="Dual Sword,Dual Fist" />
-			</add>
-			<add order="0x40" stat="pAtk" val="20.1">
-				<using kind="Dagger,Dual Dagger" />
-			</add>
-			<add order="0x40" stat="pAtk" val="59.2">
-				<using kind="Bow" />
-			</add>
-			<add order="0x40" stat="pAtk" val="36.3">
-				<using kind="Crossbow" />
-			</add>
-			<add order="0x40" stat="pAtk" val="5">
-				<using kind="Big Sword" />
-			</add>
-			<add order="0x40" stat="pAtk" val="21.4">
-				<using kind="Rapier" />
-			</add>
-			<add order="0x40" stat="pAtk" val="24.8">
-				<using kind="Ancient" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="22.9">
+					<using kind="Sword,Big Sword,Blunt,Big Blunt,Pole" />
+				</add>
+				<add order="0x40" stat="pAtk" val="27.9">
+					<using kind="Dual Sword,Dual Fist" />
+				</add>
+				<add order="0x40" stat="pAtk" val="20.1">
+					<using kind="Dagger,Dual Dagger" />
+				</add>
+				<add order="0x40" stat="pAtk" val="59.2">
+					<using kind="Bow" />
+				</add>
+				<add order="0x40" stat="pAtk" val="36.3">
+					<using kind="Crossbow" />
+				</add>
+				<add order="0x40" stat="pAtk" val="5">
+					<using kind="Big Sword" />
+				</add>
+				<add order="0x40" stat="pAtk" val="21.4">
+					<using kind="Rapier" />
+				</add>
+				<add order="0x40" stat="pAtk" val="24.8">
+					<using kind="Ancient" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="638" levels="1" name="Master Ability - Empower">
@@ -706,7 +724,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="28.65" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="28.65" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="639" levels="1" name="Master Ability - Casting">
@@ -717,7 +737,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtkSpd" val="11" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtkSpd" val="11" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="640" levels="1" name="Master Ability - Focus">
@@ -728,7 +750,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="30" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="30" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="641" levels="1" name="Knight Ability - Boost HP">
@@ -739,7 +763,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="295.32" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="295.32" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="642" levels="1" name="Enchanter Ability - Boost Mana">
@@ -750,7 +776,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="148.2" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="148.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="643" levels="1" name="Summoner Ability - Boost HP/MP">
@@ -761,8 +789,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="147.66" />
-			<add order="0x40" stat="maxMp" val="74.1" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="147.66" />
+				<add order="0x40" stat="maxMp" val="74.1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="644" levels="1" name="Rogue Ability - Evasion">
@@ -784,9 +814,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtkRange" val="100">
-				<using kind="Bow" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtkRange" val="100">
+					<using kind="Bow" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="646" levels="1" name="Wizard Ability - Mana Gain">
@@ -797,7 +829,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="manaCharge" val="20" />
+			<effect name="Buff">
+				<add order="0x40" stat="manaCharge" val="20" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="647" levels="1" name="Enchanter Ability - Mana Recovery">
@@ -808,7 +842,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.1" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="648" levels="1" name="Healer Ability - Prayer">
@@ -819,7 +855,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.06" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.06" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="650" levels="1" name="Warrior Ability - Resist Trait">
@@ -920,7 +958,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -944,7 +981,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -968,7 +1004,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -992,7 +1027,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1016,7 +1050,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1040,7 +1073,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1064,7 +1096,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1086,7 +1117,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1111,7 +1141,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1136,7 +1165,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1161,7 +1189,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1186,7 +1213,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1211,7 +1237,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1236,7 +1261,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1261,7 +1285,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1286,7 +1309,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1311,7 +1333,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1336,7 +1357,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1361,7 +1381,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1442,7 +1461,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="45000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1463,7 +1481,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1594,7 +1611,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff" abnormalVisualEffect="invulnerable">
@@ -1617,7 +1633,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1744,7 +1759,6 @@
 		<set name="mpConsume" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -1765,7 +1779,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1915,7 +1928,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
