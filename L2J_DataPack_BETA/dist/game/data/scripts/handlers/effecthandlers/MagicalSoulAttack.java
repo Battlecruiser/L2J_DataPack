@@ -53,14 +53,14 @@ public final class MagicalSoulAttack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -109,6 +109,5 @@ public final class MagicalSoulAttack extends AbstractEffect
 				activeChar.sendDamageMessage(target, damage, mcrit, false, false);
 			}
 		}
-		return true;
 	}
 }

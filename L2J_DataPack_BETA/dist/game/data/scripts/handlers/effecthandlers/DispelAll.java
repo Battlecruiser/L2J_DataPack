@@ -48,9 +48,8 @@ public final class DispelAll extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().stopAllEffects();
-		return true;
 	}
 }

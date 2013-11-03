@@ -109,12 +109,12 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				break;
 			case "32325-09.html":
 				st.setCond(5, true);
-				BLESSING_OF_FIRE.getSkill().applyEffects(player, null, player, null, false, false);
+				BLESSING_OF_FIRE.getSkill().applyEffects(player, player);
 				giveItems(player, YINSWORD, 1, Elementals.FIRE, 10);
 				break;
 			case "32326-09.html":
 				st.setCond(10, true);
-				BLESSING_OF_EARTH.getSkill().applyEffects(player, null, player, null, false, false);
+				BLESSING_OF_EARTH.getSkill().applyEffects(player, player);
 				giveItems(player, YANGSWORD, 1, Elementals.EARTH, 10);
 				break;
 		}

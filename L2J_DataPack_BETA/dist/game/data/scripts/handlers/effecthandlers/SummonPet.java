@@ -60,44 +60,44 @@ public final class SummonPet extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return false;
+			return;
 		}
 		
 		if ((player.hasSummon() || player.isMounted()))
 		{
 			player.sendPacket(SystemMessageId.YOU_ALREADY_HAVE_A_PET);
-			return false;
+			return;
 		}
 		
 		final PetItemHolder holder = player.removeScript(PetItemHolder.class);
 		if (holder == null)
 		{
 			_log.log(Level.WARNING, "Summoning pet without attaching PetItemHandler!", new Throwable());
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance item = holder.getItem();
 		if (player.getInventory().getItemByObjectId(item.getObjectId()) != item)
 		{
 			_log.log(Level.WARNING, "Player: " + player + " is trying to summon pet from item that he doesn't owns.");
-			return false;
+			return;
 		}
 		
 		final L2PetData petData = PetDataTable.getInstance().getPetDataByItemId(item.getId());
 		if ((petData == null) || (petData.getNpcId() == -1))
 		{
-			return false;
+			return;
 		}
 		
 		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(petData.getNpcId());
@@ -138,6 +138,5 @@ public final class SummonPet extends AbstractEffect
 		
 		pet.getOwner().sendPacket(new PetItemList(pet.getInventory().getItems()));
 		pet.broadcastStatusUpdate();
-		return true;
 	}
 }

@@ -44,20 +44,20 @@ public final class OpenCommonRecipeBook extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffector().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player.getPrivateStoreType() != L2PcInstance.STORE_PRIVATE_NONE)
 		{
 			player.sendPacket(SystemMessageId.CANNOT_CREATED_WHILE_ENGAGED_IN_TRADING);
-			return false;
+			return;
 		}
+		
 		RecipeController.getInstance().requestBookOpen(player, false);
-		return true;
 	}
 }

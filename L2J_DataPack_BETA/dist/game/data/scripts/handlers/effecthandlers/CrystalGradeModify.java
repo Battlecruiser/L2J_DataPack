@@ -36,6 +36,12 @@ public final class CrystalGradeModify extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		final L2PcInstance player = info.getEffected().getActingPlayer();
@@ -46,14 +52,8 @@ public final class CrystalGradeModify extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		final L2PcInstance player = info.getEffected().getActingPlayer();
-		if (player != null)
-		{
-			player.setExpertisePenaltyBonus((int) getValue());
-			return true;
-		}
-		return false;
+		info.getEffected().getActingPlayer().setExpertisePenaltyBonus((int) getValue());
 	}
 }

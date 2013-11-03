@@ -53,7 +53,7 @@ public final class MagicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
@@ -61,7 +61,7 @@ public final class MagicalAttack extends AbstractEffect
 		// TODO: Unhardcode Cubic Skill to avoid double damage
 		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4049))
 		{
-			return false;
+			return;
 		}
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -102,6 +102,5 @@ public final class MagicalAttack extends AbstractEffect
 		{
 			activeChar.doDie(activeChar);
 		}
-		return true;
 	}
 }

@@ -62,15 +62,8 @@ public final class BlockBuffSlot extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (_blockBuffSlots.isEmpty())
-		{
-			return false;
-		}
-		
 		info.getEffected().getEffectList().addBlockedBuffSlots(_blockBuffSlots);
-		
-		return true;
 	}
 }

@@ -57,18 +57,18 @@ public final class Lethal extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		if (activeChar.isPlayer() && !activeChar.getAccessLevel().canGiveDamage())
 		{
-			return false;
+			return;
 		}
 		
 		if (!target.isLethalable() || target.isInvul())
 		{
-			return false;
+			return;
 		}
 		
 		double levelBonus = Formulas.calcLvlBonusMod(activeChar, target, info.getSkill());
@@ -109,6 +109,5 @@ public final class Lethal extends AbstractEffect
 			}
 			activeChar.sendPacket(SystemMessageId.HALF_KILL);
 		}
-		return true;
 	}
 }

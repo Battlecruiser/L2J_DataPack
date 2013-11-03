@@ -96,7 +96,7 @@ public class EventItem implements IItemHandler
 				final int enemyTeam = holder.getPlayerTeam(pc);
 				if ((enemyTeam != -1) && (enemyTeam != team))
 				{
-					sk.applyEffects(castor, null, pc, null, false, false);
+					sk.applyEffects(castor, pc);
 				}
 			}
 			return true;

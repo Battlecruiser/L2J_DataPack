@@ -51,7 +51,7 @@ public final class HpDrain extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
@@ -59,7 +59,7 @@ public final class HpDrain extends AbstractEffect
 		// TODO: Unhardcode Cubic Skill to avoid double damage
 		if (activeChar.isAlikeDead() || (info.getSkill().getId() == 4050))
 		{
-			return false;
+			return;
 		}
 		
 		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
@@ -101,6 +101,5 @@ public final class HpDrain extends AbstractEffect
 			target.reduceCurrentHp(damage, activeChar, info.getSkill());
 			target.notifyDamageReceived(damage, activeChar, info.getSkill(), mcrit);
 		}
-		return true;
 	}
 }

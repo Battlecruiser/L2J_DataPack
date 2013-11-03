@@ -51,25 +51,24 @@ public final class Spoil extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isMonster() || info.getEffected().isDead())
 		{
 			info.getEffector().sendPacket(SystemMessageId.INCORRECT_TARGET);
-			return false;
+			return;
 		}
 		
 		final L2MonsterInstance target = (L2MonsterInstance) info.getEffected();
 		if (target.isSpoil())
 		{
 			info.getEffector().sendPacket(SystemMessageId.ALREADY_SPOILED);
-			return false;
+			return;
 		}
 		
 		target.setSpoil(true);
 		target.setIsSpoiledBy(info.getEffector().getObjectId());
 		info.getEffector().sendPacket(SystemMessageId.SPOIL_SUCCESS);
 		target.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, info.getEffector());
-		return true;
 	}
 }

@@ -18,8 +18,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.logging.Logger;
-
 import com.l2jserver.gameserver.enums.InstanceType;
 import com.l2jserver.gameserver.handler.ITargetTypeHandler;
 import com.l2jserver.gameserver.handler.TargetHandler;
@@ -29,7 +27,6 @@ import com.l2jserver.gameserver.model.actor.L2Character;
 import com.l2jserver.gameserver.model.actor.events.listeners.IDamageReceivedEventListener;
 import com.l2jserver.gameserver.model.conditions.Condition;
 import com.l2jserver.gameserver.model.effects.AbstractEffect;
-import com.l2jserver.gameserver.model.effects.L2EffectType;
 import com.l2jserver.gameserver.model.holders.SkillHolder;
 import com.l2jserver.gameserver.model.skills.BuffInfo;
 import com.l2jserver.gameserver.model.skills.L2Skill;
@@ -42,8 +39,6 @@ import com.l2jserver.util.Rnd;
  */
 public class TriggerSkillByDamage extends AbstractEffect implements IDamageReceivedEventListener
 {
-	private static final Logger _log = Logger.getLogger(TriggerSkillByDamage.class.getName());
-	
 	private final int _minAttackerLevel;
 	private final int _maxAttackerLevel;
 	private final int _minDamage;
@@ -65,14 +60,13 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	}
 	
 	@Override
-	public L2EffectType getEffectType()
-	{
-		return L2EffectType.NONE;
-	}
-	
-	@Override
 	public void onDamageReceivedEvent(L2Character attacker, L2Character target, double damage, L2Skill skill, boolean crit)
 	{
+		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
+		{
+			return;
+		}
+		
 		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
 		if (targetHandler == null)
 		{
@@ -115,23 +109,12 @@ public class TriggerSkillByDamage extends AbstractEffect implements IDamageRecei
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
-		{
-			return;
-		}
-		
 		info.getEffected().getEvents().unregisterListener(this);
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((_chance == 0) || (_skill.getSkillLvl() == 0))
-		{
-			return false;
-		}
-		
 		info.getEffected().getEvents().registerListener(this);
-		return true;
 	}
 }

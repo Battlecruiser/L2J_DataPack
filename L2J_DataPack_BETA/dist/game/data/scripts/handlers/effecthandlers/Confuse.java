@@ -75,7 +75,7 @@ public final class Confuse extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_CONFUSED);
 		
@@ -98,6 +98,5 @@ public final class Confuse extends AbstractEffect
 			info.getEffected().setTarget(target);
 			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 		}
-		return true;
 	}
 }

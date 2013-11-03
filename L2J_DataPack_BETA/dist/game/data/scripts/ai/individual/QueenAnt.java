@@ -316,7 +316,7 @@ public class QueenAnt extends AbstractNpcAI
 			if (curse != null)
 			{
 				npc.broadcastPacket(new MagicSkillUse(npc, character, curse.getId(), curse.getLevel(), 300, 0));
-				curse.applyEffects(npc, null, character, null, false, false);
+				curse.applyEffects(npc, character);
 			}
 			
 			((L2Attackable) npc).stopHating(character); // for calling again

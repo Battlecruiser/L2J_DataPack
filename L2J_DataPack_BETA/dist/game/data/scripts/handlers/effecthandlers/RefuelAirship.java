@@ -49,11 +49,10 @@ public final class RefuelAirship extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		final L2AirShipInstance ship = info.getEffector().getActingPlayer().getAirShip();
 		ship.setFuel(ship.getFuel() + (int) getValue());
 		ship.updateAbnormalEffect();
-		return true;
 	}
 }

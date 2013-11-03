@@ -42,13 +42,13 @@ public final class ConsumeBody extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffected().isNpc())
 		{
-			return false;
+			return;
 		}
+		
 		((L2Npc) info.getEffected()).endDecayTask();
-		return true;
 	}
 }

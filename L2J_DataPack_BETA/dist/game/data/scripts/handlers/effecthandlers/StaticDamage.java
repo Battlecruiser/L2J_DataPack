@@ -48,11 +48,11 @@ public final class StaticDamage extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffector().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		info.getEffected().reduceCurrentHp(getValue(), info.getEffector(), info.getSkill());
@@ -62,6 +62,5 @@ public final class StaticDamage extends AbstractEffect
 		{
 			info.getEffector().sendDamageMessage(info.getEffected(), (int) getValue(), false, false, false);
 		}
-		return true;
 	}
 }

@@ -59,13 +59,13 @@ public final class EnergyAttack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		boolean ss = info.getSkill().isPhysical() && activeChar.isChargedShot(ShotType.SOULSHOTS);
@@ -102,6 +102,5 @@ public final class EnergyAttack extends AbstractEffect
 		{
 			activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 		}
-		return true;
 	}
 }

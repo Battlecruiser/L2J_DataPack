@@ -50,12 +50,13 @@ public final class MpByLevel extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null))
 		{
-			return false;
+			return;
 		}
+		
 		// Calculation
 		final int abs = (int) getValue();
 		final double absorb = ((info.getEffected().getCurrentMp() + abs) > info.getEffected().getMaxMp() ? info.getEffected().getMaxMp() : (info.getEffected().getCurrentMp() + abs));
@@ -65,6 +66,5 @@ public final class MpByLevel extends AbstractEffect
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MP_RESTORED);
 		sm.addNumber(restored);
 		info.getEffected().sendPacket(sm);
-		return true;
 	}
 }

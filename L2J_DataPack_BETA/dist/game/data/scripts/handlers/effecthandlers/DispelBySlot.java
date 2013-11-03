@@ -74,11 +74,11 @@ public final class DispelBySlot extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (_dispelAbnormals.isEmpty())
 		{
-			return false;
+			return;
 		}
 		
 		final L2Character effected = info.getEffected();
@@ -109,6 +109,5 @@ public final class DispelBySlot extends AbstractEffect
 				effectList.stopSkillEffects(true, entry.getKey());
 			}
 		}
-		return true;
 	}
 }

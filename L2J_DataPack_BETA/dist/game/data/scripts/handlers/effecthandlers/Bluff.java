@@ -56,16 +56,15 @@ public final class Bluff extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() instanceof L2NpcInstance) || ((info.getEffected().isNpc()) && (info.getEffected().getId() == 35062)) || (info.getEffected() instanceof L2SiegeSummonInstance))
+		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected().isNpc() && (info.getEffected().getId() == 35062)) || (info.getEffected() instanceof L2SiegeSummonInstance))
 		{
-			return false;
+			return;
 		}
 		
 		info.getEffected().broadcastPacket(new StartRotation(info.getEffected().getObjectId(), info.getEffected().getHeading(), 1, 65535));
 		info.getEffected().broadcastPacket(new StopRotation(info.getEffected().getObjectId(), info.getEffector().getHeading(), 65535));
 		info.getEffected().setHeading(info.getEffector().getHeading());
-		return true;
 	}
 }

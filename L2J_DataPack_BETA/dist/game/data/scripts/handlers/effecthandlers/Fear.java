@@ -49,6 +49,16 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || (info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected() instanceof L2SiegeSummonInstance))
+		{
+			return false;
+		}
+		return !info.getEffected().isAfraid();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.FEAR.getMask();
@@ -99,18 +109,8 @@ public final class Fear extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() instanceof L2NpcInstance) || (info.getEffected() instanceof L2DefenderInstance) || (info.getEffected() instanceof L2FortCommanderInstance) || (info.getEffected() instanceof L2SiegeFlagInstance) || (info.getEffected() instanceof L2SiegeSummonInstance))
-		{
-			return false;
-		}
-		
-		if (info.getEffected().isAfraid())
-		{
-			return false;
-		}
-		
 		if (info.getEffected().isCastingNow() && info.getEffected().canAbortCast())
 		{
 			info.getEffected().abortCast();
@@ -118,6 +118,5 @@ public final class Fear extends AbstractEffect
 		
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_AFRAID);
 		onActionTime(info);
-		return true;
 	}
 }

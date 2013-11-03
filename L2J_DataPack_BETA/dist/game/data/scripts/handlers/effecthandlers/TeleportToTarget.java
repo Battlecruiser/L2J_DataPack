@@ -57,13 +57,13 @@ public final class TeleportToTarget extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character activeChar = info.getEffector();
 		L2Character target = info.getEffected();
 		if (target == null)
 		{
-			return false;
+			return;
 		}
 		
 		int x = 0, y = 0, z = 0;
@@ -94,6 +94,5 @@ public final class TeleportToTarget extends AbstractEffect
 		activeChar.abortCast();
 		activeChar.setXYZ(loc.getX(), loc.getY(), loc.getZ());
 		activeChar.broadcastPacket(new ValidateLocation(activeChar));
-		return true;
 	}
 }

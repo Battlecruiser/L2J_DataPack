@@ -53,23 +53,23 @@ public final class RestorationRandom extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		final L2ExtractableSkill exSkill = info.getSkill().getExtractableSkill();
 		if (exSkill == null)
 		{
-			return false;
+			return;
 		}
 		
 		if (exSkill.getProductItems().isEmpty())
 		{
 			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		final double rndNum = 100 * Rnd.nextDouble();
@@ -101,7 +101,7 @@ public final class RestorationRandom extends AbstractEffect
 		if (creationList.isEmpty())
 		{
 			player.sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
-			return false;
+			return;
 		}
 		
 		for (ItemHolder item : creationList)
@@ -112,6 +112,5 @@ public final class RestorationRandom extends AbstractEffect
 			}
 			player.addItem("Extract", item.getId(), (long) (item.getCount() * Config.RATE_EXTRACTABLE), info.getEffector(), true);
 		}
-		return true;
 	}
 }

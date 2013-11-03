@@ -35,14 +35,14 @@ public final class EnlargeAbnormalSlot extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(BuffInfo info)
+	public boolean canStart(BuffInfo info)
 	{
-		return info.getSkill().isPassive();
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public boolean onActionTime(BuffInfo info)
 	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
+		return info.getSkill().isPassive();
 	}
 }

@@ -36,20 +36,20 @@ public final class Disarm extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.DISARMED.getMask();
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isPlayer())
-		{
-			return false;
-		}
-		
 		info.getEffected().getActingPlayer().disarmWeapons();
-		return true;
 	}
 }

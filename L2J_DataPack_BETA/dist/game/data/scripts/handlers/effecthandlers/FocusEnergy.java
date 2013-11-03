@@ -41,13 +41,13 @@ public final class FocusEnergy extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
+		
 		info.getEffected().getActingPlayer().increaseCharges(1, (int) getValue());
-		return true;
 	}
 }

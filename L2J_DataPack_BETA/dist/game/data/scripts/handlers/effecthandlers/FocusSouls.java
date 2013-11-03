@@ -44,11 +44,11 @@ public final class FocusSouls extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance target = info.getEffected().getActingPlayer();
@@ -64,9 +64,7 @@ public final class FocusSouls extends AbstractEffect
 			else
 			{
 				target.sendPacket(SystemMessageId.SOUL_CANNOT_BE_INCREASED_ANYMORE);
-				return false;
 			}
 		}
-		return true;
 	}
 }

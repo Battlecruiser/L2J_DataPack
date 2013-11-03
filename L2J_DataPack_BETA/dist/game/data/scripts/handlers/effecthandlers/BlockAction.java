@@ -60,6 +60,12 @@ public final class BlockAction extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public boolean checkCondition(Object id)
 	{
 		return !_blockedActions.contains(id);
@@ -79,13 +85,8 @@ public final class BlockAction extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
-		{
-			return false;
-		}
-		
 		if (_blockedActions.contains(BotReportTable.PARTY_ACTION_BLOCK_ID))
 		{
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "block action debuff", "system", true));
@@ -95,7 +96,5 @@ public final class BlockAction extends AbstractEffect
 		{
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, 0, "block action debuff", "system", true));
 		}
-		
-		return true;
 	}
 }

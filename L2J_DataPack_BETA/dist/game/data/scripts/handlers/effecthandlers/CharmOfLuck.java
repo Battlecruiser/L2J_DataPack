@@ -37,6 +37,12 @@ public final class CharmOfLuck extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.CHARM_OF_LUCK.getMask();
@@ -46,11 +52,5 @@ public final class CharmOfLuck extends AbstractEffect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.CHARM_OF_LUCK;
-	}
-	
-	@Override
-	public boolean onStart(BuffInfo info)
-	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 }

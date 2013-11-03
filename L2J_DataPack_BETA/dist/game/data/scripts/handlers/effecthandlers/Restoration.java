@@ -48,18 +48,18 @@ public final class Restoration extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayable())
 		{
-			return false;
+			return;
 		}
 		
 		if ((_itemId <= 0) || (_itemCount <= 0))
 		{
 			info.getEffected().sendPacket(SystemMessageId.NOTHING_INSIDE_THAT);
 			_log.warning(Restoration.class.getSimpleName() + " effect with wrong item Id/count: " + _itemId + "/" + _itemCount + "!");
-			return false;
+			return;
 		}
 		
 		if (info.getEffected().isPlayer())
@@ -71,6 +71,5 @@ public final class Restoration extends AbstractEffect
 			info.getEffected().getInventory().addItem("Skill", _itemId, _itemCount, info.getEffected().getActingPlayer(), info.getEffector());
 			info.getEffected().getActingPlayer().sendPacket(new PetItemList(info.getEffected().getInventory().getItems()));
 		}
-		return true;
 	}
 }

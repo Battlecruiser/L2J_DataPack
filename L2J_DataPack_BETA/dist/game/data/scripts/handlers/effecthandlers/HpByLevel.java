@@ -50,12 +50,13 @@ public final class HpByLevel extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffector() == null)
 		{
-			return false;
+			return;
 		}
+		
 		// Calculation
 		final int abs = (int) getValue();
 		final double absorb = ((info.getEffector().getCurrentHp() + abs) > info.getEffector().getMaxHp() ? info.getEffector().getMaxHp() : (info.getEffector().getCurrentHp() + abs));
@@ -65,6 +66,5 @@ public final class HpByLevel extends AbstractEffect
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HP_RESTORED);
 		sm.addNumber(restored);
 		info.getEffector().sendPacket(sm);
-		return true;
 	}
 }

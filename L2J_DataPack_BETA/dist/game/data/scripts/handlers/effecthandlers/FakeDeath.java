@@ -81,9 +81,8 @@ public final class FakeDeath extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startFakeDeath();
-		return true;
 	}
 }

@@ -41,14 +41,13 @@ public final class GiveSp extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		info.getEffector().getActingPlayer().addExpAndSp(0, (int) getValue());
-		return true;
 	}
 }

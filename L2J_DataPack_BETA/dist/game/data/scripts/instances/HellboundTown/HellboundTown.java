@@ -193,7 +193,7 @@ public class HellboundTown extends Quest
 			{
 				if (event.equalsIgnoreCase("rebuff") && !world.isAmaskariDead)
 				{
-					STONE.getSkill().applyEffects(npc, null, npc, null, false, false);
+					STONE.getSkill().applyEffects(npc, npc);
 				}
 				else if (event.equalsIgnoreCase("break_chains"))
 				{
@@ -238,7 +238,7 @@ public class HellboundTown extends Quest
 		{
 			((L2QuestGuardInstance) npc).setPassive(true);
 			((L2QuestGuardInstance) npc).setAutoAttackable(false);
-			STONE.getSkill().applyEffects(npc, null, npc, null, false, false);
+			STONE.getSkill().applyEffects(npc, npc);
 			startQuestTimer("rebuff", 357000, npc, null);
 		}
 		else if ((npc.getId() == TOWN_GUARD) || (npc.getId() == KEYMASTER))

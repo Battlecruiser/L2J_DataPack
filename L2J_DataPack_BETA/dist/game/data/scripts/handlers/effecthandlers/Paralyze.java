@@ -61,11 +61,10 @@ public final class Paralyze extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_1);
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffector());
 		info.getEffected().startParalyze();
-		return true;
 	}
 }

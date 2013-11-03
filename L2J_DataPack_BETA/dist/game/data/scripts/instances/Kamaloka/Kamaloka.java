@@ -1693,7 +1693,7 @@ public class Kamaloka extends Quest
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.applyEffects(world.boss, null, world.boss, null, false, false);
+								skill.applyEffects(world.boss, world.boss);
 							}
 						}
 					}
@@ -1734,7 +1734,7 @@ public class Kamaloka extends Quest
 							final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 							if (skill != null)
 							{
-								skill.applyEffects(world.boss, null, world.boss, null, false, false);
+								skill.applyEffects(world.boss, world.boss);
 							}
 						}
 					}
@@ -1757,7 +1757,7 @@ public class Kamaloka extends Quest
 						final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
 						if (skill != null)
 						{
-							skill.applyEffects(world.boss, null, world.boss, null, false, false);
+							skill.applyEffects(world.boss, world.boss);
 						}
 					}
 				}

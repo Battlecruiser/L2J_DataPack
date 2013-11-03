@@ -49,7 +49,7 @@ public final class CpDamPercent extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
@@ -77,8 +77,6 @@ public final class CpDamPercent extends AbstractEffect
 			}
 			// Check if damage should be reflected
 			Formulas.calcDamageReflected(info.getEffector(), info.getEffected(), info.getSkill(), false);
-			return true;
 		}
-		return false;
 	}
 }

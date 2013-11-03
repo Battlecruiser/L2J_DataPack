@@ -63,30 +63,30 @@ public final class SummonNpc extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
 		{
-			return false;
+			return;
 		}
 		
 		if ((_npcId <= 0) || (_npcCount <= 0))
 		{
 			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isMounted())
 		{
-			return false;
+			return;
 		}
 		
 		final L2NpcTemplate npcTemplate = NpcTable.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
 			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		switch (npcTemplate.getType())
@@ -142,7 +142,7 @@ public final class SummonNpc extends AbstractEffect
 				catch (Exception e)
 				{
 					_log.warning(SummonNpc.class.getSimpleName() + ": " + e.getMessage());
-					return false;
+					return;
 				}
 				
 				int x = player.getX();
@@ -170,6 +170,5 @@ public final class SummonNpc extends AbstractEffect
 				npc.setIsRunning(false); // TODO: Fix broadcast info.
 			}
 		}
-		return true;
 	}
 }

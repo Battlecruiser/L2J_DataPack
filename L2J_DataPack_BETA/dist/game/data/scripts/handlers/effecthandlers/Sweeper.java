@@ -46,34 +46,34 @@ public final class Sweeper extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isL2Attackable())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2Attackable monster = (L2Attackable) info.getEffected();
 		if (!monster.checkSpoilOwner(player, false))
 		{
-			return false;
+			return;
 		}
 		
 		if (monster.isOldCorpse(player, MAX_SWEEPER_TIME, false))
 		{
-			return false;
+			return;
 		}
 		
 		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
 		{
-			return false;
+			return;
 		}
 		
-		ItemHolder[] items = monster.takeSweep();
+		final ItemHolder[] items = monster.takeSweep();
 		if ((items == null) || (items.length == 0))
 		{
-			return false;
+			return;
 		}
 		
 		for (ItemHolder item : items)
@@ -87,6 +87,5 @@ public final class Sweeper extends AbstractEffect
 				player.addItem("Sweeper", item, info.getEffected(), true);
 			}
 		}
-		return true;
 	}
 }

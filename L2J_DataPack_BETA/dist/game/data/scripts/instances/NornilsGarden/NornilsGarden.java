@@ -202,19 +202,19 @@ public class NornilsGarden extends Quest
 	{
 		if (skill1 != null)
 		{
-			skill1.applyEffects(ch, null, ch, null, false, false);
+			skill1.applyEffects(ch, ch);
 		}
 		if (skill2 != null)
 		{
-			skill2.applyEffects(ch, null, ch, null, false, false);
+			skill2.applyEffects(ch, ch);
 		}
 		if (skill3 != null)
 		{
-			skill3.applyEffects(ch, null, ch, null, false, false);
+			skill3.applyEffects(ch, ch);
 		}
 		if (skill4 != null)
 		{
-			skill4.applyEffects(ch, null, ch, null, false, false);
+			skill4.applyEffects(ch, ch);
 		}
 	}
 	

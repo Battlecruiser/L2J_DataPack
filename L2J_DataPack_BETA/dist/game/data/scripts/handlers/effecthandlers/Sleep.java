@@ -59,12 +59,11 @@ public final class Sleep extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().abortAttack();
 		info.getEffected().abortCast();
 		info.getEffected().stopMove(null);
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_SLEEPING);
-		return true;
 	}
 }

@@ -52,10 +52,9 @@ public final class ChanceSkillTrigger extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().addChanceTrigger(this);
 		info.getEffected().onStartChanceEffect(info.getSkill().getElement());
-		return true;
 	}
 }

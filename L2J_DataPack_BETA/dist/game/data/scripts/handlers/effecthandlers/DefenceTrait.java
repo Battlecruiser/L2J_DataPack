@@ -92,7 +92,7 @@ public final class DefenceTrait extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getDefenceTraits())
@@ -110,6 +110,5 @@ public final class DefenceTrait extends AbstractEffect
 				}
 			}
 		}
-		return true;
 	}
 }

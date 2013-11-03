@@ -43,11 +43,11 @@ public final class EnemyCharge extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isMovementDisabled())
 		{
-			return false;
+			return;
 		}
 		
 		// Get current position of the L2Character
@@ -63,7 +63,7 @@ public final class EnemyCharge extends AbstractEffect
 		if (distance > 2000)
 		{
 			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
-			return false;
+			return;
 		}
 		int offset = Math.max((int) distance - info.getSkill().getFlyRadius(), 30);
 		
@@ -81,7 +81,7 @@ public final class EnemyCharge extends AbstractEffect
 		// If no distance
 		if ((distance < 1) || ((distance - offset) <= 0))
 		{
-			return false;
+			return;
 		}
 		
 		// Calculate movement angles needed
@@ -104,7 +104,5 @@ public final class EnemyCharge extends AbstractEffect
 		// maybe is need force set X,Y,Z
 		info.getEffector().setXYZ(x, y, z);
 		info.getEffector().broadcastPacket(new ValidateLocation(info.getEffector()));
-		
-		return true;
 	}
 }

@@ -65,23 +65,23 @@ public final class SummonCubic extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
 		{
-			return false;
+			return;
 		}
 		
 		if (_cubicId < 0)
 		{
 			_log.warning(SummonCubic.class.getSimpleName() + ": Invalid Cubic ID:" + _cubicId + " in skill ID: " + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
-			return false;
+			return;
 		}
 		
 		// Gnacik: TODO: Make better method of calculation.
@@ -132,6 +132,5 @@ public final class SummonCubic extends AbstractEffect
 		// Adding a new cubic.
 		player.addCubic(_cubicId, _cubicSkillLevel, _cubicPower, _cubicDelay, _cubicSkillChance, _cubicMaxCount, _cubicDuration, info.getEffected() != info.getEffector());
 		player.broadcastUserInfo();
-		return true;
 	}
 }

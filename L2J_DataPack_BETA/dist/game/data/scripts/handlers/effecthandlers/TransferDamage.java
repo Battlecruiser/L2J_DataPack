@@ -52,12 +52,11 @@ public final class TransferDamage extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayable() && info.getEffector().isPlayer())
 		{
 			((L2Playable) info.getEffected()).setTransferDamageTo(info.getEffector().getActingPlayer());
 		}
-		return true;
 	}
 }

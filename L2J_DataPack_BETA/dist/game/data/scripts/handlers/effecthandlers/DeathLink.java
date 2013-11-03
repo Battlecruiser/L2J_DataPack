@@ -53,14 +53,14 @@ public final class DeathLink extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		boolean sps = info.getSkill().useSpiritShot() && activeChar.isChargedShot(ShotType.SPIRITSHOTS);
@@ -102,6 +102,5 @@ public final class DeathLink extends AbstractEffect
 		{
 			activeChar.doDie(activeChar);
 		}
-		return true;
 	}
 }

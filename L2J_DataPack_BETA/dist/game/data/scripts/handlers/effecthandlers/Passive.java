@@ -43,11 +43,11 @@ public final class Passive extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isL2Attackable())
 		{
-			return false;
+			return;
 		}
 		
 		L2Attackable target = (L2Attackable) info.getEffected();
@@ -55,6 +55,5 @@ public final class Passive extends AbstractEffect
 		target.abortCast();
 		target.disableAllSkills();
 		target.setIsImmobilized(true);
-		return true;
 	}
 }
