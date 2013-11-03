@@ -42,7 +42,7 @@ public final class FocusMaxEnergy extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
@@ -53,9 +53,7 @@ public final class FocusMaxEnergy extends AbstractEffect
 			{
 				int count = maxCharge - info.getEffected().getActingPlayer().getCharges();
 				info.getEffected().getActingPlayer().increaseCharges(count, maxCharge);
-				return true;
 			}
 		}
-		return false;
 	}
 }

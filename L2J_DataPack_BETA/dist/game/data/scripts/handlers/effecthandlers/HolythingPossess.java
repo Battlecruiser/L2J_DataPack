@@ -45,16 +45,15 @@ public final class HolythingPossess extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffector().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		Castle castle = CastleManager.getInstance().getCastle(info.getEffector());
 		castle.engrave(info.getEffector().getActingPlayer().getClan(), info.getEffected());
 		castle.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.OPPONENT_STARTED_ENGRAVING), false);
-		return true;
 	}
 }

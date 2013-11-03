@@ -60,17 +60,16 @@ public final class DeleteHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isL2Attackable())
 		{
-			return false;
+			return;
 		}
 		
 		L2Attackable target = (L2Attackable) info.getEffected();
 		target.clearAggroList();
 		target.setWalking();
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
-		return true;
 	}
 }

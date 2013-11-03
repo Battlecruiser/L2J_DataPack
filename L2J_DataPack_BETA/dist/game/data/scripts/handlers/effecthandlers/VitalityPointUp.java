@@ -36,20 +36,21 @@ public final class VitalityPointUp extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() != null) && info.getEffected().isPlayer())
-		{
-			info.getEffected().getActingPlayer().updateVitalityPoints((float) getValue(), false, false);
-			info.getEffected().getActingPlayer().sendPacket(new UserInfo(info.getEffected().getActingPlayer()));
-			return true;
-		}
-		return false;
+		info.getEffected().getActingPlayer().updateVitalityPoints((float) getValue(), false, false);
+		info.getEffected().getActingPlayer().sendPacket(new UserInfo(info.getEffected().getActingPlayer()));
 	}
 }

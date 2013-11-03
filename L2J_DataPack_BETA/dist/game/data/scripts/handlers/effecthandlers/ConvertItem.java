@@ -49,23 +49,23 @@ public final class ConvertItem extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || info.getEffected().isAlikeDead() || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isEnchanting())
 		{
-			return false;
+			return;
 		}
 		
 		final L2Weapon weaponItem = player.getActiveWeaponItem();
 		if (weaponItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
@@ -76,13 +76,13 @@ public final class ConvertItem extends AbstractEffect
 		
 		if ((wpn == null) || wpn.isAugmented() || (weaponItem.getChangeWeaponId() == 0))
 		{
-			return false;
+			return;
 		}
 		
 		final int newItemId = weaponItem.getChangeWeaponId();
 		if (newItemId == -1)
 		{
-			return false;
+			return;
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
@@ -97,7 +97,7 @@ public final class ConvertItem extends AbstractEffect
 		
 		if (unequiped.length <= 0)
 		{
-			return false;
+			return;
 		}
 		byte count = 0;
 		for (L2ItemInstance item : unequiped)
@@ -125,19 +125,19 @@ public final class ConvertItem extends AbstractEffect
 		
 		if (count == unequiped.length)
 		{
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance destroyItem = player.getInventory().destroyItem("ChangeWeapon", wpn, player, null);
 		if (destroyItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		final L2ItemInstance newItem = player.getInventory().addItem("ChangeWeapon", newItemId, 1, player, destroyItem);
 		if (newItem == null)
 		{
-			return false;
+			return;
 		}
 		
 		if ((elementals != null) && (elementals.getElement() != -1) && (elementals.getValue() != -1))
@@ -167,6 +167,5 @@ public final class ConvertItem extends AbstractEffect
 		player.sendPacket(u);
 		
 		player.broadcastUserInfo();
-		return true;
 	}
 }

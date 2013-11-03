@@ -77,7 +77,7 @@ public final class ChameleonRest extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
@@ -87,6 +87,5 @@ public final class ChameleonRest extends AbstractEffect
 		{
 			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 		}
-		return true;
 	}
 }

@@ -51,12 +51,12 @@ public final class CpHeal extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = getValue();
@@ -67,9 +67,9 @@ public final class CpHeal extends AbstractEffect
 		{
 			target.setCurrentCp(amount + target.getCurrentCp());
 		}
-		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
+		
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_WILL_BE_RESTORED);
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		return true;
 	}
 }

@@ -51,12 +51,12 @@ public final class HealPercent extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = 0;
@@ -82,6 +82,5 @@ public final class HealPercent extends AbstractEffect
 		}
 		sm.addNumber((int) amount);
 		target.sendPacket(sm);
-		return true;
 	}
 }

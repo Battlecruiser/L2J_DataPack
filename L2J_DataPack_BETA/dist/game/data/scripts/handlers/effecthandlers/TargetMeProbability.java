@@ -53,13 +53,13 @@ public final class TargetMeProbability extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayable())
 		{
 			if (info.getEffected() instanceof L2SiegeSummonInstance)
 			{
-				return false;
+				return;
 			}
 			
 			if (info.getEffected().getTarget() != info.getEffector())
@@ -72,12 +72,6 @@ public final class TargetMeProbability extends AbstractEffect
 					info.getEffected().setTarget(info.getEffector());
 				}
 			}
-			return true;
 		}
-		else if (info.getEffected().isL2Attackable() && !info.getEffected().isRaid())
-		{
-			return true;
-		}
-		return false;
 	}
 }

@@ -792,7 +792,7 @@ public class RainbowSpringsChateau extends Quest
 				{
 					for (L2Skill sk : DEBUFFS)
 					{
-						sk.applyEffects(chr, null, chr, null, false, false);
+						sk.applyEffects(chr, chr);
 					}
 				}
 			}

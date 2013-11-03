@@ -65,12 +65,11 @@ public final class HealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer() && (getTicks() > 0))
 		{
 			info.getEffected().sendPacket(new ExRegMax(getValue(), info.getAbnormalTime(), info.getAbnormalTime() / getTicks()));
 		}
-		return true;
 	}
 }

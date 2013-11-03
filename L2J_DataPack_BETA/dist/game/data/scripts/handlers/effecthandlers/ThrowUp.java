@@ -53,7 +53,7 @@ public final class ThrowUp extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		// Get current position of the L2Character
 		final int curX = info.getEffected().getX();
@@ -68,7 +68,7 @@ public final class ThrowUp extends AbstractEffect
 		if (distance > 2000)
 		{
 			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + info.getEffector().getX() + "," + info.getEffector().getY());
-			return false;
+			return;
 		}
 		int offset = Math.min((int) distance + info.getSkill().getFlyRadius(), 1400);
 		
@@ -86,7 +86,7 @@ public final class ThrowUp extends AbstractEffect
 		// If no distance
 		if (distance < 1)
 		{
-			return false;
+			return;
 		}
 		
 		// Calculate movement angles needed
@@ -109,6 +109,5 @@ public final class ThrowUp extends AbstractEffect
 		// TODO: Review.
 		info.getEffected().setXYZ(x, y, z);
 		info.getEffected().broadcastPacket(new ValidateLocation(info.getEffected()));
-		return true;
 	}
 }

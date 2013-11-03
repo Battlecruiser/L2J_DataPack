@@ -59,10 +59,9 @@ public final class Root extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().stopMove(null);
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_ROOTED);
-		return true;
 	}
 }

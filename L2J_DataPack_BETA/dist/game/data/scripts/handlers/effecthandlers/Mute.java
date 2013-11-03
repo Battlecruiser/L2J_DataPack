@@ -49,10 +49,9 @@ public final class Mute extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().abortCast();
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
-		return true;
 	}
 }

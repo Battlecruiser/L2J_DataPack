@@ -57,11 +57,11 @@ public final class CallPc extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected() == info.getEffector())
 		{
-			return false;
+			return;
 		}
 		
 		L2PcInstance target = info.getEffected().getActingPlayer();
@@ -75,7 +75,7 @@ public final class CallPc extends AbstractEffect
 					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_REQUIRED_FOR_SUMMONING);
 					sm.addItemName(_itemId);
 					target.sendPacket(sm);
-					return false;
+					return;
 				}
 				target.getInventory().destroyItemByItemId("Consume", _itemId, _itemCount, activeChar, target);
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
@@ -90,9 +90,7 @@ public final class CallPc extends AbstractEffect
 			confirm.addTime(30000);
 			confirm.addRequesterId(activeChar.getObjectId());
 			target.sendPacket(confirm);
-			return true;
 		}
-		return false;
 	}
 	
 	public static boolean checkSummonTargetStatus(L2PcInstance target, L2PcInstance activeChar)

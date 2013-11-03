@@ -49,13 +49,11 @@ public final class ImmobilePetBuff extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isSummon() && info.getEffector().isPlayer() && (((L2Summon) info.getEffected()).getOwner() == info.getEffector()))
 		{
 			info.getEffected().setIsImmobilized(true);
-			return true;
 		}
-		return false;
 	}
 }

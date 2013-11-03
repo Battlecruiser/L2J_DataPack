@@ -78,18 +78,18 @@ public final class Harvesting extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isNpc() || !info.getEffected().isDead())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		final L2Object[] targets = info.getSkill().getTargetList(player, false, info.getEffected());
 		if ((targets == null) || (targets.length == 0))
 		{
-			return false;
+			return;
 		}
 		
 		L2MonsterInstance monster;
@@ -162,7 +162,6 @@ public final class Harvesting extends AbstractEffect
 							{
 								player.sendPacket(new ItemList(player, false));
 							}
-							return true;
 						}
 					}
 				}
@@ -176,6 +175,5 @@ public final class Harvesting extends AbstractEffect
 				player.sendPacket(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN);
 			}
 		}
-		return false;
 	}
 }

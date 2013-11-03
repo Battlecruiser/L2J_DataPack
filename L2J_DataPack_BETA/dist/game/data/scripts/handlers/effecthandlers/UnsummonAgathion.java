@@ -42,7 +42,7 @@ public final class UnsummonAgathion extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		if (player != null)
@@ -50,6 +50,5 @@ public final class UnsummonAgathion extends AbstractEffect
 			player.setAgathionId(0);
 			player.broadcastUserInfo();
 		}
-		return true;
 	}
 }

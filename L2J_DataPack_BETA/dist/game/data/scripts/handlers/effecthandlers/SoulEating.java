@@ -79,12 +79,11 @@ public final class SoulEating extends AbstractEffect implements IExperienceRecei
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
 			info.getEffected().getEvents().registerListener(this);
 		}
-		return true;
 	}
 }

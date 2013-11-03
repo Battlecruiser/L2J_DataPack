@@ -51,24 +51,25 @@ public final class SummonTrap extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead() || info.getEffected().getActingPlayer().inObserverMode())
 		{
-			return false;
+			return;
 		}
 		
 		if (_npcId <= 0)
 		{
 			_log.warning(SummonTrap.class.getSimpleName() + ": Invalid NPC ID:" + _npcId + " in skill ID: " + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.inObserverMode() || player.isMounted())
 		{
-			return false;
+			return;
 		}
+		
 		// Unsummon previous trap
 		if (player.getTrap() != null)
 		{
@@ -79,7 +80,7 @@ public final class SummonTrap extends AbstractEffect
 		if (npcTemplate == null)
 		{
 			_log.warning(SummonTrap.class.getSimpleName() + ": Spawn of the non-existing Trap ID: " + _npcId + " in skill ID:" + info.getSkill().getId());
-			return false;
+			return;
 		}
 		
 		final L2TrapInstance trap = new L2TrapInstance(IdFactory.getInstance().getNextId(), npcTemplate, player, _despawnTime);
@@ -89,6 +90,5 @@ public final class SummonTrap extends AbstractEffect
 		trap.setHeading(player.getHeading());
 		trap.spawnMe(player.getX(), player.getY(), player.getZ());
 		player.setTrap(trap);
-		return true;
 	}
 }

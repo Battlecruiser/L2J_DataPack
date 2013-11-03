@@ -55,9 +55,8 @@ public final class Stun extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startStunning();
-		return true;
 	}
 }

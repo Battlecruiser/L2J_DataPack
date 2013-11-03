@@ -413,7 +413,7 @@ public class eventmodRace extends Event
 		player.getEffectList().stopSkillEffects(true, AbnormalType.SPEED_UP);
 		player.stopSkillEffects(true, 268);
 		player.stopSkillEffects(true, 298); // Rabbit Spirit Totem
-		SkillTable.getInstance().getInfo(_skill, 1).applyEffects(player, null, player, null, false, false);
+		SkillTable.getInstance().getInfo(_skill, 1).applyEffects(player, player);
 	}
 	
 	private void sendMessage(L2PcInstance player, String text)

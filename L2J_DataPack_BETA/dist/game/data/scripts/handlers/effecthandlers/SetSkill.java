@@ -48,19 +48,19 @@ public final class SetSkill extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		final L2Skill skill = SkillTable.getInstance().getInfo(_skillId, _skillLvl);
 		if (skill == null)
 		{
-			return false;
+			return;
 		}
+		
 		info.getEffected().getActingPlayer().addSkill(skill, true);
-		return true;
 	}
 }

@@ -51,11 +51,11 @@ public final class RebalanceHP extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffector().isPlayer() || !info.getEffector().isInParty())
 		{
-			return false;
+			return;
 		}
 		
 		double fullHP = 0;
@@ -95,6 +95,5 @@ public final class RebalanceHP extends AbstractEffect
 			}
 			member.setCurrentHp(newHP);
 		}
-		return true;
 	}
 }

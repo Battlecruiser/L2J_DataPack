@@ -58,11 +58,11 @@ public final class DispelByCategory extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isDead())
 		{
-			return false;
+			return;
 		}
 		
 		final List<BuffInfo> canceled = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
@@ -70,6 +70,5 @@ public final class DispelByCategory extends AbstractEffect
 		{
 			info.getEffected().getEffectList().stopSkillEffects(true, can.getSkill());
 		}
-		return true;
 	}
 }

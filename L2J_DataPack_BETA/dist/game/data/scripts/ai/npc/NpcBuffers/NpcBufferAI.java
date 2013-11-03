@@ -63,7 +63,7 @@ public class NpcBufferAI implements Runnable
 				{
 					if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, _npc, player, true))
 					{
-						skill.applyEffects(player, null, player, null, false, false);
+						skill.applyEffects(player, player);
 					}
 				}
 				else
@@ -72,7 +72,7 @@ public class NpcBufferAI implements Runnable
 					{
 						if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, _npc, member, true))
 						{
-							skill.applyEffects(player, null, member, null, false, false);
+							skill.applyEffects(player, member);
 						}
 					}
 				}
@@ -88,7 +88,7 @@ public class NpcBufferAI implements Runnable
 						{
 							if (isFriendly(player, target))
 							{
-								skill.applyEffects(target, null, target, null, false, false);
+								skill.applyEffects(target, target);
 							}
 							break;
 						}
@@ -96,7 +96,7 @@ public class NpcBufferAI implements Runnable
 						{
 							if (!isFriendly(player, target))
 							{
-								skill.applyEffects(target, null, target, null, false, false);
+								skill.applyEffects(target, target);
 							}
 							break;
 						}

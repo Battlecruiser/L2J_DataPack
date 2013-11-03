@@ -49,9 +49,8 @@ public final class PhysicalAttackMute extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startPhysicalAttackMuted();
-		return true;
 	}
 }

@@ -37,6 +37,12 @@ public final class NoblesseBless extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayable();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.NOBLESS_BLESSING.getMask();
@@ -46,11 +52,5 @@ public final class NoblesseBless extends AbstractEffect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.NOBLESSE_BLESSING;
-	}
-	
-	@Override
-	public boolean onStart(BuffInfo info)
-	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayable();
 	}
 }

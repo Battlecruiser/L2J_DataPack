@@ -49,9 +49,8 @@ public final class BigHead extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.BIG_HEAD);
-		return true;
 	}
 }

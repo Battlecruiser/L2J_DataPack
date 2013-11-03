@@ -56,11 +56,11 @@ public final class RandomizeHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || !info.getEffected().isL2Attackable())
 		{
-			return false;
+			return;
 		}
 		
 		L2Attackable effectedMob = (L2Attackable) info.getEffected();
@@ -81,7 +81,7 @@ public final class RandomizeHate extends AbstractEffect
 		// if there is no target, exit function
 		if (targetList.isEmpty())
 		{
-			return true;
+			return;
 		}
 		
 		// Choosing randomly a new target
@@ -89,7 +89,5 @@ public final class RandomizeHate extends AbstractEffect
 		final int hate = effectedMob.getHating(info.getEffector());
 		effectedMob.stopHating(info.getEffector());
 		effectedMob.addDamageHate(target, 0, hate);
-		
-		return true;
 	}
 }

@@ -56,13 +56,13 @@ public final class Heal extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		if ((target == null) || target.isDead() || target.isDoor())
 		{
-			return false;
+			return;
 		}
 		
 		double amount = getValue();
@@ -136,6 +136,5 @@ public final class Heal extends AbstractEffect
 				}
 			}
 		}
-		return true;
 	}
 }

@@ -59,7 +59,7 @@ public final class Blink extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		final L2Character effected = isSelfEffect() ? info.getEffector() : info.getEffected();
 		final int radius = info.getSkill().getFlyRadius();
@@ -88,6 +88,5 @@ public final class Blink extends AbstractEffect
 		effected.abortCast();
 		effected.setXYZ(x, y, z);
 		effected.broadcastPacket(new ValidateLocation(effected));
-		return true;
 	}
 }

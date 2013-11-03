@@ -43,22 +43,21 @@ public final class SummonAgathion extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffected().getActingPlayer();
 		if (player.isInOlympiadMode())
 		{
 			player.sendPacket(SystemMessageId.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
-			return false;
+			return;
 		}
 		
 		player.setAgathionId((info.getSkill() == null) ? 0 : info.getSkill().getNpcId());
 		player.broadcastUserInfo();
-		return true;
 	}
 }

@@ -59,16 +59,15 @@ public final class Backstab extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		L2Character target = info.getEffected();
-		L2Character activeChar = info.getEffector();
-		
-		if (activeChar.isAlikeDead())
+		if (info.getEffector().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
+		L2Character target = info.getEffected();
+		L2Character activeChar = info.getEffector();
 		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
 		byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
 		double damage = (int) Formulas.calcBackstabDamage(activeChar, target, info.getSkill(), shld, ss);
@@ -97,7 +96,5 @@ public final class Backstab extends AbstractEffect
 		
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
-		
-		return true;
 	}
 }

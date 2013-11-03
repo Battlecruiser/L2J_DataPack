@@ -42,11 +42,11 @@ public final class AddHate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (!info.getEffected().isL2Attackable())
 		{
-			return false;
+			return;
 		}
 		
 		final double val = getValue();
@@ -58,6 +58,5 @@ public final class AddHate extends AbstractEffect
 		{
 			((L2Attackable) info.getEffected()).reduceHate(info.getEffector(), (int) -val);
 		}
-		return true;
 	}
 }

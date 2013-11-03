@@ -38,6 +38,12 @@ public final class CharmOfCourage extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.CHARM_OF_COURAGE.getMask();
@@ -59,13 +65,8 @@ public final class CharmOfCourage extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected().isPlayer())
-		{
-			info.getEffected().broadcastPacket(new EtcStatusUpdate(info.getEffected().getActingPlayer()));
-			return true;
-		}
-		return false;
+		info.getEffected().broadcastPacket(new EtcStatusUpdate(info.getEffected().getActingPlayer()));
 	}
 }

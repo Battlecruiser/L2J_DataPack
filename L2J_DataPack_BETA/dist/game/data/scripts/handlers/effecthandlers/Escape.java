@@ -53,15 +53,15 @@ public final class Escape extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (_escapeType == null)
 		{
-			return false;
+			return;
 		}
+		
 		info.getEffected().teleToLocation(MapRegionManager.getInstance().getTeleToLocation(info.getEffected(), _escapeType), true);
 		info.getEffected().getActingPlayer().setIsIn7sDungeon(false);
 		info.getEffected().setInstanceId(0);
-		return true;
 	}
 }

@@ -57,7 +57,7 @@ public final class Grow extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isNpc())
 		{
@@ -67,8 +67,6 @@ public final class Grow extends AbstractEffect
 			npc.setCollisionRadius((npc.getCollisionRadius() * 1.19));
 			
 			info.getEffected().startAbnormalEffect(AbnormalVisualEffect.GROW);
-			return true;
 		}
-		return false;
 	}
 }

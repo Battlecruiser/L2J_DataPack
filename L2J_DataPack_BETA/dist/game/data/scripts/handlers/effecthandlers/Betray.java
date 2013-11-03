@@ -39,6 +39,12 @@ public final class Betray extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffector().isPlayer() && info.getEffected().isSummon();
+	}
+	
+	@Override
 	public int getEffectFlags()
 	{
 		return EffectFlag.BETRAYED.getMask();
@@ -57,14 +63,9 @@ public final class Betray extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (info.getEffector().isPlayer() && info.getEffected().isSummon())
-		{
-			L2PcInstance targetOwner = info.getEffected().getActingPlayer();
-			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
-			return true;
-		}
-		return false;
+		L2PcInstance targetOwner = info.getEffected().getActingPlayer();
+		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, targetOwner);
 	}
 }

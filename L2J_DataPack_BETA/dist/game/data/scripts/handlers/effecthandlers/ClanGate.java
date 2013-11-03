@@ -52,7 +52,7 @@ public final class ClanGate extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.MAGIC_CIRCLE);
 		if (info.getEffected().isPlayer())
@@ -64,6 +64,5 @@ public final class ClanGate extends AbstractEffect
 				clan.broadcastToOtherOnlineMembers(msg, info.getEffected().getActingPlayer());
 			}
 		}
-		return true;
 	}
 }

@@ -35,21 +35,20 @@ public final class Flag extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		info.getEffected().getActingPlayer().updatePvPFlag(0);
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
-		{
-			return false;
-		}
-		
 		info.getEffected().updatePvPFlag(1);
-		
-		return true;
 	}
 }

@@ -60,14 +60,14 @@ public final class PhysicalAttack extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		if (((info.getSkill().getFlyRadius() > 0) || (info.getSkill().getFlyType() != null)) && activeChar.isMovementDisabled())
@@ -75,7 +75,7 @@ public final class PhysicalAttack extends AbstractEffect
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addSkillName(info.getSkill());
 			activeChar.sendPacket(sm);
-			return false;
+			return;
 		}
 		
 		if (target.isPlayer() && target.getActingPlayer().isFakeDeath())
@@ -118,6 +118,5 @@ public final class PhysicalAttack extends AbstractEffect
 		{
 			activeChar.doDie(activeChar);
 		}
-		return true;
 	}
 }

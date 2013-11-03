@@ -36,6 +36,12 @@ public final class Lucky extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.LUCKY;
@@ -45,11 +51,5 @@ public final class Lucky extends AbstractEffect
 	public boolean onActionTime(BuffInfo info)
 	{
 		return info.getSkill().isPassive();
-	}
-	
-	@Override
-	public boolean onStart(BuffInfo info)
-	{
-		return (info.getEffector() != null) && (info.getEffected() != null) && info.getEffected().isPlayer();
 	}
 }

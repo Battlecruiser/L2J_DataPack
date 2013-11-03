@@ -60,10 +60,9 @@ public final class Petrification extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().startAbnormalEffect(AbnormalVisualEffect.HOLD_2);
 		info.getEffected().startParalyze();
-		return true;
 	}
 }

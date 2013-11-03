@@ -39,20 +39,20 @@ public final class BlockParty extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return (info.getEffected() != null) && info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		PunishmentManager.getInstance().stopPunishment(info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN);
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() == null) || !info.getEffected().isPlayer())
-		{
-			return false;
-		}
-		
 		PunishmentManager.getInstance().startPunishment(new PunishmentTask(0, info.getEffected().getObjectId(), PunishmentAffect.CHARACTER, PunishmentType.PARTY_BAN, 0, "Party banned by bot report", "system", true));
-		return true;
 	}
 }

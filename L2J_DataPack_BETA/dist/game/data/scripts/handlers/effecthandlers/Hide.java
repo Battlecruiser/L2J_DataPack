@@ -55,7 +55,7 @@ public final class Hide extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
@@ -91,6 +91,5 @@ public final class Hide extends AbstractEffect
 				}
 			}
 		}
-		return true;
 	}
 }

@@ -42,22 +42,22 @@ public final class CallParty extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (info.getEffector().isInParty())
+		if (!info.getEffector().isInParty())
 		{
-			for (L2PcInstance partyMember : info.getEffector().getParty().getMembers())
+			return;
+		}
+		
+		for (L2PcInstance partyMember : info.getEffector().getParty().getMembers())
+		{
+			if (CallPc.checkSummonTargetStatus(partyMember, info.getEffector().getActingPlayer()))
 			{
-				if (CallPc.checkSummonTargetStatus(partyMember, info.getEffector().getActingPlayer()))
+				if (info.getEffector() != partyMember)
 				{
-					if (info.getEffector() != partyMember)
-					{
-						partyMember.teleToLocation(info.getEffector().getLocation(), true);
-					}
+					partyMember.teleToLocation(info.getEffector().getLocation(), true);
 				}
 			}
-			return true;
 		}
-		return false;
 	}
 }

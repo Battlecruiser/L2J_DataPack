@@ -36,18 +36,20 @@ public final class Transformation extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isPlayer();
+	}
+	
+	@Override
 	public void onExit(BuffInfo info)
 	{
 		info.getEffected().stopTransformation(false);
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isPlayer())
-		{
-			return false;
-		}
-		return TransformData.getInstance().transformPlayer((int) getValue(), info.getEffected().getActingPlayer());
+		TransformData.getInstance().transformPlayer((int) getValue(), info.getEffected().getActingPlayer());
 	}
 }

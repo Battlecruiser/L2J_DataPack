@@ -173,7 +173,7 @@ public class Wedding implements IVoicedCommandHandler
 				final L2Skill skill = SkillTable.getInstance().getInfo(skillId, skillLevel);
 				if (!activeChar.isAffectedBySkill(skillId))
 				{
-					skill.applyEffects(activeChar, null, activeChar, null, false, false);
+					skill.applyEffects(activeChar, activeChar);
 				}
 			}
 			return false;

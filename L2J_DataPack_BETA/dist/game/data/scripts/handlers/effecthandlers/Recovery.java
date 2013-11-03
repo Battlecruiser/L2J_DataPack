@@ -41,13 +41,11 @@ public final class Recovery extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected().isPlayer())
 		{
 			info.getEffected().getActingPlayer().reduceDeathPenaltyBuffLevel();
-			return true;
 		}
-		return false;
 	}
 }

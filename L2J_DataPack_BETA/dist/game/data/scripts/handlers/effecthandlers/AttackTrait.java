@@ -82,7 +82,7 @@ public final class AttackTrait extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		final CharStat charStat = info.getEffected().getStat();
 		synchronized (charStat.getAttackTraits())
@@ -93,6 +93,5 @@ public final class AttackTrait extends AbstractEffect
 				charStat.getAttackTraitsCount()[trait.getKey().getId()]++;
 			}
 		}
-		return true;
 	}
 }

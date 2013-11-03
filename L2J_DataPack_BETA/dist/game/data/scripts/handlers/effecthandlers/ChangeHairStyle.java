@@ -42,16 +42,15 @@ public final class ChangeHairStyle extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffector() == null) || (info.getEffected() == null) || !info.getEffector().isPlayer() || !info.getEffected().isPlayer() || info.getEffected().isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		final L2PcInstance player = info.getEffector().getActingPlayer();
 		player.getAppearance().setHairStyle((int) getValue());
 		player.broadcastUserInfo();
-		return true;
 	}
 }

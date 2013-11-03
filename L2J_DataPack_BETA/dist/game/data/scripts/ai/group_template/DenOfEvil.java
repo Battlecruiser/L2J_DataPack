@@ -211,7 +211,7 @@ public class DenOfEvil extends AbstractNpcAI
 				if (character.isPlayable())
 				{
 					L2Skill skill = SkillTable.getInstance().getInfo(6149, 1);
-					skill.applyEffects(character, null, character, null, false, false); // apply effect
+					skill.applyEffects(character, character);
 				}
 				else
 				{

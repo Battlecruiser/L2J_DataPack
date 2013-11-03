@@ -60,14 +60,14 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		if (activeChar.isMovementDisabled())
@@ -75,7 +75,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
 			sm.addSkillName(info.getSkill());
 			activeChar.sendPacket(sm);
-			return false;
+			return;
 		}
 		
 		final byte shld = Formulas.calcShldUse(activeChar, target, info.getSkill());
@@ -103,6 +103,5 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 		{
 			activeChar.sendPacket(SystemMessageId.ATTACK_FAILED);
 		}
-		return true;
 	}
 }

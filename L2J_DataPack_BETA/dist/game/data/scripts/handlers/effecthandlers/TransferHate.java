@@ -48,35 +48,36 @@ public final class TransferHate extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true);
+	}
+	
+	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true))
+		for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
 		{
-			for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
+			if ((obj == null) || !obj.isL2Attackable() || obj.isDead())
 			{
-				if ((obj == null) || !obj.isL2Attackable() || obj.isDead())
-				{
-					continue;
-				}
-				
-				final L2Attackable hater = ((L2Attackable) obj);
-				final int hate = hater.getHating(info.getEffector());
-				if (hate <= 0)
-				{
-					continue;
-				}
-				
-				hater.reduceHate(info.getEffector(), -hate);
-				hater.addDamageHate(info.getEffected(), 0, hate);
+				continue;
 			}
-			return true;
+			
+			final L2Attackable hater = ((L2Attackable) obj);
+			final int hate = hater.getHating(info.getEffector());
+			if (hate <= 0)
+			{
+				continue;
+			}
+			
+			hater.reduceHate(info.getEffector(), -hate);
+			hater.addDamageHate(info.getEffected(), 0, hate);
 		}
-		return false;
 	}
 }

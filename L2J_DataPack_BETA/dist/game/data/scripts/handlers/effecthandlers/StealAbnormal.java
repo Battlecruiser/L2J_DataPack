@@ -53,14 +53,14 @@ public final class StealAbnormal extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() != null) && info.getEffected().isPlayer() && (info.getEffector() != info.getEffected()))
 		{
 			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(info.getEffector(), info.getEffected(), info.getSkill(), _slot, _rate, _max);
 			if (toSteal.isEmpty())
 			{
-				return false;
+				return;
 			}
 			
 			for (BuffInfo infoToSteal : toSteal)
@@ -84,7 +84,7 @@ public final class StealAbnormal extends AbstractEffect
 								effect.onStart(stolen);
 							}
 						}
-						else if (effect.onStart(stolen))
+						else if (effect.canStart(stolen))
 						{
 							stolen.addEffect(effect);
 						}
@@ -93,8 +93,6 @@ public final class StealAbnormal extends AbstractEffect
 				info.getEffected().getEffectList().remove(infoToSteal);
 				info.getEffector().getEffectList().add(stolen);
 			}
-			return true;
 		}
-		return false;
 	}
 }

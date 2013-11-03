@@ -52,9 +52,8 @@ public final class Teleport extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().teleToLocation(_loc, true);
-		return true;
 	}
 }

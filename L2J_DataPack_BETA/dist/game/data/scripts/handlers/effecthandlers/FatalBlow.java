@@ -59,14 +59,14 @@ public final class FatalBlow extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		L2Character target = info.getEffected();
 		L2Character activeChar = info.getEffector();
 		
 		if (activeChar.isAlikeDead())
 		{
-			return false;
+			return;
 		}
 		
 		boolean ss = info.getSkill().useSoulShot() && activeChar.isChargedShot(ShotType.SOULSHOTS);
@@ -98,6 +98,5 @@ public final class FatalBlow extends AbstractEffect
 		
 		// Check if damage should be reflected
 		Formulas.calcDamageReflected(activeChar, target, info.getSkill(), true);
-		return true;
 	}
 }

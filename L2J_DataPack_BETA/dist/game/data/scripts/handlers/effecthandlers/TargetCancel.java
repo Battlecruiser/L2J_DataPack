@@ -52,12 +52,11 @@ public final class TargetCancel extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().setTarget(null);
 		info.getEffected().abortAttack();
 		info.getEffected().abortCast();
 		info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, info.getEffector());
-		return true;
 	}
 }

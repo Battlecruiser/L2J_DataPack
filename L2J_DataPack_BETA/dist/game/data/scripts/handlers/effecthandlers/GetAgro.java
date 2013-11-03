@@ -50,15 +50,14 @@ public final class GetAgro extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if (info.getEffected() instanceof L2NpcInstance)
 		{
-			return false;
+			return;
 		}
 		
 		CtrlIntention intention = (info.getEffected().isInCombat() || info.getEffected().isL2Attackable()) ? CtrlIntention.AI_INTENTION_ATTACK : CtrlIntention.AI_INTENTION_FOLLOW;
 		info.getEffected().getAI().setIntention(intention, info.getEffector());
-		return true;
 	}
 }

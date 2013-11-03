@@ -63,11 +63,11 @@ public class Dummy implements ISkillHandler
 					{
 						if (Formulas.calcBuffDebuffReflection(target, skill))
 						{
-							skill.applyEffects(target, null, activeChar, null, false, false);
+							skill.applyEffects(target, activeChar);
 						}
 						else
 						{
-							skill.applyEffects(activeChar, null, target, null, false, false);
+							skill.applyEffects(activeChar, target);
 						}
 					}
 				}
@@ -82,7 +82,7 @@ public class Dummy implements ISkillHandler
 			{
 				activeChar.stopSkillEffects(true, skill.getId());
 			}
-			skill.applyEffects(activeChar, null, activeChar, null, true, false);
+			skill.applyEffects(activeChar, activeChar);
 		}
 		
 		if (skill.useSpiritShot())

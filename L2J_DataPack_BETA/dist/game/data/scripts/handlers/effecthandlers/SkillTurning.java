@@ -50,14 +50,13 @@ public final class SkillTurning extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		if ((info.getEffected() == null) || (info.getEffected() == info.getEffector()) || info.getEffected().isRaid())
 		{
-			return false;
+			return;
 		}
 		
 		info.getEffected().breakCast();
-		return true;
 	}
 }

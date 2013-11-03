@@ -50,9 +50,8 @@ public final class PhysicalMute extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
 		info.getEffected().getAI().notifyEvent(CtrlEvent.EVT_MUTED);
-		return true;
 	}
 }

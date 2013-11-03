@@ -60,38 +60,34 @@ public final class Unsummon extends AbstractEffect
 	}
 	
 	@Override
+	public boolean canStart(BuffInfo info)
+	{
+		return info.getEffected().isSummon();
+	}
+	
+	@Override
 	public boolean isInstant()
 	{
 		return true;
 	}
 	
 	@Override
-	public boolean onStart(BuffInfo info)
+	public void onStart(BuffInfo info)
 	{
-		if (!info.getEffected().isSummon())
+		final L2Summon summon = info.getEffected().getSummon();
+		if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
 		{
-			return false;
+			summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
+		}
+		else
+		{
+			summon.stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
 		
+		summon.abortAttack();
+		summon.abortCast();
 		final L2PcInstance summonOwner = info.getEffected().getActingPlayer();
-		final L2Summon summon = info.getEffected().getSummon();
-		if (summon != null)
-		{
-			if (summon.isPhoenixBlessed() || summon.isNoblesseBlessed())
-			{
-				summon.stopEffects(L2EffectType.NOBLESSE_BLESSING);
-			}
-			else
-			{
-				summon.stopAllEffectsExceptThoseThatLastThroughDeath();
-			}
-			
-			summon.abortAttack();
-			summon.abortCast();
-			summon.unSummon(summonOwner);
-			summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
-			return true;
-		}
-		return false;
+		summon.unSummon(summonOwner);
+		summonOwner.sendPacket(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED);
 	}
 }
