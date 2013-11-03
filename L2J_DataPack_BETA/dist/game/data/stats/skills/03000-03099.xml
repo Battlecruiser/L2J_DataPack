@@ -53,7 +53,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3008" levels="6" name="Special Ability: Guidance">
@@ -65,7 +67,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3009" levels="8" name="Special Ability: Evasion">
@@ -77,7 +81,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3010" levels="6" name="Special Ability: Focus">
@@ -89,7 +95,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3011" levels="6" name="Special Ability: Focus">
@@ -101,7 +109,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3012" levels="6" name="Special Ability: Anger">
@@ -113,8 +123,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3013" levels="5" name="Special Ability: Health">
@@ -127,11 +139,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="1.25" />
-			<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxHp" val="1.25" />
+				<add order="0x40" stat="atkCountMax" val="#atkCountMax" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3014" levels="3" name="Special Ability: Mana Up">
@@ -143,10 +157,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.3" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.3" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3016" levels="6" name="Special Ability: Critical Stun">
@@ -180,9 +196,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="#rCrit">
-				<player behind="true" />
-			</basemul>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#rCrit">
+					<player behind="true" />
+				</basemul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3019" levels="6" name="Special Ability: Back Blow">
@@ -194,9 +212,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="#rCrit">
-				<player behind="true" />
-			</basemul>
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="#rCrit">
+					<player behind="true" />
+				</basemul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
@@ -273,7 +293,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
@@ -312,7 +334,6 @@
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A1" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
@@ -324,7 +345,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3027" levels="7" name="Special Ability: Rsk. Focus">
@@ -337,12 +360,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit">
-				<player hp="60" />
-			</add>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit">
+					<player hp="60" />
+				</add>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3028" levels="6" name="Special Ability: Rsk. Evasion">
@@ -354,9 +379,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3029" levels="6" name="Special Ability: Rsk. Evasion">
@@ -368,9 +395,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3030" levels="6" name="Special Ability: Rsk. Evasion">
@@ -382,9 +411,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3031" levels="6" name="Special Ability: Rsk. Evasion">
@@ -396,9 +427,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3032" levels="6" name="Special Ability: Rsk. Haste">
@@ -410,9 +443,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3033" levels="6" name="Special Ability: Rsk. Haste">
@@ -424,9 +459,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3034" levels="7" name="Special Ability: Rsk. Haste">
@@ -439,12 +476,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
-				<player hp="60" />
-			</mul>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd">
+					<player hp="60" />
+				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3035" levels="6" name="Special Ability: Mighty Mortal">
@@ -456,7 +495,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="blowRate" val="#blowRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="blowRate" val="#blowRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3036" levels="6" name="Special Ability: Haste">
@@ -468,7 +509,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3037" levels="6" name="Special Ability: Haste">
@@ -480,7 +523,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3038" levels="6" name="Special Ability: Haste">
@@ -492,7 +537,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3039" levels="7" name="Special Ability: Critical Drain">
@@ -577,10 +624,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3043" levels="6" name="Special Ability: Critical Damage">
@@ -592,7 +641,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3044" levels="20" name="Special Ability: Focus">
@@ -605,10 +656,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="#rCrit" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="#rCrit" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3045" levels="20" name="Special Ability: Haste">
@@ -621,10 +674,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3046" levels="20" name="Special Ability: Guidance">
@@ -637,10 +692,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3047" levels="3" name="Special Ability: Acumen">
@@ -652,10 +709,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3048" levels="3" name="Special Ability: Conversion">
@@ -667,11 +726,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="1.6" />
-			<mul order="0x30" stat="maxHp" val="0.6" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="1.6" />
+				<mul order="0x30" stat="maxHp" val="0.6" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3049" levels="2" name="Special Ability: Increase Critical">
@@ -697,10 +758,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="61.6" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="61.6" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3051" levels="2" name="Special Ability: Focus">
@@ -711,10 +774,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="67.3" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="67.3" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
@@ -812,12 +877,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.11">
-				<player hp="60" />
-			</mul>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.11">
+					<player hp="60" />
+				</mul>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3057" levels="4" name="Special Ability: Anger">
@@ -829,11 +896,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3058" levels="2" name="Special Ability: Anger">
@@ -845,11 +914,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
-			<mul order="0x30" stat="maxHp" val="0.85" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+				<mul order="0x30" stat="maxHp" val="0.85" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3059" levels="2" name="Special Ability: Critical Drain">
@@ -935,12 +1006,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="0.37">
-				<player behind="true" />
-			</basemul>
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.37">
+					<player behind="true" />
+				</basemul>
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3064" levels="1" name="Special Ability: Guidance">
@@ -950,10 +1023,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.95" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.95" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3065" levels="1" name="Special Ability: Guidance">
@@ -963,10 +1038,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="5.41" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="5.41" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3066" levels="4" name="Special Ability: Critical Damage">
@@ -978,10 +1055,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3067" levels="2" name="Special Ability: Critical Damage">
@@ -993,10 +1072,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="#cAtkAdd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3068" levels="3" name="Special Ability: Haste">
@@ -1009,10 +1090,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="#pAtkSpd" />
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3069" levels="1" name="Special Ability: Rsk. Evasion">
@@ -1022,9 +1105,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="6.8">
-				<player hp="60" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="6.8">
+					<player hp="60" />
+				</add>
+			</effect>
 		</for>
 	</skill>
 	<skill id="3070" levels="4" name="Special Ability: Critical Stun">
@@ -1057,12 +1142,14 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rCrit" val="130">
-				<player hp="60" />
-			</add>
-			<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			<effect name="Buff">
+				<add order="0x40" stat="rCrit" val="130">
+					<player hp="60" />
+				</add>
+				<mul order="0x30" stat="pvpPhysDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="#pvpBonus" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="#pvpBonus" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3072" levels="2" name="Special Ability: Empower">
@@ -1074,10 +1161,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3073" levels="2" name="Special Ability: Magic Power">
@@ -1089,11 +1178,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
-			<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul order="0x30" stat="pvpMagicalDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3074" levels="2" name="Special Ability: Magic Silence">
@@ -1156,7 +1247,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3077" levels="6" name="Special Ability: Magic Power">
@@ -1168,8 +1261,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="#mAtk" />
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="#mAtk" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="1.15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3078" levels="6" name="Special Ability: Magic Silence">
@@ -1253,7 +1348,6 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="DERANGEMENT" />
 		<set name="triggeredId" val="5165" />
@@ -1291,7 +1385,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="triggeredId" val="5166" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -1311,7 +1404,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="triggeredId" val="5167" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -1331,7 +1423,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<set name="triggeredId" val="5168" />
@@ -1352,7 +1443,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
 		<set name="triggeredId" val="5169" />
@@ -1373,7 +1463,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="SLEEP" />
 		<set name="triggeredId" val="5170" />
@@ -1394,7 +1483,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="PARALYZE" />
 		<set name="triggeredId" val="5171" />
@@ -1440,7 +1528,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="DERANGEMENT" />
 		<set name="triggeredId" val="5173" />
@@ -1462,7 +1549,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="POISON" />
 		<set name="triggeredId" val="5174" />
@@ -1485,7 +1571,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="BLEED" />
 		<set name="triggeredId" val="5175" />
@@ -1506,7 +1591,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="DERANGEMENT" />
 		<set name="triggeredId" val="5176" />
@@ -1527,7 +1611,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="DERANGEMENT" />
 		<set name="triggeredId" val="5177" />
@@ -1567,7 +1650,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="triggeredId" val="5166" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -1588,7 +1670,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="triggeredId" val="5167" />
 		<set name="triggeredLevel" val="#triggeredLevel" />
@@ -1609,7 +1690,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="CON" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 		<set name="triggeredId" val="5168" />
@@ -1631,7 +1711,6 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="saveVs" val="MEN" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="HOLD" />
 		<set name="triggeredId" val="5169" />

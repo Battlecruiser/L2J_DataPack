@@ -122,7 +122,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="4000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -153,7 +152,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -183,7 +181,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -211,7 +208,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -241,7 +237,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -274,7 +269,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -304,7 +298,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -337,7 +330,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -368,7 +360,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="aggroPoints" val="655" />
@@ -442,7 +433,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="75000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -605,7 +595,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<set order="0x10" stat="shieldDefAngle" val="360" />
+			<effect name="Buff">
+				<set order="0x10" stat="shieldDefAngle" val="360" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="317" levels="5" name="Focus Attack">
@@ -663,28 +655,34 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="#runSpd">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="accCombat" val="#accCombat">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="#runSpd">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="accCombat" val="#accCombat">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</for>
 		<enchant1for>
-			<add order="0x40" stat="runSpd" val="#ench1runSpd">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="accCombat" val="3">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="#ench1runSpd">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="accCombat" val="3">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</enchant1for>
 		<enchant2for>
-			<add order="0x40" stat="runSpd" val="10">
-				<using kind="Light" />
-			</add>
-			<add order="0x40" stat="accCombat" val="#ench2acc">
-				<using kind="Light" />
-			</add>
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="10">
+					<using kind="Light" />
+				</add>
+				<add order="0x40" stat="accCombat" val="#ench2acc">
+					<using kind="Light" />
+				</add>
+			</effect>
 		</enchant2for>
 	</skill>
 	<skill id="320" levels="10" name="Wrath" enchantGroup1="2" enchantGroup2="2">
@@ -899,7 +897,6 @@
 		<set name="mpConsume" val="69" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flying="true" />
@@ -990,7 +987,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
+			<effect name="Buff">
+				<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="331" levels="1" name="Skill Mastery">
@@ -1000,7 +999,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
+			<effect name="Buff">
+				<add order="0x40" stat="skillMastery" val="2" /> <!-- FIXME: wrong values ? -->
+			</effect>
 		</for>
 	</skill>
 	<skill id="332" levels="1" name="Extra Inventory">
@@ -1010,7 +1011,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="inventoryLimit" val="1" />
+			<effect name="Buff">
+				<add order="0x40" stat="inventoryLimit" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="333" levels="1" name="Extra Sales Slots">
@@ -1020,8 +1023,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="PrivateBuyLimit" val="1" />
-			<add order="0x40" stat="PrivateSellLimit" val="1" />
+			<effect name="Buff">
+				<add order="0x40" stat="PrivateBuyLimit" val="1" />
+				<add order="0x40" stat="PrivateSellLimit" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="334" levels="1" name="Focus Skill Mastery">
@@ -1207,7 +1212,6 @@
 		<set name="magicLvl" val="78" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="hpConsume" val="#ench1Cost" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1507,7 +1511,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1534,7 +1537,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Shield" />
@@ -1561,7 +1563,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<using kind="Shield" />
@@ -1765,7 +1766,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1823,7 +1823,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1893,7 +1892,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -2017,7 +2015,6 @@
 		<set name="mpConsume" val="70" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
@@ -2058,7 +2055,6 @@
 		<set name="mpConsume" val="71" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
@@ -2214,7 +2210,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2243,7 +2238,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2273,7 +2267,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2304,7 +2297,6 @@
 		<set name="mpConsume" val="60" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -2476,7 +2468,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxHp" val="#maxHp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxHp" val="#maxHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="371" levels="3" name="Clan Spirituality">
@@ -2487,7 +2481,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxCp" val="#maxCp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxCp" val="#maxCp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="372" levels="3" name="Clan Soul">
@@ -2498,7 +2494,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="maxMp" val="#maxMp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="maxMp" val="#maxMp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="373" levels="3" name="Clan Regeneration">
@@ -2509,7 +2507,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="#regHp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="#regHp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="374" levels="3" name="Clan Morale">
@@ -2520,7 +2520,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regCp" val="#regCp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regCp" val="#regCp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="375" levels="3" name="Clan Clarity">
@@ -2531,7 +2533,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="#regMp" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="#regMp" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="376" levels="3" name="Clan Might">
@@ -2542,7 +2546,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="377" levels="3" name="Clan Shield">
@@ -2553,7 +2559,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="#pDef" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="#pDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="378" levels="3" name="Clan Empower">
@@ -2564,7 +2572,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="#mAtk" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="#mAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="379" levels="3" name="Clan Magic Resistance">
@@ -2575,7 +2585,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="#mDef" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="#mDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="380" levels="3" name="Clan Guidance">
@@ -2586,7 +2598,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="#accCombat" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="#accCombat" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="381" levels="3" name="Clan Agility">
@@ -2597,7 +2611,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="#rEvas" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="#rEvas" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="382" levels="3" name="Clan Shield Defence">
@@ -2608,7 +2624,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="rShld" val="#rShld" />
+			<effect name="Buff">
+				<mul order="0x30" stat="rShld" val="#rShld" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="383" levels="3" name="Clan Shield Block">
@@ -2619,7 +2637,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="sDef" val="#sDef" />
+			<effect name="Buff">
+				<mul order="0x30" stat="sDef" val="#sDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="384" levels="3" name="Clan Cyclonic Resistance">
@@ -2630,8 +2650,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="windRes" val="#res" />
-			<add order="0x40" stat="waterRes" val="#res" />
+			<effect name="Buff">
+				<add order="0x40" stat="windRes" val="#res" />
+				<add order="0x40" stat="waterRes" val="#res" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="385" levels="3" name="Clan Magmatic Resistance">
@@ -2642,8 +2664,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="fireRes" val="#res" />
-			<add order="0x40" stat="earthRes" val="#res" />
+			<effect name="Buff">
+				<add order="0x40" stat="fireRes" val="#res" />
+				<add order="0x40" stat="earthRes" val="#res" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="386" levels="3" name="Clan Resist Shock">
@@ -2693,7 +2717,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="#runSpd" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="#runSpd" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="390" levels="3" name="Clan Luck">
@@ -2748,7 +2774,6 @@
 		<set name="mpConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -2774,7 +2799,6 @@
 		<set name="mpConsume" val="72" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>

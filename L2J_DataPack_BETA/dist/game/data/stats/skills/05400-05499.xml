@@ -290,7 +290,6 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -308,7 +307,6 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -328,7 +326,6 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
@@ -349,7 +346,6 @@
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="PARTY" />
 		<for>
 			<effect name="Buff">
@@ -481,13 +477,15 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="0.95" />
-			<mul order="0x30" stat="mAtk" val="0.95" />
-			<sub order="0x40" stat="accCombat" val="50" />
-			<add order="0x40" stat="runSpd" val="5" />
-			<mul order="0x30" stat="pDef" val="#def" />
-			<mul order="0x30" stat="mDef" val="#def" />
-			<sub order="0x40" stat="rEvas" val="#avoid" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="0.95" />
+				<mul order="0x30" stat="mAtk" val="0.95" />
+				<sub order="0x40" stat="accCombat" val="50" />
+				<add order="0x40" stat="runSpd" val="5" />
+				<mul order="0x30" stat="pDef" val="#def" />
+				<mul order="0x30" stat="mDef" val="#def" />
+				<sub order="0x40" stat="rEvas" val="#avoid" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="5438" levels="9" name="NPC party 30 Clan Heal">
@@ -628,7 +626,6 @@
 		<set name="mpConsume" val="71" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -726,7 +723,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -746,7 +742,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1156,9 +1151,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="0.5">
-				<using kind="Bow,Crossbow" />
-			</mul>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="0.5">
+					<using kind="Bow,Crossbow" />
+				</mul>
+			</effect>
 		</for>
 	</skill>
 	<skill id="5492" levels="12" name="NPC CrossBow Attack">

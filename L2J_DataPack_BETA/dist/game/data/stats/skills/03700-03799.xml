@@ -7,7 +7,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3701" levels="1" name="Leather Armor of Doom">
@@ -17,9 +19,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="breath" val="383" />
-			<mul order="0x30" stat="pAtk" val="1.0827" />
-			<mul order="0x30" stat="regMp" val="1.0827" />
+			<effect name="Buff">
+				<add order="0x40" stat="breath" val="383" />
+				<mul order="0x30" stat="pAtk" val="1.0827" />
+				<mul order="0x30" stat="regMp" val="1.0827" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="13" />
 			</effect>
@@ -32,9 +36,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="breath" val="33" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="regMp" val="1.0041" />
+			<effect name="Buff">
+				<add order="0x40" stat="breath" val="33" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="regMp" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="2" />
 			</effect>
@@ -47,9 +53,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="breath" val="33" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<mul order="0x30" stat="regMp" val="1.0041" />
+			<effect name="Buff">
+				<add order="0x40" stat="breath" val="33" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<mul order="0x30" stat="regMp" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="3" />
 			</effect>
@@ -62,9 +70,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="breath" val="50" />
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<mul order="0x30" stat="regMp" val="1.0062" />
+			<effect name="Buff">
+				<add order="0x40" stat="breath" val="50" />
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<mul order="0x30" stat="regMp" val="1.0062" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="2" />
 			</effect>
@@ -77,9 +87,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<add order="0x40" stat="breath" val="33" />
-			<mul order="0x30" stat="regMp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<add order="0x40" stat="breath" val="33" />
+				<mul order="0x30" stat="regMp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3706" levels="1" name="Doom Boots">
@@ -89,9 +101,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<add order="0x40" stat="breath" val="33" />
-			<mul order="0x30" stat="regMp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<add order="0x40" stat="breath" val="33" />
+				<mul order="0x30" stat="regMp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3707" levels="1" name="Tunic of Doom">
@@ -101,9 +115,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="breath" val="200" />
-			<mul order="0x30" stat="regMp" val="1.0724" />
-			<add order="0x40" stat="runSpd" val="7" />
+			<effect name="Buff">
+				<add order="0x40" stat="breath" val="200" />
+				<mul order="0x30" stat="regMp" val="1.0724" />
+				<add order="0x40" stat="runSpd" val="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3708" levels="1" name="Stockings of Doom">
@@ -113,9 +129,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="2.91" />
-			<add order="0x40" stat="breath" val="88" />
-			<mul order="0x30" stat="regMp" val="1.0208" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="2.91" />
+				<add order="0x40" stat="breath" val="88" />
+				<mul order="0x30" stat="regMp" val="1.0208" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3709" levels="1" name="Doom Helmet">
@@ -125,9 +143,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.75" />
-			<add order="0x40" stat="breath" val="50" />
-			<mul order="0x30" stat="regMp" val="1.0125" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.75" />
+				<add order="0x40" stat="breath" val="50" />
+				<mul order="0x30" stat="regMp" val="1.0125" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3710" levels="1" name="Blue Wolf Breastplate">
@@ -137,8 +157,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regHp" val="1.0724" />
-			<add order="0x40" stat="runSpd" val="7" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regHp" val="1.0724" />
+				<add order="0x40" stat="runSpd" val="7" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3711" levels="1" name="Blue Wolf Gaiters">
@@ -148,8 +170,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="2.91" />
-			<mul order="0x30" stat="regHp" val="1.0208" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="2.91" />
+				<mul order="0x30" stat="regHp" val="1.0208" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3712" levels="1" name="Blue Wolf Boots">
@@ -159,8 +183,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<mul order="0x30" stat="regHp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<mul order="0x30" stat="regHp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3713" levels="1" name="Blue Wolf Gloves">
@@ -170,8 +196,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<mul order="0x30" stat="regHp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<mul order="0x30" stat="regHp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3714" levels="1" name="Blue Wolf Helmet">
@@ -181,8 +209,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="runSpd" val="1.75" />
-			<mul order="0x30" stat="regHp" val="1.0125" />
+			<effect name="Buff">
+				<add order="0x40" stat="runSpd" val="1.75" />
+				<mul order="0x30" stat="regHp" val="1.0125" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3715" levels="1" name="Blue Wolf Leather Armor">
@@ -192,8 +222,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="pDef" val="1.0219" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pDef" val="1.0219" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3716" levels="1" name="Blue Wolf Boots">
@@ -203,7 +235,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0088" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0088" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3717" levels="1" name="Blue Wolf Gloves">
@@ -213,7 +247,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0088" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0088" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3718" levels="1" name="Blue Wolf Helmet">
@@ -223,7 +259,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0132" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0132" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3719" levels="1" name="Blue Wolf Boots">
@@ -233,8 +271,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="34" />
-			<mul order="0x30" stat="regMp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="34" />
+				<mul order="0x30" stat="regMp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3720" levels="1" name="Blue Wolf Gloves">
@@ -244,8 +284,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="34" />
-			<mul order="0x30" stat="regMp" val="1.0083" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="34" />
+				<mul order="0x30" stat="regMp" val="1.0083" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3721" levels="1" name="Blue Wolf Tunic">
@@ -255,8 +297,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="205" />
-			<mul order="0x30" stat="regMp" val="1.0724" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="205" />
+				<mul order="0x30" stat="regMp" val="1.0724" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3722" levels="1" name="Blue Wolf Stockings">
@@ -266,8 +310,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="85" />
-			<mul order="0x30" stat="regMp" val="1.0208" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="85" />
+				<mul order="0x30" stat="regMp" val="1.0208" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3723" levels="1" name="Blue Wolf Helmet">
@@ -277,8 +323,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="51" />
-			<mul order="0x30" stat="regMp" val="1.0125" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="51" />
+				<mul order="0x30" stat="regMp" val="1.0125" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3724" levels="1" name="Dark Crystal Helmet">
@@ -288,7 +336,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.01" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="7.5" />
 			</effect>
@@ -301,7 +351,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.12" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.12" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
@@ -314,7 +366,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.02" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
@@ -327,7 +381,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.01" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
@@ -340,7 +396,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="healEffect" val="1.01" />
+			<effect name="Buff">
+				<mul order="0x30" stat="healEffect" val="1.01" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
@@ -353,7 +411,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3730" levels="1" name="Dark Crystal Leather Armor">
@@ -363,8 +423,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0724" />
-			<mul order="0x30" stat="pAtk" val="1.0724" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0724" />
+				<mul order="0x30" stat="pAtk" val="1.0724" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
@@ -377,8 +439,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
@@ -391,8 +455,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="5" />
 			</effect>
@@ -405,8 +471,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
-			<mul order="0x30" stat="pAtk" val="1.0062" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0062" />
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="7.5" />
 			</effect>
@@ -419,8 +487,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0103" />
-			<mul order="0x30" stat="pAtk" val="1.0103" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0103" />
+				<mul order="0x30" stat="pAtk" val="1.0103" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
@@ -433,9 +503,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0133" />
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<sub order="0x40" stat="cancel" val="8" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0133" />
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<sub order="0x40" stat="cancel" val="8" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="8.33" />
 			</effect>
@@ -448,10 +520,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cancelVuln" val="8.33" />
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="pDef" val="1.0333" />
-			<add order="0x40" stat="runSpd" val="2.91" />
+			<effect name="Buff">
+				<add order="0x40" stat="cancelVuln" val="8.33" />
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="pDef" val="1.0333" />
+				<add order="0x40" stat="runSpd" val="2.91" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="20" />
 			</effect>
@@ -464,9 +538,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0133" />
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<sub order="0x40" stat="cancel" val="8" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0133" />
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<sub order="0x40" stat="cancel" val="8" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="8.33" />
 			</effect>
@@ -479,9 +555,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.02" />
-			<add order="0x40" stat="runSpd" val="1.75" />
-			<sub order="0x40" stat="cancel" val="13" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.02" />
+				<add order="0x40" stat="runSpd" val="1.75" />
+				<sub order="0x40" stat="cancel" val="13" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param PARALYZE="12.5" />
 			</effect>
@@ -494,8 +572,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0083" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
@@ -509,8 +589,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0083" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0083" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
@@ -524,8 +606,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="8159" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0932" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="8159" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0932" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="52" />
 				<param BLEED="52" />
@@ -539,8 +623,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0125" />
-			<add order="0x40" stat="weightPenalty" val="1440" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0125" />
+				<add order="0x40" stat="weightPenalty" val="1440" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="12" />
 				<param BLEED="12" />
@@ -554,8 +640,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="315" />
-			<mul order="0x30" stat="regMp" val="1.0932" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="315" />
+				<mul order="0x30" stat="regMp" val="1.0932" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="52" />
 				<param BLEED="52" />
@@ -569,8 +657,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0083" />
+				<add order="0x40" stat="maxMp" val="37" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
@@ -584,8 +674,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0083" />
-			<add order="0x40" stat="maxMp" val="37" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0083" />
+				<add order="0x40" stat="maxMp" val="37" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="8" />
 				<param BLEED="8" />
@@ -599,8 +691,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0125" />
-			<add order="0x40" stat="maxMp" val="56" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0125" />
+				<add order="0x40" stat="maxMp" val="56" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="12" />
 				<param BLEED="12" />
@@ -614,7 +708,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.0133" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.0133" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="13.33" />
 				<param BLEED="13.33" />
@@ -628,7 +724,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.0133" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.0133" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="13.33" />
 				<param BLEED="13.33" />
@@ -642,7 +740,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3750" levels="1" name="Tallum Stockings">
@@ -652,7 +752,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.0333" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.0333" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="33.33" />
 				<param BLEED="33.33" />
@@ -666,7 +768,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param POISON="20" />
 				<param BLEED="20" />
@@ -680,8 +784,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<add order="0x40" stat="accCombat" val="0.31" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<add order="0x40" stat="accCombat" val="0.31" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -694,8 +800,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<add order="0x40" stat="accCombat" val="0.47" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<add order="0x40" stat="accCombat" val="0.47" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
@@ -708,8 +816,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="0.579" />
-			<mul order="0x30" stat="pAtk" val="1.0827" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="0.579" />
+				<mul order="0x30" stat="pAtk" val="1.0827" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
@@ -722,8 +832,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<add order="0x40" stat="accCombat" val="0.47" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<add order="0x40" stat="accCombat" val="0.47" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -736,11 +848,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083">
-				<using kind="Bow,Crossbow" />
-			</mul>
-			<add order="0x40" stat="maxMp" val="40" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0083">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="maxMp" val="40" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -753,11 +867,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="8159" />
-			<add order="0x40" stat="maxMp" val="340" />
-			<mul order="0x30" stat="pAtk" val="1.0932">
-				<using kind="Bow,Crossbow" />
-			</mul>
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="8159" />
+				<add order="0x40" stat="maxMp" val="340" />
+				<mul order="0x30" stat="pAtk" val="1.0932">
+					<using kind="Bow,Crossbow" />
+				</mul>
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
@@ -770,11 +886,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083">
-				<using kind="Bow,Crossbow" />
-			</mul>
-			<add order="0x40" stat="maxMp" val="40" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0083">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="maxMp" val="40" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -787,11 +905,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0125">
-				<using kind="Bow,Crossbow" />
-			</mul>
-			<add order="0x40" stat="maxMp" val="60" />
-			<add order="0x40" stat="weightPenalty" val="1440" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0125">
+					<using kind="Bow,Crossbow" />
+				</mul>
+				<add order="0x40" stat="maxMp" val="60" />
+				<add order="0x40" stat="weightPenalty" val="1440" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
@@ -804,8 +924,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="40" />
-			<mul order="0x30" stat="regMp" val="1.0133" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="40" />
+				<mul order="0x30" stat="regMp" val="1.0133" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -818,8 +940,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
-			<mul order="0x30" stat="regMp" val="1.0333" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+				<mul order="0x30" stat="regMp" val="1.0333" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
@@ -832,8 +956,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="40" />
-			<mul order="0x30" stat="regMp" val="1.0133" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="40" />
+				<mul order="0x30" stat="regMp" val="1.0133" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.33" />
 			</effect>
@@ -846,8 +972,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxMp" val="60" />
-			<mul order="0x30" stat="regMp" val="1.02" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxMp" val="60" />
+				<mul order="0x30" stat="regMp" val="1.02" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
@@ -860,7 +988,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.1708" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.1708" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
@@ -874,7 +1004,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -888,7 +1020,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0083" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0083" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -902,7 +1036,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0125" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0125" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="17.5" />
 				<param HOLD="17.5" />
@@ -916,8 +1052,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="absorbDam" val="3" />
-			<mul order="0x30" stat="mDef" val="1.0827" />
+			<effect name="Buff">
+				<add order="0x40" stat="absorbDam" val="3" />
+				<mul order="0x30" stat="mDef" val="1.0827" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
@@ -931,7 +1069,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -945,7 +1085,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -959,8 +1101,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0041" />
-			<mul order="0x30" stat="mAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0041" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -974,8 +1118,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0827" />
-			<mul order="0x30" stat="regMp" val="1.0827" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0827" />
+				<mul order="0x30" stat="regMp" val="1.0827" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="29.16" />
 				<param HOLD="29.16" />
@@ -989,8 +1135,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="regMp" val="1.0041" />
-			<mul order="0x30" stat="mAtk" val="1.0041" />
+			<effect name="Buff">
+				<mul order="0x30" stat="regMp" val="1.0041" />
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="11.66" />
 				<param HOLD="11.66" />
@@ -1004,7 +1152,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3775" levels="1" name="Draconic Leather Gloves">
@@ -1014,10 +1164,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<add order="0x40" stat="maxMp" val="74" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<add order="0x40" stat="maxMp" val="74" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3776" levels="1" name="Draconic Leather Boots">
@@ -1027,10 +1179,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-			<mul order="0x30" stat="pAtk" val="1.0041" />
-			<add order="0x40" stat="maxMp" val="74" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
+				<mul order="0x30" stat="pAtk" val="1.0041" />
+				<add order="0x40" stat="maxMp" val="74" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3777" levels="1" name="Draconic Leather Armor">
@@ -1040,10 +1194,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="weightPenalty" val="8159" />
-			<add order="0x40" stat="maxMp" val="630" />
-			<mul order="0x30" stat="pAtk" val="1.058" />
-			<mul order="0x30" stat="pAtkSpd" val="1.058" />
+			<effect name="Buff">
+				<add order="0x40" stat="weightPenalty" val="8159" />
+				<add order="0x40" stat="maxMp" val="630" />
+				<mul order="0x30" stat="pAtk" val="1.058" />
+				<mul order="0x30" stat="pAtkSpd" val="1.058" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3778" levels="1" name="Draconic Leather Helmet">
@@ -1053,10 +1209,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pAtkSpd" val="1.0062" />
-			<mul order="0x30" stat="pAtk" val="1.0062" />
-			<add order="0x40" stat="maxMp" val="111" />
-			<add order="0x40" stat="weightPenalty" val="1440" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtkSpd" val="1.0062" />
+				<mul order="0x30" stat="pAtk" val="1.0062" />
+				<add order="0x40" stat="maxMp" val="111" />
+				<add order="0x40" stat="weightPenalty" val="1440" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3779" levels="1" name="Major Arcana Gloves">
@@ -1066,10 +1224,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<sub order="0x40" stat="cancel" val="8" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<sub order="0x40" stat="cancel" val="8" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.3" />
 			</effect>
@@ -1082,10 +1242,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="cancel" val="21" />
-			<add order="0x40" stat="weightPenalty" val="8159" />
-			<mul order="0x30" stat="mAtk" val="1.1603" />
-			<mul order="0x30" stat="runSpd" val="1.0991" />
+			<effect name="Buff">
+				<sub order="0x40" stat="cancel" val="21" />
+				<add order="0x40" stat="weightPenalty" val="8159" />
+				<mul order="0x30" stat="mAtk" val="1.1603" />
+				<mul order="0x30" stat="runSpd" val="1.0991" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="20.83" />
 			</effect>
@@ -1098,10 +1260,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0041" />
-			<add order="0x40" stat="runSpd" val="1.16" />
-			<sub order="0x40" stat="cancel" val="8" />
-			<add order="0x40" stat="weightPenalty" val="960" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0041" />
+				<add order="0x40" stat="runSpd" val="1.16" />
+				<sub order="0x40" stat="cancel" val="8" />
+				<add order="0x40" stat="weightPenalty" val="960" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="8.3" />
 			</effect>
@@ -1114,10 +1278,12 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtk" val="1.0062" />
-			<add order="0x40" stat="runSpd" val="1.175" />
-			<sub order="0x40" stat="cancel" val="13" />
-			<add order="0x40" stat="weightPenalty" val="1440" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtk" val="1.0062" />
+				<add order="0x40" stat="runSpd" val="1.175" />
+				<sub order="0x40" stat="cancel" val="13" />
+				<add order="0x40" stat="weightPenalty" val="1440" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SHOCK="12.5" />
 			</effect>
@@ -1130,8 +1296,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0208" />
-			<add order="0x40" stat="maxHp" val="185" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0208" />
+				<add order="0x40" stat="maxHp" val="185" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="17.5" />
 				<param HOLD="17.5" />
@@ -1145,8 +1313,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0083" />
-			<add order="0x40" stat="maxHp" val="74" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0083" />
+				<add order="0x40" stat="maxHp" val="74" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
@@ -1160,8 +1330,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0083" />
-			<add order="0x40" stat="maxHp" val="74" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0083" />
+				<add order="0x40" stat="maxHp" val="74" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="7" />
 				<param HOLD="7" />
@@ -1175,7 +1347,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3787" levels="1" name="Imperial Crusader Helmet">
@@ -1185,8 +1359,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0125" />
-			<add order="0x40" stat="maxHp" val="111" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0125" />
+				<add order="0x40" stat="maxHp" val="111" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="10.5" />
 				<param HOLD="10.5" />
@@ -1200,8 +1376,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="maxHp" val="889" />
-			<mul order="0x30" stat="pDef" val="1.0724" />
+			<effect name="Buff">
+				<add order="0x40" stat="maxHp" val="889" />
+				<mul order="0x30" stat="pDef" val="1.0724" />
+			</effect>
 			<effect name="DefenceTrait">
 				<param SLEEP="28" />
 				<param HOLD="28" />
@@ -1215,9 +1393,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="darkRes" val="3.2" />
-			<add order="0x40" stat="maxHp" val="984" />
-			<mul order="0x30" stat="pDef" val="1.0724" />
+			<effect name="Buff">
+				<add order="0x40" stat="darkRes" val="3.2" />
+				<add order="0x40" stat="maxHp" val="984" />
+				<mul order="0x30" stat="pDef" val="1.0724" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3790" levels="1" name="Dynasty Gaiters">
@@ -1227,9 +1407,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0208" />
-			<add order="0x40" stat="maxHp" val="205" />
-			<add order="0x40" stat="darkRes" val="2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0208" />
+				<add order="0x40" stat="maxHp" val="205" />
+				<add order="0x40" stat="darkRes" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3791" levels="1" name="Dynasty Gauntlet">
@@ -1239,9 +1421,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0083" />
-			<add order="0x40" stat="maxHp" val="82" />
-			<add order="0x40" stat="darkRes" val="0.8" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0083" />
+				<add order="0x40" stat="maxHp" val="82" />
+				<add order="0x40" stat="darkRes" val="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3792" levels="1" name="Dynasty Boots">
@@ -1251,9 +1435,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0083" />
-			<add order="0x40" stat="maxHp" val="82" />
-			<add order="0x40" stat="darkRes" val="0.8" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0083" />
+				<add order="0x40" stat="maxHp" val="82" />
+				<add order="0x40" stat="darkRes" val="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3793" levels="1" name="Dynasty Shield">
@@ -1263,7 +1449,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mDef" val="1.02" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mDef" val="1.02" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3794" levels="1" name="Dynasty Helmet">
@@ -1273,9 +1461,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pDef" val="1.0125" />
-			<add order="0x40" stat="maxHp" val="123" />
-			<add order="0x40" stat="darkRes" val="1.2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pDef" val="1.0125" />
+				<add order="0x40" stat="maxHp" val="123" />
+				<add order="0x40" stat="darkRes" val="1.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3795" levels="1" name="Dynasty Leather Armor">
@@ -1285,11 +1475,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="3.4" />
-			<add order="0x40" stat="darkRes" val="3.2" />
-			<add order="0x40" stat="maxMp" val="492" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0477" />
-			<add order="0x40" stat="rEvas" val="3.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="3.4" />
+				<add order="0x40" stat="darkRes" val="3.2" />
+				<add order="0x40" stat="maxMp" val="492" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0477" />
+				<add order="0x40" stat="rEvas" val="3.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3796" levels="1" name="Dynasty Leather Leggings">
@@ -1299,11 +1491,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="0.79" />
-			<add order="0x40" stat="rEvas" val="0.79" />
-			<add order="0x40" stat="maxHp" val="205" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0068" />
-			<add order="0x40" stat="darkRes" val="2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="0.79" />
+				<add order="0x40" stat="rEvas" val="0.79" />
+				<add order="0x40" stat="maxHp" val="205" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0068" />
+				<add order="0x40" stat="darkRes" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3797" levels="1" name="Dynasty Leather Boots">
@@ -1313,11 +1507,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="0.31" />
-			<add order="0x40" stat="rEvas" val="0.31" />
-			<add order="0x40" stat="maxHp" val="82" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0027" />
-			<add order="0x40" stat="darkRes" val="0.8" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="0.31" />
+				<add order="0x40" stat="rEvas" val="0.31" />
+				<add order="0x40" stat="maxHp" val="82" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0027" />
+				<add order="0x40" stat="darkRes" val="0.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3798" levels="1" name="Dynasty Leather Helmet">
@@ -1327,11 +1523,13 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="0.47" />
-			<add order="0x40" stat="rEvas" val="0.47" />
-			<add order="0x40" stat="maxHp" val="123" />
-			<mul order="0x30" stat="pAtkSpd" val="1.0041" />
-			<add order="0x40" stat="darkRes" val="1.2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="0.47" />
+				<add order="0x40" stat="rEvas" val="0.47" />
+				<add order="0x40" stat="maxHp" val="123" />
+				<mul order="0x30" stat="pAtkSpd" val="1.0041" />
+				<add order="0x40" stat="darkRes" val="1.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3799" levels="1" name="Dynasty Tunic">
@@ -1341,7 +1539,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			<effect name="Buff">
+				<mul order="0x30" stat="mAtkSpd" val="1.15" />
+			</effect>
 		</for>
 	</skill>
 </list>

@@ -17,7 +17,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -42,7 +41,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -67,7 +65,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -87,7 +84,6 @@
 		<set name="mpConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -113,7 +109,6 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -735,7 +730,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="manaCharge" val="1" />
+			<effect name="Buff">
+				<add order="0x40" stat="manaCharge" val="1" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3240" levels="10" name="Item Skill: Might">
@@ -747,7 +744,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="#pAtk" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="#pAtk" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3241" levels="10" name="Item Skill: Empower">
@@ -758,7 +757,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="55" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="55" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3243" levels="10" name="Item Skill: Duel Might">
@@ -769,8 +770,10 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
-			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+			<effect name="Buff">
+				<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+				<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3244" levels="10" name="Item Skill: Shield">
@@ -782,7 +785,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="#pDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="#pDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3245" levels="10" name="Item Skill: Magic Barrier">
@@ -794,7 +799,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mDef" val="#mDef" />
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="#mDef" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
@@ -806,7 +813,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="healEffect" val="#healEffect" />
+			<effect name="Buff">
+				<add order="0x40" stat="healEffect" val="#healEffect" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3247" levels="10" name="Item Skill: Agility">
@@ -817,7 +826,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="2" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3248" levels="10" name="Item Skill: Guidance">
@@ -828,7 +839,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3249" levels="10" name="Item Skill: Focus">
@@ -839,7 +852,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<basemul order="0x30" stat="rCrit" val="0.2" />
+			<effect name="Buff">
+				<basemul order="0x30" stat="rCrit" val="0.2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3250" levels="10" name="Item Skill: Wild Magic">
@@ -850,7 +865,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mCritRate" val="4" />
+			<effect name="Buff">
+				<add order="0x40" stat="mCritRate" val="4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3251" levels="10" name="Item Skill: Weight Limit">
@@ -861,7 +878,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="weightLimit" val="2" />
+			<effect name="Buff">
+				<mul order="0x30" stat="weightLimit" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
@@ -872,7 +891,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="breath" val="6" />
+			<effect name="Buff">
+				<mul order="0x30" stat="breath" val="6" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3253" levels="10" name="Item Skill: Acrobatics">
@@ -883,7 +904,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="fall" val="100" />
+			<effect name="Buff">
+				<sub order="0x40" stat="fall" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3254" levels="10" name="Item Skill: Iron Body">
@@ -894,7 +917,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<sub order="0x40" stat="damageZoneVuln" val="40" />
+			<effect name="Buff">
+				<sub order="0x40" stat="damageZoneVuln" val="40" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3255" levels="3" name="Item Skill: Skill Clarity">
@@ -906,7 +931,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3256" levels="3" name="Item Skill: Spell Clarity">
@@ -918,7 +945,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3257" levels="3" name="Item Skill: Music Clarity">
@@ -930,7 +959,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
+			<effect name="Buff">
+				<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3258" levels="3" name="Item Skill: Clarity">
@@ -943,9 +974,11 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
-			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
-			<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			<effect name="Buff">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3259" levels="3" name="Item Skill: Reflect Damage">
@@ -957,7 +990,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="reflectDam" val="#reflectDam" />
+			<effect name="Buff">
+				<add order="0x40" stat="reflectDam" val="#reflectDam" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3260" levels="1" name="Forgiveness">
@@ -1069,7 +1104,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="ETC" />
 		<for>
@@ -1152,7 +1186,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1174,7 +1207,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1213,7 +1245,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1235,7 +1266,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1257,7 +1287,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1279,7 +1308,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1301,7 +1329,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1324,7 +1351,6 @@
 		<set name="operateType" val="A2" />
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Paralyze">
@@ -1347,7 +1373,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SilentMove" abnormalVisualEffect="stealth">
@@ -1369,7 +1394,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1393,7 +1417,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1417,7 +1440,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1439,7 +1461,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1462,7 +1483,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="360000" />
-		<set name="skillType" val="BUFF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1610,7 +1630,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pAtk" val="20.8" />
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="20.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
@@ -1620,7 +1642,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mAtk" val="24.3" />
+			<effect name="Buff">
+				<add order="0x40" stat="mAtk" val="24.3" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
@@ -1630,7 +1654,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="pDef" val="32.8" />
+			<effect name="Buff">
+				<add order="0x40" stat="pDef" val="32.8" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
@@ -1640,7 +1666,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="mDef" val="26.4" />
+			<effect name="Buff">
+				<add order="0x40" stat="mDef" val="26.4" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
@@ -1650,7 +1678,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="accCombat" val="2" />
+			<effect name="Buff">
+				<add order="0x40" stat="accCombat" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
@@ -1660,7 +1690,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="rEvas" val="2" />
+			<effect name="Buff">
+				<add order="0x40" stat="rEvas" val="2" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
@@ -1670,7 +1702,9 @@
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
-			<add order="0x40" stat="cAtkAdd" val="30" />
+			<effect name="Buff">
+				<add order="0x40" stat="cAtkAdd" val="30" />
+			</effect>
 		</for>
 	</skill>
 </list>
