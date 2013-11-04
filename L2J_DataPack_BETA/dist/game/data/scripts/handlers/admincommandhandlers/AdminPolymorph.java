@@ -31,8 +31,7 @@ import com.l2jserver.gameserver.network.serverpackets.SetupGauge;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * This class handles following admin commands: polymorph
- * @version $Revision: 1.2.2.1.2.4 $ $Date: 2007/07/31 10:05:56 $
+ * Polymorph admin command implementation.
  */
 public class AdminPolymorph implements IAdminCommandHandler
 {
@@ -76,19 +75,24 @@ public class AdminPolymorph implements IAdminCommandHandler
 					return false;
 				}
 				
-				else if (cha.isTransformed() || cha.isInStance())
+				if (cha.isTransformed() || cha.isInStance())
 				{
+					if (!command.contains(" "))
+					{
+						cha.untransform();
+						return true;
+					}
 					activeChar.sendPacket(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN);
 					return false;
 				}
 				
-				else if (cha.isInWater())
+				if (cha.isInWater())
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_INTO_THE_DESIRED_FORM_IN_WATER);
 					return false;
 				}
 				
-				else if (cha.isFlyingMounted() || cha.isMounted())
+				if (cha.isFlyingMounted() || cha.isMounted())
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_PET);
 					return false;
@@ -110,10 +114,6 @@ public class AdminPolymorph implements IAdminCommandHandler
 						activeChar.sendMessage("Usage: //transform <id>");
 					}
 				}
-				else if (parts.length == 1)
-				{
-					cha.untransform();
-				}
 				else
 				{
 					activeChar.sendMessage("Usage: //transform <id>");
@@ -134,8 +134,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 				String p1 = st.nextToken();
 				if (st.hasMoreTokens())
 				{
-					String p2 = st.nextToken();
-					doPolymorph(activeChar, target, p2, p1);
+					doPolymorph(activeChar, target, st.nextToken(), p1);
 				}
 				else
 				{

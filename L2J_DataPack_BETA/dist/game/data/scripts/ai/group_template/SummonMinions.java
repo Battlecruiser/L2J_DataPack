@@ -84,11 +84,11 @@ public class SummonMinions extends AbstractNpcAI
 		// Pythia
 		MINIONS.put(22266, Arrays.asList(18366, 18366));
 		// Invader Soldier of Nightmare
-		MINIONS.put(22715, Arrays.asList(22716,22716,22716,22716,22716,22716,22716,22716,22716));
+		MINIONS.put(22715, Arrays.asList(22716, 22716, 22716, 22716, 22716, 22716, 22716, 22716, 22716));
 		// Nihil Invader Soldier
-		MINIONS.put(22726, Arrays.asList(22727,22727,22727,22727,22727,22727,22727,22727,22727));
+		MINIONS.put(22726, Arrays.asList(22727, 22727, 22727, 22727, 22727, 22727, 22727, 22727, 22727));
 		// Mutant Soldier
-		MINIONS.put(22737, Arrays.asList(22738,22738,22738,22738,22738,22738,22738,22738,22738)); 
+		MINIONS.put(22737, Arrays.asList(22738, 22738, 22738, 22738, 22738, 22738, 22738, 22738, 22738));
 		// Tanta Lizardman Summoner
 		MINIONS.put(22774, Arrays.asList(22768, 22768));
 	}

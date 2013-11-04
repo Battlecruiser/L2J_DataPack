@@ -51,8 +51,7 @@ public final class DispelBySlot extends AbstractEffect
 			for (String ngtStack : _dispel.split(";"))
 			{
 				String[] ngt = ngtStack.split(",");
-				final AbnormalType type = AbnormalType.getAbnormalType(ngt[0]);
-				_dispelAbnormals.put(type, Short.parseShort(ngt[1]));
+				_dispelAbnormals.put(AbnormalType.getAbnormalType(ngt[0]), Short.parseShort(ngt[1]));
 			}
 		}
 		else
@@ -88,12 +87,6 @@ public final class DispelBySlot extends AbstractEffect
 		// Operation of O(n) for the amount of slots to dispel (which is usually small) and O(1) to get the buff.
 		for (Entry<AbnormalType, Short> entry : _dispelAbnormals.entrySet())
 		{
-			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());
-			if (toDispel == null)
-			{
-				continue;
-			}
-			
 			// Dispel transformations (buff and by GM)
 			if ((entry.getKey() == AbnormalType.TRANSFORM))
 			{
@@ -102,6 +95,12 @@ public final class DispelBySlot extends AbstractEffect
 					info.getEffected().stopTransformation(true);
 					continue;
 				}
+			}
+			
+			final BuffInfo toDispel = effectList.getBuffInfoByAbnormalType(entry.getKey());
+			if (toDispel == null)
+			{
+				continue;
 			}
 			
 			if ((entry.getKey() == toDispel.getSkill().getAbnormalType()) && (entry.getValue() >= toDispel.getSkill().getAbnormalLvl()))
