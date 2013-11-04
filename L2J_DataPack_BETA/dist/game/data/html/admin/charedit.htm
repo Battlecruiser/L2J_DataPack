@@ -24,10 +24,55 @@
 <tr><td width=140><button value="Nobless" action="bypass -h admin_setnoble" height=21 width=65 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><button value="Class" action="bypass -h admin_setclass" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td><td><button value="Sex" action="bypass -h admin_setsex" height=21 width=45 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td></tr>
 </table>
 <br>
-<table width=270>
-<tr><td width=50>Current HP:</td><td><edit var="hp" width=50></td><td width=50>PvP Flag:</td><td><edit var="pvpflag" width=50></td></tr>
-<tr><td width=50>Current MP:</td><td><edit var="mp" width=50></td><td width=50>PvP Kills:</td><td><edit var="pvpkills" width=50></td></tr>
-<tr><td width=50>Current CP:</td><td><edit var="cp" width=50></td><td width=50>PK Kills:</td><td><edit var="pkkills" width=50></td></tr>
-</table><br>
-<center><button value="Save Changes" action="bypass -h admin_save_modifications $hp $mp $cp $pvpflag $pvpkills $pkkills" width=130 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></center>
-</body></html>
+	<table width="270">
+		<tr>
+			<td width="10">HP:</td>
+			<td>
+				<edit var="hp" width="50">
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_set_hp $hp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width=50>
+				PvP Flag:
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_set_pvp_flag" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+		<tr>
+			<td width="10">MP:</td>
+			<td>
+				<edit var="mp" width="50">
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_set_mp $mp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width="10">PvPs:</td>
+			<td>
+				<edit var="pvpkills" width="50">
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_setpvp $pvpkills" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+		<tr>
+			<td width="10">CP:</td>
+			<td>
+				<edit var="cp" width="50">
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_set_cp $cp" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+			<td width="10">PKs:</td>
+			<td>
+				<edit var="pkkills" width="50">
+			</td>
+			<td>
+				<button value="" action="bypass -h admin_setpk $pkkills" width="16" height="16" back="L2UI_CH3.shortcut_rotate_down" fore="L2UI_CH3.shortcut_rotate">
+			</td>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>

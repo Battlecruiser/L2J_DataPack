@@ -32,13 +32,14 @@ import java.util.logging.Logger;
 
 import com.l2jserver.Config;
 import com.l2jserver.L2DatabaseFactory;
-import com.l2jserver.gameserver.ai.CtrlIntention;
 import com.l2jserver.gameserver.communitybbs.Manager.RegionBBSManager;
 import com.l2jserver.gameserver.datatables.CharNameTable;
 import com.l2jserver.gameserver.datatables.ClassListData;
 import com.l2jserver.gameserver.handler.IAdminCommandHandler;
 import com.l2jserver.gameserver.model.L2Object;
 import com.l2jserver.gameserver.model.L2World;
+import com.l2jserver.gameserver.model.actor.L2Character;
+import com.l2jserver.gameserver.model.actor.L2Playable;
 import com.l2jserver.gameserver.model.actor.L2Summon;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PetInstance;
@@ -47,7 +48,6 @@ import com.l2jserver.gameserver.network.L2GameClient;
 import com.l2jserver.gameserver.network.SystemMessageId;
 import com.l2jserver.gameserver.network.communityserver.CommunityServerThread;
 import com.l2jserver.gameserver.network.communityserver.writepackets.WorldInfo;
-import com.l2jserver.gameserver.network.serverpackets.CharInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jserver.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jserver.gameserver.network.serverpackets.GMViewItemList;
@@ -55,7 +55,6 @@ import com.l2jserver.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowAll;
 import com.l2jserver.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import com.l2jserver.gameserver.network.serverpackets.SetSummonRemainTime;
-import com.l2jserver.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jserver.gameserver.network.serverpackets.SystemMessage;
 import com.l2jserver.gameserver.network.serverpackets.UserInfo;
 import com.l2jserver.gameserver.util.Comparators;
@@ -63,9 +62,7 @@ import com.l2jserver.gameserver.util.Util;
 import com.l2jserver.util.StringUtil;
 
 /**
- * This class handles following admin commands: - edit_character - current_player - character_list - show_characters - find_character - find_ip - find_account - rec - nokarma - setkarma - settitle - changename - setsex - setclass - fullfood - save_modifications - setcolor - settcolor - setpk -
- * setpvp - remove_clan_penalty - summon_info - unsummon - summon_setlvl - show_pet_inv - partyinfo
- * @version $Revision: 1.3.2.1.2.10 $ $Date: 2005/04/11 10:06:06 $ Typo fix, rework for admin_tracert, gatherCharacterInfo and editCharacter by Zoey76 28/02/2011
+ * EditChar admin command implementation.
  */
 public class AdminEditChar implements IAdminCommandHandler
 {
@@ -87,7 +84,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_find_dualbox", // list all the IPs with more than 1 char logged in (dualbox)
 		"admin_strict_find_dualbox",
 		"admin_tracert",
-		"admin_save_modifications", // consider it deprecated...
 		"admin_rec", // gives recommendation points
 		"admin_settitle", // changes char title
 		"admin_changename", // changes char name
@@ -97,6 +93,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_setclass", // changes chars' classId
 		"admin_setpk", // changes PK count
 		"admin_setpvp", // changes PVP count
+		"admin_set_pvp_flag",
 		"admin_fullfood", // fulfills a pet's food bar
 		"admin_remove_clan_penalty", // removes clan penalties
 		"admin_summon_info", // displays an information window about target summon
@@ -104,7 +101,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		"admin_summon_setlvl",
 		"admin_show_pet_inv",
 		"admin_partyinfo",
-		"admin_setnoble"
+		"admin_setnoble",
+		"admin_set_hp",
+		"admin_set_mp",
+		"admin_set_cp",
 	};
 	
 	@Override
@@ -316,19 +316,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					_log.warning("Set Fame error: " + e);
 				}
 				activeChar.sendMessage("Usage: //setfame <new_fame_value>");
-			}
-		}
-		else if (command.startsWith("admin_save_modifications"))
-		{
-			try
-			{
-				String val = command.substring(24);
-				adminModifyCharacter(activeChar, val);
-			}
-			catch (StringIndexOutOfBoundsException e)
-			{ // Case of empty character name
-				activeChar.sendMessage("Error while modifying character.");
-				listCharacters(activeChar, 0);
 			}
 		}
 		else if (command.startsWith("admin_rec"))
@@ -757,13 +744,11 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_show_pet_inv"))
 		{
-			String val;
-			int objId;
 			L2Object target;
 			try
 			{
-				val = command.substring(19);
-				objId = Integer.parseInt(val);
+				String val = command.substring(19);
+				int objId = Integer.parseInt(val);
 				target = L2World.getInstance().getPet(objId);
 			}
 			catch (Exception e)
@@ -783,11 +768,10 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_partyinfo"))
 		{
-			String val;
 			L2Object target;
 			try
 			{
-				val = command.substring(16);
+				String val = command.substring(16);
 				target = L2World.getInstance().getPlayer(val);
 				if (target == null)
 				{
@@ -812,7 +796,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Invalid target.");
+				activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			}
 			
 		}
@@ -836,6 +820,78 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage("You've changed nobless status of: " + player.getName());
 				}
 				player.sendMessage("GM changed your nobless status!");
+			}
+		}
+		else if (command.startsWith("admin_set_hp"))
+		{
+			final String[] data = command.split(" ");
+			try
+			{
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isCharacter())
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					return false;
+				}
+				((L2Character) target).setCurrentHp(Double.parseDouble(data[1]));
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //set_hp 1000");
+			}
+		}
+		else if (command.startsWith("admin_set_mp"))
+		{
+			final String[] data = command.split(" ");
+			try
+			{
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isCharacter())
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					return false;
+				}
+				((L2Character) target).setCurrentMp(Double.parseDouble(data[1]));
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //set_mp 1000");
+			}
+		}
+		else if (command.startsWith("admin_set_cp"))
+		{
+			final String[] data = command.split(" ");
+			try
+			{
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isCharacter())
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					return false;
+				}
+				((L2Character) target).setCurrentCp(Double.parseDouble(data[1]));
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //set_cp 1000");
+			}
+		}
+		else if (command.startsWith("admin_set_pvp_flag"))
+		{
+			try
+			{
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isPlayable())
+				{
+					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
+					return false;
+				}
+				final L2Playable playable = ((L2Playable) target);
+				playable.updatePvPFlag(Math.abs(playable.getPvpFlag() - 1));
+			}
+			catch (Exception e)
+			{
+				activeChar.sendMessage("Usage: //set_pvp_flag");
 			}
 		}
 		return true;
@@ -1032,77 +1088,6 @@ public class AdminEditChar implements IAdminCommandHandler
 				_log.fine("[SET KARMA] ERROR: [GM]" + activeChar.getName() + " entered an incorrect value for new karma: " + newKarma + " for " + player.getName() + ".");
 			}
 		}
-	}
-	
-	private void adminModifyCharacter(L2PcInstance activeChar, String modifications)
-	{
-		L2Object target = activeChar.getTarget();
-		
-		if (!(target instanceof L2PcInstance))
-		{
-			return;
-		}
-		
-		L2PcInstance player = (L2PcInstance) target;
-		StringTokenizer st = new StringTokenizer(modifications);
-		
-		if (st.countTokens() != 6)
-		{
-			editCharacter(activeChar, null);
-			return;
-		}
-		
-		String hp = st.nextToken();
-		String mp = st.nextToken();
-		String cp = st.nextToken();
-		String pvpflag = st.nextToken();
-		String pvpkills = st.nextToken();
-		String pkkills = st.nextToken();
-		
-		int hpval = Integer.parseInt(hp);
-		int mpval = Integer.parseInt(mp);
-		int cpval = Integer.parseInt(cp);
-		int pvpflagval = Integer.parseInt(pvpflag);
-		int pvpkillsval = Integer.parseInt(pvpkills);
-		int pkkillsval = Integer.parseInt(pkkills);
-		
-		// Common character information
-		player.sendMessage("Admin has changed your stats." + "  HP: " + hpval + "  MP: " + mpval + "  CP: " + cpval + "  PvP Flag: " + pvpflagval + " PvP/PK " + pvpkillsval + "/" + pkkillsval);
-		player.setCurrentHp(hpval);
-		player.setCurrentMp(mpval);
-		player.setCurrentCp(cpval);
-		player.setPvpFlag(pvpflagval);
-		player.setPvpKills(pvpkillsval);
-		player.setPkKills(pkkillsval);
-		
-		// Save the changed parameters to the database.
-		player.storeMe();
-		
-		StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.CUR_HP, hpval);
-		su.addAttribute(StatusUpdate.MAX_HP, player.getMaxHp());
-		su.addAttribute(StatusUpdate.CUR_MP, mpval);
-		su.addAttribute(StatusUpdate.MAX_MP, player.getMaxMp());
-		su.addAttribute(StatusUpdate.CUR_CP, cpval);
-		su.addAttribute(StatusUpdate.MAX_CP, player.getMaxCp());
-		player.sendPacket(su);
-		
-		// Admin information
-		activeChar.sendMessage("Changed stats of " + player.getName() + "." + "  HP: " + hpval + "  MP: " + mpval + "  CP: " + cpval + "  PvP: " + pvpflagval + " / " + pvpkillsval);
-		
-		if (Config.DEBUG)
-		{
-			_log.fine("[GM]" + activeChar.getName() + " changed stats of " + player.getName() + ". " + " HP: " + hpval + " MP: " + mpval + " CP: " + cpval + " PvP: " + pvpflagval + " / " + pvpkillsval);
-		}
-		
-		showCharacterInfo(activeChar, null); // Back to start
-		
-		player.broadcastPacket(new CharInfo(player));
-		player.sendPacket(new UserInfo(player));
-		player.broadcastPacket(new ExBrExtraUserInfo(player));
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		player.decayMe();
-		player.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 	}
 	
 	private void editCharacter(L2PcInstance activeChar, String targetName)
