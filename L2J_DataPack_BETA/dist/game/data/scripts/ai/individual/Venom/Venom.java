@@ -208,7 +208,7 @@ public final class Venom extends AbstractNpcAI
 	@Override
 	public boolean onSiegeEvent(SiegeEvent event)
 	{
-		if (event.getSiege().getCastle().getCastleId() == CASTLE)
+		if (event.getSiege().getCastle().getResidenceId() == CASTLE)
 		{
 			if (event.getSiege().getCastle().getIsTimeRegistrationOver() && !event.getSiege().getAttackerClans().isEmpty())
 			{

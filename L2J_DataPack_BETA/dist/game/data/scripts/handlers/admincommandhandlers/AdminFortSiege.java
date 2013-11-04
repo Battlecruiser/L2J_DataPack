@@ -156,7 +156,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			if (fort != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_fortsiege ", String.valueOf(fort.getFortId()), "\">", fort.getName(), " id: ", String.valueOf(fort.getFortId()), "</a></td>");
+				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_fortsiege ", String.valueOf(fort.getResidenceId()), "\">", fort.getName(), " id: ", String.valueOf(fort.getResidenceId()), "</a></td>");
 				i++;
 			}
 			
@@ -176,7 +176,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/fort.htm");
 		adminReply.replace("%fortName%", fort.getName());
-		adminReply.replace("%fortId%", String.valueOf(fort.getFortId()));
+		adminReply.replace("%fortId%", String.valueOf(fort.getResidenceId()));
 		activeChar.sendPacket(adminReply);
 	}
 	

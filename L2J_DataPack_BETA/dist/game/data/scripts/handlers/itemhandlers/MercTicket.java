@@ -49,7 +49,7 @@ public class MercTicket implements IItemHandler
 		int castleId = -1;
 		if (castle != null)
 		{
-			castleId = castle.getCastleId();
+			castleId = castle.getResidenceId();
 		}
 		
 		// add check that certain tickets can only be placed in certain castles

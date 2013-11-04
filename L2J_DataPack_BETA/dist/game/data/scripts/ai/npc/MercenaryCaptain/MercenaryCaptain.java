@@ -114,7 +114,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 				}
 				case "territory":
 				{
-					player.sendPacket(new ExShowDominionRegistry(npc.getCastle().getCastleId(), player));
+					player.sendPacket(new ExShowDominionRegistry(npc.getCastle().getResidenceId(), player));
 					break;
 				}
 				case "strider":
@@ -169,7 +169,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 					}
 					else
 					{
-						final int listId = 676 + npc.getCastle().getCastleId();
+						final int listId = 676 + npc.getCastle().getResidenceId();
 						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
@@ -182,7 +182,7 @@ public class MercenaryCaptain extends AbstractNpcAI
 					}
 					else
 					{
-						final int listId = 685 + npc.getCastle().getCastleId();
+						final int listId = 685 + npc.getCastle().getResidenceId();
 						MultisellData.getInstance().separateAndSend(listId, player, npc, false);
 					}
 					break;
