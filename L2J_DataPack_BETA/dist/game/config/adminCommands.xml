@@ -130,7 +130,6 @@
 	<admin command="admin_find_dualbox" accessLevel="7" />
 	<admin command="admin_strict_find_dualbox" accessLevel="7" />
 	<admin command="admin_tracert" accessLevel="7" />
-	<admin command="admin_save_modifications" accessLevel="7" />
 	<admin command="admin_rec" accessLevel="7" />
 	<admin command="admin_settitle" accessLevel="7" />
 	<admin command="admin_changename" accessLevel="7" />
@@ -140,6 +139,7 @@
 	<admin command="admin_setclass" accessLevel="7" />
 	<admin command="admin_setpk" accessLevel="7" />
 	<admin command="admin_setpvp" accessLevel="7" />
+	<admin command="admin_set_pvp_flag" accessLevel="7" />
 	<admin command="admin_fullfood" accessLevel="7" />
 	<admin command="admin_remove_clan_penalty" accessLevel="7" />
 	<admin command="admin_summon_info" accessLevel="7" />
@@ -148,6 +148,9 @@
 	<admin command="admin_show_pet_inv" accessLevel="7" />
 	<admin command="admin_partyinfo" accessLevel="7" />
 	<admin command="admin_setnoble" accessLevel="7" confirmDlg="true" />
+	<admin command="admin_set_hp" accessLevel="7" />
+	<admin command="admin_set_mp" accessLevel="7" />
+	<admin command="admin_set_cp" accessLevel="7" />
 
 	<!-- ADMIN EDIT NPC -->
 	<admin command="admin_edit_npc" accessLevel="7" />
