@@ -82,7 +82,7 @@ public class CastleMercenaryManager extends AbstractNpcAI
 				{
 					html.setHtml(getHtm(player.getHtmlPrefix(), "mercmanager-limit.html"));
 				}
-				html.replace("%feud_name%", String.valueOf(1001000 + castle.getCastleId()));
+				html.replace("%feud_name%", String.valueOf(1001000 + castle.getResidenceId()));
 				player.sendPacket(html);
 				break;
 			}

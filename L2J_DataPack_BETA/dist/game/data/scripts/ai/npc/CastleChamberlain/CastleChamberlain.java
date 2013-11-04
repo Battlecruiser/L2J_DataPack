@@ -409,11 +409,11 @@ public class CastleChamberlain extends AbstractNpcAI
 				if (npc.isMyLord(player))
 				{
 					final StringBuilder sb = new StringBuilder();
-					final List<Integer> fort = FORTRESS.get(castle.getCastleId());
+					final List<Integer> fort = FORTRESS.get(castle.getResidenceId());
 					for (int id : fort)
 					{
 						final Fort fortress = FortManager.getInstance().getFortById(id);
-						final int fortId = fortress.getFortId();
+						final int fortId = fortress.getResidenceId();
 						final String fortType = (fortId < 112) ? "1300133" : "1300134";
 						final String fortStatus;
 						switch (fortress.getFortState())
@@ -450,7 +450,7 @@ public class CastleChamberlain extends AbstractNpcAI
 					{
 						htmltext = "chamberlain-08.html";
 					}
-					else if (!isDomainFortressInContractStatus(castle.getCastleId()))
+					else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
 					{
 						htmltext = "chamberlain-27.html";
 					}
@@ -664,7 +664,7 @@ public class CastleChamberlain extends AbstractNpcAI
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-02.html");
 						html.replace("%clanleadername%", clan.getLeaderName());
 						html.replace("%clanname%", clan.getName());
-						html.replace("%castlename%", String.valueOf(1001000 + castle.getCastleId()));
+						html.replace("%castlename%", String.valueOf(1001000 + castle.getResidenceId()));
 						
 						switch (SevenSigns.getInstance().getCurrentPeriod())
 						{
@@ -1125,7 +1125,7 @@ public class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(L2Clan.CP_CS_MANAGE_SIEGE))
 				{
-					player.sendPacket(new ExShowDominionRegistry(castle.getCastleId(), player));
+					player.sendPacket(new ExShowDominionRegistry(castle.getResidenceId(), player));
 				}
 				else
 				{
@@ -1140,7 +1140,7 @@ public class CastleChamberlain extends AbstractNpcAI
 			}
 			case "seed_status":
 			{
-				player.sendPacket(new ExShowSeedInfo(castle.getCastleId(), castle.getSeedProduction(0)));
+				player.sendPacket(new ExShowSeedInfo(castle.getResidenceId(), castle.getSeedProduction(0)));
 				break;
 			}
 			case "seed_setup":
@@ -1151,7 +1151,7 @@ public class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendPacket(new ExShowSeedSetting(castle.getCastleId()));
+					player.sendPacket(new ExShowSeedSetting(castle.getResidenceId()));
 				}
 				break;
 			}
@@ -1163,7 +1163,7 @@ public class CastleChamberlain extends AbstractNpcAI
 				}
 				else
 				{
-					player.sendPacket(new ExShowCropSetting(castle.getCastleId()));
+					player.sendPacket(new ExShowCropSetting(castle.getResidenceId()));
 				}
 				break;
 			}
@@ -1209,7 +1209,7 @@ public class CastleChamberlain extends AbstractNpcAI
 					{
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-25.html");
 						html.replace("%owner_name%", String.valueOf(player.getName()));
-						html.replace("%feud_name%", String.valueOf(String.valueOf(1001000 + castle.getCastleId())));
+						html.replace("%feud_name%", String.valueOf(String.valueOf(1001000 + castle.getResidenceId())));
 						player.sendPacket(html);
 						giveItems(player, CROWN, 1);
 					}

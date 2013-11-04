@@ -60,7 +60,7 @@ public class TerritoryStatus implements IBypassHandler
 		html.replace("%taxpercent%", "" + npc.getCastle().getTaxPercent());
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		{
-			if (npc.getCastle().getCastleId() > 6)
+			if (npc.getCastle().getResidenceId() > 6)
 			{
 				html.replace("%territory%", "The Kingdom of Elmore");
 			}
