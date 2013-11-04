@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Conquest of Alligator Island (354)
@@ -94,13 +93,13 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 				final long count = getQuestItemsCount(player, ALLIGATOR_TOOTH);
 				if (count >= 100)
 				{
-					st.giveAdena((count * 220) + 10700, true);
+					giveAdena(player, (count * 220) + 10700, true);
 					takeItems(player, ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-06.html";
 				}
 				else if (count > 0)
 				{
-					st.giveAdena((count * 220) + 3100, true);
+					giveAdena(player, (count * 220) + 3100, true);
 					takeItems(player, ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-07.html";
 				}
@@ -144,15 +143,15 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
 			{
-				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
+				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
 			}
 			else
 			{
 				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
-				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
+				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
 			}
 			
-			st.giveItemRandomly(npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);
+			giveItemRandomly(player, npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -167,18 +166,13 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (st.isCreated())
 		{
-			case State.CREATED:
-			{
-				htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html");
-				break;
-			}
-			case State.STARTED:
-			{
-				htmltext = (st.hasQuestItems(MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
-				break;
-			}
+			htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30895-01.htm" : "30895-03.html");
+		}
+		else if (st.isStarted())
+		{
+			htmltext = (hasQuestItems(player, MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
 		}
 		return htmltext;
 	}
