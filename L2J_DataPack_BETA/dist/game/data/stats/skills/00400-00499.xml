@@ -1628,8 +1628,8 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="AURA_CORPSE_MOB" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="Sweeper" />
+			<effect name="ConsumeBody" />
 		</for>
 	</skill>
 	<skill id="445" levels="1" name="Mirage">

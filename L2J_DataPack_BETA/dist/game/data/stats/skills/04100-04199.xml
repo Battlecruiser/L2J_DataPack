@@ -815,8 +815,8 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="AREA_CORPSE_MOB" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="MagicalAttack" />
+			<effect name="ConsumeBody" />
 		</for>
 	</skill>
 	<skill id="4139" levels="12" name="Boom Attack">

@@ -710,13 +710,13 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#drain" />
+			<effect name="ConsumeBody" />
 		</for>
 		<enchant2for>
-			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#ench1Drain" />
 			<effect self="1" name="CpHeal" val="#ench2Bravery" />
+			<effect name="ConsumeBody" />
 		</enchant2for>
 	</skill>
 	<skill id="1154" levels="6" name="Summon Corrupted Man" enchantGroup1="1">
@@ -786,8 +786,8 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="MagicalAttack" />
+			<effect name="ConsumeBody" />
 		</for>
 	</skill>
 	<skill id="1156" levels="13" name="Forget">
