@@ -1139,18 +1139,18 @@
 			<player canSweep="true" />
 		</cond>
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="Sweeper" />
+			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
-			<effect name="ConsumeBody" />
 			<effect name="Sweeper" />
 			<effect name="HpByLevel" val="#ench1DrainHp" />
+			<effect name="ConsumeBody" />
 		</enchant1for>
 		<enchant1for>
-			<effect name="ConsumeBody" />
 			<effect name="Sweeper" />
 			<effect name="MpByLevel" val="#ench2DrainMp" />
+			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="44" levels="3" name="Remedy">
@@ -1219,12 +1219,12 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#drain" />
+			<effect name="ConsumeBody" />
 		</for>
 		<enchant1for>
-			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#enchDrain" />
+			<effect name="ConsumeBody" />
 		</enchant1for>
 	</skill>
 	<skill id="48" levels="37" name="Thunder Storm" enchantGroup1="2" enchantGroup2="2">

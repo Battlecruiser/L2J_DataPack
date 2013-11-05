@@ -1259,8 +1259,8 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="CORPSE" />
 		<for>
-			<effect name="ConsumeBody" />
 			<effect name="Heal" val="#heal" />
+			<effect name="ConsumeBody" />
 		</for>
 	</skill>
 	<skill id="4654" levels="12" name="NPC Death Link">
