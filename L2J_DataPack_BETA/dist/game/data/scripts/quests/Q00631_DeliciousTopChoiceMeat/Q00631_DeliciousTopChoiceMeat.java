@@ -21,13 +21,10 @@ package quests.Q00631_DeliciousTopChoiceMeat;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jserver.Config;
-import com.l2jserver.gameserver.enums.QuestSound;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Delicious Top Choice Meat (631)
@@ -42,6 +39,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	private static final int PRIME_MEAT = 15534;
 	// Misc
 	private static final int MIN_LEVEL = 82;
+	private static final int PRIME_MEAT_COUNT = 120;
 	// Rewards
 	private static final int[] RECIPE =
 	{
@@ -72,23 +70,22 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	private static final int GOLDEN_SPICE_CRATE = 15482;
 	private static final int CRYSTAL_SPICE_COMPRESSED_PACK = 15483;
 	
-	private static final Map<Integer, Integer> MOBS_MEAT = new HashMap<>();
-	
+	private static final Map<Integer, Double> MOBS_MEAT = new HashMap<>();
 	static
 	{
-		MOBS_MEAT.put(18878, 172); // Full Grown Kookaburra
-		MOBS_MEAT.put(18879, 334); // Full Grown Kookaburra
-		MOBS_MEAT.put(18885, 172); // Full Grown Cougar
-		MOBS_MEAT.put(18886, 334); // Full Grown Cougar
-		MOBS_MEAT.put(18892, 182); // Full Grown Buffalo
-		MOBS_MEAT.put(18893, 349); // Full Grown Buffalo
-		MOBS_MEAT.put(18899, 182); // Full Grown Grendel
-		MOBS_MEAT.put(18900, 349); // Full Grown Grendel
+		MOBS_MEAT.put(18878, 0.172); // Full Grown Kookaburra
+		MOBS_MEAT.put(18879, 0.334); // Full Grown Kookaburra
+		MOBS_MEAT.put(18885, 0.172); // Full Grown Cougar
+		MOBS_MEAT.put(18886, 0.334); // Full Grown Cougar
+		MOBS_MEAT.put(18892, 0.182); // Full Grown Buffalo
+		MOBS_MEAT.put(18893, 0.349); // Full Grown Buffalo
+		MOBS_MEAT.put(18899, 0.182); // Full Grown Grendel
+		MOBS_MEAT.put(18900, 0.349); // Full Grown Grendel
 	}
 	
-	public Q00631_DeliciousTopChoiceMeat(int questId, String name, String descr)
+	private Q00631_DeliciousTopChoiceMeat()
 	{
-		super(questId, name, descr);
+		super(631, Q00631_DeliciousTopChoiceMeat.class.getSimpleName(), "Delicious Top Choice Meat");
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 		addKillId(MOBS_MEAT.keySet());
@@ -122,7 +119,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			}
 			case "31537-06.html":
 			{
-				if (st.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= 120))
+				if (st.isCond(2) && (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT))
 				{
 					switch (getRandom(10))
 					{
@@ -189,23 +186,10 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final L2PcInstance partyMember = getRandomPartyMember(player, 1);
-		if (partyMember == null)
+		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
+		if (st != null)
 		{
-			return super.onKill(npc, player, isSummon);
-		}
-		
-		final QuestState st = partyMember.getQuestState(getName());
-		int npcId = npc.getId();
-		float chance = (MOBS_MEAT.get(npcId) * Config.RATE_QUEST_DROP);
-		if (getRandom(1000) < chance)
-		{
-			st.rewardItems(PRIME_MEAT, 1);
-			if (getQuestItemsCount(player, PRIME_MEAT) < 120)
-			{
-				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			else
+			if (giveItemRandomly(player, npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
 			{
 				st.setCond(2, true);
 			}
@@ -223,30 +207,25 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (st.isCreated())
 		{
-			case State.CREATED:
+			htmltext = "31537-01.htm";
+		}
+		else if (st.isStarted())
+		{
+			if (st.isCond(1))
 			{
-				htmltext = "31537-01.htm";
-				break;
+				if (getQuestItemsCount(player, PRIME_MEAT) < PRIME_MEAT_COUNT)
+				{
+					htmltext = "31537-04.html";
+				}
 			}
-			case State.STARTED:
+			else if (st.isCond(2))
 			{
-				if (st.isCond(1))
+				if (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT)
 				{
-					if (getQuestItemsCount(player, PRIME_MEAT) < 120)
-					{
-						htmltext = "31537-04.html";
-					}
+					htmltext = "31537-05.html";
 				}
-				else if (st.isCond(2))
-				{
-					if (getQuestItemsCount(player, PRIME_MEAT) >= 120)
-					{
-						htmltext = "31537-05.html";
-					}
-				}
-				break;
 			}
 		}
 		return htmltext;
@@ -254,6 +233,6 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 	
 	public static void main(String args[])
 	{
-		new Q00631_DeliciousTopChoiceMeat(631, Q00631_DeliciousTopChoiceMeat.class.getSimpleName(), "Delicious Top Choice Meat");
+		new Q00631_DeliciousTopChoiceMeat();
 	}
 }
