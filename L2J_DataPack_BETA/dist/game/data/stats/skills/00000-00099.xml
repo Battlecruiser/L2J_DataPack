@@ -1139,17 +1139,17 @@
 			<player canSweep="true" />
 		</cond>
 		<for>
-			<effect name="Sweeper" />
 			<effect name="ConsumeBody" />
+			<effect name="Sweeper" />
 		</for>
 		<enchant1for>
-			<effect name="Sweeper" />
 			<effect name="ConsumeBody" />
+			<effect name="Sweeper" />
 			<effect name="HpByLevel" val="#ench1DrainHp" />
 		</enchant1for>
 		<enchant1for>
-			<effect name="Sweeper" />
 			<effect name="ConsumeBody" />
+			<effect name="Sweeper" />
 			<effect name="MpByLevel" val="#ench2DrainMp" />
 		</enchant1for>
 	</skill>
@@ -1219,9 +1219,11 @@
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<for>
+			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#drain" />
 		</for>
 		<enchant1for>
+			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#enchDrain" />
 		</enchant1for>
 	</skill>

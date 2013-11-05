@@ -710,9 +710,11 @@
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<for>
+			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#drain" />
 		</for>
 		<enchant2for>
+			<effect name="ConsumeBody" />
 			<effect name="HpByLevel" val="#ench1Drain" />
 			<effect self="1" name="CpHeal" val="#ench2Bravery" />
 		</enchant2for>
@@ -784,6 +786,7 @@
 		<enchant2 name="mpInitialConsume" val="#ench2mpInitialConsume" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
+			<effect name="ConsumeBody" />
 			<effect name="MagicalAttack" />
 		</for>
 	</skill>

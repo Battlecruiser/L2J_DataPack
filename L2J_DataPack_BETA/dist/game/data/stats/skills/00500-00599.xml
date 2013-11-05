@@ -2630,8 +2630,8 @@
 		<set name="reuseDelay" val="8000" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<for>
-			<effect name="HpByLevel" val="#drainHp" />
 			<effect name="ConsumeBody" />
+			<effect name="HpByLevel" val="#drainHp" />
 		</for>
 	</skill>
 	<skill id="590" levels="1" name="Residence Body">
