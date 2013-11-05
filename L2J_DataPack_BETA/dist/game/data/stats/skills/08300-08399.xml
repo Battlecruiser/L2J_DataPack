@@ -281,60 +281,145 @@
 		</for>
 	</skill>
 	<skill id="8315" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="1;19" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<add order="0x40" stat="pAtk" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8316" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="20" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="20;39" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="1.9" />
+				<add order="0x40" stat="pAtk" val="150" />
+				<mul order="0x30" stat="mAtk" val="3" />
+				<add order="0x40" stat="mAtk" val="100" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8317" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="30" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="40;51" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="3" />
+				<add order="0x40" stat="pAtk" val="300" />
+				<mul order="0x30" stat="mAtk" val="5" />
+				<add order="0x40" stat="mAtk" val="200" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8318" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="52;60" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="4" />
+				<add order="0x40" stat="pAtk" val="400" />
+				<mul order="0x30" stat="mAtk" val="7" />
+				<add order="0x40" stat="mAtk" val="300" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8319" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="61;74" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="5" />
+				<add order="0x40" stat="pAtk" val="450" />
+				<mul order="0x30" stat="mAtk" val="9" />
+				<add order="0x40" stat="mAtk" val="450" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8320" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="60" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="75;79" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="500" />
+				<mul order="0x30" stat="mAtk" val="11" />
+				<add order="0x40" stat="mAtk" val="500" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8321" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="80;81" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="650" />
+				<mul order="0x30" stat="mAtk" val="13" />
+				<add order="0x40" stat="mAtk" val="1000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8322" levels="1" name="Santa Claus' Blessed Weapon">
+		<!-- Confirmed CT2.5 -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="P" />
-		<set name="skillType" val="NOTDONE" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<player levelRange="82;85" />
+		</cond>
+		<for>
+			<effect name="Buff">
+				<mul order="0x30" stat="pAtk" val="6" />
+				<add order="0x40" stat="pAtk" val="750" />
+				<mul order="0x30" stat="mAtk" val="13" />
+				<add order="0x40" stat="mAtk" val="1000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="8323" levels="1" name="Notifier">
 		<set name="icon" val="icon.skill5239" />

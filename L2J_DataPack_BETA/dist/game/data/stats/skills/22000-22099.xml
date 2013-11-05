@@ -1700,6 +1700,7 @@
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="CORPSE_MOB" />
 		<for>
+			<effect name="ConsumeBody" />
 			<effect self="1" name="Buff">
 				<mul order="0x30" stat="maxHp" val="1.6" />
 				<mul order="0x30" stat="maxMp" val="1.6" />
@@ -1712,7 +1713,6 @@
 				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.9" />
 				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
 			</effect>
-			<effect name="ConsumeBody" />
 		</for>
 	</skill>
 </list>

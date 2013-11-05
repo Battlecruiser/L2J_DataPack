@@ -1259,6 +1259,7 @@
 		<set name="reuseDelay" val="20000" />
 		<set name="targetType" val="CORPSE" />
 		<for>
+			<effect name="ConsumeBody" />
 			<effect name="Heal" val="#heal" />
 		</for>
 	</skill>
