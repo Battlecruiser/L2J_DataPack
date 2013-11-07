@@ -95,17 +95,17 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 			case "30405-05a.html":
 			case "30405-05c.html":
 			{
-				if (getQuestItemsCount(player, SPIDER_SKIN) >= SKIN_COUNT)
+				if (st.getQuestItemsCount(SPIDER_SKIN) >= SKIN_COUNT)
 				{
-					giveItems(player, CONSUMABLES.get(event));
-					takeItems(player, SPIDER_SKIN, SKIN_COUNT);
+					st.giveItems(CONSUMABLES.get(event));
+					st.takeItems(SPIDER_SKIN, SKIN_COUNT);
 					htmltext = event;
 				}
 				break;
 			}
 			case "30405-06.html":
 			{
-				htmltext = (getQuestItemsCount(player, SPIDER_SKIN) >= SKIN_COUNT) ? event : "30405-07.html";
+				htmltext = (st.getQuestItemsCount(SPIDER_SKIN) >= SKIN_COUNT) ? event : "30405-07.html";
 				break;
 			}
 			case "30497-03.html":
@@ -130,7 +130,7 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if (st != null)
 		{
-			giveItems(killer, SPIDER_SKIN, 1);
+			st.giveItems(SPIDER_SKIN, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -161,9 +161,9 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 					{
 						if (st.hasQuestItems(SPIDER_SKIN))
 						{
-							final long skins = getQuestItemsCount(player, SPIDER_SKIN);
+							final long skins = st.getQuestItemsCount(SPIDER_SKIN);
 							st.giveAdena((skins * SKIN_REWARD) + ((skins >= 10) ? SKIN_BONUS : 0), true);
-							takeItems(player, SPIDER_SKIN, -1);
+							st.takeItems(SPIDER_SKIN, -1);
 							htmltext = "30497-05.html";
 						}
 						else
@@ -177,7 +177,7 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 			}
 			case MARIUS:
 			{
-				htmltext = (getQuestItemsCount(player, SPIDER_SKIN) >= SKIN_COUNT) ? "30405-02.html" : "30405-01.html";
+				htmltext = (st.getQuestItemsCount(SPIDER_SKIN) >= SKIN_COUNT) ? "30405-02.html" : "30405-01.html";
 				break;
 			}
 		}

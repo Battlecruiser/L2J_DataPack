@@ -98,7 +98,7 @@ public class Q00602_ShadowOfLight extends Quest
 				st.startQuest();
 				break;
 			case "31683-05.html":
-				if (getQuestItemsCount(player, EYE_OF_DARKNESS) < 100)
+				if (st.getQuestItemsCount(EYE_OF_DARKNESS) < 100)
 				{
 					return "31683-06.html";
 				}
@@ -106,7 +106,7 @@ public class Q00602_ShadowOfLight extends Quest
 				int i = getRandom(4);
 				if (i < 3)
 				{
-					giveItems(player, REWARD[i][0], 3);
+					st.giveItems(REWARD[i][0], 3);
 				}
 				st.giveAdena(REWARD[i][1], true);
 				st.addExpAndSp(REWARD[i][2], REWARD[i][3]);
@@ -133,8 +133,8 @@ public class Q00602_ShadowOfLight extends Quest
 		
 		if (st.isCond(1) && (getRandom(1000) < chance))
 		{
-			giveItems(player, EYE_OF_DARKNESS, 1);
-			if (getQuestItemsCount(player, EYE_OF_DARKNESS) == 100)
+			st.giveItems(EYE_OF_DARKNESS, 1);
+			if (st.getQuestItemsCount(EYE_OF_DARKNESS) == 100)
 			{
 				st.setCond(2, true);
 			}

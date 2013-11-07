@@ -80,7 +80,7 @@ public class Q00170_DangerousSeduction extends Quest
 		if ((st != null) && st.isCond(1))
 		{
 			st.setCond(2, true);
-			giveItems(player, NIGHTMARE_CRYSTAL, 1);
+			st.giveItems(NIGHTMARE_CRYSTAL, 1);
 			npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.SEND_MY_SOUL_TO_LICH_KING_ICARUS));
 		}
 		return super.onKill(npc, player, isSummon);

@@ -106,9 +106,9 @@ public final class Q00281_HeadForTheHills extends Quest
 			{
 				if (st.hasQuestItems(CLAWS))
 				{
-					final long claws = getQuestItemsCount(player, CLAWS);
+					final long claws = st.getQuestItemsCount(CLAWS);
 					st.giveAdena(((claws * 23) + (claws >= 10 ? 400 : 0)), true);
-					takeItems(player, CLAWS, -1);
+					st.takeItems(CLAWS, -1);
 					giveNewbieReward(player);
 					htmltext = event;
 				}
@@ -131,17 +131,17 @@ public final class Q00281_HeadForTheHills extends Quest
 			}
 			case "32173-11.html":
 			{
-				if (getQuestItemsCount(player, CLAWS) >= 50)
+				if (st.getQuestItemsCount(CLAWS) >= 50)
 				{
 					if (getRandom(1000) <= 360)
 					{
-						giveItems(player, REWARDS[getRandom(9)], 1);
+						st.giveItems(REWARDS[getRandom(9)], 1);
 					}
 					else
 					{
-						giveItems(player, REWARDS[9], 1);
+						st.giveItems(REWARDS[9], 1);
 					}
-					takeItems(player, CLAWS, 50);
+					st.takeItems(CLAWS, 50);
 					giveNewbieReward(player);
 					htmltext = event;
 				}
@@ -161,7 +161,7 @@ public final class Q00281_HeadForTheHills extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (getRandom(1000) <= MONSTERS.get(npc.getId())))
 		{
-			giveItems(killer, CLAWS, 1);
+			st.giveItems(CLAWS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);

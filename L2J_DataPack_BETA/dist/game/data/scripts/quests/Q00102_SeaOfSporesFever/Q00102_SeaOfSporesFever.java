@@ -93,7 +93,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 		if ((st != null) && event.equals("30284-02.htm"))
 		{
 			st.startQuest();
-			giveItems(player, ALBERIUS_LETTER, 1);
+			st.giveItems(ALBERIUS_LETTER, 1);
 			return event;
 		}
 		return super.onAdvEvent(event, npc, player);
@@ -105,8 +105,8 @@ public class Q00102_SeaOfSporesFever extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(2) && (getRandom(10) < 3))
 		{
-			giveItems(killer, DRYADS_TEAR, 1);
-			if (getQuestItemsCount(killer, DRYADS_TEAR) < 10)
+			st.giveItems(DRYADS_TEAR, 1);
+			if (st.getQuestItemsCount(DRYADS_TEAR) < 10)
 			{
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
@@ -160,8 +160,8 @@ public class Q00102_SeaOfSporesFever extends Quest
 								{
 									if (st.hasQuestItems(COBENDELLS_MEDICINE1))
 									{
-										takeItems(player, COBENDELLS_MEDICINE1, 1);
-										giveItems(player, ALBERIUS_LIST, 1);
+										st.takeItems(COBENDELLS_MEDICINE1, 1);
+										st.giveItems(ALBERIUS_LIST, 1);
 										st.setCond(5);
 										htmltext = "30284-04.html";
 									}
@@ -179,21 +179,21 @@ public class Q00102_SeaOfSporesFever extends Quest
 								{
 									if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 									{
-										giveItems(player, LESSER_HEALING_POTION, 100);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_BATTLE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_LOVE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_SOLITUDE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_FEAST, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_CELEBRATION, 10);
+										st.giveItems(LESSER_HEALING_POTION, 100);
+										st.giveItems(ECHO_CRYSTAL_THEME_OF_BATTLE, 10);
+										st.giveItems(ECHO_CRYSTAL_THEME_OF_LOVE, 10);
+										st.giveItems(ECHO_CRYSTAL_THEME_OF_SOLITUDE, 10);
+										st.giveItems(ECHO_CRYSTAL_THEME_OF_FEAST, 10);
+										st.giveItems(ECHO_CRYSTAL_THEME_OF_CELEBRATION, 10);
 										if (player.isMageClass())
 										{
-											giveItems(player, STAFF_OF_SENTINEL, 1);
-											giveItems(player, SPIRITSHOT_NO_GRADE, 500);
+											st.giveItems(STAFF_OF_SENTINEL, 1);
+											st.giveItems(SPIRITSHOT_NO_GRADE, 500);
 										}
 										else
 										{
-											giveItems(player, SWORD_OF_SENTINEL, 1);
-											giveItems(player, SOULSHOT_NO_GRADE, 500);
+											st.giveItems(SWORD_OF_SENTINEL, 1);
+											st.giveItems(SOULSHOT_NO_GRADE, 500);
 										}
 										st.addExpAndSp(30202, 1339);
 										st.giveAdena(6331, true);
@@ -221,8 +221,8 @@ public class Q00102_SeaOfSporesFever extends Quest
 						{
 							if (st.hasQuestItems(ALBERIUS_LETTER))
 							{
-								takeItems(player, ALBERIUS_LETTER, 1);
-								giveItems(player, EVERGREEN_AMULET, 1);
+								st.takeItems(ALBERIUS_LETTER, 1);
+								st.giveItems(EVERGREEN_AMULET, 1);
 								st.setCond(2, true);
 								htmltext = "30156-03.html";
 							}
@@ -230,7 +230,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 						}
 						case 2:
 						{
-							if (st.hasQuestItems(EVERGREEN_AMULET) && (getQuestItemsCount(player, DRYADS_TEAR) < 10))
+							if (st.hasQuestItems(EVERGREEN_AMULET) && (st.getQuestItemsCount(DRYADS_TEAR) < 10))
 							{
 								htmltext = "30156-04.html";
 							}
@@ -238,15 +238,15 @@ public class Q00102_SeaOfSporesFever extends Quest
 						}
 						case 3:
 						{
-							if (getQuestItemsCount(player, DRYADS_TEAR) >= 10)
+							if (st.getQuestItemsCount(DRYADS_TEAR) >= 10)
 							{
-								takeItems(player, EVERGREEN_AMULET, -1);
-								takeItems(player, DRYADS_TEAR, -1);
-								giveItems(player, COBENDELLS_MEDICINE1, 1);
-								giveItems(player, COBENDELLS_MEDICINE2, 1);
-								giveItems(player, COBENDELLS_MEDICINE3, 1);
-								giveItems(player, COBENDELLS_MEDICINE4, 1);
-								giveItems(player, COBENDELLS_MEDICINE5, 1);
+								st.takeItems(EVERGREEN_AMULET, -1);
+								st.takeItems(DRYADS_TEAR, -1);
+								st.giveItems(COBENDELLS_MEDICINE1, 1);
+								st.giveItems(COBENDELLS_MEDICINE2, 1);
+								st.giveItems(COBENDELLS_MEDICINE3, 1);
+								st.giveItems(COBENDELLS_MEDICINE4, 1);
+								st.giveItems(COBENDELLS_MEDICINE5, 1);
 								st.setCond(4, true);
 								htmltext = "30156-05.html";
 							}
@@ -278,7 +278,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 				{
 					if (st.hasQuestItems(ALBERIUS_LIST, SENTINELS.get(npc.getId())))
 					{
-						takeItems(player, SENTINELS.get(npc.getId()), -1);
+						st.takeItems(SENTINELS.get(npc.getId()), -1);
 						if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 						{
 							st.setCond(6);

@@ -128,7 +128,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 				{
 					if (!st.hasQuestItems(mob[1]))
 					{
-						giveItems(player, mob[1], 1);
+						st.giveItems(mob[1], 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
@@ -170,7 +170,7 @@ public class Q00250_WatchWhatYouEat extends Quest
 							htmltext = "32743-05.htm";
 							for (int items[] : MOBS)
 							{
-								takeItems(player, items[1], -1);
+								st.takeItems(items[1], -1);
 							}
 						}
 						else

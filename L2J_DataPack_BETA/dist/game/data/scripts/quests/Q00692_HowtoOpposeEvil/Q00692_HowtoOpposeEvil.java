@@ -192,7 +192,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 			}
 			if (numItems > 0)
 			{
-				giveItems(player, QUEST_MOBS.get(npcId).getId(), numItems);
+				st.giveItems(QUEST_MOBS.get(npcId).getId(), numItems);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
@@ -220,7 +220,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 				if (st.isCond(1) && st.hasQuestItems(LEKONS_CERTIFICATE))
 				{
 					htmltext = "32549-04.htm";
-					takeItems(player, LEKONS_CERTIFICATE, -1);
+					st.takeItems(LEKONS_CERTIFICATE, -1);
 					st.setCond(2);
 				}
 				else if (st.isCond(2))
@@ -238,7 +238,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 				{
 					for (int i : QUEST_ITEMS)
 					{
-						if (getQuestItemsCount(player, i) > 0)
+						if (st.getQuestItemsCount(i) > 0)
 						{
 							return "32550-05.htm";
 						}
@@ -252,14 +252,14 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	
 	private static final boolean giveReward(QuestState st, int itemId, int minCount, int rewardItemId, long rewardCount)
 	{
-		long count = getQuestItemsCount(st.getPlayer(), itemId);
+		long count = st.getQuestItemsCount(itemId);
 		if (count < minCount)
 		{
 			return false;
 		}
 		
 		count = count / minCount;
-		takeItems(st.getPlayer(), itemId, count * minCount);
+		st.takeItems(itemId, count * minCount);
 		st.rewardItems(rewardItemId, rewardCount * count);
 		return true;
 	}

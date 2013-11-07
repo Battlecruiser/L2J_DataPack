@@ -57,7 +57,7 @@ public class Q00613_ProveYourCourageVarka extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			giveItems(player, HEKATON_HEAD, 1);
+			st.giveItems(HEKATON_HEAD, 1);
 			st.setCond(2, true);
 		}
 	}
@@ -80,7 +80,7 @@ public class Q00613_ProveYourCourageVarka extends Quest
 			case "31377-07.html":
 				if (st.hasQuestItems(HEKATON_HEAD) && st.isCond(2))
 				{
-					giveItems(player, VALOR_FEATHER, 1);
+					st.giveItems(VALOR_FEATHER, 1);
 					st.addExpAndSp(10000, 0);
 					st.exitQuest(true, true);
 				}

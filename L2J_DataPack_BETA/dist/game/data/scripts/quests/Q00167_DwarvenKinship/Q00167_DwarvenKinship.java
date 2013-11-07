@@ -76,8 +76,8 @@ public class Q00167_DwarvenKinship extends Quest
 				{
 					if (st.isCond(1) && st.hasQuestItems(CARLONS_LETTER))
 					{
-						takeItems(player, CARLONS_LETTER, -1);
-						giveItems(player, NORMANS_LETTER, 1);
+						st.takeItems(CARLONS_LETTER, -1);
+						st.giveItems(NORMANS_LETTER, 1);
 						st.giveAdena(2000, true);
 						st.setCond(2);
 						htmltext = event;
@@ -97,7 +97,7 @@ public class Q00167_DwarvenKinship extends Quest
 				case "30350-03.htm":
 				{
 					st.startQuest();
-					giveItems(player, CARLONS_LETTER, 1);
+					st.giveItems(CARLONS_LETTER, 1);
 					htmltext = event;
 					break;
 				}

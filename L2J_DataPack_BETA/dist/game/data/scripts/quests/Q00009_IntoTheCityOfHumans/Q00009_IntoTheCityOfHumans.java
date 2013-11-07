@@ -64,8 +64,8 @@ public class Q00009_IntoTheCityOfHumans extends Quest
 				st.startQuest();
 				break;
 			case "30576-02.html":
-				giveItems(player, MARK_OF_TRAVELER, 1);
-				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
+				st.giveItems(MARK_OF_TRAVELER, 1);
+				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
 				st.exitQuest(false, true);
 				break;
 			case "30571-02.html":

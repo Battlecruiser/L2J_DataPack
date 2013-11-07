@@ -77,11 +77,11 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 				switch (st.getCond())
 				{
 					case 1: // take the item and give the heart
-						takeItems(player, GREEN_TOTEM, 1);
+						st.takeItems(GREEN_TOTEM, 1);
 					case 2:
 						if (!st.hasQuestItems(ASHUTAR_HEART))
 						{
-							giveItems(player, ASHUTAR_HEART, 1);
+							st.giveItems(ASHUTAR_HEART, 1);
 						}
 						st.setCond(3, true);
 						break;
@@ -206,7 +206,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		}
 		if (st.isCond(1))
 		{
-			takeItems(st.getPlayer(), GREEN_TOTEM, 1);
+			st.takeItems(GREEN_TOTEM, 1);
 			st.setCond(2, true);
 		}
 		npc.deleteMe();

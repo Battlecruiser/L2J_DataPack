@@ -103,7 +103,7 @@ public class Q00131_BirdInACage extends Quest
 			{
 				if (st.isCond(2))
 				{
-					giveItems(player, ECHO_CRYSTAL_OF_FREE_THOUGHT, 1);
+					st.giveItems(ECHO_CRYSTAL_OF_FREE_THOUGHT, 1);
 					st.setCond(3, true);
 					htmltext = event;
 				}
@@ -122,7 +122,7 @@ public class Q00131_BirdInACage extends Quest
 			{
 				if (st.isCond(4) && st.hasQuestItems(PARMES_LETTER))
 				{
-					takeItems(player, PARMES_LETTER, -1);
+					st.takeItems(PARMES_LETTER, -1);
 					st.setCond(5);
 					htmltext = event;
 				}
@@ -133,7 +133,7 @@ public class Q00131_BirdInACage extends Quest
 				if (st.isCond(5) && st.hasQuestItems(ECHO_CRYSTAL_OF_FREE_THOUGHT))
 				{
 					st.addExpAndSp(250677, 25019);
-					giveItems(player, FIRE_STONE + getRandom(4), 4);
+					st.giveItems(FIRE_STONE + getRandom(4), 4);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -151,7 +151,7 @@ public class Q00131_BirdInACage extends Quest
 			{
 				if (st.isCond(3))
 				{
-					giveItems(player, PARMES_LETTER, 1);
+					st.giveItems(PARMES_LETTER, 1);
 					st.setCond(4, true);
 					player.setInstanceId(0);
 					player.teleToLocation(INSTANCE_EXIT, true);

@@ -82,7 +82,7 @@ public class Q00158_SeedOfEvil extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && !st.hasQuestItems(CLAY_TABLET))
 		{
-			giveItems(killer, CLAY_TABLET, 1);
+			st.giveItems(CLAY_TABLET, 1);
 			st.setCond(2, true);
 		}
 		npc.broadcastPacket(new NpcSay(npc, Say2.NPC_ALL, NpcStringId.THE_POWER_OF_LORD_BELETH_RULES_THE_WHOLE_WORLD));
@@ -111,7 +111,7 @@ public class Q00158_SeedOfEvil extends Quest
 				}
 				else if (st.isCond(2) && st.hasQuestItems(CLAY_TABLET))
 				{
-					giveItems(player, ENCHANT_ARMOR_D, 1);
+					st.giveItems(ENCHANT_ARMOR_D, 1);
 					st.addExpAndSp(17818, 927);
 					st.giveAdena(1495, true);
 					st.exitQuest(false, true);

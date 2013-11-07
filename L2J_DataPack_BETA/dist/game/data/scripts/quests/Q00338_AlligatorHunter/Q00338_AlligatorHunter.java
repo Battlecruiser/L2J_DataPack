@@ -74,10 +74,10 @@ public class Q00338_AlligatorHunter extends Quest
 				{
 					return "30892-05.html";
 				}
-				int amount = (getQuestItemsCount(player, ALLIGATOR_LEATHER) >= 10) ? 3430 : 0;
-				amount += 60 * getQuestItemsCount(player, ALLIGATOR_LEATHER);
+				int amount = (st.getQuestItemsCount(ALLIGATOR_LEATHER) >= 10) ? 3430 : 0;
+				amount += 60 * st.getQuestItemsCount(ALLIGATOR_LEATHER);
 				st.giveAdena(amount, true);
-				takeItems(player, ALLIGATOR_LEATHER, -1);
+				st.takeItems(ALLIGATOR_LEATHER, -1);
 				break;
 			case "30892-10.html":
 				st.exitQuest(true, true);
@@ -99,10 +99,10 @@ public class Q00338_AlligatorHunter extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if (st != null)
 		{
-			giveItems(player, ALLIGATOR_LEATHER, 1);
+			st.giveItems(ALLIGATOR_LEATHER, 1);
 			if (getRandom(100) < SECOND_CHANCE)
 			{
-				giveItems(player, ALLIGATOR_LEATHER, 1);
+				st.giveItems(ALLIGATOR_LEATHER, 1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}

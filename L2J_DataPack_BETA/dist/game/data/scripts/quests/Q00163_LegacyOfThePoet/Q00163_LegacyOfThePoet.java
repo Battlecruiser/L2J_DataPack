@@ -91,7 +91,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 		{
 			if ((getRandom(10) == 0) && !st.hasQuestItems(RUMIELS_1ST_POEM))
 			{
-				giveItems(killer, RUMIELS_1ST_POEM, 1);
+				st.giveItems(RUMIELS_1ST_POEM, 1);
 				if (st.hasQuestItems(RUMIELS_2ND_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
 					st.setCond(2, true);
@@ -103,7 +103,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 			}
 			if ((getRandom(10) > 7) && !st.hasQuestItems(RUMIELS_2ND_POEM))
 			{
-				giveItems(killer, RUMIELS_2ND_POEM, 1);
+				st.giveItems(RUMIELS_2ND_POEM, 1);
 				if (st.hasQuestItems(RUMIELS_1ST_POEM, RUMIELS_3RD_POEM, RUMIELS_4TH_POEM))
 				{
 					st.setCond(2, true);
@@ -115,7 +115,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 			}
 			if ((getRandom(10) > 7) && !st.hasQuestItems(RUMIELS_3RD_POEM))
 			{
-				giveItems(killer, RUMIELS_3RD_POEM, 1);
+				st.giveItems(RUMIELS_3RD_POEM, 1);
 				if (st.hasQuestItems(RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_4TH_POEM))
 				{
 					st.setCond(2, true);
@@ -127,7 +127,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 			}
 			if ((getRandom(10) > 5) && !st.hasQuestItems(RUMIELS_4TH_POEM))
 			{
-				giveItems(killer, RUMIELS_4TH_POEM, 1);
+				st.giveItems(RUMIELS_4TH_POEM, 1);
 				if (st.hasQuestItems(RUMIELS_1ST_POEM, RUMIELS_2ND_POEM, RUMIELS_3RD_POEM))
 				{
 					st.setCond(2, true);

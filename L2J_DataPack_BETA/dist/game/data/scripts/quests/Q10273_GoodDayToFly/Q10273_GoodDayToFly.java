@@ -103,10 +103,10 @@ public class Q10273_GoodDayToFly extends Quest
 			return null;
 		}
 		
-		final long count = getQuestItemsCount(killer, MARK);
+		final long count = st.getQuestItemsCount(MARK);
 		if (st.isCond(1) && (count < 5))
 		{
-			giveItems(killer, MARK, 1);
+			st.giveItems(MARK, 1);
 			if (count == 4)
 			{
 				st.setCond(2, true);
@@ -139,18 +139,18 @@ public class Q10273_GoodDayToFly extends Quest
 				htmltext = (player.getLevel() < 75) ? "32557-00.html" : "32557-01.htm";
 				break;
 			default:
-				if (getQuestItemsCount(player, MARK) >= 5)
+				if (st.getQuestItemsCount(MARK) >= 5)
 				{
 					htmltext = "32557-14.html";
 					if (transform == 1)
 					{
-						giveItems(player, 13553, 1);
+						st.giveItems(13553, 1);
 					}
 					else if (transform == 2)
 					{
-						giveItems(player, 13554, 1);
+						st.giveItems(13554, 1);
 					}
-					giveItems(player, 13857, 1);
+					st.giveItems(13857, 1);
 					st.addExpAndSp(25160, 2525);
 					st.exitQuest(false, true);
 				}

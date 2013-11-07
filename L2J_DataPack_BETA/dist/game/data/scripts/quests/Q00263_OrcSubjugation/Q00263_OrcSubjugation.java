@@ -100,7 +100,7 @@ public final class Q00263_OrcSubjugation extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (getRandom(10) > 4))
 		{
-			giveItems(killer, MONSTERS.get(npc.getId()), 1);
+			st.giveItems(MONSTERS.get(npc.getId()), 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -127,8 +127,8 @@ public final class Q00263_OrcSubjugation extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 				{
-					final long amulets = getQuestItemsCount(player, ORC_AMULET);
-					final long necklaces = getQuestItemsCount(player, ORC_NECKLACE);
+					final long amulets = st.getQuestItemsCount(ORC_AMULET);
+					final long necklaces = st.getQuestItemsCount(ORC_NECKLACE);
 					st.giveAdena(((amulets * 20) + (necklaces * 30) + ((amulets + necklaces) >= 10 ? 1100 : 0)), true);
 					takeItems(player, -1, getRegisteredItemIds());
 					htmltext = "30346-06.html";

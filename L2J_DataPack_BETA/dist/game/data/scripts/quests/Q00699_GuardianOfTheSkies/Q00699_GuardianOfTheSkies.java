@@ -122,14 +122,14 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				{
 					amount = getRandom(10) + 60;
 				}
-				giveItems(killer, VULTURES_GOLDEN_FEATHER, amount);
+				st.giveItems(VULTURES_GOLDEN_FEATHER, amount);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
 			{
 				if (getRandom(1000) < MONSTERS.get(npc.getId()))
 				{
-					giveItems(killer, VULTURES_GOLDEN_FEATHER, 1);
+					st.giveItems(VULTURES_GOLDEN_FEATHER, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -154,11 +154,11 @@ public class Q00699_GuardianOfTheSkies extends Quest
 				}
 				case State.STARTED:
 				{
-					final long feathers = getQuestItemsCount(player, VULTURES_GOLDEN_FEATHER);
+					final long feathers = st.getQuestItemsCount(VULTURES_GOLDEN_FEATHER);
 					if (feathers > 0)
 					{
 						st.giveAdena(((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
-						takeItems(player, VULTURES_GOLDEN_FEATHER, -1);
+						st.takeItems(VULTURES_GOLDEN_FEATHER, -1);
 						htmltext = (feathers > BONUS_COUNT) ? "32557-07.html" : "32557-06.html";
 					}
 					else

@@ -65,7 +65,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 			case "32556-09.html":
 				if (st.hasQuestItems(MEDIBAL_DOCUMENT))
 				{
-					takeItems(player, MEDIBAL_DOCUMENT, -1);
+					st.takeItems(MEDIBAL_DOCUMENT, -1);
 					st.setCond(4, true);
 				}
 				break;
@@ -156,7 +156,7 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 						case 2:
 							htmltext = "32528-01.html";
 							st.setCond(3, true);
-							giveItems(player, MEDIBAL_DOCUMENT, 1);
+							st.giveItems(MEDIBAL_DOCUMENT, 1);
 							break;
 						case 3:
 						case 4:

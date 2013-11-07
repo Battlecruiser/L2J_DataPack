@@ -74,7 +74,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 		if ((st != null) && event.equals("35437-02.htm"))
 		{
 			st.startQuest();
-			giveItems(player, CONTEST_CERTIFICATE, 1);
+			st.giveItems(CONTEST_CERTIFICATE, 1);
 			htmltext = "35437-02.htm";
 		}
 		return htmltext;
@@ -91,8 +91,8 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 		
 		if (getRandom(10) < MONSTERS.get(npc.getId()))
 		{
-			giveItems(st.getPlayer(), TARLK_AMULET, 1);
-			if (getQuestItemsCount(st.getPlayer(), TARLK_AMULET) < 30)
+			st.giveItems(TARLK_AMULET, 1);
+			if (st.getQuestItemsCount(TARLK_AMULET) < 30)
 			{
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
@@ -153,13 +153,13 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 				}
 				case State.STARTED:
 				{
-					if (getQuestItemsCount(player, TARLK_AMULET) < 30)
+					if (st.getQuestItemsCount(TARLK_AMULET) < 30)
 					{
 						htmltext = "35437-07.html";
 					}
 					else
 					{
-						takeItems(player, TARLK_AMULET, 30);
+						st.takeItems(TARLK_AMULET, 30);
 						st.rewardItems(TROPHY_OF_ALLIANCE, 1);
 						st.exitQuest(true);
 						htmltext = "35437-08.html";

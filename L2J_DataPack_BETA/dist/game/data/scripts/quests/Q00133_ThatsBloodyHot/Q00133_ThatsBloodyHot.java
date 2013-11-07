@@ -98,7 +98,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 			{
 				if (st.isCond(2))
 				{
-					giveItems(player, REFINED_CRYSTAL_SAMPLE, 1);
+					st.giveItems(REFINED_CRYSTAL_SAMPLE, 1);
 					st.setCond(3);
 					htmltext = event;
 				}
@@ -116,7 +116,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(REFINED_CRYSTAL_SAMPLE))
 				{
-					takeItems(player, REFINED_CRYSTAL_SAMPLE, -1);
+					st.takeItems(REFINED_CRYSTAL_SAMPLE, -1);
 					htmltext = event;
 					st.setCond(4);
 				}

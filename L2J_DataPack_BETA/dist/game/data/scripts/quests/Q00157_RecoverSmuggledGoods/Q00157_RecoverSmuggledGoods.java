@@ -79,10 +79,10 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && st.isCond(1) && (getRandom(10) < 4) && (getQuestItemsCount(killer, ADAMANTITE_ORE) < 20))
+		if ((st != null) && st.isCond(1) && (getRandom(10) < 4) && (st.getQuestItemsCount(ADAMANTITE_ORE) < 20))
 		{
-			giveItems(killer, ADAMANTITE_ORE, 1);
-			if (getQuestItemsCount(killer, ADAMANTITE_ORE) >= 20)
+			st.giveItems(ADAMANTITE_ORE, 1);
+			if (st.getQuestItemsCount(ADAMANTITE_ORE) >= 20)
 			{
 				st.setCond(2, true);
 			}
@@ -110,9 +110,9 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, ADAMANTITE_ORE) >= 20))
+					if (st.isCond(2) && (st.getQuestItemsCount(ADAMANTITE_ORE) >= 20))
 					{
-						giveItems(player, BUCKLER, 1);
+						st.giveItems(BUCKLER, 1);
 						st.exitQuest(false, true);
 						htmltext = "30005-06.html";
 					}

@@ -73,11 +73,11 @@ public class Q00431_WeddingMarch extends Quest
 		}
 		else if (event.equalsIgnoreCase("31042-06.html"))
 		{
-			if (getQuestItemsCount(player, SILVER_CRYSTAL) < CRYSTAL_COUNT)
+			if (st.getQuestItemsCount(SILVER_CRYSTAL) < CRYSTAL_COUNT)
 			{
 				return "31042-05.html";
 			}
-			giveItems(player, WEDDING_ECHO_CRYSTAL, 25);
+			st.giveItems(WEDDING_ECHO_CRYSTAL, 25);
 			st.exitQuest(true, true);
 			htmltext = event;
 		}
@@ -93,8 +93,8 @@ public class Q00431_WeddingMarch extends Quest
 			final QuestState st = member.getQuestState(getName());
 			if (getRandomBoolean())
 			{
-				giveItems(player, SILVER_CRYSTAL, 1);
-				if (getQuestItemsCount(player, SILVER_CRYSTAL) >= CRYSTAL_COUNT)
+				st.giveItems(SILVER_CRYSTAL, 1);
+				if (st.getQuestItemsCount(SILVER_CRYSTAL) >= CRYSTAL_COUNT)
 				{
 					st.setCond(2, true);
 				}

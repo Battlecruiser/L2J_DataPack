@@ -70,7 +70,7 @@ public class Q10288_SecretMission extends Quest
 				break;
 			case "31350-05.htm":
 				st.startQuest();
-				giveItems(player, LETTER, 1);
+				st.giveItems(LETTER, 1);
 				break;
 			case "32780-03.html":
 				if (st.isCond(1) && st.hasQuestItems(LETTER))

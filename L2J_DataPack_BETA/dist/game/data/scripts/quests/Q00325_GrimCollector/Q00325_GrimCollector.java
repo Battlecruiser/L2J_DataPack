@@ -128,7 +128,7 @@ public final class Q00325_GrimCollector extends Quest
 			}
 			case "30434-03.html":
 			{
-				giveItems(player, ANATOMY_DIAGRAM, 1);
+				st.giveItems(ANATOMY_DIAGRAM, 1);
 				htmltext = event;
 				break;
 			}
@@ -137,15 +137,15 @@ public final class Q00325_GrimCollector extends Quest
 			{
 				if (hasQuestItems(player, getRegisteredItemIds()))
 				{
-					final long head = getQuestItemsCount(player, ZOMBIE_HEAD);
-					final long heart = getQuestItemsCount(player, ZOMBIE_HEART);
-					final long liver = getQuestItemsCount(player, ZOMBIE_LIVER);
-					final long skull = getQuestItemsCount(player, SKULL);
-					final long rib = getQuestItemsCount(player, RIB_BONE);
-					final long spine = getQuestItemsCount(player, SPINE);
-					final long arm = getQuestItemsCount(player, ARM_BONE);
-					final long thigh = getQuestItemsCount(player, THIGH_BONE);
-					final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
+					final long head = st.getQuestItemsCount(ZOMBIE_HEAD);
+					final long heart = st.getQuestItemsCount(ZOMBIE_HEART);
+					final long liver = st.getQuestItemsCount(ZOMBIE_LIVER);
+					final long skull = st.getQuestItemsCount(SKULL);
+					final long rib = st.getQuestItemsCount(RIB_BONE);
+					final long spine = st.getQuestItemsCount(SPINE);
+					final long arm = st.getQuestItemsCount(ARM_BONE);
+					final long thigh = st.getQuestItemsCount(THIGH_BONE);
+					final long complete = st.getQuestItemsCount(COMPLETE_SKELETON);
 					final long totalCount = (head + heart + liver + skull + rib + spine + arm + thigh + complete);
 					if (totalCount > 0)
 					{
@@ -175,11 +175,11 @@ public final class Q00325_GrimCollector extends Quest
 			}
 			case "30434-09.html":
 			{
-				final long complete = getQuestItemsCount(player, COMPLETE_SKELETON);
+				final long complete = st.getQuestItemsCount(COMPLETE_SKELETON);
 				if (complete > 0)
 				{
 					st.giveAdena(((complete * 341) + 543), true);
-					takeItems(player, COMPLETE_SKELETON, -1);
+					st.takeItems(COMPLETE_SKELETON, -1);
 				}
 				break;
 			}

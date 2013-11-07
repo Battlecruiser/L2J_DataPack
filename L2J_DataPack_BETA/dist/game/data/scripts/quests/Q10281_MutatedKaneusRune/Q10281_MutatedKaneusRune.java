@@ -156,7 +156,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	 */
 	private final void rewardItem(int npcId, QuestState st)
 	{
-		giveItems(st.getPlayer(), TISSUE_WA, 1);
+		st.giveItems(TISSUE_WA, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 	}
 	

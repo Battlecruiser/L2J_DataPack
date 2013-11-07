@@ -84,12 +84,12 @@ public class Q00319_ScentOfDeath extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = killer.getQuestState(getName());
-		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false) && (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT))
+		if ((st != null) && Util.checkIfInRange(1500, npc, killer, false) && (st.getQuestItemsCount(ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT))
 		{
 			if (getRandom(10) > MIN_CHANCE)
 			{
-				giveItems(killer, ZOMBIES_SKIN, 1);
-				if (getQuestItemsCount(killer, ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT)
+				st.giveItems(ZOMBIES_SKIN, 1);
+				if (st.getQuestItemsCount(ZOMBIES_SKIN) < REQUIRED_ITEM_COUNT)
 				{
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
@@ -131,8 +131,8 @@ public class Q00319_ScentOfDeath extends Quest
 					case 2:
 					{
 						st.giveAdena(3350, false);
-						giveItems(player, LESSER_HEALING_POTION);
-						takeItems(player, ZOMBIES_SKIN, -1);
+						st.giveItems(LESSER_HEALING_POTION);
+						st.takeItems(ZOMBIES_SKIN, -1);
 						st.exitQuest(true, true);
 						htmltext = "30138-06.html";
 						break;

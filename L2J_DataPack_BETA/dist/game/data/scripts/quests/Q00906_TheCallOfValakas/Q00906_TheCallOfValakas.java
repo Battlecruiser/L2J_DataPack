@@ -59,7 +59,7 @@ public class Q00906_TheCallOfValakas extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			giveItems(player, LAVASAURUS_ALPHA_FRAGMENT, 1);
+			st.giveItems(LAVASAURUS_ALPHA_FRAGMENT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
@@ -141,7 +141,7 @@ public class Q00906_TheCallOfValakas extends Quest
 					}
 					case 2:
 					{
-						giveItems(player, SCROLL_VALAKAS_CALL, 1);
+						st.giveItems(SCROLL_VALAKAS_CALL, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "31540-08.html";

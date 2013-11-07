@@ -80,7 +80,7 @@ public final class Q00106_ForgottenTruth extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					giveItems(player, ONYX_TALISMAN1, 1);
+					st.giveItems(ONYX_TALISMAN1, 1);
 					htmltext = event;
 				}
 				break;
@@ -99,13 +99,13 @@ public final class Q00106_ForgottenTruth extends Quest
 			{
 				if (!st.hasQuestItems(ANCIENT_SCROLL))
 				{
-					giveItems(killer, ANCIENT_SCROLL, 1);
+					st.giveItems(ANCIENT_SCROLL, 1);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				}
 				else if (!st.hasQuestItems(ANCIENT_CLAY_TABLET))
 				{
 					st.setCond(3, true);
-					giveItems(killer, ANCIENT_CLAY_TABLET, 1);
+					st.giveItems(ANCIENT_CLAY_TABLET, 1);
 				}
 			}
 		}
@@ -176,8 +176,8 @@ public final class Q00106_ForgottenTruth extends Quest
 							if (st.hasQuestItems(ONYX_TALISMAN1))
 							{
 								st.setCond(2, true);
-								takeItems(talker, ONYX_TALISMAN1, -1);
-								giveItems(talker, ONYX_TALISMAN2, 1);
+								st.takeItems(ONYX_TALISMAN1, -1);
+								st.giveItems(ONYX_TALISMAN2, 1);
 								htmltext = "30133-01.html";
 							}
 							break;
@@ -196,7 +196,7 @@ public final class Q00106_ForgottenTruth extends Quest
 							{
 								st.setCond(4, true);
 								takeItems(talker, -1, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET, ONYX_TALISMAN2);
-								giveItems(talker, KARTAS_TRANSLATION, 1);
+								st.giveItems(KARTAS_TRANSLATION, 1);
 								htmltext = "30133-03.html";
 							}
 							break;

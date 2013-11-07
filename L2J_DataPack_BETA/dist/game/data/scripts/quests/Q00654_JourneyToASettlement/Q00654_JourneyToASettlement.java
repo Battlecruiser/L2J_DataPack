@@ -92,7 +92,7 @@ public class Q00654_JourneyToASettlement extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(ANTELOPE_SKIN))
 				{
-					giveItems(player, FRINTEZZAS_SCROLL, 1);
+					st.giveItems(FRINTEZZAS_SCROLL, 1);
 					st.exitQuest(true, true);
 					htmltext = event;
 				}

@@ -66,7 +66,7 @@ public class Q00651_RunawayYouth extends Quest
 				return "32014-05.htm";
 			}
 			st.startQuest();
-			takeItems(player, SOE, 1);
+			st.takeItems(SOE, 1);
 			npc.deleteMe();
 			htmltext = event;
 		}

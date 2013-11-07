@@ -116,13 +116,13 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 				{
 					if (st.isSet("spawned"))
 					{
-						takeItems(player, KEY, 1);
+						st.takeItems(KEY, 1);
 						htmltext = "31559-04.html";
 					}
 					else
 					{
-						giveItems(player, STOLEN_RED_TOTEM, 1);
-						takeItems(player, KEY, 1);
+						st.giveItems(STOLEN_RED_TOTEM, 1);
+						st.takeItems(KEY, 1);
 						st.setCond(3, true);
 						htmltext = "31559-03.html";
 					}
@@ -201,8 +201,8 @@ public class Q00615_MagicalPowerOfFirePart1 extends Quest
 							}
 							break;
 						case 3:
-							giveItems(player, RED_TOTEM, 1);
-							giveItems(player, WISDOM_STONE, 1);
+							st.giveItems(RED_TOTEM, 1);
+							st.giveItems(WISDOM_STONE, 1);
 							st.exitQuest(true, true);
 							htmltext = "31379-04.html";
 							break;

@@ -71,8 +71,8 @@ public final class Q00187_NikolasHeart extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					takeItems(player, LORAINES_CERTIFICATE, -1);
-					giveItems(player, METALLOGRAPH, 1);
+					st.takeItems(LORAINES_CERTIFICATE, -1);
+					st.giveItems(METALLOGRAPH, 1);
 					htmltext = event;
 				}
 				break;

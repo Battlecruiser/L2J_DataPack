@@ -86,7 +86,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 		if (getRandom(10) < chance)
 		{
 			st.rewardItems(SPORE_SAC, 1);
-			if (getQuestItemsCount(player, SPORE_SAC) >= REQUIRED_ITEM_COUNT)
+			if (st.getQuestItemsCount(SPORE_SAC) >= REQUIRED_ITEM_COUNT)
 			{
 				st.setCond(2, true);
 			}
@@ -121,7 +121,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 				{
 					case 1:
 					{
-						if (getQuestItemsCount(player, SPORE_SAC) < REQUIRED_ITEM_COUNT)
+						if (st.getQuestItemsCount(SPORE_SAC) < REQUIRED_ITEM_COUNT)
 						{
 							htmltext = "30137-04.html";
 						}
@@ -129,7 +129,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 					}
 					case 2:
 					{
-						if (getQuestItemsCount(player, SPORE_SAC) >= REQUIRED_ITEM_COUNT)
+						if (st.getQuestItemsCount(SPORE_SAC) >= REQUIRED_ITEM_COUNT)
 						{
 							htmltext = "30137-05.html";
 							st.giveAdena(3000, true);

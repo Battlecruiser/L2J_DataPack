@@ -34,7 +34,7 @@ import com.l2jserver.gameserver.network.serverpackets.RadarControl;
 import com.l2jserver.gameserver.util.Util;
 
 /**
- * Success/Failure Of Business (238)<br>
+ * Reed Field Maintenance (308)<br>
  * Original Jython script by Bloodshed.
  * @author Joxit
  */
@@ -103,25 +103,25 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	
 	private boolean canGiveItem(QuestState st, int quanty)
 	{
-		long mucrokian = getQuestItemsCount(st.getPlayer(), MUCROKIAN_HIDE);
-		long awakened = getQuestItemsCount(st.getPlayer(), AWAKENED_MUCROKIAN_HIDE);
+		long mucrokian = st.getQuestItemsCount(MUCROKIAN_HIDE);
+		long awakened = st.getQuestItemsCount(AWAKENED_MUCROKIAN_HIDE);
 		if (awakened > 0)
 		{
 			if (awakened >= (quanty / 2))
 			{
-				takeItems(st.getPlayer(), AWAKENED_MUCROKIAN_HIDE, (quanty / 2));
+				st.takeItems(AWAKENED_MUCROKIAN_HIDE, (quanty / 2));
 				return true;
 			}
 			else if (mucrokian >= (quanty - (awakened * 2)))
 			{
-				takeItems(st.getPlayer(), AWAKENED_MUCROKIAN_HIDE, awakened);
-				takeItems(st.getPlayer(), MUCROKIAN_HIDE, (quanty - (awakened * 2)));
+				st.takeItems(AWAKENED_MUCROKIAN_HIDE, awakened);
+				st.takeItems(MUCROKIAN_HIDE, (quanty - (awakened * 2)));
 				return true;
 			}
 		}
 		else if (mucrokian >= quanty)
 		{
-			takeItems(st.getPlayer(), MUCROKIAN_HIDE, quanty);
+			st.takeItems(MUCROKIAN_HIDE, quanty);
 			return true;
 		}
 		return false;
@@ -195,11 +195,11 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		{
 			if (Util.contains(MOIRAI_PIECES, item))
 			{
-				giveItems(st.getPlayer(), item, getRandom(1, 4));
+				st.giveItems(item, getRandom(1, 4));
 			}
 			else
 			{
-				giveItems(st.getPlayer(), item, 1);
+				st.giveItems(item, 1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			htmltext = "32646-14.html";
@@ -223,11 +223,11 @@ public class Q00308_ReedFieldMaintenance extends Quest
 			{
 				if (npc.getId() == AWAKENED_MUCROKIAN)
 				{
-					giveItems(killer, AWAKENED_MUCROKIAN_HIDE, 1);
+					st.giveItems(AWAKENED_MUCROKIAN_HIDE, 1);
 				}
 				else
 				{
-					giveItems(killer, MUCROKIAN_HIDE, 1);
+					st.giveItems(MUCROKIAN_HIDE, 1);
 				}
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}

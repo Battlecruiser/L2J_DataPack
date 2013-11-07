@@ -82,7 +82,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					giveItems(player, KRORINS_JOURNAL, 1);
+					st.giveItems(KRORINS_JOURNAL, 1);
 					htmltext = event;
 				}
 				break;
@@ -91,7 +91,7 @@ public final class Q00031_SecretBuriedInTheSwamp extends Quest
 			{
 				if (st.isCond(2) && st.hasQuestItems(KRORINS_JOURNAL))
 				{
-					takeItems(player, KRORINS_JOURNAL, -1);
+					st.takeItems(KRORINS_JOURNAL, -1);
 					st.setCond(3, true);
 					htmltext = event;
 				}

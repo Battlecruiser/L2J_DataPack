@@ -76,7 +76,7 @@ public class Q00001_LettersOfLove extends Quest
 				if (player.getLevel() >= MIN_LEVEL)
 				{
 					st.startQuest();
-					giveItems(player, DARINS_LETTER, 1);
+					st.giveItems(DARINS_LETTER, 1);
 					htmltext = event;
 				}
 				break;
@@ -119,8 +119,8 @@ public class Q00001_LettersOfLove extends Quest
 							{
 								if (st.hasQuestItems(DARINS_LETTER) && !st.hasQuestItems(ROXXYS_KERCHIEF))
 								{
-									takeItems(player, DARINS_LETTER, -1);
-									giveItems(player, ROXXYS_KERCHIEF, 1);
+									st.takeItems(DARINS_LETTER, -1);
+									st.giveItems(ROXXYS_KERCHIEF, 1);
 									st.setCond(2, true);
 									htmltext = "30006-01.html";
 								}
@@ -137,8 +137,8 @@ public class Q00001_LettersOfLove extends Quest
 							{
 								if (st.hasQuestItems(ROXXYS_KERCHIEF))
 								{
-									takeItems(player, ROXXYS_KERCHIEF, -1);
-									giveItems(player, DARINS_RECEIPT, 1);
+									st.takeItems(ROXXYS_KERCHIEF, -1);
+									st.giveItems(DARINS_RECEIPT, 1);
 									st.setCond(3, true);
 									htmltext = "30048-08.html";
 								}
@@ -179,8 +179,8 @@ public class Q00001_LettersOfLove extends Quest
 							{
 								if (st.hasQuestItems(DARINS_RECEIPT))
 								{
-									takeItems(player, DARINS_RECEIPT, -1);
-									giveItems(player, BAULROS_POTION, 1);
+									st.takeItems(DARINS_RECEIPT, -1);
+									st.giveItems(BAULROS_POTION, 1);
 									st.setCond(4, true);
 									htmltext = "30033-01.html";
 								}
@@ -201,7 +201,7 @@ public class Q00001_LettersOfLove extends Quest
 							{
 								// TODO: Beside this message something should be set for the Newbie Guide.
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
-								giveItems(player, NECKLACE_OF_KNOWLEDGE, 1);
+								st.giveItems(NECKLACE_OF_KNOWLEDGE, 1);
 								st.addExpAndSp(5672, 446);
 								st.giveAdena(2466, false);
 								st.exitQuest(false, true);

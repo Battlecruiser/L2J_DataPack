@@ -57,7 +57,7 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			giveItems(player, MOS_HEAD, 1);
+			st.giveItems(MOS_HEAD, 1);
 			st.setCond(2, true);
 		}
 	}
@@ -80,7 +80,7 @@ public class Q00608_SlayTheEnemyCommanderKetra extends Quest
 			case "31370-07.html":
 				if (st.hasQuestItems(MOS_HEAD) && st.isCond(2))
 				{
-					giveItems(player, WISDOM_TOTEM, 1);
+					st.giveItems(WISDOM_TOTEM, 1);
 					st.addExpAndSp(10000, 0);
 					st.exitQuest(true, true);
 				}

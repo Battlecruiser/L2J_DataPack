@@ -127,8 +127,8 @@ public final class Q00628_HuntGoldenRam extends Quest
 			{
 				if (st.isStarted())
 				{
-					giveItems(player, BADGE_RECRUIT, 1);
-					takeItems(player, SPLINTER_STAKATO_CHITIN, -1);
+					st.giveItems(BADGE_RECRUIT, 1);
+					st.takeItems(SPLINTER_STAKATO_CHITIN, -1);
 					st.setCond(2, true);
 					htmltext = event;
 				}
@@ -164,9 +164,9 @@ public final class Q00628_HuntGoldenRam extends Quest
 				if (st.isCond(3))
 				{
 					final QuestItemHolder buffs = BUFFS.get(event);
-					if (getQuestItemsCount(player, GOLDEN_RAM_COIN) >= buffs.getCount())
+					if (st.getQuestItemsCount(GOLDEN_RAM_COIN) >= buffs.getCount())
 					{
-						takeItems(player, GOLDEN_RAM_COIN, buffs.getCount());
+						st.takeItems(GOLDEN_RAM_COIN, buffs.getCount());
 						npc.setTarget(player);
 						npc.doCast(SkillTable.getInstance().getInfo(buffs.getId(), buffs.getChance()));
 						htmltext = "31556-03.htm";
@@ -289,8 +289,8 @@ public final class Q00628_HuntGoldenRam extends Quest
 					}
 					case State.STARTED:
 					{
-						final long itemCountSplinter = getQuestItemsCount(player, SPLINTER_STAKATO_CHITIN);
-						final long itemCountNeedle = getQuestItemsCount(player, NEEDLE_STAKATO_CHITIN);
+						final long itemCountSplinter = st.getQuestItemsCount(SPLINTER_STAKATO_CHITIN);
+						final long itemCountNeedle = st.getQuestItemsCount(NEEDLE_STAKATO_CHITIN);
 						switch (st.getCond())
 						{
 							case 1:
@@ -304,10 +304,10 @@ public final class Q00628_HuntGoldenRam extends Quest
 								{
 									if ((itemCountSplinter >= REQUIRED_ITEM_COUNT) && (itemCountNeedle >= REQUIRED_ITEM_COUNT))
 									{
-										takeItems(player, BADGE_RECRUIT, -1);
-										takeItems(player, SPLINTER_STAKATO_CHITIN, -1);
-										takeItems(player, NEEDLE_STAKATO_CHITIN, -1);
-										giveItems(player, BADGE_SOLDIER, 1);
+										st.takeItems(BADGE_RECRUIT, -1);
+										st.takeItems(SPLINTER_STAKATO_CHITIN, -1);
+										st.takeItems(NEEDLE_STAKATO_CHITIN, -1);
+										st.giveItems(BADGE_SOLDIER, 1);
 										st.setCond(3, true);
 										htmltext = "31554-10.html";
 									}

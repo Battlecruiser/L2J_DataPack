@@ -77,20 +77,20 @@ public class Q00035_FindGlitteringJewelry extends Quest
 				st.setCond(2, true);
 				break;
 			case "30091-07.html":
-				if (getQuestItemsCount(player, ROUGH_JEWEL) < JEWEL_COUNT)
+				if (st.getQuestItemsCount(ROUGH_JEWEL) < JEWEL_COUNT)
 				{
 					return "30091-08.html";
 				}
-				takeItems(player, ROUGH_JEWEL, -1);
+				st.takeItems(ROUGH_JEWEL, -1);
 				st.setCond(4, true);
 				break;
 			case "30091-11.html":
-				if ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT))
+				if ((st.getQuestItemsCount(ORIHARUKON) >= ORIHARUKON_COUNT) && (st.getQuestItemsCount(SILVER_NUGGET) >= NUGGET_COUNT) && (st.getQuestItemsCount(THONS) >= THONS_COUNT))
 				{
-					takeItems(player, ORIHARUKON, ORIHARUKON_COUNT);
-					takeItems(player, SILVER_NUGGET, NUGGET_COUNT);
-					takeItems(player, THONS, THONS_COUNT);
-					giveItems(player, JEWEL_BOX, 1);
+					st.takeItems(ORIHARUKON, ORIHARUKON_COUNT);
+					st.takeItems(SILVER_NUGGET, NUGGET_COUNT);
+					st.takeItems(THONS, THONS_COUNT);
+					st.giveItems(JEWEL_BOX, 1);
 					st.exitQuest(false, true);
 				}
 				else
@@ -114,8 +114,8 @@ public class Q00035_FindGlitteringJewelry extends Quest
 			final QuestState st = member.getQuestState(getName());
 			if (getRandomBoolean())
 			{
-				giveItems(player, ROUGH_JEWEL, 1);
-				if (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT)
+				st.giveItems(ROUGH_JEWEL, 1);
+				if (st.getQuestItemsCount(ROUGH_JEWEL) >= JEWEL_COUNT)
 				{
 					st.setCond(3, true);
 				}
@@ -153,10 +153,10 @@ public class Q00035_FindGlitteringJewelry extends Quest
 								htmltext = "30091-04.html";
 								break;
 							case 3:
-								htmltext = (getQuestItemsCount(player, ROUGH_JEWEL) >= JEWEL_COUNT) ? "30091-06.html" : "30091-05.html";
+								htmltext = (st.getQuestItemsCount(ROUGH_JEWEL) >= JEWEL_COUNT) ? "30091-06.html" : "30091-05.html";
 								break;
 							case 4:
-								htmltext = ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT)) ? "30091-09.html" : "30091-10.html";
+								htmltext = ((st.getQuestItemsCount(ORIHARUKON) >= ORIHARUKON_COUNT) && (st.getQuestItemsCount(SILVER_NUGGET) >= NUGGET_COUNT) && (st.getQuestItemsCount(THONS) >= THONS_COUNT)) ? "30091-09.html" : "30091-10.html";
 								break;
 						}
 						break;

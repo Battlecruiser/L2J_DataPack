@@ -93,7 +93,7 @@ public class Q00626_ADarkTwilight extends Quest
 				st.startQuest();
 				break;
 			case "Exp":
-				if (getQuestItemsCount(player, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
 					return "31517-06.html";
 				}
@@ -102,7 +102,7 @@ public class Q00626_ADarkTwilight extends Quest
 				htmltext = "31517-07.html";
 				break;
 			case "Adena":
-				if (getQuestItemsCount(player, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
 					return "31517-06.html";
 				}
@@ -127,8 +127,8 @@ public class Q00626_ADarkTwilight extends Quest
 			final float chance = (MONSTERS.get(npc.getId()) * Config.RATE_QUEST_DROP);
 			if (getRandom(1000) < chance)
 			{
-				giveItems(killer, BLOOD_OF_SAINT, 1);
-				if (getQuestItemsCount(killer, BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
+				st.giveItems(BLOOD_OF_SAINT, 1);
+				if (st.getQuestItemsCount(BLOOD_OF_SAINT) < ITEMS_COUNT_REQUIRED)
 				{
 					st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}

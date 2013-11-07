@@ -99,10 +99,10 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			}
 			case "31553-07.html":
 			{
-				if (st.isStarted() && (getQuestItemsCount(player, TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT))
+				if (st.isStarted() && (st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT))
 				{
-					rewardItems(player, GOLDEN_RAM_COIN, 20);
-					takeItems(player, TALON_OF_STAKATO, 100);
+					st.rewardItems(GOLDEN_RAM_COIN, 20);
+					st.takeItems(TALON_OF_STAKATO, 100);
 					htmltext = event;
 				}
 				else
@@ -154,7 +154,7 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = ((getQuestItemsCount(player, TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
+				htmltext = ((st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
 				break;
 			}
 		}

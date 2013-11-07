@@ -82,7 +82,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.getState() == State.STARTED))
 		{
-			final long count = getQuestItemsCount(player, NECRO_HEART);
+			final long count = st.getQuestItemsCount(NECRO_HEART);
 			if (count < 10)
 			{
 				int chance = (int) (Config.RATE_QUEST_DROP * DROP_CHANCE);
@@ -104,7 +104,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
-					giveItems(player, NECRO_HEART, numItems);
+					st.giveItems(NECRO_HEART, numItems);
 				}
 			}
 		}
@@ -145,12 +145,12 @@ public final class Q00637_ThroughOnceMore extends Quest
 		}
 		else if (id == State.STARTED)
 		{
-			if ((st.isCond(2)) && (getQuestItemsCount(player, NECRO_HEART) == 10))
+			if ((st.isCond(2)) && (st.getQuestItemsCount(NECRO_HEART) == 10))
 			{
-				takeItems(player, NECRO_HEART, 10);
-				takeItems(player, FADED_MARK, 1);
-				giveItems(player, MARK, 1);
-				giveItems(player, 8273, 10);
+				st.takeItems(NECRO_HEART, 10);
+				st.takeItems(FADED_MARK, 1);
+				st.giveItems(MARK, 1);
+				st.giveItems(8273, 10);
 				st.exitQuest(true, true);
 				return "32010-05.htm";
 			}

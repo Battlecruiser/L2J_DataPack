@@ -65,7 +65,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					giveItems(player, BOX, 1);
+					st.giveItems(BOX, 1);
 				}
 				break;
 			case "31371-02.html":

@@ -67,12 +67,12 @@ public class Q00432_BirthdayPartySong extends Quest
 				st.startQuest();
 				break;
 			case "31043-05.html":
-				if (getQuestItemsCount(player, RED_CRYSTAL) < 50)
+				if (st.getQuestItemsCount(RED_CRYSTAL) < 50)
 				{
 					return "31043-06.html";
 				}
 				
-				giveItems(player, ECHO_CRYSTAL, 25);
+				st.giveItems(ECHO_CRYSTAL, 25);
 				st.exitQuest(true, true);
 				break;
 			default:
@@ -89,8 +89,8 @@ public class Q00432_BirthdayPartySong extends Quest
 		
 		if ((st != null) && st.isCond(1) && getRandomBoolean())
 		{
-			giveItems(player, RED_CRYSTAL, 1);
-			if (getQuestItemsCount(player, RED_CRYSTAL) == 50)
+			st.giveItems(RED_CRYSTAL, 1);
+			if (st.getQuestItemsCount(RED_CRYSTAL) == 50)
 			{
 				st.setCond(2, true);
 			}

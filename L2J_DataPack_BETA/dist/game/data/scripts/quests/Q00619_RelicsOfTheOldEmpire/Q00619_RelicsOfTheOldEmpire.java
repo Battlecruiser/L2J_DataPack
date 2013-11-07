@@ -248,10 +248,10 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 			}
 			case "31538-06.html":
 			{
-				if (getQuestItemsCount(player, BROKEN_RELIC_PART) >= REQUIRED_RELIC_COUNT)
+				if (st.getQuestItemsCount(BROKEN_RELIC_PART) >= REQUIRED_RELIC_COUNT)
 				{
-					rewardItems(player, RECIPES[getRandom(RECIPES.length)], 1);
-					takeItems(player, BROKEN_RELIC_PART, REQUIRED_RELIC_COUNT);
+					st.rewardItems(RECIPES[getRandom(RECIPES.length)], 1);
+					st.takeItems(BROKEN_RELIC_PART, REQUIRED_RELIC_COUNT);
 					htmltext = event;
 				}
 				break;
@@ -276,7 +276,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 			if (Util.contains(ARCHON_OF_HALISHA, npcId))
 			{
 				final int itemCount = ((getRandom(100) < 79) ? 4 : 3);
-				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, 1.0, true);
+				st.giveItemRandomly(npc, BROKEN_RELIC_PART, itemCount, 0, 1.0, true);
 			}
 			else
 			{
@@ -292,11 +292,11 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 					itemCount = 1;
 				}
 				
-				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, info.getDropChance(), true);
+				st.giveItemRandomly(npc, BROKEN_RELIC_PART, itemCount, 0, info.getDropChance(), true);
 				
 				if (info.getDropEntrancePass())
 				{
-					giveItemRandomly(player, npc, ENTRANCE_PASS_TO_THE_SEPULCHER, 1, 0, 1.0 / 30, false);
+					st.giveItemRandomly(npc, ENTRANCE_PASS_TO_THE_SEPULCHER, 1, 0, 1.0 / 30, false);
 				}
 			}
 		}

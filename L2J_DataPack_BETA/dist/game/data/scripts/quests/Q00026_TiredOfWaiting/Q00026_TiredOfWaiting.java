@@ -81,7 +81,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			case "30655-04.html":
 				if (st.isCreated())
 				{
-					giveItems(player, DELIVERY_BOX, 1);
+					st.giveItems(DELIVERY_BOX, 1);
 					st.startQuest();
 					htmltext = event;
 				}
@@ -89,7 +89,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			case "31045-04.html":
 				if (st.isStarted())
 				{
-					takeItems(player, DELIVERY_BOX, -1);
+					st.takeItems(DELIVERY_BOX, -1);
 					htmltext = event;
 				}
 				break;
@@ -98,7 +98,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			case "31045-12.html":
 				if (st.isStarted())
 				{
-					giveItems(player, REWARDS.get(event), 1);
+					st.giveItems(REWARDS.get(event), 1);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -136,7 +136,7 @@ public final class Q00026_TiredOfWaiting extends Quest
 			case KITZKA:
 				if (st.isStarted())
 				{
-					htmltext = (hasQuestItems(player, DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
+					htmltext = (st.hasQuestItems(DELIVERY_BOX) ? "31045-01.html" : "31045-09.html");
 				}
 				break;
 		}

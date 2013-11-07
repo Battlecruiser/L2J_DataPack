@@ -107,7 +107,7 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 		if ((member != null) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
 			final QuestState st = member.getQuestState(getName());
-			giveItems(player, MINERAL_FRAGMENT, 1);
+			st.giveItems(MINERAL_FRAGMENT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);

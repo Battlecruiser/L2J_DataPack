@@ -59,7 +59,7 @@ public class Q00013_ParcelDelivery extends Quest
 		{
 			case "31274-02.html":
 				st.startQuest();
-				giveItems(player, PACKAGE, 1);
+				st.giveItems(PACKAGE, 1);
 				break;
 			case "31539-01.html":
 				if (st.isCond(1) && st.hasQuestItems(PACKAGE))

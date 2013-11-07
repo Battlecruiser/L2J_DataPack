@@ -66,20 +66,20 @@ public class Q00007_ATripBegins extends Quest
 				st.startQuest();
 				break;
 			case "30146-06.html":
-				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
-				giveItems(player, MARK_OF_TRAVELER, 1);
+				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
+				st.giveItems(MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
 			case "30148-02.html":
 				st.setCond(2, true);
-				giveItems(player, ARIELS_RECOMMENDATION, 1);
+				st.giveItems(ARIELS_RECOMMENDATION, 1);
 				break;
 			case "30154-02.html":
 				if (!st.hasQuestItems(ARIELS_RECOMMENDATION))
 				{
 					return "30154-03.html";
 				}
-				takeItems(player, ARIELS_RECOMMENDATION, -1);
+				st.takeItems(ARIELS_RECOMMENDATION, -1);
 				st.setCond(3, true);
 				break;
 			default:

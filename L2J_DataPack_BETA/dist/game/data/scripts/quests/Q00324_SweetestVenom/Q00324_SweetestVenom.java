@@ -115,12 +115,12 @@ public class Q00324_SweetestVenom extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			long sacs = getQuestItemsCount(player, VENOM_SAC);
+			long sacs = st.getQuestItemsCount(VENOM_SAC);
 			if (sacs < REQUIRED_COUNT)
 			{
 				if (getRandom(100) < MONSTERS.get(npc.getId()))
 				{
-					giveItems(player, VENOM_SAC, 1);
+					st.giveItems(VENOM_SAC, 1);
 					if ((++sacs) < REQUIRED_COUNT)
 					{
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);

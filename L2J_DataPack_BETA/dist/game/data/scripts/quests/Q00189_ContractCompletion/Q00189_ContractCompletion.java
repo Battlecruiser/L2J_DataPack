@@ -72,7 +72,7 @@ public final class Q00189_ContractCompletion extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					giveItems(player, SCROLL_OF_DECODING, 1);
+					st.giveItems(SCROLL_OF_DECODING, 1);
 					htmltext = event;
 				}
 				break;
@@ -96,7 +96,7 @@ public final class Q00189_ContractCompletion extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					takeItems(player, SCROLL_OF_DECODING, -1);
+					st.takeItems(SCROLL_OF_DECODING, -1);
 					htmltext = event;
 				}
 				break;

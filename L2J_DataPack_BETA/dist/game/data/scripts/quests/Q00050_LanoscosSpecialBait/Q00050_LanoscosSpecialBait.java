@@ -66,10 +66,10 @@ public class Q00050_LanoscosSpecialBait extends Quest
 				st.startQuest();
 				break;
 			case "31570-07.html":
-				if ((st.isCond(2)) && (getQuestItemsCount(player, ESSENCE_OF_WIND) >= 100))
+				if ((st.isCond(2)) && (st.getQuestItemsCount(ESSENCE_OF_WIND) >= 100))
 				{
 					htmltext = "31570-06.htm";
-					giveItems(player, WIND_FISHING_LURE, 4);
+					st.giveItems(WIND_FISHING_LURE, 4);
 					st.exitQuest(false, true);
 				}
 				break;
@@ -88,7 +88,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getQuestItemsCount(player, ESSENCE_OF_WIND) < 100)
+		if (st.getQuestItemsCount(ESSENCE_OF_WIND) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
@@ -98,7 +98,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 			}
 		}
 		
-		if (getQuestItemsCount(player, ESSENCE_OF_WIND) >= 100)
+		if (st.getQuestItemsCount(ESSENCE_OF_WIND) >= 100)
 		{
 			st.setCond(2, true);
 			

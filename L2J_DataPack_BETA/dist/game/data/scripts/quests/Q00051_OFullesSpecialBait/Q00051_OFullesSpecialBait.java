@@ -65,10 +65,10 @@ public class Q00051_OFullesSpecialBait extends Quest
 				st.startQuest();
 				break;
 			case "31572-07.html":
-				if ((st.isCond(2)) && (getQuestItemsCount(player, LOST_BAIT) >= 100))
+				if ((st.isCond(2)) && (st.getQuestItemsCount(LOST_BAIT) >= 100))
 				{
 					htmltext = "31572-06.htm";
-					giveItems(player, ICY_AIR_LURE, 4);
+					st.giveItems(ICY_AIR_LURE, 4);
 					st.exitQuest(false, true);
 				}
 				break;
@@ -86,7 +86,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 		}
 		
 		final QuestState st = partyMember.getQuestState(getName());
-		if (getQuestItemsCount(player, LOST_BAIT) < 100)
+		if (st.getQuestItemsCount(LOST_BAIT) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
@@ -96,7 +96,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 			}
 		}
 		
-		if (getQuestItemsCount(player, LOST_BAIT) >= 100)
+		if (st.getQuestItemsCount(LOST_BAIT) >= 100)
 		{
 			st.setCond(2, true);
 		}

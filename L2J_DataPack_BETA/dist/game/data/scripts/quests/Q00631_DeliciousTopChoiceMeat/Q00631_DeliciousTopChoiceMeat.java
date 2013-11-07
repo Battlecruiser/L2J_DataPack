@@ -189,7 +189,7 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		final QuestState st = getRandomPartyMemberState(player, 1, 3, npc);
 		if (st != null)
 		{
-			if (giveItemRandomly(player, npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
+			if (st.giveItemRandomly(npc, PRIME_MEAT, 1, PRIME_MEAT_COUNT, MOBS_MEAT.get(npc.getId()), true))
 			{
 				st.setCond(2, true);
 			}
@@ -215,14 +215,14 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest
 		{
 			if (st.isCond(1))
 			{
-				if (getQuestItemsCount(player, PRIME_MEAT) < PRIME_MEAT_COUNT)
+				if (st.getQuestItemsCount(PRIME_MEAT) < PRIME_MEAT_COUNT)
 				{
 					htmltext = "31537-04.html";
 				}
 			}
 			else if (st.isCond(2))
 			{
-				if (getQuestItemsCount(player, PRIME_MEAT) >= PRIME_MEAT_COUNT)
+				if (st.getQuestItemsCount(PRIME_MEAT) >= PRIME_MEAT_COUNT)
 				{
 					htmltext = "31537-05.html";
 				}

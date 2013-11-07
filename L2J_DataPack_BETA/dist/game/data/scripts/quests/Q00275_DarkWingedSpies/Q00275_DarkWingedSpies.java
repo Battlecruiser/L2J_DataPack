@@ -77,7 +77,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 		
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, true))
 		{
-			final long count = getQuestItemsCount(killer, DARKWING_BAT_FANG);
+			final long count = st.getQuestItemsCount(DARKWING_BAT_FANG);
 			
 			switch (npc.getId())
 			{
@@ -90,7 +90,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 					else if ((count > 10) && (count < 66) && (getRandom(100) < 10))
 					{
 						st.addSpawn(VARANGKAS_TRACKER);
-						giveItems(killer, VARANGKAS_PARASITE, 1);
+						st.giveItems(VARANGKAS_PARASITE, 1);
 					}
 					break;
 				}
@@ -102,7 +102,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 						{
 							st.setCond(2);
 						}
-						takeItems(killer, VARANGKAS_PARASITE, -1);
+						st.takeItems(VARANGKAS_PARASITE, -1);
 					}
 					break;
 				}
@@ -152,7 +152,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 					}
 					case 2:
 					{
-						final long count = getQuestItemsCount(talker, DARKWING_BAT_FANG);
+						final long count = st.getQuestItemsCount(DARKWING_BAT_FANG);
 						if (count >= MAX_BAT_FANG_COUNT)
 						{
 							st.giveAdena(count * FANG_PRICE, true);

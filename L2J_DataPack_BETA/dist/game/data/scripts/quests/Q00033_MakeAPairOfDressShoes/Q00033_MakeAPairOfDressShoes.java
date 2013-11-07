@@ -73,11 +73,11 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				st.setCond(3, true);
 				break;
 			case "30838-09.html":
-				if ((getQuestItemsCount(player, LEATHER) >= LEATHER_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT2))
+				if ((st.getQuestItemsCount(LEATHER) >= LEATHER_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT2))
 				{
-					takeItems(player, LEATHER, LEATHER_COUNT);
-					takeItems(player, THREAD, LEATHER_COUNT);
-					takeItems(player, PcInventory.ADENA_ID, ADENA_COUNT2);
+					st.takeItems(LEATHER, LEATHER_COUNT);
+					st.takeItems(THREAD, LEATHER_COUNT);
+					st.takeItems(PcInventory.ADENA_ID, ADENA_COUNT2);
 					st.setCond(4, true);
 				}
 				else
@@ -86,7 +86,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				}
 				break;
 			case "30838-13.html":
-				giveItems(player, DRESS_SHOES_BOX, 1);
+				st.giveItems(DRESS_SHOES_BOX, 1);
 				st.exitQuest(false, true);
 				break;
 			case "31520-02.html":
@@ -97,7 +97,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 				{
 					return "30164-03.html";
 				}
-				takeItems(player, PcInventory.ADENA_ID, ADENA_COUNT3);
+				st.takeItems(PcInventory.ADENA_ID, ADENA_COUNT3);
 				st.setCond(5, true);
 				break;
 			default:
@@ -135,7 +135,7 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 								htmltext = "30838-05.html";
 								break;
 							case 3:
-								htmltext = ((getQuestItemsCount(player, LEATHER) >= LEATHER_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT)) ? "30838-07.html" : "30838-08.html";
+								htmltext = ((st.getQuestItemsCount(LEATHER) >= LEATHER_COUNT) && (st.getQuestItemsCount(THREAD) >= THREAD_COUNT) && (player.getAdena() >= ADENA_COUNT)) ? "30838-07.html" : "30838-08.html";
 								break;
 							case 4:
 								htmltext = "30838-11.html";

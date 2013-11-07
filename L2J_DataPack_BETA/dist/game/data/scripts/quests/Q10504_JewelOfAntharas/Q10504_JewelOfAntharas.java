@@ -62,8 +62,8 @@ public class Q10504_JewelOfAntharas extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			takeItems(player, CLEAR_CRYSTAL, -1);
-			giveItems(player, FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
+			st.takeItems(CLEAR_CRYSTAL, -1);
+			st.giveItems(FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			st.setCond(2, true);
 		}
@@ -92,7 +92,7 @@ public class Q10504_JewelOfAntharas extends Quest
 				case "30755-07.html":
 				{
 					st.startQuest();
-					giveItems(player, CLEAR_CRYSTAL, 1);
+					st.giveItems(CLEAR_CRYSTAL, 1);
 					htmltext = event;
 					break;
 				}
@@ -148,14 +148,14 @@ public class Q10504_JewelOfAntharas extends Quest
 						}
 						else
 						{
-							giveItems(player, CLEAR_CRYSTAL, 1);
+							st.giveItems(CLEAR_CRYSTAL, 1);
 							htmltext = "30755-09.html";
 						}
 						break;
 					}
 					case 2:
 					{
-						giveItems(player, JEWEL_OF_ANTHARAS, 1);
+						st.giveItems(JEWEL_OF_ANTHARAS, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(false, true);
 						htmltext = "30755-10.html";

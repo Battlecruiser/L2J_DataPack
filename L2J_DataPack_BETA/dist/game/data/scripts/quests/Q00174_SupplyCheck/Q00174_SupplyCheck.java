@@ -103,7 +103,7 @@ public class Q00174_SupplyCheck extends Quest
 								break;
 							case 2:
 								st.setCond(3, true);
-								takeItems(player, WAREHOUSE_MANIFEST, -1);
+								st.takeItems(WAREHOUSE_MANIFEST, -1);
 								htmltext = "32173-05.html";
 								break;
 							case 3:
@@ -112,7 +112,7 @@ public class Q00174_SupplyCheck extends Quest
 							case 4:
 								for (int itemId : REWARD)
 								{
-									giveItems(player, itemId, 1);
+									st.giveItems(itemId, 1);
 								}
 								st.giveAdena(2466, true);
 								st.addExpAndSp(5672, 446);
@@ -135,7 +135,7 @@ public class Q00174_SupplyCheck extends Quest
 					{
 						case 1:
 							st.setCond(2, true);
-							giveItems(player, WAREHOUSE_MANIFEST, 1);
+							st.giveItems(WAREHOUSE_MANIFEST, 1);
 							htmltext = "32170-01.html";
 							break;
 						case 2:
@@ -158,7 +158,7 @@ public class Q00174_SupplyCheck extends Quest
 							break;
 						case 3:
 							st.setCond(4, true);
-							giveItems(player, GROCERY_STORE_MANIFEST, 1);
+							st.giveItems(GROCERY_STORE_MANIFEST, 1);
 							htmltext = "32167-02.html";
 							break;
 						case 4:

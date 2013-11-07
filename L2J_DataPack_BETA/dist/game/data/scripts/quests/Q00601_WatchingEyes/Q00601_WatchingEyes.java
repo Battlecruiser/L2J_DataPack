@@ -98,7 +98,7 @@ public class Q00601_WatchingEyes extends Quest
 				st.startQuest();
 				break;
 			case "31683-05.html":
-				if (getQuestItemsCount(player, PROOF_OF_AVENGER) < 100)
+				if (st.getQuestItemsCount(PROOF_OF_AVENGER) < 100)
 				{
 					return "31683-06.html";
 				}
@@ -106,7 +106,7 @@ public class Q00601_WatchingEyes extends Quest
 				int i = getRandom(4);
 				if (i < 3)
 				{
-					giveItems(player, REWARD[i][0], 5);
+					st.giveItems(REWARD[i][0], 5);
 					st.addExpAndSp(120000, 10000);
 				}
 				st.giveAdena(REWARD[i][1], true);
@@ -126,8 +126,8 @@ public class Q00601_WatchingEyes extends Quest
 		
 		if ((st != null) && st.isCond(1) && (getRandom(1000) < MOBS.get(npc.getId())))
 		{
-			giveItems(player, PROOF_OF_AVENGER, 1);
-			if (getQuestItemsCount(player, PROOF_OF_AVENGER) == 100)
+			st.giveItems(PROOF_OF_AVENGER, 1);
+			if (st.getQuestItemsCount(PROOF_OF_AVENGER) == 100)
 			{
 				st.setCond(2, true);
 			}

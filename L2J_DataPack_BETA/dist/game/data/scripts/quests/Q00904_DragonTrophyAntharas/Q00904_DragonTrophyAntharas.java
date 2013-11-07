@@ -141,7 +141,7 @@ public class Q00904_DragonTrophyAntharas extends Quest
 					}
 					case 2:
 					{
-						giveItems(player, MEDAL_OF_GLORY, 30);
+						st.giveItems(MEDAL_OF_GLORY, 30);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "30755-09.html";

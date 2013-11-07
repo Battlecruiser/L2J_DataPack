@@ -92,10 +92,10 @@ public final class Q00293_TheHiddenVeins extends Quest
 			}
 			case "30539-03.html":
 			{
-				if (getQuestItemsCount(player, TORN_MAP_FRAGMENT) >= REQUIRED_TORN_MAP_FRAGMENT)
+				if (st.getQuestItemsCount(TORN_MAP_FRAGMENT) >= REQUIRED_TORN_MAP_FRAGMENT)
 				{
-					giveItems(player, HIDDEN_ORE_MAP, 1);
-					takeItems(player, TORN_MAP_FRAGMENT, REQUIRED_TORN_MAP_FRAGMENT);
+					st.giveItems(HIDDEN_ORE_MAP, 1);
+					st.takeItems(TORN_MAP_FRAGMENT, REQUIRED_TORN_MAP_FRAGMENT);
 					htmltext = event;
 				}
 				else
@@ -116,12 +116,12 @@ public final class Q00293_TheHiddenVeins extends Quest
 			final int chance = getRandom(100);
 			if (chance > 50)
 			{
-				giveItems(killer, CHRYSOLITE_ORE, 1);
+				st.giveItems(CHRYSOLITE_ORE, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else if (chance < 5)
 			{
-				giveItems(killer, TORN_MAP_FRAGMENT, 1);
+				st.giveItems(TORN_MAP_FRAGMENT, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
@@ -153,8 +153,8 @@ public final class Q00293_TheHiddenVeins extends Quest
 					{
 						if (hasAtLeastOneQuestItem(player, CHRYSOLITE_ORE, HIDDEN_ORE_MAP))
 						{
-							final long ores = getQuestItemsCount(player, CHRYSOLITE_ORE);
-							final long maps = getQuestItemsCount(player, HIDDEN_ORE_MAP);
+							final long ores = st.getQuestItemsCount(CHRYSOLITE_ORE);
+							final long maps = st.getQuestItemsCount(HIDDEN_ORE_MAP);
 							st.giveAdena((ores * 5) + (maps * 500) + (((ores + maps) >= 10) ? 2000 : 0), true);
 							takeItems(player, -1, CHRYSOLITE_ORE, HIDDEN_ORE_MAP);
 							Q00281_HeadForTheHills.giveNewbieReward(player);

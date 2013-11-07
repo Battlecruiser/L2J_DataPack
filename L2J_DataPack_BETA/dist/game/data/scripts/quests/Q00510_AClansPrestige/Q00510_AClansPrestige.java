@@ -135,10 +135,10 @@ public class Q00510_AClansPrestige extends Quest
 				}
 				else
 				{
-					int count = (int) getQuestItemsCount(player, TYRANNOSAURUS_CLAW);
+					int count = (int) st.getQuestItemsCount(TYRANNOSAURUS_CLAW);
 					int reward = (count < 10) ? (30 * count) : (59 + (30 * count));
 					st.playSound(QuestSound.ITEMSOUND_QUEST_FANFARE_1);
-					takeItems(player, TYRANNOSAURUS_CLAW, -1);
+					st.takeItems(TYRANNOSAURUS_CLAW, -1);
 					clan.addReputationScore(reward, true);
 					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_QUEST_COMPLETED_AND_S1_POINTS_GAINED).addNumber(reward));
 					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));

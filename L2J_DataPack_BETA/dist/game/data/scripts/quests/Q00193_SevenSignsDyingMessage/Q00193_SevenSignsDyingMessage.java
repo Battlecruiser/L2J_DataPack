@@ -89,7 +89,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 		{
 			case "30191-02.html":
 			{
-				giveItems(player, JACOBS_NECKLACE, 1);
+				st.giveItems(JACOBS_NECKLACE, 1);
 				st.startQuest();
 				htmltext = event;
 				break;
@@ -108,7 +108,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (st.isCond(1) && st.hasQuestItems(JACOBS_NECKLACE))
 				{
-					takeItems(player, JACOBS_NECKLACE, -1);
+					st.takeItems(JACOBS_NECKLACE, -1);
 					st.setCond(2, true);
 					htmltext = event;
 				}
@@ -118,7 +118,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(DEADMANS_HERB))
 				{
-					takeItems(player, DEADMANS_HERB, -1);
+					st.takeItems(DEADMANS_HERB, -1);
 					st.setCond(4, true);
 					player.showQuestMovie(9);
 					return "";
@@ -138,7 +138,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
 				{
-					takeItems(player, SCULPTURE_OF_DOUBT, -1);
+					st.takeItems(SCULPTURE_OF_DOUBT, -1);
 					st.setCond(6, true);
 					htmltext = event;
 				}
@@ -148,7 +148,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (st.isCond(2))
 				{
-					giveItems(player, DEADMANS_HERB, 1);
+					st.giveItems(DEADMANS_HERB, 1);
 					st.setCond(3, true);
 					htmltext = event;
 				}
@@ -216,7 +216,7 @@ public class Q00193_SevenSignsDyingMessage extends Quest
 		
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
-			giveItems(player, SCULPTURE_OF_DOUBT, 1);
+			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			st.setCond(5);
 		}

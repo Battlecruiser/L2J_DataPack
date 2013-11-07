@@ -82,8 +82,8 @@ public final class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 				{
 					final long count = getQuestItemsCount(player, FAIRY_BREATH);
 					final long bonus = ((count >= 10) ? 5365 : 0);
-					takeItems(player, FAIRY_BREATH, -1);
-					giveAdena(player, (count * 50) + bonus, true);
+					st.takeItems(FAIRY_BREATH, -1);
+					st.giveAdena((count * 50) + bonus, true);
 					htmltext = "30634-05.html";
 				}
 				else

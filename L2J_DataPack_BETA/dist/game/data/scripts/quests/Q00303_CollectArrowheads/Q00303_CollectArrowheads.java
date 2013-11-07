@@ -99,7 +99,7 @@ public final class Q00303_CollectArrowheads extends Quest
 				{
 					case 1:
 					{
-						if (getQuestItemsCount(player, ORCISH_ARROWHEAD) < REQUIRED_ITEM_COUNT)
+						if (st.getQuestItemsCount(ORCISH_ARROWHEAD) < REQUIRED_ITEM_COUNT)
 						{
 							htmltext = "30029-05.html";
 						}
@@ -107,7 +107,7 @@ public final class Q00303_CollectArrowheads extends Quest
 					}
 					case 2:
 					{
-						if (getQuestItemsCount(player, ORCISH_ARROWHEAD) >= REQUIRED_ITEM_COUNT)
+						if (st.getQuestItemsCount(ORCISH_ARROWHEAD) >= REQUIRED_ITEM_COUNT)
 						{
 							st.giveAdena(1000, true);
 							st.addExpAndSp(2000, 0);

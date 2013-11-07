@@ -110,8 +110,8 @@ public class Q00464_Oath extends Quest
 				int cond = getRandom(2, 9);
 				st.set("npc", String.valueOf(NPC[cond - 1][0]));
 				st.setCond(cond, true);
-				takeItems(player, BOOK, 1);
-				giveItems(player, BOOK2, 1);
+				st.takeItems(BOOK, 1);
+				st.giveItems(BOOK2, 1);
 				switch (cond)
 				{
 					case 2:
@@ -199,8 +199,8 @@ public class Q00464_Oath extends Quest
 			if (player.getLevel() >= MIN_LEVEL)
 			{
 				st.startQuest();
-				takeItems(player, STRONGBOX, 1);
-				giveItems(player, BOOK, 1);
+				st.takeItems(STRONGBOX, 1);
+				st.giveItems(BOOK, 1);
 				htmltext = "strongbox-01.htm";
 			}
 			else

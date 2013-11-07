@@ -139,7 +139,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case "32121-5.html":
 				if (st.isCond(10))
 				{
-					giveItems(player, GAZKH_FRAGMENT, 1);
+					st.giveItems(GAZKH_FRAGMENT, 1);
 					st.setCond(11, true);
 				}
 				break;
@@ -147,7 +147,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
 				break;
 			case "32122-2d.html":
-				takeItems(player, GAZKH_FRAGMENT, -1);
+				st.takeItems(GAZKH_FRAGMENT, -1);
 				break;
 			case "32122-3.html":
 				if (st.isCond(12))
@@ -282,7 +282,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 				st.unset("MI2");
 				break;
 			case "32122-7.html":
-				giveItems(player, BONE_POWDER, 1);
+				st.giveItems(BONE_POWDER, 1);
 				st.playSound(QuestSound.ETCSOUND_ELROKI_SONG_FULL);
 				npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
 				break;
@@ -301,7 +301,7 @@ public class Q00126_TheNameOfEvil2 extends Quest
 			case "32109-3.html":
 				if (st.isCond(19))
 				{
-					takeItems(player, BONE_POWDER, -1);
+					st.takeItems(BONE_POWDER, -1);
 					st.setCond(20, true);
 				}
 				break;

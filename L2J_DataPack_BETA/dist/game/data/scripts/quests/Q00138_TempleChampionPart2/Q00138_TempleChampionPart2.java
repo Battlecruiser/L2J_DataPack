@@ -71,7 +71,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 		{
 			case "30070-02.htm":
 				st.startQuest();
-				giveItems(player, TEMPLE_MANIFESTO, 1);
+				st.giveItems(TEMPLE_MANIFESTO, 1);
 				break;
 			case "30070-05.html":
 				st.giveAdena(84593, true);
@@ -89,7 +89,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 				break;
 			case "30118-09.html":
 				st.setCond(6, true);
-				giveItems(player, PUPINAS_RECOMMENDATION, 1);
+				st.giveItems(PUPINAS_RECOMMENDATION, 1);
 				break;
 			case "30474-02.html":
 				st.setCond(4, true);
@@ -98,14 +98,14 @@ public class Q00138_TempleChampionPart2 extends Quest
 				if (st.hasQuestItems(PUPINAS_RECOMMENDATION))
 				{
 					st.set("talk", "1");
-					takeItems(player, PUPINAS_RECOMMENDATION, -1);
+					st.takeItems(PUPINAS_RECOMMENDATION, -1);
 				}
 				break;
 			case "30666-03.html":
 				if (st.hasQuestItems(TEMPLE_MANIFESTO))
 				{
 					st.set("talk", "2");
-					takeItems(player, TEMPLE_MANIFESTO, -1);
+					st.takeItems(TEMPLE_MANIFESTO, -1);
 				}
 				break;
 			case "30666-08.html":
@@ -120,10 +120,10 @@ public class Q00138_TempleChampionPart2 extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && st.isCond(4) && (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
+		if ((st != null) && st.isStarted() && st.isCond(4) && (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) < 10))
 		{
-			giveItems(player, RELICS_OF_THE_DARK_ELF_TRAINEE, 1);
-			if (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
+			st.giveItems(RELICS_OF_THE_DARK_ELF_TRAINEE, 1);
+			if (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
 			{
 				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 			}
@@ -186,7 +186,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 						htmltext = "30118-08.html";
 						if (st.hasQuestItems(ANGUS_RECOMMENDATION))
 						{
-							takeItems(player, ANGUS_RECOMMENDATION, -1);
+							st.takeItems(ANGUS_RECOMMENDATION, -1);
 						}
 						break;
 					case 6:
@@ -201,10 +201,10 @@ public class Q00138_TempleChampionPart2 extends Quest
 						htmltext = "30474-01.html";
 						break;
 					case 4:
-						if (getQuestItemsCount(player, RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
+						if (st.getQuestItemsCount(RELICS_OF_THE_DARK_ELF_TRAINEE) >= 10)
 						{
-							takeItems(player, RELICS_OF_THE_DARK_ELF_TRAINEE, -1);
-							giveItems(player, ANGUS_RECOMMENDATION, 1);
+							st.takeItems(RELICS_OF_THE_DARK_ELF_TRAINEE, -1);
+							st.giveItems(ANGUS_RECOMMENDATION, 1);
 							st.setCond(5, true);
 							htmltext = "30474-04.html";
 						}

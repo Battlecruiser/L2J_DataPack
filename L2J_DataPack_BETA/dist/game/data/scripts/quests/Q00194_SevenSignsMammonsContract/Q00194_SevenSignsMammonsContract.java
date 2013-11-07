@@ -110,7 +110,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(2))
 				{
-					giveItems(player, ATHEBALDTS_INTRODUCTION, 1);
+					st.giveItems(ATHEBALDTS_INTRODUCTION, 1);
 					st.setCond(3, true);
 					htmltext = event;
 				}
@@ -129,7 +129,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(ATHEBALDTS_INTRODUCTION))
 				{
-					takeItems(player, ATHEBALDTS_INTRODUCTION, -1);
+					st.takeItems(ATHEBALDTS_INTRODUCTION, -1);
 					npc.setTarget(player);
 					npc.doCast(TRANSFORMATION_FROG.getSkill());
 					st.setCond(4, true);
@@ -160,7 +160,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(5) && st.hasQuestItems(FROG_KINGS_BEAD))
 				{
-					takeItems(player, FROG_KINGS_BEAD, -1);
+					st.takeItems(FROG_KINGS_BEAD, -1);
 					st.setCond(6, true);
 					htmltext = event;
 					if (player.getTransformationId() == 111)
@@ -204,7 +204,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(8) && st.hasQuestItems(GRANDA_TESS_CANDY_POUCH))
 				{
-					takeItems(player, GRANDA_TESS_CANDY_POUCH, -1);
+					st.takeItems(GRANDA_TESS_CANDY_POUCH, -1);
 					st.setCond(9, true);
 					htmltext = event;
 					if (player.getTransformationId() == 112)
@@ -248,7 +248,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(11) && st.hasQuestItems(NATIVES_GLOVE))
 				{
-					takeItems(player, NATIVES_GLOVE, -1);
+					st.takeItems(NATIVES_GLOVE, -1);
 					st.setCond(12, true);
 					htmltext = event;
 					if (player.getTransformationId() == 124)
@@ -271,7 +271,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(4))
 				{
-					giveItems(player, FROG_KINGS_BEAD, 1);
+					st.giveItems(FROG_KINGS_BEAD, 1);
 					st.setCond(5, true);
 					htmltext = event;
 				}
@@ -289,7 +289,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(7))
 				{
-					giveItems(player, GRANDA_TESS_CANDY_POUCH, 1);
+					st.giveItems(GRANDA_TESS_CANDY_POUCH, 1);
 					st.setCond(8, true);
 					htmltext = event;
 				}
@@ -308,7 +308,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (st.isCond(10))
 				{
-					giveItems(player, NATIVES_GLOVE, 1);
+					st.giveItems(NATIVES_GLOVE, 1);
 					st.setCond(11, true);
 					htmltext = event;
 				}
