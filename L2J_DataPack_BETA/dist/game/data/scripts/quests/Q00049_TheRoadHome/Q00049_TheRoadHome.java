@@ -87,7 +87,7 @@ public final class Q00049_TheRoadHome extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					giveItems(player, GALLADUCCIS_ORDER_1, 1);
+					st.giveItems(GALLADUCCIS_ORDER_1, 1);
 					htmltext = event;
 				}
 				break;
@@ -96,8 +96,8 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(1) && st.hasQuestItems(GALLADUCCIS_ORDER_1))
 				{
-					takeItems(player, GALLADUCCIS_ORDER_1, 1);
-					giveItems(player, MAGIC_SWORD_HILT, 1);
+					st.takeItems(GALLADUCCIS_ORDER_1, 1);
+					st.giveItems(MAGIC_SWORD_HILT, 1);
 					st.setCond(2, true);
 					htmltext = event;
 				}
@@ -111,8 +111,8 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(2) && st.hasQuestItems(MAGIC_SWORD_HILT))
 				{
-					takeItems(player, MAGIC_SWORD_HILT, 1);
-					giveItems(player, GALLADUCCIS_ORDER_2, 1);
+					st.takeItems(MAGIC_SWORD_HILT, 1);
+					st.giveItems(GALLADUCCIS_ORDER_2, 1);
 					st.setCond(3, true);
 					htmltext = event;
 				}
@@ -126,8 +126,8 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(3) && st.hasQuestItems(GALLADUCCIS_ORDER_2))
 				{
-					takeItems(player, GALLADUCCIS_ORDER_2, 1);
-					giveItems(player, GEMSTONE_POWDER, 1);
+					st.takeItems(GALLADUCCIS_ORDER_2, 1);
+					st.giveItems(GEMSTONE_POWDER, 1);
 					st.setCond(4, true);
 					htmltext = event;
 				}
@@ -141,8 +141,8 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(4) && st.hasQuestItems(GEMSTONE_POWDER))
 				{
-					takeItems(player, GEMSTONE_POWDER, 1);
-					giveItems(player, GALLADUCCIS_ORDER_3, 1);
+					st.takeItems(GEMSTONE_POWDER, 1);
+					st.giveItems(GALLADUCCIS_ORDER_3, 1);
 					st.setCond(5, true);
 					htmltext = event;
 				}
@@ -156,8 +156,8 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(5) && st.hasQuestItems(GALLADUCCIS_ORDER_3))
 				{
-					takeItems(player, GALLADUCCIS_ORDER_3, 1);
-					giveItems(player, PURIFIED_MAGIC_NECKLACE, 1);
+					st.takeItems(GALLADUCCIS_ORDER_3, 1);
+					st.giveItems(PURIFIED_MAGIC_NECKLACE, 1);
 					st.setCond(6, true);
 					htmltext = event;
 				}
@@ -171,7 +171,7 @@ public final class Q00049_TheRoadHome extends Quest
 			{
 				if (st.isCond(6) && st.hasQuestItems(PURIFIED_MAGIC_NECKLACE))
 				{
-					giveItems(player, SCROLL_OF_ESCAPE_DWARVEN_VILLAGE, 1);
+					st.giveItems(SCROLL_OF_ESCAPE_DWARVEN_VILLAGE, 1);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}

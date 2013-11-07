@@ -76,7 +76,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 		final QuestState st = player.getQuestState(getName());
 		if ((st != null) && (st.isStarted()) && (!st.isCond(5)) && Util.checkIfInRange(1500, npc, player, false))
 		{
-			giveItems(player, MONSTER_DROPS.get(npc.getId()), 1);
+			st.giveItems(MONSTER_DROPS.get(npc.getId()), 1);
 			st.setCond(5, true);
 		}
 	}
@@ -220,17 +220,17 @@ public final class Q00902_ReclaimOurEra extends Quest
 					{
 						if (st.hasQuestItems(SHATTERED_BONES))
 						{
-							giveItems(player, PROOF_OF_CHALLENGE, 1);
+							st.giveItems(PROOF_OF_CHALLENGE, 1);
 							st.giveAdena(134038, true);
 						}
 						else if (st.hasQuestItems(CANNIBALISTIC_STAKATO_LDR_CLAW))
 						{
-							giveItems(player, PROOF_OF_CHALLENGE, 3);
+							st.giveItems(PROOF_OF_CHALLENGE, 3);
 							st.giveAdena(210119, true);
 						}
 						else if (st.hasQuestItems(ANAIS_SCROLL))
 						{
-							giveItems(player, PROOF_OF_CHALLENGE, 3);
+							st.giveItems(PROOF_OF_CHALLENGE, 3);
 							st.giveAdena(348155, true);
 						}
 						st.exitQuest(QuestType.DAILY, true);

@@ -87,7 +87,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		if ((st != null) && event.equalsIgnoreCase("30017-04.htm"))
 		{
 			st.startQuest();
-			giveItems(player, GALLINTS_OAK_WAND, 3);
+			st.giveItems(GALLINTS_OAK_WAND, 3);
 			return event;
 		}
 		return null;
@@ -99,8 +99,8 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == GALLINTS_OAK_WAND) && !st.hasQuestItems(MONSTERS.get(npc.getId())))
 		{
-			takeItems(killer, GALLINTS_OAK_WAND, 1);
-			giveItems(killer, MONSTERS.get(npc.getId()), 1);
+			st.takeItems(GALLINTS_OAK_WAND, 1);
+			st.giveItems(MONSTERS.get(npc.getId()), 1);
 			if (st.hasQuestItems(SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
 			{
 				st.setCond(3, true);
@@ -138,7 +138,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 								Q00281_HeadForTheHills.giveNewbieReward(player);
 								for (ItemHolder reward : REWARDS)
 								{
-									giveItems(player, reward);
+									st.giveItems(reward);
 								}
 								st.addExpAndSp(39750, 3407);
 								st.giveAdena(16866, true);

@@ -106,7 +106,7 @@ public final class Q00326_VanquishRemnants extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isStarted() && (getRandom(100) < MONSTERS.get(npc.getId())[0]))
 		{
-			giveItems(killer, MONSTERS.get(npc.getId())[1], 1);
+			st.giveItems(MONSTERS.get(npc.getId())[1], 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -128,15 +128,15 @@ public final class Q00326_VanquishRemnants extends Quest
 				}
 				case State.STARTED:
 				{
-					final long red_badges = getQuestItemsCount(player, RED_CROSS_BADGE);
-					final long blue_badges = getQuestItemsCount(player, BLUE_CROSS_BADGE);
-					final long black_badges = getQuestItemsCount(player, BLACK_CROSS_BADGE);
+					final long red_badges = st.getQuestItemsCount(RED_CROSS_BADGE);
+					final long blue_badges = st.getQuestItemsCount(BLUE_CROSS_BADGE);
+					final long black_badges = st.getQuestItemsCount(BLACK_CROSS_BADGE);
 					final long sum = red_badges + blue_badges + black_badges;
 					if (sum > 0)
 					{
 						if ((sum >= 100) && !st.hasQuestItems(BLACK_LION_MARK))
 						{
-							giveItems(player, BLACK_LION_MARK, 1);
+							st.giveItems(BLACK_LION_MARK, 1);
 						}
 						st.giveAdena(((red_badges * 46) + (blue_badges * 52) + (black_badges * 58) + ((sum >= 10) ? 4320 : 0)), true);
 						takeItems(player, -1, RED_CROSS_BADGE, BLUE_CROSS_BADGE, BLACK_CROSS_BADGE);

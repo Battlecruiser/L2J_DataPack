@@ -106,20 +106,20 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 		
 		if (getRandom(100) < MONSTER_DROP_CHANCES.get(npc.getId()))
 		{
-			giveItems(killer, SUPPLY_ITEMS, 1);
+			st.giveItems(SUPPLY_ITEMS, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		
 		if (getRandom(100) < 10)
 		{
-			if (getQuestItemsCount(killer, SUSPICIOUS_DOCUMENT_PIECE) < 4)
+			if (st.getQuestItemsCount(SUSPICIOUS_DOCUMENT_PIECE) < 4)
 			{
-				giveItems(killer, SUSPICIOUS_DOCUMENT_PIECE, 1);
+				st.giveItems(SUSPICIOUS_DOCUMENT_PIECE, 1);
 			}
 			else
 			{
-				giveItems(killer, RECIPE_OF_SUPPLY, 1);
-				takeItems(killer, SUSPICIOUS_DOCUMENT_PIECE, -1);
+				st.giveItems(RECIPE_OF_SUPPLY, 1);
+				st.takeItems(SUSPICIOUS_DOCUMENT_PIECE, -1);
 			}
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
@@ -145,8 +145,8 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 			}
 			case State.STARTED:
 			{
-				final long supplyCount = getQuestItemsCount(player, SUPPLY_ITEMS);
-				final long recipeCount = getQuestItemsCount(player, RECIPE_OF_SUPPLY);
+				final long supplyCount = st.getQuestItemsCount(SUPPLY_ITEMS);
+				final long recipeCount = st.getQuestItemsCount(RECIPE_OF_SUPPLY);
 				if (supplyCount == 0)
 				{
 					if (recipeCount == 0)
@@ -156,7 +156,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 					else
 					{
 						st.giveAdena((recipeCount * 6000), true);
-						takeItems(player, RECIPE_OF_SUPPLY, -1);
+						st.takeItems(RECIPE_OF_SUPPLY, -1);
 						htmltext = "30873-08.html";
 					}
 				}
@@ -165,14 +165,14 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 					if (recipeCount == 0)
 					{
 						st.giveAdena(((supplyCount * 100) + 6000), true);
-						takeItems(player, SUPPLY_ITEMS, -1);
+						st.takeItems(SUPPLY_ITEMS, -1);
 						htmltext = "30873-06.html";
 					}
 					else
 					{
 						st.giveAdena((((supplyCount * 100) + 6000) + (recipeCount * 6000)), true);
-						takeItems(player, SUPPLY_ITEMS, -1);
-						takeItems(player, RECIPE_OF_SUPPLY, -1);
+						st.takeItems(SUPPLY_ITEMS, -1);
+						st.takeItems(RECIPE_OF_SUPPLY, -1);
 						htmltext = "30873-07.html";
 					}
 				}

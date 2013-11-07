@@ -89,7 +89,7 @@ public final class Q00267_WrathOfVerdure extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && (getRandom(10) < 5))
 		{
-			giveItems(killer, GOBLIN_CLUB, 1);
+			st.giveItems(GOBLIN_CLUB, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -113,13 +113,13 @@ public final class Q00267_WrathOfVerdure extends Quest
 				{
 					if (st.hasQuestItems(GOBLIN_CLUB))
 					{
-						final long count = getQuestItemsCount(player, GOBLIN_CLUB);
+						final long count = st.getQuestItemsCount(GOBLIN_CLUB);
 						st.rewardItems(SILVERY_LEAF, count);
 						if (count >= 10)
 						{
 							st.giveAdena(600, true);
 						}
-						takeItems(player, GOBLIN_CLUB, -1);
+						st.takeItems(GOBLIN_CLUB, -1);
 						htmltext = "31853-06.html";
 					}
 					else

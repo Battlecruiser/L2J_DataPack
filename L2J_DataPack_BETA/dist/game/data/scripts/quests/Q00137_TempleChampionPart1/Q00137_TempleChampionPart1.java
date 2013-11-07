@@ -81,8 +81,8 @@ public class Q00137_TempleChampionPart1 extends Quest
 			case "30070-16.html":
 				if (st.isCond(3) && (st.hasQuestItems(EXECUTOR) && st.hasQuestItems(MISSIONARY)))
 				{
-					takeItems(player, EXECUTOR, -1);
-					takeItems(player, MISSIONARY, -1);
+					st.takeItems(EXECUTOR, -1);
+					st.takeItems(MISSIONARY, -1);
 					st.giveAdena(69146, true);
 					if (player.getLevel() < 41)
 					{
@@ -99,10 +99,10 @@ public class Q00137_TempleChampionPart1 extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = player.getQuestState(getName());
-		if ((st != null) && st.isStarted() && st.isCond(2) && (getQuestItemsCount(player, FRAGMENT) < 30))
+		if ((st != null) && st.isStarted() && st.isCond(2) && (st.getQuestItemsCount(FRAGMENT) < 30))
 		{
-			giveItems(player, FRAGMENT, 1);
-			if (getQuestItemsCount(player, FRAGMENT) >= 30)
+			st.giveItems(FRAGMENT, 1);
+			if (st.getQuestItemsCount(FRAGMENT) >= 30)
 			{
 				st.setCond(3, true);
 			}
@@ -151,11 +151,11 @@ public class Q00137_TempleChampionPart1 extends Quest
 				{
 					htmltext = "30070-10.html";
 				}
-				else if (getQuestItemsCount(player, FRAGMENT) >= 30)
+				else if (st.getQuestItemsCount(FRAGMENT) >= 30)
 				{
 					st.set("talk", "1");
 					htmltext = "30070-09.html";
-					takeItems(player, FRAGMENT, -1);
+					st.takeItems(FRAGMENT, -1);
 				}
 				break;
 			default:

@@ -114,7 +114,7 @@ public final class Q00261_CollectorsDream extends Quest
 					}
 					case 2:
 					{
-						if (getQuestItemsCount(player, SPIDER_LEG) >= MAX_LEG_COUNT)
+						if (st.getQuestItemsCount(SPIDER_LEG) >= MAX_LEG_COUNT)
 						{
 							giveNewbieReward(player);
 							st.giveAdena(1000, true);

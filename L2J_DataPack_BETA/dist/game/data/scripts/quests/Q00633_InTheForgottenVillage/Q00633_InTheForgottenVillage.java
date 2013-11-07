@@ -119,11 +119,11 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			{
 				if (st.isCond(2))
 				{
-					if (getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
+					if (st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
 					{
-						giveAdena(player, 25000, true);
+						st.giveAdena(25000, true);
 						st.addExpAndSp(305235, 0);
-						takeItems(player, RIB_BONE_OF_A_BLACK_MAGUS, -1);
+						st.takeItems(RIB_BONE_OF_A_BLACK_MAGUS, -1);
 						st.setCond(1, true);
 						htmltext = event;
 					}
@@ -158,7 +158,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			{
 				case RIB_BONE_OF_A_BLACK_MAGUS:
 				{
-					if (qs.isCond(1) && giveItemRandomly(killer, npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getCount(), true))
+					if (qs.isCond(1) && qs.giveItemRandomly(npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getCount(), true))
 					{
 						qs.setCond(2);
 					}
@@ -166,7 +166,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 				}
 				case ZOMBIES_LIVER:
 				{
-					giveItemRandomly(killer, npc, ZOMBIES_LIVER, 1, 0, info.getCount(), true);
+					qs.giveItemRandomly(npc, ZOMBIES_LIVER, 1, 0, info.getCount(), true);
 					break;
 				}
 			}
@@ -190,8 +190,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 		}
 		else if (st.isStarted())
 		{
-			htmltext = ((getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
-			
+			htmltext = ((st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
 		}
 		return htmltext;
 	}

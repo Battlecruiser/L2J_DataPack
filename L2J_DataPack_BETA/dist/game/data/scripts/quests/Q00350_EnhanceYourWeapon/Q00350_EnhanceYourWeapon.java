@@ -158,15 +158,15 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		}
 		else if (event.endsWith("-09.htm"))
 		{
-			giveItems(player, RED_SOUL_CRYSTAL0_ID, 1);
+			st.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.endsWith("-10.htm"))
 		{
-			giveItems(player, GREEN_SOUL_CRYSTAL0_ID, 1);
+			st.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.endsWith("-11.htm"))
 		{
-			giveItems(player, BLUE_SOUL_CRYSTAL0_ID, 1);
+			st.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
 		}
 		else if (event.equalsIgnoreCase("exit.htm"))
 		{

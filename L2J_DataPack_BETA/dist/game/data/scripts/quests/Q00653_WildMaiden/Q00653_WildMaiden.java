@@ -66,7 +66,7 @@ public class Q00653_WildMaiden extends Quest
 				return "32013-05.htm";
 			}
 			st.startQuest();
-			takeItems(player, SOE, 1);
+			st.takeItems(SOE, 1);
 			npc.deleteMe();
 			htmltext = (getRandom(2) == 0) ? event : "32013-04a.htm";
 		}

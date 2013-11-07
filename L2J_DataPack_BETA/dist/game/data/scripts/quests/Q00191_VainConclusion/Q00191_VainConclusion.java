@@ -73,7 +73,7 @@ public final class Q00191_VainConclusion extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					giveItems(player, REPAIRED_METALLOGRAPH, 1);
+					st.giveItems(REPAIRED_METALLOGRAPH, 1);
 					htmltext = event;
 				}
 				break;
@@ -97,7 +97,7 @@ public final class Q00191_VainConclusion extends Quest
 				if (st.isCond(1))
 				{
 					st.setCond(2, true);
-					takeItems(player, REPAIRED_METALLOGRAPH, -1);
+					st.takeItems(REPAIRED_METALLOGRAPH, -1);
 					htmltext = event;
 				}
 				break;

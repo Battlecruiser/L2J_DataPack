@@ -151,7 +151,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 			{
 				if (st.isCond(2) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
 				{
-					takeItems(player, SCULPTURE_OF_DOUBT, -1);
+					st.takeItems(SCULPTURE_OF_DOUBT, -1);
 					st.setCond(3, true);
 					htmltext = event;
 					npc.broadcastPacket(new NpcSay(npc.getObjectId(), Say2.NPC_ALL, npc.getId(), NpcStringId.WE_WILL_BE_WITH_YOU_ALWAYS));
@@ -193,7 +193,7 @@ public class Q00198_SevenSignsEmbryo extends Quest
 		
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
-			giveItems(player, SCULPTURE_OF_DOUBT, 1);
+			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.setCond(2, true);
 		}
 		
@@ -247,8 +247,8 @@ public class Q00198_SevenSignsEmbryo extends Quest
 						if (player.getLevel() >= MIN_LEVEL)
 						{
 							st.addExpAndSp(315108090, 34906059);
-							giveItems(player, DAWNS_BRACELET, 1);
-							giveItems(player, PcInventory.ANCIENT_ADENA_ID, 1500000);
+							st.giveItems(DAWNS_BRACELET, 1);
+							st.giveItems(PcInventory.ANCIENT_ADENA_ID, 1500000);
 							st.exitQuest(false, true);
 							htmltext = "32593-05.html";
 						}

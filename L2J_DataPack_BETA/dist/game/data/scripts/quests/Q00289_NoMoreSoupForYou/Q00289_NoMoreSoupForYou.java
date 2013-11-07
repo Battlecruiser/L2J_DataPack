@@ -186,10 +186,10 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			}
 			else if (event.equalsIgnoreCase("30200-05.htm"))
 			{
-				if (getQuestItemsCount(player, SOUP) >= 500)
+				if (st.getQuestItemsCount(SOUP) >= 500)
 				{
-					giveItems(player, WEAPONS[c][0], WEAPONS[c][1]);
-					takeItems(player, SOUP, 500);
+					st.giveItems(WEAPONS[c][0], WEAPONS[c][1]);
+					st.takeItems(SOUP, 500);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "30200-04.htm";
 				}
@@ -200,10 +200,10 @@ public class Q00289_NoMoreSoupForYou extends Quest
 			}
 			else if (event.equalsIgnoreCase("30200-06.htm"))
 			{
-				if (getQuestItemsCount(player, SOUP) >= 100)
+				if (st.getQuestItemsCount(SOUP) >= 100)
 				{
-					giveItems(player, ARMORS[b][0], ARMORS[b][1]);
-					takeItems(player, SOUP, 100);
+					st.giveItems(ARMORS[b][0], ARMORS[b][1]);
+					st.takeItems(SOUP, 100);
 					st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					htmltext = "30200-04.htm";
 				}
@@ -227,7 +227,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		}
 		if (Util.contains(MOBS, npcId))
 		{
-			giveItems(player, SOUP, 1 * RATE);
+			st.giveItems(SOUP, 1 * RATE);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return super.onKill(npc, player, isSummon);
@@ -254,7 +254,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 				case State.STARTED:
 					if (st.isCond(1))
 					{
-						htmltext = (getQuestItemsCount(player, SOUP) >= 100) ? "30200-04.htm" : "30200-03.htm";
+						htmltext = (st.getQuestItemsCount(SOUP) >= 100) ? "30200-04.htm" : "30200-03.htm";
 					}
 					break;
 			}

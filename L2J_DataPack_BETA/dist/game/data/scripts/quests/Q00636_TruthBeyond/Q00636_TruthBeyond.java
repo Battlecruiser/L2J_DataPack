@@ -63,7 +63,7 @@ public final class Q00636_TruthBeyond extends Quest
 		}
 		else if ("32010-02.htm".equals(event))
 		{
-			giveItems(player, VISITOR_MARK, 1);
+			st.giveItems(VISITOR_MARK, 1);
 			st.exitQuest(true, true);
 		}
 		return event;

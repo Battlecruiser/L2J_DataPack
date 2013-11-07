@@ -67,8 +67,8 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 			case "31577-04a.htm":
 				if (st.isCond(1) && st.hasQuestItems(RED_TREASURE_BOX))
 				{
-					giveItems(player, RUKAL_MUSICAL, 1);
-					takeItems(player, RED_TREASURE_BOX, -1);
+					st.giveItems(RUKAL_MUSICAL, 1);
+					st.takeItems(RED_TREASURE_BOX, -1);
 					st.setCond(2, true);
 					htmltext = "31577-04.htm";
 				}
@@ -76,7 +76,7 @@ public class Q00030_ChestCaughtWithABaitOfFire extends Quest
 			case "30629-02.htm":
 				if (st.isCond(2) && st.hasQuestItems(RUKAL_MUSICAL))
 				{
-					giveItems(player, PROTECTION_NECKLACE, 1);
+					st.giveItems(PROTECTION_NECKLACE, 1);
 					st.exitQuest(false, true);
 					htmltext = "30629-03.htm";
 				}

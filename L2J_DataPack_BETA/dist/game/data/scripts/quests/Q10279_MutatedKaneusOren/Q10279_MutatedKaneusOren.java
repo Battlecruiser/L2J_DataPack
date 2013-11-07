@@ -160,12 +160,12 @@ public class Q10279_MutatedKaneusOren extends Quest
 	{
 		if ((npcId == KAIM_ABIGORE) && !st.hasQuestItems(TISSUE_KA))
 		{
-			giveItems(st.getPlayer(), TISSUE_KA, 1);
+			st.giveItems(TISSUE_KA, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		else if ((npcId == KNIGHT_MONTAGNAR) && !st.hasQuestItems(TISSUE_KM))
 		{
-			giveItems(st.getPlayer(), TISSUE_KM, 1);
+			st.giveItems(TISSUE_KM, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 	}

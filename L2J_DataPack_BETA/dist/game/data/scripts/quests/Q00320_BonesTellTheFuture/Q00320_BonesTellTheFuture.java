@@ -97,7 +97,7 @@ public final class Q00320_BonesTellTheFuture extends Quest
 			}
 			case State.STARTED:
 			{
-				if (getQuestItemsCount(player, BONE_FRAGMENT) >= REQUIRED_BONE_COUNT)
+				if (st.getQuestItemsCount(BONE_FRAGMENT) >= REQUIRED_BONE_COUNT)
 				{
 					htmltext = "30359-06.html";
 					st.giveAdena(8470, true);

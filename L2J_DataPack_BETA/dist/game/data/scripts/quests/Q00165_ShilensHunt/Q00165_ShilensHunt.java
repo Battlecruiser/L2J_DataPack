@@ -80,8 +80,8 @@ public class Q00165_ShilensHunt extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && (getRandom(3) < MONSTERS.get(npc.getId())))
 		{
-			giveItems(killer, DARK_BEZOAR, 1);
-			if (getQuestItemsCount(killer, DARK_BEZOAR) < REQUIRED_COUNT)
+			st.giveItems(DARK_BEZOAR, 1);
+			if (st.getQuestItemsCount(DARK_BEZOAR) < REQUIRED_COUNT)
 			{
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
@@ -109,9 +109,9 @@ public class Q00165_ShilensHunt extends Quest
 				}
 				case State.STARTED:
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, DARK_BEZOAR) >= REQUIRED_COUNT))
+					if (st.isCond(2) && (st.getQuestItemsCount(DARK_BEZOAR) >= REQUIRED_COUNT))
 					{
-						giveItems(player, LESSER_HEALING_POTION, 5);
+						st.giveItems(LESSER_HEALING_POTION, 5);
 						st.addExpAndSp(1000, 0);
 						st.exitQuest(false, true);
 						htmltext = "30348-05.html";

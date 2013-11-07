@@ -77,11 +77,11 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 				switch (st.getCond())
 				{
 					case 1: // take the item and give the heart
-						takeItems(player, RED_TOTEM, 1);
+						st.takeItems(RED_TOTEM, 1);
 					case 2:
 						if (!st.hasQuestItems(NASTRON_HEART))
 						{
-							giveItems(player, NASTRON_HEART, 1);
+							st.giveItems(NASTRON_HEART, 1);
 						}
 						st.setCond(3, true);
 						break;
@@ -206,7 +206,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		}
 		if (st.isCond(1))
 		{
-			takeItems(st.getPlayer(), RED_TOTEM, 1);
+			st.takeItems(RED_TOTEM, 1);
 			st.setCond(2, true);
 		}
 		npc.deleteMe();

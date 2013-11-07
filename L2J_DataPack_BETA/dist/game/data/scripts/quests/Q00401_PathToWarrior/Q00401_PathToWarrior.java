@@ -81,7 +81,7 @@ public class Q00401_PathToWarrior extends Quest
 				{
 					if (player.getLevel() >= 18)
 					{
-						if (getQuestItemsCount(player, MEDALLIONOFWARRIOR) == 1)
+						if (st.getQuestItemsCount(MEDALLIONOFWARRIOR) == 1)
 						{
 							htmltext = "30010-04.htm";
 						}
@@ -110,14 +110,14 @@ public class Q00401_PathToWarrior extends Quest
 		else if (event.equalsIgnoreCase("401_accept"))
 		{
 			st.startQuest();
-			giveItems(player, AURONSLETTER, 1);
+			st.giveItems(AURONSLETTER, 1);
 			htmltext = "30010-06.htm";
 		}
 		else if (event.equalsIgnoreCase("30253_1"))
 		{
 			st.setCond(2, true);
-			takeItems(player, AURONSLETTER, 1);
-			giveItems(player, WARRIORGUILDMARK, 1);
+			st.takeItems(AURONSLETTER, 1);
+			st.giveItems(WARRIORGUILDMARK, 1);
 			htmltext = "30253-02.html";
 		}
 		else if (event.equalsIgnoreCase("401_2"))
@@ -127,9 +127,9 @@ public class Q00401_PathToWarrior extends Quest
 		else if (event.equalsIgnoreCase("401_3"))
 		{
 			st.setCond(5, true);
-			takeItems(player, RUSTEDBRONZESWORD2, 1);
-			giveItems(player, RUSTEDBRONZESWORD3, 1);
-			takeItems(player, SIMPLONSLETTER, 1);
+			st.takeItems(RUSTEDBRONZESWORD2, 1);
+			st.giveItems(RUSTEDBRONZESWORD3, 1);
+			st.takeItems(SIMPLONSLETTER, 1);
 			htmltext = "30010-11.html";
 		}
 		return htmltext;
@@ -150,15 +150,15 @@ public class Q00401_PathToWarrior extends Quest
 			{
 				if ((npc.getId() == MONSTERS[0]) || (npc.getId() == MONSTERS[2]))
 				{
-					if (getQuestItemsCount(killer, RUSTEDBRONZESWORD1) < 10)
+					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) < 10)
 					{
 						if (getRandom(10) < 4)
 						{
-							giveItems(killer, RUSTEDBRONZESWORD1, 1);
+							st.giveItems(RUSTEDBRONZESWORD1, 1);
 							st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 						}
 					}
-					if (getQuestItemsCount(killer, RUSTEDBRONZESWORD1) == 10)
+					if (st.getQuestItemsCount(RUSTEDBRONZESWORD1) == 10)
 					{
 						st.setCond(3, true);
 					}
@@ -169,13 +169,13 @@ public class Q00401_PathToWarrior extends Quest
 			{
 				if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == RUSTEDBRONZESWORD3) && ((npc.getId() == MONSTERS[1]) || (npc.getId() == MONSTERS[3])))
 				{
-					if (getQuestItemsCount(killer, POISONSPIDERLEG) < 20)
+					if (st.getQuestItemsCount(POISONSPIDERLEG) < 20)
 					{
-						giveItems(killer, POISONSPIDERLEG, 1);
+						st.giveItems(POISONSPIDERLEG, 1);
 						st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					
-					if (getQuestItemsCount(killer, POISONSPIDERLEG) == 20)
+					if (st.getQuestItemsCount(POISONSPIDERLEG) == 20)
 					{
 						st.setCond(6, true);
 					}
@@ -230,8 +230,8 @@ public class Q00401_PathToWarrior extends Quest
 					}
 					case 6:
 					{
-						takeItems(player, RUSTEDBRONZESWORD3, 1);
-						takeItems(player, POISONSPIDERLEG, -1);
+						st.takeItems(RUSTEDBRONZESWORD3, 1);
+						st.takeItems(POISONSPIDERLEG, -1);
 						
 						if (player.getLevel() >= 20)
 						{
@@ -247,7 +247,7 @@ public class Q00401_PathToWarrior extends Quest
 						}
 						
 						st.giveAdena(163800, true);
-						giveItems(player, MEDALLIONOFWARRIOR, 1);
+						st.giveItems(MEDALLIONOFWARRIOR, 1);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
 						st.saveGlobalQuestVar("1ClassQuestFinished", "1");
 						st.exitQuest(false, true);
@@ -274,10 +274,10 @@ public class Q00401_PathToWarrior extends Quest
 					case 3:
 					{
 						st.setCond(4, true);
-						takeItems(player, WARRIORGUILDMARK, 1);
-						takeItems(player, RUSTEDBRONZESWORD1, 10);
-						giveItems(player, RUSTEDBRONZESWORD2, 1);
-						giveItems(player, SIMPLONSLETTER, 1);
+						st.takeItems(WARRIORGUILDMARK, 1);
+						st.takeItems(RUSTEDBRONZESWORD1, 10);
+						st.giveItems(RUSTEDBRONZESWORD2, 1);
+						st.giveItems(SIMPLONSLETTER, 1);
 						htmltext = "30253-04.html";
 						break;
 					}

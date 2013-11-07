@@ -101,7 +101,7 @@ public class Q00135_TempleExecutor extends Quest
 				st.setCond(3, true);
 				break;
 			case "30068-11.html":
-				giveItems(player, BADGE_TEMPLE_EXECUTOR, 1);
+				st.giveItems(BADGE_TEMPLE_EXECUTOR, 1);
 				st.giveAdena(16924, true);
 				if (player.getLevel() < MAX_REWARD_LEVEL)
 				{
@@ -127,20 +127,20 @@ public class Q00135_TempleExecutor extends Quest
 		final QuestState st = member.getQuestState(getName());
 		if ((getRandom(1000) < MOBS.get(npc.getId())))
 		{
-			if (getQuestItemsCount(player, STOLEN_CARGO) < ITEM_COUNT)
+			if (st.getQuestItemsCount(STOLEN_CARGO) < ITEM_COUNT)
 			{
-				giveItems(player, STOLEN_CARGO, 1);
+				st.giveItems(STOLEN_CARGO, 1);
 			}
-			else if (getQuestItemsCount(player, HATE_CRYSTAL) < ITEM_COUNT)
+			else if (st.getQuestItemsCount(HATE_CRYSTAL) < ITEM_COUNT)
 			{
-				giveItems(player, HATE_CRYSTAL, 1);
+				st.giveItems(HATE_CRYSTAL, 1);
 			}
 			else
 			{
-				giveItems(player, OLD_TREASURE_MAP, 1);
+				st.giveItems(OLD_TREASURE_MAP, 1);
 			}
 			
-			if ((getQuestItemsCount(player, STOLEN_CARGO) >= ITEM_COUNT) && (getQuestItemsCount(player, HATE_CRYSTAL) >= ITEM_COUNT) && (getQuestItemsCount(player, OLD_TREASURE_MAP) >= ITEM_COUNT))
+			if ((st.getQuestItemsCount(STOLEN_CARGO) >= ITEM_COUNT) && (st.getQuestItemsCount(HATE_CRYSTAL) >= ITEM_COUNT) && (st.getQuestItemsCount(OLD_TREASURE_MAP) >= ITEM_COUNT))
 			{
 				st.setCond(4, true);
 			}
@@ -187,9 +187,9 @@ public class Q00135_TempleExecutor extends Quest
 								}
 								else if (st.hasQuestItems(PANOS_CREDENTIALS, SONINS_CREDENTIALS, ALEXS_CREDENTIALS))
 								{
-									takeItems(player, SONINS_CREDENTIALS, -1);
-									takeItems(player, PANOS_CREDENTIALS, -1);
-									takeItems(player, ALEXS_CREDENTIALS, -1);
+									st.takeItems(SONINS_CREDENTIALS, -1);
+									st.takeItems(PANOS_CREDENTIALS, -1);
+									st.takeItems(ALEXS_CREDENTIALS, -1);
 									st.set("talk", "1");
 									htmltext = "30068-07.html";
 								}
@@ -230,13 +230,13 @@ public class Q00135_TempleExecutor extends Quest
 						case 4:
 							if (st.hasQuestItems(PANOS_CREDENTIALS, SONINS_CREDENTIALS))
 							{
-								if (getQuestItemsCount(player, OLD_TREASURE_MAP) < ITEM_COUNT)
+								if (st.getQuestItemsCount(OLD_TREASURE_MAP) < ITEM_COUNT)
 								{
 									return htmltext;
 								}
 								st.setCond(5, true);
-								takeItems(player, OLD_TREASURE_MAP, -1);
-								giveItems(player, ALEXS_CREDENTIALS, 1);
+								st.takeItems(OLD_TREASURE_MAP, -1);
+								st.giveItems(ALEXS_CREDENTIALS, 1);
 								htmltext = "30291-10.html";
 							}
 							else
@@ -267,12 +267,12 @@ public class Q00135_TempleExecutor extends Quest
 						case 4:
 							if (!st.isSet("Pano"))
 							{
-								if (getQuestItemsCount(player, HATE_CRYSTAL) < ITEM_COUNT)
+								if (st.getQuestItemsCount(HATE_CRYSTAL) < ITEM_COUNT)
 								{
 									return htmltext;
 								}
-								takeItems(player, HATE_CRYSTAL, -1);
-								giveItems(player, PANOS_CREDENTIALS, 1);
+								st.takeItems(HATE_CRYSTAL, -1);
+								st.giveItems(PANOS_CREDENTIALS, 1);
 								st.set("Pano", "1");
 								htmltext = "30078-04.html";
 								break;
@@ -300,12 +300,12 @@ public class Q00135_TempleExecutor extends Quest
 						case 4:
 							if (!st.isSet("Sonin"))
 							{
-								if (getQuestItemsCount(player, STOLEN_CARGO) < ITEM_COUNT)
+								if (st.getQuestItemsCount(STOLEN_CARGO) < ITEM_COUNT)
 								{
 									return htmltext;
 								}
-								takeItems(player, STOLEN_CARGO, -1);
-								giveItems(player, SONINS_CREDENTIALS, 1);
+								st.takeItems(STOLEN_CARGO, -1);
+								st.giveItems(SONINS_CREDENTIALS, 1);
 								st.set("Sonin", "1");
 								htmltext = "31773-04.html";
 								break;

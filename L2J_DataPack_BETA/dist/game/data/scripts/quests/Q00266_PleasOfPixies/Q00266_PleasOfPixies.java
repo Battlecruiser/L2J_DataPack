@@ -95,7 +95,7 @@ public final class Q00266_PleasOfPixies extends Quest
 			{
 				if (chance < mob.getId())
 				{
-					if (giveItemRandomly(killer, npc, PREDATORS_FANG, mob.getCount(), 100, 1.0, true))
+					if (st.giveItemRandomly(npc, PREDATORS_FANG, mob.getCount(), 100, 1.0, true))
 					{
 						st.setCond(2);
 					}
@@ -144,7 +144,7 @@ public final class Q00266_PleasOfPixies extends Quest
 					}
 					case 2:
 					{
-						if (getQuestItemsCount(player, PREDATORS_FANG) >= 100)
+						if (st.getQuestItemsCount(PREDATORS_FANG) >= 100)
 						{
 							final int chance = getRandom(100);
 							int reward;
@@ -167,7 +167,7 @@ public final class Q00266_PleasOfPixies extends Quest
 							}
 							for (ItemHolder item : REWARDS.get(reward))
 							{
-								rewardItems(player, item);
+								st.rewardItems(item);
 							}
 							st.exitQuest(true, true);
 							htmltext = "31852-06.html";

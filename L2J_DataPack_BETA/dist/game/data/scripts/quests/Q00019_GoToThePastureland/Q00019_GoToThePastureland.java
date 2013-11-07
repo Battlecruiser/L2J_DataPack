@@ -60,7 +60,7 @@ public class Q00019_GoToThePastureland extends Quest
 		if (event.equalsIgnoreCase("31302-02.htm"))
 		{
 			st.startQuest();
-			giveItems(player, VEAL, 1);
+			st.giveItems(VEAL, 1);
 		}
 		else if (event.equalsIgnoreCase("31537-02.html"))
 		{

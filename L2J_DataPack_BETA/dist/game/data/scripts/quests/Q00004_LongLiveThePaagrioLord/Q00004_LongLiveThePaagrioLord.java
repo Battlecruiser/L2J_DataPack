@@ -109,7 +109,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 						}
 						else
 						{
-							giveItems(player, CLUB, 1);
+							st.giveItems(CLUB, 1);
 							// Newbie Guide
 							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 							st.addExpAndSp(4254, 335);
@@ -155,7 +155,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		{
 			return npcId + "-02.html";
 		}
-		giveItems(st.getPlayer(), itemId, 1);
+		st.giveItems(itemId, 1);
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		if (st.hasQuestItems(items))
 		{

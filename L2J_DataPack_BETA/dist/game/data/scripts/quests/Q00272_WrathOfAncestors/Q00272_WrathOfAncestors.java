@@ -72,8 +72,8 @@ public final class Q00272_WrathOfAncestors extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			giveItems(killer, GRAVE_ROBBERS_HEAD, 1);
-			if (getQuestItemsCount(killer, GRAVE_ROBBERS_HEAD) >= 50)
+			st.giveItems(GRAVE_ROBBERS_HEAD, 1);
+			if (st.getQuestItemsCount(GRAVE_ROBBERS_HEAD) >= 50)
 			{
 				st.setCond(2, true);
 			}

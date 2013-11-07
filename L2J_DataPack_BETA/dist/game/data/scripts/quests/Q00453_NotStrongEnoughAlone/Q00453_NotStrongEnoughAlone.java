@@ -312,7 +312,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 					}
 					case 5:
 					{
-						giveItems(player, REWARD[getRandom(REWARD.length)][getRandom(REWARD[0].length)], 1);
+						st.giveItems(REWARD[getRandom(REWARD.length)][getRandom(REWARD[0].length)], 1);
 						st.exitQuest(QuestType.DAILY, true);
 						htmltext = "32734-14.html";
 						break;

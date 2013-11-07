@@ -102,7 +102,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				if (st.isCreated())
 				{
 					st.startQuest();
-					giveItems(player, KENDNELLS_ORDERS[getRandom(0, 3)], 1);
+					st.giveItems(KENDNELLS_ORDERS[getRandom(0, 3)], 1);
 					htmltext = event;
 				}
 				break;
@@ -131,7 +131,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				{
 					if (st.isCond(1) && st.hasQuestItems(MONSTER_DROP.get(npc.getId())))
 					{
-						giveItems(killer, KABOO_CHIEFS_1ST_TORQUE, 1);
+						st.giveItems(KABOO_CHIEFS_1ST_TORQUE, 1);
 						st.setCond(2, true);
 					}
 					break;
@@ -143,7 +143,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				{
 					if (st.isCond(3) && st.hasQuestItems(MONSTER_DROP.get(npc.getId())))
 					{
-						giveItems(killer, KABOO_CHIEFS_2ST_TORQUE, 1);
+						st.giveItems(KABOO_CHIEFS_2ST_TORQUE, 1);
 						st.setCond(4, true);
 					}
 					break;
@@ -187,10 +187,10 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 				{
 					for (int i = 0; i < 4; i++)
 					{
-						takeItems(talker, KENDNELLS_ORDERS[i], -1);
+						st.takeItems(KENDNELLS_ORDERS[i], -1);
 					}
-					takeItems(talker, KABOO_CHIEFS_1ST_TORQUE, 1);
-					giveItems(talker, KENDNELLS_ORDERS[getRandom(4, 7)], 1);
+					st.takeItems(KABOO_CHIEFS_1ST_TORQUE, 1);
+					st.giveItems(KENDNELLS_ORDERS[getRandom(4, 7)], 1);
 					st.setCond(3, true);
 					htmltext = "30218-07.html";
 				}

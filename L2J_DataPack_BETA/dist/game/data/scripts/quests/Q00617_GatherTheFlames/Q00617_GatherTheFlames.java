@@ -107,12 +107,12 @@ public class Q00617_GatherTheFlames extends Quest
 			case "31539-06.html":
 				break;
 			case "31539-07.html":
-				if ((getQuestItemsCount(player, TORCH) < 1000) || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1000) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, REWARD[getRandom(REWARD.length)], 1);
-				takeItems(player, TORCH, 1000);
+				st.giveItems(REWARD[getRandom(REWARD.length)], 1);
+				st.takeItems(TORCH, 1000);
 				break;
 			case "31539-08.html":
 				st.exitQuest(true, true);
@@ -125,22 +125,22 @@ public class Q00617_GatherTheFlames extends Quest
 			case "6895":
 			case "6897":
 			case "6899":
-				if ((getQuestItemsCount(player, TORCH) < 1200) || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1200) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, Integer.valueOf(event), 1);
-				takeItems(player, TORCH, 1200);
+				st.giveItems(Integer.valueOf(event), 1);
+				st.takeItems(TORCH, 1200);
 				htmltext = "32049-04.html";
 				break;
 			case "6887":
 			case "6881":
-				if ((getQuestItemsCount(player, TORCH) < 1200) || !st.isStarted())
+				if ((st.getQuestItemsCount(TORCH) < 1200) || !st.isStarted())
 				{
 					return getNoQuestMsg(player);
 				}
-				giveItems(player, Integer.valueOf(event), 1);
-				takeItems(player, TORCH, 1200);
+				st.giveItems(Integer.valueOf(event), 1);
+				st.takeItems(TORCH, 1200);
 				htmltext = "32049-03.html";
 				break;
 			default:
@@ -163,11 +163,11 @@ public class Q00617_GatherTheFlames extends Quest
 		
 		if (getRandom(1000) < MOBS.get(npc.getId()))
 		{
-			giveItems(player, TORCH, 2);
+			st.giveItems(TORCH, 2);
 		}
 		else
 		{
-			giveItems(player, TORCH, 1);
+			st.giveItems(TORCH, 1);
 		}
 		st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		return super.onKill(npc, player, isSummon);
@@ -188,7 +188,7 @@ public class Q00617_GatherTheFlames extends Quest
 			case ROONEY:
 				if (st.isStarted())
 				{
-					htmltext = (getQuestItemsCount(player, TORCH) >= 1200) ? "32049-02.html" : "32049-01.html";
+					htmltext = (st.getQuestItemsCount(TORCH) >= 1200) ? "32049-02.html" : "32049-01.html";
 				}
 				break;
 			case VULCAN:
@@ -198,7 +198,7 @@ public class Q00617_GatherTheFlames extends Quest
 				}
 				else
 				{
-					htmltext = (getQuestItemsCount(player, TORCH) >= 1000) ? "31539-04.html" : "31539-05.html";
+					htmltext = (st.getQuestItemsCount(TORCH) >= 1000) ? "31539-04.html" : "31539-05.html";
 				}
 				break;
 			case HILDA:

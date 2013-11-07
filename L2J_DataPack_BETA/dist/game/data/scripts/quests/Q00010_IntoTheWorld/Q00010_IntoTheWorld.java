@@ -66,12 +66,12 @@ public class Q00010_IntoTheWorld extends Quest
 				st.startQuest();
 				break;
 			case "30533-06.html":
-				giveItems(player, MARK_OF_TRAVELER, 1);
-				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
+				st.giveItems(MARK_OF_TRAVELER, 1);
+				st.giveItems(SCROLL_OF_ESCAPE_GIRAN, 1);
 				st.exitQuest(false, true);
 				break;
 			case "30520-02.html":
-				giveItems(player, VERY_EXPENSIVE_NECKLACE, 1);
+				st.giveItems(VERY_EXPENSIVE_NECKLACE, 1);
 				st.setCond(2, true);
 				break;
 			case "30520-05.html":
@@ -82,7 +82,7 @@ public class Q00010_IntoTheWorld extends Quest
 				{
 					return "30650-03.html";
 				}
-				takeItems(player, VERY_EXPENSIVE_NECKLACE, -1);
+				st.takeItems(VERY_EXPENSIVE_NECKLACE, -1);
 				st.setCond(3, true);
 				break;
 			default:

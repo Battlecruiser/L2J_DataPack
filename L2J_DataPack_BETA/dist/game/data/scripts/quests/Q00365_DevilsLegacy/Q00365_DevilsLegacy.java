@@ -110,7 +110,7 @@ public final class Q00365_DevilsLegacy extends Quest
 				{
 					htmltext = "30092-04.html";
 				}
-				else if (!hasQuestItems(player, PIRATES_TREASURE_CHEST))
+				else if (!st.hasQuestItems(PIRATES_TREASURE_CHEST))
 				{
 					htmltext = "30092-02.html";
 				}

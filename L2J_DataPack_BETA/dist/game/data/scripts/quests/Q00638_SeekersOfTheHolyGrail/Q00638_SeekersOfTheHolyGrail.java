@@ -188,26 +188,26 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 			}
 			case "reward":
 			{
-				if (st.isStarted() && (getQuestItemsCount(player, TOTEM) >= TOTEMS_REQUIRED_COUNT))
+				if (st.isStarted() && (st.getQuestItemsCount(TOTEM) >= TOTEMS_REQUIRED_COUNT))
 				{
 					if (getRandom(100) < 80)
 					{
 						if (getRandomBoolean())
 						{
-							rewardItems(player, SCROLL_ENCHANT_A_S, 1);
+							st.rewardItems(SCROLL_ENCHANT_A_S, 1);
 						}
 						else
 						{
-							rewardItems(player, SCROLL_ENCHANT_W_S, 1);
+							st.rewardItems(SCROLL_ENCHANT_W_S, 1);
 						}
 						htmltext = "31328-07.html";
 					}
 					else
 					{
-						giveAdena(player, 3576000, true);
+						st.giveAdena(3576000, true);
 						htmltext = "31328-08.html";
 					}
-					takeItems(player, TOTEM, 2000);
+					st.takeItems(TOTEM, 2000);
 				}
 				break;
 			}

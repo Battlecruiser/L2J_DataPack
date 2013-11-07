@@ -132,8 +132,8 @@ public class Q00141_ShadowFoxPart3 extends Quest
 		final QuestState st = member.getQuestState(getName());
 		if ((getRandom(100) < MOBS.get(npc.getId())))
 		{
-			giveItems(player, PREDECESSORS_REPORT, 1);
-			if (getQuestItemsCount(player, PREDECESSORS_REPORT) >= REPORT_COUNT)
+			st.giveItems(PREDECESSORS_REPORT, 1);
+			if (st.getQuestItemsCount(PREDECESSORS_REPORT) >= REPORT_COUNT)
 			{
 				st.setCond(3, true);
 			}
@@ -182,7 +182,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 						else
 						{
 							htmltext = "30894-08.html";
-							takeItems(player, PREDECESSORS_REPORT, -1);
+							st.takeItems(PREDECESSORS_REPORT, -1);
 							st.set("talk", "1");
 						}
 						break;

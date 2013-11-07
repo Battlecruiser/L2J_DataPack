@@ -71,9 +71,9 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 				st.startQuest();
 				break;
 			case "31577-3.htm":
-				if (st.isCond(2) && (getQuestItemsCount(player, CRIMSON_DRAKE_HEART) >= 100))
+				if (st.isCond(2) && (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) >= 100))
 				{
-					giveItems(player, FLAMING_FISHING_LURE, 4);
+					st.giveItems(FLAMING_FISHING_LURE, 4);
 					st.exitQuest(false, true);
 				}
 				else
@@ -96,7 +96,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		
 		final QuestState st = partyMember.getQuestState(getName());
 		
-		if (getQuestItemsCount(player, CRIMSON_DRAKE_HEART) < 100)
+		if (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) < 100)
 		{
 			float chance = 33 * Config.RATE_QUEST_DROP;
 			if (getRandom(100) < chance)
@@ -106,7 +106,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 			}
 		}
 		
-		if (getQuestItemsCount(player, CRIMSON_DRAKE_HEART) >= 100)
+		if (st.getQuestItemsCount(CRIMSON_DRAKE_HEART) >= 100)
 		{
 			st.setCond(2, true);
 			

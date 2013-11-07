@@ -72,9 +72,9 @@ public final class Q00271_ProofOfValor extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			final long count = getQuestItemsCount(killer, KASHA_WOLF_FANG);
+			final long count = st.getQuestItemsCount(KASHA_WOLF_FANG);
 			int amount = ((getRandom(100) < 25) && (count < 49)) ? 2 : 1;
-			giveItems(killer, KASHA_WOLF_FANG, amount);
+			st.giveItems(KASHA_WOLF_FANG, amount);
 			if ((count + amount) >= 50)
 			{
 				st.setCond(2, true);
@@ -112,7 +112,7 @@ public final class Q00271_ProofOfValor extends Quest
 						}
 						case 2:
 						{
-							if (getQuestItemsCount(player, KASHA_WOLF_FANG) >= 50)
+							if (st.getQuestItemsCount(KASHA_WOLF_FANG) >= 50)
 							{
 								if (getRandom(100) <= 13)
 								{
@@ -123,7 +123,7 @@ public final class Q00271_ProofOfValor extends Quest
 								{
 									st.rewardItems(NECKLACE_OF_COURAGE, 1);
 								}
-								takeItems(player, KASHA_WOLF_FANG, -1);
+								st.takeItems(KASHA_WOLF_FANG, -1);
 								st.exitQuest(true, true);
 								htmltext = "30577-06.html";
 							}

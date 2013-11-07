@@ -71,7 +71,7 @@ public class Q00042_HelpTheUncle extends Quest
 			case "30828-03.html":
 				if (st.hasQuestItems(TRIDENT))
 				{
-					takeItems(player, TRIDENT, 1);
+					st.takeItems(TRIDENT, 1);
 					st.setCond(2, true);
 				}
 				else
@@ -80,10 +80,10 @@ public class Q00042_HelpTheUncle extends Quest
 				}
 				break;
 			case "30828-06.html":
-				if (getQuestItemsCount(player, MAP_PIECE) == 30)
+				if (st.getQuestItemsCount(MAP_PIECE) == 30)
 				{
-					takeItems(player, MAP_PIECE, -1);
-					giveItems(player, MAP, 1);
+					st.takeItems(MAP_PIECE, -1);
+					st.giveItems(MAP, 1);
 					st.setCond(4, true);
 				}
 				else
@@ -94,7 +94,7 @@ public class Q00042_HelpTheUncle extends Quest
 			case "30735-02.html":
 				if (st.hasQuestItems(MAP))
 				{
-					takeItems(player, MAP, -1);
+					st.takeItems(MAP, -1);
 					st.setCond(5, true);
 				}
 				else
@@ -103,7 +103,7 @@ public class Q00042_HelpTheUncle extends Quest
 				}
 				break;
 			case "30828-09.html":
-				giveItems(player, PET_TICKET, 1);
+				st.giveItems(PET_TICKET, 1);
 				st.exitQuest(false, true);
 				break;
 		}
@@ -117,8 +117,8 @@ public class Q00042_HelpTheUncle extends Quest
 		
 		if ((st != null) && st.isCond(2))
 		{
-			giveItems(player, MAP_PIECE, 1);
-			if (getQuestItemsCount(player, MAP_PIECE) == 30)
+			st.giveItems(MAP_PIECE, 1);
+			if (st.getQuestItemsCount(MAP_PIECE) == 30)
 			{
 				st.setCond(3, true);
 			}

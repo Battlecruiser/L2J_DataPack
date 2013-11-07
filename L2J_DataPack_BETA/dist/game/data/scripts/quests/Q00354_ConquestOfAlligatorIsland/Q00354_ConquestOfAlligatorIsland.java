@@ -90,17 +90,17 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "ADENA":
 			{
-				final long count = getQuestItemsCount(player, ALLIGATOR_TOOTH);
+				final long count = st.getQuestItemsCount(ALLIGATOR_TOOTH);
 				if (count >= 100)
 				{
-					giveAdena(player, (count * 220) + 10700, true);
-					takeItems(player, ALLIGATOR_TOOTH, -1);
+					st.giveAdena((count * 220) + 10700, true);
+					st.takeItems(ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-06.html";
 				}
 				else if (count > 0)
 				{
-					giveAdena(player, (count * 220) + 3100, true);
-					takeItems(player, ALLIGATOR_TOOTH, -1);
+					st.giveAdena((count * 220) + 3100, true);
+					st.takeItems(ALLIGATOR_TOOTH, -1);
 					htmltext = "30895-07.html";
 				}
 				else
@@ -117,11 +117,11 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			}
 			case "REWARD":
 			{
-				final long count = getQuestItemsCount(player, MYSTERIOUS_MAP_PIECE);
+				final long count = st.getQuestItemsCount(MYSTERIOUS_MAP_PIECE);
 				if (count >= 10)
 				{
-					giveItems(player, PIRATES_TREASURE_MAP, 1);
-					takeItems(player, MYSTERIOUS_MAP_PIECE, 10);
+					st.giveItems(PIRATES_TREASURE_MAP, 1);
+					st.takeItems(MYSTERIOUS_MAP_PIECE, 10);
 					htmltext = "30895-13.html";
 				}
 				else if (count > 0)
@@ -143,15 +143,15 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 			int npcId = npc.getId();
 			if (MOB1.containsKey(npcId))
 			{
-				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
+				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, 1, 0, MOB1.get(npcId), true);
 			}
 			else
 			{
 				final int itemCount = ((getRandom(100) < MOB2.get(npcId)) ? 2 : 1);
-				giveItemRandomly(player, npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
+				st.giveItemRandomly(npc, ALLIGATOR_TOOTH, itemCount, 0, 1.0, true);
 			}
 			
-			giveItemRandomly(player, npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);
+			st.giveItemRandomly(npc, MYSTERIOUS_MAP_PIECE, 1, 0, 0.1, false);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -172,7 +172,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 		}
 		else if (st.isStarted())
 		{
-			htmltext = (hasQuestItems(player, MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
+			htmltext = (st.hasQuestItems(MYSTERIOUS_MAP_PIECE) ? "30895-11.html" : "30895-04.html");
 		}
 		return htmltext;
 	}

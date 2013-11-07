@@ -102,11 +102,11 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			{
 				if (getRandom(100) < MONSTERS_SKULLS.get(npc.getId()))
 				{
-					long skulls = getQuestItemsCount(killer, ELF_SKULL);
+					long skulls = st.getQuestItemsCount(ELF_SKULL);
 					if (skulls < 3)
 					{
-						giveItems(killer, ELF_SKULL, 1);
-						if (((++skulls) >= 3) && (getQuestItemsCount(killer, BONE_FRAGMENT) >= 10))
+						st.giveItems(ELF_SKULL, 1);
+						if (((++skulls) >= 3) && (st.getQuestItemsCount(BONE_FRAGMENT) >= 10))
 						{
 							st.setCond(2, true);
 						}
@@ -121,11 +121,11 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 			{
 				if (getRandom(100) < MONSTERS_BONES.get(npc.getId()))
 				{
-					long bones = getQuestItemsCount(killer, BONE_FRAGMENT);
+					long bones = st.getQuestItemsCount(BONE_FRAGMENT);
 					if (bones < 10)
 					{
-						giveItems(killer, BONE_FRAGMENT, 1);
-						if (((++bones) >= 10) && (getQuestItemsCount(killer, ELF_SKULL) >= 3))
+						st.giveItems(BONE_FRAGMENT, 1);
+						if (((++bones) >= 10) && (st.getQuestItemsCount(ELF_SKULL) >= 3))
 						{
 							st.setCond(2, true);
 						}
@@ -156,9 +156,9 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 				}
 				case State.STARTED:
 				{
-					if ((getQuestItemsCount(player, BONE_FRAGMENT) + getQuestItemsCount(player, ELF_SKULL)) >= REQUIRED_COUNT)
+					if ((st.getQuestItemsCount(BONE_FRAGMENT) + st.getQuestItemsCount(ELF_SKULL)) >= REQUIRED_COUNT)
 					{
-						giveItems(player, BONE_SHIELD, 1);
+						st.giveItems(BONE_SHIELD, 1);
 						st.addExpAndSp(22652, 1004);
 						st.giveAdena(24000, true);
 						st.exitQuest(false, true);

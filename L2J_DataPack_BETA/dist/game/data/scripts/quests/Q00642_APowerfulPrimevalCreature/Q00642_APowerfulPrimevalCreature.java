@@ -89,14 +89,14 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 			case "32105-09.html":
 				if (st.hasQuestItems(DINOSAUR_TISSUE))
 				{
-					st.giveAdena(5000 * getQuestItemsCount(player, DINOSAUR_TISSUE), true);
-					takeItems(player, DINOSAUR_TISSUE, -1);
+					st.giveAdena(5000 * st.getQuestItemsCount(DINOSAUR_TISSUE), true);
+					st.takeItems(DINOSAUR_TISSUE, -1);
 				}
 				break;
 			case "exit":
 				if (st.hasQuestItems(DINOSAUR_TISSUE))
 				{
-					st.giveAdena(5000 * getQuestItemsCount(player, DINOSAUR_TISSUE), true);
+					st.giveAdena(5000 * st.getQuestItemsCount(DINOSAUR_TISSUE), true);
 					st.exitQuest(true, true);
 					htmltext = "32105-12.html";
 				}

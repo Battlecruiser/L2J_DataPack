@@ -99,11 +99,11 @@ public class Q00134_TempleMissionary extends Quest
 				break;
 			case "31418-08.html":
 				st.setCond(5, true);
-				giveItems(player, ROUKES_REPOT, 1);
+				st.giveItems(ROUKES_REPOT, 1);
 				st.unset("talk");
 				break;
 			case "30067-10.html":
-				giveItems(player, BADGE_TEMPLE_MISSIONARY, 1);
+				st.giveItems(BADGE_TEMPLE_MISSIONARY, 1);
 				st.giveAdena(15100, true);
 				if (player.getLevel() < MAX_REWARD_LEVEL)
 				{
@@ -129,8 +129,8 @@ public class Q00134_TempleMissionary extends Quest
 		final QuestState st = member.getQuestState(getName());
 		if (npc.getId() == CRUMA_MARSHLANDS_TRAITOR)
 		{
-			giveItems(player, GIANTS_TECHNOLOGY_REPORT, 1);
-			if (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
+			st.giveItems(GIANTS_TECHNOLOGY_REPORT, 1);
+			if (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
 			{
 				st.setCond(4, true);
 			}
@@ -143,7 +143,7 @@ public class Q00134_TempleMissionary extends Quest
 		{
 			if (st.hasQuestItems(GIANTS_EXPERIMENTAL_TOOL))
 			{
-				takeItems(player, GIANTS_EXPERIMENTAL_TOOL, 1);
+				st.takeItems(GIANTS_EXPERIMENTAL_TOOL, 1);
 				if (getRandom(100) != 0)
 				{
 					addSpawn(CRUMA_MARSHLANDS_TRAITOR, npc.getX() + 20, npc.getY() + 20, npc.getZ(), npc.getHeading(), false, 60000);
@@ -151,7 +151,7 @@ public class Q00134_TempleMissionary extends Quest
 			}
 			else if (getRandom(100) < MOBS.get(npc.getId()))
 			{
-				giveItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
+				st.giveItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, 1);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
@@ -194,7 +194,7 @@ public class Q00134_TempleMissionary extends Quest
 								}
 								else
 								{
-									takeItems(player, ROUKES_REPOT, -1);
+									st.takeItems(ROUKES_REPOT, -1);
 									st.set("talk", "1");
 									htmltext = "30067-08.html";
 								}
@@ -218,15 +218,15 @@ public class Q00134_TempleMissionary extends Quest
 							htmltext = "31418-02.html";
 							break;
 						case 3:
-							if ((getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) < FRAGMENT_COUNT) && (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) < REPORT_COUNT))
+							if ((st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) < FRAGMENT_COUNT) && (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) < REPORT_COUNT))
 							{
 								htmltext = "31418-04.html";
 							}
-							else if (getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) >= FRAGMENT_COUNT)
+							else if (st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) >= FRAGMENT_COUNT)
 							{
-								final int count = (int) (getQuestItemsCount(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) / 10);
-								takeItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, count * 10);
-								giveItems(player, GIANTS_EXPERIMENTAL_TOOL, count);
+								final int count = (int) (st.getQuestItemsCount(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT) / 10);
+								st.takeItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, count * 10);
+								st.giveItems(GIANTS_EXPERIMENTAL_TOOL, count);
 								htmltext = "31418-05.html";
 							}
 							break;
@@ -235,11 +235,11 @@ public class Q00134_TempleMissionary extends Quest
 							{
 								htmltext = "31418-07.html";
 							}
-							else if (getQuestItemsCount(player, GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
+							else if (st.getQuestItemsCount(GIANTS_TECHNOLOGY_REPORT) >= REPORT_COUNT)
 							{
-								takeItems(player, GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, -1);
-								takeItems(player, GIANTS_EXPERIMENTAL_TOOL, -1);
-								takeItems(player, GIANTS_TECHNOLOGY_REPORT, -1);
+								st.takeItems(GIANTS_EXPERIMENTAL_TOOL_FRAGMENT, -1);
+								st.takeItems(GIANTS_EXPERIMENTAL_TOOL, -1);
+								st.takeItems(GIANTS_TECHNOLOGY_REPORT, -1);
 								st.set("talk", "1");
 								htmltext = "31418-06.html";
 							}

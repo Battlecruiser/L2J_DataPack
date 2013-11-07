@@ -85,8 +85,8 @@ public final class Q00258_BringWolfPelts extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			giveItems(killer, WOLF_PELT, 1);
-			if (getQuestItemsCount(killer, WOLF_PELT) >= WOLF_PELT_COUNT)
+			st.giveItems(WOLF_PELT, 1);
+			if (st.getQuestItemsCount(WOLF_PELT) >= WOLF_PELT_COUNT)
 			{
 				st.setCond(2, true);
 			}
@@ -126,14 +126,14 @@ public final class Q00258_BringWolfPelts extends Quest
 					}
 					case 2:
 					{
-						if (getQuestItemsCount(player, WOLF_PELT) >= WOLF_PELT_COUNT)
+						if (st.getQuestItemsCount(WOLF_PELT) >= WOLF_PELT_COUNT)
 						{
 							final int chance = getRandom(16);
 							for (Map.Entry<Integer, Integer> reward : REWARDS.entrySet())
 							{
 								if (chance < reward.getValue())
 								{
-									giveItems(player, reward.getKey(), 1);
+									st.giveItems(reward.getKey(), 1);
 									break;
 								}
 							}

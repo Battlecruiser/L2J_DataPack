@@ -79,9 +79,9 @@ public final class Q00283_TheFewTheProudTheBrave extends Quest
 			{
 				if (st.hasQuestItems(CRIMSON_SPIDER_CLAW))
 				{
-					final long claws = getQuestItemsCount(player, CRIMSON_SPIDER_CLAW);
+					final long claws = st.getQuestItemsCount(CRIMSON_SPIDER_CLAW);
 					st.giveAdena((claws * CLAW_PRICE) + ((claws >= 10) ? BONUS : 0), true);
-					takeItems(player, CRIMSON_SPIDER_CLAW, -1);
+					st.takeItems(CRIMSON_SPIDER_CLAW, -1);
 					Q00261_CollectorsDream.giveNewbieReward(player);
 					htmltext = event;
 				}

@@ -75,12 +75,12 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1))
 		{
-			giveItems(killer, WEREWOLF_HEAD, 1);
+			st.giveItems(WEREWOLF_HEAD, 1);
 			if (getRandom(100) <= 5)
 			{
-				giveItems(killer, WEREWOLF_TOTEM, 1);
+				st.giveItems(WEREWOLF_TOTEM, 1);
 			}
-			if (getQuestItemsCount(killer, WEREWOLF_HEAD) >= 40)
+			if (st.getQuestItemsCount(WEREWOLF_HEAD) >= 40)
 			{
 				st.setCond(2, true);
 			}
@@ -127,10 +127,10 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 					}
 					case 2:
 					{
-						final long heads = getQuestItemsCount(player, WEREWOLF_HEAD);
+						final long heads = st.getQuestItemsCount(WEREWOLF_HEAD);
 						if (heads >= 40)
 						{
-							final long totems = getQuestItemsCount(player, WEREWOLF_TOTEM);
+							final long totems = st.getQuestItemsCount(WEREWOLF_TOTEM);
 							st.giveAdena((heads * 30) + (totems * 600) + 2300, true);
 							st.exitQuest(true, true);
 							htmltext = (totems > 0) ? "30569-07.html" : "30569-06.html";

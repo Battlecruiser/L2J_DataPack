@@ -118,7 +118,7 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = (getQuestItemsCount(player, THIEF_GUILD_MARK) == 200) ? "32052-04.html" : "32052-05.html";
+				htmltext = (st.getQuestItemsCount(THIEF_GUILD_MARK) == 200) ? "32052-04.html" : "32052-05.html";
 				break;
 			}
 		}
@@ -131,8 +131,8 @@ public final class Q00649_ALooterAndARailroadMan extends Quest
 		final QuestState st = killer.getQuestState(getName());
 		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(1000) < MONSTERS.get(npc.getId())))
 		{
-			giveItems(killer, THIEF_GUILD_MARK, 1);
-			if (getQuestItemsCount(killer, THIEF_GUILD_MARK) == 200)
+			st.giveItems(THIEF_GUILD_MARK, 1);
+			if (st.getQuestItemsCount(THIEF_GUILD_MARK) == 200)
 			{
 				st.setCond(2, true);
 			}

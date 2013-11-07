@@ -118,7 +118,7 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest
 		}
 		else if (st.isStarted())
 		{
-			htmltext = (hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
+			htmltext = (st.hasQuestItems(BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
 		}
 		return htmltext;
 	}

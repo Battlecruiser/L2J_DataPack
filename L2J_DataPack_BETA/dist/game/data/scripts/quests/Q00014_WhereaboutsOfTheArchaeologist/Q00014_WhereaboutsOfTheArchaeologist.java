@@ -59,7 +59,7 @@ public class Q00014_WhereaboutsOfTheArchaeologist extends Quest
 		{
 			case "31263-02.html":
 				st.startQuest();
-				giveItems(player, LETTER, 1);
+				st.giveItems(LETTER, 1);
 				break;
 			case "31538-01.html":
 				if (st.isCond(1) && st.hasQuestItems(LETTER))

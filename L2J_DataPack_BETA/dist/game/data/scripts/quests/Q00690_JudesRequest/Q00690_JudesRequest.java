@@ -89,10 +89,10 @@ public class Q00690_JudesRequest extends Quest
 		}
 		else if (event.equalsIgnoreCase("32356-07.htm"))
 		{
-			if (getQuestItemsCount(player, EVIL_WEAPON) >= 200)
+			if (st.getQuestItemsCount(EVIL_WEAPON) >= 200)
 			{
-				giveItems(player, REWARDS[0][getRandom(REWARDS[0].length)], 1);
-				takeItems(player, EVIL_WEAPON, 200);
+				st.giveItems(REWARDS[0][getRandom(REWARDS[0].length)], 1);
+				st.takeItems(EVIL_WEAPON, 200);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "32356-07.htm";
 			}
@@ -103,15 +103,15 @@ public class Q00690_JudesRequest extends Quest
 		}
 		else if (event.equalsIgnoreCase("32356-08.htm"))
 		{
-			takeItems(player, EVIL_WEAPON, -1);
+			st.takeItems(EVIL_WEAPON, -1);
 			st.exitQuest(true, true);
 		}
 		else if (event.equalsIgnoreCase("32356-09.htm"))
 		{
-			if (getQuestItemsCount(player, EVIL_WEAPON) >= 5)
+			if (st.getQuestItemsCount(EVIL_WEAPON) >= 5)
 			{
-				giveItems(player, REWARDS[1][getRandom(REWARDS[1].length)], 1);
-				takeItems(player, EVIL_WEAPON, 5);
+				st.giveItems(REWARDS[1][getRandom(REWARDS[1].length)], 1);
+				st.takeItems(EVIL_WEAPON, 5);
 				st.playSound(QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				htmltext = "32356-09.htm";
 			}
@@ -150,7 +150,7 @@ public class Q00690_JudesRequest extends Quest
 		
 		if (getRandom(1000) <= chance)
 		{
-			giveItems(player, EVIL_WEAPON, Math.max(chance / 1000, 1));
+			st.giveItems(EVIL_WEAPON, Math.max(chance / 1000, 1));
 			st.playSound(QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		}
 		return null;
@@ -180,11 +180,11 @@ public class Q00690_JudesRequest extends Quest
 				}
 				break;
 			case State.STARTED:
-				if (getQuestItemsCount(player, EVIL_WEAPON) >= 200)
+				if (st.getQuestItemsCount(EVIL_WEAPON) >= 200)
 				{
 					htmltext = "32356-04.htm";
 				}
-				else if (getQuestItemsCount(player, EVIL_WEAPON) < 5)
+				else if (st.getQuestItemsCount(EVIL_WEAPON) < 5)
 				{
 					htmltext = "32356-05a.htm";
 				}

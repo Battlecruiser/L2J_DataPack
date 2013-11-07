@@ -56,7 +56,7 @@ public class Q00110_ToThePrimevalIsle extends Quest
 		switch (event)
 		{
 			case "31338-1.html":
-				giveItems(player, ANCIENT_BOOK, 1);
+				st.giveItems(ANCIENT_BOOK, 1);
 				st.startQuest();
 				break;
 			case "32113-2.html":

@@ -116,12 +116,12 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.unset("talk");
 				break;
 			case "32041-31.html":
-				giveItems(player, DETCTOR, 1);
+				st.giveItems(DETCTOR, 1);
 				st.setCond(17, true);
 				break;
 			case "32041-34.html":
 				st.set("talk", "1");
-				takeItems(player, DETCTOR2, 1);
+				st.takeItems(DETCTOR2, 1);
 				break;
 			case "32041-38.html":
 				if (st.getInt("choice") == 2)
@@ -136,7 +136,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			case "32041-40.html":
 				st.setCond(21, true);
 				st.unset("talk");
-				giveItems(player, LETTER, 1);
+				st.giveItems(LETTER, 1);
 				break;
 			// Suspicious-Looking Pile of Stones
 			case "32046-03.html":
@@ -226,14 +226,14 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.setCond(23, true);
 				break;
 			case "32047-23c.html":
-				takeItems(player, STARSTONE, 1);
+				st.takeItems(STARSTONE, 1);
 				st.setCond(15, true);
 				break;
 			case "32047-29c.html":
 				if (player.getAdena() >= 3000)
 				{
-					giveItems(player, STARSTONE2, 1);
-					takeItems(player, PcInventory.ADENA_ID, 3000);
+					st.giveItems(STARSTONE2, 1);
+					st.takeItems(PcInventory.ADENA_ID, 3000);
 					st.unset("talk");
 					st.setCond(26, true);
 				}
@@ -250,18 +250,18 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				st.set("talk", "1");
 				break;
 			case "32050-03.html":
-				giveItems(player, STARSTONE, 1);
+				st.giveItems(STARSTONE, 1);
 				st.setCond(14, true);
 				st.unset("talk");
 				break;
 			case "32050-05.html":
 				st.setCond(24, true);
-				giveItems(player, STARSTONE2, 1);
+				st.giveItems(STARSTONE2, 1);
 				break;
 			// Newyear
 			case "31961-02.html":
-				takeItems(player, LETTER, 1);
-				giveItems(player, STARSTONE2, 1);
+				st.takeItems(LETTER, 1);
+				st.giveItems(STARSTONE2, 1);
 				st.setCond(22, true);
 				break;
 			// Quest timer
@@ -345,8 +345,8 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			final QuestState st = creature.getActingPlayer().getQuestState(getName());
 			if ((st != null) && st.isCond(17))
 			{
-				takeItems(st.getPlayer(), DETCTOR, 1);
-				giveItems(st.getPlayer(), DETCTOR2, 1);
+				st.takeItems(DETCTOR, 1);
+				st.giveItems(DETCTOR2, 1);
 				st.setCond(18, true);
 				showOnScreenMsg(creature.getActingPlayer(), NpcStringId.THE_RADIO_SIGNAL_DETECTOR_IS_RESPONDING_A_SUSPICIOUS_PILE_OF_STONES_CATCHES_YOUR_EYE, 2, 4500);
 			}

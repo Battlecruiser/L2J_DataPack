@@ -143,8 +143,8 @@ public final class Q00306_CrystalOfFireAndIce extends Quest
 			{
 				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
 				{
-					final long flame = getQuestItemsCount(player, FLAME_SHARD);
-					final long ice = getQuestItemsCount(player, ICE_SHARD);
+					final long flame = st.getQuestItemsCount(FLAME_SHARD);
+					final long ice = st.getQuestItemsCount(ICE_SHARD);
 					st.giveAdena(((flame * 40) + (ice * 40) + ((flame + ice) >= 10 ? 5000 : 0)), true);
 					takeItems(player, -1, getRegisteredItemIds());
 					htmltext = "30004-07.html";

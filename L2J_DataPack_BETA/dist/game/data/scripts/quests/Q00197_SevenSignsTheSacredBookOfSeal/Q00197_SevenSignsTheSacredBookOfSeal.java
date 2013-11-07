@@ -212,7 +212,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			{
 				if (st.isCond(5) && st.hasQuestItems(SCULPTURE_OF_DOUBT))
 				{
-					giveItems(player, MYSTERIOUS_HAND_WRITTEN_TEXT, 1);
+					st.giveItems(MYSTERIOUS_HAND_WRITTEN_TEXT, 1);
 					st.setCond(6, true);
 					htmltext = event;
 				}
@@ -235,7 +235,7 @@ public class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		
 		if (npc.isInsideRadius(player, 1500, true, false))
 		{
-			giveItems(player, SCULPTURE_OF_DOUBT, 1);
+			st.giveItems(SCULPTURE_OF_DOUBT, 1);
 			st.playSound(QuestSound.ITEMSOUND_QUEST_FINISH);
 			st.setCond(4);
 		}
