@@ -108,6 +108,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="DOT_ATTR" />
 		<set name="activateRate" val="35" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-409" />
 		<set name="effectRange" val="900" />
@@ -117,7 +118,6 @@
 		<set name="mpConsume" val="153" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="7008" levels="1" name="not_used">
@@ -975,13 +975,13 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
@@ -994,13 +994,13 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="800" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="75" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="DA2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -1094,6 +1094,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="720" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="1080" />
@@ -1101,7 +1102,6 @@
 		<set name="magicLvl" val="70" />
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -1122,6 +1122,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-12" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="200" />
 		<set name="hitTime" val="300" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1129,7 +1130,6 @@
 		<set name="magicLvl" val="75" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
@@ -1149,11 +1149,11 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="40" />
 		<set name="abnormalType" val="PUBLIC_SLOT" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="70" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>

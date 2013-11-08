@@ -401,6 +401,7 @@
 		<!-- <set name="abnormalType" val="ATTACK_TIME_UP" /> -->
 		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1" />
 		<set name="effectRange" val="200" />
 		<set name="hitTime" val="3000" />
@@ -412,7 +413,6 @@
 		<set name="operateType" val="A1" /> <!-- Should be A2 -->
 		<set name="power" val="200" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="HpDrain" val="0.05" />
