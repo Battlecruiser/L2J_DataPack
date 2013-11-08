@@ -195,6 +195,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -206,7 +207,6 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="542" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -223,6 +223,7 @@
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-100" />
@@ -234,7 +235,6 @@
 		<set name="magicLvl" val="40" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="30">
@@ -495,6 +495,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="60" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="-100" />
@@ -509,7 +510,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -528,6 +528,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -541,7 +542,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -559,6 +559,7 @@
 		<set name="abnormalType" val="POISON" />
 		<set name="activateRate" val="35" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1000" />
@@ -572,7 +573,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="35" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="POISON" />
 		<for>
@@ -589,6 +589,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -601,7 +602,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -620,6 +620,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -632,7 +633,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -779,6 +779,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="SLEEP" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -793,7 +794,6 @@
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SLEEP" />
 		<for>
@@ -809,6 +809,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -823,7 +824,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -908,6 +908,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="POISON" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1168" />
 		<set name="isDebuff" val="true" />
@@ -916,7 +917,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="3" val="#dot" abnormalVisualEffect="poison" />
@@ -931,6 +931,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1164" />
 		<set name="isDebuff" val="true" />
@@ -938,7 +939,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -955,6 +955,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="isDebuff" val="true" />
@@ -962,7 +963,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -979,6 +979,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
@@ -986,7 +987,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1075,6 +1075,7 @@
 		<set name="abnormalTime" val="120" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="activateRate" val="90" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="50" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
@@ -1084,7 +1085,6 @@
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="916" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1100,6 +1100,7 @@
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="activateRate" val="30" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1300" />
@@ -1109,7 +1110,6 @@
 		<set name="magicLvl" val="50" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="30" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1227,13 +1227,13 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1206" />
 		<set name="isDebuff" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1265,6 +1265,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="30" />
 		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
@@ -1276,7 +1277,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1293,6 +1293,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1305,7 +1306,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1347,6 +1347,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1360,7 +1361,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1377,6 +1377,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1389,7 +1390,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1591,6 +1591,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="800" />
 		<set name="effectPoint" val="-100" />
@@ -1605,7 +1606,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1802,6 +1802,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SILENCE" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -1815,7 +1816,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>

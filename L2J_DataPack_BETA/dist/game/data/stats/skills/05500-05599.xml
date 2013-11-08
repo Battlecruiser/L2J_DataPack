@@ -8,6 +8,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="90" />
 		<set name="affectRange" val="600" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
@@ -20,7 +21,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="2616" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -36,6 +36,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="200" />
@@ -47,7 +48,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -65,6 +65,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="600" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0100" />
@@ -73,7 +74,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="100" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -190,6 +190,7 @@
 		<set name="abnormalType" val="ARMOR_FIRE" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="800" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1063" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="180" />
@@ -200,7 +201,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -214,6 +214,7 @@
 		<set name="abnormalType" val="ARMOR_WATER" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="800" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1063" />
 		<set name="element" val="1" /> <!-- Water -->
 		<set name="elementPower" val="180" />
@@ -224,7 +225,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -238,6 +238,7 @@
 		<set name="abnormalType" val="ARMOR_WIND" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="800" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1063" />
 		<set name="element" val="2" /> <!-- Wind -->
 		<set name="elementPower" val="180" />
@@ -248,7 +249,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -262,6 +262,7 @@
 		<set name="abnormalType" val="ARMOR_EARTH" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="800" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-1063" />
 		<set name="element" val="3" /> <!-- Earth -->
 		<set name="elementPower" val="180" />
@@ -272,7 +273,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -415,6 +415,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="600" />
@@ -425,7 +426,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -543,6 +543,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="900" />
@@ -555,7 +556,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -570,13 +570,13 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1000" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -874,6 +874,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="400" />
@@ -885,7 +886,6 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base land rate -->
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1154,6 +1154,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="EXPOSE_WEAK_POINT" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-671" />
 		<set name="effectRange" val="400" />
@@ -1167,7 +1168,6 @@
 		<set name="nextActionAttack" val="true" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1206,6 +1206,7 @@
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1493" />
@@ -1215,7 +1216,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1229,6 +1229,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ATTACK_TIME_UP" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="400" />
 		<set name="effectRange" val="900" />
 		<set name="icon" val="icon.skill1494" />
@@ -1238,7 +1239,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1486,6 +1486,7 @@
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
 		<set name="lvlBonusRate" val="2" />
@@ -1493,7 +1494,6 @@
 		<set name="mpConsume" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Debuff">
@@ -1507,6 +1507,7 @@
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.action109" />
@@ -1514,7 +1515,6 @@
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1524,6 +1524,7 @@
 		<set name="abnormalType" val="PA_DOWN" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-628" />
 		<set name="hitTime" val="1200" />
 		<set name="icon" val="icon.action109" />
@@ -1531,7 +1532,6 @@
 		<set name="magicLvl" val="55" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1695,6 +1695,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="138" />
 		<set name="effectRange" val="1100" />
@@ -1707,7 +1708,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="PARALYZE" />
 		<for>
@@ -1739,12 +1739,12 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
 		<set name="activateRate" val="11" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
@@ -1754,12 +1754,12 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="11" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0096" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="BLEED" />
@@ -1771,6 +1771,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DOT_ATTR" />
 		<set name="activateRate" val="11" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="element" val="0" /> <!-- Fire -->
 		<set name="elementPower" val="150" />
@@ -1780,7 +1781,6 @@
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="11" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="1" val="200" abnormalVisualEffect="bleed" />

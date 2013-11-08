@@ -316,8 +316,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="BlockChat" />
 		</for>
@@ -330,8 +330,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="BlockParty" />
 		</for>
@@ -344,8 +344,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Flag" />
 		</for>
@@ -630,8 +630,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="BlockAction">
 				<param blockedActions="-2" />
@@ -646,8 +646,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="BlockAction">
 				<param blockedActions="-2" />
@@ -662,8 +662,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.0" />
@@ -678,8 +678,8 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="stayAfterDeath" val="True" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
 				<mul order="0x30" stat="runSpd" val="0.0" />
@@ -1031,6 +1031,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ARMOR_UNHOLY" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="-475" />
 		<set name="effectRange" val="400" />
@@ -1045,7 +1046,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />

@@ -6,6 +6,7 @@
 		<set name="abnormalType" val="OBLIVION" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="5-15" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="fanRange" val="0,0,150,90" />
 		<set name="hitTime" val="2000" />
@@ -14,7 +15,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="DERANGEMENT" />
@@ -26,6 +26,7 @@
 		<set name="abnormalType" val="OBLIVION" />
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill1481" />
@@ -33,7 +34,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -55,6 +55,7 @@
 		<set name="abnormalType" val="DISARM" />
 		<set name="activateRate" val="70" />
 		<set name="affectLimit" val="5-15" />
+		<set name="basicProperty" val="STR" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -68,7 +69,6 @@
 		<set name="mpConsume" val="74" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="STR" />
 		<set name="soulMaxConsumeCount" val="1" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
@@ -105,6 +105,7 @@
 		<set name="abnormalType" val="SILENCE_ALL" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1064" />
@@ -112,7 +113,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -132,6 +132,7 @@
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill1201" />
@@ -139,7 +140,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<for>
@@ -155,6 +155,7 @@
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="#hitTime" />
 		<set name="icon" val="icon.skill1201" />
@@ -162,7 +163,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<for>
@@ -210,13 +210,13 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_D" />
 		<set name="activateRate" val="90" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1337" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -232,13 +232,13 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="MULTI_DEBUFF_E" />
 		<set name="activateRate" val="90" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1337" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -344,6 +344,7 @@
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="600" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -358,7 +359,6 @@
 		<set name="mpInitialConsume" val="45" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="121" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="FRONT_AREA" />
 		<for>
 			<effect name="HpDrain" val="0.8" />
@@ -381,6 +381,7 @@
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="5-15" />
 		<set name="affectRange" val="300" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1100" />
@@ -393,7 +394,6 @@
 		<set name="mpInitialConsume" val="45" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="121" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -858,12 +858,12 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="POISON" />
 		<set name="activateRate" val="10" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4036" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="POISON" />
@@ -874,13 +874,13 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="80" />
 		<set name="affectLimit" val="6-12" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-357" />
 		<set name="hitTime" val="4000" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
@@ -930,13 +930,13 @@
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-7121" />
 		<set name="icon" val="icon.skill0018" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="99" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="40000" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="NONE" />
@@ -963,6 +963,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="440" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1360" />
@@ -973,7 +974,6 @@
 		<set name="operateType" val="A3" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="120000" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1186,12 +1186,12 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="60" />
 		<set name="abnormalType" val="MD_DOWN" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0122" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1321,12 +1321,12 @@
 		<set name="abnormalTime" val="3" />
 		<set name="abnormalType" val="TARGET_LOCK" />
 		<set name="activateRate" val="90" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="icon" val="icon.skill0028" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="10" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 	</skill>
@@ -1339,6 +1339,7 @@
 		<set name="activateRate" val="90" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="300" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="2000" />
 		<set name="icon" val="icon.skill1481" />
@@ -1349,7 +1350,6 @@
 		<set name="mpInitialConsume" val="15" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="171" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>

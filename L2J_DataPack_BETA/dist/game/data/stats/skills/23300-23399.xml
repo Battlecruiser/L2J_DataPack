@@ -9,7 +9,6 @@
 		<set name="magicLvl" val="81" />
 		<set name="operateType" val="A1" /> <!-- FIXME: value unconfirmed -->
 		<set name="power" val="50" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="1" val="300" />
@@ -170,7 +169,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -195,7 +193,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -209,6 +206,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="TURN_FLEE" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-800" />
 		<set name="effectRange" val="400" />
@@ -221,7 +219,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -236,6 +233,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-800" />
 		<set name="effectRange" val="400" />
@@ -247,7 +245,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" />
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -263,6 +260,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="PD_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="80" />
 		<set name="effectPoint" val="-800" />
 		<set name="effectRange" val="400" />
@@ -274,7 +272,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" />
 		<set name="reuseDelay" val="10000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>

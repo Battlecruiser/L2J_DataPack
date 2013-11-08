@@ -18,6 +18,7 @@
 		<set name="abnormalType" val="CRITICAL_PROB_DOWN" />
 		<set name="activateRate" val="80" />
 		<set name="baseCritRate" val="10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -35,13 +36,16 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant4 name="basicProperty" val="MEN" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
@@ -122,6 +126,7 @@
 		<set name="abnormalType" val="CRITICAL_DMG_DOWN" />
 		<set name="activateRate" val="80" />
 		<set name="baseCritRate" val="10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="40" />
 		<set name="coolTime" val="700" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -139,14 +144,17 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
+		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant4 name="basicProperty" val="MEN" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
@@ -202,6 +210,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
@@ -214,12 +223,13 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
@@ -241,6 +251,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="1100" />
@@ -253,12 +264,13 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
@@ -282,6 +294,7 @@
 		<set name="activateRate" val="40" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="100" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0404" />
@@ -292,12 +305,13 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="HOLD" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
@@ -461,6 +475,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="3000" />
 		<set name="icon" val="icon.skill0407" />
@@ -472,7 +487,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -498,6 +512,7 @@
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
 		<set name="baseCritRate" val="10" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0408" />
@@ -509,7 +524,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<cond msgId="113" addName="1">
 			<using kind="Dual Sword" />
@@ -677,6 +691,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="HIT_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="650" />
@@ -689,12 +704,13 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1mpConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<for>
@@ -1129,34 +1145,34 @@
 	</skill>
 	<skill id="426" levels="1" name="Battle Force">
 		<!-- Not Used Anymore -->
-		<set name="effectPoint" val="1" />
-		<set name="channelingSkillId" val="5104" />
 		<set name="castRange" val="400" />
+		<set name="channelingSkillId" val="5104" />
+		<set name="effectPoint" val="1" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
+		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0426" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="mpPerChanneling" val="15" />
-		<set name="reuseDelay" val="30000" />
-		<set name="hitTime" val="15000" />
 		<set name="operateType" val="CA5" />
+		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="427" levels="1" name="Spell Force">
 		<!-- Not Used Anymore -->
-		<set name="effectPoint" val="1" />
-		<set name="channelingSkillId" val="5105" />
 		<set name="castRange" val="400" />
+		<set name="channelingSkillId" val="5105" />
+		<set name="effectPoint" val="1" />
 		<set name="effectPoint" val="1" />
 		<set name="effectRange" val="600" />
+		<set name="hitTime" val="15000" />
 		<set name="icon" val="icon.skill0427" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="77" />
 		<set name="mpPerChanneling" val="15" />
-		<set name="reuseDelay" val="30000" />
-		<set name="hitTime" val="15000" />
 		<set name="operateType" val="CA5" />
+		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="PARTY_NOTME" />
 	</skill>
 	<skill id="428" levels="1" name="Inner Rhythm" enchantGroup1="5">
@@ -1462,6 +1478,7 @@
 		<set name="activateRate" val="60" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-507" />
 		<set name="hitTime" val="2500" />
 		<set name="icon" val="icon.skill0437" />
@@ -1472,14 +1489,15 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="60" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="150000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
+		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="effectPoint" val="#ench1EffectPoints" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
+		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="effectPoint" val="#ench2EffectPoints" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -1849,6 +1867,7 @@
 		<set name="activateRate" val="50" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="500" />
 		<set name="effectPoint" val="-1" />
 		<set name="hitTime" val="500" />
@@ -1860,9 +1879,9 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="50" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
+		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Pole" />
@@ -2683,6 +2702,7 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="DISARM" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="STR" />
 		<set name="castRange" val="40" />
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="effectRange" val="200" />
@@ -2695,12 +2715,13 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="70" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="STR" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
+		<enchant1 name="basicProperty" val="STR" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
+		<enchant2 name="basicProperty" val="STR" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Disarm" abnormalVisualEffect="bleed">
@@ -2942,6 +2963,7 @@
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="70" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -2958,26 +2980,32 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="CON" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
+		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="CON" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="basicProperty" val="CON" />
 		<enchant3 name="element" val="0" /> <!-- Fire -->
 		<enchant3 name="elementPower" val="#enchElementPower" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
+		<enchant4 name="basicProperty" val="CON" />
 		<enchant4 name="element" val="1" /> <!-- Water -->
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
+		<enchant5 name="basicProperty" val="CON" />
 		<enchant5 name="element" val="2" /> <!-- Wind -->
 		<enchant5 name="elementPower" val="#enchElementPower" />
 		<enchant5 name="magicLvl" val="#enchMagicLvl" />
+		<enchant6 name="basicProperty" val="CON" />
 		<enchant6 name="element" val="3" /> <!-- Earth -->
 		<enchant6 name="elementPower" val="#enchElementPower" />
 		<enchant6 name="magicLvl" val="#enchMagicLvl" />
+		<enchant7 name="basicProperty" val="CON" />
 		<enchant7 name="magicLvl" val="#enchMagicLvl" />
 		<enchant7 name="pvpPower" val="#ench7Duel" />
 		<cond msgId="113" addName="1">
@@ -3017,6 +3045,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="50" />
 		<set name="affectRange" val="300" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="#castRange" />
 		<set name="coolTime" val="200" />
 		<set name="effectPoint" val="#effectPoints" />
@@ -3034,15 +3063,18 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1" />
 		<set name="reuseDelay" val="4000" />
-		<set name="saveVs" val="CON" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="BLEED" />
+		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant2 name="basicProperty" val="CON" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
+		<enchant3 name="basicProperty" val="CON" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="mpConsume" val="#ench3Cost" />
+		<enchant4 name="basicProperty" val="CON" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<cond msgId="113" addName="1">

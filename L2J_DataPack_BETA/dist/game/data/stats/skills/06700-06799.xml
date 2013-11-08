@@ -36,6 +36,7 @@
 		<!-- Temporarily in shock and unable to move. -->
 		<set name="abnormalTime" val="9" />
 		<set name="activateRate" val="50" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="operateType" val="P" />
@@ -47,16 +48,15 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="PD_DOWN" />
+		<set name="activateRate" val="80" /> <!-- FIXME: Base Land Rate unconformed -->
 		<set name="castRange" val="100" />
 		<set name="effectRange" val="500" />
+		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
 		<set name="mpConsume" val="83" />
-		<set name="isDebuff" val="true" />
 		<set name="operateType" val="A2" /> <!-- FIXME: value unconfirmed -->
-		<set name="activateRate" val="80" /> <!-- FIXME: Base Land Rate unconformed -->
 		<set name="reuseDelay" val="10000" /> <!-- FIXME: reuseDelay unconfirmed -->
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: Time value is unconfirmed -->
@@ -518,6 +518,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="1500" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="2000" />
@@ -531,7 +532,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -572,6 +572,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="300" />
@@ -682,6 +683,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0096" />
@@ -744,6 +746,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -757,7 +760,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="80" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="3000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -944,6 +946,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="300" />
@@ -969,6 +972,7 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="TURN_STONE" />
 		<set name="activateRate" val="40" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -982,7 +986,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Petrification" />
@@ -1075,6 +1078,7 @@
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="baseCritRate" val="20" />
+		<set name="basicProperty" val="CON" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="300" />
@@ -1118,6 +1122,7 @@
 		<!-- FIXME: value unconfirmed -->
 		<set name="abnormalTime" val="10" />
 		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="900" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="1400" />
@@ -1131,7 +1136,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="ChanceSkillTrigger" chanceType="ON_EXIT" triggeredId="6779">
@@ -1148,6 +1152,7 @@
 		<set name="abnormalType" val="BLEEDING" />
 		<set name="activateRate" val="100" />
 		<set name="affectRange" val="300" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="hitTime" val="1500" />
 		<set name="icon" val="icon.skill0096" />
@@ -1158,7 +1163,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="40" /> <!-- Base Land Rate -->
 		<set name="reuseDelay" val="5000" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="BLEED" />
 		<for>

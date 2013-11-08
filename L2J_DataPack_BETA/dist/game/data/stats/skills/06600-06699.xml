@@ -171,6 +171,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="30" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
@@ -183,7 +184,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -201,6 +201,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="SPEED_DOWN" />
 		<set name="activateRate" val="30" />
+		<set name="basicProperty" val="MEN" />
 		<set name="castRange" val="150" />
 		<set name="effectPoint" val="-100" />
 		<set name="effectRange" val="500" />
@@ -213,7 +214,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="6000" />
-		<set name="saveVs" val="MEN" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -280,6 +280,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="98" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="isDebuff" val="true" />
@@ -288,7 +289,6 @@
 		<set name="mpConsume" val="121" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="2748" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -311,11 +311,11 @@
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalType" val="STUN" />
 		<set name="activateRate" val="98" />
+		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill0100" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="SHOCK" />
@@ -828,6 +828,7 @@
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalType" val="FREEZING" />
 		<set name="activateRate" val="#activateRates" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill6274" />
 		<set name="isDebuff" val="true" />
@@ -837,7 +838,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A2" />
 		<set name="power" val="#power" /> <!-- Base Land Rate -->
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Paralyze" special="freezing" />
@@ -1078,6 +1078,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
+		<set name="basicProperty" val="MEN" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill4047" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
@@ -1085,7 +1086,6 @@
 		<set name="magicLvl" val="95" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="8000" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
@@ -1308,12 +1308,12 @@
 		<set name="abnormalTime" val="30" />
 		<set name="abnormalType" val="ROOT_MAGICALLY" />
 		<set name="activateRate" val="95" />
+		<set name="basicProperty" val="MEN" />
 		<set name="coolTime" val="2000" />
 		<set name="effectPoint" val="-100" />
 		<set name="icon" val="icon.skill1201" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="MEN" />
 		<set name="skillType" val="NOTDONE" />
 		<set name="targetType" val="NONE" />
 		<set name="trait" val="HOLD" />
@@ -1394,6 +1394,7 @@
 		<set name="abnormalLvl" val="3" />
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="FREEZING" />
+		<set name="basicProperty" val="CON" />
 		<set name="effectPoint" val="100" />
 		<set name="icon" val="icon.skill6274" />
 		<set name="isDebuff" val="true" />
@@ -1402,7 +1403,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
-		<set name="saveVs" val="CON" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Paralyze" special="freezing" />
