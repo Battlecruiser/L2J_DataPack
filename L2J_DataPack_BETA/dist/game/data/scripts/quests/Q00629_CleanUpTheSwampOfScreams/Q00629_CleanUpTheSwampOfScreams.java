@@ -25,7 +25,6 @@ import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 
 /**
  * Clean Up The Swamp Of Screams (629)
@@ -70,9 +69,9 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -81,9 +80,9 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 		{
 			case "31553-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -91,7 +90,7 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			case "31553-04.html":
 			case "31553-06.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = event;
 				}
@@ -99,10 +98,10 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			}
 			case "31553-07.html":
 			{
-				if (st.isStarted() && (st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT))
+				if (qs.isStarted() && (getQuestItemsCount(player, TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT))
 				{
-					st.rewardItems(GOLDEN_RAM_COIN, 20);
-					st.takeItems(TALON_OF_STAKATO, 100);
+					rewardItems(player, GOLDEN_RAM_COIN, 20);
+					takeItems(player, TALON_OF_STAKATO, 100);
 					htmltext = event;
 				}
 				else
@@ -113,9 +112,9 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 			}
 			case "31553-09.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -128,9 +127,9 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 2, npc);
-		if ((qs != null))
+		if (qs != null)
 		{
-			giveItemRandomly(killer, npc, TALON_OF_STAKATO, 1, 0, MOBS_DROP_CHANCES.get(npc.getId()), true);
+			giveItemRandomly(qs.getPlayer(), npc, TALON_OF_STAKATO, 1, 0, MOBS_DROP_CHANCES.get(npc.getId()), true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -138,25 +137,20 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (qs.isCreated())
 		{
-			case State.CREATED:
-			{
-				htmltext = ((player.getLevel() >= MIN_LVL) ? "31553-01.htm" : "31553-02.htm");
-				break;
-			}
-			case State.STARTED:
-			{
-				htmltext = ((st.getQuestItemsCount(TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
-				break;
-			}
+			htmltext = ((player.getLevel() >= MIN_LVL) ? "31553-01.htm" : "31553-02.htm");
+		}
+		else if (qs.isStarted())
+		{
+			htmltext = ((getQuestItemsCount(player, TALON_OF_STAKATO) >= REQUIRED_TALON_COUNT) ? "31553-04.html" : "31553-05.html");
 		}
 		return htmltext;
 	}

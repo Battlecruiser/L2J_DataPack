@@ -27,7 +27,6 @@ import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jserver.gameserver.model.holders.ItemHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
-import com.l2jserver.gameserver.model.quest.State;
 import com.l2jserver.gameserver.network.NpcStringId;
 import com.l2jserver.gameserver.network.clientpackets.Say2;
 import com.l2jserver.gameserver.network.serverpackets.NpcSay;
@@ -55,9 +54,9 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 		MONSTER_DROPS.put(VAROOL_FOULCLAW, new ItemHolder(VAROOL_FOULCLAW_FANG, 7)); // Varool Foulclaw
 	}
 	
-	private Q00316_DestroyPlagueCarriers(int questId, String name, String descr)
+	private Q00316_DestroyPlagueCarriers()
 	{
-		super(questId, name, descr);
+		super(316, Q00316_DestroyPlagueCarriers.class.getSimpleName(), "Destroy Plague Carriers");
 		addStartNpc(ELLENIA);
 		addTalkId(ELLENIA);
 		addAttackId(VAROOL_FOULCLAW);
@@ -74,26 +73,27 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
-		{
-			return null;
-		}
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
+		if (qs == null)
+		{
+			return htmltext;
+		}
+		
 		switch (event)
 		{
 			case "30155-04.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "30155-08.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -125,7 +125,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 		{
 			final ItemHolder item = MONSTER_DROPS.get(npc.getId());
 			final int limit = (npc.getId() == VAROOL_FOULCLAW ? 1 : 0);
-			giveItemRandomly(killer, npc, item.getId(), 1, limit, 10.0 / item.getCount(), true);
+			giveItemRandomly(qs.getPlayer(), npc, item.getId(), 1, limit, 10.0 / item.getCount(), true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -133,35 +133,41 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		switch (st.getState())
+		if (qs.isCreated())
 		{
-			case State.CREATED:
+			if (player.getRace() != PcRace.Elf)
 			{
-				htmltext = (player.getRace() == PcRace.Elf) ? (player.getLevel() >= MIN_LEVEL) ? "30155-03.htm" : "30155-02.htm" : "30155-00.htm";
-				break;
+				htmltext = "30155-00.htm";
 			}
-			case State.STARTED:
+			else if (player.getLevel() < MIN_LEVEL)
 			{
-				if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
-				{
-					final long wererars = st.getQuestItemsCount(WERERAT_FANG);
-					final long foulclaws = st.getQuestItemsCount(VAROOL_FOULCLAW_FANG);
-					st.giveAdena(((wererars * 30) + (foulclaws * 10000) + ((wererars + foulclaws) >= 10 ? 5000 : 0)), true);
-					takeItems(player, -1, getRegisteredItemIds());
-					htmltext = "30155-07.html";
-				}
-				else
-				{
-					htmltext = "30155-05.html";
-				}
-				break;
+				htmltext = "30155-02.htm";
+			}
+			else
+			{
+				htmltext = "30155-03.htm";
+			}
+		}
+		else if (qs.isStarted())
+		{
+			if (hasAtLeastOneQuestItem(player, getRegisteredItemIds()))
+			{
+				final long wererars = getQuestItemsCount(player, WERERAT_FANG);
+				final long foulclaws = getQuestItemsCount(player, VAROOL_FOULCLAW_FANG);
+				giveAdena(player, ((wererars * 30) + (foulclaws * 10000) + ((wererars + foulclaws) >= 10 ? 5000 : 0)), true);
+				takeItems(player, -1, getRegisteredItemIds());
+				htmltext = "30155-07.html";
+			}
+			else
+			{
+				htmltext = "30155-05.html";
 			}
 		}
 		return htmltext;
@@ -169,6 +175,6 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	
 	public static void main(String[] args)
 	{
-		new Q00316_DestroyPlagueCarriers(316, Q00316_DestroyPlagueCarriers.class.getSimpleName(), "Destroy Plague Carriers");
+		new Q00316_DestroyPlagueCarriers();
 	}
 }

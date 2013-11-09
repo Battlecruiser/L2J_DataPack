@@ -72,9 +72,9 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		String htmltext = null;
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -83,12 +83,20 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		{
 			case "31147-02.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
+				htmltext = event;
+				break;
+			}
+			case "31147-04.html":
+			case "31147-cont.html":
+			{
+				htmltext = event;
 				break;
 			}
 			case "31147-quit.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
+				htmltext = event;
 				break;
 			}
 		}
@@ -98,18 +106,18 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if (qs != null)
 		{
 			int npcId = npc.getId();
 			if (MOBS1.containsKey(npcId))
 			{
 				final int itemCount = ((getRandom(1000) < MOBS1.get(npcId)) ? 3 : 2);
-				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, itemCount, 0, 1.0, true);
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, itemCount, 0, 1.0, true);
 			}
 			else
 			{
-				giveItemRandomly(player, npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS2.get(npcId), true);
+				giveItemRandomly(qs.getPlayer(), npc, TITAN_ANCIENT_BOOK, 1, 0, MOBS2.get(npcId), true);
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -118,20 +126,20 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
-			htmltext = (player.getLevel() >= 79 ? "31147-01.htm" : "31147-00.html");
+			htmltext = ((player.getLevel() >= 79) ? "31147-01.htm" : "31147-00.html");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			htmltext = (st.hasQuestItems(BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
+			htmltext = (hasQuestItems(player, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5) ? "31147-03.html" : "31147-02a.html");
 		}
 		return htmltext;
 	}
