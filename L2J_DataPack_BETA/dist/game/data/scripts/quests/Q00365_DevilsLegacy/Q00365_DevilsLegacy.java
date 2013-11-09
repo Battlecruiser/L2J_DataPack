@@ -77,25 +77,25 @@ public final class Q00365_DevilsLegacy extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		String htmltext = null;
+		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "30095-02.htm":
 			{
-				st.startQuest();
-				st.setMemoState(1);
+				qs.startQuest();
+				qs.setMemoState(1);
 				htmltext = event;
 				break;
 			}
 			case "30095-05.html":
 			{
-				st.exitQuest(true, true);
+				qs.exitQuest(true, true);
 				htmltext = event;
 				break;
 			}
@@ -106,11 +106,11 @@ public final class Q00365_DevilsLegacy extends Quest
 			}
 			case "REWARD":
 			{
-				if (!st.isMemoState(1))
+				if (!qs.isMemoState(1))
 				{
 					htmltext = "30092-04.html";
 				}
-				else if (!st.hasQuestItems(PIRATES_TREASURE_CHEST))
+				else if (!hasQuestItems(player, PIRATES_TREASURE_CHEST))
 				{
 					htmltext = "30092-02.html";
 				}
@@ -185,7 +185,7 @@ public final class Q00365_DevilsLegacy extends Quest
 						npc.setTarget(player);
 						npc.doCast(POISON.getSkill());
 						npc.setCurrentMp(npc.getMaxMp());
-						st.setMemoState(2);
+						qs.setMemoState(2);
 						htmltext = "30092-06.html";
 					}
 					takeItems(player, PIRATES_TREASURE_CHEST, 1);
@@ -201,10 +201,10 @@ public final class Q00365_DevilsLegacy extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if (st != null)
+		final QuestState qs = getRandomPartyMemberState(player, -1, 3, npc);
+		if (qs != null)
 		{
-			giveItemRandomly(player, npc, PIRATES_TREASURE_CHEST, 1, 0, MOBS.get(npc.getId()), true);
+			giveItemRandomly(qs.getPlayer(), npc, PIRATES_TREASURE_CHEST, 1, 0, MOBS.get(npc.getId()), true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -212,9 +212,9 @@ public final class Q00365_DevilsLegacy extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		QuestState st = player.getQuestState(getName());
+		QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -223,11 +223,11 @@ public final class Q00365_DevilsLegacy extends Quest
 		{
 			case RANDOLF:
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
 					htmltext = ((player.getLevel() >= MIN_LEVEL) ? "30095-01.htm" : "30095-03.html");
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
 					if (hasQuestItems(player, PIRATES_TREASURE_CHEST))
 					{
@@ -245,9 +245,9 @@ public final class Q00365_DevilsLegacy extends Quest
 			}
 			case COLLOB:
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					htmltext = (st.isMemoState(1) ? "30092-01.html" : "30092-07.html");
+					htmltext = (qs.isMemoState(1) ? "30092-01.html" : "30092-07.html");
 				}
 				break;
 			}

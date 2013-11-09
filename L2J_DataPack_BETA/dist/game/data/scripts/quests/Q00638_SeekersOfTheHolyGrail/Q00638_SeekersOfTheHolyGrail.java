@@ -24,6 +24,7 @@ import java.util.Map;
 import com.l2jserver.gameserver.model.actor.L2Npc;
 import com.l2jserver.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jserver.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jserver.gameserver.model.holders.ItemChanceHolder;
 import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
@@ -33,10 +34,8 @@ import com.l2jserver.gameserver.model.quest.QuestState;
  */
 public final class Q00638_SeekersOfTheHolyGrail extends Quest
 {
-	private static class DropInfo
+	private static class DropInfo extends ItemChanceHolder
 	{
-		private final int _itemId;
-		private final double _chance;
 		private final int _keyId;
 		private final int _keyChance;
 		private final int _keyCount;
@@ -48,21 +47,10 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 		
 		public DropInfo(int itemId, double chance, int keyId, int keyChance, int count)
 		{
-			_itemId = itemId;
-			_chance = chance;
+			super(itemId, chance);
 			_keyId = keyId;
 			_keyChance = keyChance;
 			_keyCount = count;
-		}
-		
-		public int getItemId()
-		{
-			return _itemId;
-		}
-		
-		public double getChance()
-		{
-			return _chance;
 		}
 		
 		public int getKeyId()
@@ -161,26 +149,27 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
+		
 		switch (event)
 		{
 			case "31328-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
 			}
 			case "31328-06.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = event;
 				}
@@ -188,34 +177,34 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 			}
 			case "reward":
 			{
-				if (st.isStarted() && (st.getQuestItemsCount(TOTEM) >= TOTEMS_REQUIRED_COUNT))
+				if (qs.isStarted() && (getQuestItemsCount(player, TOTEM) >= TOTEMS_REQUIRED_COUNT))
 				{
 					if (getRandom(100) < 80)
 					{
 						if (getRandomBoolean())
 						{
-							st.rewardItems(SCROLL_ENCHANT_A_S, 1);
+							rewardItems(player, SCROLL_ENCHANT_A_S, 1);
 						}
 						else
 						{
-							st.rewardItems(SCROLL_ENCHANT_W_S, 1);
+							rewardItems(player, SCROLL_ENCHANT_W_S, 1);
 						}
 						htmltext = "31328-07.html";
 					}
 					else
 					{
-						st.giveAdena(3576000, true);
+						giveAdena(player, 3576000, true);
 						htmltext = "31328-08.html";
 					}
-					st.takeItems(TOTEM, 2000);
+					takeItems(player, TOTEM, 2000);
 				}
 				break;
 			}
 			case "31328-09.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = "31328-09.html";
 				}
 			}
@@ -231,11 +220,11 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 		if (qs != null)
 		{
 			final DropInfo info = MOBS_DROP_CHANCES.get(npc.getId());
-			if (giveItemRandomly(killer, npc, info.getItemId(), 1, 0, info.getChance(), true))
+			if (giveItemRandomly(qs.getPlayer(), npc, info.getId(), 1, 0, info.getChance(), true))
 			{
 				if ((info.getKeyId() > 0) && (getRandom(100) < info.getKeyChance()))
 				{
-					((L2MonsterInstance) npc).dropItem(killer, info.getKeyId(), info.getKeyCount());
+					((L2MonsterInstance) npc).dropItem(qs.getPlayer(), info.getKeyId(), info.getKeyCount());
 				}
 			}
 		}
@@ -245,18 +234,18 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LVL) ? "31328-01.htm" : "31328-02.htm");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
 			htmltext = ((getQuestItemsCount(player, TOTEM) >= TOTEMS_REQUIRED_COUNT) ? "31328-04.html" : "31328-05.html");
 		}

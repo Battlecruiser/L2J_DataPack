@@ -43,7 +43,6 @@ public final class Q00633_InTheForgottenVillage extends Quest
 	private static final int RIB_BONE_REQUIRED_COUNT = 200;
 	// Mobs
 	private static final Map<Integer, ItemChanceHolder> MOBS_DROP_CHANCES = new HashMap<>();
-	
 	static
 	{
 		MOBS_DROP_CHANCES.put(21553, new ItemChanceHolder(ZOMBIES_LIVER, 0.417)); // Trampled Man
@@ -87,9 +86,9 @@ public final class Q00633_InTheForgottenVillage extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, false);
 		String htmltext = null;
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
@@ -98,9 +97,9 @@ public final class Q00633_InTheForgottenVillage extends Quest
 		{
 			case "31388-03.htm":
 			{
-				if (st.isCreated())
+				if (qs.isCreated())
 				{
-					st.startQuest();
+					qs.startQuest();
 					htmltext = event;
 				}
 				break;
@@ -109,7 +108,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			case "31388-05.html":
 			case "31388-06.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
 					htmltext = event;
 				}
@@ -117,14 +116,14 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			}
 			case "31388-07.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					if (st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
+					if (getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT)
 					{
-						st.giveAdena(25000, true);
-						st.addExpAndSp(305235, 0);
-						st.takeItems(RIB_BONE_OF_A_BLACK_MAGUS, -1);
-						st.setCond(1, true);
+						giveAdena(player, 25000, true);
+						addExpAndSp(player, 305235, 0);
+						takeItems(player, RIB_BONE_OF_A_BLACK_MAGUS, -1);
+						qs.setCond(1, true);
 						htmltext = event;
 					}
 					else
@@ -136,9 +135,9 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			}
 			case "31388-09.html":
 			{
-				if (st.isStarted())
+				if (qs.isStarted())
 				{
-					st.exitQuest(true, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -158,7 +157,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 			{
 				case RIB_BONE_OF_A_BLACK_MAGUS:
 				{
-					if (qs.isCond(1) && qs.giveItemRandomly(npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getCount(), true))
+					if (qs.isCond(1) && giveItemRandomly(qs.getPlayer(), npc, RIB_BONE_OF_A_BLACK_MAGUS, 1, RIB_BONE_REQUIRED_COUNT, info.getChance(), true))
 					{
 						qs.setCond(2);
 					}
@@ -166,7 +165,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 				}
 				case ZOMBIES_LIVER:
 				{
-					qs.giveItemRandomly(npc, ZOMBIES_LIVER, 1, 0, info.getCount(), true);
+					giveItemRandomly(qs.getPlayer(), npc, ZOMBIES_LIVER, 1, 0, info.getChance(), true);
 					break;
 				}
 			}
@@ -177,20 +176,20 @@ public final class Q00633_InTheForgottenVillage extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = player.getQuestState(getName());
+		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isCreated())
+		if (qs.isCreated())
 		{
 			htmltext = ((player.getLevel() >= MIN_LVL) ? "31388-01.htm" : "31388-02.htm");
 		}
-		else if (st.isStarted())
+		else if (qs.isStarted())
 		{
-			htmltext = ((st.getQuestItemsCount(RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
+			htmltext = ((getQuestItemsCount(player, RIB_BONE_OF_A_BLACK_MAGUS) >= RIB_BONE_REQUIRED_COUNT) ? "31388-04.html" : "31388-05.html");
 		}
 		return htmltext;
 	}
