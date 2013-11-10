@@ -29,7 +29,6 @@
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
-		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<cond msgId="113" addName="1">
@@ -73,15 +72,11 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
-		<enchant2 name="basicProperty" val="CON" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="power" val="#ench2Power" />
-		<enchant3 name="basicProperty" val="CON" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="basicProperty" val="CON" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="113" addName="1">
 			<using kind="Bow" />
@@ -153,13 +148,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
@@ -257,17 +249,13 @@
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpConsume_Init" />
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="basicProperty" val="MEN" />
 		<enchant4 name="elementPower" val="#enchElementPower" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<for>
@@ -336,13 +324,10 @@
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="HOLD" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2mpConsume" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<cond msgId="144">
 			<target race_id="1" /> <!-- Undead -->
@@ -572,13 +557,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<for>
@@ -620,11 +602,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
@@ -750,13 +730,10 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<enchant3 name="power" val="#ench3Attack" />
 		<for>
@@ -837,11 +814,9 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="activateRate" val="#ench1ActivateRates" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="abnormalTime" val="#ench2AbnormalTimes" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
