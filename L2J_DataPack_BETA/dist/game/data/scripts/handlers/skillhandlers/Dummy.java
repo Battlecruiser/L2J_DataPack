@@ -82,7 +82,7 @@ public class Dummy implements ISkillHandler
 			{
 				activeChar.stopSkillEffects(true, skill.getId());
 			}
-			skill.applyEffects(activeChar, activeChar);
+			skill.applyEffects(activeChar, null, activeChar, true, false, false, 0);
 		}
 		
 		if (skill.useSpiritShot())
