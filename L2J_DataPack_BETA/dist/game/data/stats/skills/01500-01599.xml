@@ -343,10 +343,8 @@
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<enchant1 name="abnormalTime" val="#ench1AbnormalTimes" />
-		<enchant1 name="basicProperty" val="CON" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="basicProperty" val="CON" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Chance" />
 		<for>
@@ -389,17 +387,13 @@
 		<set name="reuseDelay" val="15000" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="mpConsume" val="#ench2MpConsume" />
 		<enchant2 name="mpInitialConsume" val="#ench2MpInitialConsume" />
 		<enchant3 name="activateRate" val="#ench3ActivateRates" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
-		<enchant4 name="basicProperty" val="MEN" />
 		<enchant4 name="magicLvl" val="#enchMagicLvl" />
 		<enchant4 name="pvpPower" val="#ench4Duel" />
 		<for>
@@ -931,16 +925,13 @@
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="15000" />
 		<set name="targetType" val="AREA" />
-		<enchant1 name="basicProperty" val="MEN" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="basicProperty" val="MEN" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
 		<enchant2 name="power" val="#ench2Power" />
 		<enchant3 name="abnormalTime" val="#ench3AbnormalTimes" />
-		<enchant3 name="basicProperty" val="MEN" />
 		<enchant3 name="magicLvl" val="#enchMagicLvl" />
 		<for>
 			<effect name="Debuff">
