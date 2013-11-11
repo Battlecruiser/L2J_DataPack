@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00284_MuertosFeather;
+package quests.Q00286_FabulousFeathers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,36 +27,35 @@ import com.l2jserver.gameserver.model.quest.Quest;
 import com.l2jserver.gameserver.model.quest.QuestState;
 
 /**
- * Muertos Feather (284).
+ * Fabulous Feathers (286).
  * @author xban1x
  */
-public final class Q00284_MuertosFeather extends Quest
+public final class Q00286_FabulousFeathers extends Quest
 {
 	// NPC
-	private static final int TREVOR = 32166;
+	private static final int ERINU = 32164;
 	// Item
-	private static final int MUERTOS_FEATHER = 9748;
+	private static final int COMMANDERS_FEATHER = 9746;
 	// Monsters
-	private static final Map<Integer, Double> MOB_DROP_CHANCE = new HashMap<>();
+	private static final Map<Integer, Double> MOB_DROP_CHANCES = new HashMap<>();
 	static
 	{
-		MOB_DROP_CHANCE.put(22239, 0.500); // Muertos Guard
-		MOB_DROP_CHANCE.put(22240, 0.533); // Muertos Scout
-		MOB_DROP_CHANCE.put(22242, 0.566); // Muertos Warrior
-		MOB_DROP_CHANCE.put(22243, 0.600); // Muertos Captain
-		MOB_DROP_CHANCE.put(22245, 0.633); // Muertos Lieutenant
-		MOB_DROP_CHANCE.put(22246, 0.633); // Muertos Commander
+		MOB_DROP_CHANCES.put(22251, 0.748); // Shady Muertos Captain
+		MOB_DROP_CHANCES.put(22253, 0.772); // Shady Muertos Warrior
+		MOB_DROP_CHANCES.put(22254, 0.772); // Shady Muertos Archer
+		MOB_DROP_CHANCES.put(22255, 0.796); // Shady Muertos Commander
+		MOB_DROP_CHANCES.put(22256, 0.952); // Shady Muertos Wizard
 	}
 	// Misc
-	private static final int MIN_LVL = 11;
+	private static final int MIN_LVL = 17;
 	
-	private Q00284_MuertosFeather()
+	private Q00286_FabulousFeathers()
 	{
-		super(284, Q00284_MuertosFeather.class.getSimpleName(), "Muertos Feather");
-		addStartNpc(TREVOR);
-		addTalkId(TREVOR);
-		addKillId(MOB_DROP_CHANCE.keySet());
-		registerQuestItems(MUERTOS_FEATHER);
+		super(286, Q00286_FabulousFeathers.class.getSimpleName(), "Fabulous Feathers");
+		addStartNpc(ERINU);
+		addTalkId(ERINU);
+		addKillId(MOB_DROP_CHANCES.keySet());
+		registerQuestItems(COMMANDERS_FEATHER);
 	}
 	
 	@Override
@@ -70,35 +69,25 @@ public final class Q00284_MuertosFeather extends Quest
 		}
 		switch (event)
 		{
-			case "32166-03.htm":
+			case "32164-03.htm":
 			{
 				qs.startQuest();
 				html = event;
 				break;
 			}
-			case "32166-06.html":
+			case "32164-06.html":
 			{
-				html = event;
-				break;
-			}
-			case "32166-08.html":
-			{
-				if (hasQuestItems(player, MUERTOS_FEATHER))
+				if (qs.isCond(2) && (getQuestItemsCount(player, COMMANDERS_FEATHER) >= 80))
 				{
-					giveAdena(player, getQuestItemsCount(player, MUERTOS_FEATHER) * 45, true);
-					takeItems(player, MUERTOS_FEATHER, -1);
+					takeItems(player, COMMANDERS_FEATHER, -1);
+					giveAdena(player, 4160, true);
+					qs.exitQuest(true, true);
 					html = event;
 				}
 				else
 				{
-					html = "32166-07.html";
+					html = "32164-07.html";
 				}
-				break;
-			}
-			case "32166-09.html":
-			{
-				qs.exitQuest(true, true);
-				html = event;
 				break;
 			}
 		}
@@ -111,7 +100,10 @@ public final class Q00284_MuertosFeather extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		if (qs != null)
 		{
-			giveItemRandomly(killer, npc, MUERTOS_FEATHER, 1, 0, MOB_DROP_CHANCE.get(npc.getId()), true);
+			if (giveItemRandomly(killer, npc, COMMANDERS_FEATHER, 1, 80, MOB_DROP_CHANCES.get(npc.getId()), true))
+			{
+				qs.setCond(2);
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -123,17 +115,17 @@ public final class Q00284_MuertosFeather extends Quest
 		String html = getNoQuestMsg(player);
 		if (qs.isCreated())
 		{
-			html = ((player.getLevel() >= MIN_LVL) ? "32166-01.htm" : "32166-02.htm");
+			html = ((player.getLevel() >= MIN_LVL) ? "32164-01.htm" : "32164-02.htm");
 		}
 		else if (qs.isStarted())
 		{
-			html = (hasQuestItems(player, MUERTOS_FEATHER) ? "32166-05.html" : "32166-04.html");
+			html = ((qs.isCond(2) && (getQuestItemsCount(player, COMMANDERS_FEATHER) >= 80)) ? "32164-04.html" : "32164-05.html");
 		}
 		return html;
 	}
 	
 	public static void main(String[] args)
 	{
-		new Q00284_MuertosFeather();
+		new Q00286_FabulousFeathers();
 	}
 }
