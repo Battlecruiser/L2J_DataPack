@@ -305,10 +305,13 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="power" val="10" />
 		<set name="reuseDelay" val="2000" />
-		<set name="skillType" val="GIVE_RECO" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="GiveRecommendation">
+				<param amount="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="9115" levels="1" name="Nevit's Hourglass - 1 hour">
 		<!-- Increases Nevit's blessing by 1 hour. -->

@@ -210,7 +210,6 @@ import handlers.skillhandlers.Dummy;
 import handlers.skillhandlers.Fishing;
 import handlers.skillhandlers.FishingSkill;
 import handlers.skillhandlers.GetPlayer;
-import handlers.skillhandlers.GiveReco;
 import handlers.skillhandlers.NornilsPower;
 import handlers.skillhandlers.Sow;
 import handlers.skillhandlers.TakeFort;
@@ -503,7 +502,6 @@ public class MasterHandler
 			Fishing.class,
 			FishingSkill.class,
 			GetPlayer.class,
-			GiveReco.class,
 			NornilsPower.class,
 			Sow.class,
 			TakeFort.class,
