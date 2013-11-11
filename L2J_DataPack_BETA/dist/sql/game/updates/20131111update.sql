@@ -1,0 +1,1 @@
+UPDATE character_quests SET name='Q00284_MuertosFeather' WHERE name='284_MuertosFeather';
